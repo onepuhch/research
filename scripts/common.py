@@ -1,0 +1,100 @@
+"""Investment research system shared helpers.
+
+All table and enum definitions come from config/schema.json.
+CSV files are read and written as UTF-8-SIG for Excel/Google Sheets compatibility.
+"""
+from __future__ import annotations
+
+import csv
+import json
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data" / "processed"
+CONFIG_PATH = ROOT / "config" / "schema.json"
+ENCODING = "utf-8-sig"
+
+
+def stringify(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        return ", ".join(str(v) for v in value)
+    if isinstance(value, dict):
+        return json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return str(value)
+
+
+def load_schema() -> dict[str, Any]:
+    if not CONFIG_PATH.exists():
+        raise FileNotFoundError(f"schema file not found: {CONFIG_PATH}")
+    with CONFIG_PATH.open(encoding="utf-8") as file:
+        return json.load(file)
+
+
+SCHEMA = load_schema()
+TABLES = SCHEMA["tables"]
+ENUMS = SCHEMA.get("enums", {})
+
+
+def table_def(table: str) -> dict[str, Any]:
+    if table not in TABLES:
+        valid = ", ".join(TABLES)
+        raise ValueError(f"unknown table '{table}' (valid: {valid})")
+    return TABLES[table]
+
+
+def csv_path(table: str) -> Path:
+    return DATA_DIR / f"{table}.csv"
+
+
+def read_rows(table: str) -> list[dict[str, str]]:
+    path = csv_path(table)
+    if not path.exists():
+        return []
+    with path.open(encoding=ENCODING, newline="") as file:
+        return list(csv.DictReader(file))
+
+
+def write_rows(table: str, rows: list[dict[str, str]]) -> None:
+    columns = table_def(table)["columns"]
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    path = csv_path(table)
+    with path.open("w", encoding=ENCODING, newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=columns)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({column: row.get(column, "") for column in columns})
+
+
+def next_id(table: str) -> str:
+    definition = table_def(table)
+    prefix = definition.get("id_prefix", "ID")
+    key = definition["key"]
+    max_id = 0
+    for row in read_rows(table):
+        value = (row.get(key) or "").strip()
+        if value.startswith(prefix):
+            number = value[len(prefix) :].lstrip("-_")
+            if number.isdigit():
+                max_id = max(max_id, int(number))
+    return f"{prefix}-{max_id + 1:04d}"
+
+
+def validate_enums(record: dict[str, str]) -> list[str]:
+    problems: list[str] = []
+    for column, allowed in ENUMS.items():
+        value = str(record.get(column, "")).strip()
+        if value and value not in allowed:
+            problems.append(
+                f"  - '{column}' value '{value}' is not allowed. "
+                f"Allowed: {', '.join(allowed)}"
+            )
+    return problems
+
+
+def ensure_table(table: str) -> None:
+    path = csv_path(table)
+    if not path.exists() or path.stat().st_size == 0:
+        write_rows(table, [])

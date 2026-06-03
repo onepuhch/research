@@ -1,0 +1,21 @@
+{
+  "edgar": {
+    "enabled": true,
+    "query": "\"guidance\" OR \"backlog\" OR \"capacity\" OR \"long-term agreement\"",
+    "forms": ["8-K"],
+    "lookback_days": 30,
+    "limit": 5
+  },
+  "rss": [
+    {
+      "name": "Google News - AI infrastructure",
+      "url": "https://news.google.com/rss/search?q=AI%20infrastructure%20backlog%20capacity%20when:7d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5
+    },
+    {
+      "name": "Google News - semiconductor capex",
+      "url": "https://news.google.com/rss/search?q=semiconductor%20capex%20guidance%20pricing%20when:7d&hl=en-US&gl=US&ceid=US:en",
+      "limit": 5
+    }
+  ]
+}
