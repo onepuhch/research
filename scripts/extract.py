@@ -267,7 +267,9 @@ def gemini_prompt(item: dict[str, Any]) -> str:
 - 신호유형은 다음 중 하나만 사용한다: {", ".join(SIGNAL_TYPES)}
 - 티어는 다음 중 하나만 사용한다: {", ".join(TIERS)}
 - 단계는 다음 중 하나만 사용한다: {", ".join(STAGES)}
-- 특이값 요약과 용어 풀이는 한국어로 쓴다.
+- 무슨 일, 왜 중요한지, 앞으로 볼 것, 용어 풀이는 한국어로 쓴다.
+- why_it_matters는 병목, 수혜, 저평가 등 투자 관점을 초보도 이해할 수 있게 설명한다.
+- what_to_watch는 앞으로 확인할 지표 1~2개를 구체적으로 쓴다.
 - upside_axes는 각 축 0~2점이며 총점은 0~12점이다.
 
 upside 6축:
@@ -278,7 +280,9 @@ upside 6축:
   "subject": "회사명 또는 TICKER 또는 미분류",
   "theme": "테마 또는 미분류",
   "signal_type": "신호유형 enum",
-  "special_value_summary": "한국어 한 문장",
+  "what_happened": "무슨 일이 있었는지 사실 위주 한국어 한 문장",
+  "why_it_matters": "왜 중요한지 투자 관점의 쉬운 한국어 한 문장",
+  "what_to_watch": "앞으로 확인할 지표 1~2개",
   "upside_axes": {{
     "underfollowed_pure_play": 0,
     "earnings_leverage": 0,
@@ -426,11 +430,6 @@ def normalize_axes(value: Any) -> dict[str, int]:
     return {key: clamp_int(source.get(key, 0), 0, 2) for key, _label in AXES}
 
 
-def axis_summary(axes: dict[str, int]) -> str:
-    labels = {key: label for key, label in AXES}
-    return ", ".join(f"{labels[key]} {score}" for key, score in axes.items())
-
-
 def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str]:
     data = call_gemini(item, api_key)
     subject = normalize_subject(data.get("subject"), item)
@@ -454,15 +453,21 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str]:
     if stage not in STAGES:
         stage = stage_from_signal(signal_type, score)
 
-    summary = clean_text(data.get("special_value_summary"), summarize(item, signal_type))
-    summary = f"{summary[:240].rstrip()} | 6축: {axis_summary(axes)}"
+    summary_parts = [
+        ("무슨 일", clean_text(data.get("what_happened"))),
+        ("왜 중요", clean_text(data.get("why_it_matters"))),
+        ("볼 것", clean_text(data.get("what_to_watch"))),
+    ]
+    summary = " ｜ ".join(f"{label}: {value}" for label, value in summary_parts if value)
+    if not summary:
+        summary = summarize(item, signal_type)
 
     return {
         "날짜": date.today().isoformat(),
         "종목/티커": subject,
         "테마": clean_text(data.get("theme"), infer_theme(str(item.get("raw_text", ""))))[:60],
         "신호유형": signal_type,
-        "특이값 요약": summary[:360],
+        "특이값 요약": summary,
         "upside_score": str(score),
         "티어": tier,
         "단계 추정": stage,

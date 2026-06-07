@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -30,7 +31,7 @@ SIGNAL_ID_COLUMN = SIGNAL_TABLE["key"]
     SCORE_COLUMN,
     TIER_COLUMN,
     STAGE_COLUMN,
-    _GLOSSARY_COLUMN,
+    GLOSSARY_COLUMN,
     SOURCE_COLUMN,
     SOURCE_URL_COLUMN,
 ) = SIGNAL_TABLE["columns"]
@@ -40,6 +41,8 @@ if len(TIER_VALUES) < 2:
 PUSH_TIERS = TIER_VALUES[:2]
 DEFAULT_MIN_TIER = PUSH_TIERS[-1]
 TIER_ORDER = {tier: index for index, tier in enumerate(TIER_VALUES)}
+TIER_EMOJI = {PUSH_TIERS[0]: "🅰️", PUSH_TIERS[1]: "🅱️"}
+BLOCK_SEPARATOR = "──────────"
 
 
 def console(text: str) -> None:
@@ -125,20 +128,39 @@ def escaped(value: Any) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
+def summary_lines(value: Any) -> list[str]:
+    summary = str(value or "").strip()
+    summary = re.sub(r"\s*[|｜]\s*6축:\s*.*$", "", summary).strip()
+    if not summary:
+        return []
+    parts = [part.strip() for part in summary.split("｜") if part.strip()]
+    return [f"· {escaped(part)}" for part in parts]
+
+
 def render_block(row: dict[str, str]) -> str:
-    source = escaped(row.get(SOURCE_COLUMN, ""))
     source_url = escaped(row.get(SOURCE_URL_COLUMN, ""))
-    source_line = f'<a href="{source_url}">{source}</a>' if source_url else source
-    return "\n".join(
-        [
-            f"<b>[{escaped(row.get(TIER_COLUMN))} · {escaped(row.get(SCORE_COLUMN))}점] "
-            f"{escaped(row.get(SUBJECT_COLUMN, '미분류'))}</b>",
-            f"{escaped(row.get(THEME_COLUMN))} · {escaped(row.get(SIGNAL_TYPE_COLUMN))} · "
-            f"{escaped(row.get(STAGE_COLUMN))}",
-            escaped(row.get(SUMMARY_COLUMN)),
-            source_line,
-        ]
-    )
+    source = escaped(row.get(SOURCE_COLUMN, ""))
+    tier = row.get(TIER_COLUMN, "")
+    lines = [
+        f"<b>{TIER_EMOJI.get(tier, '')} {escaped(row.get(SUBJECT_COLUMN))} · "
+        f"{escaped(row.get(SCORE_COLUMN))}/12점</b>",
+        f"테마 {escaped(row.get(THEME_COLUMN))} · 단계 {escaped(row.get(STAGE_COLUMN))}",
+        "",
+        *summary_lines(row.get(SUMMARY_COLUMN)),
+    ]
+    glossary = str(row.get(GLOSSARY_COLUMN, "") or "").strip()
+    if glossary:
+        lines.append(f"· 용어: {escaped(glossary)}")
+    if source_url:
+        lines.append(f'<a href="{source_url}">출처 보기</a>')
+    elif source:
+        lines.append(f"출처 {source}")
+    return "\n".join(lines)
+
+
+def compose_message(header: str, blocks: list[str]) -> str:
+    separator = f"\n\n{BLOCK_SEPARATOR}\n\n"
+    return f"{header}\n\n{separator.join(blocks)}"
 
 
 def build_chunks(rows: list[dict[str, str]], limit: int = MESSAGE_LIMIT) -> list[tuple[str, list[str]]]:
@@ -149,16 +171,16 @@ def build_chunks(rows: list[dict[str, str]], limit: int = MESSAGE_LIMIT) -> list
 
     for row in rows:
         block = render_block(row)
-        candidate = "\n\n".join([header, *blocks, block])
+        candidate = compose_message(header, [*blocks, block])
         if blocks and len(candidate) > limit:
-            chunks.append(("\n\n".join([header, *blocks]), signal_ids))
+            chunks.append((compose_message(header, blocks), signal_ids))
             blocks = []
             signal_ids = []
         blocks.append(block)
         signal_ids.append(row.get(SIGNAL_ID_COLUMN, ""))
 
     if blocks:
-        chunks.append(("\n\n".join([header, *blocks]), signal_ids))
+        chunks.append((compose_message(header, blocks), signal_ids))
     return chunks
 
 
