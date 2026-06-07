@@ -1,0 +1,59 @@
+name: Daily Discovery
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-discovery
+  cancel-in-progress: false
+
+jobs:
+  daily-discovery:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collect discovery items
+        run: python scripts/collect.py
+
+      - name: Extract discovery signals
+        run: python scripts/extract.py
+
+      - name: Send Telegram notifications
+        run: python scripts/notify.py
+
+      - name: Commit and push daily state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- \
+            data/processed/signal_log.csv \
+            data/processed/notify_state.json
+
+          if git diff --cached --quiet; then
+            echo "No daily discovery changes to commit."
+            exit 0
+          fi
+
+          run_date="$(TZ=Asia/Seoul date +%F)"
+          git commit -m "chore: daily discovery run ${run_date}"
+          git push
