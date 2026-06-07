@@ -1,21 +1,22 @@
 {
   "edgar": {
     "enabled": true,
-    "query": "\"guidance\" OR \"backlog\" OR \"capacity\" OR \"long-term agreement\"",
+    "query": "\"capacity expansion\" OR \"design win\" OR \"long-term supply agreement\" OR \"record backlog\" OR \"prepayment\" OR \"sold out\"",
     "forms": ["8-K"],
     "lookback_days": 30,
-    "limit": 5
+    "limit": 8,
+    "_note": "광범위한 'guidance'/'capacity' 단독 검색은 모든 실적 8-K를 긁어와 노이즈가 많았다 → 실제 병목/수요 신호 문구로 좁힘. 소형주 비중↑."
   },
   "rss": [
     {
       "name": "Google News - AI infrastructure",
       "url": "https://news.google.com/rss/search?q=AI%20infrastructure%20backlog%20capacity%20when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 5
+      "limit": 3
     },
     {
       "name": "Google News - semiconductor capex",
       "url": "https://news.google.com/rss/search?q=semiconductor%20capex%20guidance%20pricing%20when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 5
+      "limit": 3
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "_note": "레딧 전용 수집 설정. 메인 signal_log과 격리된 '시끄러운 방'이다. 결과는 data/processed/reddit_watch.csv 로 따로 나가고, 사람이 보고 판단해 메인으로 승격한다.",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+  "listing": "hot",
+  "subreddits": [
+    { "name": "stocks", "limit": 40 },
+    { "name": "investing", "limit": 40 },
+    { "name": "wallstreetbets", "limit": 40 },
+    { "name": "StockMarket", "limit": 30 },
+    { "name": "smallstreetbets", "limit": 30 },
+    { "name": "SecurityAnalysis", "limit": 20 }
+  ],
+  "min_mentions": 2,
+  "ticker_stoplist": [
+    "A", "I", "U", "DD", "YOLO", "IMO", "FOMO", "FUD", "ATH", "ER", "EPS",
+    "PE", "PT", "EOD", "AH", "PM", "CEO", "CFO", "COO", "IPO", "ETF", "ETFS",
+    "AI", "ML", "EV", "USA", "US", "UK", "EU", "GDP", "CPI", "FED", "SEC",
+    "FDA", "FTC", "DOJ", "IRS", "WSB", "TLDR", "TLDR", "ELI5", "OP", "EDIT",
+    "NEWS", "BUY", "SELL", "HOLD", "CALL", "CALLS", "PUT", "PUTS", "LONG",
+    "SHORT", "BULL", "BEAR", "RED", "GREEN", "GAIN", "LOSS", "LOL", "WTF",
+    "USD", "GG", "OK", "NO", "YES", "ALL", "ANY", "NOW", "NEW", "BIG", "TOP",
+    "Q1", "Q2", "Q3", "Q4", "FY", "YTD", "TA", "FA", "RSI", "MA", "VIX",
+    "SPY", "QQQ", "IWM", "DIA", "VOO", "VTI", "HBM", "VC", "IV", "OTM",
+    "ITM", "DTE", "MOON", "APE", "HODL", "GDP", "PEG", "ROE", "ROI", "FCF"
+  ]
+}

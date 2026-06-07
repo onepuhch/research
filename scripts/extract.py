@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -24,6 +25,22 @@ import common as c  # noqa: E402
 RAW_LATEST = c.ROOT / "data" / "raw" / "discovery" / "latest.json"
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_TIMEOUT = 30
+# 무료티어 429 방지: 호출 사이 대기(초) + 429/503 지수 백오프 재시도 횟수
+GEMINI_SLEEP = float(os.environ.get("GEMINI_SLEEP", "4"))
+GEMINI_MAX_RETRIES = int(os.environ.get("GEMINI_MAX_RETRIES", "3"))
+RETRY_STATUS = {429, 500, 502, 503, 504}
+
+# 시장이 이미 다 아는 메가캡 — 소외축 0 + 티어 A 금지 (소형주 발굴이 목표)
+MEGA_CAP_TICKERS = {
+    "NVDA", "GOOGL", "GOOG", "MSFT", "AMZN", "AAPL", "META", "TSLA",
+    "AVGO", "AMD", "TSM", "ORCL", "NFLX", "INTC", "QCOM", "TXN", "CSCO",
+    "IBM", "ADBE", "CRM", "MU", "ASML", "SMCI", "DELL", "ARM",
+}
+MEGA_CAP_NAMES = {
+    "alphabet", "google", "microsoft", "amazon", "apple", "meta", "tesla",
+    "nvidia", "broadcom", "oracle", "netflix", "intel", "qualcomm", "cisco",
+    "advanced micro devices", "micron", "asml", "taiwan semiconductor",
+}
 
 SIGNAL_TYPES = c.ENUMS["신호유형"]
 TIERS = c.ENUMS["티어"]
@@ -258,6 +275,7 @@ def gemini_prompt(item: dict[str, Any]) -> str:
 
 규칙:
 - 종목/티커는 실제 회사명 또는 티커를 찾을 수 있을 때만 작성한다. 뉴스 헤드라인, 기사 제목, 언론사명, 일반 테마명은 절대 종목/티커로 쓰지 말고 "미분류"로 둔다.
+- 우리는 "시장이 아직 모르는 소형주"를 찾는다. 잘 알려진 메가캡(시총 수천억 달러 이상: NVDA, GOOGL/GOOG, MSFT, AMZN, AAPL, META, TSLA, AVGO, AMD, TSM, MU, ASML, ORCL 등)은 이미 시장이 다 안다. 이런 종목은 underfollowed_pure_play(소외/순수노출)를 반드시 0으로 주고, 티어를 절대 A로 주지 않는다(최대 B).
 - 신호유형은 다음 중 하나만 사용한다: {", ".join(SIGNAL_TYPES)}
 - 티어는 다음 중 하나만 사용한다: {", ".join(TIERS)}
 - 단계는 다음 중 하나만 사용한다: {", ".join(STAGES)}
@@ -310,8 +328,28 @@ def call_gemini(item: dict[str, Any], api_key: str) -> dict[str, Any]:
         },
         method="POST",
     )
-    with urlopen(request, timeout=GEMINI_TIMEOUT) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+
+    delay = 5.0
+    payload: dict[str, Any] = {}
+    for attempt in range(GEMINI_MAX_RETRIES + 1):
+        try:
+            with urlopen(request, timeout=GEMINI_TIMEOUT) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            break
+        except HTTPError as error:
+            if error.code in RETRY_STATUS and attempt < GEMINI_MAX_RETRIES:
+                print(f"[retry] Gemini {error.code}; {delay:.0f}s 대기 ({attempt + 1}/{GEMINI_MAX_RETRIES})")
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise
+        except (URLError, TimeoutError):
+            if attempt < GEMINI_MAX_RETRIES:
+                print(f"[retry] Gemini 네트워크 오류; {delay:.0f}s 대기 ({attempt + 1}/{GEMINI_MAX_RETRIES})")
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise
 
     parts = payload["candidates"][0]["content"]["parts"]
     text = "".join(str(part.get("text", "")) for part in parts)
@@ -368,6 +406,18 @@ def normalize_subject(value: Any, item: dict[str, Any]) -> str:
     return subject or "미분류"
 
 
+def is_megacap(subject: str) -> bool:
+    """유명 메가캡이면 True. 티커(단어 경계)·회사명 부분일치 둘 다 본다."""
+    if not subject:
+        return False
+    upper = subject.upper()
+    for ticker in MEGA_CAP_TICKERS:
+        if re.search(rf"\b{re.escape(ticker)}\b", upper):
+            return True
+    lowered = subject.lower()
+    return any(name in lowered for name in MEGA_CAP_NAMES)
+
+
 def looks_like_headline(value: str) -> bool:
     lowered = normalize(value)
     headline_terms = [
@@ -395,15 +445,21 @@ def axis_summary(axes: dict[str, int]) -> str:
 
 def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str]:
     data = call_gemini(item, api_key)
+    subject = normalize_subject(data.get("subject"), item)
+    megacap = is_megacap(subject)
     signal_type = normalize_signal_type(data.get("signal_type"), item)
     axes_source = data.get("upside_axes")
     axes = normalize_axes(axes_source)
+    if megacap:  # 메가캡은 소외/순수노출 가치가 없다 → 0 강제
+        axes["underfollowed_pure_play"] = 0
     score = sum(axes.values()) if isinstance(axes_source, dict) else clamp_int(data.get("upside_score"), 1, 12)
     score = max(1, min(score, 12))
 
-    tier = clean_text(data.get("tier"))
-    if tier not in TIERS:
-        tier = tier_from_score(score)
+    # 티어는 점수에서 결정론적으로 뽑는다(루브릭=점수 기반). Gemini의 tier 필드는
+    # 점수와 어긋날 수 있어 신뢰하지 않는다(예: 점수7인데 관망 반환 문제).
+    tier = tier_from_score(score)
+    if megacap and tier == "A":  # 유명 메가캡은 티어 A 금지 (최대 B)
+        tier = "B"
 
     stage = clean_text(data.get("stage"))
     if stage not in STAGES:
@@ -414,7 +470,7 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str]:
 
     return {
         "날짜": date.today().isoformat(),
-        "종목/티커": normalize_subject(data.get("subject"), item),
+        "종목/티커": subject,
         "테마": clean_text(data.get("theme"), infer_theme(str(item.get("raw_text", ""))))[:60],
         "신호유형": signal_type,
         "특이값 요약": summary[:360],
@@ -456,13 +512,15 @@ def main(argv: list[str]) -> int:
         if not isinstance(items, list):
             raise ValueError("'items' must be a list.")
         api_key = load_dotenv_value("GEMINI_API_KEY")
-        signals = [
-            signal
-            for item in items
-            if isinstance(item, dict)
-            for signal in [build_signal(item, api_key)]
-            if signal
-        ]
+        dict_items = [item for item in items if isinstance(item, dict)]
+        signals: list[dict[str, str]] = []
+        for index, item in enumerate(dict_items):
+            signal = build_signal(item, api_key)
+            if signal:
+                signals.append(signal)
+            # 무료티어 429 방지: Gemini를 쓸 때만 호출 사이 대기 (마지막 항목 제외)
+            if api_key and index < len(dict_items) - 1:
+                time.sleep(GEMINI_SLEEP)
         if not signals and items:
             signals = [fallback_signal(items[0])]
         if not signals:
