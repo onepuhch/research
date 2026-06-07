@@ -204,20 +204,32 @@ def summarize(item: dict[str, Any], signal_type: str) -> str:
     return f"{signal_type} 신호: {summary}"
 
 
+def is_unnamed_subject(subject: Any) -> bool:
+    return clean_text(subject) in {"", "미분류"}
+
+
+def cap_unnamed_subject_tier(subject: Any, tier: str) -> str:
+    if is_unnamed_subject(subject) and tier == "A":
+        return "B"
+    return tier
+
+
 def build_keyword_signal(item: dict[str, Any]) -> dict[str, str] | None:
     raw_text = str(item.get("raw_text", "") or item.get("title", ""))
     signal_type = find_signal_type(raw_text, str(item.get("source_type", "")))
     if signal_type is None:
         return None
     score = score_item(raw_text, signal_type)
+    subject = infer_subject(str(item.get("title", "")), raw_text, str(item.get("source_type", "")))
+    tier = cap_unnamed_subject_tier(subject, tier_from_score(score))
     return {
         "날짜": date.today().isoformat(),
-        "종목/티커": infer_subject(str(item.get("title", "")), raw_text, str(item.get("source_type", ""))),
+        "종목/티커": subject,
         "테마": infer_theme(raw_text),
         "신호유형": signal_type,
         "특이값 요약": summarize(item, signal_type),
         "upside_score": str(score),
-        "티어": tier_from_score(score),
+        "티어": tier,
         "단계 추정": stage_from_signal(signal_type, score),
         "용어 풀이": explain_terms(raw_text),
         "출처": str(item.get("source_name", "")),
@@ -228,14 +240,16 @@ def build_keyword_signal(item: dict[str, Any]) -> dict[str, str] | None:
 def fallback_signal(item: dict[str, Any]) -> dict[str, str]:
     score = 1
     raw_text = str(item.get("raw_text", ""))
+    subject = infer_subject(str(item.get("title", "")), raw_text, str(item.get("source_type", "")))
+    tier = cap_unnamed_subject_tier(subject, tier_from_score(score))
     return {
         "날짜": date.today().isoformat(),
-        "종목/티커": infer_subject(str(item.get("title", "")), raw_text, str(item.get("source_type", ""))),
+        "종목/티커": subject,
         "테마": infer_theme(raw_text),
         "신호유형": "기타",
         "특이값 요약": summarize(item, "기타"),
         "upside_score": str(score),
-        "티어": tier_from_score(score),
+        "티어": tier,
         "단계 추정": "관찰",
         "용어 풀이": "",
         "출처": str(item.get("source_name", "")),
@@ -434,6 +448,7 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str]:
     tier = tier_from_score(score)
     if megacap and tier == "A":  # 유명 메가캡은 티어 A 금지 (최대 B)
         tier = "B"
+    tier = cap_unnamed_subject_tier(subject, tier)
 
     stage = clean_text(data.get("stage"))
     if stage not in STAGES:

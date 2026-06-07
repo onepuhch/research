@@ -108,6 +108,7 @@ def select_signals(
         if row.get(DATE_COLUMN, "") == today
         and row.get(TIER_COLUMN, "") in PUSH_TIERS
         and TIER_ORDER[row[TIER_COLUMN]] <= maximum_rank
+        and row.get(SUBJECT_COLUMN, "").strip() not in {"", "미분류"}
         and (include_all or row.get(SIGNAL_ID_COLUMN, "") not in pushed)
     ]
     return sorted(
