@@ -129,3 +129,8 @@ EPS 컨센서스/가이던스 등 선행지표의 **변화(Δ)를 시계열로**
 **반(反)순환 원칙: 이름을 미리 알고 검색하면 순환이다. 항상 신호 → 후보 순서. 검증 전엔 매수 신호 아님.**
 
 이 RUN을 매일 자동화(수집→추출→텔레그램 푸시)하는 전체 구현 브리프: [docs/discovery_engine_design.md](docs/discovery_engine_design.md) — **무료 스택, Codex 담당.**
+
+### 진행 중 구현 브리프 (Codex 담당)
+- **Phase 2 텔레그램 푸시**: [docs/notify_design.md](docs/notify_design.md) — 티어 A/B 신호만 push, 중복방지, 레딧 제외.
+
+> **역할 분담(2026-06-07~)**: 설계·검토는 Claude, **코딩은 Codex**. Codex는 위 브리프 문서를 단일 스펙으로 구현하고, §7 공통 규칙(초안만·출처·불확실성)과 §5 코드 규칙(schema 단일원천·UTF-8-SIG·표준라이브러리)을 지킨다.
