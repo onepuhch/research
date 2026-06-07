@@ -8,12 +8,12 @@
 
 ---
 
-## P0 — 데이터 오염 차단 (시급, 지금 안 고치면 악화)
+## P0 — 데이터 오염 차단 ✅ 완료 (2026-06-07, commit c4f347c)
 
-- [ ] **EDGAR 개별 공시 본문·직접 URL·안정적 source ID 확보** — `collect.py`가 회사명/공시유형 메타데이터만 저장하고 본문(검색어가 든 문장)을 안 가져옴. 출처 URL도 개별 공시가 아닌 공통 검색 URL. → 개별 8-K 본문 일부 + accession 기반 직접 URL + accession ID 저장.
-- [ ] **비(非)신호 거절 게이트** — `extract.py` 프롬프트에 `is_signal`/`reject_reason`/최소 근거 조건 없음 → Gemini가 모든 항목을 신호로 반환. EDGAR 30건이 전부 "공시(8-K)" 신호화됨. → `is_signal=false`면 append 제외.
-- [ ] **중복 방지(content hash / URL / accession)** — RSS는 날짜필터 없이 최신글 반복 수집, EDGAR는 7일 구간 매일 재조회. `extract.py` append에 중복검사 없어 같은 자료가 매일 새 signal_id로 재알림. → source 지문으로 dedup.
-- [ ] **수집 실패 fallback의 합성 신호 제거** — `collect.py` fallback이 실제 출처 아닌 합성 문장을 만들고, 이게 "수주/백로그·초기" 신호로 변환됨. → fallback은 신호화 금지(또는 명시적 비신호 처리).
+- [x] **EDGAR 개별 공시 본문·직접 URL·안정적 source ID 확보** — `collect.py`가 회사명/공시유형 메타데이터만 저장하고 본문(검색어가 든 문장)을 안 가져옴. 출처 URL도 개별 공시가 아닌 공통 검색 URL. → 개별 8-K 본문 일부 + accession 기반 직접 URL + accession ID 저장.
+- [x] **비(非)신호 거절 게이트** — Gemini `is_signal`/`reject_reason` + 이름없음 거절 + 키워드 경로 거절 적용. append 제외.
+- [x] **중복 방지(content hash / URL / accession)** — source_id(accession/url) 지문 + `seen_sources.json` 영속. 같은 항목 재실행 0건 확인.
+- [x] **수집 실패 fallback의 합성 신호 제거** — collect는 items:[], extract는 fallback 무시 + 합성 라인 삭제.
 
 ## P1 — 발굴 루프 닫기
 
