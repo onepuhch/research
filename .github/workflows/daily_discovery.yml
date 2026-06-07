@@ -21,6 +21,8 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      # Add FMP_API_KEY to repository secrets before enabling EPS collection.
+      FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
 
     steps:
       - name: Check out repository
@@ -37,6 +39,9 @@ jobs:
       - name: Extract discovery signals
         run: python scripts/extract.py
 
+      - name: Collect EPS revisions
+        run: python scripts/collect_eps.py
+
       - name: Send Telegram notifications
         run: python scripts/notify.py
 
@@ -49,6 +54,7 @@ jobs:
 
           git add -- \
             data/processed/signal_log.csv \
+            data/processed/metric_log.csv \
             data/processed/notify_state.json
 
           if git diff --cached --quiet; then

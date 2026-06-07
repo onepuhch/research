@@ -4,35 +4,10 @@
     "query": "\"capacity expansion\" OR \"design win\" OR \"long-term supply agreement\" OR \"record backlog\" OR \"prepayment\" OR \"sold out\" OR \"new customer\" OR \"pricing power\" OR \"lead time\" OR \"order intake\"",
     "forms": ["8-K"],
     "lookback_days": 7,
-    "_note": "lookback 30→7일: 최신 신호만. limit 8→30: 소형주 커버리지 확대. 검색어 추가: new customer, pricing power, lead time, order intake.",
-    "limit": 30
+    "limit": 30,
+    "_note": "구글뉴스 RSS 제거. EDGAR 직접 스캔이 핵심(공시→Gemini 판단). Substack 전문가 분석만 유지."
   },
   "rss": [
-    {
-      "name": "Google News - AI infrastructure",
-      "url": "https://news.google.com/rss/search?q=AI%20infrastructure%20backlog%20capacity%20when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 3
-    },
-    {
-      "name": "Google News - semiconductor capex",
-      "url": "https://news.google.com/rss/search?q=semiconductor%20capex%20guidance%20pricing%20when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 3
-    },
-    {
-      "name": "Google News - power infrastructure",
-      "url": "https://news.google.com/rss/search?q=power+infrastructure+data+center+capacity+when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 3
-    },
-    {
-      "name": "Google News - optical networking",
-      "url": "https://news.google.com/rss/search?q=optical+transceiver+800G+1.6T+backlog+when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 3
-    },
-    {
-      "name": "Google News - HBM memory",
-      "url": "https://news.google.com/rss/search?q=HBM+memory+supply+DRAM+capacity+when:7d&hl=en-US&gl=US&ceid=US:en",
-      "limit": 3
-    },
     {
       "name": "SemiAnalysis",
       "url": "https://www.semianalysis.com/feed",
