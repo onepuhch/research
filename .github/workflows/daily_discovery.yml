@@ -55,7 +55,8 @@ jobs:
           git add -- \
             data/processed/signal_log.csv \
             data/processed/metric_log.csv \
-            data/processed/notify_state.json
+            data/processed/notify_state.json \
+            data/processed/seen_sources.json
 
           if git diff --cached --quiet; then
             echo "No daily discovery changes to commit."

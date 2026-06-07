@@ -7,6 +7,7 @@ external packages.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -23,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 RAW_LATEST = c.ROOT / "data" / "raw" / "discovery" / "latest.json"
+SEEN_SOURCES_PATH = c.DATA_DIR / "seen_sources.json"
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_TIMEOUT = 30
 # 무료티어 429 방지: 호출 사이 대기(초) + 429/503 지수 백오프 재시도 횟수
@@ -53,10 +55,8 @@ SIGNAL_RULES: list[tuple[str, str, list[str]]] = [
     ("CAPEX", "capex", ["capex", "capital expenditure", "capacity expansion", "capacity doubling", "capacity triple"]),
     ("ASP/가격", "pricing", ["pricing up", "price increase", "higher prices", "asp", "average selling price"]),
     ("리드타임", "lead time", ["lead time", "delivery time", "supply constrained", "sold out"]),
-    ("EPS상향", "eps", ["eps", "estimate revision", "earnings revision", "consensus raised"]),
+    ("EPS상향", "eps", ["eps raised", "eps guidance raised", "estimate revision", "earnings revision", "consensus raised"]),
     ("기술로드맵", "roadmap", ["roadmap", "800g", "1.6t", "cpo", "co-packaged", "optical", "copper"]),
-    ("공시(8-K)", "8-k", ["8-k", "sec filing", "edgar"]),
-    ("커뮤니티", "community", ["reddit", "substack", "community"]),
 ]
 
 THEME_RULES: list[tuple[str, list[str]]] = [
@@ -111,6 +111,41 @@ def load_payload(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_seen_sources() -> set[str]:
+    if not SEEN_SOURCES_PATH.exists():
+        return set()
+    try:
+        data = json.loads(SEEN_SOURCES_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        print(f"[warn] seen source state unreadable; starting empty: {error}")
+        return set()
+    seen = data.get("seen", []) if isinstance(data, dict) else []
+    if not isinstance(seen, list):
+        print("[warn] seen source state has invalid 'seen'; starting empty")
+        return set()
+    return {str(value).strip() for value in seen if str(value).strip()}
+
+
+def save_seen_sources(seen: set[str]) -> None:
+    SEEN_SOURCES_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temporary = SEEN_SOURCES_PATH.with_suffix(".tmp")
+    temporary.write_text(
+        json.dumps({"seen": sorted(seen)}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    temporary.replace(SEEN_SOURCES_PATH)
+
+
+def source_fingerprint(item: dict[str, Any]) -> str:
+    source_id = clean_text(item.get("source_id"))
+    if source_id:
+        return source_id
+    material = "\n".join(
+        [clean_text(item.get("title")), clean_text(item.get("raw_text"))]
+    ).encode("utf-8")
+    return "sha256:" + hashlib.sha256(material).hexdigest()
+
+
 def normalize(text: str) -> str:
     return " ".join((text or "").lower().split())
 
@@ -120,8 +155,6 @@ def find_signal_type(text: str, source_type: str) -> str | None:
     for signal_type, _label, phrases in SIGNAL_RULES:
         if any(phrase in lowered for phrase in phrases):
             return signal_type
-    if source_type == "edgar":
-        return "공시(8-K)"
     return None
 
 
@@ -215,12 +248,16 @@ def cap_unnamed_subject_tier(subject: Any, tier: str) -> str:
 
 
 def build_keyword_signal(item: dict[str, Any]) -> dict[str, str] | None:
+    if str(item.get("source_type", "")).lower() == "fallback":
+        return None
     raw_text = str(item.get("raw_text", "") or item.get("title", ""))
     signal_type = find_signal_type(raw_text, str(item.get("source_type", "")))
     if signal_type is None:
         return None
-    score = score_item(raw_text, signal_type)
     subject = infer_subject(str(item.get("title", "")), raw_text, str(item.get("source_type", "")))
+    if is_unnamed_subject(subject):
+        return None
+    score = score_item(raw_text, signal_type)
     tier = cap_unnamed_subject_tier(subject, tier_from_score(score))
     return {
         "날짜": date.today().isoformat(),
@@ -237,31 +274,14 @@ def build_keyword_signal(item: dict[str, Any]) -> dict[str, str] | None:
     }
 
 
-def fallback_signal(item: dict[str, Any]) -> dict[str, str]:
-    score = 1
-    raw_text = str(item.get("raw_text", ""))
-    subject = infer_subject(str(item.get("title", "")), raw_text, str(item.get("source_type", "")))
-    tier = cap_unnamed_subject_tier(subject, tier_from_score(score))
-    return {
-        "날짜": date.today().isoformat(),
-        "종목/티커": subject,
-        "테마": infer_theme(raw_text),
-        "신호유형": "기타",
-        "특이값 요약": summarize(item, "기타"),
-        "upside_score": str(score),
-        "티어": tier,
-        "단계 추정": "관찰",
-        "용어 풀이": "",
-        "출처": str(item.get("source_name", "")),
-        "출처URL": str(item.get("url", "")),
-    }
-
-
 def gemini_prompt(item: dict[str, Any]) -> str:
     axis_lines = "\n".join(f"- {key}: {label} (0, 1, 2)" for key, label in AXES)
     return f"""아래 수집 항목에서 투자 발굴 신호를 JSON만으로 추출하라.
 
 규칙:
+- 먼저 이 항목이 투자 후보 조기 발굴 신호인지 판정한다. 신호가 아니면 is_signal=false로 응답하고 reject_reason에 이유를 쓴다.
+- 신호는 식별 가능한 회사의 구체적인 조기 지표여야 한다: 가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, ASP/가격 변화, 리드타임 변화, EPS 리비전, 구체적인 고객 코멘트 등.
+- 회사 식별 불가, 구체 근거 없는 일반 기사, 루틴 공시, 단순 공시 메타데이터, 투자 오피니언은 비신호다.
 - 종목/티커는 실제 회사명 또는 티커를 찾을 수 있을 때만 작성한다. 뉴스 헤드라인, 기사 제목, 언론사명, 일반 테마명은 절대 종목/티커로 쓰지 말고 "미분류"로 둔다.
 - 우리는 "시장이 아직 모르는 소형주"를 찾는다. 잘 알려진 메가캡(시총 수천억 달러 이상: NVDA, GOOGL/GOOG, MSFT, AMZN, AAPL, META, TSLA, AVGO, AMD, TSM, MU, ASML, ORCL 등)은 이미 시장이 다 안다. 이런 종목은 underfollowed_pure_play(소외/순수노출)를 반드시 0으로 주고, 티어를 절대 A로 주지 않는다(최대 B).
 - 신호유형은 다음 중 하나만 사용한다: {", ".join(SIGNAL_TYPES)}
@@ -277,6 +297,8 @@ upside 6축:
 
 응답 JSON 형식:
 {{
+  "is_signal": true,
+  "reject_reason": "비신호일 때 구체적인 이유, 신호면 빈 문자열",
   "subject": "회사명 또는 TICKER 또는 미분류",
   "theme": "테마 또는 미분류",
   "signal_type": "신호유형 enum",
@@ -430,9 +452,22 @@ def normalize_axes(value: Any) -> dict[str, int]:
     return {key: clamp_int(source.get(key, 0), 0, 2) for key, _label in AXES}
 
 
-def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str]:
+def is_true(value: Any) -> bool:
+    if value is True:
+        return True
+    return isinstance(value, str) and value.strip().lower() == "true"
+
+
+def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str] | None:
     data = call_gemini(item, api_key)
+    if not is_true(data.get("is_signal")):
+        reason = clean_text(data.get("reject_reason"), "구체적인 조기 지표 없음")
+        print(f"[rejected] {reason}")
+        return None
     subject = normalize_subject(data.get("subject"), item)
+    if is_unnamed_subject(subject):
+        print("[rejected] 식별 가능한 회사/티커 없음")
+        return None
     megacap = is_megacap(subject)
     signal_type = normalize_signal_type(data.get("signal_type"), item)
     axes_source = data.get("upside_axes")
@@ -486,16 +521,15 @@ def build_signal(item: dict[str, Any], api_key: str = "") -> dict[str, str] | No
     return build_keyword_signal(item)
 
 
-def append_signals(signals: list[dict[str, str]]) -> None:
+def append_signal(signal: dict[str, str]) -> None:
     rows = c.read_rows("signal_log")
     key = c.table_def("signal_log")["key"]
-    for signal in signals:
-        problems = c.validate_enums(signal)
-        if problems:
-            raise ValueError("enum validation failed:\n" + "\n".join(problems))
-        signal[key] = c.next_id("signal_log")
-        rows.append(signal)
-        c.write_rows("signal_log", rows)
+    problems = c.validate_enums(signal)
+    if problems:
+        raise ValueError("enum validation failed:\n" + "\n".join(problems))
+    signal[key] = c.next_id("signal_log")
+    rows.append(signal)
+    c.write_rows("signal_log", rows)
 
 
 def main(argv: list[str]) -> int:
@@ -506,20 +540,27 @@ def main(argv: list[str]) -> int:
         if not isinstance(items, list):
             raise ValueError("'items' must be a list.")
         api_key = c.load_dotenv_value("GEMINI_API_KEY")
-        dict_items = [item for item in items if isinstance(item, dict)]
+        seen = load_seen_sources()
+        dict_items = [
+            item
+            for item in items
+            if isinstance(item, dict) and str(item.get("source_type", "")).lower() != "fallback"
+        ]
         signals: list[dict[str, str]] = []
         for index, item in enumerate(dict_items):
+            fingerprint = source_fingerprint(item)
+            if fingerprint in seen:
+                print(f"[duplicate] skipped source: {fingerprint}")
+                continue
             signal = build_signal(item, api_key)
             if signal:
+                append_signal(signal)
                 signals.append(signal)
+                seen.add(fingerprint)
+                save_seen_sources(seen)
             # 무료티어 429 방지: Gemini를 쓸 때만 호출 사이 대기 (마지막 항목 제외)
             if api_key and index < len(dict_items) - 1:
                 time.sleep(GEMINI_SLEEP)
-        if not signals and items:
-            signals = [fallback_signal(items[0])]
-        if not signals:
-            raise ValueError("no collected items available for extraction.")
-        append_signals(signals)
     except Exception as error:
         print(f"[error] {error}")
         return 1

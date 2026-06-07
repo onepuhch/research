@@ -6,13 +6,15 @@ Results are written to data/raw/discovery/latest.json for extract.py.
 from __future__ import annotations
 
 import json
+import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
 from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
@@ -21,6 +23,30 @@ CONFIG_PATH = ROOT / "config" / "discovery_sources.json"
 RAW_DIR = ROOT / "data" / "raw" / "discovery"
 USER_AGENT = "investment-research-system/0.1 contact=local-research@example.com"
 TIMEOUT = 20
+EDGAR_DOCUMENT_LIMIT = 2000
+EDGAR_DOCUMENT_MAX_BYTES = 2_000_000
+SEC_REQUEST_DELAY = 0.3
+
+
+class TextExtractor(HTMLParser):
+    """Extract visible text from a small SEC HTML document."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+        self.ignored_depth = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() in {"script", "style", "noscript"}:
+            self.ignored_depth += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.lower() in {"script", "style", "noscript"} and self.ignored_depth:
+            self.ignored_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if not self.ignored_depth and data.strip():
+            self.parts.append(data)
 
 
 def load_config() -> dict:
@@ -29,7 +55,7 @@ def load_config() -> dict:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 
-def fetch_text(url: str) -> str:
+def fetch_text(url: str, max_bytes: int | None = None) -> str:
     request = Request(
         url,
         headers={
@@ -39,12 +65,58 @@ def fetch_text(url: str) -> str:
     )
     with urlopen(request, timeout=TIMEOUT) as response:
         charset = response.headers.get_content_charset() or "utf-8"
-        return response.read().decode(charset, errors="replace")
+        content = response.read(max_bytes) if max_bytes else response.read()
+        return content.decode(charset, errors="replace")
 
 
 def clean_text(value: str | None) -> str:
     text = unescape(value or "")
     return " ".join(text.replace("\n", " ").replace("\r", " ").split())
+
+
+def html_to_text(value: str) -> str:
+    parser = TextExtractor()
+    parser.feed(value)
+    parser.close()
+    return clean_text(" ".join(parser.parts))
+
+
+def search_phrases(query: str) -> list[str]:
+    quoted = [phrase.strip().lower() for phrase in re.findall(r'"([^"]+)"', query or "")]
+    return [phrase for phrase in quoted if phrase]
+
+
+def relevant_excerpt(text: str, phrases: list[str], limit: int = EDGAR_DOCUMENT_LIMIT) -> str:
+    cleaned = clean_text(text)
+    if len(cleaned) <= limit:
+        return cleaned
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+|\s{2,}", cleaned) if part.strip()]
+    matches = [
+        sentence
+        for sentence in sentences
+        if any(phrase in sentence.lower() for phrase in phrases)
+    ]
+    selected = matches or sentences
+    excerpt = " ".join(selected)
+    if len(excerpt) < min(limit, 800) and matches:
+        excerpt = " ".join([*matches, *sentences])
+    return excerpt[:limit].rstrip()
+
+
+def edgar_identity(hit: dict) -> tuple[str, str, str]:
+    source = hit.get("_source", {})
+    hit_id = str(hit.get("_id", "") or "")
+    accession = str(source.get("adsh", "") or hit_id.split(":", 1)[0]).strip()
+    ciks = source.get("ciks") or []
+    cik = str(ciks[0] if ciks else "").strip()
+    document_name = hit_id.split(":", 1)[1].strip() if ":" in hit_id else ""
+    if not accession or not cik or not document_name:
+        raise ValueError("EDGAR hit is missing accession, CIK, or document name")
+    if not re.fullmatch(r"\d{10}-\d{2}-\d{6}", accession):
+        raise ValueError(f"invalid EDGAR accession: {accession}")
+    if not cik.isdigit():
+        raise ValueError(f"invalid EDGAR CIK: {cik}")
+    return accession, str(int(cik)), document_name
 
 
 def text_from_child(item: ElementTree.Element, name: str) -> str:
@@ -61,12 +133,14 @@ def collect_rss_source(source: dict) -> list[dict[str, str]]:
     for item in items[:limit]:
         title = text_from_child(item, "title")
         description = text_from_child(item, "description")
+        url = text_from_child(item, "link")
         records.append(
             {
                 "source_type": "rss",
                 "source_name": source.get("name", "RSS"),
+                "source_id": url,
                 "title": title,
-                "url": text_from_child(item, "link"),
+                "url": url,
                 "published_at": text_from_child(item, "pubDate"),
                 "raw_text": clean_text(f"{title}. {description}"),
             }
@@ -95,44 +169,46 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
     data = json.loads(fetch_text(url))
     hits = data.get("hits", {}).get("hits", [])
     records: list[dict[str, str]] = []
+    seen_accessions: set[str] = set()
+    phrases = search_phrases(str(config.get("query", "")))
     for hit in hits[: int(config.get("limit", 5))]:
         source = hit.get("_source", {})
+        try:
+            accession, cik, document_name = edgar_identity(hit)
+        except ValueError as error:
+            print(f"[warn] EDGAR hit skipped: {error}")
+            continue
+        if accession in seen_accessions:
+            continue
+        accession_compact = accession.replace("-", "")
+        filing_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_compact}/"
+        document_url = filing_url + quote(document_name)
+        try:
+            time.sleep(SEC_REQUEST_DELAY)
+            document_html = fetch_text(document_url, EDGAR_DOCUMENT_MAX_BYTES)
+            document_text = relevant_excerpt(html_to_text(document_html), phrases)
+            if not document_text:
+                raise ValueError("empty filing document text")
+        except (HTTPError, URLError, TimeoutError, ValueError) as error:
+            print(f"[warn] EDGAR filing skipped: {accession}: {error}")
+            continue
         company = ", ".join(source.get("display_names") or [])
         form = source.get("file_type") or source.get("form") or "SEC filing"
         filed_at = source.get("file_date", "")
         title = clean_text(f"{company} {form} {filed_at}")
-        summary = clean_text(
-            " ".join(
-                str(source.get(key, ""))
-                for key in ("biz_states", "sics", "items", "file_description")
-            )
-        )
         records.append(
             {
                 "source_type": "edgar",
                 "source_name": "SEC EDGAR",
+                "source_id": accession,
                 "title": title,
-                "url": source.get("root_form", "") or url,
+                "url": filing_url,
                 "published_at": filed_at,
-                "raw_text": clean_text(f"{title}. {summary}"),
+                "raw_text": clean_text(f"{title}. {document_text}")[:EDGAR_DOCUMENT_LIMIT],
             }
         )
+        seen_accessions.add(accession)
     return records
-
-
-def fallback_record(reason: str) -> dict[str, str]:
-    return {
-        "source_type": "fallback",
-        "source_name": "local fallback",
-        "title": "AI infrastructure capacity expansion and backlog monitoring seed",
-        "url": "",
-        "published_at": datetime.now(timezone.utc).isoformat(),
-        "raw_text": (
-            "AI infrastructure suppliers report capacity expansion, backlog focus, "
-            "lead time monitoring, and pricing discipline. "
-            f"Collector fallback reason: {reason}"
-        ),
-    }
 
 
 def write_payload(payload: dict) -> Path:
@@ -175,8 +251,8 @@ def main() -> int:
             print(f"[warn] RSS failed: {source.get('name', 'RSS')}: {error}")
 
     if not items:
-        items.append(fallback_record("; ".join(errors) or "no source returned records"))
-        print("[warn] no public source records collected; wrote one local fallback seed")
+        reason = "; ".join(errors) or "no source returned records"
+        print(f"[warn] no public source records collected; items left empty: {reason}")
 
     payload = {
         "collected_at": datetime.now(timezone.utc).isoformat(),
