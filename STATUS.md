@@ -5,14 +5,15 @@
 ## 한 줄 요약
 로컬 CSV 기반 투자 후보 **조기 발굴 엔진**. 코어 + metric_log + Discovery Engine Phase 1(Gemini 추출) 작동 확인. GitHub(onepuhch/research) 푸시 완료.
 
-## ▶ 다음 순서 (내일 할 일) — 우선순위순
-1. **[Codex·시급] 429 throttle** — `extract.py` Gemini 호출 사이 `sleep`(기본 4초, env 조정) + 429/503 시 **지수 백오프 재시도(최대 3회)**. `config/discovery_sources.json` 소스당 limit 5→3. 폴백 로직 유지.
-   - 이유: 무료티어가 연속 호출에 바로 429 → 항목 절반이 stub/누락됨.
-2. **[작음·Claude가 가능] 점수 프롬프트 튜닝** — `gemini_prompt`에 규칙 추가: "메가캡/유명주는 소외(underfollowed) 0점, 시총 큰 종목은 티어 A 금지". (CoreWeave가 유명한데 소외2점 받은 문제)
-3. **[소스 품질] 소스 큐레이션** — Google News 비중↓ + **EDGAR 소형주 8-K + 니치 Substack RSS** 추가. (대형주 말고 '제2의 AXT' 소형주 발굴용)
-4. 그 후 → **Phase 2: 텔레그램 push**(`notify.py`) → **Phase 3: GitHub Actions 매일 cron**.
+## ▶ 다음 순서 — 우선순위순
+1. ✅ **429 throttle** — `extract.py` 호출 간 `sleep`(GEMINI_SLEEP=4s) + 429/503 지수 백오프 재시도(3회). limit 5→3. **검증: 14건 전부 추출, 누락 0.**
+2. ✅ **점수 보정** — 프롬프트 규칙 + **메가캡 코드 가드**(소외축 0, 티어 A 금지). 티어를 점수 기반으로 결정론화. **검증: Alphabet A→B 차단됨.**
+3. ✅ **EDGAR 정밀화** — 쿼리를 실제 병목 문구로 좁힘. **검증: 쓰레기(AIRO·NRGV) → ALGM·DIOD·ATRO 등 반도체 소형주로 개선.**
+4. ✅ **레딧 격리 파이프라인** — `collect_reddit.py`(RSS) → `reddit_watch.csv`(signal_log과 **격리**). SEC 티커목록으로 노이즈 컷. **검증: 200글 → 32후보.**
+5. ⏭ **다음: Phase 2 텔레그램 push**(`notify.py`) → **Phase 3 GitHub Actions 매일 cron**.
 
-> 현재 작동 확인됨: 파이프라인 collect→extract(Gemini)→digest. cold 추출 예) CoreWeave A 9/12, Alphabet B 7/12. 뉴스 헤드라인 버그 수정됨. `.env`는 깃에 안 올라감(안전).
+> 현재 작동 확인됨: collect→extract(Gemini, throttle)→digest + 레딧 별도 라인. `.env`는 깃에 안 올라감(안전).
+> 레딧 운영 메모: `.json`은 403 차단 → **`.rss` 사용**. 자동화(Phase 3) 시 데이터센터 IP 차단 가능성 있음.
 
 ## 완료
 - `config/schema.json` 단일 진실원천 설계 (컬럼/enum 한 곳에서 관리)
@@ -41,8 +42,9 @@
 
 ## ★ Discovery Engine (이 프로젝트의 진짜 목표) — Phase 1 ✅
 - 전체 브리프: `docs/discovery_engine_design.md`
-- **Phase 1 완료·작동 확인**: `collect.py`(EDGAR+RSS) · `extract.py`(**Gemini Flash 연결 + 키워드 폴백**) · `digest.py` · `signal_log` 테이블.
-- 남은 개선: 위 "다음 순서" 1~3 (throttle·점수튜닝·소스). 그 후 Phase 2(텔레그램)→3(자동화).
+- **Phase 1 완료·품질패치 완료**: `collect.py`(EDGAR+RSS) · `extract.py`(**Gemini + throttle + 메가캡가드 + 키워드 폴백**) · `digest.py` · `signal_log` 테이블.
+- **레딧 격리 라인(별도)**: `collect_reddit.py`(RSS 종목 언급 집계) → `reddit_watch.csv`. 시끄러운 방 → 사람이 보고 진짜만 메인으로 수동 승격. `config/reddit_sources.json`로 서브레딧·제외어 튜닝.
+- 다음: Phase 2(텔레그램)→3(자동화).
 - 분석 모델: 무료티어 Gemini Flash(`GEMINI_API_KEY` env/.env), 딥다이브는 온디맨드(ChatGPT Plus 수동/Claude).
 
 ## 진행 중 / 기록됨
