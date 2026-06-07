@@ -44,6 +44,30 @@ TIER_ORDER = {tier: index for index, tier in enumerate(TIER_VALUES)}
 TIER_EMOJI = {PUSH_TIERS[0]: "🅰️", PUSH_TIERS[1]: "🅱️"}
 BLOCK_SEPARATOR = "──────────"
 
+REVIEW_TABLE = c.table_def("investment_review_log")
+(
+    REVIEW_ID_COLUMN,
+    _REVIEW_DATE_COLUMN,
+    _REVIEW_CHECKED_COLUMN,
+    _REVIEW_TARGET_TYPE_COLUMN,
+    REVIEW_SUBJECT_COLUMN,
+    REVIEW_SECTOR_ID_COLUMN,
+    REVIEW_JUDGMENT_COLUMN,
+    REVIEW_STAGE_COLUMN,
+    _REVIEW_IDEA_TYPE_COLUMN,
+    REVIEW_STRENGTH_COLUMN,
+    *_REVIEW_REMAINING_COLUMNS,
+) = REVIEW_TABLE["columns"]
+SECTOR_TABLE = c.table_def("sectors")
+(
+    SECTOR_ID_COLUMN,
+    SECTOR_NAME_COLUMN,
+    SECTOR_THEME_COLUMN,
+    *_SECTOR_REMAINING_COLUMNS,
+) = SECTOR_TABLE["columns"]
+ACTIVE_REVIEW_STAGES = tuple(c.ENUMS[REVIEW_STAGE_COLUMN][:-1])
+REPORT_STAGE_ORDER = tuple(reversed(ACTIVE_REVIEW_STAGES))
+
 
 def console(text: str) -> None:
     """Print without crashing on Windows cp949 consoles."""
@@ -63,6 +87,11 @@ def parse_args(args: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true", help="render messages without sending or saving state")
     parser.add_argument("--all", action="store_true", help="ignore duplicate prevention and resend eligible signals")
+    parser.add_argument(
+        "--report",
+        action="store_true",
+        help="send the investment review status report",
+    )
     parser.add_argument(
         "--min-tier",
         choices=PUSH_TIERS,
@@ -184,6 +213,106 @@ def build_chunks(rows: list[dict[str, str]], limit: int = MESSAGE_LIMIT) -> list
     return chunks
 
 
+def sector_themes() -> dict[str, str]:
+    themes: dict[str, str] = {}
+    for row in c.read_rows("sectors"):
+        sector_id = (row.get(SECTOR_ID_COLUMN) or "").strip()
+        theme = (row.get(SECTOR_THEME_COLUMN) or row.get(SECTOR_NAME_COLUMN) or "").strip()
+        if sector_id and theme:
+            themes[sector_id] = theme
+    return themes
+
+
+def review_theme(row: dict[str, str], themes: dict[str, str]) -> str:
+    judgment = row.get(REVIEW_JUDGMENT_COLUMN, "") or ""
+    match = re.search(r"(?:^|\|)\s*테마:\s*([^|]+)", judgment)
+    if match:
+        return match.group(1).strip()
+    sector_id = (row.get(REVIEW_SECTOR_ID_COLUMN) or "").strip()
+    return themes.get(sector_id, "미분류")
+
+
+def report_line(row: dict[str, str], themes: dict[str, str]) -> str:
+    return (
+        f"· {escaped(row.get(REVIEW_SUBJECT_COLUMN))} | "
+        f"{escaped(review_theme(row, themes))} | "
+        f"근거강도 {escaped(row.get(REVIEW_STRENGTH_COLUMN))}"
+    )
+
+
+def build_report_chunks(
+    rows: list[dict[str, str]], limit: int = MESSAGE_LIMIT
+) -> list[str]:
+    header = f"<b>추적 현황 {date.today().isoformat()}</b>"
+    themes = sector_themes()
+    grouped = {
+        stage: sorted(
+            [row for row in rows if row.get(REVIEW_STAGE_COLUMN, "") == stage],
+            key=lambda row: (
+                row.get(REVIEW_SUBJECT_COLUMN, ""),
+                row.get(REVIEW_ID_COLUMN, ""),
+            ),
+        )
+        for stage in REPORT_STAGE_ORDER
+    }
+    chunks: list[str] = []
+    lines = [header]
+
+    for stage in REPORT_STAGE_ORDER:
+        stage_rows = grouped[stage]
+        if not stage_rows:
+            continue
+        stage_header = f"<b>{escaped(stage)} ({len(stage_rows)})</b>"
+        first_entry = report_line(stage_rows[0], themes)
+        if len("\n".join([*lines, "", stage_header, first_entry])) > limit and len(lines) > 1:
+            chunks.append("\n".join(lines))
+            lines = [header]
+        lines.extend(["", stage_header])
+
+        for row in stage_rows:
+            entry = report_line(row, themes)
+            if len("\n".join([*lines, entry])) > limit and len(lines) > 3:
+                chunks.append("\n".join(lines))
+                lines = [header, "", stage_header]
+            lines.append(entry)
+
+    if len(lines) > 1:
+        chunks.append("\n".join(lines))
+    return chunks
+
+
+def run_report(dry_run: bool) -> int:
+    rows = [
+        row
+        for row in c.read_rows("investment_review_log")
+        if row.get(REVIEW_STAGE_COLUMN, "") in ACTIVE_REVIEW_STAGES
+    ]
+    if not rows:
+        console("추적 중인 아이디어 없음")
+        return 0
+
+    chunks = build_report_chunks(rows)
+    if dry_run:
+        console(f"[dry-run] {len(rows)} ideas in {len(chunks)} message(s)")
+        for index, message in enumerate(chunks, 1):
+            console(f"\n--- report {index}/{len(chunks)} ---")
+            console(message)
+        return 0
+
+    token = c.load_dotenv_value("TELEGRAM_BOT_TOKEN")
+    chat_id = c.load_dotenv_value("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        console("[warn] Telegram credentials missing; report skipped")
+        return 0
+
+    for index, message in enumerate(chunks, 1):
+        if not send_message(token, chat_id, message):
+            console(f"[warn] report chunk {index}/{len(chunks)} failed")
+            continue
+        console(f"[sent] report chunk {index}/{len(chunks)}")
+    return 0
+
+
 def send_message(token: str, chat_id: str, message: str) -> bool:
     endpoint = f"https://api.telegram.org/bot{token}/sendMessage"
     body = {
@@ -213,6 +342,9 @@ def send_message(token: str, chat_id: str, message: str) -> bool:
 
 def main(argv: list[str]) -> int:
     args = parse_args(argv[1:])
+    if args.report:
+        return run_report(args.dry_run)
+
     state = load_state()
     pushed = set(state["pushed"])
     rows = c.read_rows("signal_log")

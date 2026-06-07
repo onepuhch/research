@@ -63,6 +63,9 @@ jobs:
   weekly-reddit:
     if: github.event.schedule == '0 0 * * 1'
     runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
       - name: Check out repository
@@ -93,3 +96,6 @@ jobs:
           run_date="$(TZ=Asia/Seoul date +%F)"
           git commit -m "chore: weekly reddit run ${run_date}"
           git push
+
+      - name: Send weekly investment status report
+        run: python scripts/notify.py --report

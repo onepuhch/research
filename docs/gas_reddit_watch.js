@@ -1,8 +1,8 @@
 /**
  * GitHub의 reddit_watch.csv를 Google Sheets에 누적합니다.
  * Apps Script의 주간 시간 기반 트리거에서 importRedditWatch를 실행하세요.
+ * SHEET_ID는 같은 Apps Script 프로젝트의 gas_main.js에서 공유합니다.
  */
-const SHEET_ID = "";
 const SHEET_NAME = "reddit_watch";
 const CSV_URL =
   "https://raw.githubusercontent.com/onepuhch/research/main/data/processed/reddit_watch.csv";
