@@ -10,9 +10,12 @@
 2. ✅ **점수 보정** — 프롬프트 규칙 + **메가캡 코드 가드**(소외축 0, 티어 A 금지). 티어를 점수 기반으로 결정론화. **검증: Alphabet A→B 차단됨.**
 3. ✅ **EDGAR 정밀화** — 쿼리를 실제 병목 문구로 좁힘. **검증: 쓰레기(AIRO·NRGV) → ALGM·DIOD·ATRO 등 반도체 소형주로 개선.**
 4. ✅ **레딧 격리 파이프라인** — `collect_reddit.py`(RSS) → `reddit_watch.csv`(signal_log과 **격리**). SEC 티커목록으로 노이즈 컷. **검증: 200글 → 32후보.**
-5. ⏭ **다음: Phase 2 텔레그램 push**(`notify.py`) → **Phase 3 GitHub Actions 매일 cron**.
+5. ✅ **Phase 2 텔레그램 push**(`notify.py`) — 티어 A/B만, 중복방지, **상세 카드형**(무슨일/왜중요/볼것 3요소 + 용어 + 출처), 미분류 제외. **검증: 카드 렌더 정상, 실제 전송 성공.**
+6. ✅ **신호 품질 보정** — 미분류(이름없는) 종목 티어 A 금지 + 폰 전송 제외. Gemini 요약 3요소화, 6축 점수 표시 제거.
+7. ⏭ **다음: 내일 quota 풀리면 실데이터 1바퀴 → 폰에서 카드 최종확인 → Phase 3 GitHub Actions 매일 cron.**
 
-> 현재 작동 확인됨: collect→extract(Gemini, throttle)→digest + 레딧 별도 라인. `.env`는 깃에 안 올라감(안전).
+> 현재 작동 확인됨: collect→extract(Gemini, throttle)→notify(카드형) + 레딧 별도 라인. `.env`는 깃에 안 올라감(안전).
+> **⚠️ Gemini 무료티어 "하루 할당량"**: 오늘 반복 테스트로 일일 quota 소진 → 429. throttle은 분당제한만 막음. **정상 운영(하루 1회 cron, ~14콜)에서는 문제 없음.** 막히면 다음날 재시도.
 > 레딧 운영 메모: `.json`은 403 차단 → **`.rss` 사용**. 자동화(Phase 3) 시 데이터센터 IP 차단 가능성 있음.
 
 ## 완료
