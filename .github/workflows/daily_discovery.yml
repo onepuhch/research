@@ -3,6 +3,7 @@ name: Daily Discovery
 on:
   schedule:
     - cron: "0 0 * * *"
+    - cron: "0 0 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -14,6 +15,7 @@ concurrency:
 
 jobs:
   daily-discovery:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * *'
     runs-on: ubuntu-latest
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -56,4 +58,38 @@ jobs:
 
           run_date="$(TZ=Asia/Seoul date +%F)"
           git commit -m "chore: daily discovery run ${run_date}"
+          git push
+
+  weekly-reddit:
+    if: github.event.schedule == '0 0 * * 1'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collect weekly Reddit watch
+        run: python scripts/collect_reddit.py
+
+      - name: Commit and push Reddit watch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- data/processed/reddit_watch.csv
+
+          if git diff --cached --quiet; then
+            echo "No Reddit watch changes to commit."
+            exit 0
+          fi
+
+          run_date="$(TZ=Asia/Seoul date +%F)"
+          git commit -m "chore: weekly reddit run ${run_date}"
           git push
