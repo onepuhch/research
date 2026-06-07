@@ -82,6 +82,21 @@ def build_review_data(
     }
 
 
+def promote_signal(
+    signal: dict[str, str],
+    idea_type: str = DEFAULT_IDEA_TYPE,
+    strength: str = DEFAULT_STRENGTH,
+    trigger: str = "",
+) -> str:
+    idea_id = c.next_id(REVIEW_TABLE)
+    payload = {
+        "target_table": REVIEW_TABLE,
+        "data": build_review_data(signal, idea_type, strength, trigger),
+    }
+    add_entry.process(payload)
+    return idea_id
+
+
 def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     signal = find_signal(args.signal_id)
@@ -89,13 +104,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[error] signal_id를 찾을 수 없습니다: {args.signal_id}", file=sys.stderr)
         return 1
 
-    idea_id = c.next_id(REVIEW_TABLE)
-    payload = {
-        "target_table": REVIEW_TABLE,
-        "data": build_review_data(signal, args.idea_type, args.strength, args.trigger),
-    }
     try:
-        add_entry.process(payload)
+        idea_id = promote_signal(signal, args.idea_type, args.strength, args.trigger)
     except (FileNotFoundError, ValueError) as error:
         print(f"[error] 승격 실패: {error}", file=sys.stderr)
         return 1

@@ -60,6 +60,29 @@ jobs:
           git commit -m "chore: daily discovery run ${run_date}"
           git push
 
+      - name: Process Telegram commands
+        run: python scripts/telegram_cmd.py
+
+      - name: Commit and push Telegram command state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- \
+            data/processed/investment_review_log.csv \
+            data/processed/telegram_offset.json
+
+          if git diff --cached --quiet; then
+            echo "No Telegram command changes to commit."
+            exit 0
+          fi
+
+          run_date="$(TZ=Asia/Seoul date +%F)"
+          git commit -m "chore: process telegram commands ${run_date}"
+          git push
+
   weekly-reddit:
     if: github.event.schedule == '0 0 * * 1'
     runs-on: ubuntu-latest
