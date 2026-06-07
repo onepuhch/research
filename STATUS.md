@@ -1,9 +1,19 @@
 # STATUS — investment-research-system
 
-마지막 업데이트: 2026-06-03
+마지막 업데이트: 2026-06-07
 
 ## 한 줄 요약
-로컬 CSV 기반 투자 후보 **조기 발굴 엔진**. 코어 + metric_log + Discovery Engine Phase 1(Gemini 추출) 작동 확인. GitHub(onepuhch/research) 푸시 완료.
+투자 후보 **조기 발굴 엔진**. **매일 자동 가동 중**: GitHub Actions(KST 09:00)가 수집→Gemini 추출→텔레그램 카드→repo 커밋. P0(데이터 오염 차단) 완료. 다음은 P1(발굴 루프 닫기).
+
+## ★ 자동화 아키텍처 (최종 — 2026-06-07 확정)
+- **실행**: GitHub Actions `.github/workflows/daily_discovery.yml` (cron UTC 00:00 = KST 09:00, +월요일 reddit·현황판). PC 무관·무료.
+- **추출 LLM**: Gemini API(무료티어, 하루 1회라 quota 무관). 키는 **GitHub Secrets**.
+- **비밀키**: GitHub Secrets(GEMINI/TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID/FMP). `.env`는 로컬·gitignore.
+- **데이터 누적**: repo CSV를 Actions가 커밋·push.
+- **구글시트**: GAS(`docs/gas_*.js`)가 raw CSV 읽어 시트 동기화(보기용).
+- **텔레그램 명령어**: `/track /list /help`(`telegram_cmd.py`, 매일 polling).
+- **탈락한 대안**: Claude routine(비밀키 못 둠), GAS 메인엔진(구독 로그인 불가). 상세: 메모리 `discovery-llm-execution`.
+- **개선 백로그·점검결과**: `docs/improvement_backlog.md` (목적적합도 ~4/10, 기반 ~8/10. P0 완료, P1~P4 남음).
 
 ## ▶ 다음 순서 — 우선순위순
 1. ✅ **429 throttle** — `extract.py` 호출 간 `sleep`(GEMINI_SLEEP=4s) + 429/503 지수 백오프 재시도(3회). limit 5→3. **검증: 14건 전부 추출, 누락 0.**
@@ -13,6 +23,13 @@
 5. ✅ **Phase 2 텔레그램 push**(`notify.py`) — 티어 A/B만, 중복방지, **상세 카드형**(무슨일/왜중요/볼것 3요소 + 용어 + 출처), 미분류 제외. **검증: 카드 렌더 정상, 실제 전송 성공.**
 6. ✅ **신호 품질 보정** — 미분류(이름없는) 종목 티어 A 금지 + 폰 전송 제외. Gemini 요약 3요소화, 6축 점수 표시 제거.
 7. ✅ **Phase 3 완료 — GitHub Actions 매일 자동 실행 (UTC 00:00 = KST 09:00)**. 수동 실행 테스트 통과: 초록체크 + 텔레그램 카드 수신 + GitHub 커밋 누적 확인.
+8. ✅ **승격 CLI** `promote.py` (signal_id→investment_review_log) + 텔레그램 명령어 `/track /list /help`(`telegram_cmd.py`).
+9. ✅ **레딧 주간 자동화** (월요일 job) + **주간 추적 현황판** `notify.py --report`.
+10. ✅ **구글시트 연동(GAS)** — reddit_watch/signal_log/investment_review_log 3탭 동기화. 사용자 시트 생성·트리거 설정 완료.
+11. ✅ **FMP EPS 리비전 수집** `collect_eps.py` (`eps_watchlist.json`, metric_log 기록, 동일 FY 비교).
+12. ✅ **소스 정리** — 구글뉴스 RSS 제거(후행·대형주), EDGAR 직접 스캔 중심 + Substack 3개(SemiAnalysis/Fabricated Knowledge/Import AI).
+13. ✅ **P0 데이터 오염 차단** (commit c4f347c) — EDGAR 본문수집·직접URL·accession ID / 비신호 거절게이트(is_signal) / 중복방지(seen_sources) / 합성 fallback 제거.
+14. ⏭ **다음: 내일 KST 09:00 자동 실행 결과 확인(거절게이트 강도·본문수집 점검) → P1(발굴 루프 닫기).**
 
 > 현재 작동 확인됨: collect→extract(Gemini, throttle)→notify(카드형) + 레딧 별도 라인. `.env`는 깃에 안 올라감(안전).
 > **⚠️ Gemini 무료티어 "하루 할당량"**: 오늘 반복 테스트로 일일 quota 소진 → 429. throttle은 분당제한만 막음. **정상 운영(하루 1회 cron, ~14콜)에서는 문제 없음.** 막히면 다음날 재시도.
