@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -14,6 +15,33 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "processed"
 CONFIG_PATH = ROOT / "config" / "schema.json"
 ENCODING = "utf-8-sig"
+
+
+def load_dotenv_value(key: str) -> str:
+    """Read a value from the process environment, then the project .env file."""
+    value = os.environ.get(key, "").strip()
+    if value:
+        return value
+
+    env_path = ROOT / ".env"
+    if not env_path.exists():
+        return ""
+
+    for raw_line in env_path.read_text(encoding=ENCODING).splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        name, raw_value = line.split("=", 1)
+        name = name.strip()
+        if name.startswith("export "):
+            name = name[7:].strip()
+        if name != key:
+            continue
+        parsed = raw_value.strip()
+        if len(parsed) >= 2 and parsed[0] == parsed[-1] and parsed[0] in {"'", '"'}:
+            parsed = parsed[1:-1]
+        return parsed.strip()
+    return ""
 
 
 def stringify(value: Any) -> str:

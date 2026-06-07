@@ -115,32 +115,6 @@ def normalize(text: str) -> str:
     return " ".join((text or "").lower().split())
 
 
-def load_dotenv_value(key: str) -> str:
-    value = os.environ.get(key, "").strip()
-    if value:
-        return value
-
-    env_path = c.ROOT / ".env"
-    if not env_path.exists():
-        return ""
-
-    for raw_line in env_path.read_text(encoding="utf-8-sig").splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        name, raw_value = line.split("=", 1)
-        name = name.strip()
-        if name.startswith("export "):
-            name = name[7:].strip()
-        if name != key:
-            continue
-        parsed = raw_value.strip()
-        if len(parsed) >= 2 and parsed[0] == parsed[-1] and parsed[0] in {"'", '"'}:
-            parsed = parsed[1:-1]
-        return parsed.strip()
-    return ""
-
-
 def find_signal_type(text: str, source_type: str) -> str | None:
     lowered = normalize(text)
     for signal_type, _label, phrases in SIGNAL_RULES:
@@ -511,7 +485,7 @@ def main(argv: list[str]) -> int:
         items = payload.get("items", [])
         if not isinstance(items, list):
             raise ValueError("'items' must be a list.")
-        api_key = load_dotenv_value("GEMINI_API_KEY")
+        api_key = c.load_dotenv_value("GEMINI_API_KEY")
         dict_items = [item for item in items if isinstance(item, dict)]
         signals: list[dict[str, str]] = []
         for index, item in enumerate(dict_items):
@@ -530,7 +504,7 @@ def main(argv: list[str]) -> int:
         print(f"[error] {error}")
         return 1
 
-    source = "Gemini Flash" if load_dotenv_value("GEMINI_API_KEY") else "keyword fallback"
+    source = "Gemini Flash" if c.load_dotenv_value("GEMINI_API_KEY") else "keyword fallback"
     print(f"[extracted] signal_log rows added: {len(signals)} ({source})")
     for signal in signals[:10]:
         print(
