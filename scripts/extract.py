@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 RAW_LATEST = c.ROOT / "data" / "raw" / "discovery" / "latest.json"
+DISCOVERY_CONFIG_PATH = c.ROOT / "config" / "discovery_sources.json"
 SEEN_SOURCES_PATH = c.DATA_DIR / "seen_sources.json"
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_TIMEOUT = 30
@@ -31,18 +32,6 @@ GEMINI_TIMEOUT = 30
 GEMINI_SLEEP = float(os.environ.get("GEMINI_SLEEP", "4"))
 GEMINI_MAX_RETRIES = int(os.environ.get("GEMINI_MAX_RETRIES", "3"))
 RETRY_STATUS = {429, 500, 502, 503, 504}
-
-# 시장이 이미 다 아는 메가캡 — 소외축 0 + 티어 A 금지 (소형주 발굴이 목표)
-MEGA_CAP_TICKERS = {
-    "NVDA", "GOOGL", "GOOG", "MSFT", "AMZN", "AAPL", "META", "TSLA",
-    "AVGO", "AMD", "TSM", "ORCL", "NFLX", "INTC", "QCOM", "TXN", "CSCO",
-    "IBM", "ADBE", "CRM", "MU", "ASML", "SMCI", "DELL", "ARM",
-}
-MEGA_CAP_NAMES = {
-    "alphabet", "google", "microsoft", "amazon", "apple", "meta", "tesla",
-    "nvidia", "broadcom", "oracle", "netflix", "intel", "qualcomm", "cisco",
-    "advanced micro devices", "micron", "asml", "taiwan semiconductor",
-}
 
 SIGNAL_TYPES = c.ENUMS["신호유형"]
 TIERS = c.ENUMS["티어"]
@@ -109,6 +98,27 @@ def load_payload(path: Path) -> dict[str, Any]:
     if not path.exists():
         raise FileNotFoundError(f"collected payload not found: {path}")
     return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def load_edgar_extract_config() -> tuple[int, list[str]]:
+    default_limit = 40
+    if not DISCOVERY_CONFIG_PATH.exists():
+        return default_limit, []
+    try:
+        config = json.loads(DISCOVERY_CONFIG_PATH.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as error:
+        print(f"[warn] discovery config unreadable; using extract_limit={default_limit}: {error}")
+        return default_limit, []
+    edgar = config.get("edgar", {}) if isinstance(config, dict) else {}
+    if not isinstance(edgar, dict):
+        return default_limit, []
+    try:
+        extract_limit = int(edgar.get("extract_limit", edgar.get("limit", default_limit)))
+    except (TypeError, ValueError):
+        extract_limit = default_limit
+    query = str(edgar.get("query", ""))
+    phrases = [phrase.strip().lower() for phrase in re.findall(r'"([^"]+)"', query) if phrase.strip()]
+    return max(0, extract_limit), phrases
 
 
 def load_seen_sources() -> set[str]:
@@ -402,6 +412,59 @@ def clean_text(value: Any, default: str = "") -> str:
     return text or default
 
 
+def item_prefilter_text(item: dict[str, Any]) -> str:
+    title = clean_text(item.get("title"))
+    raw_text = clean_text(item.get("raw_text"))
+    return f"{title} {raw_text}"
+
+
+def prefilter_score(item: dict[str, Any], phrases: list[str]) -> int:
+    text = item_prefilter_text(item)
+    if c.is_megacap(clean_text(item.get("title"))):
+        return -100
+    lowered = text.lower()
+    score = sum(1 for phrase in set(phrases) if phrase in lowered)
+    raw_length = len(clean_text(item.get("raw_text")))
+    if raw_length < 400:
+        score -= 2
+    elif raw_length < 800:
+        score -= 1
+    return score
+
+
+def prefilter_items(
+    items: list[dict[str, Any]],
+    extract_limit: int,
+    phrases: list[str],
+) -> list[dict[str, Any]]:
+    scored: list[tuple[int, int, dict[str, Any]]] = []
+    megacap_skips = 0
+    for index, item in enumerate(items):
+        score = prefilter_score(item, phrases)
+        if score <= -50:
+            megacap_skips += 1
+            print(
+                "[prefilter] skipped megacap before Gemini: "
+                f"{clean_text(item.get('title'), '(untitled)')[:120]}"
+            )
+            continue
+        scored.append((score, index, item))
+    ranked = sorted(scored, key=lambda entry: (-entry[0], entry[1]))
+    selected = ranked[:extract_limit] if extract_limit else []
+    skipped = max(0, len(ranked) - len(selected))
+    print(
+        f"[prefilter] Gemini candidates: {len(selected)}/{len(items)} "
+        f"(extract_limit={extract_limit}, ranked_out={skipped}, megacap_skipped={megacap_skips})"
+    )
+    for score, _index, item in selected[:10]:
+        print(
+            f"[prefilter] keep score={score} "
+            f"{clean_text(item.get('source_type'))} | "
+            f"{clean_text(item.get('title'), '(untitled)')[:120]}"
+        )
+    return [item for _score, _index, item in selected]
+
+
 def normalize_signal_type(value: Any, item: dict[str, Any]) -> str:
     text = clean_text(value)
     if text in SIGNAL_TYPES:
@@ -419,18 +482,6 @@ def normalize_subject(value: Any, item: dict[str, Any]) -> str:
     if subject == title or len(subject) > 80 or looks_like_headline(subject):
         subject = infer_subject(title, str(item.get("raw_text", "")), str(item.get("source_type", "")))
     return subject or "미분류"
-
-
-def is_megacap(subject: str) -> bool:
-    """유명 메가캡이면 True. 티커(단어 경계)·회사명 부분일치 둘 다 본다."""
-    if not subject:
-        return False
-    upper = subject.upper()
-    for ticker in MEGA_CAP_TICKERS:
-        if re.search(rf"\b{re.escape(ticker)}\b", upper):
-            return True
-    lowered = subject.lower()
-    return any(name in lowered for name in MEGA_CAP_NAMES)
 
 
 def looks_like_headline(value: str) -> bool:
@@ -469,7 +520,7 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str] | 
     if is_unnamed_subject(subject):
         print("[rejected] 식별 가능한 회사/티커 없음")
         return None
-    megacap = is_megacap(subject)
+    megacap = c.is_megacap(subject)
     signal_type = normalize_signal_type(data.get("signal_type"), item)
     axes_source = data.get("upside_axes")
     axes = normalize_axes(axes_source)
@@ -542,18 +593,37 @@ def main(argv: list[str]) -> int:
         if not isinstance(items, list):
             raise ValueError("'items' must be a list.")
         api_key = c.load_dotenv_value("GEMINI_API_KEY")
+        extract_limit, prefilter_phrases = load_edgar_extract_config()
         seen = load_seen_sources()
         dict_items = [
             item
             for item in items
             if isinstance(item, dict) and str(item.get("source_type", "")).lower() != "fallback"
         ]
-        signals: list[dict[str, str]] = []
-        for index, item in enumerate(dict_items):
+        candidates: list[dict[str, Any]] = []
+        for item in dict_items:
             fingerprint = source_fingerprint(item)
             if fingerprint in seen:
                 print(f"[duplicate] skipped source: {fingerprint}")
                 continue
+            candidates.append(item)
+        # 사전필터는 EDGAR 홍수(수백 건→상위 N)만 대상. RSS(전문가 Substack)는
+        # 이미 소스 큐레이션+날짜필터로 걸러진 소수라 병목문구 점수경쟁에서 빼고 전부 통과시킨다.
+        edgar_candidates = [
+            item for item in candidates
+            if str(item.get("source_type", "")).lower() == "edgar"
+        ]
+        other_candidates = [
+            item for item in candidates
+            if str(item.get("source_type", "")).lower() != "edgar"
+        ]
+        filtered_items = (
+            prefilter_items(edgar_candidates, extract_limit, prefilter_phrases)
+            + other_candidates
+        )
+        signals: list[dict[str, str]] = []
+        for index, item in enumerate(filtered_items):
+            fingerprint = source_fingerprint(item)
             signal = build_signal(item, api_key)
             if signal:
                 append_signal(signal)
@@ -561,7 +631,7 @@ def main(argv: list[str]) -> int:
                 seen.add(fingerprint)
                 save_seen_sources(seen)
             # 무료티어 429 방지: Gemini를 쓸 때만 호출 사이 대기 (마지막 항목 제외)
-            if api_key and index < len(dict_items) - 1:
+            if api_key and index < len(filtered_items) - 1:
                 time.sleep(GEMINI_SLEEP)
     except Exception as error:
         print(f"[error] {error}")

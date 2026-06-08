@@ -19,6 +19,8 @@ from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
+import common as c
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "discovery_sources.json"
 RAW_DIR = ROOT / "data" / "raw" / "discovery"
@@ -178,27 +180,44 @@ def collect_rss_source(source: dict) -> list[dict[str, str]]:
 def collect_edgar(config: dict) -> list[dict[str, str]]:
     if not config.get("enabled", True):
         return []
-    params = {
+    search_limit = int(config.get("search_limit", config.get("limit", 100)))
+    max_pages = max(1, int(config.get("max_pages", 1)))
+    base_params = {
         "q": config.get("query", "guidance OR backlog"),
-        "from": "0",
-        "size": str(config.get("limit", 5)),
     }
     forms = config.get("forms") or []
     if forms:
-        params["forms"] = ",".join(forms)
+        base_params["forms"] = ",".join(forms)
     lookback_days = int(config.get("lookback_days", 30))
     if lookback_days > 0:
         end = datetime.now(timezone.utc).date()
         start = end - timedelta(days=lookback_days)
-        params["startdt"] = start.isoformat()
-        params["enddt"] = end.isoformat()
-    url = "https://efts.sec.gov/LATEST/search-index?" + urlencode(params)
-    data = json.loads(fetch_text(url))
-    hits = data.get("hits", {}).get("hits", [])
+        base_params["startdt"] = start.isoformat()
+        base_params["enddt"] = end.isoformat()
+    hits: list[dict] = []
+    for page in range(max_pages):
+        offset = page * 100
+        if offset >= search_limit:
+            break
+        size = min(100, search_limit - offset)
+        params = {**base_params, "from": str(offset), "size": str(size)}
+        url = "https://efts.sec.gov/LATEST/search-index?" + urlencode(params)
+        try:
+            data = json.loads(fetch_text(url))
+        except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
+            print(f"[warn] EDGAR search page skipped: from={offset} size={size}: {error}")
+            continue
+        page_hits = data.get("hits", {}).get("hits", [])
+        if not isinstance(page_hits, list):
+            print(f"[warn] EDGAR search page skipped: from={offset}: invalid hits payload")
+            continue
+        hits.extend(page_hits)
+        if len(page_hits) < size:
+            break
     records: list[dict[str, str]] = []
     seen_accessions: set[str] = set()
     phrases = search_phrases(str(config.get("query", "")))
-    for hit in hits[: int(config.get("limit", 5))]:
+    for hit in hits:
         source = hit.get("_source", {})
         try:
             accession, cik, document_name = edgar_identity(hit)
@@ -206,6 +225,11 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
             print(f"[warn] EDGAR hit skipped: {error}")
             continue
         if accession in seen_accessions:
+            continue
+        company = ", ".join(source.get("display_names") or [])
+        if c.is_megacap(company):
+            seen_accessions.add(accession)
+            print(f"[prefilter] EDGAR megacap skipped before fetch: {company} {accession}")
             continue
         accession_compact = accession.replace("-", "")
         filing_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_compact}/"
@@ -219,7 +243,6 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
         except (HTTPError, URLError, TimeoutError, ValueError) as error:
             print(f"[warn] EDGAR filing skipped: {accession}: {error}")
             continue
-        company = ", ".join(source.get("display_names") or [])
         form = source.get("file_type") or source.get("form") or "SEC filing"
         filed_at = source.get("file_date", "")
         title = clean_text(f"{company} {form} {filed_at}")

@@ -8,6 +8,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any
 
@@ -15,6 +16,17 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "processed"
 CONFIG_PATH = ROOT / "config" / "schema.json"
 ENCODING = "utf-8-sig"
+
+MEGA_CAP_TICKERS = {
+    "NVDA", "GOOGL", "GOOG", "MSFT", "AMZN", "AAPL", "META", "TSLA",
+    "AVGO", "AMD", "TSM", "ORCL", "NFLX", "INTC", "QCOM", "TXN", "CSCO",
+    "IBM", "ADBE", "CRM", "MU", "ASML", "SMCI", "DELL", "ARM",
+}
+MEGA_CAP_NAMES = {
+    "alphabet", "google", "microsoft", "amazon", "apple", "meta", "tesla",
+    "nvidia", "broadcom", "oracle", "netflix", "intel", "qualcomm", "cisco",
+    "advanced micro devices", "micron", "asml", "taiwan semiconductor",
+}
 
 
 def load_dotenv_value(key: str) -> str:
@@ -54,10 +66,25 @@ def stringify(value: Any) -> str:
     return str(value)
 
 
+def is_megacap(subject: str) -> bool:
+    """Return True for large, already well-followed companies."""
+    if not subject:
+        return False
+    upper = subject.upper()
+    for ticker in MEGA_CAP_TICKERS:
+        if re.search(rf"\b{re.escape(ticker)}\b", upper):
+            return True
+    lowered = subject.lower()
+    return any(
+        re.search(rf"(?<![a-z0-9]){re.escape(name)}(?![a-z0-9])", lowered)
+        for name in MEGA_CAP_NAMES
+    )
+
+
 def load_schema() -> dict[str, Any]:
     if not CONFIG_PATH.exists():
         raise FileNotFoundError(f"schema file not found: {CONFIG_PATH}")
-    with CONFIG_PATH.open(encoding="utf-8") as file:
+    with CONFIG_PATH.open(encoding=ENCODING) as file:
         return json.load(file)
 
 
