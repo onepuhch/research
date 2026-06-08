@@ -108,7 +108,7 @@ SIGNAL_ALIASES = {
 def load_payload(path: Path) -> dict[str, Any]:
     if not path.exists():
         raise FileNotFoundError(f"collected payload not found: {path}")
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def load_seen_sources() -> set[str]:
@@ -261,6 +261,7 @@ def build_keyword_signal(item: dict[str, Any]) -> dict[str, str] | None:
     tier = cap_unnamed_subject_tier(subject, tier_from_score(score))
     return {
         "날짜": date.today().isoformat(),
+        "published_at": str(item.get("published_at", "")),
         "종목/티커": subject,
         "테마": infer_theme(raw_text),
         "신호유형": signal_type,
@@ -499,6 +500,7 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str] | 
 
     return {
         "날짜": date.today().isoformat(),
+        "published_at": str(item.get("published_at", "")),
         "종목/티커": subject,
         "테마": clean_text(data.get("theme"), infer_theme(str(item.get("raw_text", ""))))[:60],
         "신호유형": signal_type,

@@ -15,6 +15,11 @@
 - [x] **중복 방지(content hash / URL / accession)** — source_id(accession/url) 지문 + `seen_sources.json` 영속. 같은 항목 재실행 0건 확인.
 - [x] **수집 실패 fallback의 합성 신호 제거** — collect는 items:[], extract는 fallback 무시 + 합성 라인 삭제.
 
+## P0.5 — RSS 신선도 필터 (2026-06-08 발견, 미완)
+
+- [ ] **RSS 날짜필터** — `collect_rss_source`가 pubDate를 무시하고 피드 "최근 N개"를 그대로 수집 → SemiAnalysis 공개피드의 9개월 된 글(2025-09)이 "오늘 신호"로 둔갑·푸시됨. 조기발굴 목적과 정반대. → RSS도 EDGAR처럼 `lookback_days`(기본 14) 날짜필터, 묵은·무날짜 항목 컷, `published_at` ISO 정규화. notify 카드에 발행일 표기. **중복방지(seen_sources)는 이미 있어 같은 글 반복푸시는 없음** — 이번 건 "신규 URL이지만 달력상 낡음" 케이스라 날짜필터로만 해결됨.
+- 결정(2026-06-08): 전문가 Substack 3개는 **유지+날짜필터**(EDGAR가 데일리 메인엔진, Substack은 진짜 새 글일 때만). 텔레그램 명령은 **아침 데일리 실행 때 처리**(즉응 워크플로 미도입). 데일리 cron 지각(GH Actions 무료, 오늘 4h 지연)은 **수용**(시간 미변경).
+
 ## P1 — 발굴 루프 닫기
 
 - [ ] **EPS 상향률 vs 주가 상승률(동일기간) 계산** ← PRINCIPLES §2의 밸류 판단 핵심. 현재 주가 데이터를 안 가져와 비교 불가. → 주가 변화율 수집해 동일기간 EPS 리비전율과 대조.

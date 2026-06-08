@@ -24,6 +24,7 @@ SIGNAL_ID_COLUMN = SIGNAL_TABLE["key"]
 (
     _SIGNAL_ID,
     DATE_COLUMN,
+    PUBLISHED_AT_COLUMN,
     SUBJECT_COLUMN,
     THEME_COLUMN,
     SIGNAL_TYPE_COLUMN,
@@ -169,6 +170,8 @@ def summary_lines(value: Any) -> list[str]:
 def render_block(row: dict[str, str]) -> str:
     source_url = escaped(row.get(SOURCE_URL_COLUMN, ""))
     source = escaped(row.get(SOURCE_COLUMN, ""))
+    published_at = escaped(row.get(PUBLISHED_AT_COLUMN, ""))
+    published_suffix = f" ({published_at})" if published_at else ""
     tier = row.get(TIER_COLUMN, "")
     lines = [
         f"<b>{TIER_EMOJI.get(tier, '')} {escaped(row.get(SUBJECT_COLUMN))} · "
@@ -180,10 +183,12 @@ def render_block(row: dict[str, str]) -> str:
     glossary = str(row.get(GLOSSARY_COLUMN, "") or "").strip()
     if glossary:
         lines.append(f"· 용어: {escaped(glossary)}")
-    if source_url:
-        lines.append(f'<a href="{source_url}">출처 보기</a>')
+    if source_url and source:
+        lines.append(f'출처: <a href="{source_url}">{source}</a>{published_suffix}')
+    elif source_url:
+        lines.append(f'<a href="{source_url}">출처 보기</a>{published_suffix}')
     elif source:
-        lines.append(f"출처 {source}")
+        lines.append(f"출처: {source}{published_suffix}")
     return "\n".join(lines)
 
 

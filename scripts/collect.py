@@ -10,6 +10,7 @@ import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -23,6 +24,7 @@ CONFIG_PATH = ROOT / "config" / "discovery_sources.json"
 RAW_DIR = ROOT / "data" / "raw" / "discovery"
 USER_AGENT = "investment-research-system/0.1 contact=local-research@example.com"
 TIMEOUT = 20
+ENCODING = "utf-8-sig"
 EDGAR_DOCUMENT_LIMIT = 2000
 EDGAR_DOCUMENT_MAX_BYTES = 2_000_000
 SEC_REQUEST_DELAY = 0.3
@@ -52,7 +54,7 @@ class TextExtractor(HTMLParser):
 def load_config() -> dict:
     if not CONFIG_PATH.exists():
         raise FileNotFoundError(f"source config not found: {CONFIG_PATH}")
-    return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    return json.loads(CONFIG_PATH.read_text(encoding=ENCODING))
 
 
 def fetch_text(url: str, max_bytes: int | None = None) -> str:
@@ -124,27 +126,52 @@ def text_from_child(item: ElementTree.Element, name: str) -> str:
     return clean_text(child.text if child is not None else "")
 
 
+def parse_rss_published_at(value: str, source_name: str, title: str) -> datetime | None:
+    if not value:
+        print(f"[warn] RSS item skipped: {source_name}: missing pubDate: {title or '(untitled)'}")
+        return None
+    try:
+        published = parsedate_to_datetime(value)
+    except (TypeError, ValueError, IndexError, OverflowError) as error:
+        print(f"[warn] RSS item skipped: {source_name}: invalid pubDate {value!r}: {error}")
+        return None
+    if published.tzinfo is None:
+        print(f"[warn] RSS item skipped: {source_name}: pubDate missing timezone {value!r}")
+        return None
+    return published.astimezone(timezone.utc)
+
+
 def collect_rss_source(source: dict) -> list[dict[str, str]]:
     xml_text = fetch_text(source["url"])
     root = ElementTree.fromstring(xml_text)
     items = root.findall("./channel/item")
     limit = int(source.get("limit", 5))
+    lookback_days = int(source.get("lookback_days", 14))
+    cutoff = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+    source_name = source.get("name", "RSS")
     records: list[dict[str, str]] = []
-    for item in items[:limit]:
+    for item in items:
         title = text_from_child(item, "title")
         description = text_from_child(item, "description")
         url = text_from_child(item, "link")
+        published = parse_rss_published_at(text_from_child(item, "pubDate"), source_name, title)
+        if published is None:
+            continue
+        if lookback_days > 0 and published < cutoff:
+            continue
         records.append(
             {
                 "source_type": "rss",
-                "source_name": source.get("name", "RSS"),
+                "source_name": source_name,
                 "source_id": url,
                 "title": title,
                 "url": url,
-                "published_at": text_from_child(item, "pubDate"),
+                "published_at": published.date().isoformat(),
                 "raw_text": clean_text(f"{title}. {description}"),
             }
         )
+        if len(records) >= limit:
+            break
     return records
 
 
@@ -217,8 +244,8 @@ def write_payload(payload: dict) -> Path:
     path = RAW_DIR / f"collected_{stamp}.json"
     latest = RAW_DIR / "latest.json"
     text = json.dumps(payload, ensure_ascii=False, indent=2)
-    path.write_text(text, encoding="utf-8")
-    latest.write_text(text, encoding="utf-8")
+    path.write_text(text, encoding=ENCODING)
+    latest.write_text(text, encoding=ENCODING)
     return path
 
 
