@@ -6,7 +6,7 @@ import html
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -18,24 +18,34 @@ import common as c  # noqa: E402
 STATE_PATH = c.DATA_DIR / "notify_state.json"
 TELEGRAM_TIMEOUT = 20
 MESSAGE_LIMIT = 3500
+# 미전송 A/B는 '오늘'이 아니어도 이 기간 안이면 재시도(날짜경계 누락 방지).
+# 중복방지(pushed)가 이미 있어 같은 신호가 두 번 가지는 않는다.
+NOTIFY_LOOKBACK_DAYS = 14
 
 SIGNAL_TABLE = c.table_def("signal_log")
 SIGNAL_ID_COLUMN = SIGNAL_TABLE["key"]
-(
-    _SIGNAL_ID,
-    DATE_COLUMN,
-    PUBLISHED_AT_COLUMN,
-    SUBJECT_COLUMN,
-    THEME_COLUMN,
-    SIGNAL_TYPE_COLUMN,
-    SUMMARY_COLUMN,
-    SCORE_COLUMN,
-    TIER_COLUMN,
-    STAGE_COLUMN,
-    GLOSSARY_COLUMN,
-    SOURCE_COLUMN,
-    SOURCE_URL_COLUMN,
-) = SIGNAL_TABLE["columns"]
+_SIGNAL_COLUMNS = set(SIGNAL_TABLE["columns"])
+
+
+def _signal_col(name: str) -> str:
+    """컬럼을 '이름'으로 잡는다(위치 의존 금지 — schema 순서 바뀌어도 안전)."""
+    if name not in _SIGNAL_COLUMNS:
+        raise ValueError(f"signal_log에 '{name}' 컬럼이 없음 (schema.json 확인)")
+    return name
+
+
+DATE_COLUMN = _signal_col("날짜")
+PUBLISHED_AT_COLUMN = _signal_col("published_at")
+SUBJECT_COLUMN = _signal_col("종목/티커")
+THEME_COLUMN = _signal_col("테마")
+SIGNAL_TYPE_COLUMN = _signal_col("신호유형")
+SUMMARY_COLUMN = _signal_col("특이값 요약")
+SCORE_COLUMN = _signal_col("upside_score")
+TIER_COLUMN = _signal_col("티어")
+STAGE_COLUMN = _signal_col("단계 추정")
+GLOSSARY_COLUMN = _signal_col("용어 풀이")
+SOURCE_COLUMN = _signal_col("출처")
+SOURCE_URL_COLUMN = _signal_col("출처URL")
 TIER_VALUES = tuple(c.ENUMS["티어"])
 if len(TIER_VALUES) < 2:
     raise ValueError("signal tier enum must define at least A and B tiers.")
@@ -127,6 +137,19 @@ def save_state(state: dict[str, list[str]]) -> None:
     temporary.replace(STATE_PATH)
 
 
+def within_lookback(value: Any, today: date, days: int) -> bool:
+    """True if the signal date is missing/recent enough to (re)send."""
+    raw = str(value or "").strip()
+    if not raw:
+        # 날짜 없는 신호도 미전송이면 보낸다(놓치는 것보다 낫다).
+        return True
+    try:
+        parsed = datetime.strptime(raw[:10], "%Y-%m-%d").date()
+    except ValueError:
+        return True
+    return today - timedelta(days=days) <= parsed <= today
+
+
 def select_signals(
     rows: list[dict[str, str]],
     pushed: set[str],
@@ -134,11 +157,11 @@ def select_signals(
     include_all: bool,
 ) -> list[dict[str, str]]:
     maximum_rank = TIER_ORDER[min_tier]
-    today = date.today().isoformat()
+    today = date.today()
     selected = [
         row
         for row in rows
-        if row.get(DATE_COLUMN, "") == today
+        if within_lookback(row.get(DATE_COLUMN, ""), today, NOTIFY_LOOKBACK_DAYS)
         and row.get(TIER_COLUMN, "") in PUSH_TIERS
         and TIER_ORDER[row[TIER_COLUMN]] <= maximum_rank
         and row.get(SUBJECT_COLUMN, "").strip() not in {"", "미분류"}
