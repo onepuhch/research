@@ -46,6 +46,8 @@ jobs:
         run: python scripts/notify.py
 
       - name: Commit and push daily state
+        # notify가 실패(exit 1)해도 수집 데이터는 절대 잃지 않도록 무조건 커밋.
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
@@ -68,9 +70,11 @@ jobs:
           git push
 
       - name: Process Telegram commands
+        if: always()
         run: python scripts/telegram_cmd.py
 
       - name: Commit and push Telegram command state
+        if: always()
         shell: bash
         run: |
           set -euo pipefail

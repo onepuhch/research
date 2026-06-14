@@ -330,14 +330,19 @@ def run_report(dry_run: bool) -> int:
     token = c.load_dotenv_value("TELEGRAM_BOT_TOKEN")
     chat_id = c.load_dotenv_value("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
-        console("[warn] Telegram credentials missing; report skipped")
-        return 0
+        console("[error] Telegram credentials missing; report FAILED")
+        return 1
 
+    failures = 0
     for index, message in enumerate(chunks, 1):
         if not send_message(token, chat_id, message):
+            failures += 1
             console(f"[warn] report chunk {index}/{len(chunks)} failed")
             continue
         console(f"[sent] report chunk {index}/{len(chunks)}")
+    if failures:
+        console(f"[error] {failures}/{len(chunks)} report chunk(s) failed")
+        return 1
     return 0
 
 
@@ -394,17 +399,23 @@ def main(argv: list[str]) -> int:
     token = c.load_dotenv_value("TELEGRAM_BOT_TOKEN")
     chat_id = c.load_dotenv_value("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
-        console("[warn] Telegram credentials missing; notification skipped")
-        return 0
+        console("[error] Telegram credentials missing; notification FAILED")
+        return 1
 
+    failures = 0
     for index, (message, signal_ids) in enumerate(chunks, 1):
         if not send_message(token, chat_id, message):
+            failures += 1
             console(f"[warn] chunk {index}/{len(chunks)} not recorded; retry on next run")
             continue
         pushed.update(signal_id for signal_id in signal_ids if signal_id)
         state["pushed"] = sorted(pushed)
         save_state(state)
         console(f"[sent] chunk {index}/{len(chunks)}: {len(signal_ids)} signals")
+    if failures:
+        # 미전송분은 날짜 재시도로 복구되지만, 지속 장애는 Actions 빨간불로 노출한다.
+        console(f"[error] {failures}/{len(chunks)} chunk(s) failed to send")
+        return 1
     return 0
 
 
