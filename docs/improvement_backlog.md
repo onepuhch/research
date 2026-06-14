@@ -31,7 +31,8 @@
 - [ ] **promote 원신호 연결·중복 방지** — `promote.py`가 origin_signal_id·출처URL을 리뷰로그에 안 남김. 같은 신호 /track 반복 시 idea_id 계속 생성. 기본값(유형=병목확산형, 근거강도=2) 고정. → origin_signal_id 기록 + 동일 종목 중복 승격 차단 + 기본값 입력화.
 - [ ] **/track ↔ eps_watchlist 자동 연결** — 승격 종목이 자동 EPS 추적 안 됨(watchlist 수동). → promote 시 watchlist 자동 추가.
 - [ ] **EPS 연속성 정상화** — 값 미변경 시에도 "유지" 행이 쌓이고, `gen_report.py`가 상향→상향→유지를 연속 0회로 계산. → 값 미변경 행 skip + 연속 상향 카운트 수정.
-- [ ] **알림 날짜경계 재시도** — `notify.py`가 "오늘 신호"만 선택. 당일 전송 실패 후 다음날엔 미전송분이 누락. → 미전송(pushed 아님) 신호는 날짜 무관 재시도.
+- [x] **알림 날짜경계 재시도 + 컬럼 정합성** (2026-06-14, commit 445cebd) — 두 버그가 겹쳐 A/B 알짜 신호가 폰에 안 옴(검증: 전송가능 17건 중 5건만 전송, A티어 포함 12건 증발). ①**핵심 버그**: `notify.py`가 컬럼을 *위치(positional)*로 unpack → `published_at`을 schema 끝으로 옮긴 뒤 `티어` 칸이 `단계 추정`으로 한 칸씩 밀려 A/B 매칭이 항상 0건(telegram_cmd와 published_at 위치 가정이 충돌). → **이름 기반 조회**(`_signal_col`)로 전환해 schema 순서와 무관하게 안전. ②"오늘 신호"만 보내 cron 지각·전송실패 시 영영 누락 → 미전송(pushed 아님) A/B는 최근 14일 내면 날짜 무관 재시도. 묻혔던 12건 전송 완료.
+  - **교훈**: 스크립트 간 positional unpack은 schema 컬럼 순서 변경에 깨진다. extract·notify는 이름 기반으로 전환함. telegram_cmd.py도 동일 위험(첫 3컬럼 위치 가정) — 다음에 이름 기반으로.
 
 ## P2 — 점수·단계 신뢰성
 
