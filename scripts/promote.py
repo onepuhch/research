@@ -36,7 +36,7 @@ def promote_signal(signal, idea_type="병목 확산형", strength="1", trigger="
         origins = json.loads(row.get("origin_signal_ids") or "[]")
         if origin in origins:
             return row["idea_id"]
-        if row.get("entity_id") == entity and row.get("thesis_key", "").casefold() == thesis and row.get("검토 상태") != "종료":
+        if row.get("entity_id") == entity and row.get("thesis_key", "").casefold() == thesis and row.get("검토 상태") != "종료" and row.get("현재 단계") != "제외":
             return add_entry.process({"target_table": "investment_review_log", "data": {
                 "idea_id": row["idea_id"], "origin_signal_ids": json.dumps([*origins, origin]),
                 "변경 사유": f"동일 가설에 신규 근거 연결: {origin}", "판단 변화": "자료 부족",

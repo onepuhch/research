@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import hashlib
 import json
 import re
 import sys
@@ -312,12 +313,20 @@ def run_report(dry_run: bool) -> int:
         console("[error] Telegram credentials missing; report FAILED")
         return 1
 
+    state = load_state()
+    reports = state.setdefault("reports", [])
     failures = 0
     for index, message in enumerate(chunks, 1):
+        receipt = hashlib.sha256((c.today() + message).encode()).hexdigest()
+        if receipt in reports:
+            console(f"[already sent] report chunk {index}/{len(chunks)}")
+            continue
         if not send_message(token, chat_id, message):
             failures += 1
             console(f"[warn] report chunk {index}/{len(chunks)} failed")
             continue
+        reports.append(receipt)
+        save_state(state)
         console(f"[sent] report chunk {index}/{len(chunks)}")
     if failures:
         console(f"[error] {failures}/{len(chunks)} report chunk(s) failed")
@@ -349,10 +358,11 @@ def send_message(token: str, chat_id: str, message: str) -> bool:
         description = result.get("description", "unknown Telegram error")
         console(f"[warn] Telegram rejected message: {description}")
         return False
+    c.record_run("telegram_delivery", "success", message_id=result.get("result", {}).get("message_id"))
     return True
 
 
-def main(argv: list[str]) -> int:
+def _main(argv: list[str]) -> int:
     args = parse_args(argv[1:])
     if args.report:
         return run_report(args.dry_run)
@@ -408,6 +418,19 @@ def main(argv: list[str]) -> int:
         console(f"[error] {failures}/{len(chunks)} chunk(s) failed to send")
         return 1
     return 0
+
+
+def main(argv: list[str]) -> int:
+    component = "review_report" if "--report" in argv else "notify"
+    try:
+        result = _main(argv)
+    except (ValueError, OSError) as error:
+        if "--dry-run" not in argv:
+            c.record_run(component, "failed", error_type=type(error).__name__)
+        raise
+    if "--dry-run" not in argv:
+        c.record_run(component, "success" if result == 0 else "failed")
+    return result
 
 
 if __name__ == "__main__":

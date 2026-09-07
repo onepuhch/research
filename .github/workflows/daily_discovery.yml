@@ -53,11 +53,16 @@ jobs:
           python scripts/gen_report.py weekly
           python scripts/gen_report.py bottlenecks
           python scripts/gen_report.py quality
-      - name: Weekly community watch and review report
+      - name: Weekly community watch
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: |
           if [ "$(TZ=Asia/Seoul date +%u)" = '1' ]; then
             python scripts/collect_reddit.py
+          fi
+      - name: Weekly review report independently
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: |
+          if [ "$(TZ=Asia/Seoul date +%u)" = '1' ]; then
             python scripts/notify.py --report
           fi
       - name: Persist state even when a service fails

@@ -96,7 +96,7 @@ def render_valuation(subject):
 def render_health():
     state = c.read_json(c.DATA_DIR / "run_status.json", {})
     rows = []
-    for name in ["collect", "extract", "eps", "commands"]:
+    for name in ["collect", "extract", "eps", "commands", "notify", "review_report", "telegram_delivery"]:
         component = state.get(name, {})
         checked = component.get("checked_at", "")
         old = not checked or checked[:10] < (date.fromisoformat(c.today()) - timedelta(days=1)).isoformat()

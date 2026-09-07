@@ -1,13 +1,15 @@
 {
   "edgar": {
     "enabled": true,
-    "query": "\"capacity expansion\" OR \"design win\" OR \"long-term supply agreement\" OR \"record backlog\" OR \"prepayment\" OR \"sold out\" OR \"new customer\" OR \"pricing power\" OR \"lead time\" OR \"order intake\"",
-    "forms": ["8-K"],
+    "query": "\"capacity expansion\" OR \"design win\" OR \"long-term supply agreement\" OR \"record backlog\" OR \"customer prepayment\" OR \"customer deposit\" OR \"sold out\" OR \"new customer\" OR \"pricing power\" OR \"lead time\" OR \"order intake\"",
+    "forms": [
+      "8-K"
+    ],
     "lookback_days": 7,
     "search_limit": 100,
     "extract_limit": 40,
     "max_pages": 1,
-    "_note": "구글뉴스 RSS 제거. EDGAR 직접 스캔이 핵심(공시→Gemini 판단). Substack 전문가 분석만 유지."
+    "_note": "Generic loan prepayment removed to avoid financing documents crowding out commercial signals."
   },
   "rss": [
     {

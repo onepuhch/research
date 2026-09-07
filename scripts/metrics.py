@@ -106,6 +106,11 @@ def revision_stats(rows):
 
 
 def aligned_valuation(eps_rows, price_rows, days=90):
+    # Validate definitions before daily collapsing, which could hide a conflicting series.
+    live_eps = [r for r in eps_rows if r.get("data_quality") == "live"]
+    live_prices = [r for r in price_rows if r.get("data_quality") == "live"]
+    if len({series_key(r) for r in live_eps}) > 1 or len({series_key(r) for r in live_prices}) > 1:
+        return {"status": "지표 정의 혼합"}
     eps = daily_observations(eps_rows)
     prices = {observation_date(r): r for r in daily_observations(price_rows)}
     if not eps:

@@ -1,6 +1,6 @@
 {
   "eps": {
-    "checked_at": "2026-09-05T17:00:03+00:00",
+    "checked_at": "2026-09-07T13:28:06+00:00",
     "status": "degraded",
     "last_success_at": null,
     "targets": 1,
@@ -12,5 +12,47 @@
         "http_status": 402
       }
     ]
+  },
+  "collect": {
+    "checked_at": "2026-09-07T13:26:10+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:26:10+00:00",
+    "item_count": 62,
+    "errors": [],
+    "collected_at": "2026-09-07T13:26:10.257461+00:00"
+  },
+  "extract": {
+    "checked_at": "2026-09-07T13:27:42+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:27:42+00:00",
+    "accepted": 0,
+    "rejected": 5,
+    "failed": 0,
+    "pending": 0,
+    "model": "gemini-2.5-flash",
+    "prompt_version": "research-v2-20260906"
+  },
+  "commands": {
+    "checked_at": "2026-09-07T13:28:03+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:28:03+00:00",
+    "processed": 0,
+    "failed": 0
+  },
+  "telegram_delivery": {
+    "checked_at": "2026-09-07T13:28:04+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:28:04+00:00",
+    "message_id": 119
+  },
+  "review_report": {
+    "checked_at": "2026-09-07T13:28:04+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:28:04+00:00"
+  },
+  "notify": {
+    "checked_at": "2026-09-07T13:28:05+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:28:05+00:00"
   }
 }

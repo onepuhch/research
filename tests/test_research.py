@@ -82,6 +82,20 @@ class ResearchTests(unittest.TestCase):
             with patch.object(extract, "build_signal", side_effect=model):
                 return extract.main(["extract"])
 
+    def test_report_retry_does_not_resend_successful_chunk(self):
+        with patch.object(c, "active_ideas", return_value=[{}]), \
+             patch.object(notify, "build_report_chunks", return_value=["review result"]), \
+             patch.object(notify, "STATE_PATH", self.data / "notify_state.json"), \
+             patch.object(c, "load_dotenv_value", return_value="fake"), \
+             patch.object(notify, "send_message", return_value=True) as send:
+            self.assertEqual(notify.run_report(False), 0)
+            self.assertEqual(notify.run_report(False), 0)
+            self.assertEqual(send.call_count, 1)
+
+    def test_valuation_detects_same_day_definition_collision(self):
+        rows = [self.metric(), self.metric(**{"출처": "Other vendor"})]
+        self.assertEqual(metrics.aligned_valuation(rows, [])["status"], "지표 정의 혼합")
+
     def test_recovered_journal_deletion_is_staged(self):
         journal = "processed/pending_tables.json"
         seen = []

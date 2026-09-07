@@ -275,6 +275,7 @@ def main(argv: list[str] | None = None) -> int:
         updates = get_updates(token, offset, args.poll_timeout)
         processed = process_updates(token, chat_id, updates)
     except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError, RuntimeError) as error:
+        c.record_run("commands", "failed", error_type=type(error).__name__)
         console(f"[error] Telegram polling failed: {type(error).__name__}")
         return 1
     console(f"[telegram] updates={len(updates)}, authorized_messages={processed}")
