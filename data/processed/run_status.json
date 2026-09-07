@@ -1,36 +1,45 @@
 {
   "eps": {
-    "checked_at": "2026-09-07T13:31:34+00:00",
-    "status": "unavailable",
+    "checked_at": "2026-09-07T13:35:29+00:00",
+    "status": "degraded",
     "last_success_at": null,
     "targets": 1,
-    "reason": "credentials_missing"
+    "observations": 0,
+    "failures": [
+      {
+        "ticker": "CRDO",
+        "error_type": "HTTPError",
+        "http_status": 402
+      }
+    ]
   },
   "collect": {
-    "checked_at": "2026-09-07T13:29:51+00:00",
+    "checked_at": "2026-09-07T13:35:28+00:00",
     "status": "degraded",
     "last_success_at": "2026-09-07T13:26:10+00:00",
     "item_count": 21,
     "errors": [
       "Import AI: HTTP Error 403: Forbidden"
     ],
-    "collected_at": "2026-09-07T13:29:51.769659+00:00"
+    "collected_at": "2026-09-07T13:35:28.223070+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-07T13:31:34+00:00",
-    "status": "degraded",
-    "last_success_at": "2026-09-07T13:27:42+00:00",
-    "accepted": 1,
-    "rejected": 2,
-    "failed": 3,
-    "pending": 3,
+    "checked_at": "2026-09-07T13:35:28+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:35:28+00:00",
+    "accepted": 0,
+    "rejected": 0,
+    "validation_rejected": 0,
+    "validation_rejected_total": 3,
+    "failed": 0,
+    "pending": 0,
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-07T13:29:40+00:00",
+    "checked_at": "2026-09-07T13:35:16+00:00",
     "status": "success",
-    "last_success_at": "2026-09-07T13:29:40+00:00",
+    "last_success_at": "2026-09-07T13:35:16+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -41,13 +50,13 @@
     "message_id": 119
   },
   "review_report": {
-    "checked_at": "2026-09-07T13:31:37+00:00",
+    "checked_at": "2026-09-07T13:35:32+00:00",
     "status": "success",
-    "last_success_at": "2026-09-07T13:31:37+00:00"
+    "last_success_at": "2026-09-07T13:35:32+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-07T13:31:34+00:00",
+    "checked_at": "2026-09-07T13:35:29+00:00",
     "status": "success",
-    "last_success_at": "2026-09-07T13:31:34+00:00"
+    "last_success_at": "2026-09-07T13:35:29+00:00"
   }
 }
