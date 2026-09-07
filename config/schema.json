@@ -12,7 +12,8 @@
         "한줄설명",
         "거시국면",
         "관심도",
-        "마지막 업데이트"
+        "마지막 업데이트",
+        "data_quality"
       ]
     },
     "industry_indicators": {
@@ -27,7 +28,8 @@
         "위험 신호",
         "주요 데이터 출처",
         "업데이트 사유",
-        "마지막 업데이트"
+        "마지막 업데이트",
+        "data_quality"
       ]
     },
     "bottleneck_log": {
@@ -45,7 +47,12 @@
         "시장이 덜 보는 이유",
         "확인할 지표",
         "현재 단계",
-        "다음 액션"
+        "다음 액션",
+        "bottleneck_id",
+        "evidence_ids",
+        "반증 근거",
+        "해소 조건",
+        "data_quality"
       ]
     },
     "investment_review_log": {
@@ -77,7 +84,20 @@
         "이후 결과",
         "맞은 점",
         "틀린 점",
-        "프레임 수정"
+        "프레임 수정",
+        "entity_id",
+        "ticker",
+        "thesis_key",
+        "origin_signal_ids",
+        "출처URL",
+        "사업 단계",
+        "근거 수준",
+        "검토 상태",
+        "다음 점검일",
+        "판단 변화",
+        "변경 사유",
+        "추적 지표 정의",
+        "data_quality"
       ]
     },
     "metric_log": {
@@ -95,7 +115,32 @@
         "현재값",
         "변화율",
         "출처",
-        "메모"
+        "메모",
+        "entity_id",
+        "idea_id",
+        "as_of",
+        "period_end",
+        "fiscal_period",
+        "metric_kind",
+        "단위",
+        "통화",
+        "회계기준",
+        "출처URL",
+        "observation_key",
+        "data_quality",
+        "published_at"
+      ],
+      "series_key": [
+        "entity_id",
+        "종목/업종",
+        "지표명",
+        "period_end",
+        "fiscal_period",
+        "metric_kind",
+        "출처",
+        "통화",
+        "단위",
+        "회계기준"
       ]
     },
     "signal_log": {
@@ -115,7 +160,63 @@
         "용어 풀이",
         "출처",
         "출처URL",
-        "published_at"
+        "published_at",
+        "source_id",
+        "entity_id",
+        "document_url",
+        "evidence_quote",
+        "event_state",
+        "signal_direction",
+        "extraction_method",
+        "model_version",
+        "prompt_version",
+        "axes_evidence",
+        "source_role",
+        "bottleneck_id",
+        "data_quality"
+      ],
+      "enum_aliases": {
+        "단계 추정": "현재 단계"
+      },
+      "unique_nonempty": [
+        "source_id"
+      ]
+    },
+    "review_history": {
+      "type": "log",
+      "key": "review_id",
+      "id_prefix": "REV",
+      "columns": [
+        "review_id",
+        "idea_id",
+        "reviewed_at",
+        "이전 상태",
+        "이후 상태",
+        "판단 변화",
+        "변경 사유",
+        "evidence_ids",
+        "before_json",
+        "after_json",
+        "event_key",
+        "data_quality"
+      ]
+    },
+    "evaluation_log": {
+      "type": "log",
+      "key": "evaluation_id",
+      "id_prefix": "EVL",
+      "columns": [
+        "evaluation_id",
+        "날짜",
+        "signal_id",
+        "idea_id",
+        "평가 종류",
+        "판정",
+        "사전 기준",
+        "실제 결과",
+        "출처URL",
+        "메모",
+        "data_quality"
       ]
     }
   },
@@ -169,6 +270,90 @@
       "A",
       "B",
       "관망"
+    ],
+    "data_quality": [
+      "live",
+      "legacy",
+      "example",
+      "quarantine"
+    ],
+    "사업 단계": [
+      "미확인",
+      "초기",
+      "확산",
+      "성숙",
+      "둔화"
+    ],
+    "근거 수준": [
+      "가설",
+      "단일 확인",
+      "독립 교차확인",
+      "시계열 검증"
+    ],
+    "검토 상태": [
+      "미검토",
+      "추적",
+      "재검토",
+      "종료"
+    ],
+    "판단 변화": [
+      "신규",
+      "강화",
+      "유지",
+      "약화",
+      "자료 부족",
+      "종료"
+    ],
+    "metric_kind": [
+      "consensus",
+      "guidance",
+      "actual",
+      "indicator",
+      "price"
+    ],
+    "회계기준": [
+      "GAAP",
+      "non-GAAP",
+      "provider-defined",
+      "not-applicable"
+    ],
+    "event_state": [
+      "planned",
+      "contracted",
+      "realized",
+      "unknown"
+    ],
+    "signal_direction": [
+      "positive",
+      "negative",
+      "neutral",
+      "unknown"
+    ],
+    "source_role": [
+      "candidate",
+      "demand_evidence"
+    ],
+    "extraction_method": [
+      "gemini",
+      "manual",
+      "legacy"
+    ],
+    "processing_status": [
+      "accepted",
+      "rejected",
+      "retry",
+      "deferred"
+    ],
+    "평가 종류": [
+      "사실 정확도",
+      "검토 가치",
+      "예측 결과"
+    ],
+    "판정": [
+      "통과",
+      "실패",
+      "미확인"
     ]
-  }
+  },
+  "version": 2
 }

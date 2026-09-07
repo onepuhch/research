@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-09-07T12:59:59+00:00",
+  "checks": {
+    "archive_hashes": true,
+    "migration_idempotent": true,
+    "schema_and_ids": true,
+    "legacy_signal_fields_preserved": true,
+    "cli": {
+      "scripts/gen_report.py board": 0,
+      "scripts/gen_report.py weekly": 0,
+      "scripts/gen_report.py bottlenecks": 0,
+      "scripts/gen_report.py quality": 0,
+      "scripts/gen_report.py health": 0,
+      "scripts/gen_report.py share": 0,
+      "scripts/gen_report.py metric CRDO": 0,
+      "scripts/gen_report.py valuation CRDO": 0,
+      "scripts/evaluate.py": 0,
+      "scripts/notify.py --dry-run --report": 0,
+      "scripts/notify.py --dry-run": 0,
+      "scripts/telegram_cmd.py --dry-run --command /list": 0
+    },
+    "git_diff_check": 0,
+    "unittest": {
+      "passed": 35,
+      "failed": 0
+    }
+  },
+  "data_quality_counts": {
+    "sectors": {
+      "example": 1
+    },
+    "industry_indicators": {
+      "example": 1
+    },
+    "bottleneck_log": {
+      "example": 1,
+      "legacy": 1
+    },
+    "investment_review_log": {
+      "example": 1,
+      "live": 1
+    },
+    "metric_log": {
+      "example": 2,
+      "live": 14
+    },
+    "signal_log": {
+      "legacy": 865,
+      "live": 2
+    },
+    "review_history": {
+      "live": 1
+    },
+    "evaluation_log": {}
+  },
+  "external_delivery": "not executed",
+  "deployment": "local branch only"
+}

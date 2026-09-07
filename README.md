@@ -1,156 +1,76 @@
-# investment-research-system
+# 투자리서치 시스템
 
-업종, 밸류체인, 병목, 지표 변화, EPS 리비전, 투자 판단 복기를 로컬 CSV로 관리하는 투자 리서치 시스템입니다.
+해외 밸류체인 신호를 원문 근거와 함께 모으고, 소수의 가설을 숫자·반증 조건·판단 이력으로 추적한다. 현재 개선 코드는 로컬 작업 브랜치에 있으며 원격 main의 운영 전환은 아직 수행하지 않았다.
 
-운영 원칙은 [PRINCIPLES.md](PRINCIPLES.md)를 기준으로 합니다. 테이블/컬럼/enum은 [config/schema.json](config/schema.json) 한 곳에서만 정의합니다.
-
-## 폴더 구조
-
-```text
-investment-research-system/
-├─ README.md
-├─ PRINCIPLES.md
-├─ AGENTS.md
-├─ CLAUDE.md
-├─ STATUS.md
-├─ config/
-│  ├─ schema.json
-│  └─ discovery_sources.json
-├─ data/
-│  ├─ raw/
-│  └─ processed/
-│     ├─ sectors.csv
-│     ├─ industry_indicators.csv
-│     ├─ bottleneck_log.csv
-│     ├─ investment_review_log.csv
-│     ├─ metric_log.csv
-│     └─ signal_log.csv
-├─ docs/
-│  └─ metric_log_design.md
-├─ examples/
-├─ scripts/
-│  ├─ common.py
-│  ├─ add_entry.py
-│  ├─ export_tsv.py
-│  ├─ gen_report.py
-│  ├─ collect.py
-│  ├─ extract.py
-│  ├─ digest.py
-│  └─ create_templates.py
-└─ reports/
-   ├─ templates/
-   └─ generated/
-```
-
-## 실행 환경
-
-Python 3.9+ 표준 라이브러리만 사용합니다. 외부 패키지, Google Sheets API, 유료 데이터 연동은 아직 사용하지 않습니다.
-
-Windows PowerShell 기준:
+## 빠른 확인 (PowerShell, Python 3.11 이상)
 
 ```powershell
-cd "C:\Users\wls15\OneDrive\바탕 화면\투자리서치\investment-research-system"
+$env:PYTHONIOENCODING = "utf-8"
+python -m unittest discover -s tests -v
+python scripts/migrate_v2.py
+python scripts/gen_report.py board
+python scripts/gen_report.py weekly
+python scripts/gen_report.py metric CRDO
+python scripts/gen_report.py valuation CRDO
+python scripts/gen_report.py bottlenecks
+python scripts/gen_report.py quality
+python scripts/gen_report.py health
+python scripts/notify.py --dry-run --report
+python scripts/telegram_cmd.py --dry-run --command "/list"
 ```
 
-## JSON 입력
+Python 패키지 설치는 필요 없다. 생성물은 reports/generated에 저장한다. RESEARCH_DATA_DIR로 처리 원장 경로를 바꿔 격리 검증할 수 있다. 원자료 수집 경로와 보고서 경로는 별도이므로 전체 파이프라인 격리에는 임시 체크아웃을 사용한다.
+
+## 처리 흐름
+
+| 단계 | 실행 | 결과 |
+| --- | --- | --- |
+| 수집 | collect.py | SEC·RSS 문서와 정확한 문서 URL, 수집 실패 상태 |
+| 추출 | extract.py | 원문 인용에 근거한 신호; accepted/rejected/retry/deferred 원장 |
+| 검토 등록 | promote.py SIG-ID | 기업+가설 중복 방지, 원신호 연결, 다음 점검일 |
+| 숫자 관측 | collect_eps.py / add_entry.py | 동일 정의의 실제 관측값, 컨센서스와 실적 분리 |
+| 점검 | gen_report.py | 지표 부족·노후화·반증 조건·판단 변화 |
+| 평가 | evaluate.py | 티어별 표본 검토 대기 CSV; 자동 정답 없음 |
+
+API 실패 시 키워드 기반 신호를 생성하지 않는다. 재시도 대상은 원문 스냅샷과 함께 보존한다. 동일 원문이 기각되면 모델을 반복 호출하지 않는다. 추출 호출은 실행당 최대 20회이며 재시도 간격 기본값은 12시간이다. 원문 보관 기간 자동 삭제는 구현하지 않았다.
+
+신규 알림은 live·원문 인용·유효 발표일·계약/실현 사건 조건을 충족하는 A/B 중 하루 최대 3건이다. 추적 기업의 부정 신호는 티어 제한과 별도로 전달한다. 대형 고객 문서는 수요 근거로 보존한다. 단일 문서로 입증할 수 없는 ‘미주목’·‘EPS 리비전’ 점수는 0이므로 자동 A 생성은 의도적으로 제한된다.
+
+## 데이터와 갱신
+
+config/schema.json이 테이블과 enum의 기준이다. data_quality의 live는 검증 출처를 갖춘 운영 자료, legacy는 재검증이 필요한 기존 자료, example은 예제, quarantine은 격리 자료다. live가 미래 수익성을 보증하지 않는다.
 
 ```powershell
-python scripts\add_entry.py examples\sector_memory.json
-python scripts\add_entry.py examples\industry_indicator_memory.json
-python scripts\add_entry.py examples\bottleneck_log_example.json
-python scripts\add_entry.py examples\memory_review.json
+python scripts/add_entry.py path/to/input.json
+python scripts/promote.py SIG-0867 --thesis-key VC-INTERCONNECT --ticker CRDO
+python scripts/evaluate.py
 ```
 
-입력 형식:
+검토 갱신에는 idea_id와 새 변경 사유를 넣는다. 추적 상태로 전환하려면 출처URL, 모니터링 지표, 종료 조건(정량), 다음 점검일, 추적 지표 정의가 필요하다. 변경 전후는 review_history에 보관된다. 실제 재현 입력은 data/research/crdo_2026-09-06/registration.json을 참고한다. 이 파일은 소급 실적 등록이며 컨센서스 자료가 아니다.
 
-```json
-{
-  "target_table": "investment_review_log",
-  "data": {
-    "종목/업종": "메모리 반도체"
-  }
-}
-```
+수동 컨센서스 등록은 [운영 절차](docs/daily_run.md)를 따른다. as_of를 과거로 바꾸어 가상의 관측 이력을 만들지 않는다. 시점이 표시된 실제 과거 자료를 확보한 경우에만 소급 관측 근거를 명시한다.
 
-테이블 동작:
+## 외부 연결 및 자동 실행
 
-| 테이블 유형 | 동작 |
-| --- | --- |
-| `master` | key 기준 upsert |
-| `log` | ID 자동 부여 후 append |
-| `tracked` | ID가 있으면 갱신, 없으면 새 ID 생성 |
+GitHub Secrets 또는 로컬 .env: GEMINI_API_KEY, FMP_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. SEC_USER_AGENT는 실제 운영자 연락처가 포함된 식별 문자열로 설정하고 GitHub에서는 Repository Variable을 사용한다. 키 값과 .env는 커밋하지 않는다.
 
-CSV는 모두 UTF-8-SIG로 저장합니다.
+FMP stable analyst-estimates는 현재 보유 키로 HTTP 402가 확인되어 사용 불가 상태다. 요금제 구매는 수행하지 않았다. EPS 결측을 회사 실적이나 가이던스로 채우지 않는다.
 
-## Discovery Engine Phase 1
+새 workflow 설정은 KST 매일 09:17 수집·추출·EPS·알림, 03:23/09:23/15:23/21:23 명령 처리다. 주간 검토 보고는 월요일이다. GitHub 스케줄은 정확한 시각을 보장하지 않는다. /track은 최근 14일 신호를 지원하고 재실행 시 기존 아이디어를 반환한다. 명령 큐를 먼저 저장한 뒤 offset을 갱신해 응답 실패를 재시도한다.
 
-무료 공개 소스에서 원문 후보를 수집하고, 규칙 기반 추출로 `signal_log.csv`에 신호를 누적한 뒤 점수순 다이제스트를 출력합니다. 소스는 [config/discovery_sources.json](config/discovery_sources.json)에서 관리합니다.
+외부 서비스별 실패를 분리하고 실패 후에도 상태를 저장한다. scripts/persist_state.py는 깨끗한 CI 체크아웃 전용이며 git commit/push를 수행한다. 로컬 변경 검토용 명령이 아니다. 전달 성공 직후 상태 저장 전 프로세스가 종료되는 경우 Telegram의 정확히 한 번 전송은 보장하지 못한다.
 
-```powershell
-python scripts\collect.py
-python scripts\extract.py
-python scripts\digest.py
-python scripts\digest.py --top 5
-```
+## 보존과 복구
 
-- `collect.py`: EDGAR/RSS 원문 후보를 `data\raw\discovery\latest.json`에 저장
-- `extract.py`: 수집 원문에서 `신호유형`, `upside_score`, `티어`, `단계 추정`을 추출해 `signal_log.csv`에 append
-- `digest.py`: `signal_log.csv`를 `upside_score`와 `티어` 기준으로 정렬해 콘솔과 `reports\generated`에 출력
+migrate_v2.py는 data/archive/pre_v2에 원본과 SHA-256 manifest를 보관하고 예제를 분리한다. CSV 교체는 원자적으로 수행하며 투자 검토와 이력은 pending_tables.json 저널로 복구한다. 여러 프로세스가 동시에 원장을 쓰지 않도록 운영한다. 손상된 알림 상태는 백업을 복원한 후 재개한다.
 
-## metric_log
+Google Sheets 코드는 docs/gas_main.js에 있다. v2 전용 탭을 사용하며 기존 탭을 보존한다. 동일한 기존 컬럼 뒤에 추가된 컬럼만 자동 확장한다. 실제 Sheet ID 설정과 Apps Script 배포는 수행하지 않았다.
 
-지표/리비전 시계열을 기록합니다. 같은 FY끼리 비교해야 하므로 지표명에 연도를 포함합니다. 예: `2027F EPS`.
+## 문서
 
-```powershell
-python scripts\add_entry.py examples\metric_log_example.json
-python scripts\add_entry.py examples\metric_log_example_2.json
-```
-
-`metric_log`는 다음 값을 자동 보강합니다.
-
-- `이전값`이 비어 있으면 같은 `종목/업종` + `지표명`의 직전 `현재값`을 연결
-- `이전값`과 `현재값`이 숫자면 `변화율` 자동 계산
-- `방향`이 비어 있으면 숫자 변화로 `상향` / `하향` / `유지` 자동 판정
-
-## TSV 출력
-
-Google Sheet에 복사/붙여넣기 쉬운 TSV를 출력합니다.
-
-```powershell
-python scripts\export_tsv.py investment_review_log --last 5
-python scripts\export_tsv.py bottleneck_log
-python scripts\export_tsv.py industry_indicators --no-header
-python scripts\export_tsv.py metric_log --last 5
-```
-
-## 리포트 생성
-
-```powershell
-python scripts\gen_report.py board
-python scripts\gen_report.py weekly
-python scripts\gen_report.py sector "메모리 반도체"
-python scripts\gen_report.py share
-```
-
-metric 상세와 발굴 보드:
-
-```powershell
-python scripts\gen_report.py metric "메모리 반도체"
-python scripts\gen_report.py metric
-python scripts\gen_report.py metric --min 3
-```
-
-- `metric "종목/업종"`: 지표별 최신 현재값, 연속 상향 횟수, 최근 변화율, 최근 날짜 출력
-- `metric`: 연속 상향 2회 이상인 `(종목/업종, 지표명)`을 횟수순으로 출력
-- `metric --min N`: 발굴 보드 노출 기준을 연속 상향 N회 이상으로 조정
-
-## 템플릿 생성
-
-```powershell
-python scripts\create_templates.py
-python scripts\create_templates.py --overwrite
-```
-
-## 주의
-
-이 저장소는 개인 리서치 기록용이며 투자 권유가 아닙니다. API 연동, 텔레그램 전송, 에이전트 자동 실행은 현재 범위 밖입니다.
+- [현재 상태](STATUS.md)
+- [투자 연구 원칙](PRINCIPLES.md)
+- [전체 감사](docs/project_audit_2026-09-06.md)
+- [개선 적용 결과](docs/implementation_2026-09-07.md)
+- [CRDO 재점검](docs/crdo_review_2026-09-06.md)
+- [운영 절차](docs/daily_run.md)

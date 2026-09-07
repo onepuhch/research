@@ -5,8 +5,8 @@
 const SHEET_ID = "";
 const GITHUB_RAW_BASE =
   "https://raw.githubusercontent.com/onepuhch/research/main/data/processed";
-const SIGNAL_LOG_SHEET = "signal_log";
-const REVIEW_LOG_SHEET = "investment_review_log";
+const SIGNAL_LOG_SHEET = "signal_log_v2";
+const REVIEW_LOG_SHEET = "investment_review_log_v2";
 
 function importSignalLog() {
   return syncCsvToSheet({
@@ -71,6 +71,11 @@ function syncCsvToSheet(options) {
     csvRows.slice(1).forEach((sourceRow) => {
       const row = sourceHeader.map((_, index) => sourceRow[index] || "");
       if (row.every((value) => String(value).trim() === "")) {
+        return;
+      }
+      const quality = row[sourceHeader.indexOf("data_quality")];
+      if (quality === "example" || quality === "quarantine") {
+        skippedCount += 1;
         return;
       }
       const key = String(row[keyIndex] || "").trim();
@@ -143,6 +148,11 @@ function ensureHeader(sheet, sourceHeader) {
     .getRange(1, 1, 1, sheet.getLastColumn())
     .getDisplayValues()[0]
     .map((value) => String(value).trim());
+  if (sheetHeader.length < sourceHeader.length &&
+      sheetHeader.every((name, index) => name === sourceHeader[index])) {
+    sheet.getRange(1, 1, 1, sourceHeader.length).setValues([sourceHeader]);
+    return;
+  }
   if (sheetHeader.join("\u001F") !== sourceHeader.join("\u001F")) {
     throw new Error(`시트 헤더가 GitHub CSV 헤더와 일치하지 않습니다: ${sheet.getName()}`);
   }

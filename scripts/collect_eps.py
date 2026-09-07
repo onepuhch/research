@@ -1,172 +1,109 @@
-"""Collect FMP analyst EPS estimates into metric_log."""
-from __future__ import annotations
-
+"""Collect dated consensus snapshots for the next two fiscal period ends."""
 import json
-import math
 import re
-import sys
-from pathlib import Path
-from typing import Any
+from datetime import date
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+import common as c
+import metrics
+import add_entry
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import add_entry  # noqa: E402
-import common as c  # noqa: E402
-
-WATCHLIST_PATH = c.ROOT / "config" / "eps_watchlist.json"
-FMP_ENDPOINT = "https://financialmodelingprep.com/api/v3/analyst-estimates"
-TIMEOUT = 20
-TICKER_PATTERN = re.compile(r"^[A-Z0-9.-]+$")
+FMP_ENDPOINT = "https://financialmodelingprep.com/stable/analyst-estimates"
 
 
-def console(value: Any) -> None:
-    encoding = sys.stdout.encoding or "utf-8"
-    safe = str(value).encode(encoding, errors="backslashreplace").decode(encoding)
-    print(safe)
-
-
-def load_watchlist() -> list[str]:
-    if not WATCHLIST_PATH.exists():
-        raise FileNotFoundError(f"watchlist file not found: {WATCHLIST_PATH}")
-    try:
-        raw = json.loads(WATCHLIST_PATH.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as error:
-        raise ValueError(f"failed to parse watchlist JSON: {error}") from error
-    if not isinstance(raw, list):
-        raise ValueError("eps_watchlist.json must contain a JSON array.")
-
-    tickers: list[str] = []
-    seen: set[str] = set()
-    for value in raw:
-        ticker = str(value or "").strip().upper()
-        if not ticker:
+def load_targets():
+    targets = {}
+    registry = c.read_json(c.ROOT / "config" / "entities.json", {})
+    for row in c.active_ideas():
+        ticker = row.get("ticker", "").upper()
+        if not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", ticker):
             continue
-        if not TICKER_PATTERN.fullmatch(ticker):
-            console(f"[warn] 유효하지 않은 ticker skip: {ticker}")
+        meta = registry.get(ticker, {})
+        targets[ticker] = {"ticker": ticker, "entity_id": row.get("entity_id") or meta.get("entity_id"),
+                           "idea_id": row["idea_id"], "currency": meta.get("currency", "")}
+    for ticker in c.read_json(c.ROOT / "config" / "eps_watchlist.json", []):
+        ticker = str(ticker).upper()
+        if ticker not in targets and ticker in registry:
+            targets[ticker] = {"ticker": ticker, "idea_id": "", **registry[ticker]}
+    return list(targets.values())
+
+
+def load_watchlist():
+    return [target["ticker"] for target in load_targets()]
+
+
+def fetch_estimates(ticker, api_key):
+    query = urlencode({"symbol": ticker, "period": "annual", "limit": 10, "apikey": api_key})
+    request = Request(FMP_ENDPOINT + "?" + query, headers={"Accept": "application/json", "User-Agent": "investment-research-system/2"})
+    with urlopen(request, timeout=20) as response:
+        data = json.load(response)
+    if not isinstance(data, list):
+        raise ValueError("invalid estimates response")
+    return data
+
+
+def build_metrics(target, estimates, as_of=None):
+    observed = as_of or c.today()
+    date.fromisoformat(observed[:10])
+    by_period = {}
+    for row in estimates:
+        if not isinstance(row, dict):
             continue
-        if ticker not in seen:
-            seen.add(ticker)
-            tickers.append(ticker)
-    return tickers
-
-
-def fetch_estimates(ticker: str, api_key: str) -> list[dict[str, Any]]:
-    query = urlencode({"apikey": api_key, "limit": 2})
-    url = f"{FMP_ENDPOINT}/{quote(ticker, safe='.-')}?{query}"
-    request = Request(url, headers={"Accept": "application/json", "User-Agent": "investment-research-system"})
-    with urlopen(request, timeout=TIMEOUT) as response:
-        payload = json.loads(response.read().decode("utf-8"))
-    if not isinstance(payload, list):
-        message = payload.get("Error Message") if isinstance(payload, dict) else "invalid response"
-        raise ValueError(str(message or "invalid FMP response"))
-    return [item for item in payload if isinstance(item, dict)]
-
-
-def eps_value(record: dict[str, Any]) -> str:
-    value = record.get("estimatedEpsAvg")
-    if isinstance(value, bool) or value is None:
-        return ""
-    try:
-        number = float(value)
-    except (TypeError, ValueError):
-        return ""
-    if not math.isfinite(number):
-        return ""
-    return format(number, ".12g")
-
-
-def fiscal_year(record: dict[str, Any]) -> str:
-    for key in ("calendarYear", "fiscalYear"):
-        value = str(record.get(key, "") or "").strip()
-        match = re.search(r"\b(19|20)\d{2}\b", value)
-        if match:
-            return match.group(0)
-    date_text = str(record.get("date", "") or "").strip()
-    match = re.match(r"((?:19|20)\d{2})", date_text)
-    return match.group(1) if match else ""
-
-
-def estimate_sort_key(record: dict[str, Any]) -> tuple[str, str]:
-    return (
-        str(record.get("date", "") or ""),
-        str(record.get("calendarYear", record.get("fiscalYear", "")) or ""),
-    )
-
-
-def build_metric(ticker: str, estimates: list[dict[str, Any]]) -> dict[str, Any] | None:
-    ordered = sorted(estimates, key=estimate_sort_key, reverse=True)
-    if not ordered:
-        return None
-    current = ordered[0]
-    year = fiscal_year(current)
-    current_eps = eps_value(current)
-    if not year or not current_eps:
-        return None
-    previous_eps = next(
-        (
-            eps_value(record)
-            for record in ordered[1:]
-            if fiscal_year(record) == year and eps_value(record)
-        ),
-        "",
-    )
-    data = {
-        "종목/업종": ticker,
-        "지표명": f"EPS 컨센서스 (FY{year})",
-        "현재값": current_eps,
-        "출처": "FMP",
-    }
-    if previous_eps:
-        data["이전값"] = previous_eps
-    return {
-        "target_table": "metric_log",
-        "data": data,
-    }
-
-
-def main() -> int:
-    try:
-        tickers = load_watchlist()
-    except (FileNotFoundError, ValueError) as error:
-        console(f"[error] {error}")
-        return 1
-    if not tickers:
-        console("watchlist 비어있음")
-        return 0
-
-    api_key = c.load_dotenv_value("FMP_API_KEY")
-    if not api_key:
-        console("[warn] FMP_API_KEY 없음; EPS 수집 건너뜀")
-        return 0
-
-    added = 0
-    skipped = 0
-    for ticker in tickers:
+        period = str(row.get("date", ""))[:10]
         try:
-            estimates = fetch_estimates(ticker, api_key)
-            metric = build_metric(ticker, estimates)
-            if metric is None:
-                console(f"[warn] {ticker}: 유효한 EPS 추정치를 찾을 수 없어 skip")
-                skipped += 1
-                continue
-            add_entry.process(metric)
-            added += 1
-        except (
-            HTTPError,
-            URLError,
-            TimeoutError,
-            OSError,
-            json.JSONDecodeError,
-            ValueError,
-        ) as error:
-            console(f"[warn] {ticker}: {error}; skip")
-            skipped += 1
+            end = date.fromisoformat(period)
+        except ValueError:
+            continue
+        eps = metrics.number(row.get("epsAvg", row.get("estimatedEpsAvg")))
+        if end < date.fromisoformat(observed[:10]) or eps is None:
+            continue
+        if period in by_period and by_period[period] != eps:
+            raise ValueError("conflicting estimates for the same period")
+        by_period[period] = eps
+    result = []
+    for period, eps in sorted(by_period.items())[:2]:
+        result.append({"target_table": "metric_log", "data": {
+            "종목/업종": target["ticker"], "entity_id": target["entity_id"], "idea_id": target.get("idea_id", ""),
+            "지표명": "EPS consensus", "as_of": observed, "period_end": period,
+            "fiscal_period": "annual", "metric_kind": "consensus", "현재값": format(eps, ".12g"),
+            "단위": "per share", "통화": target.get("currency", ""), "회계기준": "provider-defined",
+            "출처": "FMP stable", "출처URL": FMP_ENDPOINT + "?" + urlencode({"symbol": target["ticker"], "period": "annual"}),
+            "메모": "Provider-defined consensus. Fiscal year label and GAAP adjustment not inferred; same provider/period comparisons only.",
+            "data_quality": "live"}})
+    return result
 
-    console(f"[eps] 추가 {added}건, skip {skipped}건")
-    return 0
+
+def main():
+    targets = load_targets()
+    if not targets:
+        c.record_run("eps", "empty", targets=0, observations=0)
+        print("[eps] no registered targets")
+        return 0
+    key = c.load_dotenv_value("FMP_API_KEY")
+    if not key:
+        c.record_run("eps", "unavailable", targets=len(targets), reason="credentials_missing")
+        print("[eps] unavailable: credentials missing; no synthetic consensus")
+        return 1
+    failures = []
+    added = 0
+    for target in targets:
+        try:
+            if not target.get("currency") or not target.get("entity_id"):
+                raise ValueError("entity or currency metadata missing")
+            observations = build_metrics(target, fetch_estimates(target["ticker"], key))
+            if not observations:
+                raise ValueError("no valid future estimates")
+            for observation in observations:
+                add_entry.process(observation)
+                added += 1
+        except (HTTPError, URLError, TimeoutError, OSError, ValueError) as error:
+            failures.append({"ticker": target["ticker"], "error_type": type(error).__name__,
+                             "http_status": getattr(error, "code", None)})
+            print(f"[eps] {target['ticker']}: {type(error).__name__} ({getattr(error, 'code', 'n/a')})")
+    c.record_run("eps", "degraded" if failures else "success", targets=len(targets), observations=added, failures=failures)
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())

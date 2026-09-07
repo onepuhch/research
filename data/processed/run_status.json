@@ -1,0 +1,16 @@
+{
+  "eps": {
+    "checked_at": "2026-09-05T17:00:03+00:00",
+    "status": "degraded",
+    "last_success_at": null,
+    "targets": 1,
+    "observations": 0,
+    "failures": [
+      {
+        "ticker": "CRDO",
+        "error_type": "HTTPError",
+        "http_status": 402
+      }
+    ]
+  }
+}

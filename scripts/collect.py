@@ -9,6 +9,7 @@ import json
 import re
 import sys
 import time
+import os
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from html import unescape
@@ -24,7 +25,7 @@ import common as c
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "discovery_sources.json"
 RAW_DIR = ROOT / "data" / "raw" / "discovery"
-USER_AGENT = "investment-research-system/0.1 contact=local-research@example.com"
+USER_AGENT = os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0"
 TIMEOUT = 20
 ENCODING = "utf-8-sig"
 EDGAR_DOCUMENT_LIMIT = 2000
@@ -159,7 +160,7 @@ def collect_rss_source(source: dict) -> list[dict[str, str]]:
         published = parse_rss_published_at(text_from_child(item, "pubDate"), source_name, title)
         if published is None:
             continue
-        if lookback_days > 0 and published < cutoff:
+        if published > datetime.now(timezone.utc) or (lookback_days > 0 and published < cutoff):
             continue
         records.append(
             {
@@ -177,7 +178,8 @@ def collect_rss_source(source: dict) -> list[dict[str, str]]:
     return records
 
 
-def collect_edgar(config: dict) -> list[dict[str, str]]:
+def collect_edgar(config: dict, errors: list[str] | None = None) -> list[dict[str, str]]:
+    errors = errors if errors is not None else []
     if not config.get("enabled", True):
         return []
     search_limit = int(config.get("search_limit", config.get("limit", 100)))
@@ -205,10 +207,12 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
         try:
             data = json.loads(fetch_text(url))
         except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
+            errors.append(f"EDGAR search: {type(error).__name__}")
             print(f"[warn] EDGAR search page skipped: from={offset} size={size}: {error}")
             continue
         page_hits = data.get("hits", {}).get("hits", [])
         if not isinstance(page_hits, list):
+            errors.append("EDGAR search: invalid hits payload")
             print(f"[warn] EDGAR search page skipped: from={offset}: invalid hits payload")
             continue
         hits.extend(page_hits)
@@ -227,10 +231,6 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
         if accession in seen_accessions:
             continue
         company = ", ".join(source.get("display_names") or [])
-        if c.is_megacap(company):
-            seen_accessions.add(accession)
-            print(f"[prefilter] EDGAR megacap skipped before fetch: {company} {accession}")
-            continue
         accession_compact = accession.replace("-", "")
         filing_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_compact}/"
         document_url = filing_url + quote(document_name)
@@ -241,6 +241,7 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
             if not document_text:
                 raise ValueError("empty filing document text")
         except (HTTPError, URLError, TimeoutError, ValueError) as error:
+            errors.append(f"EDGAR document: {type(error).__name__}")
             print(f"[warn] EDGAR filing skipped: {accession}: {error}")
             continue
         form = source.get("file_type") or source.get("form") or "SEC filing"
@@ -251,8 +252,11 @@ def collect_edgar(config: dict) -> list[dict[str, str]]:
                 "source_type": "edgar",
                 "source_name": "SEC EDGAR",
                 "source_id": accession,
+                "entity_id": c.resolve_entity(f"CIK:{int(cik):010d}")[0],
+                "source_role": "demand_evidence" if c.is_megacap(company) else "candidate",
                 "title": title,
                 "url": filing_url,
+                "document_url": document_url,
                 "published_at": filed_at,
                 "raw_text": clean_text(f"{title}. {document_text}")[:EDGAR_DOCUMENT_LIMIT],
             }
@@ -276,14 +280,15 @@ def main() -> int:
     try:
         config = load_config()
     except Exception as error:
-        print(f"[error] {error}")
+        c.record_run("collect", "failed", error_type=type(error).__name__)
+        print(f"[error] {type(error).__name__}")
         return 1
 
     items: list[dict[str, str]] = []
     errors: list[str] = []
 
     try:
-        edgar_items = collect_edgar(config.get("edgar", {}))
+        edgar_items = collect_edgar(config.get("edgar", {}), errors)
         items.extend(edgar_items)
         print(f"[collected] EDGAR: {len(edgar_items)}")
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError, ValueError) as error:
@@ -311,9 +316,11 @@ def main() -> int:
         "items": items,
     }
     path = write_payload(payload)
+    c.record_run("collect", "success" if not errors and items else "degraded" if errors else "empty",
+                 item_count=len(items), errors=errors, collected_at=payload["collected_at"])
     print(f"[saved] {path}")
     print(f"[saved] {RAW_DIR / 'latest.json'}")
-    return 0
+    return 1 if errors and not items else 0
 
 
 if __name__ == "__main__":

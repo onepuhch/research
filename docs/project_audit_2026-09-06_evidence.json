@@ -1,0 +1,165 @@
+{
+  "audit_date": "2026-09-06",
+  "local_head": "670d2d5",
+  "remote_head": "795a4de612",
+  "remote_commit_date": "2026-09-05T03:30:42Z",
+  "remote_url": "https://github.com/onepuhch/research/tree/795a4de612",
+  "scope_note": "Snapshot statistics; keyword format is a heuristic, not an API failure rate; no investment returns measured.",
+  "tables": {
+    "bottleneck_log": {
+      "rows": 2,
+      "sha256": "4b7a8f7d44aa3cbe362f99e1d7b4b96a1d6a5d2ee0a4dd413cac836cfe2c6a06",
+      "first_date": "2026-06-03",
+      "last_date": "2026-06-03"
+    },
+    "industry_indicators": {
+      "rows": 1,
+      "sha256": "1d18af35eb55b8b61de96ebe39692e287f229b81ecb4c46f361e7fd9e162a1c7"
+    },
+    "investment_review_log": {
+      "rows": 2,
+      "sha256": "435dd8f70b1c9f53aaf7350e92f846f10de627b851d0f64473957269e7ddec70",
+      "first_date": "2026-06-03",
+      "last_date": "2026-06-03"
+    },
+    "metric_log": {
+      "rows": 2,
+      "sha256": "26866ffa35c45bfeb042856a76a70e2e0c2545bac056250d9127cf5e76e071f3",
+      "first_date": "2026-06-03",
+      "last_date": "2026-06-03"
+    },
+    "reddit_watch": {
+      "rows": 7,
+      "sha256": "e9310d377aa6ebaeb14064217b02a24474de7e632b42645f5dbd1dad4a9461f2",
+      "first_date": "2026-08-31",
+      "last_date": "2026-08-31"
+    },
+    "sectors": {
+      "rows": 1,
+      "sha256": "63a6d9255625439d0356a47ad021e0801b91c13204ace61904f48265a767a5c3"
+    },
+    "signal_log": {
+      "rows": 865,
+      "sha256": "b9cdc0dad99bfcfe676e8b396c5dacf3f8e05833e379bb27c9a7462039903eed",
+      "first_date": "2026-06-07",
+      "last_date": "2026-09-05",
+      "티어": {
+        "관망": 638,
+        "B": 145,
+        "A": 82
+      },
+      "신호유형": {
+        "공시(8-K)": 45,
+        "CAPEX": 58,
+        "기타": 15,
+        "커뮤니티": 1,
+        "기술로드맵": 3,
+        "수주/백로그": 609,
+        "리드타임": 9,
+        "EPS상향": 7,
+        "신규고객": 61,
+        "ASP/가격": 8,
+        "가이던스상향": 49
+      },
+      "단계 추정": {
+        "초기": 646,
+        "관찰": 69,
+        "초기후반": 144,
+        "중기": 6
+      },
+      "출처": {
+        "SEC EDGAR": 856,
+        "Google News - AI infrastructure": 3,
+        "Google News - semiconductor capex": 3,
+        "SemiAnalysis": 2,
+        "Fabricated Knowledge": 1
+      },
+      "keyword_format_count": 590,
+      "keyword_format_ab_count": 3,
+      "unclassified_theme_count": 535,
+      "published_at_count": 849
+    }
+  },
+  "eps_watchlist": [],
+  "notify_pushed_count": 226,
+  "script_checks": [
+    {
+      "file": "scripts\\add_entry.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\collect.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\collect_eps.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\collect_reddit.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\common.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\create_templates.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\digest.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\export_tsv.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\extract.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\gen_report.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\notify.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\promote.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    },
+    {
+      "file": "scripts\\telegram_cmd.py",
+      "same_bytes_as_remote": true,
+      "syntax_valid": true
+    }
+  ],
+  "isolated_reproductions": {
+    "loan_prepayment_classified_as_backlog": true,
+    "up_up_unchanged_streak": 0,
+    "rejected_item_calls_over_two_runs": 2,
+    "rejected_item_saved_to_seen": false,
+    "single_article_mid_stage_accepted": true,
+    "same_signal_promoted_twice_rows": 2,
+    "promoted_origin_retained": false,
+    "fy2027_and_fy2028_selects": "FY2028",
+    "metric_previous_uses_last_inserted_other_provider": true,
+    "previous_day_track_ticker_found": false,
+    "previous_day_track_id_found": true
+  }
+}

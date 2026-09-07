@@ -1,135 +1,76 @@
 name: Daily Discovery
-
 on:
   schedule:
-    - cron: "0 0 * * *"
-    - cron: "0 0 * * 1"
+    - cron: '17 0 * * *'
+    - cron: '23 */6 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
-  group: daily-discovery
+  group: research-state-writer
   cancel-in-progress: false
-
 jobs:
-  daily-discovery:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * *'
+  research:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     env:
+      PYTHONIOENCODING: utf-8
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      # Add FMP_API_KEY to repository secrets before enabling EPS collection.
       FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Collect discovery items
-        run: python scripts/collect.py
-
-      - name: Extract discovery signals
-        run: python scripts/extract.py
-
-      - name: Collect EPS revisions
-        run: python scripts/collect_eps.py
-
-      - name: Send Telegram notifications
-        run: python scripts/notify.py
-
-      - name: Commit and push daily state
-        # notify가 실패(exit 1)해도 수집 데이터는 절대 잃지 않도록 무조건 커밋.
-        if: always()
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -- \
-            data/processed/signal_log.csv \
-            data/processed/metric_log.csv \
-            data/processed/notify_state.json \
-            data/processed/seen_sources.json
-
-          if git diff --cached --quiet; then
-            echo "No daily discovery changes to commit."
-            exit 0
-          fi
-
-          run_date="$(TZ=Asia/Seoul date +%F)"
-          git commit -m "chore: daily discovery run ${run_date}"
-          git push
-
-      - name: Process Telegram commands
-        if: always()
-        run: python scripts/telegram_cmd.py
-
-      - name: Commit and push Telegram command state
-        if: always()
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -- \
-            data/processed/investment_review_log.csv \
-            data/processed/telegram_offset.json
-
-          if git diff --cached --quiet; then
-            echo "No Telegram command changes to commit."
-            exit 0
-          fi
-
-          run_date="$(TZ=Asia/Seoul date +%F)"
-          git commit -m "chore: process telegram commands ${run_date}"
-          git push
-
-  weekly-reddit:
-    if: github.event.schedule == '0 0 * * 1'
-    runs-on: ubuntu-latest
-    env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
+      SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
+      DISCOVERY: ${{ github.event_name == 'workflow_dispatch' || github.event.schedule == '17 0 * * *' }}
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
-      - name: Collect weekly Reddit watch
-        run: python scripts/collect_reddit.py
-
-      - name: Commit and push Reddit watch
-        shell: bash
+          python-version: '3.11'
+      - name: Validate core behavior
+        run: python -m unittest discover -s tests -v
+      - name: Recover and migrate state
+        id: migrate
+        run: python scripts/migrate_v2.py
+      - name: Process commands independently
+        if: always() && steps.migrate.outcome == 'success'
+        run: python scripts/telegram_cmd.py
+      - name: Collect source documents
+        id: collect
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/collect.py
+      - name: Extract grounded signals
+        if: always() && steps.collect.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/extract.py
+      - name: Observe tracked EPS
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/collect_eps.py
+      - name: Retry eligible notifications
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/notify.py
+      - name: Build research views
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -- data/processed/reddit_watch.csv
-
-          if git diff --cached --quiet; then
-            echo "No Reddit watch changes to commit."
-            exit 0
+          python scripts/gen_report.py weekly
+          python scripts/gen_report.py bottlenecks
+          python scripts/gen_report.py quality
+      - name: Weekly community watch and review report
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: |
+          if [ "$(TZ=Asia/Seoul date +%u)" = '1' ]; then
+            python scripts/collect_reddit.py
+            python scripts/notify.py --report
           fi
-
-          run_date="$(TZ=Asia/Seoul date +%F)"
-          git commit -m "chore: weekly reddit run ${run_date}"
-          git push
-
-      - name: Send weekly investment status report
-        run: python scripts/notify.py --report
+      - name: Persist state even when a service fails
+        if: always() && steps.migrate.outcome == 'success'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python scripts/persist_state.py
+      - name: Retain generated review outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-reports-${{ github.run_id }}
+          path: reports/generated/
+          retention-days: 30
+          if-no-files-found: ignore

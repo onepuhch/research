@@ -1,0 +1,19 @@
+{
+  "daily_candidate_limit": 3,
+  "signal_lookback_days": 14,
+  "metric_stale_days": 14,
+  "review_interval_days": 7,
+  "max_active_ideas": 10,
+  "core_idea_types": [
+    "병목 확산형",
+    "사이클 리비전형"
+  ],
+  "prompt_version": "research-v2-20260906",
+  "retry_hours": 12,
+  "max_model_calls": 20,
+  "benchmark_windows_days": [
+    30,
+    90,
+    180
+  ]
+}

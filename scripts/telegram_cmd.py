@@ -23,15 +23,12 @@ SIGNAL_ID_PATTERN = re.compile(r"^SIG-\d+$", re.IGNORECASE)
 
 SIGNAL_TABLE = c.table_def("signal_log")
 SIGNAL_ID_COLUMN = SIGNAL_TABLE["key"]
-(
-    _SIGNAL_ID,
-    SIGNAL_DATE_COLUMN,
-    SIGNAL_SUBJECT_COLUMN,
-    *_SIGNAL_REMAINING_COLUMNS,
-) = SIGNAL_TABLE["columns"]
+SIGNAL_DATE_COLUMN = "날짜"
+SIGNAL_SUBJECT_COLUMN = "종목/티커"
+
 
 HELP_TEXT = """지원 명령어
-/track ALGM - 오늘의 최신 종목 신호를 추적 등록
+/track ALGM - 최근 14일의 최신 종목 신호를 추적 등록
 /track SIG-0001 - 지정한 신호를 추적 등록
 /list - 활성 아이디어 목록
 /help - 명령어 목록"""
@@ -149,9 +146,9 @@ def find_signal(target: str) -> dict[str, str] | None:
     if SIGNAL_ID_PATTERN.fullmatch(normalized):
         return promote.find_signal(normalized)
 
-    today = date.today().isoformat()
-    for row in reversed(c.read_rows("signal_log")):
-        if row.get(SIGNAL_DATE_COLUMN, "") != today:
+    today = date.fromisoformat(c.today())
+    for row in reversed(c.read_live_rows("signal_log")):
+        if not notify.within_lookback(row.get(SIGNAL_DATE_COLUMN), today, c.policy()["signal_lookback_days"]):
             continue
         if subject_matches(row.get(SIGNAL_SUBJECT_COLUMN, ""), target):
             return row
@@ -159,11 +156,7 @@ def find_signal(target: str) -> dict[str, str] | None:
 
 
 def active_review_messages() -> list[str]:
-    rows = [
-        row
-        for row in c.read_rows("investment_review_log")
-        if row.get(notify.REVIEW_STAGE_COLUMN, "") in notify.ACTIVE_REVIEW_STAGES
-    ]
+    rows = c.active_ideas()
     if not rows:
         return ["추적 중인 아이디어 없음"]
     return notify.build_report_chunks(rows)
@@ -202,31 +195,63 @@ def handle_command(text: str, dry_run: bool = False) -> list[str]:
 
 
 def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, Any]]) -> int:
-    processed = 0
-    for update in sorted(updates, key=lambda item: int(item.get("update_id", -1))):
+    # Persist incoming commands before acknowledging Telegram offsets. Retrying uses stable IDs.
+    path = c.DATA_DIR / "command_queue.json"
+    queue = c.read_json(path, {})
+    highest = load_offset()
+    for update in updates:
         update_id = int(update.get("update_id", -1))
         if update_id < 0:
             continue
+        highest = max(highest, update_id + 1)
+        message = update.get("message", {})
+        if str(message.get("chat", {}).get("id", "")) != allowed_chat_id:
+            continue
+        key = str(update_id)
+        if key not in queue:
+            raw = str(message.get("text", "")).strip()
+            parts = raw.split(maxsplit=1)
+            command = parts[0].split("@", 1)[0].lower() if parts else ""
+            arg = parts[1].strip().upper() if len(parts) > 1 else ""
+            if command == "/track" and re.fullmatch(r"(?:SIG-\d{1,12}|[A-Z][A-Z0-9.-]{0,9})", arg):
+                safe_command = f"/track {arg}"
+            elif command in {"/list", "/help"}:
+                safe_command = command
+            else:
+                safe_command = "/help"
+            # Only the supported command vocabulary is persisted, never arbitrary chat text.
+            queue[key] = {"text": safe_command, "status": "pending", "received_at": c.utc_now()}
+    c.atomic_json(path, queue)
+    save_offset(highest)
+    processed = 0
+    failures = 0
+    for key, item in sorted(queue.items(), key=lambda pair: int(pair[0])):
+        if item.get("status") == "done":
+            continue
         try:
-            message = update.get("message", {})
-            chat_id = str(message.get("chat", {}).get("id", ""))
-            text = message.get("text", "")
-            if chat_id != allowed_chat_id:
-                console(f"[ignored] unauthorized chat_id={chat_id}")
-                continue
+            if item.get("status") != "reply_pending":
+                try:
+                    replies = handle_command(item.get("text", ""))
+                except ValueError as error:
+                    # A permanent user-input error is a reply, not a poison retry loop.
+                    replies = ["명령을 처리할 수 없습니다. 신호 ID와 추적 제한을 확인해주세요."]
+                item.update(status="reply_pending", replies=replies)
+                c.atomic_json(path, queue)
+            while item.get("replies"):
+                send_reply(token, allowed_chat_id, item["replies"][0])
+                item["replies"].pop(0)
+                c.atomic_json(path, queue)
+            item.update(status="done", completed_at=c.utc_now())
+            # Completed text and replies are not needed in the repository.
+            item.pop("text", None)
             processed += 1
-            for reply in handle_command(text):
-                send_reply(token, allowed_chat_id, reply)
-        except (FileNotFoundError, ValueError) as error:
-            console(f"[warn] command failed for update {update_id}: {error}")
-            try:
-                send_reply(token, allowed_chat_id, f"명령 처리 실패: {html.escape(str(error))}")
-            except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError, RuntimeError):
-                pass
-        except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError, RuntimeError) as error:
-            console(f"[warn] Telegram reply failed for update {update_id}: {error}")
-        finally:
-            save_offset(update_id + 1)
+        except (OSError, RuntimeError, TimeoutError, json.JSONDecodeError) as error:
+            item["last_error_type"] = type(error).__name__
+            failures += 1
+        c.atomic_json(path, queue)
+    c.record_run("commands", "degraded" if failures else "success", processed=processed, failed=failures)
+    if failures:
+        raise RuntimeError("commands retained for retry")
     return processed
 
 
@@ -241,15 +266,16 @@ def main(argv: list[str] | None = None) -> int:
     token = c.load_dotenv_value("TELEGRAM_BOT_TOKEN")
     chat_id = c.load_dotenv_value("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
-        console("[warn] Telegram credentials missing; command polling skipped")
-        return 0
+        c.record_run("commands", "unavailable", reason="credentials_missing")
+        console("[error] Telegram credentials missing")
+        return 1
 
     offset = load_offset()
     try:
         updates = get_updates(token, offset, args.poll_timeout)
         processed = process_updates(token, chat_id, updates)
     except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError, RuntimeError) as error:
-        console(f"[error] Telegram polling failed: {error}")
+        console(f"[error] Telegram polling failed: {type(error).__name__}")
         return 1
     console(f"[telegram] updates={len(updates)}, authorized_messages={processed}")
     return 0

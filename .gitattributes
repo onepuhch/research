@@ -1,0 +1,7 @@
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+data/processed/*.csv text eol=lf
+data/archive/** -text whitespace=cr-at-eol

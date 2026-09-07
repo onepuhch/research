@@ -8,7 +8,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
-TIER_ORDER = {"A": 0, "B": 1, "관망": 2}
+TIER_ORDER = {tier: index for index, tier in enumerate(c.ENUMS["티어"])}
 
 
 def as_int(value: str) -> int:
@@ -31,9 +31,12 @@ def sort_signals(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def render_digest(rows: list[dict[str, str]], top: int) -> str:
+    from datetime import timedelta
+    cutoff = (date.fromisoformat(c.today()) - timedelta(days=c.policy()["signal_lookback_days"])).isoformat()
+    rows = [r for r in rows if r.get("data_quality") == "live" and cutoff <= r.get("published_at", "")[:10] <= c.today()]
     ranked = sort_signals(rows)[:top]
     output = [f"# Discovery Digest ({date.today().isoformat()})", ""]
-    output.append("개인 리서치 기록이며 투자 권유가 아닙니다.")
+    output.append("A/B는 연구 검토 순서입니다. 기대수익률이나 매매 신호가 아닙니다.")
     output.append("")
     output.append(f"상위 후보 {len(ranked)}건 / 전체 signal_log {len(rows)}건")
     output.append("")

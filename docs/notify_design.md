@@ -1,3 +1,5 @@
+> 과거 설계·운영 기록입니다. 2026-09 개선 이후의 현행 기준은 [README](../README.md), [원칙](../PRINCIPLES.md), [적용 결과](implementation_2026-09-07.md)를 따릅니다. 아래의 미구현 표시·티어 해석·기존 시트명은 현재 상태와 다를 수 있습니다.
+
 # notify.py — 텔레그램 푸시 (Discovery Engine Phase 2) 구현 브리프
 
 > **담당: Codex.** 이 문서가 단일 스펙이다. 설계·검토는 Claude, 구현은 Codex.

@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {
+      "id": "VC-INTERCONNECT",
+      "name": "데이터센터 연결",
+      "question": "구리·광 연결의 제약이 어떤 제품으로 이동하며 매출·마진에 어떻게 귀속되는가?",
+      "keywords": [
+        "aec",
+        "retimer",
+        "optical",
+        "transceiver",
+        "interconnect",
+        "800g",
+        "1.6t"
+      ],
+      "invalidation": "대체 기술 채택, 경쟁 공급 확대, 고객 내재화, 가격·마진 악화"
+    },
+    {
+      "id": "VC-POWER",
+      "name": "전력 공급·배전",
+      "question": "계약 수요와 가동 가능한 공급의 격차가 어디에 남는가?",
+      "keywords": [
+        "transformer",
+        "switchgear",
+        "grid connection",
+        "power capacity"
+      ],
+      "invalidation": "설비 가동·계통 연결 정상화, 주문 취소, 수요 감소"
+    },
+    {
+      "id": "VC-STORAGE",
+      "name": "메모리·스토리지 연결",
+      "question": "AI 추론의 메모리·저장 병목이 실적과 확정 구매로 확인되는가?",
+      "keywords": [
+        "nand",
+        "essd",
+        "memory bandwidth",
+        "memory wall",
+        "pcie"
+      ],
+      "invalidation": "재고 증가, 가격 하락, 공급 증설, 고객 사용량 둔화"
+    }
+  ]
+}

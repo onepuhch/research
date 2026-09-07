@@ -16,16 +16,18 @@ from __future__ import annotations
 
 import json
 import re
+import hashlib
 import sys
 from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
+import metrics
 
 
 def today() -> str:
-    return date.today().isoformat()
+    return c.today()
 
 
 def extract(record: dict) -> tuple[str, dict[str, str]]:
@@ -42,79 +44,8 @@ def extract(record: dict) -> tuple[str, dict[str, str]]:
     return table.strip(), {key: c.stringify(value) for key, value in data.items()}
 
 
-def parse_number(value: str) -> float | None:
-    text = str(value or "").strip()
-    if not text:
-        return None
-    text = text.replace(",", "").replace("%", "").strip()
-    match = re.fullmatch(r"[-+]?\d+(?:\.\d+)?", text)
-    if not match:
-        return None
-    return float(text)
-
-
-def format_change_rate(previous: float, current: float) -> str | None:
-    if previous == 0:
-        return None
-    rate = (current - previous) / abs(previous) * 100
-    return f"{rate:.1f}%"
-
-
-def direction_from_numbers(previous: float, current: float) -> str:
-    if current > previous:
-        return "상향"
-    if current < previous:
-        return "하향"
-    return "유지"
-
-
-def direction_from_change_rate(value: str) -> str | None:
-    number = parse_number(value)
-    if number is None:
-        return None
-    if number > 0:
-        return "상향"
-    if number < 0:
-        return "하향"
-    return "유지"
-
-
-def latest_metric_row(rows: list[dict[str, str]], subject: str, metric_name: str) -> dict[str, str] | None:
-    candidates = [
-        row
-        for row in rows
-        if row.get("종목/업종") == subject and row.get("지표명") == metric_name
-    ]
-    if not candidates:
-        return None
-    return candidates[-1]
-
-
 def preprocess_metric_log(data: dict[str, str], rows: list[dict[str, str]]) -> None:
-    subject = (data.get("종목/업종") or "").strip()
-    metric_name = (data.get("지표명") or "").strip()
-    if not subject or not metric_name:
-        raise ValueError("metric_log requires both '종목/업종' and '지표명'.")
-
-    previous_row = latest_metric_row(rows, subject, metric_name)
-    if not data.get("이전값") and previous_row:
-        data["이전값"] = previous_row.get("현재값", "")
-
-    previous = parse_number(data.get("이전값", ""))
-    current = parse_number(data.get("현재값", ""))
-
-    if not data.get("변화율") and previous is not None and current is not None:
-        change_rate = format_change_rate(previous, current)
-        if change_rate is not None:
-            data["변화율"] = change_rate
-
-    if not data.get("방향"):
-        if previous is not None and current is not None:
-            data["방향"] = direction_from_numbers(previous, current)
-        elif data.get("변화율"):
-            inferred = direction_from_change_rate(data["변화율"])
-            if inferred:
-                data["방향"] = inferred
+    metrics.prepare(data, rows)
 
 
 def validate_unknown_columns(table: str, data: dict[str, str], columns: list[str]) -> None:
@@ -131,11 +62,11 @@ def apply_default_dates(data: dict[str, str], columns: list[str]) -> None:
         if column in columns and not data.get(column):
             data[column] = today()
 
-    if "최근 점검일" in columns:
+    if "최근 점검일" in columns and "최근 점검일" not in data and data.get("변경 사유"):
         data["최근 점검일"] = today()
 
 
-def process(raw: dict) -> None:
+def process(raw: dict) -> str:
     table, data = extract(raw)
     definition = c.table_def(table)
     columns = definition["columns"]
@@ -143,15 +74,34 @@ def process(raw: dict) -> None:
     key = definition["key"]
 
     validate_unknown_columns(table, data, columns)
+    supplied_date = "날짜" in data
     apply_default_dates(data, columns)
+    if table_type == "tracked" and data.get(key) and not supplied_date:
+        data.pop("날짜", None)
     rows = c.read_rows(table)
+    if "data_quality" in columns and not data.get("data_quality"):
+        existing = next((r for r in rows if data.get(key) and r.get(key) == data[key]), {})
+        data["data_quality"] = existing.get("data_quality") or "live"
 
     if table == "metric_log":
         preprocess_metric_log(data, rows)
+        duplicate = next((r for r in rows if r.get("observation_key") == data["observation_key"]), None)
+        if duplicate:
+            if metrics.number(duplicate.get("현재값")) != metrics.number(data.get("현재값")):
+                raise ValueError("same observation key has a different value; use a distinct as_of timestamp")
+            return duplicate[key]
 
     problems = c.validate_enums(data)
+    for column, enum_name in definition.get("enum_aliases", {}).items():
+        if data.get(column) and data[column] not in c.ENUMS[enum_name]:
+            problems.append(f"invalid {column}: {data[column]}")
     if problems:
         raise ValueError("enum validation failed:\n" + "\n".join(problems))
+    for unique in definition.get("unique_nonempty", []):
+        if data.get(unique):
+            previous = next((r for r in rows if r.get(unique) == data[unique]), None)
+            if previous:
+                return previous[key]
 
     if table_type == "master":
         key_value = data.get(key)
@@ -162,38 +112,89 @@ def process(raw: dict) -> None:
                 row.update({k: v for k, v in data.items() if k in columns})
                 c.write_rows(table, rows)
                 print(f"[updated] {table}: {key}={key_value}")
-                return
+                return row[key]
         rows.append(data)
         c.write_rows(table, rows)
         print(f"[added] {table}: {key}={key_value}")
-        return
+        return data[key]
 
     if table_type == "log":
         data[key] = c.next_id(table)
         rows.append(data)
         c.write_rows(table, rows)
         print(f"[added] {table}: {key}={data[key]}")
-        return
+        return data[key]
 
     if table_type == "tracked":
         key_value = (data.get(key) or "").strip()
         if key_value:
             for row in rows:
                 if row.get(key) == key_value:
-                    row.update({k: v for k, v in data.items() if k in columns and v != ""})
-                    c.write_rows(table, rows)
+                    if table == "investment_review_log" and row.get("data_quality") == "live" and not data.get("변경 사유"):
+                        raise ValueError("provide a new 변경 사유 for each review update")
+                    before = dict(row)
+                    row.update({k: v for k, v in data.items() if k in columns})
+                    if table == "investment_review_log":
+                        commit_review(rows, before, row)
+                    else:
+                        c.write_rows(table, rows)
                     print(f"[updated] {table}: {key}={key_value}")
-                    return
+                    return row[key]
             raise ValueError(
                 f"{key}={key_value} was not found. Leave '{key}' empty to create a new row."
             )
         data[key] = c.next_id(table)
         rows.append(data)
-        c.write_rows(table, rows)
+        if table == "investment_review_log":
+            commit_review(rows, {}, data)
+        else:
+            c.write_rows(table, rows)
         print(f"[added] {table}: {key}={data[key]}")
-        return
+        return data[key]
 
     raise ValueError(f"unknown table type: {table_type}")
+
+
+def commit_review(rows, before, after):
+    if before == after:
+        return
+    if after.get("data_quality") == "live":
+        if not after.get("entity_id") or not after.get("thesis_key"):
+            raise ValueError("live ideas require entity_id and thesis_key")
+        if not after.get("변경 사유"):
+            raise ValueError("review changes require 변경 사유")
+        if after.get("검토 상태") == "추적":
+            needed = ["출처URL", "모니터링 지표", "종료 조건(정량)", "다음 점검일", "추적 지표 정의"]
+            missing = [key for key in needed if not after.get(key)]
+            if missing:
+                raise ValueError(f"tracking definition incomplete: {missing}")
+        if after.get("다음 점검일"):
+            date.fromisoformat(after["다음 점검일"])
+        if after.get("추적 지표 정의"):
+            spec = json.loads(after["추적 지표 정의"])
+            if not isinstance(spec, dict) or not isinstance(spec.get("metrics", []), list):
+                raise ValueError("추적 지표 정의 must contain a metrics array")
+        if after.get("근거 수준") == "시계열 검증" or after.get("현재 단계") == "중기":
+            groups = {}
+            for observation in c.read_live_rows("metric_log"):
+                if observation.get("entity_id") == after.get("entity_id") and observation.get("metric_kind") == "consensus":
+                    groups.setdefault(metrics.series_key(observation), []).append(observation)
+            if not any(metrics.revision_stats(group)["up_months"] >= 2 and
+                       metrics.revision_stats(group)["age_days"] <= c.policy()["metric_stale_days"] for group in groups.values()):
+                raise ValueError("time-series stage requires same-definition consensus increases across at least 2 month transitions")
+    history = c.read_rows("review_history")
+    event = {"review_id": c.next_id("review_history"), "idea_id": after["idea_id"],
+             "reviewed_at": c.utc_now(), "이전 상태": before.get("검토 상태", ""),
+             "이후 상태": after.get("검토 상태", ""), "판단 변화": after.get("판단 변화", "자료 부족"),
+             "변경 사유": after.get("변경 사유", "legacy update"),
+             "evidence_ids": after.get("origin_signal_ids", "[]"),
+             "before_json": json.dumps(before, ensure_ascii=False, sort_keys=True),
+             "after_json": json.dumps(after, ensure_ascii=False, sort_keys=True),
+             "data_quality": after.get("data_quality", "legacy")}
+    event["event_key"] = hashlib.sha256((event["before_json"] + event["after_json"]).encode()).hexdigest()
+    if not any(r.get("event_key") == event["event_key"] for r in history):
+        history.append(event)
+    c.commit_tables({"investment_review_log": rows, "review_history": history})
 
 
 def main(argv: list[str]) -> int:

@@ -1,3 +1,5 @@
+> 과거 설계·운영 기록입니다. 2026-09 개선 이후의 현행 기준은 [README](../README.md), [원칙](../PRINCIPLES.md), [적용 결과](implementation_2026-09-07.md)를 따릅니다. 아래의 미구현 표시·티어 해석·기존 시트명은 현재 상태와 다를 수 있습니다.
+
 # Reddit Watch Google Sheets 연동 설정
 
 이 설정은 GitHub의 CSV를 하나의 Google 스프레드시트에 동기화합니다. Reddit 관심 종목은 매주 누적하고, 발굴 신호와 투자 리뷰 현황은 매일 갱신합니다.

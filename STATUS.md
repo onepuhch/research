@@ -1,101 +1,32 @@
-# STATUS — investment-research-system
+# 현재 상태 — 2026-09-07
 
-마지막 업데이트: 2026-06-07
+개선 구현과 로컬 통합 검증을 완료했다. 작업 브랜치는 codex/research-loop-20260906이며 원격 main 배포·Telegram 실발송·Google Sheets 배포는 수행하지 않았다.
 
-## 한 줄 요약
-투자 후보 **조기 발굴 엔진**. **매일 자동 가동 중**: GitHub Actions(KST 09:00)가 수집→Gemini 추출→텔레그램 카드→repo 커밋. P0(데이터 오염 차단) 완료. 다음은 P1(발굴 루프 닫기).
+## 적용 완료
 
-## ★ 자동화 아키텍처 (최종 — 2026-06-07 확정)
-- **실행**: GitHub Actions `.github/workflows/daily_discovery.yml` (cron UTC 00:00 = KST 09:00, +월요일 reddit·현황판). PC 무관·무료.
-- **추출 LLM**: Gemini API(무료티어, 하루 1회라 quota 무관). 키는 **GitHub Secrets**.
-- **비밀키**: GitHub Secrets(GEMINI/TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID/FMP). `.env`는 로컬·gitignore.
-- **데이터 누적**: repo CSV를 Actions가 커밋·push.
-- **구글시트**: GAS(`docs/gas_*.js`)가 raw CSV 읽어 시트 동기화(보기용).
-- **텔레그램 명령어**: `/track /list /help`(`telegram_cmd.py`, 매일 polling).
-- **탈락한 대안**: Claude routine(비밀키 못 둠), GAS 메인엔진(구독 로그인 불가). 상세: 메모리 `discovery-llm-execution`.
-- **개선 백로그·점검결과**: `docs/improvement_backlog.md` (목적적합도 ~4/10, 기반 ~8/10. P0 완료, P1~P4 남음).
+- API 실패의 신호 변환 제거, 금융 문서 선급금 오탐 차단, 원문 인용·축별 근거 검사.
+- 수집 실패 상태, 기각 캐시·재시도 원장·호출 한도, 대형 고객의 수요 근거 보존.
+- 기업+가설 중복 방지, CRDO CIK 연결, 원신호·지표·판단 이력 연결.
+- 실적·가이던스·컨센서스 분리, 동일 정의 비교, 하루 중복·유지 관측 처리, 중기 승격 검증.
+- 지표 부족·노후화·반증 점검·주간 판단 변화·운영 상태 보고서.
+- 예제 격리, 원본 해시 백업, 원자적 CSV 교체와 복구 저널.
+- 하루 3개 후보 알림 제한, 상태 손상 시 발송 중단, 긴 메시지 처리, 명령 재시도 큐.
+- 일일 연구·6시간 명령 처리 workflow 및 Windows/Linux 테스트 설정, 운영 문서·템플릿 갱신.
 
-## ▶ 다음 순서 — 우선순위순
-1. ✅ **429 throttle** — `extract.py` 호출 간 `sleep`(GEMINI_SLEEP=4s) + 429/503 지수 백오프 재시도(3회). limit 5→3. **검증: 14건 전부 추출, 누락 0.**
-2. ✅ **점수 보정** — 프롬프트 규칙 + **메가캡 코드 가드**(소외축 0, 티어 A 금지). 티어를 점수 기반으로 결정론화. **검증: Alphabet A→B 차단됨.**
-3. ✅ **EDGAR 정밀화** — 쿼리를 실제 병목 문구로 좁힘. **검증: 쓰레기(AIRO·NRGV) → ALGM·DIOD·ATRO 등 반도체 소형주로 개선.**
-4. ✅ **레딧 격리 파이프라인** — `collect_reddit.py`(RSS) → `reddit_watch.csv`(signal_log과 **격리**). SEC 티커목록으로 노이즈 컷. **검증: 200글 → 32후보.**
-5. ✅ **Phase 2 텔레그램 push**(`notify.py`) — 티어 A/B만, 중복방지, **상세 카드형**(무슨일/왜중요/볼것 3요소 + 용어 + 출처), 미분류 제외. **검증: 카드 렌더 정상, 실제 전송 성공.**
-6. ✅ **신호 품질 보정** — 미분류(이름없는) 종목 티어 A 금지 + 폰 전송 제외. Gemini 요약 3요소화, 6축 점수 표시 제거.
-7. ✅ **Phase 3 완료 — GitHub Actions 매일 자동 실행 (UTC 00:00 = KST 09:00)**. 수동 실행 테스트 통과: 초록체크 + 텔레그램 카드 수신 + GitHub 커밋 누적 확인.
-8. ✅ **승격 CLI** `promote.py` (signal_id→investment_review_log) + 텔레그램 명령어 `/track /list /help`(`telegram_cmd.py`).
-9. ✅ **레딧 주간 자동화** (월요일 job) + **주간 추적 현황판** `notify.py --report`.
-10. ✅ **구글시트 연동(GAS)** — reddit_watch/signal_log/investment_review_log 3탭 동기화. 사용자 시트 생성·트리거 설정 완료.
-11. ✅ **FMP EPS 리비전 수집** `collect_eps.py` (`eps_watchlist.json`, metric_log 기록, 동일 FY 비교).
-12. ✅ **소스 정리** — 구글뉴스 RSS 제거(후행·대형주), EDGAR 직접 스캔 중심 + Substack 3개(SemiAnalysis/Fabricated Knowledge/Import AI).
-13. ✅ **P0 데이터 오염 차단** (commit c4f347c) — EDGAR 본문수집·직접URL·accession ID / 비신호 거절게이트(is_signal) / 중복방지(seen_sources) / 합성 fallback 제거.
-14. ⏭ **다음: 내일 KST 09:00 자동 실행 결과 확인(거절게이트 강도·본문수집 점검) → P1(발굴 루프 닫기).**
+## 실제 연구 데이터
 
-> 현재 작동 확인됨: collect→extract(Gemini, throttle)→notify(카드형) + 레딧 별도 라인. `.env`는 깃에 안 올라감(안전).
-> **⚠️ Gemini 무료티어 "하루 할당량"**: 오늘 반복 테스트로 일일 quota 소진 → 429. throttle은 분당제한만 막음. **정상 운영(하루 1회 cron, ~14콜)에서는 문제 없음.** 막히면 다음날 재시도.
-> 레딧 운영 메모: `.json`은 403 차단 → **`.rss` 사용**. 자동화(Phase 3) 시 데이터센터 IP 차단 가능성 있음.
+활성 1건(CRDO), live 실적·가이던스 관측 14개, 기존 신호 865개는 legacy로 보존, 공식 실적 근거 신호 2개 추가, 판단 이력 1개다. 예제는 운영 보드에서 제외했다. CRDO는 사업 확산·단일 확인·재검토이며 다음 점검일은 2026-09-13이다.
 
-## 완료
-- `config/schema.json` 단일 진실원천 설계 (컬럼/enum 한 곳에서 관리)
-- 4개 테이블: `sectors` · `industry_indicators` · `bottleneck_log` · `investment_review_log`
-- 스크립트 4종: `add_entry`(upsert/append/추적 갱신) · `export_tsv`(시트 복붙) · `gen_report`(**board**/weekly/sector/share) · `create_templates`
-- **단계 이동 루브릭**(숫자 기준) PRINCIPLES.md 에 정의, 업종별 `다음 단계 트리거`로 덮어쓰기
-- **상태판 `gen_report.py board`**: 활성 아이디어 + 정체(14일) 경고
-- 컬럼 보정: `확신도→근거 강도`, `포지션 비중` 제거(리서치/실행 분리), `최근 점검일`(자동 bump)·`다음 단계 트리거` 추가
-- 예시 5종, 동작 검증 완료 (추적 갱신 시 중복 없음 / enum 오타 거부 / board·리포트 생성 확인)
-- 문서: `README.md` · `PRINCIPLES.md` · `AGENTS.md` · `CLAUDE.md`(=@AGENTS.md)
+## 검증
 
-## 로드맵 (합의된 우선순위)
-1. ✅ 단계 이동 루브릭 확정
-2. ✅ `investment_review_log`에 `최근 점검일` / `다음 단계 트리거` 추가
-3. ✅ 상태판 생성 뷰(`gen_report.py board`)
-4. ✅ 에이전트 **역할 정의**(설계만) — `AGENTS.md` §7 (Sector Indicator / Bottleneck Scout / EPS Revision / Risk Check / Review)
-5. ⏳ 실제 자동화 — **아직 안 함.** 데이터 쌓인 뒤 스킬(`/research`) → 서브에이전트 순으로.
+35개 단위·회귀 테스트 통과. 12개 보고서·평가·dry-run CLI 실행 성공. 원본 해시, 기존 신호 필드 보존, 스키마·ID 유일성, 마이그레이션 재실행 불변, git diff --check 통과. 검증 세부 정보는 docs/verification_2026-09-07.json에 있다. 실제 API 성공 및 원격 운영 검증과 구분한다.
 
-## ✅ metric_log 구현 완료 (Codex, 검증 통과)
-- `metric_log` 테이블 + `방향` enum, add_entry 자동보강(이전값 연결·변화율·방향), gen_report `metric` 상세 + 발굴 보드(`--min`).
-- 검증: 연속 상향 횟수/자동계산/enum 거부/무회귀 모두 확인. 브리프: `docs/metric_log_design.md`.
+## 미완료 및 외부 제약
 
-## MVP Definition of Done
-- [x] 코드(도구) MVP — 발굴/기록/추적/상태판/리포트/내보내기/복기 + metric_log 까지 완성
-- [ ] **실데이터 1바퀴 검증** — 실제 아이디어 1건을 발굴→기록→며칠 metric_log→board 단계판정→export 까지 통과 ← **여기가 남음**
+- FMP 실제 응답 HTTP 402: 컨센서스 관측 0개. 유효한 접근 권한 또는 수동 시점 자료가 필요하다.
+- 새 코드의 원격 main 운영 전환과 첫 실행 점검은 미수행이다.
+- Google Sheets는 v2 연동 코드만 준비했다. 실제 Sheet ID 설정·배포는 미수행이다.
+- 평가 표본 60개는 검토 대기다. 정확도·적중률은 미측정이다.
+- 30/90/180일 성과 자동 계산, 공급자 확장, 원문 보관 기간 자동 정리는 후속 범위다. 없는 과거 시계열을 생성하지 않는다.
 
-## ★ Discovery Engine (이 프로젝트의 진짜 목표) — Phase 1 ✅
-- 전체 브리프: `docs/discovery_engine_design.md`
-- **Phase 1 완료·품질패치 완료**: `collect.py`(EDGAR+RSS) · `extract.py`(**Gemini + throttle + 메가캡가드 + 키워드 폴백**) · `digest.py` · `signal_log` 테이블.
-- **레딧 격리 라인(별도)**: `collect_reddit.py`(RSS 종목 언급 집계) → `reddit_watch.csv`. 시끄러운 방 → 사람이 보고 진짜만 메인으로 수동 승격. `config/reddit_sources.json`로 서브레딧·제외어 튜닝.
-- 다음: Phase 2(텔레그램)→3(자동화).
-- 분석 모델: 무료티어 Gemini Flash(`GEMINI_API_KEY` env/.env), 딥다이브는 온디맨드(ChatGPT Plus 수동/Claude).
-
-## 진행 중 / 기록됨
-- **Credo (CRDO)** 첫 실(實) 아이디어로 기록 (IDEA-0002, 중기, 병목 확산형) — cold 발굴로 surface
-- 발굴 RUN 절차 = AGENTS.md §9 / 개선·역제안 누적 = `IDEAS.md`
-
-## 미해결
-- ✅ git 초기화 + GitHub(onepuhch/research) 푸시 완료. 변경 후 `git add -A && git commit -m "..." && git push`(자격증명 캐시돼 자동 업로드).
-- 무료티어 429 한도 (→ 다음 순서 1번 throttle로 해결 예정)
-- 키 발급: GEMINI ✅(.env), 텔레그램 봇 토큰·FMP는 `.env`에 채워둠(자동화 Phase 2~3에서 사용)
-
-## 나중 (선택)
-- 텔레그램 봇으로 `gen_report.py share` 자동 전송
-- Google Sheets API 연동 (현재는 `export_tsv` 수동 복붙으로 충분)
-- 유형별 적중률 집계 리포트(복기 정량화) — Review Agent와 연결
-
-## 주요 결정 기록
-- **데이터(원장)와 표현(리포트) 분리** → 공유/자동화 확장 대비
-- 업종/아이디어 중복 방지 위해 **upsert · idea_id 추적** 채택
-- 90→100점 보강 컬럼: 시장 컨센서스 · 내 견해와의 차이(엣지) · 종료 조건(정량) · 근거 강도 · 다음 단계 트리거
-- **근거 강도**(객관) 채택, **포지션 비중은 분리**(실행 결정 → 추후 별도 보유 테이블)
-- EPS 상향률 vs 주가 상승률은 **동일 기간(기본 3개월)** 비교로 명시
-- 상태판은 저장 테이블이 아니라 **생성 뷰**(데이터 중복/desync 방지)
-- `harness_framework`(Codex TDD 하네스)는 이 프로젝트에 **적용 안 함**(과함)
-
-## 협업 / 도구 메모
-- **Codex 협업**: 지침은 `AGENTS.md` 공용. Claude Code 는 `CLAUDE.md` 가 `@AGENTS.md` 로 가져옴. → 한 파일만 고치면 됨.
-- **작업 방식**: 위임형(방향 분명하면 끝까지), "계획만" 요청 시엔 검토 후 진행.
-- 플러그인 `claude-code-setup` 설치됨(자동화 추천기, 읽기 전용).
-
-## 열린 질문
-- Google Sheet 인증을 언제 붙일지
-- 친구 공유용 요약의 톤/범위 (지금은 면책 문구 포함한 짧은 요약)
-- 데이터 폴더가 OneDrive 안 → git 버전관리 도입 여부
+상세 변경과 후속 순서는 docs/implementation_2026-09-07.md를 참조한다.
