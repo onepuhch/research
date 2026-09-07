@@ -520,6 +520,10 @@ def is_true(value: Any) -> bool:
     return isinstance(value, str) and value.strip().lower() == "true"
 
 
+class InvalidEvidence(ValueError):
+    """A model answer fails the source check; this is not an API outage."""
+
+
 def grounded_quote(quote_text: str, raw_text: str) -> bool:
     quote_text = normalize(quote_text)
     return 20 <= len(quote_text) <= 700 and quote_text in normalize(raw_text)
@@ -551,7 +555,7 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str] | 
     evidence = clean_text(data.get("evidence_quote"))
     raw_text = clean_text(item.get("raw_text"))
     if not grounded_quote(evidence, raw_text):
-        raise ValueError("missing or ungrounded evidence quote")
+        raise InvalidEvidence("missing or ungrounded evidence quote")
     megacap = c.is_megacap(subject)
     signal_type = normalize_signal_type(data.get("signal_type"), item)
     axes_source = data.get("upside_axes")
@@ -696,7 +700,7 @@ def main(argv: list[str]) -> int:
             candidates.append(item)
         limit, phrases = load_edgar_extract_config()
         selected = prefilter_items(candidates, min(limit, policy["max_model_calls"]), phrases)
-        accepted = rejected = failed = 0
+        accepted = rejected = failed = validation_rejected = 0
         circuit_open = False
         for index, item in enumerate(selected):
             if circuit_open:
@@ -713,6 +717,10 @@ def main(argv: list[str]) -> int:
                 else:
                     record.update(status="rejected", reason=item.get("_reject_reason", "not a concrete signal"))
                     rejected += 1
+            except InvalidEvidence:
+                record.update(status="rejected", reason="evidence_grounding_failed", validation_rejected=True)
+                rejected += 1
+                validation_rejected += 1
             except (HTTPError, URLError, TimeoutError, KeyError, IndexError, json.JSONDecodeError, ValueError) as error:
                 # Never log credential-bearing URLs or turn an API failure into a signal.
                 record.update(status="retry", reason=type(error).__name__,
@@ -729,7 +737,9 @@ def main(argv: list[str]) -> int:
         c.atomic_json(state_path, ledger)
         pending = sum(r.get("status") in {"retry", "deferred"} for r in ledger.values())
         c.record_run("extract", "degraded" if failed else "success", accepted=accepted,
-                     rejected=rejected, failed=failed, pending=pending, model=GEMINI_MODEL, prompt_version=version)
+                     rejected=rejected, validation_rejected=validation_rejected,
+                     validation_rejected_total=sum(bool(r.get("validation_rejected")) for r in ledger.values()),
+                     failed=failed, pending=pending, model=GEMINI_MODEL, prompt_version=version)
         print(f"[extract] accepted={accepted} rejected={rejected} retry={failed} pending={pending}")
         return 1 if failed else 0
     except (OSError, ValueError, KeyError, TypeError) as error:

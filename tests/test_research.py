@@ -82,6 +82,15 @@ class ResearchTests(unittest.TestCase):
             with patch.object(extract, "build_signal", side_effect=model):
                 return extract.main(["extract"])
 
+    def test_ungrounded_model_answer_is_rejected_not_service_failure(self):
+        result = self.run_extract([self.item()], model=extract.InvalidEvidence("source mismatch"))
+        self.assertEqual(result, 0)
+        ledger = c.read_json(self.data / "source_state.json", {})
+        self.assertEqual(next(iter(ledger.values()))["reason"], "evidence_grounding_failed")
+        state = c.read_json(self.data / "run_status.json", {})["extract"]
+        self.assertEqual(state["validation_rejected"], 1)
+        self.assertEqual(state["failed"], 0)
+
     def test_report_retry_does_not_resend_successful_chunk(self):
         with patch.object(c, "active_ideas", return_value=[{}]), \
              patch.object(notify, "build_report_chunks", return_value=["review result"]), \

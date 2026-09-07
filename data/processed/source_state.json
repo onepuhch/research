@@ -636,7 +636,7 @@
     "reason": "제공된 텍스트는 회사의 일반적인 사업 위험 요소를 나열한 것으로, 구체적인 투자 발굴 신호(예: 가이던스 상향, 수주 변화, 생산능력 증설 등)를 포함하지 않습니다."
   },
   "0001071236-26-000062": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -686,9 +686,10 @@
     "content_hash": "0b1bbd9f491308b876be7aa4673909133c53eab70a0909aba469fb759bf82e10",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-09-07T13:31:34+00:00",
-    "reason": "ValueError",
-    "next_retry_at": "2026-09-08T01:29:51.854133+00:00"
+    "updated_at": "2026-09-07T13:34:12+00:00",
+    "reason": "evidence_grounding_failed",
+    "next_retry_at": "2026-09-08T01:29:51.854133+00:00",
+    "validation_rejected": true
   },
   "0001856437-26-000019": {
     "status": "accepted",
@@ -746,7 +747,7 @@
     "reason": "grounded extraction"
   },
   "0001437749-26-029609": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -796,12 +797,13 @@
     "content_hash": "29093fdedab77e0597a373ae85c9a94bc7281342fb8fb48adec8385c0559ea9e",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-09-07T13:30:38+00:00",
-    "reason": "ValueError",
-    "next_retry_at": "2026-09-08T01:29:51.854133+00:00"
+    "updated_at": "2026-09-07T13:34:12+00:00",
+    "reason": "evidence_grounding_failed",
+    "next_retry_at": "2026-09-08T01:29:51.854133+00:00",
+    "validation_rejected": true
   },
   "0001193125-26-381874": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -851,9 +853,10 @@
     "content_hash": "d6bdf6d705bf3808c6f91600a75694941060fa0fe85bce3fa6ba8d9e546eecdb",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-09-07T13:31:00+00:00",
-    "reason": "ValueError",
-    "next_retry_at": "2026-09-08T01:29:51.854133+00:00"
+    "updated_at": "2026-09-07T13:34:12+00:00",
+    "reason": "evidence_grounding_failed",
+    "next_retry_at": "2026-09-08T01:29:51.854133+00:00",
+    "validation_rejected": true
   },
   "0001452936-26-000044": {
     "status": "rejected",
