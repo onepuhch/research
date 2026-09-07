@@ -46,6 +46,6 @@ weekly 보고서에서 강화·약화·자료 부족을 근거 ID와 함께 검�
 - 429/모델 오류: 추출 재시도 원장을 유지한다. 수집을 다시 실행하면 기한이 된 재시도도 처리한다.
 - 손상된 알림 상태: 발송이 중단된다. pushed ID를 백업에서 복원한다.
 - 쓰기 중단: migrate_v2.py 또는 다음 원장 읽기에서 pending_tables.json을 복구한다.
-- 운영 전환: 로컬 검증 결과를 검토한 뒤 변경을 원격 main에 반영하고 첫 workflow 실행의 health·저장 상태·실제 응답을 확인한다. 이 작업에서는 main 전환이나 메시지 실발송을 하지 않았다.
+- 운영 전환: 로컬 검증 결과를 검토한 뒤 변경을 원격 main에 반영하고 첫 workflow 실행의 health·저장 상태·실제 응답을 확인한다. 2026-09-07 main 전환·메시지 실발송·실제 workflow 검증을 완료했다. 이후 변경에도 같은 확인 절차를 적용한다.
 
 Telegram 명령 처리 주기를 줄여도 외부 스케줄 지연에 따른 유실 위험은 남는다. Telegram 업데이트 보관 제한은 [Bot API](https://core.telegram.org/bots/api#getting-updates), 스케줄 제약은 [GitHub 문서](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)를 확인한다.

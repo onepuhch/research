@@ -1,0 +1,264 @@
+{
+  "checked_at": "2026-09-07T13:37:07+00:00",
+  "code_commit": "e08131774b01697bade9c4c3b5e768a4106274c3",
+  "telegram_message_id": 119,
+  "telegram_receipt": "API accepted; user read status not available",
+  "tests_per_os": 38,
+  "run_status": {
+    "eps": {
+      "checked_at": "2026-09-07T13:35:29+00:00",
+      "status": "degraded",
+      "last_success_at": null,
+      "targets": 1,
+      "observations": 0,
+      "failures": [
+        {
+          "ticker": "CRDO",
+          "error_type": "HTTPError",
+          "http_status": 402
+        }
+      ]
+    },
+    "collect": {
+      "checked_at": "2026-09-07T13:35:28+00:00",
+      "status": "degraded",
+      "last_success_at": "2026-09-07T13:26:10+00:00",
+      "item_count": 21,
+      "errors": [
+        "Import AI: HTTP Error 403: Forbidden"
+      ],
+      "collected_at": "2026-09-07T13:35:28.223070+00:00"
+    },
+    "extract": {
+      "checked_at": "2026-09-07T13:35:28+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:35:28+00:00",
+      "accepted": 0,
+      "rejected": 0,
+      "validation_rejected": 0,
+      "validation_rejected_total": 3,
+      "failed": 0,
+      "pending": 0,
+      "model": "gemini-2.5-flash",
+      "prompt_version": "research-v2-20260906"
+    },
+    "commands": {
+      "checked_at": "2026-09-07T13:35:16+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:35:16+00:00",
+      "processed": 0,
+      "failed": 0
+    },
+    "telegram_delivery": {
+      "checked_at": "2026-09-07T13:28:04+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:28:04+00:00",
+      "message_id": 119
+    },
+    "review_report": {
+      "checked_at": "2026-09-07T13:35:32+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:35:32+00:00"
+    },
+    "notify": {
+      "checked_at": "2026-09-07T13:35:29+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:35:29+00:00"
+    }
+  },
+  "runs": [
+    {
+      "id": 34128208623,
+      "url": "https://github.com/onepuhch/research/actions/runs/34128208623",
+      "jobs": [
+        {
+          "name": "research",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate core behavior",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Recover and migrate state",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Process commands independently",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Collect source documents",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Extract grounded signals",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Observe tracked EPS",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "Retry eligible notifications",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Build research views",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Weekly community watch",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Weekly review report independently",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Persist state even when a service fails",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Retain generated review outputs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34128209167,
+      "url": "https://github.com/onepuhch/research/actions/runs/34128209167",
+      "jobs": [
+        {
+          "name": "tests (ubuntu-latest)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m unittest discover -s tests -v",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "tests (windows-latest)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m unittest discover -s tests -v",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
