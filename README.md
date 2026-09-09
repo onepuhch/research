@@ -1,8 +1,6 @@
-> 2026-09-07 후속 수정: EPS 기본 공급자를 Yahoo Finance 공개 non-GAAP 컨센서스로 교체했다. FMP 결제는 필요 없다. 운영 검증 결과는 STATUS.md를 참조한다.
-
 # 투자리서치 시스템
 
-해외 밸류체인 신호를 원문 근거와 함께 모으고, 소수의 가설을 숫자·반증 조건·판단 이력으로 추적한다. 2026-09-07 원격 main 배포와 운영 실행, 실제 Telegram 보고서 전달을 확인했다. FMP HTTP 402와 일부 RSS HTTP 403은 남아 있다. 검증 결과는 STATUS.md를 참조한다.
+해외 밸류체인 신호를 원문 근거와 함께 모으고, 소수의 가설을 숫자·반증 조건·판단 이력으로 추적한다. 2026-09-07 원격 main 배포와 운영 실행, 실제 Telegram 보고서 전달을 확인했다. 2026-09-09 EPS 기본 공급자를 추가 결제가 필요 없는 Yahoo Finance 공개 컨센서스로 교체했고, 접근이 차단된 Import AI 피드는 수집 설정에서 제외했다. 검증 결과는 STATUS.md를 참조한다.
 
 ## 빠른 확인 (PowerShell, Python 3.11 이상)
 
@@ -54,9 +52,9 @@ python scripts/evaluate.py
 
 ## 외부 연결 및 자동 실행
 
-GitHub Secrets 또는 로컬 .env: GEMINI_API_KEY, FMP_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. SEC_USER_AGENT는 실제 운영자 연락처가 포함된 식별 문자열로 설정하고 GitHub에서는 Repository Variable을 사용한다. 키 값과 .env는 커밋하지 않는다.
+GitHub Secrets 또는 로컬 .env: GEMINI_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. 기본 Yahoo EPS 수집에는 키가 필요 없다. FMP_API_KEY는 eps_provider를 fmp로 선택할 때만 필요하다. SEC_USER_AGENT는 실제 운영자 연락처가 포함된 식별 문자열로 설정하고 GitHub에서는 Repository Variable을 사용한다. 키 값과 .env는 커밋하지 않는다.
 
-FMP stable analyst-estimates는 현재 보유 키로 HTTP 402가 확인되어 사용 불가 상태다. 요금제 구매는 수행하지 않았다. EPS 결측을 회사 실적이나 가이던스로 채우지 않는다.
+EPS 공급자는 config/research_policy.json의 eps_provider로 선택한다. 기본 yahoo는 공개 페이지의 명시적인 non-GAAP 연간 컨센서스만 수집하며, 회사·통화·기간·분석가 수를 검사한다. 공급자별 시계열을 합치지 않는다. FMP는 현재 키로 HTTP 402이므로 기본 운영에서 호출하지 않는다. EPS 결측을 회사 실적이나 가이던스로 채우지 않는다.
 
 새 workflow 설정은 KST 매일 09:17 수집·추출·EPS·알림, 03:23/09:23/15:23/21:23 명령 처리다. 주간 검토 보고는 월요일이다. GitHub 스케줄은 정확한 시각을 보장하지 않는다. /track은 최근 14일 신호를 지원하고 재실행 시 기존 아이디어를 반환한다. 명령 큐를 먼저 저장한 뒤 offset을 갱신해 응답 실패를 재시도한다.
 

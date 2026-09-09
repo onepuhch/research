@@ -1,0 +1,141 @@
+{
+  "checked_at": "2026-09-09T14:38:41+00:00",
+  "run_url": "https://github.com/onepuhch/research/actions/runs/34364600711",
+  "tests": 40,
+  "run_status": {
+    "eps": {
+      "checked_at": "2026-09-09T14:37:15+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-09T14:37:15+00:00",
+      "targets": 1,
+      "observations": 2,
+      "failures": [],
+      "provider": "yahoo"
+    },
+    "collect": {
+      "checked_at": "2026-09-09T14:35:41+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-09T14:35:41+00:00",
+      "item_count": 22,
+      "errors": [],
+      "collected_at": "2026-09-09T14:35:41.231950+00:00"
+    },
+    "extract": {
+      "checked_at": "2026-09-09T14:37:14+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-09T14:37:14+00:00",
+      "accepted": 2,
+      "rejected": 4,
+      "validation_rejected": 2,
+      "validation_rejected_total": 7,
+      "failed": 0,
+      "pending": 0,
+      "model": "gemini-2.5-flash",
+      "prompt_version": "research-v2-20260906"
+    },
+    "commands": {
+      "checked_at": "2026-09-09T14:35:30+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-09T14:35:30+00:00",
+      "processed": 0,
+      "failed": 0
+    },
+    "telegram_delivery": {
+      "checked_at": "2026-09-07T13:28:04+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:28:04+00:00",
+      "message_id": 119
+    },
+    "review_report": {
+      "checked_at": "2026-09-07T13:35:32+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-07T13:35:32+00:00"
+    },
+    "notify": {
+      "checked_at": "2026-09-09T14:37:15+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-09T14:37:15+00:00"
+    }
+  },
+  "consensus_observations": 4,
+  "jobs": [
+    {
+      "name": "research",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Validate core behavior",
+          "conclusion": "success"
+        },
+        {
+          "name": "Recover and migrate state",
+          "conclusion": "success"
+        },
+        {
+          "name": "Process commands independently",
+          "conclusion": "success"
+        },
+        {
+          "name": "Collect source documents",
+          "conclusion": "success"
+        },
+        {
+          "name": "Extract grounded signals",
+          "conclusion": "success"
+        },
+        {
+          "name": "Observe tracked EPS",
+          "conclusion": "success"
+        },
+        {
+          "name": "Retry eligible notifications",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build research views",
+          "conclusion": "success"
+        },
+        {
+          "name": "Weekly community watch",
+          "conclusion": "success"
+        },
+        {
+          "name": "Weekly review report independently",
+          "conclusion": "success"
+        },
+        {
+          "name": "Persist state even when a service fails",
+          "conclusion": "success"
+        },
+        {
+          "name": "Retain generated review outputs",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ]
+}
