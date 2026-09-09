@@ -74,3 +74,9 @@ Google Sheets 코드는 docs/gas_main.js에 있다. v2 전용 탭을 사용하�
 - [개선 적용 결과](docs/implementation_2026-09-07.md)
 - [CRDO 재점검](docs/crdo_review_2026-09-06.md)
 - [운영 절차](docs/daily_run.md)
+
+## 실제 가설 연구
+
+`python scripts/gen_report.py cases`로 병목 → 후보 → 시장 기대 차이 → 숫자 → 반증까지 한 화면에서 확인한다. [AI 연결 연구 사례](docs/interconnect_research_2026-09-09.md)는 기준일 스냅샷이고, data/research/cases의 구조화된 가설과 metric_log를 연결해 매일 새 보고서를 만든다. 주간 보고서와 Telegram 주간 보고에도 가설 요약이 포함된다.
+
+현재 연구 우선순위는 ALAB, 비교 대상은 CRDO·MRVL이다. 매매 추천 순위가 아니며 공급 부족·시장 미반영이 입증됐다는 뜻이 아니다. 컨센서스는 자동 관측하고, 제품별 매출·고객 계약·실적 발표의 실제 수치는 원문 확인 후 add_entry로 등록한다. 미래 수치가 없으면 반증 결과는 자료 부족으로 남는다.

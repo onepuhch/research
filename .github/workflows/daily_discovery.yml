@@ -53,6 +53,7 @@ jobs:
           python scripts/gen_report.py weekly
           python scripts/gen_report.py bottlenecks
           python scripts/gen_report.py quality
+          python scripts/gen_report.py cases
       - name: Weekly community watch
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: |

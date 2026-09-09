@@ -6,6 +6,7 @@ from datetime import date, timedelta
 import common as c
 import metrics
 import review
+import research_cases
 
 
 def cell(value):
@@ -42,7 +43,7 @@ def render_weekly():
         [[r["idea_id"], r["reviewed_at"], r["판단 변화"], r["이전 상태"], r["이후 상태"], r["변경 사유"]] for r in history])
     if not history:
         result += "\n지난 7일 판단 갱신 없음. 신호 추가와 연구 갱신은 다릅니다.\n"
-    return result + "\n" + render_board() + "\n" + render_health()
+    return result + "\n" + render_board() + "\n" + render_cases() + "\n" + render_health()
 
 
 def group_metric_rows():
@@ -132,6 +133,10 @@ def render_sector(name):
          for r in c.active_ideas() if name.casefold() in json.dumps(r, ensure_ascii=False).casefold()])
 
 
+def render_cases():
+    return research_cases.render()
+
+
 def render_share():
     return render_board()
 
@@ -146,7 +151,7 @@ def save(name, content):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("view", choices=["board", "weekly", "metric", "valuation", "bottlenecks", "quality", "health", "sector", "share"])
+    parser.add_argument("view", choices=["board", "weekly", "metric", "valuation", "bottlenecks", "quality", "health", "sector", "share", "cases"])
     parser.add_argument("subject", nargs="?")
     parser.add_argument("--min", dest="minimum", type=int, default=2)
     args = parser.parse_args(argv)
@@ -158,6 +163,8 @@ def main(argv=None):
         content = render_metric_detail(args.subject) if args.subject else render_metric_board(args.minimum)
     elif args.view == "valuation":
         content = render_valuation(args.subject)
+    elif args.view == "cases":
+        content = research_cases.render(args.subject)
     elif args.view == "sector":
         content = render_sector(args.subject)
     else:

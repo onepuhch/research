@@ -355,5 +355,34 @@
       "미확인"
     ]
   },
-  "version": 2
+  "version": 2,
+  "research_case": {
+    "required": [
+      "case_id",
+      "title",
+      "as_of",
+      "next_review",
+      "conclusion",
+      "sources",
+      "chain",
+      "candidates",
+      "decision_tests"
+    ],
+    "link_status": [
+      "확인",
+      "추론",
+      "미확인",
+      "반증"
+    ],
+    "candidate_required": [
+      "ticker",
+      "entity_id",
+      "idea_id",
+      "mechanism",
+      "market_gap",
+      "next_check",
+      "invalidation",
+      "source_ids"
+    ]
+  }
 }

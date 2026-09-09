@@ -25,6 +25,7 @@ import notify
 import telegram_cmd as commands
 import gen_report
 import review
+import research_cases
 import evaluate
 import persist_state
 import subprocess
@@ -82,6 +83,37 @@ class ResearchTests(unittest.TestCase):
                 return extract.main(["extract"])
             with patch.object(extract, "build_signal", side_effect=model):
                 return extract.main(["extract"])
+
+    def sample_case(self):
+        return {"case_id": "TEST", "title": "test hypothesis", "as_of": c.today(), "next_review": c.today(),
+                "conclusion": "미반영 미확인", "sources": [{"id": "S1", "group": "Issuer", "role": "실적", "url": "https://example.org", "published_at": "", "fact": "test"}],
+                "chain": [{"claim": "demand", "status": "미확인", "source_ids": [], "limit": "unknown"}],
+                "candidates": [{"ticker": "EXM", "entity_id": "CIK:0000000001", "idea_id": "IDEA-TEST", "mechanism": "hypothesis", "market_gap": "unknown", "next_check": "next release", "invalidation": "revenue below threshold", "source_ids": ["S1"]}],
+                "decision_tests": [{"ticker": "EXM", "metric": "Revenue", "period_end": c.today(), "basis": "GAAP", "unit": "million", "currency": "USD", "source": "Vendor A", "threshold": 10, "operator": "lt", "label": "revenue below 10", "registered_at": c.today()}]}
+
+    def test_case_rejects_unresolved_or_unsupported_evidence(self):
+        case = self.sample_case()
+        case["chain"][0].update(status="확인")
+        with self.assertRaises(ValueError):
+            research_cases.validate(case)
+        case["chain"][0]["source_ids"] = ["missing"]
+        with self.assertRaises(ValueError):
+            research_cases.validate(case)
+
+    def test_case_future_missing_actual_is_not_a_pass(self):
+        case = self.sample_case()
+        idea = {"idea_id": "IDEA-TEST", "entity_id": "CIK:0000000001"}
+        with patch.object(research_cases, "load_cases", return_value=[case]), patch.object(c, "active_ideas", return_value=[idea]):
+            output = research_cases.render()
+            self.assertIn("자료 부족", output)
+            self.assertNotIn("미발동", output)
+            self.put_metric(value="9", **{"지표명": "Revenue", "metric_kind": "actual", "period_end": c.today(), "단위": "million", "회계기준": "GAAP"})
+            self.assertIn("발동", research_cases.render())
+
+    def test_case_unknown_id_is_not_silently_ignored(self):
+        with patch.object(research_cases, "load_cases", return_value=[self.sample_case()]):
+            with self.assertRaises(ValueError):
+                research_cases.render("unknown")
 
     def yahoo_page(self, symbol="CRDO", currency="USD", duplicate=False):
         trend = [{"period": p, "endDate": end, "earningsEstimate": {"avg": {"raw": value},
