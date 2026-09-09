@@ -1,6 +1,6 @@
 {
   "eps": {
-    "checked_at": "2026-09-08T04:47:12+00:00",
+    "checked_at": "2026-09-09T04:51:27+00:00",
     "status": "degraded",
     "last_success_at": null,
     "targets": 1,
@@ -14,32 +14,32 @@
     ]
   },
   "collect": {
-    "checked_at": "2026-09-08T04:47:12+00:00",
+    "checked_at": "2026-09-09T04:50:20+00:00",
     "status": "degraded",
     "last_success_at": "2026-09-07T13:26:10+00:00",
     "item_count": 16,
     "errors": [
       "Import AI: HTTP Error 403: Forbidden"
     ],
-    "collected_at": "2026-09-08T04:47:12.369850+00:00"
+    "collected_at": "2026-09-09T04:50:20.025053+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-08T04:47:12+00:00",
+    "checked_at": "2026-09-09T04:51:27+00:00",
     "status": "success",
-    "last_success_at": "2026-09-08T04:47:12+00:00",
+    "last_success_at": "2026-09-09T04:51:27+00:00",
     "accepted": 0,
-    "rejected": 0,
-    "validation_rejected": 0,
-    "validation_rejected_total": 3,
+    "rejected": 4,
+    "validation_rejected": 2,
+    "validation_rejected_total": 5,
     "failed": 0,
     "pending": 0,
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-08T21:15:19+00:00",
+    "checked_at": "2026-09-09T04:50:12+00:00",
     "status": "success",
-    "last_success_at": "2026-09-08T21:15:19+00:00",
+    "last_success_at": "2026-09-09T04:50:12+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -55,8 +55,8 @@
     "last_success_at": "2026-09-07T13:35:32+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-08T04:47:12+00:00",
+    "checked_at": "2026-09-09T04:51:27+00:00",
     "status": "success",
-    "last_success_at": "2026-09-08T04:47:12+00:00"
+    "last_success_at": "2026-09-09T04:51:27+00:00"
   }
 }
