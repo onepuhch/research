@@ -1,17 +1,12 @@
 {
   "eps": {
-    "checked_at": "2026-09-07T13:35:29+00:00",
-    "status": "degraded",
-    "last_success_at": null,
+    "checked_at": "2026-09-07T13:52:08+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-07T13:52:08+00:00",
     "targets": 1,
-    "observations": 0,
-    "failures": [
-      {
-        "ticker": "CRDO",
-        "error_type": "HTTPError",
-        "http_status": 402
-      }
-    ]
+    "observations": 2,
+    "failures": [],
+    "provider": "yahoo"
   },
   "collect": {
     "checked_at": "2026-09-07T13:35:28+00:00",

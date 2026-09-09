@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 import common as c
 import metrics
 import add_entry
+import collect_yahoo
 
 FMP_ENDPOINT = "https://financialmodelingprep.com/stable/analyst-estimates"
 
@@ -81,17 +82,19 @@ def main():
         print("[eps] no registered targets")
         return 0
     key = c.load_dotenv_value("FMP_API_KEY")
-    if not key:
-        c.record_run("eps", "unavailable", targets=len(targets), reason="credentials_missing")
-        print("[eps] unavailable: credentials missing; no synthetic consensus")
-        return 1
+    provider = c.policy().get("eps_provider", "yahoo")
     failures = []
     added = 0
     for target in targets:
         try:
             if not target.get("currency") or not target.get("entity_id"):
                 raise ValueError("entity or currency metadata missing")
-            observations = build_metrics(target, fetch_estimates(target["ticker"], key))
+            if provider == "yahoo":
+                observations = collect_yahoo.fetch_metrics(target)
+            elif provider == "fmp" and key:
+                observations = build_metrics(target, fetch_estimates(target["ticker"], key))
+            else:
+                raise ValueError("provider configuration or credential missing")
             if not observations:
                 raise ValueError("no valid future estimates")
             for observation in observations:
@@ -101,7 +104,7 @@ def main():
             failures.append({"ticker": target["ticker"], "error_type": type(error).__name__,
                              "http_status": getattr(error, "code", None)})
             print(f"[eps] {target['ticker']}: {type(error).__name__} ({getattr(error, 'code', 'n/a')})")
-    c.record_run("eps", "degraded" if failures else "success", targets=len(targets), observations=added, failures=failures)
+    c.record_run("eps", "degraded" if failures else "success", targets=len(targets), observations=added, failures=failures, provider=provider)
     return 1 if failures else 0
 
 

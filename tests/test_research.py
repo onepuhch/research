@@ -19,6 +19,7 @@ import migrate_v2
 import extract
 import collect
 import collect_eps
+import collect_yahoo
 import promote
 import notify
 import telegram_cmd as commands
@@ -81,6 +82,29 @@ class ResearchTests(unittest.TestCase):
                 return extract.main(["extract"])
             with patch.object(extract, "build_signal", side_effect=model):
                 return extract.main(["extract"])
+
+    def yahoo_page(self, symbol="CRDO", currency="USD", duplicate=False):
+        trend = [{"period": p, "endDate": end, "earningsEstimate": {"avg": {"raw": value},
+                  "numberOfAnalysts": {"raw": 12}, "earningsCurrency": currency}}
+                 for p, end, value in [("0y", "2030-04-30", 5), ("+1y", "2031-04-30", 6)]]
+        if duplicate:
+            trend.append({**trend[0], "earningsEstimate": {**trend[0]["earningsEstimate"], "avg": {"raw": 99}}})
+        body = {"quoteSummary": {"result": [{"price": {"symbol": symbol}, "earningsTrendNonGaap": {"trend": trend}}]}}
+        return "<script>" + json.dumps({"body": json.dumps(body)}) + "</script>"
+
+    def test_yahoo_annual_non_gaap_observations_are_separate_from_fmp(self):
+        target = {"ticker": "CRDO", "entity_id": "NASDAQ:CRDO", "currency": "USD"}
+        rows = collect_yahoo.parse_estimates(self.yahoo_page(), target)
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0]["data"]["회계기준"], "non-GAAP")
+        self.assertEqual(rows[0]["data"]["출처"], "Yahoo Finance non-GAAP")
+        self.assertEqual(rows[0]["data"]["as_of"], c.today())
+
+    def test_yahoo_refuses_wrong_entity_currency_or_conflicting_values(self):
+        target = {"ticker": "CRDO", "entity_id": "NASDAQ:CRDO", "currency": "USD"}
+        for page in [self.yahoo_page(symbol="OTHER"), self.yahoo_page(currency="EUR"), self.yahoo_page(duplicate=True), "<html>unavailable</html>"]:
+            with self.assertRaises(ValueError):
+                collect_yahoo.parse_estimates(page, target)
 
     def test_ungrounded_model_answer_is_rejected_not_service_failure(self):
         result = self.run_extract([self.item()], model=extract.InvalidEvidence("source mismatch"))
