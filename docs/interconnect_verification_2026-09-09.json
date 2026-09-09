@@ -1,0 +1,69 @@
+{
+  "verified_date": "2026-09-09",
+  "case_id": "AI-INTERCONNECT-20260909",
+  "runs": [
+    {
+      "id": 34366083411,
+      "url": "https://github.com/onepuhch/research/actions/runs/34366083411",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "43f4655c17db641c4dbab9593c299054da308c94",
+      "jobs": [
+        {
+          "name": "research",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 34366082774,
+      "url": "https://github.com/onepuhch/research/actions/runs/34366082774",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "43f4655c17db641c4dbab9593c299054da308c94",
+      "jobs": [
+        {
+          "name": "tests (ubuntu-latest)",
+          "conclusion": "success"
+        },
+        {
+          "name": "tests (windows-latest)",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "tests_per_platform": 43,
+  "candidates": [
+    "ALAB",
+    "CRDO",
+    "MRVL"
+  ],
+  "future_decision_tests": 6,
+  "eps": {
+    "checked_at": "2026-09-09T14:49:09+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-09T14:49:09+00:00",
+    "targets": 3,
+    "observations": 6,
+    "failures": [],
+    "provider": "yahoo"
+  },
+  "telegram_delivery": {
+    "checked_at": "2026-09-09T14:53:17+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-09T14:53:17+00:00",
+    "message_id": 121
+  },
+  "review_report": {
+    "checked_at": "2026-09-09T14:53:17+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-09T14:53:17+00:00"
+  },
+  "telegram_chunks_sent": 2,
+  "limitations": [
+    "시장 미반영과 지속적 공급 부족은 미입증",
+    "분기 확정 실적은 원문 검토 후 입력해야 반증 조건과 대조됨",
+    "전체 시장 후보 전수 비교 또는 매매 추천이 아님"
+  ]
+}
