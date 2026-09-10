@@ -1,38 +1,38 @@
 {
   "eps": {
-    "checked_at": "2026-09-09T14:49:09+00:00",
+    "checked_at": "2026-09-10T04:53:37+00:00",
     "status": "success",
-    "last_success_at": "2026-09-09T14:49:09+00:00",
+    "last_success_at": "2026-09-10T04:53:37+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-09-09T14:49:07+00:00",
+    "checked_at": "2026-09-10T04:51:49+00:00",
     "status": "success",
-    "last_success_at": "2026-09-09T14:49:07+00:00",
-    "item_count": 22,
+    "last_success_at": "2026-09-10T04:51:49+00:00",
+    "item_count": 24,
     "errors": [],
-    "collected_at": "2026-09-09T14:49:07.620982+00:00"
+    "collected_at": "2026-09-10T04:51:49.594737+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-09T14:49:07+00:00",
+    "checked_at": "2026-09-10T04:53:36+00:00",
     "status": "success",
-    "last_success_at": "2026-09-09T14:49:07+00:00",
-    "accepted": 0,
-    "rejected": 0,
-    "validation_rejected": 0,
-    "validation_rejected_total": 7,
+    "last_success_at": "2026-09-10T04:53:36+00:00",
+    "accepted": 1,
+    "rejected": 5,
+    "validation_rejected": 1,
+    "validation_rejected_total": 8,
     "failed": 0,
     "pending": 0,
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-09T21:00:00+00:00",
+    "checked_at": "2026-09-10T04:51:39+00:00",
     "status": "success",
-    "last_success_at": "2026-09-09T21:00:00+00:00",
+    "last_success_at": "2026-09-10T04:51:39+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -48,8 +48,8 @@
     "last_success_at": "2026-09-09T14:53:17+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-09T14:49:09+00:00",
+    "checked_at": "2026-09-10T04:53:37+00:00",
     "status": "success",
-    "last_success_at": "2026-09-09T14:49:09+00:00"
+    "last_success_at": "2026-09-10T04:53:37+00:00"
   }
 }
