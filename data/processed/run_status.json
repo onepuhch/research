@@ -1,28 +1,28 @@
 {
   "eps": {
-    "checked_at": "2026-09-11T04:50:17+00:00",
+    "checked_at": "2026-09-12T04:44:12+00:00",
     "status": "success",
-    "last_success_at": "2026-09-11T04:50:17+00:00",
+    "last_success_at": "2026-09-12T04:44:12+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-09-11T04:48:44+00:00",
+    "checked_at": "2026-09-12T04:42:29+00:00",
     "status": "success",
-    "last_success_at": "2026-09-11T04:48:44+00:00",
-    "item_count": 22,
+    "last_success_at": "2026-09-12T04:42:29+00:00",
+    "item_count": 27,
     "errors": [],
-    "collected_at": "2026-09-11T04:48:44.776959+00:00"
+    "collected_at": "2026-09-12T04:42:29.149814+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-11T04:50:15+00:00",
+    "checked_at": "2026-09-12T04:44:10+00:00",
     "status": "success",
-    "last_success_at": "2026-09-11T04:50:15+00:00",
-    "accepted": 1,
+    "last_success_at": "2026-09-12T04:44:10+00:00",
+    "accepted": 2,
     "rejected": 4,
-    "validation_rejected": 2,
+    "validation_rejected": 0,
     "validation_rejected_total": 10,
     "failed": 0,
     "pending": 0,
@@ -30,9 +30,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-11T21:03:32+00:00",
+    "checked_at": "2026-09-12T04:42:15+00:00",
     "status": "success",
-    "last_success_at": "2026-09-11T21:03:32+00:00",
+    "last_success_at": "2026-09-12T04:42:15+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -48,8 +48,8 @@
     "last_success_at": "2026-09-09T14:53:17+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-11T04:50:18+00:00",
+    "checked_at": "2026-09-12T04:44:12+00:00",
     "status": "success",
-    "last_success_at": "2026-09-11T04:50:18+00:00"
+    "last_success_at": "2026-09-12T04:44:12+00:00"
   }
 }
