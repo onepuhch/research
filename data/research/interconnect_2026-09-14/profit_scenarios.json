@@ -1,0 +1,50 @@
+[
+  {
+    "ticker": "ALAB",
+    "source_id": "ALAB-Q2",
+    "unit": "million USD",
+    "basis": "non-GAAP",
+    "revenue_midpoint": 550,
+    "gross_margin_midpoint": 0.72,
+    "opex_midpoint": 158,
+    "formula": "revenue * gross_margin - opex",
+    "downside_assumption": "revenue -5%, gross margin -1 percentage point; opex unchanged",
+    "upside_assumption": "revenue +5%, gross margin +1 percentage point; opex unchanged",
+    "downside_operating_income": 212.975,
+    "base_operating_income": 238.0,
+    "upside_operating_income": 263.575,
+    "interpretation": "Illustrative sensitivity only, no probabilities or independent volume/ASP forecast. Excludes interest, taxes, dilution and GAAP reconciliation."
+  },
+  {
+    "ticker": "CRDO",
+    "source_id": "CRDO-SEC-Q1",
+    "unit": "million USD",
+    "basis": "non-GAAP",
+    "revenue_midpoint": 530,
+    "gross_margin_midpoint": 0.68,
+    "opex_midpoint": 102.5,
+    "formula": "revenue * gross_margin - opex",
+    "downside_assumption": "revenue -5%, gross margin -1 percentage point; opex unchanged",
+    "upside_assumption": "revenue +5%, gross margin +1 percentage point; opex unchanged",
+    "downside_operating_income": 234.845,
+    "base_operating_income": 257.9,
+    "upside_operating_income": 281.485,
+    "interpretation": "Illustrative sensitivity only, no probabilities or independent volume/ASP forecast. Excludes interest, taxes, dilution and GAAP reconciliation."
+  },
+  {
+    "ticker": "MRVL",
+    "source_id": "MRVL-Q2",
+    "unit": "million USD",
+    "basis": "non-GAAP",
+    "revenue_midpoint": 3150,
+    "gross_margin_midpoint": 0.58,
+    "opex_midpoint": 655,
+    "formula": "revenue * gross_margin - opex",
+    "downside_assumption": "revenue -5%, gross margin -1 percentage point; opex unchanged",
+    "upside_assumption": "revenue +5%, gross margin +1 percentage point; opex unchanged",
+    "downside_operating_income": 1050.725,
+    "base_operating_income": 1172.0,
+    "upside_operating_income": 1296.425,
+    "interpretation": "Illustrative sensitivity only, no probabilities or independent volume/ASP forecast. Excludes interest, taxes, dilution and GAAP reconciliation."
+  }
+]

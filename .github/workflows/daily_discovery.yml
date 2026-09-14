@@ -23,6 +23,9 @@ jobs:
       DISCOVERY: ${{ github.event_name == 'workflow_dispatch' || github.event.schedule == '17 0 * * *' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Scheduled events can wait with an old SHA; read current state after acquiring the writer slot.
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -47,6 +50,10 @@ jobs:
       - name: Retry eligible notifications
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: python scripts/notify.py
+      - name: Observe tracked regular-session prices
+        # Price collection remains independent of EPS availability.
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/collect_prices.py
       - name: Build research views
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: |

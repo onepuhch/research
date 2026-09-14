@@ -1,0 +1,129 @@
+{
+  "chart": {
+    "result": [
+      {
+        "meta": {
+          "currency": "USD",
+          "symbol": "ALAB",
+          "exchangeName": "NMS",
+          "fullExchangeName": "NasdaqGS",
+          "instrumentType": "EQUITY",
+          "firstTradeDate": 1710941400,
+          "regularMarketTime": 1789156801,
+          "hasPrePostMarketData": true,
+          "gmtoffset": -14400,
+          "timezone": "EDT",
+          "exchangeTimezoneName": "America/New_York",
+          "regularMarketPrice": 291.22,
+          "regularMarketChangePercent": 2.351,
+          "fulldayPrice": 271.89,
+          "fulldayChange": -21.635,
+          "fulldayChangePercent": -7.429,
+          "fiftyTwoWeekHigh": 499.476,
+          "fiftyTwoWeekLow": 97.89,
+          "regularMarketDayHigh": 297.61,
+          "regularMarketDayLow": 287.0,
+          "regularMarketVolume": 2247761,
+          "longName": "Astera Labs, Inc.",
+          "shortName": "Astera Labs, Inc.",
+          "chartPreviousClose": 282.82,
+          "priceHint": 2,
+          "currentTradingPeriod": {
+            "pre": {
+              "timezone": "EDT",
+              "start": 1789372800,
+              "end": 1789392600,
+              "gmtoffset": -14400
+            },
+            "regular": {
+              "timezone": "EDT",
+              "start": 1789392600,
+              "end": 1789416000,
+              "gmtoffset": -14400
+            },
+            "post": {
+              "timezone": "EDT",
+              "start": 1789416000,
+              "end": 1789430400,
+              "gmtoffset": -14400
+            }
+          },
+          "dataGranularity": "1d",
+          "range": "5d",
+          "validRanges": [
+            "1d",
+            "5d",
+            "1mo",
+            "3mo",
+            "6mo",
+            "1y",
+            "2y",
+            "5y",
+            "ytd",
+            "max"
+          ]
+        },
+        "timestamp": [
+          1788528600,
+          1788874200,
+          1788960600,
+          1789047000,
+          1789133400
+        ],
+        "indicators": {
+          "quote": [
+            {
+              "open": [
+                286.0,
+                303.989990234375,
+                286.1199951171875,
+                287.7250061035156,
+                292.2699890136719
+              ],
+              "low": [
+                285.8399963378906,
+                286.9700012207031,
+                286.1099853515625,
+                280.5299987792969,
+                286.8999938964844
+              ],
+              "close": [
+                310.3999938964844,
+                288.8500061035156,
+                300.5400085449219,
+                284.5299987792969,
+                291.2200012207031
+              ],
+              "high": [
+                321.6499938964844,
+                312.239990234375,
+                309.6700134277344,
+                294.8699951171875,
+                297.6099853515625
+              ],
+              "volume": [
+                6536300,
+                5720400,
+                3146300,
+                3222900,
+                2312000
+              ]
+            }
+          ],
+          "adjclose": [
+            {
+              "adjclose": [
+                310.3999938964844,
+                288.8500061035156,
+                300.5400085449219,
+                284.5299987792969,
+                291.2200012207031
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "error": null
+  }
+}

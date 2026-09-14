@@ -1,0 +1,41 @@
+[
+  {
+    "target_table": "investment_review_log",
+    "data": {
+      "idea_id": "IDEA-0002",
+      "최근 점검일": "2026-09-14",
+      "다음 점검일": "2026-09-16",
+      "판단 변화": "유지",
+      "변경 사유": "기한 9월 13일의 재점검을 9월 14일 수행. 같은 FY EPS +0.455%/+0.468%이나 월간 검증 미충족. 분기 시장 예상치와 행사 내용 미확보로 관찰·재검토 유지.",
+      "시장 컨센서스": "9월 14일 FY27·FY28 EPS는 6.30217·9.67107 USD로 baseline 대비 +0.455%·+0.468%. 상향은 확인되나 지속성·독립 이익 우위는 미확인. 낮은 상대 PER을 저평가 확정으로 쓰지 않는다.",
+      "내 견해와의 차이": "제품별 증분 이익을 독립 추정할 물량·단가·고객 자료가 부족해 시장 대비 우위를 수치로 확정하지 못했다. 회사 전망 기반 민감도와 실제 가격을 비교했다.",
+      "추적 지표 정의": "{\"metrics\": [{\"name\": \"EPS consensus\", \"kind\": \"consensus\", \"required\": true}, {\"name\": \"Revenue\", \"kind\": \"actual\", \"required\": true}, {\"name\": \"Gross margin\", \"kind\": \"actual\", \"required\": true}], \"rules\": [{\"label\": \"FY27Q1 GAAP 마진의 종전 가이던스 하단 대조(소급 점검)\", \"selector\": {\"지표명\": \"Gross margin\", \"metric_kind\": \"actual\", \"period_end\": \"2026-08-01\", \"회계기준\": \"GAAP\", \"출처\": \"Credo IR\", \"단위\": \"percent\", \"통화\": \"not-applicable\"}, \"operator\": \"lt\", \"threshold\": 66.9, \"max_age_days\": 120}, {\"label\": \"FY27Q2 매출이 회사 전망 하단 미달\", \"selector\": {\"지표명\": \"Revenue\", \"metric_kind\": \"actual\", \"period_end\": \"2026-10-31\", \"출처\": \"Credo IR\", \"통화\": \"USD\", \"단위\": \"million\", \"회계기준\": \"GAAP\"}, \"operator\": \"lt\", \"threshold\": 525, \"max_age_days\": 120}, {\"label\": \"FY27Q2 non-GAAP 총마진 하단 미달\", \"selector\": {\"지표명\": \"Gross margin\", \"metric_kind\": \"actual\", \"period_end\": \"2026-10-31\", \"출처\": \"Credo IR\", \"통화\": \"not-applicable\", \"단위\": \"percent\", \"회계기준\": \"non-GAAP\"}, \"operator\": \"lt\", \"threshold\": 67, \"max_age_days\": 120}]}"
+    }
+  },
+  {
+    "target_table": "investment_review_log",
+    "data": {
+      "idea_id": "IDEA-0003",
+      "최근 점검일": "2026-09-14",
+      "다음 점검일": "2026-09-16",
+      "판단 변화": "유지",
+      "변경 사유": "연간 EPS 변화 없음. MRVL의 PCIe scale-up switch 전시 계획을 경쟁 검증 항목에 추가. 분기 컨센서스 재조회 미확보. 중복 매출 반증 규칙을 통합하고 관찰 유지.",
+      "시장 컨센서스": "연간 EPS는 9월 9일 대비 변화 없음. 참고 PER만으로 우위를 판정하지 않는다. MRVL의 PCIe scale-up switch 전시 계획까지 고려해 Scorpio 채택·제품별 이익 귀속을 검증한다.",
+      "내 견해와의 차이": "제품별 증분 이익을 독립 추정할 물량·단가·고객 자료가 부족해 시장 대비 우위를 수치로 확정하지 못했다. 회사 전망 기반 민감도와 실제 가격을 비교했다.",
+      "추적 지표 정의": "{\"metrics\": [{\"name\": \"EPS consensus\", \"kind\": \"consensus\", \"required\": true}, {\"name\": \"Revenue\", \"kind\": \"actual\", \"required\": true}], \"rules\": [{\"label\": \"Q3 2026 매출이 회사 가이던스 하단 미달\", \"selector\": {\"지표명\": \"Revenue\", \"metric_kind\": \"actual\", \"period_end\": \"2026-09-30\", \"출처\": \"ALAB IR\", \"단위\": \"million\", \"통화\": \"USD\", \"회계기준\": \"GAAP\"}, \"operator\": \"lt\", \"threshold\": 540, \"max_age_days\": 120}, {\"label\": \"Q3 총마진이 회사 전망 72% 미달\", \"selector\": {\"지표명\": \"Gross margin\", \"metric_kind\": \"actual\", \"period_end\": \"2026-09-30\", \"출처\": \"ALAB IR\", \"통화\": \"not-applicable\", \"단위\": \"percent\", \"회계기준\": \"non-GAAP\"}, \"operator\": \"lt\", \"threshold\": 72, \"max_age_days\": 120}]}"
+    }
+  },
+  {
+    "target_table": "investment_review_log",
+    "data": {
+      "idea_id": "IDEA-0004",
+      "최근 점검일": "2026-09-14",
+      "다음 점검일": "2026-09-16",
+      "판단 변화": "유지",
+      "변경 사유": "연간 EPS 소폭 상향. 다음 분기 컨센서스 매출·EPS가 회사 전망 중간값과 거의 같아 전망 달성을 미반영 우위로 해석하지 않음. 행사 전시를 실현 매출과 구분.",
+      "시장 컨센서스": "FY27·FY28 EPS는 baseline 대비 +0.268%·+0.177%. 다음 분기 시장 매출 약 3149.65백만 USD·EPS 1.10038은 회사 전망 중간값 3150·1.10과 사실상 일치한다. 전망 달성 자체는 추가 우위가 아니다.",
+      "내 견해와의 차이": "제품별 증분 이익을 독립 추정할 물량·단가·고객 자료가 부족해 시장 대비 우위를 수치로 확정하지 못했다. 회사 전망 기반 민감도와 실제 가격을 비교했다.",
+      "추적 지표 정의": "{\"metrics\": [{\"name\": \"EPS consensus\", \"kind\": \"consensus\", \"required\": true}, {\"name\": \"Revenue\", \"kind\": \"actual\", \"required\": true}], \"rules\": [{\"label\": \"FY27Q3 매출이 회사 전망 하단 미달\", \"selector\": {\"지표명\": \"Revenue\", \"metric_kind\": \"actual\", \"period_end\": \"2026-10-31\", \"출처\": \"MRVL IR\", \"통화\": \"USD\", \"단위\": \"million\", \"회계기준\": \"GAAP\"}, \"operator\": \"lt\", \"threshold\": 2992.5, \"max_age_days\": 120}, {\"label\": \"FY27Q3 non-GAAP 총마진 하단 미달\", \"selector\": {\"지표명\": \"Gross margin\", \"metric_kind\": \"actual\", \"period_end\": \"2026-10-31\", \"출처\": \"MRVL IR\", \"통화\": \"not-applicable\", \"단위\": \"percent\", \"회계기준\": \"non-GAAP\"}, \"operator\": \"lt\", \"threshold\": 57.5, \"max_age_days\": 120}]}"
+    }
+  }
+]

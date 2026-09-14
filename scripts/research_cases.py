@@ -89,6 +89,10 @@ def render(case_id=None):
                 latest = stats["latest"]
                 rows.append([candidate["ticker"], latest["period_end"], latest["현재값"], latest["회계기준"], f"[{latest['출처']}]({latest['출처URL']})", latest["as_of"], stats["observations"], stats["up_months"]])
         output.append(table(["기업", "제공자 대상 기간 말", "EPS", "기준", "출처", "관측일", "관측일 수", "연속 월간 순상향"], rows))
+        import expectations
+        output.append(expectations.render(case, observations))
+        if case.get("market_review"):
+            output.append("\n## 시장 기대 재점검\n\n" + "\n\n".join(case["market_review"]))
         output.append("## 사전 등록한 반증 점검\n\n미래 실적이 없으면 자료 부족입니다. 회사 전망과 시장 컨센서스 초과 여부는 별개입니다.\n")
         rows = []
         for rule in case["decision_tests"]:

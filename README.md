@@ -80,3 +80,11 @@ Google Sheets 코드는 docs/gas_main.js에 있다. v2 전용 탭을 사용하�
 `python scripts/gen_report.py cases`로 병목 → 후보 → 시장 기대 차이 → 숫자 → 반증까지 한 화면에서 확인한다. [AI 연결 연구 사례](docs/interconnect_research_2026-09-09.md)는 기준일 스냅샷이고, data/research/cases의 구조화된 가설과 metric_log를 연결해 매일 새 보고서를 만든다. 주간 보고서와 Telegram 주간 보고에도 가설 요약이 포함된다.
 
 현재 연구 우선순위는 ALAB, 비교 대상은 CRDO·MRVL이다. 매매 추천 순위가 아니며 공급 부족·시장 미반영이 입증됐다는 뜻이 아니다. 컨센서스는 자동 관측하고, 제품별 매출·고객 계약·실적 발표의 실제 수치는 원문 확인 후 add_entry로 등록한다. 미래 수치가 없으면 반증 결과는 자료 부족으로 남는다.
+
+### 가격과 시장 기대 재점검
+
+`python scripts/collect_prices.py`는 활성 기업의 Yahoo 정규장 시세를 수집한다. 거래 시각과 수집 시각을 분리하고 기업·통화·시세 노후화를 검증한다. `gen_report.py cases`와 주간 보고서는 같은 EPS 정의별 참고 PER을 표시하며, 다른 시점·회계연도 간 저평가 순위를 만들지 않는다. 가격 수집 실패는 운영 상태판의 prices에 기록한다.
+
+2026-09-14 재점검과 가정별 영업이익 민감도는 [연구 보고서](docs/interconnect_research_2026-09-14.md)에 있다. 원자료·연구 변경 입력·운영 감사는 data/research/interconnect_2026-09-14에 보관한다. ALAB·CRDO 분기 컨센서스와 행사 녹취 미확보를 명시했다.
+
+GitHub 예약 실행에는 지연이 발생할 수 있다. 9월 14일 일간 실행은 명목 시각보다 약 4시간 47분 늦게 시작했다. checkout은 동시 실행 대기 후 최신 브랜치를 읽도록 지정했다. 실행 도중 외부 작성자가 같은 상태를 변경하면 강제 덮어쓰기 대신 저장 실패를 표시한다.
