@@ -123,8 +123,9 @@ def render_bottlenecks():
 def render_quality():
     evaluations = c.read_live_rows("evaluation_log")
     counts = Counter((r.get("평가 종류"), r.get("판정")) for r in evaluations)
+    import research_journal
     return "# 연구 품질 측정\n\n평가가 없는 항목의 적중률은 미측정입니다. 수익률은 별도 표준 기간·벤치마크로 복기합니다.\n\n" + table(
-        ["평가 종류", "판정", "건수"], [[kind, verdict, n] for (kind, verdict), n in sorted(counts.items())])
+        ["평가 종류", "판정", "건수"], [[kind, verdict, n] for (kind, verdict), n in sorted(counts.items())]) + "\n" + research_journal.render()
 
 
 def render_sector(name):

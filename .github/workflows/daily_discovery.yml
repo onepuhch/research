@@ -57,6 +57,7 @@ jobs:
       - name: Build research views
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: |
+          python scripts/research_journal.py
           python scripts/gen_report.py weekly
           python scripts/gen_report.py bottlenecks
           python scripts/gen_report.py quality

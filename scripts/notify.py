@@ -291,8 +291,10 @@ def build_report_chunks(
     if len(lines) > 1:
         chunks.append("\n".join(lines))
     import research_cases
+    import research_journal
     for case in research_cases.load_cases():
-        chunks.append("<b>테마 가설 점검</b>\n" + escaped(research_cases.summary(case)[:450]))
+        chunks.append("<b>테마 가설 점검</b>\n" + escaped(research_cases.summary(case)[:450])
+                      + "\n" + escaped(research_journal.summary(case)))
     return chunks
 
 

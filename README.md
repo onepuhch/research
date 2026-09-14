@@ -88,3 +88,9 @@ Google Sheets 코드는 docs/gas_main.js에 있다. v2 전용 탭을 사용하�
 2026-09-14 재점검과 가정별 영업이익 민감도는 [연구 보고서](docs/interconnect_research_2026-09-14.md)에 있다. 원자료·연구 변경 입력·운영 감사는 data/research/interconnect_2026-09-14에 보관한다. ALAB·CRDO 분기 컨센서스와 행사 녹취 미확보를 명시했다.
 
 GitHub 예약 실행에는 지연이 발생할 수 있다. 9월 14일 일간 실행은 명목 시각보다 약 4시간 47분 늦게 시작했다. checkout은 동시 실행 대기 후 최신 브랜치를 읽도록 지정했다. 실행 도중 외부 작성자가 같은 상태를 변경하면 강제 덮어쓰기 대신 저장 실패를 표시한다.
+
+## 판단 스냅샷과 실제 결과 복기
+
+`python scripts/research_journal.py`는 현재 가설 개정을 고정하고 실제 실적과 비교한 outcomes 보고서를 생성합니다. 일간 운영에도 연결되어 있으며 `python scripts/gen_report.py quality`와 텔레그램에 평가 상태가 표시됩니다. 저장소는 `data/processed/research_journal/`입니다. 재실행으로 기준 관측을 바꾸지 않으며 미래 실적이 없으면 대기합니다.
+
+[평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 아직 구현하지 않았습니다.
