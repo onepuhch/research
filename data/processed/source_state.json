@@ -2299,5 +2299,108 @@
     "attempts": 1,
     "updated_at": "2026-09-12T04:43:19+00:00",
     "reason": "제출된 EX-99.1 문서는 알루미늄 산업의 일반적인 특성, 공급망 제약 및 과거 사례를 설명하는 배경 정보이며, Alcoa Corp의 구체적인 신규 생산능력 증설, 가이던스 상향, 수주 변화 등 투자 발굴을 위한 조기 지표를 포함하고 있지 않습니다. 특히 Worsley Alumina 정유소는 2012년 이후 생산능력을 유지하고 있다고 명시되어 있어 새로운 증설 신호가 아닙니다."
+  },
+  "0001213900-26-099424": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-099424",
+      "entity_id": "CIK:0002042022",
+      "source_role": "candidate",
+      "title": "WhiteFiber, Inc. (WYFI) (CIK 0002042022) EX-99.1 2026-09-14",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026099424/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026099424/ea030525701ex99-1.htm",
+      "published_at": "2026-09-14",
+      "raw_text": "WhiteFiber, Inc. (WYFI) (CIK 0002042022) EX-99.1 2026-09-14. Forward - looking statements contained in this presentation include, but are not limited to, statements about our ability to scale our business and acquire new data centers; the implementation of our business model and strategic plans; our ability to commercialize, manage and grow our business by acquiring new customers; our ability to compete with other companies engaged in our industry; our expectation about market trends; estimates of our expenses, future revenue, capital requirements, needs for additional financing and our ability to obtain additional capital; general economic, industry, and market conditions; and our future financial performance. (3) Recent cloud TCV reflects aggregate disclosed total contract value announced since May 2026: the Paris region deployment; the Hyperbolic / Modal Labs, Prime Intellect and AI inference platform agreements; and new service order agreements with an existing and a new customer. Earnout (3) ) 100% Ownership Duke Energy Power Provider ~$0.05 per kWh Energy Cost SITE SNAPSHOT KEY HIGHLIGHTS > Large retrofit project expected to reduce cost and expedite build time > Located in data center corridor with eight hyperscale data centers within 100 - mile radius > Modular development plan supports phased capacity expansion > Signed 10 - year, 40 MW IT load agreement with Nscale representing ~$865M TCV (4) > Transmission study with Duke Energy for additional 200 MW NC - 2 & NC - 3: Expansion of Data Center Footprint with Acquisition of Two New Development Sites 12 (1) Subject to customary due diligence and closing conditions. 15 Paris Region Paris Region Deployment Investment - grade technology customer >$160M Total Contract Value 5 Yrs Contract Term Sep '26 Service Expected to Commence • Advanced NVIDIA GPU systems deployed in France • Supported by customer prepayments and project - level financing • Limited long - term reliance on WhiteFiber's corporate balance sheet U",
+      "_model_response": {
+        "evidence_quote": "Recent cloud TCV reflects aggregate disclosed total contract value announced since May 2026: the Paris region deployment; the Hyperbolic / Modal Labs, Prime Intellect and AI inference platform agreements; and new service order agreements with an existing and a new customer. ... Signed 10-year, 40 MW IT load agreement with Nscale representing ~$865M TCV (4) ... NC-2 & NC-3: Expansion of Data Center Footprint with Acquisition of Two New Development Sites ... Paris Region Deployment Investment - grade technology customer >$160M Total Contract Value 5 Yrs Contract Term Sep '26 Service Expected to Commence • Advanced NVIDIA GPU systems deployed in France",
+        "axes_evidence": {
+          "underfollowed_pure_play": "WhiteFiber, Inc. (WYFI) (CIK 0002042022)",
+          "earnings_leverage": "Signed 10-year, 40 MW IT load agreement with Nscale representing ~$865M TCV (4) ... Paris Region Deployment Investment - grade technology customer >$160M Total Contract Value",
+          "supply_demand_tightness": "Expansion of Data Center Footprint with Acquisition of Two New Development Sites ... Advanced NVIDIA GPU systems deployed in France",
+          "structural_ai_demand": "AI inference platform agreements; and new service order agreements with an existing and a new customer. ... Advanced NVIDIA GPU systems deployed in France",
+          "revision_momentum": "",
+          "catalyst_visibility": "Signed 10-year, 40 MW IT load agreement with Nscale representing ~$865M TCV (4) ... Acquisition of Two New Development Sites"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "데이터센터",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "WhiteFiber, Inc. (WYFI)",
+        "theme": "데이터센터/AI 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "WhiteFiber, Inc.가 Nscale과 8.65억 달러 규모의 10년 데이터센터 서비스 계약을 체결하고, 파리 지역에서 1.6억 달러 이상의 계약을 포함한 여러 신규 고객 계약을 확보했으며, 두 개의 신규 개발 부지를 인수하여 데이터센터 확장을 진행 중이다.",
+        "why_it_matters": "대규모 장기 계약 수주와 데이터센터 확장은 WhiteFiber의 매출 성장과 시장 점유율 확대를 가속화하며, 특히 AI 관련 수요 증가에 따른 수혜를 기대할 수 있다.",
+        "what_to_watch": "신규 데이터센터의 건설 진행 상황 및 가동률, 추가적인 대규모 고객 계약 수주 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "TCV: 총 계약 가치 (Total Contract Value), IT load: IT 부하 (데이터센터가 처리할 수 있는 정보 기술 작업량)"
+      }
+    },
+    "content_hash": "b56d2e71819caf89472a441307762aba7f74ba60bf01f5bbb8091425d14064f3",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-14T13:25:38+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0000071829-26-000050": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000071829-26-000050",
+      "entity_id": "CIK:0000071829",
+      "source_role": "candidate",
+      "title": "NPK International Inc. (NPKI) (CIK 0000071829) EX-99.1 2026-09-14",
+      "url": "https://www.sec.gov/Archives/edgar/data/71829/000007182926000050/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/71829/000007182926000050/a20268ksep14exhibit991.htm",
+      "published_at": "2026-09-14",
+      "raw_text": "NPK International Inc. (NPKI) (CIK 0000071829) EX-99.1 2026-09-14. These risk factors include, but are not limited to, risks related to our ability to generate organic growth; economic and market conditions that may impact our customers’ future spending; customer concentration; the effective management of our fleet, including our ability to properly manufacture, safeguard, and maintain our fleet; international operations; manufacturing capacity expansion projects; operating hazards present in our and our customers’ industries and substantial liability claims; our contracts that can be terminated or downsized by our customers without penalty; our product offering and market expansion; our ability to attract, retain, and develop qualified leaders, key employees, and skilled personnel; expanding our services in the utilities sector, which may require unionized labor; the price and availability of raw materials; inflation; capital investments and business acquisitions; market competition; technological developments and intellectual property; severe weather, natural disasters, and seasonality; public health crises, epidemics, and pandemics; our cost and continued availability of borrowed funds, including noncompliance with debt covenants; environmental laws and regulations; legal compliance; the inherent limitations of insurance coverage; income taxes; cybersecurity incidents or business system disruptions; complications with the design or implementation of our updated enterprise resource planning system; activist stockholders that may attempt to effect changes at our Company or acquire control over our Company; share repurchases; and our amended and restated bylaws, which could limit our stockholders’ ability to obtain what such stockholders believe to be a favorable judicial forum for disputes with us or our directors, officers or other employees.",
+      "_model_response": {
+        "evidence_quote": "NPK International Inc. (NPKI) (CIK 0000071829) EX-99.1 2026-09-14. These risk factors include, but are not limited to, risks related to our ability to generate organic growth; economic and market conditions that may impact our customers’ future spending; customer concentration; the effective management of our fleet, including our ability to properly manufacture, safeguard, and maintain our fleet; international operations; manufacturing capacity expansion projects; operating hazards present in our and our customers’ industries and substantial liability claims; our contracts that can be terminated or downsized by our customers without penalty; our product offering and market expansion; our ability to attract, retain, and develop qualified leaders, key employees, and skilled personnel; expanding our services in the utilities sector, which may require unionized labor; the price and availability of raw materials; inflation; capital investments and business acquisitions; market competition; technological developments and intellectual property; severe weather, natural disasters, and seasonality; public health crises, epidemics, and pandemics; our cost and continued availability of borrowed funds, including noncompliance with debt covenants; environmental laws and regulations; legal compliance; the inherent limitations of insurance coverage; income taxes; cybersecurity incidents or business system disruptions; complications with the design or implementation of our updated enterprise resource planning system; activist stockholders that may attempt to effect changes at our Company or acquire control over our Company; share repurchases; and our amended and restated bylaws, which could limit our stockholders’ ability to obtain what such stockholders believe to be a favorable judicial forum for disputes with us or our directors, officers or other employees.",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "negative",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "제공된 텍스트는 회사의 잠재적 위험 요소를 나열한 루틴 공시(EX-99.1)이며, 구체적인 투자 발굴 신호(예: 가이던스 상향, 수주 증가, 생산능력 증설 확정 등)를 포함하지 않습니다. 'manufacturing capacity expansion projects'가 언급되지만, 이는 위험 요소의 하나로 제시된 것이지 실제 계획이나 실행을 알리는 구체적인 신호가 아닙니다.",
+        "subject": "NPK International Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "NPK International Inc.가 유기적 성장, 고객 지출, 생산능력 증설 프로젝트, 원자재 가격 등 다양한 사업 관련 위험 요소를 공시했습니다.",
+        "why_it_matters": "해당 공시는 회사의 잠재적 위험을 투자자에게 알리는 루틴한 정보이며, 특정 투자 기회를 시사하는 조기 지표는 아닙니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "제공된 텍스트는 회사의 잠재적 위험 요소를 나열한 루틴 공시(EX-99.1)이며, 구체적인 투자 발굴 신호(예: 가이던스 상향, 수주 증가, 생산능력 증설 확정 등)를 포함하지 않습니다. 'manufacturing capacity expansion projects'가 언급되지만, 이는 위험 요소의 하나로 제시된 것이지 실제 계획이나 실행을 알리는 구체적인 신호가 아닙니다."
+    },
+    "content_hash": "64c14a6475efb6fd0442001c8604600ae964075e955492cadce68fe890cdee29",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-14T13:25:54+00:00",
+    "reason": "제공된 텍스트는 회사의 잠재적 위험 요소를 나열한 루틴 공시(EX-99.1)이며, 구체적인 투자 발굴 신호(예: 가이던스 상향, 수주 증가, 생산능력 증설 확정 등)를 포함하지 않습니다. 'manufacturing capacity expansion projects'가 언급되지만, 이는 위험 요소의 하나로 제시된 것이지 실제 계획이나 실행을 알리는 구체적인 신호가 아닙니다."
   }
 }
