@@ -1,0 +1,65 @@
+{
+  "runs": [
+    {
+      "id": 34853070078,
+      "html_url": "https://github.com/onepuhch/research/actions/runs/34853070078",
+      "head_sha": "4da2102e3172772c78b522a17608347be8e7feca",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-09-14T14:03:02Z",
+      "updated_at": "2026-09-14T14:03:44Z"
+    },
+    {
+      "id": 34853036797,
+      "html_url": "https://github.com/onepuhch/research/actions/runs/34853036797",
+      "head_sha": "4da2102e3172772c78b522a17608347be8e7feca",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-09-14T14:02:43Z",
+      "updated_at": "2026-09-14T14:03:02Z"
+    }
+  ],
+  "tests_per_platform": 51,
+  "deployment_log_checks": [
+    "2026-09-14T14:03:10.2995144Z Ran 51 tests in 0.144s",
+    "2026-09-14T14:03:33.5854058Z /home/runner/work/research/research/reports/generated/outcomes_2026-09-14.md",
+    "2026-09-14T14:03:38.9022294Z [sent] report chunk 1/2",
+    "2026-09-14T14:03:38.9022775Z [sent] report chunk 2/2"
+  ],
+  "services": {
+    "eps": {
+      "checked_at": "2026-09-14T14:03:32+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-14T14:03:32+00:00",
+      "targets": 3,
+      "observations": 6,
+      "failures": [],
+      "provider": "yahoo"
+    },
+    "prices": {
+      "checked_at": "2026-09-14T14:03:33+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-14T14:03:33+00:00",
+      "targets": 3,
+      "observations": 3,
+      "failures": []
+    },
+    "review_report": {
+      "checked_at": "2026-09-14T14:03:38+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-14T14:03:38+00:00"
+    },
+    "telegram_delivery": {
+      "checked_at": "2026-09-14T14:03:38+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-14T14:03:38+00:00",
+      "message_id": 128
+    }
+  },
+  "limitations": [
+    "6 future conditions awaiting actual results",
+    "No automated total-return evaluation",
+    "No independent product-level EPS model",
+    "Scheduled recurrence after this manual run not yet observed"
+  ]
+}
