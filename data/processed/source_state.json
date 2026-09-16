@@ -2608,5 +2608,170 @@
     "attempts": 1,
     "updated_at": "2026-09-15T05:02:53+00:00",
     "reason": "고객 요금 인하 및 지원 프로그램, 합병 후 효율성 증대 계획 등 고객 관계 및 일반적인 운영 효율성 목표에 대한 내용으로, 회사의 구체적인 매출, 수주, 생산능력 증설, EPS 상향 등 조기 투자 신호로 볼 수 있는 직접적인 지표가 아니다."
+  },
+  "0002080126-26-000034": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0002080126-26-000034",
+      "entity_id": "CIK:0002080126",
+      "source_role": "candidate",
+      "title": "Forgent Power Solutions, Inc. (FPS) (CIK 0002080126) EX-99.1 2026-09-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000034/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2080126/000208012626000034/exhibit991earningsrelease_.htm",
+      "published_at": "2026-09-15",
+      "raw_text": "Forgent Power Solutions, Inc. (FPS) (CIK 0002080126) EX-99.1 2026-09-15. The Company also announced a $35 million investment to expand Powertrain Solutions manufacturing capacity at its Tijuana, Mexico campus (the \"2027 PTS Capacity Expansion\") to meet growing demand for modular solutions. The PTS Capacity Expansion is incremental to Forgent’s previously disclosed capacity expansion, which began before the Company’s IPO and is now substantially complete (the \"2025-2026 Capacity Expansion\"). The PTS Capacity Expansion is expected to come online in the fourth quarter of fiscal 2027 and increase Forgent’s total revenue capacity to approximately $5.8 billion, representing an increase of approximately $800 million. Capital expenditures in the quarter were $31 million, substantially all of which related to the Company’s 2025-2026 Capacity Expansion. Fiscal 2027 capital expenditures are expected to total approximately $87 million, including remaining spend on the 2025-2026 Capacity Expansion, the 2027 PTS Capacity Expansion, and maintenance capital expenditures of approximately 1% of revenues. As we enter fiscal 2027, our record backlog, strong customer relationships and continued capacity investments position us to deliver even greater value for our customers and our shareholders in the year ahead.” Summary of Key Performance Indicators The table below summarizes our key performance indicators for the three months ended June 30, 2026 and 2025: (in thousands) 2026 2025 % Change Revenues $461,672 $237,613 94% Net Income $66,094 $(4,761) NM Adjusted EBITDA (1) $112,736 $42,825 163% Adjusted Net Income (1) $77,340 $20,618 275% The table below summarizes our key performance indicators for the years ended June 30, 2026 and 2025: (in thousands) 2026 2025 % Change Revenues $1,420,059 $753,188 89% Net Income $106,035 $17,446 508% Adjusted EBITDA (1) $322,904 $169,173 91% Adjusted Net Income (1) $207,576 $88,124 136% (1) Represents non-GAAP measures. We believe Forgent is one of a ",
+      "_model_response": {
+        "evidence_quote": "The Company also announced a $35 million investment to expand Powertrain Solutions manufacturing capacity at its Tijuana, Mexico campus (the \"2027 PTS Capacity Expansion\") to meet growing demand for modular solutions. The PTS Capacity Expansion is expected to come online in the fourth quarter of fiscal 2027 and increase Forgent’s total revenue capacity to approximately $5.8 billion, representing an increase of approximately $800 million.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "increase Forgent’s total revenue capacity to approximately $5.8 billion, representing an increase of approximately $800 million.",
+          "supply_demand_tightness": "to meet growing demand for modular solutions. As we enter fiscal 2027, our record backlog, strong customer relationships and continued capacity investments position us to deliver even greater value for our customers and our shareholders in the year ahead.”",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "The PTS Capacity Expansion is expected to come online in the fourth quarter of fiscal 2027"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "Powertrain Solutions manufacturing",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "FPS",
+        "theme": "전력 솔루션",
+        "signal_type": "CAPEX",
+        "what_happened": "Forgent Power Solutions가 멕시코 티후아나 공장의 파워트레인 솔루션 제조 역량 확대를 위해 3,500만 달러를 투자하여 2027년 4분기 가동을 목표로 총 매출 역량을 8억 달러 증대할 것이라고 발표했습니다.",
+        "why_it_matters": "이는 증가하는 모듈형 솔루션 수요에 대응하기 위한 선제적 투자로, 향후 회사의 매출 성장과 시장 점유율 확대에 긍정적인 영향을 미칠 수 있습니다.",
+        "what_to_watch": "2027년 4분기 공장 가동률 및 실제 매출 기여도, 신규 수주 추이",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출."
+      }
+    },
+    "content_hash": "c15734b8c6f9d1ae47cb0a234e2da7daaa0b64fb63b09b5de5d601db1bb0cff2",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-16T04:56:36+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001683168-26-007160": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001683168-26-007160",
+      "entity_id": "CIK:0001158114",
+      "source_role": "candidate",
+      "title": "APPLIED OPTOELECTRONICS, INC. (AAOI) (CIK 0001158114) EX-10.1 2026-09-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007160/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007160/aaoi_ex1001.htm",
+      "published_at": "2026-09-15",
+      "raw_text": "APPLIED OPTOELECTRONICS, INC. (AAOI) (CIK 0001158114) EX-10.1 2026-09-15. Party B shall not be entitled to claim any extension of the rent-free period or lease term, and the rent shall be calculated and charged normally, if any such delay is attributable to Party B’s delay in obtaining renovation approvals, its power capacity expansion works, equipment entry and installation, environmental protection or work safety rectifications, or internal disputes. EX-10.1 2 aaoi_ex1001.htm FACTORY PREMISES LEASE Exhibit 10.1 Certain personally identifiable information has been omitted from this exhibit pursuant to Item 601(a)(6) of Regulation S-K. Redacted information is indicated by [***] Factory Premises Lease Contract Lessor (hereinafter referred to as “Party A”) : Ningbo Yiduofu Industrial Co., Ltd. Legal Representative: Zheng, Shilin Unified Social Credit Code/ID No.: [***] Address: No. 227 Kesheng Road, Jishigang Town, Haishu District, Ningbo Lessee (hereinafter referred to as “Party B”) : GLOBAL Technology Inc. Legal Representative: Lin, Chih-Hsiang Unified Social Credit Code: [***] Address: No. 88 Qiushi Road, Wangchun Industrial Park, Haishu District, Ningbo In accordance with the Civil Code of the People’s Republic of China and other applicable laws and regulations, and based on the principles of equality, free will, and good faith, Party A and Party B, through full negotiations, hereby enter into this Contract with respect to Party B’s lease of the entire factory premises legally owned by Party A for renovation and long-term production and business operations, for mutual compliance. Article 1 Leased Premises 1.1 The leased premises are located at No. 227 Kesheng Road, Jishigang Town, Haishu District, Ningbo , and comprise industrial premises that Party A is legally entitled to lease (the “Premises”). Party B shall lease the Premises in their entirety. Prior to entering into this Contract, Party B has conducted an on-site inspection of the Premises, including their cu",
+      "_model_response": {
+        "evidence_quote": "Party B shall not be entitled to claim any extension of the rent-free period or lease term, and the rent shall be calculated and charged normally, if any such delay is attributable to Party B’s delay in obtaining renovation approvals, its power capacity expansion works, equipment entry and installation, environmental protection or work safety rectifications, or internal disputes.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "APPLIED OPTOELECTRONICS, INC. (AAOI) (CIK 0001158114)",
+          "earnings_leverage": "power capacity expansion works, equipment entry and installation",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "APPLIED OPTOELECTRONICS, INC. (AAOI)",
+          "revision_momentum": "",
+          "catalyst_visibility": "Party B’s delay in obtaining renovation approvals, its power capacity expansion works, equipment entry and installation"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "광통신 부품, 데이터센터 광모듈",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AAOI",
+        "theme": "광통신, 데이터센터",
+        "signal_type": "CAPEX",
+        "what_happened": "APPLIED OPTOELECTRONICS, INC. (AAOI)의 자회사인 GLOBAL Technology Inc.가 공장 임대 계약을 체결하며 전력 용량 확장 및 장비 설치를 계획하고 있습니다.",
+        "why_it_matters": "이는 AAOI가 향후 생산 능력 확대를 통해 증가하는 수요에 대응하고 매출 성장을 도모하려는 초기 신호로 볼 수 있습니다.",
+        "what_to_watch": "향후 CAPEX 지출 규모, 신규 공장의 가동 시점 및 생산량 증가 추이",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 1,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "초기",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출."
+      }
+    },
+    "content_hash": "3d9ecceee206fea87fb62c70c6b953cf9eecd93e26058faed4091eade3b89ee6",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-16T04:56:53+00:00",
+    "signal_id": "SIG-0885",
+    "reason": "grounded extraction"
+  },
+  "0001193125-26-391948": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-391948",
+      "entity_id": "CIK:0001418121",
+      "source_role": "demand_evidence",
+      "title": "Apple Hospitality REIT, Inc. (APLE) (CIK 0001418121) EX-99.1 2026-09-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1418121/000119312526391948/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1418121/000119312526391948/aple-ex99_1.htm",
+      "published_at": "2026-09-15",
+      "raw_text": "Apple Hospitality REIT, Inc. (APLE) (CIK 0001418121) EX-99.1 2026-09-15. MISSION Average executive tenure with the Apple REIT Companies is 20 years Established and operated 8 public hospitality REITs Raised and invested approximately $7.4 billion of equity in hotel assets Purchased 458 hotels Purchased as many as 74 hotels in a single year through individual hotel and small portfolio transactions Managed $1.3 billion in CapEx and renovation spending Sold 4 REITs in 3 transactions totaling $2.7 billion Merged 3 REITs and listed Company on NYSE Completed $1.3 billion Apple REIT Ten merger Representation on over 30 brand and industry advisory boards and councils MANAGEMENT TEAM WITH DEEP INDUSTRY EXPERIENCE OVER MULTIPLE HOTEL CYCLES RESIDENCE INN SAN DIEGO OCEANSIDE PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment Well-maintained p",
+      "_model_response": {
+        "evidence_quote": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment",
+        "axes_evidence": {
+          "underfollowed_pure_play": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment",
+          "earnings_leverage": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment",
+          "supply_demand_tightness": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment",
+          "structural_ai_demand": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment",
+          "revision_momentum": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment",
+          "catalyst_visibility": "PROVEN INVESTMENT STRATEGY Concentrate on Upscale, rooms-focused hotels Efficient operating model yields higher margins Resilient group business Scale ownership minimizes relative G&A load and provides fixed cost efficiencies Unparalleled access to data and operational expertise Align with the best brands in the rooms-focused category Invested in Hilton®, Marriott® and Hyatt® branded hotels with broad consumer appeal which benefit from strong reservation systems and loyalty programs Hire industry-leading operators and maximize performance through benchmarking and asset management Strong regional and national operators with unique management structure align owner and operator to maximize performance in all market environments Analytical, data-driven asset management benchmarks and shares best practices to maximize property-level results Strategic revenue management optimizes mix of business and maximizes bottom-line performance Pursue broad geographic diversification Broad geographic diversification reduces portfolio volatility and provides exposure to a wide variety of demand generators Enhance portfolio through accretive acquisitions, opportunistic dispositions and strategic reinvestment"
+        },
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "회사의 일반적인 사업 전략, 과거 실적, 경영진 소개 등 루틴 공시 내용으로, 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주 변화, CAPEX 증설 등)에 해당하지 않습니다.",
+        "subject": "Apple Hospitality REIT, Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "Apple Hospitality REIT, Inc.가 회사의 미션, 경영진, 투자 전략 및 과거 실적을 설명하는 자료를 공시했습니다.",
+        "why_it_matters": "이 공시는 회사의 일반적인 사업 개요를 제공하며, 특정 투자 기회를 시사하는 조기 신호는 아닙니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "회사의 일반적인 사업 전략, 과거 실적, 경영진 소개 등 루틴 공시 내용으로, 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주 변화, CAPEX 증설 등)에 해당하지 않습니다."
+    },
+    "content_hash": "8273f4f99b9dfd13f07f34e3bfd9fa95db096149e1a7f66a410bc5e3fb18b745",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-16T04:57:17+00:00",
+    "reason": "회사의 일반적인 사업 전략, 과거 실적, 경영진 소개 등 루틴 공시 내용으로, 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주 변화, CAPEX 증설 등)에 해당하지 않습니다."
   }
 }
