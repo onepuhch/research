@@ -2773,5 +2773,191 @@
     "attempts": 1,
     "updated_at": "2026-09-16T04:57:17+00:00",
     "reason": "회사의 일반적인 사업 전략, 과거 실적, 경영진 소개 등 루틴 공시 내용으로, 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주 변화, CAPEX 증설 등)에 해당하지 않습니다."
+  },
+  "0001104659-26-108270": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-108270",
+      "entity_id": "CIK:0001868941",
+      "source_role": "candidate",
+      "title": "Fluence Energy, Inc. (FLNC) (CIK 0001868941) EX-99.2 2026-09-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868941/000110465926108270/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1868941/000110465926108270/tm2625477d1_ex99-2.htm",
+      "published_at": "2026-09-16",
+      "raw_text": "Fluence Energy, Inc. (FLNC) (CIK 0001868941) EX-99.2 2026-09-16. “I am excited to join Fluence at a time of record backlog, a growing list of customers and the delivery of our new product platform, Smartstack,” said Mr. These forward-looking statements are subject to a number of risks, uncertainties, and other important factors that could cause actual results to differ materially from those in the forward-looking statements, including, but not limited to, the elimination or expiration of government incentives or regulations regarding renewable energy; changes in the global trade environment; fluctuations in order intake and results of operations across fiscal periods; a significant reduction in order volume or loss of significant customers or their inability to perform under contracts; competition for offerings and the ability to attract new customers and retain existing ones; maintaining and enhancing reputation and brand recognition; our ability to manage recent and future growth and the expansion of our business and operations; our ability to attract and retain highly qualified personnel; our growth depending on the success of relationships with third parties; delays, disruptions, and quality control problems in manufacturing operations; risks associated with engineering and construction, utility interconnection, commissioning and installation of energy storage products, cost overruns, and delays; supplier concentration and limited supplier capacity; operating as a global company with a global supply chain; changes in the cost and availability of raw materials and underlying components; lengthy sales and installation cycle for energy storage solutions; quality and quantity of components provided by suppliers; defects, errors, vulnerabilities, and/or bugs in products and technology; events and incidents relating to storage, delivery, installation, operation, maintenance, and shutdowns of products; current and planned foreign operations; failure by contract manufac",
+      "_model_response": {
+        "evidence_quote": "“I am excited to join Fluence at a time of record backlog, a growing list of customers and the delivery of our new product platform, Smartstack,” said Mr.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Fluence Energy, Inc. (FLNC)",
+          "earnings_leverage": "record backlog",
+          "supply_demand_tightness": "record backlog, a growing list of customers",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "delivery of our new product platform, Smartstack"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "에너지 저장 솔루션",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "FLNC",
+        "theme": "에너지 저장 솔루션",
+        "signal_type": "수주/백로그",
+        "what_happened": "Fluence Energy의 신임 임원이 회사에 합류하며 사상 최대 백로그, 고객 증가, 신제품 플랫폼 Smartstack 출시를 언급했습니다.",
+        "why_it_matters": "사상 최대 백로그와 신규 고객 증가는 Fluence Energy의 에너지 저장 솔루션에 대한 강력한 수요를 보여주며, 이는 향후 실적 성장의 기반이 될 수 있습니다.",
+        "what_to_watch": "다음 분기 실적 발표 시 백로그 규모 및 신규 수주액 변화; Smartstack 플랫폼의 시장 채택률 및 매출 기여도.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 기업이 수주했지만 아직 고객에게 인도하지 않은 주문 잔량을 의미하며, 미래 매출의 잠재적 지표입니다. Smartstack: Fluence Energy의 새로운 에너지 저장 제품 플랫폼 이름입니다."
+      }
+    },
+    "content_hash": "5b56d79480733f3b0ffda8a13531b81fba7fd89e24042d5781be71dc76c4f894",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-17T04:59:45+00:00",
+    "signal_id": "SIG-0886",
+    "reason": "grounded extraction"
+  },
+  "0001437749-26-030550": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-030550",
+      "entity_id": "CIK:0001474735",
+      "source_role": "candidate",
+      "title": "GENERAC HOLDINGS INC. (GNRC) (CIK 0001474735) 8-K 2026-09-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926030550/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926030550/gnrc20260915_8k.htm",
+      "published_at": "2026-09-16",
+      "raw_text": "GENERAC HOLDINGS INC. (GNRC) (CIK 0001474735) 8-K 2026-09-16. On the date of issuance, the Company and Amazon executed a long-term supply agreement. gnrc20260915_8k.htm false 0001474735 0001474735 2026-09-16 2026-09-16 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, DC 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of The Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): September 16, 2026 Generac Holdings Inc. (Exact name of registrant as specified in its charter) Delaware 001-34627 20-5654756 (State or other jurisdiction (Commission (IRS Employer of incorporation) File Number) Identification No.) S45 W29290 Hwy 59 Waukesha , Wisconsin 53189 (Address of principal executive offices) (Zip Code) ( 262 ) 544-4811 (Registrant’s telephone number, including area code) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock , $0.01 par value GNRC New York Stock Exchange Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 or Rule 12b-2 of the Securities Exchange Act of 1934. Emerging growth company ☐ If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards prov",
+      "_model_response": {
+        "evidence_quote": "On the date of issuance, the Company and Amazon executed a long-term supply agreement.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "On the date of issuance, the Company and Amazon executed a long-term supply agreement.",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "On the date of issuance, the Company and Amazon executed a long-term supply agreement.",
+          "catalyst_visibility": "On the date of issuance, the Company and Amazon executed a long-term supply agreement."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "GENERAC HOLDINGS INC.",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "Generac Holdings Inc.가 아마존과 장기 공급 계약을 체결했습니다.",
+        "why_it_matters": "Generac이 아마존이라는 대형 고객사를 확보하여 안정적인 매출 기반을 마련하고 향후 성장 동력을 확보할 수 있기 때문에 중요합니다.",
+        "what_to_watch": "계약 규모 및 기간에 따른 구체적인 매출 기여도; 아마존 외 추가 대형 고객사 확보 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "8-K: 미국 증권거래위원회(SEC)에 제출하는 기업의 중요 사건 발생 보고서. 장기 공급 계약: 특정 제품이나 서비스를 장기간에 걸쳐 안정적으로 공급하기로 약속하는 계약."
+      }
+    },
+    "content_hash": "10d76e11ea3214f944addae49e85118e4d83c95da9b7352a67fafbb8c0a7ffd0",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-17T05:00:50+00:00",
+    "signal_id": "SIG-0887",
+    "reason": "grounded extraction"
+  },
+  "0000049196-26-000077": {
+    "status": "retry",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000049196-26-000077",
+      "entity_id": "CIK:0000049196",
+      "source_role": "candidate",
+      "title": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-09-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000077/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000077/hbanbarxpresentation_vf.htm",
+      "published_at": "2026-09-16",
+      "raw_text": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-09-16. 2) Growth rates exclude impact of acquisitions (CADE, Veritex, and Janney) and impact of less revenue contribution due to the sale of a portion of our corporate trust business 3) Compound annual growth rate LTM 2Q26 vs LTM 2Q24 4) Compound annual growth rate as 2Q26 vs 2Q24 $602 $640 $735 $343 $389 $460 $250 $349 $467 $320 $355 $447 $357 $314 $568 LTM 2Q24 LTM 2Q25 LTM 2Q26 Noninterest Income $2,047 $2,677 $1,872 - 30% CAGR 3 - 70%+ syndications growth in each of the past 3 years - 20%+ growth in advisory fees YoY - 10% CAGR 3 - 37% AUM CAGR 4 - 10% Household CAGR 4 Wealth - 9% CAGR 3 - 15% Commercial Payments CAGR 2 - Approximately doubled Merchant Acquiring revenues Payments Customer Deposit & Loan Fees Wealth & Asset Management Capital Markets & Advisory All Other 1 Payments & Cash Management Total Noninterest Income Expanding Value-Added Services through targeted investments • Building Capital Markets capabilities across: - Advisory - DCM, ECM - Financial sponsor coverage - Syndicated & leveraged finance • Scaling Wealth and Private Banking capabilities: - Modernizing Wealth platform through strategic partnerships - Penetrating Regional and Commercial business ownership • Expanding Payments : - Brought merchant acquiring in-house - Enhanced corporate TM capabilities Capital Markets Payments Organic Performance 2 Abundant Green RGB: 126, 207, 28 HEX: #7ECF1C Primary Palette Legacy Energy Green RGB: 45, 130, 42 HEX: #2D822A Capstone Partners Only Pastel Sage RGB: 133, 154, 153 HEX: #859A99 Medium Grey RGB: 166, 183, 183 HEX: #A6B7B7 Medium Sage RGB: 66, 100, 97 HEX: #426461 Prosperous Sage RGB: 0, 45, 42 HEX: #002D2A Highlight Teal RGB: 58, 204, 223 HEX: #3ACCDF Deep Teal RGB: 13, 164, 187 HEX: #0DA4BB Capstone Blue RGB: 4, 30, 66 HEX: #041E42 Extended Palette Off - White RGB: 245, 245, 245 HEX: #7ECF1C Light Grey RGB: 200, 210, 210 HEX: #C8D2D2 Light Sage RGB: 9"
+    },
+    "content_hash": "7c06fa58b6ff2a78d6d672607b7ff72e6ff85a0af670cad123c861d4fbd60a4f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-17T05:02:34+00:00",
+    "reason": "HTTPError",
+    "next_retry_at": "2026-09-17T16:59:33.155509+00:00"
+  },
+  "0001193125-26-392480": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-392480",
+      "entity_id": "CIK:0002040127",
+      "source_role": "candidate",
+      "title": "Karman Holdings Inc. (KRMN) (CIK 0002040127) EX-99.1 2026-09-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/2040127/000119312526392480/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2040127/000119312526392480/d98785dex991.htm",
+      "published_at": "2026-09-16",
+      "raw_text": "Karman Holdings Inc. (KRMN) (CIK 0002040127) EX-99.1 2026-09-16. Strategic Acquisitions Expand Our Value Proposition and Accelerate Growth (Cont’d) Acquisitions Since IPO Acquisition Core Market Strategic Rationale Key Initiatives to Accelerate Growth ▪ Leveraged existing customer base to cross-sell refractory alloy capability ▪ Added new capabilities in hot forgings and refractory alloy expertise Strategic ▪ Expanded MTI relationship with key, new customer with full breadth of Missile ▪ Complementary products tied into deployable shroud systems KRMN offering ▪ Use new propellant / SRM technologies on existing programs UAS / ▪ Significantly expanded capacity for tactical SRMs and boost motors ▪ Drive significant growth through existing customer relationships and C-UAS▪ Brought 40 proprietary propellant formulations in-house program positions ▪ Entered new product line in engine liners and subsystems▪ In-sourcing the spin forming for a major space launch engine program Space & Launch ▪ Added incremental capacity to support existing space programs▪ Internal second source for space qualified advanced manufacturing ▪ Major strategic expansion into maritime defense market▪ Move existing Karman resin formulation capabilities to PA to form Maritime dedicated advanced materials center of excellence ▪ Complementary “bow-to-stern” products and well aligned concept- Defense through-production approach▪ Expand production capacity space ahead of program transitions to rate ▪ Expanded into UK/Europe in response to customer needs▪ Immediately offer Karman US Prime customers a UK/EU footprint for Tactical localized missile manufacturing work ▪ Added incremental IP-rich electroforming and processing capabilities Missile to support existing programs▪ Offer KRMN capability to new European defense prime customers Each of our acquisitions offers unique combined growth opportunity – we make disciplined, strategic acquisitions that combine to solve specific challenges for the customer or ",
+      "_model_response": {
+        "evidence_quote": "Strategic Acquisitions Expand Our Value Proposition and Accelerate Growth (Cont’d) Acquisitions Since IPO Acquisition Core Market Strategic Rationale Key Initiatives to Accelerate Growth ▪ Leveraged existing customer base to cross-sell refractory alloy capability ▪ Added new capabilities in hot forgings and refractory alloy expertise Strategic ▪ Expanded MTI relationship with key, new customer with full breadth of Missile ▪ Complementary products tied into deployable shroud systems KRMN offering ▪ Use new propellant / SRM technologies on existing programs UAS / ▪ Significantly expanded capacity for tactical SRMs and boost motors ▪ Drive significant growth through existing customer relationships and C-UAS▪ Brought 40 proprietary propellant formulations in-house program positions ▪ Entered new product line in engine liners and subsystems▪ In-sourcing the spin forming for a major space launch engine program Space & Launch ▪ Added incremental capacity to support existing space programs▪ Internal second source for space qualified advanced manufacturing ▪ Major strategic expansion into maritime defense market▪ Move existing Karman resin formulation capabilities to PA to form dedicated advanced materials center of excellence ▪ Complementary “bow-to-stern” products and well aligned concept- Defense through-production approach▪ Expand production capacity space ahead of program transitions to rate ▪ Expanded into UK/Europe in response to customer needs▪ Immediately offer Karman US Prime customers a UK/EU footprint for Tactical localized missile manufacturing work ▪ Added incremental IP-rich electroforming and processing capabilities Missile to support existing programs▪ Offer KRMN capability to new European defense prime customers Each of our acquisitions offers unique combined growth opportunity – we make disciplined, strategic acquisitions that combine to solve specific challenges for the customer or",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Karman Holdings Inc. (KRMN) (CIK 0002040127) EX-99.1 2026-09-16. Strategic Acquisitions Expand Our Value Proposition and Accelerate Growth",
+          "earnings_leverage": "Significantly expanded capacity for tactical SRMs and boost motors... Expand production capacity space ahead of program transitions to rate",
+          "supply_demand_tightness": "Expand production capacity space ahead of program transitions to rate... Expanded into UK/Europe in response to customer needs",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Key Initiatives to Accelerate Growth... Expand production capacity space ahead of program transitions to rate"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "Aerospace & Defense Components",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Karman Holdings Inc. (KRMN)",
+        "theme": "Aerospace & Defense",
+        "signal_type": "CAPEX",
+        "what_happened": "Karman Holdings Inc.는 IPO 이후 전략적 인수를 통해 미사일, UAS, 우주 및 해양 방위 시장에서 생산 능력 확장, 신규 고객 관계 구축, 신제품 라인 진입 등 성장을 가속화할 계획을 발표했습니다.",
+        "why_it_matters": "이 인수는 KRMN이 핵심 방위 및 우주 시장에서 입지를 강화하고, 증가하는 수요에 대응하기 위한 생산 능력을 확보하며, 장기적인 매출 성장을 위한 기반을 마련하고 있음을 시사합니다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 각 사업 부문의 매출 성장률 및 수주 잔고 변화; 확장된 생산 능력의 가동률 및 신규 프로그램으로의 전환 진행 상황.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "SRM: 고체 로켓 모터; UAS: 무인 항공 시스템"
+      }
+    },
+    "content_hash": "d7e8f42b31b154740f585148d9a9b54ff7e0e18503d7effbf30150374e921745",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-17T05:03:04+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   }
 }
