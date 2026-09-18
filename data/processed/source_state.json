@@ -2885,7 +2885,7 @@
     "reason": "grounded extraction"
   },
   "0000049196-26-000077": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -2896,14 +2896,49 @@
       "url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000077/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000077/hbanbarxpresentation_vf.htm",
       "published_at": "2026-09-16",
-      "raw_text": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-09-16. 2) Growth rates exclude impact of acquisitions (CADE, Veritex, and Janney) and impact of less revenue contribution due to the sale of a portion of our corporate trust business 3) Compound annual growth rate LTM 2Q26 vs LTM 2Q24 4) Compound annual growth rate as 2Q26 vs 2Q24 $602 $640 $735 $343 $389 $460 $250 $349 $467 $320 $355 $447 $357 $314 $568 LTM 2Q24 LTM 2Q25 LTM 2Q26 Noninterest Income $2,047 $2,677 $1,872 - 30% CAGR 3 - 70%+ syndications growth in each of the past 3 years - 20%+ growth in advisory fees YoY - 10% CAGR 3 - 37% AUM CAGR 4 - 10% Household CAGR 4 Wealth - 9% CAGR 3 - 15% Commercial Payments CAGR 2 - Approximately doubled Merchant Acquiring revenues Payments Customer Deposit & Loan Fees Wealth & Asset Management Capital Markets & Advisory All Other 1 Payments & Cash Management Total Noninterest Income Expanding Value-Added Services through targeted investments • Building Capital Markets capabilities across: - Advisory - DCM, ECM - Financial sponsor coverage - Syndicated & leveraged finance • Scaling Wealth and Private Banking capabilities: - Modernizing Wealth platform through strategic partnerships - Penetrating Regional and Commercial business ownership • Expanding Payments : - Brought merchant acquiring in-house - Enhanced corporate TM capabilities Capital Markets Payments Organic Performance 2 Abundant Green RGB: 126, 207, 28 HEX: #7ECF1C Primary Palette Legacy Energy Green RGB: 45, 130, 42 HEX: #2D822A Capstone Partners Only Pastel Sage RGB: 133, 154, 153 HEX: #859A99 Medium Grey RGB: 166, 183, 183 HEX: #A6B7B7 Medium Sage RGB: 66, 100, 97 HEX: #426461 Prosperous Sage RGB: 0, 45, 42 HEX: #002D2A Highlight Teal RGB: 58, 204, 223 HEX: #3ACCDF Deep Teal RGB: 13, 164, 187 HEX: #0DA4BB Capstone Blue RGB: 4, 30, 66 HEX: #041E42 Extended Palette Off - White RGB: 245, 245, 245 HEX: #7ECF1C Light Grey RGB: 200, 210, 210 HEX: #C8D2D2 Light Sage RGB: 9"
+      "raw_text": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-09-16. 2) Growth rates exclude impact of acquisitions (CADE, Veritex, and Janney) and impact of less revenue contribution due to the sale of a portion of our corporate trust business 3) Compound annual growth rate LTM 2Q26 vs LTM 2Q24 4) Compound annual growth rate as 2Q26 vs 2Q24 $602 $640 $735 $343 $389 $460 $250 $349 $467 $320 $355 $447 $357 $314 $568 LTM 2Q24 LTM 2Q25 LTM 2Q26 Noninterest Income $2,047 $2,677 $1,872 - 30% CAGR 3 - 70%+ syndications growth in each of the past 3 years - 20%+ growth in advisory fees YoY - 10% CAGR 3 - 37% AUM CAGR 4 - 10% Household CAGR 4 Wealth - 9% CAGR 3 - 15% Commercial Payments CAGR 2 - Approximately doubled Merchant Acquiring revenues Payments Customer Deposit & Loan Fees Wealth & Asset Management Capital Markets & Advisory All Other 1 Payments & Cash Management Total Noninterest Income Expanding Value-Added Services through targeted investments • Building Capital Markets capabilities across: - Advisory - DCM, ECM - Financial sponsor coverage - Syndicated & leveraged finance • Scaling Wealth and Private Banking capabilities: - Modernizing Wealth platform through strategic partnerships - Penetrating Regional and Commercial business ownership • Expanding Payments : - Brought merchant acquiring in-house - Enhanced corporate TM capabilities Capital Markets Payments Organic Performance 2 Abundant Green RGB: 126, 207, 28 HEX: #7ECF1C Primary Palette Legacy Energy Green RGB: 45, 130, 42 HEX: #2D822A Capstone Partners Only Pastel Sage RGB: 133, 154, 153 HEX: #859A99 Medium Grey RGB: 166, 183, 183 HEX: #A6B7B7 Medium Sage RGB: 66, 100, 97 HEX: #426461 Prosperous Sage RGB: 0, 45, 42 HEX: #002D2A Highlight Teal RGB: 58, 204, 223 HEX: #3ACCDF Deep Teal RGB: 13, 164, 187 HEX: #0DA4BB Capstone Blue RGB: 4, 30, 66 HEX: #041E42 Extended Palette Off - White RGB: 245, 245, 245 HEX: #7ECF1C Light Grey RGB: 200, 210, 210 HEX: #C8D2D2 Light Sage RGB: 9",
+      "_model_response": {
+        "evidence_quote": "Noninterest Income $2,047 $2,677 $1,872 - 30% CAGR 3 - 70%+ syndications growth in each of the past 3 years - 20%+ growth in advisory fees YoY - 10% CAGR 3 - 37% AUM CAGR 4 - 10% Household CAGR 4 Wealth - 9% CAGR 3 - 15% Commercial Payments CAGR 2 - Approximately doubled Merchant Acquiring revenues Payments Customer Deposit & Loan Fees Wealth & Asset Management Capital Markets & Advisory All Other 1 Payments & Cash Management Total Noninterest Income Expanding Value-Added Services through targeted investments • Building Capital Markets capabilities across: - Advisory - DCM, ECM - Financial sponsor coverage - Syndicated & leveraged finance • Scaling Wealth and Private Banking capabilities: - Modernizing Wealth platform through strategic partnerships - Penetrating Regional and Commercial business ownership • Expanding Payments : - Brought merchant acquiring in-house - Enhanced corporate TM capabilities Capital Markets Payments Organic Performance 2",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Noninterest Income $2,047 $2,677 $1,872 - 30% CAGR 3 - 70%+ syndications growth in each of the past 3 years - 20%+ growth in advisory fees YoY - 10% CAGR 3 - 37% AUM CAGR 4 - 10% Household CAGR 4 Wealth - 9% CAGR 3 - 15% Commercial Payments CAGR 2 - Approximately doubled Merchant Acquiring revenues",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "Noninterest Income $2,047 $2,677 $1,872 - 30% CAGR 3 ... Wealth - 9% CAGR 3 - 15% Commercial Payments CAGR 2",
+          "catalyst_visibility": "Expanding Value-Added Services through targeted investments • Building Capital Markets capabilities across: - Advisory - DCM, ECM - Financial sponsor coverage - Syndicated & leveraged finance • Scaling Wealth and Private Banking capabilities: - Modernizing Wealth platform through strategic partnerships - Penetrating Regional and Commercial business ownership • Expanding Payments : - Brought merchant acquiring in-house - Enhanced corporate TM capabilities"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "HUNTINGTON BANCSHARES INC /MD/ (HBAN)",
+        "theme": "Financial Services",
+        "signal_type": "가이던스상향",
+        "what_happened": "Huntington Bancshares가 비이자이익, 자산관리, 결제 서비스 등 주요 사업 부문에서 2026년까지 높은 연평균 성장률(CAGR)을 제시하고, 관련 역량 강화를 위한 전략적 투자를 발표했습니다.",
+        "why_it_matters": "은행의 비이자이익 부문은 금리 변동성에 덜 민감하며, 특히 자산관리, 자본시장, 결제 서비스의 성장은 수익성 개선과 사업 다각화에 기여하여 장기적인 기업 가치 상승의 잠재력을 보여줍니다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 제시된 비이자이익 및 각 사업 부문의 성장률 달성 여부; 전략적 투자(자본시장 역량 강화, 자산관리 플랫폼 현대화, 결제 서비스 확장)의 구체적인 진행 상황 및 성과 지표",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 5,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "CAGR (Compound Annual Growth Rate): 연평균 성장률. 특정 기간 동안 투자 또는 사업의 연간 성장률을 기하평균으로 나타낸 지표.\nNoninterest Income (비이자이익): 은행이 대출 이자 외에 수수료, 자산관리, 투자 등 비이자 활동으로 벌어들이는 수익."
+      }
     },
     "content_hash": "7c06fa58b6ff2a78d6d672607b7ff72e6ff85a0af670cad123c861d4fbd60a4f",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-09-17T05:02:34+00:00",
-    "reason": "HTTPError",
-    "next_retry_at": "2026-09-17T16:59:33.155509+00:00"
+    "attempts": 2,
+    "updated_at": "2026-09-18T04:52:00+00:00",
+    "reason": "evidence_grounding_failed",
+    "next_retry_at": "2026-09-17T16:59:33.155509+00:00",
+    "validation_rejected": true
   },
   "0001193125-26-392480": {
     "status": "rejected",
@@ -2957,6 +2992,116 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
     "updated_at": "2026-09-17T05:03:04+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001769628-26-000429": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001769628-26-000429",
+      "entity_id": "CIK:0001769628",
+      "source_role": "candidate",
+      "title": "CoreWeave, Inc. (CRWV) (CIK 0001769628) EX-99.2 2026-09-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000429/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000429/crwv2026convertpresentat.htm",
+      "published_at": "2026-09-17",
+      "raw_text": "CoreWeave, Inc. (CRWV) (CIK 0001769628) EX-99.2 2026-09-17. Confidential Information – Do Not Distribute Offering Summary 3 Security Convertible Senior Notes due 2033 Base Size $3.0 Billion Greenshoe $500 Million Expected Coupon 2.375 – 2.875% Expected Conversion Premium 22.5 – 27.5% Call Feature Cleanup call if fewer than $100MM notes remain outstanding; otherwise non - callable prior to April 5, 2030; provisionally callable thereafter if stock is at least 130% of conversion price for a specified period Maturity April 1, 2033 Conversion Settlement Cash, stock or any combination at the Company's election (\"Instrument X\") with irrevocable right to fix settlement method Use of Proceeds Fund the cost of entering into capped call transactions & general corporate purposes Offering Type 144A Expected Pricing Date September 17, 2026 (after market close) Active Bookrunners Morgan Stanley, Goldman Sachs, JP Morgan, Wells Fargo Business Update Confidential Information – Do Not Distribute Executing at Scale: Recent Momentum Across the Business 5 1 2 3 4 5 6 Exceptional Q2 execution: accelerating revenue and margin growth, record revenue backlog, marquee customer wins, and a strengthened financial position Pricing and unit economics continue to expand , with both price and margins increasing across SKUs and contract tenors The essential cloud enabling both proprietary AI labs and the open - weight ecosystem across training, inference, and managed inference Enterprise adoption is intensifying across verticals , from industrial and physical AI to financial services and cybersecurity Significant demand for prior generations of cloud infrastructure , driving strong pricing and contract terms as AI diffuses globally A cost - optimized, systematic financing approach that funds the majority of capex at the asset level Confidential Information – Do Not Distribute Continued Momentum with Exceptional Execution in Q2 6 1 Revenue Backlog¹ $ 104.2B +246% YoY Does not include more than $25 b",
+      "_model_response": {
+        "evidence_quote": "Exceptional Q2 execution: accelerating revenue and margin growth, record revenue backlog, marquee customer wins, and a strengthened financial position Pricing and unit economics continue to expand , with both price and margins increasing across SKUs and contract tenors The essential cloud enabling both proprietary AI labs and the open - weight ecosystem across training, inference, and managed inference Enterprise adoption is intensifying across verticals , from industrial and physical AI to financial services and cybersecurity Significant demand for prior generations of cloud infrastructure , driving strong pricing and contract terms as AI diffuses globally A cost - optimized, systematic financing approach that funds the majority of capex at the asset level Continued Momentum with Exceptional Execution in Q2 Revenue Backlog¹ $ 104.2B +246% YoY",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Confidential Information – Do Not Distribute Offering Summary... Business Update Confidential Information – Do Not Distribute... the essential cloud enabling both proprietary AI labs and the open - weight ecosystem",
+          "earnings_leverage": "Exceptional Q2 execution: accelerating revenue and margin growth, record revenue backlog, marquee customer wins, and a strengthened financial position Pricing and unit economics continue to expand , with both price and margins increasing across SKUs and contract tenors",
+          "supply_demand_tightness": "Significant demand for prior generations of cloud infrastructure , driving strong pricing and contract terms as AI diffuses globally",
+          "structural_ai_demand": "the essential cloud enabling both proprietary AI labs and the open - weight ecosystem across training, inference, and managed inference Enterprise adoption is intensifying across verticals , from industrial and physical AI to financial services and cybersecurity Significant demand for prior generations of cloud infrastructure , driving strong pricing and contract terms as AI diffuses globally",
+          "revision_momentum": "",
+          "catalyst_visibility": "Exceptional Q2 execution: accelerating revenue and margin growth, record revenue backlog, marquee customer wins, and a strengthened financial position"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "CRWV",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CoreWeave, Inc.",
+        "theme": "AI Cloud Infrastructure",
+        "signal_type": "수주/백로그",
+        "what_happened": "CoreWeave가 2분기에 매출 및 마진 성장을 가속화하고 1,042억 달러의 기록적인 매출 백로그를 달성했다고 발표했습니다.",
+        "why_it_matters": "AI 인프라 수요 증가로 CoreWeave의 클라우드 서비스에 대한 강력한 수요가 확인되었으며, 이는 향후 실적 성장의 기반이 될 수 있습니다.",
+        "what_to_watch": "향후 분기별 매출 및 마진 성장률 추이; 신규 고객 확보 및 기존 고객과의 계약 확장 여부",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 고객과 계약이 체결되었으나 아직 매출로 인식되지 않은 미이행 주문 잔액. SKU (Stock Keeping Unit): 재고 관리 최소 단위로, 제품의 종류를 구분하는 코드."
+      }
+    },
+    "content_hash": "8cd8efc2526eec59f9bb434a5940c4ad27136de67953b13454ede3a7fef53a91",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-18T04:52:17+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001493152-26-043135": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-043135",
+      "entity_id": "CIK:0001948864",
+      "source_role": "candidate",
+      "title": "HEALTHY CHOICE WELLNESS CORP. (HCWC) (CIK 0001948864) EX-99.1 2026-09-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1948864/000149315226043135/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1948864/000149315226043135/ex99-1.htm",
+      "published_at": "2026-09-17",
+      "raw_text": "HEALTHY CHOICE WELLNESS CORP. (HCWC) (CIK 0001948864) EX-99.1 2026-09-17. EX-99.1 12 ex99-1.htm EX-99.1 Exhibit 99.1 MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS OF HOST DIGITAL INFRASTRUCTURE LLC The following discussion should be read together with Host Digital Infrastructure LLC’s (the “Company”, “we”, “our” and “us”) financial statements and the related notes included elsewhere in this Current Report on Form 8-K. This discussion contains forward-looking statements that involve risks, uncertainties and assumptions, including those described under “Risk Factors” and elsewhere in this Current Report on Form 8-K. Actual results may differ materially. Except as required by law, the Company undertakes no obligation to update any forward-looking statements. Overview The Company is a development-stage entity with no material revenue from operations. The Company was organized to develop, own and operate large-scale data center campuses in the United States serving high-performance computing and artificial intelligence workloads. The Company has no significant operating history. The Company’s continuing operations did not generate revenue during the periods presented. The Company’s initial project is expected to be the development of an approximately 45+ megawatt data center campus in Northeast Oklahoma (the “Project Facility”), comprising 45+ megawatts of contracted power capacity, related electrical equipment, and an 80,000+ square foot building under an exercised acquisition option. In the event that the Company does not complete the acquisition of the Project Facility, the Company may instead pursue the lease or acquisition of one or more other facilities with similar power output and other characteristics to the Project Facility. In February 2026, we acquired T-20 Mining LLC (“T-20”), a Delaware limited liability company that held an Electric Service Agreement (“ESA”) with the applicable utility provider for the Project Facili",
+      "_model_response": {
+        "evidence_quote": "The Company was organized to develop, own and operate large-scale data center campuses in the United States serving high-performance computing and artificial intelligence workloads. The Company’s initial project is expected to be the development of an approximately 45+ megawatt data center campus in Northeast Oklahoma (the “Project Facility”), comprising 45+ megawatts of contracted power capacity, related electrical equipment, and an 80,000+ square foot building under an exercised acquisition option. In February 2026, we acquired T-20 Mining LLC (“T-20”), a Delaware limited liability company that held an Electric Service Agreement (“ESA”) with the applicable utility provider for the Project Facili",
+        "axes_evidence": {
+          "underfollowed_pure_play": "The Company was organized to develop, own and operate large-scale data center campuses in the United States serving high-performance computing and artificial intelligence workloads.",
+          "earnings_leverage": "The Company is a development-stage entity with no material revenue from operations.",
+          "supply_demand_tightness": "serving high-performance computing and artificial intelligence workloads.",
+          "structural_ai_demand": "serving high-performance computing and artificial intelligence workloads.",
+          "revision_momentum": "The Company is a development-stage entity with no material revenue from operations.",
+          "catalyst_visibility": "The Company’s initial project is expected to be the development of an approximately 45+ megawatt data center campus... In February 2026, we acquired T-20 Mining LLC"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI Data Center Capacity",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "HCWC",
+        "theme": "AI Infrastructure",
+        "signal_type": "CAPEX",
+        "what_happened": "Host Digital Infrastructure LLC는 AI 및 고성능 컴퓨팅 워크로드를 위한 45+ 메가와트 규모의 데이터센터 캠퍼스 개발을 계획하고 있으며, 이를 위해 전력 서비스 계약을 보유한 T-20 Mining LLC를 인수했습니다.",
+        "why_it_matters": "AI 수요 증가에 필수적인 데이터센터 인프라 확장을 위한 구체적인 CAPEX 계획과 핵심 자산(전력 계약) 확보는 향후 AI 인프라 공급 부족 해소에 기여하며, 관련 기업의 성장 잠재력을 보여줍니다.",
+        "what_to_watch": "데이터센터 건설 진행 상황 및 완공 시점, 실제 AI 고객 유치 현황.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 7,
+        "tier": "관망",
+        "stage": "초기",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출. 데이터센터: 서버, 스토리지, 네트워크 장비 등 IT 인프라를 한 곳에 모아 관리하는 시설."
+      }
+    },
+    "content_hash": "d9d2e53c0c404a351fe844cd227deefae1038d33d13febded66d67981a444573",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-18T04:52:35+00:00",
     "reason": "evidence_grounding_failed",
     "validation_rejected": true
   }
