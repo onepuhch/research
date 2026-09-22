@@ -3104,5 +3104,101 @@
     "updated_at": "2026-09-18T04:52:35+00:00",
     "reason": "evidence_grounding_failed",
     "validation_rejected": true
+  },
+  "0001213900-26-101664": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-101664",
+      "entity_id": "CIK:0001866226",
+      "source_role": "candidate",
+      "title": "Evolution Metals & Technologies Corp. (EMAT) (CIK 0001866226) EX-99.1 2026-09-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/1866226/000121390026101664/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1866226/000121390026101664/ea030607101ex99-1.htm",
+      "published_at": "2026-09-21",
+      "raw_text": "Evolution Metals & Technologies Corp. (EMAT) (CIK 0001866226) EX-99.1 2026-09-21. EX-99.1 2 ea030607101ex99-1.htm PRESS RELEASE DATED SEPTEMBER 21, 2026 Exhibit 99.1 Evolution Metals & Technologies Corp. Joins Russell 3000 ® and Russell 2000 ® Indexes, Gaining Exposure to $12.2 Trillion in Benchmarked Assets U.S. rare earth permanent magnet producer becomes a constituent of both indexes effective at the opening of U.S. equity markets on September 21, 2026, following finalization of FTSE Russell’s third-quarter 2026 quarterly IPO additions MIAMI, FL, September 21, 2026 – Evolution Metals & Technologies Corp. (“EM&T” or the “Company”) (Nasdaq: EMAT), a U.S.-based critical materials and advanced manufacturing company producing rare earth permanent magnets, battery materials and related critical minerals, today announced that it has joined the broad-market Russell 3000 ® Index and the small-cap Russell 2000 ® Index, effective as of the opening of U.S. equity markets today, Monday, September 21, 2026. The addition was finalized through FTSE Russell’s third-quarter 2026 quarterly IPO additions process, placing EM&T in two of the most widely tracked U.S. equity benchmarks in its first year as a Nasdaq-listed company. Membership in the Russell 2000 ® Index results in automatic inclusion in the broad-market Russell 3000 ® Index and in the applicable Russell U.S. style indexes. According to FTSE Russell, approximately $12.2 trillion in assets are benchmarked to or invested in products based on the Russell U.S. Indexes, which institutional investors use for index funds and as benchmarks for both active and passive strategies. As an official constituent, EM&T is now being incorporated into index-tracking investment products and institutional portfolios, and is immediately eligible for active managers whose mandates require benchmark membership. “Joining the Russell 2000 and Russell 3000 indexes is a defining capital-markets milestone for EM&T and a direct reflection of the oper",
+      "_model_response": {
+        "evidence_quote": "Evolution Metals & Technologies Corp. Joins Russell 3000 ® and Russell 2000 ® Indexes, Gaining Exposure to $12.2 Trillion in Benchmarked Assets U.S. rare earth permanent magnet producer becomes a constituent of both indexes effective at the opening of U.S. equity markets on September 21, 2026, following finalization of FTSE Russell’s third-quarter 2026 quarterly IPO additions MIAMI, FL, September 21, 2026 – Evolution Metals & Technologies Corp. (“EM&T” or the “Company”) (Nasdaq: EMAT), a U.S.-based critical materials and advanced manufacturing company producing rare earth permanent magnets, battery materials and related critical minerals, today announced that it has joined the broad-market Russell 3000 ® Index and the small-cap Russell 2000 ® Index, effective as of the opening of U.S. equity markets today, Monday, September 21, 2026.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "러셀 지수 편입은 기업의 자본 시장 이벤트이며, 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등과 같은 구체적인 사업 운영 조기 지표에 해당하지 않습니다. 이는 루틴 공시에 가깝습니다.",
+        "subject": "EMAT",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "Evolution Metals & Technologies Corp. (EMAT)가 러셀 3000 및 러셀 2000 지수에 편입되었습니다.",
+        "why_it_matters": "지수 편입은 기업의 시장 가시성과 유동성을 높일 수 있으나, 직접적인 사업 운영 개선 신호는 아닙니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "러셀 지수 편입은 기업의 자본 시장 이벤트이며, 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등과 같은 구체적인 사업 운영 조기 지표에 해당하지 않습니다. 이는 루틴 공시에 가깝습니다."
+    },
+    "content_hash": "550df02846ec68b4f0c60944759aeffa7af67ffbc9004635685b7ba7d5ec61c3",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-22T05:07:20+00:00",
+    "reason": "러셀 지수 편입은 기업의 자본 시장 이벤트이며, 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등과 같은 구체적인 사업 운영 조기 지표에 해당하지 않습니다. 이는 루틴 공시에 가깝습니다."
+  },
+  "0001193125-26-396779": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-396779",
+      "entity_id": "CIK:0001145197",
+      "source_role": "candidate",
+      "title": "INSULET CORP (PODD) (CIK 0001145197) EX-10.1 2026-09-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/1145197/000119312526396779/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1145197/000119312526396779/d71204dex101.htm",
+      "published_at": "2026-09-21",
+      "raw_text": "INSULET CORP (PODD) (CIK 0001145197) EX-10.1 2026-09-21. “ Consolidated EBITDA ” means, with respect to any Person for any period, the Consolidated Net Income of such Person for such period: (1) increased (without duplication) by: (a) Fixed Charges of such Person for such period (including (w) non-cash rent expense and the implied interest component of synthetic leases with respect to such period, (x) net payments and losses or any obligations on any Swap Obligations or other derivative instruments, (y) bank, letter of credit and other financing fees and (z) costs of surety bonds in connection with financing activities, plus amounts excluded from the definition of “Consolidated Interest Expense” and any non-cash interest expense), to the extent deducted (and not added back) in computing Consolidated Net Income; plus (b) (x) provision for taxes based on income, profits, revenue or capital, including federal, foreign, state, provincial, territorial, local, unitary, excise, property, franchise, value added and similar taxes (such as Delaware franchise tax, Pennsylvania capital tax, Texas margin tax and provincial capital taxes paid in Canada) and withholding taxes (including any future taxes or other levies which replace or are intended to be in lieu of such taxes and any penalties, additions to tax and interest related to such taxes or arising from tax examinations), state taxes in lieu of business fees (including business license fees), payroll tax credits, income tax credits and similar credits, and similar taxes of such Person paid or accrued during such period (including in respect of repatriated funds), (y) any distributions made to a direct or indirect parent of the Company with respect to the foregoing, and (z) the net tax expense associated with any adjustments made pursuant to the definition of “Consolidated Net Income” in each case, to the extent deducted (and not added back) in computing Consolidated Net Income; plus (c) Consolidated Depreciation and Amorti",
+      "_model_response": {
+        "evidence_quote": "Consolidated EBITDA ” means, with respect to any Person for any period, the Consolidated Net Income of such Person for such period: (1) increased (without duplication) by: (a) Fixed Charges of such Person for such period (including (w) non-cash rent expense and the implied interest component of synthetic leases with respect to such period, (x) net payments and losses or any obligations on any Swap Obligations or other derivative instruments, (y) bank, letter of credit and other financing fees and (z) costs of surety bonds in connection with financing activities, plus amounts excluded from the definition of “Consolidated Interest Expense” and any non-cash interest expense), to the extent deducted (and not added back) in computing Consolidated Net Income;",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "제공된 텍스트는 SEC 공시(EX-10.1)의 일부로, 'Consolidated EBITDA'에 대한 정의를 담고 있습니다. 이는 회사의 구체적인 조기 지표(가이던스 상향, 수주 변화, CAPEX 등)가 아닌 루틴한 법률/재무 용어 정의이므로 투자 발굴 신호로 볼 수 없습니다.",
+        "subject": "INSULET CORP",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "INSULET CORP의 SEC 공시(EX-10.1)에서 'Consolidated EBITDA'의 정의와 계산 방식이 명시되었습니다.",
+        "why_it_matters": "해당 내용은 회사의 재무 지표 정의에 대한 것으로, 직접적인 투자 신호나 사업 변화를 나타내지 않습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "제공된 텍스트는 SEC 공시(EX-10.1)의 일부로, 'Consolidated EBITDA'에 대한 정의를 담고 있습니다. 이는 회사의 구체적인 조기 지표(가이던스 상향, 수주 변화, CAPEX 등)가 아닌 루틴한 법률/재무 용어 정의이므로 투자 발굴 신호로 볼 수 없습니다."
+    },
+    "content_hash": "a4d19f46eb1df0eb4ad9b04d656a7156e1c775cc6eed559ce81cb33f8557ba56",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-22T05:07:38+00:00",
+    "reason": "제공된 텍스트는 SEC 공시(EX-10.1)의 일부로, 'Consolidated EBITDA'에 대한 정의를 담고 있습니다. 이는 회사의 구체적인 조기 지표(가이던스 상향, 수주 변화, CAPEX 등)가 아닌 루틴한 법률/재무 용어 정의이므로 투자 발굴 신호로 볼 수 없습니다."
   }
 }
