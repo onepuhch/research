@@ -1,25 +1,25 @@
 {
   "eps": {
-    "checked_at": "2026-09-24T16:41:10+00:00",
+    "checked_at": "2026-09-24T16:42:59+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:10+00:00",
+    "last_success_at": "2026-09-24T16:42:59+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-09-24T16:41:07+00:00",
+    "checked_at": "2026-09-24T16:42:57+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:07+00:00",
+    "last_success_at": "2026-09-24T16:42:57+00:00",
     "item_count": 17,
     "errors": [],
-    "collected_at": "2026-09-24T16:41:07.531303+00:00"
+    "collected_at": "2026-09-24T16:42:57.306172+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-24T16:41:07+00:00",
+    "checked_at": "2026-09-24T16:42:57+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:07+00:00",
+    "last_success_at": "2026-09-24T16:42:57+00:00",
     "accepted": 0,
     "rejected": 0,
     "validation_rejected": 0,
@@ -30,9 +30,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-24T16:40:56+00:00",
+    "checked_at": "2026-09-24T16:42:45+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:40:56+00:00",
+    "last_success_at": "2026-09-24T16:42:45+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -48,37 +48,40 @@
     "last_success_at": "2026-09-24T15:12:00+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-24T16:41:10+00:00",
+    "checked_at": "2026-09-24T16:42:59+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:10+00:00"
+    "last_success_at": "2026-09-24T16:42:59+00:00"
   },
   "prices": {
-    "checked_at": "2026-09-24T16:41:14+00:00",
+    "checked_at": "2026-09-24T16:44:44+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:14+00:00",
+    "last_success_at": "2026-09-24T16:44:44+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-09-24T16:41:15+00:00",
+    "checked_at": "2026-09-24T16:44:45+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:15+00:00",
+    "last_success_at": "2026-09-24T16:44:45+00:00",
     "targets": 4,
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-09-24T16:41:13+00:00",
+    "checked_at": "2026-09-24T16:43:02+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:41:13+00:00",
+    "last_success_at": "2026-09-24T16:43:02+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-09-24T16:41:13+00:00",
-    "status": "failed",
-    "last_success_at": null,
-    "error_type": "HTTPError"
+    "checked_at": "2026-09-24T16:44:44+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-24T16:44:44+00:00",
+    "screened": 3238,
+    "scored": 2267,
+    "candidates": 96,
+    "failed": 322
   }
 }
