@@ -1,0 +1,97 @@
+{
+  "code_commit": "efca0890d77f93c374e36f8e3127e4ec0efaf4d2",
+  "deployment": {
+    "id": 36015671992,
+    "status": "success",
+    "url": "https://github.com/onepuhch/research/actions/runs/36015671992"
+  },
+  "regression": {
+    "id": 36015654206,
+    "status": "success",
+    "tests_per_platform": 57,
+    "platforms": [
+      "Windows",
+      "Ubuntu"
+    ],
+    "url": "https://github.com/onepuhch/research/actions/runs/36015654206"
+  },
+  "scheduled_audit": {
+    "total": 48,
+    "success": 45,
+    "failure": 3,
+    "failed_runs": [
+      35957997372,
+      35563244265,
+      35183969219
+    ]
+  },
+  "services": {
+    "collect": {
+      "checked_at": "2026-09-24T14:50:23+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:50:23+00:00",
+      "item_count": 17,
+      "errors": [],
+      "collected_at": "2026-09-24T14:50:23.015633+00:00"
+    },
+    "extract": {
+      "checked_at": "2026-09-24T14:51:55+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:51:55+00:00",
+      "accepted": 3,
+      "rejected": 1,
+      "validation_rejected": 0,
+      "validation_rejected_total": 20,
+      "failed": 0,
+      "pending": 0,
+      "model": "gemini-2.5-flash",
+      "prompt_version": "research-v2-20260906"
+    },
+    "eps": {
+      "checked_at": "2026-09-24T14:51:58+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:51:58+00:00",
+      "targets": 3,
+      "observations": 6,
+      "failures": [],
+      "provider": "yahoo"
+    },
+    "prices": {
+      "checked_at": "2026-09-24T14:51:59+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:51:59+00:00",
+      "targets": 3,
+      "observations": 3,
+      "failures": []
+    },
+    "returns": {
+      "checked_at": "2026-09-24T14:52:00+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:52:00+00:00",
+      "targets": 4,
+      "failures": []
+    },
+    "telegram_delivery": {
+      "checked_at": "2026-09-24T14:52:46+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:52:46+00:00",
+      "message_id": 133
+    },
+    "review_report": {
+      "checked_at": "2026-09-24T14:52:46+00:00",
+      "status": "success",
+      "last_success_at": "2026-09-24T14:52:46+00:00"
+    }
+  },
+  "manual_report_chunks_sent": 2,
+  "recovered_source": {
+    "id": "0001683168-26-007324",
+    "status": "accepted",
+    "attempts": 2
+  },
+  "remaining": [
+    "independent product-level EPS inputs missing",
+    "first 30-day outcome due 2026-10-14",
+    "new post-deployment scheduled run not yet observed"
+  ]
+}

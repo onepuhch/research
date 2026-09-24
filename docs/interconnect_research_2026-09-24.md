@@ -47,12 +47,12 @@ AI 연결 병목: 랙 내부 fabric 전환의 증분 이익은 누구에게 귀�
 
 | 기업 | EPS 대상 기간 말 | EPS / 관측일 | USD 시세 / 거래시각 UTC | 참고 PER | 동일 기간 EPS 변화 | 시세 수집시각 |
 | --- | --- | --- | --- | --- | --- | --- |
-| ALAB | 2026-12-31 | [4.03220](https://finance.yahoo.com/quote/ALAB/analysis/) / 2026-09-24 | [360.46](https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d) / 2026-09-23T20:00:01+00:00 | 89.40 | +0.000% (최초 2026-09-09) | 2026-09-24T14:02:45.728328+09:00 |
-| ALAB | 2027-12-31 | [6.39348](https://finance.yahoo.com/quote/ALAB/analysis/) / 2026-09-24 | [360.46](https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d) / 2026-09-23T20:00:01+00:00 | 56.38 | +0.000% (최초 2026-09-09) | 2026-09-24T14:02:45.728328+09:00 |
-| CRDO | 2027-04-30 | [6.30509](https://finance.yahoo.com/quote/CRDO/analysis/) / 2026-09-24 | [193.87](https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d) / 2026-09-23T20:00:01+00:00 | 30.75 | +0.502% (최초 2026-09-07) | 2026-09-24T14:02:45.654678+09:00 |
-| CRDO | 2028-04-30 | [9.70487](https://finance.yahoo.com/quote/CRDO/analysis/) / 2026-09-24 | [193.87](https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d) / 2026-09-23T20:00:01+00:00 | 19.98 | +0.819% (최초 2026-09-07) | 2026-09-24T14:02:45.654678+09:00 |
-| MRVL | 2027-01-31 | [4.21130](https://finance.yahoo.com/quote/MRVL/analysis/) / 2026-09-24 | [260.90](https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d) / 2026-09-23T20:00:01+00:00 | 61.95 | +0.244% (최초 2026-09-09) | 2026-09-24T14:02:45.810176+09:00 |
-| MRVL | 2028-01-31 | [6.75725](https://finance.yahoo.com/quote/MRVL/analysis/) / 2026-09-24 | [260.90](https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d) / 2026-09-23T20:00:01+00:00 | 38.61 | +0.542% (최초 2026-09-09) | 2026-09-24T14:02:45.810176+09:00 |
+| ALAB | 2026-12-31 | [4.03220](https://finance.yahoo.com/quote/ALAB/analysis/) / 2026-09-24 | [352.73](https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d) / 2026-09-24T14:51:04+00:00 | 87.48 | +0.000% (최초 2026-09-09) | 2026-09-24T23:51:58.850927+09:00 |
+| ALAB | 2027-12-31 | [6.39348](https://finance.yahoo.com/quote/ALAB/analysis/) / 2026-09-24 | [352.73](https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d) / 2026-09-24T14:51:04+00:00 | 55.17 | +0.000% (최초 2026-09-09) | 2026-09-24T23:51:58.850927+09:00 |
+| CRDO | 2027-04-30 | [6.30509](https://finance.yahoo.com/quote/CRDO/analysis/) / 2026-09-24 | [190.26](https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d) / 2026-09-24T14:51:56+00:00 | 30.18 | +0.502% (최초 2026-09-07) | 2026-09-24T23:51:58.696868+09:00 |
+| CRDO | 2028-04-30 | [9.70487](https://finance.yahoo.com/quote/CRDO/analysis/) / 2026-09-24 | [190.26](https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d) / 2026-09-24T14:51:56+00:00 | 19.60 | +0.819% (최초 2026-09-07) | 2026-09-24T23:51:58.696868+09:00 |
+| MRVL | 2027-01-31 | [4.21130](https://finance.yahoo.com/quote/MRVL/analysis/) / 2026-09-24 | [254.47](https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d) / 2026-09-24T14:51:57+00:00 | 60.43 | +0.244% (최초 2026-09-09) | 2026-09-24T23:51:59.002260+09:00 |
+| MRVL | 2028-01-31 | [6.75725](https://finance.yahoo.com/quote/MRVL/analysis/) / 2026-09-24 | [254.47](https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d) / 2026-09-24T14:51:57+00:00 | 37.66 | +0.542% (최초 2026-09-09) | 2026-09-24T23:51:59.002260+09:00 |
 
 
 ## 시장 기대 재점검
