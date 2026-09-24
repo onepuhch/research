@@ -3393,7 +3393,7 @@
     "reason": "financing/loan language without a commercial demand event"
   },
   "0001683168-26-007324": {
-    "status": "retry",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -3404,13 +3404,47 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1748137/000168316826007324/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1748137/000168316826007324/neovolta_ex9901.htm",
       "published_at": "2026-09-23",
-      "raw_text": "NeoVolta Inc. (NEOV, NEOVW) (CIK 0001748137) EX-99.1 2026-09-23. BESS manufacturing facility progressing to production ramp-up SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. EX-99.1 2 neovolta_ex9901.htm PRESS RELEASE Exhibit 99.1 NEOVOLTA, INC. NASDAQ: NEOV NeoVolta Reports Fourth Quarter and Fiscal Year 2026 Financial Results 58% year-over-year revenue growth to $13.3 million revenue in fiscal year 2026 U.S. BESS manufacturing facility progressing to production ramp-up SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. domestic cells supply San Diego, CA – Sep 23, 2026 – NeoVolta Inc. (NASDAQ: NEOV) (“NeoVolta” or the “Company”), a U.S.-based energy technology company delivering scalable energy storage solutions, today announced financial results for the fourth quarter and fiscal year ended June 30, 2026. Fourth Quarter and Fiscal Year 2026 Financial Highlights • Fiscal year 2026 revenue increased 58% year-over-year to $13.3 million, compared to $8.4 million in fiscal year 2025, reflecting the Company's expansion beyond its historical residential base. • Fourth quarter revenue was approximately $13.5 thousand, compared to $4.8 million in the fourth quarter of fiscal year 2025, reflecting a substantial decline in residential and traditional installer-channel sales following federal tax law changes in early calendar year 2026. • GAAP net loss of $21.5 million, or $(0.55) per share, for fiscal year 2026, compared to a net loss of $5.0 million, or $(0.15) per share, for fiscal year 2025. Fourth quarter GAAP net loss was $11.7 million, compared to $1.6 million in the fourth quarter of fiscal year 2025. Fourth quarter GAAP net loss increase was primarily driven by a $3.9 million provision for credit losses and bad debt expenses and $1.1 million of residential inventory obsolescence reserve. • Adjusted EBITDA of $(12.8) million for fiscal year 2026, compared to $(2.6) million for fiscal year 2025. Fourth quarter Adjusted EBITDA"
+      "raw_text": "NeoVolta Inc. (NEOV, NEOVW) (CIK 0001748137) EX-99.1 2026-09-23. BESS manufacturing facility progressing to production ramp-up SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. EX-99.1 2 neovolta_ex9901.htm PRESS RELEASE Exhibit 99.1 NEOVOLTA, INC. NASDAQ: NEOV NeoVolta Reports Fourth Quarter and Fiscal Year 2026 Financial Results 58% year-over-year revenue growth to $13.3 million revenue in fiscal year 2026 U.S. BESS manufacturing facility progressing to production ramp-up SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. domestic cells supply San Diego, CA – Sep 23, 2026 – NeoVolta Inc. (NASDAQ: NEOV) (“NeoVolta” or the “Company”), a U.S.-based energy technology company delivering scalable energy storage solutions, today announced financial results for the fourth quarter and fiscal year ended June 30, 2026. Fourth Quarter and Fiscal Year 2026 Financial Highlights • Fiscal year 2026 revenue increased 58% year-over-year to $13.3 million, compared to $8.4 million in fiscal year 2025, reflecting the Company's expansion beyond its historical residential base. • Fourth quarter revenue was approximately $13.5 thousand, compared to $4.8 million in the fourth quarter of fiscal year 2025, reflecting a substantial decline in residential and traditional installer-channel sales following federal tax law changes in early calendar year 2026. • GAAP net loss of $21.5 million, or $(0.55) per share, for fiscal year 2026, compared to a net loss of $5.0 million, or $(0.15) per share, for fiscal year 2025. Fourth quarter GAAP net loss was $11.7 million, compared to $1.6 million in the fourth quarter of fiscal year 2025. Fourth quarter GAAP net loss increase was primarily driven by a $3.9 million provision for credit losses and bad debt expenses and $1.1 million of residential inventory obsolescence reserve. • Adjusted EBITDA of $(12.8) million for fiscal year 2026, compared to $(2.6) million for fiscal year 2025. Fourth quarter Adjusted EBITDA",
+      "_model_response": {
+        "evidence_quote": "BESS manufacturing facility progressing to production ramp-up SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. domestic cells supply San Diego, CA – Sep 23, 2026 – NeoVolta Inc. (NASDAQ: NEOV) (“NeoVolta” or the “Company”), a U.S.-based energy technology company delivering scalable energy storage solutions, today announced financial results for the fourth quarter and fiscal year ended June 30, 2026. Fourth Quarter and Fiscal Year 2026 Financial Highlights • Fiscal year 2026 revenue increased 58% year-over-year to $13.3 million, compared to $8.4 million in fiscal year 2025, reflecting the Company's expansion beyond its historical residential base.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "NeoVolta Inc. (NASDAQ: NEOV) (“NeoVolta” or the “Company”), a U.S.-based energy technology company delivering scalable energy storage solutions",
+          "earnings_leverage": "Fiscal year 2026 revenue increased 58% year-over-year to $13.3 million... GAAP net loss of $21.5 million... Adjusted EBITDA of $(12.8) million",
+          "supply_demand_tightness": "SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. domestic cells supply",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "BESS manufacturing facility progressing to production ramp-up SK ON collaboration accelerates capacity expansion with 2027-2031 U.S. domestic cells supply"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "BESS",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "NEOV",
+        "theme": "에너지 저장 시스템",
+        "signal_type": "CAPEX",
+        "what_happened": "네오볼타가 SK온과의 협력을 통해 2027년부터 2031년까지 미국 내 배터리 셀 공급을 확보하며 BESS 생산 시설의 증설 및 생산량 확대를 진행 중이라고 발표했습니다.",
+        "why_it_matters": "에너지 저장 시스템(BESS) 시장 성장에 대비하여 핵심 부품 공급망을 안정화하고 생산 능력을 확장하는 것은 향후 매출 성장과 시장 점유율 확대의 기반이 될 수 있습니다.",
+        "what_to_watch": "향후 BESS 생산 시설의 실제 가동률 및 SK온으로부터의 셀 공급량 변화를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 5,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "BESS: Battery Energy Storage System (배터리 에너지 저장 시스템)"
+      }
     },
     "content_hash": "73c2f2d0c624dd296fcfc60e710637521cc960e5a167513e14da9a58d9e97f29",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-09-24T05:01:16+00:00",
-    "reason": "TimeoutError",
+    "attempts": 2,
+    "updated_at": "2026-09-24T14:50:57+00:00",
+    "reason": "grounded extraction",
     "next_retry_at": "2026-09-24T14:47:23+00:00",
     "manual_retry_history": [
       {
@@ -3418,7 +3452,8 @@
         "previous_next_retry_at": "2026-09-24T17:00:07.003872+00:00",
         "reason": "사용자 요청에 따른 운영 복구 재시도"
       }
-    ]
+    ],
+    "signal_id": "SIG-0890"
   },
   "0001213900-26-102333": {
     "status": "rejected",
@@ -3639,5 +3674,163 @@
     "updated_at": "2026-09-24T05:02:43+00:00",
     "reason": "evidence_grounding_failed",
     "validation_rejected": true
+  },
+  "0001070235-26-000112": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001070235-26-000112",
+      "entity_id": "CIK:0001070235",
+      "source_role": "candidate",
+      "title": "BLACKBERRY Ltd (BB) (CIK 0001070235) EX-99.1 2026-09-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1070235/000107023526000112/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1070235/000107023526000112/q2fy27ex-991.htm",
+      "published_at": "2026-09-24",
+      "raw_text": "BLACKBERRY Ltd (BB) (CIK 0001070235) EX-99.1 2026-09-24. EX-99.1 2 q2fy27ex-991.htm EX-99.1 Document Exhibit 99.1 September 24, 2026 BlackBerry Reports Second Quarter Fiscal Year 2027 Results • Revenue increased 26% year-over-year to $163 million • QNX delivered record quarterly revenue and secured its first Alloy Kore TM design win, the largest design win in QNX history • Adjusted EBITDA grew 81% year-over-year, resulting in the second consecutive Rule of 40 1 performance; GAAP operating income increased 192% year-over-year • Generated $29 million operating cash flow; delivered sixth consecutive quarter of positive GAAP net income and Adjusted EPS exceeded expectations • Raised fiscal year 2027 revenue and Adjusted EBITDA outlook following strong first-half execution Waterloo, Ontario - BlackBerry Limited (NYSE: BB; TSX: BB) to day reported financial results for the three months ended August 31, 2026 (all figures in U.S. The first Alloy Kore design win, the largest design win in QNX history, marks an important commercial milestone. This first Alloy Kore design win is the largest in QNX history and adds over $100 million to the QNX royalty backlog.",
+      "_model_response": {
+        "evidence_quote": "Raised fiscal year 2027 revenue and Adjusted EBITDA outlook following strong first-half execution",
+        "axes_evidence": {
+          "underfollowed_pure_play": "QNX delivered record quarterly revenue and secured its first Alloy Kore TM design win, the largest design win in QNX history",
+          "earnings_leverage": "QNX delivered record quarterly revenue and secured its first Alloy Kore TM design win, the largest design win in QNX history... adds over $100 million to the QNX royalty backlog.",
+          "supply_demand_tightness": "secured its first Alloy Kore TM design win, the largest design win in QNX history",
+          "structural_ai_demand": "QNX delivered record quarterly revenue and secured its first Alloy Kore TM design win",
+          "revision_momentum": "Raised fiscal year 2027 revenue and Adjusted EBITDA outlook following strong first-half execution",
+          "catalyst_visibility": "secured its first Alloy Kore TM design win, the largest design win in QNX history... adds over $100 million to the QNX royalty backlog."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "Embedded OS",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "BlackBerry Ltd",
+        "theme": "Automotive Embedded Software",
+        "signal_type": "가이던스상향",
+        "what_happened": "BlackBerry가 QNX 사업부의 사상 최대 Alloy Kore 디자인윈 확보 및 1억 달러 이상의 로열티 백로그 추가에 힘입어 2027 회계연도 매출 및 조정 EBITDA 가이던스를 상향했습니다.",
+        "why_it_matters": "블랙베리가 핵심 임베디드 소프트웨어(QNX)의 강력한 수주 성과를 바탕으로 연간 가이던스를 상향하며, 이는 시장의 기대치를 상회하는 실적 레버리지와 미래 성장 가능성을 시사합니다.",
+        "what_to_watch": "QNX 사업부의 추가 디자인윈 확보 여부 및 Alloy Kore 관련 로열티 매출의 실제 인식 시점.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 1,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "디자인윈 (Design Win): 고객사가 특정 부품이나 소프트웨어를 자사 제품에 채택하기로 결정하는 것. 향후 대량 수주로 이어질 수 있는 초기 단계의 계약.\n백로그 (Backlog): 이미 수주했으나 아직 매출로 인식되지 않은 계약 잔고. 미래 매출의 선행 지표."
+      }
+    },
+    "content_hash": "ce322528f08fe4ea9ea0c886e9e5f98e6734bdcf6da283c3b41102dc71b20dcb",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-24T14:51:24+00:00",
+    "signal_id": "SIG-0891",
+    "reason": "grounded extraction"
+  },
+  "0001731122-26-001278": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001731122-26-001278",
+      "entity_id": "CIK:0002038439",
+      "source_role": "candidate",
+      "title": "VisionWave Holdings, Inc. (VWAV, VWAVW) (CIK 0002038439) 8-K 2026-09-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/2038439/000173112226001278/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2038439/000173112226001278/e7965_8k.htm",
+      "published_at": "2026-09-24",
+      "raw_text": "VisionWave Holdings, Inc. (VWAV, VWAVW) (CIK 0002038439) 8-K 2026-09-24. Any such addition is excluded from the Purchase Order and would require a separate written quotation and order, and may affect price, lead time, licensing and delivery. Any change to configuration, quantity, manufacturing location, local-content requirement, end-user requirement, qualification standard, delivery point or schedule that materially affects cost, performance, regulatory burden or lead time may be implemented only by a written change order or technical annex signed by both parties. false 0002038439 0002038439 2026-09-24 2026-09-24 0002038439 VWAV:CommonStockParValue0.01PerShareMember 2026-09-24 2026-09-24 0002038439 VWAV:RedeemableWarrantsEachWholeWarrantExercisableForOneShareOfCommonStockAtExercisePriceOf230.00Member 2026-09-24 2026-09-24 iso4217:USD xbrli:shares iso4217:USD xbrli:shares UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): September 24, 2026 VisionWave Holdings, Inc. (Exact name of registrant as specified in its charter) Delaware 001-42741 99-5002777 (State or other jurisdiction of incorporation) (Commission File Number) (I.R.S. Employer Identification No.) 300 Delaware Ave. , Suite 210 # 301 , Wilmington , DE 19801 (Address of principal executive offices) (Zip Code) Registrant’s telephone number, including area code: (302) 305-4790 Not Applicable (Former nam e or former address, if changed since last report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14",
+      "_model_response": {
+        "evidence_quote": "Any such addition is excluded from the Purchase Order and would require a separate written quotation and order, and may affect price, lead time, licensing and delivery. Any change to configuration, quantity, manufacturing location, local-content requirement, end-user requirement, qualification standard, delivery point or schedule that materially affects cost, performance, regulatory burden or lead time may be implemented only by a written change order or technical annex signed by both parties.",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "unknown",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "해당 8-K 공시는 구매 주문 변경 시 절차와 조건에 대한 일반적인 계약 조항을 설명하는 것으로, 회사의 구체적인 사업 지표 변화(예: 실제 리드타임 변화, 가격 조정, 신규 수주 등)를 나타내는 조기 투자 발굴 신호가 아닙니다. 루틴 공시에 해당합니다.",
+        "subject": "VisionWave Holdings, Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "VisionWave Holdings, Inc.의 8-K 공시에서 구매 주문 변경 시 가격, 리드타임 등에 영향을 미칠 수 있으며 별도 서면 합의가 필요하다는 일반적인 계약 조항이 확인되었습니다.",
+        "why_it_matters": "해당 내용은 회사의 사업 운영에 대한 일반적인 계약 조건을 설명하는 것으로, 구체적인 투자 발굴 신호로 해석하기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "해당 8-K 공시는 구매 주문 변경 시 절차와 조건에 대한 일반적인 계약 조항을 설명하는 것으로, 회사의 구체적인 사업 지표 변화(예: 실제 리드타임 변화, 가격 조정, 신규 수주 등)를 나타내는 조기 투자 발굴 신호가 아닙니다. 루틴 공시에 해당합니다."
+    },
+    "content_hash": "49bdab477f4b8b7191d64e8430d50ca88fa1ad9cc1e6177d5bb099e0cfb7b5ea",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-24T14:51:37+00:00",
+    "reason": "해당 8-K 공시는 구매 주문 변경 시 절차와 조건에 대한 일반적인 계약 조항을 설명하는 것으로, 회사의 구체적인 사업 지표 변화(예: 실제 리드타임 변화, 가격 조정, 신규 수주 등)를 나타내는 조기 투자 발굴 신호가 아닙니다. 루틴 공시에 해당합니다."
+  },
+  "0001628280-26-063325": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-063325",
+      "entity_id": "CIK:0001805651",
+      "source_role": "candidate",
+      "title": "MARKETWISE, INC. (MKTW) (CIK 0001805651) EX-99.2 2026-09-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1805651/000162828026063325/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1805651/000162828026063325/a2q26newformatmanagement.htm",
+      "published_at": "2026-09-24",
+      "raw_text": "MARKETWISE, INC. (MKTW) (CIK 0001805651) EX-99.2 2026-09-24. Revenue retention of 91% in 2025, combined with new customer growth, drove the return to growth in FY 2025. EX-99.2 3 a2q26newformatmanagement.htm EX-99.2 a2q26newformatmanagement M A R K E T W I S E , I N C . ( N A S D A Q : M K T W ) Investor Presentation | September 2026 IMPORTANT INFORMATION: This presentation is for informational purposes. These materials are subject to change or amendment from time to time without notice and Marketwise is not under any obligation to keep you advised of such changes. The materials are not intended as an offer or solicitation with respect to any securities of Marketwise. Cautionary Statement Regarding Forward-Looking Statements: This presentation contains forward-looking statements about MarketWise’s financial position, business strategy, and objectives for future operations. These forward-looking statements are generally identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions, but the absence of these words does not mean that a statement is not forward-looking. These statements are based on current expectations and assumptions. But the future is uncertain. Factors beyond our control could cause our results to differ from our expectations. We detail these risks and uncertainties in the “Risk Factors” section of our quarterly (10-Q) and annual (10-K) reports. You should consider these risks before investing. Non-GAAP Financial Measures: This presentation uses several financial measures that are not recognized as Generally Accepted Accounting Principles (GAAP), including Adjusted CFFO, Free Cash Flow, Adjusted Free Cash Flow, Adjusted CFFO Conversion, and Adjusted Free Cash Flow Margin. The Company defines Adjusted CFFO as net cash provided by operating activities plus profits distribu",
+      "_model_response": {
+        "evidence_quote": "Revenue retention of 91% in 2025, combined with new customer growth, drove the return to growth in FY 2025.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "drove the return to growth in FY 2025",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "drove the return to growth in FY 2025",
+          "catalyst_visibility": "drove the return to growth in FY 2025"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MARKETWISE, INC.",
+        "theme": "투자 정보 플랫폼",
+        "signal_type": "가이던스상향",
+        "what_happened": "MARKETWISE, INC.가 2025년 매출 유지율 91%와 신규 고객 성장에 힘입어 2025 회계연도에 성장세로 전환했다고 발표했다.",
+        "why_it_matters": "고객 유지와 신규 고객 확보를 통해 회사가 다시 성장 궤도에 올랐음을 보여주며, 이는 향후 실적 개선의 긍정적인 신호로 볼 수 있다.",
+        "what_to_watch": "2026년 이후 분기별 매출 성장률 및 신규 고객 확보 추이, 고객 유지율 변화.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 3,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "매출 유지율: 기존 고객이 특정 기간 동안 지출한 매출이 이전 기간 대비 얼마나 유지되었는지를 나타내는 지표."
+      }
+    },
+    "content_hash": "c54fcb6b0b231514747d9dc91feaafc967bf3a12c8bc34a52e4e715cf0138a2b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-09-24T14:51:55+00:00",
+    "signal_id": "SIG-0892",
+    "reason": "grounded extraction"
   }
 }
