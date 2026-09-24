@@ -74,6 +74,9 @@ jobs:
       - name: Observe quarterly EPS and revenue independently
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: python scripts/collect_quarterly.py
+      - name: Screen US stocks for sustained estimate upgrades
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/screen_revisions.py
       - name: Observe tracked regular-session prices
         # Price collection remains independent of EPS availability.
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'

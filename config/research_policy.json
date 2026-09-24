@@ -16,5 +16,13 @@
     90,
     180
   ],
-  "eps_provider": "yahoo"
+  "eps_provider": "yahoo",
+  "revision_screen": {
+    "min_market_cap_usd": 300000000,
+    "min_analysts": 3,
+    "top_n": 20,
+    "min_yield_change_pp": 1.0,
+    "min_growth_pct": 25.0,
+    "workers": 6
+  }
 }

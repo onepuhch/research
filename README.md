@@ -5,6 +5,7 @@ Telegram에서 `/data`, `/history CRDO`로 조회한다. 명령은 약 6시간 �
 `python scripts/data_history.py --save`는 누적 문서와 `reports/generated/data_history.html` 조회 화면을 생성한다.
 HTML은 로컬 또는 Actions artifact에서 내려받는 생성 시점 스냅샷이다. 새 도메인·상시 웹 서버는 아직 운영하지 않는다.
 일간 `collect_quarterly.py`는 현재·다음 분기 EPS/매출을 관측하고, `run_history`는 각 실제 실행 상태를 보존한다.
+일간 `screen_revisions.py`는 미국 상장사(시가총액 3억 달러·분석가 3명 이상, 약 3,300개)의 내년 EPS 예상치 90일 변화를 Yahoo에서 받아 두 기준(이익 규모 대비·성장률)으로 순위를 매기고 `docs/revision_screen.md`에 쓴다. Yahoo가 제공한 7/30/60/90일 전 값은 스크리닝에만 쓰고 metric_log 관측으로 넣지 않는다. 전체 결과는 `data/processed/revision_screen/날짜.json.gz`.
 
 해외 밸류체인 신호를 원문 근거와 함께 모으고, 소수의 가설을 숫자·반증 조건·판단 이력으로 추적한다. 2026-09-07 원격 main 배포와 운영 실행, 실제 Telegram 보고서 전달을 확인했다. 2026-09-09 EPS 기본 공급자를 추가 결제가 필요 없는 Yahoo Finance 공개 컨센서스로 교체했고, 접근이 차단된 Import AI 피드는 수집 설정에서 제외했다. 검증 결과는 STATUS.md를 참조한다.
 
