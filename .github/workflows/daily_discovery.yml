@@ -4,13 +4,13 @@ on:
     - cron: '17 0 * * *'
     - cron: '23 */6 * * *'
   # The schedules are fallbacks: GitHub starts them hours late. An external timer
-  # dispatches on time (mode=daily at 09:17 KST, mode=commands for command checks).
+  # dispatches on time (mode=auto at 09:17 KST, mode=commands for command checks).
   workflow_dispatch:
     inputs:
       mode:
-        description: 'daily = full research run, commands = Telegram commands only'
+        description: 'daily = full research run, auto = full run unless today already ran, commands = Telegram commands only'
         type: choice
-        options: [daily, commands]
+        options: [daily, auto, commands]
         default: daily
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
         id: migrate
         run: python scripts/migrate_v2.py
       - name: Skip the fallback daily run when today's run already happened
-        if: github.event_name == 'schedule' && env.DISCOVERY == 'true'
+        if: (github.event_name == 'schedule' || inputs.mode == 'auto') && env.DISCOVERY == 'true'
         run: |
           python - <<'PY' >> "$GITHUB_ENV"
           import json, datetime as dt
