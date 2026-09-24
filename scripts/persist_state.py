@@ -11,6 +11,9 @@ def main():
     files += list((c.ROOT / 'data' / 'archive' / 'pre_v2').glob('*'))
     files += list((c.DATA_DIR / 'research_journal').glob('*.json'))
     files += list((c.DATA_DIR / 'return_history').glob('*.json'))
+    files += list((c.DATA_DIR / 'run_history').glob('*.json'))
+    files += list((c.DATA_DIR / 'consensus_history').glob('*.json'))
+    files += [c.ROOT / 'docs' / 'data_history.md']
     tracked = set(subprocess.run(['git', 'ls-files', '-z'], cwd=c.ROOT, check=True,
                                  capture_output=True, text=True, encoding='utf-8').stdout.split('\0'))
     # Stage deletion of a recovered journal as well as existing state files.

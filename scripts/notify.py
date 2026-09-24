@@ -248,7 +248,7 @@ def report_line(row: dict[str, str], themes: dict[str, str]) -> str:
             f"{escaped(row.get('근거 수준', '가설'))}\n"
             f"  최근 점검 {escaped(row.get('최근 점검일'))} / 다음 {escaped(check['due_date'])}\n"
             f"  변화: {escaped(row.get('판단 변화'))} · {escaped(row.get('변경 사유', '')[:300])}\n"
-            f"  부족 지표: {escaped((', '.join(check['missing']) or '없음')[:100])} · "
+            f"  등록 필수항목 누락: {escaped((', '.join(check['missing']) or '없음')[:100])} · "
             f"반증: {escaped(('; '.join(k + ': ' + v for k, v in check['rules']) or '규칙 미등록')[:150])}")
 
 
@@ -295,6 +295,8 @@ def build_report_chunks(
     for case in research_cases.load_cases():
         chunks.append("<b>테마 가설 점검</b>\n" + escaped(research_cases.summary(case)[:450])
                       + "\n" + escaped(research_journal.summary(case)))
+    import data_history
+    chunks.append("<b>데이터 누적 현황</b>\n" + escaped(data_history.summary()))
     return chunks
 
 

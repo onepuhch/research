@@ -1,5 +1,11 @@
 # 투자리서치 시스템
 
+누적 데이터: [날짜별 관측 원장](docs/data_history.md) · [저장·운영·웹 구조 점검](docs/architecture_review_2026-09-25.md).
+Telegram에서 `/data`, `/history CRDO`로 조회한다. 명령은 약 6시간 간격 예약 처리이며 즉시 응답을 보장하지 않는다.
+`python scripts/data_history.py --save`는 누적 문서와 `reports/generated/data_history.html` 조회 화면을 생성한다.
+HTML은 로컬 또는 Actions artifact에서 내려받는 생성 시점 스냅샷이다. 새 도메인·상시 웹 서버는 아직 운영하지 않는다.
+일간 `collect_quarterly.py`는 현재·다음 분기 EPS/매출을 관측하고, `run_history`는 각 실제 실행 상태를 보존한다.
+
 해외 밸류체인 신호를 원문 근거와 함께 모으고, 소수의 가설을 숫자·반증 조건·판단 이력으로 추적한다. 2026-09-07 원격 main 배포와 운영 실행, 실제 Telegram 보고서 전달을 확인했다. 2026-09-09 EPS 기본 공급자를 추가 결제가 필요 없는 Yahoo Finance 공개 컨센서스로 교체했고, 접근이 차단된 Import AI 피드는 수집 설정에서 제외했다. 검증 결과는 STATUS.md를 참조한다.
 
 ## 빠른 확인 (PowerShell, Python 3.11 이상)

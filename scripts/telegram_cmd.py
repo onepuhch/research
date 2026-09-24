@@ -31,6 +31,8 @@ HELP_TEXT = """지원 명령어
 /track ALGM - 최근 14일의 최신 종목 신호를 추적 등록
 /track SIG-0001 - 지정한 신호를 추적 등록
 /list - 활성 아이디어 목록
+/history CRDO - 같은 정의의 날짜별 숫자 관측
+/data - 데이터 누적 현황
 /help - 명령어 목록"""
 
 
@@ -185,6 +187,14 @@ def handle_command(text: str, dry_run: bool = False) -> list[str]:
         return [HELP_TEXT]
     if command == "/list":
         return active_review_messages()
+    if command == "/data":
+        import data_history
+        return data_history.telegram()
+    if command == "/history":
+        if not re.fullmatch(r"[A-Za-z][A-Za-z0-9.-]{0,9}", argument):
+            return ["사용법: /history CRDO"]
+        import data_history
+        return data_history.telegram(argument.upper())
     if command == "/track":
         if not argument:
             return ["사용법: /track ALGM 또는 /track SIG-0001"]
@@ -215,7 +225,9 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
             arg = parts[1].strip().upper() if len(parts) > 1 else ""
             if command == "/track" and re.fullmatch(r"(?:SIG-\d{1,12}|[A-Z][A-Z0-9.-]{0,9})", arg):
                 safe_command = f"/track {arg}"
-            elif command in {"/list", "/help"}:
+            elif command == "/history" and re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", arg):
+                safe_command = f"/history {arg}"
+            elif command in {"/list", "/help", "/data"}:
                 safe_command = command
             else:
                 safe_command = "/help"

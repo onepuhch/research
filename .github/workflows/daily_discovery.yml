@@ -50,6 +50,9 @@ jobs:
       - name: Retry eligible notifications
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: python scripts/notify.py
+      - name: Observe quarterly EPS and revenue independently
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: python scripts/collect_quarterly.py
       - name: Observe tracked regular-session prices
         # Price collection remains independent of EPS availability.
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
@@ -80,6 +83,9 @@ jobs:
           if [ "$(TZ=Asia/Seoul date +%u)" = '1' ]; then
             python scripts/notify.py --report
           fi
+      - name: Refresh durable observation history
+        if: always() && steps.migrate.outcome == 'success'
+        run: python scripts/data_history.py --save
       - name: Persist state even when a service fails
         if: always() && steps.migrate.outcome == 'success'
         run: |

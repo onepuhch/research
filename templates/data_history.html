@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>투자리서치 · 관측 이력</title>
+<style>
+body{font:16px/1.65 system-ui,sans-serif;margin:0;background:#f5f7fa;color:#182c40}main{max-width:1100px;margin:auto;padding:36px 20px}h1{font-size:30px;margin:0}p{margin:12px 0}select{font:inherit;max-width:100%;padding:12px;border:1px solid #bbc9d6;border-radius:6px;background:white}section{background:white;border:1px solid #dce4eb;border-radius:10px;padding:22px;margin-top:22px}svg{width:100%;height:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid #dce4eb;vertical-align:top}a{color:#14658d}.muted{color:#4e6274}.scroll{overflow:auto}#definition{overflow-wrap:anywhere}label{display:block;font-weight:600;margin-bottom:8px}
+</style>
+<main><p class="muted">투자리서치 / 저장된 관측 / __DATE__ 생성</p><h1>숫자가 어떻게 쌓였는가</h1>
+<p>같은 기업·지표·대상 기간·출처·회계기준의 실제 관측을 확인합니다. 이 파일은 생성 시점의 자료이며 자동 새로고침되지 않습니다.</p>
+<section><label for="series">조회할 시계열</label><select id="series"></select><p id="definition"></p><p id="coverage"></p>
+<svg id="chart" viewBox="0 0 1000 300" role="img" aria-label="수집일별 실제 관측값. 빈 날짜는 보간하지 않음"></svg>
+<p class="muted">점은 한국시간 관측일의 마지막 값입니다. 빈 날짜는 연결하거나 보간하지 않습니다. 관측일은 거래일·실적 대상일과 다릅니다. 아래 수치는 투자 수익률이 아닙니다.</p>
+<p id="gaps"></p></section>
+<section><h2>관측 원장</h2><p>같은 날짜에 여러 번 관측한 경우 마지막 값을 표시합니다. 모든 관측은 metric_log.csv에 보존합니다.</p><div class="scroll"><table><thead><tr><th>관측 시각</th><th>값</th><th>원문</th><th>메모·거래 시각</th></tr></thead><tbody id="rows"></tbody></table></div></section></main>
+<script type="application/json" id="dataset">__OBSERVATIONS__</script>
+<script>
+const data=JSON.parse(document.getElementById('dataset').textContent),select=document.getElementById('series');
+const text=(id,value)=>document.getElementById(id).textContent=value;
+data.forEach((s,i)=>{const o=document.createElement('option');o.value=i;o.textContent=`${s.ticker} · ${s.metric} · ${s.period_end||'시세'} · ${s.source} · ${s.basis}`;select.appendChild(o)});
+function draw(){if(!data.length){text('coverage','저장된 실제 관측 없음');return}const s=data[Number(select.value)];
+text('definition',`${s.source} / ${s.basis} / ${s.currency} ${s.unit} / ${s.fiscal_period||'시세'}`);
+text('coverage',`${s.first} → ${s.last} · ${s.rows}건 / ${s.days}관측일 · 값 변동 ${s.changed_days}일 · 최근 관측 ${s.age_days}일 전`);
+text('gaps',`최초~최근 사이 달력상 관측 없는 날짜: ${s.calendar_gaps.join(', ')||'없음'} (휴일·등록 시점에 따라 정상일 수 있음)`);
+const body=document.getElementById('rows');body.replaceChildren();
+for(const r of [...s.daily].reverse()){const tr=document.createElement('tr');for(const v of [r.as_of,r['현재값']]){const td=document.createElement('td');td.textContent=v;tr.appendChild(td)}const linkcell=document.createElement('td');try{const url=new URL(r['출처URL']);if(['http:','https:'].includes(url.protocol)){const a=document.createElement('a');a.href=url.href;a.textContent='원문 확인';a.rel='noopener noreferrer';a.target='_blank';linkcell.appendChild(a)}}catch{}tr.appendChild(linkcell);const note=document.createElement('td');note.textContent=r['메모'];tr.appendChild(note);body.appendChild(tr)}
+const chart=document.getElementById('chart');chart.replaceChildren();
+function svg(tag,attrs,label){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(label!==undefined)n.textContent=label;chart.appendChild(n);return n}
+const values=s.daily.map(r=>Number(r['현재값'].replaceAll(',','').replace('%',''))),dates=s.daily.map(r=>Date.parse(r.as_of.slice(0,10)+'T00:00:00Z'));
+let lo=Math.min(...values),hi=Math.max(...values),pad=(hi-lo)*.15||Math.abs(hi)*.05||1;lo-=pad;hi+=pad;
+for(let i=0;i<5;i++){let v=lo+(hi-lo)*i/4,y=240-200*i/4;svg('line',{x1:100,x2:950,y1:y,y2:y,stroke:'#e1e8ee'});svg('text',{x:90,y:y+5,'text-anchor':'end',fill:'#4e6274','font-size':14},v.toFixed(3))}
+values.forEach((v,i)=>{const x=dates.length===1?525:100+850*(dates[i]-dates[0])/(dates[dates.length-1]-dates[0]||1),y=240-200*(v-lo)/(hi-lo);const n=svg('circle',{cx:x,cy:y,r:5,fill:'#147c93'});const t=document.createElementNS(n.namespaceURI,'title');t.textContent=`${s.daily[i].as_of}: ${v}`;n.appendChild(t)});
+svg('text',{x:100,y:278,fill:'#4e6274','font-size':15},s.first);svg('text',{x:950,y:278,fill:'#4e6274','font-size':15,'text-anchor':'end'},s.last);
+}select.addEventListener('change',draw);draw();
+</script></html>

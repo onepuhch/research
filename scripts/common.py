@@ -10,6 +10,7 @@ import json
 import os
 import re
 import tempfile
+import uuid
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
@@ -217,6 +218,12 @@ def record_run(component: str, status: str, **details: Any) -> None:
     state[component] = {"checked_at": utc_now(), "status": status,
                         "last_success_at": utc_now() if status == "success" else previous.get("last_success_at"),
                         **details}
+    # The latest-status projection is replaceable; each actual check is retained.
+    # Do not reconstruct historical checks from today's status file.
+    event = {"component": component, **state[component],
+             "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+             "run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT", "")}
+    atomic_json(DATA_DIR / "run_history" / (uuid.uuid4().hex + ".json"), event)
     atomic_json(path, state)
 
 
