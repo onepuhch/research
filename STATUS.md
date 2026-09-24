@@ -1,12 +1,12 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
-- 마지막 작업자: Claude, 2026-09-25 02:00 KST에 중단. 진행 중인 쓰기 작업 없음. 로컬 체크아웃은 origin/main과 같다.
+- 마지막 작업자: Claude, 2026-09-25 새벽 작업 종료. 진행 중인 쓰기 작업 없음. 로컬 체크아웃은 origin/main과 같다.
 - 정시 실행 전환 중: GitHub 예약은 매일 약 4.5~5시간 늦게 시작한다(9/12~9/24 실측, 09:17 예정 → 13:45~14:10). workflow_dispatch에 mode(daily/commands)를 추가했고, 예약 실행은 대체용으로 남겼다. 오늘(KST) 일간 수집이 이미 있었으면 예약 일간 실행은 수집을 건너뛴다. dispatch mode auto는 오늘 일간 수집이 있었으면 건너뛴다. 사용자 PC의 Windows 작업 스케줄러가 09:17(auto)과 03:23·15:23·21:23(commands)에 dispatch한다. PC가 꺼져 있으면 GitHub 예약이 대신 늦게 실행된다.
 - 방향 전환(2026-09-25, 사용자 승인): 3개 기업 심층 검증이 아니라 전 산업 발굴 엔진이 주 업무다. AGENTS.md 목적과 범위, PRINCIPLES.md 첫 부분을 갱신했다. 다음 작업: 발굴 후보 순위(이익 변화 크기·시장 미반영·지속성), 추적 추천, 종목별 대시보드 페이지, 급등 사례 사후 분석으로 조건 보강. ALAB·CRDO·MRVL은 추적 유지.
 - 저장소 쓰기 담당: Codex (구조·로직·프로세스). Claude는 저장소에 쓰지 않는 원문 리서치와 읽기 전용 화면을 맡는다.
 - 급등 사례 해부 완료: [docs/surge_signal_cases_2026-09-25.md](docs/surge_signal_cases_2026-09-25.md). 발굴 엔진 추가 순서 1) 전 종목 EPS 예상치 상향 스크리너 2) 업계 가격·공급 뉴스 3) 전망 상향 폭·수주잔고 추이 4) 신호 묶기·주간 급등 사후 분석.
 - 전 종목 예상치 상향 스크리너 추가(2026-09-25, Claude): `scripts/screen_revisions.py`, 테스트 `tests/test_screen_revisions.py`, 설정 `research_policy.json`의 revision_screen. SEC 거래소 티커 목록(Nasdaq·NYSE 약 7,700개) → Yahoo v7 일괄 시세(100개씩)로 시가총액 3억 달러 이상 약 3,300개 → 종목별 quoteSummary earningsTrend(6개 병렬, 로컬 약 6분). 기준: 내년(+1y) EPS가 흑자, 30일 전보다 높고, 30일 상향 수 > 하향 수, 분석가 3명 이상. 순위 A=이익수익률 변화(ΔEPS/주가, %p ≥ 1), 순위 B=90일 증가율(≥25%, 90일 전 EPS ≥ $0.25). Yahoo가 90일 전 값을 0으로 주면 신규 커버리지로 보고 제외. 후보 전체에 업종을 붙여 3곳 이상 동시 상향 업종을 묶는다. 상위 후보만 90일 주가 변화와 PER 변화를 계산. 결과는 `docs/revision_screen.md`와 `data/processed/revision_screen/날짜.json.gz`(persist_state 대상). Yahoo 제공 7/30/60/90일 전 값은 metric_log에 넣지 않는다. 첫 로컬 실행: 후보 105개, 정유 9곳 동시 상향, AXTI는 B 4위(EPS 예상 3배, 주가 +8%). 워크플로의 일간 단계로 연결했다. 운영 확인: 첫 실행(run 36029037624)은 준비 단계 HTTPError로 실패했다(SEC 목록인지 Yahoo crumb인지 로그로 구분 불가). 실패 단계·HTTP 코드 기록과 Yahoo crumb 우회(query1, 시세 페이지에 포함된 crumb)를 추가한 뒤 재실행(run 36029243166)은 성공했다. 대상 3,238개, 후보 96개, 약 1분 40초. 다만 종목별 조회 322개(약 10%)가 실패했다. Yahoo의 요청 제한으로 추정하며, 실패 종목을 간격을 두고 재시도하는 보강이 다음 할 일이다. 현재 degraded 기준(실패 > 10%)의 바로 아래라 success로 기록됐다.
-- GitHub Actions 저장소 변수 SEC_USER_AGENT가 비어 있다(로그에서 확인). collect.py와 스크리너는 기본값으로 동작 중이다. SEC 정책상 연락처가 담긴 값을 설정하는 것이 바람직하며, 사용자 확인이 필요하다.
+- SEC_USER_AGENT: 사용자 승인으로 Repository Secret에 운영자 연락처를 넣었다(2026-09-25). 워크플로는 secrets를 먼저 읽고 로그에는 ***로 가려진다(run 36032560966에서 확인).
 - 정시 실행 타이머: 이 PC의 Windows 작업 스케줄러에 'Research daily run'(09:17, auto)과 'Research command check'(03:23·15:23·21:23)가 등록돼 있다. 토큰은 %USERPROFILE%/.research-timer/token.txt에 있고 1년 뒤 만료된다. 24시간 켜두는 Windows PC용 설치 파일은 저장소 밖 상위 폴더의 setup-24h-timer.ps1이다(관리자 PowerShell에서 실행하면 SYSTEM 작업으로 등록하고 파일 자체를 삭제한다. 아직 실행 전). 두 PC 모두 등록돼도 auto 모드는 하루 한 번만 수집한다.
 - 다음 할 일(발굴): 스크리너 후보에 회사 한 줄 설명(한국어)과 추적 추천 판단 붙이기 → 대시보드 종목별 페이지 → 업계 가격·공급 뉴스 수집.
 - 기존 일정: 10월 14일 첫 30일 성과 복기는 자동 계산으로 유지. 9월 28일·10월 6일 수동 심층 점검은 방향 전환에 따라 필수 작업이 아니다.
