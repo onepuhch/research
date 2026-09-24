@@ -59,7 +59,7 @@ python scripts/evaluate.py
 
 ## 외부 연결 및 자동 실행
 
-GitHub Secrets 또는 로컬 .env: GEMINI_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. 기본 Yahoo EPS 수집에는 키가 필요 없다. FMP_API_KEY는 eps_provider를 fmp로 선택할 때만 필요하다. SEC_USER_AGENT는 실제 운영자 연락처가 포함된 식별 문자열로 설정하고 GitHub에서는 Repository Variable을 사용한다. 키 값과 .env는 커밋하지 않는다.
+GitHub Secrets 또는 로컬 .env: GEMINI_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID. 기본 Yahoo EPS 수집에는 키가 필요 없다. FMP_API_KEY는 eps_provider를 fmp로 선택할 때만 필요하다. SEC_USER_AGENT는 실제 운영자 연락처가 포함된 식별 문자열로 설정하고 GitHub에서는 Repository Secret을 사용한다(공개 저장소 로그에 연락처가 찍히지 않도록). 워크플로는 Secret이 없을 때만 Variable을 읽는다. 키 값과 .env는 커밋하지 않는다.
 
 EPS 공급자는 config/research_policy.json의 eps_provider로 선택한다. 기본 yahoo는 공개 페이지의 명시적인 non-GAAP 연간 컨센서스만 수집하며, 회사·통화·기간·분석가 수를 검사한다. 공급자별 시계열을 합치지 않는다. FMP는 현재 키로 HTTP 402이므로 기본 운영에서 호출하지 않는다. EPS 결측을 회사 실적이나 가이던스로 채우지 않는다.
 

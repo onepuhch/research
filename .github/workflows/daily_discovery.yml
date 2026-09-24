@@ -27,7 +27,8 @@ jobs:
       FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
+      # Secret first: public-repo logs would print a plain variable (it holds a contact email).
+      SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT || vars.SEC_USER_AGENT }}
       DISCOVERY: ${{ (github.event_name == 'workflow_dispatch' && inputs.mode != 'commands') || github.event.schedule == '17 0 * * *' }}
     steps:
       - uses: actions/checkout@v4
