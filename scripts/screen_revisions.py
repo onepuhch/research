@@ -11,6 +11,7 @@ import gzip
 import http.cookiejar
 import json
 import os
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
@@ -37,13 +38,26 @@ def settings() -> dict:
 class Yahoo:
     def __init__(self) -> None:
         self.opener = build_opener(HTTPCookieProcessor(http.cookiejar.CookieJar()))
+        self.crumb = self.find_crumb()
+
+    def find_crumb(self) -> str:
         try:
             self.opener.open(Request("https://fc.yahoo.com", headers=UA), timeout=15)
         except OSError:
             pass  # Sets the session cookie even when it answers 404.
-        self.crumb = self.get_text("https://query2.finance.yahoo.com/v1/test/getcrumb")
-        if not self.crumb or len(self.crumb) > 40:
+        for host in ("query2", "query1"):
+            try:
+                crumb = self.get_text(f"https://{host}.finance.yahoo.com/v1/test/getcrumb").strip()
+                if crumb and len(crumb) <= 40 and "<" not in crumb:
+                    return crumb
+            except OSError:
+                continue
+        # Cloud runners are sometimes refused by getcrumb; the quote page embeds one.
+        page = self.get_text("https://finance.yahoo.com/quote/AAPL/")
+        match = re.search(r'"crumb":"([^"]{5,40})"', page)
+        if not match:
             raise ValueError("Yahoo crumb unavailable")
+        return match.group(1).encode().decode("unicode_escape")
 
     def get_text(self, url: str) -> str:
         with self.opener.open(Request(url, headers=UA), timeout=20) as response:
@@ -220,12 +234,15 @@ def write_gz(path, payload) -> None:
 def main() -> int:
     cfg = settings()
     started = datetime.now(timezone.utc)
+    stage = "sec_universe"
     try:
-        universe = load_universe(os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0")
+        universe = load_universe(os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0 research-bot")
+        stage = "yahoo_crumb"
         yahoo = Yahoo()
     except (OSError, ValueError, KeyError) as error:
-        c.record_run("revision_screen", "failed", error_type=type(error).__name__)
-        print(f"[revision_screen] setup failed: {type(error).__name__}")
+        detail = {"stage": stage, "error_type": type(error).__name__, "http_status": getattr(error, "code", None)}
+        c.record_run("revision_screen", "failed", **detail)
+        print(f"[revision_screen] setup failed: {detail}")
         return 1
 
     by_symbol = {row["symbol"]: row for row in universe}
