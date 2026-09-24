@@ -3,7 +3,15 @@ on:
   schedule:
     - cron: '17 0 * * *'
     - cron: '23 */6 * * *'
+  # The schedules are fallbacks: GitHub starts them hours late. An external timer
+  # dispatches on time (mode=daily at 09:17 KST, mode=commands for command checks).
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'daily = full research run, commands = Telegram commands only'
+        type: choice
+        options: [daily, commands]
+        default: daily
 permissions:
   contents: write
 concurrency:
@@ -20,7 +28,7 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
-      DISCOVERY: ${{ github.event_name == 'workflow_dispatch' || github.event.schedule == '17 0 * * *' }}
+      DISCOVERY: ${{ (github.event_name == 'workflow_dispatch' && inputs.mode != 'commands') || github.event.schedule == '17 0 * * *' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,6 +42,19 @@ jobs:
       - name: Recover and migrate state
         id: migrate
         run: python scripts/migrate_v2.py
+      - name: Skip the fallback daily run when today's run already happened
+        if: github.event_name == 'schedule' && env.DISCOVERY == 'true'
+        run: |
+          python - <<'PY' >> "$GITHUB_ENV"
+          import json, datetime as dt
+          kst = dt.timezone(dt.timedelta(hours=9))
+          try:
+              checked = json.load(open('data/processed/run_status.json', encoding='utf-8'))['collect']['checked_at']
+              ran_today = dt.datetime.fromisoformat(checked).astimezone(kst).date() == dt.datetime.now(kst).date()
+          except (OSError, KeyError, ValueError):
+              ran_today = False
+          print('DISCOVERY=false' if ran_today else 'DISCOVERY=true')
+          PY
       - name: Process commands independently
         if: always() && steps.migrate.outcome == 'success'
         run: python scripts/telegram_cmd.py
