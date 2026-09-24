@@ -80,7 +80,8 @@ def render(case_id=None):
         for candidate in case["candidates"]:
             groups = {}
             for row in observations:
-                if row.get("entity_id") == candidate["entity_id"] and row.get("metric_kind") == "consensus":
+                if (row.get("entity_id") == candidate["entity_id"] and row.get("metric_kind") == "consensus"
+                        and row.get("지표명") == "EPS consensus"):
                     groups.setdefault(metrics.series_key(row), []).append(row)
             if not groups:
                 rows.append([candidate["ticker"], "자료 부족", "", "", "", "", "", ""])

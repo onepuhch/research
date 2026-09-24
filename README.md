@@ -93,4 +93,4 @@ GitHub 예약 실행에는 지연이 발생할 수 있다. 9월 14일 일간 실
 
 `python scripts/research_journal.py`는 현재 가설 개정을 고정하고 실제 실적과 비교한 outcomes 보고서를 생성합니다. 일간 운영에도 연결되어 있으며 `python scripts/gen_report.py quality`와 텔레그램에 평가 상태가 표시됩니다. 저장소는 `data/processed/research_journal/`입니다. 재실행으로 기준 관측을 바꾸지 않으며 미래 실적이 없으면 대기합니다.
 
-[평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 아직 구현하지 않았습니다.
+[평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 2026-09-24 구현했습니다. `python scripts/research_returns.py`로 실행합니다.

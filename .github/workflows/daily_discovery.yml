@@ -62,6 +62,12 @@ jobs:
           python scripts/gen_report.py bottlenecks
           python scripts/gen_report.py quality
           python scripts/gen_report.py cases
+      - name: Evaluate research price returns
+        if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        run: |
+          python scripts/research_returns.py
+          python scripts/gen_report.py quality
+          python scripts/research_journal.py
       - name: Weekly community watch
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
         run: |

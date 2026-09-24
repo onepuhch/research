@@ -68,10 +68,19 @@ def fetch_text(url: str, max_bytes: int | None = None) -> str:
             "Accept": "application/json, application/rss+xml, application/xml, text/xml, */*",
         },
     )
-    with urlopen(request, timeout=TIMEOUT) as response:
-        charset = response.headers.get_content_charset() or "utf-8"
-        content = response.read(max_bytes) if max_bytes else response.read()
-        return content.decode(charset, errors="replace")
+    for attempt in range(3):
+        try:
+            with urlopen(request, timeout=TIMEOUT) as response:
+                charset = response.headers.get_content_charset() or "utf-8"
+                content = response.read(max_bytes) if max_bytes else response.read()
+                return content.decode(charset, errors="replace")
+        except HTTPError as error:
+            if error.code not in {500, 502, 503, 504} or attempt == 2:
+                raise
+        except (URLError, TimeoutError):
+            if attempt == 2:
+                raise
+        time.sleep(2 ** attempt)
 
 
 def clean_text(value: str | None) -> str:

@@ -3411,7 +3411,14 @@
     "attempts": 1,
     "updated_at": "2026-09-24T05:01:16+00:00",
     "reason": "TimeoutError",
-    "next_retry_at": "2026-09-24T17:00:07.003872+00:00"
+    "next_retry_at": "2026-09-24T14:47:23+00:00",
+    "manual_retry_history": [
+      {
+        "at": "2026-09-24T14:47:23+00:00",
+        "previous_next_retry_at": "2026-09-24T17:00:07.003872+00:00",
+        "reason": "사용자 요청에 따른 운영 복구 재시도"
+      }
+    ]
   },
   "0001213900-26-102333": {
     "status": "rejected",

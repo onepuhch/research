@@ -111,7 +111,8 @@ def render():
             [[r["ticker"], r["period_end"], r["condition"], r["threshold"], r["status"],
               _observation(r["first"]), _observation(r["latest"])] for r in evaluate(snapshot, observations)]))
         output.append(f"\n당시 원장 관측 {len(snapshot['observations'])}개와 출처·판단·후속 행동을 스냅샷에 보존했습니다.\n")
-    output.append("\n주가 성과·초과수익률·예측 적중률: 미측정. 배당·분할 조정 시세, 벤치마크와 공통 거래일 기준을 확보하기 전에는 일반 시세 변화를 성과로 표시하지 않습니다.\n")
+    import research_returns
+    output.append(research_returns.render())
     return "\n".join(output)
 
 
@@ -128,7 +129,7 @@ def summary(case):
     pending = sum(r["status"] == "평가 대기" for r in results)
     triggered = sum(r["status"] == "반증 발동" for r in results)
     return (f"판단 보존 {snapshot['captured_at'][:10]} / 현재 개정 조건 {len(results)}개: "
-            f"대기 {pending}, 반증 발동 {triggered}. 적중률·초과수익 미측정.")
+            f"대기 {pending}, 반증 발동 {triggered}. 주가 성과는 30/90/180일 별도 복기.")
 
 
 def main():
