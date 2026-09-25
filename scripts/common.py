@@ -245,7 +245,8 @@ def record_model_call(component: str) -> None:
     path = DATA_DIR / "model_budget.json"
     state = read_json(path, {"days": {}})
     # Calls made before this file existed were not counted; they stay unknown, not zero.
-    state.setdefault("counting_since", utc_now())
+    # A file that already has days but no start time keeps it unrecorded instead of "now".
+    state.setdefault("counting_since", utc_now() if not state["days"] else "unrecorded")
     day = today()
     cutoff = (datetime.fromisoformat(day) - timedelta(days=14)).date().isoformat()
     state["days"] = {d: v for d, v in state.get("days", {}).items() if d >= cutoff}

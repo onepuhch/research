@@ -128,16 +128,22 @@ def tracking_revision() -> str:
     return hashlib.sha256(json.dumps(rows, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
 
 
+def file_bytes(path) -> bytes:
+    """File content with line endings normalized: a Windows checkout (CRLF) and the CI
+    runner (LF) must see the same revision of the same file."""
+    return path.read_bytes().replace(b"\r\n", b"\n")
+
+
 def evidence_revision() -> str:
     path = c.DATA_DIR / "candidate_evidence.json"
-    return hashlib.sha256(path.read_bytes()).hexdigest()[:16] if path.exists() else "none"
+    return hashlib.sha256(file_bytes(path)).hexdigest()[:16] if path.exists() else "none"
 
 
 def cases_revision() -> str:
     directory = c.DATA_DIR.parent / "research" / "cases"
     digest = hashlib.sha256()
     for path in sorted(directory.glob("*.json")):
-        digest.update(path.name.encode("utf-8") + path.read_bytes())
+        digest.update(path.name.encode("utf-8") + file_bytes(path))
     return digest.hexdigest()[:16]
 
 

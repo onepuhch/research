@@ -227,6 +227,23 @@ class ResumeAndRelationTest(unittest.TestCase):
             d.record_step({}, THU, "screen", "pending", "r1", T)
 
 
+class ExternalRevisionTest(unittest.TestCase):
+    def test_line_endings_do_not_change_a_revision(self):
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(d.c, "DATA_DIR", Path(tmp)):
+            path = Path(tmp) / "candidate_evidence.json"
+            path.write_bytes(b'{\n  "a": 1\n}\n')
+            unix = d.evidence_revision()
+            path.write_bytes(b'{\r\n  "a": 1\r\n}\r\n')
+            self.assertEqual(d.evidence_revision(), unix)
+
+    def test_budget_start_is_not_invented_for_an_existing_file(self):
+        import common
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(common, "DATA_DIR", Path(tmp)):
+            common.atomic_json(Path(tmp) / "model_budget.json", {"days": {"2026-09-24": {"extract": 2}}})
+            common.record_model_call("cards")
+            self.assertEqual(common.read_json(Path(tmp) / "model_budget.json", {})["counting_since"], "unrecorded")
+
+
 class ScreenQualityTest(unittest.TestCase):
     def setUp(self):
         import screen_revisions
