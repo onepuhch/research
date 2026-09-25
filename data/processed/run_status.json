@@ -1,25 +1,25 @@
 {
   "eps": {
-    "checked_at": "2026-09-24T16:42:59+00:00",
+    "checked_at": "2026-09-25T00:08:36+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:42:59+00:00",
+    "last_success_at": "2026-09-25T00:08:36+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-09-24T16:42:57+00:00",
+    "checked_at": "2026-09-25T00:08:34+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:42:57+00:00",
-    "item_count": 17,
+    "last_success_at": "2026-09-25T00:08:34+00:00",
+    "item_count": 16,
     "errors": [],
-    "collected_at": "2026-09-24T16:42:57.306172+00:00"
+    "collected_at": "2026-09-25T00:08:34.530472+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-24T16:42:57+00:00",
+    "checked_at": "2026-09-25T00:08:34+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:42:57+00:00",
+    "last_success_at": "2026-09-25T00:08:34+00:00",
     "accepted": 0,
     "rejected": 0,
     "validation_rejected": 0,
@@ -30,9 +30,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-24T21:36:26+00:00",
+    "checked_at": "2026-09-25T00:08:21+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T21:36:26+00:00",
+    "last_success_at": "2026-09-25T00:08:21+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -48,40 +48,85 @@
     "last_success_at": "2026-09-24T15:12:00+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-24T16:42:59+00:00",
+    "checked_at": "2026-09-25T00:08:37+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:42:59+00:00"
+    "last_success_at": "2026-09-25T00:08:37+00:00"
   },
   "prices": {
-    "checked_at": "2026-09-24T16:44:44+00:00",
+    "checked_at": "2026-09-25T00:23:17+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:44:44+00:00",
+    "last_success_at": "2026-09-25T00:23:17+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-09-24T16:44:45+00:00",
-    "status": "success",
+    "checked_at": "2026-09-25T00:23:18+00:00",
+    "status": "degraded",
     "last_success_at": "2026-09-24T16:44:45+00:00",
     "targets": 4,
-    "failures": []
+    "failures": [
+      {
+        "ticker": "ALAB",
+        "error_type": "ValueError"
+      },
+      {
+        "ticker": "CRDO",
+        "error_type": "ValueError"
+      },
+      {
+        "ticker": "MRVL",
+        "error_type": "ValueError"
+      },
+      {
+        "ticker": "SPY",
+        "error_type": "ValueError"
+      }
+    ]
   },
   "quarterly": {
-    "checked_at": "2026-09-24T16:43:02+00:00",
+    "checked_at": "2026-09-25T00:08:39+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:43:02+00:00",
+    "last_success_at": "2026-09-25T00:08:39+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-09-24T16:44:44+00:00",
+    "checked_at": "2026-09-25T00:23:17+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T16:44:44+00:00",
-    "screened": 3238,
-    "scored": 2267,
-    "candidates": 96,
-    "failed": 322
+    "last_success_at": "2026-09-25T00:23:17+00:00",
+    "snapshot": "20260925T000839Z_36076125470-1.json.gz",
+    "candidates": 103,
+    "alert": false,
+    "stages": {
+      "universe": {
+        "requested": 1,
+        "success": 1
+      },
+      "session": {
+        "requested": 1,
+        "success": 1
+      },
+      "quotes": {
+        "requested": 7662,
+        "success": 7658,
+        "unavailable": 4
+      },
+      "earnings": {
+        "requested": 3295,
+        "success": 2429,
+        "unavailable": 866
+      },
+      "profile": {
+        "requested": 103,
+        "success": 102,
+        "unavailable": 1
+      },
+      "price": {
+        "requested": 30,
+        "success": 30
+      }
+    }
   }
 }

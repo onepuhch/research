@@ -1,0 +1,27 @@
+{
+  "component": "returns",
+  "checked_at": "2026-09-25T00:23:18+00:00",
+  "status": "degraded",
+  "last_success_at": "2026-09-24T16:44:45+00:00",
+  "targets": 4,
+  "failures": [
+    {
+      "ticker": "ALAB",
+      "error_type": "ValueError"
+    },
+    {
+      "ticker": "CRDO",
+      "error_type": "ValueError"
+    },
+    {
+      "ticker": "MRVL",
+      "error_type": "ValueError"
+    },
+    {
+      "ticker": "SPY",
+      "error_type": "ValueError"
+    }
+  ],
+  "run_id": "36076125470",
+  "run_attempt": "1"
+}

@@ -3832,5 +3832,25 @@
     "updated_at": "2026-09-24T14:51:55+00:00",
     "signal_id": "SIG-0892",
     "reason": "grounded extraction"
+  },
+  "0001193125-26-401226": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-401226",
+      "entity_id": "CIK:0001923622",
+      "source_role": "candidate",
+      "title": "PGIM Private Credit Fund (PGIM) (CIK 0001923622) EX-10.1 2026-09-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1923622/000119312526401226/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1923622/000119312526401226/ck0001923622-ex10_1.htm",
+      "published_at": "2026-09-24",
+      "raw_text": "PGIM Private Credit Fund (PGIM) (CIK 0001923622) EX-10.1 2026-09-24. Obtain a list of all positions sold out of the facility since the last audit (or since the Effective Date for the first audit). EX-10.1 2 ck0001923622-ex10_1.htm EX-10.1 EX-10.1 EXECUTION VERSION AMENDMENT NO. 1 TO LOAN FINANCING AND SERVICING AGREEMENT, dated as of September 18, 2026 (this “ Amendment ”), by and among PGIM PRIVATE CREDIT FUND ABL LLC, as borrower (the “ Borrower ”), PGIM PRIVATE CREDIT FUND, as servicer (the “ Servicer ”) and as equityholder (the “ Equityholder ”), DEUTSCHE BANK AG, NEW YORK BRANCH (“ DBNY ”), as facility agent (in such capacity, together with its successors and permitted assigns in such capacity, the “ Facility Agent ”), and DBNY, as an agent (in such capacity, an “ Agent ”) and as a committed lender (in such capacity, a “ Lender ”). WHEREAS, the Borrower, the Servicer, the Equityholder, the Facility Agent, the Lenders and STATE STREET BANK AND TRUST COMPANY, as collateral agent and collateral custodian, are party to the Loan Financing and Servicing Agreement, dated as of May 5, 2026 (as amended, supplemented, amended and restated and otherwise modified from time to time, the “ Loan Agreement ”); and WHEREAS, the parties hereto have agreed to amend the Loan Agreement in accordance with Section 17.2 of the Loan Agreement and subject to the terms and conditions set forth herein. NOW THEREFORE, in consideration of the foregoing premises and the mutual agreements contained herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties hereto, intending to be legally bound, hereby agree as follows: ARTICLE I Definitions SECTION 1.1. Defined Terms . Terms used but not defined herein have the respective meanings given to such terms in the Loan Agreement. ARTICLE II Amendments to the Loan Agreement SECTION 2.1. As of the date of this Amendment, the Loan Agreement is hereby amended as follows: (a) to delete"
+    },
+    "content_hash": "7b5f21268e085c5f4d1f6b20b62d0ae0cddef2af40b4196377e27b073c576294",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-09-25T00:08:34.627924+00:00",
+    "reason": "financing/loan language without a commercial demand event"
   }
 }
