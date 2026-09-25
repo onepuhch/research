@@ -18,7 +18,9 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import hashlib
 import json
+import re
 import os
 import sys
 import time
@@ -254,6 +256,217 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None)
     return report
 
 
+# ------------------------------------------------------------------ G2 drafts
+
+PROMPT_VERSION = "context-ko-v1"
+PARSER_VERSION = "context-check-v1"
+KINDS = ("fact", "guidance", "interpretation")
+DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
+           "acquisition_disposal", "one_off", "accounting", "unknown")
+DIRECTIONS = ("positive", "negative", "mixed", "unknown")
+LINKS = ("temporal_context", "explicit_link", "unconfirmed")
+FINANCIAL_TERMS = ("revenue", "sales", "net income", "earnings per share", "eps", "margin", "operating income",
+                   "guidance", "outlook", "expect", "backlog", "orders", "restructuring", "impairment", "one-time",
+                   "non-recurring", "tax", "repurchase", "buyback", "shares outstanding", "acquisition", "divest",
+                   "demand", "pricing", "price", "volume", "capacity", "gain", "charge", "gaap")
+FORWARD = ("expect", "outlook", "guidance", "forecast", "anticipate", "project", "will ", "target")
+RAISE = ("raise", "raised", "increase", "increased", "higher", "above", "up from", "improv")
+LOWER = ("lower", "lowered", "reduce", "reduced", "cut", "decrease", "decreased", "below", "down from", "declin")
+KO_UP = ("상향", "인상", "올렸", "높였", "늘렸")
+KO_DOWN = ("하향", "인하", "낮췄", "줄였")
+KO_CAUSAL = ("상향 원인", "때문에 추정치", "추정치가 올랐", "상향을 이끌", "상향의 원인")
+FORBIDDEN = ("매수", "목표가", "저평가", "상승 확률")
+MAX_PROMPT_CHARS = 12000
+
+
+def history_dir() -> Path:
+    return c.DATA_DIR / "candidate_context_history"
+
+
+def squash(text: str) -> str:
+    return " ".join(str(text).split()).casefold()
+
+
+def relevant_blocks(documents: list[dict], limit: int = MAX_PROMPT_CHARS) -> tuple[list[dict], str]:
+    """Blocks that mention financial terms (any industry), in document order; coverage says if cut."""
+    chosen, used, complete = [], 0, True
+    for doc in documents:
+        if doc.get("coverage") == "partial":
+            complete = False
+        for block in doc["blocks"]:
+            text = cf.block_text(block)
+            if not any(term in text.lower() for term in FINANCIAL_TERMS):
+                continue
+            if used + len(text) > limit:
+                complete = False
+                continue
+            chosen.append({"document_id": doc["document_id"], "block_id": block["id"], "text": text})
+            used += len(text)
+    return chosen, "complete" if complete else "partial"
+
+
+def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str:
+    heads = [{"document_id": d["document_id"], "form": d["form"], "type": d["document_type"], "title": d["title"],
+              "filed_at": d["filed_at"], "report_date": d.get("report_date")} for d in documents]
+    return (
+        "너는 미국 상장사 공식 공시 원문에서 사실만 정리하는 도우미다. 아래 문단/표만 근거로 JSON 하나를 출력하라.\n"
+        f"회사: {target['ticker']}. 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐다(대상 회계연도 말 "
+        f"{target.get('eps_target_period')}). 이 발표가 그 상향을 일으켰다고 단정하지 마라.\n"
+        "규칙: (1) 각 claim의 quote는 해당 block의 문장을 글자 그대로 짧게 인용한다. (2) text_ko 안의 숫자는 quote에 있는 숫자만 쓴다. "
+        "(3) 실적은 kind=fact, 회사 전망은 kind=guidance, 네 해석은 kind=interpretation. (4) 이전 전망과의 비교는 원문이 직접 말할 때만 쓴다. "
+        "(5) 일회성 이익·세금·자사주 매입에 의한 주당 수치 변화는 영업 성장으로 쓰지 마라. (6) 반대 근거(하향 전망, 수요 둔화, 일회성 요인)도 limitations에 넣어라. "
+        "(7) 매수·목표가·주가 전망을 쓰지 마라. (8) 추정치 상향과의 연결은 원문이 명시하지 않으면 link=unconfirmed 또는 temporal_context.\n"
+        f"drivers 값: {', '.join(DRIVERS)}. direction 값: {', '.join(DIRECTIONS)}.\n"
+        '출력 형식: {"claims":[{"text_ko":"","kind":"fact|guidance|interpretation","quote":"","document_id":"","block_id":"",'
+        '"period":"","currency":"","unit":"","gaap":"GAAP|non-GAAP|unknown","drivers":[""],"direction":""}],'
+        '"limitations":[{"text_ko":"","quote":"","document_id":"","block_id":""}],"next_check":[""],'
+        '"link":"temporal_context|explicit_link|unconfirmed"}\n최대 claims 5개, limitations 3개, next_check 2개.\n\n'
+        f"문서: {json.dumps(heads, ensure_ascii=False)}\n\n블록:\n"
+        + "\n".join(f"[{b['document_id']}#{b['block_id']}] {b['text']}" for b in blocks))
+
+
+def numbers(text: str) -> set[str]:
+    return {n.replace(",", "").rstrip(".") for n in re.findall(r"\d[\d,]*\.?\d*", str(text))}
+
+
+def check_quote(item: dict, blocks: dict) -> str | None:
+    key = (item.get("document_id"), item.get("block_id"))
+    if key not in blocks:
+        return "unknown_block"
+    quote = squash(item.get("quote", ""))
+    if len(quote) < 8 or quote not in squash(blocks[key]):
+        return "quote_not_in_block"
+    if not numbers(item.get("text_ko", "")) <= numbers(item.get("quote", "")):
+        return "number_not_in_quote"
+    text = item.get("text_ko", "")
+    if not text.strip() or any(word in text for word in FORBIDDEN):
+        return "forbidden_or_empty"
+    return None
+
+
+def check_claim(item: dict, blocks: dict) -> str | None:
+    """Structural checks only; passing is 'automatically organized, not reviewed'."""
+    problem = check_quote(item, blocks)
+    if problem:
+        return problem
+    text, quote = item.get("text_ko", ""), item.get("quote", "").lower()
+    if item.get("kind") not in KINDS:
+        return "bad_kind"
+    if item.get("direction", "unknown") not in DIRECTIONS:
+        return "bad_direction"
+    if not set(item.get("drivers") or ["unknown"]) <= set(DRIVERS):
+        return "bad_driver"
+    if item["kind"] == "fact" and any(word in quote for word in FORWARD):
+        return "guidance_written_as_fact"
+    if item["kind"] == "guidance" and not any(word in quote for word in FORWARD):
+        return "guidance_without_forward_wording"
+    if any(word in text for word in KO_CAUSAL):
+        return "causal_claim_about_estimates"  # checked first: it also contains 'raise' words
+    if any(word in text for word in KO_UP) and (not any(w in quote for w in RAISE) or any(w in quote for w in LOWER)):
+        return "raise_not_in_quote"
+    if any(word in text for word in KO_DOWN) and not any(w in quote for w in LOWER):
+        return "cut_not_in_quote"
+    return None
+
+
+def validate_draft(answer: dict, blocks: list[dict]) -> dict:
+    index = {(b["document_id"], b["block_id"]): b["text"] for b in blocks}
+    claims, limitations, rejected = [], [], []
+    for item in (answer.get("claims") or [])[:5] if isinstance(answer, dict) else []:
+        problem = check_claim(item, index) if isinstance(item, dict) else "not_an_object"
+        if problem:
+            rejected.append({"what": "claim", "reason": problem})
+            continue
+        claims.append({k: item.get(k) for k in ("text_ko", "kind", "quote", "document_id", "block_id", "period",
+                                                  "currency", "unit", "gaap", "drivers", "direction")})
+    for item in (answer.get("limitations") or [])[:3] if isinstance(answer, dict) else []:
+        problem = check_quote(item, index) if isinstance(item, dict) else "not_an_object"
+        if problem:
+            rejected.append({"what": "limitation", "reason": problem})
+            continue
+        limitations.append({k: item.get(k) for k in ("text_ko", "quote", "document_id", "block_id")})
+    link = answer.get("link") if isinstance(answer, dict) else None
+    link_note = None
+    if link not in LINKS:
+        link, link_note = "unconfirmed", "link value missing"
+    elif link == "explicit_link" and not any(w in squash(b["text"]) for b in blocks
+                                             for w in ("analyst", "consensus", "estimate revision")):
+        link, link_note = "unconfirmed", "explicit link not stated in the source"
+    checks = [str(x)[:120] for x in (answer.get("next_check") or [])[:2] if str(x).strip()
+              and not any(w in str(x) for w in FORBIDDEN)] if isinstance(answer, dict) else []
+    return {"claims": claims, "limitations": limitations, "next_check": checks, "link": link,
+            "link_note": link_note, "rejected": rejected}
+
+
+def input_sha(target: dict, document_ids: list[str]) -> str:
+    return hashlib.sha256(json.dumps([target["candidate_id"], sorted(document_ids), target.get("eps_target_period"),
+                                      PROMPT_VERSION, PARSER_VERSION]).encode()).hexdigest()
+
+
+def store_context(record: dict) -> bool:
+    path = history_dir() / f"{record['context_id']}.json"
+    if path.exists():
+        return False
+    c.atomic_json(path, c.validate_record("candidate_context", record))
+    return True
+
+
+def run_drafts(now: datetime | None = None, call=None, deadline: float | None = None) -> dict:
+    """At most one company per model request; budget and time are checked before each request."""
+    import extract
+    now = now or datetime.now(timezone.utc)
+    state = load_state()
+    api_key = c.load_dotenv_value("GEMINI_API_KEY")
+    report = {"drafted": 0, "no_supported_claims": 0, "deferred_budget": 0, "failed": 0}
+    if call is None:
+        if not api_key:
+            report["skipped"] = "model_key_missing"
+            return report
+        call = lambda prompt: extract.call_gemini_prompt(prompt, api_key, "candidate_context")  # noqa: E731
+    deadline = deadline or (time.monotonic() + settings()["time_budget_s"])
+    waiting = sorted(((cid, e) for cid, e in state["candidates"].items()
+                      if e.get("status") == "success" and e.get("document_ids")
+                      and e.get("context_input_sha") != input_sha({"candidate_id": cid, **e}, e["document_ids"])),
+                     key=lambda pair: pair[1].get("attempted_at", ""))
+    for cid, entry in waiting:
+        if c.model_calls_remaining("candidate_context") <= 0:
+            report["deferred_budget"] += 1
+            entry["draft_status"] = "deferred_budget"
+            continue
+        if time.monotonic() >= deadline:
+            entry["draft_status"] = "deferred_budget"
+            report["deferred_budget"] += 1
+            continue
+        documents = [d for d in (cf.load_document(x) for x in entry["document_ids"]) if d]
+        target = {"candidate_id": cid, "ticker": entry.get("ticker"), "eps_target_period": entry.get("eps_target_period")}
+        blocks, coverage_state = relevant_blocks(documents)
+        sha = input_sha({"candidate_id": cid, **entry}, entry["document_ids"])
+        try:
+            answer = call(draft_prompt(target, documents, blocks))
+        except c.ModelBudgetExhausted:
+            entry["draft_status"] = "deferred_budget"
+            report["deferred_budget"] += 1
+            continue
+        except (OSError, ValueError, KeyError, IndexError, TimeoutError) as error:
+            entry.update(draft_status="failed", draft_error=type(error).__name__)
+            report["failed"] += 1
+            continue
+        checked = validate_draft(answer, blocks)
+        status = "draft_ready" if checked["claims"] else "no_supported_claims"
+        record = {"context_id": "CTX-" + sha[:16].upper(), "candidate_id": cid, "ticker": entry.get("ticker"),
+                  "issuer_cik": (entry.get("issuer") or {}).get("cik"), "document_ids": entry["document_ids"],
+                  "source_blocks": [f"{b['document_id']}#{b['block_id']}" for b in blocks], "input_sha": sha,
+                  "model": extract.GEMINI_MODEL, "prompt_version": PROMPT_VERSION, "parser_version": PARSER_VERSION,
+                  "generated_at": now.isoformat(timespec="seconds"), "context_status": status,
+                  "source_coverage": coverage_state, "review": "자동 정리·미검토", **checked}
+        store_context(record)
+        entry.update(draft_status=status, context_id=record["context_id"], context_input_sha=sha)
+        report["drafted" if status == "draft_ready" else "no_supported_claims"] += 1
+        c.atomic_json(state_path(), state)
+    c.atomic_json(state_path(), state)
+    return report
+
+
 def coverage(state: dict, ids: list[str]) -> dict:
     counts: dict[str, int] = {}
     for cid in ids:
@@ -267,6 +480,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.parse_args(argv)
     try:
         report = run_sources()
+        report["drafts"] = run_drafts()
     except (OSError, ValueError, KeyError) as error:
         c.record_run("candidate_context", "failed", error_type=type(error).__name__)
         print(f"[context] failed: {type(error).__name__}")

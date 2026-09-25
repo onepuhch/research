@@ -206,7 +206,9 @@ class ClientTest(unittest.TestCase):
             sec.get("https://example.com/x")
 
 
-class RunTest(unittest.TestCase):
+class RunFixture(unittest.TestCase):
+    """Temporary data and screener directories (no tests of its own)."""
+
     def setUp(self):
         isolate_ci_environment(self)
         tmp = tempfile.TemporaryDirectory()
@@ -226,6 +228,7 @@ class RunTest(unittest.TestCase):
             json.dump(snapshot(rows=rows, top_yield=list(tickers), top_growth=[], status=status, run_id=run_id,
                                finished=finished), h)
 
+class RunTest(RunFixture):
     def test_success_documents_and_cache(self):
         self.screen(["AAA"])
         sec, fake = client(default_routes())
@@ -290,6 +293,117 @@ class RunTest(unittest.TestCase):
         sec, fake = client({})
         ctx.run_sources(NOW, sec)
         self.assertEqual((next(iter(ctx.load_state()["candidates"].values()))["status"], fake.calls), ("unavailable", []))
+
+
+def release_record(document_id="DOC-A", text=RELEASE):
+    issuer = {"cik": CIK, "ticker": "AAA"}
+    filing = {"accessionNumber": ACC, "form": "8-K", "filingDate": "2026-09-10"}
+    doc = {"url": BASE + "ex991.htm", "name": "ex991.htm", "type": "EX-99.1", "description": "Release"}
+    record = cf.build_record(issuer, filing, doc, text, doc["url"], False, NOW.isoformat())
+    record["document_id"] = document_id
+    return record
+
+
+def claim(**fields):
+    base = {"text_ko": "매출은 전년 대비 40% 늘어 120.0백만 달러였다.", "kind": "fact",
+            "quote": "Revenue grew 40% year over year to $120.0 million.", "document_id": "DOC-A", "block_id": "p2",
+            "period": "Q2 FY2027", "currency": "USD", "unit": "million", "gaap": "unknown", "drivers": ["volume"],
+            "direction": "positive"}
+    base.update(fields)
+    return base
+
+
+class DraftCheckTest(unittest.TestCase):
+    def setUp(self):
+        self.blocks, _ = ctx.relevant_blocks([release_record()])
+
+    def check(self, **fields):
+        return ctx.validate_draft({"claims": [claim(**fields)], "link": "unconfirmed"}, self.blocks)
+
+    def test_supported_fact_and_guidance_pass(self):
+        self.assertEqual(len(self.check()["claims"]), 1)
+        guidance = self.check(kind="guidance", block_id="p3", text_ko="회사는 다음 분기 매출을 130백만~135백만 달러로 예상했다.",
+                              quote="the company expects revenue of $130 million to $135 million")
+        self.assertEqual(len(guidance["claims"]), 1)
+
+    def rejected(self, **fields):
+        result = self.check(**fields)
+        self.assertEqual(result["claims"], [])
+        return result["rejected"][0]["reason"]
+
+    def test_unsupported_outputs_are_refused(self):
+        self.assertEqual(self.rejected(quote="Revenue tripled to a record."), "quote_not_in_block")
+        self.assertEqual(self.rejected(text_ko="매출은 55% 늘었다."), "number_not_in_quote")
+        self.assertEqual(self.rejected(block_id="p99"), "unknown_block")
+        self.assertEqual(self.rejected(kind="fact", block_id="p3", text_ko="다음 분기 매출은 130백만 달러다.",
+                                       quote="the company expects revenue of $130 million"), "guidance_written_as_fact")
+        self.assertEqual(self.rejected(text_ko="매출 40% 증가로 매수 기회다."), "forbidden_or_empty")
+        self.assertEqual(self.rejected(text_ko="매출 40% 증가가 추정치 상향의 원인이다."), "causal_claim_about_estimates")
+        self.assertEqual(self.rejected(text_ko="매출 전망을 상향해 40% 늘었다."), "raise_not_in_quote")
+
+    def test_a_lowered_outlook_is_never_called_a_raise(self):
+        record = release_record(text=b"<html><body><p>Results for the quarter. The company lowered its full-year "
+                                     b"outlook for earnings per share from $5 to $3.</p><table><tr><td>Revenue</td>"
+                                     b"<td>1</td></tr></table></body></html>")
+        blocks, _ = ctx.relevant_blocks([record])
+        quote = "lowered its full-year outlook for earnings per share from $5 to $3"
+        up = ctx.validate_draft({"claims": [claim(kind="guidance", block_id="p1", quote=quote,
+                                                  text_ko="연간 EPS 전망을 5달러에서 3달러로 상향했다.")]}, blocks)
+        down = ctx.validate_draft({"claims": [claim(kind="guidance", block_id="p1", quote=quote,
+                                                    text_ko="연간 EPS 전망을 5달러에서 3달러로 하향했다.",
+                                                    direction="negative")]}, blocks)
+        self.assertEqual((len(up["claims"]), len(down["claims"])), (0, 1))
+
+    def test_explicit_link_needs_the_source_to_say_it(self):
+        result = ctx.validate_draft({"claims": [claim()], "link": "explicit_link"}, self.blocks)
+        self.assertEqual((result["link"], result["link_note"]), ("unconfirmed", "explicit link not stated in the source"))
+
+
+class DraftRunTest(RunFixture):
+    def setUp(self):
+        super().setUp()
+        cf.store_document(release_record())
+        entry = {"status": "success", "ticker": "AAA", "document_ids": ["DOC-A"], "eps_target_period": "2027-12-31",
+                 "issuer": {"cik": CIK}, "attempted_at": NOW.isoformat()}
+        state = {"candidates": {f"CAN-{i:016X}": {**entry, "ticker": f"T{i}"} for i in range(8)},
+                 "days": {}, "documents_by_source": {}}
+        c.atomic_json(ctx.state_path(), state)
+        self.prompts = []
+        patch = mock.patch.object(c, "policy", return_value={**c.policy(), "max_model_calls": 20,
+                                                             "model_budget": {"candidate_context": 6}})
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def gemini(self, request, timeout=None):
+        prompt = json.loads(request.data)["contents"][0]["parts"][0]["text"]
+        self.prompts.append(prompt)
+        body = json.dumps({"claims": [claim()], "limitations": [], "next_check": ["3분기 실적 발표 확인"],
+                           "link": "temporal_context"})
+        return FakeResponse(json.dumps({"candidates": [{"content": {"parts": [{"text": body}]}}]}).encode(), "x")
+
+    def test_one_company_per_request_six_requests_a_day_and_cache(self):
+        import extract
+        with mock.patch.object(c, "load_dotenv_value", return_value="key"), \
+                mock.patch.object(extract, "urlopen", side_effect=self.gemini):
+            report = ctx.run_drafts(NOW)
+            self.assertEqual((report["drafted"], report["deferred_budget"]), (6, 2))
+            self.assertTrue(all(sum(f"회사: T{i}." in p for i in range(8)) == 1 for p in self.prompts))
+            again = ctx.run_drafts(NOW)  # same day: no budget left
+            self.assertEqual((len(self.prompts), again["drafted"]), (6, 0))
+            with mock.patch.object(c, "today", return_value="2026-09-26"):
+                tomorrow = ctx.run_drafts(NOW + timedelta(days=1))  # budget resets; drafted inputs are not asked again
+        self.assertEqual((len(self.prompts), tomorrow["drafted"]), (8, 2))
+        record = json.loads(next(ctx.history_dir().glob("CTX-*.json")).read_text(encoding="utf-8"))
+        self.assertEqual((record["context_status"], record["review"], record["link"]),
+                         ("draft_ready", "자동 정리·미검토", "temporal_context"))
+        self.assertFalse((self.data / "candidate_evidence.json").exists())  # never the human evidence file
+        self.assertFalse((self.data / "investment_review_log.csv").exists())
+
+    def test_missing_model_key_makes_no_request(self):
+        import extract
+        with mock.patch.object(c, "load_dotenv_value", return_value=""), \
+                mock.patch.object(extract, "urlopen", side_effect=AssertionError("request")):
+            self.assertEqual(ctx.run_drafts(NOW)["skipped"], "model_key_missing")
 
 
 if __name__ == "__main__":

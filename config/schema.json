@@ -372,6 +372,11 @@
       "observed_at", "raw_sha256", "content_type", "coverage", "status", "relevance",
       "normalization_version", "blocks"
     ],
+    "candidate_context": [
+      "context_id", "candidate_id", "issuer_cik", "document_ids", "source_blocks", "input_sha", "model",
+      "prompt_version", "parser_version", "generated_at", "context_status", "claims", "limitations",
+      "next_check", "link", "rejected"
+    ],
     "candidate_alert_event": [
       "channel", "event", "entity_id", "thesis_key", "day", "status", "attempts"
     ]
