@@ -321,5 +321,126 @@ class CommandTest(unittest.TestCase):
         self.assertEqual(json.loads(payload)["cards"][0]["candidate"]["candidate_version"], self.aaa["candidate_version"])
 
 
+class TrackCandidateTest(CommandTest):
+    """D2: the user's /track CAN choice becomes one ledger idea and a collection target."""
+
+    def track(self, update_id, cid=None, sent=None):
+        sent = sent if sent is not None else []
+        with mock.patch.object(telegram_cmd, "send_reply", lambda token, chat, message: sent.append(message)):
+            telegram_cmd.process_updates("t", "allowed", [self.update(update_id, f"/track {cid or self.aaa['candidate_id']}")])
+        return sent
+
+    def ideas(self):
+        return c.read_live_rows("investment_review_log")
+
+    def test_track_registers_once_and_repeats_return_the_same_idea(self):
+        replies = self.track(1) + self.track(2)
+        rows = self.ideas()
+        self.assertEqual(len(rows), 1)
+        row = rows[0]
+        self.assertEqual((row["entity_id"], row["ticker"], row["thesis_key"], row["검토 상태"], row["근거 수준"],
+                          row["사업 단계"], row["현재 단계"], row["아이디어 유형"]),
+                         ("NASDAQ:AAA", "AAA", k.THESIS_KEY, "추적", "가설", "미확인", "관찰", "사이클 리비전형"))
+        self.assertEqual(json.loads(row["origin_candidate_ids"]), [self.aaa["candidate_id"]])
+        self.assertEqual(row["origin_signal_ids"], "[]")  # no invented news signal
+        self.assertIn(self.aaa["candidate_version"], row["당시 판단"])
+        self.assertIn("검증 승격 아님", row["변경 사유"])
+        self.assertEqual(len(c.read_rows("review_history")), 1)
+        self.assertIn("추적 등록 완료", replies[0])
+        self.assertIn("다음 일간 수집", replies[0])
+        self.assertIn(row["idea_id"], replies[1])
+
+    def test_tracked_company_becomes_a_collection_target_with_verified_currency(self):
+        import collect_eps
+        self.track(1)
+        targets = {t["ticker"]: t for t in collect_eps.load_targets()}
+        self.assertEqual((targets["AAA"]["entity_id"], targets["AAA"]["currency"]), ("NASDAQ:AAA", "USD"))
+        import daily_run_state
+        before = daily_run_state.tracking_revision()
+        self.track(2)  # a repeat changes nothing
+        self.assertEqual(daily_run_state.tracking_revision(), before)
+
+    def test_capacity_and_stale_candidates_write_nothing(self):
+        with mock.patch.object(c, "active_ideas", return_value=[{}] * c.policy()["max_active_ideas"]):
+            reply = self.track(1)[0]
+        self.assertIn("가득 찼습니다", reply)
+        self.assertEqual(self.ideas(), [])
+        import promote
+        with self.assertRaises(ValueError):
+            promote.promote_candidate(self.aaa, now_day="2026-10-30")
+        self.assertEqual(self.ideas(), [])
+        self.assertIn("없는 후보", self.track(3, "CAN-0000000000000000")[0])
+
+    def test_interrupted_write_recovers_without_duplicates(self):
+        real = c.write_rows
+        calls = {"n": 0}
+
+        def flaky(table, rows):
+            calls["n"] += 1
+            if table == "review_history" and calls["n"] < 50:
+                calls["n"] = 50
+                raise OSError("disk hiccup")
+            return real(table, rows)
+
+        with mock.patch.object(c, "write_rows", flaky), self.assertRaises(RuntimeError):
+            self.track(1)  # the command run reports that commands were retained for retry
+        queue = json.loads((c.DATA_DIR / "command_queue.json").read_text(encoding="utf-8"))
+        self.assertNotEqual(queue["1"]["status"], "done")  # kept for retry, not answered as an input error
+        sent = []
+        with mock.patch.object(telegram_cmd, "send_reply", lambda token, chat, message: sent.append(message)):
+            telegram_cmd.process_updates("t", "allowed", [])
+        self.assertEqual(len(self.ideas()), 1)
+        self.assertEqual(len(c.read_rows("review_history")), 1)
+        self.assertIn("추적 등록 완료", sent[0])
+
+    def test_existing_tracked_ideas_are_not_touched(self):
+        existing = {"target_table": "investment_review_log", "data": {
+            "종목/업종": "CRDO", "entity_id": "NASDAQ:CRDO", "ticker": "CRDO", "thesis_key": "bottleneck:serdes",
+            "현재 단계": "관찰", "사업 단계": "미확인", "근거 수준": "가설", "검토 상태": "재검토",
+            "변경 사유": "seed", "data_quality": "live"}}
+        import add_entry
+        idea = add_entry.process(existing)
+        before = [dict(r) for r in self.ideas()]
+        self.track(1)
+        after = {r["idea_id"]: r for r in self.ideas()}
+        self.assertEqual(after[idea], before[0])
+        crdo = next(x for x in k.load_index()["candidates"] if x["identity"]["ticker"] == "CRDO")
+        self.assertEqual(crdo["tracking"]["status"], "untracked")  # index predates the seed until regenerated
+        k.generate(now=NOW, translate_now=False)
+        crdo = next(x for x in k.load_index()["candidates"] if x["identity"]["ticker"] == "CRDO")
+        self.assertEqual((crdo["tracking"]["status"], crdo["tracking"]["idea_ids"]), ("tracked", [idea]))
+
+    def test_track_dry_run_writes_nothing(self):
+        before = sorted(p.name for p in c.DATA_DIR.rglob("*"))
+        self.assertIn("등록 예정", telegram_cmd.handle_command(f"/track {self.aaa['candidate_id']}", dry_run=True)[0])
+        self.assertEqual(sorted(p.name for p in c.DATA_DIR.rglob("*")), before)
+
+    def test_signal_and_ticker_track_paths_are_unchanged(self):
+        self.assertIn("SIG를 찾을 수 없습니다", telegram_cmd.handle_command("/track SIG-0001")[0])
+        self.assertIn("SIG를 찾을 수 없습니다", telegram_cmd.handle_command("/track CAN")[0])  # ticker CAN, not an ID
+
+
+class ColumnMigrationTest(unittest.TestCase):
+    def test_new_column_is_added_after_keeping_the_old_file(self):
+        import migrate_v2
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stdout(io.StringIO()):
+            data = pathlib.Path(tmp) / "processed"
+            data.mkdir()
+            with mock.patch.object(c, "DATA_DIR", data):
+                old_columns = [x for x in c.table_def("investment_review_log")["columns"] if x != "origin_candidate_ids"]
+                path = c.csv_path("investment_review_log")
+                path.write_text(",".join(old_columns) + "\nIDEA-0001" + "," * (len(old_columns) - 2) + ",live\n",
+                                encoding="utf-8-sig")
+                original = path.read_bytes()
+                migrate_v2.migrate()
+                rows = c.read_rows("investment_review_log")
+                self.assertEqual(rows[0]["idea_id"], "IDEA-0001")
+                self.assertEqual(rows[0]["origin_candidate_ids"], "")
+                kept = list((pathlib.Path(tmp) / "archive" / "pre_columns").glob("investment_review_log_*.csv"))
+                self.assertEqual([p.read_bytes() for p in kept], [original])
+                migrate_v2.migrate()  # idempotent: no second backup, no change
+                self.assertEqual(len(list((pathlib.Path(tmp) / "archive" / "pre_columns").glob("*"))), 1)
+
+
 if __name__ == "__main__":
     unittest.main()

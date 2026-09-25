@@ -67,11 +67,11 @@ class Step:
 STEPS: dict[str, Step] = {
     "collect": Step(),
     "extract": Step(requires=("collect",)),   # never extracts from an older collection
-    "eps": Step(),
+    "eps": Step(inputs=("@tracking",)),          # a newly tracked ticker is collected the same day
     "notify": Step(requires=("extract",)),
-    "quarterly": Step(),
+    "quarterly": Step(inputs=("@tracking",)),
     "screen": Step(),
-    "prices": Step(),
+    "prices": Step(inputs=("@tracking",)),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
     "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v1"),
     "baseline": Step(),                        # research_journal --capture: frozen case baselines

@@ -31,6 +31,14 @@ def migrate() -> None:
         if path.exists():
             with path.open(encoding=c.ENCODING, newline="") as handle:
                 changed = next(csv.reader(handle), []) != definition["columns"]
+            if changed:
+                # A column change rewrites the file: keep the exact previous bytes first.
+                original = path.read_bytes()
+                kept = c.DATA_DIR.parent / "archive" / "pre_columns" / (
+                    f"{path.stem}_{hashlib.sha256(original).hexdigest()[:12]}{path.suffix}")
+                kept.parent.mkdir(parents=True, exist_ok=True)
+                if not kept.exists():
+                    kept.write_bytes(original)
         for row in rows:
             if row.get("data_quality"):
                 continue

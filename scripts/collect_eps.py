@@ -9,6 +9,7 @@ import common as c
 import metrics
 import add_entry
 import collect_yahoo
+import candidates
 
 FMP_ENDPOINT = "https://financialmodelingprep.com/stable/analyst-estimates"
 
@@ -20,7 +21,9 @@ def load_targets():
         ticker = row.get("ticker", "").upper()
         if not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", ticker):
             continue
-        meta = registry.get(ticker, {})
+        # A ticker tracked from a screener candidate may not be in the registry yet: use the
+        # identity and currency that candidate verified. Unknown stays unknown (collection fails visibly).
+        meta = registry.get(ticker) or candidates.verified_target(row.get("entity_id", ""), ticker)
         targets[ticker] = {"ticker": ticker, "entity_id": row.get("entity_id") or meta.get("entity_id"),
                            "idea_id": row["idea_id"], "currency": meta.get("currency", "")}
     for ticker in c.read_json(c.ROOT / "config" / "eps_watchlist.json", []):

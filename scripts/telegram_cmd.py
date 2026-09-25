@@ -33,6 +33,7 @@ HELP_TEXT = """지원 명령어
 /candidate CAN-0123456789ABCDEF - 후보 카드 상세
 /track ALGM - 최근 14일의 최신 종목 신호를 추적 등록
 /track SIG-0001 - 지정한 신호를 추적 등록
+/track CAN-0123456789ABCDEF - 발굴 후보를 추적 등록
 /list - 활성 아이디어 목록
 /history CRDO - 같은 정의의 날짜별 숫자 관측
 /data - 데이터 누적 현황
@@ -167,7 +168,32 @@ def active_review_messages() -> list[str]:
     return notify.build_report_chunks(rows)
 
 
+def handle_track_candidate(cid: str, dry_run: bool) -> list[str]:
+    cand, state = candidates.find(cid)
+    if state == "unknown":
+        return [f"없는 후보 ID입니다: {html.escape(cid)}. /screen으로 최신 목록을 확인해 주세요."]
+    ticker = html.escape(cand["identity"]["ticker"])
+    if dry_run:
+        return [f"[dry-run] {html.escape(cid)} ({ticker}) 추적 등록 예정"]
+    try:
+        idea_id = promote.promote_candidate(cand)
+    except ValueError as error:
+        reason = str(error)
+        if "too old" in reason:
+            return [f"{ticker} 후보 관측이 오래됐습니다. /screen으로 최신 결과를 본 뒤 다시 등록해 주세요."]
+        if "capacity" in reason:
+            return [f"활성 추적이 {c.policy()['max_active_ideas']}개로 가득 찼습니다. 기존 추적을 정리한 뒤 다시 등록해 주세요."]
+        return [f"{ticker} 후보는 식별·통화 확인이 부족해 등록하지 않았습니다. 다음 스크린 후 다시 시도해 주세요."]
+    note = " (최신 목록에는 없는 후보)" if state == "not_current" else ""
+    return [f"추적 등록 완료: {ticker} → {html.escape(idea_id)}{note}\n"
+            "다음 일간 수집(09:17 KST 무렵)부터 EPS 예상·주가·분기 숫자가 쌓입니다. "
+            "추적 선택은 검증 완료나 매수 추천이 아닙니다."]
+
+
 def handle_track(target: str, dry_run: bool) -> list[str]:
+    cid = candidates.normalize_id(target)
+    if cid:
+        return handle_track_candidate(cid, dry_run)
     signal = find_signal(target)
     if signal is None:
         return [f"SIG를 찾을 수 없습니다: {html.escape(target, quote=True)}"]
@@ -204,7 +230,7 @@ def handle_command(text: str, dry_run: bool = False) -> list[str]:
         return data_history.telegram(argument.upper())
     if command == "/track":
         if not argument:
-            return ["사용법: /track ALGM 또는 /track SIG-0001"]
+            return ["사용법: /track ALGM, /track SIG-0001 또는 /track CAN-0123456789ABCDEF"]
         return handle_track(argument, dry_run)
     if command.startswith("/"):
         return [f"지원하지 않는 명령어입니다.\n\n{HELP_TEXT}"]
@@ -230,7 +256,9 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
             parts = raw.split(maxsplit=1)
             command = parts[0].split("@", 1)[0].lower() if parts else ""
             arg = parts[1].strip().upper() if len(parts) > 1 else ""
-            if command == "/track" and re.fullmatch(r"(?:SIG-\d{1,12}|[A-Z][A-Z0-9.-]{0,9})", arg):
+            if command == "/track" and candidates.normalize_id(arg):
+                safe_command = f"/track {candidates.normalize_id(arg)}"
+            elif command == "/track" and re.fullmatch(r"(?:SIG-\d{1,12}|[A-Z][A-Z0-9.-]{0,9})", arg):
                 safe_command = f"/track {arg}"
             elif command == "/history" and re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", arg):
                 safe_command = f"/history {arg}"

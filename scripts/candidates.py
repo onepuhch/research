@@ -350,6 +350,19 @@ def known_candidates() -> dict:
     return known
 
 
+def verified_target(entity_id: str, ticker: str) -> dict:
+    """Entity, ticker and currency a candidate version verified, for tickers not in the registry."""
+    for path in sorted(history_dir().glob("CV-*.json"), reverse=True):
+        record = c.read_json(path, {})
+        identity = record.get("identity") or {}
+        if identity.get("verified") and identity.get("entity_id") == entity_id and identity.get("ticker") == ticker:
+            currency = (record.get("eps") or {}).get("eps_currency")
+            if currency:
+                return {"entity_id": entity_id, "currency": currency, "exchange": identity.get("exchange"),
+                        "identity_source": identity.get("source")}
+    return {}
+
+
 # ------------------------------------------------------------------ translation
 
 def translation_key(text: str) -> str:

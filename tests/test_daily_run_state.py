@@ -144,11 +144,13 @@ class ResumeAndRelationTest(unittest.TestCase):
         finished(state, THU, {"screen": "failed"}, "r2")
         self.assertIn("views", d.plan(state, THU, "auto"))
 
-    def test_new_tracking_or_evidence_redoes_cards_and_views_only(self):
+    def test_new_tracking_redoes_collection_cards_and_views_evidence_only_cards(self):
         state = finished({}, THU, all_ok(THU))
         with mock.patch.dict(EXTERNAL, {"@tracking": "t1"}):
+            # A newly tracked ticker is collected the same day, not the next.
             self.assertEqual(d.plan_detail(state, THU, "auto"),
-                             {"cards": "inputs_changed", "views": "dependency_rerun"})
+                             {"eps": "inputs_changed", "quarterly": "inputs_changed", "prices": "inputs_changed",
+                              "cards": "inputs_changed", "views": "dependency_rerun"})
         with mock.patch.dict(EXTERNAL, {"@evidence": "e1"}):
             self.assertEqual(d.plan(state, THU, "auto"), ["cards", "views"])
 

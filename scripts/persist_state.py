@@ -10,6 +10,7 @@ STATE_FILES = ['source_state.json', 'seen_sources.json', 'notify_state.json', 'r
 def main():
     files = [c.csv_path(table) for table in c.TABLES] + [c.DATA_DIR / name for name in STATE_FILES]
     files += list((c.ROOT / 'data' / 'archive' / 'pre_v2').glob('*'))
+    files += list((c.ROOT / 'data' / 'archive' / 'pre_columns').glob('*.csv'))
     files += list((c.DATA_DIR / 'research_journal').glob('*.json'))
     files += list((c.DATA_DIR / 'return_history').glob('*.json'))
     files += list((c.DATA_DIR / 'run_history').glob('*.json'))
