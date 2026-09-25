@@ -23,6 +23,17 @@
     "top_n": 20,
     "min_yield_change_pp": 1.0,
     "min_growth_pct": 25.0,
-    "workers": 6
+    "min_growth_base_eps": 0.25,
+    "workers": 3,
+    "min_interval_s": 0.25,
+    "max_interval_s": 1.0,
+    "max_attempts": 3,
+    "retry_waits_s": [
+      2,
+      8
+    ],
+    "retry_cooldown_s": 30,
+    "time_budget_s": 1500,
+    "failure_alert_rate": 0.02
   }
 }

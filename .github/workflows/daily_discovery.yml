@@ -77,6 +77,8 @@ jobs:
         run: python scripts/collect_quarterly.py
       - name: Screen US stocks for sustained estimate upgrades
         if: always() && steps.migrate.outcome == 'success' && env.DISCOVERY == 'true'
+        # The script stops itself at time_budget_s (25 min); this is the hard stop.
+        timeout-minutes: 28
         run: python scripts/screen_revisions.py
       - name: Observe tracked regular-session prices
         # Price collection remains independent of EPS availability.
