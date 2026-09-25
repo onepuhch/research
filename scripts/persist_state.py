@@ -4,7 +4,7 @@ import common as c
 
 STATE_FILES = ['source_state.json', 'seen_sources.json', 'notify_state.json', 'run_status.json', 'daily_runs.json',
                'telegram_offset.json', 'command_queue.json', 'pending_tables.json', 'reddit_watch.csv',
-               'model_budget.json']
+               'model_budget.json', 'candidate_alerts.json']
 
 
 def main():

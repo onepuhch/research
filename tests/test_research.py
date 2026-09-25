@@ -203,13 +203,18 @@ class ResearchTests(unittest.TestCase):
                 self.put_metric(as_of=stamp)
 
     def test_daily_notification_limit_persists_across_runs(self):
-        c.write_rows("signal_log", [self.signal(signal_id=f"SIG-{i:04d}") for i in range(5)])
+        # News candidates now go through candidate_alerts under the shared daily budget;
+        # notify.py sends tracked-company risk alerts only.
+        import candidate_alerts
+        c.write_rows("signal_log", [self.signal(signal_id=f"SIG-{i:04d}", entity_id=f"CIK:{i:010d}") for i in range(5)])
         with patch.object(notify, "STATE_PATH", self.data / "notify_state.json"), \
              patch.object(c, "load_dotenv_value", return_value="fake"), \
-             patch.object(notify, "send_message", return_value=True) as send:
+             patch.object(notify, "deliver", return_value=notify.Delivery("sent", 7)) as send:
             self.assertEqual(notify.main(["notify"]), 0)
-            self.assertEqual(notify.main(["notify"]), 0)
-            self.assertEqual(send.call_count, 1)
+            self.assertEqual(send.call_count, 0)
+            self.assertEqual(candidate_alerts.main([]), 0)
+            self.assertEqual(candidate_alerts.main([]), 0)
+            self.assertEqual(send.call_count, 3)
             self.assertEqual(len(notify.load_state()["pushed"]), 3)
 
     def test_loan_prepayment_rejected_customer_deposit_retained(self):

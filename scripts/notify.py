@@ -1,4 +1,9 @@
-"""Push today's new tier A/B discovery signals to Telegram."""
+"""Tracked-company risk alerts and the weekly review report to Telegram.
+
+New discovery candidates (news A/B signals and screener candidates) are sent by
+candidate_alerts.py under one shared daily budget; this module keeps the
+selection, rendering and delivery helpers they share.
+"""
 from __future__ import annotations
 
 import argparse
@@ -6,7 +11,9 @@ import html
 import hashlib
 import json
 import re
+import socket
 import sys
+from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -356,7 +363,16 @@ def run_report(dry_run: bool) -> int:
     return 0
 
 
-def send_message(token: str, chat_id: str, message: str) -> bool:
+@dataclass(frozen=True)
+class Delivery:
+    """sent: Telegram confirmed (message_id). failed: definitely not delivered, safe to retry.
+    uncertain: the message may have arrived (timeout, 5xx, unreadable reply); never resend automatically."""
+    status: str
+    message_id: int | None = None
+    error: str | None = None
+
+
+def deliver(token: str, chat_id: str, message: str) -> Delivery:
     endpoint = f"https://api.telegram.org/bot{token}/sendMessage"
     body = {
         "chat_id": chat_id,
@@ -372,16 +388,32 @@ def send_message(token: str, chat_id: str, message: str) -> bool:
     )
     try:
         with urlopen(request, timeout=TELEGRAM_TIMEOUT) as response:
-            result = json.loads(response.read().decode("utf-8"))
-    except (HTTPError, URLError, TimeoutError, OSError, json.JSONDecodeError) as error:
-        console(f"[warn] Telegram send failed: {type(error).__name__}")
-        return False
+            raw = response.read()
+    except HTTPError as error:
+        # Telegram answered. 4xx is a rejection; after a 5xx delivery is unknown.
+        return Delivery("failed" if error.code < 500 else "uncertain", error=f"HTTP {error.code}")
+    except URLError as error:
+        if isinstance(error.reason, (TimeoutError, socket.timeout)):
+            return Delivery("uncertain", error="timeout")
+        return Delivery("failed", error=type(error.reason).__name__)  # never connected
+    except (TimeoutError, OSError) as error:
+        return Delivery("uncertain", error=type(error).__name__)
+    try:
+        result = json.loads(raw.decode("utf-8"))
+    except (ValueError, UnicodeDecodeError):
+        return Delivery("uncertain", error="unreadable response")
     if result.get("ok") is not True:
-        description = result.get("description", "unknown Telegram error")
-        console(f"[warn] Telegram rejected message: {description}")
-        return False
-    c.record_run("telegram_delivery", "success", message_id=result.get("result", {}).get("message_id"))
-    return True
+        return Delivery("failed", error=str(result.get("description", "rejected"))[:200])
+    message_id = result.get("result", {}).get("message_id")
+    c.record_run("telegram_delivery", "success", message_id=message_id)
+    return Delivery("sent", message_id)
+
+
+def send_message(token: str, chat_id: str, message: str) -> bool:
+    delivery = deliver(token, chat_id, message)
+    if delivery.status != "sent":
+        console(f"[warn] Telegram send {delivery.status}: {delivery.error}")
+    return delivery.status == "sent"
 
 
 def _main(argv: list[str]) -> int:
@@ -396,16 +428,11 @@ def _main(argv: list[str]) -> int:
         return 1
     pushed = set(state["pushed"])
     rows = c.read_rows("signal_log")
-    selected = select_signals(rows, pushed, args.min_tier, args.all)
-
-    if not args.all:
-        used = sum(1 for record in state["sent"].values()
-                   if record.get("date") == c.today() and record.get("kind") == "candidate")
-        allowance = max(0, c.policy()["daily_candidate_limit"] - used)
-        risks = [r for r in selected if r.get("signal_direction") == "negative"]
-        selected = risks + [r for r in selected if r.get("signal_direction") != "negative"][:allowance]
+    # Risk alerts for tracked companies only; they never wait on the candidate budget.
+    selected = [r for r in select_signals(rows, pushed, args.min_tier, args.all)
+                if r.get("signal_direction") == "negative"]
     if not selected:
-        console("전송 조건을 충족하는 신규 신호 0건")
+        console("전송 조건을 충족하는 추적 종목 위험 신호 0건")
         return 0
 
     chunks = build_chunks(selected)
@@ -424,15 +451,17 @@ def _main(argv: list[str]) -> int:
 
     failures = 0
     for index, (message, signal_ids) in enumerate(chunks, 1):
-        if not send_message(token, chat_id, message):
+        delivery = deliver(token, chat_id, message)
+        if delivery.status == "failed":
             failures += 1
-            console(f"[warn] chunk {index}/{len(chunks)} not recorded; retry on next run")
+            console(f"[warn] chunk {index}/{len(chunks)} not delivered ({delivery.error}); retry on next run")
             continue
+        # An uncertain delivery may have arrived: record it so it is not sent twice.
         pushed.update(signal_id for signal_id in signal_ids if signal_id)
         state["pushed"] = sorted(pushed)
         for signal_id in signal_ids:
-            row = next(r for r in selected if r[SIGNAL_ID_COLUMN] == signal_id)
-            state["sent"][signal_id] = {"date": c.today(), "kind": "risk" if row.get("signal_direction") == "negative" else "candidate"}
+            state["sent"][signal_id] = {"date": c.today(), "kind": "risk", "delivery": delivery.status,
+                                        "message_id": delivery.message_id}
         save_state(state)
         console(f"[sent] chunk {index}/{len(chunks)}: {len(signal_ids)} signals")
     if failures:

@@ -70,7 +70,7 @@ jobs:
       - name: Observe tracked EPS
         if: always() && steps.plan.outcome == 'success' && env.RUN_EPS == 'true'
         run: python scripts/daily_run_state.py step eps -- python scripts/collect_eps.py
-      - name: Retry eligible notifications
+      - name: Send tracked-company risk alerts
         if: always() && steps.plan.outcome == 'success' && env.RUN_NOTIFY == 'true'
         run: python scripts/daily_run_state.py step notify -- python scripts/notify.py
       - name: Observe quarterly EPS and revenue independently
@@ -89,6 +89,9 @@ jobs:
         # Reads the latest valid screen; a failed screen leaves the previous cards marked stale.
         if: always() && steps.plan.outcome == 'success' && env.RUN_CARDS == 'true'
         run: python scripts/daily_run_state.py step cards -- python scripts/candidates.py generate
+      - name: Send new-candidate alerts (shared daily budget)
+        if: always() && steps.plan.outcome == 'success' && env.RUN_ALERTS == 'true'
+        run: python scripts/daily_run_state.py step alerts -- python scripts/candidate_alerts.py
       - name: Freeze research baselines
         if: always() && steps.plan.outcome == 'success' && env.RUN_BASELINE == 'true'
         run: python scripts/daily_run_state.py step baseline -- python scripts/research_journal.py --capture-only

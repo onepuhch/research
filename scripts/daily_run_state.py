@@ -68,15 +68,17 @@ STEPS: dict[str, Step] = {
     "collect": Step(),
     "extract": Step(requires=("collect",)),   # never extracts from an older collection
     "eps": Step(inputs=("@tracking",)),          # a newly tracked ticker is collected the same day
-    "notify": Step(requires=("extract",)),
+    "notify": Step(requires=("extract",)),     # tracked-company risk alerts; independent of cards
     "quarterly": Step(inputs=("@tracking",)),
     "screen": Step(),
     "prices": Step(inputs=("@tracking",)),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
     "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v1"),
+    # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.
+    "alerts": Step(requires=("cards",), inputs=("extract",)),
     "baseline": Step(),                        # research_journal --capture: frozen case baselines
     "returns": Step(inputs=("baseline",)),
-    "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "baseline", "returns"),
+    "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "alerts", "baseline", "returns"),
                   version="views-v2"),
     "community": Step(weekday=MONDAY),
     "weekly_report": Step(requires=("views",), weekday=MONDAY),

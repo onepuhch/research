@@ -50,11 +50,11 @@ class PlanTest(unittest.TestCase):
 
     def test_collect_failure_resumes_collect_and_its_dependents_only(self):
         state = finished({}, THU, {**all_ok(THU), "collect": "failed"})
-        self.assertEqual(d.plan(state, THU, "auto"), ["collect", "extract", "notify", "views"])
+        self.assertEqual(d.plan(state, THU, "auto"), ["collect", "extract", "notify", "alerts", "views"])
 
     def test_screen_failure_resumes_screen_and_the_views_that_read_it(self):
         state = finished({}, THU, {**all_ok(THU), "screen": "failed"})
-        self.assertEqual(d.plan(state, THU, "auto"), ["screen", "cards", "views"])
+        self.assertEqual(d.plan(state, THU, "auto"), ["screen", "cards", "alerts", "views"])
 
     def test_complete_day_runs_nothing(self):
         state = finished({}, THU, all_ok(THU))
@@ -64,7 +64,7 @@ class PlanTest(unittest.TestCase):
     def test_interrupted_step_is_not_done(self):
         state = finished({}, THU, {**all_ok(THU)})
         d.record_step(state, THU, "screen", "started", "r2", T)  # killed by the step timeout
-        self.assertEqual(d.plan(state, THU, "auto"), ["screen", "cards", "views"])
+        self.assertEqual(d.plan(state, THU, "auto"), ["screen", "cards", "alerts", "views"])
 
     def test_explicit_daily_reruns_everything_with_a_new_run(self):
         state = finished({}, THU, all_ok(THU))
@@ -150,16 +150,26 @@ class ResumeAndRelationTest(unittest.TestCase):
             # A newly tracked ticker is collected the same day, not the next.
             self.assertEqual(d.plan_detail(state, THU, "auto"),
                              {"eps": "inputs_changed", "quarterly": "inputs_changed", "prices": "inputs_changed",
-                              "cards": "inputs_changed", "views": "dependency_rerun"})
+                              "cards": "inputs_changed", "alerts": "dependency_rerun", "views": "dependency_rerun"})
         with mock.patch.dict(EXTERNAL, {"@evidence": "e1"}):
-            self.assertEqual(d.plan(state, THU, "auto"), ["cards", "views"])
+            self.assertEqual(d.plan(state, THU, "auto"), ["cards", "alerts", "views"])
 
     def test_requested_redo_runs_the_step_and_its_users(self):
         state = finished({}, THU, all_ok(THU))
         self.assertEqual(d.plan_detail(state, THU, "auto", redo={"screen"}),
-                         {"screen": "requested", "cards": "dependency_rerun", "views": "dependency_rerun"})
+                         {"screen": "requested", "cards": "dependency_rerun", "alerts": "dependency_rerun",
+                          "views": "dependency_rerun"})
         with self.assertRaises(ValueError):
             d.plan(state, THU, "auto", redo={"everything"})
+
+    def test_failed_cards_block_new_alerts_but_not_risk_alerts(self):
+        state = finished({}, THU, {**all_ok(THU), "cards": "failed"})
+        detail = d.plan_detail(state, THU, "auto")
+        d.apply_plan(state, THU, "r2", "auto", "workflow_dispatch", detail, T, "sha", "pol")
+        d.record_step(state, THU, "cards", "failed", "r2", T, 1)
+        steps = d.day_steps(state, THU)
+        self.assertEqual(d.blocking(steps, "alerts")[0], "cards")
+        self.assertIsNone(d.blocking(steps, "notify"))
 
     def test_views_generator_version_change_rerenders(self):
         state = finished({}, THU, all_ok(THU))
@@ -181,15 +191,16 @@ class ResumeAndRelationTest(unittest.TestCase):
     def test_partial_top_up_waits_60_minutes_and_happens_once(self):
         state = finished({}, THU, all_ok(THU))
         self.partial_screen(state, "r1", T)
-        finished(state, THU, {"cards": "success", "views": "success"}, "r1")
+        finished(state, THU, {"cards": "success", "alerts": "success", "views": "success"}, "r1")
         self.assertEqual(d.plan(state, THU, "auto", T + timedelta(minutes=59)), [])
         later = T + timedelta(minutes=61)
         self.assertEqual(d.plan_detail(state, THU, "auto", later),
-                         {"screen": "partial_retry", "cards": "dependency_rerun", "views": "dependency_rerun"})
+                         {"screen": "partial_retry", "cards": "dependency_rerun", "alerts": "dependency_rerun",
+                          "views": "dependency_rerun"})
         self.begin(state, "r2", later)
         self.assertEqual(state["days"][THU]["steps"]["screen"]["auto_retries"], 1)
         self.partial_screen(state, "r2", later + timedelta(minutes=20))
-        finished(state, THU, {"cards": "success", "views": "success"}, "r2")
+        finished(state, THU, {"cards": "success", "alerts": "success", "views": "success"}, "r2")
         self.assertEqual(d.plan(state, THU, "auto", later + timedelta(hours=3)), [])
         # The top-up is used up, but the data is still partial, never relabelled complete.
         self.assertTrue(d.complete(state, THU, later + timedelta(hours=3)))
@@ -198,7 +209,7 @@ class ResumeAndRelationTest(unittest.TestCase):
     def test_partial_policy_is_configurable(self):
         state = finished({}, THU, all_ok(THU))
         self.partial_screen(state, "r1", T)
-        finished(state, THU, {"cards": "success", "views": "success"}, "r1")
+        finished(state, THU, {"cards": "success", "alerts": "success", "views": "success"}, "r1")
         policy = {"partial_retry_max": 0, "partial_retry_min_gap_minutes": 60}
         self.assertEqual(d.plan(state, THU, "auto", T + timedelta(hours=5), policy), [])
 
