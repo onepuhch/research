@@ -398,7 +398,9 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             explanations[field] = ({"statements": statements} if statements else
                                    {"statements": [], "reason": "원문 근거 미연결 (EPS 스크린만 통과)"})
         context = context_view((contexts or {}).get(cid)) if cid else None
-        doc_sources = [{"id": d["document_id"], "title": d["title"], "provider": "SEC EDGAR", "url": d["url"],
+        doc_sources = [{"id": d["document_id"], "provider": "SEC EDGAR", "url": d["url"],
+                        "title": f"SEC {d['form']} {d['document_type']}"
+                                 + (f" — {d['title']}" if d.get("title") and d["title"] != d["document_type"] else ""),
                         "published_at": None, "filed_at": d["filed_at"], "observed_at": d["observed_at"],
                         "fields": f"{d['form']} {d['document_type']}"} for d in (context or {}).get("documents") or []]
         content = {
@@ -815,7 +817,8 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
     def claim_line(item, label):
         doc = docs.get(item.get("document_id"), {})
         return ("claim", json.dumps({"label": label, "text": item["text_ko"], "quote": item.get("quote"),
-                                     "title": doc.get("title") or item.get("document_id"), "url": doc.get("url"),
+                                     "title": (f"SEC {doc['form']} {doc['document_type']}" if doc.get("form")
+                                               else item.get("document_id")), "url": doc.get("url"),
                                      "filed": doc.get("filed_at"), "period": item.get("period")}, ensure_ascii=False))
 
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
@@ -860,8 +863,9 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
     checks = cand["explanations"]["next_check"]["statements"]
     if checks:
         lines += [("item", s["text"]) for s in checks]
-    elif context.get("next_check"):
-        lines.append(("item", f"{context['next_check'][0]} (자동 제안)"))
+    elif [x for x in context.get("next_check") or [] if isinstance(x, str) and not x.startswith("{")]:
+        first = next(x for x in context["next_check"] if isinstance(x, str) and not x.startswith("{"))
+        lines.append(("item", f"{first} (자동 제안)"))
     else:
         lines.append(("item", "최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인"))
     lines.append(("section", "출처"))
