@@ -300,6 +300,7 @@ class CandidateFixture(unittest.TestCase):
                       mock.patch.object(c, "ROOT", pathlib.Path(self.tmp.name)),
                       # The fixture observations are from 2026-09-25; freshness must not depend on the run date.
                       mock.patch.object(c, "today", return_value="2026-09-25"),
+                      mock.patch.object(k, "now_utc", return_value=NOW),
                       contextlib.redirect_stdout(io.StringIO())):
             patch.__enter__()
             self.addCleanup(patch.__exit__, None, None, None)
@@ -721,6 +722,35 @@ class ApprovalTest(CandidateFixture):
         c.atomic_json(k.index_path(), index)
         with self.assertRaisesRegex(ValueError, "stale"):
             k.approve(self.aaa["candidate_id"], "user")
+
+    def assert_refused_now(self, reason):
+        import candidate_alerts
+        before = k.evidence_path().read_bytes()
+        with self.assertRaisesRegex(ValueError, reason):
+            k.approve(self.aaa["candidate_id"], "user")
+        self.assertEqual(k.evidence_path().read_bytes(), before)
+        self.assertEqual(candidate_alerts.screen_items(k.load_index()), ([], []))
+
+    def test_freshness_is_rechecked_when_acting_not_when_rendered(self):
+        self.write_evidence(sourced_evidence())
+        self.regenerate()
+        self.assertEqual(k.load_index()["stale"], [])
+        self.assertEqual(k.current_freshness(k.load_index()), [])
+        # 1. Only the clock moves: the source data is now 37+ hours old.
+        with mock.patch.object(k, "now_utc", return_value=NOW + timedelta(hours=37)):
+            self.assert_refused_now("old_observation")
+        # 2. A screen attempt failed after the cards were generated.
+        c.atomic_json(c.DATA_DIR / "daily_runs.json", {"days": {"2026-09-25": {"steps": {
+            "screen": {"execution_status": "failed", "run_id": "9-1"}}}}})
+        self.assert_refused_now("latest_screen_failed")
+        (c.DATA_DIR / "daily_runs.json").unlink()
+        # 3. A newer usable snapshot exists that the cards were not rebuilt from.
+        with gzip.open(c.DATA_DIR / "revision_screen" / "20260925T020000Z_2-1.json.gz", "wt", encoding="utf-8") as h:
+            json.dump(snapshot(run_id="2-1", finished="2026-09-25T02:10:00+00:00"), h)
+        self.assert_refused_now("newer_snapshot_not_in_cards")
+        # 4. Rebuilt from the current inputs: approval goes through.
+        self.regenerate()
+        self.assertTrue(k.approve(self.aaa["candidate_id"], "user").startswith("CV-"))
 
     def test_needs_evidence_mark_blocks_approval_and_keeps_the_screen_fact(self):
         entry = {**sourced_evidence(), "review_status": "needs_evidence", "review_reason": "고객 집중도 원문 필요"}

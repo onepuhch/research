@@ -135,8 +135,10 @@ def recent_new_alerts(ledger: dict, notify_state: dict, signal_rows: list[dict])
 
 def screen_items(index: dict) -> tuple[list[dict], list[dict]]:
     """(recommendation events, new-discovery events) that meet the data conditions."""
-    if not index.get("candidates") or index.get("stale") or index.get("run_status") != "success":
-        return [], []  # stale or partial collection: no new automatic alerts
+    if not index.get("candidates") or index.get("run_status") != "success":
+        return [], []  # partial collection: no new automatic alerts
+    if candidates.current_freshness(index):
+        return [], []  # stale now (re-checked at send time, not at render time)
     recommended, new = [], []
     for cand in index["candidates"]:
         if not cand.get("candidate_id") or cand.get("missing") or cand.get("run_quality") != "complete":

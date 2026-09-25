@@ -185,6 +185,34 @@ def screen_attempt_stale(state: dict, valid_run_id: str | None) -> list[str]:
     return [f"latest_screen_{status or 'unknown'}"]
 
 
+def now_utc() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def current_freshness(index: dict, now: datetime | None = None) -> list[str]:
+    """Why these cards must not be acted on now (approval, automatic alerts); empty = fresh.
+
+    Re-checked at the moment of acting, from stored files only (no network, translation or
+    ledger write): the stored stale reasons, the age of the source data (not of the render),
+    a newer usable snapshot than the one the cards use, and the daily record's latest screen
+    attempt. Viewing old cards stays allowed; acting on them does not.
+    """
+    import screen_revisions
+    now = now or now_utc()
+    hours = settings()["stale_hours"]
+    reasons = list(index.get("stale") or [])
+    ref = index.get("source_snapshot") or {}
+    if not index.get("observed_at"):
+        reasons.append("no_valid_screen")
+    elif now - datetime.fromisoformat(index["observed_at"]) > timedelta(hours=hours):
+        reasons.append("old_observation")
+    latest = choose_snapshot(list(screen_revisions.SCREEN_DIR.glob("*.json.gz")), now, hours)["valid"]
+    if latest and Path(ref.get("path", "")).name != latest["path"].name:
+        reasons.append("newer_snapshot_not_in_cards")
+    reasons += screen_attempt_stale(c.read_json(c.DATA_DIR / "daily_runs.json", {}), ref.get("run_id"))
+    return list(dict.fromkeys(reasons))
+
+
 # ------------------------------------------------------------------ ordering
 
 def display_order(derived: dict) -> list[tuple[str, list[dict]]]:
@@ -1043,8 +1071,9 @@ def approve(cid: str, approver: str) -> str:
     if not str(approver or "").strip():
         raise ValueError("approver name required")
     index = load_index()
-    if index.get("stale"):
-        raise ValueError("cards are stale; approve after a fresh screen")
+    stale = current_freshness(index)
+    if stale:
+        raise ValueError("cards are stale (" + ", ".join(stale) + "); regenerate after a fresh screen and review again")
     shown = next((x for x in index.get("candidates", []) if x["candidate_id"] == cid), None)
     if shown is None:
         raise ValueError("candidate not in the latest index; regenerate cards first")

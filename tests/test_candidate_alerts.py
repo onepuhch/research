@@ -8,7 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from unittest import mock
 from urllib.error import HTTPError, URLError
 
@@ -16,6 +16,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 import candidates as k  # noqa: E402
+import screen_revisions  # noqa: E402
 import candidate_alerts as a  # noqa: E402
 import notify  # noqa: E402
 from test_candidates import REF, build, isolate_ci_environment, row, snapshot  # noqa: E402
@@ -51,7 +52,11 @@ class AlertTest(unittest.TestCase):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         self.data = pathlib.Path(tmp.name)
+        (self.data / "revision_screen").mkdir()
         for patch in (mock.patch.object(c, "DATA_DIR", self.data),
+                      mock.patch.object(screen_revisions, "SCREEN_DIR", self.data / "revision_screen"),
+                      # 'now' follows the test day, so freshness never depends on the real clock.
+                      mock.patch.object(k, "now_utc", side_effect=lambda: datetime.fromisoformat(f"{self.day}T03:00:00+00:00")),
                       mock.patch.object(notify, "STATE_PATH", self.data / "notify_state.json"),
                       mock.patch.object(c, "load_dotenv_value", return_value="fake"),
                       contextlib.redirect_stdout(io.StringIO())):
@@ -88,7 +93,7 @@ class AlertTest(unittest.TestCase):
     def index(self, tickers=("AAA", "BBB", "CCC", "DDD"), **snap):
         rows = screen_rows(*tickers)
         cands = build(snapshot(rows=rows, top_yield=list(tickers), top_growth=[], **snap))
-        index = {"observed_at": "2026-09-25T01:23:02+00:00", "run_status": snap.get("status", "success"),
+        index = {"observed_at": f"{self.day}T01:23:02+00:00", "run_status": snap.get("status", "success"),
                  "stale": [], "source_snapshot": REF, "candidates": cands}
         c.atomic_json(k.index_path(), index)
         return index
