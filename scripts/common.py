@@ -236,9 +236,31 @@ def record_run(component: str, status: str, **details: Any) -> None:
 
 
 def model_calls_today(day: str | None = None) -> int:
-    """Model calls already made this KST day, by every component (one shared budget)."""
+    """Model requests already sent this KST day, by every component (one shared budget)."""
     days = read_json(DATA_DIR / "model_budget.json", {}).get("days", {})
     return sum(days.get(day or today(), {}).values())
+
+
+class ModelBudgetExhausted(Exception):
+    """No model request was sent: today's shared or component budget is used up (deferred, not failed)."""
+
+
+def model_calls_remaining(component: str, day: str | None = None) -> int:
+    """Requests this component may still send today: the smaller of the shared total
+    (policy max_model_calls) and its own limit (policy model_budget). No borrowing."""
+    days = read_json(DATA_DIR / "model_budget.json", {}).get("days", {})
+    used = days.get(day or today(), {})
+    total = policy()["max_model_calls"] - sum(used.values())
+    own = policy().get("model_budget", {}).get(component, 0) - used.get(component, 0)
+    return max(0, min(total, own))
+
+
+def reserve_model_call(component: str) -> None:
+    """Count one HTTP request before it is sent (retries included); refuse when none is left.
+    A crash after this point keeps the count: an unknown outcome is never refunded."""
+    if model_calls_remaining(component) <= 0:
+        raise ModelBudgetExhausted(component)
+    record_model_call(component)
 
 
 def record_model_call(component: str) -> None:

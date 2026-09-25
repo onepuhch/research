@@ -264,7 +264,7 @@ class TranslationTest(unittest.TestCase):
             self.assertEqual((report["calls"], report["translated"], report["rejected"]), (2, 2, 1))
             k.translate(rows[:1], cache, "key", cfg, fake)
             self.assertEqual(len(calls), 2)  # cached: no new call
-            with mock.patch.object(c, "model_calls_today", return_value=c.policy()["max_model_calls"]):
+            with mock.patch.object(c, "model_calls_remaining", return_value=0):
                 report = k.translate(rows, cache, "key", cfg, fake)
             self.assertEqual((report["calls"], report.get("budget_exhausted")), (0, True))
             self.assertEqual(k.translate(rows, cache, "", cfg, fake)["calls"], 0)  # no credential

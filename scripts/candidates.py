@@ -626,13 +626,16 @@ def translate(rows: list[dict], cache: dict, api_key: str, cfg: dict, call=None,
     for start in range(0, len(tickers), cfg["translation_batch"]):
         if report["calls"] >= cfg["translation_max_calls"] or not api_key:
             break
-        if c.model_calls_today() >= c.policy()["max_model_calls"]:
+        if c.model_calls_remaining("cards") <= 0:
             report["budget_exhausted"] = True
             break
         batch = {t: todo[t] for t in tickers[start:start + cfg["translation_batch"]]}
         report["calls"] += 1
         try:
             answer = call(translation_prompt(batch))
+        except c.ModelBudgetExhausted:
+            report["budget_exhausted"] = True  # a retry ran out of budget; the rest waits for tomorrow
+            break
         except (OSError, ValueError, KeyError, IndexError, TimeoutError) as error:
             report["failed_calls"] += 1
             report["last_error"] = type(error).__name__

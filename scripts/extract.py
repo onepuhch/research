@@ -354,9 +354,10 @@ def call_gemini(item: dict[str, Any], api_key: str) -> dict[str, Any]:
 def call_gemini_prompt(prompt: str, api_key: str, component: str) -> dict[str, Any]:
     """One JSON-mode Gemini call with bounded retries (shared by extract and candidate cards).
 
-    Each call counts once against the shared daily budget (policy max_model_calls).
+    Every HTTP attempt, retries included, is reserved against the shared daily budget and
+    the component's own limit just before it is sent; with none left it raises
+    common.ModelBudgetExhausted without touching the network. Callers never count again.
     """
-    c.record_model_call(component)
     body = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -378,6 +379,7 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str) -> dict[str, A
     delay = 5.0
     payload: dict[str, Any] = {}
     for attempt in range(GEMINI_MAX_RETRIES + 1):
+        c.reserve_model_call(component)
         try:
             with urlopen(request, timeout=GEMINI_TIMEOUT) as response:
                 payload = json.loads(response.read().decode("utf-8"))
@@ -709,9 +711,9 @@ def main(argv: list[str]) -> int:
             candidates.append(item)
         limit, phrases = load_edgar_extract_config()
         # The model budget is per KST day and shared with candidate-card translation.
-        remaining = max(0, policy["max_model_calls"] - c.model_calls_today())
+        remaining = c.model_calls_remaining("extract")
         selected = prefilter_items(candidates, min(limit, remaining), phrases)
-        accepted = rejected = failed = validation_rejected = 0
+        accepted = rejected = failed = validation_rejected = deferred_budget = 0
         circuit_open = False
         for index, item in enumerate(selected):
             if circuit_open:
@@ -728,6 +730,11 @@ def main(argv: list[str]) -> int:
                 else:
                     record.update(status="rejected", reason=item.get("_reject_reason", "not a concrete signal"))
                     rejected += 1
+            except c.ModelBudgetExhausted:
+                # Nothing was sent: the item waits for tomorrow's budget; not a failure.
+                record.update(status="deferred", reason="deferred_budget")
+                deferred_budget += 1
+                circuit_open = True
             except InvalidEvidence:
                 record.update(status="rejected", reason="evidence_grounding_failed", validation_rejected=True)
                 rejected += 1
@@ -747,7 +754,7 @@ def main(argv: list[str]) -> int:
                 time.sleep(GEMINI_SLEEP)
         c.atomic_json(state_path, ledger)
         pending = sum(r.get("status") in {"retry", "deferred"} for r in ledger.values())
-        c.record_run("extract", "degraded" if failed else "success", accepted=accepted,
+        c.record_run("extract", "degraded" if failed else "success", accepted=accepted, deferred_budget=deferred_budget,
                      rejected=rejected, validation_rejected=validation_rejected,
                      validation_rejected_total=sum(bool(r.get("validation_rejected")) for r in ledger.values()),
                      failed=failed, pending=pending, model=GEMINI_MODEL, prompt_version=version)
