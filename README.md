@@ -63,7 +63,9 @@ GitHub Secrets 또는 로컬 .env: GEMINI_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_
 
 EPS 공급자는 config/research_policy.json의 eps_provider로 선택한다. 기본 yahoo는 공개 페이지의 명시적인 non-GAAP 연간 컨센서스만 수집하며, 회사·통화·기간·분석가 수를 검사한다. 공급자별 시계열을 합치지 않는다. FMP는 현재 키로 HTTP 402이므로 기본 운영에서 호출하지 않는다. EPS 결측을 회사 실적이나 가이던스로 채우지 않는다.
 
-새 workflow 설정은 KST 매일 09:17 수집·추출·EPS·알림, 03:23/09:23/15:23/21:23 명령 처리다. 주간 검토 보고는 월요일이다. GitHub 스케줄은 정확한 시각을 보장하지 않는다. /track은 최근 14일 신호를 지원하고 재실행 시 기존 아이디어를 반환한다. 명령 큐를 먼저 저장한 뒤 offset을 갱신해 응답 실패를 재시도한다.
+새 workflow 설정은 KST 매일 09:17 수집·추출·EPS·알림, 03:23/09:23/15:23/21:23 명령 처리다. 주간 검토 보고는 월요일이다. GitHub 스케줄은 정확한 시각을 보장하지 않는다. 사용자 PC 타이머가 09:17에 mode=auto, 명령 시각에 mode=commands로 dispatch하고 GitHub 예약은 대체용이다(일간 예약=auto, 6시간 예약=commands).
+
+일간 완료는 `scripts/daily_run_state.py`의 필수 단계로 판단한다: collect → extract → notify, eps, quarterly, screen, prices, views(extract·eps·quarterly·prices 사용), returns, 월요일(KST)에만 community와 weekly_report(views 사용). 각 단계는 KST 날짜별로 started/success/failed와 종료 코드·run_id·마지막 성공 시각을 `data/processed/daily_runs.json`에 남기며, 결과물과 같은 커밋으로 저장된다. auto는 오늘 success가 아닌 단계와 그 결과를 쓰는 단계만 다시 실행하고, 모두 success면 명령만 처리한다. daily는 모든 단계를 새 run 기록으로 다시 실행한다. commands 실행은 일간 완료로 세지 않는다. extract는 그날 collect가 성공한 뒤에만 돈다. push가 거절되면 원격에 success 기록이 없으므로 다음 실행이 다시 시도한다. 단계 종료 코드 0만 success이며, 스크리너처럼 일부 누락(degraded)이어도 0으로 끝나는 단계는 자체 상태 파일에서 누락을 확인한다. /track은 최근 14일 신호를 지원하고 재실행 시 기존 아이디어를 반환한다. 명령 큐를 먼저 저장한 뒤 offset을 갱신해 응답 실패를 재시도한다.
 
 외부 서비스별 실패를 분리하고 실패 후에도 상태를 저장한다. scripts/persist_state.py는 깨끗한 CI 체크아웃 전용이며 git commit/push를 수행한다. 로컬 변경 검토용 명령이 아니다. 전달 성공 직후 상태 저장 전 프로세스가 종료되는 경우 Telegram의 정확히 한 번 전송은 보장하지 못한다.
 
