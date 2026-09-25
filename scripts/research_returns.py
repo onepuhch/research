@@ -50,7 +50,7 @@ def parse(payload, ticker, retrieved_at):
     if len(stamps) != len(adjusted) or not stamps:
         raise ValueError('adjusted series incomplete')
     output = {}
-    for stamp, value in zip(stamps, adjusted):
+    for index, (stamp, value) in enumerate(zip(stamps, adjusted)):
         opened = datetime.fromtimestamp(stamp, timezone.utc)
         day = opened.date().isoformat()  # US regular open always falls on the same UTC date.
         if opened.year not in EARLY:
@@ -64,6 +64,11 @@ def parse(payload, ticker, retrieved_at):
         if opened.hour not in {13, 14} or opened.minute != 30:
             raise ValueError('unexpected daily session timestamp')
         number = metrics.number(value)
+        if (value is None and index == len(stamps) - 1
+                and journal.instant(retrieved_at) - closed <= timedelta(hours=36)):
+            # Yahoo publishes the latest session's close hours after the bell. A
+            # blank final bar is "not yet published": leave the day out, never fill it.
+            continue
         if number is None or number <= 0 or day in output:
             raise ValueError('missing, nonpositive or duplicate adjusted close')
         output[day] = {'adjusted_close': number, 'closed_at': closed.isoformat()}
