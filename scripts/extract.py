@@ -351,7 +351,8 @@ def call_gemini(item: dict[str, Any], api_key: str) -> dict[str, Any]:
     return call_gemini_prompt(gemini_prompt(item), api_key, "extract")
 
 
-def call_gemini_prompt(prompt: str, api_key: str, component: str) -> dict[str, Any]:
+def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float | None = None,
+                       thinking_budget: int | None = None) -> dict[str, Any]:
     """One JSON-mode Gemini call with bounded retries (shared by extract and candidate cards).
 
     Every HTTP attempt, retries included, is reserved against the shared daily budget and
@@ -363,6 +364,8 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str) -> dict[str, A
         "generationConfig": {
             "temperature": 0.1,
             "responseMimeType": "application/json",
+            # A long source prompt with model 'thinking' can exceed the timeout; drafts turn it off.
+            **({"thinkingConfig": {"thinkingBudget": thinking_budget}} if thinking_budget is not None else {}),
         },
     }
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{quote(GEMINI_MODEL)}:generateContent"
@@ -381,7 +384,7 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str) -> dict[str, A
     for attempt in range(GEMINI_MAX_RETRIES + 1):
         c.reserve_model_call(component)
         try:
-            with urlopen(request, timeout=GEMINI_TIMEOUT) as response:
+            with urlopen(request, timeout=timeout or GEMINI_TIMEOUT) as response:
                 payload = json.loads(response.read().decode("utf-8"))
             break
         except HTTPError as error:

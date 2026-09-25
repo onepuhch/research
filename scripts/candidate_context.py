@@ -115,8 +115,9 @@ def eligible(entry: dict | None, target: dict, now: datetime) -> bool:
 
 def select(all_targets: list[dict], state: dict, now: datetime, limit: int) -> list[dict]:
     pool = [t for t in all_targets if eligible(state["candidates"].get(t["candidate_id"]), t, now)]
+    # First seen by day: candidates seen the same day keep the A1/B1/A2... display order.
     pool.sort(key=lambda t: (state["candidates"].get(t["candidate_id"], {}).get("status") == "success",
-                             t["first_seen_at"], t["rank"], t["candidate_id"]))
+                             t["first_seen_at"][:10], t["rank"], t["candidate_id"]))
     return pool[:limit]
 
 
@@ -138,6 +139,8 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
     for filing in filings:
         if bodies >= cfg["documents_per_company"]:
             break
+        if found and filing["rank"] == 2:
+            break  # a results release was found: the large periodic report is not needed
         index_url = cf.filing_index_url(issuer["cik"], filing["accessionNumber"])
         try:
             page, final, _ = client.get(index_url)
@@ -285,8 +288,13 @@ def history_dir() -> Path:
     return c.DATA_DIR / "candidate_context_history"
 
 
+PUNCTUATION = str.maketrans({"\u2019": "'", "\u2018": "'", "\u201c": '"', "\u201d": '"', "\u2013": "-",
+                             "\u2014": "-", "\u00a0": " "})
+
+
 def squash(text: str) -> str:
-    return " ".join(str(text).split()).casefold()
+    """Whitespace, case and typographic quotes/dashes do not make a quote different."""
+    return " ".join(str(text).translate(PUNCTUATION).split()).casefold()
 
 
 def relevant_blocks(documents: list[dict], limit: int = MAX_PROMPT_CHARS) -> tuple[list[dict], str]:
@@ -317,7 +325,9 @@ def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str
         "규칙: (1) 각 claim의 quote는 해당 block의 문장을 글자 그대로 짧게 인용한다. (2) text_ko 안의 숫자는 quote에 있는 숫자만 쓴다. "
         "(3) 실적은 kind=fact, 회사 전망은 kind=guidance, 네 해석은 kind=interpretation. (4) 이전 전망과의 비교는 원문이 직접 말할 때만 쓴다. "
         "(5) 일회성 이익·세금·자사주 매입에 의한 주당 수치 변화는 영업 성장으로 쓰지 마라. (6) 반대 근거(하향 전망, 수요 둔화, 일회성 요인)도 limitations에 넣어라. "
-        "(7) 매수·목표가·주가 전망을 쓰지 마라. (8) 추정치 상향과의 연결은 원문이 명시하지 않으면 link=unconfirmed 또는 temporal_context.\n"
+        "(7) 매수·목표가·주가 전망을 쓰지 마라. (8) 추정치 상향과의 연결은 원문이 명시하지 않으면 link=unconfirmed 또는 temporal_context. "
+        "(9) 숫자·금액·기간은 원문 표기 그대로 쓴다(예: $4.1 billion, 12.5%, second quarter, Q2, 2026). "
+        "단위를 바꾸거나(억 달러) 계산하지 않는다. next_check는 한국어 문장 문자열의 배열이다.\n"
         f"drivers 값: {', '.join(DRIVERS)}. direction 값: {', '.join(DIRECTIONS)}.\n"
         '출력 형식: {"claims":[{"text_ko":"","kind":"fact|guidance|interpretation","quote":"","document_id":"","block_id":"",'
         '"period":"","currency":"","unit":"","gaap":"GAAP|non-GAAP|unknown","drivers":[""],"direction":""}],'
@@ -325,6 +335,17 @@ def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str
         '"link":"temporal_context|explicit_link|unconfirmed"}\n최대 claims 5개, limitations 3개, next_check 2개.\n\n'
         f"문서: {json.dumps(heads, ensure_ascii=False)}\n\n블록:\n"
         + "\n".join(f"[{b['document_id']}#{b['block_id']}] {b['text']}" for b in blocks))
+
+
+WORD_NUMBERS = {"first": "1", "second": "2", "third": "3", "fourth": "4", "january": "1", "february": "2",
+                "march": "3", "april": "4", "may": "5", "june": "6", "july": "7", "august": "8",
+                "september": "9", "october": "10", "november": "11", "december": "12"}
+
+
+def quote_numbers(text: str) -> set[str]:
+    """Digits in a quote, plus quarter ordinals and month names ('second quarter' -> 2, 'July' -> 7)."""
+    words = set(re.findall(r"[a-z]+", str(text).lower()))
+    return numbers(text) | {n for w, n in WORD_NUMBERS.items() if w in words}
 
 
 def numbers(text: str) -> set[str]:
@@ -338,7 +359,7 @@ def check_quote(item: dict, blocks: dict) -> str | None:
     quote = squash(item.get("quote", ""))
     if len(quote) < 8 or quote not in squash(blocks[key]):
         return "quote_not_in_block"
-    if not numbers(item.get("text_ko", "")) <= numbers(item.get("quote", "")):
+    if not numbers(item.get("text_ko", "")) <= quote_numbers(item.get("quote", "")):
         return "number_not_in_quote"
     text = item.get("text_ko", "")
     if not text.strip() or any(word in text for word in FORBIDDEN):
@@ -371,20 +392,28 @@ def check_claim(item: dict, blocks: dict) -> str | None:
     return None
 
 
+def excerpt(item) -> dict:
+    """What was refused, kept short for review; never used on the card."""
+    if not isinstance(item, dict):
+        return {}
+    return {"text_ko": str(item.get("text_ko", ""))[:200], "quote": str(item.get("quote", ""))[:200],
+            "where": f"{item.get('document_id')}#{item.get('block_id')}"}
+
+
 def validate_draft(answer: dict, blocks: list[dict]) -> dict:
     index = {(b["document_id"], b["block_id"]): b["text"] for b in blocks}
     claims, limitations, rejected = [], [], []
     for item in (answer.get("claims") or [])[:5] if isinstance(answer, dict) else []:
         problem = check_claim(item, index) if isinstance(item, dict) else "not_an_object"
         if problem:
-            rejected.append({"what": "claim", "reason": problem})
+            rejected.append({"what": "claim", "reason": problem, **excerpt(item)})
             continue
         claims.append({k: item.get(k) for k in ("text_ko", "kind", "quote", "document_id", "block_id", "period",
                                                   "currency", "unit", "gaap", "drivers", "direction")})
     for item in (answer.get("limitations") or [])[:3] if isinstance(answer, dict) else []:
         problem = check_quote(item, index) if isinstance(item, dict) else "not_an_object"
         if problem:
-            rejected.append({"what": "limitation", "reason": problem})
+            rejected.append({"what": "limitation", "reason": problem, **excerpt(item)})
             continue
         limitations.append({k: item.get(k) for k in ("text_ko", "quote", "document_id", "block_id")})
     link = answer.get("link") if isinstance(answer, dict) else None
@@ -394,8 +423,10 @@ def validate_draft(answer: dict, blocks: list[dict]) -> dict:
     elif link == "explicit_link" and not any(w in squash(b["text"]) for b in blocks
                                              for w in ("analyst", "consensus", "estimate revision")):
         link, link_note = "unconfirmed", "explicit link not stated in the source"
-    checks = [str(x)[:120] for x in (answer.get("next_check") or [])[:2] if str(x).strip()
-              and not any(w in str(x) for w in FORBIDDEN)] if isinstance(answer, dict) else []
+    raw_checks = [x.get("text_ko") if isinstance(x, dict) else x for x in (answer.get("next_check") or [])[:2]] \
+        if isinstance(answer, dict) else []
+    checks = [x.strip()[:120] for x in raw_checks
+              if isinstance(x, str) and x.strip() and not any(w in x for w in FORBIDDEN)]
     return {"claims": claims, "limitations": limitations, "next_check": checks, "link": link,
             "link_note": link_note, "rejected": rejected}
 
@@ -424,7 +455,8 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
         if not api_key:
             report["skipped"] = "model_key_missing"
             return report
-        call = lambda prompt: extract.call_gemini_prompt(prompt, api_key, "candidate_context")  # noqa: E731
+        call = lambda prompt: extract.call_gemini_prompt(prompt, api_key, "candidate_context",  # noqa: E731
+                                                         timeout=60, thinking_budget=0)
     deadline = deadline or (time.monotonic() + settings()["time_budget_s"])
     waiting = sorted(((cid, e) for cid, e in state["candidates"].items()
                       if e.get("status") == "success" and e.get("document_ids")
@@ -444,7 +476,7 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
         blocks, coverage_state = relevant_blocks(documents)
         sha = input_sha({"candidate_id": cid, **entry}, entry["document_ids"])
         try:
-            answer = call(draft_prompt(target, documents, blocks))
+            answer = call(draft_prompt(target, documents, blocks))  # one company per request
         except c.ModelBudgetExhausted:
             entry["draft_status"] = "deferred_budget"
             report["deferred_budget"] += 1

@@ -246,6 +246,28 @@ class RunTest(RunFixture):
         self.assertIn(cf.submissions_url(CIK), fake2.calls)
         self.assertNotIn(BASE + "ex991.htm", fake2.calls)
 
+    def test_same_day_candidates_follow_display_order_and_periodic_reports_are_skipped(self):
+        import candidates
+        tickers = ["AAA", "BBB", "CCC"]
+        self.screen(tickers)
+        snap = json.load(gzip.open(next((self.data / "revision_screen").glob("*.json.gz")), "rt", encoding="utf-8"))
+        # First seen seconds apart on one day, in the reverse of the display order.
+        seen = {candidates.candidate_id(f"NASDAQ:{t}"): f"2026-09-25T01:1{9 - i}:00+00:00" for i, t in enumerate(tickers)}
+        found = ctx.targets(snap, {}, {}, seen)
+        state = ctx.load_state()
+        self.assertEqual([t["ticker"] for t in ctx.select(found, state, NOW, 3)], tickers)
+        routes = default_routes()
+        filings = json.loads(routes[cf.submissions_url(CIK)])
+        recent = filings["filings"]["recent"]
+        for key, value in (("accessionNumber", "0000000001-26-000011"), ("filingDate", "2026-09-10"), ("form", "10-Q"),
+                           ("reportDate", ""), ("primaryDocument", ""), ("primaryDocDescription", ""), ("items", "")):
+            recent[key].append(value)
+        routes[cf.submissions_url(CIK)] = json.dumps(filings).encode()
+        sec, fake = client(routes)
+        target = {"issuer": {"cik": CIK, "ticker": "AAA"}}
+        ctx.research(target, sec, ctx.load_state(), NOW, ctx.settings())
+        self.assertFalse(any("000000000126000011" in u for u in fake.calls))
+
     def test_no_relevant_document_waits_seven_days_and_failures_24_hours(self):
         self.screen(["AAA"])
         routes = default_routes()
@@ -353,6 +375,28 @@ class DraftCheckTest(unittest.TestCase):
                                                     text_ko="연간 EPS 전망을 5달러에서 3달러로 하향했다.",
                                                     direction="negative")]}, blocks)
         self.assertEqual((len(up["claims"]), len(down["claims"])), (0, 1))
+
+    def test_typographic_quotes_and_object_next_checks(self):
+        record = release_record(text=b"<html><body><p>The company\xe2\x80\x99s revenue grew 40% in the quarter.</p>"
+                                     b"<table><tr><td>Revenue</td><td>1</td></tr></table></body></html>")
+        blocks, _ = ctx.relevant_blocks([record])
+        result = ctx.validate_draft({"claims": [claim(block_id="p1", text_ko="분기 매출이 40% 늘었다.",
+                                                      quote="The company's revenue grew 40%")],
+                                     "next_check": [{"text_ko": "다음 분기 수주 확인", "quote": "x"}, 7]}, blocks)
+        self.assertEqual(len(result["claims"]), 1)
+        self.assertEqual(result["next_check"], ["다음 분기 수주 확인"])
+
+    def test_quarter_ordinals_and_months_count_as_quoted_numbers(self):
+        record = release_record(text=b"<html><body><p>Second quarter revenue grew 40% as of July 30.</p>"
+                                     b"<table><tr><td>Revenue</td><td>1</td></tr></table></body></html>")
+        blocks, _ = ctx.relevant_blocks([record])
+        ok = ctx.validate_draft({"claims": [claim(block_id="p1", text_ko="2분기 매출이 7월 30일 기준 40% 늘었다.",
+                                                  quote="Second quarter revenue grew 40% as of July 30")]}, blocks)
+        self.assertEqual(len(ok["claims"]), 1)
+        bad = ctx.validate_draft({"claims": [claim(block_id="p1", text_ko="3분기 매출이 40% 늘었다.",
+                                                   quote="Second quarter revenue grew 40%")]}, blocks)
+        self.assertEqual(bad["rejected"][0]["reason"], "number_not_in_quote")
+        self.assertIn("3분기", bad["rejected"][0]["text_ko"])  # kept for review
 
     def test_explicit_link_needs_the_source_to_say_it(self):
         result = ctx.validate_draft({"claims": [claim()], "link": "explicit_link"}, self.blocks)
