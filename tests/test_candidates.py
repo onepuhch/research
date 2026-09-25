@@ -420,6 +420,162 @@ class TrackCandidateTest(CommandTest):
         self.assertIn("SIG를 찾을 수 없습니다", telegram_cmd.handle_command("/track CAN")[0])  # ticker CAN, not an ID
 
 
+class ObservationHistoryTest(CommandTest):
+    """F1: content versions and real observations are kept apart."""
+
+    def observe(self, day, rows=None, top=("AAA", "CRDO"), growth=("BBB", "AAA")):
+        """A screener run on a later day, then card generation at that time."""
+        stamp = datetime.fromisoformat(f"{day}T01:15:00+00:00")
+        rows = rows if rows is not None else [row("AAA"), row("BBB", by_yield=False), row("CRDO", by_growth=False)]
+        rows = [{**r, "eps_retrieved_at": stamp.isoformat()} for r in rows]
+        run_id = f"{day.replace('-', '')}-1"
+        with gzip.open(c.DATA_DIR / "revision_screen" / f"{stamp.strftime('%Y%m%dT%H%M%SZ')}_{run_id}.json.gz",
+                       "wt", encoding="utf-8") as h:
+            json.dump(snapshot(rows=rows, top_yield=list(top), top_growth=list(growth), run_id=run_id,
+                               finished=(stamp + timedelta(minutes=8)).isoformat()), h)
+        k.generate(now=stamp + timedelta(hours=2), translate_now=False)
+        return k.load_index()
+
+    def aaa_known(self):
+        return k.load_index()["known"][self.aaa["candidate_id"]]
+
+    def test_same_version_seen_16_days_later_then_leaving_keeps_the_real_last_observation(self):
+        self.observe("2026-10-11")
+        known = self.aaa_known()
+        self.assertEqual(len(known["timeline"]), 1)  # same claim, one version
+        self.assertEqual((known["first_seen_at"][:10], known["last_seen_at"][:10]), ("2026-09-25", "2026-10-11"))
+        self.observe("2026-10-12", rows=[row("AAA", candidate=False), row("BBB", by_yield=False)],
+                     top=(), growth=("BBB",))
+        cand, state = k.find(self.aaa["candidate_id"])
+        self.assertEqual((state, cand["observed_at"][:10]), ("not_current", "2026-10-11"))
+        self.assertEqual(cand["departure"]["reason"], "screen_condition_not_met")
+        reply = telegram_cmd.handle_command(f"/candidate {self.aaa['candidate_id']}")[0]
+        self.assertIn("스크린 조건 미충족", reply)
+        self.assertIn("2026-10-11", reply)
+        import promote
+        # Fresh by the real last observation (10/11), not the first (9/25).
+        self.assertTrue(promote.promote_candidate(cand, now_day="2026-10-20").startswith("IDEA-"))
+
+    def test_rank_outside_is_not_called_a_failed_condition(self):
+        self.observe("2026-09-26", top=("CRDO",), growth=("BBB",))
+        cand, _ = k.find(self.aaa["candidate_id"])
+        self.assertEqual(cand["departure"]["reason"], "rank_outside")
+
+    def test_a_b_a_is_rebuilt_in_time_order(self):
+        self.observe("2026-09-26", rows=[row("AAA", eps_now=2.2), row("BBB", by_yield=False), row("CRDO", by_growth=False)])
+        self.observe("2026-09-27")
+        timeline = self.aaa_known()["timeline"]
+        versions = [t["version"] for t in timeline]
+        self.assertEqual(len(versions), 3)
+        self.assertEqual(versions[0], versions[2])
+        self.assertNotEqual(versions[0], versions[1])
+        self.assertEqual(self.aaa_known()["latest_version"], versions[0])
+
+    def test_price_only_change_is_a_new_observation_of_the_same_version(self):
+        self.observe("2026-09-26", rows=[row("AAA", price_pct_90=30.0, yield_change_90_pp=1.4),
+                                         row("BBB", by_yield=False), row("CRDO", by_growth=False)])
+        known = self.aaa_known()
+        self.assertEqual(len(known["timeline"]), 1)
+        first = k.load_observation(self.aaa["observation_id"])[1]
+        latest = k.load_observation(known["latest_observation"])[1]
+        self.assertEqual((first["price"]["price_pct_90"], latest["price"]["price_pct_90"]), (10.0, 30.0))
+        self.assertEqual(latest["eps"]["yield_change_90_pp"], 1.4)
+        self.assertNotIn("yield_change_90_pp", k.load_observation(known["latest_observation"])[0]["eps"])
+
+    def test_rerendering_the_same_input_writes_no_new_observation(self):
+        before = sorted(p.name for p in k.observations_dir().glob("*.json"))
+        k.generate(now=NOW, translate_now=False)
+        self.assertEqual(sorted(p.name for p in k.observations_dir().glob("*.json")), before)
+
+    def test_registration_keeps_the_observation_it_was_made_from(self):
+        import promote
+        idea_id = promote.promote_candidate(self.aaa)
+        row_ = next(r for r in c.read_live_rows("investment_review_log") if r["idea_id"] == idea_id)
+        self.assertEqual(k.registered_observation(row_), self.aaa["observation_id"])
+        self.observe("2026-09-26", rows=[row("AAA", price_pct_90=55.0), row("BBB", by_yield=False),
+                                         row("CRDO", by_growth=False)])
+        version, obs = k.load_observation(k.registered_observation(row_))
+        then = k.telegram_card(k.assemble(version, obs, []))
+        self.assertIn("+10.0%", then)  # the price shown at registration, not today's
+        self.assertNotIn("+55.0%", then)
+
+    def test_future_observation_is_refused_and_stale_repeat_writes_nothing(self):
+        import promote
+        future = {**self.aaa, "observed_at": "2026-12-01T01:00:00+00:00"}
+        with self.assertRaises(ValueError):
+            promote.promote_candidate(future, now_day="2026-09-25")
+        idea_id = promote.promote_candidate(self.aaa, now_day="2026-09-25")
+        ledger = c.csv_path("investment_review_log").read_bytes()
+        history = c.csv_path("review_history").read_bytes()
+        # Long after the observation: the linked active idea is returned, nothing is written.
+        self.assertEqual(promote.promote_candidate(self.aaa, now_day="2027-03-01"), idea_id)
+        self.assertEqual((c.csv_path("investment_review_log").read_bytes(), c.csv_path("review_history").read_bytes()),
+                         (ledger, history))
+
+    def write_observation(self, observation_id, observed_at, currency="USD", exchange="NASDAQ"):
+        record = dict(self.base_observation)
+        record.update(observation_id=observation_id, observed_at=observed_at,
+                      identity={**record["identity"], "exchange": exchange}, eps={**record["eps"], "eps_currency": currency})
+        c.atomic_json(k.observations_dir() / f"{observation_id}.json", record)
+
+    def test_verified_target_uses_time_not_hash_name_and_holds_conflicts(self):
+        self.base_observation = c.read_json(k.observations_dir() / f"{self.aaa['observation_id']}.json", {})
+        for path in k.observations_dir().glob("*.json"):
+            path.unlink()
+        self.write_observation("OB-FFFFFFFFFFFFFFFF", "2026-09-20T01:00:00+00:00")
+        self.write_observation("OB-0000000000000000", "2026-09-24T01:00:00+00:00")
+        target = k.verified_target("NASDAQ:AAA", "AAA")
+        self.assertEqual(target["observation_id"], "OB-0000000000000000")  # latest in time, first by name
+        self.assertEqual(k.verified_target("NASDAQ:AAA", "AAA", "OB-FFFFFFFFFFFFFFFF")["observation_id"],
+                         "OB-FFFFFFFFFFFFFFFF")
+        self.write_observation("OB-1111111111111111", "2026-09-26T01:00:00+00:00", currency="EUR")
+        self.assertIn("conflict", k.verified_target("NASDAQ:AAA", "AAA"))
+
+    def test_legacy_versions_move_their_first_observation_only_and_stay_unchanged(self):
+        legacy = {"candidate_id": "CAN-1234567890ABCDEF", "candidate_version": "CV-00000000000000AA",
+                  "identity": {"entity_id": "NYSE:OLD", "ticker": "OLD", "exchange": "NYSE", "verified": True,
+                               "source": "SEC company_tickers_exchange"},
+                  "thesis_key": k.THESIS_KEY,
+                  "eps": {**{key: row("OLD")[key] for key in k.VERSION_EPS_KEYS}, "yield_change_90_pp": 2.0,
+                          "yield_change_30_pp": 1.0},
+                  "eps_provider": "Yahoo Finance earningsTrend (+1y)", "name": "Old Co", "industry": "Steel",
+                  "lists": ["A"], "missing": [], "base_classification": "found", "explanations": {}, "sources": [],
+                  "generator_version": "cards-v1", "observed_at": "2026-09-25T01:00:00+00:00",
+                  "source_snapshot": {"path": "x", "sha256": "s"}, "policy_version": "p"}
+        path = k.history_dir() / "CV-00000000000000AA.json"
+        c.atomic_json(path, legacy)
+        before = path.read_bytes()
+        k.generate(now=NOW, translate_now=False)
+        k.generate(now=NOW, translate_now=False)
+        moved = [c.read_json(p, {}) for p in k.observations_dir().glob("*.json")
+                 if c.read_json(p, {}).get("candidate_id") == "CAN-1234567890ABCDEF"]
+        self.assertEqual(len(moved), 1)
+        self.assertEqual(moved[0]["price"]["price_note"], "legacy_version_only")
+        self.assertIn("cards-v1", moved[0]["migrated"]["note"])
+        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual(k.observation_order({**moved[0], "observation_id": "OB-Z"})[1], 0)  # migrated sorts first
+        cand, state = k.find("CAN-1234567890ABCDEF")
+        self.assertEqual(state, "not_current")
+        self.assertIn("과거 기록에 주가 비교 없음", k.telegram_card(cand))
+
+    def test_observations_are_persisted(self):
+        import persist_state
+        seen = []
+
+        def fake_run(args, **kwargs):
+            seen.append(args)
+            return mock.Mock(returncode=0, stdout="")
+
+        with mock.patch.object(persist_state.subprocess, "run", side_effect=fake_run):
+            persist_state.main()
+        added = next(a for a in seen if a[1] == "add")
+        self.assertTrue(any(f"candidate_observations/{self.aaa['observation_id']}.json" in x for x in added))
+
+    def test_records_follow_the_schema_contract(self):
+        with self.assertRaises(ValueError):
+            c.validate_record("candidate_observation", {"observation_id": "x"})
+
+
 class ColumnMigrationTest(unittest.TestCase):
     def test_new_column_is_added_after_keeping_the_old_file(self):
         import migrate_v2

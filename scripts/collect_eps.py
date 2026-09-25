@@ -23,9 +23,11 @@ def load_targets():
             continue
         # A ticker tracked from a screener candidate may not be in the registry yet: use the
         # identity and currency that candidate verified. Unknown stays unknown (collection fails visibly).
-        meta = registry.get(ticker) or candidates.verified_target(row.get("entity_id", ""), ticker)
+        meta = registry.get(ticker) or candidates.verified_target(
+            row.get("entity_id", ""), ticker, candidates.registered_observation(row))
         targets[ticker] = {"ticker": ticker, "entity_id": row.get("entity_id") or meta.get("entity_id"),
-                           "idea_id": row["idea_id"], "currency": meta.get("currency", "")}
+                           "idea_id": row["idea_id"], "currency": meta.get("currency", ""),
+                           "conflict": meta.get("conflict")}
     for ticker in c.read_json(c.ROOT / "config" / "eps_watchlist.json", []):
         ticker = str(ticker).upper()
         if ticker not in targets and ticker in registry:
@@ -90,6 +92,8 @@ def main():
     added = 0
     for target in targets:
         try:
+            if target.get("conflict"):
+                raise ValueError("verified currency or exchange changed; collection held for review")
             if not target.get("currency") or not target.get("entity_id"):
                 raise ValueError("entity or currency metadata missing")
             if provider == "yahoo":

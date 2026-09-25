@@ -97,7 +97,8 @@ def screen_items(index: dict) -> tuple[list[dict], list[dict]]:
         if not cand.get("candidate_id") or cand.get("missing") or cand.get("run_quality") != "complete":
             continue
         base = {"channel": "screen", "entity_id": cand["identity"]["entity_id"], "thesis_key": cand["thesis_key"],
-                "candidate_id": cand["candidate_id"], "candidate_version": cand["candidate_version"], "cand": cand}
+                "candidate_id": cand["candidate_id"], "candidate_version": cand["candidate_version"],
+                "observation_id": cand.get("observation_id"), "cand": cand}
         if cand["classification"] == "recommended" and cand.get("approval"):
             version = cand["approval"]["candidate_version"]
             recommended.append({**base, "event": RECOMMENDATION,
@@ -186,7 +187,7 @@ def message(item: dict) -> str:
 
 def event_record(item: dict, day: str) -> dict:
     return {k: item.get(k) for k in ("channel", "event", "entity_id", "thesis_key", "candidate_id",
-                                     "candidate_version", "signal_id")} | {"day": day, "status": "reserved",
+                                     "candidate_version", "observation_id", "signal_id")} | {"day": day, "status": "reserved",
                                                                           "attempts": []}
 
 

@@ -96,6 +96,14 @@ TABLES = SCHEMA["tables"]
 ENUMS = SCHEMA.get("enums", {})
 
 
+def validate_record(kind: str, record: dict[str, Any]) -> dict[str, Any]:
+    """Refuse a JSON record that lacks a field its contract in schema.json requires."""
+    missing = [k for k in SCHEMA["json_records"][kind] if k not in record]
+    if missing:
+        raise ValueError(f"{kind} missing {missing}")
+    return record
+
+
 def table_def(table: str) -> dict[str, Any]:
     if table not in TABLES:
         valid = ", ".join(TABLES)

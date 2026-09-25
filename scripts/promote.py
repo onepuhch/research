@@ -62,8 +62,10 @@ def promote_signal(signal, idea_type="병목 확산형", strength="1", trigger="
 def promote_candidate(cand, now_day=None):
     """Register the user's choice to track a screener candidate. No signal is invented.
 
-    Same entity + thesis returns the existing idea (linking this candidate once).
-    Every refusal is a ValueError raised before any write; OSError propagates for retry.
+    Same entity + thesis returns the existing idea (linking this candidate once). A repeat
+    for an already linked active idea returns its ID before any freshness check and writes
+    nothing. A closed idea is never reopened. Every refusal is a ValueError raised before
+    any write; OSError propagates for retry.
     """
     import candidates
     today = date.fromisoformat(now_day or c.today())
@@ -72,20 +74,23 @@ def promote_candidate(cand, now_day=None):
     eps = cand.get("eps") or {}
     if not candidates.normalize_id(cid) or not identity.get("verified") or not identity.get("entity_id"):
         raise ValueError("candidate identity not verified")
-    if not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", identity.get("ticker", "")) or not eps.get("eps_currency"):
+    entity, ticker, thesis = identity["entity_id"], identity.get("ticker", ""), cand["thesis_key"]
+    active = [row for row in c.read_live_rows("investment_review_log")
+              if row.get("entity_id") == entity and row.get("thesis_key") == thesis
+              and row.get("검토 상태") != "종료" and row.get("현재 단계") != "제외"]
+    for row in active:
+        if cid in json.loads(row.get("origin_candidate_ids") or "[]"):
+            return row["idea_id"]
+    if not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", ticker) or not eps.get("eps_currency"):
         raise ValueError("candidate ticker or estimate currency missing")
-    observed = date.fromisoformat(str(cand.get("observed_at", ""))[:10])
+    # Freshness is the real last observation, as a KST date; a future observation is refused.
+    observed = date.fromisoformat(candidates.kst_date(str(cand.get("observed_at", ""))))
+    if observed > today:
+        raise ValueError("candidate observation in the future")
     if (today - observed).days > c.policy()["signal_lookback_days"]:
         raise ValueError("candidate observation too old; view the latest screen first")
-    entity, ticker, thesis = identity["entity_id"], identity["ticker"], cand["thesis_key"]
-    for row in c.read_live_rows("investment_review_log"):
-        if row.get("entity_id") != entity or row.get("thesis_key") != thesis:
-            continue
-        if row.get("검토 상태") == "종료" or row.get("현재 단계") == "제외":
-            continue
+    for row in active:
         linked = json.loads(row.get("origin_candidate_ids") or "[]")
-        if cid in linked:
-            return row["idea_id"]
         return add_entry.process({"target_table": "investment_review_log", "data": {
             "idea_id": row["idea_id"], "origin_candidate_ids": json.dumps([*linked, cid]),
             "변경 사유": f"동일 가설에 후보 연결: {cid} 버전 {cand['candidate_version']}",
@@ -106,6 +111,7 @@ def promote_candidate(cand, now_day=None):
         "origin_signal_ids": "[]", "origin_candidate_ids": json.dumps([cid]),
         "출처URL": f"https://finance.yahoo.com/quote/{symbol}/analysis",
         "당시 판단": (f"EPS 상향 원인·지속성 검토 | 후보 {cid} 버전 {cand['candidate_version']} | "
+                   f"관측 {cand.get('observation_id') or '미기록'} | "
                    f"원자료 {snapshot.get('path', '')} ({str(snapshot.get('sha256', ''))[:12]}) | 사용자 추적 선택"),
         "현재 단계": "관찰", "아이디어 유형": "사이클 리비전형", "근거 강도": "1",
         "핵심 근거": (f"등록 기준({str(cand.get('observed_at', ''))[:16]} UTC, Yahoo earningsTrend +1y, "

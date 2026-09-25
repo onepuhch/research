@@ -356,6 +356,21 @@
       "미확인"
     ]
   },
+  "json_records": {
+    "_comment": "Required fields of the JSON records the candidate pipeline writes (validated before each write).",
+    "candidate_version": [
+      "candidate_id", "candidate_version", "identity", "thesis_key", "eps", "eps_provider", "lists",
+      "missing", "base_classification", "explanations", "sources", "generator_version"
+    ],
+    "candidate_observation": [
+      "observation_id", "candidate_id", "candidate_version", "entity_id", "thesis_key", "identity",
+      "observed_at", "source_snapshot", "eps", "price", "memberships", "run_quality", "classification",
+      "policy_version", "generator_version"
+    ],
+    "candidate_alert_event": [
+      "channel", "event", "entity_id", "thesis_key", "day", "status", "attempts"
+    ]
+  },
   "version": 2,
   "research_case": {
     "required": [

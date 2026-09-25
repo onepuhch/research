@@ -17,6 +17,7 @@ def main():
     files += list((c.DATA_DIR / 'consensus_history').glob('*.json'))
     files += list((c.DATA_DIR / 'revision_screen').glob('*.json.gz'))
     files += list((c.DATA_DIR / 'candidate_history').glob('CV-*.json'))
+    files += list((c.DATA_DIR / 'candidate_observations').glob('OB-*.json'))
     files += [c.DATA_DIR / 'candidates' / 'index.json', c.DATA_DIR / 'candidate_evidence.json',
               c.DATA_DIR / 'translation_cache.json']
     files += [c.ROOT / 'docs' / 'data_history.md', c.ROOT / 'docs' / 'revision_screen.md',

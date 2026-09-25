@@ -11,13 +11,16 @@ Identity
   "eps-revision-review:v1": review the business cause and persistence of an
   EPS estimate upgrade. It does not claim a bottleneck.
 
-Versions
-  candidate_version is a hash of what the card claims: identity, estimate
-  numbers and target period, which screen lists it met, classification inputs,
-  explanations and their sources. Collection times, ranks and the daily price
-  window are observations of that version, not a new version. Each version is
-  stored once, immutably, in candidate_history/{version}.json with the source
-  snapshot path, SHA256, observation time and generator/policy versions.
+Versions and observations
+  candidate_version is a hash of what the card claims: identity, raw estimate
+  numbers, target period and basis, which screen lists it met, data status,
+  explanations and their sources. Each version is stored once, immutably, in
+  candidate_history/{version}.json.
+  Every time a candidate is seen, an immutable observation is stored in
+  candidate_observations/{observation_id}.json: the real observation time, the
+  source snapshot path and full SHA256, the price window, ranks, quality, the
+  price-based yield change and the version it showed. First/last seen and the
+  version timeline are rebuilt from observations, never from version files.
 
 States (kept separate)
   data quality          complete / partial run / needs_evidence reasons
@@ -43,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v1"
+GENERATOR_VERSION = "cards-v2"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -61,6 +64,7 @@ PRICE_NOTES = {
     "stale_end_price": "최근 종가가 오래됨", "window_not_covered": "90일 전 종가 없음(거래 기간 부족)",
     "stale_start_price": "시작 종가가 기준일보다 7일 넘게 이전", "split_in_window": "기간 중 주식분할(PER 비교 생략)",
     "price_not_retrieved": "주가 조회 실패",
+    "legacy_version_only": "과거 기록에 주가 비교 없음",
 }
 
 
@@ -76,6 +80,10 @@ def index_path() -> Path:
 
 def history_dir() -> Path:
     return c.DATA_DIR / "candidate_history"
+
+
+def observations_dir() -> Path:
+    return c.DATA_DIR / "candidate_observations"
 
 
 def evidence_path() -> Path:
@@ -228,6 +236,16 @@ def base_sources(ticker: str, observed_at: str, profile_observed: bool) -> list[
     return sources
 
 
+# EPS fields that identify the claim. yield_change_* divides by the price, so it is an observation.
+VERSION_EPS_KEYS = ("eps_now", "eps_30d", "eps_90d", "eps_target_period", "eps_currency", "eps_basis",
+                    "analysts", "up30", "down30", "pct_90", "steady", "turnaround")
+MARKET_EPS_KEYS = ("yield_change_90_pp", "yield_change_30_pp")
+
+
+def observation_key(cid: str, snapshot_sha256: str, version: str, policy: str) -> str:
+    return "OB-" + digest([cid, snapshot_sha256, version, policy])[:16].upper()
+
+
 def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, translations: dict,
           ideas: list[dict], policy_version: str) -> list[dict]:
     """Candidates in display order from one screener snapshot (pure: no I/O)."""
@@ -266,9 +284,7 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
         content = {
             "candidate_id": cid, "identity": identity, "thesis_key": THESIS_KEY,
             "name": row.get("name"), "industry": row.get("industry"), "sector": row.get("sector"),
-            "eps": {k: row.get(k) for k in ("eps_now", "eps_30d", "eps_90d", "eps_target_period", "eps_currency",
-                                            "eps_basis", "analysts", "up30", "down30", "pct_90",
-                                            "yield_change_90_pp", "yield_change_30_pp", "steady", "turnaround")},
+            "eps": {k: row.get(k) for k in VERSION_EPS_KEYS},
             "eps_provider": "Yahoo Finance earningsTrend (+1y)",
             "lists": sorted({m["list"] for m in lists}),
             "missing": missing,
@@ -286,7 +302,10 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             review_note = ("승인 후 내용이 바뀜: 재검토 필요" if approval.get("candidate_version") != version
                            else "승인 근거 불충분: " + ", ".join(problems))
         result.append({
-            **content, "candidate_version": version, "classification": classification,
+            **content, "eps": {**content["eps"], **{k: row.get(k) for k in MARKET_EPS_KEYS}},
+            "candidate_version": version, "classification": classification,
+            "observation_id": (observation_key(cid, snapshot_ref.get("sha256", ""), version, policy_version)
+                               if cid else None),
             "approval": approval if approved else None, "review_note": review_note,
             "evidence_problems": problems,
             "display_rank": position, "memberships": lists,
@@ -306,15 +325,28 @@ def content_version(content: dict) -> str:
 
 
 def version_record(candidate: dict) -> dict:
-    """The immutable part of a version, with the observation it was first seen in."""
+    """The immutable claim of a version (no observation time, price window or rank)."""
     keys = ("candidate_id", "candidate_version", "identity", "thesis_key", "name", "industry", "sector",
-            "eps", "eps_provider", "lists", "missing", "base_classification", "explanations", "sources",
-            "generator_version", "source_snapshot", "observed_at", "policy_version")
-    return {k: candidate.get(k) for k in keys}
+            "eps_provider", "lists", "missing", "base_classification", "explanations", "sources",
+            "generator_version")
+    record = {k: candidate.get(k) for k in keys}
+    record["eps"] = {k: candidate["eps"].get(k) for k in VERSION_EPS_KEYS}
+    return c.validate_record("candidate_version", record)
+
+
+def observation_record(candidate: dict) -> dict:
+    """What was seen at one observation: enough to show the card as it was then."""
+    record = {k: candidate.get(k) for k in (
+        "observation_id", "candidate_id", "candidate_version", "thesis_key", "identity", "observed_at",
+        "source_snapshot", "eps", "price", "display_rank", "memberships", "lists", "missing", "run_quality",
+        "scope_note", "classification", "policy_version", "generator_version", "market_cap")}
+    record["entity_id"] = candidate["identity"]["entity_id"]
+    record["approval_version"] = (candidate.get("approval") or {}).get("candidate_version")
+    return c.validate_record("candidate_observation", record)
 
 
 def store_versions(cands: list[dict]) -> int:
-    """Write each new version once; an existing file must hold the same content."""
+    """Write each new version once; an existing file must hold the same claim."""
     written = 0
     for cand in cands:
         if not cand["candidate_id"]:
@@ -331,36 +363,133 @@ def store_versions(cands: list[dict]) -> int:
     return written
 
 
-def known_candidates() -> dict:
-    """candidate_id -> first/last seen, versions and full key, rebuilt from history."""
-    known: dict[str, dict] = {}
+def store_observations(cands: list[dict]) -> int:
+    """One immutable file per observation; re-rendering the same input writes nothing."""
+    written = 0
+    for cand in cands:
+        if not cand.get("observation_id"):
+            continue
+        record = observation_record(cand)
+        path = observations_dir() / f"{record['observation_id']}.json"
+        if path.exists():
+            if c.read_json(path, {}).get("candidate_id") != record["candidate_id"]:
+                raise ValueError(f"observation collision {record['observation_id']}")
+            continue
+        c.atomic_json(path, record)
+        written += 1
+    return written
+
+
+def migrate_legacy_versions(now: datetime) -> int:
+    """cards-v1 version files carried their first observation; move only that one, marked as migrated.
+
+    No later observation is invented. The version file itself is left unchanged.
+    """
+    referenced = {c.read_json(p, {}).get("candidate_version") for p in observations_dir().glob("OB-*.json")}
+    moved = 0
     for path in sorted(history_dir().glob("CV-*.json")):
         record = c.read_json(path, {})
-        cid = record.get("candidate_id")
-        if not cid:
+        if record.get("candidate_version") in referenced or not record.get("observed_at"):
             continue
-        key = f"{record['identity']['entity_id']}|{record['thesis_key']}"
-        item = known.setdefault(cid, {"key": key, "first_seen_at": record["observed_at"], "versions": []})
-        if item["key"] != key:
-            raise ValueError(f"candidate id collision {cid}: {item['key']} vs {key}")
-        item["first_seen_at"] = min(item["first_seen_at"], record["observed_at"])
-        item["versions"].append({"version": record["candidate_version"], "observed_at": record["observed_at"]})
-    for item in known.values():
-        item["versions"].sort(key=lambda v: v["observed_at"])
+        snapshot = record.get("source_snapshot") or {}
+        obs = {
+            "observation_id": observation_key(record["candidate_id"], snapshot.get("sha256", ""),
+                                              record["candidate_version"], record.get("policy_version", "")),
+            "candidate_id": record["candidate_id"], "candidate_version": record["candidate_version"],
+            "entity_id": record["identity"]["entity_id"], "thesis_key": record["thesis_key"],
+            "identity": record["identity"], "observed_at": record["observed_at"], "source_snapshot": snapshot,
+            "eps": record.get("eps", {}), "lists": record.get("lists", []), "missing": record.get("missing", []),
+            "price": {"price_status": "unknown", "price_note": "legacy_version_only"},
+            "display_rank": None, "memberships": [], "run_quality": "unknown", "scope_note": None,
+            "classification": record.get("base_classification"), "policy_version": record.get("policy_version"),
+            "generator_version": record.get("generator_version"), "approval_version": None,
+            "migrated": {"from": f"candidate_history/{path.name}", "at": now.isoformat(timespec="seconds"),
+                         "note": "cards-v1 first observation only; later observations were not recorded"},
+        }
+        c.atomic_json(observations_dir() / f"{obs['observation_id']}.json", c.validate_record("candidate_observation", obs))
+        moved += 1
+    return moved
+
+
+def observation_order(record: dict) -> tuple:
+    # At the same instant a migrated cards-v1 record precedes the record the current generator made.
+    return (record["observed_at"], 0 if record.get("migrated") else 1, record["observation_id"])
+
+
+def known_candidates() -> dict:
+    """candidate_id -> first/last seen, latest observation and version timeline, from observations."""
+    by_id: dict[str, list[dict]] = {}
+    for path in observations_dir().glob("OB-*.json"):
+        record = c.read_json(path, {})
+        if record.get("candidate_id"):
+            by_id.setdefault(record["candidate_id"], []).append(record)
+    known = {}
+    for cid, records in by_id.items():
+        records.sort(key=observation_order)
+        keys = {f"{r['entity_id']}|{r['thesis_key']}" for r in records}
+        if len(keys) != 1:
+            raise ValueError(f"candidate id collision {cid}: {sorted(keys)}")
+        timeline = []
+        for r in records:  # version segments in time order: A -> B -> A stays three segments
+            if not timeline or timeline[-1]["version"] != r["candidate_version"]:
+                timeline.append({"version": r["candidate_version"], "from": r["observed_at"], "to": r["observed_at"]})
+            timeline[-1]["to"] = r["observed_at"]
+        known[cid] = {"key": keys.pop(), "ticker": records[-1]["identity"]["ticker"],
+                      "first_seen_at": records[0]["observed_at"], "last_seen_at": records[-1]["observed_at"],
+                      "latest_observation": records[-1]["observation_id"],
+                      "latest_version": records[-1]["candidate_version"], "timeline": timeline}
     return known
 
 
-def verified_target(entity_id: str, ticker: str) -> dict:
-    """Entity, ticker and currency a candidate version verified, for tickers not in the registry."""
-    for path in sorted(history_dir().glob("CV-*.json"), reverse=True):
-        record = c.read_json(path, {})
-        identity = record.get("identity") or {}
-        if identity.get("verified") and identity.get("entity_id") == entity_id and identity.get("ticker") == ticker:
-            currency = (record.get("eps") or {}).get("eps_currency")
-            if currency:
-                return {"entity_id": entity_id, "currency": currency, "exchange": identity.get("exchange"),
-                        "identity_source": identity.get("source")}
-    return {}
+def assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
+    """A card as it was at one stored observation, with today's tracking state."""
+    explanations = {"company_description_ko": {"text": None, "kind": "fact", "source_ids": [], "status": "unknown"},
+                    **{f: {"statements": [], "reason": "기록 없음"} for f in EXPLANATIONS},
+                    **(version.get("explanations") or {})}
+    return {**version, "explanations": explanations, "sources": version.get("sources") or [],
+            "memberships": [], "missing": version.get("missing") or [],
+            "eps": {**version.get("eps", {}), **(observation.get("eps") or {})},
+            **{k: observation.get(k) for k in ("observation_id", "observed_at", "price", "display_rank",
+                                               "memberships", "run_quality", "scope_note", "classification",
+                                               "source_snapshot", "policy_version", "market_cap")},
+            "approval": None, "review_note": None, "evidence_problems": [],
+            "tracking": ledger_tracking(version["identity"]["entity_id"], ideas)}
+
+
+def load_observation(observation_id: str) -> tuple[dict, dict] | None:
+    obs = c.read_json(observations_dir() / f"{observation_id}.json", None)
+    if obs is None:
+        return None
+    return c.read_json(history_dir() / f"{obs['candidate_version']}.json", {}), obs
+
+
+def registered_observation(idea: dict) -> str | None:
+    match = re.search(r"관측 (OB-[0-9A-F]{16})", idea.get("당시 판단", ""))
+    return match.group(1) if match else None
+
+
+def verified_target(entity_id: str, ticker: str, registration: str | None = None) -> dict:
+    """Entity, ticker and currency verified by candidate observations, for tickers not in the registry.
+
+    The observation recorded at registration comes first; later observations are compared in
+    observation time (never by hash file name). A later currency or exchange change is a conflict:
+    collection is held and the conflict reported instead of silently switching.
+    """
+    records = sorted((r for r in (c.read_json(p, {}) for p in observations_dir().glob("OB-*.json"))
+                      if r.get("entity_id") == entity_id and (r.get("identity") or {}).get("ticker") == ticker
+                      and (r.get("identity") or {}).get("verified") and (r.get("eps") or {}).get("eps_currency")),
+                     key=observation_order)
+    if not records:
+        return {}
+    registered = next((r for r in records if r["observation_id"] == registration), None)
+    base = registered or records[-1]
+    # Compare from the registration on; without one, every verified observation must agree.
+    compared = [r for r in records if registered is None or observation_order(r) >= observation_order(registered)]
+    seen = {((r["eps"] or {}).get("eps_currency"), r["identity"].get("exchange")) for r in compared}
+    if len(seen) > 1:
+        return {"entity_id": entity_id, "conflict": sorted(str(x) for x in seen)}
+    return {"entity_id": entity_id, "currency": base["eps"]["eps_currency"], "exchange": base["identity"].get("exchange"),
+            "identity_source": base["identity"].get("source"), "observation_id": base["observation_id"]}
 
 
 # ------------------------------------------------------------------ translation
@@ -596,17 +725,34 @@ def load_index() -> dict:
     return c.read_json(index_path(), {})
 
 
+KST = timezone(timedelta(hours=9))
+DEPARTURES = {
+    "rank_outside": "스크린 조건은 통과했지만 A·B 상위 목록 밖",
+    "screen_condition_not_met": "최신 관측에서 스크린 조건 미충족",
+    "not_observed": "최신 관측에서 EPS 자료 없음 또는 조회 대상 제외",
+}
+
+
+def kst_date(stamp: str) -> str:
+    return datetime.fromisoformat(stamp).astimezone(KST).date().isoformat()
+
+
 def find(cid: str) -> tuple[dict | None, str]:
-    """(candidate, state) where state is current / stale / not_current / unknown."""
+    """(candidate, state) where state is current / stale / not_current / unknown.
+
+    A candidate that left the list is shown as it was at its latest stored observation.
+    """
     index = load_index()
     for cand in index.get("candidates", []):
         if cand["candidate_id"] and cand["candidate_id"] == cid:
             return cand, "stale" if index.get("stale") else "current"
     known = index.get("known", {}).get(cid)
-    if known:
-        last = known["versions"][-1]["version"]
-        record = c.read_json(history_dir() / f"{last}.json", None)
-        return record, "not_current"
+    loaded = load_observation(known["latest_observation"]) if known else None
+    if loaded:
+        version, obs = loaded
+        cand = assemble(version, obs, c.read_live_rows("investment_review_log"))
+        cand["departure"] = (index.get("departed") or {}).get(cid)
+        return cand, "not_current"
     return None, "unknown"
 
 
@@ -649,17 +795,12 @@ def telegram_candidate(argument: str) -> list[str]:
     if state == "unknown":
         return [f"없는 후보 ID입니다: {esc(cid)}. /screen으로 최신 목록을 확인해 주세요."]
     if state == "not_current":
-        note = (f"⚠️ 최신 후보 목록에 없습니다. 마지막 관측 {esc(cand['observed_at'][:10])} 기준 기록입니다.\n\n")
-        return [note + telegram_history_card(cand)]
+        reason = DEPARTURES.get((cand.get("departure") or {}).get("reason"), "이유 미확인")
+        note = (f"⚠️ 최신 후보 목록에 없습니다({esc(reason)}). 아래는 마지막 관측 "
+                f"{esc(kst_date(cand['observed_at']))}(KST) 당시 카드입니다.\n\n")
+        return [note + telegram_card(cand)]
     stale = load_index().get("stale") if state == "stale" else None
     return [telegram_card(cand, stale)]
-
-
-def telegram_history_card(record: dict) -> str:
-    eps = record["eps"]
-    return (f"<b>{esc(record['identity']['ticker'])} {esc(record.get('name') or '')}</b>\n"
-            f"{esc(record['candidate_id'])} · 버전 {esc(record['candidate_version'])}\n"
-            f"내년 EPS 예상 ({esc(eps['eps_target_period'])}) {esc(money(eps['eps_90d']))} → {esc(money(eps['eps_now']))}")
 
 
 def render_markdown(index: dict) -> str:
@@ -733,6 +874,7 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
                       c.read_json(evidence_path(), {}), cache,
                       c.read_live_rows("investment_review_log"), policy_version())
         report["new_versions"] = store_versions(cands)
+        report["new_observations"] = store_observations(cands)
         earnings = snapshot.get("stages", {}).get("earnings", {})
         index.update(observed_at=snapshot["run"]["finished_at"], run_status=snapshot["run"]["status"],
                      source_snapshot=ref, screen_candidates=sum(1 for r in derived.get("rows", []) if r.get("candidate")),
@@ -742,9 +884,22 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
                      # Unidentified rows stay visible (no ID, no tracking command) instead of vanishing.
                      candidates=cands,
                      unidentified=[x["identity"]["ticker"] for x in cands if not x["candidate_id"]])
+    report["migrated_legacy"] = migrate_legacy_versions(now)
     index["known"] = known_candidates()
     for cand in index["candidates"]:
-        cand["first_seen_at"] = index["known"].get(cand["candidate_id"] or "", {}).get("first_seen_at")
+        seen = index["known"].get(cand["candidate_id"] or "", {})
+        cand["first_seen_at"], cand["last_seen_at"] = seen.get("first_seen_at"), seen.get("last_seen_at")
+    if choice["valid"] and not choice["stale"]:
+        # Why a known candidate is not on today's list, only as far as today's snapshot shows.
+        current = {x["candidate_id"] for x in index["candidates"]}
+        rows = {r["ticker"]: r for r in choice["valid"]["snapshot"].get("derived", {}).get("rows", [])}
+        index["departed"] = {}
+        for cid, item in index["known"].items():
+            if cid in current:
+                continue
+            row = rows.get(item["ticker"])
+            reason = "not_observed" if row is None else ("rank_outside" if row.get("candidate") else "screen_condition_not_met")
+            index["departed"][cid] = {"reason": reason, "as_of": index["observed_at"]}
     c.atomic_json(index_path(), index)
     (c.ROOT / "docs" / "candidates.md").write_text(render_markdown(index), encoding="utf-8")
     out = c.ROOT / "reports" / "generated"
