@@ -94,6 +94,10 @@ def translation_path() -> Path:
     return c.DATA_DIR / "translation_cache.json"
 
 
+def rejection_path() -> Path:
+    return c.DATA_DIR / "translation_rejects.json"
+
+
 def settings() -> dict:
     return {**DEFAULTS, **c.policy().get("candidate_cards", {})}
 
@@ -207,13 +211,18 @@ def price_block(row: dict) -> dict:
     return block
 
 
-def ledger_tracking(entity_id: str | None, ideas: list[dict]) -> dict:
+def ledger_tracking(entity_id: str | None, ideas: list[dict], thesis: str = THESIS_KEY) -> dict:
+    """tracked: this thesis is tracked. entity_tracked: the company is tracked under another
+    thesis only (never merged automatically). closed / untracked."""
     if not entity_id:
         return {"status": "untracked", "idea_ids": []}
     rows = [r for r in ideas if r.get("entity_id") == entity_id]
     active = [r for r in rows if r.get("현재 단계") != "제외" and r.get("검토 상태") != "종료"]
+    same = [r for r in active if r.get("thesis_key") == thesis]
+    if same:
+        return {"status": "tracked", "idea_ids": [r["idea_id"] for r in same]}
     if active:
-        return {"status": "tracked", "idea_ids": [r["idea_id"] for r in active]}
+        return {"status": "entity_tracked", "idea_ids": [r["idea_id"] for r in active]}
     if rows:
         return {"status": "closed", "idea_ids": [r["idea_id"] for r in rows]}
     return {"status": "untracked", "idea_ids": []}
@@ -223,8 +232,10 @@ def evidence_problems(entry: dict | None) -> list[str]:
     """Why human evidence is not enough for a recommendation (empty = sufficient)."""
     if not entry:
         return ["evidence_missing"]
-    sources = {s.get("id") for s in entry.get("sources", []) if s.get("id") and safe_url(s.get("url"))}
-    problems = []
+    problems = [f"source_{s.get('id') or '?'}_incomplete" for s in entry.get("sources", []) if not source_complete(s)]
+    sources = {s.get("id") for s in entry.get("sources", []) if source_complete(s)}
+    if entry.get("review_status") == "needs_evidence":
+        problems.append("marked_needs_evidence")
     for field in EXPLANATIONS:
         statements = entry.get("explanations", {}).get(field) or []
         if not statements:
@@ -235,6 +246,25 @@ def evidence_problems(entry: dict | None) -> list[str]:
             elif not statement.get("source_ids") or not set(statement["source_ids"]) <= sources:
                 problems.append(f"{field}_unsourced")
     return sorted(set(problems))
+
+
+def source_complete(source: dict) -> bool:
+    """A cited source names what it is, who published it, when it was seen and what it supports.
+    published_at may be null (unknown) but must be stated."""
+    def dated(value):
+        try:
+            datetime.fromisoformat(str(value)[:10])
+            return True
+        except ValueError:
+            return False
+    return (bool(source.get("id")) and safe_url(source.get("url")) and bool(str(source.get("title", "")).strip())
+            and bool(str(source.get("provider", "")).strip()) and dated(source.get("observed_at"))
+            and "published_at" in source and (source["published_at"] is None or dated(source["published_at"]))
+            and bool(str(source.get("quote") or source.get("fields") or "").strip()))
+
+
+def evidence_hash(entry: dict | None) -> str:
+    return digest({k: v for k, v in (entry or {}).items() if k != "approval"})
 
 
 def safe_url(url: Any) -> bool:
@@ -287,6 +317,7 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
                         "status": "translated", "model": translated.get("model")} if translated else
                        {"text": None, "kind": "fact", "source_ids": ["yahoo-profile"] if summary_text else [],
                         "status": "pending" if summary_text else "no_profile_text"})
+        description["source_text"] = summary_text or None  # the English original, reviewable next to it
         price = price_block(row)
         missing = []
         if not identity["verified"]:
@@ -297,6 +328,7 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             missing.append({"field": "industry", "reason": "profile_missing"})
         human = evidence.get(cid) if cid else None
         problems = evidence_problems(human)
+        flagged = (human or {}).get("review_status") == "needs_evidence"
         explanations = {"company_description_ko": description}
         for field in EXPLANATIONS:
             statements = (human or {}).get("explanations", {}).get(field) or []
@@ -309,14 +341,19 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "eps_provider": "Yahoo Finance earningsTrend (+1y)",
             "lists": sorted({m["list"] for m in lists}),
             "missing": missing,
-            "base_classification": "needs_evidence" if missing else "found",
+            # Data completeness (missing) and a human 'needs evidence' mark are shown apart.
+            "evidence_review": ({"status": "needs_evidence", "reason": (human or {}).get("review_reason") or "사유 미기재"}
+                                if flagged else None),
+            "base_classification": "needs_evidence" if missing or flagged else "found",
             "explanations": explanations,
             "sources": base_sources(ticker, observed, bool(summary_text)) + list((human or {}).get("sources", [])),
             "generator_version": GENERATOR_VERSION,
         }
         version = content_version(content)
         approval = (human or {}).get("approval")
-        approved = bool(approval) and approval.get("candidate_version") == version and not problems
+        approved = (bool(approval) and approval.get("candidate_version") == version and not problems
+                    and not missing and not flagged
+                    and approval.get("evidence_sha256", evidence_hash(human)) == evidence_hash(human))
         classification = "recommended" if approved else content["base_classification"]
         review_note = None
         if approval and not approved:
@@ -333,7 +370,7 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "price": price, "market_cap": row.get("market_cap"),
             "observed_at": observed, "run_quality": "partial" if partial else "complete",
             "scope_note": "확보 범위 내 순위 (일부 조회 누락)" if partial else "전체 조회 범위 순위",
-            "tracking": ledger_tracking(identity["entity_id"], ideas),
+            "tracking": ledger_tracking(identity["entity_id"], ideas, THESIS_KEY),
             "source_snapshot": snapshot_ref, "policy_version": policy_version,
         })
     return result
@@ -474,7 +511,7 @@ def assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
                                                "memberships", "run_quality", "scope_note", "classification",
                                                "source_snapshot", "policy_version", "market_cap")},
             "approval": None, "review_note": None, "evidence_problems": [],
-            "tracking": ledger_tracking(version["identity"]["entity_id"], ideas)}
+            "tracking": ledger_tracking(version["identity"]["entity_id"], ideas, version.get("thesis_key", THESIS_KEY))}
 
 
 def load_observation(observation_id: str) -> tuple[dict, dict] | None:
@@ -528,16 +565,25 @@ def translation_prompt(items: dict[str, str]) -> str:
         + json.dumps(items, ensure_ascii=False, indent=1))
 
 
-def valid_translation(text: Any, source: str) -> bool:
-    if not isinstance(text, str) or not 8 <= len(text.strip()) <= 160:
-        return False
+def translation_problem(text: Any, source: str) -> str | None:
+    """Why a translation is refused. Passing is not proof of meaning; the original stays reviewable."""
+    if not isinstance(text, str) or not text.strip():
+        return "missing"
+    if not 8 <= len(text.strip()) <= 160:
+        return "length"
     if not re.search(r"[가-힣]", text):
-        return False
+        return "not_korean"
     # Numbers that are not in the source text would be invented facts.
-    return set(re.findall(r"\d+", text)) <= set(re.findall(r"\d+", source))
+    if not set(re.findall(r"\d+", text)) <= set(re.findall(r"\d+", source)):
+        return "numbers_not_in_source"
+    return None
 
 
-def translate(rows: list[dict], cache: dict, api_key: str, cfg: dict, call=None) -> dict:
+def valid_translation(text: Any, source: str) -> bool:
+    return translation_problem(text, source) is None
+
+
+def translate(rows: list[dict], cache: dict, api_key: str, cfg: dict, call=None, rejects: dict | None = None) -> dict:
     """Fill the cache for untranslated summaries in batches, within the shared daily budget."""
     import extract
     if call is None:
@@ -565,12 +611,19 @@ def translate(rows: list[dict], cache: dict, api_key: str, cfg: dict, call=None)
             continue
         for ticker, source in batch.items():
             text = answer.get(ticker) if isinstance(answer, dict) else None
-            if valid_translation(text, source):
+            problem = translation_problem(text, source)
+            if problem is None:
                 cache[translation_key(source)] = {"text_ko": text.strip(), "model": extract.GEMINI_MODEL,
                                                   "prompt_version": TRANSLATION_PROMPT_VERSION,
                                                   "created_at": c.utc_now()}
                 report["translated"] += 1
             else:
+                # Kept with the source hash; the next daily run tries again within the budget.
+                key = translation_key(source)
+                previous = (rejects if rejects is not None else {}).get(key, {})
+                if rejects is not None:
+                    rejects[key] = {"ticker": ticker, "reason": problem, "source_sha256": key,
+                                    "at": c.utc_now(), "attempts": previous.get("attempts", 0) + 1}
                 report["rejected"] += 1
     return report
 
@@ -624,15 +677,20 @@ def price_line(cand: dict) -> str:
 
 
 def headline(cand: dict) -> str:
-    label = "추적 추천" if cand["classification"] == "recommended" else (
-        "발굴 후보 · 자료 보강 필요" if cand["classification"] == "needs_evidence" else "발굴 후보")
-    return label
+    if cand["classification"] == "recommended":
+        return "추적 추천"
+    if cand.get("missing"):
+        return "발굴 후보 · 자료 부족"
+    if cand.get("evidence_review"):
+        return "발굴 후보 · 근거 보강 필요"
+    return "발굴 후보"
 
 
 def tracking_label(cand: dict) -> str:
     t = cand["tracking"]
-    return {"tracked": f"추적 중 ({', '.join(t['idea_ids'])})", "closed": "추적 종료됨",
-            "untracked": "미추적"}[t["status"]]
+    return {"tracked": f"이 가설 추적 중 ({', '.join(t['idea_ids'])})",
+            "entity_tracked": f"기업은 추적 중·이 가설 미등록 ({', '.join(t['idea_ids'])})",
+            "closed": "추적 종료됨", "untracked": "미추적"}[t["status"]]
 
 
 def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, str]]:
@@ -648,6 +706,10 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
         lines.append(("warn", cand["scope_note"]))
     lines.append(("section", "무엇으로 돈을 버나"))
     lines.append(("text", desc["text"] if desc["text"] else f"회사 설명 확인 중 ({cand['identity']['ticker']})"))
+    if desc.get("source_text"):
+        lines.append(("source_text", desc["source_text"]))
+    if cand.get("evidence_review"):
+        lines.append(("warn", f"근거 보강 필요(사람 지정): {cand['evidence_review']['reason']}"))
     lines.append(("section", "후보가 된 이유"))
     lines += [("item", x) for x in selection_lines(cand)]
     lines.append(("section", f"숫자 (관측 {cand['observed_at'][:16].replace('T', ' ')} UTC)"))
@@ -686,9 +748,10 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
     lines.append(("section", "출처"))
     for s in cand["sources"]:
         lines.append(("link", f"{s['title']}|{s['url']}|{(s.get('observed_at') or '')[:10]}"))
-    if cand["tracking"]["status"] == "tracked":
+    status = cand["tracking"]["status"]
+    if status in ("tracked", "entity_tracked"):
         lines.append(("command", f"/history {cand['identity']['ticker']}"))
-    elif cand["candidate_id"]:
+    if status != "tracked" and cand["candidate_id"]:
         lines.append(("command", f"/track {cand['candidate_id']}"))
     return lines
 
@@ -708,6 +771,8 @@ def telegram_card(cand: dict, stale: list[str] | None = None) -> str:
             title, url, observed = text.split("|")
             if safe_url(url):
                 out.append(f'· <a href="{esc(url)}">{esc(title)}</a> (관측 {esc(observed)})')
+        elif kind == "source_text":
+            continue
         elif kind == "command":
             label = "관측 이력" if text.startswith("/history") else "추적 등록"
             out.append(f"\n{label}: <code>{esc(text)}</code>")
@@ -733,6 +798,8 @@ def markdown_card(cand: dict, stale: list[str] | None = None) -> str:
             title, url, observed = text.split("|")
             if safe_url(url):
                 out.append(f"- [{title}]({url}) (관측 {observed})")
+        elif kind == "source_text":
+            out.append(f"<small>원문(영문): {text_md}</small>")
         elif kind == "command":
             out.append(f"\n텔레그램: `{text}`")
         else:
@@ -849,13 +916,30 @@ def render_markdown(index: dict) -> str:
     lines.append("")
     for cand in index["candidates"]:
         lines += [markdown_card(cand, index.get("stale")), ""]
+    departed = departed_rows(index)
+    if departed:
+        lines += ["## 최근 목록에서 빠진 후보", "", "|종목|후보 ID|마지막 관측(KST)|이유(최신 관측 기준)|",
+                  "|---|---|---|---|"]
+        lines += [f"|{d['ticker']}|`{d['candidate_id']}`|{d['last_seen']}|{d['reason']}|" for d in departed]
+        lines.append("")
     lines.append("화면(필터·상세 카드): `reports/generated/candidates.html`. 새 후보의 과거 그래프는 만들지 않으며, "
                  "추적을 시작한 뒤부터 관측이 쌓입니다.")
     return "\n".join(lines) + "\n"
 
 
+def departed_rows(index: dict, limit: int = 30) -> list[dict]:
+    known = index.get("known", {})
+    rows = [{"candidate_id": cid, "ticker": known[cid]["ticker"], "last_seen_at": known[cid]["last_seen_at"],
+             "last_seen": kst_date(known[cid]["last_seen_at"]),
+             "reason": DEPARTURES.get(item.get("reason"), "이유 미확인")}
+            for cid, item in (index.get("departed") or {}).items() if cid in known]
+    rows.sort(key=lambda d: d["last_seen_at"], reverse=True)
+    return rows[:limit]
+
+
 def render_html(index: dict) -> str:
-    payload = {"index": {k: v for k, v in index.items() if k not in ("candidates", "known")},
+    payload = {"index": {k: v for k, v in index.items() if k not in ("candidates", "known", "departed")},
+               "departed": departed_rows(index),
                "cards": [{"candidate": cand, "lines": card_lines(cand, index.get("stale")),
                           "headline": headline(cand), "tracking": tracking_label(cand),
                           "change": eps_change(cand["eps"])} for cand in index.get("candidates", [])]}
@@ -894,8 +978,10 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
         ranked = {t for t, _ in display_order(derived)}
         rows = [r for r in derived.get("rows", []) if r.get("candidate") and r["ticker"] in ranked]
         if translate_now:
-            report["translation"] = translate(rows, cache, c.load_dotenv_value("GEMINI_API_KEY"), cfg, call)
+            rejects = c.read_json(rejection_path(), {})
+            report["translation"] = translate(rows, cache, c.load_dotenv_value("GEMINI_API_KEY"), cfg, call, rejects)
             c.atomic_json(translation_path(), cache)
+            c.atomic_json(rejection_path(), rejects)
         cands = build(snapshot, ref, c.read_json(c.ROOT / "config" / "entities.json", {}),
                       c.read_json(evidence_path(), {}), cache,
                       c.read_live_rows("investment_review_log"), policy_version())
@@ -935,20 +1021,48 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
     return report
 
 
+def recompute(cid: str, index: dict) -> dict | None:
+    """The card rebuilt from the index's snapshot with today's evidence, ledger and translations."""
+    ref = index.get("source_snapshot") or {}
+    path = c.ROOT / ref.get("path", "")
+    if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != ref.get("sha256"):
+        raise ValueError("source snapshot missing or changed; regenerate cards first")
+    cands = build(read_snapshot(path), ref, c.read_json(c.ROOT / "config" / "entities.json", {}),
+                  c.read_json(evidence_path(), {}), c.read_json(translation_path(), {}),
+                  c.read_live_rows("investment_review_log"), policy_version())
+    return next((x for x in cands if x["candidate_id"] == cid), None)
+
+
 def approve(cid: str, approver: str) -> str:
-    """Record a human approval of the current version; refuses unsourced evidence."""
+    """Record a person's approval of the current version, after re-checking it from current inputs.
+
+    Refused for stale cards, cards built before the evidence changed, missing data, a
+    'needs evidence' mark or incomplete sources. Approving never sends an alert.
+    """
     cid = normalize_id(cid) or ""
-    cand = next((x for x in load_index().get("candidates", []) if x["candidate_id"] == cid), None)
-    if cand is None:
+    if not str(approver or "").strip():
+        raise ValueError("approver name required")
+    index = load_index()
+    if index.get("stale"):
+        raise ValueError("cards are stale; approve after a fresh screen")
+    shown = next((x for x in index.get("candidates", []) if x["candidate_id"] == cid), None)
+    if shown is None:
         raise ValueError("candidate not in the latest index; regenerate cards first")
+    current = recompute(cid, index)
+    if current is None or current["candidate_version"] != shown["candidate_version"]:
+        raise ValueError("inputs changed since the cards were built; regenerate cards and review again")
+    if current["missing"]:
+        raise ValueError("candidate data incomplete: " + ", ".join(m["field"] for m in current["missing"]))
     evidence = c.read_json(evidence_path(), {})
     problems = evidence_problems(evidence.get(cid))
     if problems:
         raise ValueError("evidence incomplete: " + ", ".join(problems))
-    evidence[cid]["approval"] = {"approved_by": approver, "approved_at": c.utc_now(),
-                                 "candidate_version": cand["candidate_version"]}
+    evidence[cid]["approval"] = {"approved_by": approver.strip(), "approved_at": c.utc_now(),
+                                 "candidate_version": current["candidate_version"],
+                                 "evidence_sha256": evidence_hash(evidence[cid]),
+                                 "observation_id": shown.get("observation_id")}
     c.atomic_json(evidence_path(), evidence)
-    return cand["candidate_version"]
+    return current["candidate_version"]
 
 
 def main(argv: list[str] | None = None) -> int:

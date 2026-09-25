@@ -55,7 +55,8 @@ def sourced_evidence(extra_sources=None):
     statement = [{"text": "Q2 guidance raised on AI demand", "kind": "guidance", "source_ids": ["ir"]}]
     return {"explanations": {field: statement for field in k.EXPLANATIONS},
             "sources": [{"id": "ir", "title": "Q2 release", "provider": "Company", "url": "https://ir.example.com/q2",
-                         "published_at": "2026-08-01", "observed_at": "2026-09-25"}] + (extra_sources or [])}
+                         "published_at": "2026-08-01", "observed_at": "2026-09-25",
+                         "quote": "raising full-year guidance on AI demand"}] + (extra_sources or [])}
 
 
 class IdentityAndVersionTest(unittest.TestCase):
@@ -156,10 +157,21 @@ class ClassificationTest(unittest.TestCase):
         self.assertNotIn("javascript:", k.telegram_card(cand))
 
     def test_tracking_state_is_separate_from_classification(self):
-        ideas = [{"idea_id": "IDEA-0001", "entity_id": "NASDAQ:CRDO", "현재 단계": "관찰", "검토 상태": "추적"}]
-        crdo = next(x for x in build(ideas=ideas) if x["identity"]["ticker"] == "CRDO")
+        same = [{"idea_id": "IDEA-0001", "entity_id": "NASDAQ:CRDO", "thesis_key": k.THESIS_KEY,
+                 "현재 단계": "관찰", "검토 상태": "추적"}]
+        crdo = next(x for x in build(ideas=same) if x["identity"]["ticker"] == "CRDO")
         self.assertEqual((crdo["tracking"]["status"], crdo["classification"]), ("tracked", "found"))
+        self.assertIn("이 가설 추적 중", k.tracking_label(crdo))
         self.assertEqual([t for kind, t in k.card_lines(crdo) if kind == "command"], ["/history CRDO"])
+
+    def test_company_tracked_under_another_thesis_offers_both_commands(self):
+        other = [{"idea_id": "IDEA-0002", "entity_id": "NASDAQ:CRDO", "thesis_key": "bottleneck:serdes",
+                  "현재 단계": "관찰", "검토 상태": "추적"}]
+        crdo = next(x for x in build(ideas=other) if x["identity"]["ticker"] == "CRDO")
+        self.assertEqual(crdo["tracking"]["status"], "entity_tracked")
+        self.assertIn("기업은 추적 중·이 가설 미등록", k.tracking_label(crdo))
+        self.assertEqual([t for kind, t in k.card_lines(crdo) if kind == "command"],
+                         ["/history CRDO", f"/track {crdo['candidate_id']}"])
 
     def test_partial_run_shows_scope_warning(self):
         cand = build(snapshot(status="degraded"))[0]
@@ -469,7 +481,8 @@ class TrackCandidateTest(CandidateFixture):
         self.assertEqual(crdo["tracking"]["status"], "untracked")  # index predates the seed until regenerated
         k.generate(now=NOW, translate_now=False)
         crdo = next(x for x in k.load_index()["candidates"] if x["identity"]["ticker"] == "CRDO")
-        self.assertEqual((crdo["tracking"]["status"], crdo["tracking"]["idea_ids"]), ("tracked", [idea]))
+        # Another thesis of the same company: shown as the company being tracked, never merged.
+        self.assertEqual((crdo["tracking"]["status"], crdo["tracking"]["idea_ids"]), ("entity_tracked", [idea]))
 
     def test_track_dry_run_writes_nothing(self):
         before = sorted(p.name for p in c.DATA_DIR.rglob("*"))
@@ -635,6 +648,106 @@ class ObservationHistoryTest(CandidateFixture):
     def test_records_follow_the_schema_contract(self):
         with self.assertRaises(ValueError):
             c.validate_record("candidate_observation", {"observation_id": "x"})
+
+
+class ApprovalTest(CandidateFixture):
+    """F6: approval re-checks the current inputs; a person's 'needs evidence' mark blocks it."""
+
+    def write_evidence(self, entry):
+        c.atomic_json(k.evidence_path(), {self.aaa["candidate_id"]: entry})
+
+    def regenerate(self):
+        k.generate(now=NOW, translate_now=False)
+        return next(x for x in k.load_index()["candidates"] if x["candidate_id"] == self.aaa["candidate_id"])
+
+    def test_incomplete_sources_are_refused(self):
+        with self.assertRaises(ValueError):
+            k.approve(self.aaa["candidate_id"], "user")  # no evidence at all
+        entry = sourced_evidence()
+        del entry["sources"][0]["quote"]
+        self.write_evidence(entry)
+        self.regenerate()
+        with self.assertRaisesRegex(ValueError, "source_ir_incomplete"):
+            k.approve(self.aaa["candidate_id"], "user")
+        entry = sourced_evidence()
+        del entry["sources"][0]["published_at"]  # unknown must be stated as null
+        self.write_evidence(entry)
+        self.regenerate()
+        with self.assertRaises(ValueError):
+            k.approve(self.aaa["candidate_id"], "user")
+
+    def test_approval_records_its_basis_and_makes_the_card_recommended_without_sending(self):
+        self.write_evidence(sourced_evidence())
+        shown = self.regenerate()
+        with mock.patch("notify.deliver", side_effect=AssertionError("sent")):
+            version = k.approve(self.aaa["candidate_id"], "user")
+        approval = c.read_json(k.evidence_path(), {})[self.aaa["candidate_id"]]["approval"]
+        self.assertEqual((approval["candidate_version"], approval["observation_id"]), (version, shown["observation_id"]))
+        self.assertEqual(approval["evidence_sha256"], k.evidence_hash(c.read_json(k.evidence_path(), {})[self.aaa["candidate_id"]]))
+        self.assertEqual(self.regenerate()["classification"], "recommended")
+        # Edit the evidence afterwards: the old approval does not carry over.
+        entry = c.read_json(k.evidence_path(), {})[self.aaa["candidate_id"]]
+        entry["explanations"]["next_check"] = [{"text": "Q3 call", "kind": "interpretation", "source_ids": ["ir"]}]
+        self.write_evidence(entry)
+        card = self.regenerate()
+        self.assertEqual(card["classification"], "found")
+        self.assertIn("재검토", card["review_note"])
+
+    def test_cards_built_before_the_evidence_changed_are_not_approved(self):
+        self.write_evidence(sourced_evidence())
+        self.regenerate()
+        entry = sourced_evidence()
+        entry["explanations"]["earnings_path"][0]["text"] = "changed after the cards were built"
+        self.write_evidence(entry)  # no regeneration
+        with self.assertRaisesRegex(ValueError, "inputs changed"):
+            k.approve(self.aaa["candidate_id"], "user")
+
+    def test_stale_cards_are_not_approved(self):
+        self.write_evidence(sourced_evidence())
+        self.regenerate()
+        index = k.load_index()
+        index["stale"] = ["latest_screen_failed"]
+        c.atomic_json(k.index_path(), index)
+        with self.assertRaisesRegex(ValueError, "stale"):
+            k.approve(self.aaa["candidate_id"], "user")
+
+    def test_needs_evidence_mark_blocks_approval_and_keeps_the_screen_fact(self):
+        entry = {**sourced_evidence(), "review_status": "needs_evidence", "review_reason": "고객 집중도 원문 필요"}
+        self.write_evidence(entry)
+        card = self.regenerate()
+        self.assertEqual((card["classification"], k.headline(card)), ("needs_evidence", "발굴 후보 · 근거 보강 필요"))
+        self.assertEqual(card["lists"], self.aaa["lists"])  # the numeric screen result is unchanged
+        self.assertIn("고객 집중도 원문 필요", k.telegram_card(card))
+        with self.assertRaisesRegex(ValueError, "marked_needs_evidence"):
+            k.approve(self.aaa["candidate_id"], "user")
+
+    def test_departed_candidates_are_listed(self):
+        with gzip.open(c.DATA_DIR / "revision_screen" / "20260925T020000Z_2-1.json.gz", "wt", encoding="utf-8") as h:
+            json.dump(snapshot(rows=[row("BBB", by_yield=False), row("AAA", candidate=False)], top_yield=[],
+                               top_growth=["BBB"], finished="2026-09-25T02:10:00+00:00", run_id="2-1"), h)
+        k.generate(now=NOW, translate_now=False)
+        markdown = (pathlib.Path(self.tmp.name) / "docs" / "candidates.md").read_text(encoding="utf-8")
+        self.assertIn("최근 목록에서 빠진 후보", markdown)
+        self.assertIn("|AAA|", markdown)
+        self.assertIn("스크린 조건 미충족", markdown)
+        page = (pathlib.Path(self.tmp.name) / "reports" / "generated" / "candidates.html").read_text(encoding="utf-8")
+        payload = json.loads(page.split('<script type="application/json" id="dataset">')[1].split("</script>")[0])
+        self.assertIn("AAA", [d["ticker"] for d in payload["departed"]])
+
+    def test_translation_rejections_keep_the_reason_and_retry(self):
+        rejects = {}
+        rows = [row("AAA", summary="Sells pumps.")]
+        with mock.patch.object(c, "model_calls_today", return_value=0):
+            k.translate(rows, {}, "key", {"translation_batch": 5, "translation_max_calls": 3},
+                        lambda prompt: {"AAA": "펌프 30대를 판다"}, rejects)
+            self.assertEqual(next(iter(rejects.values()))["reason"], "numbers_not_in_source")
+            cache = {}
+            k.translate(rows, cache, "key", {"translation_batch": 5, "translation_max_calls": 3},
+                        lambda prompt: {"AAA": "펌프를 만들어 판매하는 회사다."}, rejects)
+        self.assertEqual(len(cache), 1)  # tried again and accepted
+        card = build(snapshot(rows=[row("AAA", summary="Sells pumps.")], top_yield=["AAA"], top_growth=[]))[0]
+        self.assertIn(("source_text", "Sells pumps."), k.card_lines(card))
+        self.assertNotIn("Sells pumps.", k.telegram_card(card))
 
 
 class ColumnMigrationTest(unittest.TestCase):

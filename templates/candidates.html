@@ -6,7 +6,7 @@
 @media (prefers-color-scheme:dark){:root{--bg:#10161d;--card:#18212b;--line:#2b3947;--text:#e3eaf1;--muted:#9fb0c0;--link:#7cc4ec;--warn-bg:#3a2e12;--warn:#f3d38a;--chip:#223040;--rec:#8fe0b4;--rec-bg:#16362a}}
 *{box-sizing:border-box}body{font:16px/1.6 system-ui,sans-serif;margin:0;background:var(--bg);color:var(--text)}
 main{max-width:1100px;margin:auto;padding:28px 16px 60px}h1{font-size:28px;margin:0 0 6px}p{margin:10px 0}a{color:var(--link);overflow-wrap:anywhere}
-.muted{color:var(--muted)}.warn{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:10px 12px;margin:10px 0}
+.muted{color:var(--muted)}.small{font-size:13px}.warn{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:10px 12px;margin:10px 0}
 .filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:18px 0}
 .filters label{font-size:13px;font-weight:600;display:block;margin-bottom:4px}
 input,select{font:inherit;width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--text)}
@@ -31,10 +31,10 @@ button{font:inherit;font-size:14px;padding:6px 12px;border-radius:6px;border:1px
 <p id="meta" class="muted"></p><div id="alerts"></div>
 <div class="filters">
 <div><label for="q">종목·업종 검색</label><input id="q" placeholder="예: AEHR, Semiconductor"></div>
-<div><label for="cls">분류</label><select id="cls"><option value="">전체</option><option value="recommended">추적 추천</option><option value="found">발굴 후보</option><option value="needs_evidence">자료 보강 필요</option></select></div>
-<div><label for="trk">추적 상태</label><select id="trk"><option value="">전체</option><option value="untracked">미추적</option><option value="tracked">추적 중</option><option value="closed">추적 종료</option></select></div>
+<div><label for="cls">분류</label><select id="cls"><option value="">전체</option><option value="recommended">추적 추천</option><option value="found">발굴 후보</option><option value="needs_evidence">자료 부족·근거 보강 필요</option></select></div>
+<div><label for="trk">추적 상태</label><select id="trk"><option value="">전체</option><option value="untracked">미추적</option><option value="tracked">이 가설 추적 중</option><option value="entity_tracked">기업만 추적(다른 가설)</option><option value="closed">추적 종료</option></select></div>
 </div>
-<p id="count" class="muted"></p><div id="list"></div>
+<p id="count" class="muted"></p><div id="list"></div><section id="departed"></section>
 <p class="muted">순서는 A(이익수익률 변화)·B(90일 증가율) 목록을 번갈아 놓은 것이며 투자 점수가 아닙니다. 새 후보의 과거 그래프는 만들지 않습니다. 추적을 시작한 뒤부터 관측이 쌓입니다. 이 화면의 버튼은 명령을 복사만 합니다. 추적 등록은 텔레그램에 붙여 넣어야 이뤄집니다.</p>
 </main>
 <script type="application/json" id="dataset">__CANDIDATES__</script>
@@ -62,6 +62,7 @@ function render(item){
   if(kind==='title'||kind==='meta'){if(kind==='meta')body.appendChild(el('p','muted',text));continue}
   if(kind==='section'){body.appendChild(el('h3',null,text));ul=el('ul');body.appendChild(ul);continue}
   if(kind==='warn'){body.appendChild(el('div','warn',text));continue}
+  if(kind==='source_text'){body.appendChild(el('p','muted small','원문(영문): '+text));continue}
   if(kind==='command'){const box=el('div','cmd');box.appendChild(el('span',null,text.startsWith('/history')?'관측 이력:':'추적 등록(텔레그램):'));
    box.appendChild(el('code',null,text));const b=el('button',null,'명령 복사');
    b.onclick=(ev)=>{ev.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(text).then(()=>{b.textContent='복사됨 · 텔레그램에 붙여 넣기'},()=>{b.textContent='복사 실패'})};
@@ -73,6 +74,12 @@ function render(item){
   (ul||body).appendChild(li)}
  d.appendChild(body);return d}
 const list=document.getElementById('list');cards.forEach(x=>list.appendChild(render(x)));
+const gone=document.getElementById('departed');
+if(data.departed&&data.departed.length){gone.appendChild(el('h2',null,'최근 목록에서 빠진 후보'));
+ gone.appendChild(el('p','muted','이유는 최신 관측에서 확인되는 범위만 적습니다. 상세는 텔레그램 /candidate로 마지막 관측 당시 카드를 봅니다.'));
+ const ul=el('ul');for(const d of data.departed){const li=el('li');li.appendChild(el('b',null,d.ticker+' '));
+  li.appendChild(document.createTextNode(`마지막 관측 ${d.last_seen} · ${d.reason} · `));li.appendChild(el('code',null,'/candidate '+d.candidate_id));ul.appendChild(li)}
+ gone.appendChild(ul)}
 const q=document.getElementById('q'),cls=document.getElementById('cls'),trk=document.getElementById('trk'),count=document.getElementById('count');
 function filter(){const term=q.value.trim().toLowerCase();let n=0;
  for(const d of list.children){const show=(!term||d.dataset.q.includes(term))&&(!cls.value||d.dataset.cls===cls.value)&&(!trk.value||d.dataset.trk===trk.value);d.hidden=!show;if(show)n++}

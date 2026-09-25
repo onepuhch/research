@@ -19,7 +19,7 @@ def main(message=None):
     files += list((c.DATA_DIR / 'candidate_history').glob('CV-*.json'))
     files += list((c.DATA_DIR / 'candidate_observations').glob('OB-*.json'))
     files += [c.DATA_DIR / 'candidates' / 'index.json', c.DATA_DIR / 'candidate_evidence.json',
-              c.DATA_DIR / 'translation_cache.json']
+              c.DATA_DIR / 'translation_cache.json', c.DATA_DIR / 'translation_rejects.json']
     files += [c.ROOT / 'docs' / 'data_history.md', c.ROOT / 'docs' / 'revision_screen.md',
               c.ROOT / 'docs' / 'candidates.md']
     tracked = set(subprocess.run(['git', 'ls-files', '-z'], cwd=c.ROOT, check=True,
