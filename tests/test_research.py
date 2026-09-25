@@ -209,6 +209,7 @@ class ResearchTests(unittest.TestCase):
         c.write_rows("signal_log", [self.signal(signal_id=f"SIG-{i:04d}", entity_id=f"CIK:{i:010d}") for i in range(5)])
         with patch.object(notify, "STATE_PATH", self.data / "notify_state.json"), \
              patch.object(c, "load_dotenv_value", return_value="fake"), \
+             patch.object(candidate_alerts, "persist_remote", return_value=True), \
              patch.object(notify, "deliver", return_value=notify.Delivery("sent", 7)) as send:
             self.assertEqual(notify.main(["notify"]), 0)
             self.assertEqual(send.call_count, 0)

@@ -31,6 +31,11 @@ class WorkflowTextTest(unittest.TestCase):
         self.assertIn("always() && steps.migrate.outcome == 'success'", plan)
         self.assertNotIn("steps.commands", plan)
 
+    def test_git_identity_is_set_before_any_step_that_pushes(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        self.assertLess(text.index("- name: Configure the state commit identity"),
+                        text.index("- name: Send new-candidate alerts"))
+
     def test_state_is_persisted_even_when_finish_fails(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertLess(text.index("- name: Close today's run record"),

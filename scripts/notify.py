@@ -10,6 +10,7 @@ import argparse
 import html
 import hashlib
 import json
+import http.client
 import re
 import socket
 import sys
@@ -397,6 +398,7 @@ def deliver(token: str, chat_id: str, message: str) -> Delivery:
         headers={"Content-Type": "application/json"},
         method="POST",
     )
+    # Only type names are recorded: an exception text could carry the bot URL.
     try:
         with urlopen(request, timeout=TELEGRAM_TIMEOUT) as response:
             raw = response.read()
@@ -404,18 +406,23 @@ def deliver(token: str, chat_id: str, message: str) -> Delivery:
         # Telegram answered. 4xx is a rejection; after a 5xx delivery is unknown.
         return Delivery("failed" if error.code < 500 else "uncertain", error=f"HTTP {error.code}")
     except URLError as error:
-        if isinstance(error.reason, (TimeoutError, socket.timeout)):
-            return Delivery("uncertain", error="timeout")
-        return Delivery("failed", error=type(error.reason).__name__)  # never connected
-    except (TimeoutError, OSError) as error:
-        return Delivery("uncertain", error=type(error).__name__)
+        if isinstance(error.reason, (socket.gaierror, ConnectionRefusedError)):
+            return Delivery("failed", error=type(error.reason).__name__)  # never reached Telegram
+        return Delivery("uncertain", error=type(error.reason).__name__)  # may have been sent
+    except (http.client.HTTPException, TimeoutError, OSError) as error:
+        return Delivery("uncertain", error=type(error).__name__)  # e.g. cut off while reading the reply
     try:
         result = json.loads(raw.decode("utf-8"))
     except (ValueError, UnicodeDecodeError):
         return Delivery("uncertain", error="unreadable response")
-    if result.get("ok") is not True:
-        return Delivery("failed", error=str(result.get("description", "rejected"))[:200])
-    message_id = result.get("result", {}).get("message_id")
+    if not isinstance(result, dict):
+        return Delivery("uncertain", error="unexpected response shape")
+    if result.get("ok") is False:
+        return Delivery("failed", error=f"rejected {result.get('error_code', '')}".strip())
+    payload = result.get("result")
+    message_id = payload.get("message_id") if result.get("ok") is True and isinstance(payload, dict) else None
+    if not isinstance(message_id, int) or isinstance(message_id, bool) or message_id <= 0:
+        return Delivery("uncertain", error="no valid message_id")
     c.record_run("telegram_delivery", "success", message_id=message_id)
     return Delivery("sent", message_id)
 

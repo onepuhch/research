@@ -41,6 +41,11 @@ jobs:
         with:
           # Scheduled events can wait with an old SHA; read current state after acquiring the writer slot.
           ref: ${{ github.ref_name }}
+      - name: Configure the state commit identity
+        # Candidate alerts push their reservation mid-run, before the final persist step.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'

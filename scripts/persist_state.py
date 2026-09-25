@@ -7,7 +7,7 @@ STATE_FILES = ['source_state.json', 'seen_sources.json', 'notify_state.json', 'r
                'model_budget.json', 'candidate_alerts.json']
 
 
-def main():
+def main(message=None):
     files = [c.csv_path(table) for table in c.TABLES] + [c.DATA_DIR / name for name in STATE_FILES]
     files += list((c.ROOT / 'data' / 'archive' / 'pre_v2').glob('*'))
     files += list((c.ROOT / 'data' / 'archive' / 'pre_columns').glob('*.csv'))
@@ -31,9 +31,19 @@ def main():
     if subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=c.ROOT).returncode == 0:
         return
     subprocess.run(['git', 'diff', '--cached', '--check'], cwd=c.ROOT, check=True)
-    subprocess.run(['git', 'commit', '-m', f'chore: research state {c.today()}'], cwd=c.ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', message or f'chore: research state {c.today()}'], cwd=c.ROOT, check=True)
     # On conflict, fail visibly; never force-push a competing writer's state.
     subprocess.run(['git', 'push'], cwd=c.ROOT, check=True)
+
+
+def persist(message):
+    """Commit and push the named state now; False when the remote did not receive it."""
+    try:
+        main(message)
+    except (subprocess.CalledProcessError, OSError) as error:
+        print(f'[persist] not saved remotely: {type(error).__name__}')
+        return False
+    return True
 
 
 if __name__ == '__main__':

@@ -14,10 +14,16 @@ new-discovery alert. A human-approved recommendation is exempt from the 14 days 
 Entities are compared after the registry mapping (CIK and exchange:ticker of one
 registered company are the same); names are never matched by similarity.
 
-Delivery ledger (data/processed/candidate_alerts.json): a slot is reserved before
-sending and counts toward the daily limit while reserved or uncertain. Only a
-confirmed failure is retried. A lost response is "uncertain" and never resent
-automatically, because Telegram cannot guarantee exactly-once delivery.
+Delivery ledger (data/processed/candidate_alerts.json), per alert:
+  prepare + reserve (payload hash, observation, event key, run attempt)
+  -> push the reservation to the remote; if that push fails, nothing is sent and
+     the reservation is released
+  -> send -> record the receipt -> push the receipts.
+A reservation found by a later run (the run that made it stopped, or its receipt
+push failed) becomes "uncertain" and is never sent automatically: missing an alert is
+preferred to sending it twice. Reserved and uncertain count toward the daily limit.
+Only a confirmed failure is retried, as the same event. Exactly-once delivery is not
+guaranteed. Real sends run only in the CI single-writer job.
 
 First run: at most bootstrap_max screener candidates are sent; the other current
 candidates are stored as the bootstrap set and never announced as new later.
@@ -28,8 +34,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
+import uuid
 from datetime import date
 from pathlib import Path
 
@@ -41,6 +49,7 @@ import notify  # noqa: E402
 NEW = "new_discovery"
 RECOMMENDATION = "recommendation"
 COUNTED = ("reserved", "sent", "uncertain")
+RETRYABLE = ("failed", "released")
 DEFAULTS = {"bootstrap_max": 1, "entity_new_cooldown_days": 14}
 
 
@@ -218,9 +227,19 @@ def screen_message(item: dict) -> str:
 
 
 def news_message(item: dict) -> str:
-    block = notify.render_block(item["row"])
-    return notify.split_lines([f"📡 새 발굴 신호 · {c.today()}\n\n{block}\n\n"
-                               f"추적 <code>/track {candidates.esc(item['signal_id'])}</code>"])[0]
+    row = item["row"]
+    track = f"추적 <code>/track {candidates.esc(item['signal_id'])}</code>"
+    full = f"📡 새 발굴 신호 · {c.today()}\n\n{notify.render_block(row)}\n\n{track}"
+    if len(full) <= notify.MESSAGE_LIMIT:
+        return full
+    # Too long: an explicit summary that keeps the source and the command, never a silent cut.
+    esc = candidates.esc
+    url = row.get("document_url") or row.get("출처URL", "")
+    source = f'<a href="{esc(url)}">원문</a>' if candidates.safe_url(url) else esc(row.get("출처", ""))
+    summary = str(row.get("특이값 요약", ""))[:600]
+    return (f"📡 새 발굴 신호 · {c.today()} (요약본: 원문이 길어 줄임)\n\n"
+            f"<b>{esc(row.get('종목/티커'))} · {esc(row.get('signal_id'))} · {esc(row.get('티어'))}</b>\n"
+            f"{esc(summary)}\n출처: {source} ({esc(row.get('published_at'))})\n\n{track}")
 
 
 def message(item: dict) -> str:
@@ -228,6 +247,34 @@ def message(item: dict) -> str:
 
 
 # ------------------------------------------------------------------ run
+
+def attempt_id() -> str:
+    if os.environ.get("GITHUB_RUN_ID"):
+        return f"{os.environ['GITHUB_RUN_ID']}-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
+    return f"local-{uuid.uuid4().hex[:8]}"
+
+
+def persist_remote(message: str) -> bool:
+    """Push the ledger with the other named state. Outside the CI writer job nothing is pushed,
+    so a local run can never send (its reservations are released)."""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        print("[candidate_alerts] not in the CI writer job: reservations are not persisted, nothing is sent")
+        return False
+    import persist_state
+    return persist_state.persist(message)
+
+
+def quarantine(ledger: dict, me: str, now: str) -> int:
+    """Reservations from another run have an unknown outcome: mark them uncertain, never resend."""
+    moved = 0
+    for event in ledger["events"].values():
+        if event.get("status") == "reserved" and event.get("reserved_by") != me:
+            event["status"] = "uncertain"
+            event.setdefault("attempts", []).append({"at": now, "status": "uncertain", "message_id": None,
+                                                     "error": "reservation_without_receipt"})
+            moved += 1
+    return moved
+
 
 def event_record(item: dict, day: str) -> dict:
     return {k: item.get(k) for k in ("channel", "event", "entity_id", "thesis_key", "candidate_id",
@@ -237,7 +284,11 @@ def event_record(item: dict, day: str) -> dict:
 
 def run(dry_run: bool = False) -> dict:
     day = c.today()
+    me = attempt_id()
     ledger = load_ledger()
+    quarantined = 0 if dry_run else quarantine(ledger, me, c.utc_now())
+    if quarantined:
+        c.atomic_json(ledger_path(), ledger)
     notify_state = notify.load_state()
     index = candidates.load_index()
     signal_rows = c.read_rows("signal_log")
@@ -248,12 +299,12 @@ def run(dry_run: bool = False) -> dict:
     bootstrap = ledger["bootstrap"] is None and bool(screen)
     cap = settings()["bootstrap_max"] if bootstrap else None
     # A confirmed failure keeps its key and is eligible again; it never becomes a second event.
-    retry = [e for e in ledger["events"].values() if e.get("status") == "failed"]
+    retry = [e for e in ledger["events"].values() if e.get("status") in RETRYABLE]
     chosen = select(ledger, news, recommended, screen, slots, day, cap, recent,
                     settings()["entity_new_cooldown_days"])
     report = {"slots": slots, "selected": [x["key"] for x in chosen], "bootstrap": bootstrap,
               "legacy_unknown_entity": unknown_legacy,
-              "retry_pending": len(retry), "sent": 0, "failed": 0, "uncertain": 0}
+              "retry_pending": len(retry), "quarantined": quarantined, "sent": 0, "failed": 0, "uncertain": 0}
     if dry_run:
         for item in chosen:
             print(f"--- {item['channel']} {item['key']}\n{message(item)}\n")
@@ -271,15 +322,29 @@ def run(dry_run: bool = False) -> dict:
     token, chat_id = c.load_dotenv_value("TELEGRAM_BOT_TOKEN"), c.load_dotenv_value("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
         raise ValueError("Telegram credentials missing")
+    texts = {item["key"]: message(item) for item in chosen}
     for item in chosen:
         record = ledger["events"].get(item["key"])
-        if record is None or record.get("status") == "failed":
-            attempts = (record or {}).get("attempts", [])
-            record = {**event_record(item, day), "attempts": attempts}
-        record.update(status="reserved", day=day, candidate_version=item.get("candidate_version"))
-        ledger["events"][item["key"]] = record
-        c.atomic_json(ledger_path(), ledger)  # reserved before the network call
-        delivery = notify.deliver(token, chat_id, message(item))
+        attempts = (record or {}).get("attempts", [])
+        record = {**event_record(item, day), "attempts": attempts}
+        record.update(status="reserved", reserved_by=me, reserved_at=c.utc_now(),
+                      payload_sha256=hashlib.sha256(texts[item["key"]].encode("utf-8")).hexdigest())
+        ledger["events"][item["key"]] = c.validate_record("candidate_alert_event", record)
+    c.atomic_json(ledger_path(), ledger)
+    if not persist_remote(f"chore: reserve candidate alerts {day}"):
+        # The remote never saw these reservations: nothing is sent and they are released.
+        for item in chosen:
+            record = ledger["events"][item["key"]]
+            record["status"] = "released"
+            record["attempts"].append({"at": c.utc_now(), "status": "not_sent", "message_id": None,
+                                       "error": "reservation_not_persisted"})
+        c.atomic_json(ledger_path(), ledger)
+        report["reservation_persisted"] = False
+        return report
+    report["reservation_persisted"] = True
+    for item in chosen:
+        record = ledger["events"][item["key"]]
+        delivery = notify.deliver(token, chat_id, texts[item["key"]])
         record["attempts"].append({"at": c.utc_now(), "status": delivery.status,
                                    "message_id": delivery.message_id, "error": delivery.error})
         record.update(status=delivery.status, message_id=delivery.message_id)
@@ -290,6 +355,8 @@ def run(dry_run: bool = False) -> dict:
             notify_state["pushed"] = sorted(set(notify_state["pushed"]) | {item["signal_id"]})
             notify_state["sent"][item["signal_id"]] = {"date": day, "kind": "candidate"}
             notify.save_state(notify_state)
+    # If this push fails, the remote still holds the reservations, so no later run resends them.
+    report["receipts_persisted"] = persist_remote(f"chore: candidate alert receipts {day}")
     return report
 
 
@@ -307,10 +374,12 @@ def main(argv: list[str] | None = None) -> int:
     print(f"[candidate_alerts] {json.dumps(report, ensure_ascii=False)}")
     if args.dry_run:
         return 0
-    status = "degraded" if report["failed"] or report["uncertain"] else "success"
+    trouble = report["failed"] or report["uncertain"] or report["quarantined"]
+    unsaved = report.get("reservation_persisted") is False or report.get("receipts_persisted") is False
+    status = "degraded" if trouble or unsaved else "success"
     c.record_run("candidate_alerts", status, **{k: v for k, v in report.items() if k != "selected"},
                  selected=len(report["selected"]))
-    return 1 if report["failed"] else 0
+    return 1 if report["failed"] or unsaved else 0
 
 
 if __name__ == "__main__":

@@ -2,7 +2,9 @@ import contextlib
 import io
 import json
 import pathlib
+import http.client
 import socket
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -17,6 +19,8 @@ import candidates as k  # noqa: E402
 import candidate_alerts as a  # noqa: E402
 import notify  # noqa: E402
 from test_candidates import REF, build, row, snapshot  # noqa: E402
+
+REAL_PERSIST_REMOTE = a.persist_remote  # the fixtures replace the module attribute
 
 ODD = "2026-09-26"   # date ordinal odd: screen channel first
 EVEN = "2026-09-27"  # the next day, news channel first
@@ -50,8 +54,19 @@ class AlertTest(unittest.TestCase):
             self.addCleanup(patch.__exit__, None, None, None)
         self.sent = []
         self.outcomes = []
+        self.pushes = []        # ledger contents the (fake) remote received, in order
+        self.push_results = []  # scripted push outcomes; default success
+        patch = mock.patch.object(a, "persist_remote", side_effect=self.fake_persist)
+        patch.start()
+        self.addCleanup(patch.stop)
         self.day = ODD
         self.patch_day()
+
+    def fake_persist(self, message):
+        ok = self.push_results.pop(0) if self.push_results else True
+        if ok:
+            self.pushes.append((message, (self.data / "candidate_alerts.json").read_text(encoding="utf-8")))
+        return ok
 
     def patch_day(self):
         patch = mock.patch.object(c, "today", side_effect=lambda: self.day)
@@ -327,6 +342,110 @@ class DeliveryLedgerTest(AlertTest):
         self.assertIn("핵심 미확인", text)
 
 
+class RemoteReservationTest(AlertTest):
+    """F4: the remote holds a reservation before any send; later runs never resend it."""
+
+    def setUp(self):
+        super().setUp()
+        c.atomic_json(a.ledger_path(), {"events": {}, "bootstrap": {"date": "2026-09-01", "keys": []}})
+        self.index(tickers=("AAA",))
+
+    def event(self):
+        return next(iter(self.ledger()["events"].values()))
+
+    def restart_from_remote(self):
+        """The next CI run checks out only what the remote received."""
+        (self.data / "candidate_alerts.json").write_text(self.pushes[-1][1], encoding="utf-8")
+
+    def test_reservation_push_failure_sends_nothing_and_releases(self):
+        self.push_results = [False]
+        self.assertEqual(self.send_alerts(), (1, 0))
+        self.assertEqual(self.event()["status"], "released")
+        self.assertEqual(self.event()["attempts"][-1]["error"], "reservation_not_persisted")
+        self.assertEqual(self.send_alerts(), (0, 1))  # the next run sends it once
+        self.assertEqual(self.event()["status"], "sent")
+
+    def test_stop_after_the_reservation_reached_the_remote_is_not_resent(self):
+        with mock.patch.object(notify, "deliver", side_effect=KeyboardInterrupt):
+            with self.assertRaises(KeyboardInterrupt):
+                a.main([])
+        self.assertIn('"reserved"', self.pushes[-1][1])
+        self.restart_from_remote()
+        self.assertEqual(self.send_alerts(), (0, 0))
+        event = self.event()
+        self.assertEqual((event["status"], event["attempts"][-1]["error"]), ("uncertain", "reservation_without_receipt"))
+
+    def test_receipt_push_failure_still_blocks_a_resend(self):
+        self.push_results = [True, False]  # reservation saved, receipts not
+        self.assertEqual(self.send_alerts(), (1, 1))
+        self.assertEqual(self.event()["status"], "sent")  # locally known
+        self.restart_from_remote()
+        self.assertEqual(self.send_alerts(), (0, 0))
+        self.assertEqual(self.event()["status"], "uncertain")
+
+    def test_reservation_records_what_will_be_sent(self):
+        self.send_alerts()
+        reserved = json.loads(self.pushes[0][1])["events"]
+        event = next(iter(reserved.values()))
+        self.assertEqual(event["status"], "reserved")
+        self.assertEqual(len(event["payload_sha256"]), 64)
+        self.assertTrue(event["observation_id"].startswith("OB-"))
+        self.assertTrue(event["reserved_by"])
+        key = next(iter(reserved))
+        self.assertEqual(json.loads(self.pushes[1][1])["events"][key]["status"], "sent")  # receipt pushed after
+
+    def test_local_runs_never_push_so_never_send(self):
+        with mock.patch.dict("os.environ", {"GITHUB_ACTIONS": ""}), \
+                mock.patch("persist_state.persist", side_effect=AssertionError("pushed")):
+            self.assertFalse(REAL_PERSIST_REMOTE("x"))
+        with mock.patch.object(a, "persist_remote", REAL_PERSIST_REMOTE), mock.patch.dict("os.environ", {"GITHUB_ACTIONS": ""}):
+            self.assertEqual(self.send_alerts(), (1, 0))
+
+    def test_dry_run_pushes_nothing(self):
+        self.assertEqual(self.send_alerts(dry=True), (0, 0))
+        self.assertEqual(self.pushes, [])
+
+    def test_long_news_message_keeps_source_and_command(self):
+        row = signal(0, **{"특이값 요약": "<&" * 5000})
+        text = a.news_message({"row": row, "signal_id": row["signal_id"]})
+        self.assertLessEqual(len(text), notify.MESSAGE_LIMIT)
+        self.assertIn("/track SIG-0000", text)
+        self.assertIn("요약본", text)
+        self.assertIn('href="https://example.org/filing"', text)
+
+
+class GitRemoteTest(unittest.TestCase):
+    """persist_state.persist against a real temporary git remote."""
+
+    def git(self, *args, cwd):
+        return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True, text=True)
+
+    def test_push_success_and_failure_are_reported(self):
+        import persist_state
+        with tempfile.TemporaryDirectory() as tmp:
+            root = pathlib.Path(tmp)
+            self.git("init", "--bare", "-q", str(root / "remote.git"), cwd=root)
+            self.git("clone", "-q", str(root / "remote.git"), str(root / "work"), cwd=root)
+            work = root / "work"
+            for key, value in (("user.name", "t"), ("user.email", "t@example.invalid"), ("commit.gpgsign", "false")):
+                self.git("config", key, value, cwd=work)
+            data = work / "data" / "processed"
+            data.mkdir(parents=True)
+            with mock.patch.object(c, "ROOT", work), mock.patch.object(c, "DATA_DIR", data), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                c.atomic_json(data / "candidate_alerts.json", {"events": {"k": {"status": "reserved"}}})
+                self.assertTrue(persist_state.persist("chore: reserve"))
+                shown = self.git("--git-dir", str(root / "remote.git"), "show", "HEAD:data/processed/candidate_alerts.json",
+                                 cwd=root).stdout
+                self.assertIn("reserved", shown)
+                self.git("remote", "set-url", "origin", str(root / "missing.git"), cwd=work)
+                c.atomic_json(data / "candidate_alerts.json", {"events": {"k": {"status": "sent"}}})
+                self.assertFalse(persist_state.persist("chore: receipts"))
+                shown = self.git("--git-dir", str(root / "remote.git"), "show", "HEAD:data/processed/candidate_alerts.json",
+                                 cwd=root).stdout
+                self.assertIn("reserved", shown)  # the remote still blocks a resend
+
+
 class DeliverClassificationTest(unittest.TestCase):
     def outcome(self, effect=None, body=None):
         response = mock.MagicMock()
@@ -345,6 +464,26 @@ class DeliverClassificationTest(unittest.TestCase):
         self.assertEqual(self.outcome(body=b'{"ok": false, "description": "chat not found"}').status, "failed")
         sent = self.outcome(body=b'{"ok": true, "result": {"message_id": 42}}')
         self.assertEqual((sent.status, sent.message_id), ("sent", 42))
+
+    def test_success_needs_a_valid_message_id(self):
+        for body in (b'{"ok": true, "result": {}}', b'{"ok": true, "result": {"message_id": "42"}}',
+                     b'{"ok": true, "result": {"message_id": true}}', b'{"ok": true, "result": {"message_id": 0}}',
+                     b'{"ok": true, "result": []}', b'[{"ok": true}]', b'{"result": {"message_id": 5}}'):
+            self.assertEqual(self.outcome(body=body).status, "uncertain", body)
+
+    def test_cut_connections_are_uncertain_and_only_definite_no_sends_fail(self):
+        self.assertEqual(self.outcome(URLError(socket.gaierror("dns"))).status, "failed")
+        self.assertEqual(self.outcome(URLError(ConnectionResetError())).status, "uncertain")
+        self.assertEqual(self.outcome(URLError(http.client.RemoteDisconnected("x"))).status, "uncertain")
+        self.assertEqual(self.outcome(http.client.RemoteDisconnected("x")).status, "uncertain")
+        response = mock.MagicMock()
+        response.__enter__.return_value.read.side_effect = http.client.IncompleteRead(b"{")
+        with mock.patch.object(notify, "urlopen", return_value=response), mock.patch.object(c, "record_run"):
+            self.assertEqual(notify.deliver("t", "c", "m").status, "uncertain")
+
+    def test_errors_never_carry_the_bot_url(self):
+        error = URLError(OSError("https://api.telegram.org/botSECRET/sendMessage"))
+        self.assertNotIn("SECRET", str(self.outcome(error).error))
 
 
 class RiskIndependenceTest(AlertTest):
