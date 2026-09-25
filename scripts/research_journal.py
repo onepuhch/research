@@ -132,13 +132,26 @@ def summary(case):
             f"대기 {pending}, 반증 발동 {triggered}. 주가 성과는 30/90/180일 별도 복기.")
 
 
-def main():
+def capture_all():
     import research_cases
-    from gen_report import save
     observations = c.read_live_rows("metric_log")
     for case in research_cases.load_cases():
         capture(case, observations)
-    print(save("outcomes", render()))
+
+
+def main(argv=None):
+    """--capture-only freezes baselines (read by returns); --render-only writes the view."""
+    import argparse
+    from gen_report import save
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--capture-only", action="store_true")
+    mode.add_argument("--render-only", action="store_true")
+    args = parser.parse_args(argv)
+    if not args.render_only:
+        capture_all()
+    if not args.capture_only:
+        print(save("outcomes", render()))
 
 
 if __name__ == "__main__":

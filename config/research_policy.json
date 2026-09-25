@@ -37,5 +37,9 @@
     "failure_alert_rate": 0.02,
     "price_end_max_lag_sessions": 1,
     "price_start_max_gap_days": 7
+  },
+  "daily_run": {
+    "partial_retry_max": 1,
+    "partial_retry_min_gap_minutes": 60
   }
 }

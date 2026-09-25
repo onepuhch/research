@@ -51,26 +51,23 @@ jobs:
       - name: Process commands independently
         if: always() && steps.migrate.outcome == 'success'
         run: python scripts/telegram_cmd.py
-      # Each step runs when the plan says so; the wrapper records started/success/failed
-      # and passes the exit code through. A dependency that fails in this run skips its users.
+      # Each step runs when the plan says so. Relations between steps live only in
+      # scripts/daily_run_state.py: the wrapper records a step as blocked without running it
+      # when a required predecessor has not succeeded, and records started/success/failed,
+      # quality and the exit code otherwise (the exit code is passed through).
       - name: Collect source documents
-        id: collect
         if: always() && steps.plan.outcome == 'success' && env.RUN_COLLECT == 'true'
         run: python scripts/daily_run_state.py step collect -- python scripts/collect.py
       - name: Extract grounded signals
-        id: extract
-        # Never extracts from an older collection: collect must have succeeded today.
-        if: always() && steps.plan.outcome == 'success' && env.RUN_EXTRACT == 'true' && steps.collect.outcome != 'failure'
+        if: always() && steps.plan.outcome == 'success' && env.RUN_EXTRACT == 'true'
         run: python scripts/daily_run_state.py step extract -- python scripts/extract.py
       - name: Observe tracked EPS
-        id: eps
         if: always() && steps.plan.outcome == 'success' && env.RUN_EPS == 'true'
         run: python scripts/daily_run_state.py step eps -- python scripts/collect_eps.py
       - name: Retry eligible notifications
-        if: always() && steps.plan.outcome == 'success' && env.RUN_NOTIFY == 'true' && steps.extract.outcome != 'failure'
+        if: always() && steps.plan.outcome == 'success' && env.RUN_NOTIFY == 'true'
         run: python scripts/daily_run_state.py step notify -- python scripts/notify.py
       - name: Observe quarterly EPS and revenue independently
-        id: quarterly
         if: always() && steps.plan.outcome == 'success' && env.RUN_QUARTERLY == 'true'
         run: python scripts/daily_run_state.py step quarterly -- python scripts/collect_quarterly.py
       - name: Screen US stocks for sustained estimate upgrades
@@ -79,30 +76,27 @@ jobs:
         timeout-minutes: 28
         run: python scripts/daily_run_state.py step screen -- python scripts/screen_revisions.py
       - name: Observe tracked regular-session prices
-        id: prices
         # Price collection remains independent of EPS availability.
         if: always() && steps.plan.outcome == 'success' && env.RUN_PRICES == 'true'
         run: python scripts/daily_run_state.py step prices -- python scripts/collect_prices.py
-      - name: Build research views
-        id: views
-        if: >-
-          always() && steps.plan.outcome == 'success' && env.RUN_VIEWS == 'true'
-          && steps.extract.outcome != 'failure' && steps.eps.outcome != 'failure'
-          && steps.quarterly.outcome != 'failure' && steps.prices.outcome != 'failure'
-        run: >-
-          python scripts/daily_run_state.py step views -- bash -ec 'python scripts/research_journal.py;
-          python scripts/gen_report.py weekly; python scripts/gen_report.py bottlenecks;
-          python scripts/gen_report.py quality; python scripts/gen_report.py cases'
+      - name: Freeze research baselines
+        if: always() && steps.plan.outcome == 'success' && env.RUN_BASELINE == 'true'
+        run: python scripts/daily_run_state.py step baseline -- python scripts/research_journal.py --capture-only
       - name: Evaluate research price returns
         if: always() && steps.plan.outcome == 'success' && env.RUN_RETURNS == 'true'
+        run: python scripts/daily_run_state.py step returns -- python scripts/research_returns.py
+      - name: Build research views
+        # Renders whatever its inputs hold, including their failures and last observation times.
+        if: always() && steps.plan.outcome == 'success' && env.RUN_VIEWS == 'true'
         run: >-
-          python scripts/daily_run_state.py step returns -- bash -ec 'python scripts/research_returns.py;
-          python scripts/gen_report.py quality; python scripts/research_journal.py'
+          python scripts/daily_run_state.py step views -- bash -ec 'python scripts/research_journal.py --render-only;
+          python scripts/gen_report.py weekly; python scripts/gen_report.py bottlenecks;
+          python scripts/gen_report.py quality; python scripts/gen_report.py cases'
       - name: Weekly community watch
         if: always() && steps.plan.outcome == 'success' && env.RUN_COMMUNITY == 'true'
         run: python scripts/daily_run_state.py step community -- python scripts/collect_reddit.py
       - name: Weekly review report independently
-        if: always() && steps.plan.outcome == 'success' && env.RUN_WEEKLY_REPORT == 'true' && steps.views.outcome != 'failure'
+        if: always() && steps.plan.outcome == 'success' && env.RUN_WEEKLY_REPORT == 'true'
         run: python scripts/daily_run_state.py step weekly_report -- python scripts/notify.py --report
       - name: Refresh durable observation history
         if: always() && steps.migrate.outcome == 'success'

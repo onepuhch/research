@@ -1,3 +1,4 @@
+import gzip
 import json
 import sys
 import tempfile
@@ -37,9 +38,9 @@ class PlanTest(unittest.TestCase):
         state = finished({}, THU, {**all_ok(THU), "collect": "failed"})
         self.assertEqual(d.plan(state, THU, "auto"), ["collect", "extract", "notify", "views"])
 
-    def test_screen_failure_resumes_screen_only(self):
+    def test_screen_failure_resumes_screen_and_the_views_that_read_it(self):
         state = finished({}, THU, {**all_ok(THU), "screen": "failed"})
-        self.assertEqual(d.plan(state, THU, "auto"), ["screen"])
+        self.assertEqual(d.plan(state, THU, "auto"), ["screen", "views"])
 
     def test_complete_day_runs_nothing(self):
         state = finished({}, THU, all_ok(THU))
@@ -49,7 +50,7 @@ class PlanTest(unittest.TestCase):
     def test_interrupted_step_is_not_done(self):
         state = finished({}, THU, {**all_ok(THU)})
         d.record_step(state, THU, "screen", "started", "r2", T)  # killed by the step timeout
-        self.assertEqual(d.plan(state, THU, "auto"), ["screen"])
+        self.assertEqual(d.plan(state, THU, "auto"), ["screen", "views"])
 
     def test_explicit_daily_reruns_everything_with_a_new_run(self):
         state = finished({}, THU, all_ok(THU))
@@ -63,7 +64,8 @@ class PlanTest(unittest.TestCase):
         first = state["days"][THU]["steps"]["screen"]["last_success_at"]
         finished(state, THU, {"screen": "failed"}, "r2")
         entry = state["days"][THU]["steps"]["screen"]
-        self.assertEqual((entry["status"], entry["last_success_at"], entry["run_id"]), ("failed", first, "r2"))
+        self.assertEqual((entry["execution_status"], entry["last_success_at"], entry["run_id"]), ("failed", first, "r2"))
+        self.assertEqual([a["execution_status"] for a in entry["attempts"]], ["success", "failed"])
 
     def test_commands_never_run_or_complete_the_day(self):
         self.assertEqual(d.plan({}, THU, "commands"), [])
@@ -89,6 +91,122 @@ class PlanTest(unittest.TestCase):
     def test_prune_keeps_recent_days(self):
         state = {"days": {"2026-06-01": {}, "2026-09-01": {}}}
         self.assertEqual(list(d.prune(state, THU)["days"]), ["2026-09-01"])
+
+
+class ResumeAndRelationTest(unittest.TestCase):
+    """Codex C follow-up: invalidation at plan time, required vs input relations, partial top-ups."""
+
+    def begin(self, state, run_id, now=T, mode="auto"):
+        detail = d.plan_detail(state, THU, mode, now)
+        d.apply_plan(state, THU, run_id, mode, "workflow_dispatch", detail, now, "sha", "pol")
+        return list(detail)
+
+    def test_stop_after_eps_rerun_still_leaves_views_pending(self):
+        # Reproduction: every step succeeded once, EPS needs a retry, plan is eps+views,
+        # EPS succeeds and the run stops before views.
+        state = finished({}, THU, {**all_ok(THU), "eps": "failed"})
+        self.assertEqual(self.begin(state, "r2"), ["eps", "views"])
+        d.record_step(state, THU, "eps", "started", "r2", T)
+        d.record_step(state, THU, "eps", "success", "r2", T + timedelta(minutes=2), 0)
+        self.assertEqual(d.plan(state, THU, "auto"), ["views"])
+        self.assertFalse(d.complete(state, THU))
+
+    def test_invalidation_alone_keeps_views_pending(self):
+        state = finished({}, THU, {**all_ok(THU), "eps": "failed"})
+        self.begin(state, "r2")
+        entry = state["days"][THU]["steps"]["views"]
+        self.assertEqual((entry["execution_status"], entry["planned_by"]), ("pending", "r2"))
+        self.assertIsNotNone(entry["last_success_at"])  # the earlier success is kept, not used
+
+    def test_new_input_revision_alone_makes_views_stale(self):
+        state = finished({}, THU, all_ok(THU))
+        finished(state, THU, {"returns": "success"}, "r2")  # returns only, views not planned
+        self.assertEqual(d.plan_detail(state, THU, "auto"), {"views": "inputs_changed"})
+        finished(state, THU, {"views": "success"}, "r2")
+        self.assertEqual(d.plan(state, THU, "auto"), [])
+
+    def test_failed_input_still_refreshes_views(self):
+        state = finished({}, THU, all_ok(THU))
+        finished(state, THU, {"screen": "failed"}, "r2")
+        self.assertIn("views", d.plan(state, THU, "auto"))
+
+    def test_views_generator_version_change_rerenders(self):
+        state = finished({}, THU, all_ok(THU))
+        state["days"][THU]["steps"]["views"]["version"] = "views-v1"
+        self.assertEqual(d.plan_detail(state, THU, "auto"), {"views": "inputs_changed"})
+
+    def test_skipped_or_invalidated_extract_is_not_success(self):
+        state = finished({}, THU, {**all_ok(THU), "collect": "failed"})
+        self.begin(state, "r2")
+        self.assertEqual(d.blocking(d.day_steps(state, THU), "extract")[0], "collect")
+        # extract succeeded earlier today, but this plan invalidated it: notify must not use it.
+        self.assertEqual(d.blocking(d.day_steps(state, THU), "notify")[0], "extract")
+        self.assertIsNone(d.blocking(d.day_steps(state, THU), "views"))  # inputs never block
+
+    def partial_screen(self, state, run_id, finished_at):
+        d.record_step(state, THU, "screen", "started", run_id, finished_at - timedelta(minutes=14))
+        d.record_step(state, THU, "screen", "success", run_id, finished_at, 0, "partial")
+
+    def test_partial_top_up_waits_60_minutes_and_happens_once(self):
+        state = finished({}, THU, all_ok(THU))
+        self.partial_screen(state, "r1", T)
+        finished(state, THU, {"views": "success"}, "r1")
+        self.assertEqual(d.plan(state, THU, "auto", T + timedelta(minutes=59)), [])
+        later = T + timedelta(minutes=61)
+        self.assertEqual(d.plan_detail(state, THU, "auto", later),
+                         {"screen": "partial_retry", "views": "dependency_rerun"})
+        self.begin(state, "r2", later)
+        self.assertEqual(state["days"][THU]["steps"]["screen"]["auto_retries"], 1)
+        self.partial_screen(state, "r2", later + timedelta(minutes=20))
+        finished(state, THU, {"views": "success"}, "r2")
+        self.assertEqual(d.plan(state, THU, "auto", later + timedelta(hours=3)), [])
+        # The top-up is used up, but the data is still partial, never relabelled complete.
+        self.assertTrue(d.complete(state, THU, later + timedelta(hours=3)))
+        self.assertEqual(d.quality_summary(state, THU), {"screen": "partial"})
+
+    def test_partial_policy_is_configurable(self):
+        state = finished({}, THU, all_ok(THU))
+        self.partial_screen(state, "r1", T)
+        finished(state, THU, {"views": "success"}, "r1")
+        policy = {"partial_retry_max": 0, "partial_retry_min_gap_minutes": 60}
+        self.assertEqual(d.plan(state, THU, "auto", T + timedelta(hours=5), policy), [])
+
+    def test_schema_1_record_keeps_success_without_inventing_quality(self):
+        old = {"schema_version": 1, "days": {THU: {"runs": [], "steps": {
+            "screen": {"status": "success", "run_id": "r0", "exit_code": 0, "last_success_at": "x"}}}}}
+        entry = d.migrate(old)["days"][THU]["steps"]["screen"]
+        self.assertEqual((entry["execution_status"], entry["quality_status"]), ("success", "unknown"))
+        self.assertNotIn("status", entry)
+
+    def test_record_rejects_unknown_quality_or_pending(self):
+        with self.assertRaises(ValueError):
+            d.record_step({}, THU, "screen", "success", "r1", T, 0, "great")
+        with self.assertRaises(ValueError):
+            d.record_step({}, THU, "screen", "pending", "r1", T)
+
+
+class ScreenQualityTest(unittest.TestCase):
+    def setUp(self):
+        import screen_revisions
+        self.tmp = tempfile.TemporaryDirectory()
+        self.patch = mock.patch.object(screen_revisions, "SCREEN_DIR", Path(self.tmp.name))
+        self.patch.start()
+
+    def tearDown(self):
+        self.patch.stop()
+        self.tmp.cleanup()
+
+    def snapshot(self, run_id, status):
+        path = Path(self.tmp.name) / f"20260924T001000Z_{run_id}.json.gz"
+        with gzip.open(path, "wt", encoding="utf-8") as handle:
+            json.dump({"run": {"run_id": run_id, "status": status}}, handle)
+
+    def test_only_this_runs_snapshot_counts(self):
+        self.snapshot("100-1", "success")
+        self.assertEqual(d.screen_quality("101-1"), "unknown")  # an earlier success is not reused
+        self.snapshot("101-1", "degraded")
+        self.assertEqual(d.screen_quality("101-1"), "partial")
+        self.assertEqual(d.screen_quality("100-1"), "complete")
 
 
 class CliTest(unittest.TestCase):
@@ -138,6 +256,28 @@ class CliTest(unittest.TestCase):
             self.step(env, step, 0)
         self.path.unlink()  # The next runner checks out the remote, which never received this file.
         self.assertEqual(self.plan_env("auto", "301")["RUN_COLLECT"], "true")
+
+    def test_collect_failure_blocks_extract_without_calling_it(self):
+        env = self.plan_env("auto", "500")
+        self.assertEqual(self.step(env, "collect", 1), 1)
+        with mock.patch.dict("os.environ", {"DAILY_DAY": env["DAILY_DAY"], "DAILY_RUN_ID": env["DAILY_RUN_ID"]}), \
+                mock.patch.object(d.subprocess, "run") as run, mock.patch("builtins.print"):
+            self.assertEqual(d.main(["step", "extract", "--", "python", "x.py"]), 0)
+            self.assertEqual(d.main(["step", "notify", "--", "python", "x.py"]), 0)
+        run.assert_not_called()
+        steps = json.loads(self.path.read_text(encoding="utf-8"))["days"][env["DAILY_DAY"]]["steps"]
+        self.assertEqual((steps["extract"]["execution_status"], steps["extract"]["blocked_reason"],
+                          steps["extract"]["dependency_run_id"]), ("blocked", "collect failed", "500-1"))
+        self.assertEqual(steps["notify"]["blocked_reason"], "extract blocked")
+        self.assertEqual(self.plan_env("auto", "501")["RUN_EXTRACT"], "true")
+
+    def test_screen_quality_is_recorded_from_this_runs_snapshot(self):
+        env = self.plan_env("auto", "600")
+        probe = {"screen": lambda run_id: "partial" if run_id == "600-1" else "unknown"}
+        with mock.patch.dict(d.QUALITY_PROBES, probe):
+            self.step(env, "screen", 0)
+        entry = json.loads(self.path.read_text(encoding="utf-8"))["days"][env["DAILY_DAY"]]["steps"]["screen"]
+        self.assertEqual((entry["execution_status"], entry["quality_status"]), ("success", "partial"))
 
     def test_commands_mode_writes_no_daily_record(self):
         env = self.plan_env("commands", "400")

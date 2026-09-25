@@ -65,7 +65,7 @@ EPS 공급자는 config/research_policy.json의 eps_provider로 선택한다. �
 
 새 workflow 설정은 KST 매일 09:17 수집·추출·EPS·알림, 03:23/09:23/15:23/21:23 명령 처리다. 주간 검토 보고는 월요일이다. GitHub 스케줄은 정확한 시각을 보장하지 않는다. 사용자 PC 타이머가 09:17에 mode=auto, 명령 시각에 mode=commands로 dispatch하고 GitHub 예약은 대체용이다(일간 예약=auto, 6시간 예약=commands).
 
-일간 완료는 `scripts/daily_run_state.py`의 필수 단계로 판단한다: collect → extract → notify, eps, quarterly, screen, prices, views(extract·eps·quarterly·prices 사용), returns, 월요일(KST)에만 community와 weekly_report(views 사용). 각 단계는 KST 날짜별로 started/success/failed와 종료 코드·run_id·마지막 성공 시각을 `data/processed/daily_runs.json`에 남기며, 결과물과 같은 커밋으로 저장된다. auto는 오늘 success가 아닌 단계와 그 결과를 쓰는 단계만 다시 실행하고, 모두 success면 명령만 처리한다. daily는 모든 단계를 새 run 기록으로 다시 실행한다. commands 실행은 일간 완료로 세지 않는다. extract는 그날 collect가 성공한 뒤에만 돈다. push가 거절되면 원격에 success 기록이 없으므로 다음 실행이 다시 시도한다. 단계 종료 코드 0만 success이며, 스크리너처럼 일부 누락(degraded)이어도 0으로 끝나는 단계는 자체 상태 파일에서 누락을 확인한다. /track은 최근 14일 신호를 지원하고 재실행 시 기존 아이디어를 반환한다. 명령 큐를 먼저 저장한 뒤 offset을 갱신해 응답 실패를 재시도한다.
+일간 완료는 `scripts/daily_run_state.py`의 필수 단계로 판단한다. 단계 순서는 수집/계산(collect, extract, eps, notify, quarterly, screen, prices) → baseline(기준 스냅샷 고정) → returns → views → 월요일(KST)에만 community·weekly_report다. 단계 관계는 이 파일 한 곳에서만 정의한다. '필수 선행'(extract←collect, notify←extract, weekly_report←views)은 앞 단계가 이번 계획 기준으로 성공하지 않았으면 명령을 호출하지 않고 blocked(이유·dependency_run_id)로 기록한다. '입력 갱신'(returns←baseline, views←extract·eps·quarterly·screen·prices·baseline·returns)은 입력 단계가 다시 끝나면(성공이든 실패든) 같은 날에도 화면을 다시 만든다. views는 입력 실패로 멈추지 않고 그 실패와 이전 관측 시각을 보여준다. 화면 생성 버전이 바뀌어도 다시 만든다. 각 단계는 실행 상태(pending/started/success/failed/blocked)와 자료 품질(complete/partial/unavailable/unknown)을 따로 `data/processed/daily_runs.json`에 남기며, 결과물과 같은 커밋으로 저장된다. 종료 코드 0은 프로세스가 끝났다는 뜻이고, 스크리너 품질은 이번 실행의 스냅샷(run_id 일치)에서 읽는다(degraded=partial). auto는 오늘 success가 아닌 단계, 입력이 바뀐 화면, 보완 시점이 된 partial 단계와 그것을 쓰는 단계만 실행한다. 계획을 저장할 때 다시 실행할 단계를 모두 pending으로 무효화하므로, 중간에 끊겨도 다음 auto가 남은 단계를 이어간다(이전 성공 시각과 시도 이력은 보존). partial 단계는 KST 하루에 추가 1회, 마지막 시도 60분 뒤 다음 auto 실행에서 보완한다(research_policy.json daily_run). 한도를 다 써도 품질은 partial로 남는다. daily는 모든 단계를 새 run 기록으로 다시 실행한다. commands 실행은 일간 완료로 세지 않는다. push가 거절되면 원격에 success 기록이 없으므로 다음 실행이 다시 시도한다. /track은 최근 14일 신호를 지원하고 재실행 시 기존 아이디어를 반환한다. 명령 큐를 먼저 저장한 뒤 offset을 갱신해 응답 실패를 재시도한다.
 
 외부 서비스별 실패를 분리하고 실패 후에도 상태를 저장한다. scripts/persist_state.py는 깨끗한 CI 체크아웃 전용이며 git commit/push를 수행한다. 로컬 변경 검토용 명령이 아니다. 전달 성공 직후 상태 저장 전 프로세스가 종료되는 경우 Telegram의 정확히 한 번 전송은 보장하지 못한다.
 
@@ -100,6 +100,6 @@ GitHub 예약 실행에는 지연이 발생할 수 있다. 9월 14일 일간 실
 
 ## 판단 스냅샷과 실제 결과 복기
 
-`python scripts/research_journal.py`는 현재 가설 개정을 고정하고 실제 실적과 비교한 outcomes 보고서를 생성합니다. 일간 운영에도 연결되어 있으며 `python scripts/gen_report.py quality`와 텔레그램에 평가 상태가 표시됩니다. 저장소는 `data/processed/research_journal/`입니다. 재실행으로 기준 관측을 바꾸지 않으며 미래 실적이 없으면 대기합니다.
+`python scripts/research_journal.py`는 현재 가설 개정을 고정하고 실제 실적과 비교한 outcomes 보고서를 생성합니다(`--capture-only`는 고정만, `--render-only`는 보고서만. 일간 운영은 baseline 단계에서 고정하고 views 단계에서 보고서를 만듭니다). 일간 운영에도 연결되어 있으며 `python scripts/gen_report.py quality`와 텔레그램에 평가 상태가 표시됩니다. 저장소는 `data/processed/research_journal/`입니다. 재실행으로 기준 관측을 바꾸지 않으며 미래 실적이 없으면 대기합니다.
 
 [평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 2026-09-24 구현했습니다. `python scripts/research_returns.py`로 실행합니다.
