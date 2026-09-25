@@ -76,7 +76,9 @@ STEPS: dict[str, Step] = {
     "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v2"),
     # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.
     "alerts": Step(requires=("cards",), inputs=("extract",)),
-    "baseline": Step(),                        # research_journal --capture: frozen case baselines
+    # research_journal --capture-only reads research case files and metric_log; tracking changes
+    # (/track) are not an input, so a new tracked ticker does not redo baselines or returns.
+    "baseline": Step(inputs=("@cases",)),
     "returns": Step(inputs=("baseline",)),
     "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "alerts", "baseline", "returns"),
                   version="views-v2"),
@@ -131,7 +133,15 @@ def evidence_revision() -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()[:16] if path.exists() else "none"
 
 
-EXTERNAL = {"@tracking": tracking_revision, "@evidence": evidence_revision}
+def cases_revision() -> str:
+    directory = c.DATA_DIR.parent / "research" / "cases"
+    digest = hashlib.sha256()
+    for path in sorted(directory.glob("*.json")):
+        digest.update(path.name.encode("utf-8") + path.read_bytes())
+    return digest.hexdigest()[:16]
+
+
+EXTERNAL = {"@tracking": tracking_revision, "@evidence": evidence_revision, "@cases": cases_revision}
 
 
 def input_revisions(steps: dict, name: str) -> dict:
@@ -299,6 +309,16 @@ def complete(state: dict, day: str, now: datetime | None = None, policy: dict | 
     return plan(state, day, "auto", now, policy) == []
 
 
+def incomplete(state: dict, day: str) -> dict[str, str]:
+    """Required steps whose latest execution did not succeed (failed/blocked/pending/started/not run).
+
+    A partial result waiting for, or past, its top-up is a quality gap, not an execution failure.
+    """
+    steps = day_steps(state, day)
+    return {name: steps.get(name, {}).get("execution_status") or "not_run" for name in required_steps(day)
+            if steps.get(name, {}).get("execution_status") != "success"}
+
+
 def quality_summary(state: dict, day: str) -> dict[str, str]:
     steps = day_steps(state, day)
     return {name: steps.get(name, {}).get("quality_status", "unknown") for name in required_steps(day)
@@ -414,9 +434,13 @@ def cmd_finish() -> int:
     if any(r["run_id"] == run_id for r in state.get("days", {}).get(day, {}).get("runs", [])):
         save(finish_run(state, day, run_id, datetime.now(timezone.utc)))
     state = load()
-    print(f"[daily] {day} complete={complete(state, day, policy=run_policy())} "
-          f"quality_gaps={quality_summary(state, day) or 'none'}")
-    return 0
+    unfinished = incomplete(state, day)
+    print(f"[daily] {day} execution={'complete' if not unfinished else unfinished} "
+          f"quality_gaps={quality_summary(state, day) or 'none'} "
+          f"auto_plan_now={plan(state, day, 'auto', policy=run_policy()) or 'none'}")
+    if os.environ.get("DAILY_MODE") == "commands":
+        return 0  # a commands run never owes the daily steps
+    return 1 if unfinished else 0
 
 
 def main(argv: list[str] | None = None) -> int:

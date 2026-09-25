@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import re
 import sys
 from datetime import date
@@ -185,9 +186,12 @@ def handle_track_candidate(cid: str, dry_run: bool) -> list[str]:
             return [f"활성 추적이 {c.policy()['max_active_ideas']}개로 가득 찼습니다. 기존 추적을 정리한 뒤 다시 등록해 주세요."]
         return [f"{ticker} 후보는 식별·통화 확인이 부족해 등록하지 않았습니다. 다음 스크린 후 다시 시도해 주세요."]
     note = " (최신 목록에는 없는 후보)" if state == "not_current" else ""
-    return [f"추적 등록 완료: {ticker} → {html.escape(idea_id)}{note}\n"
-            "다음 일간 수집(09:17 KST 무렵)부터 EPS 예상·주가·분기 숫자가 쌓입니다. "
-            "추적 선택은 검증 완료나 매수 추천이 아닙니다."]
+    if os.environ.get("DAILY_MODE") in ("auto", "daily"):
+        when = "이번 일간 실행에서 EPS 예상·주가·분기 숫자 수집을 시작합니다."
+    else:
+        when = "다음 auto 일간 실행(09:17 KST 무렵)에서 EPS 예상·주가·분기 숫자 수집을 시작합니다."
+    return [f"추적 등록 완료: {ticker} → {html.escape(idea_id)}{note}\n{when} "
+            "자료 확보 여부는 /data로 확인하세요. 추적 선택은 검증 완료나 매수 추천이 아닙니다."]
 
 
 def handle_track(target: str, dry_run: bool) -> list[str]:

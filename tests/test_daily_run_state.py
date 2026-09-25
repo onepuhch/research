@@ -15,7 +15,7 @@ MON = "2026-09-28"   # weekly steps due
 T = datetime(2026, 9, 24, 0, 20, tzinfo=timezone.utc)  # 09:20 KST Thursday
 
 
-EXTERNAL = {"@tracking": "t0", "@evidence": "e0"}
+EXTERNAL = {"@tracking": "t0", "@evidence": "e0", "@cases": "c0"}
 
 
 def setUpModule():

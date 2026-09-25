@@ -49,14 +49,18 @@ jobs:
       - name: Recover and migrate state
         id: migrate
         run: python scripts/migrate_v2.py
+      # Commands first: a /track registered now changes the tracking input, so this run's plan
+      # collects the new ticker. A failed command run never stops the daily plan.
+      - name: Process commands independently
+        id: commands
+        if: always() && steps.migrate.outcome == 'success'
+        run: python scripts/telegram_cmd.py
       - name: Plan today's remaining steps
         id: plan
+        if: always() && steps.migrate.outcome == 'success'
         env:
           DAILY_REDO: ${{ inputs.redo }}
         run: python scripts/daily_run_state.py plan --mode "$DAILY_MODE" --event "${{ github.event_name }}" --redo "$DAILY_REDO" >> "$GITHUB_ENV"
-      - name: Process commands independently
-        if: always() && steps.migrate.outcome == 'success'
-        run: python scripts/telegram_cmd.py
       # Each step runs when the plan says so. Relations between steps live only in
       # scripts/daily_run_state.py: the wrapper records a step as blocked without running it
       # when a required predecessor has not succeeded, and records started/success/failed,
@@ -115,6 +119,7 @@ jobs:
         if: always() && steps.migrate.outcome == 'success'
         run: python scripts/data_history.py --save
       - name: Close today's run record
+        # Fails the job when a required step is failed, blocked or unfinished; state is still persisted below.
         if: always() && steps.plan.outcome == 'success'
         run: python scripts/daily_run_state.py finish
       - name: Persist state even when a service fails

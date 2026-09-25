@@ -233,8 +233,8 @@ class TranslationTest(unittest.TestCase):
         self.assertEqual(cand["explanations"]["company_description_ko"]["text"], "데이터센터용 반도체를 만든다.")
 
 
-class CommandTest(unittest.TestCase):
-    """Direct and queued /screen and /candidate against a generated index."""
+class CandidateFixture(unittest.TestCase):
+    """A temporary data directory with one generated screener snapshot (no tests of its own)."""
 
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -245,6 +245,8 @@ class CommandTest(unittest.TestCase):
                       mock.patch.object(screen_revisions, "SCREEN_DIR", data / "revision_screen"),
                       mock.patch.object(telegram_cmd, "OFFSET_PATH", data / "telegram_offset.json"),
                       mock.patch.object(c, "ROOT", pathlib.Path(self.tmp.name)),
+                      # The fixture observations are from 2026-09-25; freshness must not depend on the run date.
+                      mock.patch.object(c, "today", return_value="2026-09-25"),
                       contextlib.redirect_stdout(io.StringIO())):
             patch.__enter__()
             self.addCleanup(patch.__exit__, None, None, None)
@@ -260,6 +262,13 @@ class CommandTest(unittest.TestCase):
             json.dump(snapshot(), h)
         k.generate(now=NOW, translate_now=False)
         self.aaa = k.load_index()["candidates"][0]
+
+    def update(self, update_id, text, chat="allowed"):
+        return {"update_id": update_id, "message": {"chat": {"id": chat}, "text": text}}
+
+
+class CommandTest(CandidateFixture):
+    """Direct and queued /screen and /candidate against a generated index."""
 
     def test_screen_and_candidate_replies(self):
         screen = telegram_cmd.handle_command("/screen")[0]
@@ -285,9 +294,6 @@ class CommandTest(unittest.TestCase):
         k.generate(now=NOW, translate_now=False)
         self.assertIn("마지막 유효 관측", telegram_cmd.handle_command("/screen")[0])
         self.assertIn("최신 수집 실패", telegram_cmd.handle_command(f"/candidate {self.aaa['candidate_id']}")[0])
-
-    def update(self, update_id, text, chat="allowed"):
-        return {"update_id": update_id, "message": {"chat": {"id": chat}, "text": text}}
 
     def test_queue_path_normalizes_and_rejects_other_chats(self):
         sent = []
@@ -321,7 +327,7 @@ class CommandTest(unittest.TestCase):
         self.assertEqual(json.loads(payload)["cards"][0]["candidate"]["candidate_version"], self.aaa["candidate_version"])
 
 
-class TrackCandidateTest(CommandTest):
+class TrackCandidateTest(CandidateFixture):
     """D2: the user's /track CAN choice becomes one ledger idea and a collection target."""
 
     def track(self, update_id, cid=None, sent=None):
@@ -347,7 +353,7 @@ class TrackCandidateTest(CommandTest):
         self.assertIn("검증 승격 아님", row["변경 사유"])
         self.assertEqual(len(c.read_rows("review_history")), 1)
         self.assertIn("추적 등록 완료", replies[0])
-        self.assertIn("다음 일간 수집", replies[0])
+        self.assertIn("다음 auto 일간 실행", replies[0])
         self.assertIn(row["idea_id"], replies[1])
 
     def test_tracked_company_becomes_a_collection_target_with_verified_currency(self):
@@ -420,7 +426,7 @@ class TrackCandidateTest(CommandTest):
         self.assertIn("SIG를 찾을 수 없습니다", telegram_cmd.handle_command("/track CAN")[0])  # ticker CAN, not an ID
 
 
-class ObservationHistoryTest(CommandTest):
+class ObservationHistoryTest(CandidateFixture):
     """F1: content versions and real observations are kept apart."""
 
     def observe(self, day, rows=None, top=("AAA", "CRDO"), growth=("BBB", "AAA")):
