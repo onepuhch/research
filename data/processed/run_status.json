@@ -1,25 +1,25 @@
 {
   "eps": {
-    "checked_at": "2026-09-25T00:08:36+00:00",
+    "checked_at": "2026-09-25T00:53:04+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:08:36+00:00",
+    "last_success_at": "2026-09-25T00:53:04+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-09-25T00:08:34+00:00",
+    "checked_at": "2026-09-25T00:53:01+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:08:34+00:00",
+    "last_success_at": "2026-09-25T00:53:01+00:00",
     "item_count": 16,
     "errors": [],
-    "collected_at": "2026-09-25T00:08:34.530472+00:00"
+    "collected_at": "2026-09-25T00:53:01.155068+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-25T00:08:34+00:00",
+    "checked_at": "2026-09-25T00:53:01+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:08:34+00:00",
+    "last_success_at": "2026-09-25T00:53:01+00:00",
     "accepted": 0,
     "rejected": 0,
     "validation_rejected": 0,
@@ -30,9 +30,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-25T00:23:29+00:00",
+    "checked_at": "2026-09-25T00:52:51+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:23:29+00:00",
+    "last_success_at": "2026-09-25T00:52:51+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -48,56 +48,39 @@
     "last_success_at": "2026-09-24T15:12:00+00:00"
   },
   "notify": {
-    "checked_at": "2026-09-25T00:08:37+00:00",
+    "checked_at": "2026-09-25T00:53:04+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:08:37+00:00"
+    "last_success_at": "2026-09-25T00:53:04+00:00"
   },
   "prices": {
-    "checked_at": "2026-09-25T00:23:17+00:00",
+    "checked_at": "2026-09-25T01:07:30+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:23:17+00:00",
+    "last_success_at": "2026-09-25T01:07:30+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-09-25T00:23:18+00:00",
-    "status": "degraded",
-    "last_success_at": "2026-09-24T16:44:45+00:00",
+    "checked_at": "2026-09-25T01:07:31+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-25T01:07:31+00:00",
     "targets": 4,
-    "failures": [
-      {
-        "ticker": "ALAB",
-        "error_type": "ValueError"
-      },
-      {
-        "ticker": "CRDO",
-        "error_type": "ValueError"
-      },
-      {
-        "ticker": "MRVL",
-        "error_type": "ValueError"
-      },
-      {
-        "ticker": "SPY",
-        "error_type": "ValueError"
-      }
-    ]
+    "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-09-25T00:08:39+00:00",
+    "checked_at": "2026-09-25T00:53:07+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:08:39+00:00",
+    "last_success_at": "2026-09-25T00:53:07+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-09-25T00:23:17+00:00",
+    "checked_at": "2026-09-25T01:07:30+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T00:23:17+00:00",
-    "snapshot": "20260925T000839Z_36076125470-1.json.gz",
-    "candidates": 103,
+    "last_success_at": "2026-09-25T01:07:30+00:00",
+    "snapshot": "20260925T005307Z_36079536116-1.json.gz",
+    "candidates": 101,
     "alert": false,
     "stages": {
       "universe": {
@@ -110,17 +93,17 @@
       },
       "quotes": {
         "requested": 7662,
-        "success": 7658,
-        "unavailable": 4
+        "success": 7657,
+        "unavailable": 5
       },
       "earnings": {
-        "requested": 3295,
-        "success": 2429,
-        "unavailable": 866
+        "requested": 3239,
+        "success": 2412,
+        "unavailable": 827
       },
       "profile": {
-        "requested": 103,
-        "success": 102,
+        "requested": 101,
+        "success": 100,
         "unavailable": 1
       },
       "price": {

@@ -1,14 +1,14 @@
 # 이익 예상치 상향 스크리너
 
-최신 시도: 2026-09-25 09:08 KST · 상태 **정상** · 마지막 완전 정상 결과: 2026-09-25 09:08 KST
+최신 시도: 2026-09-25 09:53 KST · 상태 **정상** · 마지막 완전 정상 결과: 2026-09-25 09:53 KST
 
 |단계|요청|정상|자료 부족|실패|미시도|
 |---|---|---|---|---|---|
 |상장 목록(SEC)|1|1|0|0|0|
 |Yahoo 접속|1|1|0|0|0|
-|시세 일괄 조회|7662|7658|4|0|0|
-|EPS 예상치|3295|2429|866|0|0|
-|업종(후보)|103|102|1|0|0|
+|시세 일괄 조회|7662|7657|5|0|0|
+|EPS 예상치|3239|2412|827|0|0|
+|업종(후보)|101|100|1|0|0|
 |주가 비교(상위)|30|30|0|0|0|
 
 증권사들이 **내년(다음 회계연도) EPS 예상치**를 최근 90일 동안 얼마나 올렸는지 본다. 내년에 흑자이고, 최근 30일에도 오르고, 올린 증권사가 내린 곳보다 많은 회사만 남긴다.
@@ -32,14 +32,13 @@
 - **Computer Hardware** 4곳: DELL, STX, WDC, P
 - **Banks - Regional** 4곳: CIB, HBT, CLBK, AMTB
 - **Oil & Gas E&P** 4곳: MGY, TALO, KOS, TXO
-- **Steel** 3곳: NUE, CLF, TX
 - **Aerospace & Defense** 3곳: ARXS, VSEC, SPCX
 - **Biotechnology** 3곳: CORT, BLTE, URGN
 - **Auto Parts** 3곳: MBLY, DAN, DCH
 - **Credit Services** 3곳: BFH, AGM, ECPG
 - **Software - Infrastructure** 3곳: PGY, SABR, RPAY
 
-> 업종 확인 102/103곳. 업종이 미확인인 후보는 묶음 판단에서 빠졌다.
+> 업종 확인 100/101곳. 업종이 미확인인 후보는 묶음 판단에서 빠졌다.
 
 ## A. 이익 규모 대비 상향
 
@@ -49,22 +48,22 @@
 |2|TALO|Oil & Gas E&P|$2.8B|$-0.04 → $1.66|적자→흑자|+9.99%p|2/0|+24%|미산출|예|
 |3|DK|Oil & Gas Refining & Marketing|$4.1B|$2.06 → $7.85|+282%|+8.66%p|6/0|+51%|-60%|예|
 |4|PBF|Oil & Gas Refining & Marketing|$8.5B|$6.34 → $12.38|+95%|+8.39%p|4/0|+64%|-16%|예|
-|5|MPC|Oil & Gas Refining & Marketing|$114.1B|$23.93 → $47.13|+97%|+5.93%p|12/0|+53%|-22%|예|
+|5|MPC|Oil & Gas Refining & Marketing|$109.8B|$23.93 → $47.13|+97%|+5.93%p|12/0|+53%|-22%|예|
 |6|AGL|Medical Care Facilities|$1.3B|$-0.62 → $3.20|적자→흑자|+5.03%p|6/0|-29%|미산출|-|
 |7|PARR|Oil & Gas Refining & Marketing|$3.8B|$10.00 → $13.84|+38%|+5.00%p|4/1|+41%|+2%|예|
 |8|RPAY|Software - Infrastructure|$347M|$0.97 → $1.16|+20%|+4.91%p|2/1|+6%|-11%|-|
-|9|TX|Steel|$10.9B|$5.02 → $7.65|+52%|+4.75%p|3/0|+26%|-17%|예|
-|10|VLO|Oil & Gas Refining & Marketing|$110.2B|$21.14 → $38.04|+80%|+4.42%p|7/1|+45%|-20%|예|
-|11|DINO|Oil & Gas Refining & Marketing|$18.8B|$7.40 → $11.82|+60%|+4.19%p|9/2|+55%|-3%|예|
-|12|TNK|Oil & Gas Midstream|$3.3B|$7.47 → $10.90|+46%|+3.64%p|3/1|+39%|-5%|-|
-|13|SPT|Software - Application|$589M|$1.20 → $1.54|+28%|+3.51%p|9/0|+33%|+4%|-|
-|14|SUNC|Oil & Gas Midstream|$4.0B|$9.70 → $12.34|+27%|+3.42%p|1/0|+15%|-9%|-|
-|15|URGN|Biotechnology|$2.0B|$1.44 → $2.79|+94%|+3.29%p|5/0|+20%|-38%|-|
-|16|PGY|Software - Infrastructure|$1.6B|$3.54 → $4.15|+17%|+3.25%p|7/0|+18%|+1%|-|
-|17|CODI|Conglomerates|$846M|$0.28 → $0.64|+130%|+3.24%p|4/1|+9%|-53%|예|
-|18|LPG|Oil & Gas Midstream|$2.3B|$3.01 → $4.68|+56%|+3.09%p|2/1|+47%|-5%|예|
-|19|NBR|Oil & Gas Drilling|$1.3B|$1.11 → $3.61|+224%|+3.01%p|1/0|+0%|-69%|예|
-|20|PSX|Oil & Gas Refining & Marketing|$102.1B|$17.28 → $24.90|+44%|+2.98%p|15/1|+49%|+4%|예|
+|9|VLO|Oil & Gas Refining & Marketing|$110.2B|$21.14 → $38.04|+80%|+4.42%p|7/1|+45%|-20%|예|
+|10|DINO|Oil & Gas Refining & Marketing|$18.8B|$7.40 → $11.82|+60%|+4.19%p|9/2|+55%|-3%|예|
+|11|TNK|Oil & Gas Midstream|$3.3B|$7.47 → $10.90|+46%|+3.64%p|3/1|+39%|-5%|-|
+|12|SPT|Software - Application|$589M|$1.20 → $1.54|+28%|+3.51%p|9/0|+33%|+4%|-|
+|13|SUNC|Oil & Gas Midstream|$4.0B|$9.70 → $12.34|+27%|+3.42%p|1/0|+15%|-9%|-|
+|14|URGN|Biotechnology|$2.0B|$1.44 → $2.79|+94%|+3.29%p|5/0|+20%|-38%|-|
+|15|PGY|Software - Infrastructure|$1.6B|$3.54 → $4.15|+17%|+3.25%p|7/0|+18%|+1%|-|
+|16|CODI|Conglomerates|$846M|$0.28 → $0.64|+130%|+3.24%p|4/1|+9%|-53%|예|
+|17|LPG|Oil & Gas Midstream|$2.3B|$3.01 → $4.68|+56%|+3.09%p|2/1|+47%|-5%|예|
+|18|NBR|Oil & Gas Drilling|$1.3B|$1.11 → $3.61|+224%|+3.01%p|1/0|+0%|-69%|예|
+|19|PSX|Oil & Gas Refining & Marketing|$102.6B|$17.28 → $24.90|+44%|+2.98%p|15/1|+49%|+4%|예|
+|20|DAN|Auto Parts|$2.9B|$3.38 → $4.19|+24%|+2.94%p|2/1|+6%|-15%|예|
 
 ## B. 성장률 상향
 
@@ -78,7 +77,7 @@
 |6|IPI|Agricultural Inputs|$482M|$0.57 → $1.41|+148%|+2.36%p|2/0|+6%|-57%|예|
 |7|BLTE|Biotechnology|$6.8B|$0.94 → $2.26|+139%|+0.78%p|1/0|+13%|-53%|예|
 |8|CODI|Conglomerates|$846M|$0.28 → $0.64|+130%|+3.24%p|4/1|+9%|-53%|예|
-|9|MPC|Oil & Gas Refining & Marketing|$114.1B|$23.93 → $47.13|+97%|+5.93%p|12/0|+53%|-22%|예|
+|9|MPC|Oil & Gas Refining & Marketing|$109.8B|$23.93 → $47.13|+97%|+5.93%p|12/0|+53%|-22%|예|
 |10|PBF|Oil & Gas Refining & Marketing|$8.5B|$6.34 → $12.38|+95%|+8.39%p|4/0|+64%|-16%|예|
 |11|URGN|Biotechnology|$2.0B|$1.44 → $2.79|+94%|+3.29%p|5/0|+20%|-38%|-|
 |12|AMCX|Entertainment|$496M|$1.48 → $2.76|+86%|+10.57%p|7/0|+19%|-36%|-|
@@ -88,7 +87,7 @@
 |16|DINO|Oil & Gas Refining & Marketing|$18.8B|$7.40 → $11.82|+60%|+4.19%p|9/2|+55%|-3%|예|
 |17|FSLY|Software - Application|$4.3B|$0.39 → $0.63|+60%|+0.88%p|10/0|+73%|+8%|예|
 |18|CBRL|Restaurants|$1.2B|$1.16 → $1.85|+60%|+1.33%p|2/0|-10%|-44%|-|
-|19|UCTT|Semiconductor Equipment & Materials|$3.4B|$3.77 → $5.87|+56%|+2.74%p|4/0|-35%|-58%|예|
+|19|UCTT|Semiconductor Equipment & Materials|$3.5B|$3.77 → $5.87|+56%|+2.74%p|4/0|-35%|-58%|예|
 |20|LPG|Oil & Gas Midstream|$2.3B|$3.01 → $4.68|+56%|+3.09%p|2/1|+47%|-5%|예|
 
-전체 결과: `data/processed/revision_screen/20260925T000839Z_36076125470-1.json.gz`
+전체 결과: `data/processed/revision_screen/20260925T005307Z_36079536116-1.json.gz`
