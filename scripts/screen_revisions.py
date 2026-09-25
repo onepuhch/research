@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import hashlib
 import http.client
 import http.cookiejar
 import json
@@ -679,21 +680,45 @@ def publish(snapshot: dict, path: Path) -> None:
 
 # ----------------------------------------------------------------------- main
 
+UNIVERSE_SOURCE: dict = {}
+
+
 def load_universe(transport, user_agent: str) -> list[dict]:
     status, body, _ = transport(SEC_URL, {"User-Agent": user_agent})
     if status != 200:
         raise FetchError("failed", f"http_{status}", status, 1)
     payload = json.loads(body.decode("utf-8"))
     index = {name: i for i, name in enumerate(payload["fields"])}
+    UNIVERSE_SOURCE.update(url=SEC_URL, sha256=hashlib.sha256(body).hexdigest(),
+                           observed_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
     seen, rows = set(), []
     for item in payload["data"]:
         ticker, exchange = item[index["ticker"]], item[index["exchange"]]
         if exchange not in EXCHANGES or not ticker or ticker in seen:
             continue
         seen.add(ticker)
+        cik = item[index["cik"]] if "cik" in index else None
         rows.append({"ticker": ticker, "symbol": ticker.replace(".", "-"), "name": item[index["name"]],
-                     "exchange": exchange})
+                     "exchange": exchange, "cik": f"{int(cik):010d}" if isinstance(cik, int) or str(cik).isdigit() else None})
     return rows
+
+
+def issuers_path() -> Path:
+    return c.DATA_DIR / "sec_issuers.json.gz"
+
+
+def store_issuers(universe: list[dict], source: dict) -> bool:
+    """Official ticker -> CIK/exchange list as read from SEC, kept for snapshots without CIKs.
+    Rewritten only when the SEC file changed."""
+    path = issuers_path()
+    if path.exists():
+        with gzip.open(path, "rt", encoding="utf-8") as handle:
+            if json.load(handle).get("source", {}).get("sha256") == source.get("sha256"):
+                return False
+    record = {"source": source, "issuers": {r["ticker"]: {"cik": r["cik"], "exchange": r["exchange"], "name": r["name"]}
+                                            for r in universe if r.get("cik")}}
+    write_gz(path, record)
+    return True
 
 
 def eligibility(q: dict, cfg: dict) -> str:
@@ -758,7 +783,8 @@ def screen(cfg: dict, universe: list[dict], yahoo: Yahoo) -> dict:
         q = quotes[symbol]
         rows.append({"ticker": by_symbol[symbol]["ticker"], "symbol": symbol,
                      "name": q.get("longName") or q.get("shortName") or by_symbol[symbol]["name"],
-                     "exchange": by_symbol[symbol].get("exchange"), "market_cap": q.get("marketCap"), **row})
+                     "exchange": by_symbol[symbol].get("exchange"), "cik": by_symbol[symbol].get("cik"),
+                     "market_cap": q.get("marketCap"), **row})
     stages["earnings"] = stage_stats(earn)
 
     candidates = [r for r in rows if r["candidate"]]
@@ -869,6 +895,8 @@ def main(argv: list[str] | None = None) -> int:
         return 1 if status == "failed" else 0
     path = SCREEN_DIR / f"{started.strftime('%Y%m%dT%H%M%SZ')}_{run_id}.json.gz"
     write_gz(path, snapshot)
+    if UNIVERSE_SOURCE and not args.tickers:
+        store_issuers(universe, dict(UNIVERSE_SOURCE))
     publish(snapshot, path)
     c.record_run("revision_screen", status, snapshot=path.name, candidates=summary["candidates"],
                  alert=summary["alert"], stages=summary["stages"])

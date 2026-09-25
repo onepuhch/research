@@ -55,5 +55,18 @@
     "extract": 11,
     "cards": 3,
     "candidate_context": 6
+  },
+  "candidate_context": {
+    "companies_per_day": 10,
+    "filings_per_company": 5,
+    "documents_per_company": 3,
+    "http_attempts_per_day": 100,
+    "time_budget_s": 180,
+    "timeout_s": 15,
+    "max_document_bytes": 2000000,
+    "lookback_days": 120,
+    "revisit_days": 7,
+    "retry_failed_hours": 24,
+    "no_document_days": 7
   }
 }

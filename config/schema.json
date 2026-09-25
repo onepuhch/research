@@ -367,6 +367,11 @@
       "observed_at", "source_snapshot", "eps", "price", "memberships", "run_quality", "classification",
       "policy_version", "generator_version"
     ],
+    "company_document": [
+      "document_id", "issuer", "url", "accession", "form", "document_type", "filed_at", "published_at",
+      "observed_at", "raw_sha256", "content_type", "coverage", "status", "relevance",
+      "normalization_version", "blocks"
+    ],
     "candidate_alert_event": [
       "channel", "event", "entity_id", "thesis_key", "day", "status", "attempts"
     ]

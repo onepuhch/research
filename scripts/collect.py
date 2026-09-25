@@ -21,6 +21,7 @@ from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
 import common as c
+import company_filings
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "discovery_sources.json"
@@ -69,6 +70,7 @@ def fetch_text(url: str, max_bytes: int | None = None) -> str:
         },
     )
     for attempt in range(3):
+        company_filings.pace(url)  # one SEC pace for every collector in this process
         try:
             with urlopen(request, timeout=TIMEOUT) as response:
                 charset = response.headers.get_content_charset() or "utf-8"
