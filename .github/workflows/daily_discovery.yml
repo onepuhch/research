@@ -26,7 +26,10 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    # Worst case (minutes): tests 1 + collect 3 + extract 7 (11 model requests with retries and
+    # pauses) + EPS/quarterly/prices 2 + screen 28 (hard stop) + context 6 (hard stop; 180 s budget
+    # plus one in-flight model call) + cards 2 + the rest 3 = 52. The screen normally takes ~15.
+    timeout-minutes: 55
     env:
       PYTHONIOENCODING: utf-8
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -94,6 +97,11 @@ jobs:
         # Price collection remains independent of EPS availability.
         if: always() && steps.plan.outcome == 'success' && env.RUN_PRICES == 'true'
         run: python scripts/daily_run_state.py step prices -- python scripts/collect_prices.py
+      - name: Research candidate sources (SEC filings and drafts)
+        # Its failure never stops numeric cards, tracked-company collection or risk alerts.
+        if: always() && steps.plan.outcome == 'success' && env.RUN_CONTEXT == 'true'
+        timeout-minutes: 6
+        run: python scripts/daily_run_state.py step context -- python scripts/candidate_context.py
       - name: Build candidate cards
         # Reads the latest valid screen; a failed screen leaves the previous cards marked stale.
         if: always() && steps.plan.outcome == 'success' && env.RUN_CARDS == 'true'

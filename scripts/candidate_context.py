@@ -189,7 +189,8 @@ def screen_ready(now: datetime) -> tuple[dict | None, list[str]]:
     return snapshot, list(dict.fromkeys(reasons))
 
 
-def run_sources(now: datetime | None = None, client: cf.SecClient | None = None) -> dict:
+def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
+                deadline: float | None = None) -> dict:
     import candidates
     now = now or datetime.now(timezone.utc)
     cfg = settings()
@@ -216,7 +217,8 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None)
     user_agent = os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0 research-bot"
     client = client or cf.SecClient(user_agent=user_agent,
                                     attempts_left=max(0, cfg["http_attempts_per_day"] - usage["http_attempts"]),
-                                    deadline=time.monotonic() + cfg["time_budget_s"], timeout_s=cfg["timeout_s"],
+                                    deadline=deadline or time.monotonic() + cfg["time_budget_s"],
+                                    timeout_s=cfg["timeout_s"],
                                     max_bytes=cfg["max_document_bytes"])
     for target in chosen:
         entry = state["candidates"].setdefault(target["candidate_id"], {})
@@ -479,8 +481,10 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.parse_args(argv)
     try:
-        report = run_sources()
-        report["drafts"] = run_drafts()
+        # One time budget for sources and drafts together; state is saved after each company.
+        deadline = time.monotonic() + settings()["time_budget_s"]
+        report = run_sources(deadline=deadline)
+        report["drafts"] = run_drafts(deadline=deadline)
     except (OSError, ValueError, KeyError) as error:
         c.record_run("candidate_context", "failed", error_type=type(error).__name__)
         print(f"[context] failed: {type(error).__name__}")

@@ -61,6 +61,8 @@ class Step:
     weekday: int | None = None
     # A render step is redone when its generator version changes, without recollecting inputs.
     version: str | None = None
+    # A partial result may get the generic 60-minute top-up; steps with their own retry rules opt out.
+    partial_top_up: bool = True
 
 
 # Order is the workflow order: collection/calculation -> baseline -> returns -> views -> weekly.
@@ -72,8 +74,11 @@ STEPS: dict[str, Step] = {
     "quarterly": Step(inputs=("@tracking",)),
     "screen": Step(),
     "prices": Step(inputs=("@tracking",)),
+    # Official filings and drafts for the screen's candidates. It keeps its own limits and retry
+    # times (24 h after failures, 7 days after 'nothing relevant'), so no generic partial top-up.
+    "context": Step(inputs=("screen",), version="context-v1", partial_top_up=False),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
-    "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v3"),
+    "cards": Step(inputs=("screen", "context", "@tracking", "@evidence"), version="cards-v3"),
     # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.
     "alerts": Step(requires=("cards",), inputs=("extract",)),
     # research_journal --capture-only reads research case files and metric_log; tracking changes
@@ -164,8 +169,10 @@ def stale(steps: dict, name: str) -> bool:
     return bool(step.inputs) and entry.get("inputs") != input_revisions(steps, name)
 
 
-def retry_due(entry: dict, now: datetime, policy: dict) -> bool:
+def retry_due(entry: dict, now: datetime, policy: dict, step: str = "screen") -> bool:
     """A partial result gets a limited top-up, spaced from the last attempt."""
+    if not STEPS[step].partial_top_up:
+        return False
     if entry.get("quality_status") != "partial" or not entry.get("finished_at"):
         return False
     if entry.get("auto_retries", 0) >= policy["partial_retry_max"]:
@@ -202,7 +209,7 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
             why[name] = entry.get("execution_status") or "not_run"
         elif stale(steps, name):
             why[name] = "inputs_changed"
-        elif retry_due(entry, now, policy):
+        elif retry_due(entry, now, policy, name):
             why[name] = "partial_retry"
     for name in dependents(set(why), required) - set(why):
         why[name] = "dependency_rerun"
@@ -363,7 +370,13 @@ def screen_quality(run_id: str) -> str:
     return {"success": "complete", "degraded": "partial"}.get(run.get("status"), "unknown")
 
 
-QUALITY_PROBES = {"screen": screen_quality}
+def context_quality(run_id: str) -> str:
+    """partial when some documents could not be reached; waiting or budget stops are not failures."""
+    status = c.read_json(c.DATA_DIR / "run_status.json", {}).get("candidate_context", {}).get("status")
+    return {"success": "complete", "held": "unavailable", "degraded": "partial"}.get(status, "unknown")
+
+
+QUALITY_PROBES = {"screen": screen_quality, "context": context_quality}
 
 
 # ------------------------------------------------------------------------ CLI

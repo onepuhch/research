@@ -36,6 +36,14 @@ class WorkflowTextTest(unittest.TestCase):
         self.assertLess(text.index("- name: Configure the state commit identity"),
                         text.index("- name: Send new-candidate alerts"))
 
+    def test_context_runs_after_screen_and_before_cards(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        order = [text.index(f"- name: {name}") for name in (
+            "Screen US stocks for sustained estimate upgrades", "Research candidate sources (SEC filings and drafts)",
+            "Build candidate cards", "Send new-candidate alerts (shared daily budget)", "Build research views")]
+        self.assertEqual(order, sorted(order))
+        self.assertIn("timeout-minutes: 6", step_block(text, "Research candidate sources (SEC filings and drafts)"))
+
     def test_state_is_persisted_even_when_finish_fails(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertLess(text.index("- name: Close today's run record"),
