@@ -1,0 +1,64 @@
+{
+  "events": {
+    "NASDAQ:AMCX|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:AMCX",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-14C6F602D0868FB9",
+      "candidate_version": "CV-B4F200613F69C4B5",
+      "signal_id": null,
+      "day": "2026-09-25",
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-09-25T12:33:32+00:00",
+          "status": "sent",
+          "message_id": 137,
+          "error": null
+        }
+      ],
+      "message_id": 137
+    }
+  },
+  "bootstrap": {
+    "date": "2026-09-25",
+    "source_snapshot": {
+      "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+      "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+      "run_id": "36133507734-1",
+      "finished_at": "2026-09-25T12:25:51+00:00"
+    },
+    "keys": [
+      "NASDAQ:AEHR|eps-revision-review:v1|new_discovery",
+      "NASDAQ:AXTI|eps-revision-review:v1|new_discovery",
+      "NASDAQ:BLTE|eps-revision-review:v1|new_discovery",
+      "NASDAQ:CBRL|eps-revision-review:v1|new_discovery",
+      "NASDAQ:CLBK|eps-revision-review:v1|new_discovery",
+      "NASDAQ:CORT|eps-revision-review:v1|new_discovery",
+      "NASDAQ:FSLY|eps-revision-review:v1|new_discovery",
+      "NASDAQ:PGY|eps-revision-review:v1|new_discovery",
+      "NASDAQ:PUBM|eps-revision-review:v1|new_discovery",
+      "NASDAQ:RPAY|eps-revision-review:v1|new_discovery",
+      "NASDAQ:SPT|eps-revision-review:v1|new_discovery",
+      "NASDAQ:UCTT|eps-revision-review:v1|new_discovery",
+      "NASDAQ:URGN|eps-revision-review:v1|new_discovery",
+      "NYSE:AGL|eps-revision-review:v1|new_discovery",
+      "NYSE:CODI|eps-revision-review:v1|new_discovery",
+      "NYSE:DAN|eps-revision-review:v1|new_discovery",
+      "NYSE:DINO|eps-revision-review:v1|new_discovery",
+      "NYSE:DK|eps-revision-review:v1|new_discovery",
+      "NYSE:IPI|eps-revision-review:v1|new_discovery",
+      "NYSE:LPG|eps-revision-review:v1|new_discovery",
+      "NYSE:MPC|eps-revision-review:v1|new_discovery",
+      "NYSE:NBR|eps-revision-review:v1|new_discovery",
+      "NYSE:PARR|eps-revision-review:v1|new_discovery",
+      "NYSE:PBF|eps-revision-review:v1|new_discovery",
+      "NYSE:PSX|eps-revision-review:v1|new_discovery",
+      "NYSE:SUNC|eps-revision-review:v1|new_discovery",
+      "NYSE:TALO|eps-revision-review:v1|new_discovery",
+      "NYSE:TNK|eps-revision-review:v1|new_discovery",
+      "NYSE:VLO|eps-revision-review:v1|new_discovery"
+    ]
+  }
+}

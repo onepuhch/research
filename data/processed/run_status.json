@@ -1,8 +1,8 @@
 {
   "eps": {
-    "checked_at": "2026-09-25T01:08:38+00:00",
+    "checked_at": "2026-09-25T12:33:29+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T01:08:38+00:00",
+    "last_success_at": "2026-09-25T12:33:29+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
@@ -30,17 +30,17 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-25T12:26:46+00:00",
+    "checked_at": "2026-09-25T12:33:27+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T12:26:46+00:00",
+    "last_success_at": "2026-09-25T12:33:27+00:00",
     "processed": 0,
     "failed": 0
   },
   "telegram_delivery": {
-    "checked_at": "2026-09-24T15:12:00+00:00",
+    "checked_at": "2026-09-25T12:33:32+00:00",
     "status": "success",
-    "last_success_at": "2026-09-24T15:12:00+00:00",
-    "message_id": 136
+    "last_success_at": "2026-09-25T12:33:32+00:00",
+    "message_id": 137
   },
   "review_report": {
     "checked_at": "2026-09-24T15:12:00+00:00",
@@ -53,9 +53,9 @@
     "last_success_at": "2026-09-25T01:08:38+00:00"
   },
   "prices": {
-    "checked_at": "2026-09-25T01:23:03+00:00",
+    "checked_at": "2026-09-25T12:33:31+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T01:23:03+00:00",
+    "last_success_at": "2026-09-25T12:33:31+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
@@ -68,9 +68,9 @@
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-09-25T01:08:40+00:00",
+    "checked_at": "2026-09-25T12:33:31+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T01:08:40+00:00",
+    "last_success_at": "2026-09-25T12:33:31+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
@@ -127,5 +127,17 @@
     "cards": 30,
     "unidentified": 0,
     "stale": []
+  },
+  "candidate_alerts": {
+    "checked_at": "2026-09-25T12:33:32+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-25T12:33:32+00:00",
+    "slots": 3,
+    "bootstrap": true,
+    "retry_pending": 0,
+    "sent": 1,
+    "failed": 0,
+    "uncertain": 0,
+    "selected": 1
   }
 }
