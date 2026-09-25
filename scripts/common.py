@@ -255,9 +255,39 @@ def model_calls_remaining(component: str, day: str | None = None) -> int:
     return max(0, min(total, own))
 
 
+def model_provider_blocked(now: datetime | None = None) -> dict | None:
+    """The shared model block after a 429, while it lasts (every component respects it)."""
+    block = read_json(DATA_DIR / "model_budget.json", {}).get("blocked")
+    if not block:
+        return None
+    now = now or datetime.now(timezone.utc)
+    return block if datetime.fromisoformat(block["until"]) > now else None
+
+
+def block_model_provider(reason: str, retry_after_s: float | None = None, now: datetime | None = None) -> dict:
+    """Stop model requests until the server's Retry-After, else the next KST day. A 429 is not
+    assumed to mean the daily quota is spent; the reason stays 'provider_rate_limited'."""
+    now = now or datetime.now(timezone.utc)
+    if retry_after_s is not None:
+        until = now + timedelta(seconds=retry_after_s)
+    else:
+        kst = timezone(timedelta(hours=9))
+        until = (now.astimezone(kst) + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+    path = DATA_DIR / "model_budget.json"
+    state = read_json(path, {"days": {}})
+    state["blocked"] = {"reason": reason, "since": now.isoformat(timespec="seconds"),
+                        "until": until.astimezone(timezone.utc).isoformat(timespec="seconds"),
+                        "retry_after_s": retry_after_s}
+    atomic_json(path, state)
+    return state["blocked"]
+
+
 def reserve_model_call(component: str) -> None:
-    """Count one HTTP request before it is sent (retries included); refuse when none is left.
-    A crash after this point keeps the count: an unknown outcome is never refunded."""
+    """Count one HTTP request before it is sent (retries included); refuse when none is left
+    or the provider is blocked. A crash after this point keeps the count: an unknown outcome
+    is never refunded."""
+    if model_provider_blocked():
+        raise ModelBudgetExhausted("provider_rate_limited")
     if model_calls_remaining(component) <= 0:
         raise ModelBudgetExhausted(component)
     record_model_call(component)

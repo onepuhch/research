@@ -12,8 +12,16 @@ on:
       mode:
         description: 'daily = rerun every step, auto = only steps not yet successful today, commands = Telegram commands only'
         type: choice
-        options: [daily, auto, commands]
+        options: [daily, auto, commands, context_verify]
         default: daily
+      verify_cache_only:
+        description: 'Context verification: render stored data without network calls'
+        type: boolean
+        default: false
+      verify_refresh_screen:
+        description: 'Context verification: explicitly refresh a stale screen with sending disabled'
+        type: boolean
+        default: false
       redo:
         description: 'auto only: comma-separated steps to run again today (e.g. screen); their users rerun too'
         type: string
@@ -25,6 +33,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   research:
+    if: ${{ inputs.mode != 'context_verify' }}
     runs-on: ubuntu-latest
     # Worst case (minutes): tests 1 + collect 3 + extract 7 (11 model requests with retries and
     # pauses) + EPS/quarterly/prices 2 + screen 28 (hard stop) + context 6 (hard stop; 180 s budget
@@ -149,3 +158,43 @@ jobs:
           path: reports/generated/
           retention-days: 30
           if-no-files-found: ignore
+
+  context-verification:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'context_verify' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      PYTHONIOENCODING: utf-8
+      RESEARCH_DISABLE_SEND: '1'
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT || vars.SEC_USER_AGENT }}
+      VERIFY_CACHE_ONLY: ${{ inputs.verify_cache_only }}
+      VERIFY_REFRESH_SCREEN: ${{ inputs.verify_refresh_screen }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate behavior
+        run: python -m unittest discover -s tests -q
+      - name: Configure state writer
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Recover state
+        id: recover
+        run: python scripts/migrate_v2.py
+      - name: Verify context without delivery
+        if: steps.recover.outcome == 'success'
+        run: python scripts/context_verify.py
+      - name: Persist verification evidence
+        if: always() && steps.recover.outcome == 'success'
+        run: python scripts/persist_state.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: context-verification-${{ github.run_id }}
+          path: reports/generated/
+          retention-days: 30

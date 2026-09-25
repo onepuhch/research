@@ -1165,6 +1165,11 @@ def context_inputs() -> tuple[dict, dict]:
             if entry.get("context_id") else None
         if not record:
             continue
+        if (record.get("parser_version") != candidate_context.PARSER_VERSION
+                or entry.get("status") != "success"
+                or record.get("eps_target_period") != entry.get("eps_target_period")):
+            entry["draft_status"] = "review_needed"
+            continue
         docs = []
         for document_id in record["document_ids"]:
             doc = company_filings.load_document(document_id)

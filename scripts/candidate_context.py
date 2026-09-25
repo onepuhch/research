@@ -135,16 +135,17 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
     submissions = json.loads(body.decode("utf-8"))
     issuer["name"] = submissions.get("name") or issuer.get("name")
     filings = cf.recent_filings(submissions, now.date(), cfg["lookback_days"])[:cfg["filings_per_company"]]
-    found, examined, notes, bodies = [], [], [], 0
+    found, examined, notes, bodies, failures = [], [], [], 0, 0
     for filing in filings:
         if bodies >= cfg["documents_per_company"]:
             break
-        if found and filing["rank"] == 2:
+        if found and filing["rank"] == 2 and any(cf.load_document(d).get("relevance", {}).get("core_earnings") for d in found):
             break  # a results release was found: the large periodic report is not needed
         index_url = cf.filing_index_url(issuer["cik"], filing["accessionNumber"])
         try:
             page, final, _ = client.get(index_url)
         except HTTPError as error:
+            failures += 1
             notes.append(f"{filing['accessionNumber']} index HTTP {error.code}")
             continue
         base = final.rsplit("/", 1)[0] + "/"
@@ -158,6 +159,7 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 try:
                     raw, final_url, truncated = client.get(doc["url"])
                 except HTTPError as error:
+                    failures += 1
                     notes.append(f"{doc['name']} HTTP {error.code}")
                     continue
                 bodies += 1
@@ -169,10 +171,10 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 found.append(record["document_id"])
                 break  # one results document per filing
     if found:
-        return {"status": "success", "document_ids": found, "examined": examined, "notes": notes}
+        return {"status": "success", "quality": "partial" if failures else "complete", "document_ids": found, "examined": examined, "notes": notes}
     if not filings:
         notes.append(f"no 8-K/6-K results or periodic report in {cfg['lookback_days']} days")
-    return {"status": "no_relevant_document", "document_ids": [], "examined": examined, "notes": notes}
+    return {"status": "failed" if failures else "no_relevant_document", "document_ids": [], "examined": examined, "notes": notes}
 
 
 def screen_ready(now: datetime) -> tuple[dict | None, list[str]]:
@@ -192,6 +194,19 @@ def screen_ready(now: datetime) -> tuple[dict | None, list[str]]:
     return snapshot, list(dict.fromkeys(reasons))
 
 
+def refresh_issuers(client):
+    """Only the official identity list; never run prices, EPS or alerts."""
+    import screen_revisions as screen
+    def transport(url, headers):
+        body, _, truncated = client.get(url)
+        if truncated:
+            raise ValueError("issuer list truncated")
+        return 200, body, {}
+    rows = screen.load_universe(transport, client.user_agent)
+    screen.store_issuers(rows, dict(screen.UNIVERSE_SOURCE))
+    return len(rows)
+
+
 def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
                 deadline: float | None = None) -> dict:
     import candidates
@@ -205,48 +220,59 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
     if snapshot is None or hold:
         c.atomic_json(state_path(), state)
         return report
-    first_seen = {cid: item["first_seen_at"] for cid, item in candidates.known_candidates().items()}
-    all_targets = targets(snapshot, c.read_json(c.ROOT / "config" / "entities.json", {}), load_issuers(), first_seen)
-    report["targets"] = len(all_targets)
-    for t in all_targets:  # identity problems are recorded without any request
-        if t["problem"]:
-            entry = state["candidates"].setdefault(t["candidate_id"], {})
-            if entry.get("status") != t["problem"]:
-                entry.update(status=t["problem"], ticker=t["ticker"], attempted_at=now.isoformat(timespec="seconds"),
-                             next_eligible_at=(now + timedelta(days=cfg["no_document_days"])).isoformat(timespec="seconds"))
-    ready = [t for t in all_targets if not t["problem"]]
-    slots = max(0, cfg["companies_per_day"] - usage["companies"])
-    chosen = select(ready, state, now, slots)
     user_agent = os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0 research-bot"
     client = client or cf.SecClient(user_agent=user_agent,
-                                    attempts_left=max(0, cfg["http_attempts_per_day"] - usage["http_attempts"]),
-                                    deadline=deadline or time.monotonic() + cfg["time_budget_s"],
-                                    timeout_s=cfg["timeout_s"],
-                                    max_bytes=cfg["max_document_bytes"])
+        attempts_left=max(0, cfg["http_attempts_per_day"] - usage["http_attempts"]),
+        deadline=deadline or time.monotonic() + cfg["time_budget_s"], timeout_s=cfg["timeout_s"],
+        max_bytes=cfg["max_document_bytes"])
+    def reserve_request():
+        if usage["http_attempts"] >= cfg["http_attempts_per_day"]:
+            raise cf.Budget("daily_http_attempts")
+        usage["http_attempts"] += 1
+        c.atomic_json(state_path(), state)
+    client.on_attempt = reserve_request
+    issuers = load_issuers()
+    if not issuers.get("issuers") and any(not r.get("cik") for r in snapshot.get("derived", {}).get("rows", []) if r.get("candidate")):
+        try:
+            refresh_issuers(client)
+            issuers = load_issuers()
+        except (OSError, ValueError, cf.Budget, cf.Blocked) as error:
+            report["issuer_refresh"] = type(error).__name__
+    first_seen = {cid: item["first_seen_at"] for cid, item in candidates.known_candidates().items()}
+    all_targets = targets(snapshot, c.read_json(c.ROOT / "config" / "entities.json", {}), issuers, first_seen)
+    report["targets"] = len(all_targets)
+    report["current"] = {t["candidate_id"]: t["eps_target_period"] for t in all_targets}
+    for t in all_targets:
+        entry = state["candidates"].get(t["candidate_id"])
+        if t["problem"]:
+            entry = state["candidates"].setdefault(t["candidate_id"], {})
+            entry.update(status=t["problem"], identity_problem=True, ticker=t["ticker"])
+        elif entry and entry.pop("identity_problem", False):
+            entry.update(status="queued", next_eligible_at=None)
+    ready = [t for t in all_targets if not t["problem"]]
+    chosen = select(ready, state, now, max(0, cfg["companies_per_day"] - usage["companies"]))
     for target in chosen:
         entry = state["candidates"].setdefault(target["candidate_id"], {})
-        before = client.attempts
+        usage["companies"] += 1
+        c.atomic_json(state_path(), state)
         try:
             result = research(target, client, state, now, cfg)
         except cf.Budget as error:
             # Not a failure: nothing more is sent today; the next run continues from here.
             entry.update(status="deferred_budget", note=str(error), ticker=target["ticker"], next_eligible_at=None)
-            usage["http_attempts"] += client.attempts - before
             break
         except cf.Blocked as error:
             entry.update(status="failed", note=str(error), ticker=target["ticker"],
                          next_eligible_at=(now + timedelta(hours=cfg["retry_failed_hours"])).isoformat(timespec="seconds"))
-            usage["http_attempts"] += client.attempts - before
             report["blocked"] = True
             break
         except (URLError, TimeoutError, OSError, ValueError) as error:
             result = {"status": "failed", "document_ids": [], "notes": [type(error).__name__]}
-        usage["http_attempts"] += client.attempts - before
-        usage["companies"] += 1
         wait = {"success": timedelta(days=cfg["revisit_days"]), "failed": timedelta(hours=cfg["retry_failed_hours"])}
         entry.update(status=result["status"], ticker=target["ticker"], issuer=target["issuer"],
                      attempted_at=now.isoformat(timespec="seconds"), eps_key=target["eps_key"],
                      eps_target_period=target["eps_target_period"], document_ids=result["document_ids"],
+                     quality=result.get("quality", "unknown"),
                      examined=result.get("examined", []), notes=result["notes"],
                      next_eligible_at=(now + wait.get(result["status"], timedelta(days=cfg["no_document_days"])))
                      .isoformat(timespec="seconds"))
@@ -263,25 +289,48 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 
 # ------------------------------------------------------------------ G2 drafts
 
-PROMPT_VERSION = "context-ko-v1"
-PARSER_VERSION = "context-check-v1"
+PROMPT_VERSION = "context-ko-v2"
+PARSER_VERSION = "context-check-v2"
 KINDS = ("fact", "guidance", "interpretation")
+SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
            "acquisition_disposal", "one_off", "accounting", "unknown")
 DIRECTIONS = ("positive", "negative", "mixed", "unknown")
-LINKS = ("temporal_context", "explicit_link", "unconfirmed")
-FINANCIAL_TERMS = ("revenue", "sales", "net income", "earnings per share", "eps", "margin", "operating income",
-                   "guidance", "outlook", "expect", "backlog", "orders", "restructuring", "impairment", "one-time",
-                   "non-recurring", "tax", "repurchase", "buyback", "shares outstanding", "acquisition", "divest",
-                   "demand", "pricing", "price", "volume", "capacity", "gain", "charge", "gaap")
+# Automatic drafts never assert a direct link to the estimate revision; a person confirms that elsewhere.
+LINKS = ("temporal_context", "unconfirmed")
 FORWARD = ("expect", "outlook", "guidance", "forecast", "anticipate", "project", "will ", "target")
 RAISE = ("raise", "raised", "increase", "increased", "higher", "above", "up from", "improv")
 LOWER = ("lower", "lowered", "reduce", "reduced", "cut", "decrease", "decreased", "below", "down from", "declin")
 KO_UP = ("상향", "인상", "올렸", "높였", "늘렸")
 KO_DOWN = ("하향", "인하", "낮췄", "줄였")
-KO_CAUSAL = ("상향 원인", "때문에 추정치", "추정치가 올랐", "상향을 이끌", "상향의 원인")
+KO_CAUSAL = ("상향 원인", "때문에 추정치", "추정치가 올랐", "상향을 이끌", "상향의 원인", "추정치 상향", "컨센서스")
 FORBIDDEN = ("매수", "목표가", "저평가", "상승 확률")
+# Amounts, units and currencies in the Korean note are refused: figures come only from the source.
+UNIT_WORDS = ("달러", "유로", "파운드", "엔화", "원화", "억", "조 ", "백만", "천만", "퍼센트", "%", "million", "billion",
+              "thousand", "usd", "eur", "gbp", "$", "€", "£", "센트")
+METRIC_KO = {"revenue": "매출", "revenues": "매출", "net sales": "매출", "sales": "매출", "net income": "순이익",
+             "net earnings": "순이익", "net loss": "순손실", "earnings per share": "주당순이익", "eps": "주당순이익",
+             "diluted eps": "희석 주당순이익", "operating income": "영업이익", "gross margin": "매출총이익률",
+             "operating margin": "영업이익률", "ebitda": "EBITDA", "adjusted ebitda": "조정 EBITDA",
+             "free cash flow": "잉여현금흐름", "backlog": "수주잔고", "orders": "수주", "bookings": "수주",
+             "distribution": "분배금", "distributions": "분배금", "dividend": "배당", "margin": "마진",
+             "capital expenditures": "설비투자", "share repurchases": "자사주 매입", "throughput": "처리량",
+             "production": "생산량", "volume": "물량", "volumes": "물량", "cost": "비용", "costs": "비용"}
+FIGURE = re.compile(r"\(?[$€£]?\s?\d[\d,]*(?:\.\d+)?\)?\s?(?:%|percent|million|billion|thousand|cents?|per share|per diluted share|x)?"
+                    r"(?:\s(?:million|billion))?", re.I)
+YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
+QUARTER = re.compile(r"\b(?:first|second|third|fourth)\s+quarter\b|\bq[1-4]\b", re.I)
 MAX_PROMPT_CHARS = 12000
+BLOCK_SIGNALS = {
+    "results": ("revenue", "net sales", "net income", "earnings per share", "operating income", "gross margin",
+                "ebitda", "per diluted share"),
+    "guidance": ("guidance", "outlook", "expect", "forecast", "anticipate"),
+    "cause": ("driven by", "due to", "primarily", "reflect", "as a result", "because"),
+    "one_off": ("one-time", "non-recurring", "impairment", "restructuring", "gain on", "tax benefit", "divest",
+                "special item"),
+    "against": ("decline", "decrease", "lower", "headwind", "weak", "offset", "reduced"),
+}
+BOILERPLATE = ("forward-looking statements", "safe harbor", "risk factors", "undue reliance", "cautionary")
 
 
 def history_dir() -> Path:
@@ -297,138 +346,225 @@ def squash(text: str) -> str:
     return " ".join(str(text).translate(PUNCTUATION).split()).casefold()
 
 
+def block_score(text: str) -> int:
+    low = text.lower()
+    if any(word in low for word in BOILERPLATE):
+        return -1
+    return sum(any(word in low for word in words) for words in BLOCK_SIGNALS.values())
+
+
 def relevant_blocks(documents: list[dict], limit: int = MAX_PROMPT_CHARS) -> tuple[list[dict], str]:
-    """Blocks that mention financial terms (any industry), in document order; coverage says if cut."""
-    chosen, used, complete = [], 0, True
-    for doc in documents:
+    """Blocks about results, guidance, causes, one-offs and counter-evidence first (any industry);
+    shown to the model in document order. Coverage is partial when a relevant block was left out."""
+    scored, complete = [], True
+    for d_index, doc in enumerate(documents):
         if doc.get("coverage") == "partial":
             complete = False
-        for block in doc["blocks"]:
+        for b_index, block in enumerate(doc["blocks"]):
             text = cf.block_text(block)
-            if not any(term in text.lower() for term in FINANCIAL_TERMS):
-                continue
-            if used + len(text) > limit:
-                complete = False
-                continue
-            chosen.append({"document_id": doc["document_id"], "block_id": block["id"], "text": text})
-            used += len(text)
-    return chosen, "complete" if complete else "partial"
+            score = block_score(text)
+            if score > 0:
+                scored.append((score, d_index, b_index, {"document_id": doc["document_id"], "block_id": block["id"],
+                                                         "text": text}))
+    chosen, used = [], 0
+    for score, d_index, b_index, block in sorted(scored, key=lambda x: (-x[0], x[1], x[2])):
+        if used + len(block["text"]) > limit:
+            complete = False
+            continue
+        chosen.append((d_index, b_index, block))
+        used += len(block["text"])
+    return [b for _, _, b in sorted(chosen, key=lambda x: (x[0], x[1]))], "complete" if complete else "partial"
 
 
 def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str:
     heads = [{"document_id": d["document_id"], "form": d["form"], "type": d["document_type"], "title": d["title"],
               "filed_at": d["filed_at"], "report_date": d.get("report_date")} for d in documents]
     return (
-        "너는 미국 상장사 공식 공시 원문에서 사실만 정리하는 도우미다. 아래 문단/표만 근거로 JSON 하나를 출력하라.\n"
-        f"회사: {target['ticker']}. 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐다(대상 회계연도 말 "
-        f"{target.get('eps_target_period')}). 이 발표가 그 상향을 일으켰다고 단정하지 마라.\n"
-        "규칙: (1) 각 claim의 quote는 해당 block의 문장을 글자 그대로 짧게 인용한다. (2) text_ko 안의 숫자는 quote에 있는 숫자만 쓴다. "
-        "(3) 실적은 kind=fact, 회사 전망은 kind=guidance, 네 해석은 kind=interpretation. (4) 이전 전망과의 비교는 원문이 직접 말할 때만 쓴다. "
-        "(5) 일회성 이익·세금·자사주 매입에 의한 주당 수치 변화는 영업 성장으로 쓰지 마라. (6) 반대 근거(하향 전망, 수요 둔화, 일회성 요인)도 limitations에 넣어라. "
-        "(7) 매수·목표가·주가 전망을 쓰지 마라. (8) 추정치 상향과의 연결은 원문이 명시하지 않으면 link=unconfirmed 또는 temporal_context. "
-        "(9) 숫자·금액·기간은 원문 표기 그대로 쓴다(예: $4.1 billion, 12.5%, second quarter, Q2, 2026). "
-        "단위를 바꾸거나(억 달러) 계산하지 않는다. next_check는 한국어 문장 문자열의 배열이다.\n"
-        f"drivers 값: {', '.join(DRIVERS)}. direction 값: {', '.join(DIRECTIONS)}.\n"
-        '출력 형식: {"claims":[{"text_ko":"","kind":"fact|guidance|interpretation","quote":"","document_id":"","block_id":"",'
-        '"period":"","currency":"","unit":"","gaap":"GAAP|non-GAAP|unknown","drivers":[""],"direction":""}],'
-        '"limitations":[{"text_ko":"","quote":"","document_id":"","block_id":""}],"next_check":[""],'
-        '"link":"temporal_context|explicit_link|unconfirmed"}\n최대 claims 5개, limitations 3개, next_check 2개.\n\n'
+        "너는 미국 상장사 공식 공시 원문에서 사실만 뽑는 도우미다. 아래 블록만 근거로 JSON 하나를 출력하라.\n"
+        f"회사: {target['ticker']} ({target.get('issuer_name') or '발행사'}). 애널리스트의 내년 EPS 예상치가 최근 올라 "
+        f"검토 대상이 됐다(대상 회계연도 말 {target.get('eps_target_period')}). 이 발표가 그 상향을 일으켰다고 쓰지 마라.\n"
+        "규칙:\n"
+        "1. quote는 해당 block 문장을 글자 그대로 복사한다(한 문장 또는 표 한 행).\n"
+        "2. figures는 quote에 있는 수치 문구를 글자 그대로 복사한다(예: \"$5 million\", \"(1.3)\", \"40%\"). 단위 환산·계산 금지.\n"
+        "3. note_ko는 한국어 설명이며 숫자·통화·단위(달러, million, % 등)를 쓰지 않는다. 숫자는 figures로만 전달된다.\n"
+        "4. metric은 quote에 있는 영어 지표명(예: revenue, net income, distributions), period는 quote/표 머리글의 기간 표기 그대로(모르면 unknown).\n"
+        "5. subject: 회사 전체 수치면 issuer, 자회사면 subsidiary(subject_name에 이름), 사업부면 segment, 고객이면 customer.\n"
+        "6. kind: 실적 fact, 회사 전망 guidance, 원문 인용이 있는 해석 interpretation(figures 없이).\n"
+        "7. gaap: 원문에 GAAP/non-GAAP/adjusted 표기가 있을 때만 적고 없으면 unknown.\n"
+        "8. 일회성 이익·세금·자사주 매입으로 생긴 주당 수치 변화를 영업 성장으로 쓰지 마라. 반대 근거는 limitations에.\n"
+        "9. link는 unconfirmed 또는 temporal_context만. 매수·목표가·주가 전망 금지. next_check는 확인할 질문 문장(숫자 없이).\n"
+        f"drivers: {', '.join(DRIVERS)}. direction: {', '.join(DIRECTIONS)}.\n"
+        '출력: {"claims":[{"kind":"","subject":"","subject_name":"","metric":"","figures":[""],"period":"",'
+        '"gaap":"unknown","note_ko":"","quote":"","document_id":"","block_id":"","drivers":[""],"direction":""}],'
+        '"limitations":[{"subject":"","metric":"","figures":[],"period":"","note_ko":"","quote":"","document_id":"",'
+        '"block_id":""}],"next_check":[""],"link":"unconfirmed"}\n최대 claims 5개, limitations 3개, next_check 2개.\n\n'
         f"문서: {json.dumps(heads, ensure_ascii=False)}\n\n블록:\n"
         + "\n".join(f"[{b['document_id']}#{b['block_id']}] {b['text']}" for b in blocks))
 
 
-WORD_NUMBERS = {"first": "1", "second": "2", "third": "3", "fourth": "4", "january": "1", "february": "2",
-                "march": "3", "april": "4", "may": "5", "june": "6", "july": "7", "august": "8",
-                "september": "9", "october": "10", "november": "11", "december": "12"}
+def figure_phrases(text: str) -> set[str]:
+    return {squash(m.group(0).strip()) for m in FIGURE.finditer(str(text)) if re.search(r"\d", m.group(0))}
 
 
-def quote_numbers(text: str) -> set[str]:
-    """Digits in a quote, plus quarter ordinals and month names ('second quarter' -> 2, 'July' -> 7)."""
-    words = set(re.findall(r"[a-z]+", str(text).lower()))
-    return numbers(text) | {n for w, n in WORD_NUMBERS.items() if w in words}
+def nearest(pattern: re.Pattern, text: str, position: int) -> str | None:
+    hits = [(abs(m.start() - position), squash(m.group(0))) for m in pattern.finditer(text)]
+    return min(hits)[1] if hits else None
 
 
-def numbers(text: str) -> set[str]:
-    return {n.replace(",", "").rstrip(".") for n in re.findall(r"\d[\d,]*\.?\d*", str(text))}
+def period_problem(item: dict, quote: str, block: str) -> str | None:
+    """The claimed period must be in the source, and every figure's nearest year/quarter in the
+    quote must be that period's, so a number cannot move to another period."""
+    period = squash(item.get("period") or "unknown")
+    years, quarters = set(YEAR.findall(quote)), {squash(q) for q in QUARTER.findall(quote)}
+    if period == "unknown":
+        return "ambiguous_period" if item.get("figures") and (len(years) > 1 or len(quarters) > 1) else None
+    if period not in squash(quote) and period not in squash(block):
+        return "period_not_in_source"
+    flat = quote.translate(PUNCTUATION)
+    for figure in item.get("figures") or []:
+        at = squash(flat).find(squash(figure))
+        text = squash(flat)
+        near_year, near_quarter = nearest(YEAR, text, at), nearest(QUARTER, text, at)
+        if near_year and YEAR.search(period) and near_year not in period:
+            return "figure_from_another_period"
+        if near_quarter and QUARTER.search(period) and near_quarter not in period:
+            return "figure_from_another_period"
+    return None
 
 
-def check_quote(item: dict, blocks: dict) -> str | None:
+def issuer_named(quote: str, issuer: dict) -> bool:
+    low = squash(quote)
+    names = {squash(issuer.get("ticker") or "")} | {w for w in squash(issuer.get("name") or "").split()[:1] if len(w) > 2}
+    return any(n and n in low for n in names) or any(
+        w in f" {low} " for w in (" the company", " we ", " our ", " consolidated", " total company", " company's"))
+
+
+def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str | None, dict]:
+    """(problem, checked item). Structural checks only: passing means 'automatic, unreviewed'."""
+    if not isinstance(item, dict):
+        return "not_an_object", {}
     key = (item.get("document_id"), item.get("block_id"))
     if key not in blocks:
-        return "unknown_block"
-    quote = squash(item.get("quote", ""))
-    if len(quote) < 8 or quote not in squash(blocks[key]):
-        return "quote_not_in_block"
-    if not numbers(item.get("text_ko", "")) <= quote_numbers(item.get("quote", "")):
-        return "number_not_in_quote"
-    text = item.get("text_ko", "")
-    if not text.strip() or any(word in text for word in FORBIDDEN):
-        return "forbidden_or_empty"
-    return None
-
-
-def check_claim(item: dict, blocks: dict) -> str | None:
-    """Structural checks only; passing is 'automatically organized, not reviewed'."""
-    problem = check_quote(item, blocks)
+        return "unknown_block", {}
+    quote_raw = str(item.get("quote", ""))
+    quote, block = squash(quote_raw), blocks[key]
+    if len(quote) < 8 or quote not in squash(block):
+        return "quote_not_in_block", {}
+    kind = item.get("kind") or "fact"
+    if kind not in KINDS:
+        return "bad_kind", {}
+    figures = [str(f) for f in item.get("figures") or []]
+    if kind == "interpretation" and figures:
+        return "figures_in_interpretation", {}
+    source_figures = figure_phrases(quote_raw)
+    for figure in figures:
+        if not re.search(r"\d", figure) or squash(figure) not in source_figures:
+            return "figure_not_verbatim", {}
+    note = str(item.get("note_ko") or "").strip()
+    if not note or len(note) > 160:
+        return "bad_note", {}
+    if re.search(r"\d", note) or any(word in note.lower() for word in UNIT_WORDS):
+        return "number_or_unit_in_note", {}
+    if any(word in note for word in FORBIDDEN):
+        return "forbidden_wording", {}
+    if any(word in note for word in KO_CAUSAL):
+        return "causal_claim_about_estimates", {}
+    metric = str(item.get("metric") or "").strip()
+    if metric and metric.lower() not in METRIC_KO:
+        return "unsupported_metric", {}
+    if (what == "claim" and kind != "interpretation" and not metric) or (metric and squash(metric) not in quote):
+        return "metric_not_in_quote", {}
+    if figures and len(re.findall(r"[.;]\s+[A-Z]", quote_raw)):
+        return "multiple_statements_for_figures", {}
+    if figures and any(token in quote_raw for token in (" | ", " ; ")):
+        return "ambiguous_table_figures", {}
+    present_metrics = {m for m in METRIC_KO if re.search(r"\b" + re.escape(m) + r"\b", quote)}
+    if figures and any(m not in metric.lower() and metric.lower() not in m for m in present_metrics):
+        return "multiple_metrics_for_figures", {}
+    problem = period_problem(item, quote_raw, block)
     if problem:
-        return problem
-    text, quote = item.get("text_ko", ""), item.get("quote", "").lower()
-    if item.get("kind") not in KINDS:
-        return "bad_kind"
-    if item.get("direction", "unknown") not in DIRECTIONS:
-        return "bad_direction"
-    if not set(item.get("drivers") or ["unknown"]) <= set(DRIVERS):
-        return "bad_driver"
-    if item["kind"] == "fact" and any(word in quote for word in FORWARD):
-        return "guidance_written_as_fact"
-    if item["kind"] == "guidance" and not any(word in quote for word in FORWARD):
-        return "guidance_without_forward_wording"
-    if any(word in text for word in KO_CAUSAL):
-        return "causal_claim_about_estimates"  # checked first: it also contains 'raise' words
-    if any(word in text for word in KO_UP) and (not any(w in quote for w in RAISE) or any(w in quote for w in LOWER)):
-        return "raise_not_in_quote"
-    if any(word in text for word in KO_DOWN) and not any(w in quote for w in LOWER):
-        return "cut_not_in_quote"
-    return None
+        return problem, {}
+    gaap = item.get("gaap") or "unknown"
+    stated_non = any(w in quote for w in ("non-gaap", "adjusted"))
+    stated_gaap = "gaap" in quote.replace("non-gaap", "")
+    expected = "non-GAAP" if stated_non else ("GAAP" if stated_gaap else "unknown")
+    if gaap != expected:
+        return "gaap_not_as_stated", {}
+    currencies = {"$": "USD", "€": "EUR", "£": "GBP"}
+    derived = sorted({v for k, v in currencies.items() if any(k in f for f in figures)})
+    if item.get("currency") and item["currency"] not in derived:
+        return "currency_not_in_figures", {}
+    if item.get("unit") and not any(str(item["unit"]).lower() in f.lower() for f in figures):
+        return "unit_not_in_figures", {}
+    if kind == "fact" and any(w in quote for w in FORWARD):
+        return "guidance_written_as_fact", {}
+    if kind == "guidance" and not any(w in quote for w in FORWARD):
+        return "guidance_without_forward_wording", {}
+    if any(w in note for w in KO_UP) and (not any(w in quote for w in RAISE) or any(w in quote for w in LOWER)):
+        return "raise_not_in_quote", {}
+    if any(w in note for w in KO_DOWN) and not any(w in quote for w in LOWER):
+        return "cut_not_in_quote", {}
+    subject = item.get("subject") or "issuer"
+    if subject not in SUBJECTS:
+        return "bad_subject", {}
+    subject_name = str(item.get("subject_name") or "")
+    if subject == "issuer" and re.search(r"\b(subsidiary|mplx|customer)\b", quote):
+        return "unverified_issuer_subject", {}
+    if subject != "issuer" and (not subject_name or squash(subject_name) not in quote):
+        return "subject_not_in_quote", {}
+    core = subject == "issuer" and issuer_named(quote_raw, issuer)
+    if what == "claim" and (item.get("direction", "unknown") not in DIRECTIONS
+                            or not set(item.get("drivers") or ["unknown"]) <= set(DRIVERS)):
+        return "bad_tag", {}
+    label = METRIC_KO.get(metric.lower(), metric) if metric else ""
+    period = item.get("period") if item.get("period") and item["period"] != "unknown" else ""
+    head = "".join([f"[{subject_name}] " if subject != "issuer" else "",
+                    f"{label}({metric})" if label and label != metric else label,
+                    f" · {period}" if period else ""])
+    body = " / ".join(figures)
+    text_ko = f"{head}: {body} — {note}" if head and body else (f"{head} — {note}" if head else note)
+    return None, {"text_ko": text_ko, "note_ko": note, "kind": kind, "quote": quote_raw, "document_id": key[0],
+                  "block_id": key[1], "metric": metric or None, "figures": figures, "period": item.get("period") or "unknown",
+                  "currency": derived[0] if len(derived) == 1 else None, "gaap": expected, "subject": subject,
+                  "subject_name": subject_name or None, "core": core,
+                  "drivers": item.get("drivers") or ["unknown"], "direction": item.get("direction", "unknown")}
 
 
 def excerpt(item) -> dict:
     """What was refused, kept short for review; never used on the card."""
     if not isinstance(item, dict):
         return {}
-    return {"text_ko": str(item.get("text_ko", ""))[:200], "quote": str(item.get("quote", ""))[:200],
-            "where": f"{item.get('document_id')}#{item.get('block_id')}"}
+    return {"note_ko": str(item.get("note_ko") or item.get("text_ko") or "")[:200],
+            "figures": [str(f)[:40] for f in (item.get("figures") or [])[:5]] if isinstance(item.get("figures"), list) else [],
+            "quote": str(item.get("quote", ""))[:200], "where": f"{item.get('document_id')}#{item.get('block_id')}"}
 
 
-def validate_draft(answer: dict, blocks: list[dict]) -> dict:
+def validate_draft(answer: dict, blocks: list[dict], issuer: dict | None = None) -> dict:
     index = {(b["document_id"], b["block_id"]): b["text"] for b in blocks}
+    issuer = issuer or {}
     claims, limitations, rejected = [], [], []
-    for item in (answer.get("claims") or [])[:5] if isinstance(answer, dict) else []:
-        problem = check_claim(item, index) if isinstance(item, dict) else "not_an_object"
-        if problem:
-            rejected.append({"what": "claim", "reason": problem, **excerpt(item)})
-            continue
-        claims.append({k: item.get(k) for k in ("text_ko", "kind", "quote", "document_id", "block_id", "period",
-                                                  "currency", "unit", "gaap", "drivers", "direction")})
-    for item in (answer.get("limitations") or [])[:3] if isinstance(answer, dict) else []:
-        problem = check_quote(item, index) if isinstance(item, dict) else "not_an_object"
-        if problem:
-            rejected.append({"what": "limitation", "reason": problem, **excerpt(item)})
-            continue
-        limitations.append({k: item.get(k) for k in ("text_ko", "quote", "document_id", "block_id")})
-    link = answer.get("link") if isinstance(answer, dict) else None
+    answer = answer if isinstance(answer, dict) else {}
+    for what, items, out, cap in (("claim", answer.get("claims"), claims, 5),
+                                  ("limitation", answer.get("limitations"), limitations, 3)):
+        for item in (items or [])[:cap] if isinstance(items, list) else []:
+            problem, checked = check_item(item, index, issuer, what)
+            if problem:
+                rejected.append({"what": what, "reason": problem, **excerpt(item)})
+            else:
+                out.append(checked)
+    link = answer.get("link")
     link_note = None
     if link not in LINKS:
-        link, link_note = "unconfirmed", "link value missing"
-    elif link == "explicit_link" and not any(w in squash(b["text"]) for b in blocks
-                                             for w in ("analyst", "consensus", "estimate revision")):
-        link, link_note = "unconfirmed", "explicit link not stated in the source"
+        link_note = "automatic drafts do not assert a direct link" if link == "explicit_link" else "link value missing"
+        link = "unconfirmed"
     raw_checks = [x.get("text_ko") if isinstance(x, dict) else x for x in (answer.get("next_check") or [])[:2]] \
-        if isinstance(answer, dict) else []
-    checks = [x.strip()[:120] for x in raw_checks
-              if isinstance(x, str) and x.strip() and not any(w in x for w in FORBIDDEN)]
+        if isinstance(answer.get("next_check"), list) else []
+    checks = [x.strip()[:120] for x in raw_checks if isinstance(x, str) and x.strip() and not re.search(r"\d", x)
+              and not any(w in x for w in FORBIDDEN) and ("확인" in x or x.strip().endswith("?"))]
+    core = [x for x in claims if x["core"] and x["kind"] in ("fact", "guidance")]
+    status = ("draft_ready" if core else "insufficient_earnings_context") if claims else "no_supported_claims"
     return {"claims": claims, "limitations": limitations, "next_check": checks, "link": link,
-            "link_note": link_note, "rejected": rejected}
+            "link_note": link_note, "rejected": rejected, "context_status": status}
 
 
 def input_sha(target: dict, document_ids: list[str]) -> str:
@@ -444,58 +580,83 @@ def store_context(record: dict) -> bool:
     return True
 
 
-def run_drafts(now: datetime | None = None, call=None, deadline: float | None = None) -> dict:
-    """At most one company per model request; budget and time are checked before each request."""
+def draft_queue(state: dict, current: dict[str, str], now: datetime) -> list[tuple[str, dict]]:
+    """Current candidates only, with documents for the same target fiscal year and no draft for this input."""
+    queue = []
+    for cid, entry in state["candidates"].items():
+        if entry.get("status") != "success" or not entry.get("document_ids") or cid not in current:
+            continue
+        if entry.get("eps_target_period") != current[cid]:
+            continue
+        if entry.get("context_input_sha") == input_sha({"candidate_id": cid, **entry}, entry["document_ids"]):
+            continue
+        if entry.get("draft_next_at") and datetime.fromisoformat(entry["draft_next_at"]) > now:
+            continue
+        queue.append((cid, entry))
+    return sorted(queue, key=lambda pair: pair[1].get("attempted_at", ""))
+
+
+def run_drafts(now: datetime | None = None, call=None, deadline: float | None = None,
+               current: dict[str, str] | None = None, clock=time.monotonic) -> dict:
+    """One company per model request and one attempt per company in a run; a failed company
+    waits 24 hours so the others get their turn. Budget, provider block and time are checked
+    before every request (and inside the shared model call)."""
     import extract
     now = now or datetime.now(timezone.utc)
     state = load_state()
     api_key = c.load_dotenv_value("GEMINI_API_KEY")
-    report = {"drafted": 0, "no_supported_claims": 0, "deferred_budget": 0, "failed": 0}
+    report = {"requests": 0, "drafted": 0, "insufficient_earnings_context": 0, "no_supported_claims": 0,
+              "deferred": 0, "failed": 0}
+    deadline = deadline or (clock() + settings()["time_budget_s"])
     if call is None:
         if not api_key:
             report["skipped"] = "model_key_missing"
             return report
-        call = lambda prompt: extract.call_gemini_prompt(prompt, api_key, "candidate_context",  # noqa: E731
-                                                         timeout=60, thinking_budget=0)
-    deadline = deadline or (time.monotonic() + settings()["time_budget_s"])
-    waiting = sorted(((cid, e) for cid, e in state["candidates"].items()
-                      if e.get("status") == "success" and e.get("document_ids")
-                      and e.get("context_input_sha") != input_sha({"candidate_id": cid, **e}, e["document_ids"])),
-                     key=lambda pair: pair[1].get("attempted_at", ""))
-    for cid, entry in waiting:
-        if c.model_calls_remaining("candidate_context") <= 0:
-            report["deferred_budget"] += 1
-            entry["draft_status"] = "deferred_budget"
-            continue
-        if time.monotonic() >= deadline:
-            entry["draft_status"] = "deferred_budget"
-            report["deferred_budget"] += 1
+        call = lambda prompt: extract.call_gemini_prompt(  # noqa: E731
+            prompt, api_key, "candidate_context", timeout=60, thinking_budget=0, deadline=deadline, max_attempts=1,
+            clock=clock)
+    if current is None:
+        current = {cid: e.get("eps_target_period") for cid, e in state["candidates"].items()}
+    for cid, entry in draft_queue(state, current, now):
+        blocked = c.model_provider_blocked()
+        if blocked or c.model_calls_remaining("candidate_context") <= 0 or deadline - clock() < 5:
+            report["deferred"] += 1
+            entry["draft_status"] = "deferred_budget" if not blocked else "provider_rate_limited"
             continue
         documents = [d for d in (cf.load_document(x) for x in entry["document_ids"]) if d]
-        target = {"candidate_id": cid, "ticker": entry.get("ticker"), "eps_target_period": entry.get("eps_target_period")}
+        target = {"candidate_id": cid, "ticker": entry.get("ticker"), "eps_target_period": entry.get("eps_target_period"),
+                  "issuer_name": (entry.get("issuer") or {}).get("name")}
         blocks, coverage_state = relevant_blocks(documents)
         sha = input_sha({"candidate_id": cid, **entry}, entry["document_ids"])
+        before_calls = c.model_calls_today()
         try:
             answer = call(draft_prompt(target, documents, blocks))  # one company per request
-        except c.ModelBudgetExhausted:
-            entry["draft_status"] = "deferred_budget"
-            report["deferred_budget"] += 1
+        except c.ModelBudgetExhausted as reason:
+            report["requests"] += c.model_calls_today() - before_calls
+            entry["draft_status"] = "provider_rate_limited" if "rate" in str(reason) else "deferred_budget"
+            report["deferred"] += 1
             continue
         except (OSError, ValueError, KeyError, IndexError, TimeoutError) as error:
-            entry.update(draft_status="failed", draft_error=type(error).__name__)
+            report["requests"] += c.model_calls_today() - before_calls
+            entry.update(draft_status="failed", draft_error=type(error).__name__,
+                         draft_next_at=(now + timedelta(hours=settings()["retry_failed_hours"])).isoformat(timespec="seconds"))
             report["failed"] += 1
+            c.atomic_json(state_path(), state)
             continue
-        checked = validate_draft(answer, blocks)
-        status = "draft_ready" if checked["claims"] else "no_supported_claims"
+        report["requests"] += c.model_calls_today() - before_calls
+        checked = validate_draft(answer, blocks, {**(entry.get("issuer") or {}), "ticker": entry.get("ticker")})
         record = {"context_id": "CTX-" + sha[:16].upper(), "candidate_id": cid, "ticker": entry.get("ticker"),
                   "issuer_cik": (entry.get("issuer") or {}).get("cik"), "document_ids": entry["document_ids"],
+                  "eps_target_period": entry.get("eps_target_period"),
                   "source_blocks": [f"{b['document_id']}#{b['block_id']}" for b in blocks], "input_sha": sha,
                   "model": extract.GEMINI_MODEL, "prompt_version": PROMPT_VERSION, "parser_version": PARSER_VERSION,
-                  "generated_at": now.isoformat(timespec="seconds"), "context_status": status,
+                  "generated_at": now.isoformat(timespec="seconds"),
                   "source_coverage": coverage_state, "review": "자동 정리·미검토", **checked}
         store_context(record)
+        status = checked["context_status"]
         entry.update(draft_status=status, context_id=record["context_id"], context_input_sha=sha)
-        report["drafted" if status == "draft_ready" else "no_supported_claims"] += 1
+        entry.pop("draft_next_at", None)
+        report["drafted" if status == "draft_ready" else status] += 1
         c.atomic_json(state_path(), state)
     c.atomic_json(state_path(), state)
     return report
@@ -511,17 +672,30 @@ def coverage(state: dict, ids: list[str]) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.parse_args(argv)
+    parser.add_argument("--refresh-issuers", action="store_true")
+    args = parser.parse_args(argv)
+    if args.refresh_issuers:
+        # Share the normal daily HTTP accounting without invoking the screener.
+        state = load_state()
+        usage = state["days"].setdefault(c.today(), {"companies": 0, "http_attempts": 0})
+        def reserve():
+            usage["http_attempts"] += 1
+            c.atomic_json(state_path(), state)
+        client = cf.SecClient(user_agent=os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0",
+            attempts_left=max(0, settings()["http_attempts_per_day"] - usage["http_attempts"]),
+            deadline=time.monotonic() + settings()["time_budget_s"], on_attempt=reserve)
+        print(f"[issuers] {refresh_issuers(client)} verified entries")
+        return 0
     try:
         # One time budget for sources and drafts together; state is saved after each company.
         deadline = time.monotonic() + settings()["time_budget_s"]
         report = run_sources(deadline=deadline)
-        report["drafts"] = run_drafts(deadline=deadline)
+        report["drafts"] = {"held": True} if report["held"] else run_drafts(deadline=deadline, current=report.get("current", {}))
     except (OSError, ValueError, KeyError) as error:
         c.record_run("candidate_context", "failed", error_type=type(error).__name__)
         print(f"[context] failed: {type(error).__name__}")
         return 1
-    status = "held" if report["held"] else ("degraded" if report["statuses"].get("failed") else "success")
+    status = "held" if report["held"] else ("degraded" if report["statuses"].get("failed") or report.get("blocked") or report["drafts"].get("failed") else "success")
     c.record_run("candidate_context", status, **{k: v for k, v in report.items() if k != "day"})
     print(f"[context] {json.dumps(report, ensure_ascii=False)}")
     return 0

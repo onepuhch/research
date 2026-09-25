@@ -20,8 +20,8 @@ from datetime import date, datetime, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse
-from urllib.request import Request, urlopen
+from urllib.parse import urlparse, urljoin
+from urllib.request import Request, urlopen, build_opener, HTTPRedirectHandler
 
 import common as c
 
@@ -57,9 +57,23 @@ class Blocked(Exception):
     """SEC refused repeatedly (403): stop this provider for the run."""
 
 
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def direct_open(request, timeout):
+    return build_opener(NoRedirect()).open(request, timeout=timeout)
+
+
+def sec_url(url):
+    parsed = urlparse(url)
+    host = parsed.hostname or ""
+    return parsed.scheme == "https" and (host == "sec.gov" or host.endswith(".sec.gov")) and not parsed.username
+
+
 @dataclass
 class SecClient:
-    """Sequential, paced SEC client. Every attempt, retry and redirect is counted before it is sent."""
     user_agent: str
     attempts_left: int
     deadline: float
@@ -67,55 +81,67 @@ class SecClient:
     timeout_s: float = 15.0
     clock: object = time.monotonic
     sleep: object = time.sleep
-    opener: object = urlopen
+    opener: object = direct_open
+    on_attempt: object = None
     forbidden: int = 0
     attempts: int = 0
     log: list = field(default_factory=list)
 
-    def _spend(self) -> None:
+    def _spend(self):
         if self.attempts_left <= 0:
             raise Budget("daily_http_attempts")
         if self.clock() >= self.deadline:
             raise Budget("time_budget")
+        if self.on_attempt:
+            self.on_attempt()
         self.attempts_left -= 1
         self.attempts += 1
 
-    def get(self, url: str) -> tuple[bytes, str, bool]:
-        """(body, final_url, truncated). One retry for 429/5xx if Retry-After fits the budget."""
-        if urlparse(url).scheme != "https" or not (urlparse(url).hostname or "").endswith("sec.gov"):
-            raise ValueError("only https SEC URLs are fetched")
-        for attempt in range(2):
-            self._spend()
+    def get(self, url):
+        retries, redirects = 0, 0
+        while True:
+            if not sec_url(url):
+                raise ValueError("only https SEC URLs are fetched")
             pace(url, self.clock, self.sleep)
+            self._spend()
             request = Request(url, headers={"User-Agent": self.user_agent, "Accept-Encoding": "identity"})
             try:
-                with self.opener(request, timeout=min(self.timeout_s, max(1.0, self.deadline - self.clock()))) as response:
+                with self.opener(request, timeout=min(self.timeout_s, self.deadline - self.clock())) as response:
                     body = response.read(self.max_bytes + 1)
                     final = response.geturl() if hasattr(response, "geturl") else url
-                if final != url and attempt == 0:
-                    self._spend()  # a redirect is one more request against the budget
+                if self.clock() >= self.deadline:
+                    raise Budget("time_budget")
+                if final != url:
+                    raise ValueError("uncontrolled redirect")
                 self.log.append({"url": url, "status": 200})
                 return body[:self.max_bytes], final, len(body) > self.max_bytes
             except HTTPError as error:
                 self.log.append({"url": url, "status": error.code})
+                if error.code in (301, 302, 303, 307, 308):
+                    redirects += 1
+                    if redirects > 3 or not error.headers.get("Location"):
+                        raise ValueError("redirect limit or missing target") from None
+                    url = urljoin(url, error.headers["Location"])
+                    continue
                 if error.code == 403:
                     self.forbidden += 1
                     if self.forbidden >= 2:
                         raise Blocked("sec_403") from None
                     raise
-                if error.code in (429, 500, 502, 503, 504) and attempt == 0:
-                    wait = float(error.headers.get("Retry-After") or 2) if error.headers else 2.0
-                    if self.clock() + wait >= self.deadline:
-                        raise Budget("retry_after_exceeds_budget") from None
-                    self.sleep(wait)
-                    continue
-                raise
-            except (URLError, TimeoutError, OSError) as error:
-                self.log.append({"url": url, "status": type(error).__name__})
-                if attempt == 0:
-                    continue
-                raise
-        raise OSError("unreachable")
+                if error.code not in (429, 500, 502, 503, 504) or retries >= 1:
+                    raise
+                try:
+                    wait = max(0.0, float((error.headers or {}).get("Retry-After") or 2))
+                except ValueError:
+                    raise Budget("unsupported_retry_after") from None
+                if self.clock() + wait >= self.deadline:
+                    raise Budget("retry_after_exceeds_budget") from None
+                self.sleep(wait)
+                retries += 1
+            except (URLError, TimeoutError, OSError):
+                if retries >= 1:
+                    raise
+                retries += 1
 
 
 # ------------------------------------------------------------------ filings
@@ -213,6 +239,7 @@ def pick_documents(docs: list[dict], form: str) -> list[dict]:
     if form in ("8-K", "6-K"):
         exhibits = [d for d in docs if d["type"].upper().startswith("EX-99")]
         main = [d for d in docs if d["type"].upper() == form]
+        exhibits.sort(key=lambda d: not any(w in (d["description"] + " " + d["name"]).lower() for w in ("earning", "result", "financial", "guidance")))
         return exhibits + (main if form == "6-K" else [])
     return [d for d in docs if d["type"].upper() == form]
 
@@ -309,7 +336,10 @@ def looks_like_earnings(blocks: list[dict]) -> tuple[bool, str]:
     body = " ".join(block_text(b) for b in blocks[:400]).lower()
     hits = [w for w in EARNINGS_WORDS if w in body]
     has_table = any(b["kind"] == "table" for b in blocks)
-    if len(hits) >= 3 and has_table:
+    purpose = any(w in body for w in ("reports", "results", "outlook", "guidance"))
+    period = any(w in body for w in ("quarter", "fiscal", "year ended", "year ending"))
+    metric = any(w in body for w in ("revenue", "net income", "net sales", "earnings per share", "operating income"))
+    if purpose and period and metric and (has_table or re.search(r"[$%]|\d[.,]\d", body)):
         return True, "earnings_terms_and_tables:" + ",".join(hits[:5])
     return False, "not_an_earnings_document:" + ",".join(hits[:5])
 
@@ -358,6 +388,7 @@ def build_record(issuer: dict, filing: dict, doc: dict, raw: bytes, final_url: s
         "observed_at": observed_at, "raw_sha256": sha, "raw_bytes": len(raw),
         "content_type": content_type, "coverage": "partial" if truncated else ("complete" if blocks else "none"),
         "status": "unsupported_content" if content_type != "html" or not blocks else "parsed",
-        "relevance": {"earnings": relevant, "reason": reason},
+        "relevance": {"earnings": relevant, "reason": reason,
+                      "core_earnings": relevant and any(w in " ".join(block_text(b) for b in blocks).lower() for w in ("net income", "net sales", "earnings per share", "operating income"))},
         "normalization_version": NORMALIZATION_VERSION, "blocks": blocks,
     }

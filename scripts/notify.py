@@ -13,6 +13,7 @@ import json
 import http.client
 import re
 import socket
+import os
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
@@ -385,6 +386,8 @@ class Delivery:
 
 
 def deliver(token: str, chat_id: str, message: str) -> Delivery:
+    if os.environ.get("RESEARCH_DISABLE_SEND") == "1":
+        return Delivery("failed", error="sending_disabled")
     endpoint = f"https://api.telegram.org/bot{token}/sendMessage"
     body = {
         "chat_id": chat_id,

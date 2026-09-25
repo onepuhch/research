@@ -29,8 +29,8 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 GEMINI_TIMEOUT = 30
 # 무료티어 429 방지: 호출 사이 대기(초) + 429/503 지수 백오프 재시도 횟수
 GEMINI_SLEEP = float(os.environ.get("GEMINI_SLEEP", "4"))
-GEMINI_MAX_RETRIES = int(os.environ.get("GEMINI_MAX_RETRIES", "3"))
-RETRY_STATUS = {429, 500, 502, 503, 504}
+GEMINI_MAX_RETRIES = int(os.environ.get("GEMINI_MAX_RETRIES", "1"))  # at most one retry (503/network)
+RETRY_STATUS = {500, 502, 503, 504}  # 429 is never retried: it blocks the provider (common.block_model_provider)
 
 SIGNAL_TYPES = c.ENUMS["신호유형"]
 TIERS = c.ENUMS["티어"]
@@ -351,13 +351,24 @@ def call_gemini(item: dict[str, Any], api_key: str) -> dict[str, Any]:
     return call_gemini_prompt(gemini_prompt(item), api_key, "extract")
 
 
+def retry_after_seconds(error: HTTPError) -> float | None:
+    try:
+        return float((error.headers or {}).get("Retry-After"))
+    except (TypeError, ValueError):
+        return None
+
+
 def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float | None = None,
-                       thinking_budget: int | None = None) -> dict[str, Any]:
-    """One JSON-mode Gemini call with bounded retries (shared by extract and candidate cards).
+                       thinking_budget: int | None = None, deadline: float | None = None,
+                       max_attempts: int | None = None, clock=time.monotonic, sleep=time.sleep) -> dict[str, Any]:
+    """One JSON-mode Gemini call with bounded retries (shared by extract, cards and context).
 
     Every HTTP attempt, retries included, is reserved against the shared daily budget and
     the component's own limit just before it is sent; with none left it raises
     common.ModelBudgetExhausted without touching the network. Callers never count again.
+    A deadline is checked before each attempt and wait, and caps each request's timeout.
+    429 is not retried: the provider is blocked for every component (until Retry-After, or
+    the next KST day) and ModelBudgetExhausted('provider_rate_limited') is raised.
     """
     body = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
@@ -381,26 +392,44 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float
 
     delay = 5.0
     payload: dict[str, Any] = {}
-    for attempt in range(GEMINI_MAX_RETRIES + 1):
+    attempts = max(1, min(2, max_attempts if max_attempts is not None else GEMINI_MAX_RETRIES + 1))
+
+    def remaining() -> float | None:
+        return None if deadline is None else deadline - clock()
+
+    for attempt in range(attempts):
+        failure = None
+        left = remaining()
+        if left is not None and left < 1:
+            raise c.ModelBudgetExhausted("deadline")  # no reservation, no request
         c.reserve_model_call(component)
+        request_timeout = timeout or GEMINI_TIMEOUT
+        if left is not None:
+            request_timeout = max(1.0, min(request_timeout, left))
         try:
-            with urlopen(request, timeout=timeout or GEMINI_TIMEOUT) as response:
+            with urlopen(request, timeout=request_timeout) as response:
                 payload = json.loads(response.read().decode("utf-8"))
+            if deadline is not None and clock() >= deadline:
+                raise c.ModelBudgetExhausted("deadline")
             break
         except HTTPError as error:
-            if error.code in RETRY_STATUS and attempt < GEMINI_MAX_RETRIES:
-                print(f"[retry] Gemini {error.code}; {delay:.0f}s 대기 ({attempt + 1}/{GEMINI_MAX_RETRIES})")
-                time.sleep(delay)
-                delay *= 2
-                continue
-            raise
-        except (URLError, TimeoutError):
-            if attempt < GEMINI_MAX_RETRIES:
-                print(f"[retry] Gemini 네트워크 오류; {delay:.0f}s 대기 ({attempt + 1}/{GEMINI_MAX_RETRIES})")
-                time.sleep(delay)
-                delay *= 2
-                continue
-            raise
+            if error.code == 429:
+                c.block_model_provider("provider_rate_limited", retry_after_seconds(error))
+                raise c.ModelBudgetExhausted("provider_rate_limited") from None
+            retryable = error.code in RETRY_STATUS
+            failure = error
+        except (URLError, TimeoutError) as error:
+            retryable, failure = True, error
+        if not retryable or attempt + 1 >= attempts:
+            if failure is not None:
+                raise failure
+            raise TimeoutError("model request failed")
+        left = remaining()
+        if left is not None and left < delay + 1:
+            raise c.ModelBudgetExhausted("deadline")
+        print(f"[retry] Gemini 재시도 1회; {delay:.0f}s 대기")
+        sleep(delay)
+        delay *= 2
 
     parts = payload["candidates"][0]["content"]["parts"]
     text = "".join(str(part.get("text", "")) for part in parts)
