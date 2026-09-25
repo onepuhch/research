@@ -28,12 +28,16 @@ def main(message=None):
     paths = [p.relative_to(c.ROOT).as_posix() for p in files
              if p.is_file() or p.relative_to(c.ROOT).as_posix() in tracked]
     subprocess.run(['git', 'add', '--', *paths], cwd=c.ROOT, check=True)
-    if subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=c.ROOT).returncode == 0:
-        return
-    subprocess.run(['git', 'diff', '--cached', '--check'], cwd=c.ROOT, check=True)
-    subprocess.run(['git', 'commit', '-m', message or f'chore: research state {c.today()}'], cwd=c.ROOT, check=True)
+    if subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=c.ROOT).returncode != 0:
+        subprocess.run(['git', 'diff', '--cached', '--check'], cwd=c.ROOT, check=True)
+        subprocess.run(['git', 'commit', '-m', message or f'chore: research state {c.today()}'], cwd=c.ROOT, check=True)
+    # Push even with nothing new staged: an earlier commit may not have reached the remote.
     # On conflict, fail visibly; never force-push a competing writer's state.
     subprocess.run(['git', 'push'], cwd=c.ROOT, check=True)
+    head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=c.ROOT, check=True, capture_output=True, text=True)
+    remote = subprocess.run(['git', 'rev-parse', '@{u}'], cwd=c.ROOT, check=True, capture_output=True, text=True)
+    if head.stdout.strip() != remote.stdout.strip():
+        raise subprocess.CalledProcessError(1, 'git push', output='remote branch does not hold HEAD')
 
 
 def persist(message):

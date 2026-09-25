@@ -449,6 +449,44 @@ class GitRemoteTest(unittest.TestCase):
                 shown = self.git("--git-dir", str(root / "remote.git"), "show", "HEAD:data/processed/candidate_alerts.json",
                                  cwd=root).stdout
                 self.assertIn("reserved", shown)  # the remote still blocks a resend
+                # R1: the commit exists locally but never reached the remote. With the remote back and
+                # no file change, persist must push it, not report success because the tree is clean.
+                self.git("remote", "set-url", "origin", str(root / "remote.git"), cwd=work)
+                self.assertTrue(persist_state.persist("chore: nothing new"))
+                shown = self.git("--git-dir", str(root / "remote.git"), "show", "HEAD:data/processed/candidate_alerts.json",
+                                 cwd=root).stdout
+                self.assertIn("sent", shown)
+                head = self.git("rev-parse", "HEAD", cwd=work).stdout
+                self.assertEqual(self.git("--git-dir", str(root / "remote.git"), "rev-parse", "HEAD", cwd=root).stdout, head)
+
+    def test_push_that_leaves_the_remote_behind_is_not_success(self):
+        import persist_state
+
+        def fake_run(args, **kwargs):
+            out = {"HEAD": "aaa\n", "@{u}": "bbb\n"}.get(args[-1], "")
+            return subprocess.CompletedProcess(args, 1 if args[1:3] == ["diff", "--cached"] else 0, out)
+
+        with mock.patch.object(persist_state.subprocess, "run", side_effect=fake_run), \
+                contextlib.redirect_stdout(io.StringIO()):
+            self.assertFalse(persist_state.persist("x"))
+
+    def test_clean_tree_with_an_unreachable_remote_is_not_success(self):
+        import persist_state
+        with tempfile.TemporaryDirectory() as tmp:
+            root = pathlib.Path(tmp)
+            self.git("init", "--bare", "-q", str(root / "remote.git"), cwd=root)
+            self.git("clone", "-q", str(root / "remote.git"), str(root / "work"), cwd=root)
+            work = root / "work"
+            for key, value in (("user.name", "t"), ("user.email", "t@example.invalid"), ("commit.gpgsign", "false")):
+                self.git("config", key, value, cwd=work)
+            data = work / "data" / "processed"
+            data.mkdir(parents=True)
+            with mock.patch.object(c, "ROOT", work), mock.patch.object(c, "DATA_DIR", data), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                c.atomic_json(data / "candidate_alerts.json", {"events": {}})
+                self.assertTrue(persist_state.persist("chore: first"))
+                self.git("remote", "set-url", "origin", str(root / "missing.git"), cwd=work)
+                self.assertFalse(persist_state.persist("chore: clean tree"))
 
 
 class DeliverClassificationTest(unittest.TestCase):
