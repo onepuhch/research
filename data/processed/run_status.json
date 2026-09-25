@@ -30,9 +30,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-25T11:59:23+00:00",
+    "checked_at": "2026-09-25T12:11:29+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T11:59:23+00:00",
+    "last_success_at": "2026-09-25T12:11:29+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -76,10 +76,10 @@
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-09-25T01:23:02+00:00",
+    "checked_at": "2026-09-25T12:25:52+00:00",
     "status": "success",
-    "last_success_at": "2026-09-25T01:23:02+00:00",
-    "snapshot": "20260925T010840Z_36080693982-1.json.gz",
+    "last_success_at": "2026-09-25T12:25:52+00:00",
+    "snapshot": "20260925T121129Z_36133507734-1.json.gz",
     "candidates": 101,
     "alert": false,
     "stages": {
@@ -111,5 +111,21 @@
         "success": 30
       }
     }
+  },
+  "cards": {
+    "checked_at": "2026-09-25T12:26:21+00:00",
+    "status": "success",
+    "last_success_at": "2026-09-25T12:26:21+00:00",
+    "translation": {
+      "requested": 30,
+      "translated": 29,
+      "rejected": 1,
+      "failed_calls": 0,
+      "calls": 3
+    },
+    "new_versions": 30,
+    "cards": 30,
+    "unidentified": 0,
+    "stale": []
   }
 }

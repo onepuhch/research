@@ -1,0 +1,107 @@
+{
+  "candidate_id": "CAN-14C6F602D0868FB9",
+  "candidate_version": "CV-B4F200613F69C4B5",
+  "identity": {
+    "entity_id": "NASDAQ:AMCX",
+    "ticker": "AMCX",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "AMC Global Media Inc.",
+  "industry": "Entertainment",
+  "sector": "Communication Services",
+  "eps": {
+    "eps_now": 2.75593,
+    "eps_30d": 2.53896,
+    "eps_90d": 1.48467,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 85.6,
+    "yield_change_90_pp": 10.567,
+    "yield_change_30_pp": 1.804,
+    "steady": false,
+    "turnaround": false
+  },
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공 및 오리지널 콘텐츠 제작, 배급으로 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AMCX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:24:02+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AMCX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:24:02+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AMCX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:24:02+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v1",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "observed_at": "2026-09-25T12:24:02+00:00",
+  "policy_version": "22a18de72c4a"
+}

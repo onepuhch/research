@@ -1,0 +1,105 @@
+{
+  "candidate_id": "CAN-5A9E947A6AEC56D7",
+  "candidate_version": "CV-871A37F9A9331D56",
+  "identity": {
+    "entity_id": "NYSE:AGL",
+    "ticker": "AGL",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "agilon health, inc.",
+  "industry": "Medical Care Facilities",
+  "sector": "Healthcare",
+  "eps": {
+    "eps_now": 3.19833,
+    "eps_30d": 1.76475,
+    "eps_90d": -0.61688,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": null,
+    "yield_change_90_pp": 5.031,
+    "yield_change_30_pp": 1.891,
+    "steady": false,
+    "turnaround": true
+  },
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AGL analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AGL/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:21:01+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AGL daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AGL/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:21:01+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AGL company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AGL/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:21:01+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v1",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "observed_at": "2026-09-25T12:21:01+00:00",
+  "policy_version": "22a18de72c4a"
+}

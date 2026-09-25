@@ -1,0 +1,4604 @@
+{
+  "generated_at": "2026-09-25T12:25:52+00:00",
+  "generator_version": "cards-v1",
+  "thesis_key": "eps-revision-review:v1",
+  "stale": [],
+  "candidates": [
+    {
+      "candidate_id": "CAN-14C6F602D0868FB9",
+      "identity": {
+        "entity_id": "NASDAQ:AMCX",
+        "ticker": "AMCX",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "AMC Global Media Inc.",
+      "industry": "Entertainment",
+      "sector": "Communication Services",
+      "eps": {
+        "eps_now": 2.75593,
+        "eps_30d": 2.53896,
+        "eps_90d": 1.48467,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 7,
+        "up30": 7,
+        "down30": 0,
+        "pct_90": 85.6,
+        "yield_change_90_pp": 10.567,
+        "yield_change_30_pp": 1.804,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공 및 오리지널 콘텐츠 제작, 배급으로 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "AMCX analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AMCX/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:24:02+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "AMCX daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AMCX/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:24:02+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "AMCX company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AMCX/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:24:02+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-B4F200613F69C4B5",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 1,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 1
+        },
+        {
+          "list": "B",
+          "rank": 12
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 10.079999923706055,
+        "close_end": 12.029999732971191,
+        "price_pct_90": 19.3,
+        "adj_return_pct_90": 19.3,
+        "pe_change_pct": -35.7
+      },
+      "market_cap": 496237152,
+      "observed_at": "2026-09-25T12:24:02+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:24:02+00:00"
+    },
+    {
+      "candidate_id": "CAN-D50A4151AB176FB7",
+      "identity": {
+        "entity_id": "NASDAQ:AEHR",
+        "ticker": "AEHR",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Aehr Test Systems, Inc.",
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 1.38333,
+        "eps_30d": 0.3,
+        "eps_90d": 0.3,
+        "eps_target_period": "2028-05-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0,
+        "pct_90": 361.1,
+        "yield_change_90_pp": 1.112,
+        "yield_change_30_pp": 1.112,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "반도체 웨이퍼, 다이, 패키지 테스트 및 번인 솔루션을 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "AEHR analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AEHR/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:43+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "AEHR daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AEHR/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:43+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "AEHR company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AEHR/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:43+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-DA95C110EE6F41D4",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 2,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 1
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 91.80999755859375,
+        "close_end": 97.41999816894531,
+        "price_pct_90": 6.1,
+        "adj_return_pct_90": 6.1,
+        "pe_change_pct": -77.0
+      },
+      "market_cap": 3181692928,
+      "observed_at": "2026-09-25T12:18:43+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:18:43+00:00"
+    },
+    {
+      "candidate_id": "CAN-ABBBE42278126D28",
+      "identity": {
+        "entity_id": "NYSE:TALO",
+        "ticker": "TALO",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Talos Energy Inc.",
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 1.65844,
+        "eps_30d": 1.33094,
+        "eps_90d": -0.04273,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 8,
+        "up30": 2,
+        "down30": 0,
+        "pct_90": null,
+        "yield_change_90_pp": 9.995,
+        "yield_change_30_pp": 1.924,
+        "steady": true,
+        "turnaround": true
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "석유 및 가스 탐사, 생산, 탄소 포집 및 저장 사업을 통해 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "TALO analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/TALO/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:19:16+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "TALO daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/TALO/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:19:16+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "TALO company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/TALO/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:19:16+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-C7C48647A856A28C",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 3,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 2
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 13.319999694824219,
+        "close_end": 17.020000457763672,
+        "price_pct_90": 27.8,
+        "adj_return_pct_90": 27.8,
+        "pe_change_pct": null
+      },
+      "market_cap": 2841752320,
+      "observed_at": "2026-09-25T12:19:16+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:19:16+00:00"
+    },
+    {
+      "candidate_id": "CAN-D577F2C38FBBCFF7",
+      "identity": {
+        "entity_id": "NYSE:DK",
+        "ticker": "DK",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Delek US Holdings, Inc.",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 7.85407,
+        "eps_30d": 4.08407,
+        "eps_90d": 2.05776,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 10,
+        "up30": 6,
+        "down30": 0,
+        "pct_90": 281.7,
+        "yield_change_90_pp": 8.663,
+        "yield_change_30_pp": 5.634,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "원유를 정제하여 휘발유, 디젤, 항공유 등 석유 제품을 생산하고, 원유 운송 및 저장 서비스를 제공합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "DK analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DK/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:40+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "DK daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DK/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:40+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "DK company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DK/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:40+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-86794C89F295E989",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 4,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 2
+        },
+        {
+          "list": "A",
+          "rank": 3
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 47.81999969482422,
+        "close_end": 66.91000366210938,
+        "price_pct_90": 39.9,
+        "adj_return_pct_90": 40.4,
+        "pe_change_pct": -63.3
+      },
+      "market_cap": 4097045248,
+      "observed_at": "2026-09-25T12:17:40+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:17:40+00:00"
+    },
+    {
+      "candidate_id": "CAN-E460E34B1D8B66CE",
+      "identity": {
+        "entity_id": "NYSE:NBR",
+        "ticker": "NBR",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Nabors Industries Ltd.",
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 3.60994,
+        "eps_30d": 1.115,
+        "eps_90d": 1.115,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0,
+        "pct_90": 223.8,
+        "yield_change_90_pp": 3.006,
+        "yield_change_30_pp": 3.006,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "육상 및 해상 유정, 가스정 시추 및 관련 서비스를 제공하여 수익을 창출합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "NBR analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/NBR/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:26+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "NBR daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/NBR/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:26+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "NBR company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/NBR/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:26+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-654A8F6DFEEFDDC7",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 5,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 3
+        },
+        {
+          "list": "A",
+          "rank": 18
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 82.61000061035156,
+        "close_end": 82.98999786376953,
+        "price_pct_90": 0.5,
+        "adj_return_pct_90": 0.5,
+        "pe_change_pct": -69.0
+      },
+      "market_cap": 1260749440,
+      "observed_at": "2026-09-25T12:21:26+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:21:26+00:00"
+    },
+    {
+      "candidate_id": "CAN-82719B27698E3C22",
+      "identity": {
+        "entity_id": "NYSE:PBF",
+        "ticker": "PBF",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "PBF Energy Inc.",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 12.375,
+        "eps_30d": 11.0,
+        "eps_90d": 6.3425,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 4,
+        "up30": 4,
+        "down30": 0,
+        "pct_90": 95.1,
+        "yield_change_90_pp": 8.39,
+        "yield_change_30_pp": 1.912,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "원유를 정제하여 휘발유, 디젤, 제트 연료, 윤활유, 석유화학 제품 등을 생산하고 공급합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "PBF analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PBF/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:15:57+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "PBF daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PBF/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:15:57+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "PBF company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PBF/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:15:57+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-455DA67895538E91",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 6,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 4
+        },
+        {
+          "list": "B",
+          "rank": 10
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 43.11000061035156,
+        "close_end": 71.9000015258789,
+        "price_pct_90": 66.8,
+        "adj_return_pct_90": 67.4,
+        "pe_change_pct": -14.5
+      },
+      "market_cap": 8522799616,
+      "observed_at": "2026-09-25T12:15:57+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:15:57+00:00"
+    },
+    {
+      "candidate_id": "CAN-DC6D3F92ECFFD019",
+      "identity": {
+        "entity_id": "NASDAQ:AXTI",
+        "ticker": "AXTI",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "AXT, Inc.",
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 2.25,
+        "eps_30d": 2.226,
+        "eps_90d": 0.752,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 5,
+        "up30": 4,
+        "down30": 0,
+        "pct_90": 199.2,
+        "yield_change_90_pp": 1.974,
+        "yield_change_30_pp": 0.032,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "화합물 및 단일 원소 반도체 기판을 설계, 제조, 유통하여 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "AXTI analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AXTI/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:24+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "AXTI daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AXTI/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:24+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "AXTI company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AXTI/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:24+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-9F70D84B23F78EC3",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 7,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 4
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 70.1500015258789,
+        "close_end": 75.9000015258789,
+        "price_pct_90": 8.2,
+        "adj_return_pct_90": 8.2,
+        "pe_change_pct": -63.8
+      },
+      "market_cap": 4977007104,
+      "observed_at": "2026-09-25T12:17:24+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:17:24+00:00"
+    },
+    {
+      "candidate_id": "CAN-77F79A3B05ABB893",
+      "identity": {
+        "entity_id": "NYSE:MPC",
+        "ticker": "MPC",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Marathon Petroleum Corporation",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 47.13423,
+        "eps_30d": 32.20183,
+        "eps_90d": 23.93006,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 19,
+        "up30": 12,
+        "down30": 0,
+        "pct_90": 97.0,
+        "yield_change_90_pp": 5.935,
+        "yield_change_30_pp": 3.82,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "MPC analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/MPC/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:23+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "MPC daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/MPC/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:23+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "MPC company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/MPC/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:23+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-5738FCB84A71A919",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 8,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 5
+        },
+        {
+          "list": "B",
+          "rank": 9
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 254.05999755859375,
+        "close_end": 390.95001220703125,
+        "price_pct_90": 53.9,
+        "adj_return_pct_90": 54.3,
+        "pe_change_pct": -21.9
+      },
+      "market_cap": 109788446720,
+      "observed_at": "2026-09-25T12:12:23+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:12:23+00:00"
+    },
+    {
+      "candidate_id": "CAN-700B10D9B75B0040",
+      "identity": {
+        "entity_id": "NASDAQ:CORT",
+        "ticker": "CORT",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Corcept Therapeutics Incorporated",
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "eps": {
+        "eps_now": 4.4025,
+        "eps_30d": 3.20667,
+        "eps_90d": 1.63,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 4,
+        "up30": 2,
+        "down30": 0,
+        "pct_90": 170.1,
+        "yield_change_90_pp": 2.339,
+        "yield_change_30_pp": 1.009,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "내분비 질환 치료제를 개발하고, 쿠싱 증후군 치료제인 코를림을 판매하여 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "CORT analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CORT/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:15:04+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "CORT daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CORT/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:15:04+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "CORT company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CORT/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:15:04+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-3F6E50FBA0DDC58E",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 9,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 5
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 87.31999969482422,
+        "close_end": 118.51000213623047,
+        "price_pct_90": 35.7,
+        "adj_return_pct_90": 35.7,
+        "pe_change_pct": -49.8
+      },
+      "market_cap": 12810741760,
+      "observed_at": "2026-09-25T12:15:04+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:15:04+00:00"
+    },
+    {
+      "candidate_id": "CAN-5A9E947A6AEC56D7",
+      "identity": {
+        "entity_id": "NYSE:AGL",
+        "ticker": "AGL",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "agilon health, inc.",
+      "industry": "Medical Care Facilities",
+      "sector": "Healthcare",
+      "eps": {
+        "eps_now": 3.19833,
+        "eps_30d": 1.76475,
+        "eps_90d": -0.61688,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 6,
+        "up30": 6,
+        "down30": 0,
+        "pct_90": null,
+        "yield_change_90_pp": 5.031,
+        "yield_change_30_pp": 1.891,
+        "steady": false,
+        "turnaround": true
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": null,
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "pending"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "AGL analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AGL/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:01+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "AGL daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AGL/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:01+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "AGL company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/AGL/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:01+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-871A37F9A9331D56",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 10,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 6
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 119.25,
+        "close_end": 75.83000183105469,
+        "price_pct_90": -36.4,
+        "adj_return_pct_90": -36.4,
+        "pe_change_pct": null
+      },
+      "market_cap": 1273277440,
+      "observed_at": "2026-09-25T12:21:01+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:21:01+00:00"
+    },
+    {
+      "candidate_id": "CAN-68E9292E49558246",
+      "identity": {
+        "entity_id": "NYSE:IPI",
+        "ticker": "IPI",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Intrepid Potash, Inc.",
+      "industry": "Agricultural Inputs",
+      "sector": "Basic Materials",
+      "eps": {
+        "eps_now": 1.41366,
+        "eps_30d": 0.61031,
+        "eps_90d": 0.56888,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 3,
+        "up30": 2,
+        "down30": 0,
+        "pct_90": 148.5,
+        "yield_change_90_pp": 2.357,
+        "yield_change_30_pp": 2.241,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "칼륨, 마그네슘, 황, 소금, 물 제품을 농업, 사료, 산업 시장에 공급하여 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "IPI analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/IPI/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:23:59+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "IPI daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/IPI/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:23:59+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "IPI company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/IPI/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:23:59+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-194B00513FC568CE",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 11,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 6
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 34.59000015258789,
+        "close_end": 35.84000015258789,
+        "price_pct_90": 3.6,
+        "adj_return_pct_90": 3.6,
+        "pe_change_pct": -58.3
+      },
+      "market_cap": 482287200,
+      "observed_at": "2026-09-25T12:23:59+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:23:59+00:00"
+    },
+    {
+      "candidate_id": "CAN-FDA6B7F62852042F",
+      "identity": {
+        "entity_id": "NYSE:PARR",
+        "ticker": "PARR",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Par Pacific Holdings, Inc.",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 13.83903,
+        "eps_30d": 11.81722,
+        "eps_90d": 10.002,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 6,
+        "up30": 4,
+        "down30": 1,
+        "pct_90": 38.4,
+        "yield_change_90_pp": 4.998,
+        "yield_change_30_pp": 2.634,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "에너지 회사로, 정유, 소매점 운영, 물류를 통해 재생 및 기존 연료를 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "PARR analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PARR/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:03+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "PARR daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PARR/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:03+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "PARR company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PARR/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:03+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-0821772C30045A3D",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 12,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 7
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 54.630001068115234,
+        "close_end": 76.7699966430664,
+        "price_pct_90": 40.5,
+        "adj_return_pct_90": 40.5,
+        "pe_change_pct": 1.6
+      },
+      "market_cap": 3846148352,
+      "observed_at": "2026-09-25T12:18:03+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:18:03+00:00"
+    },
+    {
+      "candidate_id": "CAN-3D7A7E3B7BFBE2CE",
+      "identity": {
+        "entity_id": "NASDAQ:BLTE",
+        "ticker": "BLTE",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Belite Bio, Inc",
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "eps": {
+        "eps_now": 2.26,
+        "eps_30d": 0.94714,
+        "eps_90d": 0.94429,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 8,
+        "up30": 1,
+        "down30": 0,
+        "pct_90": 139.3,
+        "yield_change_90_pp": 0.777,
+        "yield_change_30_pp": 0.775,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "스타가르트병 및 간 질환 등 미충족 의료 수요를 위한 신약 후보 물질을 연구 개발합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "BLTE analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/BLTE/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:16:24+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "BLTE daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/BLTE/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:16:24+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "BLTE company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/BLTE/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:16:24+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-A1D56F28D5F882C9",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 13,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 7
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 148.72999572753906,
+        "close_end": 169.44000244140625,
+        "price_pct_90": 13.9,
+        "adj_return_pct_90": 13.9,
+        "pe_change_pct": -52.4
+      },
+      "market_cap": 6823712256,
+      "observed_at": "2026-09-25T12:16:24+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:16:24+00:00"
+    },
+    {
+      "candidate_id": "CAN-490AC1686F9442CE",
+      "identity": {
+        "entity_id": "NASDAQ:RPAY",
+        "ticker": "RPAY",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Repay Holdings Corporation",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 1.1645,
+        "eps_30d": 1.11365,
+        "eps_90d": 0.97163,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 3,
+        "up30": 2,
+        "down30": 1,
+        "pct_90": 19.9,
+        "yield_change_90_pp": 4.908,
+        "yield_change_30_pp": 1.294,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "소비자와 기업이 전자 결제 수단을 사용하도록 통합 결제 처리 솔루션을 제공하여 수익을 창출합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "RPAY analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/RPAY/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:24:58+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "RPAY daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/RPAY/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:24:58+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "RPAY company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/RPAY/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:24:58+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-3933E29FAFB1F33A",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 14,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 8
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 3.5799999237060547,
+        "close_end": 3.930000066757202,
+        "price_pct_90": 9.8,
+        "adj_return_pct_90": 9.8,
+        "pe_change_pct": -8.4
+      },
+      "market_cap": 346564672,
+      "observed_at": "2026-09-25T12:24:58+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:24:58+00:00"
+    },
+    {
+      "candidate_id": "CAN-36582E27909720FE",
+      "identity": {
+        "entity_id": "NYSE:CODI",
+        "ticker": "CODI",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Compass Diversified",
+      "industry": "Conglomerates",
+      "sector": "Industrials",
+      "eps": {
+        "eps_now": 0.644,
+        "eps_30d": 0.464,
+        "eps_90d": 0.28,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 5,
+        "up30": 4,
+        "down30": 1,
+        "pct_90": 130.0,
+        "yield_change_90_pp": 3.236,
+        "yield_change_30_pp": 1.6,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "산업 및 브랜드 소비재 기업에 투자하고 인수합병, 기업 재편 등을 통해 수익을 얻는 사모펀드입니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "CODI analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CODI/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:36+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "CODI daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CODI/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:36+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "CODI company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CODI/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:36+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-46141FAD267E07DC",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 15,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 8
+        },
+        {
+          "list": "A",
+          "rank": 16
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 10.40999984741211,
+        "close_end": 11.25,
+        "price_pct_90": 8.1,
+        "adj_return_pct_90": 8.1,
+        "pe_change_pct": -53.0
+      },
+      "market_cap": 846404608,
+      "observed_at": "2026-09-25T12:22:36+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:22:36+00:00"
+    },
+    {
+      "candidate_id": "CAN-325B2A6C30755476",
+      "identity": {
+        "entity_id": "NYSE:VLO",
+        "ticker": "VLO",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Valero Energy Corporation",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 38.04043,
+        "eps_30d": 29.96796,
+        "eps_90d": 21.13555,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 18,
+        "up30": 7,
+        "down30": 1,
+        "pct_90": 80.0,
+        "yield_change_90_pp": 4.415,
+        "yield_change_30_pp": 2.108,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "석유 기반 및 저탄소 액체 연료와 석유화학 제품을 제조하고 판매하여 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "VLO analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/VLO/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:23+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "VLO daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/VLO/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:23+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "VLO company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/VLO/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:23+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-9C294CDD7D8C842A",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 16,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 9
+        },
+        {
+          "list": "B",
+          "rank": 13
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 259.3699951171875,
+        "close_end": 382.8599853515625,
+        "price_pct_90": 47.6,
+        "adj_return_pct_90": 48.2,
+        "pe_change_pct": -18.0
+      },
+      "market_cap": 110235901952,
+      "observed_at": "2026-09-25T12:12:23+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:12:23+00:00"
+    },
+    {
+      "candidate_id": "CAN-11B1565B12AFE2F9",
+      "identity": {
+        "entity_id": "NYSE:DINO",
+        "ticker": "DINO",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "HF Sinclair Corporation",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 11.82475,
+        "eps_30d": 9.37352,
+        "eps_90d": 7.39586,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 15,
+        "up30": 9,
+        "down30": 2,
+        "pct_90": 59.9,
+        "yield_change_90_pp": 4.186,
+        "yield_change_30_pp": 2.317,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "휘발유, 디젤 연료, 재생 디젤, 특수 윤활유 및 화학 제품 등을 생산하고 판매합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "DINO analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DINO/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:14:17+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "DINO daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DINO/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:14:17+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "DINO company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DINO/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:14:17+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-EDC55F683C958D03",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 17,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 10
+        },
+        {
+          "list": "B",
+          "rank": 16
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 68.29000091552734,
+        "close_end": 105.79000091552734,
+        "price_pct_90": 54.9,
+        "adj_return_pct_90": 55.9,
+        "pe_change_pct": -3.1
+      },
+      "market_cap": 18807754752,
+      "observed_at": "2026-09-25T12:14:17+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:14:17+00:00"
+    },
+    {
+      "candidate_id": "CAN-E95987D989EF1145",
+      "identity": {
+        "entity_id": "NYSE:TNK",
+        "ticker": "TNK",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Teekay Tankers Ltd.",
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 10.89793,
+        "eps_30d": 8.0747,
+        "eps_90d": 7.47095,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 5,
+        "up30": 3,
+        "down30": 1,
+        "pct_90": 45.9,
+        "yield_change_90_pp": 3.643,
+        "yield_change_30_pp": 3.001,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "유조선을 이용해 해상 운송 서비스, 유류 환적, 선박 관리 및 장비 대여로 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "TNK analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/TNK/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:35+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "TNK daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/TNK/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:35+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "TNK company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/TNK/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:35+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-2DD875623ED0333B",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 18,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 11
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 67.98999786376953,
+        "close_end": 94.08000183105469,
+        "price_pct_90": 38.4,
+        "adj_return_pct_90": 38.8,
+        "pe_change_pct": -5.1
+      },
+      "market_cap": 3262704896,
+      "observed_at": "2026-09-25T12:18:35+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:18:35+00:00"
+    },
+    {
+      "candidate_id": "CAN-4DB66C064FC2ED7C",
+      "identity": {
+        "entity_id": "NASDAQ:URGN",
+        "ticker": "URGN",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "UroGen Pharma Ltd.",
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "eps": {
+        "eps_now": 2.79429,
+        "eps_30d": 1.49375,
+        "eps_90d": 1.43667,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 7,
+        "up30": 5,
+        "down30": 0,
+        "pct_90": 94.5,
+        "yield_change_90_pp": 3.293,
+        "yield_change_30_pp": 3.154,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "비뇨기암 및 특수암 치료를 위한 생명공학 솔루션과 의약품을 개발, 판매하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "URGN analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/URGN/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:20:02+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "URGN daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/URGN/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:20:02+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "URGN company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/URGN/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:20:02+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-1579A095C79C5C9D",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 19,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 11
+        },
+        {
+          "list": "A",
+          "rank": 14
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 34.540000915527344,
+        "close_end": 41.22999954223633,
+        "price_pct_90": 19.4,
+        "adj_return_pct_90": 19.4,
+        "pe_change_pct": -38.6
+      },
+      "market_cap": 2015345664,
+      "observed_at": "2026-09-25T12:20:02+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:20:02+00:00"
+    },
+    {
+      "candidate_id": "CAN-E87900AEFDDE7B07",
+      "identity": {
+        "entity_id": "NASDAQ:SPT",
+        "ticker": "SPT",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Sprout Social, Inc.",
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 1.5398,
+        "eps_30d": 1.1854,
+        "eps_90d": 1.19855,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 10,
+        "up30": 9,
+        "down30": 0,
+        "pct_90": 28.5,
+        "yield_change_90_pp": 3.511,
+        "yield_change_30_pp": 3.646,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "웹 기반 소셜 미디어 관리 플랫폼과 클라우드 소프트웨어를 제공하여 기업의 소셜 활동을 돕고 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "SPT analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SPT/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:23:36+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "SPT daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SPT/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:23:36+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "SPT company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SPT/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:23:36+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-EDF7689610E360C0",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 20,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 12
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 7.480000019073486,
+        "close_end": 9.720000267028809,
+        "price_pct_90": 29.9,
+        "adj_return_pct_90": 29.9,
+        "pe_change_pct": 1.1
+      },
+      "market_cap": 588956288,
+      "observed_at": "2026-09-25T12:23:36+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:23:36+00:00"
+    },
+    {
+      "candidate_id": "CAN-A0761326A7E13159",
+      "identity": {
+        "entity_id": "NYSE:SUNC",
+        "ticker": "SUNC",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "SunocoCorp LLC",
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 12.33833,
+        "eps_30d": 4.9895,
+        "eps_90d": 9.695,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0,
+        "pct_90": 27.3,
+        "yield_change_90_pp": 3.42,
+        "yield_change_30_pp": 9.509,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "에너지 인프라를 운영하고, 연료를 유통하며, 파이프라인과 터미널을 통해 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "SUNC analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SUNC/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:08+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "SUNC daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SUNC/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:08+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "SUNC company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/SUNC/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:08+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-F5FC73696BF629F0",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 21,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 13
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 67.0199966430664,
+        "close_end": 77.27999877929688,
+        "price_pct_90": 15.3,
+        "adj_return_pct_90": 16.9,
+        "pe_change_pct": -9.4
+      },
+      "market_cap": 3981249280,
+      "observed_at": "2026-09-25T12:18:08+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:18:08+00:00"
+    },
+    {
+      "candidate_id": "CAN-E763F753A2D7609F",
+      "identity": {
+        "entity_id": "NASDAQ:CLBK",
+        "ticker": "CLBK",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Columbia Financial, Inc.",
+      "industry": "Banks - Regional",
+      "sector": "Financial Services",
+      "eps": {
+        "eps_now": 0.63364,
+        "eps_30d": 0.35454,
+        "eps_90d": 0.35454,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0,
+        "pct_90": 78.7,
+        "yield_change_90_pp": 2.479,
+        "yield_change_30_pp": 2.479,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "기업과 소비자에게 다양한 대출 및 금융 서비스를 제공하고 증권 활동으로 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "CLBK analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CLBK/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:37+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "CLBK daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CLBK/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:37+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "CLBK company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CLBK/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:21:37+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-80A3655EAA47F80A",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 22,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 14
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "split_in_window",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 9.481818199157715,
+        "close_end": 11.260000228881836,
+        "price_pct_90": 18.8,
+        "adj_return_pct_90": 19.3,
+        "pe_change_pct": null
+      },
+      "market_cap": 1171695744,
+      "observed_at": "2026-09-25T12:21:37+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:21:37+00:00"
+    },
+    {
+      "candidate_id": "CAN-EE8A92AC2C2D3E8C",
+      "identity": {
+        "entity_id": "NASDAQ:PGY",
+        "ticker": "PGY",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Pagaya Technologies Ltd.",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 4.14595,
+        "eps_30d": 4.07106,
+        "eps_90d": 3.53854,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 10,
+        "up30": 7,
+        "down30": 0,
+        "pct_90": 17.2,
+        "yield_change_90_pp": 3.245,
+        "yield_change_30_pp": 0.4,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "금융 서비스에 데이터 과학과 AI 기술을 활용하여 대출 심사 및 승인 솔루션을 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "PGY analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PGY/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:20:36+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "PGY daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PGY/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:20:36+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "PGY company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PGY/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:20:36+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-D66A0F0A17542154",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 23,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 15
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 15.869999885559082,
+        "close_end": 18.719999313354492,
+        "price_pct_90": 18.0,
+        "adj_return_pct_90": 18.0,
+        "pe_change_pct": 0.7
+      },
+      "market_cap": 1561731712,
+      "observed_at": "2026-09-25T12:20:36+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:20:36+00:00"
+    },
+    {
+      "candidate_id": "CAN-C8B827862A3B86D5",
+      "identity": {
+        "entity_id": "NASDAQ:PUBM",
+        "ticker": "PUBM",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "PubMatic, Inc.",
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 0.81333,
+        "eps_30d": 0.812,
+        "eps_90d": 0.48833,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 6,
+        "up30": 5,
+        "down30": 0,
+        "pct_90": 66.6,
+        "yield_change_90_pp": 1.752,
+        "yield_change_30_pp": 0.007,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "디지털 콘텐츠 제작자와 광고주를 위한 실시간 광고 거래 클라우드 플랫폼을 제공하여 수익을 창출합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "PUBM analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PUBM/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:45+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "PUBM daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PUBM/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:45+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "PUBM company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PUBM/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:45+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-76CE164A5E3E4DD6",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 24,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 15
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 12.649999618530273,
+        "close_end": 18.549999237060547,
+        "price_pct_90": 46.6,
+        "adj_return_pct_90": 46.6,
+        "pe_change_pct": -12.0
+      },
+      "market_cap": 844953600,
+      "observed_at": "2026-09-25T12:22:45+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:22:45+00:00"
+    },
+    {
+      "candidate_id": "CAN-6AC97D7E0081C82D",
+      "identity": {
+        "entity_id": "NYSE:LPG",
+        "ticker": "LPG",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Dorian LPG Ltd.",
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 4.68,
+        "eps_30d": 4.2875,
+        "eps_90d": 3.01,
+        "eps_target_period": "2028-03-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 4,
+        "up30": 2,
+        "down30": 1,
+        "pct_90": 55.5,
+        "yield_change_90_pp": 3.09,
+        "yield_change_30_pp": 0.726,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A",
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "액화 석유 가스(LPG) 운반선을 소유 및 운영하며 운송 서비스를 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "LPG analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/LPG/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:19:42+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "LPG daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/LPG/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:19:42+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "LPG company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/LPG/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:19:42+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-9A3C1A62F693630E",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 25,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 17
+        },
+        {
+          "list": "B",
+          "rank": 20
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 36.060001373291016,
+        "close_end": 54.04999923706055,
+        "price_pct_90": 49.9,
+        "adj_return_pct_90": 53.3,
+        "pe_change_pct": -3.6
+      },
+      "market_cap": 2312403712,
+      "observed_at": "2026-09-25T12:19:42+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:19:42+00:00"
+    },
+    {
+      "candidate_id": "CAN-8ED72F330C1AE34D",
+      "identity": {
+        "entity_id": "NASDAQ:FSLY",
+        "ticker": "FSLY",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Fastly, Inc.",
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 0.6305,
+        "eps_30d": 0.58384,
+        "eps_90d": 0.39454,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 12,
+        "up30": 10,
+        "down30": 0,
+        "pct_90": 59.8,
+        "yield_change_90_pp": 0.884,
+        "yield_change_30_pp": 0.175,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "고객 애플리케이션 처리, 제공, 보안을 위한 엣지 클라우드 플랫폼 및 네트워크 서비스를 운영합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "FSLY analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/FSLY/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:58+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "FSLY daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/FSLY/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:58+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "FSLY company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/FSLY/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:17:58+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-D4E558540F1D4477",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 26,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 17
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 17.110000610351562,
+        "close_end": 26.68000030517578,
+        "price_pct_90": 55.9,
+        "adj_return_pct_90": 55.9,
+        "pe_change_pct": -2.4
+      },
+      "market_cap": 4250124032,
+      "observed_at": "2026-09-25T12:17:58+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:17:58+00:00"
+    },
+    {
+      "candidate_id": "CAN-DF76D3AD7ADC73CF",
+      "identity": {
+        "entity_id": "NASDAQ:CBRL",
+        "ticker": "CBRL",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Cracker Barrel Old Country Store, Inc.",
+      "industry": "Restaurants",
+      "sector": "Consumer Cyclical",
+      "eps": {
+        "eps_now": 1.84926,
+        "eps_30d": 1.67945,
+        "eps_90d": 1.15875,
+        "eps_target_period": "2028-07-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 8,
+        "up30": 2,
+        "down30": 0,
+        "pct_90": 59.6,
+        "yield_change_90_pp": 1.332,
+        "yield_change_30_pp": 0.328,
+        "steady": false,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "식당과 선물 가게를 운영하며 음식 판매 및 다양한 기념품, 생활용품 판매로 수익을 얻습니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "CBRL analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CBRL/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:01+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "CBRL daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CBRL/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:01+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "CBRL company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/CBRL/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:22:01+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-1D39906962BB7F56",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 27,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 18
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 52.849998474121094,
+        "close_end": 51.84000015258789,
+        "price_pct_90": -1.9,
+        "adj_return_pct_90": -1.4,
+        "pe_change_pct": -38.5
+      },
+      "market_cap": 1158699648,
+      "observed_at": "2026-09-25T12:22:01+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:22:01+00:00"
+    },
+    {
+      "candidate_id": "CAN-3D30FF7D03231FE1",
+      "identity": {
+        "entity_id": "NYSE:PSX",
+        "ticker": "PSX",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Phillips 66",
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "eps": {
+        "eps_now": 24.89667,
+        "eps_30d": 21.25519,
+        "eps_90d": 17.28123,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 19,
+        "up30": 15,
+        "down30": 1,
+        "pct_90": 44.1,
+        "yield_change_90_pp": 2.976,
+        "yield_change_30_pp": 1.423,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "원유 정제, 석유화학 제품 생산, 석유 및 천연가스 운송·저장·처리 서비스를 제공합니다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "PSX analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PSX/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:26+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "PSX daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PSX/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:26+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "PSX company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/PSX/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:12:26+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-ADDD3AC39407ADD4",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 28,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 19
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 171.64999389648438,
+        "close_end": 255.8699951171875,
+        "price_pct_90": 49.1,
+        "adj_return_pct_90": 49.9,
+        "pe_change_pct": 3.5
+      },
+      "market_cap": 102587236352,
+      "observed_at": "2026-09-25T12:12:26+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:12:26+00:00"
+    },
+    {
+      "candidate_id": "CAN-4BD491C8D3F1EC4F",
+      "identity": {
+        "entity_id": "NASDAQ:UCTT",
+        "ticker": "UCTT",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Ultra Clean Holdings, Inc.",
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 5.87,
+        "eps_30d": 3.9375,
+        "eps_90d": 3.7725,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 4,
+        "up30": 4,
+        "down30": 0,
+        "pct_90": 55.6,
+        "yield_change_90_pp": 2.741,
+        "yield_change_30_pp": 2.525,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "반도체 산업에 핵심 부품, 시스템, 세척 및 분석 서비스를 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "UCTT analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/UCTT/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:33+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "UCTT daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/UCTT/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:33+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "UCTT company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/UCTT/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:33+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-C637A1A8B346F69C",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 29,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 19
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 118.81999969482422,
+        "close_end": 76.5199966430664,
+        "price_pct_90": -35.6,
+        "adj_return_pct_90": -35.6,
+        "pe_change_pct": -58.6
+      },
+      "market_cap": 3464598016,
+      "observed_at": "2026-09-25T12:18:33+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:18:33+00:00"
+    },
+    {
+      "candidate_id": "CAN-0584EAE068460D91",
+      "identity": {
+        "entity_id": "NYSE:DAN",
+        "ticker": "DAN",
+        "exchange": "NYSE",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "name": "Dana Incorporated",
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "eps": {
+        "eps_now": 4.18621,
+        "eps_30d": 4.07184,
+        "eps_90d": 3.38333,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 5,
+        "up30": 2,
+        "down30": 1,
+        "pct_90": 23.7,
+        "yield_change_90_pp": 2.936,
+        "yield_change_30_pp": 0.418,
+        "steady": true,
+        "turnaround": false
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "A"
+      ],
+      "missing": [],
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "차량용 동력 전달 및 에너지 관리 솔루션, 부품, 냉각 시스템을 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "DAN analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DAN/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:40+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "DAN daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DAN/history",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:40+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "DAN company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/DAN/profile",
+          "published_at": null,
+          "observed_at": "2026-09-25T12:18:40+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v1",
+      "candidate_version": "CV-F56CCBC732F0E648",
+      "classification": "found",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 30,
+      "memberships": [
+        {
+          "list": "A",
+          "rank": 20
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-27",
+        "price_start_date": "2026-06-26",
+        "price_end_expected": "2026-09-24",
+        "price_end_date": "2026-09-24",
+        "close_start": 28.1299991607666,
+        "close_end": 27.350000381469727,
+        "price_pct_90": -2.8,
+        "adj_return_pct_90": -2.3,
+        "pe_change_pct": -21.4
+      },
+      "market_cap": 2942222336,
+      "observed_at": "2026-09-25T12:18:40+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+        "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+        "run_id": "36133507734-1",
+        "finished_at": "2026-09-25T12:25:51+00:00"
+      },
+      "policy_version": "22a18de72c4a",
+      "first_seen_at": "2026-09-25T12:18:40+00:00"
+    }
+  ],
+  "observed_at": "2026-09-25T12:25:51+00:00",
+  "run_status": "success",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "screen_candidates": 101,
+  "coverage": {
+    "universe": 7662,
+    "earnings_requested": 3239,
+    "earnings_success": 2412
+  },
+  "unidentified": [],
+  "known": {
+    "CAN-FDA6B7F62852042F": {
+      "key": "NYSE:PARR|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:18:03+00:00",
+      "versions": [
+        {
+          "version": "CV-0821772C30045A3D",
+          "observed_at": "2026-09-25T12:18:03+00:00"
+        }
+      ]
+    },
+    "CAN-4DB66C064FC2ED7C": {
+      "key": "NASDAQ:URGN|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:20:02+00:00",
+      "versions": [
+        {
+          "version": "CV-1579A095C79C5C9D",
+          "observed_at": "2026-09-25T12:20:02+00:00"
+        }
+      ]
+    },
+    "CAN-68E9292E49558246": {
+      "key": "NYSE:IPI|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:23:59+00:00",
+      "versions": [
+        {
+          "version": "CV-194B00513FC568CE",
+          "observed_at": "2026-09-25T12:23:59+00:00"
+        }
+      ]
+    },
+    "CAN-DF76D3AD7ADC73CF": {
+      "key": "NASDAQ:CBRL|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:22:01+00:00",
+      "versions": [
+        {
+          "version": "CV-1D39906962BB7F56",
+          "observed_at": "2026-09-25T12:22:01+00:00"
+        }
+      ]
+    },
+    "CAN-E95987D989EF1145": {
+      "key": "NYSE:TNK|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:18:35+00:00",
+      "versions": [
+        {
+          "version": "CV-2DD875623ED0333B",
+          "observed_at": "2026-09-25T12:18:35+00:00"
+        }
+      ]
+    },
+    "CAN-490AC1686F9442CE": {
+      "key": "NASDAQ:RPAY|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:24:58+00:00",
+      "versions": [
+        {
+          "version": "CV-3933E29FAFB1F33A",
+          "observed_at": "2026-09-25T12:24:58+00:00"
+        }
+      ]
+    },
+    "CAN-700B10D9B75B0040": {
+      "key": "NASDAQ:CORT|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:15:04+00:00",
+      "versions": [
+        {
+          "version": "CV-3F6E50FBA0DDC58E",
+          "observed_at": "2026-09-25T12:15:04+00:00"
+        }
+      ]
+    },
+    "CAN-82719B27698E3C22": {
+      "key": "NYSE:PBF|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:15:57+00:00",
+      "versions": [
+        {
+          "version": "CV-455DA67895538E91",
+          "observed_at": "2026-09-25T12:15:57+00:00"
+        }
+      ]
+    },
+    "CAN-36582E27909720FE": {
+      "key": "NYSE:CODI|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:22:36+00:00",
+      "versions": [
+        {
+          "version": "CV-46141FAD267E07DC",
+          "observed_at": "2026-09-25T12:22:36+00:00"
+        }
+      ]
+    },
+    "CAN-77F79A3B05ABB893": {
+      "key": "NYSE:MPC|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "versions": [
+        {
+          "version": "CV-5738FCB84A71A919",
+          "observed_at": "2026-09-25T12:12:23+00:00"
+        }
+      ]
+    },
+    "CAN-E460E34B1D8B66CE": {
+      "key": "NYSE:NBR|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:21:26+00:00",
+      "versions": [
+        {
+          "version": "CV-654A8F6DFEEFDDC7",
+          "observed_at": "2026-09-25T12:21:26+00:00"
+        }
+      ]
+    },
+    "CAN-C8B827862A3B86D5": {
+      "key": "NASDAQ:PUBM|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:22:45+00:00",
+      "versions": [
+        {
+          "version": "CV-76CE164A5E3E4DD6",
+          "observed_at": "2026-09-25T12:22:45+00:00"
+        }
+      ]
+    },
+    "CAN-E763F753A2D7609F": {
+      "key": "NASDAQ:CLBK|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:21:37+00:00",
+      "versions": [
+        {
+          "version": "CV-80A3655EAA47F80A",
+          "observed_at": "2026-09-25T12:21:37+00:00"
+        }
+      ]
+    },
+    "CAN-D577F2C38FBBCFF7": {
+      "key": "NYSE:DK|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:17:40+00:00",
+      "versions": [
+        {
+          "version": "CV-86794C89F295E989",
+          "observed_at": "2026-09-25T12:17:40+00:00"
+        }
+      ]
+    },
+    "CAN-5A9E947A6AEC56D7": {
+      "key": "NYSE:AGL|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:21:01+00:00",
+      "versions": [
+        {
+          "version": "CV-871A37F9A9331D56",
+          "observed_at": "2026-09-25T12:21:01+00:00"
+        }
+      ]
+    },
+    "CAN-6AC97D7E0081C82D": {
+      "key": "NYSE:LPG|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:19:42+00:00",
+      "versions": [
+        {
+          "version": "CV-9A3C1A62F693630E",
+          "observed_at": "2026-09-25T12:19:42+00:00"
+        }
+      ]
+    },
+    "CAN-325B2A6C30755476": {
+      "key": "NYSE:VLO|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "versions": [
+        {
+          "version": "CV-9C294CDD7D8C842A",
+          "observed_at": "2026-09-25T12:12:23+00:00"
+        }
+      ]
+    },
+    "CAN-DC6D3F92ECFFD019": {
+      "key": "NASDAQ:AXTI|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:17:24+00:00",
+      "versions": [
+        {
+          "version": "CV-9F70D84B23F78EC3",
+          "observed_at": "2026-09-25T12:17:24+00:00"
+        }
+      ]
+    },
+    "CAN-3D7A7E3B7BFBE2CE": {
+      "key": "NASDAQ:BLTE|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:16:24+00:00",
+      "versions": [
+        {
+          "version": "CV-A1D56F28D5F882C9",
+          "observed_at": "2026-09-25T12:16:24+00:00"
+        }
+      ]
+    },
+    "CAN-3D30FF7D03231FE1": {
+      "key": "NYSE:PSX|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:12:26+00:00",
+      "versions": [
+        {
+          "version": "CV-ADDD3AC39407ADD4",
+          "observed_at": "2026-09-25T12:12:26+00:00"
+        }
+      ]
+    },
+    "CAN-14C6F602D0868FB9": {
+      "key": "NASDAQ:AMCX|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:24:02+00:00",
+      "versions": [
+        {
+          "version": "CV-B4F200613F69C4B5",
+          "observed_at": "2026-09-25T12:24:02+00:00"
+        }
+      ]
+    },
+    "CAN-4BD491C8D3F1EC4F": {
+      "key": "NASDAQ:UCTT|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:18:33+00:00",
+      "versions": [
+        {
+          "version": "CV-C637A1A8B346F69C",
+          "observed_at": "2026-09-25T12:18:33+00:00"
+        }
+      ]
+    },
+    "CAN-ABBBE42278126D28": {
+      "key": "NYSE:TALO|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:19:16+00:00",
+      "versions": [
+        {
+          "version": "CV-C7C48647A856A28C",
+          "observed_at": "2026-09-25T12:19:16+00:00"
+        }
+      ]
+    },
+    "CAN-8ED72F330C1AE34D": {
+      "key": "NASDAQ:FSLY|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:17:58+00:00",
+      "versions": [
+        {
+          "version": "CV-D4E558540F1D4477",
+          "observed_at": "2026-09-25T12:17:58+00:00"
+        }
+      ]
+    },
+    "CAN-EE8A92AC2C2D3E8C": {
+      "key": "NASDAQ:PGY|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:20:36+00:00",
+      "versions": [
+        {
+          "version": "CV-D66A0F0A17542154",
+          "observed_at": "2026-09-25T12:20:36+00:00"
+        }
+      ]
+    },
+    "CAN-D50A4151AB176FB7": {
+      "key": "NASDAQ:AEHR|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:18:43+00:00",
+      "versions": [
+        {
+          "version": "CV-DA95C110EE6F41D4",
+          "observed_at": "2026-09-25T12:18:43+00:00"
+        }
+      ]
+    },
+    "CAN-11B1565B12AFE2F9": {
+      "key": "NYSE:DINO|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:14:17+00:00",
+      "versions": [
+        {
+          "version": "CV-EDC55F683C958D03",
+          "observed_at": "2026-09-25T12:14:17+00:00"
+        }
+      ]
+    },
+    "CAN-E87900AEFDDE7B07": {
+      "key": "NASDAQ:SPT|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:23:36+00:00",
+      "versions": [
+        {
+          "version": "CV-EDF7689610E360C0",
+          "observed_at": "2026-09-25T12:23:36+00:00"
+        }
+      ]
+    },
+    "CAN-0584EAE068460D91": {
+      "key": "NYSE:DAN|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:18:40+00:00",
+      "versions": [
+        {
+          "version": "CV-F56CCBC732F0E648",
+          "observed_at": "2026-09-25T12:18:40+00:00"
+        }
+      ]
+    },
+    "CAN-A0761326A7E13159": {
+      "key": "NYSE:SUNC|eps-revision-review:v1",
+      "first_seen_at": "2026-09-25T12:18:08+00:00",
+      "versions": [
+        {
+          "version": "CV-F5FC73696BF629F0",
+          "observed_at": "2026-09-25T12:18:08+00:00"
+        }
+      ]
+    }
+  }
+}
