@@ -4,6 +4,7 @@ import gzip
 import hashlib
 import io
 import json
+import os
 import pathlib
 import sys
 import tempfile
@@ -275,10 +276,20 @@ class TranslationTest(unittest.TestCase):
         self.assertEqual(cand["explanations"]["company_description_ko"]["text"], "데이터센터용 반도체를 만든다.")
 
 
+def isolate_ci_environment(test):
+    """Tests must not see the CI job's run ID or mode (they would join 'this run')."""
+    env = mock.patch.dict("os.environ")
+    env.start()
+    test.addCleanup(env.stop)
+    for key in ("DAILY_MODE", "DAILY_DAY", "DAILY_RUN_ID", "GITHUB_RUN_ID", "GITHUB_RUN_ATTEMPT", "GITHUB_ACTIONS"):
+        os.environ.pop(key, None)
+
+
 class CandidateFixture(unittest.TestCase):
     """A temporary data directory with one generated screener snapshot (no tests of its own)."""
 
     def setUp(self):
+        isolate_ci_environment(self)
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         data = pathlib.Path(self.tmp.name) / "processed"

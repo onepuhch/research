@@ -18,7 +18,7 @@ import common as c  # noqa: E402
 import candidates as k  # noqa: E402
 import candidate_alerts as a  # noqa: E402
 import notify  # noqa: E402
-from test_candidates import REF, build, row, snapshot  # noqa: E402
+from test_candidates import REF, build, isolate_ci_environment, row, snapshot  # noqa: E402
 
 REAL_PERSIST_REMOTE = a.persist_remote  # the fixtures replace the module attribute
 
@@ -43,6 +43,11 @@ def screen_rows(*tickers):
 
 class AlertTest(unittest.TestCase):
     def setUp(self):
+        isolate_ci_environment(self)
+        runs = iter(range(1, 1000))  # every alerts run is a separate CI run attempt
+        patch = mock.patch.object(a, "attempt_id", side_effect=lambda: f"run-{next(runs)}")
+        patch.start()
+        self.addCleanup(patch.stop)
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         self.data = pathlib.Path(tmp.name)
