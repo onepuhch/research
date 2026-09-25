@@ -6,9 +6,13 @@ Selection is a slot order, not a combined investment score:
      date, and an empty channel leaves its slots to the other
   news keeps its existing priority; the screener keeps A1/B1/A2/B2 order.
 
-Duplicates: the logical key is entity | thesis_key | event_type. Rank, collection
-date and fiscal-year roll never make a new alert. A company already alerted today
-(by either channel) is not alerted again that day.
+Duplicates: the logical key is entity | thesis_key | event_type; that event is never
+sent twice. Rank, collection date and fiscal-year roll never make a new event. A company
+gets at most one alert a day (either channel), and a new-discovery alert for another
+thesis or channel waits entity_new_cooldown_days (14) after that company's last
+new-discovery alert. A human-approved recommendation is exempt from the 14 days only.
+Entities are compared after the registry mapping (CIK and exchange:ticker of one
+registered company are the same); names are never matched by similarity.
 
 Delivery ledger (data/processed/candidate_alerts.json): a slot is reserved before
 sending and counts toward the daily limit while reserved or uncertain. Only a
@@ -37,7 +41,7 @@ import notify  # noqa: E402
 NEW = "new_discovery"
 RECOMMENDATION = "recommendation"
 COUNTED = ("reserved", "sent", "uncertain")
-DEFAULTS = {"bootstrap_max": 1}
+DEFAULTS = {"bootstrap_max": 1, "entity_new_cooldown_days": 14}
 
 
 def ledger_path() -> Path:
@@ -75,17 +79,49 @@ def news_items(rows: list[dict], notify_state: dict) -> list[dict]:
     import promote
     pushed = set(notify_state.get("pushed", []))
     items = []
-    for row in notify.select_signals(rows, pushed, notify.DEFAULT_MIN_TIER, False):
-        if row.get("signal_direction") == "negative":
-            continue  # risk alerts belong to notify.py
-        try:
-            entity, _ = promote.identity(row)
-        except ValueError:
+    # Every eligible signal: duplicates are removed before the daily limit, not after a top-3 cut.
+    for row in notify.eligible_signals(rows, pushed, notify.DEFAULT_MIN_TIER, False)[1]:
+        entity = news_entity(row)
+        if not entity:
             continue
         thesis = re.sub(r"\s+", " ", (row.get("bottleneck_id") or row.get("테마") or "unclassified").casefold()).strip()
         items.append({"channel": "news", "event": NEW, "entity_id": entity, "thesis_key": thesis,
                       "key": logical_key(entity, thesis, NEW), "signal_id": row["signal_id"], "row": row})
     return items
+
+
+def news_entity(row: dict) -> str | None:
+    import promote
+    try:
+        return promote.identity(row)[0]
+    except ValueError:
+        return None
+
+
+def recent_new_alerts(ledger: dict, notify_state: dict, signal_rows: list[dict]) -> tuple[dict[str, str], int]:
+    """entity -> latest day of a new-discovery alert (sent, reserved or uncertain), and
+    how many legacy notify.py sends could not be tied to a company (left unknown)."""
+    recent: dict[str, str] = {}
+
+    def note(entity, day):
+        if entity and day and day > recent.get(entity, ""):
+            recent[entity] = day
+
+    for e in ledger["events"].values():
+        if e.get("event") == NEW and e.get("status") in COUNTED:
+            note(e.get("entity_id"), e.get("day"))
+    tracked = {e.get("signal_id") for e in ledger["events"].values() if e.get("signal_id")}
+    by_id = {r.get("signal_id"): r for r in signal_rows}
+    unknown = 0
+    for signal_id, record in notify_state.get("sent", {}).items():
+        if record.get("kind") != "candidate" or signal_id in tracked:
+            continue
+        entity = news_entity(by_id[signal_id]) if signal_id in by_id else None
+        if entity:
+            note(entity, record.get("date"))
+        else:
+            unknown += 1
+    return recent, unknown
 
 
 def screen_items(index: dict) -> tuple[list[dict], list[dict]]:
@@ -114,28 +150,36 @@ def blocked_keys(ledger: dict) -> set[str]:
 
 
 def select(ledger: dict, news: list[dict], recommended: list[dict], screen: list[dict], slots: int,
-           day: str, screen_cap: int | None = None) -> list[dict]:
+           day: str, screen_cap: int | None = None, recent: dict[str, str] | None = None,
+           cooldown_days: int = 14) -> list[dict]:
     blocked = blocked_keys(ledger)
     bootstrap = set((ledger.get("bootstrap") or {}).get("keys", []))
+    recent = dict(recent or {})
     alerted_today = {e["entity_id"] for e in ledger["events"].values()
                      if e.get("day") == day and e.get("status") in COUNTED}
-    news_sent = {(e["entity_id"], e["thesis_key"]) for e in ledger["events"].values()
-                 if e.get("channel") == "news" and e.get("status") in COUNTED}
+    alerted_today |= {entity for entity, last in recent.items() if last == day}
     chosen: list[dict] = []
     screen_used = 0
 
+    def cooling(item) -> bool:
+        last = recent.get(item["entity_id"])
+        return (item["event"] == NEW and last is not None
+                and (date.fromisoformat(day) - date.fromisoformat(last)).days < cooldown_days)
+
     def take(item) -> bool:
         nonlocal screen_used
-        if len(chosen) >= slots or item["key"] in blocked or item["entity_id"] in alerted_today:
+        if len(chosen) >= slots or item["key"] in blocked or item["entity_id"] in alerted_today or cooling(item):
             return False
         if item["channel"] == "screen":
-            if item["event"] == NEW and (item["key"] in bootstrap or (item["entity_id"], item["thesis_key"]) in news_sent):
+            if item["event"] == NEW and item["key"] in bootstrap:
                 return False
             if screen_cap is not None and screen_used >= screen_cap:
                 return False
             screen_used += 1
         chosen.append(item)
         alerted_today.add(item["entity_id"])
+        if item["event"] == NEW:
+            recent[item["entity_id"]] = day
         return True
 
     for item in recommended:
@@ -196,15 +240,19 @@ def run(dry_run: bool = False) -> dict:
     ledger = load_ledger()
     notify_state = notify.load_state()
     index = candidates.load_index()
-    news = news_items(c.read_rows("signal_log"), notify_state)
+    signal_rows = c.read_rows("signal_log")
+    news = news_items(signal_rows, notify_state)
+    recent, unknown_legacy = recent_new_alerts(ledger, notify_state, signal_rows)
     recommended, screen = screen_items(index)
     slots = max(0, c.policy()["daily_candidate_limit"] - used_today(ledger, notify_state, day))
     bootstrap = ledger["bootstrap"] is None and bool(screen)
     cap = settings()["bootstrap_max"] if bootstrap else None
     # A confirmed failure keeps its key and is eligible again; it never becomes a second event.
     retry = [e for e in ledger["events"].values() if e.get("status") == "failed"]
-    chosen = select(ledger, news, recommended, screen, slots, day, cap)
+    chosen = select(ledger, news, recommended, screen, slots, day, cap, recent,
+                    settings()["entity_new_cooldown_days"])
     report = {"slots": slots, "selected": [x["key"] for x in chosen], "bootstrap": bootstrap,
+              "legacy_unknown_entity": unknown_legacy,
               "retry_pending": len(retry), "sent": 0, "failed": 0, "uncertain": 0}
     if dry_run:
         for item in chosen:

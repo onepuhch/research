@@ -159,6 +159,111 @@ class BudgetAndOrderTest(AlertTest):
         self.assertEqual(self.send_alerts()[1], 0)
 
 
+class CooldownTest(AlertTest):
+    """F3: dedupe before the daily cut, and a 14-day gap per company across channels."""
+
+    def setUp(self):
+        super().setUp()
+        self.events = {}
+        c.atomic_json(notify.STATE_PATH, {"pushed": [], "sent": {}})
+
+    def seed(self, **extra):
+        c.atomic_json(a.ledger_path(), {"events": self.events, "bootstrap": {"date": "2026-09-01", "keys": []}, **extra})
+
+    def past(self, entity, day, channel="news", thesis="ai interconnect", event=a.NEW):
+        self.events[a.logical_key(entity, thesis, event)] = {
+            "channel": channel, "event": event, "entity_id": entity, "thesis_key": thesis,
+            "day": day, "status": "sent", "attempts": []}
+
+    def no_screen(self):
+        c.atomic_json(k.index_path(), {"run_status": "success", "stale": [], "candidates": []})
+
+    def test_top_three_known_events_do_not_hide_a_fourth_new_company(self):
+        for i in range(3):
+            self.past(f"CIK:{i:010d}", "2026-08-01")  # same company+thesis, new signal IDs today
+        self.seed()
+        self.no_screen()
+        self.news(4)
+        self.send_alerts()
+        sent = [e for e in self.ledger()["events"].values() if e["day"] == ODD]
+        self.assertEqual([e["entity_id"] for e in sent], ["CIK:0000000003"])
+
+    def at(self, day, delta):
+        return (date.fromisoformat(day) + timedelta(days=delta)).isoformat()
+
+    def test_news_then_screen_waits_14_days(self):
+        self.past("NASDAQ:AAA", self.at(ODD, -13))
+        self.seed()
+        self.index(tickers=("AAA",))
+        self.assertEqual(self.send_alerts()[1], 0)  # 13 days: too soon
+        self.events = {}
+        self.past("NASDAQ:AAA", self.at(ODD, -14))
+        self.seed()
+        self.assertEqual(self.send_alerts()[1], 1)  # 14 days: another thesis may be announced
+
+    def test_screen_then_news_waits_14_days(self):
+        self.past("NASDAQ:AAA", self.at(ODD, -13), channel="screen", thesis=k.THESIS_KEY)
+        self.seed()
+        self.no_screen()
+        c.write_rows("signal_log", [signal(0, entity_id="NASDAQ:AAA", **{"종목/티커": "AAA"})])
+        self.assertEqual(self.send_alerts()[1], 0)
+        self.events = {}
+        self.past("NASDAQ:AAA", self.at(ODD, -14), channel="screen", thesis=k.THESIS_KEY)
+        self.seed()
+        self.assertEqual(self.send_alerts()[1], 1)
+
+    def test_same_event_is_never_resent_even_after_the_gap(self):
+        self.past("NASDAQ:AAA", "2026-01-01", channel="screen", thesis=k.THESIS_KEY)
+        self.seed()
+        self.index(tickers=("AAA",))
+        self.assertEqual(self.send_alerts()[1], 0)
+
+    def test_registry_mapping_joins_cik_and_exchange_ticker(self):
+        self.past("NASDAQ:CRDO", self.at(ODD, -3), channel="screen", thesis=k.THESIS_KEY)
+        self.seed()
+        self.no_screen()
+        c.write_rows("signal_log", [signal(0, entity_id="CIK:0001807794", **{"종목/티커": "CRDO"})])
+        self.assertEqual(self.send_alerts()[1], 0)
+
+    def test_approved_recommendation_skips_the_gap_but_not_one_per_day(self):
+        self.past("NASDAQ:BBB", self.at(ODD, -3), channel="screen", thesis=k.THESIS_KEY)
+        self.seed()
+        idx = self.index(tickers=("AAA", "BBB"))
+        rec = idx["candidates"][1]
+        rec.update(classification="recommended", approval={"candidate_version": rec["candidate_version"]})
+        c.atomic_json(k.index_path(), idx)
+        self.send_alerts()
+        today = [e for e in self.ledger()["events"].values() if e["day"] == ODD]
+        self.assertEqual(sorted(e["event"] for e in today if e["entity_id"] == "NASDAQ:BBB"), ["recommendation"])
+        self.events = self.ledger()["events"]
+        self.past("NASDAQ:AAA", ODD, channel="news")  # AAA already alerted today by news
+        aaa = idx["candidates"][0]
+        aaa.update(classification="recommended", approval={"candidate_version": aaa["candidate_version"]})
+        c.atomic_json(k.index_path(), idx)
+        self.seed()
+        self.send_alerts()
+        self.assertFalse(any(e["event"] == "recommendation" and e["entity_id"] == "NASDAQ:AAA"
+                             for e in self.ledger()["events"].values()))
+
+    def test_legacy_notify_sends_count_by_company(self):
+        self.seed()
+        self.index(tickers=("AAA",))
+        c.write_rows("signal_log", [signal(0, entity_id="NASDAQ:AAA", **{"종목/티커": "AAA"}, 티어="관망")])
+        c.atomic_json(notify.STATE_PATH, {"pushed": ["SIG-0000", "SIG-9999"], "sent": {
+            "SIG-0000": {"date": self.at(ODD, -5), "kind": "candidate"},
+            "SIG-9999": {"date": self.at(ODD, -5), "kind": "candidate"}}})
+        self.assertEqual(self.send_alerts()[1], 0)
+        recent, unknown = a.recent_new_alerts(a.load_ledger(), notify.load_state(), c.read_rows("signal_log"))
+        self.assertEqual((recent, unknown), ({"NASDAQ:AAA": self.at(ODD, -5)}, 1))
+
+    def test_bootstrap_companies_are_seen_not_sent(self):
+        self.seed(bootstrap={"date": "2026-09-01", "keys": [a.logical_key("NASDAQ:AAA", k.THESIS_KEY, a.NEW)]})
+        self.index(tickers=("AAA",))
+        self.assertEqual(self.send_alerts()[1], 0)
+        recent, _ = a.recent_new_alerts(a.load_ledger(), notify.load_state(), [])
+        self.assertNotIn("NASDAQ:AAA", recent)  # no invented send time
+
+
 class BootstrapTest(AlertTest):
     def test_first_run_sends_at_most_bootstrap_max_and_remembers_the_rest(self):
         self.index()

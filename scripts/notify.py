@@ -136,6 +136,17 @@ def select_signals(
     min_tier: str,
     include_all: bool,
 ) -> list[dict[str, str]]:
+    risks, candidates = eligible_signals(rows, pushed, min_tier, include_all)
+    return risks + candidates[:c.policy()["daily_candidate_limit"]]
+
+
+def eligible_signals(
+    rows: list[dict[str, str]],
+    pushed: set[str],
+    min_tier: str,
+    include_all: bool,
+) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+    """(tracked-company risks, every eligible news candidate in priority order), not yet limited."""
     maximum_rank = TIER_ORDER[min_tier]
     today = date.fromisoformat(c.today())
     tracked = {r.get("entity_id") for r in c.active_ideas() if r.get("entity_id")}
@@ -156,7 +167,7 @@ def select_signals(
               and row.get(SUBJECT_COLUMN, "").strip() not in {"", "미분류"}):
             candidates.append(row)
     candidates.sort(key=lambda row: (TIER_ORDER[row[TIER_COLUMN]], -as_int(row.get(SCORE_COLUMN)), row.get(SIGNAL_ID_COLUMN, "")))
-    return risks + candidates[:c.policy()["daily_candidate_limit"]]
+    return risks, candidates
 
 
 def escaped(value: Any) -> str:
