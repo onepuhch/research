@@ -33,6 +33,7 @@ from urllib.parse import quote
 from urllib.request import HTTPCookieProcessor, Request, build_opener
 
 import common as c
+import market_calendar
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126 Safari/537.36"}
@@ -54,6 +55,8 @@ DEFAULTS = {
     "workers": 3, "min_interval_s": 0.25, "max_interval_s": 1.0,
     "max_attempts": 3, "retry_waits_s": [2, 8], "retry_cooldown_s": 30,
     "time_budget_s": 1500, "failure_alert_rate": 0.02,
+    # A 90-day price comparison needs closes at most this stale.
+    "price_end_max_lag_sessions": 1, "price_start_max_gap_days": 7,
 }
 
 
@@ -101,14 +104,23 @@ class Pacer:
             self.next_start = max(self.next_start, self.clock.now() + pause)
 
 
+class IncompleteResponse(OSError):
+    """An http.client protocol error (e.g. IncompleteRead), surfaced as a network failure."""
+
+
 def urllib_transport(opener):
-    """Return (status, body, headers); raise OSError/TimeoutError on network failure."""
-    def send(url: str, headers: dict) -> tuple[int, bytes, dict]:
+    """Return (status, body, headers); raise OSError (incl. timeouts) on network failure."""
+    def send(url: str, headers: dict, timeout: float = 20.0) -> tuple[int, bytes, dict]:
         try:
-            with opener.open(Request(url, headers=headers), timeout=20) as response:
+            with opener.open(Request(url, headers=headers), timeout=timeout) as response:
                 return response.status, response.read(5_000_001), dict(response.headers)
         except HTTPError as error:
-            return error.code, error.read(5_000_001), dict(error.headers or {})
+            try:
+                return error.code, error.read(5_000_001), dict(error.headers or {})
+            except http.client.HTTPException as read_error:
+                raise IncompleteResponse(type(read_error).__name__) from None
+        except http.client.HTTPException as error:
+            raise IncompleteResponse(type(error).__name__) from None
     return send
 
 
@@ -141,23 +153,31 @@ class Yahoo:
             self.crumb = self.find_crumb()
             self.session_generation += 1
 
+    def timeout(self) -> float:
+        """Per-request timeout that never runs past the time budget."""
+        remaining = self.remaining()
+        if remaining <= 0:
+            raise FetchError("budget", "time_budget")
+        return max(1.0, min(20.0, remaining))
+
     def find_crumb(self) -> str:
         try:
-            self.transport("https://fc.yahoo.com", UA)  # Sets the session cookie, even on 404.
-        except (OSError, TimeoutError):
+            self.transport("https://fc.yahoo.com", UA, self.timeout())  # Sets the session cookie, even on 404.
+        except OSError:
             pass
         for host in ("query2", "query1"):
             try:
-                status, body, _ = self.transport(f"https://{host}.finance.yahoo.com/v1/test/getcrumb", UA)
-            except (OSError, TimeoutError):
+                status, body, _ = self.transport(f"https://{host}.finance.yahoo.com/v1/test/getcrumb", UA,
+                                                 self.timeout())
+            except OSError:
                 continue
             crumb = body.decode("utf-8", "replace").strip()
             if status == 200 and crumb and len(crumb) <= 40 and "<" not in crumb:
                 return crumb
         # Cloud runners are sometimes refused by getcrumb; the quote page embeds one.
         try:
-            status, body, _ = self.transport("https://finance.yahoo.com/quote/AAPL/", UA)
-        except (OSError, TimeoutError) as error:
+            status, body, _ = self.transport("https://finance.yahoo.com/quote/AAPL/", UA, self.timeout())
+        except OSError as error:
             raise FetchError("blocked", "session_" + type(error).__name__) from None
         match = re.search(r'"crumb":"([^"]{5,40})"', body.decode("utf-8", "replace")) if status == 200 else None
         if not match:
@@ -172,13 +192,16 @@ class Yahoo:
                 raise FetchError("budget", "time_budget", attempts=attempts)
             generation = self.session_generation
             self.pacer.wait()
+            if self.remaining() <= 0:  # The wait itself can use up the budget; send nothing.
+                raise FetchError("budget", "time_budget", attempts=attempts)
             attempts += 1
             self.local.attempts = getattr(self.local, "attempts", 0) + 1
             sep = "&" if "?" in path else "?"
             try:
-                status, body, headers = self.transport(f"{YAHOO}{path}{sep}crumb={quote(self.crumb)}", UA)
+                status, body, headers = self.transport(f"{YAHOO}{path}{sep}crumb={quote(self.crumb)}", UA,
+                                                       self.timeout())
                 network_error = ""
-            except (OSError, TimeoutError, http.client.HTTPException) as error:
+            except (OSError, http.client.HTTPException) as error:
                 status, body, headers, network_error = None, b"", {}, type(error).__name__
             if status == 200:
                 try:
@@ -233,8 +256,10 @@ class Yahoo:
     def chart(self, symbol: str) -> dict:
         data = self.get_json(f"/v8/finance/chart/{quote(symbol)}?range=6mo&interval=1d&events=split")
         block = data.get("chart") or {}
-        if block.get("error"):
-            raise FetchError("unavailable", "api_error", 200)
+        error = block.get("error")
+        if error:
+            kind = "unavailable" if (error.get("code") or "").lower() == "not found" else "failed"
+            raise FetchError(kind, "api_error", 200)
         results = block.get("result") or []
         if not results:
             raise FetchError("unavailable", "empty_result", 200)
@@ -260,6 +285,9 @@ def outcome(status: str, value=None, reason: str = "", http_status=None, attempt
 def run_stage(items: list[str], fetch, workers: int, yahoo: Yahoo, cooldown: float) -> dict[str, dict]:
     """Run fetch over items; retry only the failed ones once more after a cooldown.
 
+    max_attempts applies per pass, so a failed item is sent at most
+    2 x max_attempts times. The time budget overrides both passes.
+
     A blocked response (403 after a session refresh) stops the stage and marks
     the rest not_attempted, so a banned session does not burn the budget.
     """
@@ -273,15 +301,16 @@ def run_stage(items: list[str], fetch, workers: int, yahoo: Yahoo, cooldown: flo
         yahoo.take_attempts()
         try:
             value = fetch(item)
-            return item, outcome("success", value, attempts=prior_attempts + max(yahoo.take_attempts(), 1))
+            return item, outcome("success", value, attempts=prior_attempts + yahoo.take_attempts())
         except FetchError as error:
-            yahoo.take_attempts()
-            attempts = prior_attempts + max(error.attempts, 1)
+            # Validation after a response raises with attempts=0; the thread count keeps real sends.
+            sent = max(error.attempts, yahoo.take_attempts())
+            attempts = prior_attempts + sent
             if error.kind == "blocked":
                 blocked.set()
                 return item, outcome("failed", reason=error.reason, http_status=error.http_status, attempts=attempts)
             if error.kind == "budget":
-                return item, outcome("not_attempted" if error.attempts == 0 else "failed", reason="time_budget",
+                return item, outcome("not_attempted" if sent == 0 else "failed", reason="time_budget",
                                      http_status=error.http_status, attempts=attempts)
             return item, outcome(error.kind, reason=error.reason, http_status=error.http_status, attempts=attempts)
 
@@ -291,7 +320,9 @@ def run_stage(items: list[str], fetch, workers: int, yahoo: Yahoo, cooldown: flo
     if retry and yahoo.remaining() > cooldown:
         yahoo.clock.sleep(cooldown)
         for item in retry:
-            results[item] = one(item, results[item]["attempts"])[1]
+            again = one(item, results[item]["attempts"])[1]
+            if again["status"] != "not_attempted":  # An item that already failed stays failed.
+                results[item] = again
     return results
 
 
@@ -390,41 +421,95 @@ def evaluate(symbol: str, source: dict, cfg: dict) -> tuple[dict | None, str]:
     }, ""
 
 
+def last_completed_session(as_of: datetime) -> date:
+    """Most recent NYSE session whose close was at least an hour before as_of."""
+    day = as_of.date()
+    for _ in range(15):
+        closed = market_calendar.close_time(day)
+        if closed is not None and closed + timedelta(hours=1) <= as_of:
+            return day
+        day -= timedelta(days=1)
+    raise ValueError("no completed session in 15 days")
+
+
+def sessions_between(after: date, through: date) -> int:
+    """Trading sessions in (after, through]; holidays and weekends do not count."""
+    count, day = 0, after + timedelta(days=1)
+    while day <= through:
+        if market_calendar.close_time(day) is not None:
+            count += 1
+        day += timedelta(days=1)
+    return count
+
+
 def price_comparison(chart: dict, symbol: str, eps_now: float, eps_90d: float, as_of: float,
-                     days: int = 90) -> dict:
+                     cfg: dict | None = None, days: int = 90) -> dict:
     """Price move over the same window as the provider's 90-day estimate change.
 
-    Both prices are regular-session closes from one chart response on one
-    basis. The dividend-adjusted return is reported separately. P/E change is
-    left out when a split falls inside the window, because the provider's
-    past estimate may be on a different share basis.
+    Uses only completed sessions (close + 1 hour before as_of) from one chart
+    response on one basis, and records the target and chosen dates. The
+    dividend-adjusted return is separate. P/E change is left out across a
+    split, because the provider's past estimate may be on another share basis.
+
+    price_status: success (price_pct_90 computed), unavailable (a valid answer
+    without comparable data: short history, stale or missing closes,
+    unsupported calendar) or failed (wrong ticker/currency, malformed arrays).
     """
-    empty = {"price_basis": PRICE_BASIS, "price_start_date": None, "price_end_date": None,
-             "price_pct_90": None, "adj_return_pct_90": None, "pe_change_pct": None, "price_note": ""}
+    cfg = {**DEFAULTS, **(cfg or {})}
+    result = {"price_status": "unavailable", "price_note": "", "price_basis": PRICE_BASIS,
+              "price_start_target": None, "price_start_date": None, "price_end_expected": None,
+              "price_end_date": None, "close_start": None, "close_end": None,
+              "price_pct_90": None, "adj_return_pct_90": None, "pe_change_pct": None}
     meta = chart.get("meta") or {}
     if meta.get("symbol") != symbol or meta.get("currency") != "USD":
-        return {**empty, "price_note": "chart_mismatch"}
+        return {**result, "price_status": "failed", "price_note": "chart_mismatch"}
     stamps = chart.get("timestamp") or []
     indicators = chart.get("indicators") or {}
-    closes = ((indicators.get("quote") or [{}])[0].get("close")) or []
-    adj = ((indicators.get("adjclose") or [{}])[0].get("adjclose")) or [None] * len(closes)
-    points = [(t, cl, a) for t, cl, a in zip(stamps, closes, adj) if finite(cl) and cl > 0 and t <= as_of]
+    closes = ((indicators.get("quote") or [{}])[0] or {}).get("close")
+    adj = ((indicators.get("adjclose") or [{}])[0] or {}).get("adjclose")
+    if closes is None and not stamps:
+        return {**result, "price_note": "no_prices"}
+    if (not isinstance(closes, list) or len(closes) != len(stamps)
+            or (adj is not None and (not isinstance(adj, list) or len(adj) != len(stamps)))
+            or not all(finite(t) for t in stamps)
+            or any(b <= a for a, b in zip(stamps, stamps[1:]))):
+        return {**result, "price_status": "failed", "price_note": "malformed_series"}
+    as_of_dt = datetime.fromtimestamp(as_of, timezone.utc)
+    try:
+        expected = last_completed_session(as_of_dt)
+        points = []
+        for i, stamp in enumerate(stamps):
+            day = datetime.fromtimestamp(stamp, timezone.utc).date()
+            closed = market_calendar.close_time(day)
+            if closed is None or closed + timedelta(hours=1) > as_of_dt:
+                continue  # A closed-market bar, or a session not yet settled, is not a close.
+            if finite(closes[i]) and closes[i] > 0:
+                adjusted = adj[i] if adj is not None and finite(adj[i]) and adj[i] > 0 else None
+                points.append((day, closes[i], adjusted))
+    except ValueError:
+        return {**result, "price_note": "calendar_unsupported"}
+    target = as_of_dt.date() - timedelta(days=days)
+    result.update(price_start_target=target.isoformat(), price_end_expected=expected.isoformat())
     if not points:
-        return {**empty, "price_note": "no_prices"}
+        return {**result, "price_note": "no_prices"}
     end = points[-1]
-    starts = [p for p in points if p[0] <= as_of - days * 86400]
+    if sessions_between(end[0], expected) > cfg["price_end_max_lag_sessions"]:
+        return {**result, "price_end_date": end[0].isoformat(), "price_note": "stale_end_price"}
+    starts = [pt for pt in points if pt[0] <= target]
     if not starts:
-        return {**empty, "price_note": "window_not_covered"}
+        return {**result, "price_end_date": end[0].isoformat(), "price_note": "window_not_covered"}
     start = starts[-1]
-    day = lambda t: datetime.fromtimestamp(t, timezone.utc).date().isoformat()
-    splits = [s for s in ((chart.get("events") or {}).get("splits") or {}).values()
-              if start[0] < (s.get("date") or 0) <= end[0]]
-    result = {**empty, "price_start_date": day(start[0]), "price_end_date": day(end[0]),
-              "close_start": start[1], "close_end": end[1],
-              "price_pct_90": round((end[1] / start[1] - 1) * 100, 1)}
-    if finite(start[2]) and finite(end[2]) and start[2] > 0:
+    if (target - start[0]).days > cfg["price_start_max_gap_days"]:
+        return {**result, "price_start_date": start[0].isoformat(), "price_end_date": end[0].isoformat(),
+                "price_note": "stale_start_price"}
+    splits = [x for x in ((chart.get("events") or {}).get("splits") or {}).values() if finite(x.get("date"))]
+    split_days = [datetime.fromtimestamp(x["date"], timezone.utc).date() for x in splits]
+    result.update(price_status="success", price_start_date=start[0].isoformat(),
+                  price_end_date=end[0].isoformat(), close_start=start[1], close_end=end[1],
+                  price_pct_90=round((end[1] / start[1] - 1) * 100, 1))
+    if start[2] is not None and end[2] is not None:
         result["adj_return_pct_90"] = round((end[2] / start[2] - 1) * 100, 1)
-    if splits:
+    if any(start[0] < d <= end[0] for d in split_days):
         result["price_note"] = "split_in_window"
     elif eps_now > 0 and eps_90d > 0:
         result["pe_change_pct"] = round(((end[1] / start[1]) / (eps_now / eps_90d) - 1) * 100, 1)
@@ -680,6 +765,8 @@ def screen(cfg: dict, universe: list[dict], yahoo: Yahoo) -> dict:
 
     def fetch_profile(symbol: str) -> dict:
         p = yahoo.summary(symbol, "assetProfile").get("assetProfile") or {}
+        if not p.get("industry"):
+            raise FetchError("unavailable", "profile_missing", 200)
         return {"industry": p.get("industry"), "sector": p.get("sector"),
                 "summary": (p.get("longBusinessSummary") or "")[:600]}
 
@@ -697,10 +784,14 @@ def screen(cfg: dict, universe: list[dict], yahoo: Yahoo) -> dict:
         r = by_sym[symbol]
         if o["status"] == "success":
             as_of = datetime.fromisoformat(r["eps_retrieved_at"]).timestamp()
-            comparison = price_comparison(o["value"], symbol, r["eps_now"], r["eps_90d"], as_of)
-            source["price"][symbol] = {k: comparison.get(k) for k in ("price_start_date", "price_end_date",
-                                                                      "close_start", "close_end", "price_note")}
+            comparison = price_comparison(o["value"], symbol, r["eps_now"], r["eps_90d"], as_of, cfg)
+            source["price"][symbol] = {k: comparison.get(k) for k in (
+                "price_status", "price_note", "price_start_target", "price_start_date", "price_end_expected",
+                "price_end_date", "close_start", "close_end")}
             r.update(comparison)
+            if comparison["price_status"] != "success":
+                # A 200 response is not a comparison; count only what could be compared.
+                price[symbol] = {**o, "status": comparison["price_status"], "reason": comparison["price_note"]}
     stages["price"] = stage_stats(price)
 
     for name, results in (("quotes", quote_results), ("earnings", earn), ("profile", prof), ("price", price)):

@@ -1,10 +1,11 @@
 import gzip
+import http.client
 import json
 import math
 import sys
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from unittest import mock
 
@@ -59,7 +60,7 @@ class FakeTransport:
         self.routes = routes
         self.calls = []
 
-    def __call__(self, url, headers):
+    def __call__(self, url, headers, timeout=None):
         self.calls.append(url)
         if "fc.yahoo.com" in url:
             return 404, b"", {}
@@ -134,7 +135,7 @@ class HttpLayerTest(unittest.TestCase):
         self.assertEqual(t.count("quoteSummary/OK"), 1)
 
     def test_network_error_is_retried_then_reported_without_url(self):
-        def boom(url, headers):
+        def boom(url, headers, timeout=None):
             raise TimeoutError("timed out: https://secret?crumb=crumb123")
         y, _, _ = make_yahoo({})
         y.transport = boom
@@ -352,6 +353,182 @@ class SnapshotTest(unittest.TestCase):
         self.assertIn("업종 확인 0/1곳", doc)
         self.assertIn("|1|GRW|미확인|", doc)
         self.assertIn("완전 정상 결과 없음", doc)
+
+
+def at(y, m, d, hh=0, mm=0):
+    return datetime(y, m, d, hh, mm, tzinfo=timezone.utc)
+
+
+def session_chart(symbol, first, last, blanks=(), adj=True):
+    """Daily bars stamped at the NYSE open for every session in [first, last]."""
+    stamps, closes, day = [], [], first
+    while day <= last:
+        closed = sr.market_calendar.close_time(day)
+        if closed:
+            stamps.append(int((closed - timedelta(hours=6, minutes=30)).timestamp()))
+            closes.append(None if day in blanks else 100.0 + len(closes))
+        day += timedelta(days=1)
+    indicators = {"quote": [{"close": closes}]}
+    if adj:
+        indicators["adjclose"] = [{"adjclose": [None if c is None else c * 0.99 for c in closes]}]
+    return {"meta": {"symbol": symbol, "currency": "USD"}, "timestamp": stamps, "indicators": indicators, "events": {}}
+
+
+class CompletedSessionTest(unittest.TestCase):
+    """AB-2: only settled closes, fresh enough, from well-formed arrays."""
+
+    def compare(self, chart, as_of):
+        return sr.price_comparison(chart, "SYM", 2.0, 1.0, as_of.timestamp(), CFG)
+
+    def test_intraday_and_just_closed_sessions_are_not_closes(self):
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 24))
+        self.assertEqual(self.compare(chart, at(2026, 9, 24, 18))["price_end_date"], "2026-09-23")
+        self.assertEqual(self.compare(chart, at(2026, 9, 24, 20, 30))["price_end_date"], "2026-09-23")
+        self.assertEqual(self.compare(chart, at(2026, 9, 24, 21, 5))["price_end_date"], "2026-09-24")
+
+    def test_weekend_and_holiday_do_not_count_as_lag(self):
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 25))
+        weekend = self.compare(chart, at(2026, 9, 26, 12))
+        self.assertEqual((weekend["price_status"], weekend["price_end_expected"]), ("success", "2026-09-25"))
+        chart = session_chart("SYM", date(2026, 5, 1), date(2026, 9, 4))
+        labor_day = self.compare(chart, at(2026, 9, 8, 12))  # Tuesday before the open; Monday was a holiday.
+        self.assertEqual((labor_day["price_status"], labor_day["price_end_expected"]), ("success", "2026-09-04"))
+        self.assertEqual(sr.sessions_between(date(2026, 9, 4), date(2026, 9, 8)), 1)
+
+    def test_one_unpublished_close_is_tolerated_but_stale_end_is_not(self):
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 24), blanks={date(2026, 9, 24)})
+        result = self.compare(chart, at(2026, 9, 25, 0, 20))
+        self.assertEqual((result["price_status"], result["price_end_date"]), ("success", "2026-09-23"))
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 21))
+        stale = self.compare(chart, at(2026, 9, 25, 0, 20))
+        self.assertEqual((stale["price_status"], stale["price_note"]), ("unavailable", "stale_end_price"))
+        self.assertIsNone(stale["price_pct_90"])
+
+    def test_start_gap_and_short_history(self):
+        blanks = {date(2026, 6, 12) + timedelta(days=i) for i in range(15)}
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 24), blanks=blanks)
+        gap = self.compare(chart, at(2026, 9, 25, 0, 20))
+        self.assertEqual((gap["price_note"], gap["price_start_target"], gap["price_start_date"]),
+                         ("stale_start_price", "2026-06-27", "2026-06-11"))
+        chart = session_chart("SYM", date(2026, 8, 1), date(2026, 9, 24))
+        self.assertEqual(self.compare(chart, at(2026, 9, 25, 0, 20))["price_note"], "window_not_covered")
+
+    def test_malformed_arrays_fail_and_missing_adjusted_only_drops_adjusted_return(self):
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 24))
+        short = {**chart, "indicators": {"quote": [{"close": chart["indicators"]["quote"][0]["close"][:-1]}]}}
+        self.assertEqual(self.compare(short, at(2026, 9, 25, 1))["price_status"], "failed")
+        shuffled = {**chart, "timestamp": list(reversed(chart["timestamp"]))}
+        self.assertEqual(self.compare(shuffled, at(2026, 9, 25, 1))["price_note"], "malformed_series")
+        no_adj = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 24), adj=False)
+        result = self.compare(no_adj, at(2026, 9, 25, 1))
+        self.assertEqual(result["price_status"], "success")
+        self.assertIsNone(result["adj_return_pct_90"])
+
+    def test_unsupported_calendar_year_is_not_guessed(self):
+        chart = session_chart("SYM", date(2026, 6, 1), date(2026, 9, 24))
+        result = sr.price_comparison(chart, "SYM", 2.0, 1.0, at(2028, 1, 5, 12).timestamp(), CFG)
+        self.assertEqual((result["price_status"], result["price_note"]), ("unavailable", "calendar_unsupported"))
+
+
+class ComparableStateTest(unittest.TestCase):
+    """AB-1: a 200 response counts only if it yields a usable industry or price comparison."""
+
+    def test_stage_counts_follow_usable_results(self):
+        symbols = ["GRW", "EMP", "MIS", "NEW"]
+        as_of = at(2026, 9, 25, 0, 20)
+        routes = {"/v7/finance/quote": ScreenStageTest.quotes_route(None, symbols)}
+        for s in symbols:
+            routes[f"quoteSummary/{s}?modules=earningsTrend,price"] = (200, earnings_payload(s), {})
+            profile = {} if s == "EMP" else {"industry": "Semis", "sector": "Tech"}
+            routes[f"quoteSummary/{s}?modules=assetProfile"] = (
+                200, {"quoteSummary": {"error": None, "result": [{"assetProfile": profile}]}}, {})
+        chart = lambda s, first: {"chart": {"error": None, "result": [session_chart(s, first, date(2026, 9, 24))]}}
+        routes["/v8/finance/chart/GRW"] = (200, chart("GRW", date(2026, 5, 1)), {})
+        routes["/v8/finance/chart/EMP"] = (200, chart("EMP", date(2026, 5, 1)), {})
+        routes["/v8/finance/chart/MIS"] = (200, chart("OTHER", date(2026, 5, 1)), {})
+        routes["/v8/finance/chart/NEW"] = (200, chart("NEW", date(2026, 8, 15)), {})
+        y, _, _ = make_yahoo(routes)
+        with mock.patch.object(sr, "datetime", wraps=datetime) as dt:
+            dt.now.return_value = as_of
+            parts = sr.screen(CFG, [{"ticker": s, "symbol": s, "name": s} for s in symbols], y)
+        stages = parts["stages"]
+        self.assertEqual({k: stages["profile"][k] for k in ("success", "unavailable")}, {"success": 3, "unavailable": 1})
+        self.assertEqual({k: stages["price"][k] for k in ("success", "unavailable", "failed")},
+                         {"success": 2, "unavailable": 1, "failed": 1})
+        computed = [r for r in parts["derived"]["rows"] if r.get("price_pct_90") is not None]
+        self.assertEqual(len(computed), stages["price"]["success"])
+        reasons = {i["ticker"]: i["reason"] for i in parts["issues"] if i["stage"] == "price"}
+        self.assertEqual(reasons, {"MIS": "chart_mismatch"})
+        self.assertEqual(stages["price"]["requested"], sum(stages["price"][k] for k in sr.OUTCOMES))
+
+    def test_chart_service_error_fails_but_not_found_is_unavailable(self):
+        error = lambda code: (200, {"chart": {"result": None, "error": {"code": code}}}, {})
+        y, _, _ = make_yahoo({"/v8/finance/chart/SVC": error("Internal Server Error"),
+                              "/v8/finance/chart/GONE": error("Not Found")})
+        result = sr.run_stage(["SVC", "GONE"], y.chart, 1, y, 1e9)
+        self.assertEqual((result["SVC"]["status"], result["GONE"]["status"]), ("failed", "unavailable"))
+
+    def test_split_only_withholds_pe(self):
+        chart = session_chart("SPL", date(2026, 5, 1), date(2026, 9, 24))
+        chart["events"] = {"splits": {"x": {"date": int(at(2026, 8, 3, 13, 30).timestamp())}}}
+        result = sr.price_comparison(chart, "SPL", 2.0, 1.0, at(2026, 9, 25, 1).timestamp(), CFG)
+        self.assertEqual((result["price_status"], result["price_note"]), ("success", "split_in_window"))
+        self.assertIsNone(result["pe_change_pct"])
+
+
+class BudgetAndConnectionTest(unittest.TestCase):
+    """AB-3: no send after the budget ends; protocol errors in every stage; real attempt counts."""
+
+    def test_budget_spent_while_pacing_sends_nothing(self):
+        cfg = {**CFG, "min_interval_s": 10.0, "time_budget_s": 5}
+        y, t, _ = make_yahoo({"quoteSummary/": (200, earnings_payload("X"), {})}, cfg)
+        result = sr.run_stage(["A1", "A2"], lambda s: y.summary(s, "earningsTrend"), 1, y, 1e9)
+        self.assertEqual(t.count("quoteSummary/"), 1)
+        self.assertEqual((result["A2"]["status"], result["A2"]["attempts"]), ("not_attempted", 0))
+
+    def test_protocol_errors_become_network_failures(self):
+        class Opener:
+            def open(self, request, timeout):
+                raise http.client.IncompleteRead(b"partial")
+        send = sr.urllib_transport(Opener())
+        with self.assertRaises(OSError):
+            send("https://example.com", {}, 5)
+
+        def broken(url, headers, timeout=None):
+            raise sr.IncompleteResponse("IncompleteRead")
+        with self.assertRaises(sr.FetchError) as caught:
+            sr.Yahoo(CFG, clock=FakeClock(), transport=broken)
+        self.assertEqual(caught.exception.kind, "blocked")
+        with self.assertRaises(OSError):
+            sr.load_universe(broken, "agent")
+
+    def test_universe_read_error_is_a_failed_run(self):
+        with mock.patch.object(sr, "load_universe", side_effect=sr.IncompleteResponse("IncompleteRead")), \
+                mock.patch.object(sr, "Yahoo") as yahoo, mock.patch("builtins.print") as out:
+            self.assertEqual(sr.main(["--no-save"]), 1)
+        yahoo.assert_not_called()
+        summary = json.loads(out.call_args[0][0])
+        self.assertEqual((summary["status"], summary["issues"][0]["reason"]), ("failed", "IncompleteResponse"))
+
+    def test_attempts_survive_an_api_error_after_retry(self):
+        api_error = {"quoteSummary": {"result": None, "error": {"code": "Internal"}}}
+        y, _, _ = make_yahoo({"quoteSummary/AAA": [(429, b"", {"Retry-After": "0"}), (200, api_error, {})]})
+        result = sr.run_stage(["AAA"], lambda s: y.summary(s, "earningsTrend"), 1, y, 1e9)
+        self.assertEqual((result["AAA"]["status"], result["AAA"]["reason"], result["AAA"]["attempts"]),
+                         ("failed", "api_error", 2))
+
+    def test_two_passes_cap_sends_at_twice_max_attempts(self):
+        y, t, _ = make_yahoo({"quoteSummary/AAA": (503, b"", {})})
+        result = sr.run_stage(["AAA"], lambda s: y.summary(s, "earningsTrend"), 1, y, 30)
+        self.assertEqual(t.count("quoteSummary/AAA"), 2 * CFG["max_attempts"])
+        self.assertEqual(result["AAA"]["attempts"], 2 * CFG["max_attempts"])
+
+    def test_failed_item_stays_failed_when_budget_ends_in_second_pass(self):
+        cfg = {**CFG, "max_attempts": 1, "min_interval_s": 4.0, "time_budget_s": 35}
+        y, _, _ = make_yahoo({"quoteSummary/": (503, b"", {})}, cfg)
+        result = sr.run_stage(["A1", "A2"], lambda s: y.summary(s, "earningsTrend"), 1, y, 30)
+        self.assertEqual((result["A2"]["status"], result["A2"]["attempts"]), ("failed", 1))
+        self.assertEqual(result["A1"]["attempts"], 2)
 
 
 class HelpersTest(unittest.TestCase):

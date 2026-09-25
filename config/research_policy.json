@@ -34,6 +34,8 @@
     ],
     "retry_cooldown_s": 30,
     "time_budget_s": 1500,
-    "failure_alert_rate": 0.02
+    "failure_alert_rate": 0.02,
+    "price_end_max_lag_sessions": 1,
+    "price_start_max_gap_days": 7
   }
 }
