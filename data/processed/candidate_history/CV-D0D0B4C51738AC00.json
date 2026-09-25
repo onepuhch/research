@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-0584EAE068460D91",
+  "candidate_version": "CV-D0D0B4C51738AC00",
+  "identity": {
+    "entity_id": "NYSE:DAN",
+    "ticker": "DAN",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Dana Incorporated",
+  "industry": "Auto Parts",
+  "sector": "Consumer Cyclical",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "차량용 동력 전달 및 에너지 관리 솔루션, 부품, 냉각 시스템을 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Dana Incorporated, together with its subsidiaries, provides power-conveyance and energy-management solutions for on-highway vehicles in North America, Europe, South America, and the Asia Pacific. The Light Vehicle segment provides axles, driveshafts, internal combustion engine (ICE), hybrid and electric transmissions, e-axle and e-transmission systems, inverters, electric motors, controllers, sealing and thermal products, e-sealing, e-thermal cooling systems, battery and electronics cooling, hydrogen fuel cell cooling, and new power industrial cooling. The Commercial Vehicle segment offers axl"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "DAN analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DAN/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:18:40+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "DAN daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DAN/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:18:40+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "DAN company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DAN/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:18:40+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 4.18621,
+    "eps_30d": 4.07184,
+    "eps_90d": 3.38333,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 23.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

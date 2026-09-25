@@ -1,0 +1,98 @@
+{
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "candidate_version": "CV-12904D03276AD5D4",
+  "identity": {
+    "entity_id": "NYSE:MPC",
+    "ticker": "MPC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Marathon Petroleum Corporation",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MPC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:12:23+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MPC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:12:23+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MPC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:12:23+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 47.13423,
+    "eps_30d": 32.20183,
+    "eps_90d": 23.93006,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 12,
+    "down30": 0,
+    "pct_90": 97.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

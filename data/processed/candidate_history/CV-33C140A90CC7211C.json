@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-3D30FF7D03231FE1",
+  "candidate_version": "CV-33C140A90CC7211C",
+  "identity": {
+    "entity_id": "NYSE:PSX",
+    "ticker": "PSX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Phillips 66",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유 정제, 석유화학 제품 생산, 석유 및 천연가스 운송·저장·처리 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Phillips 66 operates as an integrated downstream energy provider in the United States, the United Kingdom, Germany, and internationally. It operates through five segments: Midstream, Chemicals, Refining, Marketing and Specialties (M&S), and Renewable Fuels. The Midstream segment provides crude oil and refined petroleum product transportation, terminaling, and storage services, as well as natural gas and natural gas liquids (NGL) gathering, processing, transportation, fractionation, storage and marketing services. It also exports liquefied petroleum gas. The Chemicals segment produces and marke"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PSX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSX/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:12:26+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PSX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSX/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:12:26+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PSX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSX/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:12:26+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 24.89667,
+    "eps_30d": 21.25519,
+    "eps_90d": 17.28123,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 15,
+    "down30": 1,
+    "pct_90": 44.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

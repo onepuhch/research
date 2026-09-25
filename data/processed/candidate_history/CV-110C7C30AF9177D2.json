@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-700B10D9B75B0040",
+  "candidate_version": "CV-110C7C30AF9177D2",
+  "identity": {
+    "entity_id": "NASDAQ:CORT",
+    "ticker": "CORT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Corcept Therapeutics Incorporated",
+  "industry": "Biotechnology",
+  "sector": "Healthcare",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "내분비 질환 치료제를 개발하고, 쿠싱 증후군 치료제인 코를림을 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Corcept Therapeutics Incorporated, a biopharmaceutical company, engages in the discovery and development of medications to treat severe endocrinologic, oncologic, metabolic, and neurologic disorders in the United States. The company offers Korlym, an oral medication for the treatment of hyperglycemia secondary to hypercortisolism in adult patients with endogenous Cushing's syndrome who have type 2 diabetes mellitus or glucose intolerance and have failed surgery or are not candidates for surgery. It also develops relacorilant, a selective cortisol modulator for patients with hypercortisolism; a"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CORT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CORT/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:15:04+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CORT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CORT/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:15:04+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CORT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CORT/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:15:04+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 4.4025,
+    "eps_30d": 3.20667,
+    "eps_90d": 1.63,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 170.1,
+    "steady": false,
+    "turnaround": false
+  }
+}

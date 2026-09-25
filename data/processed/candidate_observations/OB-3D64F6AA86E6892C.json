@@ -1,0 +1,74 @@
+{
+  "observation_id": "OB-3D64F6AA86E6892C",
+  "candidate_id": "CAN-14C6F602D0868FB9",
+  "candidate_version": "CV-6A44FA96F257735A",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:AMCX",
+    "ticker": "AMCX",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:24:02+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 2.75593,
+    "eps_30d": 2.53896,
+    "eps_90d": 1.48467,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 85.6,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 10.567,
+    "yield_change_30_pp": 1.804
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-27",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-24",
+    "price_end_date": "2026-09-24",
+    "close_start": 10.079999923706055,
+    "close_end": 12.029999732971191,
+    "price_pct_90": 19.3,
+    "adj_return_pct_90": 19.3,
+    "pe_change_pct": -35.7
+  },
+  "display_rank": 1,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 1
+    },
+    {
+      "list": "B",
+      "rank": 12
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "269949667340",
+  "generator_version": "cards-v2",
+  "market_cap": 496237152,
+  "entity_id": "NASDAQ:AMCX",
+  "approval_version": null
+}

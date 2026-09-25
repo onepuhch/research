@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-E87900AEFDDE7B07",
+  "candidate_version": "CV-88606568735BCAAB",
+  "identity": {
+    "entity_id": "NASDAQ:SPT",
+    "ticker": "SPT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Sprout Social, Inc.",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "웹 기반 소셜 미디어 관리 플랫폼과 클라우드 소프트웨어를 제공하여 기업의 소셜 활동을 돕고 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Sprout Social, Inc. designs, develops, and operates a web-based social media management platform in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. The company provides cloud software for social messaging, data and workflows in a unified system of record, intelligence, and action. It offers AI-powered solutions, such as publishing and scheduling, social customer care, reporting and analytics, social listening and business intelligence, reputation management, social commerce, influencer marketing, predictive media intelligence, employee advocacy, and automation and workflow"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SPT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPT/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:23:36+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SPT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPT/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:23:36+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SPT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPT/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:23:36+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 1.5398,
+    "eps_30d": 1.1854,
+    "eps_90d": 1.19855,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 9,
+    "down30": 0,
+    "pct_90": 28.5,
+    "steady": false,
+    "turnaround": false
+  }
+}

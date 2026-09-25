@@ -43,6 +43,7 @@ CAN-14C6F602D0868FB9 · Entertainment · 미추적
 **무엇으로 돈을 버나**
 
 AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공 및 오리지널 콘텐츠 제작, 배급으로 수익을 얻습니다.
+<small>원문(영문): AMC Global Media Inc., an entertainment company, distributes contents in the United States, Europe, and internationally. It operates in two segments, Domestic Operations and International. The Domestic Operations segment operates programming networks, such as AMC, We TV, BBCA, IFC, and SundanceTV; provides streaming services, including AMC+ and Acorn TV, Shudder, Sundance Now, ALLBLK, HIDIVE, and All Reality targeted subscription streaming services; produces original programming for its programming services and third parties; and licenses programming. This segment is also involved in the film</small>
 
 **후보가 된 이유**
 
@@ -82,6 +83,7 @@ CAN-D50A4151AB176FB7 · Semiconductor Equipment & Materials · 미추적
 **무엇으로 돈을 버나**
 
 반도체 웨이퍼, 다이, 패키지 테스트 및 번인 솔루션을 제공하여 돈을 번다.
+<small>원문(영문): Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United States, Asia, Europe, and the Middle East. The company offers FOX-XP and FOX-NP systems, which are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize a range of devices, including silicon carbide-based (SIC) and gallium nitride (GAN) power semiconductors; 2D and 3D sensors used in mobile phones, tablets, and other computing devices; memory semiconductors; processors; microcontrollers;</small>
 
 **후보가 된 이유**
 
@@ -120,6 +122,7 @@ CAN-ABBBE42278126D28 · Oil & Gas E&P · 미추적
 **무엇으로 돈을 버나**
 
 석유 및 가스 탐사, 생산, 탄소 포집 및 저장 사업을 통해 돈을 번다.
+<small>원문(영문): Talos Energy Inc., through its subsidiaries, engages in the exploration and production of oil and gas in the United States and Mexico. The company operates through two segments: Upstream, and Carbon Capture and Sequestration. It also engages in the exploration and production of natural gas liquid. Talos Energy Inc. was founded in 2011 and is headquartered in Houston, Texas.</small>
 
 **후보가 된 이유**
 
@@ -158,6 +161,7 @@ CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 원유를 정제하여 휘발유, 디젤, 항공유 등 석유 제품을 생산하고, 원유 운송 및 저장 서비스를 제공합니다.
+<small>원문(영문): Delek US Holdings, Inc. engages in the integrated downstream energy business in the United States. The company operates in two segments Refining and Logistics. The Refining segment processes crude oil and other feedstock for the manufacture of various grades of gasoline, diesel fuel, aviation fuel, asphalt, and other petroleum-based products that are distributed through owned and third-party product terminals. It owns and operates refineries located in Tyler, Texas; El Dorado, Arkansas; Big Spring, Texas; and Krotz Springs, Louisiana. The Logistics segment gathers, transports, and stores crude</small>
 
 **후보가 된 이유**
 
@@ -197,6 +201,7 @@ CAN-E460E34B1D8B66CE · Oil & Gas Drilling · 미추적
 **무엇으로 돈을 버나**
 
 육상 및 해상 유정, 가스정 시추 및 관련 서비스를 제공하여 수익을 창출합니다.
+<small>원문(영문): Nabors Industries Ltd. provides drilling and drilling-related services for land-based and offshore oil and natural gas wells in the United States and internationally. The company operates through four segments: U.S. Drilling, International Drilling, Drilling Solutions, and Rig Technologies. The company offers tubular running services, including casing and tubing running, and torque monitoring; managed pressure drilling services; and drilling-bit steering systems and rig instrumentation software. The company also offers drilling systems comprising ROCKit, a directional steering control system;</small>
 
 **후보가 된 이유**
 
@@ -236,6 +241,7 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 원유를 정제하여 휘발유, 디젤, 제트 연료, 윤활유, 석유화학 제품 등을 생산하고 공급합니다.
+<small>원문(영문): PBF Energy Inc., through its subsidiaries, engages in the refining and supplying of petroleum products. It operates through two segments, Refining and Logistics. The company produces gasoline, ultra-low-sulfur diesel, heating oil, jet fuel, lubricants, petrochemicals, and asphalt; diesel fuel; and unbranded transportation fuels, petrochemical feedstocks, blending components, and other petroleum products. It sells its products in the Northeast, Midwest, Gulf Coast, and West Coast of the United States, as well as in other regions of the United States, Canada, Mexico, and internationally. The com</small>
 
 **후보가 된 이유**
 
@@ -275,6 +281,7 @@ CAN-DC6D3F92ECFFD019 · Semiconductor Equipment & Materials · 미추적
 **무엇으로 돈을 버나**
 
 화합물 및 단일 원소 반도체 기판을 설계, 제조, 유통하여 수익을 얻습니다.
+<small>원문(영문): AXT, Inc. designs, develops, manufactures, and distributes compound and single element semiconductor substrates. The company provides indium phosphide for use in data center connectivity using light/lasers, high-speed data transfer in data centers, 5G communications, fiber optic lasers and detectors, consumer devices, passive optical networks, silicon photonics, photonic integrated circuits, thermo-photovoltaics, RF amplifier and switching, infrared light-emitting diode (LEDS) motion control, lidar for robotics and autonomous vehicles, and infrared thermal imaging. It also offers semi-insulati</small>
 
 **후보가 된 이유**
 
@@ -313,6 +320,7 @@ CAN-77F79A3B05ABB893 · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.
+<small>원문(영문): Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp</small>
 
 **후보가 된 이유**
 
@@ -352,6 +360,7 @@ CAN-700B10D9B75B0040 · Biotechnology · 미추적
 **무엇으로 돈을 버나**
 
 내분비 질환 치료제를 개발하고, 쿠싱 증후군 치료제인 코를림을 판매하여 수익을 얻습니다.
+<small>원문(영문): Corcept Therapeutics Incorporated, a biopharmaceutical company, engages in the discovery and development of medications to treat severe endocrinologic, oncologic, metabolic, and neurologic disorders in the United States. The company offers Korlym, an oral medication for the treatment of hyperglycemia secondary to hypercortisolism in adult patients with endogenous Cushing's syndrome who have type 2 diabetes mellitus or glucose intolerance and have failed surgery or are not candidates for surgery. It also develops relacorilant, a selective cortisol modulator for patients with hypercortisolism; a</small>
 
 **후보가 된 이유**
 
@@ -389,7 +398,8 @@ CAN-5A9E947A6AEC56D7 · Medical Care Facilities · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (AGL)
+노인들에게 의료 서비스를 제공하고, 회원당 월별 고정 요금으로 환자 건강 관리 플랫폼을 운영하여 수익을 얻습니다.
+<small>원문(영문): agilon health, inc. provides healthcare services for seniors through primary care physicians in the communities of the United States. It offers a platform that manages the total healthcare needs of the patients by subscription-like per-member per-month. The company was formerly known as Agilon Health Topco, Inc. and changed its name to agilon health, inc. in March 2021. The company was founded in 2016 and is based in Westerville, Ohio.</small>
 
 **후보가 된 이유**
 
@@ -428,6 +438,7 @@ CAN-68E9292E49558246 · Agricultural Inputs · 미추적
 **무엇으로 돈을 버나**
 
 칼륨, 마그네슘, 황, 소금, 물 제품을 농업, 사료, 산업 시장에 공급하여 수익을 얻습니다.
+<small>원문(영문): Intrepid Potash, Inc. delivers potassium, magnesium, sulfur, salt, and water products. It operates through three segments: Potash, Trio, and Oilfield Solutions. The company offers muriate of potash for various markets, such as in agricultural market as a fertilizer input, in animal feed market as a nutrient supplement, in industrial market as a component in drilling and fracturing fluids, as well as input to other industrial processes. It also provides Trio, a specialty fertilizer that delivers potassium, sulfate, and magnesium in a single particle; salt for various markets, including animal f</small>
 
 **후보가 된 이유**
 
@@ -466,6 +477,7 @@ CAN-FDA6B7F62852042F · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 에너지 회사로, 정유, 소매점 운영, 물류를 통해 재생 및 기존 연료를 제공하여 돈을 번다.
+<small>원문(영문): Par Pacific Holdings, Inc., an energy company, provides renewable and conventional fuels in the United States. The company operates through three segments: Refining, Retail, and Logistics. The Refining segment owns and operates refineries that convert crude oil into gasoline, distillate, asphalt, and other products. The Retail segment operates convenience stores and fuel retail outlets that sell gasoline, diesel, and retail merchandise, such as soft drinks, prepared food, and other sundries under the Hele, 76, and nomnom brands, as well as unattended cardlock stations. The Logistics segment ow</small>
 
 **후보가 된 이유**
 
@@ -504,6 +516,7 @@ CAN-3D7A7E3B7BFBE2CE · Biotechnology · 미추적
 **무엇으로 돈을 버나**
 
 스타가르트병 및 간 질환 등 미충족 의료 수요를 위한 신약 후보 물질을 연구 개발합니다.
+<small>원문(영문): Belite Bio, Inc, a clinical stage biopharmaceutical drug development company, engages in the research and development of novel therapeutics with unmet medical needs in the United States. Its lead product candidate is Tinlarebant (LBS-008), an orally administered, which is in phase 3 clinical trial as an early intervention for maintaining the health and integrity of retinal tissues in stargardt disease type 1 and geographic atrophy patients. The company also develops LBS-009, an retinol binding protein 4 oral therapy, which is in preclinical development targeting liver disease, including non-al</small>
 
 **후보가 된 이유**
 
@@ -542,6 +555,7 @@ CAN-490AC1686F9442CE · Software - Infrastructure · 미추적
 **무엇으로 돈을 버나**
 
 소비자와 기업이 전자 결제 수단을 사용하도록 통합 결제 처리 솔루션을 제공하여 수익을 창출합니다.
+<small>원문(영문): Repay Holdings Corporation, a payments technology company, provides integrated payment processing solutions that enables consumers and businesses to make payments using electronic payment methods in the United States. It operates through two segments: Consumer Payments and Business Payments. The company offers payment acceptance solutions, such as debit and credit card processing, automated clearing house (ACH) processing, e-cash, and digital wallet services; virtual credit card processing, enhanced ACH processing, instant funding, clearing and settlement, and communication solutions; and prop</small>
 
 **후보가 된 이유**
 
@@ -580,6 +594,7 @@ CAN-36582E27909720FE · Conglomerates · 미추적
 **무엇으로 돈을 버나**
 
 산업 및 브랜드 소비재 기업에 투자하고 인수합병, 기업 재편 등을 통해 수익을 얻는 사모펀드입니다.
+<small>원문(영문): Compass Diversified is a private equity firm specializing in add on acquisitions, buyouts, industry consolidation, recapitalization, late stage, and middle market investments. It seeks to invest in leading industrial or branded consumer companies, textiles, Apparel and Luxury goods, trading companies and distributors, manufacturing, distribution, consumer discretionary, commercial services and supplies, consumer products, capital good, Leisure Product, consumer service, consumer staples, household durables, business services sector, infrastructure healthcare, safety & security, electronic comp</small>
 
 **후보가 된 이유**
 
@@ -619,6 +634,7 @@ CAN-325B2A6C30755476 · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 석유 기반 및 저탄소 액체 연료와 석유화학 제품을 제조하고 판매하여 수익을 얻습니다.
+<small>원문(영문): Valero Energy Corporation manufactures, markets, and sells petroleum-based and low-carbon liquid transportation fuels and petrochemical products in the United States, Canada, the United Kingdom, Ireland, Latin America, Mexico, Peru, and internationally. It operates through three segments: Refining, Renewable Diesel, and Ethanol. The company produces California Reformulated Gasoline Blendstock for Oxygenate Blending (CARBOB) and Conventional Blendstock for Oxygenate Blending (CBOB) gasolines, CARB diesel, diesel, jet fuel, heating oil, and asphalt; feedstocks; aromatics; sulfur and residual fue</small>
 
 **후보가 된 이유**
 
@@ -658,6 +674,7 @@ CAN-11B1565B12AFE2F9 · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 휘발유, 디젤 연료, 재생 디젤, 특수 윤활유 및 화학 제품 등을 생산하고 판매합니다.
+<small>원문(영문): HF Sinclair Corporation operates as an independent energy company in the United States. It operates through five segments: Refining, Renewables, Marketing, Lubricants & Specialties, and Midstream. The company produces and markets gasoline, diesel fuel, jet fuel, renewable diesel, specialty lubricant products, specialty chemicals, commodity and modified asphalt products, and others. It also owns and operates refineries located in Kansas, Oklahoma, New Mexico, Wyoming, Washington, and Utah, as well as markets its refined products principally in the Southwest United States and Rocky Mountains, Pa</small>
 
 **후보가 된 이유**
 
@@ -697,6 +714,7 @@ CAN-E95987D989EF1145 · Oil & Gas Midstream · 미추적
 **무엇으로 돈을 버나**
 
 유조선을 이용해 해상 운송 서비스, 유류 환적, 선박 관리 및 장비 대여로 돈을 번다.
+<small>원문(영문): Teekay Tankers Ltd., together with its subsidiaries, provides marine transportation services to oil industries in Bermuda and internationally. The company operates in two segments: Tankers and Marine Servies. It offers voyage and time charter services; offshore ship-to-ship transfer of commodities primarily crude oil and refined oil products; and tanker commercial and technical management services. In addition, the company is involved in the vessels management, procurement, and equipment rental businesses. It serves energy and utility companies, oil traders, oil consumers and petroleum product</small>
 
 **후보가 된 이유**
 
@@ -735,6 +753,7 @@ CAN-4DB66C064FC2ED7C · Biotechnology · 미추적
 **무엇으로 돈을 버나**
 
 비뇨기암 및 특수암 치료를 위한 생명공학 솔루션과 의약품을 개발, 판매하여 돈을 번다.
+<small>원문(영문): UroGen Pharma Ltd., a biotechnology company, engages in the development and commercialization of solutions for urothelial and specialty cancers. It offers RTGel, a novel proprietary polymeric biocompatible, reverse thermal gelation hydrogel technology; Mitomycin a generic drug used off-label as an adjuvant chemotherapy for the treatment of low-grade NMIBC after trans-urethral resection of bladder tumor; Zusduri, a sustained-release formulation of mitomycin for the treatment of non-muscle invasive bladder cancer (NMIBC); and Jelmyto for pyelocalyceal solutions. The company's lead product candid</small>
 
 **후보가 된 이유**
 
@@ -774,6 +793,7 @@ CAN-E87900AEFDDE7B07 · Software - Application · 미추적
 **무엇으로 돈을 버나**
 
 웹 기반 소셜 미디어 관리 플랫폼과 클라우드 소프트웨어를 제공하여 기업의 소셜 활동을 돕고 수익을 얻습니다.
+<small>원문(영문): Sprout Social, Inc. designs, develops, and operates a web-based social media management platform in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. The company provides cloud software for social messaging, data and workflows in a unified system of record, intelligence, and action. It offers AI-powered solutions, such as publishing and scheduling, social customer care, reporting and analytics, social listening and business intelligence, reputation management, social commerce, influencer marketing, predictive media intelligence, employee advocacy, and automation and workflow</small>
 
 **후보가 된 이유**
 
@@ -812,6 +832,7 @@ CAN-A0761326A7E13159 · Oil & Gas Midstream · 미추적
 **무엇으로 돈을 버나**
 
 에너지 인프라를 운영하고, 연료를 유통하며, 파이프라인과 터미널을 통해 돈을 번다.
+<small>원문(영문): SunocoCorp LLC engages in energy infrastructure and distribution of motor fuels in North America, the Greater Caribbean, and Europe. It operates through four segments: Fuel Distribution, Pipeline Systems, Terminals, and Refinery. Its midstream operations include a network of approximately 14,000 miles of pipeline and 160 terminals. It distributes its fuel to partner-branded retail locations, as well as to independent dealers and commercial customers. credit card processing, car washes, lottery, and other services. The company was incorporated in 1886 and is based in Dallas, Texas. SunocoCorp L</small>
 
 **후보가 된 이유**
 
@@ -850,6 +871,7 @@ CAN-E763F753A2D7609F · Banks - Regional · 미추적
 **무엇으로 돈을 버나**
 
 기업과 소비자에게 다양한 대출 및 금융 서비스를 제공하고 증권 활동으로 수익을 얻습니다.
+<small>원문(영문): Columbia Financial, Inc. operates as a bank holding company for Columbia Bank that provides banking and other financial services to businesses and consumers in the United States. The company offers commercial loans, including multifamily and commercial real estate, commercial business, and construction loans; residential loans, such as one-to-four family residential real estate and one-to-four family residential loans; and consumer loans, which includes home equity loans and advances, as well as automobile, personal, unsecured, and overdraft lines of credit, as well as securities activities. I</small>
 
 **후보가 된 이유**
 
@@ -888,6 +910,7 @@ CAN-EE8A92AC2C2D3E8C · Software - Infrastructure · 미추적
 **무엇으로 돈을 버나**
 
 금융 서비스에 데이터 과학과 AI 기술을 활용하여 대출 심사 및 승인 솔루션을 제공하여 돈을 번다.
+<small>원문(영문): Pagaya Technologies Ltd., a product-focused technology company, deploys data science and proprietary artificial intelligence-powered technology for financial services, their customers, and institutional or sophisticated investors in the United States, Israel, and the Cayman Islands. The company offers Decline Monetization, the flagship product which allows Partners to automatically send rejected loan applications to its network, as well as approve customers they would otherwise decline; Dual Look which allows to assess applications concurrently with its Partners in real time; and First Look th</small>
 
 **후보가 된 이유**
 
@@ -926,6 +949,7 @@ CAN-C8B827862A3B86D5 · Software - Application · 미추적
 **무엇으로 돈을 버나**
 
 디지털 콘텐츠 제작자와 광고주를 위한 실시간 광고 거래 클라우드 플랫폼을 제공하여 수익을 창출합니다.
+<small>원문(영문): PubMatic, Inc., a technology company, engages in the provision of a cloud infrastructure platform that enables real time programmatic advertising transactions for digital content creators, advertisers, agencies, agency trading desks, and demand side platforms worldwide. Its PubMatic SSP, a sell side platform for the purchase and sale of digital advertising inventory for publishers and buyers. The company also provides OpenWrap, a header bidding solution; Connect, a solution that provides additional data and insights to publishers and buyers; Activate, which allows buyers to execute direct deal</small>
 
 **후보가 된 이유**
 
@@ -964,6 +988,7 @@ CAN-6AC97D7E0081C82D · Oil & Gas Midstream · 미추적
 **무엇으로 돈을 버나**
 
 액화 석유 가스(LPG) 운반선을 소유 및 운영하며 운송 서비스를 제공하여 돈을 번다.
+<small>원문(영문): Dorian LPG Ltd., together with its subsidiaries, engages in the transportation of liquefied petroleum gas through its LPG tankers worldwide. It owns and operates twenty-eight very large gas carriers. Dorian LPG Ltd. was incorporated in 2013 and is headquartered in Stamford, Connecticut.</small>
 
 **후보가 된 이유**
 
@@ -1003,6 +1028,7 @@ CAN-8ED72F330C1AE34D · Software - Application · 미추적
 **무엇으로 돈을 버나**
 
 고객 애플리케이션 처리, 제공, 보안을 위한 엣지 클라우드 플랫폼 및 네트워크 서비스를 운영합니다.
+<small>원문(영문): Fastly, Inc. operates an edge cloud platform for processing, serving, and securing its customer's applications in the United States, the Asia Pacific, Europe, and internationally. The edge cloud is a category of Infrastructure as a Service that enables developers to build, secure, and deliver digital experiences at the edge of the internet. The company offers network services to speed up and optimize the delivery of web and application traffic; content delivery network, such as dynamic site acceleration, origin shield, instant purge, surrogate keys, programmatic control, content compression, r</small>
 
 **후보가 된 이유**
 
@@ -1041,6 +1067,7 @@ CAN-DF76D3AD7ADC73CF · Restaurants · 미추적
 **무엇으로 돈을 버나**
 
 식당과 선물 가게를 운영하며 음식 판매 및 다양한 기념품, 생활용품 판매로 수익을 얻습니다.
+<small>원문(영문): Cracker Barrel Old Country Store, Inc. develops and operates the Cracker Barrel Old Country Store concept in the United States. Its Cracker Barrel stores consist of restaurants with a gift shop. The company's restaurants serve breakfast, lunch, and dinner, as well as dine-in, pick-up, and delivery services. Its gift shops offer various decorative and functional items, such as rocking chairs, seasonal gifts, apparel, toys, food, cookware, and various other gift items, as well as various candies, preserves, and other food items. Cracker Barrel Old Country Store, Inc. was incorporated in 1969 and</small>
 
 **후보가 된 이유**
 
@@ -1079,6 +1106,7 @@ CAN-3D30FF7D03231FE1 · Oil & Gas Refining & Marketing · 미추적
 **무엇으로 돈을 버나**
 
 원유 정제, 석유화학 제품 생산, 석유 및 천연가스 운송·저장·처리 서비스를 제공합니다.
+<small>원문(영문): Phillips 66 operates as an integrated downstream energy provider in the United States, the United Kingdom, Germany, and internationally. It operates through five segments: Midstream, Chemicals, Refining, Marketing and Specialties (M&S), and Renewable Fuels. The Midstream segment provides crude oil and refined petroleum product transportation, terminaling, and storage services, as well as natural gas and natural gas liquids (NGL) gathering, processing, transportation, fractionation, storage and marketing services. It also exports liquefied petroleum gas. The Chemicals segment produces and marke</small>
 
 **후보가 된 이유**
 
@@ -1117,6 +1145,7 @@ CAN-4BD491C8D3F1EC4F · Semiconductor Equipment & Materials · 미추적
 **무엇으로 돈을 버나**
 
 반도체 산업에 핵심 부품, 시스템, 세척 및 분석 서비스를 제공하여 돈을 번다.
+<small>원문(영문): Ultra Clean Holdings, Inc. develops and supplies critical subsystems, components and parts, and cleaning and analytical services for the semiconductor industry in the United States and internationally. The company offers outsourced solutions for the development, design, component sourcing and cleaning, prototyping, engineering, and manufacturing and testing of advanced systems. It also provides a range of gas delivery solutions, such as precision thermal products, valves, connectors, industrial process connectors and valves, pneumatic actuators, manifolds and safety solutions, hoses, pressure</small>
 
 **후보가 된 이유**
 
@@ -1155,6 +1184,7 @@ CAN-0584EAE068460D91 · Auto Parts · 미추적
 **무엇으로 돈을 버나**
 
 차량용 동력 전달 및 에너지 관리 솔루션, 부품, 냉각 시스템을 제공하여 돈을 번다.
+<small>원문(영문): Dana Incorporated, together with its subsidiaries, provides power-conveyance and energy-management solutions for on-highway vehicles in North America, Europe, South America, and the Asia Pacific. The Light Vehicle segment provides axles, driveshafts, internal combustion engine (ICE), hybrid and electric transmissions, e-axle and e-transmission systems, inverters, electric motors, controllers, sealing and thermal products, e-sealing, e-thermal cooling systems, battery and electronics cooling, hydrogen fuel cell cooling, and new power industrial cooling. The Commercial Vehicle segment offers axl</small>
 
 **후보가 된 이유**
 

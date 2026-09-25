@@ -1,0 +1,69 @@
+{
+  "observation_id": "OB-062AC73BC3318F21",
+  "candidate_id": "CAN-E95987D989EF1145",
+  "candidate_version": "CV-16F96623BDDF2F32",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:TNK",
+    "ticker": "TNK",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:18:35+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 10.89793,
+    "eps_30d": 8.0747,
+    "eps_90d": 7.47095,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 45.9,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 3.643,
+    "yield_change_30_pp": 3.001
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-27",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-24",
+    "price_end_date": "2026-09-24",
+    "close_start": 67.98999786376953,
+    "close_end": 94.08000183105469,
+    "price_pct_90": 38.4,
+    "adj_return_pct_90": 38.8,
+    "pe_change_pct": -5.1
+  },
+  "display_rank": 18,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 11
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "269949667340",
+  "generator_version": "cards-v2",
+  "market_cap": 3262704896,
+  "entity_id": "NYSE:TNK",
+  "approval_version": null
+}

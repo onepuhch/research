@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-3D7A7E3B7BFBE2CE",
+  "candidate_version": "CV-40629701A031879D",
+  "identity": {
+    "entity_id": "NASDAQ:BLTE",
+    "ticker": "BLTE",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Belite Bio, Inc",
+  "industry": "Biotechnology",
+  "sector": "Healthcare",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "스타가르트병 및 간 질환 등 미충족 의료 수요를 위한 신약 후보 물질을 연구 개발합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Belite Bio, Inc, a clinical stage biopharmaceutical drug development company, engages in the research and development of novel therapeutics with unmet medical needs in the United States. Its lead product candidate is Tinlarebant (LBS-008), an orally administered, which is in phase 3 clinical trial as an early intervention for maintaining the health and integrity of retinal tissues in stargardt disease type 1 and geographic atrophy patients. The company also develops LBS-009, an retinol binding protein 4 oral therapy, which is in preclinical development targeting liver disease, including non-al"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "BLTE analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BLTE/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:16:24+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "BLTE daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BLTE/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:16:24+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "BLTE company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BLTE/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:16:24+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 2.26,
+    "eps_30d": 0.94714,
+    "eps_90d": 0.94429,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 139.3,
+    "steady": true,
+    "turnaround": false
+  }
+}

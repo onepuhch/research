@@ -1,0 +1,98 @@
+{
+  "candidate_id": "CAN-6AC97D7E0081C82D",
+  "candidate_version": "CV-BABFCE7BFA7383F8",
+  "identity": {
+    "entity_id": "NYSE:LPG",
+    "ticker": "LPG",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Dorian LPG Ltd.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "액화 석유 가스(LPG) 운반선을 소유 및 운영하며 운송 서비스를 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Dorian LPG Ltd., together with its subsidiaries, engages in the transportation of liquefied petroleum gas through its LPG tankers worldwide. It owns and operates twenty-eight very large gas carriers. Dorian LPG Ltd. was incorporated in 2013 and is headquartered in Stamford, Connecticut."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "LPG analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/LPG/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:19:42+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "LPG daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/LPG/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:19:42+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "LPG company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/LPG/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:19:42+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 4.68,
+    "eps_30d": 4.2875,
+    "eps_90d": 3.01,
+    "eps_target_period": "2028-03-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 55.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

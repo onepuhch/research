@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-D50A4151AB176FB7",
+  "candidate_version": "CV-E5D4BB82CED3B729",
+  "identity": {
+    "entity_id": "NASDAQ:AEHR",
+    "ticker": "AEHR",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Aehr Test Systems, Inc.",
+  "industry": "Semiconductor Equipment & Materials",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "반도체 웨이퍼, 다이, 패키지 테스트 및 번인 솔루션을 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United States, Asia, Europe, and the Middle East. The company offers FOX-XP and FOX-NP systems, which are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize a range of devices, including silicon carbide-based (SIC) and gallium nitride (GAN) power semiconductors; 2D and 3D sensors used in mobile phones, tablets, and other computing devices; memory semiconductors; processors; microcontrollers;"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AEHR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AEHR/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:18:43+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AEHR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AEHR/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:18:43+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AEHR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AEHR/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:18:43+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 1.38333,
+    "eps_30d": 0.3,
+    "eps_90d": 0.3,
+    "eps_target_period": "2028-05-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 361.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

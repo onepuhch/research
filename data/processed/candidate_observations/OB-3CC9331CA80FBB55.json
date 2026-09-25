@@ -1,0 +1,58 @@
+{
+  "observation_id": "OB-3CC9331CA80FBB55",
+  "candidate_id": "CAN-490AC1686F9442CE",
+  "candidate_version": "CV-3933E29FAFB1F33A",
+  "entity_id": "NASDAQ:RPAY",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:RPAY",
+    "ticker": "RPAY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:24:58+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 1.1645,
+    "eps_30d": 1.11365,
+    "eps_90d": 0.97163,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 19.9,
+    "yield_change_90_pp": 4.908,
+    "yield_change_30_pp": 1.294,
+    "steady": false,
+    "turnaround": false
+  },
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "price": {
+    "price_status": "unknown",
+    "price_note": "legacy_version_only"
+  },
+  "display_rank": null,
+  "memberships": [],
+  "run_quality": "unknown",
+  "scope_note": null,
+  "classification": "found",
+  "policy_version": "22a18de72c4a",
+  "generator_version": "cards-v1",
+  "approval_version": null,
+  "migrated": {
+    "from": "candidate_history/CV-3933E29FAFB1F33A.json",
+    "at": "2026-09-25T13:14:38+00:00",
+    "note": "cards-v1 first observation only; later observations were not recorded"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "observation_id": "OB-072F56B9A7F1EC41",
+  "candidate_id": "CAN-11B1565B12AFE2F9",
+  "candidate_version": "CV-EDC55F683C958D03",
+  "entity_id": "NYSE:DINO",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DINO",
+    "ticker": "DINO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:14:17+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 11.82475,
+    "eps_30d": 9.37352,
+    "eps_90d": 7.39586,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 9,
+    "down30": 2,
+    "pct_90": 59.9,
+    "yield_change_90_pp": 4.186,
+    "yield_change_30_pp": 2.317,
+    "steady": true,
+    "turnaround": false
+  },
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "price": {
+    "price_status": "unknown",
+    "price_note": "legacy_version_only"
+  },
+  "display_rank": null,
+  "memberships": [],
+  "run_quality": "unknown",
+  "scope_note": null,
+  "classification": "found",
+  "policy_version": "22a18de72c4a",
+  "generator_version": "cards-v1",
+  "approval_version": null,
+  "migrated": {
+    "from": "candidate_history/CV-EDC55F683C958D03.json",
+    "at": "2026-09-25T13:14:38+00:00",
+    "note": "cards-v1 first observation only; later observations were not recorded"
+  }
+}

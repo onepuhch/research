@@ -1,0 +1,58 @@
+{
+  "observation_id": "OB-D0236762AB1EE1D0",
+  "candidate_id": "CAN-5A9E947A6AEC56D7",
+  "candidate_version": "CV-871A37F9A9331D56",
+  "entity_id": "NYSE:AGL",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:AGL",
+    "ticker": "AGL",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:21:01+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 3.19833,
+    "eps_30d": 1.76475,
+    "eps_90d": -0.61688,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": null,
+    "yield_change_90_pp": 5.031,
+    "yield_change_30_pp": 1.891,
+    "steady": false,
+    "turnaround": true
+  },
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "price": {
+    "price_status": "unknown",
+    "price_note": "legacy_version_only"
+  },
+  "display_rank": null,
+  "memberships": [],
+  "run_quality": "unknown",
+  "scope_note": null,
+  "classification": "found",
+  "policy_version": "22a18de72c4a",
+  "generator_version": "cards-v1",
+  "approval_version": null,
+  "migrated": {
+    "from": "candidate_history/CV-871A37F9A9331D56.json",
+    "at": "2026-09-25T13:14:38+00:00",
+    "note": "cards-v1 first observation only; later observations were not recorded"
+  }
+}

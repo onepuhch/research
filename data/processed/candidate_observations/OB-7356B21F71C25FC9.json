@@ -1,0 +1,74 @@
+{
+  "observation_id": "OB-7356B21F71C25FC9",
+  "candidate_id": "CAN-4DB66C064FC2ED7C",
+  "candidate_version": "CV-177439DE5D3C3D23",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:URGN",
+    "ticker": "URGN",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:20:02+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 2.79429,
+    "eps_30d": 1.49375,
+    "eps_90d": 1.43667,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 5,
+    "down30": 0,
+    "pct_90": 94.5,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 3.293,
+    "yield_change_30_pp": 3.154
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-27",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-24",
+    "price_end_date": "2026-09-24",
+    "close_start": 34.540000915527344,
+    "close_end": 41.22999954223633,
+    "price_pct_90": 19.4,
+    "adj_return_pct_90": 19.4,
+    "pe_change_pct": -38.6
+  },
+  "display_rank": 19,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 11
+    },
+    {
+      "list": "A",
+      "rank": 14
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "269949667340",
+  "generator_version": "cards-v2",
+  "market_cap": 2015345664,
+  "entity_id": "NASDAQ:URGN",
+  "approval_version": null
+}

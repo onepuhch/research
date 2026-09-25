@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-25T12:25:52+00:00",
-  "generator_version": "cards-v1",
+  "generated_at": "2026-09-25T13:14:38+00:00",
+  "generator_version": "cards-v2",
   "thesis_key": "eps-revision-review:v1",
   "stale": [],
   "candidates": [
@@ -28,10 +28,10 @@
         "up30": 7,
         "down30": 0,
         "pct_90": 85.6,
-        "yield_change_90_pp": 10.567,
-        "yield_change_30_pp": 1.804,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 10.567,
+        "yield_change_30_pp": 1.804
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -39,6 +39,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -48,7 +49,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "AMC Global Media Inc., an entertainment company, distributes contents in the United States, Europe, and internationally. It operates in two segments, Domestic Operations and International. The Domestic Operations segment operates programming networks, such as AMC, We TV, BBCA, IFC, and SundanceTV; provides streaming services, including AMC+ and Acorn TV, Shudder, Sundance Now, ALLBLK, HIDIVE, and All Reality targeted subscription streaming services; produces original programming for its programming services and third parties; and licenses programming. This segment is also involved in the film"
         },
         "earnings_path": {
           "statements": [],
@@ -100,9 +102,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-B4F200613F69C4B5",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-6A44FA96F257735A",
       "classification": "found",
+      "observation_id": "OB-3D64F6AA86E6892C",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -147,8 +150,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:24:02+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:24:02+00:00",
+      "last_seen_at": "2026-09-25T12:24:02+00:00"
     },
     {
       "candidate_id": "CAN-D50A4151AB176FB7",
@@ -174,16 +178,17 @@
         "up30": 1,
         "down30": 0,
         "pct_90": 361.1,
-        "yield_change_90_pp": 1.112,
-        "yield_change_30_pp": 1.112,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 1.112,
+        "yield_change_30_pp": 1.112
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -193,7 +198,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United States, Asia, Europe, and the Middle East. The company offers FOX-XP and FOX-NP systems, which are full wafer contact and singulated die/module test and burn-in systems that test, burn-in, and stabilize a range of devices, including silicon carbide-based (SIC) and gallium nitride (GAN) power semiconductors; 2D and 3D sensors used in mobile phones, tablets, and other computing devices; memory semiconductors; processors; microcontrollers;"
         },
         "earnings_path": {
           "statements": [],
@@ -245,9 +251,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-DA95C110EE6F41D4",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-E5D4BB82CED3B729",
       "classification": "found",
+      "observation_id": "OB-8E05A79605F4C1CB",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -288,8 +295,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:18:43+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:18:43+00:00",
+      "last_seen_at": "2026-09-25T12:18:43+00:00"
     },
     {
       "candidate_id": "CAN-ABBBE42278126D28",
@@ -315,16 +323,17 @@
         "up30": 2,
         "down30": 0,
         "pct_90": null,
-        "yield_change_90_pp": 9.995,
-        "yield_change_30_pp": 1.924,
         "steady": true,
-        "turnaround": true
+        "turnaround": true,
+        "yield_change_90_pp": 9.995,
+        "yield_change_30_pp": 1.924
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -334,7 +343,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Talos Energy Inc., through its subsidiaries, engages in the exploration and production of oil and gas in the United States and Mexico. The company operates through two segments: Upstream, and Carbon Capture and Sequestration. It also engages in the exploration and production of natural gas liquid. Talos Energy Inc. was founded in 2011 and is headquartered in Houston, Texas."
         },
         "earnings_path": {
           "statements": [],
@@ -386,9 +396,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-C7C48647A856A28C",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-EB3B77D42357FC02",
       "classification": "found",
+      "observation_id": "OB-D886519C37C07C3E",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -429,8 +440,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:19:16+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:19:16+00:00",
+      "last_seen_at": "2026-09-25T12:19:16+00:00"
     },
     {
       "candidate_id": "CAN-D577F2C38FBBCFF7",
@@ -456,10 +468,10 @@
         "up30": 6,
         "down30": 0,
         "pct_90": 281.7,
-        "yield_change_90_pp": 8.663,
-        "yield_change_30_pp": 5.634,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 8.663,
+        "yield_change_30_pp": 5.634
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -467,6 +479,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -476,7 +489,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Delek US Holdings, Inc. engages in the integrated downstream energy business in the United States. The company operates in two segments Refining and Logistics. The Refining segment processes crude oil and other feedstock for the manufacture of various grades of gasoline, diesel fuel, aviation fuel, asphalt, and other petroleum-based products that are distributed through owned and third-party product terminals. It owns and operates refineries located in Tyler, Texas; El Dorado, Arkansas; Big Spring, Texas; and Krotz Springs, Louisiana. The Logistics segment gathers, transports, and stores crude"
         },
         "earnings_path": {
           "statements": [],
@@ -528,9 +542,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-86794C89F295E989",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-42D1318E7E187F93",
       "classification": "found",
+      "observation_id": "OB-CEE8FCD509D6B808",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -575,8 +590,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:17:40+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:17:40+00:00",
+      "last_seen_at": "2026-09-25T12:17:40+00:00"
     },
     {
       "candidate_id": "CAN-E460E34B1D8B66CE",
@@ -602,10 +618,10 @@
         "up30": 1,
         "down30": 0,
         "pct_90": 223.8,
-        "yield_change_90_pp": 3.006,
-        "yield_change_30_pp": 3.006,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.006,
+        "yield_change_30_pp": 3.006
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -613,6 +629,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -622,7 +639,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Nabors Industries Ltd. provides drilling and drilling-related services for land-based and offshore oil and natural gas wells in the United States and internationally. The company operates through four segments: U.S. Drilling, International Drilling, Drilling Solutions, and Rig Technologies. The company offers tubular running services, including casing and tubing running, and torque monitoring; managed pressure drilling services; and drilling-bit steering systems and rig instrumentation software. The company also offers drilling systems comprising ROCKit, a directional steering control system;"
         },
         "earnings_path": {
           "statements": [],
@@ -674,9 +692,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-654A8F6DFEEFDDC7",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-6B45D51EEEA8ADDB",
       "classification": "found",
+      "observation_id": "OB-E097177FF6E7AFF9",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -721,8 +740,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:21:26+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:21:26+00:00",
+      "last_seen_at": "2026-09-25T12:21:26+00:00"
     },
     {
       "candidate_id": "CAN-82719B27698E3C22",
@@ -748,10 +768,10 @@
         "up30": 4,
         "down30": 0,
         "pct_90": 95.1,
-        "yield_change_90_pp": 8.39,
-        "yield_change_30_pp": 1.912,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 8.39,
+        "yield_change_30_pp": 1.912
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -759,6 +779,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -768,7 +789,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "PBF Energy Inc., through its subsidiaries, engages in the refining and supplying of petroleum products. It operates through two segments, Refining and Logistics. The company produces gasoline, ultra-low-sulfur diesel, heating oil, jet fuel, lubricants, petrochemicals, and asphalt; diesel fuel; and unbranded transportation fuels, petrochemical feedstocks, blending components, and other petroleum products. It sells its products in the Northeast, Midwest, Gulf Coast, and West Coast of the United States, as well as in other regions of the United States, Canada, Mexico, and internationally. The com"
         },
         "earnings_path": {
           "statements": [],
@@ -820,9 +842,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-455DA67895538E91",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-6FBDFA5AEB4BB302",
       "classification": "found",
+      "observation_id": "OB-E56FA9B31CF61DCA",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -867,8 +890,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:15:57+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:15:57+00:00",
+      "last_seen_at": "2026-09-25T12:15:57+00:00"
     },
     {
       "candidate_id": "CAN-DC6D3F92ECFFD019",
@@ -894,16 +918,17 @@
         "up30": 4,
         "down30": 0,
         "pct_90": 199.2,
-        "yield_change_90_pp": 1.974,
-        "yield_change_30_pp": 0.032,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 1.974,
+        "yield_change_30_pp": 0.032
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -913,7 +938,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "AXT, Inc. designs, develops, manufactures, and distributes compound and single element semiconductor substrates. The company provides indium phosphide for use in data center connectivity using light/lasers, high-speed data transfer in data centers, 5G communications, fiber optic lasers and detectors, consumer devices, passive optical networks, silicon photonics, photonic integrated circuits, thermo-photovoltaics, RF amplifier and switching, infrared light-emitting diode (LEDS) motion control, lidar for robotics and autonomous vehicles, and infrared thermal imaging. It also offers semi-insulati"
         },
         "earnings_path": {
           "statements": [],
@@ -965,9 +991,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-9F70D84B23F78EC3",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-D99FD8934C33935D",
       "classification": "found",
+      "observation_id": "OB-8A226C626769F750",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1008,8 +1035,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:17:24+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:17:24+00:00",
+      "last_seen_at": "2026-09-25T12:17:24+00:00"
     },
     {
       "candidate_id": "CAN-77F79A3B05ABB893",
@@ -1035,10 +1063,10 @@
         "up30": 12,
         "down30": 0,
         "pct_90": 97.0,
-        "yield_change_90_pp": 5.935,
-        "yield_change_30_pp": 3.82,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 5.935,
+        "yield_change_30_pp": 3.82
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -1046,6 +1074,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -1055,7 +1084,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp"
         },
         "earnings_path": {
           "statements": [],
@@ -1107,9 +1137,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-5738FCB84A71A919",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-12904D03276AD5D4",
       "classification": "found",
+      "observation_id": "OB-58DC7D1B1C86C565",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1154,8 +1185,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:12:23+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-25T12:12:23+00:00"
     },
     {
       "candidate_id": "CAN-700B10D9B75B0040",
@@ -1181,16 +1213,17 @@
         "up30": 2,
         "down30": 0,
         "pct_90": 170.1,
-        "yield_change_90_pp": 2.339,
-        "yield_change_30_pp": 1.009,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 2.339,
+        "yield_change_30_pp": 1.009
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -1200,7 +1233,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Corcept Therapeutics Incorporated, a biopharmaceutical company, engages in the discovery and development of medications to treat severe endocrinologic, oncologic, metabolic, and neurologic disorders in the United States. The company offers Korlym, an oral medication for the treatment of hyperglycemia secondary to hypercortisolism in adult patients with endogenous Cushing's syndrome who have type 2 diabetes mellitus or glucose intolerance and have failed surgery or are not candidates for surgery. It also develops relacorilant, a selective cortisol modulator for patients with hypercortisolism; a"
         },
         "earnings_path": {
           "statements": [],
@@ -1252,9 +1286,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-3F6E50FBA0DDC58E",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-110C7C30AF9177D2",
       "classification": "found",
+      "observation_id": "OB-6CE40458B68D8525",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1295,8 +1330,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:15:04+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:15:04+00:00",
+      "last_seen_at": "2026-09-25T12:15:04+00:00"
     },
     {
       "candidate_id": "CAN-5A9E947A6AEC56D7",
@@ -1322,25 +1358,28 @@
         "up30": 6,
         "down30": 0,
         "pct_90": null,
-        "yield_change_90_pp": 5.031,
-        "yield_change_30_pp": 1.891,
         "steady": false,
-        "turnaround": true
+        "turnaround": true,
+        "yield_change_90_pp": 5.031,
+        "yield_change_30_pp": 1.891
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": null,
+          "text": "노인들에게 의료 서비스를 제공하고, 회원당 월별 고정 요금으로 환자 건강 관리 플랫폼을 운영하여 수익을 얻습니다.",
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "pending"
+          "status": "translated",
+          "model": "gemini-2.5-flash",
+          "source_text": "agilon health, inc. provides healthcare services for seniors through primary care physicians in the communities of the United States. It offers a platform that manages the total healthcare needs of the patients by subscription-like per-member per-month. The company was formerly known as Agilon Health Topco, Inc. and changed its name to agilon health, inc. in March 2021. The company was founded in 2016 and is based in Westerville, Ohio."
         },
         "earnings_path": {
           "statements": [],
@@ -1392,9 +1431,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-871A37F9A9331D56",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-FE788D654BB08EC7",
       "classification": "found",
+      "observation_id": "OB-E6B4DE4116530EB0",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1435,8 +1475,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:21:01+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:21:01+00:00",
+      "last_seen_at": "2026-09-25T12:21:01+00:00"
     },
     {
       "candidate_id": "CAN-68E9292E49558246",
@@ -1462,16 +1503,17 @@
         "up30": 2,
         "down30": 0,
         "pct_90": 148.5,
-        "yield_change_90_pp": 2.357,
-        "yield_change_30_pp": 2.241,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 2.357,
+        "yield_change_30_pp": 2.241
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -1481,7 +1523,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Intrepid Potash, Inc. delivers potassium, magnesium, sulfur, salt, and water products. It operates through three segments: Potash, Trio, and Oilfield Solutions. The company offers muriate of potash for various markets, such as in agricultural market as a fertilizer input, in animal feed market as a nutrient supplement, in industrial market as a component in drilling and fracturing fluids, as well as input to other industrial processes. It also provides Trio, a specialty fertilizer that delivers potassium, sulfate, and magnesium in a single particle; salt for various markets, including animal f"
         },
         "earnings_path": {
           "statements": [],
@@ -1533,9 +1576,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-194B00513FC568CE",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-3FB3EF0B51B5C446",
       "classification": "found",
+      "observation_id": "OB-F426DCA160F26421",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1576,8 +1620,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:23:59+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:23:59+00:00",
+      "last_seen_at": "2026-09-25T12:23:59+00:00"
     },
     {
       "candidate_id": "CAN-FDA6B7F62852042F",
@@ -1603,16 +1648,17 @@
         "up30": 4,
         "down30": 1,
         "pct_90": 38.4,
-        "yield_change_90_pp": 4.998,
-        "yield_change_30_pp": 2.634,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 4.998,
+        "yield_change_30_pp": 2.634
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -1622,7 +1668,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Par Pacific Holdings, Inc., an energy company, provides renewable and conventional fuels in the United States. The company operates through three segments: Refining, Retail, and Logistics. The Refining segment owns and operates refineries that convert crude oil into gasoline, distillate, asphalt, and other products. The Retail segment operates convenience stores and fuel retail outlets that sell gasoline, diesel, and retail merchandise, such as soft drinks, prepared food, and other sundries under the Hele, 76, and nomnom brands, as well as unattended cardlock stations. The Logistics segment ow"
         },
         "earnings_path": {
           "statements": [],
@@ -1674,9 +1721,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-0821772C30045A3D",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-B88B7835534F96D6",
       "classification": "found",
+      "observation_id": "OB-7F3F8A5295E8E07B",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1717,8 +1765,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:18:03+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:18:03+00:00",
+      "last_seen_at": "2026-09-25T12:18:03+00:00"
     },
     {
       "candidate_id": "CAN-3D7A7E3B7BFBE2CE",
@@ -1744,16 +1793,17 @@
         "up30": 1,
         "down30": 0,
         "pct_90": 139.3,
-        "yield_change_90_pp": 0.777,
-        "yield_change_30_pp": 0.775,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 0.777,
+        "yield_change_30_pp": 0.775
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -1763,7 +1813,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Belite Bio, Inc, a clinical stage biopharmaceutical drug development company, engages in the research and development of novel therapeutics with unmet medical needs in the United States. Its lead product candidate is Tinlarebant (LBS-008), an orally administered, which is in phase 3 clinical trial as an early intervention for maintaining the health and integrity of retinal tissues in stargardt disease type 1 and geographic atrophy patients. The company also develops LBS-009, an retinol binding protein 4 oral therapy, which is in preclinical development targeting liver disease, including non-al"
         },
         "earnings_path": {
           "statements": [],
@@ -1815,9 +1866,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-A1D56F28D5F882C9",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-40629701A031879D",
       "classification": "found",
+      "observation_id": "OB-3E31F07C1FF6B134",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1858,8 +1910,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:16:24+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:16:24+00:00",
+      "last_seen_at": "2026-09-25T12:16:24+00:00"
     },
     {
       "candidate_id": "CAN-490AC1686F9442CE",
@@ -1885,16 +1938,17 @@
         "up30": 2,
         "down30": 1,
         "pct_90": 19.9,
-        "yield_change_90_pp": 4.908,
-        "yield_change_30_pp": 1.294,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 4.908,
+        "yield_change_30_pp": 1.294
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -1904,7 +1958,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Repay Holdings Corporation, a payments technology company, provides integrated payment processing solutions that enables consumers and businesses to make payments using electronic payment methods in the United States. It operates through two segments: Consumer Payments and Business Payments. The company offers payment acceptance solutions, such as debit and credit card processing, automated clearing house (ACH) processing, e-cash, and digital wallet services; virtual credit card processing, enhanced ACH processing, instant funding, clearing and settlement, and communication solutions; and prop"
         },
         "earnings_path": {
           "statements": [],
@@ -1956,9 +2011,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-3933E29FAFB1F33A",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-4E1A2E5356F48BB9",
       "classification": "found",
+      "observation_id": "OB-9FCCFF99BAE7CCBE",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1999,8 +2055,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:24:58+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:24:58+00:00",
+      "last_seen_at": "2026-09-25T12:24:58+00:00"
     },
     {
       "candidate_id": "CAN-36582E27909720FE",
@@ -2026,10 +2083,10 @@
         "up30": 4,
         "down30": 1,
         "pct_90": 130.0,
-        "yield_change_90_pp": 3.236,
-        "yield_change_30_pp": 1.6,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.236,
+        "yield_change_30_pp": 1.6
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -2037,6 +2094,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2046,7 +2104,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Compass Diversified is a private equity firm specializing in add on acquisitions, buyouts, industry consolidation, recapitalization, late stage, and middle market investments. It seeks to invest in leading industrial or branded consumer companies, textiles, Apparel and Luxury goods, trading companies and distributors, manufacturing, distribution, consumer discretionary, commercial services and supplies, consumer products, capital good, Leisure Product, consumer service, consumer staples, household durables, business services sector, infrastructure healthcare, safety & security, electronic comp"
         },
         "earnings_path": {
           "statements": [],
@@ -2098,9 +2157,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-46141FAD267E07DC",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-A4CFD10423CF2FF5",
       "classification": "found",
+      "observation_id": "OB-FA645E8BE364B25F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2145,8 +2205,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:22:36+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:22:36+00:00",
+      "last_seen_at": "2026-09-25T12:22:36+00:00"
     },
     {
       "candidate_id": "CAN-325B2A6C30755476",
@@ -2172,10 +2233,10 @@
         "up30": 7,
         "down30": 1,
         "pct_90": 80.0,
-        "yield_change_90_pp": 4.415,
-        "yield_change_30_pp": 2.108,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 4.415,
+        "yield_change_30_pp": 2.108
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -2183,6 +2244,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2192,7 +2254,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Valero Energy Corporation manufactures, markets, and sells petroleum-based and low-carbon liquid transportation fuels and petrochemical products in the United States, Canada, the United Kingdom, Ireland, Latin America, Mexico, Peru, and internationally. It operates through three segments: Refining, Renewable Diesel, and Ethanol. The company produces California Reformulated Gasoline Blendstock for Oxygenate Blending (CARBOB) and Conventional Blendstock for Oxygenate Blending (CBOB) gasolines, CARB diesel, diesel, jet fuel, heating oil, and asphalt; feedstocks; aromatics; sulfur and residual fue"
         },
         "earnings_path": {
           "statements": [],
@@ -2244,9 +2307,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-9C294CDD7D8C842A",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-02250FE8C31AC3FE",
       "classification": "found",
+      "observation_id": "OB-3622DD8173521D90",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2291,8 +2355,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:12:23+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-25T12:12:23+00:00"
     },
     {
       "candidate_id": "CAN-11B1565B12AFE2F9",
@@ -2318,10 +2383,10 @@
         "up30": 9,
         "down30": 2,
         "pct_90": 59.9,
-        "yield_change_90_pp": 4.186,
-        "yield_change_30_pp": 2.317,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 4.186,
+        "yield_change_30_pp": 2.317
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -2329,6 +2394,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2338,7 +2404,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "HF Sinclair Corporation operates as an independent energy company in the United States. It operates through five segments: Refining, Renewables, Marketing, Lubricants & Specialties, and Midstream. The company produces and markets gasoline, diesel fuel, jet fuel, renewable diesel, specialty lubricant products, specialty chemicals, commodity and modified asphalt products, and others. It also owns and operates refineries located in Kansas, Oklahoma, New Mexico, Wyoming, Washington, and Utah, as well as markets its refined products principally in the Southwest United States and Rocky Mountains, Pa"
         },
         "earnings_path": {
           "statements": [],
@@ -2390,9 +2457,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-EDC55F683C958D03",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-CB915C8E89470A99",
       "classification": "found",
+      "observation_id": "OB-69F5815339CA7B5D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2437,8 +2505,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:14:17+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:14:17+00:00",
+      "last_seen_at": "2026-09-25T12:14:17+00:00"
     },
     {
       "candidate_id": "CAN-E95987D989EF1145",
@@ -2464,16 +2533,17 @@
         "up30": 3,
         "down30": 1,
         "pct_90": 45.9,
-        "yield_change_90_pp": 3.643,
-        "yield_change_30_pp": 3.001,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.643,
+        "yield_change_30_pp": 3.001
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2483,7 +2553,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Teekay Tankers Ltd., together with its subsidiaries, provides marine transportation services to oil industries in Bermuda and internationally. The company operates in two segments: Tankers and Marine Servies. It offers voyage and time charter services; offshore ship-to-ship transfer of commodities primarily crude oil and refined oil products; and tanker commercial and technical management services. In addition, the company is involved in the vessels management, procurement, and equipment rental businesses. It serves energy and utility companies, oil traders, oil consumers and petroleum product"
         },
         "earnings_path": {
           "statements": [],
@@ -2535,9 +2606,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-2DD875623ED0333B",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-16F96623BDDF2F32",
       "classification": "found",
+      "observation_id": "OB-062AC73BC3318F21",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2578,8 +2650,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:18:35+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:18:35+00:00",
+      "last_seen_at": "2026-09-25T12:18:35+00:00"
     },
     {
       "candidate_id": "CAN-4DB66C064FC2ED7C",
@@ -2605,10 +2678,10 @@
         "up30": 5,
         "down30": 0,
         "pct_90": 94.5,
-        "yield_change_90_pp": 3.293,
-        "yield_change_30_pp": 3.154,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.293,
+        "yield_change_30_pp": 3.154
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -2616,6 +2689,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2625,7 +2699,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "UroGen Pharma Ltd., a biotechnology company, engages in the development and commercialization of solutions for urothelial and specialty cancers. It offers RTGel, a novel proprietary polymeric biocompatible, reverse thermal gelation hydrogel technology; Mitomycin a generic drug used off-label as an adjuvant chemotherapy for the treatment of low-grade NMIBC after trans-urethral resection of bladder tumor; Zusduri, a sustained-release formulation of mitomycin for the treatment of non-muscle invasive bladder cancer (NMIBC); and Jelmyto for pyelocalyceal solutions. The company's lead product candid"
         },
         "earnings_path": {
           "statements": [],
@@ -2677,9 +2752,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-1579A095C79C5C9D",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-177439DE5D3C3D23",
       "classification": "found",
+      "observation_id": "OB-7356B21F71C25FC9",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2724,8 +2800,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:20:02+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:20:02+00:00",
+      "last_seen_at": "2026-09-25T12:20:02+00:00"
     },
     {
       "candidate_id": "CAN-E87900AEFDDE7B07",
@@ -2751,16 +2828,17 @@
         "up30": 9,
         "down30": 0,
         "pct_90": 28.5,
-        "yield_change_90_pp": 3.511,
-        "yield_change_30_pp": 3.646,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.511,
+        "yield_change_30_pp": 3.646
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2770,7 +2848,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Sprout Social, Inc. designs, develops, and operates a web-based social media management platform in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. The company provides cloud software for social messaging, data and workflows in a unified system of record, intelligence, and action. It offers AI-powered solutions, such as publishing and scheduling, social customer care, reporting and analytics, social listening and business intelligence, reputation management, social commerce, influencer marketing, predictive media intelligence, employee advocacy, and automation and workflow"
         },
         "earnings_path": {
           "statements": [],
@@ -2822,9 +2901,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-EDF7689610E360C0",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-88606568735BCAAB",
       "classification": "found",
+      "observation_id": "OB-B22B149319647A69",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2865,8 +2945,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:23:36+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:23:36+00:00",
+      "last_seen_at": "2026-09-25T12:23:36+00:00"
     },
     {
       "candidate_id": "CAN-A0761326A7E13159",
@@ -2892,16 +2973,17 @@
         "up30": 1,
         "down30": 0,
         "pct_90": 27.3,
-        "yield_change_90_pp": 3.42,
-        "yield_change_30_pp": 9.509,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.42,
+        "yield_change_30_pp": 9.509
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -2911,7 +2993,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "SunocoCorp LLC engages in energy infrastructure and distribution of motor fuels in North America, the Greater Caribbean, and Europe. It operates through four segments: Fuel Distribution, Pipeline Systems, Terminals, and Refinery. Its midstream operations include a network of approximately 14,000 miles of pipeline and 160 terminals. It distributes its fuel to partner-branded retail locations, as well as to independent dealers and commercial customers. credit card processing, car washes, lottery, and other services. The company was incorporated in 1886 and is based in Dallas, Texas. SunocoCorp L"
         },
         "earnings_path": {
           "statements": [],
@@ -2963,9 +3046,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-F5FC73696BF629F0",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-7A47AD3C204175C2",
       "classification": "found",
+      "observation_id": "OB-5519AB2EB5A76989",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3006,8 +3090,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:18:08+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:18:08+00:00",
+      "last_seen_at": "2026-09-25T12:18:08+00:00"
     },
     {
       "candidate_id": "CAN-E763F753A2D7609F",
@@ -3033,16 +3118,17 @@
         "up30": 1,
         "down30": 0,
         "pct_90": 78.7,
-        "yield_change_90_pp": 2.479,
-        "yield_change_30_pp": 2.479,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 2.479,
+        "yield_change_30_pp": 2.479
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3052,7 +3138,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Columbia Financial, Inc. operates as a bank holding company for Columbia Bank that provides banking and other financial services to businesses and consumers in the United States. The company offers commercial loans, including multifamily and commercial real estate, commercial business, and construction loans; residential loans, such as one-to-four family residential real estate and one-to-four family residential loans; and consumer loans, which includes home equity loans and advances, as well as automobile, personal, unsecured, and overdraft lines of credit, as well as securities activities. I"
         },
         "earnings_path": {
           "statements": [],
@@ -3104,9 +3191,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-80A3655EAA47F80A",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-283B95385C02CDAC",
       "classification": "found",
+      "observation_id": "OB-0AEA4F8925FF5448",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3147,8 +3235,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:21:37+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:21:37+00:00",
+      "last_seen_at": "2026-09-25T12:21:37+00:00"
     },
     {
       "candidate_id": "CAN-EE8A92AC2C2D3E8C",
@@ -3174,16 +3263,17 @@
         "up30": 7,
         "down30": 0,
         "pct_90": 17.2,
-        "yield_change_90_pp": 3.245,
-        "yield_change_30_pp": 0.4,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.245,
+        "yield_change_30_pp": 0.4
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3193,7 +3283,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Pagaya Technologies Ltd., a product-focused technology company, deploys data science and proprietary artificial intelligence-powered technology for financial services, their customers, and institutional or sophisticated investors in the United States, Israel, and the Cayman Islands. The company offers Decline Monetization, the flagship product which allows Partners to automatically send rejected loan applications to its network, as well as approve customers they would otherwise decline; Dual Look which allows to assess applications concurrently with its Partners in real time; and First Look th"
         },
         "earnings_path": {
           "statements": [],
@@ -3245,9 +3336,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-D66A0F0A17542154",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-465F6D39B9D35A2B",
       "classification": "found",
+      "observation_id": "OB-AD821F623041C81C",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3288,8 +3380,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:20:36+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:20:36+00:00",
+      "last_seen_at": "2026-09-25T12:20:36+00:00"
     },
     {
       "candidate_id": "CAN-C8B827862A3B86D5",
@@ -3315,16 +3408,17 @@
         "up30": 5,
         "down30": 0,
         "pct_90": 66.6,
-        "yield_change_90_pp": 1.752,
-        "yield_change_30_pp": 0.007,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 1.752,
+        "yield_change_30_pp": 0.007
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3334,7 +3428,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "PubMatic, Inc., a technology company, engages in the provision of a cloud infrastructure platform that enables real time programmatic advertising transactions for digital content creators, advertisers, agencies, agency trading desks, and demand side platforms worldwide. Its PubMatic SSP, a sell side platform for the purchase and sale of digital advertising inventory for publishers and buyers. The company also provides OpenWrap, a header bidding solution; Connect, a solution that provides additional data and insights to publishers and buyers; Activate, which allows buyers to execute direct deal"
         },
         "earnings_path": {
           "statements": [],
@@ -3386,9 +3481,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-76CE164A5E3E4DD6",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-CF1A892F7B7ACC08",
       "classification": "found",
+      "observation_id": "OB-AAD69C59623AD31F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3429,8 +3525,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:22:45+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:22:45+00:00",
+      "last_seen_at": "2026-09-25T12:22:45+00:00"
     },
     {
       "candidate_id": "CAN-6AC97D7E0081C82D",
@@ -3456,10 +3553,10 @@
         "up30": 2,
         "down30": 1,
         "pct_90": 55.5,
-        "yield_change_90_pp": 3.09,
-        "yield_change_30_pp": 0.726,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 3.09,
+        "yield_change_30_pp": 0.726
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -3467,6 +3564,7 @@
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3476,7 +3574,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Dorian LPG Ltd., together with its subsidiaries, engages in the transportation of liquefied petroleum gas through its LPG tankers worldwide. It owns and operates twenty-eight very large gas carriers. Dorian LPG Ltd. was incorporated in 2013 and is headquartered in Stamford, Connecticut."
         },
         "earnings_path": {
           "statements": [],
@@ -3528,9 +3627,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-9A3C1A62F693630E",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-BABFCE7BFA7383F8",
       "classification": "found",
+      "observation_id": "OB-46AD565B9DEDFEBE",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3575,8 +3675,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:19:42+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:19:42+00:00",
+      "last_seen_at": "2026-09-25T12:19:42+00:00"
     },
     {
       "candidate_id": "CAN-8ED72F330C1AE34D",
@@ -3602,16 +3703,17 @@
         "up30": 10,
         "down30": 0,
         "pct_90": 59.8,
-        "yield_change_90_pp": 0.884,
-        "yield_change_30_pp": 0.175,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 0.884,
+        "yield_change_30_pp": 0.175
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3621,7 +3723,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Fastly, Inc. operates an edge cloud platform for processing, serving, and securing its customer's applications in the United States, the Asia Pacific, Europe, and internationally. The edge cloud is a category of Infrastructure as a Service that enables developers to build, secure, and deliver digital experiences at the edge of the internet. The company offers network services to speed up and optimize the delivery of web and application traffic; content delivery network, such as dynamic site acceleration, origin shield, instant purge, surrogate keys, programmatic control, content compression, r"
         },
         "earnings_path": {
           "statements": [],
@@ -3673,9 +3776,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-D4E558540F1D4477",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-7FDF68422B1394B3",
       "classification": "found",
+      "observation_id": "OB-07F7AD682A22B5FD",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3716,8 +3820,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:17:58+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:17:58+00:00",
+      "last_seen_at": "2026-09-25T12:17:58+00:00"
     },
     {
       "candidate_id": "CAN-DF76D3AD7ADC73CF",
@@ -3743,16 +3848,17 @@
         "up30": 2,
         "down30": 0,
         "pct_90": 59.6,
-        "yield_change_90_pp": 1.332,
-        "yield_change_30_pp": 0.328,
         "steady": false,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 1.332,
+        "yield_change_30_pp": 0.328
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3762,7 +3868,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Cracker Barrel Old Country Store, Inc. develops and operates the Cracker Barrel Old Country Store concept in the United States. Its Cracker Barrel stores consist of restaurants with a gift shop. The company's restaurants serve breakfast, lunch, and dinner, as well as dine-in, pick-up, and delivery services. Its gift shops offer various decorative and functional items, such as rocking chairs, seasonal gifts, apparel, toys, food, cookware, and various other gift items, as well as various candies, preserves, and other food items. Cracker Barrel Old Country Store, Inc. was incorporated in 1969 and"
         },
         "earnings_path": {
           "statements": [],
@@ -3814,9 +3921,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-1D39906962BB7F56",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-3E4799955826259A",
       "classification": "found",
+      "observation_id": "OB-A1BADB2A8B6B40DE",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3857,8 +3965,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:22:01+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:22:01+00:00",
+      "last_seen_at": "2026-09-25T12:22:01+00:00"
     },
     {
       "candidate_id": "CAN-3D30FF7D03231FE1",
@@ -3884,16 +3993,17 @@
         "up30": 15,
         "down30": 1,
         "pct_90": 44.1,
-        "yield_change_90_pp": 2.976,
-        "yield_change_30_pp": 1.423,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 2.976,
+        "yield_change_30_pp": 1.423
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -3903,7 +4013,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Phillips 66 operates as an integrated downstream energy provider in the United States, the United Kingdom, Germany, and internationally. It operates through five segments: Midstream, Chemicals, Refining, Marketing and Specialties (M&S), and Renewable Fuels. The Midstream segment provides crude oil and refined petroleum product transportation, terminaling, and storage services, as well as natural gas and natural gas liquids (NGL) gathering, processing, transportation, fractionation, storage and marketing services. It also exports liquefied petroleum gas. The Chemicals segment produces and marke"
         },
         "earnings_path": {
           "statements": [],
@@ -3955,9 +4066,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-ADDD3AC39407ADD4",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-33C140A90CC7211C",
       "classification": "found",
+      "observation_id": "OB-BE5196FEC00C4C79",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3998,8 +4110,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:12:26+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:12:26+00:00",
+      "last_seen_at": "2026-09-25T12:12:26+00:00"
     },
     {
       "candidate_id": "CAN-4BD491C8D3F1EC4F",
@@ -4025,16 +4138,17 @@
         "up30": 4,
         "down30": 0,
         "pct_90": 55.6,
-        "yield_change_90_pp": 2.741,
-        "yield_change_30_pp": 2.525,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 2.741,
+        "yield_change_30_pp": 2.525
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "B"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -4044,7 +4158,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Ultra Clean Holdings, Inc. develops and supplies critical subsystems, components and parts, and cleaning and analytical services for the semiconductor industry in the United States and internationally. The company offers outsourced solutions for the development, design, component sourcing and cleaning, prototyping, engineering, and manufacturing and testing of advanced systems. It also provides a range of gas delivery solutions, such as precision thermal products, valves, connectors, industrial process connectors and valves, pneumatic actuators, manifolds and safety solutions, hoses, pressure"
         },
         "earnings_path": {
           "statements": [],
@@ -4096,9 +4211,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-C637A1A8B346F69C",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-4F52F217ECEA230C",
       "classification": "found",
+      "observation_id": "OB-D25140E6121B39E0",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4139,8 +4255,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:18:33+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:18:33+00:00",
+      "last_seen_at": "2026-09-25T12:18:33+00:00"
     },
     {
       "candidate_id": "CAN-0584EAE068460D91",
@@ -4166,16 +4283,17 @@
         "up30": 2,
         "down30": 1,
         "pct_90": 23.7,
-        "yield_change_90_pp": 2.936,
-        "yield_change_30_pp": 0.418,
         "steady": true,
-        "turnaround": false
+        "turnaround": false,
+        "yield_change_90_pp": 2.936,
+        "yield_change_30_pp": 0.418
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
         "A"
       ],
       "missing": [],
+      "evidence_review": null,
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
@@ -4185,7 +4303,8 @@
             "yahoo-profile"
           ],
           "status": "translated",
-          "model": "gemini-2.5-flash"
+          "model": "gemini-2.5-flash",
+          "source_text": "Dana Incorporated, together with its subsidiaries, provides power-conveyance and energy-management solutions for on-highway vehicles in North America, Europe, South America, and the Asia Pacific. The Light Vehicle segment provides axles, driveshafts, internal combustion engine (ICE), hybrid and electric transmissions, e-axle and e-transmission systems, inverters, electric motors, controllers, sealing and thermal products, e-sealing, e-thermal cooling systems, battery and electronics cooling, hydrogen fuel cell cooling, and new power industrial cooling. The Commercial Vehicle segment offers axl"
         },
         "earnings_path": {
           "statements": [],
@@ -4237,9 +4356,10 @@
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v1",
-      "candidate_version": "CV-F56CCBC732F0E648",
+      "generator_version": "cards-v2",
+      "candidate_version": "CV-D0D0B4C51738AC00",
       "classification": "found",
+      "observation_id": "OB-F1263D46F2865000",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4280,8 +4400,9 @@
         "run_id": "36133507734-1",
         "finished_at": "2026-09-25T12:25:51+00:00"
       },
-      "policy_version": "22a18de72c4a",
-      "first_seen_at": "2026-09-25T12:18:40+00:00"
+      "policy_version": "269949667340",
+      "first_seen_at": "2026-09-25T12:18:40+00:00",
+      "last_seen_at": "2026-09-25T12:18:40+00:00"
     }
   ],
   "observed_at": "2026-09-25T12:25:51+00:00",
@@ -4300,305 +4421,606 @@
   },
   "unidentified": [],
   "known": {
-    "CAN-FDA6B7F62852042F": {
-      "key": "NYSE:PARR|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:18:03+00:00",
-      "versions": [
-        {
-          "version": "CV-0821772C30045A3D",
-          "observed_at": "2026-09-25T12:18:03+00:00"
-        }
-      ]
-    },
-    "CAN-4DB66C064FC2ED7C": {
-      "key": "NASDAQ:URGN|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:20:02+00:00",
-      "versions": [
-        {
-          "version": "CV-1579A095C79C5C9D",
-          "observed_at": "2026-09-25T12:20:02+00:00"
-        }
-      ]
-    },
-    "CAN-68E9292E49558246": {
-      "key": "NYSE:IPI|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:23:59+00:00",
-      "versions": [
-        {
-          "version": "CV-194B00513FC568CE",
-          "observed_at": "2026-09-25T12:23:59+00:00"
-        }
-      ]
-    },
-    "CAN-DF76D3AD7ADC73CF": {
-      "key": "NASDAQ:CBRL|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:22:01+00:00",
-      "versions": [
-        {
-          "version": "CV-1D39906962BB7F56",
-          "observed_at": "2026-09-25T12:22:01+00:00"
-        }
-      ]
-    },
-    "CAN-E95987D989EF1145": {
-      "key": "NYSE:TNK|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:18:35+00:00",
-      "versions": [
-        {
-          "version": "CV-2DD875623ED0333B",
-          "observed_at": "2026-09-25T12:18:35+00:00"
-        }
-      ]
-    },
-    "CAN-490AC1686F9442CE": {
-      "key": "NASDAQ:RPAY|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:24:58+00:00",
-      "versions": [
-        {
-          "version": "CV-3933E29FAFB1F33A",
-          "observed_at": "2026-09-25T12:24:58+00:00"
-        }
-      ]
-    },
     "CAN-700B10D9B75B0040": {
       "key": "NASDAQ:CORT|eps-revision-review:v1",
+      "ticker": "CORT",
       "first_seen_at": "2026-09-25T12:15:04+00:00",
-      "versions": [
+      "last_seen_at": "2026-09-25T12:15:04+00:00",
+      "latest_observation": "OB-6CE40458B68D8525",
+      "latest_version": "CV-110C7C30AF9177D2",
+      "timeline": [
         {
           "version": "CV-3F6E50FBA0DDC58E",
-          "observed_at": "2026-09-25T12:15:04+00:00"
-        }
-      ]
-    },
-    "CAN-82719B27698E3C22": {
-      "key": "NYSE:PBF|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:15:57+00:00",
-      "versions": [
+          "from": "2026-09-25T12:15:04+00:00",
+          "to": "2026-09-25T12:15:04+00:00"
+        },
         {
-          "version": "CV-455DA67895538E91",
-          "observed_at": "2026-09-25T12:15:57+00:00"
-        }
-      ]
-    },
-    "CAN-36582E27909720FE": {
-      "key": "NYSE:CODI|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:22:36+00:00",
-      "versions": [
-        {
-          "version": "CV-46141FAD267E07DC",
-          "observed_at": "2026-09-25T12:22:36+00:00"
-        }
-      ]
-    },
-    "CAN-77F79A3B05ABB893": {
-      "key": "NYSE:MPC|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "versions": [
-        {
-          "version": "CV-5738FCB84A71A919",
-          "observed_at": "2026-09-25T12:12:23+00:00"
-        }
-      ]
-    },
-    "CAN-E460E34B1D8B66CE": {
-      "key": "NYSE:NBR|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:21:26+00:00",
-      "versions": [
-        {
-          "version": "CV-654A8F6DFEEFDDC7",
-          "observed_at": "2026-09-25T12:21:26+00:00"
-        }
-      ]
-    },
-    "CAN-C8B827862A3B86D5": {
-      "key": "NASDAQ:PUBM|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:22:45+00:00",
-      "versions": [
-        {
-          "version": "CV-76CE164A5E3E4DD6",
-          "observed_at": "2026-09-25T12:22:45+00:00"
-        }
-      ]
-    },
-    "CAN-E763F753A2D7609F": {
-      "key": "NASDAQ:CLBK|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:21:37+00:00",
-      "versions": [
-        {
-          "version": "CV-80A3655EAA47F80A",
-          "observed_at": "2026-09-25T12:21:37+00:00"
-        }
-      ]
-    },
-    "CAN-D577F2C38FBBCFF7": {
-      "key": "NYSE:DK|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:17:40+00:00",
-      "versions": [
-        {
-          "version": "CV-86794C89F295E989",
-          "observed_at": "2026-09-25T12:17:40+00:00"
-        }
-      ]
-    },
-    "CAN-5A9E947A6AEC56D7": {
-      "key": "NYSE:AGL|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:21:01+00:00",
-      "versions": [
-        {
-          "version": "CV-871A37F9A9331D56",
-          "observed_at": "2026-09-25T12:21:01+00:00"
-        }
-      ]
-    },
-    "CAN-6AC97D7E0081C82D": {
-      "key": "NYSE:LPG|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:19:42+00:00",
-      "versions": [
-        {
-          "version": "CV-9A3C1A62F693630E",
-          "observed_at": "2026-09-25T12:19:42+00:00"
-        }
-      ]
-    },
-    "CAN-325B2A6C30755476": {
-      "key": "NYSE:VLO|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "versions": [
-        {
-          "version": "CV-9C294CDD7D8C842A",
-          "observed_at": "2026-09-25T12:12:23+00:00"
-        }
-      ]
-    },
-    "CAN-DC6D3F92ECFFD019": {
-      "key": "NASDAQ:AXTI|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:17:24+00:00",
-      "versions": [
-        {
-          "version": "CV-9F70D84B23F78EC3",
-          "observed_at": "2026-09-25T12:17:24+00:00"
-        }
-      ]
-    },
-    "CAN-3D7A7E3B7BFBE2CE": {
-      "key": "NASDAQ:BLTE|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:16:24+00:00",
-      "versions": [
-        {
-          "version": "CV-A1D56F28D5F882C9",
-          "observed_at": "2026-09-25T12:16:24+00:00"
-        }
-      ]
-    },
-    "CAN-3D30FF7D03231FE1": {
-      "key": "NYSE:PSX|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:12:26+00:00",
-      "versions": [
-        {
-          "version": "CV-ADDD3AC39407ADD4",
-          "observed_at": "2026-09-25T12:12:26+00:00"
+          "version": "CV-110C7C30AF9177D2",
+          "from": "2026-09-25T12:15:04+00:00",
+          "to": "2026-09-25T12:15:04+00:00"
         }
       ]
     },
     "CAN-14C6F602D0868FB9": {
       "key": "NASDAQ:AMCX|eps-revision-review:v1",
+      "ticker": "AMCX",
       "first_seen_at": "2026-09-25T12:24:02+00:00",
-      "versions": [
+      "last_seen_at": "2026-09-25T12:24:02+00:00",
+      "latest_observation": "OB-3D64F6AA86E6892C",
+      "latest_version": "CV-6A44FA96F257735A",
+      "timeline": [
         {
           "version": "CV-B4F200613F69C4B5",
-          "observed_at": "2026-09-25T12:24:02+00:00"
-        }
-      ]
-    },
-    "CAN-4BD491C8D3F1EC4F": {
-      "key": "NASDAQ:UCTT|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:18:33+00:00",
-      "versions": [
+          "from": "2026-09-25T12:24:02+00:00",
+          "to": "2026-09-25T12:24:02+00:00"
+        },
         {
-          "version": "CV-C637A1A8B346F69C",
-          "observed_at": "2026-09-25T12:18:33+00:00"
-        }
-      ]
-    },
-    "CAN-ABBBE42278126D28": {
-      "key": "NYSE:TALO|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:19:16+00:00",
-      "versions": [
-        {
-          "version": "CV-C7C48647A856A28C",
-          "observed_at": "2026-09-25T12:19:16+00:00"
-        }
-      ]
-    },
-    "CAN-8ED72F330C1AE34D": {
-      "key": "NASDAQ:FSLY|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:17:58+00:00",
-      "versions": [
-        {
-          "version": "CV-D4E558540F1D4477",
-          "observed_at": "2026-09-25T12:17:58+00:00"
-        }
-      ]
-    },
-    "CAN-EE8A92AC2C2D3E8C": {
-      "key": "NASDAQ:PGY|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:20:36+00:00",
-      "versions": [
-        {
-          "version": "CV-D66A0F0A17542154",
-          "observed_at": "2026-09-25T12:20:36+00:00"
-        }
-      ]
-    },
-    "CAN-D50A4151AB176FB7": {
-      "key": "NASDAQ:AEHR|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:18:43+00:00",
-      "versions": [
-        {
-          "version": "CV-DA95C110EE6F41D4",
-          "observed_at": "2026-09-25T12:18:43+00:00"
+          "version": "CV-6A44FA96F257735A",
+          "from": "2026-09-25T12:24:02+00:00",
+          "to": "2026-09-25T12:24:02+00:00"
         }
       ]
     },
     "CAN-11B1565B12AFE2F9": {
       "key": "NYSE:DINO|eps-revision-review:v1",
+      "ticker": "DINO",
       "first_seen_at": "2026-09-25T12:14:17+00:00",
-      "versions": [
+      "last_seen_at": "2026-09-25T12:14:17+00:00",
+      "latest_observation": "OB-69F5815339CA7B5D",
+      "latest_version": "CV-CB915C8E89470A99",
+      "timeline": [
         {
           "version": "CV-EDC55F683C958D03",
-          "observed_at": "2026-09-25T12:14:17+00:00"
+          "from": "2026-09-25T12:14:17+00:00",
+          "to": "2026-09-25T12:14:17+00:00"
+        },
+        {
+          "version": "CV-CB915C8E89470A99",
+          "from": "2026-09-25T12:14:17+00:00",
+          "to": "2026-09-25T12:14:17+00:00"
         }
       ]
     },
-    "CAN-E87900AEFDDE7B07": {
-      "key": "NASDAQ:SPT|eps-revision-review:v1",
-      "first_seen_at": "2026-09-25T12:23:36+00:00",
-      "versions": [
+    "CAN-8ED72F330C1AE34D": {
+      "key": "NASDAQ:FSLY|eps-revision-review:v1",
+      "ticker": "FSLY",
+      "first_seen_at": "2026-09-25T12:17:58+00:00",
+      "last_seen_at": "2026-09-25T12:17:58+00:00",
+      "latest_observation": "OB-07F7AD682A22B5FD",
+      "latest_version": "CV-7FDF68422B1394B3",
+      "timeline": [
         {
-          "version": "CV-EDF7689610E360C0",
-          "observed_at": "2026-09-25T12:23:36+00:00"
+          "version": "CV-D4E558540F1D4477",
+          "from": "2026-09-25T12:17:58+00:00",
+          "to": "2026-09-25T12:17:58+00:00"
+        },
+        {
+          "version": "CV-7FDF68422B1394B3",
+          "from": "2026-09-25T12:17:58+00:00",
+          "to": "2026-09-25T12:17:58+00:00"
+        }
+      ]
+    },
+    "CAN-6AC97D7E0081C82D": {
+      "key": "NYSE:LPG|eps-revision-review:v1",
+      "ticker": "LPG",
+      "first_seen_at": "2026-09-25T12:19:42+00:00",
+      "last_seen_at": "2026-09-25T12:19:42+00:00",
+      "latest_observation": "OB-46AD565B9DEDFEBE",
+      "latest_version": "CV-BABFCE7BFA7383F8",
+      "timeline": [
+        {
+          "version": "CV-9A3C1A62F693630E",
+          "from": "2026-09-25T12:19:42+00:00",
+          "to": "2026-09-25T12:19:42+00:00"
+        },
+        {
+          "version": "CV-BABFCE7BFA7383F8",
+          "from": "2026-09-25T12:19:42+00:00",
+          "to": "2026-09-25T12:19:42+00:00"
+        }
+      ]
+    },
+    "CAN-EE8A92AC2C2D3E8C": {
+      "key": "NASDAQ:PGY|eps-revision-review:v1",
+      "ticker": "PGY",
+      "first_seen_at": "2026-09-25T12:20:36+00:00",
+      "last_seen_at": "2026-09-25T12:20:36+00:00",
+      "latest_observation": "OB-AD821F623041C81C",
+      "latest_version": "CV-465F6D39B9D35A2B",
+      "timeline": [
+        {
+          "version": "CV-D66A0F0A17542154",
+          "from": "2026-09-25T12:20:36+00:00",
+          "to": "2026-09-25T12:20:36+00:00"
+        },
+        {
+          "version": "CV-465F6D39B9D35A2B",
+          "from": "2026-09-25T12:20:36+00:00",
+          "to": "2026-09-25T12:20:36+00:00"
+        }
+      ]
+    },
+    "CAN-68E9292E49558246": {
+      "key": "NYSE:IPI|eps-revision-review:v1",
+      "ticker": "IPI",
+      "first_seen_at": "2026-09-25T12:23:59+00:00",
+      "last_seen_at": "2026-09-25T12:23:59+00:00",
+      "latest_observation": "OB-F426DCA160F26421",
+      "latest_version": "CV-3FB3EF0B51B5C446",
+      "timeline": [
+        {
+          "version": "CV-194B00513FC568CE",
+          "from": "2026-09-25T12:23:59+00:00",
+          "to": "2026-09-25T12:23:59+00:00"
+        },
+        {
+          "version": "CV-3FB3EF0B51B5C446",
+          "from": "2026-09-25T12:23:59+00:00",
+          "to": "2026-09-25T12:23:59+00:00"
+        }
+      ]
+    },
+    "CAN-82719B27698E3C22": {
+      "key": "NYSE:PBF|eps-revision-review:v1",
+      "ticker": "PBF",
+      "first_seen_at": "2026-09-25T12:15:57+00:00",
+      "last_seen_at": "2026-09-25T12:15:57+00:00",
+      "latest_observation": "OB-E56FA9B31CF61DCA",
+      "latest_version": "CV-6FBDFA5AEB4BB302",
+      "timeline": [
+        {
+          "version": "CV-455DA67895538E91",
+          "from": "2026-09-25T12:15:57+00:00",
+          "to": "2026-09-25T12:15:57+00:00"
+        },
+        {
+          "version": "CV-6FBDFA5AEB4BB302",
+          "from": "2026-09-25T12:15:57+00:00",
+          "to": "2026-09-25T12:15:57+00:00"
+        }
+      ]
+    },
+    "CAN-4BD491C8D3F1EC4F": {
+      "key": "NASDAQ:UCTT|eps-revision-review:v1",
+      "ticker": "UCTT",
+      "first_seen_at": "2026-09-25T12:18:33+00:00",
+      "last_seen_at": "2026-09-25T12:18:33+00:00",
+      "latest_observation": "OB-D25140E6121B39E0",
+      "latest_version": "CV-4F52F217ECEA230C",
+      "timeline": [
+        {
+          "version": "CV-C637A1A8B346F69C",
+          "from": "2026-09-25T12:18:33+00:00",
+          "to": "2026-09-25T12:18:33+00:00"
+        },
+        {
+          "version": "CV-4F52F217ECEA230C",
+          "from": "2026-09-25T12:18:33+00:00",
+          "to": "2026-09-25T12:18:33+00:00"
         }
       ]
     },
     "CAN-0584EAE068460D91": {
       "key": "NYSE:DAN|eps-revision-review:v1",
+      "ticker": "DAN",
       "first_seen_at": "2026-09-25T12:18:40+00:00",
-      "versions": [
+      "last_seen_at": "2026-09-25T12:18:40+00:00",
+      "latest_observation": "OB-F1263D46F2865000",
+      "latest_version": "CV-D0D0B4C51738AC00",
+      "timeline": [
         {
           "version": "CV-F56CCBC732F0E648",
-          "observed_at": "2026-09-25T12:18:40+00:00"
+          "from": "2026-09-25T12:18:40+00:00",
+          "to": "2026-09-25T12:18:40+00:00"
+        },
+        {
+          "version": "CV-D0D0B4C51738AC00",
+          "from": "2026-09-25T12:18:40+00:00",
+          "to": "2026-09-25T12:18:40+00:00"
+        }
+      ]
+    },
+    "CAN-4DB66C064FC2ED7C": {
+      "key": "NASDAQ:URGN|eps-revision-review:v1",
+      "ticker": "URGN",
+      "first_seen_at": "2026-09-25T12:20:02+00:00",
+      "last_seen_at": "2026-09-25T12:20:02+00:00",
+      "latest_observation": "OB-7356B21F71C25FC9",
+      "latest_version": "CV-177439DE5D3C3D23",
+      "timeline": [
+        {
+          "version": "CV-1579A095C79C5C9D",
+          "from": "2026-09-25T12:20:02+00:00",
+          "to": "2026-09-25T12:20:02+00:00"
+        },
+        {
+          "version": "CV-177439DE5D3C3D23",
+          "from": "2026-09-25T12:20:02+00:00",
+          "to": "2026-09-25T12:20:02+00:00"
+        }
+      ]
+    },
+    "CAN-ABBBE42278126D28": {
+      "key": "NYSE:TALO|eps-revision-review:v1",
+      "ticker": "TALO",
+      "first_seen_at": "2026-09-25T12:19:16+00:00",
+      "last_seen_at": "2026-09-25T12:19:16+00:00",
+      "latest_observation": "OB-D886519C37C07C3E",
+      "latest_version": "CV-EB3B77D42357FC02",
+      "timeline": [
+        {
+          "version": "CV-C7C48647A856A28C",
+          "from": "2026-09-25T12:19:16+00:00",
+          "to": "2026-09-25T12:19:16+00:00"
+        },
+        {
+          "version": "CV-EB3B77D42357FC02",
+          "from": "2026-09-25T12:19:16+00:00",
+          "to": "2026-09-25T12:19:16+00:00"
+        }
+      ]
+    },
+    "CAN-3D30FF7D03231FE1": {
+      "key": "NYSE:PSX|eps-revision-review:v1",
+      "ticker": "PSX",
+      "first_seen_at": "2026-09-25T12:12:26+00:00",
+      "last_seen_at": "2026-09-25T12:12:26+00:00",
+      "latest_observation": "OB-BE5196FEC00C4C79",
+      "latest_version": "CV-33C140A90CC7211C",
+      "timeline": [
+        {
+          "version": "CV-ADDD3AC39407ADD4",
+          "from": "2026-09-25T12:12:26+00:00",
+          "to": "2026-09-25T12:12:26+00:00"
+        },
+        {
+          "version": "CV-33C140A90CC7211C",
+          "from": "2026-09-25T12:12:26+00:00",
+          "to": "2026-09-25T12:12:26+00:00"
+        }
+      ]
+    },
+    "CAN-490AC1686F9442CE": {
+      "key": "NASDAQ:RPAY|eps-revision-review:v1",
+      "ticker": "RPAY",
+      "first_seen_at": "2026-09-25T12:24:58+00:00",
+      "last_seen_at": "2026-09-25T12:24:58+00:00",
+      "latest_observation": "OB-9FCCFF99BAE7CCBE",
+      "latest_version": "CV-4E1A2E5356F48BB9",
+      "timeline": [
+        {
+          "version": "CV-3933E29FAFB1F33A",
+          "from": "2026-09-25T12:24:58+00:00",
+          "to": "2026-09-25T12:24:58+00:00"
+        },
+        {
+          "version": "CV-4E1A2E5356F48BB9",
+          "from": "2026-09-25T12:24:58+00:00",
+          "to": "2026-09-25T12:24:58+00:00"
         }
       ]
     },
     "CAN-A0761326A7E13159": {
       "key": "NYSE:SUNC|eps-revision-review:v1",
+      "ticker": "SUNC",
       "first_seen_at": "2026-09-25T12:18:08+00:00",
-      "versions": [
+      "last_seen_at": "2026-09-25T12:18:08+00:00",
+      "latest_observation": "OB-5519AB2EB5A76989",
+      "latest_version": "CV-7A47AD3C204175C2",
+      "timeline": [
         {
           "version": "CV-F5FC73696BF629F0",
-          "observed_at": "2026-09-25T12:18:08+00:00"
+          "from": "2026-09-25T12:18:08+00:00",
+          "to": "2026-09-25T12:18:08+00:00"
+        },
+        {
+          "version": "CV-7A47AD3C204175C2",
+          "from": "2026-09-25T12:18:08+00:00",
+          "to": "2026-09-25T12:18:08+00:00"
+        }
+      ]
+    },
+    "CAN-77F79A3B05ABB893": {
+      "key": "NYSE:MPC|eps-revision-review:v1",
+      "ticker": "MPC",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-25T12:12:23+00:00",
+      "latest_observation": "OB-58DC7D1B1C86C565",
+      "latest_version": "CV-12904D03276AD5D4",
+      "timeline": [
+        {
+          "version": "CV-5738FCB84A71A919",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-12904D03276AD5D4",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        }
+      ]
+    },
+    "CAN-36582E27909720FE": {
+      "key": "NYSE:CODI|eps-revision-review:v1",
+      "ticker": "CODI",
+      "first_seen_at": "2026-09-25T12:22:36+00:00",
+      "last_seen_at": "2026-09-25T12:22:36+00:00",
+      "latest_observation": "OB-FA645E8BE364B25F",
+      "latest_version": "CV-A4CFD10423CF2FF5",
+      "timeline": [
+        {
+          "version": "CV-46141FAD267E07DC",
+          "from": "2026-09-25T12:22:36+00:00",
+          "to": "2026-09-25T12:22:36+00:00"
+        },
+        {
+          "version": "CV-A4CFD10423CF2FF5",
+          "from": "2026-09-25T12:22:36+00:00",
+          "to": "2026-09-25T12:22:36+00:00"
+        }
+      ]
+    },
+    "CAN-E87900AEFDDE7B07": {
+      "key": "NASDAQ:SPT|eps-revision-review:v1",
+      "ticker": "SPT",
+      "first_seen_at": "2026-09-25T12:23:36+00:00",
+      "last_seen_at": "2026-09-25T12:23:36+00:00",
+      "latest_observation": "OB-B22B149319647A69",
+      "latest_version": "CV-88606568735BCAAB",
+      "timeline": [
+        {
+          "version": "CV-EDF7689610E360C0",
+          "from": "2026-09-25T12:23:36+00:00",
+          "to": "2026-09-25T12:23:36+00:00"
+        },
+        {
+          "version": "CV-88606568735BCAAB",
+          "from": "2026-09-25T12:23:36+00:00",
+          "to": "2026-09-25T12:23:36+00:00"
+        }
+      ]
+    },
+    "CAN-D577F2C38FBBCFF7": {
+      "key": "NYSE:DK|eps-revision-review:v1",
+      "ticker": "DK",
+      "first_seen_at": "2026-09-25T12:17:40+00:00",
+      "last_seen_at": "2026-09-25T12:17:40+00:00",
+      "latest_observation": "OB-CEE8FCD509D6B808",
+      "latest_version": "CV-42D1318E7E187F93",
+      "timeline": [
+        {
+          "version": "CV-86794C89F295E989",
+          "from": "2026-09-25T12:17:40+00:00",
+          "to": "2026-09-25T12:17:40+00:00"
+        },
+        {
+          "version": "CV-42D1318E7E187F93",
+          "from": "2026-09-25T12:17:40+00:00",
+          "to": "2026-09-25T12:17:40+00:00"
+        }
+      ]
+    },
+    "CAN-C8B827862A3B86D5": {
+      "key": "NASDAQ:PUBM|eps-revision-review:v1",
+      "ticker": "PUBM",
+      "first_seen_at": "2026-09-25T12:22:45+00:00",
+      "last_seen_at": "2026-09-25T12:22:45+00:00",
+      "latest_observation": "OB-AAD69C59623AD31F",
+      "latest_version": "CV-CF1A892F7B7ACC08",
+      "timeline": [
+        {
+          "version": "CV-76CE164A5E3E4DD6",
+          "from": "2026-09-25T12:22:45+00:00",
+          "to": "2026-09-25T12:22:45+00:00"
+        },
+        {
+          "version": "CV-CF1A892F7B7ACC08",
+          "from": "2026-09-25T12:22:45+00:00",
+          "to": "2026-09-25T12:22:45+00:00"
+        }
+      ]
+    },
+    "CAN-D50A4151AB176FB7": {
+      "key": "NASDAQ:AEHR|eps-revision-review:v1",
+      "ticker": "AEHR",
+      "first_seen_at": "2026-09-25T12:18:43+00:00",
+      "last_seen_at": "2026-09-25T12:18:43+00:00",
+      "latest_observation": "OB-8E05A79605F4C1CB",
+      "latest_version": "CV-E5D4BB82CED3B729",
+      "timeline": [
+        {
+          "version": "CV-DA95C110EE6F41D4",
+          "from": "2026-09-25T12:18:43+00:00",
+          "to": "2026-09-25T12:18:43+00:00"
+        },
+        {
+          "version": "CV-E5D4BB82CED3B729",
+          "from": "2026-09-25T12:18:43+00:00",
+          "to": "2026-09-25T12:18:43+00:00"
+        }
+      ]
+    },
+    "CAN-E763F753A2D7609F": {
+      "key": "NASDAQ:CLBK|eps-revision-review:v1",
+      "ticker": "CLBK",
+      "first_seen_at": "2026-09-25T12:21:37+00:00",
+      "last_seen_at": "2026-09-25T12:21:37+00:00",
+      "latest_observation": "OB-0AEA4F8925FF5448",
+      "latest_version": "CV-283B95385C02CDAC",
+      "timeline": [
+        {
+          "version": "CV-80A3655EAA47F80A",
+          "from": "2026-09-25T12:21:37+00:00",
+          "to": "2026-09-25T12:21:37+00:00"
+        },
+        {
+          "version": "CV-283B95385C02CDAC",
+          "from": "2026-09-25T12:21:37+00:00",
+          "to": "2026-09-25T12:21:37+00:00"
+        }
+      ]
+    },
+    "CAN-325B2A6C30755476": {
+      "key": "NYSE:VLO|eps-revision-review:v1",
+      "ticker": "VLO",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-25T12:12:23+00:00",
+      "latest_observation": "OB-3622DD8173521D90",
+      "latest_version": "CV-02250FE8C31AC3FE",
+      "timeline": [
+        {
+          "version": "CV-9C294CDD7D8C842A",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-02250FE8C31AC3FE",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        }
+      ]
+    },
+    "CAN-DC6D3F92ECFFD019": {
+      "key": "NASDAQ:AXTI|eps-revision-review:v1",
+      "ticker": "AXTI",
+      "first_seen_at": "2026-09-25T12:17:24+00:00",
+      "last_seen_at": "2026-09-25T12:17:24+00:00",
+      "latest_observation": "OB-8A226C626769F750",
+      "latest_version": "CV-D99FD8934C33935D",
+      "timeline": [
+        {
+          "version": "CV-9F70D84B23F78EC3",
+          "from": "2026-09-25T12:17:24+00:00",
+          "to": "2026-09-25T12:17:24+00:00"
+        },
+        {
+          "version": "CV-D99FD8934C33935D",
+          "from": "2026-09-25T12:17:24+00:00",
+          "to": "2026-09-25T12:17:24+00:00"
+        }
+      ]
+    },
+    "CAN-E460E34B1D8B66CE": {
+      "key": "NYSE:NBR|eps-revision-review:v1",
+      "ticker": "NBR",
+      "first_seen_at": "2026-09-25T12:21:26+00:00",
+      "last_seen_at": "2026-09-25T12:21:26+00:00",
+      "latest_observation": "OB-E097177FF6E7AFF9",
+      "latest_version": "CV-6B45D51EEEA8ADDB",
+      "timeline": [
+        {
+          "version": "CV-654A8F6DFEEFDDC7",
+          "from": "2026-09-25T12:21:26+00:00",
+          "to": "2026-09-25T12:21:26+00:00"
+        },
+        {
+          "version": "CV-6B45D51EEEA8ADDB",
+          "from": "2026-09-25T12:21:26+00:00",
+          "to": "2026-09-25T12:21:26+00:00"
+        }
+      ]
+    },
+    "CAN-FDA6B7F62852042F": {
+      "key": "NYSE:PARR|eps-revision-review:v1",
+      "ticker": "PARR",
+      "first_seen_at": "2026-09-25T12:18:03+00:00",
+      "last_seen_at": "2026-09-25T12:18:03+00:00",
+      "latest_observation": "OB-7F3F8A5295E8E07B",
+      "latest_version": "CV-B88B7835534F96D6",
+      "timeline": [
+        {
+          "version": "CV-0821772C30045A3D",
+          "from": "2026-09-25T12:18:03+00:00",
+          "to": "2026-09-25T12:18:03+00:00"
+        },
+        {
+          "version": "CV-B88B7835534F96D6",
+          "from": "2026-09-25T12:18:03+00:00",
+          "to": "2026-09-25T12:18:03+00:00"
+        }
+      ]
+    },
+    "CAN-DF76D3AD7ADC73CF": {
+      "key": "NASDAQ:CBRL|eps-revision-review:v1",
+      "ticker": "CBRL",
+      "first_seen_at": "2026-09-25T12:22:01+00:00",
+      "last_seen_at": "2026-09-25T12:22:01+00:00",
+      "latest_observation": "OB-A1BADB2A8B6B40DE",
+      "latest_version": "CV-3E4799955826259A",
+      "timeline": [
+        {
+          "version": "CV-1D39906962BB7F56",
+          "from": "2026-09-25T12:22:01+00:00",
+          "to": "2026-09-25T12:22:01+00:00"
+        },
+        {
+          "version": "CV-3E4799955826259A",
+          "from": "2026-09-25T12:22:01+00:00",
+          "to": "2026-09-25T12:22:01+00:00"
+        }
+      ]
+    },
+    "CAN-E95987D989EF1145": {
+      "key": "NYSE:TNK|eps-revision-review:v1",
+      "ticker": "TNK",
+      "first_seen_at": "2026-09-25T12:18:35+00:00",
+      "last_seen_at": "2026-09-25T12:18:35+00:00",
+      "latest_observation": "OB-062AC73BC3318F21",
+      "latest_version": "CV-16F96623BDDF2F32",
+      "timeline": [
+        {
+          "version": "CV-2DD875623ED0333B",
+          "from": "2026-09-25T12:18:35+00:00",
+          "to": "2026-09-25T12:18:35+00:00"
+        },
+        {
+          "version": "CV-16F96623BDDF2F32",
+          "from": "2026-09-25T12:18:35+00:00",
+          "to": "2026-09-25T12:18:35+00:00"
+        }
+      ]
+    },
+    "CAN-3D7A7E3B7BFBE2CE": {
+      "key": "NASDAQ:BLTE|eps-revision-review:v1",
+      "ticker": "BLTE",
+      "first_seen_at": "2026-09-25T12:16:24+00:00",
+      "last_seen_at": "2026-09-25T12:16:24+00:00",
+      "latest_observation": "OB-3E31F07C1FF6B134",
+      "latest_version": "CV-40629701A031879D",
+      "timeline": [
+        {
+          "version": "CV-A1D56F28D5F882C9",
+          "from": "2026-09-25T12:16:24+00:00",
+          "to": "2026-09-25T12:16:24+00:00"
+        },
+        {
+          "version": "CV-40629701A031879D",
+          "from": "2026-09-25T12:16:24+00:00",
+          "to": "2026-09-25T12:16:24+00:00"
+        }
+      ]
+    },
+    "CAN-5A9E947A6AEC56D7": {
+      "key": "NYSE:AGL|eps-revision-review:v1",
+      "ticker": "AGL",
+      "first_seen_at": "2026-09-25T12:21:01+00:00",
+      "last_seen_at": "2026-09-25T12:21:01+00:00",
+      "latest_observation": "OB-E6B4DE4116530EB0",
+      "latest_version": "CV-FE788D654BB08EC7",
+      "timeline": [
+        {
+          "version": "CV-871A37F9A9331D56",
+          "from": "2026-09-25T12:21:01+00:00",
+          "to": "2026-09-25T12:21:01+00:00"
+        },
+        {
+          "version": "CV-FE788D654BB08EC7",
+          "from": "2026-09-25T12:21:01+00:00",
+          "to": "2026-09-25T12:21:01+00:00"
         }
       ]
     }
-  }
+  },
+  "departed": {}
 }

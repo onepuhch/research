@@ -1,0 +1,74 @@
+{
+  "observation_id": "OB-E56FA9B31CF61DCA",
+  "candidate_id": "CAN-82719B27698E3C22",
+  "candidate_version": "CV-6FBDFA5AEB4BB302",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PBF",
+    "ticker": "PBF",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-25T12:15:57+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260925T121129Z_36133507734-1.json.gz",
+    "sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+    "run_id": "36133507734-1",
+    "finished_at": "2026-09-25T12:25:51+00:00"
+  },
+  "eps": {
+    "eps_now": 12.375,
+    "eps_30d": 11.0,
+    "eps_90d": 6.3425,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 95.1,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 8.39,
+    "yield_change_30_pp": 1.912
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-27",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-24",
+    "price_end_date": "2026-09-24",
+    "close_start": 43.11000061035156,
+    "close_end": 71.9000015258789,
+    "price_pct_90": 66.8,
+    "adj_return_pct_90": 67.4,
+    "pe_change_pct": -14.5
+  },
+  "display_rank": 6,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 4
+    },
+    {
+      "list": "B",
+      "rank": 10
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "269949667340",
+  "generator_version": "cards-v2",
+  "market_cap": 8522799616,
+  "entity_id": "NYSE:PBF",
+  "approval_version": null
+}

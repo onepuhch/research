@@ -1,0 +1,97 @@
+{
+  "candidate_id": "CAN-C8B827862A3B86D5",
+  "candidate_version": "CV-CF1A892F7B7ACC08",
+  "identity": {
+    "entity_id": "NASDAQ:PUBM",
+    "ticker": "PUBM",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "PubMatic, Inc.",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "디지털 콘텐츠 제작자와 광고주를 위한 실시간 광고 거래 클라우드 플랫폼을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "PubMatic, Inc., a technology company, engages in the provision of a cloud infrastructure platform that enables real time programmatic advertising transactions for digital content creators, advertisers, agencies, agency trading desks, and demand side platforms worldwide. Its PubMatic SSP, a sell side platform for the purchase and sale of digital advertising inventory for publishers and buyers. The company also provides OpenWrap, a header bidding solution; Connect, a solution that provides additional data and insights to publishers and buyers; Activate, which allows buyers to execute direct deal"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PUBM analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PUBM/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:22:45+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PUBM daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PUBM/history",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:22:45+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PUBM company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PUBM/profile",
+      "published_at": null,
+      "observed_at": "2026-09-25T12:22:45+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v2",
+  "eps": {
+    "eps_now": 0.81333,
+    "eps_30d": 0.812,
+    "eps_90d": 0.48833,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 5,
+    "down30": 0,
+    "pct_90": 66.6,
+    "steady": true,
+    "turnaround": false
+  }
+}
