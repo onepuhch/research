@@ -348,8 +348,17 @@ upside 6축:
 
 
 def call_gemini(item: dict[str, Any], api_key: str) -> dict[str, Any]:
+    return call_gemini_prompt(gemini_prompt(item), api_key, "extract")
+
+
+def call_gemini_prompt(prompt: str, api_key: str, component: str) -> dict[str, Any]:
+    """One JSON-mode Gemini call with bounded retries (shared by extract and candidate cards).
+
+    Each call counts once against the shared daily budget (policy max_model_calls).
+    """
+    c.record_model_call(component)
     body = {
-        "contents": [{"role": "user", "parts": [{"text": gemini_prompt(item)}]}],
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.1,
             "responseMimeType": "application/json",
@@ -699,7 +708,9 @@ def main(argv: list[str]) -> int:
                 continue
             candidates.append(item)
         limit, phrases = load_edgar_extract_config()
-        selected = prefilter_items(candidates, min(limit, policy["max_model_calls"]), phrases)
+        # The model budget is per KST day and shared with candidate-card translation.
+        remaining = max(0, policy["max_model_calls"] - c.model_calls_today())
+        selected = prefilter_items(candidates, min(limit, remaining), phrases)
         accepted = rejected = failed = validation_rejected = 0
         circuit_open = False
         for index, item in enumerate(selected):

@@ -691,7 +691,8 @@ def load_universe(transport, user_agent: str) -> list[dict]:
         if exchange not in EXCHANGES or not ticker or ticker in seen:
             continue
         seen.add(ticker)
-        rows.append({"ticker": ticker, "symbol": ticker.replace(".", "-"), "name": item[index["name"]]})
+        rows.append({"ticker": ticker, "symbol": ticker.replace(".", "-"), "name": item[index["name"]],
+                     "exchange": exchange})
     return rows
 
 
@@ -757,7 +758,7 @@ def screen(cfg: dict, universe: list[dict], yahoo: Yahoo) -> dict:
         q = quotes[symbol]
         rows.append({"ticker": by_symbol[symbol]["ticker"], "symbol": symbol,
                      "name": q.get("longName") or q.get("shortName") or by_symbol[symbol]["name"],
-                     "market_cap": q.get("marketCap"), **row})
+                     "exchange": by_symbol[symbol].get("exchange"), "market_cap": q.get("marketCap"), **row})
     stages["earnings"] = stage_stats(earn)
 
     candidates = [r for r in rows if r["candidate"]]

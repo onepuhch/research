@@ -43,7 +43,22 @@ def render_weekly():
         [[r["idea_id"], r["reviewed_at"], r["판단 변화"], r["이전 상태"], r["이후 상태"], r["변경 사유"]] for r in history])
     if not history:
         result += "\n지난 7일 판단 갱신 없음. 신호 추가와 연구 갱신은 다릅니다.\n"
-    return result + "\n" + render_board() + "\n" + render_cases() + "\n" + render_health()
+    return (result + "\n" + render_board() + "\n" + render_candidates_brief() + "\n" + render_cases()
+            + "\n" + render_health())
+
+
+def render_candidates_brief(limit=5):
+    import candidates
+    index = candidates.load_index()
+    listed = [x for x in index.get("candidates", []) if x.get("candidate_id")]
+    if not index.get("observed_at"):
+        return "# 발굴 후보\n\n유효한 스크린 결과 없음.\n"
+    warn = f" 최신 수집 실패 또는 오래된 결과({', '.join(index['stale'])})." if index.get("stale") else ""
+    return (f"# 발굴 후보\n\n관측 {index['observed_at']} · 카드 {len(index['candidates'])}개.{warn} "
+            "상세는 docs/candidates.md. 추적 추천은 매수 추천이 아닙니다.\n\n" + table(
+                ["순서", "종목", "분류", "내년 EPS 예상 90일", "추적", "후보 ID"],
+                [[x["display_rank"], x["identity"]["ticker"], candidates.headline(x), candidates.eps_change(x["eps"]),
+                  candidates.tracking_label(x), x["candidate_id"]] for x in listed[:limit]]))
 
 
 def group_metric_rows():

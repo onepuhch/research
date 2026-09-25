@@ -7,6 +7,8 @@ else (the workflow only asks the plan whether to start a step):
             recorded as blocked and its command is never called.
   inputs    the step reads these outputs; whenever one of them finishes again
             (success or failure), the step is redone so it reflects the change.
+            "@name" is state changed outside the daily steps (a /track command,
+            human evidence); its revision is a hash of that state.
 
 Each step records execution_status (pending/started/success/failed/blocked)
 separately from quality_status (complete/partial/unavailable/unknown). Exit
@@ -70,9 +72,11 @@ STEPS: dict[str, Step] = {
     "quarterly": Step(),
     "screen": Step(),
     "prices": Step(),
+    # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
+    "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v1"),
     "baseline": Step(),                        # research_journal --capture: frozen case baselines
     "returns": Step(inputs=("baseline",)),
-    "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "baseline", "returns"),
+    "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "baseline", "returns"),
                   version="views-v2"),
     "community": Step(weekday=MONDAY),
     "weekly_report": Step(requires=("views",), weekday=MONDAY),
@@ -112,8 +116,25 @@ def day_steps(state: dict, day: str) -> dict:
     return state.get("days", {}).get(day, {}).get("steps", {})
 
 
+def tracking_revision() -> str:
+    """Which companies the user tracks: changes when /track registers or an idea closes."""
+    rows = sorted((r.get("idea_id", ""), r.get("ticker", ""), r.get("entity_id", ""),
+                   r.get("현재 단계") != "제외" and r.get("검토 상태") != "종료")
+                  for r in c.read_live_rows("investment_review_log"))
+    return hashlib.sha256(json.dumps(rows, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
+
+
+def evidence_revision() -> str:
+    path = c.DATA_DIR / "candidate_evidence.json"
+    return hashlib.sha256(path.read_bytes()).hexdigest()[:16] if path.exists() else "none"
+
+
+EXTERNAL = {"@tracking": tracking_revision, "@evidence": evidence_revision}
+
+
 def input_revisions(steps: dict, name: str) -> dict:
-    return {dep: steps.get(dep, {}).get("revision") for dep in STEPS[name].inputs}
+    return {dep: EXTERNAL[dep]() if dep in EXTERNAL else steps.get(dep, {}).get("revision")
+            for dep in STEPS[name].inputs}
 
 
 def stale(steps: dict, name: str) -> bool:
@@ -136,10 +157,16 @@ def retry_due(entry: dict, now: datetime, policy: dict) -> bool:
 
 
 def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
-                policy: dict | None = None) -> dict[str, str]:
-    """{step: why} for the steps to run now, in workflow order."""
+                policy: dict | None = None, redo: set[str] | frozenset = frozenset()) -> dict[str, str]:
+    """{step: why} for the steps to run now, in workflow order.
+
+    redo (auto only) asks for named steps to run again today, with the steps that use them.
+    """
     if mode not in MODES:
         raise ValueError(f"unknown mode {mode}")
+    unknown = set(redo) - set(STEPS)
+    if unknown:
+        raise ValueError(f"unknown redo step {sorted(unknown)}")
     if mode == "commands":
         return {}
     required = required_steps(day)
@@ -151,7 +178,9 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
     why: dict[str, str] = {}
     for name in required:
         entry = steps.get(name, {})
-        if entry.get("execution_status") != "success":
+        if name in redo:
+            why[name] = "requested"
+        elif entry.get("execution_status") != "success":
             why[name] = entry.get("execution_status") or "not_run"
         elif stale(steps, name):
             why[name] = "inputs_changed"
@@ -162,8 +191,9 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
     return {name: why[name] for name in required if name in why}
 
 
-def plan(state: dict, day: str, mode: str, now: datetime | None = None, policy: dict | None = None) -> list[str]:
-    return list(plan_detail(state, day, mode, now, policy))
+def plan(state: dict, day: str, mode: str, now: datetime | None = None, policy: dict | None = None,
+         redo: set[str] | frozenset = frozenset()) -> list[str]:
+    return list(plan_detail(state, day, mode, now, policy, redo))
 
 
 def day_record(state: dict, day: str) -> dict:
@@ -335,11 +365,12 @@ def run_policy() -> dict:
     return {**DEFAULT_POLICY, **c.policy().get("daily_run", {})}
 
 
-def cmd_plan(mode: str, event: str) -> int:
+def cmd_plan(mode: str, event: str, redo: str = "") -> int:
     now = datetime.now(timezone.utc)
     day = kst_day(now)
     state = prune(load(), day)
-    detail = plan_detail(state, day, mode, now, run_policy())
+    names = {x.strip() for x in redo.split(",") if x.strip()}
+    detail = plan_detail(state, day, mode, now, run_policy(), names if mode == "auto" else frozenset())
     run_id = (f"{os.environ['GITHUB_RUN_ID']}-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
               if os.environ.get("GITHUB_RUN_ID") else f"local-{uuid.uuid4().hex[:8]}")
     if detail:  # A commands-only run leaves no daily run record.
@@ -397,12 +428,13 @@ def main(argv: list[str] | None = None) -> int:
     p_plan = sub.add_parser("plan")
     p_plan.add_argument("--mode", choices=MODES, required=True)
     p_plan.add_argument("--event", default="")
+    p_plan.add_argument("--redo", default="", help="auto only: comma-separated steps to run again today")
     p_step = sub.add_parser("step")
     p_step.add_argument("name", choices=list(STEPS))
     sub.add_parser("finish")
     args = parser.parse_args(argv)
     if args.action == "plan":
-        return cmd_plan(args.mode, args.event)
+        return cmd_plan(args.mode, args.event, args.redo)
     if args.action == "step":
         if not command:
             parser.error("step needs a command after --")

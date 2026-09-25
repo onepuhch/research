@@ -14,6 +14,10 @@ on:
         type: choice
         options: [daily, auto, commands]
         default: daily
+      redo:
+        description: 'auto only: comma-separated steps to run again today (e.g. screen); their users rerun too'
+        type: string
+        default: ''
 permissions:
   contents: write
 concurrency:
@@ -47,7 +51,9 @@ jobs:
         run: python scripts/migrate_v2.py
       - name: Plan today's remaining steps
         id: plan
-        run: python scripts/daily_run_state.py plan --mode "$DAILY_MODE" --event "${{ github.event_name }}" >> "$GITHUB_ENV"
+        env:
+          DAILY_REDO: ${{ inputs.redo }}
+        run: python scripts/daily_run_state.py plan --mode "$DAILY_MODE" --event "${{ github.event_name }}" --redo "$DAILY_REDO" >> "$GITHUB_ENV"
       - name: Process commands independently
         if: always() && steps.migrate.outcome == 'success'
         run: python scripts/telegram_cmd.py
@@ -79,6 +85,10 @@ jobs:
         # Price collection remains independent of EPS availability.
         if: always() && steps.plan.outcome == 'success' && env.RUN_PRICES == 'true'
         run: python scripts/daily_run_state.py step prices -- python scripts/collect_prices.py
+      - name: Build candidate cards
+        # Reads the latest valid screen; a failed screen leaves the previous cards marked stale.
+        if: always() && steps.plan.outcome == 'success' && env.RUN_CARDS == 'true'
+        run: python scripts/daily_run_state.py step cards -- python scripts/candidates.py generate
       - name: Freeze research baselines
         if: always() && steps.plan.outcome == 'success' && env.RUN_BASELINE == 'true'
         run: python scripts/daily_run_state.py step baseline -- python scripts/research_journal.py --capture-only

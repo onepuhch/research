@@ -41,5 +41,10 @@
   "daily_run": {
     "partial_retry_max": 1,
     "partial_retry_min_gap_minutes": 60
+  },
+  "candidate_cards": {
+    "stale_hours": 36,
+    "translation_batch": 10,
+    "translation_max_calls": 3
   }
 }

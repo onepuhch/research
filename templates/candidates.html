@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>투자리서치 · 발굴 후보</title>
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--line:#dce4eb;--text:#182c40;--muted:#4e6274;--link:#14658d;--warn-bg:#fff6e0;--warn:#7a5200;--chip:#eef3f7;--rec:#0d6b3f;--rec-bg:#e5f5ec}
+@media (prefers-color-scheme:dark){:root{--bg:#10161d;--card:#18212b;--line:#2b3947;--text:#e3eaf1;--muted:#9fb0c0;--link:#7cc4ec;--warn-bg:#3a2e12;--warn:#f3d38a;--chip:#223040;--rec:#8fe0b4;--rec-bg:#16362a}}
+*{box-sizing:border-box}body{font:16px/1.6 system-ui,sans-serif;margin:0;background:var(--bg);color:var(--text)}
+main{max-width:1100px;margin:auto;padding:28px 16px 60px}h1{font-size:28px;margin:0 0 6px}p{margin:10px 0}a{color:var(--link);overflow-wrap:anywhere}
+.muted{color:var(--muted)}.warn{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:10px 12px;margin:10px 0}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;margin:18px 0}
+.filters label{font-size:13px;font-weight:600;display:block;margin-bottom:4px}
+input,select{font:inherit;width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--text)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-top:14px;overflow:hidden}
+.card>summary{list-style:none;cursor:pointer;padding:16px 18px;display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:baseline}
+.card>summary::-webkit-details-marker{display:none}
+.rank{font-weight:700;color:var(--muted)}.tick{font-weight:700;font-size:18px}.chg{font-weight:700;white-space:nowrap}
+.sub{grid-column:2/4;color:var(--muted);font-size:14px}.desc{grid-column:2/4;font-size:15px}
+.chip{display:inline-block;background:var(--chip);border-radius:999px;padding:1px 9px;font-size:12px;margin-right:6px}
+.chip.rec{background:var(--rec-bg);color:var(--rec);font-weight:700}
+.body{padding:4px 18px 18px;border-top:1px solid var(--line)}.body h3{font-size:15px;margin:16px 0 6px}
+.body ul{margin:0;padding-left:20px}.body li{margin:3px 0;overflow-wrap:anywhere}
+.cmd{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}
+code{background:var(--chip);padding:4px 8px;border-radius:6px;font-size:14px;overflow-wrap:anywhere}
+button{font:inherit;font-size:14px;padding:6px 12px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+@media (max-width:640px){.filters{grid-template-columns:1fr}h1{font-size:23px}.card>summary{grid-template-columns:auto 1fr}.chg{grid-column:2}.sub,.desc{grid-column:1/3}}
+</style>
+<main>
+<p class="muted">투자리서치 / 발굴 후보 / __DATE__ 생성 · 자동 새로고침되지 않는 정적 파일</p>
+<h1>남들보다 먼저 볼 후보</h1>
+<p>전 종목 스크린에서 내년 EPS 예상이 꾸준히 오른 회사입니다. <b>발굴 후보</b>는 숫자 조건만 통과한 상태이고, <b>추적 추천</b>은 사람이 원문 근거를 확인·승인한 경우에만 붙습니다. 매수 추천·목표가·상승 확률이 아닙니다.</p>
+<p id="meta" class="muted"></p><div id="alerts"></div>
+<div class="filters">
+<div><label for="q">종목·업종 검색</label><input id="q" placeholder="예: AEHR, Semiconductor"></div>
+<div><label for="cls">분류</label><select id="cls"><option value="">전체</option><option value="recommended">추적 추천</option><option value="found">발굴 후보</option><option value="needs_evidence">자료 보강 필요</option></select></div>
+<div><label for="trk">추적 상태</label><select id="trk"><option value="">전체</option><option value="untracked">미추적</option><option value="tracked">추적 중</option><option value="closed">추적 종료</option></select></div>
+</div>
+<p id="count" class="muted"></p><div id="list"></div>
+<p class="muted">순서는 A(이익수익률 변화)·B(90일 증가율) 목록을 번갈아 놓은 것이며 투자 점수가 아닙니다. 새 후보의 과거 그래프는 만들지 않습니다. 추적을 시작한 뒤부터 관측이 쌓입니다. 이 화면의 버튼은 명령을 복사만 합니다. 추적 등록은 텔레그램에 붙여 넣어야 이뤄집니다.</p>
+</main>
+<script type="application/json" id="dataset">__CANDIDATES__</script>
+<script>
+const data=JSON.parse(document.getElementById('dataset').textContent);
+const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e};
+const idx=data.index,cards=data.cards;
+const meta=document.getElementById('meta'),alerts=document.getElementById('alerts');
+if(idx.observed_at){const cov=idx.coverage||{};meta.textContent=`관측 ${idx.observed_at.replace('T',' ').slice(0,16)} UTC · 조회 ${(cov.earnings_success||0).toLocaleString()}/${(cov.earnings_requested||0).toLocaleString()}종목 · 스크린 통과 ${idx.screen_candidates}개 · 카드 ${cards.length}개`}
+else meta.textContent='유효한 스크린 결과가 없습니다.';
+if(idx.stale&&idx.stale.length)alerts.appendChild(el('div','warn',`최신 수집 실패 또는 오래된 결과(${idx.stale.join(', ')}). 마지막 유효 관측이며 새 알림은 보내지 않습니다.`));
+if(idx.run_status&&idx.run_status!=='success')alerts.appendChild(el('div','warn','일부 조회가 누락된 실행입니다. 순위는 확보 범위 내 순위입니다.'));
+function safeLink(url){try{const u=new URL(url);return ['http:','https:'].includes(u.protocol)?u.href:null}catch(e){return null}}
+function render(item){
+ const c=item.candidate,d=el('details','card');d.dataset.cls=c.classification;d.dataset.trk=c.tracking.status;
+ d.dataset.q=`${c.identity.ticker} ${c.name||''} ${c.industry||''} ${c.sector||''}`.toLowerCase();
+ const s=el('summary');s.appendChild(el('span','rank',`${c.display_rank}`));
+ const t=el('span');t.appendChild(el('span','tick',c.identity.ticker+' '));t.appendChild(el('span','muted',c.name||''));s.appendChild(t);
+ s.appendChild(el('span','chg',`EPS 예상 ${item.change}`));
+ const sub=el('span','sub');sub.appendChild(el('span','chip'+(c.classification==='recommended'?' rec':''),item.headline));
+ sub.appendChild(el('span','chip',item.tracking));sub.appendChild(document.createTextNode(c.industry||'업종 미확인'));s.appendChild(sub);
+ const desc=c.explanations.company_description_ko.text||`회사 설명 확인 중 (${c.identity.ticker})`;s.appendChild(el('span','desc',desc));
+ d.appendChild(s);const body=el('div','body');let ul=null;
+ for(const [kind,text] of item.lines){
+  if(kind==='title'||kind==='meta'){if(kind==='meta')body.appendChild(el('p','muted',text));continue}
+  if(kind==='section'){body.appendChild(el('h3',null,text));ul=el('ul');body.appendChild(ul);continue}
+  if(kind==='warn'){body.appendChild(el('div','warn',text));continue}
+  if(kind==='command'){const box=el('div','cmd');box.appendChild(el('span',null,text.startsWith('/history')?'관측 이력:':'추적 등록(텔레그램):'));
+   box.appendChild(el('code',null,text));const b=el('button',null,'명령 복사');
+   b.onclick=(ev)=>{ev.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(text).then(()=>{b.textContent='복사됨 · 텔레그램에 붙여 넣기'},()=>{b.textContent='복사 실패'})};
+   box.appendChild(b);body.appendChild(box);continue}
+  const li=el('li');
+  if(kind==='link'){const [title,url,observed]=text.split('|');const href=safeLink(url);if(!href)continue;
+   const a=el('a',null,title);a.href=href;a.rel='noopener noreferrer';a.target='_blank';li.appendChild(a);li.appendChild(document.createTextNode(` (관측 ${observed})`))}
+  else li.textContent=text;
+  (ul||body).appendChild(li)}
+ d.appendChild(body);return d}
+const list=document.getElementById('list');cards.forEach(x=>list.appendChild(render(x)));
+const q=document.getElementById('q'),cls=document.getElementById('cls'),trk=document.getElementById('trk'),count=document.getElementById('count');
+function filter(){const term=q.value.trim().toLowerCase();let n=0;
+ for(const d of list.children){const show=(!term||d.dataset.q.includes(term))&&(!cls.value||d.dataset.cls===cls.value)&&(!trk.value||d.dataset.trk===trk.value);d.hidden=!show;if(show)n++}
+ count.textContent=`${n}개 표시 / 전체 ${cards.length}개 · 카드를 누르면 상세가 열립니다`}
+[q,cls,trk].forEach(x=>x.addEventListener('input',filter));filter();
+</script>

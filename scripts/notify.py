@@ -191,6 +191,21 @@ def render_block(row: dict[str, str]) -> str:
     return "\n".join(lines)
 
 
+def split_lines(messages: list[str], limit: int = MESSAGE_LIMIT) -> list[str]:
+    """Split long messages at line breaks. Callers keep each line's HTML tags closed."""
+    result = []
+    for message in messages:
+        chunk: list[str] = []
+        for line in message.split("\n"):
+            if chunk and len("\n".join([*chunk, line])) > limit:
+                result.append("\n".join(chunk))
+                chunk = []
+            chunk.append(line[:limit])
+        if chunk:
+            result.append("\n".join(chunk))
+    return result
+
+
 def compose_message(header: str, blocks: list[str]) -> str:
     separator = f"\n\n{BLOCK_SEPARATOR}\n\n"
     return f"{header}\n\n{separator.join(blocks)}"

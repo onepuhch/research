@@ -227,6 +227,23 @@ def record_run(component: str, status: str, **details: Any) -> None:
     atomic_json(path, state)
 
 
+def model_calls_today(day: str | None = None) -> int:
+    """Model calls already made this KST day, by every component (one shared budget)."""
+    days = read_json(DATA_DIR / "model_budget.json", {}).get("days", {})
+    return sum(days.get(day or today(), {}).values())
+
+
+def record_model_call(component: str) -> None:
+    path = DATA_DIR / "model_budget.json"
+    state = read_json(path, {"days": {}})
+    day = today()
+    cutoff = (datetime.fromisoformat(day) - timedelta(days=14)).date().isoformat()
+    state["days"] = {d: v for d, v in state.get("days", {}).items() if d >= cutoff}
+    counts = state["days"].setdefault(day, {})
+    counts[component] = counts.get(component, 0) + 1
+    atomic_json(path, state)
+
+
 def recover_tables() -> None:
     journal = DATA_DIR / "pending_tables.json"
     if journal.exists():

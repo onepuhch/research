@@ -3,7 +3,8 @@ import subprocess
 import common as c
 
 STATE_FILES = ['source_state.json', 'seen_sources.json', 'notify_state.json', 'run_status.json', 'daily_runs.json',
-               'telegram_offset.json', 'command_queue.json', 'pending_tables.json', 'reddit_watch.csv']
+               'telegram_offset.json', 'command_queue.json', 'pending_tables.json', 'reddit_watch.csv',
+               'model_budget.json']
 
 
 def main():
@@ -14,7 +15,11 @@ def main():
     files += list((c.DATA_DIR / 'run_history').glob('*.json'))
     files += list((c.DATA_DIR / 'consensus_history').glob('*.json'))
     files += list((c.DATA_DIR / 'revision_screen').glob('*.json.gz'))
-    files += [c.ROOT / 'docs' / 'data_history.md', c.ROOT / 'docs' / 'revision_screen.md']
+    files += list((c.DATA_DIR / 'candidate_history').glob('CV-*.json'))
+    files += [c.DATA_DIR / 'candidates' / 'index.json', c.DATA_DIR / 'candidate_evidence.json',
+              c.DATA_DIR / 'translation_cache.json']
+    files += [c.ROOT / 'docs' / 'data_history.md', c.ROOT / 'docs' / 'revision_screen.md',
+              c.ROOT / 'docs' / 'candidates.md']
     tracked = set(subprocess.run(['git', 'ls-files', '-z'], cwd=c.ROOT, check=True,
                                  capture_output=True, text=True, encoding='utf-8').stdout.split('\0'))
     # Stage deletion of a recovered journal as well as existing state files.

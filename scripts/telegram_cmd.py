@@ -14,6 +14,7 @@ from urllib.request import Request, urlopen
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
+import candidates  # noqa: E402
 import notify  # noqa: E402
 import promote  # noqa: E402
 
@@ -28,6 +29,8 @@ SIGNAL_SUBJECT_COLUMN = "종목/티커"
 
 
 HELP_TEXT = """지원 명령어
+/screen - 최신 EPS 상향 발굴 후보 상위 5개
+/candidate CAN-0123456789ABCDEF - 후보 카드 상세
 /track ALGM - 최근 14일의 최신 종목 신호를 추적 등록
 /track SIG-0001 - 지정한 신호를 추적 등록
 /list - 활성 아이디어 목록
@@ -185,6 +188,10 @@ def handle_command(text: str, dry_run: bool = False) -> list[str]:
 
     if command == "/help":
         return [HELP_TEXT]
+    if command == "/screen":
+        return notify.split_lines(candidates.telegram_screen())
+    if command == "/candidate":
+        return notify.split_lines(candidates.telegram_candidate(argument))
     if command == "/list":
         return active_review_messages()
     if command == "/data":
@@ -227,7 +234,10 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
                 safe_command = f"/track {arg}"
             elif command == "/history" and re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", arg):
                 safe_command = f"/history {arg}"
-            elif command in {"/list", "/help", "/data"}:
+            elif command == "/candidate":
+                # A malformed ID is kept only as a marker, so the reply can say the format is wrong.
+                safe_command = f"/candidate {candidates.normalize_id(arg) or '?'}"
+            elif command in {"/list", "/help", "/data", "/screen"}:
                 safe_command = command
             else:
                 safe_command = "/help"
