@@ -791,6 +791,119 @@ class ApprovalTest(CandidateFixture):
         self.assertNotIn("Sells pumps.", k.telegram_card(card))
 
 
+class ContextCardTest(CandidateFixture):
+    """G3: automatic drafts on the card, kept apart from human evidence and approval."""
+
+    def add_context(self, context_id="CTX-0000000000000001", claims=None, status="draft_ready", research="success"):
+        import candidate_context
+        import company_filings
+        doc = {"document_id": "DOC-00000000000000AA", "issuer": {"cik": "0000000001"},
+               "url": "https://www.sec.gov/Archives/edgar/data/1/x/ex991.htm", "accession": "0000000001-26-000010",
+               "form": "8-K", "document_type": "EX-99.1", "filed_at": "2026-09-10", "published_at": None,
+               "observed_at": "2026-09-25T02:00:00+00:00", "raw_sha256": "s", "content_type": "html",
+               "coverage": "complete", "status": "parsed", "relevance": {"earnings": True}, "title": "Q2 results",
+               "normalization_version": "norm-v1", "blocks": []}
+        company_filings.store_document(doc)
+        claims = claims if claims is not None else [
+            {"text_ko": "매출이 전년 대비 40% 늘었다.", "kind": "fact", "quote": "Revenue grew 40%",
+             "document_id": doc["document_id"], "block_id": "p2", "period": "Q2 FY2027", "drivers": ["volume"],
+             "direction": "positive"},
+            {"text_ko": "회사는 다음 분기 매출 130백만 달러를 예상했다.", "kind": "guidance",
+             "quote": "expects revenue of $130 million", "document_id": doc["document_id"], "block_id": "p3",
+             "period": "Q3 FY2027", "drivers": ["volume"], "direction": "positive"}]
+        record = {"context_id": context_id, "candidate_id": self.aaa["candidate_id"], "issuer_cik": "0000000001",
+                  "document_ids": [doc["document_id"]], "source_blocks": [], "input_sha": context_id * 2,
+                  "model": "m", "prompt_version": "p", "parser_version": "v", "generated_at": "2026-09-25T02:30:00+00:00",
+                  "context_status": status, "claims": claims,
+                  "limitations": [{"text_ko": "일회성 세금 이익이 포함됐다.", "quote": "one-time tax benefit",
+                                   "document_id": doc["document_id"], "block_id": "p4"}],
+                  "next_check": ["3분기 실적 발표에서 수주 확인"], "link": "temporal_context", "link_note": None,
+                  "rejected": [], "source_coverage": "complete"}
+        c.atomic_json(candidate_context.history_dir() / f"{context_id}.json", record)
+        state = candidate_context.load_state()
+        state["candidates"][self.aaa["candidate_id"]] = {"status": research, "context_id": context_id,
+                                                         "document_ids": [doc["document_id"]]}
+        c.atomic_json(candidate_context.state_path(), state)
+        return self.card()
+
+    def card(self):
+        k.generate(now=NOW, translate_now=False)
+        return next(x for x in k.load_index()["candidates"] if x["candidate_id"] == self.aaa["candidate_id"])
+
+    def test_card_shows_the_draft_as_unreviewed_with_sources_and_limits(self):
+        card = self.add_context()
+        text = k.telegram_card(card)
+        self.assertIn("공식 발표에서 확인한 변화 (자동 정리·미검토)", text)
+        self.assertIn("[실적] 매출이 전년 대비 40% 늘었다.", text)
+        self.assertIn("[회사 전망]", text)
+        self.assertIn("일회성 세금 이익", text)
+        self.assertIn("같은 시기의 회사 발표(인과 미확인)", text)
+        self.assertIn("(자동 제안)", text)
+        self.assertIn("제출 2026-09-10", text)
+        self.assertEqual((card["research_status"], card["classification"]), ("draft_ready", "found"))
+        markdown = k.markdown_card(card)
+        self.assertIn("“Revenue grew 40%”", markdown)
+
+    def test_research_state_without_a_draft(self):
+        self.assertEqual(self.aaa["research_status"], "not_started")
+        import candidate_context
+        c.atomic_json(candidate_context.state_path(), {"candidates": {self.aaa["candidate_id"]: {"status": "failed"}},
+                                                       "days": {}, "documents_by_source": {}})
+        card = self.card()
+        self.assertEqual(card["research_status"], "queued")
+        self.assertIn("원문 접근 실패", k.telegram_card(card))
+
+    def test_draft_changes_the_version_but_its_generation_time_does_not(self):
+        first = self.add_context()
+        self.assertNotEqual(first["candidate_version"], self.aaa["candidate_version"])
+        import candidate_context
+        path = candidate_context.history_dir() / "CTX-0000000000000001.json"
+        record = json.loads(path.read_text(encoding="utf-8"))
+        record["generated_at"] = "2026-09-26T00:00:00+00:00"
+        path.write_text(json.dumps(record), encoding="utf-8")
+        self.assertEqual(self.card()["candidate_version"], first["candidate_version"])
+
+    def test_past_observation_keeps_the_draft_it_showed(self):
+        first = self.add_context()
+        newer = [{"text_ko": "순이익은 15.2백만 달러였다.", "kind": "fact", "quote": "Net income was $15.2 million",
+                  "document_id": "DOC-00000000000000AA", "block_id": "p2", "period": "Q2"}]
+        self.add_context("CTX-0000000000000002", claims=newer)
+        version, obs = k.load_observation(first["observation_id"])
+        then = k.telegram_card(k.assemble(version, obs, []))
+        self.assertIn("40% 늘었다", then)
+        self.assertNotIn("15.2백만", then)
+
+    def test_import_copies_without_approval_and_blocks_approval_until_reviewed(self):
+        self.add_context()
+        k.import_context(self.aaa["candidate_id"])
+        entry = c.read_json(k.evidence_path(), {})[self.aaa["candidate_id"]]
+        self.assertNotIn("approval", entry)
+        self.assertEqual(entry["review_status"], "needs_evidence")
+        self.assertEqual(entry["explanations"]["persistence_evidence"], [])  # not invented
+        self.assertEqual(self.card()["research_status"], "review_needed")
+        with self.assertRaisesRegex(ValueError, "marked_needs_evidence"):
+            k.approve(self.aaa["candidate_id"], "user")
+        with self.assertRaisesRegex(ValueError, "already has human evidence"):
+            k.import_context(self.aaa["candidate_id"])
+
+    def test_approval_and_revocation_are_review_events(self):
+        self.write_evidence(sourced_evidence())
+        shown = self.card()
+        version = k.approve(self.aaa["candidate_id"], "user")
+        self.assertEqual(k.review_state(self.aaa["candidate_id"], version), "approved")
+        self.assertIsNone(k.review_state(self.aaa["candidate_id"], version, as_of="2000-01-01T00:00:00+00:00"))
+        self.assertEqual(self.card()["classification"], "recommended")
+        k.revoke(self.aaa["candidate_id"], "user", "원문 재확인 필요")
+        self.assertEqual(k.review_state(self.aaa["candidate_id"], version), "revoked")
+        self.assertEqual(self.card()["classification"], "found")
+        events = sorted(p.name for p in k.review_events_dir().glob("RE-*.json"))
+        self.assertEqual(len(events), 2)
+        self.assertTrue(k.observations_dir().joinpath(f"{shown['observation_id']}.json").exists())
+
+    def write_evidence(self, entry):
+        c.atomic_json(k.evidence_path(), {self.aaa["candidate_id"]: entry})
+
+
 class ColumnMigrationTest(unittest.TestCase):
     def test_new_column_is_added_after_keeping_the_old_file(self):
         import migrate_v2

@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v2"
+GENERATOR_VERSION = "cards-v3"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -325,8 +325,43 @@ def observation_key(cid: str, snapshot_sha256: str, version: str, policy: str) -
     return "OB-" + digest([cid, snapshot_sha256, version, policy])[:16].upper()
 
 
+RESEARCH_NOTES = {
+    "no_relevant_document": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
+    "unavailable": "발행사 식별 또는 공시 목록을 확보하지 못했습니다(원문 미확보).",
+    "failed": "원문 접근에 실패했습니다. 24시간 뒤 다시 시도합니다(원문 접근 실패).",
+    "identity_conflict": "등록된 식별자와 SEC 식별자가 달라 조사를 보류했습니다.",
+    "deferred_budget": "오늘 조사 한도를 다 써서 다음 실행에서 이어갑니다.",
+    "queued": "원문 조사 대기 중입니다.",
+}
+LINK_LABELS = {
+    "unconfirmed": "EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)",
+    "temporal_context": "EPS 예상 상향과 같은 시기의 회사 발표(인과 미확인)",
+    "explicit_link": "원문이 추정치 변화와의 연결을 직접 언급함",
+}
+KIND_LABELS = {"fact": "실적", "guidance": "회사 전망", "interpretation": "해석"}
+
+
+def context_view(record: dict | None) -> dict | None:
+    """The part of a draft that is a claim on the card (generation time is not part of it)."""
+    if not record:
+        return None
+    return {k: record.get(k) for k in ("context_id", "input_sha", "context_status", "claims", "limitations",
+                                       "next_check", "link", "link_note", "source_coverage", "documents")}
+
+
+def research_state(entry: dict | None, context: dict | None, human: dict | None) -> str:
+    """not_started / queued / source_linked / draft_ready / review_needed; never a recommendation."""
+    if context and context.get("context_status") == "draft_ready":
+        imported = (human or {}).get("imported_from") == context.get("context_id")
+        return "review_needed" if imported and not (human or {}).get("approval") else "draft_ready"
+    if not entry:
+        return "not_started"
+    return "source_linked" if entry.get("status") == "success" else "queued"
+
+
 def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, translations: dict,
-          ideas: list[dict], policy_version: str) -> list[dict]:
+          ideas: list[dict], policy_version: str, contexts: dict | None = None,
+          research: dict | None = None) -> list[dict]:
     """Candidates in display order from one screener snapshot (pure: no I/O)."""
     derived = snapshot.get("derived", {})
     rows = {r["ticker"]: r for r in derived.get("rows", []) if r.get("candidate")}
@@ -362,8 +397,13 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             statements = (human or {}).get("explanations", {}).get(field) or []
             explanations[field] = ({"statements": statements} if statements else
                                    {"statements": [], "reason": "원문 근거 미연결 (EPS 스크린만 통과)"})
+        context = context_view((contexts or {}).get(cid)) if cid else None
+        doc_sources = [{"id": d["document_id"], "title": d["title"], "provider": "SEC EDGAR", "url": d["url"],
+                        "published_at": None, "filed_at": d["filed_at"], "observed_at": d["observed_at"],
+                        "fields": f"{d['form']} {d['document_type']}"} for d in (context or {}).get("documents") or []]
         content = {
             "candidate_id": cid, "identity": identity, "thesis_key": THESIS_KEY,
+            "context": context,
             "name": row.get("name"), "industry": row.get("industry"), "sector": row.get("sector"),
             "eps": {k: row.get(k) for k in VERSION_EPS_KEYS},
             "eps_provider": "Yahoo Finance earningsTrend (+1y)",
@@ -374,10 +414,12 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
                                 if flagged else None),
             "base_classification": "needs_evidence" if missing or flagged else "found",
             "explanations": explanations,
-            "sources": base_sources(ticker, observed, bool(summary_text)) + list((human or {}).get("sources", [])),
+            "sources": base_sources(ticker, observed, bool(summary_text)) + list((human or {}).get("sources", []))
+                       + doc_sources,
             "generator_version": GENERATOR_VERSION,
         }
         version = content_version(content)
+        research_entry = (research or {}).get(cid) if cid else None
         approval = (human or {}).get("approval")
         approved = (bool(approval) and approval.get("candidate_version") == version and not problems
                     and not missing and not flagged
@@ -399,6 +441,9 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "observed_at": observed, "run_quality": "partial" if partial else "complete",
             "scope_note": "확보 범위 내 순위 (일부 조회 누락)" if partial else "전체 조회 범위 순위",
             "tracking": ledger_tracking(identity["entity_id"], ideas, THESIS_KEY),
+            "research_status": research_state(research_entry, context, human),
+            "research_note": RESEARCH_NOTES.get((research_entry or {}).get("status")) if not context else None,
+            "context_id": (context or {}).get("context_id"),
             "source_snapshot": snapshot_ref, "policy_version": policy_version,
         })
     return result
@@ -414,7 +459,7 @@ def version_record(candidate: dict) -> dict:
     """The immutable claim of a version (no observation time, price window or rank)."""
     keys = ("candidate_id", "candidate_version", "identity", "thesis_key", "name", "industry", "sector",
             "eps_provider", "lists", "missing", "base_classification", "explanations", "sources",
-            "generator_version")
+            "generator_version", "context", "evidence_review")
     record = {k: candidate.get(k) for k in keys}
     record["eps"] = {k: candidate["eps"].get(k) for k in VERSION_EPS_KEYS}
     return c.validate_record("candidate_version", record)
@@ -425,7 +470,8 @@ def observation_record(candidate: dict) -> dict:
     record = {k: candidate.get(k) for k in (
         "observation_id", "candidate_id", "candidate_version", "thesis_key", "identity", "observed_at",
         "source_snapshot", "eps", "price", "display_rank", "memberships", "lists", "missing", "run_quality",
-        "scope_note", "classification", "policy_version", "generator_version", "market_cap")}
+        "scope_note", "classification", "policy_version", "generator_version", "market_cap",
+        "context_id", "research_status", "research_note")}
     record["entity_id"] = candidate["identity"]["entity_id"]
     record["approval_version"] = (candidate.get("approval") or {}).get("candidate_version")
     return c.validate_record("candidate_observation", record)
@@ -527,8 +573,20 @@ def known_candidates() -> dict:
     return known
 
 
-def assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
-    """A card as it was at one stored observation, with today's tracking state."""
+def assemble(version: dict, observation: dict, ideas: list[dict], as_of: str | None = None) -> dict:
+    """A card as it was at one stored observation, with today's tracking state and the
+    approval state as it stood at as_of (default now) from the review events."""
+    card = _assemble(version, observation, ideas)
+    state = review_state(version.get("candidate_id"), version.get("candidate_version"), as_of)
+    card["review_state"] = state
+    if state == "approved":
+        card["classification"] = "recommended"
+    elif card.get("classification") == "recommended":
+        card["classification"] = version.get("base_classification") or "found"
+    return card
+
+
+def _assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
     explanations = {"company_description_ko": {"text": None, "kind": "fact", "source_ids": [], "status": "unknown"},
                     **{f: {"statements": [], "reason": "기록 없음"} for f in EXPLANATIONS},
                     **(version.get("explanations") or {})}
@@ -537,7 +595,10 @@ def assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
             "eps": {**version.get("eps", {}), **(observation.get("eps") or {})},
             **{k: observation.get(k) for k in ("observation_id", "observed_at", "price", "display_rank",
                                                "memberships", "run_quality", "scope_note", "classification",
-                                               "source_snapshot", "policy_version", "market_cap")},
+                                               "source_snapshot", "policy_version", "market_cap",
+                                               "context_id", "research_status", "research_note")},
+            # The draft is the one this observation showed, never a later one.
+            "context": version.get("context"),
             "approval": None, "review_note": None, "evidence_problems": [],
             "tracking": ledger_tracking(version["identity"]["entity_id"], ideas, version.get("thesis_key", THESIS_KEY))}
 
@@ -748,7 +809,28 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                           f"{cand['eps_provider']}, 회계기준 미표시): 90일 전 {money(eps['eps_90d'])} → "
                           f"30일 전 {money(eps['eps_30d'])} → 현재 {money(eps['eps_now'])} ({eps_change(eps)})"))
     lines.append(("item", price_line(cand)))
-    lines.append(("section", "확인된 사업 근거"))
+    context = cand.get("context") or {}
+    docs = {d["document_id"]: d for d in context.get("documents") or []}
+
+    def claim_line(item, label):
+        doc = docs.get(item.get("document_id"), {})
+        return ("claim", json.dumps({"label": label, "text": item["text_ko"], "quote": item.get("quote"),
+                                     "title": doc.get("title") or item.get("document_id"), "url": doc.get("url"),
+                                     "filed": doc.get("filed_at"), "period": item.get("period")}, ensure_ascii=False))
+
+    lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
+    stated = [x for x in context.get("claims") or [] if x.get("kind") in ("fact", "guidance")][:3]
+    if stated:
+        lines += [claim_line(x, KIND_LABELS[x["kind"]]) for x in stated]
+    elif context.get("context_status") == "no_supported_claims":
+        lines.append(("text", "원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다."))
+    else:
+        lines.append(("text", cand.get("research_note") or "아직 공식 발표 원문을 연결하지 않았습니다."))
+    interpreted = [x for x in context.get("claims") or [] if x.get("kind") == "interpretation"][:2]
+    if interpreted:
+        lines.append(("section", "이익으로 이어질 수 있는 경로 (해석)"))
+        lines += [claim_line(x, "해석") for x in interpreted]
+    lines.append(("section", "사람이 확인한 사업 근거"))
     human = [(f, cand["explanations"][f]["statements"]) for f in ("earnings_path", "persistence_evidence")]
     if any(s for _, s in human):
         for field, statements in human:
@@ -768,17 +850,24 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                               "30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다."))
     if not gap:
         lines.append(("item", "시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다."))
+    for item in (context.get("limitations") or [])[:2]:
+        lines.append(claim_line({**item, "kind": "fact"}, "반대 근거·한계"))
+    if context.get("link"):
+        lines.append(("item", LINK_LABELS.get(context["link"], context["link"])))
     if cand.get("review_note"):
         lines.append(("warn", cand["review_note"]))
     lines.append(("section", "다음 확인"))
     checks = cand["explanations"]["next_check"]["statements"]
     if checks:
         lines += [("item", s["text"]) for s in checks]
+    elif context.get("next_check"):
+        lines.append(("item", f"{context['next_check'][0]} (자동 제안)"))
     else:
         lines.append(("item", "최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인"))
     lines.append(("section", "출처"))
     for s in cand["sources"]:
-        lines.append(("link", f"{s['title']}|{s['url']}|{(s.get('observed_at') or '')[:10]}"))
+        seen = f"제출 {s['filed_at']}" if s.get("filed_at") else f"관측 {(s.get('observed_at') or '')[:10]}"
+        lines.append(("link", f"{s['title']}|{s['url']}|{seen}"))
     status = cand["tracking"]["status"]
     if status in ("tracked", "entity_tracked"):
         lines.append(("command", f"/history {cand['identity']['ticker']}"))
@@ -801,7 +890,10 @@ def telegram_card(cand: dict, stale: list[str] | None = None) -> str:
         elif kind == "link":
             title, url, observed = text.split("|")
             if safe_url(url):
-                out.append(f'· <a href="{esc(url)}">{esc(title)}</a> (관측 {esc(observed)})')
+                out.append(f'· <a href="{esc(url)}">{esc(title)}</a> ({esc(observed)})')
+        elif kind == "claim":
+            item = json.loads(text)
+            out.append(f"· [{esc(item['label'])}] {esc(item['text'])} ({esc(item['title'])}, 제출 {esc(item['filed'])})")
         elif kind == "source_text":
             continue
         elif kind == "command":
@@ -828,7 +920,12 @@ def markdown_card(cand: dict, stale: list[str] | None = None) -> str:
         elif kind == "link":
             title, url, observed = text.split("|")
             if safe_url(url):
-                out.append(f"- [{title}]({url}) (관측 {observed})")
+                out.append(f"- [{title}]({url}) ({observed})")
+        elif kind == "claim":
+            item = json.loads(text)
+            source = f"[{item['title']}]({item['url']})" if safe_url(item.get("url")) else item["title"]
+            out.append(f"- [{item['label']}] {item['text']} — “{item['quote']}” ({source}, 제출 {item['filed']}, "
+                       f"기간 {item.get('period') or '미표시'})")
         elif kind == "source_text":
             out.append(f"<small>원문(영문): {text_md}</small>")
         elif kind == "command":
@@ -1013,9 +1110,10 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
             report["translation"] = translate(rows, cache, c.load_dotenv_value("GEMINI_API_KEY"), cfg, call, rejects)
             c.atomic_json(translation_path(), cache)
             c.atomic_json(rejection_path(), rejects)
+        contexts, research = context_inputs()
         cands = build(snapshot, ref, c.read_json(c.ROOT / "config" / "entities.json", {}),
                       c.read_json(evidence_path(), {}), cache,
-                      c.read_live_rows("investment_review_log"), policy_version())
+                      c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research)
         report["new_versions"] = store_versions(cands)
         report["new_observations"] = store_observations(cands)
         earnings = snapshot.get("stages", {}).get("earnings", {})
@@ -1052,15 +1150,59 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
     return report
 
 
+def context_inputs() -> tuple[dict, dict]:
+    """(drafts with their document titles, research state) as cards and approval both read them."""
+    import candidate_context
+    import company_filings
+    research = candidate_context.load_state()["candidates"]
+    contexts = {}
+    for cid, entry in research.items():
+        record = c.read_json(candidate_context.history_dir() / f"{entry.get('context_id')}.json", None) \
+            if entry.get("context_id") else None
+        if not record:
+            continue
+        docs = []
+        for document_id in record["document_ids"]:
+            doc = company_filings.load_document(document_id)
+            if doc:
+                docs.append({k: doc.get(k) for k in ("document_id", "title", "url", "filed_at", "observed_at",
+                                                      "form", "document_type")})
+        contexts[cid] = {**record, "documents": docs}
+    return contexts, research
+
+
+def review_events_dir() -> Path:
+    return c.DATA_DIR / "candidate_review_events"
+
+
+def record_review(event: str, cid: str, version: str, actor: str, **details) -> dict:
+    """Append-only: approvals and revocations are separate from market observations."""
+    # Microseconds: an approval and a revocation in the same second must keep their order.
+    record = {"event": event, "candidate_id": cid, "candidate_version": version, "actor": actor,
+              "at": datetime.now(timezone.utc).isoformat(timespec="microseconds"), **details}
+    record["review_event_id"] = "RE-" + digest(record)[:16].upper()
+    c.atomic_json(review_events_dir() / f"{record['review_event_id']}.json", record)
+    return record
+
+
+def review_state(cid: str, version: str, as_of: str | None = None) -> str | None:
+    """'approved', 'revoked' or None for one version, as it stood at as_of (default: now)."""
+    events = [c.read_json(p, {}) for p in review_events_dir().glob("RE-*.json")]
+    events = sorted((e for e in events if e.get("candidate_id") == cid and e.get("candidate_version") == version
+                     and (as_of is None or e.get("at", "") <= as_of)), key=lambda e: e["at"])
+    return events[-1]["event"] if events else None
+
+
 def recompute(cid: str, index: dict) -> dict | None:
-    """The card rebuilt from the index's snapshot with today's evidence, ledger and translations."""
+    """The card rebuilt from the index's snapshot with today's evidence, ledger, translations and drafts."""
     ref = index.get("source_snapshot") or {}
     path = c.ROOT / ref.get("path", "")
     if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != ref.get("sha256"):
         raise ValueError("source snapshot missing or changed; regenerate cards first")
+    contexts, research = context_inputs()
     cands = build(read_snapshot(path), ref, c.read_json(c.ROOT / "config" / "entities.json", {}),
                   c.read_json(evidence_path(), {}), c.read_json(translation_path(), {}),
-                  c.read_live_rows("investment_review_log"), policy_version())
+                  c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research)
     return next((x for x in cands if x["candidate_id"] == cid), None)
 
 
@@ -1094,7 +1236,62 @@ def approve(cid: str, approver: str) -> str:
                                  "evidence_sha256": evidence_hash(evidence[cid]),
                                  "observation_id": shown.get("observation_id")}
     c.atomic_json(evidence_path(), evidence)
+    record_review("approved", cid, current["candidate_version"], approver.strip(),
+                  evidence_sha256=evidence[cid]["approval"]["evidence_sha256"],
+                  observation_id=shown.get("observation_id"))
     return current["candidate_version"]
+
+
+def revoke(cid: str, actor: str, reason: str) -> str:
+    cid = normalize_id(cid) or ""
+    evidence = c.read_json(evidence_path(), {})
+    approval = (evidence.get(cid) or {}).get("approval")
+    if not approval:
+        raise ValueError("no approval to revoke")
+    evidence[cid].pop("approval")
+    c.atomic_json(evidence_path(), evidence)
+    record_review("revoked", cid, approval["candidate_version"], actor, reason=reason)
+    return approval["candidate_version"]
+
+
+def import_context(cid: str) -> str:
+    """Copy the current automatic draft into candidate_evidence for a person to check.
+
+    Never copies or creates an approval, never overwrites an existing human entry, and
+    leaves fields the draft cannot support empty. The imported entry is marked
+    needs_evidence until a person compares it with the source and clears the mark.
+    """
+    cid = normalize_id(cid) or ""
+    evidence = c.read_json(evidence_path(), {})
+    if cid in evidence:
+        raise ValueError("candidate already has human evidence; merge by hand")
+    contexts, _ = context_inputs()
+    context = contexts.get(cid)
+    if not context or context.get("context_status") != "draft_ready":
+        raise ValueError("no automatic draft with supported claims for this candidate")
+    docs = {d["document_id"]: d for d in context["documents"]}
+    stated = [x for x in context["claims"] if x["kind"] in ("fact", "guidance")]
+
+    def statement(item, kind=None):
+        return {"text": item["text_ko"], "kind": kind or item.get("kind", "fact"), "source_ids": [item["document_id"]]}
+
+    quotes = {}
+    for item in context["claims"] + context["limitations"]:
+        quotes.setdefault(item["document_id"], item.get("quote"))
+    evidence[cid] = {
+        "explanations": {"earnings_path": [statement(x) for x in stated], "persistence_evidence": [],
+                         "market_expectation_gap": [],
+                         "falsification": [statement(x, "fact") for x in context["limitations"]],
+                         "next_check": [{"text": t, "kind": "interpretation", "source_ids": []} for t in context["next_check"]]},
+        "sources": [{"id": d, "title": docs[d]["title"], "provider": "SEC EDGAR", "url": docs[d]["url"],
+                     "published_at": None, "observed_at": (docs[d]["observed_at"] or "")[:10], "quote": quotes.get(d)}
+                    for d in quotes if d in docs],
+        "imported_from": context["context_id"], "imported_at": c.utc_now(),
+        "review_status": "needs_evidence",
+        "review_reason": "자동 초안을 가져옴: 원문 대조 후 빈 항목을 채우고 이 표시를 지워야 승인 가능",
+    }
+    c.atomic_json(evidence_path(), evidence)
+    return context["context_id"]
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1105,9 +1302,21 @@ def main(argv: list[str] | None = None) -> int:
     ap = sub.add_parser("approve", help="approve the current version after evidence is complete")
     ap.add_argument("candidate_id")
     ap.add_argument("--by", required=True)
+    rv = sub.add_parser("revoke", help="withdraw an approval (recorded as a review event)")
+    rv.add_argument("candidate_id")
+    rv.add_argument("--by", required=True)
+    rv.add_argument("--reason", required=True)
+    im = sub.add_parser("import-context", help="copy the automatic draft into candidate_evidence (no approval)")
+    im.add_argument("candidate_id")
     args = parser.parse_args(argv)
     if args.action == "approve":
         print(approve(args.candidate_id, args.by))
+        return 0
+    if args.action == "revoke":
+        print(revoke(args.candidate_id, args.by, args.reason))
+        return 0
+    if args.action == "import-context":
+        print(import_context(args.candidate_id))
         return 0
     try:
         report = generate(translate_now=not getattr(args, "no_translate", False))

@@ -73,7 +73,7 @@ STEPS: dict[str, Step] = {
     "screen": Step(),
     "prices": Step(inputs=("@tracking",)),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
-    "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v2"),
+    "cards": Step(inputs=("screen", "@tracking", "@evidence"), version="cards-v3"),
     # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.
     "alerts": Step(requires=("cards",), inputs=("extract",)),
     # research_journal --capture-only reads research case files and metric_log; tracking changes

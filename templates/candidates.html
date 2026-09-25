@@ -63,6 +63,11 @@ function render(item){
   if(kind==='section'){body.appendChild(el('h3',null,text));ul=el('ul');body.appendChild(ul);continue}
   if(kind==='warn'){body.appendChild(el('div','warn',text));continue}
   if(kind==='source_text'){body.appendChild(el('p','muted small','원문(영문): '+text));continue}
+  if(kind==='claim'){const c2=JSON.parse(text),li=el('li');li.appendChild(el('b',null,`[${c2.label}] `));
+   li.appendChild(document.createTextNode(c2.text));const d=el('details');d.appendChild(el('summary','muted small','원문 인용·출처'));
+   d.appendChild(el('p','small','“'+(c2.quote||'')+'”'));const src=el('p','muted small');const href=safeLink(c2.url);
+   if(href){const a=el('a',null,c2.title||'문서');a.href=href;a.rel='noopener noreferrer';a.target='_blank';src.appendChild(a)}else src.appendChild(document.createTextNode(c2.title||''));
+   src.appendChild(document.createTextNode(` · 제출 ${c2.filed||'-'} · 기간 ${c2.period||'미표시'}`));d.appendChild(src);li.appendChild(d);(ul||body).appendChild(li);continue}
   if(kind==='command'){const box=el('div','cmd');box.appendChild(el('span',null,text.startsWith('/history')?'관측 이력:':'추적 등록(텔레그램):'));
    box.appendChild(el('code',null,text));const b=el('button',null,'명령 복사');
    b.onclick=(ev)=>{ev.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(text).then(()=>{b.textContent='복사됨 · 텔레그램에 붙여 넣기'},()=>{b.textContent='복사 실패'})};
