@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "days": {
+    "2026-09-25": {
+      "runs": [
+        {
+          "run_id": "36080693982-1",
+          "mode": "auto",
+          "event": "workflow_dispatch",
+          "planned": [
+            "collect",
+            "extract",
+            "eps",
+            "notify",
+            "quarterly",
+            "screen",
+            "prices",
+            "views",
+            "returns"
+          ],
+          "started_at": "2026-09-25T01:08:27+00:00",
+          "finished_at": "2026-09-25T01:23:04+00:00",
+          "code_version": "979287c298fc",
+          "policy_hash": "05a798c7c78b"
+        }
+      ],
+      "steps": {
+        "collect": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:08:36+00:00",
+          "started_at": "2026-09-25T01:08:28+00:00",
+          "finished_at": "2026-09-25T01:08:36+00:00"
+        },
+        "extract": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:08:37+00:00",
+          "started_at": "2026-09-25T01:08:37+00:00",
+          "finished_at": "2026-09-25T01:08:37+00:00"
+        },
+        "eps": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:08:38+00:00",
+          "started_at": "2026-09-25T01:08:37+00:00",
+          "finished_at": "2026-09-25T01:08:38+00:00"
+        },
+        "notify": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:08:38+00:00",
+          "started_at": "2026-09-25T01:08:38+00:00",
+          "finished_at": "2026-09-25T01:08:38+00:00"
+        },
+        "quarterly": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:08:40+00:00",
+          "started_at": "2026-09-25T01:08:38+00:00",
+          "finished_at": "2026-09-25T01:08:40+00:00"
+        },
+        "screen": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:23:02+00:00",
+          "started_at": "2026-09-25T01:08:40+00:00",
+          "finished_at": "2026-09-25T01:23:02+00:00"
+        },
+        "prices": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:23:03+00:00",
+          "started_at": "2026-09-25T01:23:02+00:00",
+          "finished_at": "2026-09-25T01:23:03+00:00"
+        },
+        "views": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:23:03+00:00",
+          "started_at": "2026-09-25T01:23:03+00:00",
+          "finished_at": "2026-09-25T01:23:03+00:00"
+        },
+        "returns": {
+          "status": "success",
+          "run_id": "36080693982-1",
+          "exit_code": 0,
+          "last_success_at": "2026-09-25T01:23:03+00:00",
+          "started_at": "2026-09-25T01:23:03+00:00",
+          "finished_at": "2026-09-25T01:23:03+00:00"
+        }
+      }
+    }
+  }
+}
