@@ -199,6 +199,36 @@ class SnapshotChoiceTest(unittest.TestCase):
             self.assertEqual(k.choose_snapshot([], NOW, 36)["stale"], ["no_valid_screen"])
 
 
+class ScreenAttemptTest(unittest.TestCase):
+    """F5: a screen attempt that left no snapshot still marks the cards stale."""
+
+    def state(self, status, run_id="2-1", planned_by=None, day="2026-09-25"):
+        entry = {"execution_status": status, "run_id": run_id, "quality_status": "unknown"}
+        if planned_by:
+            entry["planned_by"] = planned_by
+        return {"days": {"2026-09-24": {"steps": {"screen": {"execution_status": "success", "run_id": "1-1"}}},
+                         day: {"steps": {"screen": entry}}}}
+
+    def test_timeout_or_kill_without_snapshot_is_stale(self):
+        self.assertEqual(k.screen_attempt_stale(self.state("started"), "1-1"), ["latest_screen_started"])
+        self.assertEqual(k.screen_attempt_stale(self.state("failed"), "1-1"), ["latest_screen_failed"])
+        self.assertEqual(k.screen_attempt_stale(self.state("blocked"), "1-1"), ["latest_screen_blocked"])
+
+    def test_plan_that_stopped_before_screen_is_stale(self):
+        self.assertEqual(k.screen_attempt_stale(self.state("pending", run_id="1-1", planned_by="3-1"), "1-1"),
+                         ["latest_screen_pending"])
+
+    def test_later_success_in_use_clears_it(self):
+        self.assertEqual(k.screen_attempt_stale(self.state("success", run_id="4-1"), "4-1"), [])
+        self.assertEqual(k.screen_attempt_stale(self.state("success", run_id="4-1"), "1-1"),
+                         ["latest_screen_result_missing"])
+
+    def test_schema_1_success_with_unknown_quality_is_not_a_failure(self):
+        old = {"days": {"2026-09-24": {"steps": {"screen": {"status": "success", "run_id": "1-1"}}}}}
+        self.assertEqual(k.screen_attempt_stale(old, "1-1"), [])
+        self.assertEqual(k.screen_attempt_stale({}, "1-1"), [])
+
+
 class TranslationTest(unittest.TestCase):
     def test_invented_numbers_or_non_korean_text_are_rejected(self):
         source = "Makes chips for data centers."
@@ -265,6 +295,31 @@ class CandidateFixture(unittest.TestCase):
 
     def update(self, update_id, text, chat="allowed"):
         return {"update_id": update_id, "message": {"chat": {"id": chat}, "text": text}}
+
+
+class StaleWithoutSnapshotTest(CandidateFixture):
+    def record_screen(self, status, run_id, day="2026-09-25"):
+        state = c.read_json(c.DATA_DIR / "daily_runs.json", {"days": {}})
+        state["days"].setdefault(day, {"runs": [], "steps": {}})["steps"]["screen"] = {
+            "execution_status": status, "run_id": run_id}
+        c.atomic_json(c.DATA_DIR / "daily_runs.json", state)
+
+    def test_killed_screen_marks_cards_stale_and_blocks_alerts_until_a_new_success(self):
+        self.record_screen("started", "9-1")  # the only gz is the earlier success 1-1
+        k.generate(now=NOW, translate_now=False)
+        self.assertEqual(k.load_index()["stale"], ["latest_screen_started"])
+        self.assertIn("마지막 유효 관측", telegram_cmd.handle_command("/screen")[0])
+        import candidate_alerts
+        self.assertEqual(candidate_alerts.screen_items(k.load_index()), ([], []))
+        # Re-rendering later with the same data does not make it fresh.
+        k.generate(now=NOW + timedelta(hours=1), translate_now=False)
+        self.assertEqual(k.load_index()["stale"], ["latest_screen_started"])
+        # A new successful screen whose snapshot is in use clears it.
+        with gzip.open(c.DATA_DIR / "revision_screen" / "20260925T030000Z_9-2.json.gz", "wt", encoding="utf-8") as h:
+            json.dump(snapshot(run_id="9-2", finished="2026-09-25T03:10:00+00:00"), h)
+        self.record_screen("success", "9-2")
+        k.generate(now=NOW + timedelta(hours=2), translate_now=False)
+        self.assertEqual(k.load_index()["stale"], [])
 
 
 class CommandTest(CandidateFixture):

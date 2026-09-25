@@ -160,6 +160,27 @@ def choose_snapshot(paths: list[Path], now: datetime, stale_hours: float) -> dic
     return {"valid": valid, "latest_attempt": latest_attempt, "stale": stale}
 
 
+def screen_attempt_stale(state: dict, valid_run_id: str | None) -> list[str]:
+    """A newer screen attempt with no usable result, from the daily run record.
+
+    Covers attempts that never wrote a snapshot (timeout, killed runner, a plan that
+    invalidated screen and stopped). A later success whose snapshot is the one in use
+    clears it. Only execution status counts: an 'unknown' quality from schema 1 is not a failure.
+    """
+    days = [day for day, record in sorted(state.get("days", {}).items(), reverse=True)
+            if "screen" in record.get("steps", {})]
+    if not days:
+        return []
+    entry = state["days"][days[0]]["steps"]["screen"]
+    status = entry.get("execution_status") or entry.get("status")
+    attempt = entry.get("planned_by") if status == "pending" else entry.get("run_id")
+    if status == "success":
+        return [] if attempt == valid_run_id or valid_run_id is None else ["latest_screen_result_missing"]
+    if attempt == valid_run_id:
+        return []
+    return [f"latest_screen_{status or 'unknown'}"]
+
+
 # ------------------------------------------------------------------ ordering
 
 def display_order(derived: dict) -> list[tuple[str, list[dict]]]:
@@ -855,6 +876,11 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
     now = now or datetime.now(timezone.utc)
     cfg = settings()
     choice = choose_snapshot(list(screen_revisions.SCREEN_DIR.glob("*.json.gz")), now, cfg["stale_hours"])
+    valid_run = choice["valid"]["snapshot"]["run"].get("run_id") if choice["valid"] else None
+    # A screen attempt that died without writing a snapshot is only visible in the daily record.
+    for reason in screen_attempt_stale(c.read_json(c.DATA_DIR / "daily_runs.json", {}), valid_run):
+        if reason not in choice["stale"]:
+            choice["stale"].append(reason)
     index: dict[str, Any] = {"generated_at": now.isoformat(timespec="seconds"), "generator_version": GENERATOR_VERSION,
                              "thesis_key": THESIS_KEY, "stale": choice["stale"], "candidates": []}
     report: dict[str, Any] = {"stale": choice["stale"]}
