@@ -109,3 +109,5 @@ GitHub 예약 실행에는 지연이 발생할 수 있다. 9월 14일 일간 실
 `python scripts/research_journal.py`는 현재 가설 개정을 고정하고 실제 실적과 비교한 outcomes 보고서를 생성합니다(`--capture-only`는 고정만, `--render-only`는 보고서만. 일간 운영은 baseline 단계에서 고정하고 views 단계에서 보고서를 만듭니다). 일간 운영에도 연결되어 있으며 `python scripts/gen_report.py quality`와 텔레그램에 평가 상태가 표시됩니다. 저장소는 `data/processed/research_journal/`입니다. 재실행으로 기준 관측을 바꾸지 않으며 미래 실적이 없으면 대기합니다.
 
 [평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 2026-09-24 구현했습니다. `python scripts/research_returns.py`로 실행합니다.
+
+날짜 회귀시험: `python tests/run_at_date.py 2026-09-28T03:00:00+00:00`처럼 시각을 주면 테스트 전용 가상 시계로 전체 테스트를 그 시각에 실행한다(실행 전 시계 읽기 지점이 그 시각을 쓰는지 확인). CI `date-scenarios`가 월요일·월초·연말 자정·윤일 등 7개 시각을 push마다 돌린다. 배경: [2026-09-26 장애 기록](docs/incident_2026-09-26_date_test.md).

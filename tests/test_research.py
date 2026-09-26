@@ -126,11 +126,12 @@ class ResearchTests(unittest.TestCase):
 
     def test_yahoo_annual_non_gaap_observations_are_separate_from_fmp(self):
         target = {"ticker": "CRDO", "entity_id": "NASDAQ:CRDO", "currency": "USD"}
-        rows = collect_yahoo.parse_estimates(self.yahoo_page(), target)
+        with patch.object(c, "today", return_value="2026-09-25"):  # the page's fiscal years are fixed dates
+            rows = collect_yahoo.parse_estimates(self.yahoo_page(), target)
         self.assertEqual(len(rows), 2)
         self.assertEqual(rows[0]["data"]["회계기준"], "non-GAAP")
         self.assertEqual(rows[0]["data"]["출처"], "Yahoo Finance non-GAAP")
-        self.assertEqual(rows[0]["data"]["as_of"], c.today())
+        self.assertEqual(rows[0]["data"]["as_of"], "2026-09-25")
 
     def test_yahoo_refuses_wrong_entity_currency_or_conflicting_values(self):
         target = {"ticker": "CRDO", "entity_id": "NASDAQ:CRDO", "currency": "USD"}
@@ -342,7 +343,9 @@ class ResearchTests(unittest.TestCase):
             self.put_metric(value="6")
 
     def test_unchanged_observation_preserves_up_events(self):
-        rows = [self.metric("5", 3), self.metric("6", 2), self.metric("7", 1), self.metric("7", 0)]
+        # Fixed dates inside one month: relative days crossed a month end on the 2nd and 3rd of each month.
+        rows = [self.metric("5", as_of="2026-09-10"), self.metric("6", as_of="2026-09-11"),
+                self.metric("7", as_of="2026-09-12"), self.metric("7", as_of="2026-09-13")]
         stats = metrics.revision_stats(rows)
         self.assertEqual(stats["up_events"], 2)
         self.assertEqual(stats["up_months"], 0)
@@ -355,7 +358,8 @@ class ResearchTests(unittest.TestCase):
     def test_fmp_uses_nearest_two_periods_and_no_cross_fy_baseline(self):
         target = {"ticker": "EXM", "entity_id": "CIK:1", "currency": "USD"}
         records = [{"date": d, "epsAvg": v} for d, v in [("2030-12-31", 9), ("2028-12-31", 7), ("2027-12-31", 5), ("2020-12-31", 1)]]
-        rows = collect_eps.build_metrics(target, records)
+        # The observation date is fixed: the fiscal periods below are fixed dates too.
+        rows = collect_eps.build_metrics(target, records, as_of="2026-09-25")
         self.assertEqual([r["data"]["period_end"] for r in rows], ["2027-12-31", "2028-12-31"])
         self.assertNotIn("이전값", rows[0]["data"])
 

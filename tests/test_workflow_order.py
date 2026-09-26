@@ -90,7 +90,10 @@ class TrackThenPlanTest(CandidateFixture):
         self.assertIn("이번 일간 실행에서", reply)
         env = self.plan_env("auto", "700")
         planned = {name for name in d.STEPS if env[d.env_name(name)] == "true"}
-        self.assertEqual(planned, {"eps", "quarterly", "prices", "cards", "alerts", "views"})
+        expected = {"eps", "quarterly", "prices", "cards", "alerts", "views"}
+        if "weekly_report" in d.required_steps(self.day):
+            expected.add("weekly_report")  # on a KST Monday the weekly report reads the redone views
+        self.assertEqual(planned, expected)
         import collect_eps
         self.assertIn("AAA", [t["ticker"] for t in collect_eps.load_targets()])
 
