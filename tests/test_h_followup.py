@@ -168,6 +168,24 @@ class RealOutputTest(unittest.TestCase):
         self.assertEqual(len(check(pbf, metric="net income", figures=["$915.0 million"],
                                    period="second quarter 2026")["claims"]), 1)
 
+    def test_pbf_full_sentence_keeps_each_figure_with_its_own_metric(self):
+        """I3: the real PBF sentence has both $915.0 million (net income) and $906.4 million (attributable)."""
+        pbf = ("The company reported second quarter 2026 net income of $915.0 million and net income attributable "
+               "to PBF Energy Inc. of $906.4 million or $7.54 per share.")
+        attributable = "net income attributable to PBF Energy Inc."
+        issuer = {"ticker": "PBF", "name": "PBF Energy"}
+        outcome = {(metric, figure): self.reason(check(pbf, issuer=issuer, metric=metric, figures=[figure],
+                                                       period="second quarter 2026"))
+                   for metric in ("net income", attributable)
+                   for figure in ("$915.0 million", "$906.4 million", "$7.54 per share")}
+        self.assertEqual(outcome, {
+            ("net income", "$915.0 million"): None,
+            ("net income", "$906.4 million"): "figure_belongs_to_another_metric",
+            ("net income", "$7.54 per share"): "figure_belongs_to_another_metric",
+            (attributable, "$915.0 million"): "figure_belongs_to_another_metric",  # accepted before v4
+            (attributable, "$906.4 million"): None,
+            (attributable, "$7.54 per share"): None})
+
     def test_grammatical_parentheses_are_not_a_sign(self):
         quote = "Common stock dividends ($0.255 per share) were paid in 2026."
         self.assertEqual(len(check(quote, metric="dividends", figures=["$0.255 per share"], period="2026")["claims"]), 1)

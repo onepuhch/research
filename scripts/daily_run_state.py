@@ -76,7 +76,7 @@ STEPS: dict[str, Step] = {
     "prices": Step(inputs=("@tracking",)),
     # Official filings and drafts for the screen's candidates. It keeps its own limits and retry
     # times (24 h after failures, 7 days after 'nothing relevant'), so no generic partial top-up.
-    "context": Step(inputs=("screen",), version="context-v3", partial_top_up=False),
+    "context": Step(inputs=("screen",), version="context-v4", partial_top_up=False),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
     "cards": Step(inputs=("screen", "context", "@tracking", "@evidence"), version="cards-v4"),
     # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.

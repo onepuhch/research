@@ -295,7 +295,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v3"
-PARSER_VERSION = "context-check-v3"
+PARSER_VERSION = "context-check-v4"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -454,13 +454,16 @@ def metric_problem(metric: str, figures: list[str], quote_raw: str) -> str | Non
     names = {squash(x) for x in METRIC_KO} | {m}
     mentions = [(x.start(), x.end(), name) for name in names
                 for x in re.finditer(r"(?<![a-z])" + re.escape(name) + r"(?![a-z])", q)]
+    claimed = [(s, e) for s, e, name in mentions if name == m]
     for figure in figures:
         at = q.find(squash(figure))
         if at < 0 or not mentions:
             continue
         # Nearest mention by distance; at a tie the longer name wins ('adjusted ebitda' over 'ebitda').
         s, e, name = min(mentions, key=lambda x: (min(abs(x[0] - at), abs(x[1] - at)), -len(x[2])))
-        if name != m and not (name in m and len(name) < len(m)):
+        # A shorter name counts as the claimed metric only inside a mention of it: 'revenue' within
+        # 'total company revenue', never a separate 'net income' next to 'net income attributable to ...'.
+        if name != m and not any(cs <= s and e <= ce for cs, ce in claimed):
             return "figure_belongs_to_another_metric"
         # 'operating income' inside 'adjusted operating income' is another metric unless claimed so.
         qualifier = re.search(r"(adjusted|non-gaap|organic|core|segment|pro forma)\s+$", q[max(0, s - 14):s])
