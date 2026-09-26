@@ -3,6 +3,7 @@
 
     prepare  build the experiment from a fixed copy of the documents (no network)
     run      ask the local model, loopback only, and keep every raw answer (resumable)
+    revalidate  re-check the kept answers with the current validator into a new folder (no network)
     report   score the kept answers against the review labels (no network)
 
 The pipeline's pure functions (relevant_blocks, draft_prompt, validate_draft) are reused; nothing
@@ -100,22 +101,34 @@ def answer_schema() -> dict:
         "required": ["claims", "limitations", "next_check", "link"]}
 
 
+SCHEMA_TYPES = {"object": dict, "array": list, "string": str}
+
+
+def schema_errors(value, schema: dict, path: str = "$") -> list[str]:
+    """Every place the parsed answer breaks answer_schema: type, enum, required field, maxItems
+    (no content check). JSON syntax is a separate question, answered before this."""
+    kind = schema.get("type")
+    if kind and not isinstance(value, SCHEMA_TYPES[kind]):
+        return [f"{path}:type"]
+    if "enum" in schema and value not in schema["enum"]:
+        return [f"{path}:enum"]
+    errors = []
+    if kind == "object":
+        errors += [f"{path}.{k}:required" for k in schema.get("required", []) if k not in value]
+        for key, sub in schema.get("properties", {}).items():
+            if key in value:
+                errors += schema_errors(value[key], sub, f"{path}.{key}")
+    if kind == "array":
+        if "maxItems" in schema and len(value) > schema["maxItems"]:
+            errors.append(f"{path}:maxItems")
+        for i, item in enumerate(value):
+            errors += schema_errors(item, schema.get("items", {}), f"{path}[{i}]")
+    return errors
+
+
 def schema_problem(answer) -> str | None:
-    """Shape check of the parsed answer against answer_schema (no content check)."""
-    if not isinstance(answer, dict):
-        return "not_an_object"
-    for key in ("claims", "limitations", "next_check", "link"):
-        if key not in answer:
-            return f"missing_{key}"
-    if not all(isinstance(answer[k], list) for k in ("claims", "limitations", "next_check")):
-        return "not_a_list"
-    if answer["link"] not in ctx.LINKS:
-        return "bad_link"
-    required = answer_schema()["properties"]["claims"]["items"]["required"]
-    for item in answer["claims"]:
-        if not isinstance(item, dict) or any(k not in item for k in required):
-            return "claim_fields"
-    return None
+    errors = schema_errors(answer, answer_schema())
+    return errors[0] if errors else None
 
 
 # ------------------------------------------------------------------ prepare (no network)
@@ -288,8 +301,16 @@ def classify(status: int | None, raw: bytes, error: Exception | None) -> tuple[s
 
 
 def result_key(case: dict, info: dict, options: dict, schema_sha: str) -> str:
+    """The inference key: what the model saw and how it was asked. The validator is not part of it,
+    so a new validator re-checks kept answers (revalidate) instead of asking the model again."""
     return sha256(canonical({"input": case["input_sha256"], "prompt": case["prompt_sha256"], "digest": info["digest"],
-                             "options": options, "schema": schema_sha, "parser": ctx.PARSER_VERSION}))
+                             "options": options, "schema": schema_sha}))
+
+
+def legacy_key(case: dict, info: dict, options: dict, schema_sha: str, parser: str | None) -> str:
+    """J3 records keyed the inference together with the validator of the day."""
+    return sha256(canonical({"input": case["input_sha256"], "prompt": case["prompt_sha256"], "digest": info["digest"],
+                             "options": options, "schema": schema_sha, "parser": parser}))
 
 
 def ledger(experiment: Path) -> list[dict]:
@@ -325,10 +346,10 @@ def run_case(client: Loopback, case: dict, model: str, options: dict, schema: di
         except (json.JSONDecodeError, TypeError):
             result["failure"] = "bad_json"
             return result
-        problem = schema_problem(answer)
         result["answer"] = answer
-        if problem:
-            result.update(failure="schema_error", schema_problem=problem)
+        result["schema_errors"] = schema_errors(answer, answer_schema())
+        if not isinstance(answer, dict):
+            result["failure"] = "schema_error"
             return result
         result["validation"] = ctx.validate_draft(json.loads(json.dumps(answer)), case["blocks"], case["issuer"])
     return result
@@ -365,8 +386,16 @@ def run(experiment: Path, model: str, endpoint: str, label: str, cases: list[str
             write_json(path, {"case_id": case_id, "status": case["status"], "reason": case.get("reason")})
             continue
         key = result_key(case, info, options, meta["schema_sha256"])
-        if resume and path.exists() and read_json(path).get("key") == key:
-            summary["skipped"] += 1
+        if path.exists():
+            # A kept answer is never overwritten: the same inference is skipped, another setting
+            # under the same label is refused and needs a new label.
+            old = read_json(path)
+            same = old.get("inference_key") == key or old.get("key") == legacy_key(
+                case, info, options, meta["schema_sha256"], old.get("parser_version"))
+            if same:
+                summary["skipped"] += 1
+            else:
+                summary.setdefault("kept_other_setting", []).append(case_id)
             continue
         done = ledger(experiment)
         if len(done) >= max_requests:
@@ -376,7 +405,7 @@ def run(experiment: Path, model: str, endpoint: str, label: str, cases: list[str
             summary["stopped"] = "max_seconds"
             break
         result = run_case(client, case, model, options, meta["schema"], timeout)
-        record = {"case_id": case_id, "label": label, "key": key, "model": model, "digest": info["digest"],
+        record = {"case_id": case_id, "label": label, "inference_key": key, "model": model, "digest": info["digest"],
                   "options": options, "parser_version": ctx.PARSER_VERSION, "input_sha256": case["input_sha256"],
                   "prompt_sha256": case["prompt_sha256"], "finished_at": now(), **result}
         write_json(path, record)
@@ -388,6 +417,47 @@ def run(experiment: Path, model: str, endpoint: str, label: str, cases: list[str
         if result["failure"] in ("timeout", "oom"):
             unload(client, model)
     return summary
+
+
+# ------------------------------------------------------------------ revalidate (no network)
+
+SCORING_VERSION = "j3-score-v2"
+
+
+def revalidate(experiment: Path, labels: tuple[str, ...] = ("final", "stability")) -> Path:
+    """Re-check the kept answers with the current validator, without asking any model. Results go
+    to revalidated/<validator>/<label>/, never over runs/; a version already written is kept."""
+    experiment = Path(experiment)
+    root = safe_output(experiment / "revalidated" / ctx.PARSER_VERSION)
+    written = kept = 0
+    for label in labels:
+        source = experiment / "runs" / label
+        if not source.is_dir():
+            continue
+        for path in sorted(source.glob("*.json")):
+            out = root / label / path.name
+            if out.exists():
+                kept += 1
+                continue
+            record = read_json(path)
+            if path.name == "environment.json":
+                write_json(out, record)
+                continue
+            new = {**record, "revalidation": {
+                "kind": "기존 표본에 대한 회귀 재검증", "validator": ctx.PARSER_VERSION,
+                "validator_at_run": record.get("parser_version"), "scoring_version": SCORING_VERSION,
+                "source": f"runs/{label}/{path.name}", "source_sha256": sha256(path.read_bytes()), "at": now()}}
+            if isinstance(record.get("answer"), dict) and record.get("failure") in (None, "schema_error"):
+                case = read_json(experiment / "cases" / path.name)
+                new["validation_at_run"] = record.get("validation")
+                new["validation"] = ctx.validate_draft(json.loads(json.dumps(record["answer"])), case["blocks"],
+                                                       case["issuer"])
+            write_json(out, new)
+            written += 1
+    write_json(root / "revalidation.json", {"validator": ctx.PARSER_VERSION, "labels": list(labels),
+                                            "written": written, "kept": kept, "at": now(),
+                                            "note": "no model or network request; answers are the stored ones"})
+    return root
 
 
 # ------------------------------------------------------------------ report (no network)
@@ -403,25 +473,47 @@ def metric_hit(metric: str, rule: dict) -> bool:
 
 
 def figure_hit(figures, wanted) -> bool:
-    got = {norm(f) for f in figures or []}
+    got = {norm(f) for f in figures or [] if isinstance(f, str)}
     return bool(got & {norm(f) for f in wanted})
 
 
-def match_fact(claim: dict, facts: list[dict]) -> dict | None:
+def label_check(claim: dict, facts: list[dict]) -> tuple[dict | None, list[str], bool]:
+    """(fact, wrong attributes, fully labelled). A claim is about a label fact when its metric and
+    one figure match; it is correct only if every labelled attribute matches too. A figure the
+    label does not hold leaves the claim unreviewed, never correct."""
     for fact in facts:
-        if figure_hit(claim.get("figures"), fact["figures"]) and metric_hit(claim.get("metric", ""), fact):
-            return fact
-    return None
+        if not (metric_hit(claim.get("metric") or "", fact) and figure_hit(claim.get("figures"), fact["figures"])):
+            continue
+        wrong = []
+        if fact.get("subject") and (claim.get("subject") or "issuer") != fact["subject"]:
+            wrong.append("subject")
+        if fact.get("period") and norm(fact["period"]) not in norm(claim.get("period")):
+            wrong.append("period")
+        if fact.get("kind") and (claim.get("kind") or "fact") != fact["kind"]:
+            wrong.append("kind")
+        if fact.get("gaap") and (claim.get("gaap") or "unknown") not in ("unknown", fact["gaap"]):
+            wrong.append("gaap")
+        if fact.get("direction") and claim.get("direction") not in (None, "unknown", fact["direction"]):
+            wrong.append("direction")
+        labelled = {norm(f) for f in fact["figures"]}
+        complete = all(isinstance(f, str) and norm(f) in labelled for f in claim.get("figures") or [])
+        return fact, wrong, complete
+    return None, [], False
+
+
+def mentioned(claim: dict, fact: dict) -> bool:
+    """Loose: the metric and one figure appear together (a mention rate, not a correct recall)."""
+    return metric_hit(claim.get("metric") or "", fact) and figure_hit(claim.get("figures"), fact["figures"])
 
 
 def critical_hits(claim: dict, rules: list[dict]) -> list[str]:
     hits = []
     for rule in rules:
         if rule.get("subject_rule"):
-            if claim.get("subject", "issuer") == "issuer" and figure_hit(claim.get("figures"), rule["figures"]):
+            if (claim.get("subject") or "issuer") == "issuer" and figure_hit(claim.get("figures"), rule["figures"]):
                 hits.append(rule["id"])
             continue
-        if not (metric_hit(claim.get("metric", ""), rule) and figure_hit(claim.get("figures"), rule["figures"])):
+        if not (metric_hit(claim.get("metric") or "", rule) and figure_hit(claim.get("figures"), rule["figures"])):
             continue
         if rule.get("period_terms") and not any(norm(t) in norm(claim.get("period")) for t in rule["period_terms"]):
             continue
@@ -431,59 +523,115 @@ def critical_hits(claim: dict, rules: list[dict]) -> list[str]:
     return hits
 
 
+def claim_key(item: dict) -> str:
+    figures = item.get("figures") if isinstance(item.get("figures"), list) else []
+    return f"{item.get('block_id')}|{str(item.get('metric') or '').strip()}|{'/'.join(str(f) for f in figures)}"
+
+
+def manual_verdicts(raw: dict) -> dict:
+    """{case: {key: {verdict, severity, reason, evidence, reviewed_at}}}; a bare 'correct'/'wrong'
+    string (the J3 form) keeps severity unset."""
+    out = {}
+    for case_id, entries in (raw or {}).items():
+        if case_id.startswith("_") or not isinstance(entries, dict):
+            continue
+        out[case_id] = {}
+        for key, value in entries.items():
+            if isinstance(value, str):
+                value = {"verdict": value}
+            if isinstance(value, dict) and value.get("verdict") in ("correct", "wrong"):
+                out[case_id][key] = {k: value.get(k) for k in ("verdict", "severity", "reason", "evidence",
+                                                               "reviewed_at")}
+    return out
+
+
 def block_ids(case: dict) -> set[str]:
     return {b["block_id"] for b in case.get("blocks") or []}
 
 
+def critical_of(item: dict, company: dict, facts: list[dict], manual: dict) -> list[str]:
+    """Every reason one claim is a critical error: label rules, a GAAP label against the source,
+    and a hand verdict marked critical. One claim is one error however many reasons it has."""
+    hits = critical_hits(item, company["critical"])
+    fact, wrong, _ = label_check(item, facts)
+    if fact and "gaap" in wrong:
+        hits.append(f"gaap_mislabel:{fact['id']}")
+    verdict = manual.get(claim_key(item))
+    if verdict and verdict["verdict"] == "wrong" and verdict.get("severity") == "critical":
+        hits.append(f"manual:{verdict.get('reason') or 'critical'}")
+    return hits
+
+
+def row_base(case: dict, labels: dict) -> dict:
+    company = labels["companies"].get(case.get("ticker"), {})
+    return {"case_id": case["case_id"], "group": case.get("group"), "split": case.get("split"),
+            "ticker": case.get("ticker"), "sufficient_evidence": company.get("sufficient_evidence", True)}
+
+
 def score_case(case: dict, result: dict, labels: dict, manual: dict) -> dict:
     company = labels["companies"][case["ticker"]]
+    manual = manual.get(case["case_id"], {})
     visible = block_ids(case)
-    facts = [f for f in company["facts"]]
+    facts = list(company["facts"])
     important = [f for f in facts if f.get("important")]
     shown = [f for f in important if f["block"] in visible]
     counters = [x for x in company["counter"] if x["block"] in visible]
-    out = {"case_id": case["case_id"], "group": case["group"], "split": case["split"],
-           "failure": result.get("failure"), "elapsed_s": result.get("elapsed_s"),
-           "sufficient_evidence": company.get("sufficient_evidence", True),
+    answer = result.get("answer") if isinstance(result.get("answer"), dict) else None
+    out = {**row_base(case, labels), "failure": result.get("failure"), "elapsed_s": result.get("elapsed_s"),
+           "validator": (result.get("revalidation") or {}).get("validator") or result.get("parser_version"),
+           "json_ok": answer is not None, "schema_errors": schema_errors(answer, answer_schema()) if answer else None,
            "important_in_input": len(shown), "important_not_in_input": len(important) - len(shown),
            "counter_in_input": len(counters)}
     if result.get("failure") or "validation" not in result:
         return {**out, "claims": 0, "accepted": 0, "correct": 0, "wrong_accepted": [], "unreviewed": [],
-                "critical_accepted": [], "critical_emitted": [], "recall_model": 0, "recall_accepted": 0,
-                "counter_recalled": 0, "core_draft": False, "status": None}
-    answer, checked = result["answer"], result["validation"]
-    emitted = answer.get("claims") or []
+                "critical_accepted": [], "critical_emitted": [], "critical_rejected": 0, "recall_model": 0,
+                "recall_accepted": 0, "mention_model": 0, "counter_model": 0, "counter_accepted": 0,
+                "core_draft": False, "status": None}
+    checked = result["validation"]
+    emitted = [x for x in answer.get("claims") or [] if isinstance(x, dict)]
     accepted = checked.get("claims") or []
     correct, wrong, unreviewed, crit_acc = 0, [], [], []
     for item in accepted:
-        key = f"{item.get('block_id')}|{item.get('metric')}|{'/'.join(item.get('figures') or [])}"
-        hits = critical_hits(item, company["critical"])
-        fact = match_fact(item, facts)
-        if fact and fact.get("gaap") and item.get("gaap", "unknown") not in ("unknown", fact["gaap"]):
-            hits.append(f"gaap_mislabel:{fact['id']}")  # the label kept with the claim contradicts the source
-        verdict = manual.get(case["case_id"], {}).get(key)
+        key = claim_key(item)
+        hits = critical_of(item, company, facts, manual)
+        fact, wrong_fields, complete = label_check(item, facts)
+        verdict = manual.get(key)
         if hits:
             crit_acc.append({"key": key, "rules": hits})
-            wrong.append(key)
-        elif verdict in ("correct", "wrong"):
-            (wrong.append(key) if verdict == "wrong" else None)
-            correct += verdict == "correct"
-        elif match_fact(item, facts):
+            wrong.append({"key": key, "why": hits})
+        elif verdict:
+            if verdict["verdict"] == "wrong":
+                wrong.append({"key": key, "why": [f"manual:{verdict.get('reason') or 'wrong'}"]})
+            else:
+                correct += 1
+        elif fact and wrong_fields:
+            wrong.append({"key": key, "why": [f"label:{fact['id']}:{'/'.join(wrong_fields)}"]})
+        elif fact and complete:
             correct += 1
         else:
             unreviewed.append(key)
-    crit_emit = [h for item in emitted if isinstance(item, dict) for h in critical_hits(item, company["critical"])]
-    recalled_model = {f["id"] for f in shown for item in emitted if isinstance(item, dict)
-                      and figure_hit(item.get("figures"), f["figures"]) and metric_hit(item.get("metric", ""), f)}
-    recalled_acc = {f["id"] for f in shown for item in accepted
-                    if figure_hit(item.get("figures"), f["figures"]) and metric_hit(item.get("metric", ""), f)}
-    quotes = " ".join(norm(x.get("quote")) for x in (answer.get("limitations") or []) + emitted if isinstance(x, dict))
-    counter_hit = {x["id"] for x in counters if any(norm(a) in quotes for a in x["anchors"])}
+    crit_emit = [{"key": claim_key(x), "rules": r} for x in emitted
+                 if (r := critical_of(x, company, facts, manual))]
+    accepted_keys = {x["key"] for x in crit_acc}
+    crit_rejected = len({x["key"] for x in crit_emit} - accepted_keys)
+
+    def recalled(items):
+        return {f["id"] for f in shown for item in items
+                if (m := label_check(item, [f]))[0] and not m[1] and m[2]}
+
+    def counter_found(items):
+        quotes = " ".join(norm(x.get("quote")) for x in items if isinstance(x, dict))
+        return {x["id"] for x in counters if any(norm(a) in quotes for a in x["anchors"])}
+
+    kept_limits = checked.get("limitations") or []
     return {**out, "claims": len(emitted), "accepted": len(accepted), "correct": correct, "wrong_accepted": wrong,
             "unreviewed": unreviewed, "critical_accepted": crit_acc, "critical_emitted": crit_emit,
-            "recall_model": len(recalled_model), "recall_accepted": len(recalled_acc),
-            "counter_recalled": len(counter_hit), "core_draft": checked.get("context_status") == "draft_ready",
-            "status": checked.get("context_status")}
+            "critical_rejected": crit_rejected, "recall_model": len(recalled(emitted)),
+            "recall_accepted": len(recalled(accepted)),
+            "mention_model": len({f["id"] for f in shown for item in emitted if mentioned(item, f)}),
+            "counter_model": len(counter_found((answer.get("limitations") or []) + emitted)),
+            "counter_accepted": len(counter_found(kept_limits + accepted)),
+            "core_draft": checked.get("context_status") == "draft_ready", "status": checked.get("context_status")}
 
 
 def pct(n, d):
@@ -498,27 +646,30 @@ def percentile(values, q):
 
 
 def report(experiment: Path, labels_path: Path, output: Path, label: str = "final",
-           stability_label: str = "stability") -> dict:
+           stability_label: str = "stability", runs_root: Path | None = None) -> dict:
+    """Scores the kept answers; runs_root=<experiment>/revalidated/<validator> scores a revalidation.
+    Never asks a model: a new validator is applied only by the separate revalidate step."""
     experiment = Path(experiment)
+    runs_root = Path(runs_root) if runs_root else experiment / "runs"
     labels = read_json(labels_path)
     manual_path = experiment / "manual_review.json"
-    manual = read_json(manual_path) if manual_path.exists() else {}
+    manual = manual_verdicts(read_json(manual_path) if manual_path.exists() else {})
     meta = read_json(experiment / "experiment.json")
     rows = []
     for entry in meta["cases"]:
-        path = experiment / "runs" / label / f"{entry['case_id']}.json"
+        path = runs_root / label / f"{entry['case_id']}.json"
         case = read_json(experiment / "cases" / f"{entry['case_id']}.json")
         if case["status"] != "ready":
-            rows.append({"case_id": entry["case_id"], "failure": case["status"]})
+            rows.append({**row_base(case, labels), "failure": case["status"]})  # split/group kept
             continue
         if not path.exists():
-            rows.append({"case_id": entry["case_id"], "failure": "not_run"})
+            rows.append({**row_base(case, labels), "failure": "not_run"})
             continue
         rows.append(score_case(case, read_json(path), labels, manual))
     summary = summarize(rows)
     stability = []
     for case_id in meta.get("stability_cases", []):
-        first, again = (experiment / "runs" / x / f"{case_id}.json" for x in (label, stability_label))
+        first, again = (runs_root / x / f"{case_id}.json" for x in (label, stability_label))
         if first.exists() and again.exists():
             a, b = read_json(first), read_json(again)
             case = read_json(experiment / "cases" / f"{case_id}.json")
@@ -526,8 +677,14 @@ def report(experiment: Path, labels_path: Path, output: Path, label: str = "fina
             stability.append({"case_id": case_id, "same_content": a.get("raw_content") == b.get("raw_content"),
                               "critical_accepted": scored.get("critical_accepted", []),
                               "failure": b.get("failure")})
-    env_path = experiment / "runs" / label / "environment.json"
-    result = {"summary": summary, "rows": rows, "stability": stability,
+    env_path = runs_root / label / "environment.json"
+    try:
+        runs_name = str(runs_root.relative_to(experiment))
+    except ValueError:
+        runs_name = str(runs_root)
+    result = {"scoring_version": SCORING_VERSION, "runs": runs_name,
+              "validators": sorted({r.get("validator") for r in rows if r.get("validator")}),
+              "summary": summary, "rows": rows, "stability": stability,
               "environment": read_json(env_path) if env_path.exists() else None}
     output = safe_output(output)
     write_json(output.with_suffix(".json"), result)
@@ -537,28 +694,36 @@ def report(experiment: Path, labels_path: Path, output: Path, label: str = "fina
 
 def render(result: dict) -> str:
     """Tables for the evaluation document (machine checks and hand review kept apart)."""
-    lines = ["| 구분 | 사례 | 실행 | JSON/스키마 | 모델 주장 | 기계 수용 | 원문 대조 정답 | 수용됐지만 틀림 | 미검토 | "
-             "중대 오류 수용 | 중대 오류 거부 | 핵심 초안/가능 | 근거 부족 보류 | 중요 사실 회수(모델/수용) | 반대 근거 회수 | "
-             "빈 답 | 중앙값/p95 초 |", "|" + "---|" * 17]
+    lines = [f"채점 {result['scoring_version']}, 응답 {result['runs']}, 검증기 {', '.join(result['validators'])}", "",
+             "| 구분 | 사례 | 실행 | 미실행/자료없음 | JSON | 스키마 | 모델 주장 | 기계 수용 | 원문 대조 정답 | "
+             "수용됐지만 틀림 | 미검토 | 중대 오류 수용(주장) | 중대 오류 생성/그중 거부(주장) | 핵심 초안/가능 | "
+             "근거 부족 보류 | 중요 사실 회수(모델/수용) | 언급률(참고) | 반대 근거(생성/표시) | 빈 답 | 중앙값/p95 초 |",
+             "|" + "---|" * 20]
     for name in ("eval", "eval_A", "eval_B", "dev", "all"):
         s = result["summary"][name]
         lines.append(
-            f"| {name} | {s['cases']} | {s['ran']} | {s['json_schema_ok']} ({s['json_schema_rate']}%) | {s['claims']} | "
-            f"{s['accepted']} | {s['correct']} ({s['accepted_accuracy']}%) | {s['wrong_accepted']} | {s['unreviewed']} | "
-            f"{s['critical_accepted']} | {s['critical_emitted_rejected']} | {s['core_draft']}/{s['core_draft_possible']} | "
+            f"| {name} | {s['cases']} | {s['ran']} | {s['not_run']} | {s['json_ok']} ({s['json_rate']}%) | "
+            f"{s['schema_ok']} | {s['claims']} | {s['accepted']} | {s['correct']} ({s['accepted_accuracy']}%, 검토 "
+            f"{s['reviewed']}/{s['accepted']}) | {s['wrong_accepted']} | {s['unreviewed']} | {s['critical_accepted']} | "
+            f"{s['critical_emitted']}/{s['critical_rejected']} | {s['core_draft']}/{s['core_draft_possible']} | "
             f"{s['insufficient_withheld']}/{s['insufficient_cases']} | {s['recall_model']}% / {s['recall_accepted']}% "
-            f"(입력 {s['important_in_input']}, 입력 밖 {s['important_not_in_input']}) | {s['counter_recall']}% | "
-            f"{s['empty_answers']} | {s['elapsed_median_s']} / {s['elapsed_p95_s']} |")
-    lines += ["", "| 사례 | 실패 | 초 | 주장 | 수용 | 정답 | 틀림 | 중대(수용) | 중대(생성) | 상태 |", "|" + "---|" * 10]
+            f"(입력 {s['important_in_input']}, 입력 밖 {s['important_not_in_input']}) | {s['mention_model']}% | "
+            f"{s['counter_model']}% / {s['counter_accepted']}% | {s['empty_answers']} | "
+            f"{s['elapsed_median_s']} / {s['elapsed_p95_s']} |")
+    lines += ["", "| 사례 | 구분 | 실패 | 초 | 주장 | 수용 | 정답 | 틀림 | 중대(수용) | 중대(생성) | 상태 |",
+              "|" + "---|" * 11]
     for r in result["rows"]:
-        lines.append(f"| {r['case_id']} | {r.get('failure') or '-'} | {r.get('elapsed_s')} | {r.get('claims', '-')} | "
-                     f"{r.get('accepted', '-')} | {r.get('correct', '-')} | {len(r.get('wrong_accepted') or [])} | "
-                     f"{', '.join(x['key'] + ' ' + '/'.join(x['rules']) for x in r.get('critical_accepted') or []) or '-'} | "
-                     f"{', '.join(r.get('critical_emitted') or []) or '-'} | {r.get('status') or '-'} |")
+        lines.append(f"| {r['case_id']} | {r.get('split')}/{r.get('group')} | {r.get('failure') or '-'} | "
+                     f"{r.get('elapsed_s')} | {r.get('claims', '-')} | {r.get('accepted', '-')} | {r.get('correct', '-')} | "
+                     f"{'; '.join(x['key'] + ' ' + '/'.join(x['why']) for x in r.get('wrong_accepted') or []) or '-'} | "
+                     f"{'; '.join(x['key'] + ' ' + '/'.join(x['rules']) for x in r.get('critical_accepted') or []) or '-'} | "
+                     f"{len(r.get('critical_emitted') or [])} | {r.get('status') or '-'} |")
     return "\n".join(lines) + "\n"
 
 
 def summarize(rows: list[dict]) -> dict:
+    """Failures and cases not run stay in their group's denominators: a rate is over all cases
+    that were meant to run (core drafts over every case with enough evidence)."""
     groups = {}
     for name, keep in (("all", lambda r: True), ("eval", lambda r: r.get("split") == "eval"),
                        ("dev", lambda r: r.get("split") == "dev"), ("A", lambda r: r.get("group") == "A"),
@@ -570,31 +735,37 @@ def summarize(rows: list[dict]) -> dict:
         ok = [r for r in ran if not r.get("failure")]
         accepted = sum(r.get("accepted", 0) for r in ok)
         reviewed = sum(r.get("correct", 0) + len(r.get("wrong_accepted", [])) for r in ok)
-        possible = [r for r in ok if r.get("sufficient_evidence")]
-        insufficient = [r for r in ok if not r.get("sufficient_evidence")]
+        possible = [r for r in part if r.get("sufficient_evidence")]
+        insufficient = [r for r in part if not r.get("sufficient_evidence")]
         warm = [r["elapsed_s"] for r in ok if r.get("elapsed_s") is not None]
+        shown = sum(r.get("important_in_input", 0) for r in ok)
+        counter_in = sum(r.get("counter_in_input", 0) for r in ok)
         groups[name] = {
-            "cases": len(part), "ran": len(ran), "json_schema_ok": len(ok),
-            "json_schema_rate": pct(len(ok), len(ran)),
-            "failures": {k: sum(r.get("failure") == k for r in ran) for k in FAILURES if any(r.get("failure") == k for r in ran)},
-            "claims": sum(r.get("claims", 0) for r in ok), "accepted": accepted,
+            "cases": len(part), "ran": len(ran), "not_run": len(part) - len(ran),
+            "json_ok": sum(bool(r.get("json_ok")) for r in ran),
+            "json_rate": pct(sum(bool(r.get("json_ok")) for r in ran), len(part)),
+            "schema_ok": sum(r.get("schema_errors") == [] for r in ran),
+            "failures": {k: sum(r.get("failure") == k for r in part) for k in FAILURES + ("dataset_missing", "not_run")
+                         if any(r.get("failure") == k for r in part)},
+            "claims": sum(r.get("claims", 0) for r in ok), "accepted": accepted, "reviewed": reviewed,
             "correct": sum(r.get("correct", 0) for r in ok),
             "wrong_accepted": sum(len(r.get("wrong_accepted", [])) for r in ok),
             "unreviewed": sum(len(r.get("unreviewed", [])) for r in ok),
             "accepted_accuracy": pct(sum(r.get("correct", 0) for r in ok), reviewed),
             "critical_accepted": sum(len(r.get("critical_accepted", [])) for r in ok),
-            "critical_emitted_rejected": sum(len(r.get("critical_emitted", [])) for r in ok)
-                                         - sum(len(r.get("critical_accepted", [])) for r in ok),
-            "core_draft_possible": len(possible), "core_draft": sum(r.get("core_draft", False) for r in possible),
-            "core_draft_rate": pct(sum(r.get("core_draft", False) for r in possible), len(possible)),
+            "critical_emitted": sum(len(r.get("critical_emitted", [])) for r in ok),
+            "critical_rejected": sum(r.get("critical_rejected", 0) for r in ok),
+            "core_draft_possible": len(possible), "core_draft": sum(bool(r.get("core_draft")) for r in possible),
+            "core_draft_rate": pct(sum(bool(r.get("core_draft")) for r in possible), len(possible)),
             "insufficient_cases": len(insufficient),
             "insufficient_withheld": sum(not r.get("core_draft") for r in insufficient),
-            "important_in_input": sum(r.get("important_in_input", 0) for r in ok),
+            "important_in_input": shown,
             "important_not_in_input": sum(r.get("important_not_in_input", 0) for r in ok),
-            "recall_model": pct(sum(r.get("recall_model", 0) for r in ok), sum(r.get("important_in_input", 0) for r in ok)),
-            "recall_accepted": pct(sum(r.get("recall_accepted", 0) for r in ok),
-                                   sum(r.get("important_in_input", 0) for r in ok)),
-            "counter_recall": pct(sum(r.get("counter_recalled", 0) for r in ok), sum(r.get("counter_in_input", 0) for r in ok)),
+            "recall_model": pct(sum(r.get("recall_model", 0) for r in ok), shown),
+            "recall_accepted": pct(sum(r.get("recall_accepted", 0) for r in ok), shown),
+            "mention_model": pct(sum(r.get("mention_model", 0) for r in ok), shown),
+            "counter_model": pct(sum(r.get("counter_model", 0) for r in ok), counter_in),
+            "counter_accepted": pct(sum(r.get("counter_accepted", 0) for r in ok), counter_in),
             "empty_answers": sum(r.get("claims", 0) == 0 for r in ok),
             "elapsed_median_s": round(statistics.median(warm), 1) if warm else None,
             "elapsed_p95_s": percentile(warm, 0.95)}
@@ -620,11 +791,15 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--timeout", type=float, default=120)
     r.add_argument("--num-ctx", type=int)
     r.add_argument("--num-predict", type=int)
+    v = sub.add_parser("revalidate")
+    v.add_argument("--experiment", required=True, type=Path)
+    v.add_argument("--labels", nargs="*", default=["final", "stability"])
     q = sub.add_parser("report")
     q.add_argument("--experiment", required=True, type=Path)
     q.add_argument("--labels", required=True, type=Path)
     q.add_argument("--output", required=True, type=Path)
     q.add_argument("--label", default="final")
+    q.add_argument("--runs", type=Path, help="default <experiment>/runs; or <experiment>/revalidated/<validator>")
     args = parser.parse_args(argv)
     if args.command == "prepare":
         print(prepare(args.source_data, args.manifest, args.output))
@@ -632,8 +807,10 @@ def main(argv: list[str] | None = None) -> int:
         options = {k: v for k, v in (("num_ctx", args.num_ctx), ("num_predict", args.num_predict)) if v}
         print(json.dumps(run(args.experiment, args.model, args.endpoint, args.label, args.cases, args.resume,
                              timeout=args.timeout, options=options), ensure_ascii=False))
+    elif args.command == "revalidate":
+        print(revalidate(args.experiment, tuple(args.labels)))
     else:
-        result = report(args.experiment, args.labels, args.output, label=args.label)
+        result = report(args.experiment, args.labels, args.output, label=args.label, runs_root=args.runs)
         print(json.dumps(result["summary"]["eval"], ensure_ascii=False, indent=1))
     return 0
 

@@ -169,7 +169,7 @@ class BenchmarkTest(unittest.TestCase):
         self.assertEqual(len(res["validation"]["claims"]), 1)  # 'net income' with the revenue figure is refused
         scored = lb.report(self.out, self.write_labels(), self.out / "report")["summary"]["all"]
         self.assertEqual((scored["accepted"], scored["correct"], scored["critical_accepted"]), (2, 2, 0))
-        self.assertGreaterEqual(scored["critical_emitted_rejected"], 1)
+        self.assertGreaterEqual(scored["critical_rejected"], 1)
 
     def test_failures_are_results_and_never_repaired(self):
         self.prepared()
@@ -207,19 +207,16 @@ class BenchmarkTest(unittest.TestCase):
                 lb.Loopback(endpoint)
 
     def test_resume_skips_only_identical_inputs(self):
+        """K4-2: a kept answer is never overwritten; another setting needs a new label, and a new
+        validator is not part of the inference key (revalidate re-checks instead)."""
         self.prepared()
         self.run_bench()
         self.assertEqual(self.run_bench()["skipped"], 2)
-        self.assertEqual(self.run_bench(options={"num_ctx": 8192})["ran"], 2)  # settings changed
-        FakeOllama.digest = "sha256:bbb"
-        self.assertEqual(self.run_bench(options={"num_ctx": 8192})["ran"], 2)  # model changed
-        path = self.out / "cases" / "AAA-B.json"
-        case = json.loads(path.read_text(encoding="utf-8"))
-        case["input_sha256"] = "changed"
-        path.write_text(json.dumps(case), encoding="utf-8")
-        self.assertEqual(self.run_bench(options={"num_ctx": 8192})["ran"], 1)  # only the changed input
+        changed = self.run_bench(options={"num_ctx": 8192})
+        self.assertEqual((changed["ran"], changed["kept_other_setting"]), (0, ["AAA-A", "AAA-B"]))
+        self.assertEqual(self.run_bench(label="ctx8k", options={"num_ctx": 8192})["ran"], 2)
         with mock.patch.object(ctx, "PARSER_VERSION", "context-check-v9"):
-            self.assertEqual(self.run_bench(options={"num_ctx": 8192})["ran"], 2)  # validator changed
+            self.assertEqual(self.run_bench()["skipped"], 2)  # validator changed: no new inference
 
     def test_request_cap_stops_the_run(self):
         self.prepared()
