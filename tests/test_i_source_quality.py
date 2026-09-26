@@ -23,6 +23,7 @@ FAILED = "최근 원문 확인 실패"
 class SourceQualityTest(CandidateFixture):
     add_context = ContextCardTest.add_context
     card = ContextCardTest.card
+    write_evidence = ContextCardTest.write_evidence
 
     def set_research(self, **fields):
         state = candidate_context.load_state()
@@ -56,10 +57,10 @@ class SourceQualityTest(CandidateFixture):
         failed = self.set_research(status="failed", quality="unknown", failures=3,
                                    attempted_at="2026-09-27T02:00:00+00:00")
         self.assertEqual(failed["source_quality"], "unavailable")
-        self.assertIsNone(failed["context"])  # never shown as today's result
+        # The last valid draft stays under a dated warning, so the card version does not change.
+        self.assertEqual(failed["candidate_version"], normal["candidate_version"])
         for text in self.rendered(failed):
-            self.assertIn(f"{FAILED}(2026-09-27)", text)
-            self.assertIn("마지막 유효 근거 2026-09-25", text)
+            self.assertIn(f"{FAILED}(2026-09-27). 아래는 마지막 유효 근거 2026-09-25 기준(현재 확인 결과 아님)", text)
             self.assertNotIn("관련 원문을 확인하지 못했습니다", text)  # access failure is not 'nothing relevant'
 
         recovered = self.set_research(status="success", quality="complete", failures=0,
@@ -79,6 +80,24 @@ class SourceQualityTest(CandidateFixture):
         self.assertEqual(obs["source_quality"], "partial")
         version, obs = k.load_observation(normal["observation_id"])
         self.assertNotIn(PARTIAL, k.telegram_card(k.assemble(version, obs, [])))
+
+    def test_nothing_relevant_after_a_draft_drops_it(self):
+        self.add_context()
+        card = self.set_research(status="no_relevant_document", failures=0)
+        self.assertIsNone(card["context"])
+        self.assertNotIn(FAILED, k.telegram_card(card))
+
+    def test_source_failure_keeps_a_human_approval_and_shows_the_limit(self):
+        from test_candidates import sourced_evidence
+        self.add_context()
+        self.write_evidence(sourced_evidence())
+        self.card()
+        version = k.approve(self.aaa["candidate_id"], "user")
+        card = self.set_research(status="failed", failures=2, attempted_at="2026-09-27T02:00:00+00:00")
+        self.assertEqual((card["candidate_version"], card["classification"]), (version, "recommended"))
+        self.assertIsNone(card["review_note"])
+        for text in self.rendered(card):
+            self.assertIn(FAILED, text)
 
     def test_failed_without_earlier_evidence_says_so(self):
         c.atomic_json(candidate_context.state_path(), {"candidates": {self.aaa["candidate_id"]: {

@@ -858,8 +858,11 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                               f"확인 {attempted})"))
     elif cand.get("source_status") == "failed":
         last = (cand.get("last_valid_context") or {}).get("generated_at")
+        shown = context.get("context_id") and (cand.get("last_valid_context") or {}).get("context_id") == context["context_id"]
         lines.append(("warn", f"최근 원문 확인 실패({attempted}). "
-                              + (f"마지막 유효 근거 {last[:10]}(현재 확인 결과 아님)" if last else "이전에 확보한 유효 근거 없음")))
+                              + (f"아래는 마지막 유효 근거 {last[:10]} 기준(현재 확인 결과 아님)" if shown and last else
+                                 f"마지막 유효 근거 {last[:10]}(현재 확인 결과 아님)" if last else
+                                 "이전에 확보한 유효 근거 없음")))
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
     stated = [x for x in context.get("claims") or [] if x.get("kind") in ("fact", "guidance")][:3]
     if stated:
@@ -1209,7 +1212,9 @@ def context_inputs() -> tuple[dict, dict]:
             # Shown only as a date when the latest source attempt failed; never as today's result.
             entry["last_valid_context"] = {"context_id": record["context_id"], "generated_at": record["generated_at"],
                                            "eps_target_period": record.get("eps_target_period")}
-        if (not current_parser or entry.get("status") != "success"
+        # An access failure keeps the last draft (shown under a dated warning) so the card and any
+        # human approval of it do not change; 'nothing relevant' or an identity problem drops it.
+        if (not current_parser or entry.get("status") not in ("success", "failed")
                 or record.get("eps_target_period") != entry.get("eps_target_period")):
             continue
         docs = []
