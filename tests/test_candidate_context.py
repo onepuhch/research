@@ -428,7 +428,9 @@ class DraftRunTest(RunFixture):
     def test_one_company_per_request_six_requests_a_day_and_cache(self):
         import extract
         with mock.patch.object(c, "load_dotenv_value", return_value="key"), \
-                mock.patch.object(extract, "urlopen", side_effect=self.gemini):
+                mock.patch.object(extract, "urlopen", side_effect=self.gemini), \
+                mock.patch.object(c, "today", return_value="2026-09-25"):
+            # Both days are pinned: the budget day must not depend on the date the tests run.
             report = ctx.run_drafts(NOW)
             self.assertEqual((report["drafted"], report["deferred_budget"]), (6, 2))
             self.assertTrue(all(sum(f"회사: T{i}." in p for i in range(8)) == 1 for p in self.prompts))
