@@ -178,6 +178,11 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate behavior
+        # The suite runs as in the daily job; the send block applies to the verification step below.
+        env:
+          RESEARCH_DISABLE_SEND: ''
+          VERIFY_CACHE_ONLY: ''
+          VERIFY_REFRESH_SCREEN: ''
         run: python -m unittest discover -s tests -q
       - name: Configure state writer
         run: |

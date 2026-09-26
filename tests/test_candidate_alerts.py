@@ -1,6 +1,7 @@
 import contextlib
 import io
 import json
+import os
 import pathlib
 import http.client
 import socket
@@ -495,6 +496,12 @@ class GitRemoteTest(unittest.TestCase):
 
 
 class DeliverClassificationTest(unittest.TestCase):
+    def setUp(self):
+        # How replies are classified is tested with sending allowed; the block has its own test.
+        patch = mock.patch.dict(os.environ, {"RESEARCH_DISABLE_SEND": ""})
+        patch.start()
+        self.addCleanup(patch.stop)
+
     def outcome(self, effect=None, body=None):
         response = mock.MagicMock()
         response.__enter__.return_value.read.return_value = body or b""

@@ -281,7 +281,9 @@ def isolate_ci_environment(test):
     env = mock.patch.dict("os.environ")
     env.start()
     test.addCleanup(env.stop)
-    for key in ("DAILY_MODE", "DAILY_DAY", "DAILY_RUN_ID", "GITHUB_RUN_ID", "GITHUB_RUN_ATTEMPT", "GITHUB_ACTIONS"):
+    # Also the verification job's switches: a test must never refresh the real screen or block sends.
+    for key in ("DAILY_MODE", "DAILY_DAY", "DAILY_RUN_ID", "GITHUB_RUN_ID", "GITHUB_RUN_ATTEMPT", "GITHUB_ACTIONS",
+                "RESEARCH_DISABLE_SEND", "VERIFY_CACHE_ONLY", "VERIFY_REFRESH_SCREEN"):
         os.environ.pop(key, None)
 
 

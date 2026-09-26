@@ -386,7 +386,8 @@ class ContextVerifyTest(RunFixture):
     def run_verify(self, env, context_main=None, generate=None):
         import candidates
         import context_verify
-        with mock.patch.dict(os.environ, env, clear=False), \
+        with mock.patch.dict(os.environ, {"VERIFY_REFRESH_SCREEN": "false", **env}, clear=False), \
+                mock.patch("subprocess.run", side_effect=AssertionError("a test must not start the screener")), \
                 mock.patch.object(ctx, "main", side_effect=context_main or (lambda argv: 0)) as context, \
                 mock.patch.object(candidates, "generate", side_effect=generate or (lambda **kw: {})):
             code = context_verify.main()
