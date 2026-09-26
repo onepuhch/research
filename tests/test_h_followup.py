@@ -268,6 +268,7 @@ class SourceFailureTest(RunFixture):
         ctx.run_sources(NOW, client(routes)[0])
         entry = self.entry()
         self.assertEqual(entry["status"], "failed")
+        self.assertGreaterEqual(entry["failures"], 1)
         self.assertEqual(entry["next_eligible_at"], (NOW + timedelta(hours=24)).isoformat(timespec="seconds"))
 
     def test_one_document_found_and_one_request_failing_is_partial(self):
@@ -283,6 +284,8 @@ class SourceFailureTest(RunFixture):
         ctx.run_sources(NOW, client(routes)[0])
         entry = self.entry()
         self.assertEqual((entry["status"], entry["quality"], len(entry["document_ids"])), ("success", "partial", 1))
+        self.assertEqual(entry["failures"], 1)
+        self.assertFalse(any("http" in note for note in entry["notes"]))  # reasons carry no URL
 
     def test_partial_sources_make_the_step_degraded(self):
         with mock.patch.object(ctx, "run_sources", return_value={"held": [], "statuses": {"success": 1},

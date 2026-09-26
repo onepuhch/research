@@ -172,10 +172,12 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 found.append(record["document_id"])
                 break  # one results document per filing
     if found:
-        return {"status": "success", "quality": "partial" if failures else "complete", "document_ids": found, "examined": examined, "notes": notes}
+        return {"status": "success", "quality": "partial" if failures else "complete", "document_ids": found,
+                "examined": examined, "notes": notes, "failures": failures}
     if not filings:
         notes.append(f"no 8-K/6-K results or periodic report in {cfg['lookback_days']} days")
-    return {"status": "failed" if failures else "no_relevant_document", "document_ids": [], "examined": examined, "notes": notes}
+    return {"status": "failed" if failures else "no_relevant_document", "document_ids": [], "examined": examined,
+            "notes": notes, "failures": failures}
 
 
 def screen_ready(now: datetime) -> tuple[dict | None, list[str]]:
@@ -273,7 +275,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
         entry.update(status=result["status"], ticker=target["ticker"], issuer=target["issuer"],
                      attempted_at=now.isoformat(timespec="seconds"), eps_key=target["eps_key"],
                      eps_target_period=target["eps_target_period"], document_ids=result["document_ids"],
-                     quality=result.get("quality", "unknown"),
+                     quality=result.get("quality", "unknown"), failures=result.get("failures", 0),
                      examined=result.get("examined", []), notes=result["notes"],
                      next_eligible_at=(now + wait.get(result["status"], timedelta(days=cfg["no_document_days"])))
                      .isoformat(timespec="seconds"))

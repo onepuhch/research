@@ -78,7 +78,7 @@ STEPS: dict[str, Step] = {
     # times (24 h after failures, 7 days after 'nothing relevant'), so no generic partial top-up.
     "context": Step(inputs=("screen",), version="context-v3", partial_top_up=False),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
-    "cards": Step(inputs=("screen", "context", "@tracking", "@evidence"), version="cards-v3"),
+    "cards": Step(inputs=("screen", "context", "@tracking", "@evidence"), version="cards-v4"),
     # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.
     "alerts": Step(requires=("cards",), inputs=("extract",)),
     # research_journal --capture-only reads research case files and metric_log; tracking changes

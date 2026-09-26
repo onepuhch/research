@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v3"
+GENERATOR_VERSION = "cards-v4"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -321,8 +321,29 @@ VERSION_EPS_KEYS = ("eps_now", "eps_30d", "eps_90d", "eps_target_period", "eps_c
 MARKET_EPS_KEYS = ("yield_change_90_pp", "yield_change_30_pp")
 
 
-def observation_key(cid: str, snapshot_sha256: str, version: str, policy: str) -> str:
-    return "OB-" + digest([cid, snapshot_sha256, version, policy])[:16].upper()
+def observation_key(cid: str, snapshot_sha256: str, version: str, policy: str, research: str = "") -> str:
+    """The research signature (source quality and attempt time) is part of what was seen:
+    a new source attempt is a new observation, never a rewrite of an old one."""
+    parts = [cid, snapshot_sha256, version, policy] + ([research] if research else [])
+    return "OB-" + digest(parts)[:16].upper()
+
+
+def source_view(entry: dict | None) -> dict:
+    """Official-source access quality for one candidate, apart from the screen's data quality.
+    complete: every request answered (incl. 'nothing relevant'); partial: some failed;
+    unavailable: none reached or no issuer; unknown: not researched yet."""
+    if not entry or entry.get("status") in (None, "queued", "deferred_budget"):
+        quality = "unknown"
+    elif entry["status"] == "success":
+        quality = "partial" if entry.get("quality") == "partial" else "complete"
+    elif entry["status"] == "no_relevant_document":
+        quality = "complete"
+    else:
+        quality = "unavailable"
+    reasons = [str(n)[:80] for n in (entry or {}).get("notes") or []][:3]  # HTTP codes/exception names only
+    return {"source_quality": quality, "source_failures": int((entry or {}).get("failures") or 0),
+            "source_failure_reasons": reasons, "source_attempt_at": (entry or {}).get("attempted_at"),
+            "source_status": (entry or {}).get("status")}
 
 
 RESEARCH_NOTES = {
@@ -398,6 +419,8 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             explanations[field] = ({"statements": statements} if statements else
                                    {"statements": [], "reason": "원문 근거 미연결 (EPS 스크린만 통과)"})
         context = context_view((contexts or {}).get(cid)) if cid else None
+        if context and (contexts or {}).get(cid, {}).get("eps_target_period") not in (None, row.get("eps_target_period")):
+            context = None  # researched for another fiscal year: wait for a new source check
         doc_sources = [{"id": d["document_id"], "provider": "SEC EDGAR", "url": d["url"],
                         "title": f"SEC {d['form']} {d['document_type']}"
                                  + (f" — {d['title']}" if d.get("title") and d["title"] != d["document_type"] else ""),
@@ -422,6 +445,8 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
         }
         version = content_version(content)
         research_entry = (research or {}).get(cid) if cid else None
+        source = source_view(research_entry)
+        last_valid = (research_entry or {}).get("last_valid_context")
         approval = (human or {}).get("approval")
         approved = (bool(approval) and approval.get("candidate_version") == version and not problems
                     and not missing and not flagged
@@ -434,7 +459,8 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
         result.append({
             **content, "eps": {**content["eps"], **{k: row.get(k) for k in MARKET_EPS_KEYS}},
             "candidate_version": version, "classification": classification,
-            "observation_id": (observation_key(cid, snapshot_ref.get("sha256", ""), version, policy_version)
+            "observation_id": (observation_key(cid, snapshot_ref.get("sha256", ""), version, policy_version,
+                                               f"{source['source_quality']}|{source['source_attempt_at']}")
                                if cid else None),
             "approval": approval if approved else None, "review_note": review_note,
             "evidence_problems": problems,
@@ -444,6 +470,7 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "scope_note": "확보 범위 내 순위 (일부 조회 누락)" if partial else "전체 조회 범위 순위",
             "tracking": ledger_tracking(identity["entity_id"], ideas, THESIS_KEY),
             "research_status": research_state(research_entry, context, human),
+            **source, "last_valid_context": last_valid,
             "research_note": RESEARCH_NOTES.get((research_entry or {}).get("status")) if not context else None,
             "context_id": (context or {}).get("context_id"),
             "source_snapshot": snapshot_ref, "policy_version": policy_version,
@@ -473,7 +500,8 @@ def observation_record(candidate: dict) -> dict:
         "observation_id", "candidate_id", "candidate_version", "thesis_key", "identity", "observed_at",
         "source_snapshot", "eps", "price", "display_rank", "memberships", "lists", "missing", "run_quality",
         "scope_note", "classification", "policy_version", "generator_version", "market_cap",
-        "context_id", "research_status", "research_note")}
+        "context_id", "research_status", "research_note", "source_quality", "source_failures",
+        "source_failure_reasons", "source_attempt_at", "source_status", "last_valid_context")}
     record["entity_id"] = candidate["identity"]["entity_id"]
     record["approval_version"] = (candidate.get("approval") or {}).get("candidate_version")
     return c.validate_record("candidate_observation", record)
@@ -598,7 +626,10 @@ def _assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
             **{k: observation.get(k) for k in ("observation_id", "observed_at", "price", "display_rank",
                                                "memberships", "run_quality", "scope_note", "classification",
                                                "source_snapshot", "policy_version", "market_cap",
-                                               "context_id", "research_status", "research_note")},
+                                               "context_id", "research_status", "research_note",
+                                               "source_quality", "source_failures", "source_failure_reasons",
+                                               "source_attempt_at", "source_status", "last_valid_context")},
+            "source_quality": observation.get("source_quality") or "unknown",  # recorded before cards-v4
             # The draft is the one this observation showed, never a later one.
             "context": version.get("context"),
             "approval": None, "review_note": None, "evidence_problems": [],
@@ -821,6 +852,14 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                                                else item.get("document_id")), "url": doc.get("url"),
                                      "filed": doc.get("filed_at"), "period": item.get("period")}, ensure_ascii=False))
 
+    attempted = (cand.get("source_attempt_at") or "")[:10]
+    if cand.get("source_quality") == "partial":
+        lines.append(("warn", f"공식 원문 일부 미확보 — 확보된 자료 기준 (요청 실패 {cand.get('source_failures', 0)}건, "
+                              f"확인 {attempted})"))
+    elif cand.get("source_status") == "failed":
+        last = (cand.get("last_valid_context") or {}).get("generated_at")
+        lines.append(("warn", f"최근 원문 확인 실패({attempted}). "
+                              + (f"마지막 유효 근거 {last[:10]}(현재 확인 결과 아님)" if last else "이전에 확보한 유효 근거 없음")))
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
     stated = [x for x in context.get("claims") or [] if x.get("kind") in ("fact", "guidance")][:3]
     if stated:
@@ -1158,17 +1197,20 @@ def context_inputs() -> tuple[dict, dict]:
     """(drafts with their document titles, research state) as cards and approval both read them."""
     import candidate_context
     import company_filings
-    research = candidate_context.load_state()["candidates"]
+    research = {cid: dict(entry) for cid, entry in candidate_context.load_state()["candidates"].items()}
     contexts = {}
     for cid, entry in research.items():
         record = c.read_json(candidate_context.history_dir() / f"{entry.get('context_id')}.json", None) \
             if entry.get("context_id") else None
         if not record:
             continue
-        if (record.get("parser_version") != candidate_context.PARSER_VERSION
-                or entry.get("status") != "success"
+        current_parser = record.get("parser_version") == candidate_context.PARSER_VERSION
+        if current_parser and record.get("context_status") == "draft_ready":
+            # Shown only as a date when the latest source attempt failed; never as today's result.
+            entry["last_valid_context"] = {"context_id": record["context_id"], "generated_at": record["generated_at"],
+                                           "eps_target_period": record.get("eps_target_period")}
+        if (not current_parser or entry.get("status") != "success"
                 or record.get("eps_target_period") != entry.get("eps_target_period")):
-            entry["draft_status"] = "review_needed"
             continue
         docs = []
         for document_id in record["document_ids"]:
