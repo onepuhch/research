@@ -292,8 +292,8 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 
 # ------------------------------------------------------------------ G2 drafts
 
-PROMPT_VERSION = "context-ko-v2"
-PARSER_VERSION = "context-check-v2"
+PROMPT_VERSION = "context-ko-v3"
+PARSER_VERSION = "context-check-v3"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -389,7 +389,9 @@ def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str
         "규칙:\n"
         "1. quote는 해당 block 문장을 글자 그대로 복사한다(한 문장 또는 표 한 행).\n"
         "2. figures는 quote에 있는 수치 문구를 글자 그대로 복사한다(예: \"$5 million\", \"(1.3)\", \"40%\"). 단위 환산·계산 금지.\n"
-        "3. note_ko는 한국어 설명이며 숫자·통화·단위(달러, million, % 등)를 쓰지 않는다. 숫자는 figures로만 전달된다.\n"
+        "3. note_ko는 한국어 설명이며 숫자·통화·단위(달러, million, % 등)를 쓰지 않는다. 한글로 풀어 쓴 금액(예: 구백만 달러)도 금지. "
+        "숫자는 figures로만 전달되며 카드 문장은 figures로 조립된다. 좋은 예: note_ko \"전년 같은 분기보다 늘었다\".\n"
+        "3-1. figures 하나에는 한 기간의 값만 넣고, 비교 문장에서는 현재 기간 값을 쓴다. 범위는 원문대로 한 문구로(\"$130 million to $135 million\").\n"
         "4. metric은 quote에 있는 영어 지표명(예: revenue, net income, distributions), period는 quote/표 머리글의 기간 표기 그대로(모르면 unknown).\n"
         "5. subject: 회사 전체 수치면 issuer, 자회사면 subsidiary(subject_name에 이름), 사업부면 segment, 고객이면 customer.\n"
         "6. kind: 실적 fact, 회사 전망 guidance, 원문 인용이 있는 해석 interpretation(figures 없이).\n"
@@ -403,6 +405,69 @@ def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str
         '"block_id":""}],"next_check":[""],"link":"unconfirmed"}\n최대 claims 5개, limitations 3개, next_check 2개.\n\n'
         f"문서: {json.dumps(heads, ensure_ascii=False)}\n\n블록:\n"
         + "\n".join(f"[{b['document_id']}#{b['block_id']}] {b['text']}" for b in blocks))
+
+
+def number_spans(text: str) -> list[tuple[int, int]]:
+    """Spans of the number phrases in squashed text. A leading '(' counts only as a negative sign."""
+    spans = []
+    for m in FIGURE.finditer(text):
+        if not re.search(r"\d", m.group(0)):
+            continue
+        start, end = m.span()
+        if text[start] == "(" and not re.match(r"\([$€£]?\s?\d[\d,]*(?:\.\d+)?\)", text[start:]):
+            start += 1  # '($0.25 per share)': grammar, not a negative
+        while start < end and text[start] == " ":
+            start += 1  # the pattern may begin at the space before a number
+        while end > start and text[end - 1] == " ":
+            end -= 1
+        spans.append((start, end))
+    return spans
+
+
+def figure_problem(figure: str, quote_raw: str) -> str | None:
+    """A figure is a verbatim, contiguous part of the quote that never cuts a number phrase
+    (currency, parentheses, million/billion) and holds at most one period."""
+    q, f = squash(quote_raw), squash(figure)
+    if not re.search(r"\d", f) or len(f) > 80:
+        return "figure_not_verbatim"
+    start = q.find(f)
+    if start < 0:
+        return "figure_not_verbatim"
+    end = start + len(f)
+    if (start > 0 and q[start - 1].isalnum()) or (end < len(q) and q[end].isalnum()):
+        return "figure_cut_from_source"
+    for s, e in number_spans(q):
+        if e > start and s < end and not (start <= s and e <= end):
+            return "figure_cut_from_source"
+    if len(set(YEAR.findall(f))) + len({squash(x) for x in QUARTER.findall(f)}) > 1 or re.search(r"[.;]\s", f):
+        return "figure_spans_statements"
+    return None
+
+
+def metric_problem(metric: str, figures: list[str], quote_raw: str) -> str | None:
+    """Each figure's nearest metric mention is the claimed one, within the same statement."""
+    q, m = squash(quote_raw), squash(metric)
+    if not m or m not in q:
+        return "metric_not_in_quote"
+    names = {squash(x) for x in METRIC_KO} | {m}
+    mentions = [(x.start(), x.end(), name) for name in names
+                for x in re.finditer(r"(?<![a-z])" + re.escape(name) + r"(?![a-z])", q)]
+    for figure in figures:
+        at = q.find(squash(figure))
+        if at < 0 or not mentions:
+            continue
+        # Nearest mention by distance; at a tie the longer name wins ('adjusted ebitda' over 'ebitda').
+        s, e, name = min(mentions, key=lambda x: (min(abs(x[0] - at), abs(x[1] - at)), -len(x[2])))
+        if name != m and not (name in m and len(name) < len(m)):
+            return "figure_belongs_to_another_metric"
+        # 'operating income' inside 'adjusted operating income' is another metric unless claimed so.
+        qualifier = re.search(r"(adjusted|non-gaap|organic|core|segment|pro forma)\s+$", q[max(0, s - 14):s])
+        if qualifier and qualifier.group(1) not in m:
+            return "figure_belongs_to_another_metric"
+        between = q[min(e, at):max(s, at)]
+        if re.search(r"[.;]\s", between):
+            return "figure_belongs_to_another_metric"
+    return None
 
 
 def figure_phrases(text: str) -> set[str]:
@@ -469,10 +534,10 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
     figures = [str(f) for f in item.get("figures") or []]
     if kind == "interpretation" and figures:
         return "figures_in_interpretation", {}
-    source_figures = figure_phrases(quote_raw)
     for figure in figures:
-        if not re.search(r"\d", figure) or squash(figure) not in source_figures:
-            return "figure_not_verbatim", {}
+        problem = figure_problem(figure, quote_raw)
+        if problem:
+            return problem, {}
     note = str(item.get("note_ko") or "").strip()
     if not note or len(note) > 160:
         return "bad_note", {}
@@ -483,17 +548,14 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
     if any(word in note for word in KO_CAUSAL):
         return "causal_claim_about_estimates", {}
     metric = str(item.get("metric") or "").strip()
-    if metric and metric.lower() not in METRIC_KO:
-        return "unsupported_metric", {}
     if (what == "claim" and kind != "interpretation" and not metric) or (metric and squash(metric) not in quote):
         return "metric_not_in_quote", {}
-    if figures and len(re.findall(r"[.;]\s+[A-Z]", quote_raw)):
-        return "multiple_statements_for_figures", {}
     if figures and any(token in quote_raw for token in (" | ", " ; ")):
-        return "ambiguous_table_figures", {}
-    present_metrics = {m for m in METRIC_KO if re.search(r"\b" + re.escape(m) + r"\b", quote)}
-    if figures and any(m not in metric.lower() and metric.lower() not in m for m in present_metrics):
-        return "multiple_metrics_for_figures", {}
+        return "ambiguous_table_figures", {}  # a table row without its header row cannot place its numbers
+    if figures and metric:
+        problem = metric_problem(metric, figures, quote_raw)
+        if problem:
+            return problem, {}
     problem = period_problem(item, quote_raw, block)
     if problem:
         return problem, {}
@@ -501,8 +563,8 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
     stated_non = any(w in quote for w in ("non-gaap", "adjusted"))
     stated_gaap = "gaap" in quote.replace("non-gaap", "")
     expected = "non-GAAP" if stated_non else ("GAAP" if stated_gaap else "unknown")
-    if gaap != expected:
-        return "gaap_not_as_stated", {}
+    if gaap != "unknown" and gaap != expected:
+        return "gaap_not_as_stated", {}  # an asserted label must be the source's; unknown is filled from it
     currencies = {"$": "USD", "€": "EUR", "£": "GBP"}
     derived = sorted({v for k, v in currencies.items() if any(k in f for f in figures)})
     if item.get("currency") and item["currency"] not in derived:

@@ -82,9 +82,11 @@ class NumbersAndCausalityTest(unittest.TestCase):
 
     def test_gaap_label_must_match_the_source(self):
         adjusted = "Adjusted EPS was $1.20 for 2026."
-        base = dict(metric="eps", figures=["$1.20"], period="2026")
+        base = dict(metric="Adjusted EPS", figures=["$1.20"], period="2026")
         self.assertEqual(self.reason(check(adjusted, gaap="GAAP", **base)), "gaap_not_as_stated")
         self.assertEqual(len(check(adjusted, gaap="non-GAAP", **base)["claims"]), 1)
+        self.assertEqual(self.reason(check(adjusted, metric="eps", figures=["$1.20"], period="2026")),
+                         "figure_belongs_to_another_metric")  # 'EPS' alone would hide 'Adjusted'
         gaap = "GAAP EPS was $1.00 for 2026."
         self.assertEqual(self.reason(check(gaap, gaap="non-GAAP", metric="eps", figures=["$1.00"], period="2026")),
                          "gaap_not_as_stated")
@@ -122,6 +124,55 @@ class NumbersAndCausalityTest(unittest.TestCase):
     def test_next_check_is_a_question_or_plan_without_numbers(self):
         result = ctx.validate_draft({"next_check": ["다음 분기 수주를 확인", "매출 40% 증가 확인", "좋은 회사"]}, [])
         self.assertEqual(result["next_check"], ["다음 분기 수주를 확인"])
+
+
+class RealOutputTest(unittest.TestCase):
+    """Model outputs seen in verification run 36247419404, fixed as regressions: right ones pass,
+    wrong ones stay refused."""
+
+    def reason(self, result):
+        return result["rejected"][0]["reason"] if result["rejected"] else None
+
+    def test_two_metrics_in_one_sentence_keep_their_own_figures(self):
+        quote = "•Operating income of $16 million; Adjusted Operating Income(1) of $46 million."
+        issuer = {"ticker": "AMCX", "name": "AMC Networks"}
+        ok = check(quote, issuer=issuer, metric="Operating income", figures=["$16 million"])
+        adjusted = check(quote, issuer=issuer, metric="Adjusted Operating Income", figures=["$46 million"])
+        swapped = check(quote, issuer=issuer, metric="Operating income", figures=["$46 million"])
+        self.assertEqual((len(ok["claims"]), len(adjusted["claims"])), (1, 1))
+        self.assertEqual(adjusted["claims"][0]["gaap"], "non-GAAP")  # filled from the source
+        self.assertEqual(self.reason(swapped), "figure_belongs_to_another_metric")
+
+    def test_fiscal_guidance_range_and_industry_units(self):
+        aehr = ("For the fiscal year ending June 25, 2027, Aehr expects total company revenue to be between "
+                "$130 million and $150 million")
+        result = check(aehr, issuer={"ticker": "AEHR", "name": "Aehr Test Systems"}, kind="guidance",
+                       metric="total company revenue", figures=["$130 million", "$150 million"],
+                       period="fiscal year ending June 25, 2027")
+        self.assertEqual(len(result["claims"]), 1)
+        talos = ("Talos has increased its full-year 2026 production guidance and now expects production to range "
+                 "from 64 to 68 MBo/d and 87 to 91 MBoe/d")
+        result = check(talos, issuer={"ticker": "TALO", "name": "Talos Energy"}, kind="guidance", metric="production",
+                       figures=["64 to 68 MBo/d"], period="full-year 2026", currency=None,
+                       note_ko="연간 생산량 전망 범위를 높였습니다.")
+        self.assertEqual(len(result["claims"]), 1)
+        self.assertIn("64 to 68 MBo/d", result["claims"][0]["text_ko"])
+
+    def test_headerless_table_rows_and_wrong_amounts_stay_refused(self):
+        row_ = "Net income (loss) ; — ; — ; — ; — ; 169.5 ; — ; — ; 10.6 ; 180.1"
+        self.assertEqual(self.reason(check(row_, metric="Net income", figures=["169.5"], currency=None)),
+                         "ambiguous_table_figures")
+        pbf = "The company reported second quarter 2026 net income of $915.0 million."
+        self.assertEqual(self.reason(check(pbf, metric="net income", figures=["$906.4 million"],
+                                           period="second quarter 2026")), "figure_not_verbatim")
+        self.assertEqual(len(check(pbf, metric="net income", figures=["$915.0 million"],
+                                   period="second quarter 2026")["claims"]), 1)
+
+    def test_grammatical_parentheses_are_not_a_sign(self):
+        quote = "Common stock dividends ($0.255 per share) were paid in 2026."
+        self.assertEqual(len(check(quote, metric="dividends", figures=["$0.255 per share"], period="2026")["claims"]), 1)
+        cut = check("Revenue was $5 million in 2025.", metric="revenue", figures=["$5"], period="2025")
+        self.assertEqual(self.reason(cut), "figure_cut_from_source")  # '$5' would drop 'million'
 
 
 # ------------------------------------------------------------------ H2 deadlines, 429, held, failures
