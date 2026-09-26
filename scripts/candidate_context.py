@@ -295,7 +295,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v3"
-PARSER_VERSION = "context-check-v4"
+PARSER_VERSION = "context-check-v5"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -522,6 +522,31 @@ def issuer_named(quote: str, issuer: dict) -> bool:
         w in f" {low} " for w in (" the company", " we ", " our ", " consolidated", " total company", " company's"))
 
 
+def gaap_basis(metric: str, quote: str, figures: list[str] | None = None) -> str:
+    """The basis the source states for this metric, not for the whole sentence: in 'Operating income
+    of $16 million; Adjusted Operating Income of $46 million' operating income is not non-GAAP.
+    A metric named adjusted/non-GAAP is non-GAAP; otherwise only 'GAAP'/'non-GAAP' written right
+    before the mention of the metric nearest the first figure counts. Without a metric nothing is inferred."""
+    m = squash(metric)
+    if not m:
+        return "unknown"
+    if re.search(r"(?<![a-z])(adjusted|non-gaap)(?![a-z])", m):
+        return "non-GAAP"
+    if re.search(r"(?<![a-z-])gaap(?![a-z])", m):
+        return "GAAP"
+    mentions = list(re.finditer(r"(?<![a-z])" + re.escape(m) + r"(?![a-z])", quote))
+    at = quote.find(squash(figures[0])) if figures else -1
+    if at >= 0 and mentions:
+        mentions = [min(mentions, key=lambda x: min(abs(x.start() - at), abs(x.end() - at)))]
+    for found in mentions:
+        before = quote[max(0, found.start() - 12):found.start()]
+        if re.search(r"(non-gaap|adjusted)\s+$", before):
+            return "non-GAAP"
+        if re.search(r"(?<![a-z-])gaap\s+$", before):
+            return "GAAP"
+    return "unknown"
+
+
 def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str | None, dict]:
     """(problem, checked item). Structural checks only: passing means 'automatic, unreviewed'."""
     if not isinstance(item, dict):
@@ -565,9 +590,7 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
     if problem:
         return problem, {}
     gaap = item.get("gaap") or "unknown"
-    stated_non = any(w in quote for w in ("non-gaap", "adjusted"))
-    stated_gaap = "gaap" in quote.replace("non-gaap", "")
-    expected = "non-GAAP" if stated_non else ("GAAP" if stated_gaap else "unknown")
+    expected = gaap_basis(metric, quote, figures)
     if gaap != "unknown" and gaap != expected:
         return "gaap_not_as_stated", {}  # an asserted label must be the source's; unknown is filled from it
     currencies = {"$": "USD", "€": "EUR", "£": "GBP"}

@@ -458,6 +458,9 @@ def score_case(case: dict, result: dict, labels: dict, manual: dict) -> dict:
     for item in accepted:
         key = f"{item.get('block_id')}|{item.get('metric')}|{'/'.join(item.get('figures') or [])}"
         hits = critical_hits(item, company["critical"])
+        fact = match_fact(item, facts)
+        if fact and fact.get("gaap") and item.get("gaap", "unknown") not in ("unknown", fact["gaap"]):
+            hits.append(f"gaap_mislabel:{fact['id']}")  # the label kept with the claim contradicts the source
         verdict = manual.get(case["case_id"], {}).get(key)
         if hits:
             crit_acc.append({"key": key, "rules": hits})
@@ -528,7 +531,31 @@ def report(experiment: Path, labels_path: Path, output: Path, label: str = "fina
               "environment": read_json(env_path) if env_path.exists() else None}
     output = safe_output(output)
     write_json(output.with_suffix(".json"), result)
+    output.with_suffix(".md").write_text(render(result), encoding="utf-8")
     return result
+
+
+def render(result: dict) -> str:
+    """Tables for the evaluation document (machine checks and hand review kept apart)."""
+    lines = ["| 구분 | 사례 | 실행 | JSON/스키마 | 모델 주장 | 기계 수용 | 원문 대조 정답 | 수용됐지만 틀림 | 미검토 | "
+             "중대 오류 수용 | 중대 오류 거부 | 핵심 초안/가능 | 근거 부족 보류 | 중요 사실 회수(모델/수용) | 반대 근거 회수 | "
+             "빈 답 | 중앙값/p95 초 |", "|" + "---|" * 17]
+    for name in ("eval", "eval_A", "eval_B", "dev", "all"):
+        s = result["summary"][name]
+        lines.append(
+            f"| {name} | {s['cases']} | {s['ran']} | {s['json_schema_ok']} ({s['json_schema_rate']}%) | {s['claims']} | "
+            f"{s['accepted']} | {s['correct']} ({s['accepted_accuracy']}%) | {s['wrong_accepted']} | {s['unreviewed']} | "
+            f"{s['critical_accepted']} | {s['critical_emitted_rejected']} | {s['core_draft']}/{s['core_draft_possible']} | "
+            f"{s['insufficient_withheld']}/{s['insufficient_cases']} | {s['recall_model']}% / {s['recall_accepted']}% "
+            f"(입력 {s['important_in_input']}, 입력 밖 {s['important_not_in_input']}) | {s['counter_recall']}% | "
+            f"{s['empty_answers']} | {s['elapsed_median_s']} / {s['elapsed_p95_s']} |")
+    lines += ["", "| 사례 | 실패 | 초 | 주장 | 수용 | 정답 | 틀림 | 중대(수용) | 중대(생성) | 상태 |", "|" + "---|" * 10]
+    for r in result["rows"]:
+        lines.append(f"| {r['case_id']} | {r.get('failure') or '-'} | {r.get('elapsed_s')} | {r.get('claims', '-')} | "
+                     f"{r.get('accepted', '-')} | {r.get('correct', '-')} | {len(r.get('wrong_accepted') or [])} | "
+                     f"{', '.join(x['key'] + ' ' + '/'.join(x['rules']) for x in r.get('critical_accepted') or []) or '-'} | "
+                     f"{', '.join(r.get('critical_emitted') or []) or '-'} | {r.get('status') or '-'} |")
+    return "\n".join(lines) + "\n"
 
 
 def summarize(rows: list[dict]) -> dict:

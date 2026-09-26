@@ -186,6 +186,29 @@ class RealOutputTest(unittest.TestCase):
             (attributable, "$906.4 million"): None,
             (attributable, "$7.54 per share"): None})
 
+    def test_gaap_basis_is_the_metrics_not_the_sentences(self):
+        """J3 dev case AMCX-B: 'Adjusted' later in the sentence made GAAP operating income non-GAAP."""
+        quote = "•Operating income of $16 million; Adjusted Operating Income(1) of $46 million."
+        issuer = {"ticker": "AMCX", "name": "AMC Networks"}
+        plain = check(quote, issuer=issuer, metric="Operating income", figures=["$16 million"])
+        adjusted = check(quote, issuer=issuer, metric="Adjusted Operating Income", figures=["$46 million"])
+        self.assertEqual((plain["claims"][0]["gaap"], adjusted["claims"][0]["gaap"]), ("unknown", "non-GAAP"))
+        said_non = check(quote, issuer=issuer, metric="Operating income", figures=["$16 million"], gaap="non-GAAP")
+        self.assertEqual(self.reason(said_non), "gaap_not_as_stated")
+        aehr = "GAAP net income was $1.4 million, or $0.04 per diluted share."
+        self.assertEqual(check(aehr, metric="net income", figures=["$1.4 million"])["claims"][0]["gaap"], "GAAP")
+        self.assertEqual(ctx.gaap_basis("net income", "non-gaap net income was $3.6 million"), "non-GAAP")
+
+    @unittest.expectedFailure
+    def test_known_miss_divested_unit_revenue_as_issuer(self):
+        """J3 eval case NBR-B (qwen3.5:9b): a divested unit's prior-year revenue passes as the issuer's.
+        Kept as a known miss, not fixed from an eval case; this test starts passing when it is caught."""
+        quote = ("The quarter ended June 30, 2025 includes revenue of $63 million, EBITDA of $37 million, and "
+                 "operating income of $26 million from Quail Tools, which was sold in August 2025.")
+        result = check(quote, issuer={"ticker": "NBR", "name": "Nabors Industries"}, metric="revenue",
+                       figures=["$63 million"], period="quarter ended June 30, 2025", subject="issuer")
+        self.assertEqual(result["claims"], [])
+
     def test_grammatical_parentheses_are_not_a_sign(self):
         quote = "Common stock dividends ($0.255 per share) were paid in 2026."
         self.assertEqual(len(check(quote, metric="dividends", figures=["$0.255 per share"], period="2026")["claims"]), 1)
