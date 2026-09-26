@@ -1,0 +1,131 @@
+{
+  "context_id": "CTX-117FF6568DA33E35",
+  "candidate_id": "CAN-14C6F602D0868FB9",
+  "ticker": "AMCX",
+  "issuer_cik": "0001514991",
+  "document_ids": [
+    "DOC-3563CA2BB442B25A"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3563CA2BB442B25A#p13",
+    "DOC-3563CA2BB442B25A#p14",
+    "DOC-3563CA2BB442B25A#p17",
+    "DOC-3563CA2BB442B25A#p21",
+    "DOC-3563CA2BB442B25A#p22",
+    "DOC-3563CA2BB442B25A#p23",
+    "DOC-3563CA2BB442B25A#p24",
+    "DOC-3563CA2BB442B25A#p25",
+    "DOC-3563CA2BB442B25A#p26",
+    "DOC-3563CA2BB442B25A#p27",
+    "DOC-3563CA2BB442B25A#p31",
+    "DOC-3563CA2BB442B25A#p32",
+    "DOC-3563CA2BB442B25A#p33",
+    "DOC-3563CA2BB442B25A#p41",
+    "DOC-3563CA2BB442B25A#p55",
+    "DOC-3563CA2BB442B25A#p59",
+    "DOC-3563CA2BB442B25A#t5",
+    "DOC-3563CA2BB442B25A#t6",
+    "DOC-3563CA2BB442B25A#t8",
+    "DOC-3563CA2BB442B25A#t9"
+  ],
+  "input_sha": "117ff6568da33e353aa1f5b2f06bca2a19a8119eb61e67e63b0c55b6bc9293dc",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v2",
+  "parser_version": "context-check-v2",
+  "generated_at": "2026-09-26T14:07:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문의 매출이 전년 대비 감소했습니다",
+      "note_ko": "국내 사업 부문의 매출이 전년 대비 감소했습니다",
+      "kind": "fact",
+      "quote": "•Domestic Operations revenue decreased 11% from the prior year to $470 million.",
+      "document_id": "DOC-3563CA2BB442B25A",
+      "block_id": "p21",
+      "metric": "revenue",
+      "figures": [
+        "11%",
+        "$470 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Domestic Operations",
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "Adjusted Operating Income의 정의에 포함된 항목들이 회사의 영업 성과에 어떤 영향을 미쳤는지 확인해야 합니다.",
+    "Adjusted EPS의 정의에 포함된 항목들이 회사의 주당 순이익에 어떤 영향을 미쳤는지 확인해야 합니다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "multiple_statements_for_figures",
+      "note_ko": "회사의 영업 이익입니다",
+      "figures": [
+        "$16 million"
+      ],
+      "quote": "•Operating income of $16 million; Adjusted Operating Income(1) of $46 million.",
+      "where": "DOC-3563CA2BB442B25A#p13"
+    },
+    {
+      "what": "claim",
+      "reason": "unsupported_metric",
+      "note_ko": "회사의 조정 영업 이익입니다",
+      "figures": [
+        "$46 million"
+      ],
+      "quote": "•Operating income of $16 million; Adjusted Operating Income(1) of $46 million.",
+      "where": "DOC-3563CA2BB442B25A#p13"
+    },
+    {
+      "what": "claim",
+      "reason": "unsupported_metric",
+      "note_ko": "회사의 순 매출이 전년 대비 감소했습니다",
+      "figures": [
+        "$547 million",
+        "9%"
+      ],
+      "quote": "•Net revenue of $547 million decreased 9% from the prior year.",
+      "where": "DOC-3563CA2BB442B25A#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사는 라이선스 계약과 관련된 연간 매출을 예상합니다",
+      "figures": [
+        "$200 million to $225 million"
+      ],
+      "quote": "In each of 2026 and 2027, the Company expects to recognize annual revenue related to the license agreement between $200 million to $225 million.",
+      "where": "DOC-3563CA2BB442B25A#p41"
+    },
+    {
+      "what": "limitation",
+      "reason": "unsupported_metric",
+      "note_ko": "조정 영업 이익은 비 GAAP 재무 측정치이며, 특정 항목을 제외하여 계산됩니다. 이는 다른 회사의 유사한 측정치와 직접 비교되지 않을 수 있습니다.",
+      "figures": [],
+      "quote": "The Company defines Adjusted Operating Income (Loss), which is a non-GAAP financial measure, as operating income (loss) before share-based compensation expense or benefit (including equity-classified ",
+      "where": "DOC-3563CA2BB442B25A#p55"
+    },
+    {
+      "what": "limitation",
+      "reason": "unsupported_metric",
+      "note_ko": "조정 희석 주당 순이익은 비 GAAP 재무 측정치이며, 특정 항목을 제외하여 계산됩니다. 이는 다른 회사의 유사한 측정치와 직접 비교되지 않을 수 있습니다.",
+      "figures": [],
+      "quote": "The Company defines Adjusted Earnings per Diluted Share (“Adjusted EPS”), which is a non-GAAP financial measure, as earnings per diluted share excluding the following items: amortization of acquisitio",
+      "where": "DOC-3563CA2BB442B25A#p59"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

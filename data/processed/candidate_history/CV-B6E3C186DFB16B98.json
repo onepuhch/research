@@ -1,0 +1,158 @@
+{
+  "candidate_id": "CAN-14C6F602D0868FB9",
+  "candidate_version": "CV-B6E3C186DFB16B98",
+  "identity": {
+    "entity_id": "NASDAQ:AMCX",
+    "ticker": "AMCX",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "AMC Global Media Inc.",
+  "industry": "Entertainment",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공 및 오리지널 콘텐츠 제작, 배급으로 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "AMC Global Media Inc., an entertainment company, distributes contents in the United States, Europe, and internationally. It operates in two segments, Domestic Operations and International. The Domestic Operations segment operates programming networks, such as AMC, We TV, BBCA, IFC, and SundanceTV; provides streaming services, including AMC+ and Acorn TV, Shudder, Sundance Now, ALLBLK, HIDIVE, and All Reality targeted subscription streaming services; produces original programming for its programming services and third parties; and licenses programming. This segment is also involved in the film"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AMCX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:50:11+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AMCX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:50:11+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AMCX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:50:11+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-3563CA2BB442B25A",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": {
+    "context_id": "CTX-117FF6568DA33E35",
+    "input_sha": "117ff6568da33e353aa1f5b2f06bca2a19a8119eb61e67e63b0c55b6bc9293dc",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문의 매출이 전년 대비 감소했습니다",
+        "note_ko": "국내 사업 부문의 매출이 전년 대비 감소했습니다",
+        "kind": "fact",
+        "quote": "•Domestic Operations revenue decreased 11% from the prior year to $470 million.",
+        "document_id": "DOC-3563CA2BB442B25A",
+        "block_id": "p21",
+        "metric": "revenue",
+        "figures": [
+          "11%",
+          "$470 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Domestic Operations",
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "Adjusted Operating Income의 정의에 포함된 항목들이 회사의 영업 성과에 어떤 영향을 미쳤는지 확인해야 합니다.",
+      "Adjusted EPS의 정의에 포함된 항목들이 회사의 주당 순이익에 어떤 영향을 미쳤는지 확인해야 합니다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-3563CA2BB442B25A",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.84307,
+    "eps_30d": 2.76736,
+    "eps_90d": 1.48467,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 91.5,
+    "steady": false,
+    "turnaround": false
+  }
+}

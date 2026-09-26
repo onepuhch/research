@@ -1,0 +1,97 @@
+{
+  "context_id": "CTX-A06399250CF0DD59",
+  "candidate_id": "CAN-D50A4151AB176FB7",
+  "ticker": "AEHR",
+  "issuer_cik": "0001040470",
+  "document_ids": [
+    "DOC-EA4425A446380C5A"
+  ],
+  "eps_target_period": "2028-05-31",
+  "source_blocks": [
+    "DOC-EA4425A446380C5A#p5",
+    "DOC-EA4425A446380C5A#t2",
+    "DOC-EA4425A446380C5A#t3",
+    "DOC-EA4425A446380C5A#p14",
+    "DOC-EA4425A446380C5A#p15",
+    "DOC-EA4425A446380C5A#p16",
+    "DOC-EA4425A446380C5A#p17",
+    "DOC-EA4425A446380C5A#p18",
+    "DOC-EA4425A446380C5A#p19",
+    "DOC-EA4425A446380C5A#p23",
+    "DOC-EA4425A446380C5A#p25",
+    "DOC-EA4425A446380C5A#p26",
+    "DOC-EA4425A446380C5A#p27",
+    "DOC-EA4425A446380C5A#t8",
+    "DOC-EA4425A446380C5A#p49",
+    "DOC-EA4425A446380C5A#p50",
+    "DOC-EA4425A446380C5A#t15"
+  ],
+  "input_sha": "a06399250cf0dd59e3097a16a8840bf652b6d5b717388603f744b168cdf610e6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v2",
+  "parser_version": "context-check-v2",
+  "generated_at": "2026-09-26T14:07:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "unsupported_metric",
+      "note_ko": "회사는 다음 회계연도 매출이 얼마에서 얼마 사이가 될 것으로 예상한다",
+      "figures": [
+        "$130 million",
+        "$150 million"
+      ],
+      "quote": "For the fiscal year ending June 25, 2027, Aehr expects total company revenue to be between $130 million and $150 million, representing approximately 160%-200% year-over-year growth.",
+      "where": "DOC-EA4425A446380C5A#p27"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사는 다음 회계연도 매출이 전년 대비 얼마에서 얼마 성장할 것으로 예상한다",
+      "figures": [
+        "160%-200%"
+      ],
+      "quote": "For the fiscal year ending June 25, 2027, Aehr expects total company revenue to be between $130 million and $150 million, representing approximately 160%-200% year-over-year growth.",
+      "where": "DOC-EA4425A446380C5A#p27"
+    },
+    {
+      "what": "claim",
+      "reason": "unsupported_metric",
+      "note_ko": "회사는 다음 회계연도 비일반회계기준 순이익이 총 매출의 얼마에서 얼마가 될 것으로 예상한다",
+      "figures": [
+        "18%",
+        "22%"
+      ],
+      "quote": "Aehr also expects non-GAAP net income to be 18% to 22% of total revenue.",
+      "where": "DOC-EA4425A446380C5A#p27"
+    },
+    {
+      "what": "claim",
+      "reason": "unsupported_metric",
+      "note_ko": "회사의 유효 수주잔고는 얼마이다",
+      "figures": [
+        "$100.6 million"
+      ],
+      "quote": "Effective backlog, including bookings since May 29, 2026, is $100.6 million.",
+      "where": "DOC-EA4425A446380C5A#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "unsupported_metric",
+      "note_ko": "회사의 순 매출은 얼마였으며, 전년 동기에는 얼마였다",
+      "figures": [
+        "$18.8 million",
+        "$14.1 million"
+      ],
+      "quote": "Net revenue was $18.8 million, compared to $14.1 million in the fourth quarter of fiscal 2025.",
+      "where": "DOC-EA4425A446380C5A#t2"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

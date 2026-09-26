@@ -1,0 +1,127 @@
+{
+  "context_id": "CTX-7E739AC1982C7ECD",
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "ticker": "TALO",
+  "issuer_cik": "0001724965",
+  "document_ids": [
+    "DOC-70283ADC988D0C81"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-70283ADC988D0C81#p5",
+    "DOC-70283ADC988D0C81#p8",
+    "DOC-70283ADC988D0C81#p16",
+    "DOC-70283ADC988D0C81#p29",
+    "DOC-70283ADC988D0C81#p56",
+    "DOC-70283ADC988D0C81#p86",
+    "DOC-70283ADC988D0C81#p94",
+    "DOC-70283ADC988D0C81#t22",
+    "DOC-70283ADC988D0C81#t24",
+    "DOC-70283ADC988D0C81#p151",
+    "DOC-70283ADC988D0C81#t28",
+    "DOC-70283ADC988D0C81#p156",
+    "DOC-70283ADC988D0C81#p158",
+    "DOC-70283ADC988D0C81#p160",
+    "DOC-70283ADC988D0C81#t31",
+    "DOC-70283ADC988D0C81#p175",
+    "DOC-70283ADC988D0C81#p178",
+    "DOC-70283ADC988D0C81#p183"
+  ],
+  "input_sha": "7e739ac1982c7ecda46b602b52c51eb6b3c11c43a519ed061bffd70197417ae2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v2",
+  "parser_version": "context-check-v2",
+  "generated_at": "2026-09-26T14:07:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "Gulf of America 볼트온 인수 완료 시점은 언제인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "원유 및 총 석유환산 생산량이 가이던스 범위를 초과했다",
+      "figures": [
+        "68.6 thousand barrels of oil per day",
+        "93.7 thousand barrels of oil equivalent "
+      ],
+      "quote": "Produced 68.6 thousand barrels of oil per day (“MBo/d”) and 93.7 thousand barrels of oil equivalent per day (“MBoe/d”); oil and total equivalent production exceeded guidance ranges driven by strong up",
+      "where": "DOC-70283ADC988D0C81#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 EBITDA를 기록했다",
+      "figures": [
+        "$402.4 million"
+      ],
+      "quote": "Generated Adjusted EBITDA(1)(2) of $402.4 million.",
+      "where": "DOC-70283ADC988D0C81#p16"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "연간 생산량 가이던스 중간값을 상향 조정했다",
+      "figures": [
+        "66 MBo/d",
+        "89 MBoe/d"
+      ],
+      "quote": "Increased midpoint of full-year 2026 production guidance to 66 MBo/d and 89 MBoe/d; excluding the announced Gulf of America bolt-on acquisition and after adjusting for the closed non-core shelf divest",
+      "where": "DOC-70283ADC988D0C81#p29"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "임대 운영 비용은 배럴당 특정 금액이었으며, 이 중 일부는 일회성 유정 개입 작업과 관련이 있었다",
+      "figures": [
+        "$18.25 per Boe",
+        "$1.75 per Boe"
+      ],
+      "quote": "Lease operating expense totaled $18.25 per Boe, including approximately $1.75 per Boe associated with one-time well intervention work performed during the quarter.",
+      "where": "DOC-70283ADC988D0C81#p56"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "연간 생산량 가이던스를 상향 조정했으며, 이는 특정 인수 제외 및 비핵심 자산 매각 영향을 반영한다",
+      "figures": [
+        "64 to 68 MBo/d",
+        "87 to 91 MBoe/d"
+      ],
+      "quote": "Talos has increased its full-year 2026 production guidance and now expects production to range from 64 to 68 MBo/d and 87 to 91 MBoe/d. This guidance excludes the previously announced Gulf of America ",
+      "where": "DOC-70283ADC988D0C81#p94"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "임대 운영 비용에는 일회성 유정 개입 작업과 관련된 비용이 포함되어 있다",
+      "figures": [
+        "$1.75 per Boe"
+      ],
+      "quote": "Lease operating expense totaled $18.25 per Boe, including approximately $1.75 per Boe associated with one-time well intervention work performed during the quarter.",
+      "where": "DOC-70283ADC988D0C81#p56"
+    },
+    {
+      "what": "limitation",
+      "reason": "unsupported_metric",
+      "note_ko": "연간 생산량 가이던스는 발표된 인수를 제외하고 비핵심 자산 매각의 영향을 반영한다",
+      "figures": [],
+      "quote": "This guidance excludes the previously announced Gulf of America bolt-on acquisition and reflects the impact of the closed non-core shelf divestment.",
+      "where": "DOC-70283ADC988D0C81#p94"
+    },
+    {
+      "what": "limitation",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "조정 EBITDA는 비현금성 손상, 거래 및 기타 비용, 파생상품의 공정 가치 변동, 비현금성 주식 기반 보상 비용 등을 포함한 여러 항목을 조정한다",
+      "figures": [],
+      "quote": "Adjusted EBITDA. EBITDA plus non-cash impairment of oil and natural gas properties, transaction and other (income) expenses, decommissioning obligations, the net change in fair value of derivatives (m",
+      "where": "DOC-70283ADC988D0C81#p151"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

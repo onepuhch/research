@@ -1,0 +1,77 @@
+{
+  "observation_id": "OB-03446660878A8FCC",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "candidate_version": "CV-B73B43F73AE3226C",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:NBR",
+    "ticker": "NBR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-26T13:47:34+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
+    "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
+    "run_id": "36245680144-1",
+    "finished_at": "2026-09-26T13:52:03+00:00"
+  },
+  "eps": {
+    "eps_now": 3.60994,
+    "eps_30d": 1.115,
+    "eps_90d": 1.115,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 223.8,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.068,
+    "yield_change_30_pp": 3.068
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-28",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-25",
+    "price_end_date": "2026-09-25",
+    "close_start": 82.61000061035156,
+    "close_end": 81.33000183105469,
+    "price_pct_90": -1.5,
+    "adj_return_pct_90": -1.5,
+    "pe_change_pct": -69.6
+  },
+  "display_rank": 5,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 3
+    },
+    {
+      "list": "A",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v3",
+  "market_cap": 1235531520,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "entity_id": "NYSE:NBR",
+  "approval_version": null
+}

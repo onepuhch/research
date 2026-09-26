@@ -1,0 +1,72 @@
+{
+  "observation_id": "OB-1EB65E17556D68A6",
+  "candidate_id": "CAN-DF76D3AD7ADC73CF",
+  "candidate_version": "CV-55A316EBB44220E6",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:CBRL",
+    "ticker": "CBRL",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-26T13:47:52+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
+    "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
+    "run_id": "36245680144-1",
+    "finished_at": "2026-09-26T13:52:03+00:00"
+  },
+  "eps": {
+    "eps_now": 1.95504,
+    "eps_30d": 1.67945,
+    "eps_90d": 1.15875,
+    "eps_target_period": "2028-07-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 68.7,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 1.537,
+    "yield_change_30_pp": 0.532
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-28",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-25",
+    "price_end_date": "2026-09-25",
+    "close_start": 52.849998474121094,
+    "close_end": 51.810001373291016,
+    "price_pct_90": -2.0,
+    "adj_return_pct_90": -1.5,
+    "pe_change_pct": -41.9
+  },
+  "display_rank": 24,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 15
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v3",
+  "market_cap": 1158079488,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "원문 조사 대기 중입니다.",
+  "entity_id": "NASDAQ:CBRL",
+  "approval_version": null
+}

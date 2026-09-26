@@ -1,0 +1,72 @@
+{
+  "observation_id": "OB-604BFE76218F0299",
+  "candidate_id": "CAN-68E9292E49558246",
+  "candidate_version": "CV-F3322EBD4C4AD487",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:IPI",
+    "ticker": "IPI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-26T13:50:14+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
+    "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
+    "run_id": "36245680144-1",
+    "finished_at": "2026-09-26T13:52:03+00:00"
+  },
+  "eps": {
+    "eps_now": 1.41366,
+    "eps_30d": 0.61031,
+    "eps_90d": 0.56888,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 148.5,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.482,
+    "yield_change_30_pp": 2.36
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-28",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-25",
+    "price_end_date": "2026-09-25",
+    "close_start": 34.59000015258789,
+    "close_end": 34.040000915527344,
+    "price_pct_90": -1.6,
+    "adj_return_pct_90": -1.6,
+    "pe_change_pct": -60.4
+  },
+  "display_rank": 11,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 6
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v3",
+  "market_cap": 458065184,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "원문 조사 대기 중입니다.",
+  "entity_id": "NYSE:IPI",
+  "approval_version": null
+}

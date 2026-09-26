@@ -1,0 +1,152 @@
+{
+  "candidate_id": "CAN-D577F2C38FBBCFF7",
+  "candidate_version": "CV-799E6A70FB1B30B6",
+  "identity": {
+    "entity_id": "NYSE:DK",
+    "ticker": "DK",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Delek US Holdings, Inc.",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유를 정제하여 휘발유, 디젤, 항공유 등 석유 제품을 생산하고, 원유 운송 및 저장 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Delek US Holdings, Inc. engages in the integrated downstream energy business in the United States. The company operates in two segments Refining and Logistics. The Refining segment processes crude oil and other feedstock for the manufacture of various grades of gasoline, diesel fuel, aviation fuel, asphalt, and other petroleum-based products that are distributed through owned and third-party product terminals. It owns and operates refineries located in Tyler, Texas; El Dorado, Arkansas; Big Spring, Texas; and Krotz Springs, Louisiana. The Logistics segment gathers, transports, and stores crude"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "DK analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DK/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:44:06+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "DK daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DK/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:44:06+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "DK company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DK/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:44:06+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-80DB053BD25896A0",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": {
+    "context_id": "CTX-CFFAC44D8F92374D",
+    "input_sha": "cffac44d8f92374d85ec627c8f5834a87f3acb99035192709c40f5c36306161f",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "주당순이익(earnings per share) — 주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다.",
+        "note_ko": "주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다.",
+        "kind": "fact",
+        "quote": "The following table sets forth the computation of basic and diluted earnings per share.",
+        "document_id": "DOC-80DB053BD25896A0",
+        "block_id": "p129",
+        "metric": "earnings per share",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-80DB053BD25896A0",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 7.85407,
+    "eps_30d": 4.08407,
+    "eps_90d": 2.05776,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": 281.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

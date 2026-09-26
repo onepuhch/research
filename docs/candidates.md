@@ -58,7 +58,7 @@ AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-아직 공식 발표 원문을 연결하지 않았습니다.
+- [실적] [Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문의 매출이 전년 대비 감소했습니다 — “•Domestic Operations revenue decreased 11% from the prior year to $470 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm), 제출 2026-07-30, 기간 unknown)
 
 **사람이 확인한 사업 근거**
 
@@ -68,16 +68,18 @@ AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+- Adjusted Operating Income의 정의에 포함된 항목들이 회사의 영업 성과에 어떤 영향을 미쳤는지 확인해야 합니다. (자동 제안)
 
 **출처**
 
 - [AMCX analyst estimates (EPS trend)](https://finance.yahoo.com/quote/AMCX/analysis) (관측 2026-09-26)
 - [AMCX daily closes](https://finance.yahoo.com/quote/AMCX/history) (관측 2026-09-26)
 - [AMCX company profile](https://finance.yahoo.com/quote/AMCX/profile) (관측 2026-09-26)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm) (제출 2026-07-30)
 
 텔레그램: `/track CAN-14C6F602D0868FB9`
 
@@ -101,7 +103,7 @@ CAN-D50A4151AB176FB7 · Semiconductor Equipment & Materials · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-아직 공식 발표 원문을 연결하지 않았습니다.
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
 
@@ -111,6 +113,7 @@ CAN-D50A4151AB176FB7 · Semiconductor Equipment & Materials · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -121,6 +124,7 @@ CAN-D50A4151AB176FB7 · Semiconductor Equipment & Materials · 미추적
 - [AEHR analyst estimates (EPS trend)](https://finance.yahoo.com/quote/AEHR/analysis) (관측 2026-09-26)
 - [AEHR daily closes](https://finance.yahoo.com/quote/AEHR/history) (관측 2026-09-26)
 - [AEHR company profile](https://finance.yahoo.com/quote/AEHR/profile) (관측 2026-09-26)
+- [SEC 8-K EX-99.1 — PRESS RELEASE](https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm) (제출 2026-07-14)
 
 텔레그램: `/track CAN-D50A4151AB176FB7`
 
@@ -144,7 +148,7 @@ CAN-ABBBE42278126D28 · Oil & Gas E&P · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-아직 공식 발표 원문을 연결하지 않았습니다.
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
 
@@ -154,16 +158,18 @@ CAN-ABBBE42278126D28 · Oil & Gas E&P · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+- Gulf of America 볼트온 인수 완료 시점은 언제인가? (자동 제안)
 
 **출처**
 
 - [TALO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TALO/analysis) (관측 2026-09-26)
 - [TALO daily closes](https://finance.yahoo.com/quote/TALO/history) (관측 2026-09-26)
 - [TALO company profile](https://finance.yahoo.com/quote/TALO/profile) (관측 2026-09-26)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm) (제출 2026-08-04)
 
 텔레그램: `/track CAN-ABBBE42278126D28`
 
@@ -188,7 +194,7 @@ CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-아직 공식 발표 원문을 연결하지 않았습니다.
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
 
@@ -198,6 +204,8 @@ CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- [반대 근거·한계] 주당순이익(earnings per share) — 주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다. — “The following table sets forth the computation of basic and diluted earnings per share.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm), 제출 2026-08-05, 기간 unknown)
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -208,6 +216,7 @@ CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
 - [DK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DK/analysis) (관측 2026-09-26)
 - [DK daily closes](https://finance.yahoo.com/quote/DK/history) (관측 2026-09-26)
 - [DK company profile](https://finance.yahoo.com/quote/DK/profile) (관측 2026-09-26)
+- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-D577F2C38FBBCFF7`
 
@@ -276,7 +285,7 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-아직 공식 발표 원문을 연결하지 않았습니다.
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
 
@@ -286,6 +295,7 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -296,6 +306,7 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 - [PBF analyst estimates (EPS trend)](https://finance.yahoo.com/quote/PBF/analysis) (관측 2026-09-26)
 - [PBF daily closes](https://finance.yahoo.com/quote/PBF/history) (관측 2026-09-26)
 - [PBF company profile](https://finance.yahoo.com/quote/PBF/profile) (관측 2026-09-26)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm) (제출 2026-07-30)
 
 텔레그램: `/track CAN-82719B27698E3C22`
 

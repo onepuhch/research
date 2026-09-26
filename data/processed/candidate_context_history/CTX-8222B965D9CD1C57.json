@@ -1,0 +1,98 @@
+{
+  "context_id": "CTX-8222B965D9CD1C57",
+  "candidate_id": "CAN-82719B27698E3C22",
+  "ticker": "PBF",
+  "issuer_cik": "0001534504",
+  "document_ids": [
+    "DOC-9FC60A7023735EC9"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9FC60A7023735EC9#p10",
+    "DOC-9FC60A7023735EC9#p17",
+    "DOC-9FC60A7023735EC9#p18",
+    "DOC-9FC60A7023735EC9#t2",
+    "DOC-9FC60A7023735EC9#t13"
+  ],
+  "input_sha": "8222b965d9cd1c577e967dd415061f4b75cefaa0392a1634e585001886edc08b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v2",
+  "parser_version": "context-check-v2",
+  "generated_at": "2026-09-26T14:07:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "이 회사의 이분기 순이익은 구백육백사십만 달러이며 주당 순이익은 칠 달러 오십사 센트이다",
+      "figures": [
+        "$906.4 million",
+        "$7.54 per share"
+      ],
+      "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
+      "where": "DOC-9FC60A7023735EC9#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "이 회사의 이분기 순손실은 오백이십만 달러이며 주당 순손실은 영 달러 오 센트이다",
+      "figures": [
+        "$5.2 million",
+        "$(0.05) per share"
+      ],
+      "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
+      "where": "DOC-9FC60A7023735EC9#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "특별 항목을 제외한 조정된 완전 전환 순이익은 칠백오십삼백십만 달러이며 주당 육 달러 이십이 센트이다",
+      "figures": [
+        "$753.1 million",
+        "$6.22 per share"
+      ],
+      "quote": "Adjusted fully-converted net income for the second quarter 2026, excluding special items, was $753.1 million, or $6.22 per share on a fully-exchanged, fully-diluted basis, as described below, compared",
+      "where": "DOC-9FC60A7023735EC9#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "특별 항목을 제외한 조정된 완전 전환 순손실은 백십팔백오십만 달러이며 주당 일 달러 삼 센트이다",
+      "figures": [
+        "$118.5 million",
+        "$(1.03) per share"
+      ],
+      "quote": "Adjusted fully-converted net income for the second quarter 2026, excluding special items, was $753.1 million, or $6.22 per share on a fully-exchanged, fully-diluted basis, as described below, compared",
+      "where": "DOC-9FC60A7023735EC9#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "이 회사는 이천이십육년 육월 삼십일로 마감된 삼개월 및 육개월 동안 마르티네즈 정유소 화재와 관련된 보험금 회수 이익을 각각 이백오십백만 달러와 삼백오십육백오십만 달러 기록했다",
+      "figures": [
+        "$250.0 million",
+        "$356.5 million"
+      ],
+      "quote": "During the three and six months ended June 30, 2026, we recorded gains on insurance recoveries associated with the Martinez refinery fire that increased income from operations by $250.0 million and $3",
+      "where": "DOC-9FC60A7023735EC9#t13"
+    },
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "이분기 순이익은 비현금성 특별 항목으로 인해 백오십구백팔십만 달러 또는 주당 일 달러 삼십이 센트 증가했다",
+      "figures": [
+        "$159.8 million",
+        "$1.32 per share"
+      ],
+      "quote": "Non-cash special items included in the second quarter 2026 results, which increased net income by a net, after-tax benefit of $159.8 million, or $1.32 per share, primarily consisted of gains on insura",
+      "where": "DOC-9FC60A7023735EC9#p10"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

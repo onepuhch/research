@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T13:52:19+00:00",
+  "generated_at": "2026-09-26T14:08:03+00:00",
   "generator_version": "cards-v3",
   "thesis_key": "eps-revision-review:v1",
   "stale": [],
@@ -14,7 +14,55 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-117FF6568DA33E35",
+        "input_sha": "117ff6568da33e353aa1f5b2f06bca2a19a8119eb61e67e63b0c55b6bc9293dc",
+        "context_status": "insufficient_earnings_context",
+        "claims": [
+          {
+            "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문의 매출이 전년 대비 감소했습니다",
+            "note_ko": "국내 사업 부문의 매출이 전년 대비 감소했습니다",
+            "kind": "fact",
+            "quote": "•Domestic Operations revenue decreased 11% from the prior year to $470 million.",
+            "document_id": "DOC-3563CA2BB442B25A",
+            "block_id": "p21",
+            "metric": "revenue",
+            "figures": [
+              "11%",
+              "$470 million"
+            ],
+            "period": "unknown",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "segment",
+            "subject_name": "Domestic Operations",
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "negative"
+          }
+        ],
+        "limitations": [],
+        "next_check": [
+          "Adjusted Operating Income의 정의에 포함된 항목들이 회사의 영업 성과에 어떤 영향을 미쳤는지 확인해야 합니다.",
+          "Adjusted EPS의 정의에 포함된 항목들이 회사의 주당 순이익에 어떤 영향을 미쳤는지 확인해야 합니다."
+        ],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-3563CA2BB442B25A",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+            "filed_at": "2026-07-30",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "AMC Global Media Inc.",
       "industry": "Entertainment",
       "sector": "Communication Services",
@@ -101,12 +149,22 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:50:11+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-3563CA2BB442B25A",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-07-30",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-28E27553C83FCEEC",
+      "candidate_version": "CV-B6E3C186DFB16B98",
       "classification": "found",
-      "observation_id": "OB-F0AD06B0D4BF0C1C",
+      "observation_id": "OB-B2265D02E707278B",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -147,14 +205,14 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-117FF6568DA33E35",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:24:02+00:00",
       "last_seen_at": "2026-09-26T13:50:11+00:00"
     },
@@ -168,7 +226,28 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-A06399250CF0DD59",
+        "input_sha": "a06399250cf0dd59e3097a16a8840bf652b6d5b717388603f744b168cdf610e6",
+        "context_status": "no_supported_claims",
+        "claims": [],
+        "limitations": [],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-EA4425A446380C5A",
+            "title": "PRESS RELEASE",
+            "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
+            "filed_at": "2026-07-14",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "Aehr Test Systems, Inc.",
       "industry": "Semiconductor Equipment & Materials",
       "sector": "Technology",
@@ -254,12 +333,22 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:44:54+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-EA4425A446380C5A",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
+          "title": "SEC 8-K EX-99.1 — PRESS RELEASE",
+          "published_at": null,
+          "filed_at": "2026-07-14",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-8C06BCD4BFC39145",
+      "candidate_version": "CV-145AB934DBDB4BCC",
       "classification": "found",
-      "observation_id": "OB-1F342699A9411BCD",
+      "observation_id": "OB-8675C2D46C311BA2",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -296,14 +385,14 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-A06399250CF0DD59",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:43+00:00",
       "last_seen_at": "2026-09-26T13:44:54+00:00"
     },
@@ -317,7 +406,30 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-7E739AC1982C7ECD",
+        "input_sha": "7e739ac1982c7ecda46b602b52c51eb6b3c11c43a519ed061bffd70197417ae2",
+        "context_status": "no_supported_claims",
+        "claims": [],
+        "limitations": [],
+        "next_check": [
+          "Gulf of America 볼트온 인수 완료 시점은 언제인가?"
+        ],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-70283ADC988D0C81",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+            "filed_at": "2026-08-04",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "Talos Energy Inc.",
       "industry": "Oil & Gas E&P",
       "sector": "Energy",
@@ -403,12 +515,22 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:45:16+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-70283ADC988D0C81",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-08-04",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-7DEE706CB9DB7FBB",
+      "candidate_version": "CV-3A94E7D653555C95",
       "classification": "found",
-      "observation_id": "OB-0955F76AFBB90A24",
+      "observation_id": "OB-7B8CCF74678E6BAF",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -445,14 +567,14 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-7E739AC1982C7ECD",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:19:16+00:00",
       "last_seen_at": "2026-09-26T13:45:16+00:00"
     },
@@ -466,7 +588,49 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-CFFAC44D8F92374D",
+        "input_sha": "cffac44d8f92374d85ec627c8f5834a87f3acb99035192709c40f5c36306161f",
+        "context_status": "no_supported_claims",
+        "claims": [],
+        "limitations": [
+          {
+            "text_ko": "주당순이익(earnings per share) — 주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다.",
+            "note_ko": "주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다.",
+            "kind": "fact",
+            "quote": "The following table sets forth the computation of basic and diluted earnings per share.",
+            "document_id": "DOC-80DB053BD25896A0",
+            "block_id": "p129",
+            "metric": "earnings per share",
+            "figures": [],
+            "period": "unknown",
+            "currency": null,
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          }
+        ],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-80DB053BD25896A0",
+            "title": "10-Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+            "filed_at": "2026-08-05",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "10-Q",
+            "document_type": "10-Q"
+          }
+        ]
+      },
       "name": "Delek US Holdings, Inc.",
       "industry": "Oil & Gas Refining & Marketing",
       "sector": "Energy",
@@ -553,12 +717,22 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:44:06+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-80DB053BD25896A0",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+          "title": "SEC 10-Q 10-Q",
+          "published_at": null,
+          "filed_at": "2026-08-05",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "10-Q 10-Q"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-0173F79AFD5AA961",
+      "candidate_version": "CV-799E6A70FB1B30B6",
       "classification": "found",
-      "observation_id": "OB-F8AC1CC721553499",
+      "observation_id": "OB-A91B69C383066226",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -599,14 +773,14 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-CFFAC44D8F92374D",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:17:40+00:00",
       "last_seen_at": "2026-09-26T13:44:06+00:00"
     },
@@ -712,7 +886,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-B73B43F73AE3226C",
       "classification": "found",
-      "observation_id": "OB-177FF808AFF6A56F",
+      "observation_id": "OB-03446660878A8FCC",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -760,7 +934,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:21:26+00:00",
       "last_seen_at": "2026-09-26T13:47:34+00:00"
     },
@@ -774,7 +948,28 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-8222B965D9CD1C57",
+        "input_sha": "8222b965d9cd1c577e967dd415061f4b75cefaa0392a1634e585001886edc08b",
+        "context_status": "no_supported_claims",
+        "claims": [],
+        "limitations": [],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-9FC60A7023735EC9",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
+            "filed_at": "2026-07-30",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "PBF Energy Inc.",
       "industry": "Oil & Gas Refining & Marketing",
       "sector": "Energy",
@@ -861,12 +1056,22 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:42:09+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-9FC60A7023735EC9",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-07-30",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-1685DBD3D71BB3F6",
+      "candidate_version": "CV-6EB541EE1A3EA72B",
       "classification": "found",
-      "observation_id": "OB-6104A383893E395B",
+      "observation_id": "OB-7EB4966B95AA68E5",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -907,14 +1112,14 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-8222B965D9CD1C57",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:15:57+00:00",
       "last_seen_at": "2026-09-26T13:42:09+00:00"
     },
@@ -1019,7 +1224,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-F3C6AFA6AB298745",
       "classification": "found",
-      "observation_id": "OB-BFD7D41B4E1CF2D9",
+      "observation_id": "OB-9F8D6DB6E99232A6",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1063,7 +1268,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:17:24+00:00",
       "last_seen_at": "2026-09-26T13:43:28+00:00"
     },
@@ -1169,7 +1374,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-7CBC55C2C777CB44",
       "classification": "found",
-      "observation_id": "OB-547F6C49EFE9D013",
+      "observation_id": "OB-C3D26A70E812DB0F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1217,7 +1422,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:12:23+00:00",
       "last_seen_at": "2026-09-26T13:38:34+00:00"
     },
@@ -1322,7 +1527,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-389CEC378D385D9E",
       "classification": "found",
-      "observation_id": "OB-8F9EE99A6A6576F4",
+      "observation_id": "OB-B630A451DF75344B",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1366,7 +1571,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:15:04+00:00",
       "last_seen_at": "2026-09-26T13:41:14+00:00"
     },
@@ -1471,7 +1676,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-6F633DF556AEE827",
       "classification": "found",
-      "observation_id": "OB-8D3BC805EA4C0939",
+      "observation_id": "OB-917DABA458FD36E0",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1515,7 +1720,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:24:58+00:00",
       "last_seen_at": "2026-09-26T13:51:01+00:00"
     },
@@ -1620,7 +1825,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-F3322EBD4C4AD487",
       "classification": "found",
-      "observation_id": "OB-D3EA7609165079D5",
+      "observation_id": "OB-604BFE76218F0299",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1664,7 +1869,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:23:59+00:00",
       "last_seen_at": "2026-09-26T13:50:14+00:00"
     },
@@ -1769,7 +1974,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-4A5183D3753A42A9",
       "classification": "found",
-      "observation_id": "OB-B06D35DEE1D6F01A",
+      "observation_id": "OB-10F156345A8C069E",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1813,7 +2018,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:03+00:00",
       "last_seen_at": "2026-09-26T13:44:18+00:00"
     },
@@ -1918,7 +2123,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-4CFC394DB1A1E385",
       "classification": "found",
-      "observation_id": "OB-81E5DD2401F211F2",
+      "observation_id": "OB-23FDA0C1B483CD2F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1962,7 +2167,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:16:24+00:00",
       "last_seen_at": "2026-09-26T13:42:39+00:00"
     },
@@ -2068,7 +2273,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-14712902D0D29EA0",
       "classification": "found",
-      "observation_id": "OB-C73DBF773F4FEE50",
+      "observation_id": "OB-3F3ED94E589FEB3F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2116,7 +2321,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:12:23+00:00",
       "last_seen_at": "2026-09-26T13:38:34+00:00"
     },
@@ -2222,7 +2427,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-493C559DA52E5AF8",
       "classification": "found",
-      "observation_id": "OB-BFD5371F374F3B12",
+      "observation_id": "OB-102798A12A38338A",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2270,7 +2475,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:22:36+00:00",
       "last_seen_at": "2026-09-26T13:48:42+00:00"
     },
@@ -2376,7 +2581,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-9392535436B8860D",
       "classification": "found",
-      "observation_id": "OB-98D9D9237C88C120",
+      "observation_id": "OB-F1642384B0F3CCB0",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2424,7 +2629,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:14:17+00:00",
       "last_seen_at": "2026-09-26T13:40:29+00:00"
     },
@@ -2529,7 +2734,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-67D2C4A52BEBB2BB",
       "classification": "found",
-      "observation_id": "OB-3B2CC746F4C20853",
+      "observation_id": "OB-1CA145ABEA580038",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2573,7 +2778,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:21:01+00:00",
       "last_seen_at": "2026-09-26T13:47:39+00:00"
     },
@@ -2678,7 +2883,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-1AF3FA9465E9CCAC",
       "classification": "found",
-      "observation_id": "OB-41692F4B0CE6A5A3",
+      "observation_id": "OB-73A9F8A45461641A",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2722,7 +2927,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:35+00:00",
       "last_seen_at": "2026-09-26T13:44:45+00:00"
     },
@@ -2828,7 +3033,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-E4F660E480036F4D",
       "classification": "found",
-      "observation_id": "OB-8ED4A1EE1D20FF27",
+      "observation_id": "OB-764BAF1995CE5AA7",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2876,7 +3081,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:20:02+00:00",
       "last_seen_at": "2026-09-26T13:46:16+00:00"
     },
@@ -2981,7 +3186,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-12F5DA4651ACA7AF",
       "classification": "found",
-      "observation_id": "OB-23131E7030D711D8",
+      "observation_id": "OB-41992EFA7CCF682D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3025,7 +3230,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:23:36+00:00",
       "last_seen_at": "2026-09-26T13:49:44+00:00"
     },
@@ -3130,7 +3335,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-8CE2A563CF142132",
       "classification": "found",
-      "observation_id": "OB-B54FE5BEA1C3B128",
+      "observation_id": "OB-486A1B7B4B0ECCBB",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3174,7 +3379,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:08+00:00",
       "last_seen_at": "2026-09-26T13:44:12+00:00"
     },
@@ -3279,7 +3484,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-F473BBC445827447",
       "classification": "found",
-      "observation_id": "OB-57CD28FEEEC3F9B3",
+      "observation_id": "OB-4B6D4782CCCB9561",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3323,7 +3528,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:20:36+00:00",
       "last_seen_at": "2026-09-26T13:47:00+00:00"
     },
@@ -3428,7 +3633,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-8788753D9CB4E829",
       "classification": "found",
-      "observation_id": "OB-682CB121C6E6BF08",
+      "observation_id": "OB-A323E241332D780D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3472,7 +3677,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:21:37+00:00",
       "last_seen_at": "2026-09-26T13:47:47+00:00"
     },
@@ -3577,7 +3782,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-55A316EBB44220E6",
       "classification": "found",
-      "observation_id": "OB-3545E4ABBDE75AB4",
+      "observation_id": "OB-1EB65E17556D68A6",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3621,7 +3826,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:22:01+00:00",
       "last_seen_at": "2026-09-26T13:47:52+00:00"
     },
@@ -3726,7 +3931,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-E69B41464CFF9A9E",
       "classification": "found",
-      "observation_id": "OB-4BC29DAD1930281E",
+      "observation_id": "OB-70CC9C10718C28BD",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3770,7 +3975,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:22:45+00:00",
       "last_seen_at": "2026-09-26T13:48:42+00:00"
     },
@@ -3876,7 +4081,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-AD575391E01D9BBC",
       "classification": "found",
-      "observation_id": "OB-9898C569891C7A65",
+      "observation_id": "OB-44B39AFD6BD51E76",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3924,7 +4129,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:19:42+00:00",
       "last_seen_at": "2026-09-26T13:45:52+00:00"
     },
@@ -4029,7 +4234,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-4C1E08CD5614E654",
       "classification": "found",
-      "observation_id": "OB-B40240AA0C2E4D31",
+      "observation_id": "OB-91C16CC59587E738",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4073,7 +4278,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:17:58+00:00",
       "last_seen_at": "2026-09-26T13:44:00+00:00"
     },
@@ -4178,7 +4383,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-8D085D040B2EE2CE",
       "classification": "found",
-      "observation_id": "OB-1CFADA99A5AD8627",
+      "observation_id": "OB-077A93776E4349C1",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4222,7 +4427,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:12:26+00:00",
       "last_seen_at": "2026-09-26T13:38:37+00:00"
     },
@@ -4327,7 +4532,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-1A01B5CD572ADED3",
       "classification": "found",
-      "observation_id": "OB-A7CFF6B6E0AC0150",
+      "observation_id": "OB-A0B0D92E96CAE3CA",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4371,7 +4576,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:33+00:00",
       "last_seen_at": "2026-09-26T13:44:37+00:00"
     },
@@ -4476,7 +4681,7 @@
       "generator_version": "cards-v3",
       "candidate_version": "CV-CB3AD51968EC2172",
       "classification": "found",
-      "observation_id": "OB-5B950F10DEF784F7",
+      "observation_id": "OB-B6F2F7156F5A735D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4520,7 +4725,7 @@
         "run_id": "36245680144-1",
         "finished_at": "2026-09-26T13:52:03+00:00"
       },
-      "policy_version": "0cc43c631011",
+      "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:40+00:00",
       "last_seen_at": "2026-09-26T13:45:04+00:00"
     }
@@ -4546,7 +4751,7 @@
       "ticker": "PUBM",
       "first_seen_at": "2026-09-25T12:22:45+00:00",
       "last_seen_at": "2026-09-26T13:48:42+00:00",
-      "latest_observation": "OB-4BC29DAD1930281E",
+      "latest_observation": "OB-70CC9C10718C28BD",
       "latest_version": "CV-E69B41464CFF9A9E",
       "timeline": [
         {
@@ -4566,12 +4771,37 @@
         }
       ]
     },
+    "CAN-77F79A3B05ABB893": {
+      "key": "NYSE:MPC|eps-revision-review:v1",
+      "ticker": "MPC",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-26T13:38:34+00:00",
+      "latest_observation": "OB-C3D26A70E812DB0F",
+      "latest_version": "CV-7CBC55C2C777CB44",
+      "timeline": [
+        {
+          "version": "CV-5738FCB84A71A919",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-12904D03276AD5D4",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-7CBC55C2C777CB44",
+          "from": "2026-09-26T13:38:34+00:00",
+          "to": "2026-09-26T13:38:34+00:00"
+        }
+      ]
+    },
     "CAN-700B10D9B75B0040": {
       "key": "NASDAQ:CORT|eps-revision-review:v1",
       "ticker": "CORT",
       "first_seen_at": "2026-09-25T12:15:04+00:00",
       "last_seen_at": "2026-09-26T13:41:14+00:00",
-      "latest_observation": "OB-8F9EE99A6A6576F4",
+      "latest_observation": "OB-B630A451DF75344B",
       "latest_version": "CV-389CEC378D385D9E",
       "timeline": [
         {
@@ -4635,6 +4865,11 @@
           "to": "2026-09-25T12:24:02+00:00"
         },
         {
+          "version": "CV-B6E3C186DFB16B98",
+          "from": "2026-09-26T13:50:11+00:00",
+          "to": "2026-09-26T13:50:11+00:00"
+        },
+        {
           "version": "CV-28E27553C83FCEEC",
           "from": "2026-09-26T13:50:11+00:00",
           "to": "2026-09-26T13:50:11+00:00"
@@ -4646,7 +4881,7 @@
       "ticker": "DINO",
       "first_seen_at": "2026-09-25T12:14:17+00:00",
       "last_seen_at": "2026-09-26T13:40:29+00:00",
-      "latest_observation": "OB-98D9D9237C88C120",
+      "latest_observation": "OB-F1642384B0F3CCB0",
       "latest_version": "CV-9392535436B8860D",
       "timeline": [
         {
@@ -4688,6 +4923,31 @@
           "version": "CV-4C1E08CD5614E654",
           "from": "2026-09-26T13:44:00+00:00",
           "to": "2026-09-26T13:44:00+00:00"
+        }
+      ]
+    },
+    "CAN-DF76D3AD7ADC73CF": {
+      "key": "NASDAQ:CBRL|eps-revision-review:v1",
+      "ticker": "CBRL",
+      "first_seen_at": "2026-09-25T12:22:01+00:00",
+      "last_seen_at": "2026-09-26T13:47:52+00:00",
+      "latest_observation": "OB-3545E4ABBDE75AB4",
+      "latest_version": "CV-55A316EBB44220E6",
+      "timeline": [
+        {
+          "version": "CV-1D39906962BB7F56",
+          "from": "2026-09-25T12:22:01+00:00",
+          "to": "2026-09-25T12:22:01+00:00"
+        },
+        {
+          "version": "CV-3E4799955826259A",
+          "from": "2026-09-25T12:22:01+00:00",
+          "to": "2026-09-25T12:22:01+00:00"
+        },
+        {
+          "version": "CV-55A316EBB44220E6",
+          "from": "2026-09-26T13:47:52+00:00",
+          "to": "2026-09-26T13:47:52+00:00"
         }
       ]
     },
@@ -4741,6 +5001,61 @@
         }
       ]
     },
+    "CAN-D50A4151AB176FB7": {
+      "key": "NASDAQ:AEHR|eps-revision-review:v1",
+      "ticker": "AEHR",
+      "first_seen_at": "2026-09-25T12:18:43+00:00",
+      "last_seen_at": "2026-09-26T13:44:54+00:00",
+      "latest_observation": "OB-8675C2D46C311BA2",
+      "latest_version": "CV-145AB934DBDB4BCC",
+      "timeline": [
+        {
+          "version": "CV-DA95C110EE6F41D4",
+          "from": "2026-09-25T12:18:43+00:00",
+          "to": "2026-09-25T12:18:43+00:00"
+        },
+        {
+          "version": "CV-E5D4BB82CED3B729",
+          "from": "2026-09-25T12:18:43+00:00",
+          "to": "2026-09-25T12:18:43+00:00"
+        },
+        {
+          "version": "CV-8C06BCD4BFC39145",
+          "from": "2026-09-26T13:44:54+00:00",
+          "to": "2026-09-26T13:44:54+00:00"
+        },
+        {
+          "version": "CV-145AB934DBDB4BCC",
+          "from": "2026-09-26T13:44:54+00:00",
+          "to": "2026-09-26T13:44:54+00:00"
+        }
+      ]
+    },
+    "CAN-E763F753A2D7609F": {
+      "key": "NASDAQ:CLBK|eps-revision-review:v1",
+      "ticker": "CLBK",
+      "first_seen_at": "2026-09-25T12:21:37+00:00",
+      "last_seen_at": "2026-09-26T13:47:47+00:00",
+      "latest_observation": "OB-A323E241332D780D",
+      "latest_version": "CV-8788753D9CB4E829",
+      "timeline": [
+        {
+          "version": "CV-80A3655EAA47F80A",
+          "from": "2026-09-25T12:21:37+00:00",
+          "to": "2026-09-25T12:21:37+00:00"
+        },
+        {
+          "version": "CV-283B95385C02CDAC",
+          "from": "2026-09-25T12:21:37+00:00",
+          "to": "2026-09-25T12:21:37+00:00"
+        },
+        {
+          "version": "CV-8788753D9CB4E829",
+          "from": "2026-09-26T13:47:47+00:00",
+          "to": "2026-09-26T13:47:47+00:00"
+        }
+      ]
+    },
     "CAN-68E9292E49558246": {
       "key": "NYSE:IPI|eps-revision-review:v1",
       "ticker": "IPI",
@@ -4771,8 +5086,8 @@
       "ticker": "PBF",
       "first_seen_at": "2026-09-25T12:15:57+00:00",
       "last_seen_at": "2026-09-26T13:42:09+00:00",
-      "latest_observation": "OB-6104A383893E395B",
-      "latest_version": "CV-1685DBD3D71BB3F6",
+      "latest_observation": "OB-7EB4966B95AA68E5",
+      "latest_version": "CV-6EB541EE1A3EA72B",
       "timeline": [
         {
           "version": "CV-455DA67895538E91",
@@ -4788,6 +5103,91 @@
           "version": "CV-1685DBD3D71BB3F6",
           "from": "2026-09-26T13:42:09+00:00",
           "to": "2026-09-26T13:42:09+00:00"
+        },
+        {
+          "version": "CV-6EB541EE1A3EA72B",
+          "from": "2026-09-26T13:42:09+00:00",
+          "to": "2026-09-26T13:42:09+00:00"
+        }
+      ]
+    },
+    "CAN-E87900AEFDDE7B07": {
+      "key": "NASDAQ:SPT|eps-revision-review:v1",
+      "ticker": "SPT",
+      "first_seen_at": "2026-09-25T12:23:36+00:00",
+      "last_seen_at": "2026-09-26T13:49:44+00:00",
+      "latest_observation": "OB-41992EFA7CCF682D",
+      "latest_version": "CV-12F5DA4651ACA7AF",
+      "timeline": [
+        {
+          "version": "CV-EDF7689610E360C0",
+          "from": "2026-09-25T12:23:36+00:00",
+          "to": "2026-09-25T12:23:36+00:00"
+        },
+        {
+          "version": "CV-88606568735BCAAB",
+          "from": "2026-09-25T12:23:36+00:00",
+          "to": "2026-09-25T12:23:36+00:00"
+        },
+        {
+          "version": "CV-12F5DA4651ACA7AF",
+          "from": "2026-09-26T13:49:44+00:00",
+          "to": "2026-09-26T13:49:44+00:00"
+        }
+      ]
+    },
+    "CAN-D577F2C38FBBCFF7": {
+      "key": "NYSE:DK|eps-revision-review:v1",
+      "ticker": "DK",
+      "first_seen_at": "2026-09-25T12:17:40+00:00",
+      "last_seen_at": "2026-09-26T13:44:06+00:00",
+      "latest_observation": "OB-F8AC1CC721553499",
+      "latest_version": "CV-0173F79AFD5AA961",
+      "timeline": [
+        {
+          "version": "CV-86794C89F295E989",
+          "from": "2026-09-25T12:17:40+00:00",
+          "to": "2026-09-25T12:17:40+00:00"
+        },
+        {
+          "version": "CV-42D1318E7E187F93",
+          "from": "2026-09-25T12:17:40+00:00",
+          "to": "2026-09-25T12:17:40+00:00"
+        },
+        {
+          "version": "CV-799E6A70FB1B30B6",
+          "from": "2026-09-26T13:44:06+00:00",
+          "to": "2026-09-26T13:44:06+00:00"
+        },
+        {
+          "version": "CV-0173F79AFD5AA961",
+          "from": "2026-09-26T13:44:06+00:00",
+          "to": "2026-09-26T13:44:06+00:00"
+        }
+      ]
+    },
+    "CAN-5A9E947A6AEC56D7": {
+      "key": "NYSE:AGL|eps-revision-review:v1",
+      "ticker": "AGL",
+      "first_seen_at": "2026-09-25T12:21:01+00:00",
+      "last_seen_at": "2026-09-26T13:47:39+00:00",
+      "latest_observation": "OB-3B2CC746F4C20853",
+      "latest_version": "CV-67D2C4A52BEBB2BB",
+      "timeline": [
+        {
+          "version": "CV-871A37F9A9331D56",
+          "from": "2026-09-25T12:21:01+00:00",
+          "to": "2026-09-25T12:21:01+00:00"
+        },
+        {
+          "version": "CV-FE788D654BB08EC7",
+          "from": "2026-09-25T12:21:01+00:00",
+          "to": "2026-09-25T12:21:01+00:00"
+        },
+        {
+          "version": "CV-67D2C4A52BEBB2BB",
+          "from": "2026-09-26T13:47:39+00:00",
+          "to": "2026-09-26T13:47:39+00:00"
         }
       ]
     },
@@ -4796,7 +5196,7 @@
       "ticker": "TNK",
       "first_seen_at": "2026-09-25T12:18:35+00:00",
       "last_seen_at": "2026-09-26T13:44:45+00:00",
-      "latest_observation": "OB-41692F4B0CE6A5A3",
+      "latest_observation": "OB-73A9F8A45461641A",
       "latest_version": "CV-1AF3FA9465E9CCAC",
       "timeline": [
         {
@@ -4821,7 +5221,7 @@
       "ticker": "DAN",
       "first_seen_at": "2026-09-25T12:18:40+00:00",
       "last_seen_at": "2026-09-26T13:45:04+00:00",
-      "latest_observation": "OB-5B950F10DEF784F7",
+      "latest_observation": "OB-B6F2F7156F5A735D",
       "latest_version": "CV-CB3AD51968EC2172",
       "timeline": [
         {
@@ -4838,6 +5238,31 @@
           "version": "CV-CB3AD51968EC2172",
           "from": "2026-09-26T13:45:04+00:00",
           "to": "2026-09-26T13:45:04+00:00"
+        }
+      ]
+    },
+    "CAN-A0761326A7E13159": {
+      "key": "NYSE:SUNC|eps-revision-review:v1",
+      "ticker": "SUNC",
+      "first_seen_at": "2026-09-25T12:18:08+00:00",
+      "last_seen_at": "2026-09-26T13:44:12+00:00",
+      "latest_observation": "OB-B54FE5BEA1C3B128",
+      "latest_version": "CV-8CE2A563CF142132",
+      "timeline": [
+        {
+          "version": "CV-F5FC73696BF629F0",
+          "from": "2026-09-25T12:18:08+00:00",
+          "to": "2026-09-25T12:18:08+00:00"
+        },
+        {
+          "version": "CV-7A47AD3C204175C2",
+          "from": "2026-09-25T12:18:08+00:00",
+          "to": "2026-09-25T12:18:08+00:00"
+        },
+        {
+          "version": "CV-8CE2A563CF142132",
+          "from": "2026-09-26T13:44:12+00:00",
+          "to": "2026-09-26T13:44:12+00:00"
         }
       ]
     },
@@ -4871,8 +5296,8 @@
       "ticker": "TALO",
       "first_seen_at": "2026-09-25T12:19:16+00:00",
       "last_seen_at": "2026-09-26T13:45:16+00:00",
-      "latest_observation": "OB-0955F76AFBB90A24",
-      "latest_version": "CV-7DEE706CB9DB7FBB",
+      "latest_observation": "OB-7B8CCF74678E6BAF",
+      "latest_version": "CV-3A94E7D653555C95",
       "timeline": [
         {
           "version": "CV-C7C48647A856A28C",
@@ -4888,31 +5313,11 @@
           "version": "CV-7DEE706CB9DB7FBB",
           "from": "2026-09-26T13:45:16+00:00",
           "to": "2026-09-26T13:45:16+00:00"
-        }
-      ]
-    },
-    "CAN-DF76D3AD7ADC73CF": {
-      "key": "NASDAQ:CBRL|eps-revision-review:v1",
-      "ticker": "CBRL",
-      "first_seen_at": "2026-09-25T12:22:01+00:00",
-      "last_seen_at": "2026-09-26T13:47:52+00:00",
-      "latest_observation": "OB-3545E4ABBDE75AB4",
-      "latest_version": "CV-55A316EBB44220E6",
-      "timeline": [
-        {
-          "version": "CV-1D39906962BB7F56",
-          "from": "2026-09-25T12:22:01+00:00",
-          "to": "2026-09-25T12:22:01+00:00"
         },
         {
-          "version": "CV-3E4799955826259A",
-          "from": "2026-09-25T12:22:01+00:00",
-          "to": "2026-09-25T12:22:01+00:00"
-        },
-        {
-          "version": "CV-55A316EBB44220E6",
-          "from": "2026-09-26T13:47:52+00:00",
-          "to": "2026-09-26T13:47:52+00:00"
+          "version": "CV-3A94E7D653555C95",
+          "from": "2026-09-26T13:45:16+00:00",
+          "to": "2026-09-26T13:45:16+00:00"
         }
       ]
     },
@@ -4966,131 +5371,6 @@
         }
       ]
     },
-    "CAN-FDA6B7F62852042F": {
-      "key": "NYSE:PARR|eps-revision-review:v1",
-      "ticker": "PARR",
-      "first_seen_at": "2026-09-25T12:18:03+00:00",
-      "last_seen_at": "2026-09-26T13:44:18+00:00",
-      "latest_observation": "OB-B06D35DEE1D6F01A",
-      "latest_version": "CV-4A5183D3753A42A9",
-      "timeline": [
-        {
-          "version": "CV-0821772C30045A3D",
-          "from": "2026-09-25T12:18:03+00:00",
-          "to": "2026-09-25T12:18:03+00:00"
-        },
-        {
-          "version": "CV-B88B7835534F96D6",
-          "from": "2026-09-25T12:18:03+00:00",
-          "to": "2026-09-25T12:18:03+00:00"
-        },
-        {
-          "version": "CV-4A5183D3753A42A9",
-          "from": "2026-09-26T13:44:18+00:00",
-          "to": "2026-09-26T13:44:18+00:00"
-        }
-      ]
-    },
-    "CAN-490AC1686F9442CE": {
-      "key": "NASDAQ:RPAY|eps-revision-review:v1",
-      "ticker": "RPAY",
-      "first_seen_at": "2026-09-25T12:24:58+00:00",
-      "last_seen_at": "2026-09-26T13:51:01+00:00",
-      "latest_observation": "OB-8D3BC805EA4C0939",
-      "latest_version": "CV-6F633DF556AEE827",
-      "timeline": [
-        {
-          "version": "CV-3933E29FAFB1F33A",
-          "from": "2026-09-25T12:24:58+00:00",
-          "to": "2026-09-25T12:24:58+00:00"
-        },
-        {
-          "version": "CV-4E1A2E5356F48BB9",
-          "from": "2026-09-25T12:24:58+00:00",
-          "to": "2026-09-25T12:24:58+00:00"
-        },
-        {
-          "version": "CV-6F633DF556AEE827",
-          "from": "2026-09-26T13:51:01+00:00",
-          "to": "2026-09-26T13:51:01+00:00"
-        }
-      ]
-    },
-    "CAN-A0761326A7E13159": {
-      "key": "NYSE:SUNC|eps-revision-review:v1",
-      "ticker": "SUNC",
-      "first_seen_at": "2026-09-25T12:18:08+00:00",
-      "last_seen_at": "2026-09-26T13:44:12+00:00",
-      "latest_observation": "OB-B54FE5BEA1C3B128",
-      "latest_version": "CV-8CE2A563CF142132",
-      "timeline": [
-        {
-          "version": "CV-F5FC73696BF629F0",
-          "from": "2026-09-25T12:18:08+00:00",
-          "to": "2026-09-25T12:18:08+00:00"
-        },
-        {
-          "version": "CV-7A47AD3C204175C2",
-          "from": "2026-09-25T12:18:08+00:00",
-          "to": "2026-09-25T12:18:08+00:00"
-        },
-        {
-          "version": "CV-8CE2A563CF142132",
-          "from": "2026-09-26T13:44:12+00:00",
-          "to": "2026-09-26T13:44:12+00:00"
-        }
-      ]
-    },
-    "CAN-77F79A3B05ABB893": {
-      "key": "NYSE:MPC|eps-revision-review:v1",
-      "ticker": "MPC",
-      "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "last_seen_at": "2026-09-26T13:38:34+00:00",
-      "latest_observation": "OB-547F6C49EFE9D013",
-      "latest_version": "CV-7CBC55C2C777CB44",
-      "timeline": [
-        {
-          "version": "CV-5738FCB84A71A919",
-          "from": "2026-09-25T12:12:23+00:00",
-          "to": "2026-09-25T12:12:23+00:00"
-        },
-        {
-          "version": "CV-12904D03276AD5D4",
-          "from": "2026-09-25T12:12:23+00:00",
-          "to": "2026-09-25T12:12:23+00:00"
-        },
-        {
-          "version": "CV-7CBC55C2C777CB44",
-          "from": "2026-09-26T13:38:34+00:00",
-          "to": "2026-09-26T13:38:34+00:00"
-        }
-      ]
-    },
-    "CAN-E87900AEFDDE7B07": {
-      "key": "NASDAQ:SPT|eps-revision-review:v1",
-      "ticker": "SPT",
-      "first_seen_at": "2026-09-25T12:23:36+00:00",
-      "last_seen_at": "2026-09-26T13:49:44+00:00",
-      "latest_observation": "OB-23131E7030D711D8",
-      "latest_version": "CV-12F5DA4651ACA7AF",
-      "timeline": [
-        {
-          "version": "CV-EDF7689610E360C0",
-          "from": "2026-09-25T12:23:36+00:00",
-          "to": "2026-09-25T12:23:36+00:00"
-        },
-        {
-          "version": "CV-88606568735BCAAB",
-          "from": "2026-09-25T12:23:36+00:00",
-          "to": "2026-09-25T12:23:36+00:00"
-        },
-        {
-          "version": "CV-12F5DA4651ACA7AF",
-          "from": "2026-09-26T13:49:44+00:00",
-          "to": "2026-09-26T13:49:44+00:00"
-        }
-      ]
-    },
     "CAN-3D7A7E3B7BFBE2CE": {
       "key": "NASDAQ:BLTE|eps-revision-review:v1",
       "ticker": "BLTE",
@@ -5116,128 +5396,28 @@
         }
       ]
     },
-    "CAN-D577F2C38FBBCFF7": {
-      "key": "NYSE:DK|eps-revision-review:v1",
-      "ticker": "DK",
-      "first_seen_at": "2026-09-25T12:17:40+00:00",
-      "last_seen_at": "2026-09-26T13:44:06+00:00",
-      "latest_observation": "OB-F8AC1CC721553499",
-      "latest_version": "CV-0173F79AFD5AA961",
+    "CAN-FDA6B7F62852042F": {
+      "key": "NYSE:PARR|eps-revision-review:v1",
+      "ticker": "PARR",
+      "first_seen_at": "2026-09-25T12:18:03+00:00",
+      "last_seen_at": "2026-09-26T13:44:18+00:00",
+      "latest_observation": "OB-B06D35DEE1D6F01A",
+      "latest_version": "CV-4A5183D3753A42A9",
       "timeline": [
         {
-          "version": "CV-86794C89F295E989",
-          "from": "2026-09-25T12:17:40+00:00",
-          "to": "2026-09-25T12:17:40+00:00"
+          "version": "CV-0821772C30045A3D",
+          "from": "2026-09-25T12:18:03+00:00",
+          "to": "2026-09-25T12:18:03+00:00"
         },
         {
-          "version": "CV-42D1318E7E187F93",
-          "from": "2026-09-25T12:17:40+00:00",
-          "to": "2026-09-25T12:17:40+00:00"
+          "version": "CV-B88B7835534F96D6",
+          "from": "2026-09-25T12:18:03+00:00",
+          "to": "2026-09-25T12:18:03+00:00"
         },
         {
-          "version": "CV-0173F79AFD5AA961",
-          "from": "2026-09-26T13:44:06+00:00",
-          "to": "2026-09-26T13:44:06+00:00"
-        }
-      ]
-    },
-    "CAN-D50A4151AB176FB7": {
-      "key": "NASDAQ:AEHR|eps-revision-review:v1",
-      "ticker": "AEHR",
-      "first_seen_at": "2026-09-25T12:18:43+00:00",
-      "last_seen_at": "2026-09-26T13:44:54+00:00",
-      "latest_observation": "OB-1F342699A9411BCD",
-      "latest_version": "CV-8C06BCD4BFC39145",
-      "timeline": [
-        {
-          "version": "CV-DA95C110EE6F41D4",
-          "from": "2026-09-25T12:18:43+00:00",
-          "to": "2026-09-25T12:18:43+00:00"
-        },
-        {
-          "version": "CV-E5D4BB82CED3B729",
-          "from": "2026-09-25T12:18:43+00:00",
-          "to": "2026-09-25T12:18:43+00:00"
-        },
-        {
-          "version": "CV-8C06BCD4BFC39145",
-          "from": "2026-09-26T13:44:54+00:00",
-          "to": "2026-09-26T13:44:54+00:00"
-        }
-      ]
-    },
-    "CAN-5A9E947A6AEC56D7": {
-      "key": "NYSE:AGL|eps-revision-review:v1",
-      "ticker": "AGL",
-      "first_seen_at": "2026-09-25T12:21:01+00:00",
-      "last_seen_at": "2026-09-26T13:47:39+00:00",
-      "latest_observation": "OB-3B2CC746F4C20853",
-      "latest_version": "CV-67D2C4A52BEBB2BB",
-      "timeline": [
-        {
-          "version": "CV-871A37F9A9331D56",
-          "from": "2026-09-25T12:21:01+00:00",
-          "to": "2026-09-25T12:21:01+00:00"
-        },
-        {
-          "version": "CV-FE788D654BB08EC7",
-          "from": "2026-09-25T12:21:01+00:00",
-          "to": "2026-09-25T12:21:01+00:00"
-        },
-        {
-          "version": "CV-67D2C4A52BEBB2BB",
-          "from": "2026-09-26T13:47:39+00:00",
-          "to": "2026-09-26T13:47:39+00:00"
-        }
-      ]
-    },
-    "CAN-E763F753A2D7609F": {
-      "key": "NASDAQ:CLBK|eps-revision-review:v1",
-      "ticker": "CLBK",
-      "first_seen_at": "2026-09-25T12:21:37+00:00",
-      "last_seen_at": "2026-09-26T13:47:47+00:00",
-      "latest_observation": "OB-682CB121C6E6BF08",
-      "latest_version": "CV-8788753D9CB4E829",
-      "timeline": [
-        {
-          "version": "CV-80A3655EAA47F80A",
-          "from": "2026-09-25T12:21:37+00:00",
-          "to": "2026-09-25T12:21:37+00:00"
-        },
-        {
-          "version": "CV-283B95385C02CDAC",
-          "from": "2026-09-25T12:21:37+00:00",
-          "to": "2026-09-25T12:21:37+00:00"
-        },
-        {
-          "version": "CV-8788753D9CB4E829",
-          "from": "2026-09-26T13:47:47+00:00",
-          "to": "2026-09-26T13:47:47+00:00"
-        }
-      ]
-    },
-    "CAN-325B2A6C30755476": {
-      "key": "NYSE:VLO|eps-revision-review:v1",
-      "ticker": "VLO",
-      "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "last_seen_at": "2026-09-26T13:38:34+00:00",
-      "latest_observation": "OB-C73DBF773F4FEE50",
-      "latest_version": "CV-14712902D0D29EA0",
-      "timeline": [
-        {
-          "version": "CV-9C294CDD7D8C842A",
-          "from": "2026-09-25T12:12:23+00:00",
-          "to": "2026-09-25T12:12:23+00:00"
-        },
-        {
-          "version": "CV-02250FE8C31AC3FE",
-          "from": "2026-09-25T12:12:23+00:00",
-          "to": "2026-09-25T12:12:23+00:00"
-        },
-        {
-          "version": "CV-14712902D0D29EA0",
-          "from": "2026-09-26T13:38:34+00:00",
-          "to": "2026-09-26T13:38:34+00:00"
+          "version": "CV-4A5183D3753A42A9",
+          "from": "2026-09-26T13:44:18+00:00",
+          "to": "2026-09-26T13:44:18+00:00"
         }
       ]
     },
@@ -5263,6 +5443,56 @@
           "version": "CV-F3C6AFA6AB298745",
           "from": "2026-09-26T13:43:28+00:00",
           "to": "2026-09-26T13:43:28+00:00"
+        }
+      ]
+    },
+    "CAN-490AC1686F9442CE": {
+      "key": "NASDAQ:RPAY|eps-revision-review:v1",
+      "ticker": "RPAY",
+      "first_seen_at": "2026-09-25T12:24:58+00:00",
+      "last_seen_at": "2026-09-26T13:51:01+00:00",
+      "latest_observation": "OB-917DABA458FD36E0",
+      "latest_version": "CV-6F633DF556AEE827",
+      "timeline": [
+        {
+          "version": "CV-3933E29FAFB1F33A",
+          "from": "2026-09-25T12:24:58+00:00",
+          "to": "2026-09-25T12:24:58+00:00"
+        },
+        {
+          "version": "CV-4E1A2E5356F48BB9",
+          "from": "2026-09-25T12:24:58+00:00",
+          "to": "2026-09-25T12:24:58+00:00"
+        },
+        {
+          "version": "CV-6F633DF556AEE827",
+          "from": "2026-09-26T13:51:01+00:00",
+          "to": "2026-09-26T13:51:01+00:00"
+        }
+      ]
+    },
+    "CAN-325B2A6C30755476": {
+      "key": "NYSE:VLO|eps-revision-review:v1",
+      "ticker": "VLO",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-26T13:38:34+00:00",
+      "latest_observation": "OB-C73DBF773F4FEE50",
+      "latest_version": "CV-14712902D0D29EA0",
+      "timeline": [
+        {
+          "version": "CV-9C294CDD7D8C842A",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-02250FE8C31AC3FE",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-14712902D0D29EA0",
+          "from": "2026-09-26T13:38:34+00:00",
+          "to": "2026-09-26T13:38:34+00:00"
         }
       ]
     },
