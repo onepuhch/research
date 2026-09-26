@@ -144,9 +144,10 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
         index_url = cf.filing_index_url(issuer["cik"], filing["accessionNumber"])
         try:
             page, final, _ = client.get(index_url)
-        except HTTPError as error:
+        except (HTTPError, URLError, TimeoutError, OSError, ValueError) as error:
+            # One unreachable filing does not discard what other filings gave (quality=partial).
             failures += 1
-            notes.append(f"{filing['accessionNumber']} index HTTP {error.code}")
+            notes.append(f"{filing['accessionNumber']} index {getattr(error, 'code', type(error).__name__)}")
             continue
         base = final.rsplit("/", 1)[0] + "/"
         for doc in cf.pick_documents(cf.filing_documents(page.decode("utf-8", "replace"), base), filing["form"]):
@@ -158,9 +159,9 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
             if record is None:
                 try:
                     raw, final_url, truncated = client.get(doc["url"])
-                except HTTPError as error:
+                except (HTTPError, URLError, TimeoutError, OSError, ValueError) as error:
                     failures += 1
-                    notes.append(f"{doc['name']} HTTP {error.code}")
+                    notes.append(f"{doc['name']} {getattr(error, 'code', type(error).__name__)}")
                     continue
                 bodies += 1
                 record = cf.build_record(issuer, filing, doc, raw, final_url, truncated, observed)
@@ -278,6 +279,8 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
                      .isoformat(timespec="seconds"))
         report["researched"] += 1
         report["statuses"][result["status"]] = report["statuses"].get(result["status"], 0) + 1
+        if result.get("quality") == "partial":
+            report["partial_sources"] = report.get("partial_sources", 0) + 1
         c.atomic_json(state_path(), state)
     for t in ready:
         state["candidates"].setdefault(t["candidate_id"], {"status": "queued", "ticker": t["ticker"]})
@@ -411,6 +414,14 @@ def nearest(pattern: re.Pattern, text: str, position: int) -> str | None:
     return min(hits)[1] if hits else None
 
 
+MONTHS = "january|february|march|april|may|june|july|august|september|october|november|december"
+# A period is a year, quarter, half, fiscal/full year, 'N months ended', or a month with a day or year.
+PERIOD_FORM = re.compile(
+    rf"\b(?:19|20)\d{{2}}\b|\bq[1-4]\b|\b(?:first|second|third|fourth)\s+quarter\b|\b(?:first|second)\s+half\b"
+    rf"|\bfiscal\b|\bfull[- ]year\b|\b(?:three|six|nine|twelve)\s+months\s+ended\b"
+    rf"|\b(?:{MONTHS})\s+\d{{1,2}}\b|\b(?:{MONTHS})\s+(?:19|20)\d{{2}}\b", re.I)
+
+
 def period_problem(item: dict, quote: str, block: str) -> str | None:
     """The claimed period must be in the source, and every figure's nearest year/quarter in the
     quote must be that period's, so a number cannot move to another period."""
@@ -418,6 +429,8 @@ def period_problem(item: dict, quote: str, block: str) -> str | None:
     years, quarters = set(YEAR.findall(quote)), {squash(q) for q in QUARTER.findall(quote)}
     if period == "unknown":
         return "ambiguous_period" if item.get("figures") and (len(years) > 1 or len(quarters) > 1) else None
+    if not PERIOD_FORM.search(period):
+        return "period_not_a_period"  # e.g. 'may' the verb is not the month May
     if period not in squash(quote) and period not in squash(block):
         return "period_not_in_source"
     flat = quote.translate(PUNCTUATION)
@@ -695,7 +708,10 @@ def main(argv: list[str] | None = None) -> int:
         c.record_run("candidate_context", "failed", error_type=type(error).__name__)
         print(f"[context] failed: {type(error).__name__}")
         return 1
-    status = "held" if report["held"] else ("degraded" if report["statuses"].get("failed") or report.get("blocked") or report["drafts"].get("failed") else "success")
+    # Some documents unreachable, SEC blocked, or drafts failing: the step ran but its data is partial.
+    troubled = (report["statuses"].get("failed") or report.get("blocked") or report.get("partial_sources")
+                or report["drafts"].get("failed"))
+    status = "held" if report["held"] else ("degraded" if troubled else "success")
     c.record_run("candidate_context", status, **{k: v for k, v in report.items() if k != "day"})
     print(f"[context] {json.dumps(report, ensure_ascii=False)}")
     return 0

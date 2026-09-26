@@ -125,6 +125,8 @@ def get_updates(token: str, offset: int, poll_timeout: int) -> list[dict[str, An
 
 
 def send_reply(token: str, chat_id: str, message: str) -> None:
+    if os.environ.get("RESEARCH_DISABLE_SEND") == "1":
+        raise RuntimeError("sending disabled for this run")
     telegram_request(
         token,
         "sendMessage",

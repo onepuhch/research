@@ -6,9 +6,18 @@ import sys
 import common as c
 
 
-def fingerprints():
-    paths = [c.DATA_DIR / name for name in ("candidate_alerts.json", "notify_state.json",
-             "investment_review_log.csv", "review_history.csv", "command_queue.json", "telegram_offset.json")]
+PROTECTED = ("candidate_alerts.json", "notify_state.json", "command_queue.json", "telegram_offset.json",
+             "daily_runs.json")
+# A cache-only run must not spend or record any SEC/model request, nor rewrite a stored observation.
+CACHE_ONLY = ("model_budget.json", "candidate_context_state.json")
+
+
+def fingerprints(cache_only: bool = False):
+    paths = [c.DATA_DIR / name for name in PROTECTED]
+    paths += [c.csv_path("investment_review_log"), c.csv_path("review_history")]
+    if cache_only:
+        paths += [c.DATA_DIR / name for name in CACHE_ONLY]
+        paths += sorted((c.DATA_DIR / "candidate_observations").glob("OB-*.json"))
     return {str(p): hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None for p in paths}
 
 
@@ -23,7 +32,7 @@ def main():
     refresh = os.environ.get("VERIFY_REFRESH_SCREEN") == "true"
     if cache_only and refresh:
         raise ValueError("cache-only and screen refresh are mutually exclusive")
-    before = fingerprints()
+    before = fingerprints(cache_only)
     code = 0
     try:
         if not cache_only:
@@ -31,8 +40,11 @@ def main():
                 subprocess.run([sys.executable, "scripts/screen_revisions.py"], cwd=c.ROOT, check=True)
             code = context.main([])
         candidates.generate(translate_now=False)
-        if fingerprints() != before:
-            raise ValueError("verification changed tracking or delivery state")
+        after = fingerprints(cache_only)
+        changed = [p for p in before if after.get(p) != before[p]]
+        if changed:
+            print(f"[verify] changed: {changed}")
+            raise ValueError("verification changed protected state")
         c.record_run("context_verification", "failed" if code else "success",
                      cache_only=cache_only, screen_refreshed=refresh, protected_state_unchanged=True)
     except Exception as error:

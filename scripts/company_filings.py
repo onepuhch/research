@@ -333,9 +333,11 @@ def block_text(block: dict) -> str:
 
 def looks_like_earnings(blocks: list[dict]) -> tuple[bool, str]:
     """Decided from the body, not the exhibit label: EX-99 is not always a results release."""
-    body = " ".join(block_text(b) for b in blocks[:400]).lower()
+    boilerplate = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
+    kept = [b for b in blocks[:400] if not any(w in block_text(b).lower() for w in boilerplate)]
+    body = " ".join(block_text(b) for b in kept).lower()
     hits = [w for w in EARNINGS_WORDS if w in body]
-    has_table = any(b["kind"] == "table" for b in blocks)
+    has_table = any(b["kind"] == "table" for b in kept)
     purpose = any(w in body for w in ("reports", "results", "outlook", "guidance"))
     period = any(w in body for w in ("quarter", "fiscal", "year ended", "year ending"))
     metric = any(w in body for w in ("revenue", "net income", "net sales", "earnings per share", "operating income"))
