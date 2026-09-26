@@ -1,0 +1,357 @@
+{
+ "schema_version": 1,
+ "created": "2026-09-27",
+ "purpose": "J3 local model test on stored official documents; not an operational record",
+ "source_snapshot": "copy of data/processed/company_documents/<DOC>.json.gz at 2026-09-27 00:50 KST",
+ "documents": [
+  {
+   "ticker": "AEHR",
+   "candidate_id": "CAN-D50A4151AB176FB7",
+   "document_id": "DOC-EA4425A446380C5A",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-07-14",
+   "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
+   "raw_sha256": "a71055beca3a58c4bea25bb3998227354e6bc117cd6da7cd71ec96c3aade6071",
+   "file_sha256": "0787b4c2aab92f3f9d561c7111faa3c097eb8b75d377ff52a5ba6f443b620714",
+   "blocks_sha256": "d34dff3f0bcb2e324611aeb64abef725ea3ced2a156ea820cff1cc078468bfcf",
+   "eps_target_period": "2028-05-31",
+   "issuer_name": "Aehr Test Systems, Inc."
+  },
+  {
+   "ticker": "AMCX",
+   "candidate_id": "CAN-14C6F602D0868FB9",
+   "document_id": "DOC-3563CA2BB442B25A",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-07-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+   "raw_sha256": "1302aa97ef7214808413d415d5977755c89c123e5edef1a360891854324a5512",
+   "file_sha256": "0c30bf41aca71898819aff896abde6c19fea10544cb37459eca6c80e6f489bc9",
+   "blocks_sha256": "fcf9ef2e40576d60edde10a68baa108d4976057abd23c3fe0da13705a939a9c1",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "AMC Global Media Inc."
+  },
+  {
+   "ticker": "AXTI",
+   "candidate_id": "CAN-DC6D3F92ECFFD019",
+   "document_id": "DOC-A6967554C2E4C643",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-07-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+   "raw_sha256": "50e0aab31901e2c71fd488e8c9abc7fa1832d7835c628b3dd1b2a6f82142242f",
+   "file_sha256": "bf74962dddc98569f45bade5c316a138363915d3e9ec17829b0dc8cca3dd11c5",
+   "blocks_sha256": "855847b03cda00bde8e04b68a345b03213988d0b43108e04dd9c9572a715f64a",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "AXT, Inc."
+  },
+  {
+   "ticker": "CORT",
+   "candidate_id": "CAN-700B10D9B75B0040",
+   "document_id": "DOC-668EE132B5D00A32",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-07-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm",
+   "raw_sha256": "4fb9290e1891adede7628c0560e792de9c1e97b11fe20cc6146000be5cfad086",
+   "file_sha256": "dffb4cdf345021af9609398625a12c777d22c4cee29f7e51fce8fbea1f8ac321",
+   "blocks_sha256": "ddd7f091f5c1f660eeab1c7d97b95f7f91cd16d26840856b73c8894781ebd5e6",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "Corcept Therapeutics Incorporated"
+  },
+  {
+   "ticker": "DK",
+   "candidate_id": "CAN-D577F2C38FBBCFF7",
+   "document_id": "DOC-80DB053BD25896A0",
+   "form": "10-Q",
+   "document_type": "10-Q",
+   "filed_at": "2026-08-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+   "raw_sha256": "a7f8f5bf9c87e18471e1521b1954e2bfe7d815196b291bfe40673d801e7c403d",
+   "file_sha256": "2f51b714fcc52fd303e43ad98ecc9a93f9cb9f33a19a613f1dc8d54f00540c5c",
+   "blocks_sha256": "83ffed1d44448caa99223328d6fc86b75b99769e08855029d28f481dff66cba9",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "Delek US Holdings, Inc."
+  },
+  {
+   "ticker": "MPC",
+   "candidate_id": "CAN-77F79A3B05ABB893",
+   "document_id": "DOC-683FD7B3F9B87824",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-08-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm",
+   "raw_sha256": "7d132eabbb4e7c6f390dacb1ce7b817e77482d1e90448a48918ffe3b8cb16e22",
+   "file_sha256": "4590d17c24f0210f24f8d8063a3154a845dda801c5f68ee51a3bc389d1b367db",
+   "blocks_sha256": "7b9ebd05b18f5dddbfd00ab09b31052cd963b3f1a3f8b1a46163f3683a056359",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "Marathon Petroleum Corporation"
+  },
+  {
+   "ticker": "NBR",
+   "candidate_id": "CAN-E460E34B1D8B66CE",
+   "document_id": "DOC-9B80B26347EA4928",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-07-28",
+   "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+   "raw_sha256": "d595d17855403c119d39a358447335040f73b16e1182d8738bc7e532e6047e50",
+   "file_sha256": "a83c3e05c834c8c5245a04d3d3845000791363f994e4f54050cd6674d55c8ddf",
+   "blocks_sha256": "1fd4b7f4acd3d0bb9f03b597c3289091ba668e569df9d84f65e66ebe552a28d0",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "Nabors Industries Ltd."
+  },
+  {
+   "ticker": "PBF",
+   "candidate_id": "CAN-82719B27698E3C22",
+   "document_id": "DOC-9FC60A7023735EC9",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-07-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
+   "raw_sha256": "f4a36cf0de98416717ff2381b7abfb13e0443853211d40bcc0973cfc8c97389c",
+   "file_sha256": "d18ea67c989b33b4490fec75d35cc7c02904e3284e034cc1d4e743283e7d59e5",
+   "blocks_sha256": "695b2438e325e10ade4e5ff903d96697ab0bcd543c361fc492e405a6e9d22679",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "PBF Energy Inc."
+  },
+  {
+   "ticker": "RPAY",
+   "candidate_id": "CAN-490AC1686F9442CE",
+   "document_id": "DOC-93050982946C0EE4",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-08-10",
+   "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm",
+   "raw_sha256": "09c8d073ff32cbd0726141fa5daa472db6250ad43c9f6b6b2fd4879fa5d9b77a",
+   "file_sha256": "46b415fee0b1de56bf11155c2592f5bd9d6b8b6181d75d3895dbdb49b99b48d0",
+   "blocks_sha256": "1b01dab8ccc1507d3b79015599dbf06ac4889b81237e1da9d04380777c681eb2",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "Repay Holdings Corporation"
+  },
+  {
+   "ticker": "TALO",
+   "candidate_id": "CAN-ABBBE42278126D28",
+   "document_id": "DOC-70283ADC988D0C81",
+   "form": "8-K",
+   "document_type": "EX-99.1",
+   "filed_at": "2026-08-04",
+   "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+   "raw_sha256": "0dd5306a042709b16b11285051abee8fc991cc3944522af9ffba1dec946b1278",
+   "file_sha256": "43be6884d04d6f87995dfd1028bf7dea3a155eebbc07c1371fd0f8497760fa50",
+   "blocks_sha256": "f6b9b612c737b340599f1377b5a0c2d077929bbd29ca0213dcc6de26433a034d",
+   "eps_target_period": "2027-12-31",
+   "issuer_name": "Talos Energy Inc."
+  }
+ ],
+ "cases": [
+  {
+   "case_id": "AEHR-A",
+   "group": "A",
+   "split": "dev",
+   "ticker": "AEHR",
+   "document_id": "DOC-EA4425A446380C5A",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "AEHR-B",
+   "group": "B",
+   "split": "dev",
+   "ticker": "AEHR",
+   "document_id": "DOC-EA4425A446380C5A",
+   "blocks": [
+    "p27",
+    "p15"
+   ]
+  },
+  {
+   "case_id": "AMCX-A",
+   "group": "A",
+   "split": "dev",
+   "ticker": "AMCX",
+   "document_id": "DOC-3563CA2BB442B25A",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "AMCX-B",
+   "group": "B",
+   "split": "dev",
+   "ticker": "AMCX",
+   "document_id": "DOC-3563CA2BB442B25A",
+   "blocks": [
+    "p13",
+    "p14",
+    "p25"
+   ]
+  },
+  {
+   "case_id": "AXTI-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "AXTI",
+   "document_id": "DOC-A6967554C2E4C643",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "AXTI-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "AXTI",
+   "document_id": "DOC-A6967554C2E4C643",
+   "blocks": [
+    "t3",
+    "t6",
+    "p6"
+   ]
+  },
+  {
+   "case_id": "CORT-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "CORT",
+   "document_id": "DOC-668EE132B5D00A32",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "CORT-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "CORT",
+   "document_id": "DOC-668EE132B5D00A32",
+   "blocks": [
+    "p5",
+    "p8",
+    "p18"
+   ]
+  },
+  {
+   "case_id": "DK-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "DK",
+   "document_id": "DOC-80DB053BD25896A0",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "DK-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "DK",
+   "document_id": "DOC-80DB053BD25896A0",
+   "blocks": [
+    "t14",
+    "p486"
+   ]
+  },
+  {
+   "case_id": "MPC-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "MPC",
+   "document_id": "DOC-683FD7B3F9B87824",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "MPC-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "MPC",
+   "document_id": "DOC-683FD7B3F9B87824",
+   "blocks": [
+    "p5",
+    "p8",
+    "p10"
+   ]
+  },
+  {
+   "case_id": "NBR-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "NBR",
+   "document_id": "DOC-9B80B26347EA4928",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "NBR-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "NBR",
+   "document_id": "DOC-9B80B26347EA4928",
+   "blocks": [
+    "p25",
+    "p24",
+    "p8"
+   ]
+  },
+  {
+   "case_id": "PBF-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "PBF",
+   "document_id": "DOC-9FC60A7023735EC9",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "PBF-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "PBF",
+   "document_id": "DOC-9FC60A7023735EC9",
+   "blocks": [
+    "p10"
+   ]
+  },
+  {
+   "case_id": "RPAY-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "RPAY",
+   "document_id": "DOC-93050982946C0EE4",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "RPAY-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "RPAY",
+   "document_id": "DOC-93050982946C0EE4",
+   "blocks": [
+    "p31",
+    "p10"
+   ]
+  },
+  {
+   "case_id": "TALO-A",
+   "group": "A",
+   "split": "eval",
+   "ticker": "TALO",
+   "document_id": "DOC-70283ADC988D0C81",
+   "blocks": "relevant_blocks"
+  },
+  {
+   "case_id": "TALO-B",
+   "group": "B",
+   "split": "eval",
+   "ticker": "TALO",
+   "document_id": "DOC-70283ADC988D0C81",
+   "blocks": [
+    "p8",
+    "p94",
+    "p56"
+   ]
+  }
+ ],
+ "stability_cases": [
+  "PBF-B",
+  "MPC-B",
+  "DK-B",
+  "NBR-A"
+ ],
+ "limits": {
+  "request_timeout_s": 120,
+  "total_inference_s": 2700,
+  "max_requests": 26,
+  "discarded_dev_requests": 2
+ }
+}

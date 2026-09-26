@@ -1,0 +1,221 @@
+{
+ "schema_version": 1,
+ "written": "2026-09-27 01:00 KST, by Claude from the stored source blocks, before any local model output was seen",
+ "rules": {
+  "fact_match": "a claim matches a fact when one of its figures equals one of the fact's figures (whitespace/case ignored), its metric contains one of metric_terms and none of exclude_terms",
+  "critical_match": "a claim is a critical error when its metric contains one of metric_terms (and none of exclude_terms) and one of its figures equals one of the rule's figures; or, for subject rules, when subject is issuer and a figure equals one of the rule's figures",
+  "counter_match": "a counter-evidence item is recovered when any limitation or claim quote contains one of anchors (case-insensitive)",
+  "other": "every machine-accepted claim not matched automatically is reviewed by hand against the stored source and recorded in the experiment's manual_review.json"
+ },
+ "companies": {
+  "AMCX": {
+   "facts": [
+    {"id": "amcx_oi", "metric_terms": ["operating income"], "exclude_terms": ["adjusted", "segment"], "figures": ["$16 million"], "period": "second quarter 2026", "subject": "issuer", "gaap": "GAAP", "kind": "fact", "block": "p13", "important": true},
+    {"id": "amcx_aoi", "metric_terms": ["adjusted operating income"], "exclude_terms": ["segment"], "figures": ["$46 million"], "period": "second quarter 2026", "subject": "issuer", "gaap": "non-GAAP", "kind": "fact", "block": "p13", "important": true},
+    {"id": "amcx_rev", "metric_terms": ["revenue"], "exclude_terms": ["domestic", "subscription", "streaming", "affiliate", "advertising", "licensing", "license"], "figures": ["$547 million", "9%"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "direction": "negative", "block": "p14", "important": true},
+    {"id": "amcx_license", "metric_terms": ["revenue", "license"], "figures": ["$200 million to $225 million", "$445 million"], "period": "2026 and 2027", "subject": "issuer", "kind": "guidance", "block": "p41", "important": true},
+    {"id": "amcx_domestic", "metric_terms": ["domestic"], "figures": ["$470 million", "11%"], "subject": "segment", "kind": "fact", "block": "p21", "important": false},
+    {"id": "amcx_streaming", "metric_terms": ["streaming"], "figures": ["$180 million", "6%"], "subject": "segment", "kind": "fact", "block": "p23", "important": false},
+    {"id": "amcx_segment_aoi", "metric_terms": ["segment adjusted operating income"], "figures": ["$61 million", "52%", "$14 million", "3%"], "subject": "segment", "kind": "fact", "block": "p27", "important": false}
+   ],
+   "critical": [
+    {"id": "amcx_oi_swap", "metric_terms": ["operating income"], "exclude_terms": ["adjusted"], "figures": ["$46 million"], "why": "adjusted (non-GAAP) value given to GAAP operating income"},
+    {"id": "amcx_aoi_swap", "metric_terms": ["adjusted operating income"], "figures": ["$16 million"], "why": "GAAP value given to adjusted operating income"},
+    {"id": "amcx_rev_up", "metric_terms": ["revenue"], "figures": ["$547 million"], "direction": "positive", "why": "net revenue fell 9%"}
+   ],
+   "counter": [
+    {"id": "amcx_one_time_ad", "anchors": ["one-time impact", "system integration"], "block": "p25"},
+    {"id": "amcx_marketing", "anchors": ["marketing investments"], "block": "p27"},
+    {"id": "amcx_net_loss", "anchors": ["(21,943)", "(0.51)"], "block": "t5"}
+   ]
+  },
+  "AEHR": {
+   "facts": [
+    {"id": "aehr_guide_rev", "metric_terms": ["revenue"], "figures": ["$130 million", "$150 million", "$130 million to $150 million", "$130 million and $150 million"], "period": "fiscal year ending June 25, 2027", "subject": "issuer", "kind": "guidance", "block": "p27", "important": true},
+    {"id": "aehr_growth", "metric_terms": ["growth", "revenue"], "figures": ["160%-200%", "160% to 200%", "2.6x to 3.0x"], "period": "fiscal 2027", "subject": "issuer", "kind": "guidance", "block": "p27", "important": true},
+    {"id": "aehr_ngaap_margin", "metric_terms": ["non-gaap net income", "net income"], "figures": ["18% to 22%", "18%", "22%"], "period": "fiscal 2027", "subject": "issuer", "gaap": "non-GAAP", "kind": "guidance", "block": "p27", "important": true},
+    {"id": "aehr_backlog", "metric_terms": ["backlog"], "figures": ["$100.6 million", "$80.6 million", "$100 million", "approximately $100 million", "over $100 million"], "subject": "issuer", "kind": "fact", "block": "t2", "important": true},
+    {"id": "aehr_q4_rev", "metric_terms": ["revenue"], "figures": ["$18.8 million"], "period": "fourth quarter of fiscal 2026", "subject": "issuer", "kind": "fact", "block": "t2", "important": true},
+    {"id": "aehr_bookings", "metric_terms": ["bookings"], "figures": ["$60.7 million"], "subject": "issuer", "kind": "fact", "block": "t2", "important": false},
+    {"id": "aehr_fy_rev", "metric_terms": ["revenue"], "figures": ["$50.0 million"], "period": "fiscal 2026", "subject": "issuer", "kind": "fact", "direction": "negative", "block": "t3", "important": false},
+    {"id": "aehr_q4_ni", "metric_terms": ["net income"], "exclude_terms": ["non-gaap"], "figures": ["$1.4 million", "$0.04"], "subject": "issuer", "kind": "fact", "block": "t2", "important": false},
+    {"id": "aehr_sic_orders", "metric_terms": ["orders"], "figures": ["$8 million", "approximately $8 million"], "subject": "issuer", "kind": "fact", "block": "p23", "important": false}
+   ],
+   "critical": [
+    {"id": "aehr_prior_q4_as_current", "metric_terms": ["revenue"], "figures": ["$14.1 million"], "why": "prior-year quarter value as the current one"},
+    {"id": "aehr_prior_fy_as_current", "metric_terms": ["revenue"], "figures": ["$59.0 million"], "why": "fiscal 2025 value as the current one"},
+    {"id": "aehr_guide_wrong_fy", "metric_terms": ["revenue"], "figures": ["$130 million", "$150 million", "$130 million to $150 million", "$130 million and $150 million"], "period_terms": ["2028"], "why": "fiscal 2027 guidance labelled as fiscal 2028 (the EPS target year)"}
+   ],
+   "counter": [
+    {"id": "aehr_fy_decline", "anchors": ["$50.0 million", "$59.0 million"], "block": "t3"},
+    {"id": "aehr_fy_loss", "anchors": ["(7.1)", "$(0.23)"], "block": "t3"},
+    {"id": "aehr_outlook_basis", "anchors": ["based on the information available", "expected customer demand", "outlook reflects"], "block": "p15"}
+   ]
+  },
+  "TALO": {
+   "facts": [
+    {"id": "talo_oil", "metric_terms": ["oil", "produc"], "figures": ["68.6 thousand barrels of oil per day", "68.6"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p8", "important": true},
+    {"id": "talo_boe", "metric_terms": ["equivalent", "produc"], "figures": ["93.7 thousand barrels of oil equivalent per day", "93.7"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p8", "important": false},
+    {"id": "talo_ebitda", "metric_terms": ["adjusted ebitda"], "figures": ["$402.4 million", "402,438"], "period": "second quarter 2026", "subject": "issuer", "gaap": "non-GAAP", "kind": "fact", "block": "p16", "important": true},
+    {"id": "talo_guide", "metric_terms": ["production"], "figures": ["64 to 68 MBo/d", "87 to 91 MBoe/d", "66 MBo/d", "89 MBoe/d"], "period": "full-year 2026", "subject": "issuer", "kind": "guidance", "direction": "positive", "block": "p94", "important": true},
+    {"id": "talo_ni", "metric_terms": ["net income"], "figures": ["$149,667", "149,667", "$149,889", "$0.88", "$0.90"], "period": "three months ended June 30, 2026", "subject": "issuer", "kind": "fact", "block": "t22", "important": false},
+    {"id": "talo_rev", "metric_terms": ["revenue"], "figures": ["664,813", "$620,768"], "subject": "issuer", "kind": "fact", "block": "t22", "important": false}
+   ],
+   "critical": [
+    {"id": "talo_ebitda_as_ni", "metric_terms": ["net income"], "figures": ["$402.4 million", "402,438"], "why": "adjusted EBITDA given as net income"},
+    {"id": "talo_guide_wrong_year", "metric_terms": ["production"], "figures": ["64 to 68 MBo/d", "87 to 91 MBoe/d", "66 MBo/d", "89 MBoe/d"], "period_terms": ["2027"], "why": "full-year 2026 guidance labelled as 2027"},
+    {"id": "talo_h1_as_q2", "metric_terms": ["net income"], "figures": ["$(106,115)", "(106,115)", "$(106,498)"], "period_terms": ["three months", "second quarter"], "why": "six-month loss given as the quarter"}
+   ],
+   "counter": [
+    {"id": "talo_one_time_loe", "anchors": ["one-time well intervention", "$1.75 per Boe"], "block": "p56"},
+    {"id": "talo_guide_excl_acq", "anchors": ["excludes the previously announced", "excluding the announced", "bolt-on acquisition"], "block": "p94"},
+    {"id": "talo_h1_loss", "anchors": ["(106,115)", "(106,498)", "impairment"], "block": "t22"}
+   ]
+  },
+  "DK": {
+   "sufficient_evidence": false,
+   "sufficient_note": "the excerpt has only an equity statement, G&A and risk text; no statement-level revenue, earnings or guidance sentence",
+   "facts": [
+    {"id": "dk_ga_q2", "metric_terms": ["general and administrative"], "figures": ["$56.7 million", "$19.9 million", "26.0%"], "period": "second quarter of 2026", "subject": "issuer", "kind": "fact", "direction": "negative", "block": "p486", "important": true},
+    {"id": "dk_ga_h1", "metric_terms": ["general and administrative"], "figures": ["$100.7 million", "$37.4 million", "27.1%"], "period": "six months ended June 30, 2026", "subject": "issuer", "kind": "fact", "block": "p488", "important": false},
+    {"id": "dk_ni_q2", "metric_terms": ["net income"], "figures": ["169.5", "180.1"], "period": "three months ended June 30, 2026", "subject": "issuer", "kind": "fact", "block": "t14", "important": false}
+   ],
+   "critical": [
+    {"id": "dk_nci_as_ni", "metric_terms": ["net income"], "figures": ["10.6"], "why": "non-controlling interest share given as net income"},
+    {"id": "dk_prior_as_current", "metric_terms": ["net income"], "figures": ["(106.4)", "(90.1)"], "period_terms": ["2026"], "why": "2025 quarter given as 2026"},
+    {"id": "dk_dividend_as_earnings", "metric_terms": ["net income", "earnings", "eps"], "figures": ["$0.255 per share", "$0.255"], "why": "dividend per share given as earnings"},
+    {"id": "dk_prior_ga", "metric_terms": ["general and administrative"], "figures": ["$76.6 million"], "period_terms": ["2026"], "why": "prior-year G&A as the current value"}
+   ],
+   "counter": [
+    {"id": "dk_restructuring", "anchors": ["restructuring costs"], "block": "p486"},
+    {"id": "dk_margin_risk", "anchors": ["decline in margins", "impairments"], "block": "p325"},
+    {"id": "dk_rins", "anchors": ["RIN"], "block": "p415"},
+    {"id": "dk_h1_loss", "anchors": ["(31.8)", "(10.8)"], "block": "t17"}
+   ]
+  },
+  "NBR": {
+   "facts": [
+    {"id": "nbr_guide_ebitda", "metric_terms": ["adjusted ebitda"], "figures": ["$920 to $930 million"], "period": "full-year", "subject": "issuer", "gaap": "non-GAAP", "kind": "guidance", "block": "p25", "important": true},
+    {"id": "nbr_guide_fcf", "metric_terms": ["free cash flow"], "figures": ["$20 to $30 million"], "period": "full-year", "subject": "issuer", "gaap": "non-GAAP", "kind": "guidance", "block": "p25", "important": true},
+    {"id": "nbr_capex", "metric_terms": ["capital spending"], "figures": ["$710 to $730 million", "$25 million", "$325 to $335 million"], "subject": "issuer", "kind": "guidance", "block": "p24", "important": false},
+    {"id": "nbr_rigs", "metric_terms": ["rig"], "figures": ["approximately 74 rigs", "74 rigs", "73 rigs"], "subject": "segment", "kind": "guidance", "block": "p24", "important": false},
+    {"id": "nbr_intl", "metric_terms": ["international drilling"], "figures": ["$131 million", "$17,534"], "period": "second quarter", "subject": "segment", "kind": "fact", "block": "p16", "important": true},
+    {"id": "nbr_us", "metric_terms": ["u.s. drilling"], "figures": ["$94 million"], "period": "second quarter", "subject": "segment", "kind": "fact", "block": "p17", "important": false},
+    {"id": "nbr_q_ebitda", "metric_terms": ["adjusted ebitda"], "figures": ["$221.7"], "subject": "issuer", "kind": "fact", "block": "t2", "important": false},
+    {"id": "nbr_fcf_q", "metric_terms": ["free cash flow"], "figures": ["$12 million", "$60 million", "$12.3"], "period": "second quarter", "subject": "issuer", "kind": "fact", "block": "p22", "important": false},
+    {"id": "nbr_run_rate", "metric_terms": ["adjusted ebitda", "run-rate"], "figures": ["$1 billion"], "period": "second-half", "subject": "issuer", "kind": "guidance", "block": "p35", "important": false}
+   ],
+   "critical": [
+    {"id": "nbr_run_rate_as_fy", "metric_terms": ["adjusted ebitda"], "figures": ["$1 billion"], "period_terms": ["full-year", "full year"], "why": "second-half annualized run-rate given as full-year EBITDA"},
+    {"id": "nbr_guide_not_income", "metric_terms": ["net income", "revenue", "earnings"], "figures": ["$920 to $930 million"], "why": "EBITDA guidance given as income or revenue"},
+    {"id": "nbr_prior_as_current", "metric_terms": ["adjusted ebitda"], "figures": ["$248.5", "$204.8"], "why": "prior period EBITDA as current"}
+   ],
+   "counter": [
+    {"id": "nbr_quail", "anchors": ["Quail Tools"], "block": "p8"},
+    {"id": "nbr_sanad", "anchors": ["consumption at SANAD", "SANAD of $60 to $80 million"], "block": "p25"},
+    {"id": "nbr_working_capital", "anchors": ["working capital consumed"], "block": "p23"},
+    {"id": "nbr_offshore", "anchors": ["Offshore and Alaska"], "block": "p17"},
+    {"id": "nbr_yoy", "anchors": ["$248.5", "248.5"], "block": "t2"}
+   ]
+  },
+  "PBF": {
+   "facts": [
+    {"id": "pbf_ni", "metric_terms": ["net income"], "exclude_terms": ["attributable", "adjusted"], "figures": ["$915.0 million"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p10", "important": true},
+    {"id": "pbf_ni_attr", "metric_terms": ["attributable"], "figures": ["$906.4 million", "$7.54 per share", "$7.54"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p10", "important": true},
+    {"id": "pbf_adj", "metric_terms": ["adjusted"], "figures": ["$753.1 million", "$6.22 per share", "$6.22"], "period": "second quarter 2026", "subject": "issuer", "gaap": "non-GAAP", "kind": "fact", "block": "p10", "important": true},
+    {"id": "pbf_special", "metric_terms": ["special items", "net income"], "figures": ["$159.8 million", "$1.32 per share"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p10", "important": true},
+    {"id": "pbf_insurance", "metric_terms": ["insurance"], "figures": ["$250 million", "$1.25 billion", "$250.0"], "subject": "issuer", "kind": "fact", "block": "p17", "important": false},
+    {"id": "pbf_rev", "metric_terms": ["revenue"], "figures": ["$11,678.3"], "subject": "issuer", "kind": "fact", "block": "t2", "important": false}
+   ],
+   "critical": [
+    {"id": "pbf_attr_as_ni", "metric_terms": ["net income"], "exclude_terms": ["attributable", "adjusted"], "figures": ["$906.4 million"], "why": "attributable value given as consolidated net income"},
+    {"id": "pbf_ni_as_attr", "metric_terms": ["attributable"], "figures": ["$915.0 million"], "why": "consolidated value given as attributable net income"},
+    {"id": "pbf_adj_as_gaap", "metric_terms": ["net income"], "exclude_terms": ["adjusted"], "figures": ["$753.1 million", "$6.22 per share"], "why": "adjusted value given as GAAP net income"},
+    {"id": "pbf_prior_as_current", "metric_terms": ["net income", "net loss"], "figures": ["$5.4 million", "$5.2 million", "$118.5 million", "$(0.05) per share", "$(1.03) per share"], "period_terms": ["2026"], "why": "2025 values given as 2026"}
+   ],
+   "counter": [
+    {"id": "pbf_special_items", "anchors": ["special items", "after-tax benefit"], "block": "p10"},
+    {"id": "pbf_insurance_gain", "anchors": ["insurance recoveries", "insurance"], "block": "p10"},
+    {"id": "pbf_lcm", "anchors": ["LCM"], "block": "t13"}
+   ]
+  },
+  "AXTI": {
+   "facts": [
+    {"id": "axti_rev", "metric_terms": ["revenue"], "figures": ["$47.6 million", "$47,589"], "period": "second quarter of 2026", "subject": "issuer", "kind": "fact", "direction": "positive", "block": "t3", "important": true},
+    {"id": "axti_ni", "metric_terms": ["net income"], "exclude_terms": ["non-gaap"], "figures": ["$11.1 million", "$0.17", "$11,128"], "period": "second quarter of 2026", "subject": "issuer", "gaap": "GAAP", "kind": "fact", "block": "t6", "important": true},
+    {"id": "axti_ngaap_ni", "metric_terms": ["non-gaap net income"], "figures": ["$11.9 million", "$0.19"], "period": "second quarter of 2026", "subject": "issuer", "gaap": "non-GAAP", "kind": "fact", "block": "t7", "important": false},
+    {"id": "axti_gm", "metric_terms": ["gross margin"], "figures": ["44.9 percent", "45.0 percent"], "period": "second quarter of 2026", "subject": "issuer", "kind": "fact", "block": "t4", "important": true}
+   ],
+   "critical": [
+    {"id": "axti_prior_rev", "metric_terms": ["revenue"], "figures": ["$26.9 million", "$18.0 million"], "why": "Q1 2026 or Q2 2025 revenue given as Q2 2026"},
+    {"id": "axti_prior_ni", "metric_terms": ["net income", "net loss"], "figures": ["$1.6 million", "$7.0 million"], "period_terms": ["second quarter of 2026"], "why": "earlier period loss given as Q2 2026"},
+    {"id": "axti_ni_incl_nci", "metric_terms": ["attributable"], "figures": ["13,030"], "why": "net income including minority interests given as attributable"}
+   ],
+   "counter": [
+    {"id": "axti_interest_income", "anchors": ["4,728", "interest income"], "block": "t8"},
+    {"id": "axti_minority", "anchors": ["minority interests", "noncontrolling"], "block": "t6"}
+   ]
+  },
+  "MPC": {
+   "facts": [
+    {"id": "mpc_ni", "metric_terms": ["net income"], "figures": ["$5.1 billion", "$17.73 per diluted share", "$17.73", "$5,138"], "period": "second quarter of 2026", "subject": "issuer", "kind": "fact", "direction": "positive", "block": "p10", "important": true},
+    {"id": "mpc_ebitda", "metric_terms": ["adjusted ebitda", "adjusted earnings before interest"], "exclude_terms": ["segment"], "figures": ["$8.5 billion", "$8,460"], "period": "second quarter of 2026", "subject": "issuer", "gaap": "non-GAAP", "kind": "fact", "block": "p11", "important": true},
+    {"id": "mpc_rm", "metric_terms": ["segment adjusted ebitda", "r&m", "refining"], "figures": ["$6.7 billion", "$24.84 per barrel", "$36.33 per barrel", "$6,655"], "period": "second quarter of 2026", "subject": "segment", "kind": "fact", "block": "p17", "important": true},
+    {"id": "mpc_capital_return", "metric_terms": ["capital return"], "figures": ["$2.8 billion"], "subject": "issuer", "kind": "fact", "block": "p9", "important": false},
+    {"id": "mpc_capex", "metric_terms": ["capital spending"], "figures": ["$1.5 billion"], "period": "2026", "subject": "issuer", "kind": "guidance", "block": "p32", "important": false},
+    {"id": "mpc_midstream", "metric_terms": ["segment adjusted ebitda", "midstream"], "figures": ["$1.8 billion", "$1,778"], "subject": "segment", "kind": "fact", "block": "p21", "important": false},
+    {"id": "mpc_rd", "metric_terms": ["segment adjusted ebitda", "renewable"], "figures": ["$258 million"], "subject": "segment", "kind": "fact", "block": "p23", "important": false}
+   ],
+   "critical": [
+    {"id": "mpc_mplx_as_issuer", "subject_rule": true, "figures": ["12.5%", "$2.9 billion", "$500 million"], "why": "MPLX (subsidiary) distribution growth or capital given as MPC's own"},
+    {"id": "mpc_prior_as_current", "metric_terms": ["net income", "adjusted ebitda"], "figures": ["$1.2 billion", "$3.96 per diluted share", "$3.3 billion"], "period_terms": ["2026"], "why": "2025 values given as 2026"}
+   ],
+   "counter": [
+    {"id": "mpc_crack", "anchors": ["crack spreads"], "block": "p18"},
+    {"id": "mpc_45z", "anchors": ["45Z", "clean fuel production tax credits"], "block": "p101"},
+    {"id": "mpc_opcost", "anchors": ["operating costs"], "block": "p19"},
+    {"id": "mpc_turnaround", "anchors": ["turnaround"], "block": "p17"}
+   ]
+  },
+  "CORT": {
+   "facts": [
+    {"id": "cort_rev", "metric_terms": ["revenue"], "exclude_terms": ["korlym", "lifyorli", "guidance"], "figures": ["$256.1 million", "32 percent"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "direction": "positive", "block": "p17", "important": true},
+    {"id": "cort_guide", "metric_terms": ["revenue", "guidance"], "figures": ["$1.1 – $1.2 billion", "$1.1 - $1.2 billion"], "period": "2026", "subject": "issuer", "kind": "guidance", "direction": "positive", "block": "p8", "important": true},
+    {"id": "cort_lifyorli", "metric_terms": ["lifyorli"], "figures": ["$47.6 million"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p17", "important": true},
+    {"id": "cort_korlym", "metric_terms": ["korlym"], "figures": ["$208.6 million"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p17", "important": false},
+    {"id": "cort_ni", "metric_terms": ["net income"], "figures": ["$43.0 million", "$0.36"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p9", "important": false},
+    {"id": "cort_opex", "metric_terms": ["operating expenses"], "figures": ["$214.8 million"], "period": "second quarter 2026", "subject": "issuer", "kind": "fact", "block": "p18", "important": false}
+   ],
+   "critical": [
+    {"id": "cort_guide_wrong_year", "metric_terms": ["revenue", "guidance"], "figures": ["$1.1 – $1.2 billion", "$1.1 - $1.2 billion"], "period_terms": ["2027"], "why": "2026 guidance labelled as 2027"},
+    {"id": "cort_prior_rev", "metric_terms": ["revenue"], "exclude_terms": ["korlym"], "figures": ["$194.4 million"], "why": "2025 revenue as current"},
+    {"id": "cort_lifyorli_as_total", "metric_terms": ["revenue"], "exclude_terms": ["lifyorli"], "figures": ["$47.6 million"], "why": "one product's revenue given as total revenue"}
+   ],
+   "counter": [
+    {"id": "cort_opex_up", "anchors": ["increased spending", "launch"], "block": "p18"},
+    {"id": "cort_h1", "anchors": ["11,226", "(8,301)"], "block": "t2"},
+    {"id": "cort_regulatory", "anchors": ["NDA", "decision"], "block": "p23"}
+   ]
+  },
+  "RPAY": {
+   "facts": [
+    {"id": "rpay_kubra", "metric_terms": ["kubra", "revenue", "adjusted ebitda"], "figures": ["$150 million and $154 million", "$150 million", "$154 million", "$27.5 million and $30 million"], "period": "2026", "subject": "subsidiary", "kind": "guidance", "block": "p31", "important": true},
+    {"id": "rpay_organic", "metric_terms": ["organic"], "figures": ["10% to 12%", "approximately 10% to 12%"], "period": "2026", "subject": "issuer", "kind": "guidance", "block": "p31", "important": true},
+    {"id": "rpay_guide", "metric_terms": ["revenue", "adjusted ebitda"], "figures": ["$490 - 500 million", "$168.5 - 176 million"], "period": "full year 2026", "subject": "issuer", "kind": "guidance", "block": "t2", "important": true},
+    {"id": "rpay_rev_q", "metric_terms": ["revenue"], "figures": ["$100,705"], "subject": "issuer", "kind": "fact", "block": "t4", "important": false},
+    {"id": "rpay_adj_ebitda_q", "metric_terms": ["adjusted ebitda"], "figures": ["$36,301"], "subject": "issuer", "kind": "fact", "block": "t7", "important": false}
+   ],
+   "critical": [
+    {"id": "rpay_kubra_as_organic", "metric_terms": ["organic"], "figures": ["$150 million and $154 million", "$150 million", "$154 million"], "why": "acquired revenue given as organic"},
+    {"id": "rpay_kubra_as_total", "metric_terms": ["revenue"], "exclude_terms": ["kubra"], "figures": ["$150 million and $154 million", "$150 million", "$154 million"], "why": "KUBRA contribution given as total revenue"},
+    {"id": "rpay_impairment_2026", "metric_terms": ["impairment", "net loss"], "figures": ["$103.8 million", "$138.9 million"], "period_terms": ["2026"], "why": "2025 impairment dated 2026"}
+   ],
+   "counter": [
+    {"id": "rpay_acquisition", "anchors": ["KUBRA"], "block": "p31"},
+    {"id": "rpay_impairment", "anchors": ["goodwill impairment", "impairment loss"], "block": "p10"},
+    {"id": "rpay_net_loss", "anchors": ["(11,529)", "(10,986)", "net loss"], "block": "t4"},
+    {"id": "rpay_interest", "anchors": ["7,983", "interest expense"], "block": "t4"}
+   ]
+  }
+ }
+}
