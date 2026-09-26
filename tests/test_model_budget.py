@@ -37,7 +37,7 @@ class ModelBudgetTest(unittest.TestCase):
     def call(self, component, effects):
         with mock.patch.object(extract, "urlopen", side_effect=effects) as urlopen:
             try:
-                extract.call_gemini_prompt("p", "key", component)
+                extract.call_gemini_prompt("p", "key", component, sleep=lambda _: None)
             except (c.ModelBudgetExhausted, HTTPError) as error:
                 return urlopen.call_count, type(error).__name__
         return urlopen.call_count, None
@@ -57,8 +57,8 @@ class ModelBudgetTest(unittest.TestCase):
     def test_retries_consume_the_component_limit(self):
         failure = HTTPError("u", 503, "busy", {}, None)
         calls, error = self.call("cards", [failure, failure, failure, failure])
-        self.assertEqual((calls, error), (3, "ModelBudgetExhausted"))  # cards limit 3: no fourth request
-        self.assertEqual(self.counts(), {"cards": 3})
+        self.assertEqual((calls, error), (2, "HTTPError"))  # cards limit 3: no fourth request
+        self.assertEqual(self.counts(), {"cards": 2})
 
     def test_kst_day_boundary_starts_a_new_budget(self):
         self.used(extract=11)

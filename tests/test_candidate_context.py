@@ -314,7 +314,7 @@ class RunTest(RunFixture):
             json.dump(snapshot(rows=[row("NOCIK")], top_yield=["NOCIK"], top_growth=[]), h)
         sec, fake = client({})
         ctx.run_sources(NOW, sec)
-        self.assertEqual((next(iter(ctx.load_state()["candidates"].values()))["status"], fake.calls), ("unavailable", []))
+        self.assertEqual((next(iter(ctx.load_state()["candidates"].values()))["status"], fake.calls), ("unavailable", [screen_revisions.SEC_URL]))
 
 
 def release_record(document_id="DOC-A", text=RELEASE):
@@ -327,10 +327,10 @@ def release_record(document_id="DOC-A", text=RELEASE):
 
 
 def claim(**fields):
-    base = {"text_ko": "매출은 전년 대비 40% 늘어 120.0백만 달러였다.", "kind": "fact",
+    base = {"note_ko": "회사가 매출 증가를 보고했습니다.", "kind": "fact", "subject": "issuer",
+            "metric": "revenue", "figures": ["40%", "$120.0 million"],
             "quote": "Revenue grew 40% year over year to $120.0 million.", "document_id": "DOC-A", "block_id": "p2",
-            "period": "Q2 FY2027", "currency": "USD", "unit": "million", "gaap": "unknown", "drivers": ["volume"],
-            "direction": "positive"}
+            "period": "unknown", "currency": "USD", "gaap": "unknown", "drivers": ["volume"], "direction": "positive"}
     base.update(fields)
     return base
 
@@ -342,65 +342,70 @@ class DraftCheckTest(unittest.TestCase):
     def check(self, **fields):
         return ctx.validate_draft({"claims": [claim(**fields)], "link": "unconfirmed"}, self.blocks)
 
-    def test_supported_fact_and_guidance_pass(self):
-        self.assertEqual(len(self.check()["claims"]), 1)
-        guidance = self.check(kind="guidance", block_id="p3", text_ko="회사는 다음 분기 매출을 130백만~135백만 달러로 예상했다.",
-                              quote="the company expects revenue of $130 million to $135 million")
-        self.assertEqual(len(guidance["claims"]), 1)
-
     def rejected(self, **fields):
         result = self.check(**fields)
         self.assertEqual(result["claims"], [])
         return result["rejected"][0]["reason"]
 
+    def test_supported_fact_and_guidance_pass(self):
+        self.assertEqual(len(self.check()["claims"]), 1)
+        result = self.check(kind="guidance", block_id="p3", figures=["$130 million", "$135 million"],
+                            note_ko="회사가 다음 분기 매출 전망을 제시했습니다.",
+                            quote="the company expects revenue of $130 million to $135 million")
+        self.assertEqual(len(result["claims"]), 1)
+
     def test_unsupported_outputs_are_refused(self):
         self.assertEqual(self.rejected(quote="Revenue tripled to a record."), "quote_not_in_block")
-        self.assertEqual(self.rejected(text_ko="매출은 55% 늘었다."), "number_not_in_quote")
+        self.assertEqual(self.rejected(figures=["55%"]), "figure_not_verbatim")
         self.assertEqual(self.rejected(block_id="p99"), "unknown_block")
-        self.assertEqual(self.rejected(kind="fact", block_id="p3", text_ko="다음 분기 매출은 130백만 달러다.",
-                                       quote="the company expects revenue of $130 million"), "guidance_written_as_fact")
-        self.assertEqual(self.rejected(text_ko="매출 40% 증가로 매수 기회다."), "forbidden_or_empty")
-        self.assertEqual(self.rejected(text_ko="매출 40% 증가가 추정치 상향의 원인이다."), "causal_claim_about_estimates")
-        self.assertEqual(self.rejected(text_ko="매출 전망을 상향해 40% 늘었다."), "raise_not_in_quote")
+        self.assertEqual(self.rejected(note_ko="매수하세요"), "forbidden_wording")
+        self.assertEqual(self.rejected(currency="EUR"), "currency_not_in_figures")
+        self.assertEqual(self.rejected(unit="billion"), "unit_not_in_figures")
+        self.assertEqual(self.rejected(gaap="GAAP"), "gaap_not_as_stated")
+
+    def test_period_and_free_numeric_notes_are_rejected(self):
+        self.assertEqual(self.rejected(period="Q3 FY2028"), "period_not_in_source")
+        self.assertEqual(self.rejected(note_ko="매출은 5 billion EUR입니다."), "number_or_unit_in_note")
 
     def test_a_lowered_outlook_is_never_called_a_raise(self):
-        record = release_record(text=b"<html><body><p>Results for the quarter. The company lowered its full-year "
-                                     b"outlook for earnings per share from $5 to $3.</p><table><tr><td>Revenue</td>"
-                                     b"<td>1</td></tr></table></body></html>")
-        blocks, _ = ctx.relevant_blocks([record])
-        quote = "lowered its full-year outlook for earnings per share from $5 to $3"
-        up = ctx.validate_draft({"claims": [claim(kind="guidance", block_id="p1", quote=quote,
-                                                  text_ko="연간 EPS 전망을 5달러에서 3달러로 상향했다.")]}, blocks)
-        down = ctx.validate_draft({"claims": [claim(kind="guidance", block_id="p1", quote=quote,
-                                                    text_ko="연간 EPS 전망을 5달러에서 3달러로 하향했다.",
-                                                    direction="negative")]}, blocks)
-        self.assertEqual((len(up["claims"]), len(down["claims"])), (0, 1))
+        quote = "The company lowered its revenue guidance to $5 million."
+        blocks = [{"document_id":"DOC-A", "block_id":"p1", "text":quote}]
+        base = claim(block_id="p1", quote=quote, figures=["$5 million"], kind="guidance")
+        bad = ctx.validate_draft({"claims":[{**base,"note_ko":"회사가 전망을 상향했습니다."}]}, blocks)
+        good = ctx.validate_draft({"claims":[{**base,"note_ko":"회사가 전망을 하향했습니다."}]}, blocks)
+        self.assertEqual((len(bad["claims"]),len(good["claims"])),(0,1))
 
     def test_typographic_quotes_and_object_next_checks(self):
-        record = release_record(text=b"<html><body><p>The company\xe2\x80\x99s revenue grew 40% in the quarter.</p>"
-                                     b"<table><tr><td>Revenue</td><td>1</td></tr></table></body></html>")
-        blocks, _ = ctx.relevant_blocks([record])
-        result = ctx.validate_draft({"claims": [claim(block_id="p1", text_ko="분기 매출이 40% 늘었다.",
-                                                      quote="The company's revenue grew 40%")],
-                                     "next_check": [{"text_ko": "다음 분기 수주 확인", "quote": "x"}, 7]}, blocks)
-        self.assertEqual(len(result["claims"]), 1)
-        self.assertEqual(result["next_check"], ["다음 분기 수주 확인"])
+        quote="The company’s revenue grew 40%"
+        blocks=[{"document_id":"DOC-A","block_id":"p1","text":quote}]
+        result=ctx.validate_draft({"claims":[claim(block_id="p1",quote="The company's revenue grew 40%",
+                    figures=["40%"],currency=None)],"next_check":[{"text_ko":"다음 분기 수주 확인"},7]},blocks)
+        self.assertEqual(len(result["claims"]),1)
+        self.assertEqual(result["next_check"],["다음 분기 수주 확인"])
 
-    def test_quarter_ordinals_and_months_count_as_quoted_numbers(self):
-        record = release_record(text=b"<html><body><p>Second quarter revenue grew 40% as of July 30.</p>"
-                                     b"<table><tr><td>Revenue</td><td>1</td></tr></table></body></html>")
-        blocks, _ = ctx.relevant_blocks([record])
-        ok = ctx.validate_draft({"claims": [claim(block_id="p1", text_ko="2분기 매출이 7월 30일 기준 40% 늘었다.",
-                                                  quote="Second quarter revenue grew 40% as of July 30")]}, blocks)
-        self.assertEqual(len(ok["claims"]), 1)
-        bad = ctx.validate_draft({"claims": [claim(block_id="p1", text_ko="3분기 매출이 40% 늘었다.",
-                                                   quote="Second quarter revenue grew 40%")]}, blocks)
-        self.assertEqual(bad["rejected"][0]["reason"], "number_not_in_quote")
-        self.assertIn("3분기", bad["rejected"][0]["text_ko"])  # kept for review
+    def test_quarter_ordinals_are_preserved_not_invented(self):
+        quote="Second quarter revenue grew 40% as of July 30"
+        blocks=[{"document_id":"DOC-A","block_id":"p1","text":quote}]
+        base=claim(block_id="p1",quote=quote,figures=["40%"],currency=None,period="Second quarter")
+        self.assertEqual(len(ctx.validate_draft({"claims":[base]},blocks)["claims"]),1)
+        self.assertEqual(ctx.validate_draft({"claims":[{**base,"period":"Third quarter"}]},blocks)["claims"],[])
 
-    def test_explicit_link_needs_the_source_to_say_it(self):
-        result = ctx.validate_draft({"claims": [claim()], "link": "explicit_link"}, self.blocks)
-        self.assertEqual((result["link"], result["link_note"]), ("unconfirmed", "explicit link not stated in the source"))
+    def test_explicit_link_is_never_automatic(self):
+        blocks=self.blocks+[{"document_id":"DOC-A","block_id":"p99","text":"Analyst consensus is elsewhere."}]
+        result=ctx.validate_draft({"claims":[claim()],"link":"explicit_link"},blocks)
+        self.assertEqual(result["link"],"unconfirmed")
+
+    def test_subsidiary_is_not_issuer_earnings(self):
+        quote="MPLX expects distributions of $5 million."
+        base=claim(quote=quote,block_id="p1",metric="distributions",kind="guidance",figures=["$5 million"])
+        blocks=[{"document_id":"DOC-A","block_id":"p1","text":quote}]
+        self.assertEqual(ctx.validate_draft({"claims":[base]},blocks,{"ticker":"MPC"})["claims"],[])
+        sub={**base,"subject":"subsidiary","subject_name":"MPLX"}
+        self.assertEqual(ctx.validate_draft({"claims":[sub]},blocks,{"ticker":"MPC"})["context_status"],"insufficient_earnings_context")
+
+    def test_limitations_use_same_currency_checks(self):
+        result=ctx.validate_draft({"limitations":[claim(currency="EUR")]},self.blocks)
+        self.assertEqual(result["limitations"],[])
 
 
 class DraftRunTest(RunFixture):
@@ -432,16 +437,16 @@ class DraftRunTest(RunFixture):
                 mock.patch.object(c, "today", return_value="2026-09-25"):
             # Both days are pinned: the budget day must not depend on the date the tests run.
             report = ctx.run_drafts(NOW)
-            self.assertEqual((report["drafted"], report["deferred_budget"]), (6, 2))
-            self.assertTrue(all(sum(f"회사: T{i}." in p for i in range(8)) == 1 for p in self.prompts))
+            self.assertEqual((report["insufficient_earnings_context"], report["deferred"]), (6, 2))
+            self.assertTrue(all(sum(f"회사: T{i} (" in p for i in range(8)) == 1 for p in self.prompts))
             again = ctx.run_drafts(NOW)  # same day: no budget left
             self.assertEqual((len(self.prompts), again["drafted"]), (6, 0))
             with mock.patch.object(c, "today", return_value="2026-09-26"):
                 tomorrow = ctx.run_drafts(NOW + timedelta(days=1))  # budget resets; drafted inputs are not asked again
-        self.assertEqual((len(self.prompts), tomorrow["drafted"]), (8, 2))
+        self.assertEqual((len(self.prompts), tomorrow["insufficient_earnings_context"]), (8, 2))
         record = json.loads(next(ctx.history_dir().glob("CTX-*.json")).read_text(encoding="utf-8"))
         self.assertEqual((record["context_status"], record["review"], record["link"]),
-                         ("draft_ready", "자동 정리·미검토", "temporal_context"))
+                         ("insufficient_earnings_context", "자동 정리·미검토", "temporal_context"))
         self.assertFalse((self.data / "candidate_evidence.json").exists())  # never the human evidence file
         self.assertFalse((self.data / "investment_review_log.csv").exists())
 

@@ -813,7 +813,7 @@ class ContextCardTest(CandidateFixture):
              "period": "Q3 FY2027", "drivers": ["volume"], "direction": "positive"}]
         record = {"context_id": context_id, "candidate_id": self.aaa["candidate_id"], "issuer_cik": "0000000001",
                   "document_ids": [doc["document_id"]], "source_blocks": [], "input_sha": context_id * 2,
-                  "model": "m", "prompt_version": "p", "parser_version": "v", "generated_at": "2026-09-25T02:30:00+00:00",
+                  "model": "m", "prompt_version": "p", "parser_version": candidate_context.PARSER_VERSION, "generated_at": "2026-09-25T02:30:00+00:00",
                   "context_status": status, "claims": claims,
                   "limitations": [{"text_ko": "일회성 세금 이익이 포함됐다.", "quote": "one-time tax benefit",
                                    "document_id": doc["document_id"], "block_id": "p4"}],
