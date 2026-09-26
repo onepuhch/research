@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T14:08:03+00:00",
+  "generated_at": "2026-09-26T14:14:28+00:00",
   "generator_version": "cards-v3",
   "thesis_key": "eps-revision-review:v1",
   "stale": [],
@@ -14,55 +14,7 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": {
-        "context_id": "CTX-117FF6568DA33E35",
-        "input_sha": "117ff6568da33e353aa1f5b2f06bca2a19a8119eb61e67e63b0c55b6bc9293dc",
-        "context_status": "insufficient_earnings_context",
-        "claims": [
-          {
-            "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문의 매출이 전년 대비 감소했습니다",
-            "note_ko": "국내 사업 부문의 매출이 전년 대비 감소했습니다",
-            "kind": "fact",
-            "quote": "•Domestic Operations revenue decreased 11% from the prior year to $470 million.",
-            "document_id": "DOC-3563CA2BB442B25A",
-            "block_id": "p21",
-            "metric": "revenue",
-            "figures": [
-              "11%",
-              "$470 million"
-            ],
-            "period": "unknown",
-            "currency": "USD",
-            "gaap": "unknown",
-            "subject": "segment",
-            "subject_name": "Domestic Operations",
-            "core": false,
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "negative"
-          }
-        ],
-        "limitations": [],
-        "next_check": [
-          "Adjusted Operating Income의 정의에 포함된 항목들이 회사의 영업 성과에 어떤 영향을 미쳤는지 확인해야 합니다.",
-          "Adjusted EPS의 정의에 포함된 항목들이 회사의 주당 순이익에 어떤 영향을 미쳤는지 확인해야 합니다."
-        ],
-        "link": "unconfirmed",
-        "link_note": null,
-        "source_coverage": "partial",
-        "documents": [
-          {
-            "document_id": "DOC-3563CA2BB442B25A",
-            "title": "EX-99.1",
-            "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
-            "filed_at": "2026-07-30",
-            "observed_at": "2026-09-26T13:52:04+00:00",
-            "form": "8-K",
-            "document_type": "EX-99.1"
-          }
-        ]
-      },
+      "context": null,
       "name": "AMC Global Media Inc.",
       "industry": "Entertainment",
       "sector": "Communication Services",
@@ -149,22 +101,12 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:50:11+00:00",
           "fields": "assetProfile industry, sector, business summary"
-        },
-        {
-          "id": "DOC-3563CA2BB442B25A",
-          "provider": "SEC EDGAR",
-          "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
-          "title": "SEC 8-K EX-99.1",
-          "published_at": null,
-          "filed_at": "2026-07-30",
-          "observed_at": "2026-09-26T13:52:04+00:00",
-          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-B6E3C186DFB16B98",
+      "candidate_version": "CV-28E27553C83FCEEC",
       "classification": "found",
-      "observation_id": "OB-B2265D02E707278B",
+      "observation_id": "OB-792578F548D59D6D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -205,7 +147,7 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": "CTX-117FF6568DA33E35",
+      "context_id": null,
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
@@ -226,28 +168,7 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": {
-        "context_id": "CTX-A06399250CF0DD59",
-        "input_sha": "a06399250cf0dd59e3097a16a8840bf652b6d5b717388603f744b168cdf610e6",
-        "context_status": "no_supported_claims",
-        "claims": [],
-        "limitations": [],
-        "next_check": [],
-        "link": "unconfirmed",
-        "link_note": null,
-        "source_coverage": "partial",
-        "documents": [
-          {
-            "document_id": "DOC-EA4425A446380C5A",
-            "title": "PRESS RELEASE",
-            "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
-            "filed_at": "2026-07-14",
-            "observed_at": "2026-09-26T13:52:04+00:00",
-            "form": "8-K",
-            "document_type": "EX-99.1"
-          }
-        ]
-      },
+      "context": null,
       "name": "Aehr Test Systems, Inc.",
       "industry": "Semiconductor Equipment & Materials",
       "sector": "Technology",
@@ -333,22 +254,12 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:44:54+00:00",
           "fields": "assetProfile industry, sector, business summary"
-        },
-        {
-          "id": "DOC-EA4425A446380C5A",
-          "provider": "SEC EDGAR",
-          "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
-          "title": "SEC 8-K EX-99.1 — PRESS RELEASE",
-          "published_at": null,
-          "filed_at": "2026-07-14",
-          "observed_at": "2026-09-26T13:52:04+00:00",
-          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-145AB934DBDB4BCC",
+      "candidate_version": "CV-8C06BCD4BFC39145",
       "classification": "found",
-      "observation_id": "OB-8675C2D46C311BA2",
+      "observation_id": "OB-D53AE3A45D77804F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -385,7 +296,7 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": "CTX-A06399250CF0DD59",
+      "context_id": null,
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
@@ -406,30 +317,7 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": {
-        "context_id": "CTX-7E739AC1982C7ECD",
-        "input_sha": "7e739ac1982c7ecda46b602b52c51eb6b3c11c43a519ed061bffd70197417ae2",
-        "context_status": "no_supported_claims",
-        "claims": [],
-        "limitations": [],
-        "next_check": [
-          "Gulf of America 볼트온 인수 완료 시점은 언제인가?"
-        ],
-        "link": "unconfirmed",
-        "link_note": null,
-        "source_coverage": "partial",
-        "documents": [
-          {
-            "document_id": "DOC-70283ADC988D0C81",
-            "title": "EX-99.1",
-            "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
-            "filed_at": "2026-08-04",
-            "observed_at": "2026-09-26T13:52:04+00:00",
-            "form": "8-K",
-            "document_type": "EX-99.1"
-          }
-        ]
-      },
+      "context": null,
       "name": "Talos Energy Inc.",
       "industry": "Oil & Gas E&P",
       "sector": "Energy",
@@ -515,22 +403,12 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:45:16+00:00",
           "fields": "assetProfile industry, sector, business summary"
-        },
-        {
-          "id": "DOC-70283ADC988D0C81",
-          "provider": "SEC EDGAR",
-          "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
-          "title": "SEC 8-K EX-99.1",
-          "published_at": null,
-          "filed_at": "2026-08-04",
-          "observed_at": "2026-09-26T13:52:04+00:00",
-          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-3A94E7D653555C95",
+      "candidate_version": "CV-7DEE706CB9DB7FBB",
       "classification": "found",
-      "observation_id": "OB-7B8CCF74678E6BAF",
+      "observation_id": "OB-0C1A8570121AA14E",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -567,7 +445,7 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": "CTX-7E739AC1982C7ECD",
+      "context_id": null,
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
@@ -588,49 +466,7 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": {
-        "context_id": "CTX-CFFAC44D8F92374D",
-        "input_sha": "cffac44d8f92374d85ec627c8f5834a87f3acb99035192709c40f5c36306161f",
-        "context_status": "no_supported_claims",
-        "claims": [],
-        "limitations": [
-          {
-            "text_ko": "주당순이익(earnings per share) — 주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다.",
-            "note_ko": "주당 기본 및 희석 이익 계산에 대한 정보는 표에 제시되어 있습니다.",
-            "kind": "fact",
-            "quote": "The following table sets forth the computation of basic and diluted earnings per share.",
-            "document_id": "DOC-80DB053BD25896A0",
-            "block_id": "p129",
-            "metric": "earnings per share",
-            "figures": [],
-            "period": "unknown",
-            "currency": null,
-            "gaap": "unknown",
-            "subject": "issuer",
-            "subject_name": null,
-            "core": false,
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "unknown"
-          }
-        ],
-        "next_check": [],
-        "link": "unconfirmed",
-        "link_note": null,
-        "source_coverage": "partial",
-        "documents": [
-          {
-            "document_id": "DOC-80DB053BD25896A0",
-            "title": "10-Q",
-            "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
-            "filed_at": "2026-08-05",
-            "observed_at": "2026-09-26T13:52:04+00:00",
-            "form": "10-Q",
-            "document_type": "10-Q"
-          }
-        ]
-      },
+      "context": null,
       "name": "Delek US Holdings, Inc.",
       "industry": "Oil & Gas Refining & Marketing",
       "sector": "Energy",
@@ -717,22 +553,12 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:44:06+00:00",
           "fields": "assetProfile industry, sector, business summary"
-        },
-        {
-          "id": "DOC-80DB053BD25896A0",
-          "provider": "SEC EDGAR",
-          "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
-          "title": "SEC 10-Q 10-Q",
-          "published_at": null,
-          "filed_at": "2026-08-05",
-          "observed_at": "2026-09-26T13:52:04+00:00",
-          "fields": "10-Q 10-Q"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-799E6A70FB1B30B6",
+      "candidate_version": "CV-0173F79AFD5AA961",
       "classification": "found",
-      "observation_id": "OB-A91B69C383066226",
+      "observation_id": "OB-8AF0F73106669A75",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -773,7 +599,7 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": "CTX-CFFAC44D8F92374D",
+      "context_id": null,
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
@@ -948,28 +774,7 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": {
-        "context_id": "CTX-8222B965D9CD1C57",
-        "input_sha": "8222b965d9cd1c577e967dd415061f4b75cefaa0392a1634e585001886edc08b",
-        "context_status": "no_supported_claims",
-        "claims": [],
-        "limitations": [],
-        "next_check": [],
-        "link": "unconfirmed",
-        "link_note": null,
-        "source_coverage": "partial",
-        "documents": [
-          {
-            "document_id": "DOC-9FC60A7023735EC9",
-            "title": "EX-99.1",
-            "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
-            "filed_at": "2026-07-30",
-            "observed_at": "2026-09-26T13:52:04+00:00",
-            "form": "8-K",
-            "document_type": "EX-99.1"
-          }
-        ]
-      },
+      "context": null,
       "name": "PBF Energy Inc.",
       "industry": "Oil & Gas Refining & Marketing",
       "sector": "Energy",
@@ -1056,22 +861,12 @@
           "published_at": null,
           "observed_at": "2026-09-26T13:42:09+00:00",
           "fields": "assetProfile industry, sector, business summary"
-        },
-        {
-          "id": "DOC-9FC60A7023735EC9",
-          "provider": "SEC EDGAR",
-          "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
-          "title": "SEC 8-K EX-99.1",
-          "published_at": null,
-          "filed_at": "2026-07-30",
-          "observed_at": "2026-09-26T13:52:04+00:00",
-          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v3",
-      "candidate_version": "CV-6EB541EE1A3EA72B",
+      "candidate_version": "CV-1685DBD3D71BB3F6",
       "classification": "found",
-      "observation_id": "OB-7EB4966B95AA68E5",
+      "observation_id": "OB-F878A983C0260E3F",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1112,7 +907,7 @@
       },
       "research_status": "source_linked",
       "research_note": null,
-      "context_id": "CTX-8222B965D9CD1C57",
+      "context_id": null,
       "source_snapshot": {
         "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
         "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
@@ -4865,6 +4660,11 @@
           "to": "2026-09-25T12:24:02+00:00"
         },
         {
+          "version": "CV-28E27553C83FCEEC",
+          "from": "2026-09-26T13:50:11+00:00",
+          "to": "2026-09-26T13:50:11+00:00"
+        },
+        {
           "version": "CV-B6E3C186DFB16B98",
           "from": "2026-09-26T13:50:11+00:00",
           "to": "2026-09-26T13:50:11+00:00"
@@ -5006,8 +4806,8 @@
       "ticker": "AEHR",
       "first_seen_at": "2026-09-25T12:18:43+00:00",
       "last_seen_at": "2026-09-26T13:44:54+00:00",
-      "latest_observation": "OB-8675C2D46C311BA2",
-      "latest_version": "CV-145AB934DBDB4BCC",
+      "latest_observation": "OB-D53AE3A45D77804F",
+      "latest_version": "CV-8C06BCD4BFC39145",
       "timeline": [
         {
           "version": "CV-DA95C110EE6F41D4",
@@ -5026,6 +4826,11 @@
         },
         {
           "version": "CV-145AB934DBDB4BCC",
+          "from": "2026-09-26T13:44:54+00:00",
+          "to": "2026-09-26T13:44:54+00:00"
+        },
+        {
+          "version": "CV-8C06BCD4BFC39145",
           "from": "2026-09-26T13:44:54+00:00",
           "to": "2026-09-26T13:44:54+00:00"
         }
@@ -5086,8 +4891,8 @@
       "ticker": "PBF",
       "first_seen_at": "2026-09-25T12:15:57+00:00",
       "last_seen_at": "2026-09-26T13:42:09+00:00",
-      "latest_observation": "OB-7EB4966B95AA68E5",
-      "latest_version": "CV-6EB541EE1A3EA72B",
+      "latest_observation": "OB-F878A983C0260E3F",
+      "latest_version": "CV-1685DBD3D71BB3F6",
       "timeline": [
         {
           "version": "CV-455DA67895538E91",
@@ -5106,6 +4911,11 @@
         },
         {
           "version": "CV-6EB541EE1A3EA72B",
+          "from": "2026-09-26T13:42:09+00:00",
+          "to": "2026-09-26T13:42:09+00:00"
+        },
+        {
+          "version": "CV-1685DBD3D71BB3F6",
           "from": "2026-09-26T13:42:09+00:00",
           "to": "2026-09-26T13:42:09+00:00"
         }
@@ -5153,6 +4963,11 @@
           "version": "CV-42D1318E7E187F93",
           "from": "2026-09-25T12:17:40+00:00",
           "to": "2026-09-25T12:17:40+00:00"
+        },
+        {
+          "version": "CV-0173F79AFD5AA961",
+          "from": "2026-09-26T13:44:06+00:00",
+          "to": "2026-09-26T13:44:06+00:00"
         },
         {
           "version": "CV-799E6A70FB1B30B6",
