@@ -676,6 +676,61 @@ def draft_queue(state: dict, current: dict[str, str], now: datetime) -> list[tup
     return sorted(queue, key=lambda pair: pair[1].get("attempted_at", ""))
 
 
+AUDIT_SCHEMA = 1
+AUDIT_MAX_BYTES = 512 * 1024
+
+
+def audit_dir(day: str) -> Path:
+    """Pre-validation copies of each draft attempt: a 30-day run artifact, never read by the pipeline."""
+    return c.ROOT / "reports" / "generated" / "context_audit" / day
+
+
+def code_sha() -> str | None:
+    """The commit actually checked out (not the event's head_sha), read without running git."""
+    try:
+        git = c.ROOT / ".git"
+        head = (git / "HEAD").read_text(encoding="utf-8").strip()
+        if not head.startswith("ref: "):
+            return head
+        ref = head[5:]
+        if (git / ref).exists():
+            return (git / ref).read_text(encoding="utf-8").strip()
+        for line in (git / "packed-refs").read_text(encoding="utf-8").splitlines():
+            if line.endswith(" " + ref):
+                return line.split()[0]
+    except OSError:
+        pass
+    return None
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def write_audit(record: dict, day: str) -> bool:
+    """Atomic, one file per attempt, at most AUDIT_MAX_BYTES. A copy too large keeps its hash and
+    size, drops the biggest fields and says truncated=true (not usable for a full comparison)."""
+    try:
+        body = json.dumps(record, ensure_ascii=False, indent=1)
+        size = len(body.encode("utf-8"))
+        if size > AUDIT_MAX_BYTES:
+            record = {**record, "truncated": True, "original_bytes": size, "original_sha256": sha256_text(body)}
+            for key in ("blocks", "prompt", "raw_response", "answer", "validation"):
+                if key in record:
+                    dropped = json.dumps(record[key], ensure_ascii=False)
+                    record[key] = {"dropped": True, "sha256": sha256_text(dropped),
+                                   "bytes": len(dropped.encode("utf-8"))}
+                body = json.dumps(record, ensure_ascii=False, indent=1)
+                if len(body.encode("utf-8")) <= AUDIT_MAX_BYTES:
+                    break
+        path = audit_dir(day) / f"{record['attempt_id']}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        c.atomic_json(path, json.loads(body))
+        return True
+    except (OSError, ValueError, TypeError):
+        return False
+
+
 def run_drafts(now: datetime | None = None, call=None, deadline: float | None = None,
                current: dict[str, str] | None = None, clock=time.monotonic) -> dict:
     """One company per model request and one attempt per company in a run; a failed company
@@ -688,13 +743,18 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
     report = {"requests": 0, "drafted": 0, "insufficient_earnings_context": 0, "no_supported_claims": 0,
               "deferred": 0, "failed": 0}
     deadline = deadline or (clock() + settings()["time_budget_s"])
+    raw_seen: dict = {}  # filled by the real provider call only; an injected call leaves it empty
     if call is None:
         if not api_key:
             report["skipped"] = "model_key_missing"
             return report
-        call = lambda prompt: extract.call_gemini_prompt(  # noqa: E731
-            prompt, api_key, "candidate_context", timeout=60, thinking_budget=0, deadline=deadline, max_attempts=1,
-            clock=clock)
+
+        def call(prompt):
+            return extract.call_gemini_prompt(prompt, api_key, "candidate_context", timeout=60, thinking_budget=0,
+                                              deadline=deadline, max_attempts=1, clock=clock, raw=raw_seen)
+    day = c.today()
+    run_id = "-".join(x for x in (os.environ.get("GITHUB_RUN_ID"), os.environ.get("GITHUB_RUN_ATTEMPT")) if x) or "local"
+    sha_of_code = code_sha()
     if current is None:
         current = {cid: e.get("eps_target_period") for cid, e in state["candidates"].items()}
     for cid, entry in draft_queue(state, current, now):
@@ -709,12 +769,39 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
         blocks, coverage_state = relevant_blocks(documents)
         sha = input_sha({"candidate_id": cid, **entry}, entry["document_ids"])
         before_calls = c.model_calls_today()
+        before_component = component_calls(day)
+        prompt = draft_prompt(target, documents, blocks)
+        started = datetime.now(timezone.utc)
+        raw_seen.clear()
+        audit = {"schema_version": AUDIT_SCHEMA, "attempt_id": f"{started:%Y%m%dT%H%M%S%fZ}-{cid}",
+                 "candidate_id": cid, "ticker": entry.get("ticker"), "issuer": entry.get("issuer"),
+                 "eps_target_period": entry.get("eps_target_period"), "run_id": run_id, "code_sha": sha_of_code,
+                 "provider": "gemini", "model": extract.GEMINI_MODEL, "prompt_version": PROMPT_VERSION,
+                 "parser_version": PARSER_VERSION, "input_sha": sha,
+                 "started_at": started.isoformat(timespec="seconds"),
+                 "documents": [{"document_id": d["document_id"], "raw_sha256": d.get("raw_sha256"),
+                                "coverage": d.get("coverage")} for d in documents],
+                 "blocks": blocks, "source_coverage": coverage_state, "prompt": prompt,
+                 "prompt_sha256": sha256_text(prompt)}
+
+        def finish(outcome, **fields):
+            audit.update(outcome=outcome, finished_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                         budget={"candidate_context_before": before_component,
+                                 "candidate_context_after": component_calls(day),
+                                 "requests_sent": c.model_calls_today() - before_calls},
+                         raw_response={"available": "text" in raw_seen,
+                                       **{k: raw_seen.get(k) for k in ("text", "finish_reason", "usage")}},
+                         **fields)
+            if not write_audit(audit, day):
+                report["audit_write_failed"] = report.get("audit_write_failed", 0) + 1
+
         try:
-            answer = call(draft_prompt(target, documents, blocks))  # one company per request
+            answer = call(prompt)  # one company per request
         except c.ModelBudgetExhausted as reason:
             report["requests"] += c.model_calls_today() - before_calls
             entry["draft_status"] = "provider_rate_limited" if "rate" in str(reason) else "deferred_budget"
             report["deferred"] += 1
+            finish("deferred", error={"type": "ModelBudgetExhausted", "reason": str(reason)[:60]})
             continue
         except (OSError, ValueError, KeyError, IndexError, TimeoutError) as error:
             report["requests"] += c.model_calls_today() - before_calls
@@ -722,9 +809,13 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
                          draft_next_at=(now + timedelta(hours=settings()["retry_failed_hours"])).isoformat(timespec="seconds"))
             report["failed"] += 1
             c.atomic_json(state_path(), state)
+            # Type and HTTP status only: an exception's text can carry a URL.
+            finish("failed", error={"type": type(error).__name__, "http_status": getattr(error, "code", None)})
             continue
         report["requests"] += c.model_calls_today() - before_calls
+        answer_copy = json.loads(json.dumps(answer, ensure_ascii=False, default=str))  # before validation
         checked = validate_draft(answer, blocks, {**(entry.get("issuer") or {}), "ticker": entry.get("ticker")})
+        finish("answered", answer=answer_copy, validation=checked, context_id="CTX-" + sha[:16].upper())
         record = {"context_id": "CTX-" + sha[:16].upper(), "candidate_id": cid, "ticker": entry.get("ticker"),
                   "issuer_cik": (entry.get("issuer") or {}).get("cik"), "document_ids": entry["document_ids"],
                   "eps_target_period": entry.get("eps_target_period"),
@@ -740,6 +831,10 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
         c.atomic_json(state_path(), state)
     c.atomic_json(state_path(), state)
     return report
+
+
+def component_calls(day: str) -> int:
+    return c.read_json(c.DATA_DIR / "model_budget.json", {}).get("days", {}).get(day, {}).get("candidate_context", 0)
 
 
 def coverage(state: dict, ids: list[str]) -> dict:

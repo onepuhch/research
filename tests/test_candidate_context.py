@@ -217,6 +217,8 @@ class RunFixture(unittest.TestCase):
         (self.data / "revision_screen").mkdir()
         for patch in (mock.patch.object(c, "DATA_DIR", self.data),
                       mock.patch.object(screen_revisions, "SCREEN_DIR", self.data / "revision_screen"),
+                      # Audit copies go to the temporary directory, never to the repository's reports/.
+                      mock.patch.object(ctx, "audit_dir", lambda day: self.data / "context_audit" / day),
                       contextlib.redirect_stdout(io.StringIO())):
             patch.__enter__()
             self.addCleanup(patch.__exit__, None, None, None)

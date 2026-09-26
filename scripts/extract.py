@@ -360,7 +360,8 @@ def retry_after_seconds(error: HTTPError) -> float | None:
 
 def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float | None = None,
                        thinking_budget: int | None = None, deadline: float | None = None,
-                       max_attempts: int | None = None, clock=time.monotonic, sleep=time.sleep) -> dict[str, Any]:
+                       max_attempts: int | None = None, clock=time.monotonic, sleep=time.sleep,
+                       raw: dict[str, Any] | None = None) -> dict[str, Any]:
     """One JSON-mode Gemini call with bounded retries (shared by extract, cards and context).
 
     Every HTTP attempt, retries included, is reserved against the shared daily budget and
@@ -369,6 +370,8 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float
     A deadline is checked before each attempt and wait, and caps each request's timeout.
     429 is not retried: the provider is blocked for every component (until Retry-After, or
     the next KST day) and ModelBudgetExhausted('provider_rate_limited') is raised.
+    If `raw` is given, the response text, finish reason and token counts are put there before
+    the JSON is parsed (for audit copies; nothing else changes).
     """
     body = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
@@ -431,8 +434,13 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float
         sleep(delay)
         delay *= 2
 
+    if raw is not None:
+        raw["usage"] = payload.get("usageMetadata")
+        raw["finish_reason"] = ((payload.get("candidates") or [{}])[0] or {}).get("finishReason")
     parts = payload["candidates"][0]["content"]["parts"]
     text = "".join(str(part.get("text", "")) for part in parts)
+    if raw is not None:
+        raw["text"] = text
     return parse_json_object(text)
 
 
