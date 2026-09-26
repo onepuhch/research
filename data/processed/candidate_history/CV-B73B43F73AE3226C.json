@@ -1,0 +1,100 @@
+{
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "candidate_version": "CV-B73B43F73AE3226C",
+  "identity": {
+    "entity_id": "NYSE:NBR",
+    "ticker": "NBR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Nabors Industries Ltd.",
+  "industry": "Oil & Gas Drilling",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "육상 및 해상 유정, 가스정 시추 및 관련 서비스를 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Nabors Industries Ltd. provides drilling and drilling-related services for land-based and offshore oil and natural gas wells in the United States and internationally. The company operates through four segments: U.S. Drilling, International Drilling, Drilling Solutions, and Rig Technologies. The company offers tubular running services, including casing and tubing running, and torque monitoring; managed pressure drilling services; and drilling-bit steering systems and rig instrumentation software. The company also offers drilling systems comprising ROCKit, a directional steering control system;"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "NBR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:34+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "NBR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:34+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "NBR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:34+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.60994,
+    "eps_30d": 1.115,
+    "eps_90d": 1.115,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 223.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

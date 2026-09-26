@@ -1,0 +1,72 @@
+{
+  "observation_id": "OB-8F9EE99A6A6576F4",
+  "candidate_id": "CAN-700B10D9B75B0040",
+  "candidate_version": "CV-389CEC378D385D9E",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:CORT",
+    "ticker": "CORT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-26T13:41:14+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
+    "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
+    "run_id": "36245680144-1",
+    "finished_at": "2026-09-26T13:52:03+00:00"
+  },
+  "eps": {
+    "eps_now": 4.4025,
+    "eps_30d": 3.20667,
+    "eps_90d": 1.63,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 170.1,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 2.388,
+    "yield_change_30_pp": 1.03
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-28",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-25",
+    "price_end_date": "2026-09-25",
+    "close_start": 87.31999969482422,
+    "close_end": 116.0999984741211,
+    "price_pct_90": 33.0,
+    "adj_return_pct_90": 33.0,
+    "pe_change_pct": -50.8
+  },
+  "display_rank": 9,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 5
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "0cc43c631011",
+  "generator_version": "cards-v3",
+  "market_cap": 12550223872,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "entity_id": "NASDAQ:CORT",
+  "approval_version": null
+}

@@ -1,0 +1,100 @@
+{
+  "candidate_id": "CAN-82719B27698E3C22",
+  "candidate_version": "CV-1685DBD3D71BB3F6",
+  "identity": {
+    "entity_id": "NYSE:PBF",
+    "ticker": "PBF",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "PBF Energy Inc.",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유를 정제하여 휘발유, 디젤, 제트 연료, 윤활유, 석유화학 제품 등을 생산하고 공급합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "PBF Energy Inc., through its subsidiaries, engages in the refining and supplying of petroleum products. It operates through two segments, Refining and Logistics. The company produces gasoline, ultra-low-sulfur diesel, heating oil, jet fuel, lubricants, petrochemicals, and asphalt; diesel fuel; and unbranded transportation fuels, petrochemical feedstocks, blending components, and other petroleum products. It sells its products in the Northeast, Midwest, Gulf Coast, and West Coast of the United States, as well as in other regions of the United States, Canada, Mexico, and internationally. The com"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PBF analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PBF/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:42:09+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PBF daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PBF/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:42:09+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PBF company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PBF/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:42:09+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 12.375,
+    "eps_30d": 11.0,
+    "eps_90d": 6.3425,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 95.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

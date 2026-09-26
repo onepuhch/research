@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-68E9292E49558246",
+  "candidate_version": "CV-F3322EBD4C4AD487",
+  "identity": {
+    "entity_id": "NYSE:IPI",
+    "ticker": "IPI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Intrepid Potash, Inc.",
+  "industry": "Agricultural Inputs",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "칼륨, 마그네슘, 황, 소금, 물 제품을 농업, 사료, 산업 시장에 공급하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Intrepid Potash, Inc. delivers potassium, magnesium, sulfur, salt, and water products. It operates through three segments: Potash, Trio, and Oilfield Solutions. The company offers muriate of potash for various markets, such as in agricultural market as a fertilizer input, in animal feed market as a nutrient supplement, in industrial market as a component in drilling and fracturing fluids, as well as input to other industrial processes. It also provides Trio, a specialty fertilizer that delivers potassium, sulfate, and magnesium in a single particle; salt for various markets, including animal f"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "IPI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/IPI/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:50:14+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "IPI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/IPI/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:50:14+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "IPI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/IPI/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:50:14+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.41366,
+    "eps_30d": 0.61031,
+    "eps_90d": 0.56888,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 148.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

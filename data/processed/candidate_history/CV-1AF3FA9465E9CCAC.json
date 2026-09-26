@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-E95987D989EF1145",
+  "candidate_version": "CV-1AF3FA9465E9CCAC",
+  "identity": {
+    "entity_id": "NYSE:TNK",
+    "ticker": "TNK",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Teekay Tankers Ltd.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "유조선을 이용해 해상 운송 서비스, 유류 환적, 선박 관리 및 장비 대여로 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Teekay Tankers Ltd., together with its subsidiaries, provides marine transportation services to oil industries in Bermuda and internationally. The company operates in two segments: Tankers and Marine Servies. It offers voyage and time charter services; offshore ship-to-ship transfer of commodities primarily crude oil and refined oil products; and tanker commercial and technical management services. In addition, the company is involved in the vessels management, procurement, and equipment rental businesses. It serves energy and utility companies, oil traders, oil consumers and petroleum product"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TNK analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:44:45+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TNK daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:44:45+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TNK company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:44:45+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 10.89793,
+    "eps_30d": 8.0747,
+    "eps_90d": 7.47095,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 45.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

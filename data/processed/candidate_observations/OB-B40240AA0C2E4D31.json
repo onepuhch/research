@@ -1,0 +1,72 @@
+{
+  "observation_id": "OB-B40240AA0C2E4D31",
+  "candidate_id": "CAN-8ED72F330C1AE34D",
+  "candidate_version": "CV-4C1E08CD5614E654",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:FSLY",
+    "ticker": "FSLY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-26T13:44:00+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
+    "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
+    "run_id": "36245680144-1",
+    "finished_at": "2026-09-26T13:52:03+00:00"
+  },
+  "eps": {
+    "eps_now": 0.6305,
+    "eps_30d": 0.58384,
+    "eps_90d": 0.39454,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 12,
+    "up30": 10,
+    "down30": 0,
+    "pct_90": 59.8,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 0.945,
+    "yield_change_30_pp": 0.187
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-28",
+    "price_start_date": "2026-06-26",
+    "price_end_expected": "2026-09-25",
+    "price_end_date": "2026-09-25",
+    "close_start": 17.110000610351562,
+    "close_end": 24.959999084472656,
+    "price_pct_90": 45.9,
+    "adj_return_pct_90": 45.9,
+    "pe_change_pct": -8.7
+  },
+  "display_rank": 27,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "0cc43c631011",
+  "generator_version": "cards-v3",
+  "market_cap": 3976127744,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "원문 조사 대기 중입니다.",
+  "entity_id": "NASDAQ:FSLY",
+  "approval_version": null
+}

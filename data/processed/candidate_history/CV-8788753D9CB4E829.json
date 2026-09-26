@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-E763F753A2D7609F",
+  "candidate_version": "CV-8788753D9CB4E829",
+  "identity": {
+    "entity_id": "NASDAQ:CLBK",
+    "ticker": "CLBK",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Columbia Financial, Inc.",
+  "industry": "Banks - Regional",
+  "sector": "Financial Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "기업과 소비자에게 다양한 대출 및 금융 서비스를 제공하고 증권 활동으로 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Columbia Financial, Inc. operates as a bank holding company for Columbia Bank that provides banking and other financial services to businesses and consumers in the United States. The company offers commercial loans, including multifamily and commercial real estate, commercial business, and construction loans; residential loans, such as one-to-four family residential real estate and one-to-four family residential loans; and consumer loans, which includes home equity loans and advances, as well as automobile, personal, unsecured, and overdraft lines of credit, as well as securities activities. I"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CLBK analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLBK/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:47+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CLBK daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLBK/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:47+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CLBK company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLBK/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:47+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.63364,
+    "eps_30d": 0.35454,
+    "eps_90d": 0.35454,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 78.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

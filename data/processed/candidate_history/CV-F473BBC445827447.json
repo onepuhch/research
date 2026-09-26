@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-EE8A92AC2C2D3E8C",
+  "candidate_version": "CV-F473BBC445827447",
+  "identity": {
+    "entity_id": "NASDAQ:PGY",
+    "ticker": "PGY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Pagaya Technologies Ltd.",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "금융 서비스에 데이터 과학과 AI 기술을 활용하여 대출 심사 및 승인 솔루션을 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Pagaya Technologies Ltd., a product-focused technology company, deploys data science and proprietary artificial intelligence-powered technology for financial services, their customers, and institutional or sophisticated investors in the United States, Israel, and the Cayman Islands. The company offers Decline Monetization, the flagship product which allows Partners to automatically send rejected loan applications to its network, as well as approve customers they would otherwise decline; Dual Look which allows to assess applications concurrently with its Partners in real time; and First Look th"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PGY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PGY/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:00+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PGY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PGY/history",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:00+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PGY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PGY/profile",
+      "published_at": null,
+      "observed_at": "2026-09-26T13:47:00+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v3",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.14595,
+    "eps_30d": 4.07106,
+    "eps_90d": 3.53854,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 17.2,
+    "steady": false,
+    "turnaround": false
+  }
+}
