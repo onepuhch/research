@@ -1,5 +1,11 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-09-27 01:40 KST 무렵(사용 한도로 중단). 진행 중인 쓰기 없음. [K 지시서](docs/k_j_acceptance_and_validator_followup_2026-09-27.md) 진행 상황:
+  - K1(주체 범위·글머리·설명 삽입구)+K2(형식 검사·검증 전 감사 저장·ctx_stored) **구현·CI 완료** 806e786(CI 36254283608 success). 검증기 context-check-v6, 일간 context-v6. NBR 예상실패 → 일반 테스트. 운영 초안 오프라인 재검증 표(I3)는 v6에서 변화 없음.
+  - K3(KST 날짜 창·--run-id·attempt 중복·현재 대기열 분리) **구현** e68711c, 테스트 7개.
+  - K4(채점 j3-score-v2: 주장 단위 중대 오류 합집합·엄격 정답 매칭·스키마 검사·분모 보존, `revalidate` 명령, 추론 키에서 검증기 분리·기존 결과 덮어쓰기 금지) **코드·테스트 완료** 7352eb3. 전체 378개 통과(예상실패 0).
+  - **남은 일**: (1) manual_review.json의 NBR 항목을 `{verdict: wrong, severity: critical, reason, evidence, reviewed_at}`로 갱신(원본 백업) → `python scripts/local_context_benchmark.py revalidate --experiment reports/generated/local_model/j3-55774e6d13-context-check-v4` → `report --runs <exp>/revalidated/context-check-v6 --output <exp>/report_v6` → J 평가 문서에 '기존 표본 회귀 재검증' 절 추가. K4 fixture 필수 시험(NBR 수동 critical JSON/MD 1, 중복 1, 기간·주체 오류가 정답·회수율 미상승, 미실행 분모, revalidate 네트워크 0) 추가. (2) K5 Ollama 서버 종료·Startup/Ollama.lnk 백업 후 제외. (3) 9/27 정상 실행 뒤 I3-2(`tests/live_context_evaluation.py 2026-09-27 --audit ... --run-id ...`). (4) docs/k_handoff_2026-09-27.md 작성.
+
 - 최신 검토자: Codex, 2026-09-27. 기준 `fbae8a1`(코드 `5149743`). [J 판정과 K 상세 후속](docs/k_j_acceptance_and_validator_followup_2026-09-27.md). 최신 HEAD CI 36253140058와 코드 CI 36253024562 success 확인. 로컬은 **361개 실행 = 360 일반 통과 + expectedFailure 1**로 재확인했다.
 - 결정: 로컬 원문 초안 **현재 보류**와 v5 GAAP 수정 수용. NBR 사업 주체 오류는 공통 운영 검증기 결함이므로 eval에서 발견됐어도 수정한다. 글머리 서식/AEHR 설명 삽입구 과잉 거부는 좁은 범위로 보완. 새 로컬 번역 시험·추가 API 요청은 I3-2 뒤로 미룬다.
 - 새 재현: list인 block_id → TypeError + 감사 파일 0개, I3-2 날짜 필터의 KST 당일 누락/미래 날짜 포함, 수동 NBR 중대 오류의 자동 critical 집계 누락. 다음은 K1 주체 검증 + K2 감사 보존 우선 → K3 날짜/run 집계 → K4 저장 응답 오프라인 재채점 → 정상 일간 I3-2. K5 시험 서버/신규 자동시작 정리도 지시서에 포함했다.
