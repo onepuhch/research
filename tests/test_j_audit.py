@@ -114,6 +114,62 @@ class AuditTest(RunFixture):
         entry = ctx.load_state()["candidates"]["CAN-0000000000000001"]
         self.assertTrue(entry["context_id"].startswith("CTX-"))
 
+    def test_a_badly_typed_claim_is_refused_alone_and_the_copy_is_kept(self):
+        """K2: Codex's reproduction (a list block_id) raised TypeError and left no audit file."""
+        bad = claim()
+        bad["block_id"] = []
+        self.answer["claims"] = [bad, claim()]
+        with mock.patch.object(extract, "urlopen", side_effect=self.gemini):
+            report = ctx.run_drafts(NOW)
+        [audit] = self.audits()
+        self.assertEqual((audit["outcome"], audit["ctx_stored"]), ("answered", True))
+        self.assertEqual(audit["answer"]["claims"][0]["block_id"], [])  # as the model sent it
+        self.assertEqual([r["reason"] for r in audit["validation"]["rejected"]], ["invalid_field_type"])
+        self.assertEqual(len(audit["validation"]["claims"]), 1)  # the good claim is kept
+        self.assertEqual(report["requests"], 1)
+
+    def test_malformed_shapes_offline(self):
+        """K2: shapes a syntactically valid JSON answer can still have; nothing is converted into a fact."""
+        blocks = [{"document_id": "DOC-A", "block_id": "p1", "text": "Revenue was $5 million in 2025."}]
+        good = claim(quote="Revenue was $5 million in 2025.", block_id="p1", figures=["$5 million"], period="2025")
+        variants = {"figures_object": {**good, "figures": {"a": "$5 million"}},
+                    "figure_number": {**good, "figures": [5]},
+                    "drivers_string": {**good, "drivers": "volume"},
+                    "metric_list": {**good, "metric": ["revenue"]},
+                    "period_number": {**good, "period": 2025},
+                    "quote_dict": {**good, "quote": {"text": "Revenue"}}}
+        for name, item in variants.items():
+            with self.subTest(name):
+                result = ctx.validate_draft({"claims": [item, good]}, blocks, {"ticker": "AAA"})
+                self.assertEqual(([r["reason"] for r in result["rejected"]], len(result["claims"])),
+                                 (["invalid_field_type"], 1))
+        for answer in ([good], {"claims": {"x": good}}, {"claims": "text"}, {"next_check": {"q": "확인?"}},
+                       {"next_check": [1, None, ["확인"]], "link": ["unconfirmed"]}):
+            with self.subTest(answer=answer):
+                result = ctx.validate_draft(answer, blocks, {"ticker": "AAA"})
+                self.assertEqual((result["claims"], result["next_check"], result["link"]), ([], [], "unconfirmed"))
+
+    def test_a_validator_bug_keeps_the_raw_answer_and_surfaces(self):
+        """K2: an internal validator error is recorded with its type and is not turned into '0 drafts'."""
+        with mock.patch.object(extract, "urlopen", side_effect=self.gemini), \
+                mock.patch.object(ctx, "validate_draft", side_effect=RuntimeError("bug")):
+            with self.assertRaises(RuntimeError):
+                ctx.run_drafts(NOW)
+        [audit] = self.audits()
+        self.assertEqual((audit["outcome"], audit["validation_error"]), ("validation_error", {"type": "RuntimeError"}))
+        self.assertEqual(audit["raw_response"]["text"], json.dumps(self.answer))
+        self.assertEqual(audit["answer"], self.answer)
+        self.assertNotIn("validation", audit)
+        entry = ctx.load_state()["candidates"]["CAN-0000000000000001"]
+        self.assertNotIn("context_id", entry)  # nothing was stored as a draft
+
+    def test_audit_and_ctx_storage_are_separate_facts(self):
+        with mock.patch.object(extract, "urlopen", side_effect=self.gemini), \
+                mock.patch.object(ctx, "store_context", return_value=False):
+            ctx.run_drafts(NOW)
+        [audit] = self.audits()
+        self.assertEqual((audit["outcome"], audit["ctx_stored"]), ("answered", False))
+
     def test_budget_exhaustion_is_recorded_without_a_request(self):
         with mock.patch.object(c, "model_calls_remaining", return_value=0), \
                 mock.patch.object(extract, "urlopen", side_effect=AssertionError("request")):

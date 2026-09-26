@@ -295,7 +295,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v3"
-PARSER_VERSION = "context-check-v5"
+PARSER_VERSION = "context-check-v6"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -446,19 +446,40 @@ def figure_problem(figure: str, quote_raw: str) -> str | None:
     return None
 
 
+PREDICATE = r"(?:is|was|were|are|totaled|totalled|totals|reached|stood at|amounted to|of)\b"
+# ', including <words>, is ...': commas inside only in a date, periods only in a decimal number.
+ASIDE = re.compile(r", including (?:[^,.;]|(?<=\d)\.(?=\d)|, (?=(?:19|20)\d{2}\b))+?, (?=" + PREDICATE + ")")
+
+
+def asides(q: str) -> list[tuple[int, int]]:
+    """Closed 'including ...' asides followed by the sentence's own predicate ('effective backlog,
+    including bookings since may 29, 2026, is $100.6 million'). Anything unclear is not an aside,
+    so the conservative nearest-metric rule still applies."""
+    return [found.span() for found in ASIDE.finditer(q)]
+
+
 def metric_problem(metric: str, figures: list[str], quote_raw: str) -> str | None:
     """Each figure's nearest metric mention is the claimed one, within the same statement."""
     q, m = squash(quote_raw), squash(metric)
     if not m or m not in q:
         return "metric_not_in_quote"
     names = {squash(x) for x in METRIC_KO} | {m}
-    mentions = [(x.start(), x.end(), name) for name in names
-                for x in re.finditer(r"(?<![a-z])" + re.escape(name) + r"(?![a-z])", q)]
-    claimed = [(s, e) for s, e, name in mentions if name == m]
+    all_mentions = [(x.start(), x.end(), name) for name in names
+                    for x in re.finditer(r"(?<![a-z])" + re.escape(name) + r"(?![a-z])", q)]
+    claimed = [(s, e) for s, e, name in all_mentions if name == m]
+    aside_spans = asides(q)
     for figure in figures:
         at = q.find(squash(figure))
-        if at < 0 or not mentions:
+        if at < 0 or not all_mentions:
             continue
+        # A figure outside an aside is not claimed by a metric named inside it, and a figure inside
+        # one belongs only to a metric named inside the same aside.
+        inside = next((span for span in aside_spans if span[0] <= at < span[1]), None)
+        mentions = [x for x in all_mentions
+                    if (inside and inside[0] <= x[0] < inside[1])
+                    or (not inside and not any(a <= x[0] < b for a, b in aside_spans))]
+        if not mentions:
+            return "figure_belongs_to_another_metric"
         # Nearest mention by distance; at a tie the longer name wins ('adjusted ebitda' over 'ebitda').
         s, e, name = min(mentions, key=lambda x: (min(abs(x[0] - at), abs(x[1] - at)), -len(x[2])))
         # A shorter name counts as the claimed metric only inside a mention of it: 'revenue' within
@@ -503,6 +524,13 @@ def period_problem(item: dict, quote: str, block: str) -> str | None:
         return "period_not_a_period"  # e.g. 'may' the verb is not the month May
     if period not in squash(quote) and period not in squash(block):
         return "period_not_in_source"
+    q = squash(quote)
+    aside_spans = asides(q)
+    if aside_spans and period in q and all(any(a <= x.start() < b for a, b in aside_spans)
+                                           for x in re.finditer(re.escape(period), q)):
+        # 'backlog, including bookings since May 29, 2026, is ...': the aside's date is not the figure's period.
+        if any(not any(a <= q.find(squash(f)) < b for a, b in aside_spans) for f in item.get("figures") or []):
+            return "figure_from_another_period"
     flat = quote.translate(PUNCTUATION)
     for figure in item.get("figures") or []:
         at = squash(flat).find(squash(figure))
@@ -520,6 +548,82 @@ def issuer_named(quote: str, issuer: dict) -> bool:
     names = {squash(issuer.get("ticker") or "")} | {w for w in squash(issuer.get("name") or "").split()[:1] if len(w) > 2}
     return any(n and n in low for n in names) or any(
         w in f" {low} " for w in (" the company", " we ", " our ", " consolidated", " total company", " company's"))
+
+
+# Figures listed before 'from <business>, which was sold ...' are that business's, however many there are.
+DIVESTED = re.compile(r"\bfrom (?:the |our |its )?[^,.;]{2,80}?,? which (?:was|were|had been|has been|have been|is|are|"
+                      r"will be) (?:sold|divested|disposed of|spun[- ]off|deconsolidated|exited|classified as held for sale)\b")
+# A business named as discontinued/divested: figures before it in the statement, or right after it.
+EXITED = re.compile(r"\b(?:from|of|in|for|at|by) (?:the |our |its )?(?:discontinued operations?|(?:divested|exited|sold|"
+                    r"deconsolidated) (?:business(?:es)?|operations?|units?|segments?|subsidiar(?:y|ies)))\b")
+SCOPE_BREAK = re.compile(r"[.;]\s|\b(?:including|excluding|of which|compared (?:to|with)|versus|while|whereas)\b")
+CLAUSE_BREAK = re.compile(r"[.;]\s|,\s(?:and|but|while|whereas)\s|\b(?:including|excluding|of which|while|whereas)\b")
+# '<Named> segment/division/subsidiary', in the original case.
+NAMED_UNIT = re.compile(r"\b(?:[A-Z][\w.&'-]*\s+){1,4}(?:segment|division|business unit|subsidiary|joint venture)s?\b")
+NAME_WORD = re.compile(r"((?:[A-Z][\w.&'-]*\s+){1,3})$")
+GENERIC_WORDS = {
+    "total", "consolidated", "net", "adjusted", "operating", "gaap", "non-gaap", "company", "company's", "quarterly",
+    "annual", "first", "second", "third", "fourth", "first-quarter", "second-quarter", "third-quarter",
+    "fourth-quarter", "q1", "q2", "q3", "q4", "full", "full-year", "year", "fiscal", "record", "our", "the", "its",
+    "diluted", "basic", "gross", "organic", "core", "free", "cash", "reported", "comparable", "pro", "forma", "new",
+    "current", "prior", "prior-year", "trailing", "global", "international", "domestic", "u.s.", "us", "north",
+    "america", "american", "worldwide", "we", "this", "that", "these", "total-company", "quarter", "half", "ytd",
+    "effective", "average", "daily", "recurring", "annualized", "product", "services", "service", "subscription",
+    "income", "revenue", "revenues", "sales", "ebitda", "eps", "earnings", "margin", "and", "for", "in", "of"}
+GENERIC_WORDS |= set(MONTHS.split("|")) | {"each", "all", "every", "other", "both", "reportable", "business", "its"}
+
+
+def name_words(words: list[str]) -> set[str]:
+    return {re.sub(r"'s?$", "", w.lower()) for w in words}
+
+
+def scope_problem(metric: str, figures: list[str], quote_raw: str, issuer: dict) -> str | None:
+    """An issuer claim must not carry a figure the source ties to a named or divested business:
+    'revenue of $63 million, EBITDA of $37 million, and operating income of $26 million from Quail
+    Tools, which was sold in August 2025' is none of the company's own totals. Causes and regions
+    ('from higher demand', 'from $400 million', 'from international operations') are not a scope,
+    and a company total next to a business's part ('$750 million, including $63 million from ...')
+    keeps its own figure. The subject is never rewritten: the claim is refused."""
+    flat = " ".join(str(quote_raw).translate(PUNCTUATION).split())
+    q = flat.lower()
+    m = squash(metric)
+    positions = [q.find(squash(f)) for f in figures]
+    positions = [p for p in positions if p >= 0]
+    if not positions:
+        return None
+    spans = []
+    for pattern in (DIVESTED, EXITED):
+        for found in pattern.finditer(q):
+            if pattern is EXITED and found.group(0).split(" ", 1)[1] in m:
+                continue  # 'income from discontinued operations' names its own scope
+            start = max([0] + [b.end() for b in SCOPE_BREAK.finditer(q, 0, found.start())])
+            spans.append((start, found.start()))
+            if pattern is EXITED:
+                after = CLAUSE_BREAK.search(q, found.end())
+                comma = q.find(", ", found.end())
+                ends = [x for x in (after.start() if after else -1, comma) if x >= 0]
+                spans.append((found.end(), min(ends) if ends else len(q)))
+    if any(a <= p < b for a, b in spans for p in positions):
+        return "subject_scope_conflict"
+    own = {w for w in squash(issuer.get("name") or "").split() if len(w) > 2} | {squash(issuer.get("ticker") or "")}
+    bounds = [0] + [b.end() for b in CLAUSE_BREAK.finditer(q)] + [len(q)]
+    for p in positions:
+        start = max(b for b in bounds if b <= p)
+        end = min([b for b in bounds if b > p] or [len(q)])
+        for unit in NAMED_UNIT.finditer(flat, start, end):
+            words = name_words(unit.group(0).split()[:-1])
+            if words - GENERIC_WORDS - own:
+                return "subject_scope_conflict"
+        # '<Named business> revenue of $63 million': a proper name right before the metric nearest the figure.
+        mentions = [x for x in re.finditer(r"(?<![a-z])" + re.escape(m) + r"(?![a-z])", q)] if m else []
+        if mentions:
+            near = min(mentions, key=lambda x: min(abs(x.start() - p), abs(x.end() - p)))
+            if start <= near.start() < end:
+                name = NAME_WORD.search(flat[max(start, near.start() - 60):near.start()])
+                words = name_words(name.group(1).split()) if name else set()
+                if words - GENERIC_WORDS - own:
+                    return "subject_scope_conflict"
+    return None
 
 
 def gaap_basis(metric: str, quote: str, figures: list[str] | None = None) -> str:
@@ -547,16 +651,38 @@ def gaap_basis(metric: str, quote: str, figures: list[str] | None = None) -> str
     return "unknown"
 
 
+TEXT_FIELDS = ("document_id", "block_id", "quote", "kind", "subject", "subject_name", "metric", "period", "gaap",
+               "note_ko", "direction", "currency", "unit")
+LIST_FIELDS = ("figures", "drivers")
+# Formatting at the start of a quote only: '◦' and '•' are the same bullet. Nothing inside a quote is dropped.
+LEADING_BULLET = re.compile(r"^[•◦]\s*")
+
+
+def field_type_problem(item: dict) -> str | None:
+    """Model fields are used as strings and lists of strings; anything else refuses this item only
+    (a list block_id would otherwise break the lookup). Nothing is converted into a new fact."""
+    if any(item.get(k) is not None and not isinstance(item[k], str) for k in TEXT_FIELDS):
+        return "invalid_field_type"
+    if any(item.get(k) is not None and not (isinstance(item[k], list) and all(isinstance(x, str) for x in item[k]))
+           for k in LIST_FIELDS):
+        return "invalid_field_type"
+    return None
+
+
 def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str | None, dict]:
     """(problem, checked item). Structural checks only: passing means 'automatic, unreviewed'."""
     if not isinstance(item, dict):
         return "not_an_object", {}
+    problem = field_type_problem(item)
+    if problem:
+        return problem, {}
     key = (item.get("document_id"), item.get("block_id"))
     if key not in blocks:
         return "unknown_block", {}
     quote_raw = str(item.get("quote", ""))
     quote, block = squash(quote_raw), blocks[key]
-    if len(quote) < 8 or quote not in squash(block):
+    bare = LEADING_BULLET.sub("", quote)  # compared without its bullet; the quote itself is kept as given
+    if len(bare) < 8 or bare not in squash(block):
         return "quote_not_in_block", {}
     kind = item.get("kind") or "fact"
     if kind not in KINDS:
@@ -615,6 +741,10 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
         return "unverified_issuer_subject", {}
     if subject != "issuer" and (not subject_name or squash(subject_name) not in quote):
         return "subject_not_in_quote", {}
+    if subject == "issuer" and figures:
+        problem = scope_problem(metric, figures, quote_raw, issuer)
+        if problem:
+            return problem, {}
     core = subject == "issuer" and issuer_named(quote_raw, issuer)
     if what == "claim" and (item.get("direction", "unknown") not in DIRECTIONS
                             or not set(item.get("drivers") or ["unknown"]) <= set(DRIVERS)):
@@ -807,7 +937,10 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
                  "blocks": blocks, "source_coverage": coverage_state, "prompt": prompt,
                  "prompt_sha256": sha256_text(prompt)}
 
+        audit_failed = []
+
         def finish(outcome, **fields):
+            """Rewrites this attempt's one file; a failed write is counted once per attempt."""
             audit.update(outcome=outcome, finished_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
                          budget={"candidate_context_before": before_component,
                                  "candidate_context_after": component_calls(day),
@@ -815,7 +948,8 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
                          raw_response={"available": "text" in raw_seen,
                                        **{k: raw_seen.get(k) for k in ("text", "finish_reason", "usage")}},
                          **fields)
-            if not write_audit(audit, day):
+            if not write_audit(audit, day) and not audit_failed:
+                audit_failed.append(True)
                 report["audit_write_failed"] = report.get("audit_write_failed", 0) + 1
 
         try:
@@ -836,9 +970,14 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
             finish("failed", error={"type": type(error).__name__, "http_status": getattr(error, "code", None)})
             continue
         report["requests"] += c.model_calls_today() - before_calls
-        answer_copy = json.loads(json.dumps(answer, ensure_ascii=False, default=str))  # before validation
-        checked = validate_draft(answer, blocks, {**(entry.get("issuer") or {}), "ticker": entry.get("ticker")})
-        finish("answered", answer=answer_copy, validation=checked, context_id="CTX-" + sha[:16].upper())
+        answer_copy = json.loads(json.dumps(answer, ensure_ascii=False, default=str))
+        finish("answered_unvalidated", answer=answer_copy)  # kept even if the validator breaks
+        try:
+            checked = validate_draft(answer, blocks, {**(entry.get("issuer") or {}), "ticker": entry.get("ticker")})
+        except Exception as error:
+            # An internal validator bug is recorded and then surfaces; it never becomes '0 drafts'.
+            finish("validation_error", answer=answer_copy, validation_error={"type": type(error).__name__})
+            raise
         record = {"context_id": "CTX-" + sha[:16].upper(), "candidate_id": cid, "ticker": entry.get("ticker"),
                   "issuer_cik": (entry.get("issuer") or {}).get("cik"), "document_ids": entry["document_ids"],
                   "eps_target_period": entry.get("eps_target_period"),
@@ -846,7 +985,9 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
                   "model": extract.GEMINI_MODEL, "prompt_version": PROMPT_VERSION, "parser_version": PARSER_VERSION,
                   "generated_at": now.isoformat(timespec="seconds"),
                   "source_coverage": coverage_state, "review": "자동 정리·미검토", **checked}
-        store_context(record)
+        stored = store_context(record)
+        # 'Audit written' and 'CTX stored' are separate facts.
+        finish("answered", answer=answer_copy, validation=checked, context_id=record["context_id"], ctx_stored=stored)
         status = checked["context_status"]
         entry.update(draft_status=status, context_id=record["context_id"], context_input_sha=sha)
         entry.pop("draft_next_at", None)

@@ -199,15 +199,133 @@ class RealOutputTest(unittest.TestCase):
         self.assertEqual(check(aehr, metric="net income", figures=["$1.4 million"])["claims"][0]["gaap"], "GAAP")
         self.assertEqual(ctx.gaap_basis("net income", "non-gaap net income was $3.6 million"), "non-GAAP")
 
-    @unittest.expectedFailure
     def test_known_miss_divested_unit_revenue_as_issuer(self):
-        """J3 eval case NBR-B (qwen3.5:9b): a divested unit's prior-year revenue passes as the issuer's.
-        Kept as a known miss, not fixed from an eval case; this test starts passing when it is caught."""
+        """J3 eval case NBR-B (qwen3.5:9b): a divested unit's prior-year revenue passed as the issuer's
+        (a known miss until context-check-v6; fixed as a shared validator bug per the K spec)."""
         quote = ("The quarter ended June 30, 2025 includes revenue of $63 million, EBITDA of $37 million, and "
                  "operating income of $26 million from Quail Tools, which was sold in August 2025.")
         result = check(quote, issuer={"ticker": "NBR", "name": "Nabors Industries"}, metric="revenue",
                        figures=["$63 million"], period="quarter ended June 30, 2025", subject="issuer")
         self.assertEqual(result["claims"], [])
+
+
+class SubjectScopeTest(unittest.TestCase):
+    """K1-1: a figure the source ties to a named or divested business is not the issuer's."""
+    NBR = {"ticker": "NBR", "name": "Nabors Industries"}
+    QUOTE = ("The quarter ended June 30, 2025 includes revenue of $63 million, EBITDA of $37 million, and "
+             "operating income of $26 million from Quail Tools, which was sold in August 2025.")
+    PERIOD = "quarter ended June 30, 2025"
+
+    def reason(self, result):
+        return result["rejected"][0]["reason"] if result["rejected"] else None
+
+    def test_every_listed_figure_of_the_sold_business_is_refused_as_the_issuers(self):
+        """Real NBR sentence: all three figures, not only the last one before 'from Quail Tools'."""
+        for metric, figure in (("revenue", "$63 million"), ("EBITDA", "$37 million"),
+                               ("operating income", "$26 million")):
+            with self.subTest(metric=metric):
+                self.assertEqual(self.reason(check(self.QUOTE, issuer=self.NBR, metric=metric, figures=[figure],
+                                                   period=self.PERIOD)), "subject_scope_conflict")
+                as_unit = check(self.QUOTE, issuer=self.NBR, metric=metric, figures=[figure], period=self.PERIOD,
+                                subject="segment", subject_name="Quail Tools")
+                self.assertEqual(len(as_unit["claims"]), 1)  # the business itself is a supporting fact
+                self.assertFalse(as_unit["claims"][0]["core"])
+
+    def test_synthetic_other_business_and_named_segment(self):
+        """Synthetic (not from a filing): the rule is not tied to NBR or Quail Tools."""
+        sold = ("The prior-year quarter includes revenue of $40 million and operating income of $9 million from Acme "
+                "Packaging, which was divested in March 2026.")
+        for metric, figure in (("revenue", "$40 million"), ("operating income", "$9 million")):
+            self.assertEqual(self.reason(check(sold, metric=metric, figures=[figure], period="unknown")),
+                             "subject_scope_conflict")
+        named = "Quail Tools revenue was $63 million in 2025."
+        self.assertEqual(self.reason(check(named, issuer=self.NBR, metric="revenue", figures=["$63 million"],
+                                           period="2025")), "subject_scope_conflict")
+        segment = "Revenue for the Drilling Solutions segment was $90 million in 2025."
+        self.assertEqual(self.reason(check(segment, issuer=self.NBR, metric="revenue", figures=["$90 million"],
+                                           period="2025")), "subject_scope_conflict")
+        exited = "Loss from discontinued operations was $5 million in 2025."
+        self.assertEqual(self.reason(check(exited, metric="loss", figures=["$5 million"], period="2025")),
+                         "subject_scope_conflict")
+        self.assertEqual(len(check(exited, metric="loss from discontinued operations", figures=["$5 million"],
+                                   period="2025")["claims"]), 1)  # the metric names its own scope
+
+    def test_company_totals_causes_and_comparisons_still_pass(self):
+        """Synthetic: 'from' as a cause, region or comparison is not a business, and a company total
+        next to a sold business's part keeps its own figure."""
+        both = "Total revenue was $750 million, including $63 million from Quail Tools, which was sold in August 2025."
+        self.assertEqual(len(check(both, issuer=self.NBR, metric="revenue", figures=["$750 million"],
+                                   period="unknown")["claims"]), 1)
+        self.assertEqual(self.reason(check(both, issuer=self.NBR, metric="revenue", figures=["$63 million"],
+                                           period="August 2025")), "subject_scope_conflict")
+        for quote in ("Revenue of $500 million in 2026 grew from higher demand for rigs.",
+                      "Revenue grew to $500 million in 2026 from $400 million.",
+                      "Revenue was $500 million in 2026, driven by growth from international operations.",
+                      "Nabors revenue was $500 million in 2026.",
+                      "Total revenue was $500 million in 2026."):
+            with self.subTest(quote=quote):
+                self.assertEqual(len(check(quote, issuer=self.NBR, metric="revenue", figures=["$500 million"],
+                                           period="2026")["claims"]), 1)
+
+    def test_other_stored_sources_keep_their_results(self):
+        """Real MPC (subsidiary) and PBF (company total) sentences keep the v5 outcome."""
+        mpc = check("MPLX expects to raise distributions by 12.5% in 2026.", issuer={"ticker": "MPC",
+                    "name": "Marathon Petroleum Corp"}, kind="guidance", metric="distributions", figures=["12.5%"],
+                    period="2026", currency=None, subject="subsidiary", subject_name="MPLX")
+        self.assertEqual(len(mpc["claims"]), 1)
+        pbf = ("The company reported second quarter 2026 net income of $915.0 million and net income attributable "
+               "to PBF Energy Inc. of $906.4 million or $7.54 per share.")
+        self.assertEqual(check(pbf, issuer={"ticker": "PBF", "name": "PBF Energy"}, metric="net income",
+                               figures=["$915.0 million"], period="second quarter 2026")["context_status"],
+                         "draft_ready")
+
+
+class OverRejectionTest(unittest.TestCase):
+    """K1-2/K1-3: narrow fixes for two J3 dev cases; the neighbouring rules stay strict."""
+
+    def reason(self, result):
+        return result["rejected"][0]["reason"] if result["rejected"] else None
+
+    def test_leading_bullet_style_only(self):
+        """AMCX-A: the model wrote '•' where the filing has '◦'. Only the leading bullet is equal."""
+        source = "◦Subscription revenue decreased 5% to $306 million primarily due to a decline in affiliate revenue."
+        given = "•" + source[1:]
+        result = check(given, blocks=blocks_of(source), issuer={"ticker": "AMCX", "name": "AMC Networks"},
+                       metric="Subscription revenue", figures=["$306 million"], period="unknown")
+        self.assertEqual(len(result["claims"]), 1)
+        self.assertEqual(result["claims"][0]["quote"], given)  # the answer is kept as written
+        inner = check("Subscription •revenue decreased", blocks=blocks_of("Subscription ◦revenue decreased"))
+        self.assertEqual(self.reason(inner), "quote_not_in_block")
+        sign = check("•Net loss was (5.2) million in 2026.", blocks=blocks_of("◦Net loss was 5.2 million in 2026."),
+                     metric="net loss", figures=["(5.2) million"], period="2026", currency=None)
+        self.assertEqual(self.reason(sign), "quote_not_in_block")  # a sign is never formatting
+
+    def test_including_aside_does_not_take_the_sentences_figure(self):
+        """AEHR-A: 'bookings' inside the aside no longer claims backlog's $100.6 million."""
+        aehr = "Effective backlog, including bookings since May 29, 2026, is $100.6 million."
+        issuer = {"ticker": "AEHR", "name": "Aehr Test Systems"}
+        self.assertEqual(len(check(aehr, issuer=issuer, metric="backlog", figures=["$100.6 million"],
+                                   period="unknown")["claims"]), 1)
+        self.assertEqual(self.reason(check(aehr, issuer=issuer, metric="bookings", figures=["$100.6 million"],
+                                           period="unknown")), "figure_belongs_to_another_metric")
+        # The aside's date is not the backlog's period (the J3 answer said 'May 29, 2026').
+        self.assertEqual(self.reason(check(aehr, issuer=issuer, metric="backlog", figures=["$100.6 million"],
+                                           period="May 29, 2026")), "figure_from_another_period")
+        # Synthetic: an amount inside the aside stays with the aside's metric.
+        own = "Effective backlog, including $20.0 million of bookings since May 29, 2026, is $100.6 million."
+        self.assertEqual(self.reason(check(own, issuer=issuer, metric="backlog", figures=["$20.0 million"],
+                                           period="unknown")), "figure_belongs_to_another_metric")
+        self.assertEqual(len(check(own, issuer=issuer, metric="bookings", figures=["$20.0 million"],
+                                   period="unknown")["claims"]), 1)
+        self.assertEqual(len(check(own, issuer=issuer, metric="backlog", figures=["$100.6 million"],
+                                   period="unknown")["claims"]), 1)
+        # Without a closed aside the nearest-metric rule is unchanged, and the words are not synonyms.
+        plain = "Bookings were $30 million and backlog was $100.6 million in 2026."
+        self.assertEqual(self.reason(check(plain, metric="backlog", figures=["$30 million"], period="2026")),
+                         "figure_belongs_to_another_metric")
+        open_ = "Effective backlog including bookings since May 29, 2026 is $100.6 million."
+        self.assertEqual(self.reason(check(open_, issuer=issuer, metric="backlog", figures=["$100.6 million"],
+                                           period="unknown")), "figure_belongs_to_another_metric")
 
     def test_grammatical_parentheses_are_not_a_sign(self):
         quote = "Common stock dividends ($0.255 per share) were paid in 2026."
