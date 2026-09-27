@@ -30,11 +30,19 @@
       "observation_id": "OB-88FD99AFB6571D9D",
       "signal_id": null,
       "day": "2026-09-27",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-09-27T05:41:03+00:00",
+          "status": "sent",
+          "message_id": 138,
+          "error": null
+        }
+      ],
       "reserved_by": "36297143973-1",
       "reserved_at": "2026-09-27T05:41:00+00:00",
-      "payload_sha256": "f580949ec7995feb4bd8acdf5a90d4943b1933fd77d628fffeb098f32b3e2bae"
+      "payload_sha256": "f580949ec7995feb4bd8acdf5a90d4943b1933fd77d628fffeb098f32b3e2bae",
+      "message_id": 138
     }
   },
   "bootstrap": {
