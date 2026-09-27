@@ -1,0 +1,141 @@
+{
+  "context_id": "CTX-5C98C21D42053DF8",
+  "candidate_id": "CAN-DC6D3F92ECFFD019",
+  "ticker": "AXTI",
+  "issuer_cik": "0001051627",
+  "document_ids": [
+    "DOC-A6967554C2E4C643"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A6967554C2E4C643#p6",
+    "DOC-A6967554C2E4C643#t3",
+    "DOC-A6967554C2E4C643#t4",
+    "DOC-A6967554C2E4C643#t5",
+    "DOC-A6967554C2E4C643#t6",
+    "DOC-A6967554C2E4C643#t7",
+    "DOC-A6967554C2E4C643#p17",
+    "DOC-A6967554C2E4C643#t8",
+    "DOC-A6967554C2E4C643#t10"
+  ],
+  "input_sha": "5c98c21d42053df8ec34d8545d54795869792c0f112a50a3a554d5d6ed143ac7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-27T05:40:24+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · second quarter of 2026: $47.6 million — 회사의 매출은 해당 분기에 이 금액을 기록했다",
+      "note_ko": "회사의 매출은 해당 분기에 이 금액을 기록했다",
+      "kind": "fact",
+      "quote": "Revenue for the second quarter of 2026 was $47.6 million, compared with $26.9 million for the first quarter of 2026 and $18.0 million for the second quarter of 2025.",
+      "document_id": "DOC-A6967554C2E4C643",
+      "block_id": "t3",
+      "metric": "Revenue",
+      "figures": [
+        "$47.6 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "volume",
+        "capacity"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "GAAP gross margin · second quarter of 2026: 44.9 percent — 회사의 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+      "note_ko": "회사의 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+      "kind": "fact",
+      "quote": "GAAP gross margin was 44.9 percent of revenue for the second quarter of 2026, compared with 29.6 percent of revenue for the first quarter of 2026 and 8.0 percent for the second quarter of 2025.",
+      "document_id": "DOC-A6967554C2E4C643",
+      "block_id": "t4",
+      "metric": "GAAP gross margin",
+      "figures": [
+        "44.9 percent"
+      ],
+      "period": "second quarter of 2026",
+      "currency": null,
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP financial measures — 다른 회사들이 유사한 이름의 비일반회계기준 재무 지표를 다르게 계산하거나 다른 지표를 사용할 수 있어 비교 도구로서 유용성이 떨어질 수 있다고 언급했다",
+      "note_ko": "다른 회사들이 유사한 이름의 비일반회계기준 재무 지표를 다르게 계산하거나 다른 지표를 사용할 수 있어 비교 도구로서 유용성이 떨어질 수 있다고 언급했다",
+      "kind": "fact",
+      "quote": "In addition, other companies may calculate similarly-titled non-GAAP financial measures differently or may use other measures to evaluate their performance, all of which could reduce the usefulness of the company’s non-GAAP financial measures as tools for comparison.",
+      "document_id": "DOC-A6967554C2E4C643",
+      "block_id": "p17",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 비일반회계기준 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+      "figures": [
+        "45.0 percent"
+      ],
+      "quote": "Non-GAAP gross margin, after excluding charges for stock-based compensation, was 45.0 percent of revenue for the second quarter of 2026, compared with 29.9 percent of revenue for the first quarter of ",
+      "where": "DOC-A6967554C2E4C643#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 순이익은 해당 분기에 이 금액을 기록했다",
+      "figures": [
+        "$11.1 million"
+      ],
+      "quote": "GAAP net income, after minority interests, for the second quarter of 2026 was a net income of $11.1 million, or $0.17 diluted income per share, compared with a net loss of $1.6 million, or $0.03 per s",
+      "where": "DOC-A6967554C2E4C643#t6"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 비일반회계기준 순이익은 해당 분기에 이 금액을 기록했다",
+      "figures": [
+        "$11.9 million"
+      ],
+      "quote": "Non-GAAP net income for the second quarter of 2026 was a net income of $11.9 million, or $0.19 per share, compared with a net loss of $0.6 million, or $0.01 per share, for the first quarter of 2026 an",
+      "where": "DOC-A6967554C2E4C643#t7"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사는 비일반회계기준 재무 지표가 분석 도구로서 한계가 있으며 일반회계기준 재무 정보와 분리하여 고려하거나 대체해서는 안 된다고 언급했다",
+      "figures": [],
+      "quote": "However, non-GAAP financial information is presented for supplemental informational purposes only, has limitations as an analytical tool and should not be considered in isolation or as a substitute fo",
+      "where": "DOC-A6967554C2E4C643#p17"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

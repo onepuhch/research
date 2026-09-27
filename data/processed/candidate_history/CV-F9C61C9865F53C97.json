@@ -1,0 +1,247 @@
+{
+  "candidate_id": "CAN-14C6F602D0868FB9",
+  "candidate_version": "CV-F9C61C9865F53C97",
+  "identity": {
+    "entity_id": "NASDAQ:AMCX",
+    "ticker": "AMCX",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "AMC Global Media Inc.",
+  "industry": "Entertainment",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "AMC, We TV 등 방송 네트워크를 운영하고 스트리밍 서비스 제공 및 오리지널 콘텐츠 제작, 배급으로 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "AMC Global Media Inc., an entertainment company, distributes contents in the United States, Europe, and internationally. It operates in two segments, Domestic Operations and International. The Domestic Operations segment operates programming networks, such as AMC, We TV, BBCA, IFC, and SundanceTV; provides streaming services, including AMC+ and Acorn TV, Shudder, Sundance Now, ALLBLK, HIDIVE, and All Reality targeted subscription streaming services; produces original programming for its programming services and third parties; and licenses programming. This segment is also involved in the film"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AMCX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-27T05:38:15+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AMCX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/history",
+      "published_at": null,
+      "observed_at": "2026-09-27T05:38:15+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AMCX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMCX/profile",
+      "published_at": null,
+      "observed_at": "2026-09-27T05:38:15+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-3563CA2BB442B25A",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-11890494D9E46A8A",
+    "input_sha": "11890494d9e46a8a1d99169c4475d140b0270779779f76512415b52d0df959ca",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "영업이익(Operating income): $16 million — 회사의 영업 이익이다",
+        "note_ko": "회사의 영업 이익이다",
+        "kind": "fact",
+        "quote": "Operating income of $16 million;",
+        "document_id": "DOC-3563CA2BB442B25A",
+        "block_id": "p13",
+        "metric": "Operating income",
+        "figures": [
+          "$16 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted Operating Income: $46 million — 회사의 조정 영업 이익이다",
+        "note_ko": "회사의 조정 영업 이익이다",
+        "kind": "fact",
+        "quote": "Adjusted Operating Income(1) of $46 million.",
+        "document_id": "DOC-3563CA2BB442B25A",
+        "block_id": "p13",
+        "metric": "Adjusted Operating Income",
+        "figures": [
+          "$46 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Net revenue · second quarter: $547 million / 9% — 회사의 순 매출이 전년보다 감소했다",
+        "note_ko": "회사의 순 매출이 전년보다 감소했다",
+        "kind": "fact",
+        "quote": "Net revenue of $547 million decreased 9% from the prior year.",
+        "document_id": "DOC-3563CA2BB442B25A",
+        "block_id": "p14",
+        "metric": "Net revenue",
+        "figures": [
+          "$547 million",
+          "9%"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문 매출이 전년보다 감소했다",
+        "note_ko": "국내 사업 부문 매출이 전년보다 감소했다",
+        "kind": "fact",
+        "quote": "Domestic Operations revenue decreased 11% from the prior year to $470 million.",
+        "document_id": "DOC-3563CA2BB442B25A",
+        "block_id": "p21",
+        "metric": "revenue",
+        "figures": [
+          "11%",
+          "$470 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Domestic Operations",
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "annual revenue · 2026 and 2027: $200 million to $225 million — 회사는 라이선스 계약과 관련하여 연간 매출을 인식할 것으로 예상한다",
+        "note_ko": "회사는 라이선스 계약과 관련하여 연간 매출을 인식할 것으로 예상한다",
+        "kind": "guidance",
+        "quote": "In each of 2026 and 2027, the Company expects to recognize annual revenue related to the license agreement between $200 million to $225 million.",
+        "document_id": "DOC-3563CA2BB442B25A",
+        "block_id": "p41",
+        "metric": "annual revenue",
+        "figures": [
+          "$200 million to $225 million"
+        ],
+        "period": "2026 and 2027",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "What was the prior year's operating income?",
+      "What was the prior year's Adjusted Operating Income?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-3563CA2BB442B25A",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.84307,
+    "eps_30d": 2.76736,
+    "eps_90d": 1.48467,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 91.5,
+    "steady": false,
+    "turnaround": false
+  }
+}

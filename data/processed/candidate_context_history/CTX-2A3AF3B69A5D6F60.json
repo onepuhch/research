@@ -1,0 +1,123 @@
+{
+  "context_id": "CTX-2A3AF3B69A5D6F60",
+  "candidate_id": "CAN-D50A4151AB176FB7",
+  "ticker": "AEHR",
+  "issuer_cik": "0001040470",
+  "document_ids": [
+    "DOC-EA4425A446380C5A"
+  ],
+  "eps_target_period": "2028-05-31",
+  "source_blocks": [
+    "DOC-EA4425A446380C5A#p5",
+    "DOC-EA4425A446380C5A#t2",
+    "DOC-EA4425A446380C5A#t3",
+    "DOC-EA4425A446380C5A#p14",
+    "DOC-EA4425A446380C5A#p15",
+    "DOC-EA4425A446380C5A#p16",
+    "DOC-EA4425A446380C5A#p17",
+    "DOC-EA4425A446380C5A#p18",
+    "DOC-EA4425A446380C5A#p19",
+    "DOC-EA4425A446380C5A#p23",
+    "DOC-EA4425A446380C5A#p25",
+    "DOC-EA4425A446380C5A#p26",
+    "DOC-EA4425A446380C5A#p27",
+    "DOC-EA4425A446380C5A#t8",
+    "DOC-EA4425A446380C5A#p49",
+    "DOC-EA4425A446380C5A#p50",
+    "DOC-EA4425A446380C5A#t15"
+  ],
+  "input_sha": "2a3af3b69a5d6f603fb0d1399a83e2a82e597397c77e1c49a706227e873dfb2e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-27T05:40:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "total company revenue · fiscal year ending June 25, 2027: $130 million and $150 million — 회사는 다음 회계연도 매출을 예상한다",
+      "note_ko": "회사는 다음 회계연도 매출을 예상한다",
+      "kind": "guidance",
+      "quote": "For the fiscal year ending June 25, 2027, Aehr expects total company revenue to be between $130 million and $150 million, representing approximately 160%-200% year-over-year growth.",
+      "document_id": "DOC-EA4425A446380C5A",
+      "block_id": "p27",
+      "metric": "total company revenue",
+      "figures": [
+        "$130 million and $150 million"
+      ],
+      "period": "fiscal year ending June 25, 2027",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "backlog",
+        "volume"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "non-GAAP net income · fiscal year ending June 25, 2027: 18% to 22% — 회사는 다음 회계연도 비일반회계기준 순이익을 총 매출의 일정 비율로 예상한다",
+      "note_ko": "회사는 다음 회계연도 비일반회계기준 순이익을 총 매출의 일정 비율로 예상한다",
+      "kind": "guidance",
+      "quote": "Aehr also expects non-GAAP net income to be 18% to 22% of total revenue.",
+      "document_id": "DOC-EA4425A446380C5A",
+      "block_id": "p27",
+      "metric": "non-GAAP net income",
+      "figures": [
+        "18% to 22%"
+      ],
+      "period": "fiscal year ending June 25, 2027",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순 매출은 특정 분기에 특정 금액이었다",
+      "figures": [
+        "$18.8 million"
+      ],
+      "quote": "Net revenue was $18.8 million, compared to $14.1 million in the fourth quarter of fiscal 2025.",
+      "where": "DOC-EA4425A446380C5A#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "회사의 일반회계기준 순이익은 특정 분기에 특정 금액이었고, 주당 순이익은 특정 금액이었다",
+      "figures": [
+        "$1.4 million",
+        "$0.04"
+      ],
+      "quote": "GAAP net income was $1.4 million, or $0.04 per diluted share, compared to GAAP net loss of $(2.9) million, or $(0.10) per diluted share, in the fourth quarter of fiscal 2025.",
+      "where": "DOC-EA4425A446380C5A#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "회사의 특정 분기 예약은 기록적인 금액이었다",
+      "figures": [
+        "$60.7 million"
+      ],
+      "quote": "Bookings were a record $60.7 million for the quarter.",
+      "where": "DOC-EA4425A446380C5A#t2"
+    }
+  ],
+  "context_status": "draft_ready"
+}

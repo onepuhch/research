@@ -1,0 +1,123 @@
+{
+  "context_id": "CTX-8729185E317E8C05",
+  "candidate_id": "CAN-D577F2C38FBBCFF7",
+  "ticker": "DK",
+  "issuer_cik": "0001694426",
+  "document_ids": [
+    "DOC-80DB053BD25896A0"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-80DB053BD25896A0#t14",
+    "DOC-80DB053BD25896A0#t15",
+    "DOC-80DB053BD25896A0#t17",
+    "DOC-80DB053BD25896A0#t18",
+    "DOC-80DB053BD25896A0#t21",
+    "DOC-80DB053BD25896A0#p129",
+    "DOC-80DB053BD25896A0#p325",
+    "DOC-80DB053BD25896A0#p415",
+    "DOC-80DB053BD25896A0#p418",
+    "DOC-80DB053BD25896A0#p442",
+    "DOC-80DB053BD25896A0#p486",
+    "DOC-80DB053BD25896A0#p488",
+    "DOC-80DB053BD25896A0#p499",
+    "DOC-80DB053BD25896A0#p541"
+  ],
+  "input_sha": "8729185e317e8c051d2c02a14a4e6bc17e2333a9c5fd6ebca5167f50b0d5969b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-27T05:40:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "회사의 정제 마진에 영향을 미치는 RIN 가격 변동성의 구체적인 영향은 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "169.5"
+      ],
+      "quote": "Net income (loss) ; — ; — ; — ; — ; 169.5 ; — ; — ; 10.6 ; 180.1",
+      "where": "DOC-80DB053BD25896A0#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "보통주 배당금은 주당 특정 금액이다",
+      "figures": [
+        "$0.255 per share"
+      ],
+      "quote": "Common stock dividends ($0.255 per share) ; — ; — ; — ; — ; (15.6) ; — ; — ; — ; (15.6)",
+      "where": "DOC-80DB053BD25896A0#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사가 보통주를 재매입했다",
+      "figures": [
+        "(442,893)"
+      ],
+      "quote": "Repurchase of common stock ; (442,893) ; — ; (7.2) ; — ; (12.8) ; — ; — ; — ; (20.0)",
+      "where": "DOC-80DB053BD25896A0#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "일반 및 관리 비용은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$56.7 million",
+        "$76.6 million",
+        "$19.9 million",
+        "26.0%"
+      ],
+      "quote": "General and administrative expenses were $56.7 million for the second quarter of 2026 compared to $76.6 million for the second quarter of 2025, a decrease of $19.9 million, or 26.0%.",
+      "where": "DOC-80DB053BD25896A0#p486"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "일반 및 관리 비용은 전년 같은 기간보다 줄었다",
+      "figures": [
+        "$100.7 million",
+        "$138.1 million",
+        "$37.4 million",
+        "27.1%"
+      ],
+      "quote": "General and administrative expenses were $100.7 million for the six months ended June 30, 2026 compared to $138.1 million for the six months ended June 30, 2025, a decrease of $37.4 million, or 27.1%.",
+      "where": "DOC-80DB053BD25896A0#p488"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "마진 감소는 특정 장기 또는 무기한 자산의 손상을 초래할 수 있다",
+      "figures": [],
+      "quote": "the decline in margins impacting current results and forecasts could result in impairments in certain of our long-lived or indefinite-lived assets, including goodwill, or have other financial statemen",
+      "where": "DOC-80DB053BD25896A0#p325"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "환경 규제와 정치적 환경은 정제 마진에 영향을 미친다",
+      "figures": [],
+      "quote": "Environmental regulations and the political environment continue to affect our refining margins in the form of volatility in the price of RINs.",
+      "where": "DOC-80DB053BD25896A0#p415"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "원유 시장의 가격 및 가용성 변동성으로 인해 포지션에 시간 차이가 발생하거나, 의도한 대로 상쇄 포지션을 확보하지 못할 수 있으며, 이는 정제 EBITDA에 중대한 영향을 미칠 수 있다",
+      "figures": [],
+      "quote": "However, because of the volatility of the market in terms of pricing and availability, it is possible that we may have material positions with timing differences or, more rarely, that we are unable to",
+      "where": "DOC-80DB053BD25896A0#p541"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

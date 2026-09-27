@@ -1,0 +1,197 @@
+{
+  "candidate_id": "CAN-DC6D3F92ECFFD019",
+  "candidate_version": "CV-0301B04162CA6C21",
+  "identity": {
+    "entity_id": "NASDAQ:AXTI",
+    "ticker": "AXTI",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "AXT, Inc.",
+  "industry": "Semiconductor Equipment & Materials",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "화합물 및 단일 원소 반도체 기판을 설계, 제조, 유통하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "AXT, Inc. designs, develops, manufactures, and distributes compound and single element semiconductor substrates. The company provides indium phosphide for use in data center connectivity using light/lasers, high-speed data transfer in data centers, 5G communications, fiber optic lasers and detectors, consumer devices, passive optical networks, silicon photonics, photonic integrated circuits, thermo-photovoltaics, RF amplifier and switching, infrared light-emitting diode (LEDS) motion control, lidar for robotics and autonomous vehicles, and infrared thermal imaging. It also offers semi-insulati"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AXTI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AXTI/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-27T05:31:36+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AXTI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AXTI/history",
+      "published_at": null,
+      "observed_at": "2026-09-27T05:31:36+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AXTI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AXTI/profile",
+      "published_at": null,
+      "observed_at": "2026-09-27T05:31:36+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-A6967554C2E4C643",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-5C98C21D42053DF8",
+    "input_sha": "5c98c21d42053df8ec34d8545d54795869792c0f112a50a3a554d5d6ed143ac7",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(Revenue) · second quarter of 2026: $47.6 million — 회사의 매출은 해당 분기에 이 금액을 기록했다",
+        "note_ko": "회사의 매출은 해당 분기에 이 금액을 기록했다",
+        "kind": "fact",
+        "quote": "Revenue for the second quarter of 2026 was $47.6 million, compared with $26.9 million for the first quarter of 2026 and $18.0 million for the second quarter of 2025.",
+        "document_id": "DOC-A6967554C2E4C643",
+        "block_id": "t3",
+        "metric": "Revenue",
+        "figures": [
+          "$47.6 million"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "volume",
+          "capacity"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "GAAP gross margin · second quarter of 2026: 44.9 percent — 회사의 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+        "note_ko": "회사의 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+        "kind": "fact",
+        "quote": "GAAP gross margin was 44.9 percent of revenue for the second quarter of 2026, compared with 29.6 percent of revenue for the first quarter of 2026 and 8.0 percent for the second quarter of 2025.",
+        "document_id": "DOC-A6967554C2E4C643",
+        "block_id": "t4",
+        "metric": "GAAP gross margin",
+        "figures": [
+          "44.9 percent"
+        ],
+        "period": "second quarter of 2026",
+        "currency": null,
+        "gaap": "GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "margin_cost"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "non-GAAP financial measures — 다른 회사들이 유사한 이름의 비일반회계기준 재무 지표를 다르게 계산하거나 다른 지표를 사용할 수 있어 비교 도구로서 유용성이 떨어질 수 있다고 언급했다",
+        "note_ko": "다른 회사들이 유사한 이름의 비일반회계기준 재무 지표를 다르게 계산하거나 다른 지표를 사용할 수 있어 비교 도구로서 유용성이 떨어질 수 있다고 언급했다",
+        "kind": "fact",
+        "quote": "In addition, other companies may calculate similarly-titled non-GAAP financial measures differently or may use other measures to evaluate their performance, all of which could reduce the usefulness of the company’s non-GAAP financial measures as tools for comparison.",
+        "document_id": "DOC-A6967554C2E4C643",
+        "block_id": "p17",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "complete",
+    "documents": [
+      {
+        "document_id": "DOC-A6967554C2E4C643",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.25,
+    "eps_30d": 2.226,
+    "eps_90d": 0.752,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 199.2,
+    "steady": true,
+    "turnaround": false
+  }
+}

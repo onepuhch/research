@@ -19,6 +19,22 @@
         }
       ],
       "message_id": 137
+    },
+    "NASDAQ:TEAM|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:TEAM",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-4E5151866E863998",
+      "candidate_version": "CV-57AD858451CC21EA",
+      "observation_id": "OB-88FD99AFB6571D9D",
+      "signal_id": null,
+      "day": "2026-09-27",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "36297143973-1",
+      "reserved_at": "2026-09-27T05:41:00+00:00",
+      "payload_sha256": "f580949ec7995feb4bd8acdf5a90d4943b1933fd77d628fffeb098f32b3e2bae"
     }
   },
   "bootstrap": {

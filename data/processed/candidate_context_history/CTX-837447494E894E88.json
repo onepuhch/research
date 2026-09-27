@@ -1,0 +1,96 @@
+{
+  "context_id": "CTX-837447494E894E88",
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "ticker": "TALO",
+  "issuer_cik": "0001724965",
+  "document_ids": [
+    "DOC-70283ADC988D0C81"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-70283ADC988D0C81#p5",
+    "DOC-70283ADC988D0C81#p8",
+    "DOC-70283ADC988D0C81#p16",
+    "DOC-70283ADC988D0C81#p29",
+    "DOC-70283ADC988D0C81#p56",
+    "DOC-70283ADC988D0C81#p86",
+    "DOC-70283ADC988D0C81#p94",
+    "DOC-70283ADC988D0C81#t22",
+    "DOC-70283ADC988D0C81#t24",
+    "DOC-70283ADC988D0C81#p151",
+    "DOC-70283ADC988D0C81#t28",
+    "DOC-70283ADC988D0C81#p156",
+    "DOC-70283ADC988D0C81#p158",
+    "DOC-70283ADC988D0C81#p160",
+    "DOC-70283ADC988D0C81#t31",
+    "DOC-70283ADC988D0C81#p175",
+    "DOC-70283ADC988D0C81#p178",
+    "DOC-70283ADC988D0C81#p183"
+  ],
+  "input_sha": "837447494e894e885c9db364b3dcc8c83d8af2265e21f887e21185f07750636e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-27T05:40:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "석유 생산량이 가이던스 범위를 초과했다",
+      "figures": [
+        "68.6 thousand barrels of oil per day"
+      ],
+      "quote": "Produced 68.6 thousand barrels of oil per day (“MBo/d”) and 93.7 thousand barrels of oil equivalent per day (“MBoe/d”); oil and total equivalent production exceeded guidance ranges driven by strong up",
+      "where": "DOC-70283ADC988D0C81#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "총 석유 환산 생산량이 가이던스 범위를 초과했다",
+      "figures": [
+        "93.7 thousand barrels of oil equivalent "
+      ],
+      "quote": "Produced 68.6 thousand barrels of oil per day (“MBo/d”) and 93.7 thousand barrels of oil equivalent per day (“MBoe/d”); oil and total equivalent production exceeded guidance ranges driven by strong up",
+      "where": "DOC-70283ADC988D0C81#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 에비타를 창출했다",
+      "figures": [
+        "$402.4 million"
+      ],
+      "quote": "Generated Adjusted EBITDA(1)(2) of $402.4 million.",
+      "where": "DOC-70283ADC988D0C81#p16"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "연간 생산량 가이던스를 상향 조정했으며, 이는 이전에 발표된 Gulf of America 볼트온 인수를 제외하고 비핵심 해상 자산 매각의 영향을 반영한다",
+      "figures": [
+        "64 to 68 MBo/d",
+        "87 to 91 MBoe/d"
+      ],
+      "quote": "Talos has increased its full-year 2026 production guidance and now expects production to range from 64 to 68 MBo/d and 87 to 91 MBoe/d. This guidance excludes the previously announced Gulf of America ",
+      "where": "DOC-70283ADC988D0C81#p94"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "탈로스 에너지에 귀속되는 순이익이다",
+      "figures": [
+        "$149,667"
+      ],
+      "quote": "Net income (loss) attributable to Talos Energy Inc. ; $149,667 ; $(185,937) ; $(106,498) ; $(195,805)",
+      "where": "DOC-70283ADC988D0C81#t22"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-26T14:14:28+00:00",
-  "generator_version": "cards-v3",
+  "generated_at": "2026-09-27T05:41:00+00:00",
+  "generator_version": "cards-v4",
   "thesis_key": "eps-revision-review:v1",
   "stale": [],
   "candidates": [
@@ -14,7 +14,144 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-11890494D9E46A8A",
+        "input_sha": "11890494d9e46a8a1d99169c4475d140b0270779779f76512415b52d0df959ca",
+        "context_status": "draft_ready",
+        "claims": [
+          {
+            "text_ko": "영업이익(Operating income): $16 million — 회사의 영업 이익이다",
+            "note_ko": "회사의 영업 이익이다",
+            "kind": "fact",
+            "quote": "Operating income of $16 million;",
+            "document_id": "DOC-3563CA2BB442B25A",
+            "block_id": "p13",
+            "metric": "Operating income",
+            "figures": [
+              "$16 million"
+            ],
+            "period": "unknown",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          },
+          {
+            "text_ko": "Adjusted Operating Income: $46 million — 회사의 조정 영업 이익이다",
+            "note_ko": "회사의 조정 영업 이익이다",
+            "kind": "fact",
+            "quote": "Adjusted Operating Income(1) of $46 million.",
+            "document_id": "DOC-3563CA2BB442B25A",
+            "block_id": "p13",
+            "metric": "Adjusted Operating Income",
+            "figures": [
+              "$46 million"
+            ],
+            "period": "unknown",
+            "currency": "USD",
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          },
+          {
+            "text_ko": "Net revenue · second quarter: $547 million / 9% — 회사의 순 매출이 전년보다 감소했다",
+            "note_ko": "회사의 순 매출이 전년보다 감소했다",
+            "kind": "fact",
+            "quote": "Net revenue of $547 million decreased 9% from the prior year.",
+            "document_id": "DOC-3563CA2BB442B25A",
+            "block_id": "p14",
+            "metric": "Net revenue",
+            "figures": [
+              "$547 million",
+              "9%"
+            ],
+            "period": "second quarter",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "negative"
+          },
+          {
+            "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문 매출이 전년보다 감소했다",
+            "note_ko": "국내 사업 부문 매출이 전년보다 감소했다",
+            "kind": "fact",
+            "quote": "Domestic Operations revenue decreased 11% from the prior year to $470 million.",
+            "document_id": "DOC-3563CA2BB442B25A",
+            "block_id": "p21",
+            "metric": "revenue",
+            "figures": [
+              "11%",
+              "$470 million"
+            ],
+            "period": "unknown",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "segment",
+            "subject_name": "Domestic Operations",
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "negative"
+          },
+          {
+            "text_ko": "annual revenue · 2026 and 2027: $200 million to $225 million — 회사는 라이선스 계약과 관련하여 연간 매출을 인식할 것으로 예상한다",
+            "note_ko": "회사는 라이선스 계약과 관련하여 연간 매출을 인식할 것으로 예상한다",
+            "kind": "guidance",
+            "quote": "In each of 2026 and 2027, the Company expects to recognize annual revenue related to the license agreement between $200 million to $225 million.",
+            "document_id": "DOC-3563CA2BB442B25A",
+            "block_id": "p41",
+            "metric": "annual revenue",
+            "figures": [
+              "$200 million to $225 million"
+            ],
+            "period": "2026 and 2027",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          }
+        ],
+        "limitations": [],
+        "next_check": [
+          "What was the prior year's operating income?",
+          "What was the prior year's Adjusted Operating Income?"
+        ],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-3563CA2BB442B25A",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+            "filed_at": "2026-07-30",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "AMC Global Media Inc.",
       "industry": "Entertainment",
       "sector": "Communication Services",
@@ -81,7 +218,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AMCX/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:50:11+00:00",
+          "observed_at": "2026-09-27T05:38:15+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -90,7 +227,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AMCX/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:50:11+00:00",
+          "observed_at": "2026-09-27T05:38:15+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -99,14 +236,24 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AMCX/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:50:11+00:00",
+          "observed_at": "2026-09-27T05:38:15+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-3563CA2BB442B25A",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1514991/000151499126000086/amcx-73026ex991.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-07-30",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-28E27553C83FCEEC",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-F9C61C9865F53C97",
       "classification": "found",
-      "observation_id": "OB-792578F548D59D6D",
+      "observation_id": "OB-94EF792543228B12",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -127,36 +274,46 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 10.079999923706055,
+        "close_start": 10.050000190734863,
         "close_end": 12.15999984741211,
-        "price_pct_90": 20.6,
-        "adj_return_pct_90": 20.6,
-        "pe_change_pct": -37.0
+        "price_pct_90": 21.0,
+        "adj_return_pct_90": 21.0,
+        "pe_change_pct": -36.8
       },
       "market_cap": 501599648,
-      "observed_at": "2026-09-26T13:50:11+00:00",
+      "observed_at": "2026-09-27T05:38:15+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "source_linked",
+      "research_status": "draft_ready",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": {
+        "context_id": "CTX-11890494D9E46A8A",
+        "generated_at": "2026-09-27T05:40:24+00:00",
+        "eps_target_period": "2027-12-31"
+      },
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-11890494D9E46A8A",
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:24:02+00:00",
-      "last_seen_at": "2026-09-26T13:50:11+00:00"
+      "last_seen_at": "2026-09-27T05:38:15+00:00"
     },
     {
       "candidate_id": "CAN-D50A4151AB176FB7",
@@ -168,7 +325,76 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-2A3AF3B69A5D6F60",
+        "input_sha": "2a3af3b69a5d6f603fb0d1399a83e2a82e597397c77e1c49a706227e873dfb2e",
+        "context_status": "draft_ready",
+        "claims": [
+          {
+            "text_ko": "total company revenue · fiscal year ending June 25, 2027: $130 million and $150 million — 회사는 다음 회계연도 매출을 예상한다",
+            "note_ko": "회사는 다음 회계연도 매출을 예상한다",
+            "kind": "guidance",
+            "quote": "For the fiscal year ending June 25, 2027, Aehr expects total company revenue to be between $130 million and $150 million, representing approximately 160%-200% year-over-year growth.",
+            "document_id": "DOC-EA4425A446380C5A",
+            "block_id": "p27",
+            "metric": "total company revenue",
+            "figures": [
+              "$130 million and $150 million"
+            ],
+            "period": "fiscal year ending June 25, 2027",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "backlog",
+              "volume"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "non-GAAP net income · fiscal year ending June 25, 2027: 18% to 22% — 회사는 다음 회계연도 비일반회계기준 순이익을 총 매출의 일정 비율로 예상한다",
+            "note_ko": "회사는 다음 회계연도 비일반회계기준 순이익을 총 매출의 일정 비율로 예상한다",
+            "kind": "guidance",
+            "quote": "Aehr also expects non-GAAP net income to be 18% to 22% of total revenue.",
+            "document_id": "DOC-EA4425A446380C5A",
+            "block_id": "p27",
+            "metric": "non-GAAP net income",
+            "figures": [
+              "18% to 22%"
+            ],
+            "period": "fiscal year ending June 25, 2027",
+            "currency": null,
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          }
+        ],
+        "limitations": [],
+        "next_check": [
+          "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+        ],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-EA4425A446380C5A",
+            "title": "PRESS RELEASE",
+            "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
+            "filed_at": "2026-07-14",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "Aehr Test Systems, Inc.",
       "industry": "Semiconductor Equipment & Materials",
       "sector": "Technology",
@@ -234,7 +460,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AEHR/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:54+00:00",
+          "observed_at": "2026-09-27T05:32:55+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -243,7 +469,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AEHR/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:54+00:00",
+          "observed_at": "2026-09-27T05:32:55+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -252,14 +478,24 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AEHR/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:54+00:00",
+          "observed_at": "2026-09-27T05:32:55+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-EA4425A446380C5A",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495426006655/aehr_ex991.htm",
+          "title": "SEC 8-K EX-99.1 — PRESS RELEASE",
+          "published_at": null,
+          "filed_at": "2026-07-14",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-8C06BCD4BFC39145",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-B9F7E657F2C0FA94",
       "classification": "found",
-      "observation_id": "OB-D53AE3A45D77804F",
+      "observation_id": "OB-09C1F4DB96D81EF5",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -276,36 +512,46 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 91.80999755859375,
+        "close_start": 94.7699966430664,
         "close_end": 104.38999938964844,
-        "price_pct_90": 13.7,
-        "adj_return_pct_90": 13.7,
-        "pe_change_pct": -75.3
+        "price_pct_90": 10.2,
+        "adj_return_pct_90": 10.2,
+        "pe_change_pct": -76.1
       },
       "market_cap": 3409329920,
-      "observed_at": "2026-09-26T13:44:54+00:00",
+      "observed_at": "2026-09-27T05:32:55+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "source_linked",
+      "research_status": "draft_ready",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": {
+        "context_id": "CTX-2A3AF3B69A5D6F60",
+        "generated_at": "2026-09-27T05:40:24+00:00",
+        "eps_target_period": "2028-05-31"
+      },
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-2A3AF3B69A5D6F60",
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:43+00:00",
-      "last_seen_at": "2026-09-26T13:44:54+00:00"
+      "last_seen_at": "2026-09-27T05:32:55+00:00"
     },
     {
       "candidate_id": "CAN-ABBBE42278126D28",
@@ -317,7 +563,28 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-837447494E894E88",
+        "input_sha": "837447494e894e885c9db364b3dcc8c83d8af2265e21f887e21185f07750636e",
+        "context_status": "no_supported_claims",
+        "claims": [],
+        "limitations": [],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-70283ADC988D0C81",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+            "filed_at": "2026-08-04",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "Talos Energy Inc.",
       "industry": "Oil & Gas E&P",
       "sector": "Energy",
@@ -383,7 +650,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/TALO/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:16+00:00",
+          "observed_at": "2026-09-27T05:33:28+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -392,7 +659,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/TALO/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:16+00:00",
+          "observed_at": "2026-09-27T05:33:28+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -401,14 +668,24 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/TALO/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:16+00:00",
+          "observed_at": "2026-09-27T05:33:28+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-70283ADC988D0C81",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-08-04",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-7DEE706CB9DB7FBB",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-7399AE40B052CB67",
       "classification": "found",
-      "observation_id": "OB-0C1A8570121AA14E",
+      "observation_id": "OB-1DA20DD3B7F1DD33",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -425,18 +702,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 13.319999694824219,
+        "close_start": 13.359999656677246,
         "close_end": 16.469999313354492,
-        "price_pct_90": 23.6,
-        "adj_return_pct_90": 23.6,
+        "price_pct_90": 23.3,
+        "adj_return_pct_90": 23.3,
         "pe_change_pct": null
       },
       "market_cap": 2749921280,
-      "observed_at": "2026-09-26T13:45:16+00:00",
+      "observed_at": "2026-09-27T05:33:28+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -444,17 +721,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-837447494E894E88",
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:19:16+00:00",
-      "last_seen_at": "2026-09-26T13:45:16+00:00"
+      "last_seen_at": "2026-09-27T05:33:28+00:00"
     },
     {
       "candidate_id": "CAN-D577F2C38FBBCFF7",
@@ -466,7 +749,30 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-8729185E317E8C05",
+        "input_sha": "8729185e317e8c051d2c02a14a4e6bc17e2333a9c5fd6ebca5167f50b0d5969b",
+        "context_status": "no_supported_claims",
+        "claims": [],
+        "limitations": [],
+        "next_check": [
+          "회사의 정제 마진에 영향을 미치는 RIN 가격 변동성의 구체적인 영향은 무엇인가?"
+        ],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-80DB053BD25896A0",
+            "title": "10-Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+            "filed_at": "2026-08-05",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "10-Q",
+            "document_type": "10-Q"
+          }
+        ]
+      },
       "name": "Delek US Holdings, Inc.",
       "industry": "Oil & Gas Refining & Marketing",
       "sector": "Energy",
@@ -533,7 +839,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DK/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:06+00:00",
+          "observed_at": "2026-09-27T05:31:52+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -542,7 +848,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DK/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:06+00:00",
+          "observed_at": "2026-09-27T05:31:52+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -551,14 +857,24 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DK/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:06+00:00",
+          "observed_at": "2026-09-27T05:31:52+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-80DB053BD25896A0",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm",
+          "title": "SEC 10-Q 10-Q",
+          "published_at": null,
+          "filed_at": "2026-08-05",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "10-Q 10-Q"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-0173F79AFD5AA961",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-53D404FEF8B0D621",
       "classification": "found",
-      "observation_id": "OB-8AF0F73106669A75",
+      "observation_id": "OB-201990FBDB3C594D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -579,18 +895,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 47.81999969482422,
+        "close_start": 51.58000183105469,
         "close_end": 67.83999633789062,
-        "price_pct_90": 41.9,
-        "adj_return_pct_90": 42.4,
-        "pe_change_pct": -62.8
+        "price_pct_90": 31.5,
+        "adj_return_pct_90": 32.0,
+        "pe_change_pct": -65.5
       },
       "market_cap": 4153990656,
-      "observed_at": "2026-09-26T13:44:06+00:00",
+      "observed_at": "2026-09-27T05:31:52+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -598,17 +914,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-8729185E317E8C05",
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:17:40+00:00",
-      "last_seen_at": "2026-09-26T13:44:06+00:00"
+      "last_seen_at": "2026-09-27T05:31:52+00:00"
     },
     {
       "candidate_id": "CAN-E460E34B1D8B66CE",
@@ -687,7 +1009,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/NBR/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:34+00:00",
+          "observed_at": "2026-09-27T05:35:38+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -696,7 +1018,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/NBR/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:34+00:00",
+          "observed_at": "2026-09-27T05:35:38+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -705,14 +1027,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/NBR/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:34+00:00",
+          "observed_at": "2026-09-27T05:35:38+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-B73B43F73AE3226C",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-340FA1D1E892AE50",
       "classification": "found",
-      "observation_id": "OB-03446660878A8FCC",
+      "observation_id": "OB-A372F4D7C0EFB001",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -733,18 +1055,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 82.61000061035156,
+        "close_start": 83.76000213623047,
         "close_end": 81.33000183105469,
-        "price_pct_90": -1.5,
-        "adj_return_pct_90": -1.5,
-        "pe_change_pct": -69.6
+        "price_pct_90": -2.9,
+        "adj_return_pct_90": -2.9,
+        "pe_change_pct": -70.0
       },
       "market_cap": 1235531520,
-      "observed_at": "2026-09-26T13:47:34+00:00",
+      "observed_at": "2026-09-27T05:35:38+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -752,17 +1074,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:21:26+00:00",
-      "last_seen_at": "2026-09-26T13:47:34+00:00"
+      "last_seen_at": "2026-09-27T05:35:38+00:00"
     },
     {
       "candidate_id": "CAN-82719B27698E3C22",
@@ -774,7 +1102,166 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-0FEBFA576C7DAAF0",
+        "input_sha": "0febfa576c7daaf0d45c623ee8c269dd8d52893a40d0e0b1d0cc83023c6ac2ba",
+        "context_status": "draft_ready",
+        "claims": [
+          {
+            "text_ko": "net income attributable to PBF Energy Inc. · second quarter 2026: $906.4 million — 회사의 순이익이다",
+            "note_ko": "회사의 순이익이다",
+            "kind": "fact",
+            "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
+            "document_id": "DOC-9FC60A7023735EC9",
+            "block_id": "p10",
+            "metric": "net income attributable to PBF Energy Inc.",
+            "figures": [
+              "$906.4 million"
+            ],
+            "period": "second quarter 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "net income attributable to PBF Energy Inc. · second quarter 2026: $7.54 per share — 회사의 주당 순이익이다",
+            "note_ko": "회사의 주당 순이익이다",
+            "kind": "fact",
+            "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
+            "document_id": "DOC-9FC60A7023735EC9",
+            "block_id": "p10",
+            "metric": "net income attributable to PBF Energy Inc.",
+            "figures": [
+              "$7.54 per share"
+            ],
+            "period": "second quarter 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "net loss attributable to PBF Energy Inc. · second quarter 2025: $5.2 million — 전년 같은 분기 회사의 순손실이다",
+            "note_ko": "전년 같은 분기 회사의 순손실이다",
+            "kind": "fact",
+            "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
+            "document_id": "DOC-9FC60A7023735EC9",
+            "block_id": "p10",
+            "metric": "net loss attributable to PBF Energy Inc.",
+            "figures": [
+              "$5.2 million"
+            ],
+            "period": "second quarter 2025",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "negative"
+          },
+          {
+            "text_ko": "net loss attributable to PBF Energy Inc. · second quarter 2025: $(0.05) per share — 전년 같은 분기 회사의 주당 순손실이다",
+            "note_ko": "전년 같은 분기 회사의 주당 순손실이다",
+            "kind": "fact",
+            "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
+            "document_id": "DOC-9FC60A7023735EC9",
+            "block_id": "p10",
+            "metric": "net loss attributable to PBF Energy Inc.",
+            "figures": [
+              "$(0.05) per share"
+            ],
+            "period": "second quarter 2025",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "negative"
+          },
+          {
+            "text_ko": "Adjusted fully-converted net income · second quarter 2026: $753.1 million — 특별 항목을 제외한 조정 순이익이다",
+            "note_ko": "특별 항목을 제외한 조정 순이익이다",
+            "kind": "fact",
+            "quote": "Adjusted fully-converted net income for the second quarter 2026, excluding special items, was $753.1 million, or $6.22 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $118.5 million or $(1.03) per share, for the second quarter 2025.",
+            "document_id": "DOC-9FC60A7023735EC9",
+            "block_id": "p10",
+            "metric": "Adjusted fully-converted net income",
+            "figures": [
+              "$753.1 million"
+            ],
+            "period": "second quarter 2026",
+            "currency": "USD",
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          }
+        ],
+        "limitations": [
+          {
+            "text_ko": "순이익(net income) · second quarter 2026: $159.8 million / $1.32 per share — 비현금성 특별 항목이 순이익을 증가시켰다",
+            "note_ko": "비현금성 특별 항목이 순이익을 증가시켰다",
+            "kind": "fact",
+            "quote": "Non-cash special items included in the second quarter 2026 results, which increased net income by a net, after-tax benefit of $159.8 million, or $1.32 per share, primarily consisted of gains on insurance recoveries associated with the February 1, 2025 fire at the Martinez refinery (the \"Martinez refinery fire\"), partially offset by expenses associated with the Martinez refinery fire, costs related to PBF's Refinery Business Improvement initiative (\"RBI\"), and loss on extinguishment of debt related to the redemption of the 6.00% senior unsecured notes due 2028.",
+            "document_id": "DOC-9FC60A7023735EC9",
+            "block_id": "p10",
+            "metric": "net income",
+            "figures": [
+              "$159.8 million",
+              "$1.32 per share"
+            ],
+            "period": "second quarter 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          }
+        ],
+        "next_check": [
+          "마르티네즈 정유 공장 화재 관련 보험금 수령액이 얼마인가?",
+          "마르티네즈 정유 공장 화재 관련 비용은 얼마인가?"
+        ],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-9FC60A7023735EC9",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
+            "filed_at": "2026-07-30",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "PBF Energy Inc.",
       "industry": "Oil & Gas Refining & Marketing",
       "sector": "Energy",
@@ -841,7 +1328,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PBF/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:42:09+00:00",
+          "observed_at": "2026-09-27T05:30:10+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -850,7 +1337,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PBF/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:42:09+00:00",
+          "observed_at": "2026-09-27T05:30:10+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -859,14 +1346,24 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PBF/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:42:09+00:00",
+          "observed_at": "2026-09-27T05:30:10+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-9FC60A7023735EC9",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-07-30",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-1685DBD3D71BB3F6",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-B3E2088FC45B0A89",
       "classification": "found",
-      "observation_id": "OB-F878A983C0260E3F",
+      "observation_id": "OB-F224BE234FCB6108",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -887,36 +1384,46 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 43.11000061035156,
+        "close_start": 46.43000030517578,
         "close_end": 73.69000244140625,
-        "price_pct_90": 70.9,
-        "adj_return_pct_90": 71.6,
-        "pe_change_pct": -12.4
+        "price_pct_90": 58.7,
+        "adj_return_pct_90": 59.3,
+        "pe_change_pct": -18.7
       },
       "market_cap": 8734981120,
-      "observed_at": "2026-09-26T13:42:09+00:00",
+      "observed_at": "2026-09-27T05:30:10+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "source_linked",
+      "research_status": "draft_ready",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": {
+        "context_id": "CTX-0FEBFA576C7DAAF0",
+        "generated_at": "2026-09-27T05:40:24+00:00",
+        "eps_target_period": "2027-12-31"
+      },
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-0FEBFA576C7DAAF0",
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:15:57+00:00",
-      "last_seen_at": "2026-09-26T13:42:09+00:00"
+      "last_seen_at": "2026-09-27T05:30:10+00:00"
     },
     {
       "candidate_id": "CAN-DC6D3F92ECFFD019",
@@ -928,7 +1435,95 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-5C98C21D42053DF8",
+        "input_sha": "5c98c21d42053df8ec34d8545d54795869792c0f112a50a3a554d5d6ed143ac7",
+        "context_status": "insufficient_earnings_context",
+        "claims": [
+          {
+            "text_ko": "매출(Revenue) · second quarter of 2026: $47.6 million — 회사의 매출은 해당 분기에 이 금액을 기록했다",
+            "note_ko": "회사의 매출은 해당 분기에 이 금액을 기록했다",
+            "kind": "fact",
+            "quote": "Revenue for the second quarter of 2026 was $47.6 million, compared with $26.9 million for the first quarter of 2026 and $18.0 million for the second quarter of 2025.",
+            "document_id": "DOC-A6967554C2E4C643",
+            "block_id": "t3",
+            "metric": "Revenue",
+            "figures": [
+              "$47.6 million"
+            ],
+            "period": "second quarter of 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "volume",
+              "capacity"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "GAAP gross margin · second quarter of 2026: 44.9 percent — 회사의 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+            "note_ko": "회사의 매출 총 이익률은 해당 분기에 이 비율을 기록했다",
+            "kind": "fact",
+            "quote": "GAAP gross margin was 44.9 percent of revenue for the second quarter of 2026, compared with 29.6 percent of revenue for the first quarter of 2026 and 8.0 percent for the second quarter of 2025.",
+            "document_id": "DOC-A6967554C2E4C643",
+            "block_id": "t4",
+            "metric": "GAAP gross margin",
+            "figures": [
+              "44.9 percent"
+            ],
+            "period": "second quarter of 2026",
+            "currency": null,
+            "gaap": "GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "drivers": [
+              "margin_cost"
+            ],
+            "direction": "positive"
+          }
+        ],
+        "limitations": [
+          {
+            "text_ko": "non-GAAP financial measures — 다른 회사들이 유사한 이름의 비일반회계기준 재무 지표를 다르게 계산하거나 다른 지표를 사용할 수 있어 비교 도구로서 유용성이 떨어질 수 있다고 언급했다",
+            "note_ko": "다른 회사들이 유사한 이름의 비일반회계기준 재무 지표를 다르게 계산하거나 다른 지표를 사용할 수 있어 비교 도구로서 유용성이 떨어질 수 있다고 언급했다",
+            "kind": "fact",
+            "quote": "In addition, other companies may calculate similarly-titled non-GAAP financial measures differently or may use other measures to evaluate their performance, all of which could reduce the usefulness of the company’s non-GAAP financial measures as tools for comparison.",
+            "document_id": "DOC-A6967554C2E4C643",
+            "block_id": "p17",
+            "metric": "non-GAAP financial measures",
+            "figures": [],
+            "period": "unknown",
+            "currency": null,
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          }
+        ],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "complete",
+        "documents": [
+          {
+            "document_id": "DOC-A6967554C2E4C643",
+            "title": "EXHIBIT 99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+            "filed_at": "2026-07-30",
+            "observed_at": "2026-09-26T13:52:04+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ]
+      },
       "name": "AXT, Inc.",
       "industry": "Semiconductor Equipment & Materials",
       "sector": "Technology",
@@ -994,7 +1589,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AXTI/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:43:28+00:00",
+          "observed_at": "2026-09-27T05:31:36+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1003,7 +1598,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AXTI/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:43:28+00:00",
+          "observed_at": "2026-09-27T05:31:36+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1012,14 +1607,24 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AXTI/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:43:28+00:00",
+          "observed_at": "2026-09-27T05:31:36+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-A6967554C2E4C643",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+          "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+          "published_at": null,
+          "filed_at": "2026-07-30",
+          "observed_at": "2026-09-26T13:52:04+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-F3C6AFA6AB298745",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-0301B04162CA6C21",
       "classification": "found",
-      "observation_id": "OB-9F8D6DB6E99232A6",
+      "observation_id": "OB-FD0B766736F43E10",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1036,18 +1641,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 70.1500015258789,
+        "close_start": 71.45999908447266,
         "close_end": 78.94000244140625,
-        "price_pct_90": 12.5,
-        "adj_return_pct_90": 12.5,
-        "pe_change_pct": -62.4
+        "price_pct_90": 10.5,
+        "adj_return_pct_90": 10.5,
+        "pe_change_pct": -63.1
       },
       "market_cap": 5176349696,
-      "observed_at": "2026-09-26T13:43:28+00:00",
+      "observed_at": "2026-09-27T05:31:36+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -1055,17 +1660,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-5C98C21D42053DF8",
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:17:24+00:00",
-      "last_seen_at": "2026-09-26T13:43:28+00:00"
+      "last_seen_at": "2026-09-27T05:31:36+00:00"
     },
     {
       "candidate_id": "CAN-77F79A3B05ABB893",
@@ -1144,7 +1755,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/MPC/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:34+00:00",
+          "observed_at": "2026-09-27T05:26:35+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1153,7 +1764,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/MPC/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:34+00:00",
+          "observed_at": "2026-09-27T05:26:35+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1162,14 +1773,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/MPC/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:34+00:00",
+          "observed_at": "2026-09-27T05:26:35+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-7CBC55C2C777CB44",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-02F0FBEFCBE8ABE6",
       "classification": "found",
-      "observation_id": "OB-C3D26A70E812DB0F",
+      "observation_id": "OB-01C127CD1815FD8A",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1190,18 +1801,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 254.05999755859375,
+        "close_start": 259.2200012207031,
         "close_end": 393.5199890136719,
-        "price_pct_90": 54.9,
-        "adj_return_pct_90": 55.3,
-        "pe_change_pct": -21.4
+        "price_pct_90": 51.8,
+        "adj_return_pct_90": 52.2,
+        "pe_change_pct": -22.9
       },
       "market_cap": 110510161920,
-      "observed_at": "2026-09-26T13:38:34+00:00",
+      "observed_at": "2026-09-27T05:26:35+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -1209,17 +1820,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "last_seen_at": "2026-09-26T13:38:34+00:00"
+      "last_seen_at": "2026-09-27T05:26:35+00:00"
     },
     {
       "candidate_id": "CAN-700B10D9B75B0040",
@@ -1297,7 +1914,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CORT/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:41:14+00:00",
+          "observed_at": "2026-09-27T05:29:16+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1306,7 +1923,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CORT/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:41:14+00:00",
+          "observed_at": "2026-09-27T05:29:16+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1315,14 +1932,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CORT/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:41:14+00:00",
+          "observed_at": "2026-09-27T05:29:16+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-389CEC378D385D9E",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-C1A2BF1B82E00068",
       "classification": "found",
-      "observation_id": "OB-B630A451DF75344B",
+      "observation_id": "OB-8FC50E1747A836A1",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1339,18 +1956,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 87.31999969482422,
+        "close_start": 87.88999938964844,
         "close_end": 116.0999984741211,
-        "price_pct_90": 33.0,
-        "adj_return_pct_90": 33.0,
-        "pe_change_pct": -50.8
+        "price_pct_90": 32.1,
+        "adj_return_pct_90": 32.1,
+        "pe_change_pct": -51.1
       },
       "market_cap": 12550223872,
-      "observed_at": "2026-09-26T13:41:14+00:00",
+      "observed_at": "2026-09-27T05:29:16+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -1358,17 +1975,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:15:04+00:00",
-      "last_seen_at": "2026-09-26T13:41:14+00:00"
+      "last_seen_at": "2026-09-27T05:29:16+00:00"
     },
     {
       "candidate_id": "CAN-490AC1686F9442CE",
@@ -1446,7 +2069,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/RPAY/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:51:01+00:00",
+          "observed_at": "2026-09-27T05:39:10+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1455,7 +2078,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/RPAY/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:51:01+00:00",
+          "observed_at": "2026-09-27T05:39:10+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1464,14 +2087,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/RPAY/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:51:01+00:00",
+          "observed_at": "2026-09-27T05:39:10+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-6F633DF556AEE827",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-E19C01A103591B78",
       "classification": "found",
-      "observation_id": "OB-917DABA458FD36E0",
+      "observation_id": "OB-7FEA68DB782B948D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1488,18 +2111,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 3.5799999237060547,
+        "close_start": 4.260000228881836,
         "close_end": 3.7899999618530273,
-        "price_pct_90": 5.9,
-        "adj_return_pct_90": 5.9,
-        "pe_change_pct": -11.7
+        "price_pct_90": -11.0,
+        "adj_return_pct_90": -11.0,
+        "pe_change_pct": -25.8
       },
       "market_cap": 334218848,
-      "observed_at": "2026-09-26T13:51:01+00:00",
+      "observed_at": "2026-09-27T05:39:10+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -1507,17 +2130,23 @@
         "idea_ids": []
       },
       "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-26T13:52:04+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
       "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:24:58+00:00",
-      "last_seen_at": "2026-09-26T13:51:01+00:00"
+      "last_seen_at": "2026-09-27T05:39:10+00:00"
     },
     {
       "candidate_id": "CAN-68E9292E49558246",
@@ -1595,7 +2224,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/IPI/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:50:14+00:00",
+          "observed_at": "2026-09-27T05:38:12+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1604,7 +2233,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/IPI/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:50:14+00:00",
+          "observed_at": "2026-09-27T05:38:12+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1613,14 +2242,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/IPI/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:50:14+00:00",
+          "observed_at": "2026-09-27T05:38:12+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-F3322EBD4C4AD487",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-A89B7DD6348DCB08",
       "classification": "found",
-      "observation_id": "OB-604BFE76218F0299",
+      "observation_id": "OB-CEDD13BBC8DF9762",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1637,36 +2266,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 34.59000015258789,
+        "close_start": 33.41999816894531,
         "close_end": 34.040000915527344,
-        "price_pct_90": -1.6,
-        "adj_return_pct_90": -1.6,
-        "pe_change_pct": -60.4
+        "price_pct_90": 1.9,
+        "adj_return_pct_90": 1.9,
+        "pe_change_pct": -59.0
       },
       "market_cap": 458065184,
-      "observed_at": "2026-09-26T13:50:14+00:00",
+      "observed_at": "2026-09-27T05:38:12+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:23:59+00:00",
-      "last_seen_at": "2026-09-26T13:50:14+00:00"
+      "last_seen_at": "2026-09-27T05:38:12+00:00"
     },
     {
       "candidate_id": "CAN-FDA6B7F62852042F",
@@ -1744,7 +2379,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PARR/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:18+00:00",
+          "observed_at": "2026-09-27T05:32:15+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1753,7 +2388,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PARR/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:18+00:00",
+          "observed_at": "2026-09-27T05:32:15+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1762,14 +2397,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PARR/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:18+00:00",
+          "observed_at": "2026-09-27T05:32:15+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-4A5183D3753A42A9",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-0F212A7146261446",
       "classification": "found",
-      "observation_id": "OB-10F156345A8C069E",
+      "observation_id": "OB-004976D295A74C81",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1786,36 +2421,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 54.630001068115234,
+        "close_start": 56.66999816894531,
         "close_end": 77.45999908447266,
-        "price_pct_90": 41.8,
-        "adj_return_pct_90": 41.8,
-        "pe_change_pct": 2.5
+        "price_pct_90": 36.7,
+        "adj_return_pct_90": 36.7,
+        "pe_change_pct": -1.2
       },
       "market_cap": 3880717056,
-      "observed_at": "2026-09-26T13:44:18+00:00",
+      "observed_at": "2026-09-27T05:32:15+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:03+00:00",
-      "last_seen_at": "2026-09-26T13:44:18+00:00"
+      "last_seen_at": "2026-09-27T05:32:15+00:00"
     },
     {
       "candidate_id": "CAN-3D7A7E3B7BFBE2CE",
@@ -1893,7 +2534,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/BLTE/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:42:39+00:00",
+          "observed_at": "2026-09-27T05:30:37+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -1902,7 +2543,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/BLTE/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:42:39+00:00",
+          "observed_at": "2026-09-27T05:30:37+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -1911,14 +2552,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/BLTE/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:42:39+00:00",
+          "observed_at": "2026-09-27T05:30:37+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-4CFC394DB1A1E385",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-A0FBA9FA8B5E8582",
       "classification": "found",
-      "observation_id": "OB-23FDA0C1B483CD2F",
+      "observation_id": "OB-357E1B9A24EA83D0",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1935,18 +2576,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 148.72999572753906,
+        "close_start": 154.64999389648438,
         "close_end": 167.3300018310547,
-        "price_pct_90": 12.5,
-        "adj_return_pct_90": 12.5,
-        "pe_change_pct": -53.0
+        "price_pct_90": 8.2,
+        "adj_return_pct_90": 8.2,
+        "pe_change_pct": -54.8
       },
       "market_cap": 6738738176,
-      "observed_at": "2026-09-26T13:42:39+00:00",
+      "observed_at": "2026-09-27T05:30:37+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -1954,17 +2595,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "no_relevant_document",
+      "last_valid_context": null,
+      "research_note": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:16:24+00:00",
-      "last_seen_at": "2026-09-26T13:42:39+00:00"
+      "last_seen_at": "2026-09-27T05:30:37+00:00"
     },
     {
       "candidate_id": "CAN-325B2A6C30755476",
@@ -2043,7 +2690,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/VLO/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:34+00:00",
+          "observed_at": "2026-09-27T05:26:35+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2052,7 +2699,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/VLO/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:34+00:00",
+          "observed_at": "2026-09-27T05:26:35+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2061,14 +2708,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/VLO/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:34+00:00",
+          "observed_at": "2026-09-27T05:26:35+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-14712902D0D29EA0",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-78E9043AC302202C",
       "classification": "found",
-      "observation_id": "OB-3F3ED94E589FEB3F",
+      "observation_id": "OB-718A5C173F26EDDC",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2089,36 +2736,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 259.3699951171875,
+        "close_start": 266.32000732421875,
         "close_end": 387.17999267578125,
-        "price_pct_90": 49.3,
-        "adj_return_pct_90": 49.9,
-        "pe_change_pct": -17.1
+        "price_pct_90": 45.4,
+        "adj_return_pct_90": 45.9,
+        "pe_change_pct": -19.2
       },
       "market_cap": 111479750656,
-      "observed_at": "2026-09-26T13:38:34+00:00",
+      "observed_at": "2026-09-27T05:26:35+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "last_seen_at": "2026-09-26T13:38:34+00:00"
+      "last_seen_at": "2026-09-27T05:26:35+00:00"
     },
     {
       "candidate_id": "CAN-36582E27909720FE",
@@ -2197,7 +2850,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CODI/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:48:42+00:00",
+          "observed_at": "2026-09-27T05:36:48+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2206,7 +2859,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CODI/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:48:42+00:00",
+          "observed_at": "2026-09-27T05:36:48+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2215,14 +2868,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CODI/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:48:42+00:00",
+          "observed_at": "2026-09-27T05:36:48+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-493C559DA52E5AF8",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-8E79FD085B00B751",
       "classification": "found",
-      "observation_id": "OB-102798A12A38338A",
+      "observation_id": "OB-FCE43D03820D894E",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2243,36 +2896,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 10.40999984741211,
+        "close_start": 10.149999618530273,
         "close_end": 11.25,
-        "price_pct_90": 8.1,
-        "adj_return_pct_90": 8.1,
-        "pe_change_pct": -53.0
+        "price_pct_90": 10.8,
+        "adj_return_pct_90": 10.8,
+        "pe_change_pct": -51.8
       },
       "market_cap": 846404608,
-      "observed_at": "2026-09-26T13:48:42+00:00",
+      "observed_at": "2026-09-27T05:36:48+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:22:36+00:00",
-      "last_seen_at": "2026-09-26T13:48:42+00:00"
+      "last_seen_at": "2026-09-27T05:36:48+00:00"
     },
     {
       "candidate_id": "CAN-11B1565B12AFE2F9",
@@ -2351,7 +3010,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DINO/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:40:29+00:00",
+          "observed_at": "2026-09-27T05:28:30+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2360,7 +3019,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DINO/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:40:29+00:00",
+          "observed_at": "2026-09-27T05:28:30+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2369,14 +3028,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DINO/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:40:29+00:00",
+          "observed_at": "2026-09-27T05:28:30+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-9392535436B8860D",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-503F833812E6D01A",
       "classification": "found",
-      "observation_id": "OB-F1642384B0F3CCB0",
+      "observation_id": "OB-B9745DD53CC957EC",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2397,36 +3056,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 68.29000091552734,
+        "close_start": 70.80999755859375,
         "close_end": 106.81999969482422,
-        "price_pct_90": 56.4,
-        "adj_return_pct_90": 57.4,
-        "pe_change_pct": -2.2
+        "price_pct_90": 50.9,
+        "adj_return_pct_90": 51.8,
+        "pe_change_pct": -5.6
       },
       "market_cap": 18990870528,
-      "observed_at": "2026-09-26T13:40:29+00:00",
+      "observed_at": "2026-09-27T05:28:30+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:14:17+00:00",
-      "last_seen_at": "2026-09-26T13:40:29+00:00"
+      "last_seen_at": "2026-09-27T05:28:30+00:00"
     },
     {
       "candidate_id": "CAN-5A9E947A6AEC56D7",
@@ -2504,7 +3169,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AGL/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:39+00:00",
+          "observed_at": "2026-09-27T05:35:13+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2513,7 +3178,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AGL/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:39+00:00",
+          "observed_at": "2026-09-27T05:35:13+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2522,14 +3187,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/AGL/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:39+00:00",
+          "observed_at": "2026-09-27T05:35:13+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-67D2C4A52BEBB2BB",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-7133F17F14BE6AFC",
       "classification": "found",
-      "observation_id": "OB-1CA145ABEA580038",
+      "observation_id": "OB-009EDB24954C5F06",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2546,36 +3211,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 119.25,
+        "close_start": 115.1500015258789,
         "close_end": 80.7300033569336,
-        "price_pct_90": -32.3,
-        "adj_return_pct_90": -32.3,
+        "price_pct_90": -29.9,
+        "adj_return_pct_90": -29.9,
         "pe_change_pct": null
       },
       "market_cap": 1355554432,
-      "observed_at": "2026-09-26T13:47:39+00:00",
+      "observed_at": "2026-09-27T05:35:13+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:21:01+00:00",
-      "last_seen_at": "2026-09-26T13:47:39+00:00"
+      "last_seen_at": "2026-09-27T05:35:13+00:00"
     },
     {
       "candidate_id": "CAN-E95987D989EF1145",
@@ -2653,7 +3324,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/TNK/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:45+00:00",
+          "observed_at": "2026-09-27T05:32:47+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2662,7 +3333,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/TNK/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:45+00:00",
+          "observed_at": "2026-09-27T05:32:47+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2671,14 +3342,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/TNK/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:45+00:00",
+          "observed_at": "2026-09-27T05:32:47+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-1AF3FA9465E9CCAC",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-955E5810EBBDD287",
       "classification": "found",
-      "observation_id": "OB-73A9F8A45461641A",
+      "observation_id": "OB-3A95BC79C148AFFD",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2695,36 +3366,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 67.98999786376953,
+        "close_start": 65.98999786376953,
         "close_end": 94.06999969482422,
-        "price_pct_90": 38.4,
-        "adj_return_pct_90": 38.8,
-        "pe_change_pct": -5.1
+        "price_pct_90": 42.6,
+        "adj_return_pct_90": 43.0,
+        "pe_change_pct": -2.3
       },
       "market_cap": 3262358016,
-      "observed_at": "2026-09-26T13:44:45+00:00",
+      "observed_at": "2026-09-27T05:32:47+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:35+00:00",
-      "last_seen_at": "2026-09-26T13:44:45+00:00"
+      "last_seen_at": "2026-09-27T05:32:47+00:00"
     },
     {
       "candidate_id": "CAN-4DB66C064FC2ED7C",
@@ -2803,7 +3480,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/URGN/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:46:16+00:00",
+          "observed_at": "2026-09-27T05:34:14+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2812,7 +3489,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/URGN/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:46:16+00:00",
+          "observed_at": "2026-09-27T05:34:14+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2821,14 +3498,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/URGN/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:46:16+00:00",
+          "observed_at": "2026-09-27T05:34:14+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-E4F660E480036F4D",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-3FF095E7B5FCD49E",
       "classification": "found",
-      "observation_id": "OB-764BAF1995CE5AA7",
+      "observation_id": "OB-6EE1E8DAF8E911C6",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2849,36 +3526,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 34.540000915527344,
+        "close_start": 36.06999969482422,
         "close_end": 41.349998474121094,
-        "price_pct_90": 19.7,
-        "adj_return_pct_90": 19.7,
-        "pe_change_pct": -38.4
+        "price_pct_90": 14.6,
+        "adj_return_pct_90": 14.6,
+        "pe_change_pct": -41.1
       },
       "market_cap": 2021211264,
-      "observed_at": "2026-09-26T13:46:16+00:00",
+      "observed_at": "2026-09-27T05:34:14+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:20:02+00:00",
-      "last_seen_at": "2026-09-26T13:46:16+00:00"
+      "last_seen_at": "2026-09-27T05:34:14+00:00"
     },
     {
       "candidate_id": "CAN-E87900AEFDDE7B07",
@@ -2956,7 +3639,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/SPT/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:49:44+00:00",
+          "observed_at": "2026-09-27T05:37:49+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -2965,7 +3648,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/SPT/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:49:44+00:00",
+          "observed_at": "2026-09-27T05:37:49+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -2974,14 +3657,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/SPT/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:49:44+00:00",
+          "observed_at": "2026-09-27T05:37:49+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-12F5DA4651ACA7AF",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-B9A71272392C7EF3",
       "classification": "found",
-      "observation_id": "OB-41992EFA7CCF682D",
+      "observation_id": "OB-D12D5E61EC4F4B00",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2998,36 +3681,42 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 7.480000019073486,
+        "close_start": 7.659999847412109,
         "close_end": 9.539999961853027,
-        "price_pct_90": 27.5,
-        "adj_return_pct_90": 27.5,
-        "pe_change_pct": -0.7
+        "price_pct_90": 24.5,
+        "adj_return_pct_90": 24.5,
+        "pe_change_pct": -3.1
       },
       "market_cap": 578049728,
-      "observed_at": "2026-09-26T13:49:44+00:00",
+      "observed_at": "2026-09-27T05:37:49+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "queued",
-      "research_note": "원문 조사 대기 중입니다.",
+      "research_status": "source_linked",
+      "source_quality": "complete",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": "2026-09-27T05:40:06+00:00",
+      "source_status": "success",
+      "last_valid_context": null,
+      "research_note": null,
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:23:36+00:00",
-      "last_seen_at": "2026-09-26T13:49:44+00:00"
+      "last_seen_at": "2026-09-27T05:37:49+00:00"
     },
     {
       "candidate_id": "CAN-A0761326A7E13159",
@@ -3105,7 +3794,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/SUNC/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:12+00:00",
+          "observed_at": "2026-09-27T05:32:21+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -3114,7 +3803,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/SUNC/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:12+00:00",
+          "observed_at": "2026-09-27T05:32:21+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -3123,14 +3812,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/SUNC/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:12+00:00",
+          "observed_at": "2026-09-27T05:32:21+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-8CE2A563CF142132",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-723497F0CCDF7EE2",
       "classification": "found",
-      "observation_id": "OB-486A1B7B4B0ECCBB",
+      "observation_id": "OB-EC3C05E79F974768",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3147,18 +3836,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 67.0199966430664,
+        "close_start": 68.41999816894531,
         "close_end": 76.31999969482422,
-        "price_pct_90": 13.9,
-        "adj_return_pct_90": 15.5,
-        "pe_change_pct": -10.5
+        "price_pct_90": 11.5,
+        "adj_return_pct_90": 13.1,
+        "pe_change_pct": -12.4
       },
       "market_cap": 3931792640,
-      "observed_at": "2026-09-26T13:44:12+00:00",
+      "observed_at": "2026-09-27T05:32:21+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -3166,17 +3855,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:08+00:00",
-      "last_seen_at": "2026-09-26T13:44:12+00:00"
+      "last_seen_at": "2026-09-27T05:32:21+00:00"
     },
     {
       "candidate_id": "CAN-EE8A92AC2C2D3E8C",
@@ -3254,7 +3949,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PGY/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:00+00:00",
+          "observed_at": "2026-09-27T05:34:48+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -3263,7 +3958,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PGY/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:00+00:00",
+          "observed_at": "2026-09-27T05:34:48+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -3272,14 +3967,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PGY/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:00+00:00",
+          "observed_at": "2026-09-27T05:34:48+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-F473BBC445827447",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-7DA3486FA5CBDDBC",
       "classification": "found",
-      "observation_id": "OB-4B6D4782CCCB9561",
+      "observation_id": "OB-5C444492CCA518E5",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3296,18 +3991,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 15.869999885559082,
+        "close_start": 16.6299991607666,
         "close_end": 17.6200008392334,
-        "price_pct_90": 11.0,
-        "adj_return_pct_90": 11.0,
-        "pe_change_pct": -5.2
+        "price_pct_90": 6.0,
+        "adj_return_pct_90": 6.0,
+        "pe_change_pct": -9.6
       },
       "market_cap": 1469963392,
-      "observed_at": "2026-09-26T13:47:00+00:00",
+      "observed_at": "2026-09-27T05:34:48+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -3315,17 +4010,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:20:36+00:00",
-      "last_seen_at": "2026-09-26T13:47:00+00:00"
+      "last_seen_at": "2026-09-27T05:34:48+00:00"
     },
     {
       "candidate_id": "CAN-E763F753A2D7609F",
@@ -3403,7 +4104,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CLBK/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:47+00:00",
+          "observed_at": "2026-09-27T05:35:50+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -3412,7 +4113,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CLBK/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:47+00:00",
+          "observed_at": "2026-09-27T05:35:50+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -3421,14 +4122,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CLBK/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:47+00:00",
+          "observed_at": "2026-09-27T05:35:50+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-8788753D9CB4E829",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-0BBC705B7DA4066D",
       "classification": "found",
-      "observation_id": "OB-A323E241332D780D",
+      "observation_id": "OB-F9B52FED9C69CDD2",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3445,18 +4146,18 @@
         "price_status": "success",
         "price_note": "split_in_window",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 9.481818199157715,
+        "close_start": 9.559090614318848,
         "close_end": 11.329999923706055,
-        "price_pct_90": 19.5,
-        "adj_return_pct_90": 20.0,
+        "price_pct_90": 18.5,
+        "adj_return_pct_90": 19.1,
         "pe_change_pct": null
       },
       "market_cap": 1178979712,
-      "observed_at": "2026-09-26T13:47:47+00:00",
+      "observed_at": "2026-09-27T05:35:50+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -3464,17 +4165,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:21:37+00:00",
-      "last_seen_at": "2026-09-26T13:47:47+00:00"
+      "last_seen_at": "2026-09-27T05:35:50+00:00"
     },
     {
       "candidate_id": "CAN-DF76D3AD7ADC73CF",
@@ -3552,7 +4259,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CBRL/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:52+00:00",
+          "observed_at": "2026-09-27T05:36:13+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -3561,7 +4268,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CBRL/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:52+00:00",
+          "observed_at": "2026-09-27T05:36:13+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -3570,14 +4277,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/CBRL/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:47:52+00:00",
+          "observed_at": "2026-09-27T05:36:13+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-55A316EBB44220E6",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-38C776C3CA653D0A",
       "classification": "found",
-      "observation_id": "OB-1EB65E17556D68A6",
+      "observation_id": "OB-A9AE1077CF3B9978",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3594,18 +4301,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 52.849998474121094,
+        "close_start": 53.939998626708984,
         "close_end": 51.810001373291016,
-        "price_pct_90": -2.0,
-        "adj_return_pct_90": -1.5,
-        "pe_change_pct": -41.9
+        "price_pct_90": -3.9,
+        "adj_return_pct_90": -3.5,
+        "pe_change_pct": -43.1
       },
       "market_cap": 1158079488,
-      "observed_at": "2026-09-26T13:47:52+00:00",
+      "observed_at": "2026-09-27T05:36:13+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -3613,17 +4320,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:22:01+00:00",
-      "last_seen_at": "2026-09-26T13:47:52+00:00"
+      "last_seen_at": "2026-09-27T05:36:13+00:00"
     },
     {
       "candidate_id": "CAN-C8B827862A3B86D5",
@@ -3701,7 +4414,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PUBM/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:48:42+00:00",
+          "observed_at": "2026-09-27T05:36:58+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -3710,7 +4423,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PUBM/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:48:42+00:00",
+          "observed_at": "2026-09-27T05:36:58+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -3719,14 +4432,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PUBM/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:48:42+00:00",
+          "observed_at": "2026-09-27T05:36:58+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-E69B41464CFF9A9E",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-7892B4F2E7E04CDF",
       "classification": "found",
-      "observation_id": "OB-70CC9C10718C28BD",
+      "observation_id": "OB-44EF300C6AFD90CC",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3743,18 +4456,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 12.649999618530273,
+        "close_start": 13.069999694824219,
         "close_end": 18.600000381469727,
-        "price_pct_90": 47.0,
-        "adj_return_pct_90": 47.0,
-        "pe_change_pct": -11.7
+        "price_pct_90": 42.3,
+        "adj_return_pct_90": 42.3,
+        "pe_change_pct": -14.6
       },
       "market_cap": 847231104,
-      "observed_at": "2026-09-26T13:48:42+00:00",
+      "observed_at": "2026-09-27T05:36:58+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -3762,17 +4475,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:22:45+00:00",
-      "last_seen_at": "2026-09-26T13:48:42+00:00"
+      "last_seen_at": "2026-09-27T05:36:58+00:00"
     },
     {
       "candidate_id": "CAN-6AC97D7E0081C82D",
@@ -3806,8 +4525,7 @@
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
-        "A",
-        "B"
+        "A"
       ],
       "missing": [],
       "evidence_review": null,
@@ -3851,7 +4569,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/LPG/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:52+00:00",
+          "observed_at": "2026-09-27T05:33:54+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -3860,7 +4578,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/LPG/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:52+00:00",
+          "observed_at": "2026-09-27T05:33:54+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -3869,14 +4587,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/LPG/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:52+00:00",
+          "observed_at": "2026-09-27T05:33:54+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-AD575391E01D9BBC",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-6BB23FC71480D885",
       "classification": "found",
-      "observation_id": "OB-44B39AFD6BD51E76",
+      "observation_id": "OB-EC438D932751A941",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -3887,28 +4605,24 @@
         {
           "list": "A",
           "rank": 17
-        },
-        {
-          "list": "B",
-          "rank": 20
         }
       ],
       "price": {
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 36.060001373291016,
+        "close_start": 35.2400016784668,
         "close_end": 53.43000030517578,
-        "price_pct_90": 48.2,
-        "adj_return_pct_90": 51.5,
-        "pe_change_pct": -4.7
+        "price_pct_90": 51.6,
+        "adj_return_pct_90": 55.0,
+        "pe_change_pct": -2.5
       },
       "market_cap": 2285878528,
-      "observed_at": "2026-09-26T13:45:52+00:00",
+      "observed_at": "2026-09-27T05:33:54+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -3916,17 +4630,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:19:42+00:00",
-      "last_seen_at": "2026-09-26T13:45:52+00:00"
+      "last_seen_at": "2026-09-27T05:33:54+00:00"
     },
     {
       "candidate_id": "CAN-8ED72F330C1AE34D",
@@ -4004,7 +4724,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/FSLY/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:00+00:00",
+          "observed_at": "2026-09-27T05:32:11+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -4013,7 +4733,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/FSLY/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:00+00:00",
+          "observed_at": "2026-09-27T05:32:11+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -4022,14 +4742,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/FSLY/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:00+00:00",
+          "observed_at": "2026-09-27T05:32:11+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-4C1E08CD5614E654",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-1385373A44ECAD7A",
       "classification": "found",
-      "observation_id": "OB-91C16CC59587E738",
+      "observation_id": "OB-0A49C7B857FF0396",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4046,18 +4766,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 17.110000610351562,
+        "close_start": 18.0,
         "close_end": 24.959999084472656,
-        "price_pct_90": 45.9,
-        "adj_return_pct_90": 45.9,
-        "pe_change_pct": -8.7
+        "price_pct_90": 38.7,
+        "adj_return_pct_90": 38.7,
+        "pe_change_pct": -13.2
       },
       "market_cap": 3976127744,
-      "observed_at": "2026-09-26T13:44:00+00:00",
+      "observed_at": "2026-09-27T05:32:11+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -4065,17 +4785,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:17:58+00:00",
-      "last_seen_at": "2026-09-26T13:44:00+00:00"
+      "last_seen_at": "2026-09-27T05:32:11+00:00"
     },
     {
       "candidate_id": "CAN-3D30FF7D03231FE1",
@@ -4153,7 +4879,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PSX/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:37+00:00",
+          "observed_at": "2026-09-27T05:26:38+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -4162,7 +4888,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PSX/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:37+00:00",
+          "observed_at": "2026-09-27T05:26:38+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -4171,14 +4897,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/PSX/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:38:37+00:00",
+          "observed_at": "2026-09-27T05:26:38+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-8D085D040B2EE2CE",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-23FD3709B2B6FD50",
       "classification": "found",
-      "observation_id": "OB-077A93776E4349C1",
+      "observation_id": "OB-A7403E7A80C88497",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4195,18 +4921,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 171.64999389648438,
+        "close_start": 174.0500030517578,
         "close_end": 255.75,
-        "price_pct_90": 49.0,
-        "adj_return_pct_90": 49.8,
-        "pe_change_pct": 3.4
+        "price_pct_90": 46.9,
+        "adj_return_pct_90": 47.7,
+        "pe_change_pct": 2.0
       },
       "market_cap": 102539124736,
-      "observed_at": "2026-09-26T13:38:37+00:00",
+      "observed_at": "2026-09-27T05:26:38+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -4214,47 +4940,53 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:12:26+00:00",
-      "last_seen_at": "2026-09-26T13:38:37+00:00"
+      "last_seen_at": "2026-09-27T05:26:38+00:00"
     },
     {
-      "candidate_id": "CAN-4BD491C8D3F1EC4F",
+      "candidate_id": "CAN-4E5151866E863998",
       "identity": {
-        "entity_id": "NASDAQ:UCTT",
-        "ticker": "UCTT",
+        "entity_id": "NASDAQ:TEAM",
+        "ticker": "TEAM",
         "exchange": "NASDAQ",
         "source": "SEC company_tickers_exchange",
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
       "context": null,
-      "name": "Ultra Clean Holdings, Inc.",
-      "industry": "Semiconductor Equipment & Materials",
+      "name": "Atlassian Corporation",
+      "industry": "Software - Application",
       "sector": "Technology",
       "eps": {
-        "eps_now": 5.87,
-        "eps_30d": 3.9375,
-        "eps_90d": 3.7725,
-        "eps_target_period": "2027-12-31",
+        "eps_now": 2.1871,
+        "eps_30d": 2.0571,
+        "eps_90d": 1.39452,
+        "eps_target_period": "2028-06-30",
         "eps_currency": "USD",
         "eps_basis": "provider-unspecified",
-        "analysts": 4,
+        "analysts": 8,
         "up30": 4,
-        "down30": 0,
-        "pct_90": 55.6,
-        "steady": true,
+        "down30": 1,
+        "pct_90": 56.8,
+        "steady": false,
         "turnaround": false,
-        "yield_change_90_pp": 2.7,
-        "yield_change_30_pp": 2.487
+        "yield_change_90_pp": 0.422,
+        "yield_change_30_pp": 0.069
       },
       "eps_provider": "Yahoo Finance earningsTrend (+1y)",
       "lists": [
@@ -4265,14 +4997,13 @@
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": "반도체 산업에 핵심 부품, 시스템, 세척 및 분석 서비스를 제공하여 돈을 번다.",
+          "text": null,
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "translated",
-          "model": "gemini-2.5-flash",
-          "source_text": "Ultra Clean Holdings, Inc. develops and supplies critical subsystems, components and parts, and cleaning and analytical services for the semiconductor industry in the United States and internationally. The company offers outsourced solutions for the development, design, component sourcing and cleaning, prototyping, engineering, and manufacturing and testing of advanced systems. It also provides a range of gas delivery solutions, such as precision thermal products, valves, connectors, industrial process connectors and valves, pneumatic actuators, manifolds and safety solutions, hoses, pressure"
+          "status": "pending",
+          "source_text": "Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at scale worldwide. The company's product portfolio includes Jira, Confluence, Loom, Jira Service Management, Rovo, Bitbucket, Compass, Jira Product Discovery, Focus, Talent, Trello, and Guard. It also offers Collections, a curated sets of apps and agents built on the Atlassian cloud platform and designed to solve cross-functional customer workflows, including teamwork, service, strategy, software, and product collections. The company was fo"
         },
         "earnings_path": {
           "statements": [],
@@ -4298,36 +5029,36 @@
       "sources": [
         {
           "id": "yahoo-estimates",
-          "title": "UCTT analyst estimates (EPS trend)",
+          "title": "TEAM analyst estimates (EPS trend)",
           "provider": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/quote/UCTT/analysis",
+          "url": "https://finance.yahoo.com/quote/TEAM/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:37+00:00",
+          "observed_at": "2026-09-27T05:27:22+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
           "id": "yahoo-price",
-          "title": "UCTT daily closes",
+          "title": "TEAM daily closes",
           "provider": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/quote/UCTT/history",
+          "url": "https://finance.yahoo.com/quote/TEAM/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:37+00:00",
+          "observed_at": "2026-09-27T05:27:22+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
           "id": "yahoo-profile",
-          "title": "UCTT company profile",
+          "title": "TEAM company profile",
           "provider": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/quote/UCTT/profile",
+          "url": "https://finance.yahoo.com/quote/TEAM/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:44:37+00:00",
+          "observed_at": "2026-09-27T05:27:22+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-1A01B5CD572ADED3",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-57AD858451CC21EA",
       "classification": "found",
-      "observation_id": "OB-A0B0D92E96CAE3CA",
+      "observation_id": "OB-88FD99AFB6571D9D",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4344,18 +5075,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 118.81999969482422,
-        "close_end": 77.69000244140625,
-        "price_pct_90": -34.6,
-        "adj_return_pct_90": -34.6,
-        "pe_change_pct": -58.0
+        "close_start": 79.26000213623047,
+        "close_end": 187.74000549316406,
+        "price_pct_90": 136.9,
+        "adj_return_pct_90": 136.9,
+        "pe_change_pct": 51.0
       },
-      "market_cap": 3517572352,
-      "observed_at": "2026-09-26T13:44:37+00:00",
+      "market_cap": 47524282368,
+      "observed_at": "2026-09-27T05:27:22+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -4363,17 +5094,23 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
-      "first_seen_at": "2026-09-25T12:18:33+00:00",
-      "last_seen_at": "2026-09-26T13:44:37+00:00"
+      "first_seen_at": "2026-09-27T05:27:22+00:00",
+      "last_seen_at": "2026-09-27T05:27:22+00:00"
     },
     {
       "candidate_id": "CAN-0584EAE068460D91",
@@ -4451,7 +5188,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DAN/analysis",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:04+00:00",
+          "observed_at": "2026-09-27T05:32:52+00:00",
           "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
         },
         {
@@ -4460,7 +5197,7 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DAN/history",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:04+00:00",
+          "observed_at": "2026-09-27T05:32:52+00:00",
           "fields": "chart close (split-adjusted)"
         },
         {
@@ -4469,14 +5206,14 @@
           "provider": "Yahoo Finance",
           "url": "https://finance.yahoo.com/quote/DAN/profile",
           "published_at": null,
-          "observed_at": "2026-09-26T13:45:04+00:00",
+          "observed_at": "2026-09-27T05:32:52+00:00",
           "fields": "assetProfile industry, sector, business summary"
         }
       ],
-      "generator_version": "cards-v3",
-      "candidate_version": "CV-CB3AD51968EC2172",
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-59F32D93B63D8475",
       "classification": "found",
-      "observation_id": "OB-B6F2F7156F5A735D",
+      "observation_id": "OB-19CEB8B7CB7E5C26",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4493,18 +5230,18 @@
         "price_status": "success",
         "price_note": "",
         "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
-        "price_start_target": "2026-06-28",
-        "price_start_date": "2026-06-26",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
         "price_end_expected": "2026-09-25",
         "price_end_date": "2026-09-25",
-        "close_start": 28.1299991607666,
+        "close_start": 26.479999542236328,
         "close_end": 27.139999389648438,
-        "price_pct_90": -3.5,
-        "adj_return_pct_90": -3.1,
-        "pe_change_pct": -22.0
+        "price_pct_90": 2.5,
+        "adj_return_pct_90": 2.9,
+        "pe_change_pct": -17.2
       },
       "market_cap": 2919631104,
-      "observed_at": "2026-09-26T13:45:04+00:00",
+      "observed_at": "2026-09-27T05:32:52+00:00",
       "run_quality": "complete",
       "scope_note": "전체 조회 범위 순위",
       "tracking": {
@@ -4512,32 +5249,193 @@
         "idea_ids": []
       },
       "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
       "research_note": "원문 조사 대기 중입니다.",
       "context_id": null,
       "source_snapshot": {
-        "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-        "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-        "run_id": "36245680144-1",
-        "finished_at": "2026-09-26T13:52:03+00:00"
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
       },
       "policy_version": "41d88768948f",
       "first_seen_at": "2026-09-25T12:18:40+00:00",
-      "last_seen_at": "2026-09-26T13:45:04+00:00"
+      "last_seen_at": "2026-09-27T05:32:52+00:00"
+    },
+    {
+      "candidate_id": "CAN-4BD491C8D3F1EC4F",
+      "identity": {
+        "entity_id": "NASDAQ:UCTT",
+        "ticker": "UCTT",
+        "exchange": "NASDAQ",
+        "source": "SEC company_tickers_exchange",
+        "verified": true
+      },
+      "thesis_key": "eps-revision-review:v1",
+      "context": null,
+      "name": "Ultra Clean Holdings, Inc.",
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "eps": {
+        "eps_now": 5.87,
+        "eps_30d": 3.9375,
+        "eps_90d": 3.7725,
+        "eps_target_period": "2027-12-31",
+        "eps_currency": "USD",
+        "eps_basis": "provider-unspecified",
+        "analysts": 4,
+        "up30": 4,
+        "down30": 0,
+        "pct_90": 55.6,
+        "steady": true,
+        "turnaround": false,
+        "yield_change_90_pp": 2.7,
+        "yield_change_30_pp": 2.487
+      },
+      "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+      "lists": [
+        "B"
+      ],
+      "missing": [],
+      "evidence_review": null,
+      "base_classification": "found",
+      "explanations": {
+        "company_description_ko": {
+          "text": "반도체 산업에 핵심 부품, 시스템, 세척 및 분석 서비스를 제공하여 돈을 번다.",
+          "kind": "fact",
+          "source_ids": [
+            "yahoo-profile"
+          ],
+          "status": "translated",
+          "model": "gemini-2.5-flash",
+          "source_text": "Ultra Clean Holdings, Inc. develops and supplies critical subsystems, components and parts, and cleaning and analytical services for the semiconductor industry in the United States and internationally. The company offers outsourced solutions for the development, design, component sourcing and cleaning, prototyping, engineering, and manufacturing and testing of advanced systems. It also provides a range of gas delivery solutions, such as precision thermal products, valves, connectors, industrial process connectors and valves, pneumatic actuators, manifolds and safety solutions, hoses, pressure"
+        },
+        "earnings_path": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "persistence_evidence": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "market_expectation_gap": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "falsification": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        },
+        "next_check": {
+          "statements": [],
+          "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+        }
+      },
+      "sources": [
+        {
+          "id": "yahoo-estimates",
+          "title": "UCTT analyst estimates (EPS trend)",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/UCTT/analysis",
+          "published_at": null,
+          "observed_at": "2026-09-27T05:32:45+00:00",
+          "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+        },
+        {
+          "id": "yahoo-price",
+          "title": "UCTT daily closes",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/UCTT/history",
+          "published_at": null,
+          "observed_at": "2026-09-27T05:32:45+00:00",
+          "fields": "chart close (split-adjusted)"
+        },
+        {
+          "id": "yahoo-profile",
+          "title": "UCTT company profile",
+          "provider": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/quote/UCTT/profile",
+          "published_at": null,
+          "observed_at": "2026-09-27T05:32:45+00:00",
+          "fields": "assetProfile industry, sector, business summary"
+        }
+      ],
+      "generator_version": "cards-v4",
+      "candidate_version": "CV-CCEFC56D06261ED1",
+      "classification": "found",
+      "observation_id": "OB-846A3A25542A8EC0",
+      "approval": null,
+      "review_note": null,
+      "evidence_problems": [
+        "evidence_missing"
+      ],
+      "display_rank": 31,
+      "memberships": [
+        {
+          "list": "B",
+          "rank": 20
+        }
+      ],
+      "price": {
+        "price_status": "success",
+        "price_note": "",
+        "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+        "price_start_target": "2026-06-29",
+        "price_start_date": "2026-06-29",
+        "price_end_expected": "2026-09-25",
+        "price_end_date": "2026-09-25",
+        "close_start": 130.6999969482422,
+        "close_end": 77.69000244140625,
+        "price_pct_90": -40.6,
+        "adj_return_pct_90": -40.6,
+        "pe_change_pct": -61.8
+      },
+      "market_cap": 3517572352,
+      "observed_at": "2026-09-27T05:32:45+00:00",
+      "run_quality": "complete",
+      "scope_note": "전체 조회 범위 순위",
+      "tracking": {
+        "status": "untracked",
+        "idea_ids": []
+      },
+      "research_status": "queued",
+      "source_quality": "unknown",
+      "source_failures": 0,
+      "source_failure_reasons": [],
+      "source_attempt_at": null,
+      "source_status": "queued",
+      "last_valid_context": null,
+      "research_note": "원문 조사 대기 중입니다.",
+      "context_id": null,
+      "source_snapshot": {
+        "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+        "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+        "run_id": "36297143973-1",
+        "finished_at": "2026-09-27T05:40:04+00:00"
+      },
+      "policy_version": "41d88768948f",
+      "first_seen_at": "2026-09-25T12:18:33+00:00",
+      "last_seen_at": "2026-09-27T05:32:45+00:00"
     }
   ],
-  "observed_at": "2026-09-26T13:52:03+00:00",
+  "observed_at": "2026-09-27T05:40:04+00:00",
   "run_status": "success",
   "source_snapshot": {
-    "path": "data/processed/revision_screen/20260926T133740Z_36245680144-1.json.gz",
-    "sha256": "0ad75c7b703b1b71a28270a6acc86d7c208e438cff40cf0995facbf88d7f3bc2",
-    "run_id": "36245680144-1",
-    "finished_at": "2026-09-26T13:52:03+00:00"
+    "path": "data/processed/revision_screen/20260927T052542Z_36297143973-1.json.gz",
+    "sha256": "22bd0d56826eca8935b3ac582cd17f2e94fba0592e50cc7a5834b759a15a4c9a",
+    "run_id": "36297143973-1",
+    "finished_at": "2026-09-27T05:40:04+00:00"
   },
-  "screen_candidates": 100,
+  "screen_candidates": 101,
   "coverage": {
-    "universe": 7676,
+    "universe": 7662,
     "earnings_requested": 3241,
-    "earnings_success": 2413
+    "earnings_success": 2411
   },
   "unidentified": [],
   "known": {
@@ -4545,9 +5443,9 @@
       "key": "NASDAQ:PUBM|eps-revision-review:v1",
       "ticker": "PUBM",
       "first_seen_at": "2026-09-25T12:22:45+00:00",
-      "last_seen_at": "2026-09-26T13:48:42+00:00",
-      "latest_observation": "OB-70CC9C10718C28BD",
-      "latest_version": "CV-E69B41464CFF9A9E",
+      "last_seen_at": "2026-09-27T05:36:58+00:00",
+      "latest_observation": "OB-44EF300C6AFD90CC",
+      "latest_version": "CV-7892B4F2E7E04CDF",
       "timeline": [
         {
           "version": "CV-76CE164A5E3E4DD6",
@@ -4563,6 +5461,11 @@
           "version": "CV-E69B41464CFF9A9E",
           "from": "2026-09-26T13:48:42+00:00",
           "to": "2026-09-26T13:48:42+00:00"
+        },
+        {
+          "version": "CV-7892B4F2E7E04CDF",
+          "from": "2026-09-27T05:36:58+00:00",
+          "to": "2026-09-27T05:36:58+00:00"
         }
       ]
     },
@@ -4570,9 +5473,9 @@
       "key": "NYSE:MPC|eps-revision-review:v1",
       "ticker": "MPC",
       "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "last_seen_at": "2026-09-26T13:38:34+00:00",
-      "latest_observation": "OB-C3D26A70E812DB0F",
-      "latest_version": "CV-7CBC55C2C777CB44",
+      "last_seen_at": "2026-09-27T05:26:35+00:00",
+      "latest_observation": "OB-01C127CD1815FD8A",
+      "latest_version": "CV-02F0FBEFCBE8ABE6",
       "timeline": [
         {
           "version": "CV-5738FCB84A71A919",
@@ -4588,6 +5491,41 @@
           "version": "CV-7CBC55C2C777CB44",
           "from": "2026-09-26T13:38:34+00:00",
           "to": "2026-09-26T13:38:34+00:00"
+        },
+        {
+          "version": "CV-02F0FBEFCBE8ABE6",
+          "from": "2026-09-27T05:26:35+00:00",
+          "to": "2026-09-27T05:26:35+00:00"
+        }
+      ]
+    },
+    "CAN-325B2A6C30755476": {
+      "key": "NYSE:VLO|eps-revision-review:v1",
+      "ticker": "VLO",
+      "first_seen_at": "2026-09-25T12:12:23+00:00",
+      "last_seen_at": "2026-09-27T05:26:35+00:00",
+      "latest_observation": "OB-718A5C173F26EDDC",
+      "latest_version": "CV-78E9043AC302202C",
+      "timeline": [
+        {
+          "version": "CV-9C294CDD7D8C842A",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-02250FE8C31AC3FE",
+          "from": "2026-09-25T12:12:23+00:00",
+          "to": "2026-09-25T12:12:23+00:00"
+        },
+        {
+          "version": "CV-14712902D0D29EA0",
+          "from": "2026-09-26T13:38:34+00:00",
+          "to": "2026-09-26T13:38:34+00:00"
+        },
+        {
+          "version": "CV-78E9043AC302202C",
+          "from": "2026-09-27T05:26:35+00:00",
+          "to": "2026-09-27T05:26:35+00:00"
         }
       ]
     },
@@ -4595,9 +5533,9 @@
       "key": "NASDAQ:CORT|eps-revision-review:v1",
       "ticker": "CORT",
       "first_seen_at": "2026-09-25T12:15:04+00:00",
-      "last_seen_at": "2026-09-26T13:41:14+00:00",
-      "latest_observation": "OB-B630A451DF75344B",
-      "latest_version": "CV-389CEC378D385D9E",
+      "last_seen_at": "2026-09-27T05:29:16+00:00",
+      "latest_observation": "OB-8FC50E1747A836A1",
+      "latest_version": "CV-C1A2BF1B82E00068",
       "timeline": [
         {
           "version": "CV-3F6E50FBA0DDC58E",
@@ -4613,6 +5551,11 @@
           "version": "CV-389CEC378D385D9E",
           "from": "2026-09-26T13:41:14+00:00",
           "to": "2026-09-26T13:41:14+00:00"
+        },
+        {
+          "version": "CV-C1A2BF1B82E00068",
+          "from": "2026-09-27T05:29:16+00:00",
+          "to": "2026-09-27T05:29:16+00:00"
         }
       ]
     },
@@ -4620,9 +5563,9 @@
       "key": "NASDAQ:UCTT|eps-revision-review:v1",
       "ticker": "UCTT",
       "first_seen_at": "2026-09-25T12:18:33+00:00",
-      "last_seen_at": "2026-09-26T13:44:37+00:00",
-      "latest_observation": "OB-A7CFF6B6E0AC0150",
-      "latest_version": "CV-1A01B5CD572ADED3",
+      "last_seen_at": "2026-09-27T05:32:45+00:00",
+      "latest_observation": "OB-846A3A25542A8EC0",
+      "latest_version": "CV-CCEFC56D06261ED1",
       "timeline": [
         {
           "version": "CV-C637A1A8B346F69C",
@@ -4638,6 +5581,11 @@
           "version": "CV-1A01B5CD572ADED3",
           "from": "2026-09-26T13:44:37+00:00",
           "to": "2026-09-26T13:44:37+00:00"
+        },
+        {
+          "version": "CV-CCEFC56D06261ED1",
+          "from": "2026-09-27T05:32:45+00:00",
+          "to": "2026-09-27T05:32:45+00:00"
         }
       ]
     },
@@ -4645,9 +5593,9 @@
       "key": "NASDAQ:AMCX|eps-revision-review:v1",
       "ticker": "AMCX",
       "first_seen_at": "2026-09-25T12:24:02+00:00",
-      "last_seen_at": "2026-09-26T13:50:11+00:00",
-      "latest_observation": "OB-F0AD06B0D4BF0C1C",
-      "latest_version": "CV-28E27553C83FCEEC",
+      "last_seen_at": "2026-09-27T05:38:15+00:00",
+      "latest_observation": "OB-94EF792543228B12",
+      "latest_version": "CV-F9C61C9865F53C97",
       "timeline": [
         {
           "version": "CV-B4F200613F69C4B5",
@@ -4673,6 +5621,11 @@
           "version": "CV-28E27553C83FCEEC",
           "from": "2026-09-26T13:50:11+00:00",
           "to": "2026-09-26T13:50:11+00:00"
+        },
+        {
+          "version": "CV-F9C61C9865F53C97",
+          "from": "2026-09-27T05:38:15+00:00",
+          "to": "2026-09-27T05:38:15+00:00"
         }
       ]
     },
@@ -4680,9 +5633,9 @@
       "key": "NYSE:DINO|eps-revision-review:v1",
       "ticker": "DINO",
       "first_seen_at": "2026-09-25T12:14:17+00:00",
-      "last_seen_at": "2026-09-26T13:40:29+00:00",
-      "latest_observation": "OB-F1642384B0F3CCB0",
-      "latest_version": "CV-9392535436B8860D",
+      "last_seen_at": "2026-09-27T05:28:30+00:00",
+      "latest_observation": "OB-B9745DD53CC957EC",
+      "latest_version": "CV-503F833812E6D01A",
       "timeline": [
         {
           "version": "CV-EDC55F683C958D03",
@@ -4698,6 +5651,11 @@
           "version": "CV-9392535436B8860D",
           "from": "2026-09-26T13:40:29+00:00",
           "to": "2026-09-26T13:40:29+00:00"
+        },
+        {
+          "version": "CV-503F833812E6D01A",
+          "from": "2026-09-27T05:28:30+00:00",
+          "to": "2026-09-27T05:28:30+00:00"
         }
       ]
     },
@@ -4705,9 +5663,9 @@
       "key": "NASDAQ:FSLY|eps-revision-review:v1",
       "ticker": "FSLY",
       "first_seen_at": "2026-09-25T12:17:58+00:00",
-      "last_seen_at": "2026-09-26T13:44:00+00:00",
-      "latest_observation": "OB-B40240AA0C2E4D31",
-      "latest_version": "CV-4C1E08CD5614E654",
+      "last_seen_at": "2026-09-27T05:32:11+00:00",
+      "latest_observation": "OB-0A49C7B857FF0396",
+      "latest_version": "CV-1385373A44ECAD7A",
       "timeline": [
         {
           "version": "CV-D4E558540F1D4477",
@@ -4723,6 +5681,11 @@
           "version": "CV-4C1E08CD5614E654",
           "from": "2026-09-26T13:44:00+00:00",
           "to": "2026-09-26T13:44:00+00:00"
+        },
+        {
+          "version": "CV-1385373A44ECAD7A",
+          "from": "2026-09-27T05:32:11+00:00",
+          "to": "2026-09-27T05:32:11+00:00"
         }
       ]
     },
@@ -4730,9 +5693,9 @@
       "key": "NASDAQ:CBRL|eps-revision-review:v1",
       "ticker": "CBRL",
       "first_seen_at": "2026-09-25T12:22:01+00:00",
-      "last_seen_at": "2026-09-26T13:47:52+00:00",
-      "latest_observation": "OB-3545E4ABBDE75AB4",
-      "latest_version": "CV-55A316EBB44220E6",
+      "last_seen_at": "2026-09-27T05:36:13+00:00",
+      "latest_observation": "OB-A9AE1077CF3B9978",
+      "latest_version": "CV-38C776C3CA653D0A",
       "timeline": [
         {
           "version": "CV-1D39906962BB7F56",
@@ -4748,6 +5711,11 @@
           "version": "CV-55A316EBB44220E6",
           "from": "2026-09-26T13:47:52+00:00",
           "to": "2026-09-26T13:47:52+00:00"
+        },
+        {
+          "version": "CV-38C776C3CA653D0A",
+          "from": "2026-09-27T05:36:13+00:00",
+          "to": "2026-09-27T05:36:13+00:00"
         }
       ]
     },
@@ -4755,9 +5723,9 @@
       "key": "NYSE:LPG|eps-revision-review:v1",
       "ticker": "LPG",
       "first_seen_at": "2026-09-25T12:19:42+00:00",
-      "last_seen_at": "2026-09-26T13:45:52+00:00",
-      "latest_observation": "OB-9898C569891C7A65",
-      "latest_version": "CV-AD575391E01D9BBC",
+      "last_seen_at": "2026-09-27T05:33:54+00:00",
+      "latest_observation": "OB-EC438D932751A941",
+      "latest_version": "CV-6BB23FC71480D885",
       "timeline": [
         {
           "version": "CV-9A3C1A62F693630E",
@@ -4773,6 +5741,11 @@
           "version": "CV-AD575391E01D9BBC",
           "from": "2026-09-26T13:45:52+00:00",
           "to": "2026-09-26T13:45:52+00:00"
+        },
+        {
+          "version": "CV-6BB23FC71480D885",
+          "from": "2026-09-27T05:33:54+00:00",
+          "to": "2026-09-27T05:33:54+00:00"
         }
       ]
     },
@@ -4780,9 +5753,9 @@
       "key": "NASDAQ:PGY|eps-revision-review:v1",
       "ticker": "PGY",
       "first_seen_at": "2026-09-25T12:20:36+00:00",
-      "last_seen_at": "2026-09-26T13:47:00+00:00",
-      "latest_observation": "OB-57CD28FEEEC3F9B3",
-      "latest_version": "CV-F473BBC445827447",
+      "last_seen_at": "2026-09-27T05:34:48+00:00",
+      "latest_observation": "OB-5C444492CCA518E5",
+      "latest_version": "CV-7DA3486FA5CBDDBC",
       "timeline": [
         {
           "version": "CV-D66A0F0A17542154",
@@ -4798,6 +5771,11 @@
           "version": "CV-F473BBC445827447",
           "from": "2026-09-26T13:47:00+00:00",
           "to": "2026-09-26T13:47:00+00:00"
+        },
+        {
+          "version": "CV-7DA3486FA5CBDDBC",
+          "from": "2026-09-27T05:34:48+00:00",
+          "to": "2026-09-27T05:34:48+00:00"
         }
       ]
     },
@@ -4805,9 +5783,9 @@
       "key": "NASDAQ:AEHR|eps-revision-review:v1",
       "ticker": "AEHR",
       "first_seen_at": "2026-09-25T12:18:43+00:00",
-      "last_seen_at": "2026-09-26T13:44:54+00:00",
-      "latest_observation": "OB-D53AE3A45D77804F",
-      "latest_version": "CV-8C06BCD4BFC39145",
+      "last_seen_at": "2026-09-27T05:32:55+00:00",
+      "latest_observation": "OB-09C1F4DB96D81EF5",
+      "latest_version": "CV-B9F7E657F2C0FA94",
       "timeline": [
         {
           "version": "CV-DA95C110EE6F41D4",
@@ -4833,116 +5811,11 @@
           "version": "CV-8C06BCD4BFC39145",
           "from": "2026-09-26T13:44:54+00:00",
           "to": "2026-09-26T13:44:54+00:00"
-        }
-      ]
-    },
-    "CAN-E763F753A2D7609F": {
-      "key": "NASDAQ:CLBK|eps-revision-review:v1",
-      "ticker": "CLBK",
-      "first_seen_at": "2026-09-25T12:21:37+00:00",
-      "last_seen_at": "2026-09-26T13:47:47+00:00",
-      "latest_observation": "OB-A323E241332D780D",
-      "latest_version": "CV-8788753D9CB4E829",
-      "timeline": [
-        {
-          "version": "CV-80A3655EAA47F80A",
-          "from": "2026-09-25T12:21:37+00:00",
-          "to": "2026-09-25T12:21:37+00:00"
         },
         {
-          "version": "CV-283B95385C02CDAC",
-          "from": "2026-09-25T12:21:37+00:00",
-          "to": "2026-09-25T12:21:37+00:00"
-        },
-        {
-          "version": "CV-8788753D9CB4E829",
-          "from": "2026-09-26T13:47:47+00:00",
-          "to": "2026-09-26T13:47:47+00:00"
-        }
-      ]
-    },
-    "CAN-68E9292E49558246": {
-      "key": "NYSE:IPI|eps-revision-review:v1",
-      "ticker": "IPI",
-      "first_seen_at": "2026-09-25T12:23:59+00:00",
-      "last_seen_at": "2026-09-26T13:50:14+00:00",
-      "latest_observation": "OB-D3EA7609165079D5",
-      "latest_version": "CV-F3322EBD4C4AD487",
-      "timeline": [
-        {
-          "version": "CV-194B00513FC568CE",
-          "from": "2026-09-25T12:23:59+00:00",
-          "to": "2026-09-25T12:23:59+00:00"
-        },
-        {
-          "version": "CV-3FB3EF0B51B5C446",
-          "from": "2026-09-25T12:23:59+00:00",
-          "to": "2026-09-25T12:23:59+00:00"
-        },
-        {
-          "version": "CV-F3322EBD4C4AD487",
-          "from": "2026-09-26T13:50:14+00:00",
-          "to": "2026-09-26T13:50:14+00:00"
-        }
-      ]
-    },
-    "CAN-82719B27698E3C22": {
-      "key": "NYSE:PBF|eps-revision-review:v1",
-      "ticker": "PBF",
-      "first_seen_at": "2026-09-25T12:15:57+00:00",
-      "last_seen_at": "2026-09-26T13:42:09+00:00",
-      "latest_observation": "OB-F878A983C0260E3F",
-      "latest_version": "CV-1685DBD3D71BB3F6",
-      "timeline": [
-        {
-          "version": "CV-455DA67895538E91",
-          "from": "2026-09-25T12:15:57+00:00",
-          "to": "2026-09-25T12:15:57+00:00"
-        },
-        {
-          "version": "CV-6FBDFA5AEB4BB302",
-          "from": "2026-09-25T12:15:57+00:00",
-          "to": "2026-09-25T12:15:57+00:00"
-        },
-        {
-          "version": "CV-1685DBD3D71BB3F6",
-          "from": "2026-09-26T13:42:09+00:00",
-          "to": "2026-09-26T13:42:09+00:00"
-        },
-        {
-          "version": "CV-6EB541EE1A3EA72B",
-          "from": "2026-09-26T13:42:09+00:00",
-          "to": "2026-09-26T13:42:09+00:00"
-        },
-        {
-          "version": "CV-1685DBD3D71BB3F6",
-          "from": "2026-09-26T13:42:09+00:00",
-          "to": "2026-09-26T13:42:09+00:00"
-        }
-      ]
-    },
-    "CAN-E87900AEFDDE7B07": {
-      "key": "NASDAQ:SPT|eps-revision-review:v1",
-      "ticker": "SPT",
-      "first_seen_at": "2026-09-25T12:23:36+00:00",
-      "last_seen_at": "2026-09-26T13:49:44+00:00",
-      "latest_observation": "OB-41992EFA7CCF682D",
-      "latest_version": "CV-12F5DA4651ACA7AF",
-      "timeline": [
-        {
-          "version": "CV-EDF7689610E360C0",
-          "from": "2026-09-25T12:23:36+00:00",
-          "to": "2026-09-25T12:23:36+00:00"
-        },
-        {
-          "version": "CV-88606568735BCAAB",
-          "from": "2026-09-25T12:23:36+00:00",
-          "to": "2026-09-25T12:23:36+00:00"
-        },
-        {
-          "version": "CV-12F5DA4651ACA7AF",
-          "from": "2026-09-26T13:49:44+00:00",
-          "to": "2026-09-26T13:49:44+00:00"
+          "version": "CV-B9F7E657F2C0FA94",
+          "from": "2026-09-27T05:32:55+00:00",
+          "to": "2026-09-27T05:32:55+00:00"
         }
       ]
     },
@@ -4950,9 +5823,9 @@
       "key": "NYSE:DK|eps-revision-review:v1",
       "ticker": "DK",
       "first_seen_at": "2026-09-25T12:17:40+00:00",
-      "last_seen_at": "2026-09-26T13:44:06+00:00",
-      "latest_observation": "OB-F8AC1CC721553499",
-      "latest_version": "CV-0173F79AFD5AA961",
+      "last_seen_at": "2026-09-27T05:31:52+00:00",
+      "latest_observation": "OB-201990FBDB3C594D",
+      "latest_version": "CV-53D404FEF8B0D621",
       "timeline": [
         {
           "version": "CV-86794C89F295E989",
@@ -4978,6 +5851,141 @@
           "version": "CV-0173F79AFD5AA961",
           "from": "2026-09-26T13:44:06+00:00",
           "to": "2026-09-26T13:44:06+00:00"
+        },
+        {
+          "version": "CV-53D404FEF8B0D621",
+          "from": "2026-09-27T05:31:52+00:00",
+          "to": "2026-09-27T05:31:52+00:00"
+        }
+      ]
+    },
+    "CAN-E763F753A2D7609F": {
+      "key": "NASDAQ:CLBK|eps-revision-review:v1",
+      "ticker": "CLBK",
+      "first_seen_at": "2026-09-25T12:21:37+00:00",
+      "last_seen_at": "2026-09-27T05:35:50+00:00",
+      "latest_observation": "OB-F9B52FED9C69CDD2",
+      "latest_version": "CV-0BBC705B7DA4066D",
+      "timeline": [
+        {
+          "version": "CV-80A3655EAA47F80A",
+          "from": "2026-09-25T12:21:37+00:00",
+          "to": "2026-09-25T12:21:37+00:00"
+        },
+        {
+          "version": "CV-283B95385C02CDAC",
+          "from": "2026-09-25T12:21:37+00:00",
+          "to": "2026-09-25T12:21:37+00:00"
+        },
+        {
+          "version": "CV-8788753D9CB4E829",
+          "from": "2026-09-26T13:47:47+00:00",
+          "to": "2026-09-26T13:47:47+00:00"
+        },
+        {
+          "version": "CV-0BBC705B7DA4066D",
+          "from": "2026-09-27T05:35:50+00:00",
+          "to": "2026-09-27T05:35:50+00:00"
+        }
+      ]
+    },
+    "CAN-68E9292E49558246": {
+      "key": "NYSE:IPI|eps-revision-review:v1",
+      "ticker": "IPI",
+      "first_seen_at": "2026-09-25T12:23:59+00:00",
+      "last_seen_at": "2026-09-27T05:38:12+00:00",
+      "latest_observation": "OB-CEDD13BBC8DF9762",
+      "latest_version": "CV-A89B7DD6348DCB08",
+      "timeline": [
+        {
+          "version": "CV-194B00513FC568CE",
+          "from": "2026-09-25T12:23:59+00:00",
+          "to": "2026-09-25T12:23:59+00:00"
+        },
+        {
+          "version": "CV-3FB3EF0B51B5C446",
+          "from": "2026-09-25T12:23:59+00:00",
+          "to": "2026-09-25T12:23:59+00:00"
+        },
+        {
+          "version": "CV-F3322EBD4C4AD487",
+          "from": "2026-09-26T13:50:14+00:00",
+          "to": "2026-09-26T13:50:14+00:00"
+        },
+        {
+          "version": "CV-A89B7DD6348DCB08",
+          "from": "2026-09-27T05:38:12+00:00",
+          "to": "2026-09-27T05:38:12+00:00"
+        }
+      ]
+    },
+    "CAN-82719B27698E3C22": {
+      "key": "NYSE:PBF|eps-revision-review:v1",
+      "ticker": "PBF",
+      "first_seen_at": "2026-09-25T12:15:57+00:00",
+      "last_seen_at": "2026-09-27T05:30:10+00:00",
+      "latest_observation": "OB-F224BE234FCB6108",
+      "latest_version": "CV-B3E2088FC45B0A89",
+      "timeline": [
+        {
+          "version": "CV-455DA67895538E91",
+          "from": "2026-09-25T12:15:57+00:00",
+          "to": "2026-09-25T12:15:57+00:00"
+        },
+        {
+          "version": "CV-6FBDFA5AEB4BB302",
+          "from": "2026-09-25T12:15:57+00:00",
+          "to": "2026-09-25T12:15:57+00:00"
+        },
+        {
+          "version": "CV-1685DBD3D71BB3F6",
+          "from": "2026-09-26T13:42:09+00:00",
+          "to": "2026-09-26T13:42:09+00:00"
+        },
+        {
+          "version": "CV-6EB541EE1A3EA72B",
+          "from": "2026-09-26T13:42:09+00:00",
+          "to": "2026-09-26T13:42:09+00:00"
+        },
+        {
+          "version": "CV-1685DBD3D71BB3F6",
+          "from": "2026-09-26T13:42:09+00:00",
+          "to": "2026-09-26T13:42:09+00:00"
+        },
+        {
+          "version": "CV-B3E2088FC45B0A89",
+          "from": "2026-09-27T05:30:10+00:00",
+          "to": "2026-09-27T05:30:10+00:00"
+        }
+      ]
+    },
+    "CAN-E87900AEFDDE7B07": {
+      "key": "NASDAQ:SPT|eps-revision-review:v1",
+      "ticker": "SPT",
+      "first_seen_at": "2026-09-25T12:23:36+00:00",
+      "last_seen_at": "2026-09-27T05:37:49+00:00",
+      "latest_observation": "OB-D12D5E61EC4F4B00",
+      "latest_version": "CV-B9A71272392C7EF3",
+      "timeline": [
+        {
+          "version": "CV-EDF7689610E360C0",
+          "from": "2026-09-25T12:23:36+00:00",
+          "to": "2026-09-25T12:23:36+00:00"
+        },
+        {
+          "version": "CV-88606568735BCAAB",
+          "from": "2026-09-25T12:23:36+00:00",
+          "to": "2026-09-25T12:23:36+00:00"
+        },
+        {
+          "version": "CV-12F5DA4651ACA7AF",
+          "from": "2026-09-26T13:49:44+00:00",
+          "to": "2026-09-26T13:49:44+00:00"
+        },
+        {
+          "version": "CV-B9A71272392C7EF3",
+          "from": "2026-09-27T05:37:49+00:00",
+          "to": "2026-09-27T05:37:49+00:00"
         }
       ]
     },
@@ -4985,9 +5993,9 @@
       "key": "NYSE:AGL|eps-revision-review:v1",
       "ticker": "AGL",
       "first_seen_at": "2026-09-25T12:21:01+00:00",
-      "last_seen_at": "2026-09-26T13:47:39+00:00",
-      "latest_observation": "OB-3B2CC746F4C20853",
-      "latest_version": "CV-67D2C4A52BEBB2BB",
+      "last_seen_at": "2026-09-27T05:35:13+00:00",
+      "latest_observation": "OB-009EDB24954C5F06",
+      "latest_version": "CV-7133F17F14BE6AFC",
       "timeline": [
         {
           "version": "CV-871A37F9A9331D56",
@@ -5003,6 +6011,11 @@
           "version": "CV-67D2C4A52BEBB2BB",
           "from": "2026-09-26T13:47:39+00:00",
           "to": "2026-09-26T13:47:39+00:00"
+        },
+        {
+          "version": "CV-7133F17F14BE6AFC",
+          "from": "2026-09-27T05:35:13+00:00",
+          "to": "2026-09-27T05:35:13+00:00"
         }
       ]
     },
@@ -5010,9 +6023,9 @@
       "key": "NYSE:TNK|eps-revision-review:v1",
       "ticker": "TNK",
       "first_seen_at": "2026-09-25T12:18:35+00:00",
-      "last_seen_at": "2026-09-26T13:44:45+00:00",
-      "latest_observation": "OB-73A9F8A45461641A",
-      "latest_version": "CV-1AF3FA9465E9CCAC",
+      "last_seen_at": "2026-09-27T05:32:47+00:00",
+      "latest_observation": "OB-3A95BC79C148AFFD",
+      "latest_version": "CV-955E5810EBBDD287",
       "timeline": [
         {
           "version": "CV-2DD875623ED0333B",
@@ -5028,6 +6041,11 @@
           "version": "CV-1AF3FA9465E9CCAC",
           "from": "2026-09-26T13:44:45+00:00",
           "to": "2026-09-26T13:44:45+00:00"
+        },
+        {
+          "version": "CV-955E5810EBBDD287",
+          "from": "2026-09-27T05:32:47+00:00",
+          "to": "2026-09-27T05:32:47+00:00"
         }
       ]
     },
@@ -5035,9 +6053,9 @@
       "key": "NYSE:DAN|eps-revision-review:v1",
       "ticker": "DAN",
       "first_seen_at": "2026-09-25T12:18:40+00:00",
-      "last_seen_at": "2026-09-26T13:45:04+00:00",
-      "latest_observation": "OB-B6F2F7156F5A735D",
-      "latest_version": "CV-CB3AD51968EC2172",
+      "last_seen_at": "2026-09-27T05:32:52+00:00",
+      "latest_observation": "OB-19CEB8B7CB7E5C26",
+      "latest_version": "CV-59F32D93B63D8475",
       "timeline": [
         {
           "version": "CV-F56CCBC732F0E648",
@@ -5053,6 +6071,11 @@
           "version": "CV-CB3AD51968EC2172",
           "from": "2026-09-26T13:45:04+00:00",
           "to": "2026-09-26T13:45:04+00:00"
+        },
+        {
+          "version": "CV-59F32D93B63D8475",
+          "from": "2026-09-27T05:32:52+00:00",
+          "to": "2026-09-27T05:32:52+00:00"
         }
       ]
     },
@@ -5060,9 +6083,9 @@
       "key": "NYSE:SUNC|eps-revision-review:v1",
       "ticker": "SUNC",
       "first_seen_at": "2026-09-25T12:18:08+00:00",
-      "last_seen_at": "2026-09-26T13:44:12+00:00",
-      "latest_observation": "OB-B54FE5BEA1C3B128",
-      "latest_version": "CV-8CE2A563CF142132",
+      "last_seen_at": "2026-09-27T05:32:21+00:00",
+      "latest_observation": "OB-EC3C05E79F974768",
+      "latest_version": "CV-723497F0CCDF7EE2",
       "timeline": [
         {
           "version": "CV-F5FC73696BF629F0",
@@ -5078,6 +6101,11 @@
           "version": "CV-8CE2A563CF142132",
           "from": "2026-09-26T13:44:12+00:00",
           "to": "2026-09-26T13:44:12+00:00"
+        },
+        {
+          "version": "CV-723497F0CCDF7EE2",
+          "from": "2026-09-27T05:32:21+00:00",
+          "to": "2026-09-27T05:32:21+00:00"
         }
       ]
     },
@@ -5085,9 +6113,9 @@
       "key": "NASDAQ:URGN|eps-revision-review:v1",
       "ticker": "URGN",
       "first_seen_at": "2026-09-25T12:20:02+00:00",
-      "last_seen_at": "2026-09-26T13:46:16+00:00",
-      "latest_observation": "OB-8ED4A1EE1D20FF27",
-      "latest_version": "CV-E4F660E480036F4D",
+      "last_seen_at": "2026-09-27T05:34:14+00:00",
+      "latest_observation": "OB-6EE1E8DAF8E911C6",
+      "latest_version": "CV-3FF095E7B5FCD49E",
       "timeline": [
         {
           "version": "CV-1579A095C79C5C9D",
@@ -5103,6 +6131,11 @@
           "version": "CV-E4F660E480036F4D",
           "from": "2026-09-26T13:46:16+00:00",
           "to": "2026-09-26T13:46:16+00:00"
+        },
+        {
+          "version": "CV-3FF095E7B5FCD49E",
+          "from": "2026-09-27T05:34:14+00:00",
+          "to": "2026-09-27T05:34:14+00:00"
         }
       ]
     },
@@ -5110,9 +6143,9 @@
       "key": "NYSE:TALO|eps-revision-review:v1",
       "ticker": "TALO",
       "first_seen_at": "2026-09-25T12:19:16+00:00",
-      "last_seen_at": "2026-09-26T13:45:16+00:00",
-      "latest_observation": "OB-7B8CCF74678E6BAF",
-      "latest_version": "CV-3A94E7D653555C95",
+      "last_seen_at": "2026-09-27T05:33:28+00:00",
+      "latest_observation": "OB-1DA20DD3B7F1DD33",
+      "latest_version": "CV-7399AE40B052CB67",
       "timeline": [
         {
           "version": "CV-C7C48647A856A28C",
@@ -5133,6 +6166,11 @@
           "version": "CV-3A94E7D653555C95",
           "from": "2026-09-26T13:45:16+00:00",
           "to": "2026-09-26T13:45:16+00:00"
+        },
+        {
+          "version": "CV-7399AE40B052CB67",
+          "from": "2026-09-27T05:33:28+00:00",
+          "to": "2026-09-27T05:33:28+00:00"
         }
       ]
     },
@@ -5140,9 +6178,9 @@
       "key": "NYSE:CODI|eps-revision-review:v1",
       "ticker": "CODI",
       "first_seen_at": "2026-09-25T12:22:36+00:00",
-      "last_seen_at": "2026-09-26T13:48:42+00:00",
-      "latest_observation": "OB-BFD5371F374F3B12",
-      "latest_version": "CV-493C559DA52E5AF8",
+      "last_seen_at": "2026-09-27T05:36:48+00:00",
+      "latest_observation": "OB-FCE43D03820D894E",
+      "latest_version": "CV-8E79FD085B00B751",
       "timeline": [
         {
           "version": "CV-46141FAD267E07DC",
@@ -5158,6 +6196,11 @@
           "version": "CV-493C559DA52E5AF8",
           "from": "2026-09-26T13:48:42+00:00",
           "to": "2026-09-26T13:48:42+00:00"
+        },
+        {
+          "version": "CV-8E79FD085B00B751",
+          "from": "2026-09-27T05:36:48+00:00",
+          "to": "2026-09-27T05:36:48+00:00"
         }
       ]
     },
@@ -5165,9 +6208,9 @@
       "key": "NYSE:PSX|eps-revision-review:v1",
       "ticker": "PSX",
       "first_seen_at": "2026-09-25T12:12:26+00:00",
-      "last_seen_at": "2026-09-26T13:38:37+00:00",
-      "latest_observation": "OB-1CFADA99A5AD8627",
-      "latest_version": "CV-8D085D040B2EE2CE",
+      "last_seen_at": "2026-09-27T05:26:38+00:00",
+      "latest_observation": "OB-A7403E7A80C88497",
+      "latest_version": "CV-23FD3709B2B6FD50",
       "timeline": [
         {
           "version": "CV-ADDD3AC39407ADD4",
@@ -5183,6 +6226,11 @@
           "version": "CV-8D085D040B2EE2CE",
           "from": "2026-09-26T13:38:37+00:00",
           "to": "2026-09-26T13:38:37+00:00"
+        },
+        {
+          "version": "CV-23FD3709B2B6FD50",
+          "from": "2026-09-27T05:26:38+00:00",
+          "to": "2026-09-27T05:26:38+00:00"
         }
       ]
     },
@@ -5190,9 +6238,9 @@
       "key": "NASDAQ:BLTE|eps-revision-review:v1",
       "ticker": "BLTE",
       "first_seen_at": "2026-09-25T12:16:24+00:00",
-      "last_seen_at": "2026-09-26T13:42:39+00:00",
-      "latest_observation": "OB-81E5DD2401F211F2",
-      "latest_version": "CV-4CFC394DB1A1E385",
+      "last_seen_at": "2026-09-27T05:30:37+00:00",
+      "latest_observation": "OB-357E1B9A24EA83D0",
+      "latest_version": "CV-A0FBA9FA8B5E8582",
       "timeline": [
         {
           "version": "CV-A1D56F28D5F882C9",
@@ -5208,6 +6256,11 @@
           "version": "CV-4CFC394DB1A1E385",
           "from": "2026-09-26T13:42:39+00:00",
           "to": "2026-09-26T13:42:39+00:00"
+        },
+        {
+          "version": "CV-A0FBA9FA8B5E8582",
+          "from": "2026-09-27T05:30:37+00:00",
+          "to": "2026-09-27T05:30:37+00:00"
         }
       ]
     },
@@ -5215,9 +6268,9 @@
       "key": "NYSE:PARR|eps-revision-review:v1",
       "ticker": "PARR",
       "first_seen_at": "2026-09-25T12:18:03+00:00",
-      "last_seen_at": "2026-09-26T13:44:18+00:00",
-      "latest_observation": "OB-B06D35DEE1D6F01A",
-      "latest_version": "CV-4A5183D3753A42A9",
+      "last_seen_at": "2026-09-27T05:32:15+00:00",
+      "latest_observation": "OB-004976D295A74C81",
+      "latest_version": "CV-0F212A7146261446",
       "timeline": [
         {
           "version": "CV-0821772C30045A3D",
@@ -5233,6 +6286,11 @@
           "version": "CV-4A5183D3753A42A9",
           "from": "2026-09-26T13:44:18+00:00",
           "to": "2026-09-26T13:44:18+00:00"
+        },
+        {
+          "version": "CV-0F212A7146261446",
+          "from": "2026-09-27T05:32:15+00:00",
+          "to": "2026-09-27T05:32:15+00:00"
         }
       ]
     },
@@ -5240,9 +6298,9 @@
       "key": "NASDAQ:AXTI|eps-revision-review:v1",
       "ticker": "AXTI",
       "first_seen_at": "2026-09-25T12:17:24+00:00",
-      "last_seen_at": "2026-09-26T13:43:28+00:00",
-      "latest_observation": "OB-BFD7D41B4E1CF2D9",
-      "latest_version": "CV-F3C6AFA6AB298745",
+      "last_seen_at": "2026-09-27T05:31:36+00:00",
+      "latest_observation": "OB-FD0B766736F43E10",
+      "latest_version": "CV-0301B04162CA6C21",
       "timeline": [
         {
           "version": "CV-9F70D84B23F78EC3",
@@ -5258,6 +6316,11 @@
           "version": "CV-F3C6AFA6AB298745",
           "from": "2026-09-26T13:43:28+00:00",
           "to": "2026-09-26T13:43:28+00:00"
+        },
+        {
+          "version": "CV-0301B04162CA6C21",
+          "from": "2026-09-27T05:31:36+00:00",
+          "to": "2026-09-27T05:31:36+00:00"
         }
       ]
     },
@@ -5265,9 +6328,9 @@
       "key": "NASDAQ:RPAY|eps-revision-review:v1",
       "ticker": "RPAY",
       "first_seen_at": "2026-09-25T12:24:58+00:00",
-      "last_seen_at": "2026-09-26T13:51:01+00:00",
-      "latest_observation": "OB-917DABA458FD36E0",
-      "latest_version": "CV-6F633DF556AEE827",
+      "last_seen_at": "2026-09-27T05:39:10+00:00",
+      "latest_observation": "OB-7FEA68DB782B948D",
+      "latest_version": "CV-E19C01A103591B78",
       "timeline": [
         {
           "version": "CV-3933E29FAFB1F33A",
@@ -5283,31 +6346,11 @@
           "version": "CV-6F633DF556AEE827",
           "from": "2026-09-26T13:51:01+00:00",
           "to": "2026-09-26T13:51:01+00:00"
-        }
-      ]
-    },
-    "CAN-325B2A6C30755476": {
-      "key": "NYSE:VLO|eps-revision-review:v1",
-      "ticker": "VLO",
-      "first_seen_at": "2026-09-25T12:12:23+00:00",
-      "last_seen_at": "2026-09-26T13:38:34+00:00",
-      "latest_observation": "OB-C73DBF773F4FEE50",
-      "latest_version": "CV-14712902D0D29EA0",
-      "timeline": [
-        {
-          "version": "CV-9C294CDD7D8C842A",
-          "from": "2026-09-25T12:12:23+00:00",
-          "to": "2026-09-25T12:12:23+00:00"
         },
         {
-          "version": "CV-02250FE8C31AC3FE",
-          "from": "2026-09-25T12:12:23+00:00",
-          "to": "2026-09-25T12:12:23+00:00"
-        },
-        {
-          "version": "CV-14712902D0D29EA0",
-          "from": "2026-09-26T13:38:34+00:00",
-          "to": "2026-09-26T13:38:34+00:00"
+          "version": "CV-E19C01A103591B78",
+          "from": "2026-09-27T05:39:10+00:00",
+          "to": "2026-09-27T05:39:10+00:00"
         }
       ]
     },
@@ -5315,9 +6358,9 @@
       "key": "NYSE:NBR|eps-revision-review:v1",
       "ticker": "NBR",
       "first_seen_at": "2026-09-25T12:21:26+00:00",
-      "last_seen_at": "2026-09-26T13:47:34+00:00",
-      "latest_observation": "OB-177FF808AFF6A56F",
-      "latest_version": "CV-B73B43F73AE3226C",
+      "last_seen_at": "2026-09-27T05:35:38+00:00",
+      "latest_observation": "OB-A372F4D7C0EFB001",
+      "latest_version": "CV-340FA1D1E892AE50",
       "timeline": [
         {
           "version": "CV-654A8F6DFEEFDDC7",
@@ -5333,6 +6376,26 @@
           "version": "CV-B73B43F73AE3226C",
           "from": "2026-09-26T13:47:34+00:00",
           "to": "2026-09-26T13:47:34+00:00"
+        },
+        {
+          "version": "CV-340FA1D1E892AE50",
+          "from": "2026-09-27T05:35:38+00:00",
+          "to": "2026-09-27T05:35:38+00:00"
+        }
+      ]
+    },
+    "CAN-4E5151866E863998": {
+      "key": "NASDAQ:TEAM|eps-revision-review:v1",
+      "ticker": "TEAM",
+      "first_seen_at": "2026-09-27T05:27:22+00:00",
+      "last_seen_at": "2026-09-27T05:27:22+00:00",
+      "latest_observation": "OB-88FD99AFB6571D9D",
+      "latest_version": "CV-57AD858451CC21EA",
+      "timeline": [
+        {
+          "version": "CV-57AD858451CC21EA",
+          "from": "2026-09-27T05:27:22+00:00",
+          "to": "2026-09-27T05:27:22+00:00"
         }
       ]
     }

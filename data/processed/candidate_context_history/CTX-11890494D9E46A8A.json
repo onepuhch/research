@@ -1,0 +1,195 @@
+{
+  "context_id": "CTX-11890494D9E46A8A",
+  "candidate_id": "CAN-14C6F602D0868FB9",
+  "ticker": "AMCX",
+  "issuer_cik": "0001514991",
+  "document_ids": [
+    "DOC-3563CA2BB442B25A"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3563CA2BB442B25A#p13",
+    "DOC-3563CA2BB442B25A#p14",
+    "DOC-3563CA2BB442B25A#p17",
+    "DOC-3563CA2BB442B25A#p21",
+    "DOC-3563CA2BB442B25A#p22",
+    "DOC-3563CA2BB442B25A#p23",
+    "DOC-3563CA2BB442B25A#p24",
+    "DOC-3563CA2BB442B25A#p25",
+    "DOC-3563CA2BB442B25A#p26",
+    "DOC-3563CA2BB442B25A#p27",
+    "DOC-3563CA2BB442B25A#p31",
+    "DOC-3563CA2BB442B25A#p32",
+    "DOC-3563CA2BB442B25A#p33",
+    "DOC-3563CA2BB442B25A#p41",
+    "DOC-3563CA2BB442B25A#p55",
+    "DOC-3563CA2BB442B25A#p59",
+    "DOC-3563CA2BB442B25A#t5",
+    "DOC-3563CA2BB442B25A#t6",
+    "DOC-3563CA2BB442B25A#t8",
+    "DOC-3563CA2BB442B25A#t9"
+  ],
+  "input_sha": "11890494d9e46a8a1d99169c4475d140b0270779779f76512415b52d0df959ca",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-27T05:40:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "영업이익(Operating income): $16 million — 회사의 영업 이익이다",
+      "note_ko": "회사의 영업 이익이다",
+      "kind": "fact",
+      "quote": "Operating income of $16 million;",
+      "document_id": "DOC-3563CA2BB442B25A",
+      "block_id": "p13",
+      "metric": "Operating income",
+      "figures": [
+        "$16 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted Operating Income: $46 million — 회사의 조정 영업 이익이다",
+      "note_ko": "회사의 조정 영업 이익이다",
+      "kind": "fact",
+      "quote": "Adjusted Operating Income(1) of $46 million.",
+      "document_id": "DOC-3563CA2BB442B25A",
+      "block_id": "p13",
+      "metric": "Adjusted Operating Income",
+      "figures": [
+        "$46 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Net revenue · second quarter: $547 million / 9% — 회사의 순 매출이 전년보다 감소했다",
+      "note_ko": "회사의 순 매출이 전년보다 감소했다",
+      "kind": "fact",
+      "quote": "Net revenue of $547 million decreased 9% from the prior year.",
+      "document_id": "DOC-3563CA2BB442B25A",
+      "block_id": "p14",
+      "metric": "Net revenue",
+      "figures": [
+        "$547 million",
+        "9%"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "[Domestic Operations] 매출(revenue): 11% / $470 million — 국내 사업 부문 매출이 전년보다 감소했다",
+      "note_ko": "국내 사업 부문 매출이 전년보다 감소했다",
+      "kind": "fact",
+      "quote": "Domestic Operations revenue decreased 11% from the prior year to $470 million.",
+      "document_id": "DOC-3563CA2BB442B25A",
+      "block_id": "p21",
+      "metric": "revenue",
+      "figures": [
+        "11%",
+        "$470 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Domestic Operations",
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "annual revenue · 2026 and 2027: $200 million to $225 million — 회사는 라이선스 계약과 관련하여 연간 매출을 인식할 것으로 예상한다",
+      "note_ko": "회사는 라이선스 계약과 관련하여 연간 매출을 인식할 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "In each of 2026 and 2027, the Company expects to recognize annual revenue related to the license agreement between $200 million to $225 million.",
+      "document_id": "DOC-3563CA2BB442B25A",
+      "block_id": "p41",
+      "metric": "annual revenue",
+      "figures": [
+        "$200 million to $225 million"
+      ],
+      "period": "2026 and 2027",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "What was the prior year's operating income?",
+    "What was the prior year's Adjusted Operating Income?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "외환 환산이 회사의 성장률에 긍정적인 영향을 미쳤다",
+      "figures": [
+        "28 basis points"
+      ],
+      "quote": "Foreign currency translation represented a beneficial impact of 28 basis points to our second quarter growth rate.",
+      "where": "DOC-3563CA2BB442B25A#p14"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "구독 매출은 주로 제휴 매출 감소로 인해 감소했지만, 스트리밍 매출 성장이 부분적으로 상쇄했다",
+      "figures": [
+        "5%",
+        "$306 million"
+      ],
+      "quote": "Subscription revenue decreased 5% to $306 million primarily due to a decline in affiliate revenue, partially offset by streaming revenue growth.",
+      "where": "DOC-3563CA2BB442B25A#p22"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "광고 매출은 일회성 시스템 통합 문제의 영향을 포함한다. 이 일회성 영향을 제외하면, 광고 매출은 낮은 시청률과 시장 가격 책정으로 인해 감소했지만, 디지털 광고 성장이 부분적으로 상쇄했다",
+      "figures": [
+        "11%",
+        "$109 million"
+      ],
+      "quote": "Advertising revenue included the one-time impact of a now resolved system integration issue in the second quarter. Excluding this one-time impact, advertising revenue declined in the mid-single digit ",
+      "where": "DOC-3563CA2BB442B25A#p25"
+    }
+  ],
+  "context_status": "draft_ready"
+}

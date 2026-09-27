@@ -1,0 +1,169 @@
+{
+  "context_id": "CTX-0FEBFA576C7DAAF0",
+  "candidate_id": "CAN-82719B27698E3C22",
+  "ticker": "PBF",
+  "issuer_cik": "0001534504",
+  "document_ids": [
+    "DOC-9FC60A7023735EC9"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9FC60A7023735EC9#p10",
+    "DOC-9FC60A7023735EC9#p17",
+    "DOC-9FC60A7023735EC9#p18",
+    "DOC-9FC60A7023735EC9#t2",
+    "DOC-9FC60A7023735EC9#t13"
+  ],
+  "input_sha": "0febfa576c7daaf0d45c623ee8c269dd8d52893a40d0e0b1d0cc83023c6ac2ba",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-27T05:40:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net income attributable to PBF Energy Inc. · second quarter 2026: $906.4 million — 회사의 순이익이다",
+      "note_ko": "회사의 순이익이다",
+      "kind": "fact",
+      "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
+      "document_id": "DOC-9FC60A7023735EC9",
+      "block_id": "p10",
+      "metric": "net income attributable to PBF Energy Inc.",
+      "figures": [
+        "$906.4 million"
+      ],
+      "period": "second quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "net income attributable to PBF Energy Inc. · second quarter 2026: $7.54 per share — 회사의 주당 순이익이다",
+      "note_ko": "회사의 주당 순이익이다",
+      "kind": "fact",
+      "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
+      "document_id": "DOC-9FC60A7023735EC9",
+      "block_id": "p10",
+      "metric": "net income attributable to PBF Energy Inc.",
+      "figures": [
+        "$7.54 per share"
+      ],
+      "period": "second quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "net loss attributable to PBF Energy Inc. · second quarter 2025: $5.2 million — 전년 같은 분기 회사의 순손실이다",
+      "note_ko": "전년 같은 분기 회사의 순손실이다",
+      "kind": "fact",
+      "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
+      "document_id": "DOC-9FC60A7023735EC9",
+      "block_id": "p10",
+      "metric": "net loss attributable to PBF Energy Inc.",
+      "figures": [
+        "$5.2 million"
+      ],
+      "period": "second quarter 2025",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "net loss attributable to PBF Energy Inc. · second quarter 2025: $(0.05) per share — 전년 같은 분기 회사의 주당 순손실이다",
+      "note_ko": "전년 같은 분기 회사의 주당 순손실이다",
+      "kind": "fact",
+      "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
+      "document_id": "DOC-9FC60A7023735EC9",
+      "block_id": "p10",
+      "metric": "net loss attributable to PBF Energy Inc.",
+      "figures": [
+        "$(0.05) per share"
+      ],
+      "period": "second quarter 2025",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Adjusted fully-converted net income · second quarter 2026: $753.1 million — 특별 항목을 제외한 조정 순이익이다",
+      "note_ko": "특별 항목을 제외한 조정 순이익이다",
+      "kind": "fact",
+      "quote": "Adjusted fully-converted net income for the second quarter 2026, excluding special items, was $753.1 million, or $6.22 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $118.5 million or $(1.03) per share, for the second quarter 2025.",
+      "document_id": "DOC-9FC60A7023735EC9",
+      "block_id": "p10",
+      "metric": "Adjusted fully-converted net income",
+      "figures": [
+        "$753.1 million"
+      ],
+      "period": "second quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "순이익(net income) · second quarter 2026: $159.8 million / $1.32 per share — 비현금성 특별 항목이 순이익을 증가시켰다",
+      "note_ko": "비현금성 특별 항목이 순이익을 증가시켰다",
+      "kind": "fact",
+      "quote": "Non-cash special items included in the second quarter 2026 results, which increased net income by a net, after-tax benefit of $159.8 million, or $1.32 per share, primarily consisted of gains on insurance recoveries associated with the February 1, 2025 fire at the Martinez refinery (the \"Martinez refinery fire\"), partially offset by expenses associated with the Martinez refinery fire, costs related to PBF's Refinery Business Improvement initiative (\"RBI\"), and loss on extinguishment of debt related to the redemption of the 6.00% senior unsecured notes due 2028.",
+      "document_id": "DOC-9FC60A7023735EC9",
+      "block_id": "p10",
+      "metric": "net income",
+      "figures": [
+        "$159.8 million",
+        "$1.32 per share"
+      ],
+      "period": "second quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "마르티네즈 정유 공장 화재 관련 보험금 수령액이 얼마인가?",
+    "마르티네즈 정유 공장 화재 관련 비용은 얼마인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [],
+  "context_status": "draft_ready"
+}

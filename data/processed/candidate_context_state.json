@@ -23,9 +23,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "insufficient_earnings_context",
-      "context_id": "CTX-117FF6568DA33E35",
-      "context_input_sha": "117ff6568da33e353aa1f5b2f06bca2a19a8119eb61e67e63b0c55b6bc9293dc"
+      "draft_status": "draft_ready",
+      "context_id": "CTX-11890494D9E46A8A",
+      "context_input_sha": "11890494d9e46a8a1d99169c4475d140b0270779779f76512415b52d0df959ca"
     },
     "CAN-D50A4151AB176FB7": {
       "status": "success",
@@ -50,9 +50,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "no_supported_claims",
-      "context_id": "CTX-A06399250CF0DD59",
-      "context_input_sha": "a06399250cf0dd59e3097a16a8840bf652b6d5b717388603f744b168cdf610e6"
+      "draft_status": "draft_ready",
+      "context_id": "CTX-2A3AF3B69A5D6F60",
+      "context_input_sha": "2a3af3b69a5d6f603fb0d1399a83e2a82e597397c77e1c49a706227e873dfb2e"
     },
     "CAN-ABBBE42278126D28": {
       "status": "success",
@@ -78,8 +78,8 @@
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
       "draft_status": "no_supported_claims",
-      "context_id": "CTX-7E739AC1982C7ECD",
-      "context_input_sha": "7e739ac1982c7ecda46b602b52c51eb6b3c11c43a519ed061bffd70197417ae2"
+      "context_id": "CTX-837447494E894E88",
+      "context_input_sha": "837447494e894e885c9db364b3dcc8c83d8af2265e21f887e21185f07750636e"
     },
     "CAN-D577F2C38FBBCFF7": {
       "status": "success",
@@ -105,8 +105,8 @@
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
       "draft_status": "no_supported_claims",
-      "context_id": "CTX-CFFAC44D8F92374D",
-      "context_input_sha": "cffac44d8f92374d85ec627c8f5834a87f3acb99035192709c40f5c36306161f"
+      "context_id": "CTX-8729185E317E8C05",
+      "context_input_sha": "8729185e317e8c051d2c02a14a4e6bc17e2333a9c5fd6ebca5167f50b0d5969b"
     },
     "CAN-E460E34B1D8B66CE": {
       "status": "success",
@@ -158,9 +158,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "no_supported_claims",
-      "context_id": "CTX-8222B965D9CD1C57",
-      "context_input_sha": "8222b965d9cd1c577e967dd415061f4b75cefaa0392a1634e585001886edc08b"
+      "draft_status": "draft_ready",
+      "context_id": "CTX-0FEBFA576C7DAAF0",
+      "context_input_sha": "0febfa576c7daaf0d45c623ee8c269dd8d52893a40d0e0b1d0cc83023c6ac2ba"
     },
     "CAN-DC6D3F92ECFFD019": {
       "status": "success",
@@ -185,7 +185,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-5C98C21D42053DF8",
+      "context_input_sha": "5c98c21d42053df8ec34d8545d54795869792c0f112a50a3a554d5d6ed143ac7"
     },
     "CAN-77F79A3B05ABB893": {
       "status": "success",
@@ -263,44 +265,276 @@
       "draft_status": "deferred_budget"
     },
     "CAN-68E9292E49558246": {
-      "status": "queued",
-      "ticker": "IPI"
+      "status": "success",
+      "ticker": "IPI",
+      "issuer": {
+        "cik": "0001421461",
+        "ticker": "IPI",
+        "exchange": "NYSE",
+        "name": "Intrepid Potash, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|1.41366",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-BA022B8E3B6B6141"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-BA022B8E3B6B6141"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-FDA6B7F62852042F": {
-      "status": "queued",
-      "ticker": "PARR"
+      "status": "success",
+      "ticker": "PARR",
+      "issuer": {
+        "cik": "0000821483",
+        "ticker": "PARR",
+        "exchange": "NYSE",
+        "name": "Par Pacific Holdings, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|13.83903",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-45EC7F1F3C20E448"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-45EC7F1F3C20E448"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-3D7A7E3B7BFBE2CE": {
-      "status": "queued",
-      "ticker": "BLTE"
+      "status": "no_relevant_document",
+      "ticker": "BLTE",
+      "issuer": {
+        "cik": "0001889109",
+        "ticker": "BLTE",
+        "exchange": "Nasdaq",
+        "name": "Belite Bio, Inc",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|2.26",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [],
+      "quality": "unknown",
+      "failures": 0,
+      "examined": [
+        "DOC-CE85349F176584D3",
+        "DOC-45A6160CC02123E0",
+        "DOC-6230F89359C53CCD"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00"
     },
     "CAN-325B2A6C30755476": {
-      "status": "queued",
-      "ticker": "VLO"
+      "status": "success",
+      "ticker": "VLO",
+      "issuer": {
+        "cik": "0001035002",
+        "ticker": "VLO",
+        "exchange": "NYSE",
+        "name": "Valero Energy Corporation",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|38.04043",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-9DA9F71500981FB2"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-9DA9F71500981FB2"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-36582E27909720FE": {
-      "status": "queued",
-      "ticker": "CODI"
+      "status": "success",
+      "ticker": "CODI",
+      "issuer": {
+        "cik": "0001345126",
+        "ticker": "CODI",
+        "exchange": "NYSE",
+        "name": "Compass Diversified",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|0.644",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-DCA2D5E4142540F1"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-DCA2D5E4142540F1"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-11B1565B12AFE2F9": {
-      "status": "queued",
-      "ticker": "DINO"
+      "status": "success",
+      "ticker": "DINO",
+      "issuer": {
+        "cik": "0001915657",
+        "ticker": "DINO",
+        "exchange": "NYSE",
+        "name": "HF Sinclair Corporation",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|11.82475",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-0F62310DD65064FB"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-0F62310DD65064FB"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-5A9E947A6AEC56D7": {
-      "status": "queued",
-      "ticker": "AGL"
+      "status": "success",
+      "ticker": "AGL",
+      "issuer": {
+        "cik": "0001831097",
+        "ticker": "AGL",
+        "exchange": "NYSE",
+        "name": "agilon health, inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|2.40143",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-7387CF5E90D2794F"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-7387CF5E90D2794F"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-E95987D989EF1145": {
-      "status": "queued",
-      "ticker": "TNK"
+      "status": "success",
+      "ticker": "TNK",
+      "issuer": {
+        "cik": "0001419945",
+        "ticker": "TNK",
+        "exchange": "NYSE",
+        "name": "Teekay Tankers Ltd.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|10.89793",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-D9EC64103F5CF7D0",
+        "DOC-13D619F52008D76E"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-D9EC64103F5CF7D0",
+        "DOC-13D619F52008D76E"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-4DB66C064FC2ED7C": {
-      "status": "queued",
-      "ticker": "URGN"
+      "status": "success",
+      "ticker": "URGN",
+      "issuer": {
+        "cik": "0001668243",
+        "ticker": "URGN",
+        "exchange": "Nasdaq",
+        "name": "UroGen Pharma Ltd.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|2.79429",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-99C179A86297DD8F"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-99C179A86297DD8F"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-E87900AEFDDE7B07": {
-      "status": "queued",
-      "ticker": "SPT"
+      "status": "success",
+      "ticker": "SPT",
+      "issuer": {
+        "cik": "0001517375",
+        "ticker": "SPT",
+        "exchange": "Nasdaq",
+        "name": "Sprout Social, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
+        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+      },
+      "attempted_at": "2026-09-27T05:40:06+00:00",
+      "eps_key": "2027-12-31|1.5398",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-450C06FD810BE835"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-450C06FD810BE835",
+        "DOC-73E8D5E3097AE999"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-04T05:40:06+00:00",
+      "draft_status": "deferred_budget"
     },
     "CAN-A0761326A7E13159": {
       "status": "queued",
@@ -341,12 +575,20 @@
     "CAN-0584EAE068460D91": {
       "status": "queued",
       "ticker": "DAN"
+    },
+    "CAN-4E5151866E863998": {
+      "status": "queued",
+      "ticker": "TEAM"
     }
   },
   "days": {
     "2026-09-26": {
       "companies": 10,
       "http_attempts": 30
+    },
+    "2026-09-27": {
+      "companies": 10,
+      "http_attempts": 37
     }
   },
   "documents_by_source": {
@@ -359,6 +601,20 @@
     "0001437749-26-025061|https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm": "DOC-A6967554C2E4C643",
     "0001510295-26-000060|https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm": "DOC-683FD7B3F9B87824",
     "0001628280-26-050607|https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm": "DOC-668EE132B5D00A32",
-    "0001193125-26-342425|https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm": "DOC-93050982946C0EE4"
+    "0001193125-26-342425|https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm": "DOC-93050982946C0EE4",
+    "0001421461-26-000020|https://www.sec.gov/Archives/edgar/data/1421461/000142146126000020/ex991q22026pressrelease.htm": "DOC-BA022B8E3B6B6141",
+    "0001628280-26-052766|https://www.sec.gov/Archives/edgar/data/821483/000162828026052766/a20260630991earningsreleas.htm": "DOC-45EC7F1F3C20E448",
+    "0001104659-26-105608|https://www.sec.gov/Archives/edgar/data/1889109/000110465926105608/tm2624806d1_ex99-1.htm": "DOC-CE85349F176584D3",
+    "0001104659-26-105608|https://www.sec.gov/Archives/edgar/data/1889109/000110465926105608/tm2624806d1_6k.htm": "DOC-45A6160CC02123E0",
+    "0001104659-26-095218|https://www.sec.gov/Archives/edgar/data/1889109/000110465926095218/tm2623018d1_ex99-1.htm": "DOC-6230F89359C53CCD",
+    "0001628280-26-050822|https://www.sec.gov/Archives/edgar/data/1035002/000162828026050822/a6302026exh9901earningsrel.htm": "DOC-9DA9F71500981FB2",
+    "0001345126-26-000062|https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm": "DOC-DCA2D5E4142540F1",
+    "0001915657-26-000046|https://www.sec.gov/Archives/edgar/data/1915657/000191565726000046/dinoex99106-30x2026.htm": "DOC-0F62310DD65064FB",
+    "0001628280-26-053328|https://www.sec.gov/Archives/edgar/data/1831097/000162828026053328/agl-20260630xexx991.htm": "DOC-7387CF5E90D2794F",
+    "0001419945-26-000056|https://www.sec.gov/Archives/edgar/data/1419945/000141994526000056/tnk6-kq1x261.htm": "DOC-D9EC64103F5CF7D0",
+    "0001419945-26-000054|https://www.sec.gov/Archives/edgar/data/1419945/000141994526000054/tnkq2-26erdocument.htm": "DOC-13D619F52008D76E",
+    "0001437749-26-025793|https://www.sec.gov/Archives/edgar/data/1668243/000143774926025793/ex_995856.htm": "DOC-99C179A86297DD8F",
+    "0001517375-26-000056|https://www.sec.gov/Archives/edgar/data/1517375/000151737526000056/a2q26earningsrelease.htm": "DOC-450C06FD810BE835",
+    "0001517375-26-000052|https://www.sec.gov/Archives/edgar/data/1517375/000151737526000052/prw_ceoletterexternal.htm": "DOC-73E8D5E3097AE999"
   }
 }
