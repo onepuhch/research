@@ -1,0 +1,157 @@
+{
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "candidate_version": "CV-AD94F5752332AF8A",
+  "identity": {
+    "entity_id": "NYSE:PARR",
+    "ticker": "PARR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Par Pacific Holdings, Inc.",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "에너지 회사로, 정유, 소매점 운영, 물류를 통해 재생 및 기존 연료를 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Par Pacific Holdings, Inc., an energy company, provides renewable and conventional fuels in the United States. The company operates through three segments: Refining, Retail, and Logistics. The Refining segment owns and operates refineries that convert crude oil into gasoline, distillate, asphalt, and other products. The Retail segment operates convenience stores and fuel retail outlets that sell gasoline, diesel, and retail merchandise, such as soft drinks, prepared food, and other sundries under the Hele, 76, and nomnom brands, as well as unattended cardlock stations. The Logistics segment ow"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PARR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PARR/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:39:30+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PARR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PARR/history",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:39:30+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PARR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PARR/profile",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:39:30+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-45EC7F1F3C20E448",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/821483/000162828026052766/a20260630991earningsreleas.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-305850576F9ED20E",
+    "input_sha": "305850576f9ed20e5d86019584de5fc20d0cda0cac175578bfd8cb32adbe8aad",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Retail] fuel sales volumes · second quarter of 2026: 30.7 million gallons / 30.8 million gallons — 소매 부문의 연료 판매량은 전년 같은 분기보다 줄었다",
+        "note_ko": "소매 부문의 연료 판매량은 전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "The Retail segment reported fuel sales volumes of 30.7 million gallons in the second quarter of 2026, compared to 30.8 million gallons in the same quarter of 2025.",
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "block_id": "p35",
+        "metric": "fuel sales volumes",
+        "figures": [
+          "30.7 million gallons",
+          "30.8 million gallons"
+        ],
+        "period": "second quarter of 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Retail",
+        "core": false,
+        "drivers": [
+          "volume"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "Adjusted EBITDA의 기간을 확인할 수 있는가",
+      "Adjusted EBITDA의 전년 같은 기간 수치를 확인할 수 있는가"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/821483/000162828026052766/a20260630991earningsreleas.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 13.83903,
+    "eps_30d": 11.81722,
+    "eps_90d": 10.002,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 38.4,
+    "steady": true,
+    "turnaround": false
+  }
+}

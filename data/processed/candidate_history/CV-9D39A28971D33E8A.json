@@ -1,0 +1,153 @@
+{
+  "candidate_id": "CAN-490AC1686F9442CE",
+  "candidate_version": "CV-9D39A28971D33E8A",
+  "identity": {
+    "entity_id": "NASDAQ:RPAY",
+    "ticker": "RPAY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Repay Holdings Corporation",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "소비자와 기업이 전자 결제 수단을 사용하도록 통합 결제 처리 솔루션을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Repay Holdings Corporation, a payments technology company, provides integrated payment processing solutions that enables consumers and businesses to make payments using electronic payment methods in the United States. It operates through two segments: Consumer Payments and Business Payments. The company offers payment acceptance solutions, such as debit and credit card processing, automated clearing house (ACH) processing, e-cash, and digital wallet services; virtual credit card processing, enhanced ACH processing, instant funding, clearing and settlement, and communication solutions; and prop"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "RPAY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/RPAY/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:46:13+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "RPAY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/RPAY/history",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:46:13+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "RPAY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/RPAY/profile",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:46:13+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-93050982946C0EE4",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-10",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-87CB658FB21FD9FF",
+    "input_sha": "87cb658fb21fd9ffcbddd965656993b199aa82e328713325f92c23f85e44233d",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "Adjusted EBITDA, Free Cash Flow Conversion and Adjusted Free Cash Flow Conversion — 회사는 조정된 이비티디에이, 무상 현금 흐름 전환 및 조정된 무상 현금 흐름 전환과 같은 미래 예측 비일반회계기준 재무 측정치에 대한 정량적 조정을 제공하지 않는다",
+        "note_ko": "회사는 조정된 이비티디에이, 무상 현금 흐름 전환 및 조정된 무상 현금 흐름 전환과 같은 미래 예측 비일반회계기준 재무 측정치에 대한 정량적 조정을 제공하지 않는다",
+        "kind": "fact",
+        "quote": "REPAY does not provide quantitative reconciliation of forward-looking, non-GAAP financial measures, such as Adjusted EBITDA, Free Cash Flow Conversion and Adjusted Free Cash Flow Conversion, to the most directly comparable GAAP financial measure, because it is difficult to reliably predict or estimate the relevant components without unreasonable effort due to future uncertainties that may potentially have a significant impact on such calculations, and providing them may imply a degree of precision that would be confusing or potentially misleading.",
+        "document_id": "DOC-93050982946C0EE4",
+        "block_id": "p32",
+        "metric": "Adjusted EBITDA, Free Cash Flow Conversion and Adjusted Free Cash Flow Conversion",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "큐브라 인수가 이천이십육년 전체 회계연도에 대한 전망 상향을 일으켰는지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-93050982946C0EE4",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm",
+        "filed_at": "2026-08-10",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.1645,
+    "eps_30d": 1.11365,
+    "eps_90d": 0.97163,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 19.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

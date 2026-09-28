@@ -1,0 +1,178 @@
+{
+  "candidate_id": "CAN-68E9292E49558246",
+  "candidate_version": "CV-8CE3527C3DA4B287",
+  "identity": {
+    "entity_id": "NYSE:IPI",
+    "ticker": "IPI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Intrepid Potash, Inc.",
+  "industry": "Agricultural Inputs",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "칼륨, 마그네슘, 황, 소금, 물 제품을 농업, 사료, 산업 시장에 공급하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Intrepid Potash, Inc. delivers potassium, magnesium, sulfur, salt, and water products. It operates through three segments: Potash, Trio, and Oilfield Solutions. The company offers muriate of potash for various markets, such as in agricultural market as a fertilizer input, in animal feed market as a nutrient supplement, in industrial market as a component in drilling and fracturing fluids, as well as input to other industrial processes. It also provides Trio, a specialty fertilizer that delivers potassium, sulfate, and magnesium in a single particle; salt for various markets, including animal f"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "IPI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/IPI/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:45:26+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "IPI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/IPI/history",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:45:26+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "IPI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/IPI/profile",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:45:26+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-BA022B8E3B6B6141",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1421461/000142146126000020/ex991q22026pressrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-C9DA47C85E86C804",
+    "input_sha": "c9da47c85e86c8045e50d1dd6e6908916ae11b12213d4d01518d38e1c3731963",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "production guidance for potash · full-year 2026: 290-300 thousand tons — 내년 포타쉬 생산량 전망치를 늘렸다",
+        "note_ko": "내년 포타쉬 생산량 전망치를 늘렸다",
+        "kind": "guidance",
+        "quote": "Increased full-year 2026 production guidance for potash to 290-300 thousand tons and Trio® to 295-305 thousand tons.",
+        "document_id": "DOC-BA022B8E3B6B6141",
+        "block_id": "p9",
+        "metric": "production guidance for potash",
+        "figures": [
+          "290-300 thousand tons"
+        ],
+        "period": "full-year 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "capacity"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "capital expenditure guidance · full-year 2026: approximately $40 million — 내년 자본 지출 전망치를 낮췄다",
+        "note_ko": "내년 자본 지출 전망치를 낮췄다",
+        "kind": "guidance",
+        "quote": "Lowered full-year 2026 capital expenditure guidance to approximately $40 million.",
+        "document_id": "DOC-BA022B8E3B6B6141",
+        "block_id": "p15",
+        "metric": "capital expenditure guidance",
+        "figures": [
+          "approximately $40 million"
+        ],
+        "period": "full-year 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "margin_cost"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "인트레피드 사우스 매각 이익을 제외한 순이익은 얼마인가?",
+      "조정된 EBITDA는 어떤 항목들을 조정하여 계산되었는가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-BA022B8E3B6B6141",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1421461/000142146126000020/ex991q22026pressrelease.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.41366,
+    "eps_30d": 0.61031,
+    "eps_90d": 0.56888,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 148.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

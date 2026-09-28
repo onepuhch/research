@@ -1,0 +1,170 @@
+{
+  "context_id": "CTX-1E0F0F72BCF5456A",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "ticker": "NBR",
+  "issuer_cik": "0001163739",
+  "document_ids": [
+    "DOC-9B80B26347EA4928"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9B80B26347EA4928#p5",
+    "DOC-9B80B26347EA4928#t2",
+    "DOC-9B80B26347EA4928#p8",
+    "DOC-9B80B26347EA4928#p12",
+    "DOC-9B80B26347EA4928#p14",
+    "DOC-9B80B26347EA4928#p16",
+    "DOC-9B80B26347EA4928#p17",
+    "DOC-9B80B26347EA4928#p19",
+    "DOC-9B80B26347EA4928#p20",
+    "DOC-9B80B26347EA4928#p22",
+    "DOC-9B80B26347EA4928#p23",
+    "DOC-9B80B26347EA4928#p24",
+    "DOC-9B80B26347EA4928#p25",
+    "DOC-9B80B26347EA4928#t7",
+    "DOC-9B80B26347EA4928#p35",
+    "DOC-9B80B26347EA4928#p45",
+    "DOC-9B80B26347EA4928#t19",
+    "DOC-9B80B26347EA4928#p80",
+    "DOC-9B80B26347EA4928#p81"
+  ],
+  "input_sha": "1e0f0f72bcf5456a927868921d270a1d50ef73560545ec17f4947d6813477844",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-28T05:47:32+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "full-year adjusted EBITDA · full-year: $920 to $930 million — 회사의 연간 조정 이자, 세금, 감가상각 전 이익 전망치이다",
+      "note_ko": "회사의 연간 조정 이자, 세금, 감가상각 전 이익 전망치이다",
+      "kind": "guidance",
+      "quote": "We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p25",
+      "metric": "full-year adjusted EBITDA",
+      "figures": [
+        "$920 to $930 million"
+      ],
+      "period": "full-year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "full-year adjusted free cash flow · full-year: $20 to $30 million — 회사의 연간 조정 잉여 현금 흐름 전망치이다",
+      "note_ko": "회사의 연간 조정 잉여 현금 흐름 전망치이다",
+      "kind": "guidance",
+      "quote": "We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p25",
+      "metric": "full-year adjusted free cash flow",
+      "figures": [
+        "$20 to $30 million"
+      ],
+      "period": "full-year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 이자, 세금, 감가상각 전 이익은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+      "note_ko": "조정 이자, 세금, 감가상각 전 이익은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+      "note_ko": "조정 영업 이익 또는 손실은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted operating income (loss)",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 총 매출액이다",
+      "figures": [
+        "$814.8"
+      ],
+      "quote": "Operating revenues ; $814.8",
+      "where": "DOC-9B80B26347EA4928#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 조정 이자, 세금, 감가상각 전 이익이다",
+      "figures": [
+        "$221.7"
+      ],
+      "quote": "Adjusted EBITDA ; $221.7",
+      "where": "DOC-9B80B26347EA4928#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 조정 잉여 현금 흐름이다",
+      "figures": [
+        "$12.3"
+      ],
+      "quote": "Adjusted free cash flow ; $12.3",
+      "where": "DOC-9B80B26347EA4928#t2"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "미래 전망치에 대한 GAAP 재무 측정치와의 조정은 합리적인 노력 없이는 추정할 수 없다",
+      "figures": [],
+      "quote": "We do not provide a forward-looking reconciliation of our outlook for Segment Adjusted EBITDA, Segment Gross Margin or Adjusted Free Cash Flow, as the amount and significance of items required to deve",
+      "where": "DOC-9B80B26347EA4928#p45"
+    }
+  ],
+  "context_status": "draft_ready"
+}

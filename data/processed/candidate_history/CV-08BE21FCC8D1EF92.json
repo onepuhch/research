@@ -1,0 +1,217 @@
+{
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "candidate_version": "CV-08BE21FCC8D1EF92",
+  "identity": {
+    "entity_id": "NYSE:NBR",
+    "ticker": "NBR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Nabors Industries Ltd.",
+  "industry": "Oil & Gas Drilling",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "육상 및 해상 유정, 가스정 시추 및 관련 서비스를 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Nabors Industries Ltd. provides drilling and drilling-related services for land-based and offshore oil and natural gas wells in the United States and internationally. The company operates through four segments: U.S. Drilling, International Drilling, Drilling Solutions, and Rig Technologies. The company offers tubular running services, including casing and tubing running, and torque monitoring; managed pressure drilling services; and drilling-bit steering systems and rig instrumentation software. The company also offers drilling systems comprising ROCKit, a directional steering control system;"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "NBR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:42:46+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "NBR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/history",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:42:46+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "NBR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/profile",
+      "published_at": null,
+      "observed_at": "2026-09-28T05:42:46+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-9B80B26347EA4928",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-07-28",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-1E0F0F72BCF5456A",
+    "input_sha": "1e0f0f72bcf5456a927868921d270a1d50ef73560545ec17f4947d6813477844",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "full-year adjusted EBITDA · full-year: $920 to $930 million — 회사의 연간 조정 이자, 세금, 감가상각 전 이익 전망치이다",
+        "note_ko": "회사의 연간 조정 이자, 세금, 감가상각 전 이익 전망치이다",
+        "kind": "guidance",
+        "quote": "We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "p25",
+        "metric": "full-year adjusted EBITDA",
+        "figures": [
+          "$920 to $930 million"
+        ],
+        "period": "full-year",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "full-year adjusted free cash flow · full-year: $20 to $30 million — 회사의 연간 조정 잉여 현금 흐름 전망치이다",
+        "note_ko": "회사의 연간 조정 잉여 현금 흐름 전망치이다",
+        "kind": "guidance",
+        "quote": "We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "p25",
+        "metric": "full-year adjusted free cash flow",
+        "figures": [
+          "$20 to $30 million"
+        ],
+        "period": "full-year",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 이자, 세금, 감가상각 전 이익은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+        "note_ko": "조정 이자, 세금, 감가상각 전 이익은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "t19",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+        "note_ko": "조정 영업 이익 또는 손실은 GAAP에 따른 금액을 대체하거나 단독으로 사용해서는 안 된다",
+        "kind": "fact",
+        "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "t19",
+        "metric": "Adjusted operating income (loss)",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-9B80B26347EA4928",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+        "filed_at": "2026-07-28",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.60994,
+    "eps_30d": 1.115,
+    "eps_90d": 1.115,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 223.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "observation_id": "OB-573F306B06E50405",
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "candidate_version": "CV-AD94F5752332AF8A",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PARR",
+    "ticker": "PARR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-28T05:39:30+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260928T053253Z_36382342890-1.json.gz",
+    "sha256": "52b3af7015275f2f76ae38ac522ae822b2ccf38758bd58800f41914c29ee3233",
+    "run_id": "36382342890-1",
+    "finished_at": "2026-09-28T05:47:15+00:00"
+  },
+  "eps": {
+    "eps_now": 13.83903,
+    "eps_30d": 11.81722,
+    "eps_90d": 10.002,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 38.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.954,
+    "yield_change_30_pp": 2.61
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-06-30",
+    "price_start_date": "2026-06-30",
+    "price_end_expected": "2026-09-25",
+    "price_end_date": "2026-09-25",
+    "close_start": 56.08000183105469,
+    "close_end": 77.45999908447266,
+    "price_pct_90": 38.1,
+    "adj_return_pct_90": 38.1,
+    "pe_change_pct": -0.2
+  },
+  "display_rank": 12,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 7
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 3880717056,
+  "context_id": "CTX-305850576F9ED20E",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-09-27T05:40:06+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NYSE:PARR",
+  "approval_version": null
+}

@@ -1,0 +1,130 @@
+{
+  "context_id": "CTX-87CB658FB21FD9FF",
+  "candidate_id": "CAN-490AC1686F9442CE",
+  "ticker": "RPAY",
+  "issuer_cik": "0001720592",
+  "document_ids": [
+    "DOC-93050982946C0EE4"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-93050982946C0EE4#p5",
+    "DOC-93050982946C0EE4#p10",
+    "DOC-93050982946C0EE4#p29",
+    "DOC-93050982946C0EE4#p31",
+    "DOC-93050982946C0EE4#t2",
+    "DOC-93050982946C0EE4#p32",
+    "DOC-93050982946C0EE4#p49",
+    "DOC-93050982946C0EE4#p55",
+    "DOC-93050982946C0EE4#t4",
+    "DOC-93050982946C0EE4#t6",
+    "DOC-93050982946C0EE4#t7"
+  ],
+  "input_sha": "87cb658fb21fd9ffcbddd965656993b199aa82e328713325f92c23f85e44233d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v6",
+  "generated_at": "2026-09-28T05:47:32+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "Adjusted EBITDA, Free Cash Flow Conversion and Adjusted Free Cash Flow Conversion — 회사는 조정된 이비티디에이, 무상 현금 흐름 전환 및 조정된 무상 현금 흐름 전환과 같은 미래 예측 비일반회계기준 재무 측정치에 대한 정량적 조정을 제공하지 않는다",
+      "note_ko": "회사는 조정된 이비티디에이, 무상 현금 흐름 전환 및 조정된 무상 현금 흐름 전환과 같은 미래 예측 비일반회계기준 재무 측정치에 대한 정량적 조정을 제공하지 않는다",
+      "kind": "fact",
+      "quote": "REPAY does not provide quantitative reconciliation of forward-looking, non-GAAP financial measures, such as Adjusted EBITDA, Free Cash Flow Conversion and Adjusted Free Cash Flow Conversion, to the most directly comparable GAAP financial measure, because it is difficult to reliably predict or estimate the relevant components without unreasonable effort due to future uncertainties that may potentially have a significant impact on such calculations, and providing them may imply a degree of precision that would be confusing or potentially misleading.",
+      "document_id": "DOC-93050982946C0EE4",
+      "block_id": "p32",
+      "metric": "Adjusted EBITDA, Free Cash Flow Conversion and Adjusted Free Cash Flow Conversion",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "큐브라 인수가 이천이십육년 전체 회계연도에 대한 전망 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사는 이전에 제공된 큐브라 인수에 대한 보도자료에서 제시된 이천이십육년 전체 회계연도에 대한 전망을 재확인했다",
+      "figures": [
+        "$490 - 500 million"
+      ],
+      "quote": "REPAY is reiterating the 2026 outlook presented at that time and continues to expect the following financial results for full year 2026: Full Year 2026 Outlook | Revenue ; $490 - 500 million",
+      "where": "DOC-93050982946C0EE4#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사는 이전에 제공된 큐브라 인수에 대한 보도자료에서 제시된 이천이십육년 전체 회계연도에 대한 전망을 재확인했다",
+      "figures": [
+        "$168.5 - 176 million"
+      ],
+      "quote": "REPAY is reiterating the 2026 outlook presented at that time and continues to expect the following financial results for full year 2026: Adjusted EBITDA ; $168.5 - 176 million",
+      "where": "DOC-93050982946C0EE4#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사는 이전에 제공된 큐브라 인수에 대한 보도자료에서 제시된 이천이십육년 전체 회계연도에 대한 전망을 재확인했다",
+      "figures": [
+        "30%"
+      ],
+      "quote": "REPAY is reiterating the 2026 outlook presented at that time and continues to expect the following financial results for full year 2026: Free Cash Flow Conversion ; 30%",
+      "where": "DOC-93050982946C0EE4#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사는 이전에 제공된 큐브라 인수에 대한 보도자료에서 제시된 이천이십육년 전체 회계연도에 대한 전망을 재확인했다",
+      "figures": [
+        "35%"
+      ],
+      "quote": "REPAY is reiterating the 2026 outlook presented at that time and continues to expect the following financial results for full year 2026: Adjusted Free Cash Flow Conversion ; 35%",
+      "where": "DOC-93050982946C0EE4#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "큐브라는 이천이십육년에 이천이백만 달러에서 이천사백만 달러 사이의 매출을 기여할 것으로 예상된다",
+      "figures": [
+        "between $150 million and $154 million"
+      ],
+      "quote": "KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.",
+      "where": "DOC-93050982946C0EE4#p31"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "이천이십오년 이분기와 사분기 동안 순손실은 소비자 결제 부문과 관련된 영업권 손상 손실로 인해 영향을 받았다",
+      "figures": [
+        "$103.8 million",
+        "$138.9 million"
+      ],
+      "quote": "During the second and fourth quarter of 2025, Net loss was impacted by a $103.8 million and a $138.9 million goodwill impairment loss, respectively, primarily related to the Consumer Payments segment.",
+      "where": "DOC-93050982946C0EE4#p10"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "예측 및 추정치는 설명 목적으로만 사용되며, 예측이 아니며 실제 결과와 다를 수 있다",
+      "figures": [],
+      "quote": "projected and estimated numbers are used for illustrative purpose only, are not forecasts and may not reflect actual results.",
+      "where": "DOC-93050982946C0EE4#p55"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
