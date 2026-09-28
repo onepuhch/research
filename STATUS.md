@@ -1,8 +1,13 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
-- 마지막 작업자: Claude, 2026-09-28 22:40 KST 무렵(K 마무리 진행 중). 진행 중인 쓰기 없음. 원격 CI 상태 커밋 d82a82d까지 fast-forward 반영.
-  - K4 **완료**: NBR-B 수동 critical 기록(원본 manual_review.j3-original.json 보존), 저장 응답 24개 v6 오프라인 재검증(네트워크 0회), report_v4_scoring-v2/report_v6 생성, [J 평가 8절](docs/j_local_model_evaluation_2026-09-27.md#8-기존-표본-회귀-재검증-k4-2026-09-28). 필수 시험 7개 `tests/test_k4_scoring.py`. Markdown 표 `|` 이스케이프 결함 수정. 385개 통과·예상실패 0, 날짜 시나리오 7개 통과.
-  - 다음: K5(Ollama 정리) → I3-2(9/27 run 36297143973-1, artifact는 scratchpad에 받아 둠, 보존 기한 10/27) → 9/28 월요일 확인 → docs/k_handoff_2026-09-27.md.
+- 마지막 작업자: Claude, 2026-09-28 23:40 KST 무렵. **K 완료 보고**: [K 인수인계](docs/k_handoff_2026-09-27.md). 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
+  - K1·K2(806e786)·K3(e68711c)·K4(7352eb3, 723bad0, c34fa2b) 구현·CI success. K4: NBR 수동 critical, 24응답 v6 오프라인 재검증(네트워크 0), [J 평가 8절](docs/j_local_model_evaluation_2026-09-27.md#8-기존-표본-회귀-재검증-k4-2026-09-28), 필수 시험 7개. 로컬 원문 초안 **현재 보류** 유지.
+  - K5 완료: 로그인 자동 시작으로 뜬 Ollama 앱·서버만 종료(포트 0), Startup/Ollama.lnk → `~/.ollama/startup-backup/`. 모델·키 보존. 재시작·복구 명령은 인수인계 2절.
+  - I3-2 완료: [9/27 평가](docs/i3_live_evaluation_2026-09-27.md). run 36297143973-1(schedule/auto, 05bfdba, v6), 요청 6·감사 6/6·수용 14 전부 원문 일치·core 7. 연구에 바로 쓸 초안은 PBF 1곳(AMCX·AEHR 주의 필요). Gemini↔로컬 A군 6쌍 비교: 이 표본에서 Gemini 우세, 일반화 안 함.
+  - 평가 중 9/28 운영에서 결함 2건 발견 → **context-check-v7**(31847e6, CI 36426696576 success): 문장 첫 대문자 동사를 사업체로 오인(IPI), 비교 문장 반대편 기간(PARR). 9/27 초안·J3 응답 불변. 운영 반영은 9/29 정상 실행부터(미확인).
+  - 운영 자연 확인: 원격 예약→발송→영수증(9/27 TEAM, msg 138), 9/28 주간 단계(15단계·weekly·community·msg 139~141), PC 타이머 21:39 auto → run 36423211645(skip, 중복 없음). **미확인**: 실제 /track, v7 운영 결과.
+  - 테스트 387개 통과·예상실패 0, 날짜 시나리오 7개 통과. 새 모델/SEC 요청·메시지·추적 등록·원장 수정 없음.
+  - Codex 결정 요청: AXTI 과잉 거부 좁은 수정, 카드 앞 3개 선택(core 누락), 반대 근거 수용률(2/9). 재개: 9/29 artifact로 `python tests/live_context_evaluation.py 2026-09-29 --audit ... --run-id ...`.
 
 - 마지막 작업자: Claude, 2026-09-27 01:40 KST 무렵(사용 한도로 중단). 진행 중인 쓰기 없음. [K 지시서](docs/k_j_acceptance_and_validator_followup_2026-09-27.md) 진행 상황:
   - K1(주체 범위·글머리·설명 삽입구)+K2(형식 검사·검증 전 감사 저장·ctx_stored) **구현·CI 완료** 806e786(CI 36254283608 success). 검증기 context-check-v6, 일간 context-v6. NBR 예상실패 → 일반 테스트. 운영 초안 오프라인 재검증 표(I3)는 v6에서 변화 없음.
