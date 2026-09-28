@@ -162,7 +162,8 @@ class K4ScoringTest(unittest.TestCase):
         old_out, _ = self.report("report")
         before = self.tree("runs", "cases", "report.json", "report.md", "manual_review.json")
         root = lb.revalidate(self.exp)
-        self.assertEqual(root, self.exp / "revalidated" / ctx.PARSER_VERSION)
+        # resolve() both sides: a Windows runner's temp path can be an 8.3 short name (RUNNER~1).
+        self.assertEqual(root.resolve(), (self.exp / "revalidated" / ctx.PARSER_VERSION).resolve())
         new = json.loads((root / "final" / "NBR-B.json").read_text(encoding="utf-8"))
         self.assertEqual(new["validation_at_run"], result([claim()])["validation"])
         self.assertEqual(new["revalidation"]["kind"], "기존 표본에 대한 회귀 재검증")
