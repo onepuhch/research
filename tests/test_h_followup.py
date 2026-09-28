@@ -267,6 +267,44 @@ class SubjectScopeTest(unittest.TestCase):
                 self.assertEqual(len(check(quote, issuer=self.NBR, metric="revenue", figures=["$500 million"],
                                            period="2026")["claims"]), 1)
 
+    def test_a_capitalized_first_word_is_not_a_business(self):
+        """v7: real IPI bullet from the 9/28 run. 'Increased' opens the sentence; v6 read it as a
+        business name and refused the one-time gain warning. A name there still counts from its
+        second word on, so a sold business at the start of a sentence is still refused."""
+        ipi = {"ticker": "IPI", "name": "Intrepid Potash, Inc."}
+        quote = ("Increased net income to $15.6 million including $13.2 million gain on sale of Intrepid South, "
+                 "compared with $3.3 million in the second quarter of 2025.")
+        self.assertIsNone(ctx.scope_problem("net income", ["$15.6 million"], quote, ipi))
+        for verb in ("Reported", "Generated", "Delivered", "Grew"):  # synthetic
+            with self.subTest(verb=verb):
+                self.assertEqual(len(check(f"{verb} revenue of $500 million in 2026.", issuer=self.NBR,
+                                           metric="revenue", figures=["$500 million"], period="2026")["claims"]), 1)
+        for quote in ("Quail Tools revenue was $63 million in 2025.",
+                      "Reported Quail Tools revenue of $63 million in 2025.",
+                      "• Quail Tools revenue was $63 million in 2025.",
+                      "Revenue rose in 2025. Quail Tools revenue was $63 million in 2025."):
+            with self.subTest(quote=quote):
+                self.assertEqual(ctx.scope_problem("revenue", ["$63 million"], quote, self.NBR),
+                                 "subject_scope_conflict")
+
+    def test_a_period_on_one_side_of_a_comparison_is_not_the_other_sides(self):
+        """v7: the IPI limitation gave 'second quarter of 2025' to all three figures; only $3.3 million
+        is that quarter's. Without the scope false alarm it must still not pass with that period."""
+        quote = ("Increased net income to $15.6 million including $13.2 million gain on sale of Intrepid South, "
+                 "compared with $3.3 million in the second quarter of 2025.")
+        item = {"period": "second quarter of 2025", "figures": ["$15.6 million", "$13.2 million", "$3.3 million"]}
+        self.assertEqual(ctx.period_problem(item, quote, quote), "figure_from_another_period")
+        self.assertIsNone(ctx.period_problem({**item, "figures": ["$3.3 million"]}, quote, quote))
+        self.assertIsNone(ctx.period_problem({**item, "period": "unknown", "figures": ["$15.6 million"]}, quote, quote))
+        synthetic = "Revenue was $500 million, compared with $400 million in 2025."
+        self.assertEqual(self.reason(check(synthetic, issuer=self.NBR, metric="revenue", figures=["$500 million"],
+                                           period="2025")), "figure_from_another_period")
+        self.assertEqual(len(check(synthetic, issuer=self.NBR, metric="revenue", figures=["$400 million"],
+                                   period="2025")["claims"]), 1)
+        both = "Revenue was $500 million in 2026, compared with $400 million in 2025."  # both sides dated
+        self.assertEqual(len(check(both, issuer=self.NBR, metric="revenue", figures=["$500 million"],
+                                   period="2026")["claims"]), 1)
+
     def test_other_stored_sources_keep_their_results(self):
         """Real MPC (subsidiary) and PBF (company total) sentences keep the v5 outcome."""
         mpc = check("MPLX expects to raise distributions by 12.5% in 2026.", issuer={"ticker": "MPC",

@@ -295,7 +295,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v3"
-PARSER_VERSION = "context-check-v6"
+PARSER_VERSION = "context-check-v7"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -513,6 +513,9 @@ PERIOD_FORM = re.compile(
     rf"|\b(?:{MONTHS})\s+\d{{1,2}}\b|\b(?:{MONTHS})\s+(?:19|20)\d{{2}}\b", re.I)
 
 
+COMPARISON = re.compile(r"\b(?:compared (?:to|with)|versus|vs\.?)\s")
+
+
 def period_problem(item: dict, quote: str, block: str) -> str | None:
     """The claimed period must be in the source, and every figure's nearest year/quarter in the
     quote must be that period's, so a number cannot move to another period."""
@@ -531,6 +534,17 @@ def period_problem(item: dict, quote: str, block: str) -> str | None:
         # 'backlog, including bookings since May 29, 2026, is ...': the aside's date is not the figure's period.
         if any(not any(a <= q.find(squash(f)) < b for a, b in aside_spans) for f in item.get("figures") or []):
             return "figure_from_another_period"
+    # 'net income to $15.6 million ..., compared with $3.3 million in the second quarter of 2025' (IPI):
+    # the only stated period sits on one side of the comparison, so a figure on the other side is not its.
+    mark = COMPARISON.search(q)
+    if mark and period in q:
+        sides = {x.start() < mark.start() for x in re.finditer(re.escape(period), q)}
+        if len(sides) == 1:
+            before = sides.pop()
+            for figure in item.get("figures") or []:
+                at = q.find(squash(figure))
+                if at >= 0 and (at < mark.start()) != before:
+                    return "figure_from_another_period"
     flat = quote.translate(PUNCTUATION)
     for figure in item.get("figures") or []:
         at = squash(flat).find(squash(figure))
@@ -577,6 +591,13 @@ def name_words(words: list[str]) -> set[str]:
     return {re.sub(r"'s?$", "", w.lower()) for w in words}
 
 
+def sentence_initial(flat: str, at: int) -> bool:
+    """A word at the start of a sentence or bullet is capitalized by grammar, not because it is a name:
+    'Increased net income to $15.6 million' (IPI, 9/28 run) names no business."""
+    before = flat[:at].rstrip()
+    return not before or before[-1] in ".;:!?•◦"
+
+
 def scope_problem(metric: str, figures: list[str], quote_raw: str, issuer: dict) -> str | None:
     """An issuer claim must not carry a figure the source ties to a named or divested business:
     'revenue of $63 million, EBITDA of $37 million, and operating income of $26 million from Quail
@@ -611,7 +632,8 @@ def scope_problem(metric: str, figures: list[str], quote_raw: str, issuer: dict)
         start = max(b for b in bounds if b <= p)
         end = min([b for b in bounds if b > p] or [len(q)])
         for unit in NAMED_UNIT.finditer(flat, start, end):
-            words = name_words(unit.group(0).split()[:-1])
+            tokens = unit.group(0).split()[:-1]
+            words = name_words(tokens[1:] if sentence_initial(flat, unit.start()) else tokens)
             if words - GENERIC_WORDS - own:
                 return "subject_scope_conflict"
         # '<Named business> revenue of $63 million': a proper name right before the metric nearest the figure.
@@ -619,8 +641,12 @@ def scope_problem(metric: str, figures: list[str], quote_raw: str, issuer: dict)
         if mentions:
             near = min(mentions, key=lambda x: min(abs(x.start() - p), abs(x.end() - p)))
             if start <= near.start() < end:
-                name = NAME_WORD.search(flat[max(start, near.start() - 60):near.start()])
-                words = name_words(name.group(1).split()) if name else set()
+                origin = max(start, near.start() - 60)
+                name = NAME_WORD.search(flat[origin:near.start()])
+                tokens = name.group(1).split() if name else []
+                if tokens and sentence_initial(flat, origin + name.start(1)):
+                    tokens = tokens[1:]  # 'Quail Tools revenue ...' still keeps 'Tools'
+                words = name_words(tokens)
                 if words - GENERIC_WORDS - own:
                     return "subject_scope_conflict"
     return None
