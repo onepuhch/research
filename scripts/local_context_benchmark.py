@@ -692,6 +692,11 @@ def report(experiment: Path, labels_path: Path, output: Path, label: str = "fina
     return result
 
 
+def cell(text) -> str:
+    """A claim key holds '|' (block|metric|figures): escaped so the table keeps its columns."""
+    return str(text).replace("|", r"\|")
+
+
 def render(result: dict) -> str:
     """Tables for the evaluation document (machine checks and hand review kept apart)."""
     lines = [f"채점 {result['scoring_version']}, 응답 {result['runs']}, 검증기 {', '.join(result['validators'])}", "",
@@ -715,8 +720,8 @@ def render(result: dict) -> str:
     for r in result["rows"]:
         lines.append(f"| {r['case_id']} | {r.get('split')}/{r.get('group')} | {r.get('failure') or '-'} | "
                      f"{r.get('elapsed_s')} | {r.get('claims', '-')} | {r.get('accepted', '-')} | {r.get('correct', '-')} | "
-                     f"{'; '.join(x['key'] + ' ' + '/'.join(x['why']) for x in r.get('wrong_accepted') or []) or '-'} | "
-                     f"{'; '.join(x['key'] + ' ' + '/'.join(x['rules']) for x in r.get('critical_accepted') or []) or '-'} | "
+                     f"{cell('; '.join(x['key'] + ' ' + '/'.join(x['why']) for x in r.get('wrong_accepted') or [])) or '-'} | "
+                     f"{cell('; '.join(x['key'] + ' ' + '/'.join(x['rules']) for x in r.get('critical_accepted') or [])) or '-'} | "
                      f"{len(r.get('critical_emitted') or [])} | {r.get('status') or '-'} |")
     return "\n".join(lines) + "\n"
 

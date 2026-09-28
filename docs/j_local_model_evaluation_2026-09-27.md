@@ -4,6 +4,8 @@
 
 **판정: 현재 보류.** 원문 초안 보조로는 기준에 크게 못 미친다.
 
+> 2026-09-28 추가: 채점 j3-score-v2와 검증기 context-check-v6로 같은 저장 응답을 다시 채점·재검증한 결과는 [8절](#8-기존-표본-회귀-재검증-k4-2026-09-28)에 있다. 기존 표본에 대한 회귀 재검증이며 새 성능 측정이 아니다. 판정(현재 보류)은 바뀌지 않는다.
+
 - JSON 형식과 속도는 충분했다.
 - 그러나 모델이 프롬프트 규칙을 지키지 못해 97개 주장 중 6개만 기계 검증을 통과했다.
 - eval에서 **기계 검증을 통과한 중대 오류가 1건**(NBR-B 귀속 주체) 나왔다.
@@ -159,3 +161,73 @@ dev에서는 AEHR 전년 분기 매출을 현재 값으로 포함한 1건이 더
 
 - **Gemini 비교**: 9/27 정상 실행이 AXTI, MPC, CORT, RPAY, NBR 초안을 만들면 J1 감사 사본으로 비교할 수 있다. 같은 문서·블록·프롬프트·대상 회계연도라면 A군 사례와 paired 비교가 된다(프롬프트 버전은 동일). 그때 v5로 두 출력을 함께 재검증해 이 표에 합친다.
 - 번역 성능, 다른 모델, 다른 발췌 전략은 시험하지 않았다.
+
+## 8. 기존 표본 회귀 재검증 (K4, 2026-09-28)
+
+작성: Claude, 2026-09-28 22:30 KST 무렵. [K 지시서](k_j_acceptance_and_validator_followup_2026-09-27.md) K4.
+
+**이 절은 기존 표본에 대한 회귀 재검증이다.** NBR-B는 eval에서 발견한 결함이다. 그 결함을 고친 검증기(v6)로 같은 표본을 다시 본 결과이므로, 새로운 독립 성능 측정으로 쓰지 않는다. 로컬 원문 초안 **현재 보류** 판정은 유지한다.
+
+**무엇을 했나**
+
+- 새 모델 호출은 없었다. 저장된 응답 24개(final 20 + stability 4)의 answer만 다시 검증했다.
+- 실행 명령은 `revalidate --experiment <exp>`, `report --runs <exp>/revalidated/context-check-v6`이다.
+  - 소켓 연결을 막은 상태에서 실행했고, 네트워크 연결 시도는 0회였다.
+  - 같은 조건은 `tests/test_k4_scoring.py`에서도 시험한다.
+- 기존 원응답·당시 검증 결과·J3 보고서(`runs/`, `cases/`, `report.json/.md`, `requests.jsonl`, `experiment.json`, 52개 파일)는 재검증 전후 sha256이 같다.
+- 수동 판정 갱신: `manual_review.json`의 NBR-B `p8|revenue|$63 million`을 `{verdict: wrong, severity: critical, reason: divested_unit_as_issuer, evidence, reviewed_at: 2026-09-28T22:10+09:00}`로 바꿨다. 원본은 `manual_review.j3-original.json`으로 보존했다.
+- 실험 폴더는 `reports/generated/local_model/j3-55774e6d13-context-check-v4/`이다. 이 경로는 .gitignore 대상이라 로컬에만 있다.
+
+| 산출물 | 응답 | 검증기 | 채점 |
+|---|---|---|---|
+| `report.json/.md` (J3 원본, 보존) | runs/ | 실행 당시 context-check-v4 | J3 채점(버전 표기 없음) |
+| `report_v4_scoring-v2.json/.md` | runs/ | 실행 당시 context-check-v4 | j3-score-v2 |
+| `revalidated/context-check-v6/` + `report_v6.json/.md` | 같은 answer | context-check-v6 | j3-score-v2 |
+
+모델·입력은 모두 같다: qwen3.5:9b digest 6488c96f…, prompt context-ko-v3, schema 3c10558d0e3a, manifest 55774e6d1307, temperature 0, seed 42.
+
+**eval 16사례 비교** (분모는 3절과 같다. 실행 실패·미실행 없음)
+
+| 지표 | J3 원본 채점 | 채점 v2, 검증기 v4(당시) | 채점 v2, 검증기 v6(재검증) |
+|---|---|---|---|
+| 기계 수용 주장 | 4 | 4 | 3 |
+| 원문 대조 정답 / 검토 | 3/4 | 3/4 | 3/3 |
+| 수용됐지만 틀림 | 1 | 1 (NBR-B) | 0 |
+| 중대 오류 수용(주장 단위) | 자동 표 0, 수동 합산 1 | **1** (NBR-B, 수동 critical이 자동 집계에 반영) | 0 |
+| 중대 오류 생성 / 그중 거부 | 5 거부 | 6 / 5 | 6 / 6 |
+| 핵심 초안 / 가능 | 2/14 | 2/14 | 2/14 |
+| 중요 사실 회수(모델 / 수용) | 50.0% / 5.3% | **23.7%** / 5.3% | 23.7% / 5.3% |
+| 언급률(참고, 느슨한 기준) | — | 50.0% | 50.0% |
+| 반대 근거(생성 / 표시 가능) | 64.1% / — | 64.1% / 7.7% | 64.1% / 5.1% |
+| 스키마(타입·enum·필수·길이) | 16/16 | 16/16 | 16/16 |
+
+**읽는 법**
+
+- J3의 '모델 회수 50%'는 지표와 수치 하나가 함께 나오기만 해도 센 느슨한 언급률이었다. 채점 v2는 기간·주체·종류·GAAP까지 맞은 주장만 회수로 센다. 그 기준으로는 23.7%다. 수용 기준 5.3%는 원래도 엄격 기준과 같았다.
+- v4 → v6에서 바뀐 사례는 NBR-B 하나다. 매각된 Quail Tools의 매출을 회사 매출로 적은 주장이 `subject_scope_conflict`로 거부됐다. 사례 상태는 insufficient_earnings_context에서 no_supported_claims로 바뀌었다.
+- 반대 근거 표시율이 7.7%에서 5.1%로 내려갔다. 틀린 NBR-B 주장의 인용문이 'Quail Tools' 반대 근거 앵커를 우연히 포함하고 있었기 때문이다. 오류 주장이 빠지면서 함께 빠졌다.
+- 나머지 23개 응답은 수용·거부된 주장이 v4와 같다(24개 validation_at_run과 validation을 기계 대조). 거부 사유나 필드만 바뀐 것은 모두 dev다.
+  - AEHR-A: K1-3 설명 삽입구 수정으로 backlog 주장의 거부 사유가 figure_belongs_to_another_metric에서 figure_from_another_period로 바뀌었다. 여전히 거부다.
+  - AMCX-A: K1-2 글머리 수정으로 quote_not_in_block이 풀렸다. 그러나 note_ko에 숫자가 있어 number_or_unit_in_note로 여전히 거부다. 지시서가 예상한 결과다.
+  - AMCX-B: p13의 gaap이 non-GAAP에서 unknown으로 바뀌었다(v5 수정).
+- stability 4건도 응답이 첫 실행과 같고 새 중대 오류가 없다.
+
+**dev 4사례** (개발용, 참고만)
+
+- AMCX-B p13 영업이익 $16M은 v4에서 GAAP 오표기로 중대 1건이었다. v5 이후 gaap=unknown이 되어 중대 오류는 0이다.
+- 그러나 모델이 기간을 unknown으로 둬서 정답표의 기간(second quarter 2026)과 맞지 않는다. 채점 v2는 이를 정답이 아닌 '수용됐지만 틀림(label: period)'으로 센다.
+  - 틀린 기간을 적은 것이 아니라 기간 누락이다. 인용 문장 자체에는 기간이 없다.
+  - 지시서의 "기간이 맞아야 정답" 기준을 따라 정답으로 올리지 않았다.
+- AMCX-B p25 광고 매출 해석은 J3 수동 판정대로 틀림(심각도 미지정)이다.
+
+**판정에 미치는 영향**
+
+- eval에서 기계 검증을 통과한 중대 오류는 v6 기준 0이다. 그러나 v6는 이 표본의 NBR-B를 보고 고친 검증기라, 새 표본에서 0이라는 증거가 아니다.
+- 수용 정확도 3/3도 분모 3이다. 수용 기준 회수율 5.3%, 핵심 초안 2/14는 그대로다.
+- **현재 보류 유지.** 로컬 모델 추가 실추론·번역 시험은 이번 범위에 넣지 않았다.
+
+**이번에 함께 고친 채점 결함**
+
+- Markdown 사례 표에서 주장 키(`block|metric|figures`)의 `|`가 칸 구분자로 해석돼 열이 밀렸다.
+- `render`가 셀 안의 `|`를 `\|`로 이스케이프하도록 고쳤다. `tests/test_k4_scoring.py`가 JSON과 Markdown 양쪽의 NBR critical=1을 확인한다.
+- J3 원본 report.md는 보존했으므로 그 파일의 사례 표 열 밀림은 그대로 있다.

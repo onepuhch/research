@@ -1,5 +1,9 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-09-28 22:40 KST 무렵(K 마무리 진행 중). 진행 중인 쓰기 없음. 원격 CI 상태 커밋 d82a82d까지 fast-forward 반영.
+  - K4 **완료**: NBR-B 수동 critical 기록(원본 manual_review.j3-original.json 보존), 저장 응답 24개 v6 오프라인 재검증(네트워크 0회), report_v4_scoring-v2/report_v6 생성, [J 평가 8절](docs/j_local_model_evaluation_2026-09-27.md#8-기존-표본-회귀-재검증-k4-2026-09-28). 필수 시험 7개 `tests/test_k4_scoring.py`. Markdown 표 `|` 이스케이프 결함 수정. 385개 통과·예상실패 0, 날짜 시나리오 7개 통과.
+  - 다음: K5(Ollama 정리) → I3-2(9/27 run 36297143973-1, artifact는 scratchpad에 받아 둠, 보존 기한 10/27) → 9/28 월요일 확인 → docs/k_handoff_2026-09-27.md.
+
 - 마지막 작업자: Claude, 2026-09-27 01:40 KST 무렵(사용 한도로 중단). 진행 중인 쓰기 없음. [K 지시서](docs/k_j_acceptance_and_validator_followup_2026-09-27.md) 진행 상황:
   - K1(주체 범위·글머리·설명 삽입구)+K2(형식 검사·검증 전 감사 저장·ctx_stored) **구현·CI 완료** 806e786(CI 36254283608 success). 검증기 context-check-v6, 일간 context-v6. NBR 예상실패 → 일반 테스트. 운영 초안 오프라인 재검증 표(I3)는 v6에서 변화 없음.
   - K3(KST 날짜 창·--run-id·attempt 중복·현재 대기열 분리) **구현** e68711c, 테스트 7개.
