@@ -1,0 +1,98 @@
+{
+  "candidate_id": "CAN-D386F57F584A20DC",
+  "candidate_version": "CV-D35784836F532263",
+  "identity": {
+    "entity_id": "NYSE:TX",
+    "ticker": "TX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Ternium S.A.",
+  "industry": "Steel",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Ternium S.A., together with its subsidiaries, manufactures and distributes steel products in Mexico, Southern Region, Brazil, and internationally. The company operates through two segments, Steel and Mining. The Steel segment offers slabs, heavy plates, hot and cold rolled products, coated products, stamped steel parts for the automotive industry, roll-formed and tubular products, billets, bars, and other products, including sales of energy. Its Mining segment sells iron ore and pellets. It also provides medical and social; scrap; and engineering and other services. In addition, the company en"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TX/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-29T06:07:46+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TX/history",
+      "published_at": null,
+      "observed_at": "2026-09-29T06:07:46+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TX/profile",
+      "published_at": null,
+      "observed_at": "2026-09-29T06:07:46+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 7.65036,
+    "eps_30d": 6.59529,
+    "eps_90d": 5.01552,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 52.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "context_id": "CTX-3A49D7297BE7A680",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "ticker": "NBR",
+  "issuer_cik": "0001163739",
+  "document_ids": [
+    "DOC-9B80B26347EA4928"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9B80B26347EA4928#p5",
+    "DOC-9B80B26347EA4928#t2",
+    "DOC-9B80B26347EA4928#p8",
+    "DOC-9B80B26347EA4928#p12",
+    "DOC-9B80B26347EA4928#p14",
+    "DOC-9B80B26347EA4928#p16",
+    "DOC-9B80B26347EA4928#p17",
+    "DOC-9B80B26347EA4928#p19",
+    "DOC-9B80B26347EA4928#p20",
+    "DOC-9B80B26347EA4928#p22",
+    "DOC-9B80B26347EA4928#p23",
+    "DOC-9B80B26347EA4928#p24",
+    "DOC-9B80B26347EA4928#p25",
+    "DOC-9B80B26347EA4928#t7",
+    "DOC-9B80B26347EA4928#p35",
+    "DOC-9B80B26347EA4928#p45",
+    "DOC-9B80B26347EA4928#t19",
+    "DOC-9B80B26347EA4928#p80",
+    "DOC-9B80B26347EA4928#p81"
+  ],
+  "input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-29T06:08:38+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[International Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $131 million — 국제 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+      "note_ko": "국제 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+      "kind": "fact",
+      "quote": "International Drilling adjusted EBITDA was $131 million in the second quarter, compared to $121 million in the first quarter.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p16",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "$131 million"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "segment",
+      "subject_name": "International Drilling",
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[U.S. Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $94 million — 미국 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+      "note_ko": "미국 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+      "kind": "fact",
+      "quote": "The U.S. Drilling segment reported second quarter adjusted EBITDA of $94 million, compared to $88 million in the previous quarter.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p17",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "$94 million"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "segment",
+      "subject_name": "U.S. Drilling",
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(adjusted EBITDA) · full-year: $920 to $930 million — 회사의 연간 조정 EBITDA가 이 범위에 있을 것으로 예상된다",
+      "note_ko": "회사의 연간 조정 EBITDA가 이 범위에 있을 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "“We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p25",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "$920 to $930 million"
+      ],
+      "period": "full-year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "adjusted free cash flow · full-year: $20 to $30 million — 회사의 연간 조정 잉여 현금 흐름이 이 범위에 있을 것으로 예상된다",
+      "note_ko": "회사의 연간 조정 잉여 현금 흐름이 이 범위에 있을 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "“We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p25",
+      "metric": "adjusted free cash flow",
+      "figures": [
+        "$20 to $30 million"
+      ],
+      "period": "full-year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+      "note_ko": "조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+      "note_ko": "조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+      "kind": "fact",
+      "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted operating income (loss)",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "조정 잉여 현금 흐름이 해당 분기에 이 금액을 기록했다",
+      "figures": [
+        "$12.3"
+      ],
+      "quote": "Adjusted free cash flow ; $12.3",
+      "where": "DOC-9B80B26347EA4928#t2"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "미래 예상치에 대한 GAAP 재무 측정치와의 조정은 합리적인 노력 없이는 항목의 양과 중요성을 추정할 수 없으므로 제공되지 않는다",
+      "figures": [],
+      "quote": "We do not provide a forward-looking reconciliation of our outlook for Segment Adjusted EBITDA, Segment Gross Margin or Adjusted Free Cash Flow, as the amount and significance of items required to deve",
+      "where": "DOC-9B80B26347EA4928#p45"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

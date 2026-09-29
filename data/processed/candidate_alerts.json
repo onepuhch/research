@@ -43,6 +43,22 @@
       "reserved_at": "2026-09-27T05:41:00+00:00",
       "payload_sha256": "f580949ec7995feb4bd8acdf5a90d4943b1933fd77d628fffeb098f32b3e2bae",
       "message_id": 138
+    },
+    "NYSE:TX|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:TX",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-D386F57F584A20DC",
+      "candidate_version": "CV-D35784836F532263",
+      "observation_id": "OB-1943A41DF8EF53F5",
+      "signal_id": null,
+      "day": "2026-09-29",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "36528079469-1",
+      "reserved_at": "2026-09-29T06:09:16+00:00",
+      "payload_sha256": "99c939254cff157828026e9868af9d605d3499518258a338897704cd44ceecc9"
     }
   },
   "bootstrap": {

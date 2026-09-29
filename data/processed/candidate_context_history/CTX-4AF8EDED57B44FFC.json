@@ -1,0 +1,137 @@
+{
+  "context_id": "CTX-4AF8EDED57B44FFC",
+  "candidate_id": "CAN-D577F2C38FBBCFF7",
+  "ticker": "DK",
+  "issuer_cik": "0001694426",
+  "document_ids": [
+    "DOC-80DB053BD25896A0"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-80DB053BD25896A0#t14",
+    "DOC-80DB053BD25896A0#t15",
+    "DOC-80DB053BD25896A0#t17",
+    "DOC-80DB053BD25896A0#t18",
+    "DOC-80DB053BD25896A0#t21",
+    "DOC-80DB053BD25896A0#p129",
+    "DOC-80DB053BD25896A0#p325",
+    "DOC-80DB053BD25896A0#p415",
+    "DOC-80DB053BD25896A0#p418",
+    "DOC-80DB053BD25896A0#p442",
+    "DOC-80DB053BD25896A0#p486",
+    "DOC-80DB053BD25896A0#p488",
+    "DOC-80DB053BD25896A0#p499",
+    "DOC-80DB053BD25896A0#p541"
+  ],
+  "input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-29T06:08:38+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "Refining EBITDA — 원유 가격 및 가용성 시장의 변동성으로 인해 포지션에 시간 차이가 발생하거나 의도한 대로 상쇄 포지션을 커버하지 못할 수 있으며, 이는 정제 EBITDA에 중대한 영향을 미칠 수 있다",
+      "note_ko": "원유 가격 및 가용성 시장의 변동성으로 인해 포지션에 시간 차이가 발생하거나 의도한 대로 상쇄 포지션을 커버하지 못할 수 있으며, 이는 정제 EBITDA에 중대한 영향을 미칠 수 있다",
+      "kind": "fact",
+      "quote": "However, because of the volatility of the market in terms of pricing and availability, it is possible that we may have material positions with timing differences or, more rarely, that we are unable to cover a position with an offsetting position as intended. Such differences could have a material impact on the classification of resulting gains/losses, assets or liabilities, and could also significantly impact Refining EBITDA.",
+      "document_id": "DOC-80DB053BD25896A0",
+      "block_id": "p541",
+      "metric": "Refining EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "회사의 순이익이 전년 같은 분기보다 늘었는지 줄었는지 확인해야 한다",
+    "회사의 보통주 배당금이 전년 같은 분기보다 늘었는지 줄었는지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "169.5"
+      ],
+      "quote": "Net income (loss) ; — ; — ; — ; — ; 169.5 ; — ; — ; 10.6 ; 180.1",
+      "where": "DOC-80DB053BD25896A0#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "보통주 배당금은 주당 특정 금액이다",
+      "figures": [
+        "$0.255 per share"
+      ],
+      "quote": "Common stock dividends ($0.255 per share) ; — ; — ; — ; — ; (15.6) ; — ; — ; — ; (15.6)",
+      "where": "DOC-80DB053BD25896A0#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사가 보통주를 재매입했다",
+      "figures": [
+        "(442,893)"
+      ],
+      "quote": "Repurchase of common stock ; (442,893) ; — ; (7.2) ; — ; (12.8) ; — ; — ; — ; (20.0)",
+      "where": "DOC-80DB053BD25896A0#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "일반 및 관리 비용은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$56.7 million",
+        "$76.6 million",
+        "$19.9 million",
+        "26.0%"
+      ],
+      "quote": "General and administrative expenses were $56.7 million for the second quarter of 2026 compared to $76.6 million for the second quarter of 2025, a decrease of $19.9 million, or 26.0%.",
+      "where": "DOC-80DB053BD25896A0#p486"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "일반 및 관리 비용은 전년 같은 기간보다 줄었다",
+      "figures": [
+        "$100.7 million",
+        "$138.1 million",
+        "$37.4 million",
+        "27.1%"
+      ],
+      "quote": "General and administrative expenses were $100.7 million for the six months ended June 30, 2026 compared to $138.1 million for the six months ended June 30, 2025, a decrease of $37.4 million, or 27.1%.",
+      "where": "DOC-80DB053BD25896A0#p488"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "마진 감소는 특정 장기 또는 무기한 자산의 손상을 초래할 수 있다",
+      "figures": [],
+      "quote": "the decline in margins impacting current results and forecasts could result in impairments in certain of our long-lived or indefinite-lived assets, including goodwill, or have other financial statemen",
+      "where": "DOC-80DB053BD25896A0#p325"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "재생에너지 식별 번호 가격 변동성은 정제 마진에 상당하고 예상치 못한 부정적인 영향을 미칠 수 있다",
+      "figures": [],
+      "quote": "Because of the volatility in RINs prices, it is not possible to predict future RINs cost with certainty, and movements in RINs prices can have significant and unanticipated adverse effects on our refi",
+      "where": "DOC-80DB053BD25896A0#p415"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

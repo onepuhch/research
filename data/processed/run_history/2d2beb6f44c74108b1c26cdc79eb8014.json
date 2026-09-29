@@ -1,0 +1,39 @@
+{
+  "component": "revision_screen",
+  "checked_at": "2026-09-29T06:08:30+00:00",
+  "status": "success",
+  "last_success_at": "2026-09-29T06:08:30+00:00",
+  "snapshot": "20260929T055354Z_36528079469-1.json.gz",
+  "candidates": 102,
+  "alert": false,
+  "stages": {
+    "universe": {
+      "requested": 1,
+      "success": 1
+    },
+    "session": {
+      "requested": 1,
+      "success": 1
+    },
+    "quotes": {
+      "requested": 7676,
+      "success": 7673,
+      "unavailable": 3
+    },
+    "earnings": {
+      "requested": 3291,
+      "success": 2432,
+      "unavailable": 859
+    },
+    "profile": {
+      "requested": 102,
+      "success": 102
+    },
+    "price": {
+      "requested": 30,
+      "success": 30
+    }
+  },
+  "run_id": "36528079469",
+  "run_attempt": "1"
+}
