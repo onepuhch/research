@@ -78,11 +78,19 @@
       "observation_id": "OB-32C442EF066AB09C",
       "signal_id": null,
       "day": "2026-09-30",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-09-30T05:56:52+00:00",
+          "status": "sent",
+          "message_id": 143,
+          "error": null
+        }
+      ],
       "reserved_by": "36674489444-1",
       "reserved_at": "2026-09-30T05:56:50+00:00",
-      "payload_sha256": "8aec9a71bd41e8b3e751c5fb4c3a29a95bab95cbb843c8045b90c378215135ce"
+      "payload_sha256": "8aec9a71bd41e8b3e751c5fb4c3a29a95bab95cbb843c8045b90c378215135ce",
+      "message_id": 143
     },
     "NASDAQ:SMTC|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -94,11 +102,19 @@
       "observation_id": "OB-DDA6C6F21D62E4AD",
       "signal_id": null,
       "day": "2026-09-30",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-09-30T05:56:52+00:00",
+          "status": "sent",
+          "message_id": 144,
+          "error": null
+        }
+      ],
       "reserved_by": "36674489444-1",
       "reserved_at": "2026-09-30T05:56:50+00:00",
-      "payload_sha256": "983097dcf5b1b48dbc8a9aa814eb983bdaf82cd08b7aad8cdcfadb4ec1c7b50f"
+      "payload_sha256": "983097dcf5b1b48dbc8a9aa814eb983bdaf82cd08b7aad8cdcfadb4ec1c7b50f",
+      "message_id": 144
     }
   },
   "bootstrap": {
