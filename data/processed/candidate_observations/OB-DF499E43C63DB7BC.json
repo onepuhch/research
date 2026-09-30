@@ -1,0 +1,78 @@
+{
+  "observation_id": "OB-DF499E43C63DB7BC",
+  "candidate_id": "CAN-4E5151866E863998",
+  "candidate_version": "CV-7490156C99528D24",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:TEAM",
+    "ticker": "TEAM",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-09-30T05:43:18+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20260930T054134Z_36674489444-1.json.gz",
+    "sha256": "3c5f110b019f840c18cf31bae6c1cd8934aedbd42afd525ba3de431e050053a4",
+    "run_id": "36674489444-1",
+    "finished_at": "2026-09-30T05:55:55+00:00"
+  },
+  "eps": {
+    "eps_now": 2.1871,
+    "eps_30d": 2.0571,
+    "eps_90d": 1.39452,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 56.8,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 0.45,
+    "yield_change_30_pp": 0.074
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-02",
+    "price_start_date": "2026-07-02",
+    "price_end_expected": "2026-09-29",
+    "price_end_date": "2026-09-29",
+    "close_start": 83.83999633789062,
+    "close_end": 175.9600067138672,
+    "price_pct_90": 109.9,
+    "adj_return_pct_90": 109.9,
+    "pe_change_pct": 33.8
+  },
+  "display_rank": 26,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 17
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 44542308352,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-09-29T06:08:31+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NASDAQ:TEAM",
+  "approval_version": null
+}

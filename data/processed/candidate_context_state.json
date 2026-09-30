@@ -186,9 +186,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "deferred_budget",
-      "context_id": "CTX-5C98C21D42053DF8",
-      "context_input_sha": "5c98c21d42053df8ec34d8545d54795869792c0f112a50a3a554d5d6ed143ac7"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-C0F40E5CBBA2627E",
+      "context_input_sha": "c0f40e5cbba2627ec2d99c197ae82a67f2d733cbfff3d8d86710d15ca7b3224e"
     },
     "CAN-77F79A3B05ABB893": {
       "status": "success",
@@ -213,9 +213,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "deferred_budget",
-      "context_id": "CTX-7E2F28488945E13C",
-      "context_input_sha": "7e2f28488945e13cf2c3d6833d3a353e1a30dc49cfff294bf93b4168ae455eed"
+      "draft_status": "draft_ready",
+      "context_id": "CTX-80ADD5ED7A3A87DF",
+      "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984"
     },
     "CAN-700B10D9B75B0040": {
       "status": "success",
@@ -240,9 +240,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "deferred_budget",
-      "context_id": "CTX-F8AD235C699878EC",
-      "context_input_sha": "f8ad235c699878ecbae8d3287ac733f3321ea0258a5c61729a592685b8419b5c"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-9880C8070DA7574A",
+      "context_input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552"
     },
     "CAN-490AC1686F9442CE": {
       "status": "success",
@@ -267,9 +267,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-03T13:52:04+00:00",
-      "draft_status": "deferred_budget",
-      "context_id": "CTX-87CB658FB21FD9FF",
-      "context_input_sha": "87cb658fb21fd9ffcbddd965656993b199aa82e328713325f92c23f85e44233d"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-5CD5637243E02192",
+      "context_input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed"
     },
     "CAN-68E9292E49558246": {
       "status": "success",
@@ -325,9 +325,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-04T05:40:06+00:00",
-      "draft_status": "deferred_budget",
-      "context_id": "CTX-305850576F9ED20E",
-      "context_input_sha": "305850576f9ed20e5d86019584de5fc20d0cda0cac175578bfd8cb32adbe8aad"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-E7B727C6F72567CB",
+      "context_input_sha": "e7b727c6f72567cb3dcad7c9c49d2e47af4cfd4e720ec6b23fe1529b5e53a3b1"
     },
     "CAN-3D7A7E3B7BFBE2CE": {
       "status": "no_relevant_document",
@@ -380,7 +380,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-04T05:40:06+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-C6D280F99B770EDC",
+      "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6"
     },
     "CAN-36582E27909720FE": {
       "status": "success",
@@ -583,11 +585,11 @@
         "exchange": "Nasdaq",
         "name": "Pagaya Technologies Ltd.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "affa8f025ab31bab39b60e06cf0bcc401bb87f23151412d686258fc9b99ef091",
-        "mapping_observed_at": "2026-09-28T05:32:53+00:00"
+        "mapping_sha256": "ec78fbd272ecb158e65b60d774e2ee5715b454eaadc3c9a670214fa0c2bcce13",
+        "mapping_observed_at": "2026-09-30T05:41:34+00:00"
       },
-      "attempted_at": "2026-09-28T05:47:17+00:00",
-      "eps_key": "2027-12-31|4.14595",
+      "attempted_at": "2026-09-30T05:55:57+00:00",
+      "eps_key": "2027-12-31|4.13106",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-16EEC0F8F2129A3A"
@@ -598,7 +600,7 @@
         "DOC-16EEC0F8F2129A3A"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-05T05:47:17+00:00",
+      "next_eligible_at": "2026-10-07T05:55:57+00:00",
       "draft_status": "deferred_budget"
     },
     "CAN-E763F753A2D7609F": {
@@ -875,6 +877,60 @@
       "notes": [],
       "next_eligible_at": "2026-10-06T06:08:31+00:00",
       "draft_status": "deferred_budget"
+    },
+    "CAN-0733D6B2B6A41784": {
+      "status": "success",
+      "ticker": "TXO",
+      "issuer": {
+        "cik": "0001559432",
+        "ticker": "TXO",
+        "exchange": "NYSE",
+        "name": "TXO Partners, L.P.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "ec78fbd272ecb158e65b60d774e2ee5715b454eaadc3c9a670214fa0c2bcce13",
+        "mapping_observed_at": "2026-09-30T05:41:34+00:00"
+      },
+      "attempted_at": "2026-09-30T05:55:57+00:00",
+      "eps_key": "2027-12-31|1.30667",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-439BA8AE037B9273"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-439BA8AE037B9273"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-07T05:55:57+00:00",
+      "draft_status": "deferred_budget"
+    },
+    "CAN-782282A0C20A29F1": {
+      "status": "success",
+      "ticker": "SMTC",
+      "issuer": {
+        "cik": "0000088941",
+        "ticker": "SMTC",
+        "exchange": "Nasdaq",
+        "name": "Semtech Corporation",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "ec78fbd272ecb158e65b60d774e2ee5715b454eaadc3c9a670214fa0c2bcce13",
+        "mapping_observed_at": "2026-09-30T05:41:34+00:00"
+      },
+      "attempted_at": "2026-09-30T05:55:57+00:00",
+      "eps_key": "2028-01-31|5.8359",
+      "eps_target_period": "2028-01-31",
+      "document_ids": [
+        "DOC-CBBC405DFC60E662"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-CBBC405DFC60E662"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-07T05:55:57+00:00",
+      "draft_status": "deferred_budget"
     }
   },
   "days": {
@@ -893,6 +949,10 @@
     "2026-09-29": {
       "companies": 4,
       "http_attempts": 15
+    },
+    "2026-09-30": {
+      "companies": 3,
+      "http_attempts": 8
     }
   },
   "documents_by_source": {
@@ -934,6 +994,8 @@
     "0001650372-26-000031|https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm": "DOC-AAA5C2B5425B0947",
     "0001342874-26-000046|https://www.sec.gov/Archives/edgar/data/1342874/000134287426000046/a2026junternium6-k.htm": "DOC-29F6CDBE38A4A95D",
     "0001342874-26-000044|https://www.sec.gov/Archives/edgar/data/1342874/000134287426000044/prternium2q2026.htm": "DOC-7711E2B3F13517D4",
-    "0001554855-26-001510|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001510/ex991_1.pdf": "DOC-BD4A51269165B058"
+    "0001554855-26-001510|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001510/ex991_1.pdf": "DOC-BD4A51269165B058",
+    "0001559432-26-000014|https://www.sec.gov/Archives/edgar/data/1559432/000155943226000014/txo-20260630.htm": "DOC-439BA8AE037B9273",
+    "0000088941-26-000028|https://www.sec.gov/Archives/edgar/data/88941/000008894126000028/smtc-07262026x8k991.htm": "DOC-CBBC405DFC60E662"
   }
 }

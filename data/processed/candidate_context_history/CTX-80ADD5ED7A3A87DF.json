@@ -1,0 +1,131 @@
+{
+  "context_id": "CTX-80ADD5ED7A3A87DF",
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "ticker": "MPC",
+  "issuer_cik": "0001510295",
+  "document_ids": [
+    "DOC-683FD7B3F9B87824"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-683FD7B3F9B87824#p5",
+    "DOC-683FD7B3F9B87824#p6",
+    "DOC-683FD7B3F9B87824#p8",
+    "DOC-683FD7B3F9B87824#p9",
+    "DOC-683FD7B3F9B87824#p10",
+    "DOC-683FD7B3F9B87824#p11",
+    "DOC-683FD7B3F9B87824#p12",
+    "DOC-683FD7B3F9B87824#p15",
+    "DOC-683FD7B3F9B87824#t1",
+    "DOC-683FD7B3F9B87824#p17",
+    "DOC-683FD7B3F9B87824#p18",
+    "DOC-683FD7B3F9B87824#p19",
+    "DOC-683FD7B3F9B87824#p21",
+    "DOC-683FD7B3F9B87824#p23",
+    "DOC-683FD7B3F9B87824#p32",
+    "DOC-683FD7B3F9B87824#t2",
+    "DOC-683FD7B3F9B87824#p34",
+    "DOC-683FD7B3F9B87824#p36",
+    "DOC-683FD7B3F9B87824#t3",
+    "DOC-683FD7B3F9B87824#p38",
+    "DOC-683FD7B3F9B87824#p51",
+    "DOC-683FD7B3F9B87824#p54",
+    "DOC-683FD7B3F9B87824#t5",
+    "DOC-683FD7B3F9B87824#p64",
+    "DOC-683FD7B3F9B87824#p98",
+    "DOC-683FD7B3F9B87824#p101",
+    "DOC-683FD7B3F9B87824#p104",
+    "DOC-683FD7B3F9B87824#p108",
+    "DOC-683FD7B3F9B87824#p113"
+  ],
+  "input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-30T05:56:01+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[MPLX] annual distribution growth · 2026 and 2027: 12.5% — 자회사 MPLX의 연간 배당금 증가율이 예상된다",
+      "note_ko": "자회사 MPLX의 연간 배당금 증가율이 예상된다",
+      "kind": "guidance",
+      "quote": "Advancing MPLX Natural Gas and NGL value chain growth strategy, expected to support 12.5% annual distribution growth in 2026 and 2027",
+      "document_id": "DOC-683FD7B3F9B87824",
+      "block_id": "p8",
+      "metric": "annual distribution growth",
+      "figures": [
+        "12.5%"
+      ],
+      "period": "2026 and 2027",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "subsidiary",
+      "subject_name": "MPLX",
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "capital returned: $2.8 billion — 자본이 반환되었다",
+      "note_ko": "자본이 반환되었다",
+      "kind": "fact",
+      "quote": "$2.8 billion of capital returned, reflecting strong cash generation and disciplined execution of our capital allocation priorities",
+      "document_id": "DOC-683FD7B3F9B87824",
+      "block_id": "p9",
+      "metric": "capital returned",
+      "figures": [
+        "$2.8 billion"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "buyback_sharecount"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "$5.1 billion"
+      ],
+      "quote": "Second-quarter net income attributable to MPC of $5.1 billion, or $17.73 per diluted share",
+      "where": "DOC-683FD7B3F9B87824#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "희석 주당 순이익이다",
+      "figures": [
+        "$17.73"
+      ],
+      "quote": "Second-quarter net income attributable to MPC of $5.1 billion, or $17.73 per diluted share",
+      "where": "DOC-683FD7B3F9B87824#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "조정된 이자, 세금, 감가상각비 차감 전 이익이다",
+      "figures": [
+        "$8.5 billion"
+      ],
+      "quote": "$8.5 billion of adjusted EBITDA, with strong commercial and operational performance across the system",
+      "where": "DOC-683FD7B3F9B87824#p6"
+    }
+  ],
+  "context_status": "draft_ready"
+}

@@ -1,0 +1,155 @@
+{
+  "candidate_id": "CAN-490AC1686F9442CE",
+  "candidate_version": "CV-43DB53F7078B6E40",
+  "identity": {
+    "entity_id": "NASDAQ:RPAY",
+    "ticker": "RPAY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Repay Holdings Corporation",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "소비자와 기업이 전자 결제 수단을 사용하도록 통합 결제 처리 솔루션을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Repay Holdings Corporation, a payments technology company, provides integrated payment processing solutions that enables consumers and businesses to make payments using electronic payment methods in the United States. It operates through two segments: Consumer Payments and Business Payments. The company offers payment acceptance solutions, such as debit and credit card processing, automated clearing house (ACH) processing, e-cash, and digital wallet services; virtual credit card processing, enhanced ACH processing, instant funding, clearing and settlement, and communication solutions; and prop"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "RPAY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/RPAY/analysis",
+      "published_at": null,
+      "observed_at": "2026-09-30T05:55:02+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "RPAY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/RPAY/history",
+      "published_at": null,
+      "observed_at": "2026-09-30T05:55:02+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "RPAY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/RPAY/profile",
+      "published_at": null,
+      "observed_at": "2026-09-30T05:55:02+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-93050982946C0EE4",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-10",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-5CD5637243E02192",
+    "input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[KUBRA] 매출(revenue) · 2026: between $150 million and $154 million — 큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다",
+        "note_ko": "큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.",
+        "document_id": "DOC-93050982946C0EE4",
+        "block_id": "p31",
+        "metric": "revenue",
+        "figures": [
+          "between $150 million and $154 million"
+        ],
+        "period": "2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "subsidiary",
+        "subject_name": "KUBRA",
+        "core": false,
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-93050982946C0EE4",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm",
+        "filed_at": "2026-08-10",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.1645,
+    "eps_30d": 1.11365,
+    "eps_90d": 0.97163,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 19.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

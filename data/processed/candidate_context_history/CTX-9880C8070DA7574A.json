@@ -1,0 +1,143 @@
+{
+  "context_id": "CTX-9880C8070DA7574A",
+  "candidate_id": "CAN-700B10D9B75B0040",
+  "ticker": "CORT",
+  "issuer_cik": "0001088856",
+  "document_ids": [
+    "DOC-668EE132B5D00A32"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-668EE132B5D00A32#p5",
+    "DOC-668EE132B5D00A32#p6",
+    "DOC-668EE132B5D00A32#p7",
+    "DOC-668EE132B5D00A32#p8",
+    "DOC-668EE132B5D00A32#p9",
+    "DOC-668EE132B5D00A32#p15",
+    "DOC-668EE132B5D00A32#p16",
+    "DOC-668EE132B5D00A32#p17",
+    "DOC-668EE132B5D00A32#p18",
+    "DOC-668EE132B5D00A32#p21",
+    "DOC-668EE132B5D00A32#p23",
+    "DOC-668EE132B5D00A32#p24",
+    "DOC-668EE132B5D00A32#p30",
+    "DOC-668EE132B5D00A32#p35",
+    "DOC-668EE132B5D00A32#p37",
+    "DOC-668EE132B5D00A32#p38",
+    "DOC-668EE132B5D00A32#p39",
+    "DOC-668EE132B5D00A32#p40",
+    "DOC-668EE132B5D00A32#p41",
+    "DOC-668EE132B5D00A32#p45",
+    "DOC-668EE132B5D00A32#p46",
+    "DOC-668EE132B5D00A32#p48",
+    "DOC-668EE132B5D00A32#p49",
+    "DOC-668EE132B5D00A32#t2",
+    "DOC-668EE132B5D00A32#p71",
+    "DOC-668EE132B5D00A32#t3"
+  ],
+  "input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-30T05:56:01+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "revenue guidance · 2026: $1.1 – $1.2 billion — 매출 전망치를 상향 조정했다",
+      "note_ko": "매출 전망치를 상향 조정했다",
+      "kind": "guidance",
+      "quote": "Increase in 2026 revenue guidance to $1.1 – $1.2 billion",
+      "document_id": "DOC-668EE132B5D00A32",
+      "block_id": "p8",
+      "metric": "revenue guidance",
+      "figures": [
+        "$1.1 – $1.2 billion"
+      ],
+      "period": "2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Net income per common share (diluted) · second quarter of 2026: $0.36 — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Net income per common share (diluted) was $0.36 in the second quarter of 2026, compared to $0.29 in the prior year period.",
+      "document_id": "DOC-668EE132B5D00A32",
+      "block_id": "p18",
+      "metric": "Net income per common share (diluted)",
+      "figures": [
+        "$0.36"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[Korlym and authorized generic] product revenue · second quarter 2026: $208.6 million — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Korlym and authorized generic product revenue was $208.6 million, compared to $194.4 million in the prior year period.",
+      "document_id": "DOC-668EE132B5D00A32",
+      "block_id": "p17",
+      "metric": "product revenue",
+      "figures": [
+        "$208.6 million"
+      ],
+      "period": "second quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Korlym and authorized generic",
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "CATALYST 및 MOMENTUM 연구 결과가 임상 진료에 완전히 통합될 때까지 Cushing 증후군 사업의 신규 처방 증가 추세가 계속될 것인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "figures": [
+        "$256.1 million",
+        "32 percent"
+      ],
+      "quote": "Revenue of $256.1 million, a 32 percent increase over the same period in 2025",
+      "where": "DOC-668EE132B5D00A32#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 증가했다",
+      "figures": [
+        "$43.0 million"
+      ],
+      "quote": "Net income of $43.0 million, compared to $35.1 million in second quarter 2025",
+      "where": "DOC-668EE132B5D00A32#p9"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

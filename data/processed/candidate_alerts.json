@@ -67,6 +67,38 @@
       "reserved_at": "2026-09-29T06:09:16+00:00",
       "payload_sha256": "99c939254cff157828026e9868af9d605d3499518258a338897704cd44ceecc9",
       "message_id": 142
+    },
+    "NYSE:TXO|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:TXO",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-0733D6B2B6A41784",
+      "candidate_version": "CV-9CE7C2D57774A6D6",
+      "observation_id": "OB-32C442EF066AB09C",
+      "signal_id": null,
+      "day": "2026-09-30",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "36674489444-1",
+      "reserved_at": "2026-09-30T05:56:50+00:00",
+      "payload_sha256": "8aec9a71bd41e8b3e751c5fb4c3a29a95bab95cbb843c8045b90c378215135ce"
+    },
+    "NASDAQ:SMTC|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:SMTC",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-782282A0C20A29F1",
+      "candidate_version": "CV-CAE020092A1CEED4",
+      "observation_id": "OB-DDA6C6F21D62E4AD",
+      "signal_id": null,
+      "day": "2026-09-30",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "36674489444-1",
+      "reserved_at": "2026-09-30T05:56:50+00:00",
+      "payload_sha256": "983097dcf5b1b48dbc8a9aa814eb983bdaf82cd08b7aad8cdcfadb4ec1c7b50f"
     }
   },
   "bootstrap": {

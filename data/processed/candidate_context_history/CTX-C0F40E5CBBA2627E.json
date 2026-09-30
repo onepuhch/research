@@ -1,0 +1,110 @@
+{
+  "context_id": "CTX-C0F40E5CBBA2627E",
+  "candidate_id": "CAN-DC6D3F92ECFFD019",
+  "ticker": "AXTI",
+  "issuer_cik": "0001051627",
+  "document_ids": [
+    "DOC-A6967554C2E4C643"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A6967554C2E4C643#p6",
+    "DOC-A6967554C2E4C643#t3",
+    "DOC-A6967554C2E4C643#t4",
+    "DOC-A6967554C2E4C643#t5",
+    "DOC-A6967554C2E4C643#t6",
+    "DOC-A6967554C2E4C643#t7",
+    "DOC-A6967554C2E4C643#p17",
+    "DOC-A6967554C2E4C643#t8",
+    "DOC-A6967554C2E4C643#t10"
+  ],
+  "input_sha": "c0f40e5cbba2627ec2d99c197ae82a67f2d733cbfff3d8d86710d15ca7b3224e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-30T05:56:01+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "GAAP gross margin · second quarter of 2026: 44.9 percent — 회사의 GAAP 매출 총 이익률은 해당 분기에 이 비율이었다",
+      "note_ko": "회사의 GAAP 매출 총 이익률은 해당 분기에 이 비율이었다",
+      "kind": "fact",
+      "quote": "GAAP gross margin was 44.9 percent of revenue for the second quarter of 2026, compared with 29.6 percent of revenue for the first quarter of 2026 and 8.0 percent for the second quarter of 2025.",
+      "document_id": "DOC-A6967554C2E4C643",
+      "block_id": "t4",
+      "metric": "GAAP gross margin",
+      "figures": [
+        "44.9 percent"
+      ],
+      "period": "second quarter of 2026",
+      "currency": null,
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "회사의 데이터 센터 광학 연결에 대한 고객 수요가 계속 강한지 확인해야 한다",
+    "회사의 제조 능력 추가 및 생산성 향상이 계속되는지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사의 매출은 해당 분기에 이 금액이었다",
+      "figures": [
+        "$47.6 million"
+      ],
+      "quote": "Revenue for the second quarter of 2026 was $47.6 million, compared with $26.9 million for the first quarter of 2026 and $18.0 million for the second quarter of 2025.",
+      "where": "DOC-A6967554C2E4C643#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 비 GAAP 매출 총 이익률은 해당 분기에 이 비율이었다",
+      "figures": [
+        "45.0 percent"
+      ],
+      "quote": "Non-GAAP gross margin, after excluding charges for stock-based compensation, was 45.0 percent of revenue for the second quarter of 2026, compared with 29.9 percent of revenue for the first quarter of ",
+      "where": "DOC-A6967554C2E4C643#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 GAAP 순이익은 해당 분기에 이 금액이었다",
+      "figures": [
+        "$11.1 million"
+      ],
+      "quote": "GAAP net income, after minority interests, for the second quarter of 2026 was a net income of $11.1 million, or $0.17 diluted income per share, compared with a net loss of $1.6 million, or $0.03 per s",
+      "where": "DOC-A6967554C2E4C643#t6"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 비 GAAP 순이익은 해당 분기에 이 금액이었다",
+      "figures": [
+        "$11.9 million"
+      ],
+      "quote": "Non-GAAP net income for the second quarter of 2026 was a net income of $11.9 million, or $0.19 per share, compared with a net loss of $0.6 million, or $0.01 per share, for the first quarter of 2026 an",
+      "where": "DOC-A6967554C2E4C643#t7"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 비 GAAP 재무 지표가 GAAP에 따른 재무 지표를 대체하거나 우월하다고 믿지 않으며, 보충 정보로만 제공된다고 명시했다",
+      "figures": [],
+      "quote": "As discussed above, the company provides certain non-GAAP financial measures that exclude stock-based compensation in addition to, and not as a substitute for, or because it believes that such informa",
+      "where": "DOC-A6967554C2E4C643#p17"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

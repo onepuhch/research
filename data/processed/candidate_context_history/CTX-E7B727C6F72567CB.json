@@ -1,0 +1,139 @@
+{
+  "context_id": "CTX-E7B727C6F72567CB",
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "ticker": "PARR",
+  "issuer_cik": "0000821483",
+  "document_ids": [
+    "DOC-45EC7F1F3C20E448"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-45EC7F1F3C20E448#p8",
+    "DOC-45EC7F1F3C20E448#p21",
+    "DOC-45EC7F1F3C20E448#p35",
+    "DOC-45EC7F1F3C20E448#p40",
+    "DOC-45EC7F1F3C20E448#p77",
+    "DOC-45EC7F1F3C20E448#p79",
+    "DOC-45EC7F1F3C20E448#t7",
+    "DOC-45EC7F1F3C20E448#t8",
+    "DOC-45EC7F1F3C20E448#t9",
+    "DOC-45EC7F1F3C20E448#t11",
+    "DOC-45EC7F1F3C20E448#p87",
+    "DOC-45EC7F1F3C20E448#t12",
+    "DOC-45EC7F1F3C20E448#p96",
+    "DOC-45EC7F1F3C20E448#t16",
+    "DOC-45EC7F1F3C20E448#p102",
+    "DOC-45EC7F1F3C20E448#p110"
+  ],
+  "input_sha": "e7b727c6f72567cb3dcad7c9c49d2e47af4cfd4e720ec6b23fe1529b5e53a3b1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-30T05:56:01+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "Adjusted Gross Margin — 조정 매출총이익은 변동성이 큰 원자재 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이와 순실현가능가치 조정 중 낮은 원가를 조정하여 투자자에게 유용한 정보를 제공한다. 이는 사업의 수익 잠재력을 보여주기 위함이다.",
+      "note_ko": "조정 매출총이익은 변동성이 큰 원자재 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이와 순실현가능가치 조정 중 낮은 원가를 조정하여 투자자에게 유용한 정보를 제공한다. 이는 사업의 수익 잠재력을 보여주기 위함이다.",
+      "kind": "fact",
+      "quote": "We believe Adjusted Gross Margin (as defined below) provides useful information to investors because it eliminates the gross impact of volatile commodity prices and adjusts for certain non-cash items and timing differences created by our inventory financing agreements and lower of cost and net realizable value adjustments to demonstrate the earnings potential of the business before other fixed and variable costs, which are reported separately in Operating expense (excluding depreciation) and Depreciation and amortization.",
+      "document_id": "DOC-45EC7F1F3C20E448",
+      "block_id": "p77",
+      "metric": "Adjusted Gross Margin",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "조정 에비타는 이 금액이다",
+      "figures": [
+        "$571.3 million"
+      ],
+      "quote": "Adjusted EBITDA of $571.3 million",
+      "where": "DOC-45EC7F1F3C20E448#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "소매 부문의 조정 에비타는 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$17.3 million",
+        "$23.3 million"
+      ],
+      "quote": "Retail segment Adjusted EBITDA was $17.3 million in the second quarter of 2026, compared to $23.3 million in the second quarter of 2025.",
+      "where": "DOC-45EC7F1F3C20E448#p35"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "소매 부문의 연료 판매량은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "30.7 million gallons",
+        "30.8 million gallons"
+      ],
+      "quote": "The Retail segment reported fuel sales volumes of 30.7 million gallons in the second quarter of 2026, compared to 30.8 million gallons in the same quarter of 2025.",
+      "where": "DOC-45EC7F1F3C20E448#p35"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "소매 부문의 동일 매장 연료 판매량은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "0.8%"
+      ],
+      "quote": "Second quarter 2026 same store fuel volumes declined by 0.8% and inside sales revenue increased by 1.0% compared to the second quarter of 2025.",
+      "where": "DOC-45EC7F1F3C20E448#p35"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "영업 활동으로 인한 순 현금은 전년 같은 기간보다 늘었다",
+      "figures": [
+        "$282.6 million",
+        "$133.6 million"
+      ],
+      "quote": "Net cash provided by operations totaled $282.6 million for the three months ended June 30, 2026, including working capital outflows of $(312.2) million and deferred turnaround expenditures of $(19.5) ",
+      "where": "DOC-45EC7F1F3C20E448#p40"
+    },
+    {
+      "what": "limitation",
+      "reason": "bad_note",
+      "note_ko": "하와이 정유소의 계약 판매량은 전월 및 전주 평균 시장 가격을 기준으로 가격이 책정된다. 2026년 2분기 순 가격 지연 이익은 3월 대비 6월 정제 제품 가격 하락에 의해 발생했으며, 이는 정제 제품 가격이 급격히 상승했던 2026년 1분기에 인식된 부정적인 순 가격 지연 영향을 부분적으로 상쇄했다. 일반적으로 정제 제품 가격 하락은 긍정적인 순 가격 지",
+      "figures": [],
+      "quote": "The net price lag impact reflects the Hawaii refinery's contractual sales volumes that are priced based on prior-month and prior-week average market prices. The second quarter 2026 net price lag benef",
+      "where": "DOC-45EC7F1F3C20E448#p21"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "영업 활동으로 인한 순 현금에는 운전자본 유출과 이연된 정비 지출이 포함된다. 이러한 항목을 제외하면 영업 활동으로 인한 순 현금은 이 금액이다. 이러한 운전자본 유출의 상당 부분은 원자재 가격이 정상화되고 하와이 재고가 정비 후 정상 수준으로 돌아오면 역전될 것으로 예상된다.",
+      "figures": [
+        "$(312.2) million",
+        "$(19.5) million",
+        "$614.3 million"
+      ],
+      "quote": "Net cash provided by operations totaled $282.6 million for the three months ended June 30, 2026, including working capital outflows of $(312.2) million and deferred turnaround expenditures of $(19.5) ",
+      "where": "DOC-45EC7F1F3C20E448#p40"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

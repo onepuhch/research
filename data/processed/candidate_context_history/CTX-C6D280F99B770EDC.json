@@ -1,0 +1,106 @@
+{
+  "context_id": "CTX-C6D280F99B770EDC",
+  "candidate_id": "CAN-325B2A6C30755476",
+  "ticker": "VLO",
+  "issuer_cik": "0001035002",
+  "document_ids": [
+    "DOC-9DA9F71500981FB2"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9DA9F71500981FB2#p5",
+    "DOC-9DA9F71500981FB2#t1",
+    "DOC-9DA9F71500981FB2#t2",
+    "DOC-9DA9F71500981FB2#t3",
+    "DOC-9DA9F71500981FB2#t4",
+    "DOC-9DA9F71500981FB2#t7",
+    "DOC-9DA9F71500981FB2#t9",
+    "DOC-9DA9F71500981FB2#p168",
+    "DOC-9DA9F71500981FB2#p170",
+    "DOC-9DA9F71500981FB2#p184",
+    "DOC-9DA9F71500981FB2#p190"
+  ],
+  "input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-09-30T05:56:01+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "발레로 주주에게 귀속되는 순이익을 보고했다",
+      "figures": [
+        "$3.7 billion"
+      ],
+      "quote": "Reported net income attributable to Valero stockholders of $3.7 billion, or $12.62 per share",
+      "where": "DOC-9DA9F71500981FB2#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "주당 순이익을 보고했다",
+      "figures": [
+        "$12.62"
+      ],
+      "quote": "Earnings per common share ; $12.62",
+      "where": "DOC-9DA9F71500981FB2#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "매출을 기록했다",
+      "figures": [
+        "$44,476"
+      ],
+      "quote": "Revenues ; $44,476",
+      "where": "DOC-9DA9F71500981FB2#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "정유 부문의 영업 이익을 기록했다",
+      "figures": [
+        "$4,470"
+      ],
+      "quote": "Operating income by segment ; $4,470",
+      "where": "DOC-9DA9F71500981FB2#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "재생 디젤 부문의 영업 이익을 기록했다",
+      "figures": [
+        "$717"
+      ],
+      "quote": "Renewable Diesel operating income (loss) ; $717",
+      "where": "DOC-9DA9F71500981FB2#t2"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "베니시아 및 윌밍턴 정유소에 귀속되는 자산 손상 손실은 지속적인 운영이나 정유 사업의 수익성에 대한 기대를 나타내지 않는다",
+      "figures": [
+        "$1.1 billion"
+      ],
+      "quote": "–Asset impairment loss – The asset impairment loss attributable to our Benicia and Wilmington refineries (see note (c)) is not indicative of our ongoing operations or our expectations about the profit",
+      "where": "DOC-9DA9F71500981FB2#p184"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "조정된 정유 부문 영업 이익은 해당 부문의 핵심 영업 성과를 나타내지 않는 항목을 제외하므로 정유 부문의 영업 및 재무 성과에 대한 중요한 척도라고 믿는다",
+      "figures": [],
+      "quote": "We believe adjusted Refining operating income is an important measure of our Refining segment’s operating and financial performance because it excludes items that are not indicative of that segment’s ",
+      "where": "DOC-9DA9F71500981FB2#p190"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
