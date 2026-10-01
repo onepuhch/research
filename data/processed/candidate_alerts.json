@@ -126,11 +126,19 @@
       "observation_id": "OB-1DB9B74067ADDE80",
       "signal_id": null,
       "day": "2026-10-01",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-01T06:23:22+00:00",
+          "status": "sent",
+          "message_id": 145,
+          "error": null
+        }
+      ],
       "reserved_by": "36822997450-1",
       "reserved_at": "2026-10-01T06:23:20+00:00",
-      "payload_sha256": "39e44776aeca69b89032bc7c63d7006d63a870119e4a61d30c147a4c32eea123"
+      "payload_sha256": "39e44776aeca69b89032bc7c63d7006d63a870119e4a61d30c147a4c32eea123",
+      "message_id": 145
     },
     "NYSE:TRLV|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -142,11 +150,19 @@
       "observation_id": "OB-DE3B52DADD8E8906",
       "signal_id": null,
       "day": "2026-10-01",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-01T06:23:23+00:00",
+          "status": "sent",
+          "message_id": 146,
+          "error": null
+        }
+      ],
       "reserved_by": "36822997450-1",
       "reserved_at": "2026-10-01T06:23:20+00:00",
-      "payload_sha256": "b49a6c70559b34d8f09c1a50fa8b45cf9375fe9950bac1344e78a37bca6d8210"
+      "payload_sha256": "b49a6c70559b34d8f09c1a50fa8b45cf9375fe9950bac1344e78a37bca6d8210",
+      "message_id": 146
     }
   },
   "bootstrap": {
