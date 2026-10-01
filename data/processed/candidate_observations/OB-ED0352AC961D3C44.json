@@ -1,0 +1,83 @@
+{
+  "observation_id": "OB-ED0352AC961D3C44",
+  "candidate_id": "CAN-325B2A6C30755476",
+  "candidate_version": "CV-F4103587DA317D65",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:VLO",
+    "ticker": "VLO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-01T06:09:04+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261001T060811Z_36822997450-1.json.gz",
+    "sha256": "c73435006bdb72d794fdf33ac500fdb67c1ae306c0636327ae7298515fe2679f",
+    "run_id": "36822997450-1",
+    "finished_at": "2026-10-01T06:22:34+00:00"
+  },
+  "eps": {
+    "eps_now": 38.04043,
+    "eps_30d": 29.96796,
+    "eps_90d": 21.13555,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 18,
+    "up30": 7,
+    "down30": 1,
+    "pct_90": 80.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.361,
+    "yield_change_30_pp": 2.083
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-03",
+    "price_start_date": "2026-07-02",
+    "price_end_expected": "2026-09-30",
+    "price_end_date": "2026-09-30",
+    "close_start": 267.760009765625,
+    "close_end": 387.6099853515625,
+    "price_pct_90": 44.8,
+    "adj_return_pct_90": 45.3,
+    "pe_change_pct": -19.6
+  },
+  "display_rank": 12,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 7
+    },
+    {
+      "list": "B",
+      "rank": 12
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 111603556352,
+  "context_id": "CTX-C6D280F99B770EDC",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-09-27T05:40:06+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NYSE:VLO",
+  "approval_version": null
+}

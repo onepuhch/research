@@ -2577,6 +2577,327 @@
           ]
         }
       }
+    },
+    "2026-10-01": {
+      "runs": [
+        {
+          "run_id": "36822997450-1",
+          "mode": "auto",
+          "event": "schedule",
+          "planned": [
+            "collect",
+            "extract",
+            "eps",
+            "notify",
+            "quarterly",
+            "screen",
+            "prices",
+            "context",
+            "cards",
+            "alerts",
+            "baseline",
+            "returns",
+            "views"
+          ],
+          "reasons": {
+            "collect": "not_run",
+            "extract": "not_run",
+            "eps": "not_run",
+            "notify": "not_run",
+            "quarterly": "not_run",
+            "screen": "not_run",
+            "prices": "not_run",
+            "context": "not_run",
+            "cards": "not_run",
+            "alerts": "not_run",
+            "baseline": "not_run",
+            "returns": "not_run",
+            "views": "not_run"
+          },
+          "started_at": "2026-10-01T06:06:10+00:00",
+          "finished_at": null,
+          "code_version": "f555a687c328",
+          "policy_hash": "41d88768948f"
+        }
+      ],
+      "steps": {
+        "collect": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:06:10+00:00",
+          "finished_at": "2026-10-01T06:06:24+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "revision": "36822997450-1@2026-10-01T06:06:24+00:00",
+          "last_success_at": "2026-10-01T06:06:24+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-10-01T06:06:10+00:00",
+              "finished_at": "2026-10-01T06:06:24+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:06:24+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "extract": {
+          "execution_status": "failed",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:06:24+00:00",
+          "finished_at": "2026-10-01T06:08:07+00:00",
+          "exit_code": 1,
+          "quality_status": "unknown",
+          "revision": "36822997450-1@2026-10-01T06:08:07+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "failed",
+              "quality_status": "unknown",
+              "started_at": "2026-10-01T06:06:24+00:00",
+              "finished_at": "2026-10-01T06:08:07+00:00",
+              "exit_code": 1,
+              "revision": "36822997450-1@2026-10-01T06:08:07+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "eps": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:08:07+00:00",
+          "finished_at": "2026-10-01T06:08:09+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "@tracking": "c274958b3e3dea1d"
+          },
+          "revision": "36822997450-1@2026-10-01T06:08:09+00:00",
+          "last_success_at": "2026-10-01T06:08:09+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-10-01T06:08:07+00:00",
+              "finished_at": "2026-10-01T06:08:09+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:08:09+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "notify": {
+          "execution_status": "blocked",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": null,
+          "finished_at": "2026-10-01T06:08:09+00:00",
+          "exit_code": null,
+          "quality_status": "unknown",
+          "blocked_reason": "extract failed",
+          "dependency_run_id": "36822997450-1",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "blocked",
+              "quality_status": "unknown",
+              "started_at": null,
+              "finished_at": "2026-10-01T06:08:09+00:00",
+              "exit_code": null,
+              "revision": null,
+              "blocked_reason": "extract failed"
+            }
+          ]
+        },
+        "quarterly": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:08:09+00:00",
+          "finished_at": "2026-10-01T06:08:10+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "@tracking": "c274958b3e3dea1d"
+          },
+          "revision": "36822997450-1@2026-10-01T06:08:10+00:00",
+          "last_success_at": "2026-10-01T06:08:10+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-10-01T06:08:09+00:00",
+              "finished_at": "2026-10-01T06:08:10+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:08:10+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "screen": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:08:10+00:00",
+          "finished_at": "2026-10-01T06:22:35+00:00",
+          "exit_code": 0,
+          "quality_status": "complete",
+          "revision": "36822997450-1@2026-10-01T06:22:35+00:00",
+          "last_success_at": "2026-10-01T06:22:35+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "complete",
+              "started_at": "2026-10-01T06:08:10+00:00",
+              "finished_at": "2026-10-01T06:22:35+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:22:35+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "prices": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:22:35+00:00",
+          "finished_at": "2026-10-01T06:22:35+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "@tracking": "c274958b3e3dea1d"
+          },
+          "revision": "36822997450-1@2026-10-01T06:22:35+00:00",
+          "last_success_at": "2026-10-01T06:22:35+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-10-01T06:22:35+00:00",
+              "finished_at": "2026-10-01T06:22:35+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:22:35+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "context": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:22:35+00:00",
+          "finished_at": "2026-10-01T06:23:13+00:00",
+          "exit_code": 0,
+          "quality_status": "partial",
+          "inputs": {
+            "screen": "36822997450-1@2026-10-01T06:22:35+00:00"
+          },
+          "version": "context-v7",
+          "revision": "36822997450-1@2026-10-01T06:23:13+00:00",
+          "last_success_at": "2026-10-01T06:23:13+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "partial",
+              "started_at": "2026-10-01T06:22:35+00:00",
+              "finished_at": "2026-10-01T06:23:13+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:23:13+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "cards": {
+          "execution_status": "success",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:23:14+00:00",
+          "finished_at": "2026-10-01T06:23:20+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "screen": "36822997450-1@2026-10-01T06:22:35+00:00",
+            "context": "36822997450-1@2026-10-01T06:23:13+00:00",
+            "@tracking": "c274958b3e3dea1d",
+            "@evidence": "none"
+          },
+          "version": "cards-v4",
+          "revision": "36822997450-1@2026-10-01T06:23:20+00:00",
+          "last_success_at": "2026-10-01T06:23:20+00:00",
+          "attempts": [
+            {
+              "run_id": "36822997450-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-10-01T06:23:14+00:00",
+              "finished_at": "2026-10-01T06:23:20+00:00",
+              "exit_code": 0,
+              "revision": "36822997450-1@2026-10-01T06:23:20+00:00",
+              "blocked_reason": null
+            }
+          ]
+        },
+        "alerts": {
+          "execution_status": "started",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run",
+          "run_id": "36822997450-1",
+          "started_at": "2026-10-01T06:23:20+00:00",
+          "finished_at": null,
+          "exit_code": null,
+          "quality_status": "unknown",
+          "inputs": {
+            "extract": "36822997450-1@2026-10-01T06:08:07+00:00"
+          }
+        },
+        "baseline": {
+          "execution_status": "pending",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run"
+        },
+        "returns": {
+          "execution_status": "pending",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run"
+        },
+        "views": {
+          "execution_status": "pending",
+          "planned_by": "36822997450-1",
+          "planned_at": "2026-10-01T06:06:10+00:00",
+          "plan_reason": "not_run"
+        }
+      }
     }
   }
 }

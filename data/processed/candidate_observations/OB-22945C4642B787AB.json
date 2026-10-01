@@ -1,0 +1,78 @@
+{
+  "observation_id": "OB-22945C4642B787AB",
+  "candidate_id": "CAN-DF76D3AD7ADC73CF",
+  "candidate_version": "CV-DC57F70790E9B70C",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:CBRL",
+    "ticker": "CBRL",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-01T06:18:09+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261001T060811Z_36822997450-1.json.gz",
+    "sha256": "c73435006bdb72d794fdf33ac500fdb67c1ae306c0636327ae7298515fe2679f",
+    "run_id": "36822997450-1",
+    "finished_at": "2026-10-01T06:22:34+00:00"
+  },
+  "eps": {
+    "eps_now": 2.14485,
+    "eps_30d": 1.67945,
+    "eps_90d": 1.15875,
+    "eps_target_period": "2028-07-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 85.1,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 1.874,
+    "yield_change_30_pp": 0.884
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-03",
+    "price_start_date": "2026-07-02",
+    "price_end_expected": "2026-09-30",
+    "price_end_date": "2026-09-30",
+    "close_start": 53.5,
+    "close_end": 52.619998931884766,
+    "price_pct_90": -1.6,
+    "adj_return_pct_90": -1.2,
+    "pe_change_pct": -46.9
+  },
+  "display_rank": 19,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 11
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 1176184832,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-01T06:22:35+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NASDAQ:CBRL",
+  "approval_version": null
+}

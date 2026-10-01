@@ -1,0 +1,152 @@
+{
+  "candidate_id": "CAN-36582E27909720FE",
+  "candidate_version": "CV-CFAE75C696070CD2",
+  "identity": {
+    "entity_id": "NYSE:CODI",
+    "ticker": "CODI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Compass Diversified",
+  "industry": "Conglomerates",
+  "sector": "Industrials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "산업 및 브랜드 소비재 기업에 투자하고 인수합병, 기업 재편 등을 통해 수익을 얻는 사모펀드입니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Compass Diversified is a private equity firm specializing in add on acquisitions, buyouts, industry consolidation, recapitalization, late stage, and middle market investments. It seeks to invest in leading industrial or branded consumer companies, textiles, Apparel and Luxury goods, trading companies and distributors, manufacturing, distribution, consumer discretionary, commercial services and supplies, consumer products, capital good, Leisure Product, consumer service, consumer staples, household durables, business services sector, infrastructure healthcare, safety & security, electronic comp"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CODI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CODI/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-01T06:19:11+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CODI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CODI/history",
+      "published_at": null,
+      "observed_at": "2026-10-01T06:19:11+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CODI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CODI/profile",
+      "published_at": null,
+      "observed_at": "2026-10-01T06:19:11+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-DCA2D5E4142540F1",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-10",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-B1F7138D24B2BA42",
+    "input_sha": "b1f7138d24b2ba421b8d51f9f1ea39de461584bb5657acd5e0b63aed8c97a1ea",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "outlook — 회사의 전망은 이전 가이던스에 비해 브랜드 소비재 사업부에 대한 기대치가 높고 산업재 사업부에 대한 기대치가 낮음을 반영한다",
+        "note_ko": "회사의 전망은 이전 가이던스에 비해 브랜드 소비재 사업부에 대한 기대치가 높고 산업재 사업부에 대한 기대치가 낮음을 반영한다",
+        "kind": "interpretation",
+        "quote": "CODI’s outlook reflects higher expectations for the Branded Consumer businesses and lower expectations for the Industrial businesses relative to prior guidance.",
+        "document_id": "DOC-DCA2D5E4142540F1",
+        "block_id": "p41",
+        "metric": "outlook",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "mixed"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-DCA2D5E4142540F1",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm",
+        "filed_at": "2026-08-10",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.644,
+    "eps_30d": 0.464,
+    "eps_90d": 0.28,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 130.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

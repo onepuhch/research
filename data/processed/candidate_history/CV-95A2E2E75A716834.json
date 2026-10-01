@@ -1,0 +1,158 @@
+{
+  "candidate_id": "CAN-5A9E947A6AEC56D7",
+  "candidate_version": "CV-95A2E2E75A716834",
+  "identity": {
+    "entity_id": "NYSE:AGL",
+    "ticker": "AGL",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "agilon health, inc.",
+  "industry": "Medical Care Facilities",
+  "sector": "Healthcare",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "노인들에게 의료 서비스를 제공하고, 회원당 월별 고정 요금으로 환자 건강 관리 플랫폼을 운영하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "agilon health, inc. provides healthcare services for seniors through primary care physicians in the communities of the United States. It offers a platform that manages the total healthcare needs of the patients by subscription-like per-member per-month. The company was formerly known as Agilon Health Topco, Inc. and changed its name to agilon health, inc. in March 2021. The company was founded in 2016 and is based in Westerville, Ohio."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AGL analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AGL/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-01T06:17:51+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AGL daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AGL/history",
+      "published_at": null,
+      "observed_at": "2026-10-01T06:17:51+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AGL company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AGL/profile",
+      "published_at": null,
+      "observed_at": "2026-10-01T06:17:51+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-7387CF5E90D2794F",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1831097/000162828026053328/agl-20260630xexx991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-489EBDB3A330DB87",
+    "input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "Total members on the agilon platform · June 30, 2026: 549,000 / 437,000 / 112,000 — 플랫폼 총 회원 수가 감소했다",
+        "note_ko": "플랫폼 총 회원 수가 감소했다",
+        "kind": "fact",
+        "quote": "Total members on the agilon platform decreased to 549,000 as of June 30, 2026, including 437,000 Medicare Advantage members and 112,000 ACO model beneficiaries.",
+        "document_id": "DOC-7387CF5E90D2794F",
+        "block_id": "p10",
+        "metric": "Total members on the agilon platform",
+        "figures": [
+          "549,000",
+          "437,000",
+          "112,000"
+        ],
+        "period": "June 30, 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "회원 수 감소의 구체적인 원인은 무엇인가?",
+      "조정 에비타에 대한 비 GAAP 조정 항목은 무엇인가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-7387CF5E90D2794F",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1831097/000162828026053328/agl-20260630xexx991.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.40143,
+    "eps_30d": 1.76475,
+    "eps_90d": -0.61688,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": null,
+    "steady": false,
+    "turnaround": true
+  }
+}

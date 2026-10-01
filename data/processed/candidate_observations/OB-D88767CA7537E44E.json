@@ -1,0 +1,78 @@
+{
+  "observation_id": "OB-D88767CA7537E44E",
+  "candidate_id": "CAN-0584EAE068460D91",
+  "candidate_version": "CV-59F32D93B63D8475",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DAN",
+    "ticker": "DAN",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-01T06:15:38+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261001T060811Z_36822997450-1.json.gz",
+    "sha256": "c73435006bdb72d794fdf33ac500fdb67c1ae306c0636327ae7298515fe2679f",
+    "run_id": "36822997450-1",
+    "finished_at": "2026-10-01T06:22:34+00:00"
+  },
+  "eps": {
+    "eps_now": 4.18621,
+    "eps_30d": 4.07184,
+    "eps_90d": 3.38333,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 23.7,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.94,
+    "yield_change_30_pp": 0.419
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-03",
+    "price_start_date": "2026-07-02",
+    "price_end_expected": "2026-09-30",
+    "price_end_date": "2026-09-30",
+    "close_start": 24.90999984741211,
+    "close_end": 27.309999465942383,
+    "price_pct_90": 9.6,
+    "adj_return_pct_90": 10.1,
+    "pe_change_pct": -11.4
+  },
+  "display_rank": 27,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 2937918976,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-09-28T05:47:17+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NYSE:DAN",
+  "approval_version": null
+}

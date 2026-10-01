@@ -115,6 +115,38 @@
       "reserved_at": "2026-09-30T05:56:50+00:00",
       "payload_sha256": "983097dcf5b1b48dbc8a9aa814eb983bdaf82cd08b7aad8cdcfadb4ec1c7b50f",
       "message_id": 144
+    },
+    "NYSE:CLF|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:CLF",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-7F0690B785E31226",
+      "candidate_version": "CV-CE10DC0FDD425DF1",
+      "observation_id": "OB-1DB9B74067ADDE80",
+      "signal_id": null,
+      "day": "2026-10-01",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "36822997450-1",
+      "reserved_at": "2026-10-01T06:23:20+00:00",
+      "payload_sha256": "39e44776aeca69b89032bc7c63d7006d63a870119e4a61d30c147a4c32eea123"
+    },
+    "NYSE:TRLV|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:TRLV",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-713C837ADADE8D8B",
+      "candidate_version": "CV-49A7086EF3E949FE",
+      "observation_id": "OB-DE3B52DADD8E8906",
+      "signal_id": null,
+      "day": "2026-10-01",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "36822997450-1",
+      "reserved_at": "2026-10-01T06:23:20+00:00",
+      "payload_sha256": "b49a6c70559b34d8f09c1a50fa8b45cf9375fe9950bac1344e78a37bca6d8210"
     }
   },
   "bootstrap": {

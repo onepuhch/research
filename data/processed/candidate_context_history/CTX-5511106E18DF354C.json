@@ -1,0 +1,112 @@
+{
+  "context_id": "CTX-5511106E18DF354C",
+  "candidate_id": "CAN-4DB66C064FC2ED7C",
+  "ticker": "URGN",
+  "issuer_cik": "0001668243",
+  "document_ids": [
+    "DOC-99C179A86297DD8F"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-99C179A86297DD8F#p4",
+    "DOC-99C179A86297DD8F#t1",
+    "DOC-99C179A86297DD8F#t2",
+    "DOC-99C179A86297DD8F#t3",
+    "DOC-99C179A86297DD8F#p6",
+    "DOC-99C179A86297DD8F#t5",
+    "DOC-99C179A86297DD8F#t10",
+    "DOC-99C179A86297DD8F#t12",
+    "DOC-99C179A86297DD8F#t15",
+    "DOC-99C179A86297DD8F#t16",
+    "DOC-99C179A86297DD8F#p14",
+    "DOC-99C179A86297DD8F#p15",
+    "DOC-99C179A86297DD8F#p16",
+    "DOC-99C179A86297DD8F#p18",
+    "DOC-99C179A86297DD8F#p21",
+    "DOC-99C179A86297DD8F#t20",
+    "DOC-99C179A86297DD8F#p33",
+    "DOC-99C179A86297DD8F#t42",
+    "DOC-99C179A86297DD8F#p47"
+  ],
+  "input_sha": "5511106e18df354c6c19166c944f81b8410a12350f74bf9c5218a7031784607f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-01T06:22:42+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · second quarter ended June 30, 2026: $72.5 million — 총 매출은 전년 같은 분기보다 늘었다",
+      "note_ko": "총 매출은 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Total revenue was $72.5 million in the second quarter ended June 30, 2026, compared with $24.2 million in the second quarter of 2025.",
+      "document_id": "DOC-99C179A86297DD8F",
+      "block_id": "p14",
+      "metric": "Revenue",
+      "figures": [
+        "$72.5 million"
+      ],
+      "period": "second quarter ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "ZUSDURI의 연간 매출 가이던스는 언제 제공될 예정인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "ZUSDURI 매출은 전 분기 대비 성장했다",
+      "figures": [
+        "$50.4 million",
+        "73%"
+      ],
+      "quote": "ZUSDURI® generated $50.4 million in revenue in the second quarter of 2026, representing 73% quarter-over-quarter growth",
+      "where": "DOC-99C179A86297DD8F#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "JELMYTO의 연간 순제품 매출은 특정 범위에 있을 것으로 예상한다",
+      "figures": [
+        "$97 million to $101 million"
+      ],
+      "quote": "The Company continues to expect 2026 net product revenue for JELMYTO to be in the range of $97 million to $101 million.",
+      "where": "DOC-99C179A86297DD8F#p21"
+    },
+    {
+      "what": "claim",
+      "reason": "raise_not_in_quote",
+      "note_ko": "연간 영업 비용 가이던스를 상향 조정했다",
+      "figures": [
+        "$260 million to $270 million"
+      ],
+      "quote": "The Company is increasing its full-year 2026 operating expenses guidance to be in the range of $260 million to $270 million, including non-cash share-based compensation expense of $20 million to $24 m",
+      "where": "DOC-99C179A86297DD8F#p21"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "주당 순손실은 전년 같은 기간보다 줄었다",
+      "figures": [
+        "$(0.28)"
+      ],
+      "quote": "Net loss per ordinary share basic and diluted ; $ (0.28) ; $ (1.05)",
+      "where": "DOC-99C179A86297DD8F#t20"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

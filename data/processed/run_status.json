@@ -1,39 +1,39 @@
 {
   "eps": {
-    "checked_at": "2026-09-30T05:41:32+00:00",
+    "checked_at": "2026-10-01T06:08:09+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T05:41:32+00:00",
+    "last_success_at": "2026-10-01T06:08:09+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-09-30T05:40:56+00:00",
+    "checked_at": "2026-10-01T06:06:24+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T05:40:56+00:00",
-    "item_count": 24,
+    "last_success_at": "2026-10-01T06:06:24+00:00",
+    "item_count": 25,
     "errors": [],
-    "collected_at": "2026-09-30T05:40:56.809272+00:00"
+    "collected_at": "2026-10-01T06:06:24.821466+00:00"
   },
   "extract": {
-    "checked_at": "2026-09-30T05:41:31+00:00",
-    "status": "success",
+    "checked_at": "2026-10-01T06:08:07+00:00",
+    "status": "degraded",
     "last_success_at": "2026-09-30T05:41:31+00:00",
-    "accepted": 0,
+    "accepted": 1,
     "deferred_budget": 0,
     "rejected": 2,
-    "validation_rejected": 2,
+    "validation_rejected": 0,
     "validation_rejected_total": 27,
-    "failed": 0,
-    "pending": 0,
+    "failed": 3,
+    "pending": 3,
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-09-30T22:23:00+00:00",
+    "checked_at": "2026-10-01T06:06:10+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T22:23:00+00:00",
+    "last_success_at": "2026-10-01T06:06:10+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -54,9 +54,9 @@
     "last_success_at": "2026-09-30T05:41:32+00:00"
   },
   "prices": {
-    "checked_at": "2026-09-30T05:55:57+00:00",
+    "checked_at": "2026-10-01T06:22:35+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T05:55:57+00:00",
+    "last_success_at": "2026-10-01T06:22:35+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
@@ -69,19 +69,19 @@
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-09-30T05:41:34+00:00",
+    "checked_at": "2026-10-01T06:08:10+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T05:41:34+00:00",
+    "last_success_at": "2026-10-01T06:08:10+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-09-30T05:55:56+00:00",
+    "checked_at": "2026-10-01T06:22:35+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T05:55:56+00:00",
-    "snapshot": "20260930T054134Z_36674489444-1.json.gz",
-    "candidates": 100,
+    "last_success_at": "2026-10-01T06:22:35+00:00",
+    "snapshot": "20261001T060811Z_36822997450-1.json.gz",
+    "candidates": 105,
     "alert": false,
     "stages": {
       "universe": {
@@ -94,39 +94,40 @@
       },
       "quotes": {
         "requested": 7673,
-        "success": 7668,
-        "unavailable": 5
+        "success": 7670,
+        "unavailable": 3
       },
       "earnings": {
-        "requested": 3236,
-        "success": 2414,
+        "requested": 3238,
+        "success": 2416,
         "unavailable": 822
       },
       "profile": {
-        "requested": 100,
-        "success": 100
+        "requested": 105,
+        "success": 105
       },
       "price": {
-        "requested": 31,
-        "success": 31
+        "requested": 32,
+        "success": 32
       }
     }
   },
   "cards": {
-    "checked_at": "2026-09-30T05:56:49+00:00",
+    "checked_at": "2026-10-01T06:23:20+00:00",
     "status": "success",
-    "last_success_at": "2026-09-30T05:56:49+00:00",
+    "last_success_at": "2026-10-01T06:23:20+00:00",
     "translation": {
-      "requested": 3,
-      "translated": 3,
+      "requested": 2,
+      "translated": 0,
       "rejected": 0,
       "failed_calls": 0,
-      "calls": 1
+      "calls": 1,
+      "budget_exhausted": true
     },
-    "new_versions": 10,
-    "new_observations": 31,
+    "new_versions": 9,
+    "new_observations": 32,
     "migrated_legacy": 0,
-    "cards": 31,
+    "cards": 32,
     "unidentified": 0,
     "stale": []
   },
@@ -147,15 +148,15 @@
     "selected": 2
   },
   "candidate_context": {
-    "checked_at": "2026-09-30T05:56:43+00:00",
-    "status": "success",
+    "checked_at": "2026-10-01T06:23:13+00:00",
+    "status": "degraded",
     "last_success_at": "2026-09-30T05:56:43+00:00",
     "held": [],
-    "researched": 3,
+    "researched": 5,
     "statuses": {
-      "success": 3
+      "success": 5
     },
-    "targets": 31,
+    "targets": 32,
     "current": {
       "CAN-ABBBE42278126D28": "2027-12-31",
       "CAN-D50A4151AB176FB7": "2028-05-31",
@@ -172,35 +173,36 @@
       "CAN-36582E27909720FE": "2027-12-31",
       "CAN-11B1565B12AFE2F9": "2027-12-31",
       "CAN-5A9E947A6AEC56D7": "2027-12-31",
-      "CAN-E87900AEFDDE7B07": "2027-12-31",
-      "CAN-4DB66C064FC2ED7C": "2027-12-31",
       "CAN-A0761326A7E13159": "2027-12-31",
-      "CAN-E95987D989EF1145": "2027-12-31",
-      "CAN-E763F753A2D7609F": "2027-12-31",
+      "CAN-4DB66C064FC2ED7C": "2027-12-31",
+      "CAN-E87900AEFDDE7B07": "2027-12-31",
       "CAN-DF76D3AD7ADC73CF": "2028-07-31",
+      "CAN-E763F753A2D7609F": "2027-12-31",
+      "CAN-3D30FF7D03231FE1": "2027-12-31",
       "CAN-C8B827862A3B86D5": "2027-12-31",
       "CAN-EE8A92AC2C2D3E8C": "2027-12-31",
       "CAN-8ED72F330C1AE34D": "2027-12-31",
-      "CAN-6AC97D7E0081C82D": "2028-03-31",
-      "CAN-4E5151866E863998": "2028-06-30",
-      "CAN-3D30FF7D03231FE1": "2027-12-31",
-      "CAN-4BD491C8D3F1EC4F": "2027-12-31",
       "CAN-0733D6B2B6A41784": "2027-12-31",
+      "CAN-4E5151866E863998": "2028-06-30",
       "CAN-0584EAE068460D91": "2027-12-31",
+      "CAN-4BD491C8D3F1EC4F": "2027-12-31",
+      "CAN-E95987D989EF1145": "2027-12-31",
+      "CAN-7F0690B785E31226": "2027-12-31",
+      "CAN-713C837ADADE8D8B": "2027-12-31",
       "CAN-782282A0C20A29F1": "2028-01-31"
     },
-    "http_attempts": 8,
+    "http_attempts": 14,
     "coverage": {
-      "success": 30,
+      "success": 31,
       "no_relevant_document": 1
     },
     "drafts": {
       "requests": 6,
-      "drafted": 1,
-      "insufficient_earnings_context": 3,
+      "drafted": 0,
+      "insufficient_earnings_context": 2,
       "no_supported_claims": 2,
-      "deferred": 19,
-      "failed": 0
+      "deferred": 14,
+      "failed": 2
     }
   },
   "context_verification": {
