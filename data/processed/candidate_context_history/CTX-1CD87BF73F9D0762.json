@@ -1,0 +1,200 @@
+{
+  "context_id": "CTX-1CD87BF73F9D0762",
+  "candidate_id": "CAN-E763F753A2D7609F",
+  "ticker": "CLBK",
+  "issuer_cik": "0002115119",
+  "document_ids": [
+    "DOC-AC201A9BE0E4E848"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-AC201A9BE0E4E848#p5",
+    "DOC-AC201A9BE0E4E848#p6",
+    "DOC-AC201A9BE0E4E848#p7",
+    "DOC-AC201A9BE0E4E848#p14",
+    "DOC-AC201A9BE0E4E848#p19",
+    "DOC-AC201A9BE0E4E848#p20",
+    "DOC-AC201A9BE0E4E848#p21",
+    "DOC-AC201A9BE0E4E848#p22",
+    "DOC-AC201A9BE0E4E848#p23",
+    "DOC-AC201A9BE0E4E848#p26",
+    "DOC-AC201A9BE0E4E848#p30",
+    "DOC-AC201A9BE0E4E848#p31",
+    "DOC-AC201A9BE0E4E848#p32",
+    "DOC-AC201A9BE0E4E848#p33",
+    "DOC-AC201A9BE0E4E848#p34",
+    "DOC-AC201A9BE0E4E848#p35",
+    "DOC-AC201A9BE0E4E848#p36",
+    "DOC-AC201A9BE0E4E848#p39",
+    "DOC-AC201A9BE0E4E848#p49"
+  ],
+  "input_sha": "1cd87bf73f9d0762ffe5bad0e43471ea71d0947218c488e0fe263fffea95756d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-01T15:16:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "순이익(net income) · quarter ended June 30, 2026: $14.5 million — 해당 분기 순이익은 전년 같은 분기보다 늘었다",
+      "note_ko": "해당 분기 순이익은 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Columbia Financial, Inc. (the “Company”) (NASDAQ: CLBK), the holding company for Columbia Bank (\"Columbia\"), reported net income of $14.5 million, or $0.14 per basic and diluted share, for the quarter ended June 30, 2026, as compared to $12.3 million, or $0.12 per basic and diluted share, for the quarter ended June 30, 2025.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p5",
+      "metric": "net income",
+      "figures": [
+        "$14.5 million"
+      ],
+      "period": "quarter ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "volume",
+        "margin_cost"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "net interest income · quarter ended June 30, 2026: $9.2 million — 순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다",
+      "note_ko": "순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다",
+      "kind": "fact",
+      "quote": "The increase in net income was primarily attributable to a $9.2 million increase in net interest income and a $657,000 increase in non-interest income, partially offset by a $1.8 million increase in provision for credit losses, $4.5 million increase in non-interest expense, and a $1.3 million increase in income tax expense.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p19",
+      "metric": "net interest income",
+      "figures": [
+        "$9.2 million"
+      ],
+      "period": "quarter ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "volume",
+        "margin_cost"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "net interest margin · quarter ended June 30, 2026: 2.44% — 순이자 마진은 이자부 부채의 평균 비용 감소로 늘었다",
+      "note_ko": "순이자 마진은 이자부 부채의 평균 비용 감소로 늘었다",
+      "kind": "fact",
+      "quote": "The Company's net interest margin for the quarter ended June 30, 2026 increased 25 basis points to 2.44% when compared to 2.19%, for the quarter ended June 30, 2025, mostly due to a decrease in the average cost of interest-bearing liabilities.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p23",
+      "metric": "net interest margin",
+      "figures": [
+        "2.44%"
+      ],
+      "period": "quarter ended June 30, 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "non-interest expense · quarter ended June 30, 2026: $49.4 million — 비이자 비용은 보상 및 직원 복리후생 비용, 데이터 처리 및 소프트웨어 비용, 합병 관련 비용 증가로 늘었다",
+      "note_ko": "비이자 비용은 보상 및 직원 복리후생 비용, 데이터 처리 및 소프트웨어 비용, 합병 관련 비용 증가로 늘었다",
+      "kind": "fact",
+      "quote": "Non-interest expense was $49.4 million for the quarter ended June 30, 2026, an increase of $4.5 million, or 10.0%, from $44.9 million for the quarter ended June 30, 2025.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p26",
+      "metric": "non-interest expense",
+      "figures": [
+        "$49.4 million"
+      ],
+      "period": "quarter ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "순이익(net income) · six months ended June 30, 2026: $27.6 million — 해당 육개월 순이익은 전년 같은 기간보다 늘었다",
+      "note_ko": "해당 육개월 순이익은 전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "Net income of $27.6 million was recorded for the six months ended June 30, 2026, an increase of $6.4 million, or 30.1%, compared to net income of $21.2 million for the six months ended June 30, 2025.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p30",
+      "metric": "net income",
+      "figures": [
+        "$27.6 million"
+      ],
+      "period": "six months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "volume",
+        "margin_cost"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "순이익(net income) · quarter ended June 30, 2026 — 순이익 증가는 신용 손실 충당금 증가, 비이자 비용 증가, 소득세 비용 증가로 부분적으로 상쇄되었다",
+      "note_ko": "순이익 증가는 신용 손실 충당금 증가, 비이자 비용 증가, 소득세 비용 증가로 부분적으로 상쇄되었다",
+      "kind": "fact",
+      "quote": "The increase in net income was primarily attributable to a $9.2 million increase in net interest income and a $657,000 increase in non-interest income, partially offset by a $1.8 million increase in provision for credit losses, $4.5 million increase in non-interest expense, and a $1.3 million increase in income tax expense.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p19",
+      "metric": "net income",
+      "figures": [],
+      "period": "quarter ended June 30, 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "non-interest income · six months ended June 30, 2026 — 비이자 수입 감소는 주로 지분 증권의 공정 가치 변동과 기타 비이자 수입 감소에 기인하며, 이는 은행 소유 생명 보험의 증가로 부분적으로 상쇄되었다",
+      "note_ko": "비이자 수입 감소는 주로 지분 증권의 공정 가치 변동과 기타 비이자 수입 감소에 기인하며, 이는 은행 소유 생명 보험의 증가로 부분적으로 상쇄되었다",
+      "kind": "fact",
+      "quote": "The decrease was primarily attributable to a change in fair value of equity securities of $1.6 million and a decrease in other non-interest income of $627,000, mainly due to interest rate swaps, partially offset by a $1.1 million increase in bank-owned life insurance partially attributable to a death benefit claim in June 2026, and income related to the transition and exchange into higher yielding bank-owed life insurance policies.",
+      "document_id": "DOC-AC201A9BE0E4E848",
+      "block_id": "p36",
+      "metric": "non-interest income",
+      "figures": [],
+      "period": "six months ended June 30, 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [],
+  "context_status": "draft_ready"
+}

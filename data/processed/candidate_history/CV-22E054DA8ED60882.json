@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-23C223C070F4B3C3",
+  "candidate_version": "CV-22E054DA8ED60882",
+  "identity": {
+    "entity_id": "NYSE:CIB",
+    "ticker": "CIB",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Grupo Cibest S.A.",
+  "industry": "Banks - Regional",
+  "sector": "Financial Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "예금, 대출, 팩토링, 리스 등 다양한 은행 상품과 금융 서비스를 제공하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Grupo Cibest S.A., together with its subsidiaries, provides various banking products and services in Colombia and internationally. It offers deposit products, including checking and savings accounts, fixed-term deposits, and investment products; credit alternatives solutions such as trade financing, working capital loans, mortgages, credit cards, personal, vehicle, payroll, and small business loans, and overdrafts; and factoring. It also provides financial and operating leases; capital markets, such as hedging instruments; trading, including interbank lending, repurchase agreements, foreign ex"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CIB analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CIB/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-01T15:04:30+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CIB daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CIB/history",
+      "published_at": null,
+      "observed_at": "2026-10-01T15:04:30+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CIB company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CIB/profile",
+      "published_at": null,
+      "observed_at": "2026-10-01T15:04:30+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 11.5804,
+    "eps_30d": 11.46525,
+    "eps_90d": 8.99623,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 28.7,
+    "steady": false,
+    "turnaround": false
+  }
+}

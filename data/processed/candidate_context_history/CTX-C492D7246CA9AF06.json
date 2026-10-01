@@ -1,0 +1,168 @@
+{
+  "context_id": "CTX-C492D7246CA9AF06",
+  "candidate_id": "CAN-8ED72F330C1AE34D",
+  "ticker": "FSLY",
+  "issuer_cik": "0001517413",
+  "document_ids": [
+    "DOC-756AB63F072FAB95"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-756AB63F072FAB95#p5",
+    "DOC-756AB63F072FAB95#p6",
+    "DOC-756AB63F072FAB95#p9",
+    "DOC-756AB63F072FAB95#p14",
+    "DOC-756AB63F072FAB95#p19",
+    "DOC-756AB63F072FAB95#p27",
+    "DOC-756AB63F072FAB95#p38",
+    "DOC-756AB63F072FAB95#p40",
+    "DOC-756AB63F072FAB95#p41",
+    "DOC-756AB63F072FAB95#p42",
+    "DOC-756AB63F072FAB95#p44",
+    "DOC-756AB63F072FAB95#p45",
+    "DOC-756AB63F072FAB95#p48",
+    "DOC-756AB63F072FAB95#p49",
+    "DOC-756AB63F072FAB95#p50",
+    "DOC-756AB63F072FAB95#p51",
+    "DOC-756AB63F072FAB95#p52",
+    "DOC-756AB63F072FAB95#p53",
+    "DOC-756AB63F072FAB95#p54",
+    "DOC-756AB63F072FAB95#p55",
+    "DOC-756AB63F072FAB95#p56",
+    "DOC-756AB63F072FAB95#p59",
+    "DOC-756AB63F072FAB95#p60",
+    "DOC-756AB63F072FAB95#p61",
+    "DOC-756AB63F072FAB95#t3"
+  ],
+  "input_sha": "c492d7246ca9af06d9468efafcbe62faf8401777ba8cacad82f71dcd82d11bbe",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-01T15:16:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(revenue) · second quarter: $183.3 million / 23% — 매출이 전년 같은 분기보다 늘었다",
+      "note_ko": "매출이 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Record second quarter revenue of $183.3 million grew 23% year-over-year",
+      "document_id": "DOC-756AB63F072FAB95",
+      "block_id": "p5",
+      "metric": "revenue",
+      "figures": [
+        "$183.3 million",
+        "23%"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP measures — 비일반회계기준 측정치는 일반회계기준에 따라 결정된 운영 결과와 관련된 모든 금액을 반영하지 않는다는 한계가 있다",
+      "note_ko": "비일반회계기준 측정치는 일반회계기준에 따라 결정된 운영 결과와 관련된 모든 금액을 반영하지 않는다는 한계가 있다",
+      "kind": "fact",
+      "quote": "These non-GAAP measures have limitations in that they do not reflect all of the amounts associated with our results of operations as determined in accordance with GAAP.",
+      "document_id": "DOC-756AB63F072FAB95",
+      "block_id": "p38",
+      "metric": "non-GAAP measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "non-GAAP financial measures — 비일반회계기준 재무 측정치는 다른 회사에서 사용하는 비일반회계기준 재무 측정치와 다를 수 있다",
+      "note_ko": "비일반회계기준 재무 측정치는 다른 회사에서 사용하는 비일반회계기준 재무 측정치와 다를 수 있다",
+      "kind": "fact",
+      "quote": "In addition, these non-GAAP financial measures may be different from the non-GAAP financial measures used by other companies.",
+      "document_id": "DOC-756AB63F072FAB95",
+      "block_id": "p38",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "Fastly의 플랫폼 전략이 사업 모멘텀을 이끌고 있는지 확인해야 한다",
+    "Fastly가 연간 전망치를 상향 조정한 이유를 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "총 마진을 기록했다",
+      "figures": [
+        "63.3%"
+      ],
+      "quote": "Record second quarter gross margin of 63.3% and record non-GAAP gross margin of 65.8%",
+      "where": "DOC-756AB63F072FAB95#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "비일반회계기준 총 마진을 기록했다",
+      "figures": [
+        "65.8%"
+      ],
+      "quote": "Record second quarter gross margin of 63.3% and record non-GAAP gross margin of 65.8%",
+      "where": "DOC-756AB63F072FAB95#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "일반회계기준 총 마진은 전년 같은 분기보다 늘었다",
+      "figures": [
+        "63.3%"
+      ],
+      "quote": "GAAP gross margin of 63.3%, compared to 54.5% in the second quarter of 2025.",
+      "where": "DOC-756AB63F072FAB95#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "비일반회계기준 총 마진은 전년 같은 분기보다 늘었다",
+      "figures": [
+        "65.8%"
+      ],
+      "quote": "Non-GAAP gross margin1 of 65.8%, compared to 59.0% in the second quarter of 2025.",
+      "where": "DOC-756AB63F072FAB95#p14"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "비일반회계기준 가이던스 측정치는 미래에 발생할 수 있는 불확실한 비용으로 인해 합리적인 노력 없이는 해당 일반회계기준 측정치와 조정할 수 없다",
+      "figures": [],
+      "quote": "A reconciliation of non-GAAP guidance measures to corresponding GAAP measures is not available on a forward-looking basis without unreasonable effort due to the uncertainty of expenses that may be inc",
+      "where": "DOC-756AB63F072FAB95#p27"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

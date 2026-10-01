@@ -1,0 +1,88 @@
+{
+  "context_id": "CTX-7C14B035C00E86A3",
+  "candidate_id": "CAN-4BD491C8D3F1EC4F",
+  "ticker": "UCTT",
+  "issuer_cik": "0001275014",
+  "document_ids": [
+    "DOC-A19880431D2CB470"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A19880431D2CB470#p6",
+    "DOC-A19880431D2CB470#p10",
+    "DOC-A19880431D2CB470#p11",
+    "DOC-A19880431D2CB470#p12",
+    "DOC-A19880431D2CB470#p19",
+    "DOC-A19880431D2CB470#p20",
+    "DOC-A19880431D2CB470#t2",
+    "DOC-A19880431D2CB470#t6",
+    "DOC-A19880431D2CB470#t8",
+    "DOC-A19880431D2CB470#t9",
+    "DOC-A19880431D2CB470#t10"
+  ],
+  "input_sha": "7c14b035c00e86a37a73316283c7f4f8415018f09497b4f8d673f4949f11db95",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-01T15:16:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 총 마진율이다",
+      "figures": [
+        "16.7%"
+      ],
+      "quote": "On a non-GAAP basis, gross margin was 16.7%, operating margin was 7.0%, and net income was $32.3 million or $0.70 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 영업 마진율이다",
+      "figures": [
+        "7.0%"
+      ],
+      "quote": "On a non-GAAP basis, gross margin was 16.7%, operating margin was 7.0%, and net income was $32.3 million or $0.70 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "$32.3 million"
+      ],
+      "quote": "On a non-GAAP basis, gross margin was 16.7%, operating margin was 7.0%, and net income was $32.3 million or $0.70 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "회사의 희석 주당 순이익이다",
+      "figures": [
+        "$0.70"
+      ],
+      "quote": "On a non-GAAP basis, gross margin was 16.7%, operating margin was 7.0%, and net income was $32.3 million or $0.70 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 예상 매출액 범위이다",
+      "figures": [
+        "$700 million to $750 million"
+      ],
+      "quote": "The Company expects revenue in the range of $700 million to $750 million.",
+      "where": "DOC-A19880431D2CB470#p12"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

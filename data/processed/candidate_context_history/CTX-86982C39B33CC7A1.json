@@ -1,0 +1,182 @@
+{
+  "context_id": "CTX-86982C39B33CC7A1",
+  "candidate_id": "CAN-0584EAE068460D91",
+  "ticker": "DAN",
+  "issuer_cik": "0000026780",
+  "document_ids": [
+    "DOC-9BCC3ED21F2A62D7"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9BCC3ED21F2A62D7#p10",
+    "DOC-9BCC3ED21F2A62D7#p12",
+    "DOC-9BCC3ED21F2A62D7#p17",
+    "DOC-9BCC3ED21F2A62D7#p48",
+    "DOC-9BCC3ED21F2A62D7#t15",
+    "DOC-9BCC3ED21F2A62D7#t16",
+    "DOC-9BCC3ED21F2A62D7#p91",
+    "DOC-9BCC3ED21F2A62D7#p141",
+    "DOC-9BCC3ED21F2A62D7#p142",
+    "DOC-9BCC3ED21F2A62D7#p143",
+    "DOC-9BCC3ED21F2A62D7#p144"
+  ],
+  "input_sha": "86982c39b33cc7a12ac0d9a63aea8d6349463d1c2fd840c0987205910bd8496f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-01T15:16:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Net income from continuing operations · second quarter of 2026: $11 million — 전년 같은 분기보다 순이익이 늘었다",
+      "note_ko": "전년 같은 분기보다 순이익이 늘었다",
+      "kind": "fact",
+      "quote": "Net income from continuing operations was $11 million in the second quarter of 2026, compared with a loss of $12 million, in the second quarter of 2025.",
+      "document_id": "DOC-9BCC3ED21F2A62D7",
+      "block_id": "p10",
+      "metric": "Net income from continuing operations",
+      "figures": [
+        "$11 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "margin_cost",
+        "one_off"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Diluted earnings per share from continuing operations · second quarter of 2026: $0.06 — 전년 같은 분기보다 주당 순이익이 늘었다",
+      "note_ko": "전년 같은 분기보다 주당 순이익이 늘었다",
+      "kind": "fact",
+      "quote": "Diluted earnings per share from continuing operations were $0.06 in the second quarter of 2026 compared to a loss of $0.11 last year.",
+      "document_id": "DOC-9BCC3ED21F2A62D7",
+      "block_id": "p10",
+      "metric": "Diluted earnings per share from continuing operations",
+      "figures": [
+        "$0.06"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "margin_cost",
+        "one_off"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Operating cash flow · second quarter of 2026: $109 million — 전년 같은 기간보다 영업 현금 흐름이 늘었다",
+      "note_ko": "전년 같은 기간보다 영업 현금 흐름이 늘었다",
+      "kind": "fact",
+      "quote": "Operating cash flow in the second quarter of 2026 was $109 million, compared with $32 million in the same period of 2025.",
+      "document_id": "DOC-9BCC3ED21F2A62D7",
+      "block_id": "p12",
+      "metric": "Operating cash flow",
+      "figures": [
+        "$109 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "margin_cost",
+        "one_off",
+        "tax",
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Non-GAAP Measures — 비 GAAP 측정치는 미국 GAAP에 따라 결정된 결과와 별개로 사용되거나 대체될 수 없다",
+      "note_ko": "비 GAAP 측정치는 미국 GAAP에 따라 결정된 결과와 별개로 사용되거나 대체될 수 없다",
+      "kind": "fact",
+      "quote": "These Non-GAAP Measures should not be used in isolation or as a substitute or alternative to results determined in accordance with U.S. GAAP.",
+      "document_id": "DOC-9BCC3ED21F2A62D7",
+      "block_id": "p48",
+      "metric": "Non-GAAP Measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Non-GAAP Measures — 비 GAAP 측정치에 대한 정의는 다른 회사의 유사한 비 GAAP 재무 측정치와 비교 가능하지 않을 수 있다",
+      "note_ko": "비 GAAP 측정치에 대한 정의는 다른 회사의 유사한 비 GAAP 재무 측정치와 비교 가능하지 않을 수 있다",
+      "kind": "fact",
+      "quote": "In addition, Dana’s and Eaton’s definitions of these Non-GAAP Measures may not be comparable to similarly titled non-GAAP financial measures reported by other companies.",
+      "document_id": "DOC-9BCC3ED21F2A62D7",
+      "block_id": "p48",
+      "metric": "Non-GAAP Measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "What were the specific cost-reduction initiatives mentioned?",
+    "What were the specific operational improvements mentioned?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "raise_not_in_quote",
+      "note_ko": "연간 매출 전망을 상향 조정했다",
+      "figures": [
+        "approximately $225 million"
+      ],
+      "quote": "Dana has revised its full-year financial guidance upward, increasing its sales outlook by approximately $225 million and its adjusted EBITDA outlook by approximately $25 million.",
+      "where": "DOC-9BCC3ED21F2A62D7#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "연간 조정 EBITDA 전망을 상향 조정했다",
+      "figures": [
+        "approximately $25 million"
+      ],
+      "quote": "Dana has revised its full-year financial guidance upward, increasing its sales outlook by approximately $225 million and its adjusted EBITDA outlook by approximately $25 million.",
+      "where": "DOC-9BCC3ED21F2A62D7#p17"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "조정 EBITDA 전망과 가장 직접적으로 비교 가능한 GAAP 측정치인 순이익 손실에 대한 조정은 제공되지 않았다",
+      "figures": [],
+      "quote": "We have not provided a reconciliation of our adjusted EBITDA outlook to the most comparable GAAP measures of net income (loss).",
+      "where": "DOC-9BCC3ED21F2A62D7#p48"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

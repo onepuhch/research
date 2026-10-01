@@ -640,7 +640,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-05T05:47:17+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "draft_ready",
+      "context_id": "CTX-1CD87BF73F9D0762",
+      "context_input_sha": "1cd87bf73f9d0762ffe5bad0e43471ea71d0947218c488e0fe263fffea95756d"
     },
     "CAN-DF76D3AD7ADC73CF": {
       "status": "success",
@@ -696,7 +698,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-05T05:47:17+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-2A3AEDF08EAFBA08",
+      "context_input_sha": "2a3aedf08eafba084ea045bc22c45db693988336e716908a5c326879afa2ec21"
     },
     "CAN-6AC97D7E0081C82D": {
       "status": "success",
@@ -750,7 +754,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-05T05:47:17+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-C492D7246CA9AF06",
+      "context_input_sha": "c492d7246ca9af06d9468efafcbe62faf8401777ba8cacad82f71dcd82d11bbe"
     },
     "CAN-3D30FF7D03231FE1": {
       "status": "success",
@@ -804,7 +810,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-05T05:47:17+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-7C14B035C00E86A3",
+      "context_input_sha": "7c14b035c00e86a37a73316283c7f4f8415018f09497b4f8d673f4949f11db95"
     },
     "CAN-0584EAE068460D91": {
       "status": "success",
@@ -831,7 +839,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-05T05:47:17+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-86982C39B33CC7A1",
+      "context_input_sha": "86982c39b33cc7a12ac0d9a63aea8d6349463d1c2fd840c0987205910bd8496f"
     },
     "CAN-4E5151866E863998": {
       "status": "success",
@@ -858,7 +868,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-06T06:08:31+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-51E7AD8BDA733DB4",
+      "context_input_sha": "51e7ad8bda733db48cc99445a6af31d9b6132c581f86ce181c09cfed53ed044c"
     },
     "CAN-D386F57F584A20DC": {
       "status": "success",
@@ -926,11 +938,11 @@
         "exchange": "Nasdaq",
         "name": "Semtech Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "ec78fbd272ecb158e65b60d774e2ee5715b454eaadc3c9a670214fa0c2bcce13",
-        "mapping_observed_at": "2026-09-30T05:41:34+00:00"
+        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
+        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
       },
-      "attempted_at": "2026-09-30T05:55:57+00:00",
-      "eps_key": "2028-01-31|5.8359",
+      "attempted_at": "2026-10-01T15:16:19+00:00",
+      "eps_key": "2028-01-31|5.85723",
       "eps_target_period": "2028-01-31",
       "document_ids": [
         "DOC-CBBC405DFC60E662"
@@ -941,7 +953,7 @@
         "DOC-CBBC405DFC60E662"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-07T05:55:57+00:00",
+      "next_eligible_at": "2026-10-08T15:16:19+00:00",
       "draft_status": "deferred_budget"
     },
     "CAN-7F0690B785E31226": {
@@ -997,6 +1009,36 @@
       "notes": [],
       "next_eligible_at": "2026-10-08T06:22:35+00:00",
       "draft_status": "deferred_budget"
+    },
+    "CAN-23C223C070F4B3C3": {
+      "status": "success",
+      "ticker": "CIB",
+      "issuer": {
+        "cik": "0002058897",
+        "ticker": "CIB",
+        "exchange": "NYSE",
+        "name": "Grupo Cibest S.A.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
+        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+      },
+      "attempted_at": "2026-10-01T15:16:19+00:00",
+      "eps_key": "2027-12-31|11.5804",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-AEB8D652AE5E4F23",
+        "DOC-A3EF1033724A7D6D"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-C33EA5851965D76C",
+        "DOC-AEB8D652AE5E4F23",
+        "DOC-A3EF1033724A7D6D"
+      ],
+      "notes": [],
+      "next_eligible_at": "2026-10-08T15:16:19+00:00",
+      "draft_status": "deferred_budget"
     }
   },
   "days": {
@@ -1023,6 +1065,10 @@
     "2026-10-01": {
       "companies": 5,
       "http_attempts": 14
+    },
+    "2026-10-02": {
+      "companies": 2,
+      "http_attempts": 9
     }
   },
   "documents_by_source": {
@@ -1068,6 +1114,9 @@
     "0001559432-26-000014|https://www.sec.gov/Archives/edgar/data/1559432/000155943226000014/txo-20260630.htm": "DOC-439BA8AE037B9273",
     "0000088941-26-000028|https://www.sec.gov/Archives/edgar/data/88941/000008894126000028/smtc-07262026x8k991.htm": "DOC-CBBC405DFC60E662",
     "0000764065-26-000097|https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm": "DOC-067BE90E51AC5E3F",
-    "0001754195-26-000069|https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm": "DOC-F17429F199F2C94B"
+    "0001754195-26-000069|https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm": "DOC-F17429F199F2C94B",
+    "0002058897-26-000297|https://www.sec.gov/Archives/edgar/data/2058897/000205889726000297/grupocibestsaannouncesdeci.htm": "DOC-C33EA5851965D76C",
+    "0002058897-26-000279|https://www.sec.gov/Archives/edgar/data/2058897/000205889726000279/cib-20260630xigcibest2q26.htm": "DOC-AEB8D652AE5E4F23",
+    "0002058897-26-000275|https://www.sec.gov/Archives/edgar/data/2058897/000205889726000275/grupocibestsa6-kpr2q26.htm": "DOC-A3EF1033724A7D6D"
   }
 }

@@ -1,0 +1,155 @@
+{
+  "context_id": "CTX-51E7AD8BDA733DB4",
+  "candidate_id": "CAN-4E5151866E863998",
+  "ticker": "TEAM",
+  "issuer_cik": "0001650372",
+  "document_ids": [
+    "DOC-AAA5C2B5425B0947"
+  ],
+  "eps_target_period": "2028-06-30",
+  "source_blocks": [
+    "DOC-AAA5C2B5425B0947#p4",
+    "DOC-AAA5C2B5425B0947#p5",
+    "DOC-AAA5C2B5425B0947#p10",
+    "DOC-AAA5C2B5425B0947#p14",
+    "DOC-AAA5C2B5425B0947#p25",
+    "DOC-AAA5C2B5425B0947#p64",
+    "DOC-AAA5C2B5425B0947#p65",
+    "DOC-AAA5C2B5425B0947#p66",
+    "DOC-AAA5C2B5425B0947#p67",
+    "DOC-AAA5C2B5425B0947#p68",
+    "DOC-AAA5C2B5425B0947#p72",
+    "DOC-AAA5C2B5425B0947#p73",
+    "DOC-AAA5C2B5425B0947#p74",
+    "DOC-AAA5C2B5425B0947#p75",
+    "DOC-AAA5C2B5425B0947#p76",
+    "DOC-AAA5C2B5425B0947#p79",
+    "DOC-AAA5C2B5425B0947#p99",
+    "DOC-AAA5C2B5425B0947#p101",
+    "DOC-AAA5C2B5425B0947#p102",
+    "DOC-AAA5C2B5425B0947#p103",
+    "DOC-AAA5C2B5425B0947#p104",
+    "DOC-AAA5C2B5425B0947#t5",
+    "DOC-AAA5C2B5425B0947#t7",
+    "DOC-AAA5C2B5425B0947#p141"
+  ],
+  "input_sha": "51e7ad8bda733db48cc99445a6af31d9b6132c581f86ce181c09cfed53ed044c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-01T15:16:23+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Total revenue · fourth quarter of fiscal year 2026: $1,766 million / 28% — 총 매출이 전년 같은 기간보다 늘었다",
+      "note_ko": "총 매출이 전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "Total revenue was $1,766 million for the fourth quarter of fiscal year 2026, up 28% from $1,384 million for the fourth quarter of fiscal year 2025.",
+      "document_id": "DOC-AAA5C2B5425B0947",
+      "block_id": "p14",
+      "metric": "Total revenue",
+      "figures": [
+        "$1,766 million",
+        "28%"
+      ],
+      "period": "fourth quarter of fiscal year 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Total revenue: $1,705 million to $1,715 million — 총 매출이 특정 범위에 있을 것으로 예상된다",
+      "note_ko": "총 매출이 특정 범위에 있을 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "Total revenue is expected to be in the range of $1,705 million to $1,715 million.",
+      "document_id": "DOC-AAA5C2B5425B0947",
+      "block_id": "p64",
+      "metric": "Total revenue",
+      "figures": [
+        "$1,705 million to $1,715 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Cloud revenue growth year-over-year: 28.5% — 클라우드 매출이 전년 대비 특정 비율로 성장할 것으로 예상된다",
+      "note_ko": "클라우드 매출이 전년 대비 특정 비율로 성장할 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "Cloud revenue growth year-over-year is expected to be approximately 28.5%.",
+      "document_id": "DOC-AAA5C2B5425B0947",
+      "block_id": "p65",
+      "metric": "Cloud revenue growth year-over-year",
+      "figures": [
+        "28.5%"
+      ],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Data Center revenue growth year-over-year: (4.0%) — 데이터 센터 매출이 전년 대비 특정 비율로 감소할 것으로 예상된다",
+      "note_ko": "데이터 센터 매출이 전년 대비 특정 비율로 감소할 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "Data Center revenue growth year-over-year is expected to decline approximately (4.0%).",
+      "document_id": "DOC-AAA5C2B5425B0947",
+      "block_id": "p66",
+      "metric": "Data Center revenue growth year-over-year",
+      "figures": [
+        "(4.0%)"
+      ],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "총 매출 전망치가 어떤 기간에 대한 것인지 확인해야 한다",
+    "클라우드 매출 성장률 전망치가 어떤 기간에 대한 것인지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "클라우드 매출이 전년 같은 기간보다 늘었다",
+      "figures": [
+        "$1,213 million",
+        "31%"
+      ],
+      "quote": "Quarterly cloud revenue of $1,213 million, up 31% year-over-year",
+      "where": "DOC-AAA5C2B5425B0947#p5"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

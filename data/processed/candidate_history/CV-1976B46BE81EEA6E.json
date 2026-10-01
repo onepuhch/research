@@ -1,0 +1,223 @@
+{
+  "candidate_id": "CAN-4E5151866E863998",
+  "candidate_version": "CV-1976B46BE81EEA6E",
+  "identity": {
+    "entity_id": "NASDAQ:TEAM",
+    "ticker": "TEAM",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Atlassian Corporation",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "조직의 생산성을 높이는 협업 소프트웨어와 클라우드 기반 앱을 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at scale worldwide. The company's product portfolio includes Jira, Confluence, Loom, Jira Service Management, Rovo, Bitbucket, Compass, Jira Product Discovery, Focus, Talent, Trello, and Guard. It also offers Collections, a curated sets of apps and agents built on the Atlassian cloud platform and designed to solve cross-functional customer workflows, including teamwork, service, strategy, software, and product collections. The company was fo"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TEAM analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TEAM/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-01T15:03:42+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TEAM daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TEAM/history",
+      "published_at": null,
+      "observed_at": "2026-10-01T15:03:42+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TEAM company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TEAM/profile",
+      "published_at": null,
+      "observed_at": "2026-10-01T15:03:42+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-AAA5C2B5425B0947",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-09-29T06:08:31+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-51E7AD8BDA733DB4",
+    "input_sha": "51e7ad8bda733db48cc99445a6af31d9b6132c581f86ce181c09cfed53ed044c",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Total revenue · fourth quarter of fiscal year 2026: $1,766 million / 28% — 총 매출이 전년 같은 기간보다 늘었다",
+        "note_ko": "총 매출이 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "Total revenue was $1,766 million for the fourth quarter of fiscal year 2026, up 28% from $1,384 million for the fourth quarter of fiscal year 2025.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p14",
+        "metric": "Total revenue",
+        "figures": [
+          "$1,766 million",
+          "28%"
+        ],
+        "period": "fourth quarter of fiscal year 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Total revenue: $1,705 million to $1,715 million — 총 매출이 특정 범위에 있을 것으로 예상된다",
+        "note_ko": "총 매출이 특정 범위에 있을 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "Total revenue is expected to be in the range of $1,705 million to $1,715 million.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p64",
+        "metric": "Total revenue",
+        "figures": [
+          "$1,705 million to $1,715 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Cloud revenue growth year-over-year: 28.5% — 클라우드 매출이 전년 대비 특정 비율로 성장할 것으로 예상된다",
+        "note_ko": "클라우드 매출이 전년 대비 특정 비율로 성장할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "Cloud revenue growth year-over-year is expected to be approximately 28.5%.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p65",
+        "metric": "Cloud revenue growth year-over-year",
+        "figures": [
+          "28.5%"
+        ],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Data Center revenue growth year-over-year: (4.0%) — 데이터 센터 매출이 전년 대비 특정 비율로 감소할 것으로 예상된다",
+        "note_ko": "데이터 센터 매출이 전년 대비 특정 비율로 감소할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "Data Center revenue growth year-over-year is expected to decline approximately (4.0%).",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p66",
+        "metric": "Data Center revenue growth year-over-year",
+        "figures": [
+          "(4.0%)"
+        ],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "총 매출 전망치가 어떤 기간에 대한 것인지 확인해야 한다",
+      "클라우드 매출 성장률 전망치가 어떤 기간에 대한 것인지 확인해야 한다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-09-29T06:08:31+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.1871,
+    "eps_30d": 2.0571,
+    "eps_90d": 1.39452,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 56.8,
+    "steady": false,
+    "turnaround": false
+  }
+}
