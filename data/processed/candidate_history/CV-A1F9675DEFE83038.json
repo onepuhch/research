@@ -1,0 +1,175 @@
+{
+  "candidate_id": "CAN-EE8A92AC2C2D3E8C",
+  "candidate_version": "CV-A1F9675DEFE83038",
+  "identity": {
+    "entity_id": "NASDAQ:PGY",
+    "ticker": "PGY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Pagaya Technologies Ltd.",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "금융 서비스에 데이터 과학과 AI 기술을 활용하여 대출 심사 및 승인 솔루션을 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Pagaya Technologies Ltd., a product-focused technology company, deploys data science and proprietary artificial intelligence-powered technology for financial services, their customers, and institutional or sophisticated investors in the United States, Israel, and the Cayman Islands. The company offers Decline Monetization, the flagship product which allows Partners to automatically send rejected loan applications to its network, as well as approve customers they would otherwise decline; Dual Look which allows to assess applications concurrently with its Partners in real time; and First Look th"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PGY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PGY/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:38:26+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PGY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PGY/history",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:38:26+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PGY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PGY/profile",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:38:26+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-16EEC0F8F2129A3A",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1883085/000188308526000052/earningspressreleasefina.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-09-28T05:47:17+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-971061B10EF84A2B",
+    "input_sha": "971061b10ef84a2b62bfdc779b11e146985433d294a952df22229d377ed4a2ff",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "GAAP net income · Second Quarter 2026: $45 million — 전년 같은 기간보다 늘었다",
+        "note_ko": "전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "$45 million GAAP net income; up $29 million YoY",
+        "document_id": "DOC-16EEC0F8F2129A3A",
+        "block_id": "p3",
+        "metric": "GAAP net income",
+        "figures": [
+          "$45 million"
+        ],
+        "period": "Second Quarter 2026",
+        "currency": "USD",
+        "gaap": "GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "순이익(net income) · Full-Year — 회사가 연간 순이익 전망치를 상향 조정했다",
+        "note_ko": "회사가 연간 순이익 전망치를 상향 조정했다",
+        "kind": "guidance",
+        "quote": "Raises Full-Year Net Income Guidance",
+        "document_id": "DOC-16EEC0F8F2129A3A",
+        "block_id": "p3",
+        "metric": "net income",
+        "figures": [],
+        "period": "Full-Year",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "회사의 연간 순이익 전망치 상향 조정에 대한 구체적인 수치를 확인해야 한다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-16EEC0F8F2129A3A",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1883085/000188308526000052/earningspressreleasefina.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-09-28T05:47:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.13106,
+    "eps_30d": 4.07106,
+    "eps_90d": 3.56548,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 15.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

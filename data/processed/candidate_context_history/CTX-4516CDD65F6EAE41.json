@@ -1,0 +1,101 @@
+{
+  "context_id": "CTX-4516CDD65F6EAE41",
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "ticker": "TXO",
+  "issuer_cik": "0001559432",
+  "document_ids": [
+    "DOC-439BA8AE037B9273"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-439BA8AE037B9273#p75",
+    "DOC-439BA8AE037B9273#p88",
+    "DOC-439BA8AE037B9273#p117",
+    "DOC-439BA8AE037B9273#p141",
+    "DOC-439BA8AE037B9273#p168",
+    "DOC-439BA8AE037B9273#p276",
+    "DOC-439BA8AE037B9273#p280",
+    "DOC-439BA8AE037B9273#p299",
+    "DOC-439BA8AE037B9273#p301",
+    "DOC-439BA8AE037B9273#p303",
+    "DOC-439BA8AE037B9273#p304"
+  ],
+  "input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-03T05:43:34+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "oil revenues · three months ended June 30, 2026: decreased oil revenues by $28.5 million — 석유 선물 및 매도 베이시스 스왑 계약의 순결제로 인해 석유 매출이 감소했다",
+      "note_ko": "석유 선물 및 매도 베이시스 스왑 계약의 순결제로 인해 석유 매출이 감소했다",
+      "kind": "fact",
+      "quote": "Net settlements on oil futures and sell basis swap contracts decreased oil revenues by $28.5 million in the three months ended June 30, 2026 and increased oil revenues by $2.0 million in the three months ended June 30, 2025.",
+      "document_id": "DOC-439BA8AE037B9273",
+      "block_id": "p141",
+      "metric": "oil revenues",
+      "figures": [
+        "decreased oil revenues by $28.5 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "자회사 순이익이 발생했다",
+      "figures": [
+        "income of $10.0 million"
+      ],
+      "quote": "The net income (loss) related to these properties, net to TXO Partners, was income of $10.0 million for the three months ended June 30, 2026 , a loss of ($3.8) million for the three months ended June ",
+      "where": "DOC-439BA8AE037B9273#p75"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "자회사 순손실이 발생했다",
+      "figures": [
+        "loss of ($3.8) million"
+      ],
+      "quote": "The net income (loss) related to these properties, net to TXO Partners, was income of $10.0 million for the three months ended June 30, 2026 , a loss of ($3.8) million for the three months ended June ",
+      "where": "DOC-439BA8AE037B9273#p75"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "자회사 순이익이 발생했다",
+      "figures": [
+        "income of $10.5 million"
+      ],
+      "quote": "The net income (loss) related to these properties, net to TXO Partners, was income of $10.0 million for the three months ended June 30, 2026 , a loss of ($3.8) million for the three months ended June ",
+      "where": "DOC-439BA8AE037B9273#p75"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "자회사 순손실이 발생했다",
+      "figures": [
+        "loss of ($0.3) million"
+      ],
+      "quote": "The net income (loss) related to these properties, net to TXO Partners, was income of $10.0 million for the three months ended June 30, 2026 , a loss of ($3.8) million for the three months ended June ",
+      "where": "DOC-439BA8AE037B9273#p75"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

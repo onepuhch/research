@@ -1,0 +1,124 @@
+{
+  "context_id": "CTX-BC75ACFAFFC06F1A",
+  "candidate_id": "CAN-E87900AEFDDE7B07",
+  "ticker": "SPT",
+  "issuer_cik": "0001517375",
+  "document_ids": [
+    "DOC-450C06FD810BE835"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-450C06FD810BE835#p4",
+    "DOC-450C06FD810BE835#p7",
+    "DOC-450C06FD810BE835#p9",
+    "DOC-450C06FD810BE835#p15",
+    "DOC-450C06FD810BE835#p16"
+  ],
+  "input_sha": "bc75acfaffc06f1afa78da14c113bc3eae0e38bfa109fbbdeb1aa756c295381f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-03T05:43:34+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "Non-GAAP net income per share — 비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다",
+      "note_ko": "비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다",
+      "kind": "fact",
+      "quote": "We believe non-GAAP net income per share provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operations, as this non-GAAP financial measure eliminates the effect of stock-based compensation, acquisition-related expenses, amortization expense, restructuring and related charges, non-cash (gains)/losses from lease modifications and terminations and changes in the fair value of contingent consideration, which are often unrelated to overall operating performance.",
+      "document_id": "DOC-450C06FD810BE835",
+      "block_id": "p7",
+      "metric": "Non-GAAP net income per share",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Non-GAAP operating income — 비일반회계기준 영업 이익은 주식 기반 보상, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동의 영향을 제외한다",
+      "note_ko": "비일반회계기준 영업 이익은 주식 기반 보상, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동의 영향을 제외한다",
+      "kind": "fact",
+      "quote": "We believe non-GAAP operating income provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operations, as it eliminates the effect of stock-based compensation, acquisition-related expenses, amortization expense, restructuring and related charges, non-cash (gains)/losses from lease modifications and termination and changes in the fair value of contingent consideration, which are often unrelated to overall operating performance.",
+      "document_id": "DOC-450C06FD810BE835",
+      "block_id": "p7",
+      "metric": "Non-GAAP operating income",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사가 예상하는 총 매출액이다",
+      "figures": [
+        "$123.3 million and $124.1 million"
+      ],
+      "quote": "Total revenue between $123.3 million and $124.1 million.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사가 예상하는 영업 이익이다",
+      "figures": [
+        "$17.5 million and $18.3 million"
+      ],
+      "quote": "Non-GAAP operating income between $17.5 million and $18.3 million.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사가 예상하는 주당 순이익이다",
+      "figures": [
+        "$0.29 and $0.30"
+      ],
+      "quote": "Non-GAAP net income per share between $0.29 and $0.30 based on approximately 60.7 million weighted-average shares of common stock outstanding.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사가 예상하는 총 매출액이다",
+      "figures": [
+        "$493.0 million and $495.6 million"
+      ],
+      "quote": "Total revenue between $493.0 million and $495.6 million.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "연간 반복 매출이 삼만 달러 이상인 고객 수가 전년 같은 기간보다 늘었다",
+      "figures": [
+        "3,926 customers",
+        "11%"
+      ],
+      "quote": "Grew number of customers contributing $30,000 or more in ARR to 3,926 customers as of June 30, 2026, up 11% compared to June 30, 2025.",
+      "where": "DOC-450C06FD810BE835#p4"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

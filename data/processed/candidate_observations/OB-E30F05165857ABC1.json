@@ -1,0 +1,78 @@
+{
+  "observation_id": "OB-E30F05165857ABC1",
+  "candidate_id": "CAN-3D30FF7D03231FE1",
+  "candidate_version": "CV-BA24603CAEA1F911",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PSX",
+    "ticker": "PSX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-03T05:29:55+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261003T052857Z_37099766046-1.json.gz",
+    "sha256": "096c90fd47eb46740818c48838d43d777e95507cb3950bf6a583ecae1f600e20",
+    "run_id": "37099766046-1",
+    "finished_at": "2026-10-03T05:43:19+00:00"
+  },
+  "eps": {
+    "eps_now": 25.75825,
+    "eps_30d": 21.00231,
+    "eps_90d": 17.40386,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 15,
+    "down30": 1,
+    "pct_90": 48.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.158,
+    "yield_change_30_pp": 1.798
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-05",
+    "price_start_date": "2026-07-02",
+    "price_end_expected": "2026-10-02",
+    "price_end_date": "2026-10-02",
+    "close_start": 176.4199981689453,
+    "close_end": 264.5799865722656,
+    "price_pct_90": 50.0,
+    "adj_return_pct_90": 50.8,
+    "pe_change_pct": 1.3
+  },
+  "display_rank": 22,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 14
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 106079379456,
+  "context_id": "CTX-2CEA03A0C6A3BE21",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-01T06:22:35+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NYSE:PSX",
+  "approval_version": null
+}

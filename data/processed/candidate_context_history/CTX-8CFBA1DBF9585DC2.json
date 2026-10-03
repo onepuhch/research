@@ -1,0 +1,144 @@
+{
+  "context_id": "CTX-8CFBA1DBF9585DC2",
+  "candidate_id": "CAN-A0761326A7E13159",
+  "ticker": "SUNC",
+  "issuer_cik": "0002089661",
+  "document_ids": [
+    "DOC-80DC8C8E299B416B"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-80DC8C8E299B416B#p5",
+    "DOC-80DC8C8E299B416B#p6",
+    "DOC-80DC8C8E299B416B#p10",
+    "DOC-80DC8C8E299B416B#p12",
+    "DOC-80DC8C8E299B416B#p14",
+    "DOC-80DC8C8E299B416B#p30",
+    "DOC-80DC8C8E299B416B#t3",
+    "DOC-80DC8C8E299B416B#t4",
+    "DOC-80DC8C8E299B416B#p66",
+    "DOC-80DC8C8E299B416B#p67",
+    "DOC-80DC8C8E299B416B#p78",
+    "DOC-80DC8C8E299B416B#p80",
+    "DOC-80DC8C8E299B416B#p96",
+    "DOC-80DC8C8E299B416B#p98",
+    "DOC-80DC8C8E299B416B#p104",
+    "DOC-80DC8C8E299B416B#p106",
+    "DOC-80DC8C8E299B416B#p111",
+    "DOC-80DC8C8E299B416B#p112",
+    "DOC-80DC8C8E299B416B#p118",
+    "DOC-80DC8C8E299B416B#p136",
+    "DOC-80DC8C8E299B416B#p139",
+    "DOC-80DC8C8E299B416B#p148",
+    "DOC-80DC8C8E299B416B#p150"
+  ],
+  "input_sha": "8cfba1dbf9585dc2d9d851650bd35b7201b8f4584c6dbe6ad2dcc777a0c3493d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-03T05:43:34+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "순이익(net income) · second quarter: $283 million — 회사의 순이익이다",
+      "note_ko": "회사의 순이익이다",
+      "kind": "fact",
+      "quote": "Reports strong second quarter results, including net income of $283 million, Adjusted EBITDA(1) of $996 million, excluding one-time transaction-related expenses(2), and Distributable Cash Flow, as adjusted(1), of $608 million",
+      "document_id": "DOC-80DC8C8E299B416B",
+      "block_id": "p5",
+      "metric": "net income",
+      "figures": [
+        "$283 million"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "내년 EPS 예상치가 올라간 것이 이 발표와 관련이 있는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "일회성 거래 관련 비용을 제외한 회사의 조정 에비타이다",
+      "figures": [
+        "$996 million"
+      ],
+      "quote": "Reports strong second quarter results, including net income of $283 million, Adjusted EBITDA(1) of $996 million, excluding one-time transaction-related expenses(2), and Distributable Cash Flow, as adj",
+      "where": "DOC-80DC8C8E299B416B#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사의 연간 조정 에비타 가이던스가 증가했다",
+      "figures": [
+        "$400 million",
+        "$3.5 billion to $3.7 billion"
+      ],
+      "quote": "Increases full year 2026 Adjusted EBITDA guidance by $400 million to $3.5 billion to $3.7 billion",
+      "where": "DOC-80DC8C8E299B416B#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사의 조정 에비타는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$982 million"
+      ],
+      "quote": "Adjusted EBITDA for the second quarter of 2026 was $982 million compared to $454 million in the second quarter of 2025.",
+      "where": "DOC-80DC8C8E299B416B#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "연료 유통 부문의 조정 에비타는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$504 million"
+      ],
+      "quote": "Adjusted EBITDA for the Fuel Distribution segment for the second quarter of 2026 was $504 million compared to $206 million in the second quarter of 2025.",
+      "where": "DOC-80DC8C8E299B416B#p12"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_from_another_period",
+      "note_ko": "회사의 조정 에비타에는 일회성 거래 관련 비용이 포함되어 있다",
+      "figures": [
+        "$14 million"
+      ],
+      "quote": "Adjusted EBITDA for the second quarter of 2026 and 2025 included $14 million and $10 million, respectively, of one-time transaction-related expenses.",
+      "where": "DOC-80DC8C8E299B416B#p10"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_from_another_period",
+      "note_ko": "연료 유통 부문의 조정 에비타에는 일회성 거래 관련 비용이 포함되어 있다",
+      "figures": [
+        "$12 million"
+      ],
+      "quote": "Adjusted EBITDA for the second quarter of 2026 and 2025 included $12 million and $8 million, respectively, of one-time transaction-related expenses.",
+      "where": "DOC-80DC8C8E299B416B#p12"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "감가상각, 상각 및 할부 상환은 비현금성 비용이지만, 감가상각, 상각 및 할부 상환되는 자산은 미래에 교체되어야 할 경우가 많으며, 조정 에비타는 이러한 교체에 필요한 현금 요구 사항을 반영하지 않는다",
+      "figures": [],
+      "quote": "although depreciation, amortization and accretion are non-cash charges, the assets being depreciated, amortized and accreted will often have to be replaced in the future, and Adjusted EBITDA does not ",
+      "where": "DOC-80DC8C8E299B416B#p78"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

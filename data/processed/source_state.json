@@ -4710,7 +4710,7 @@
     "reason": "grounded extraction"
   },
   "0001562762-26-000111": {
-    "status": "retry",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -4721,17 +4721,52 @@
       "url": "https://www.sec.gov/Archives/edgar/data/16160/000156276226000111/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/16160/000156276226000111/exhibit991.htm",
       "published_at": "2026-09-30",
-      "raw_text": "CAL-MAINE FOODS INC (CALM) (CIK 0000016160) EX-99.1 2026-09-30. Prepared Foods Prepared Foods sales decreased 13.0% reflecting a 19.3% decrease in pounds sold, primarily related to temporary production reductions during capacity expansion and network optimization activities, which was partially offset by a 7.9% increase in average selling price per pound. in February 2022 and that impacted our flocks in the third and fourth quarters of fiscal 2024 and again in March 2026, (vi) risks, changes, or obligations that could result from our recent or future acquisition of new flocks or businesses, such as our acquisition of Echo Lake Foods completed June 2, 2025, and risks or changes that may cause conditions to completing a pending acquisition not to be met, (vii) our ability to successfully integrate and manage recently acquired businesses, like Echo Lake Foods, and realize the expected benefits of such acquisitions, including synergies, cost savings, reduction in earnings volatility, margin expansion, financial returns, expanded customer relationships, or sales or growth opportunities, (viii) our ability to produce, supply and distribute shell eggs and prepared foods efficiently and reliably, (ix) our ability to compete effectively with existing competitors and new market entrants, retain existing customers, acquire new customers and grow our product mix including our prepared foods product offerings, (x) the impacts of government, customer and consumer reactions to high market prices for eggs, including, without limitation, potential new or expanded government regulations, (xi) risks relating to potential changes in inflation, interest rates and trade and tariff policies, (xii) the loss or expiration of any registered trademarks or other intellectual property that we use in our business, (xiii) adverse results in pending litigation and other legal matters, (xiv) global instability, including as a result of geopolitical conflicts and other uncertainties and (xv) the ris"
+      "raw_text": "CAL-MAINE FOODS INC (CALM) (CIK 0000016160) EX-99.1 2026-09-30. Prepared Foods Prepared Foods sales decreased 13.0% reflecting a 19.3% decrease in pounds sold, primarily related to temporary production reductions during capacity expansion and network optimization activities, which was partially offset by a 7.9% increase in average selling price per pound. in February 2022 and that impacted our flocks in the third and fourth quarters of fiscal 2024 and again in March 2026, (vi) risks, changes, or obligations that could result from our recent or future acquisition of new flocks or businesses, such as our acquisition of Echo Lake Foods completed June 2, 2025, and risks or changes that may cause conditions to completing a pending acquisition not to be met, (vii) our ability to successfully integrate and manage recently acquired businesses, like Echo Lake Foods, and realize the expected benefits of such acquisitions, including synergies, cost savings, reduction in earnings volatility, margin expansion, financial returns, expanded customer relationships, or sales or growth opportunities, (viii) our ability to produce, supply and distribute shell eggs and prepared foods efficiently and reliably, (ix) our ability to compete effectively with existing competitors and new market entrants, retain existing customers, acquire new customers and grow our product mix including our prepared foods product offerings, (x) the impacts of government, customer and consumer reactions to high market prices for eggs, including, without limitation, potential new or expanded government regulations, (xi) risks relating to potential changes in inflation, interest rates and trade and tariff policies, (xii) the loss or expiration of any registered trademarks or other intellectual property that we use in our business, (xiii) adverse results in pending litigation and other legal matters, (xiv) global instability, including as a result of geopolitical conflicts and other uncertainties and (xv) the ris",
+      "_model_response": {
+        "evidence_quote": "Prepared Foods sales decreased 13.0% reflecting a 19.3% decrease in pounds sold, primarily related to temporary production reductions during capacity expansion and network optimization activities, which was partially offset by a 7.9% increase in average selling price per pound.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "7.9% increase in average selling price per pound.",
+          "supply_demand_tightness": "7.9% increase in average selling price per pound.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "capacity expansion and network optimization activities"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CALM",
+        "theme": "가공식품",
+        "signal_type": "ASP/가격",
+        "what_happened": "CALM의 가공식품 평균 판매 가격이 파운드당 7.9% 상승했으며, 이는 생산 능력 확장 활동 중 일시적인 생산량 감소로 인한 판매량 감소를 부분적으로 상쇄했다.",
+        "why_it_matters": "생산량 감소에도 불구하고 가격 인상을 통해 매출 감소를 방어한 것은 제품의 가격 결정력과 수요가 견고함을 시사하며, 향후 생산 능력 증설이 완료되면 실적 개선에 긍정적 영향을 줄 수 있다.",
+        "what_to_watch": "생산 능력 증설 완료 시점 및 그에 따른 생산량 회복, 그리고 평균 판매 가격의 지속적인 추이.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 5,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "ASP (Average Selling Price): 평균 판매 가격"
+      }
     },
     "content_hash": "e5ac57f3740846e670006b1552f5d6720ec0d146738b0de99d596b05c121cded",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-01T06:06:35+00:00",
-    "reason": "HTTPError",
-    "next_retry_at": "2026-10-01T18:06:24.986333+00:00"
+    "attempts": 2,
+    "updated_at": "2026-10-03T05:26:11+00:00",
+    "reason": "grounded extraction",
+    "next_retry_at": "2026-10-01T18:06:24.986333+00:00",
+    "signal_id": "SIG-0898"
   },
   "0000015847-26-000047": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -4742,14 +4777,49 @@
       "url": "https://www.sec.gov/Archives/edgar/data/15847/000001584726000047/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/15847/000001584726000047/shareholderpresentation-.htm",
       "published_at": "2026-09-30",
-      "raw_text": "BUTLER NATIONAL CORP (BUKS) (CIK 0000015847) EX-99.1 2026-09-30. – AIRCRAFT MODIFICATIONS BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2026 [COMPANY NAME] AIRCRAFT MODIFICATIONS Product & Service Applications Special Mission Mods Design Engineering Special Mission System Integration Avcon Industries has developed FAA/EASA/DGAC/CAA approved solutions that support: • Search and Rescue (SAR) • Fire Detection / Monitoring • Maritime Surveillance & Patrol • Aerial Mapping • Police & Homeland Security Missions • Coastal / Erosion Research • Environmental / Atmospheric Research • Disaster Relief Control • Oil Spill Detection • SIGINT Capabilities • Electronic Functionality & Countermeasures • Protection Systems BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2026 [COMPANY NAME] AIRCRAFT MODIFICATIONS – WHAT WE DO • Structural Modifications • Electrical Systems Integration and Avionics • Engineering – Design / Aero / Structural / Electrical • Supplemental Type Certificate Approvals (STC) / Parts Manufacturing Authority (PMA) • Manufacturing – Fabrication • OEM Relationship to Engineering / Obsolescence Solutions BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2026 [COMPANY NAME] OPPORTUNITIES / RISKS AVCON REPORT • Special Mission Large Aircraft - System Integration Opportunities - Risk: · Equipment Lead Time / Availability · Export Approvals - Action: Enhanced Program Management • Backlog – Supply of Work with Strong Backlog - Risk: · Technical Staff – Hourly Technicians · Production Efficiencies with Expansion - Action: Engaged Recruiting Specialists, Increased Inventory/Stock • Kits (Rails, Pods, Hardpoints) Sales / Revenue - Field Installations · Transmissive Pods · Power/Generator Upgrades · External Stores/Hard Points - Risk: · Aircraft for Modification · Foreign on-site support - Action: Designate Avcon Team Members to Support, Focus on Qualified Facilities • Cargo Door - Risk: · STC Process · Staffing for Demand - Action: STC planned FY27 Q3 BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2"
+      "raw_text": "BUTLER NATIONAL CORP (BUKS) (CIK 0000015847) EX-99.1 2026-09-30. – AIRCRAFT MODIFICATIONS BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2026 [COMPANY NAME] AIRCRAFT MODIFICATIONS Product & Service Applications Special Mission Mods Design Engineering Special Mission System Integration Avcon Industries has developed FAA/EASA/DGAC/CAA approved solutions that support: • Search and Rescue (SAR) • Fire Detection / Monitoring • Maritime Surveillance & Patrol • Aerial Mapping • Police & Homeland Security Missions • Coastal / Erosion Research • Environmental / Atmospheric Research • Disaster Relief Control • Oil Spill Detection • SIGINT Capabilities • Electronic Functionality & Countermeasures • Protection Systems BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2026 [COMPANY NAME] AIRCRAFT MODIFICATIONS – WHAT WE DO • Structural Modifications • Electrical Systems Integration and Avionics • Engineering – Design / Aero / Structural / Electrical • Supplemental Type Certificate Approvals (STC) / Parts Manufacturing Authority (PMA) • Manufacturing – Fabrication • OEM Relationship to Engineering / Obsolescence Solutions BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2026 [COMPANY NAME] OPPORTUNITIES / RISKS AVCON REPORT • Special Mission Large Aircraft - System Integration Opportunities - Risk: · Equipment Lead Time / Availability · Export Approvals - Action: Enhanced Program Management • Backlog – Supply of Work with Strong Backlog - Risk: · Technical Staff – Hourly Technicians · Production Efficiencies with Expansion - Action: Engaged Recruiting Specialists, Increased Inventory/Stock • Kits (Rails, Pods, Hardpoints) Sales / Revenue - Field Installations · Transmissive Pods · Power/Generator Upgrades · External Stores/Hard Points - Risk: · Aircraft for Modification · Foreign on-site support - Action: Designate Avcon Team Members to Support, Focus on Qualified Facilities • Cargo Door - Risk: · STC Process · Staffing for Demand - Action: STC planned FY27 Q3 BUTLER ATIONAL CORPORATION SEPTEMBER 30, 2",
+      "_model_response": {
+        "evidence_quote": "OPPORTUNITIES / RISKS AVCON REPORT • Special Mission Large Aircraft - System Integration Opportunities - Risk: · Equipment Lead Time / Availability - Action: Enhanced Program Management • Backlog – Supply of Work with Strong Backlog - Risk: · Technical Staff – Hourly Technicians · Production Efficiencies with Expansion - Action: Engaged Recruiting Specialists, Increased Inventory/Stock • Kits (Rails, Pods, Hardpoints) Sales / Revenue - Field Installations · Transmissive Pods · Power/Generator Upgrades · External Stores/Hard Points - Risk: · Aircraft for Modification · Foreign on-site support - Action: Designate Avcon Team Members to Support, Focus on Qualified Facilities • Cargo Door - Risk: · STC Process · Staffing for Demand - Action: STC planned FY27 Q3",
+        "axes_evidence": {
+          "underfollowed_pure_play": "BUTLER NATIONAL CORP (BUKS) (CIK 0000015847)",
+          "earnings_leverage": "Backlog – Supply of Work with Strong Backlog - Action: Engaged Recruiting Specialists, Increased Inventory/Stock",
+          "supply_demand_tightness": "Risk: · Equipment Lead Time / Availability - Risk: · Technical Staff – Hourly Technicians",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Cargo Door - Risk: · STC Process · Staffing for Demand - Action: STC planned FY27 Q3"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "Aircraft Modification Services",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "BUKS",
+        "theme": "항공기 개조",
+        "signal_type": "수주/백로그",
+        "what_happened": "BUTLER NATIONAL CORP (BUKS)의 자회사 Avcon Industries가 특수 임무 항공기 개조 사업에서 강력한 수주잔고를 보유하고 있으며, 인력 및 재고 확충을 통해 생산 능력 증대를 추진 중이다.",
+        "why_it_matters": "강력한 수주잔고와 생산 능력 확충 노력은 특수 항공기 개조 시장의 견조한 수요를 반영하며, 이는 BUKS의 향후 실적 성장을 견인할 잠재적 저평가 요인으로 작용할 수 있다.",
+        "what_to_watch": "향후 분기별 수주잔고 추이 및 인력 충원 현황, 그리고 FY27 Q3로 예정된 화물 도어 STC 진행 상황.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "STC (Supplemental Type Certificate): 항공기 개조 또는 부품 변경에 대해 항공 당국(예: FAA)이 발행하는 추가 형식 증명서.\n백로그 (Backlog): 기업이 수주했으나 아직 완료하지 못한 주문 또는 계약의 총액."
+      }
     },
     "content_hash": "78a8a2ef98ba72ebbfbbb819052465ba2647c759397ebf4aef6452d9d12a9ca1",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-01T06:07:33+00:00",
-    "reason": "HTTPError",
-    "next_retry_at": "2026-10-01T18:06:24.986333+00:00"
+    "attempts": 2,
+    "updated_at": "2026-10-03T05:27:31+00:00",
+    "reason": "evidence_grounding_failed",
+    "next_retry_at": "2026-10-01T18:06:24.986333+00:00",
+    "validation_rejected": true
   },
   "0001437749-26-031585": {
     "status": "rejected",
@@ -4800,7 +4870,7 @@
     "reason": "제공된 텍스트는 일반적인 기업 전략 진술과 과거 재무제표를 포함하고 있으며, 가이던스 상향, 구체적인 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 식별 가능한 회사의 구체적인 조기 투자 발굴 신호가 없습니다. 'DCS' 관련 언급은 너무 모호하여 구체적인 신호로 보기 어렵습니다."
   },
   "0001140361-26-038110": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -4811,13 +4881,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1162194/000114036126038110/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1162194/000114036126038110/ef20082995_ex2-1.htm",
       "published_at": "2026-09-30",
-      "raw_text": "STANDARD BIOTOOLS INC. (LAB) (CIK 0001162194) EX-2.1 2026-09-30. (f) The Parties hereby acknowledge the intent of the Business to enter into a long-term supply agreement for the supply of products by the Markham, Ontario facility of the Business to the Retained Business, and Buyer agrees to cooperate in good faith with Seller in respect of the entry by the Business into such long-term supply agreement. EX-2.1 2 ef20082995_ex2-1.htm EXHIBIT 2.1 Exhibit 2.1 CERTAIN INFORMATION CONTAINED IN THIS AGREEMENT HAS BEEN OMITTED BY MEANS OF REDACTING A PORTION OF THE TEXT AND REPLACING IT WITH [***] BECAUSE IT IS BOTH: (I) NOT MATERIAL AND (II) THE TYPE THAT THE REGISTRANT TREATS AS PRIVATE OR CONFIDENTIAL. SHARE AND ASSET PURCHASE AGREEMENT BY AND BETWEEN STANDARD BIOTOOLS INC. and ELEMENT BIOSYSTEMS, LLC DATED AS OF September 30, 2026 TABLE OF CONTENTS Page ARTICLE I DEFINITIONS 2 Section 1.01 Certain Definitions 2 Section 1.02 Other Definitions 17 Section 1.03 Terms Generally 19 ARTICLE II PURCHASE AND SALE 21 Section 2.01 Purchase and Sale of the Shares and the Transferred Assets 21 Section 2.02 Excluded Assets 23 Section 2.03 Assumption of Assumed Liabilities 24 Section 2.04 Excluded Liabilities 25 Section 2.05 Closing 25 Section 2.06 Purchase Price 25 Section 2.07 Determination of Estimated Purchase Price 26 Section 2.08 Payment of Estimated Closing Payment 26 Section 2.09 Purchase Price Adjustment 27 Section 2.10 Purchase Price Allocation 30 Section 2.11 Closing Deliverables 30 Section 2.12 Restricted Contracts 31 Section 2.13 Local Transfer Documents 32 Section 2.14 Wrong Pockets 32 Section 2.15 Non-Assignability of Assets 33 ARTICLE III REPRESENTATIONS AND WARRANTIES OF SELLER 34 Section 3.01 Organization, Good Standing and Power; Qualifications 34 Section 3.02 Capitalization of the Transferred Companies 35 Section 3.03 Business Subsidiaries 35 Section 3.04 Authority; Execution and Delivery; Enforceability 36 Section 3.05 No Conflicts; Consents and Approvals 37 Secti"
+      "raw_text": "STANDARD BIOTOOLS INC. (LAB) (CIK 0001162194) EX-2.1 2026-09-30. (f) The Parties hereby acknowledge the intent of the Business to enter into a long-term supply agreement for the supply of products by the Markham, Ontario facility of the Business to the Retained Business, and Buyer agrees to cooperate in good faith with Seller in respect of the entry by the Business into such long-term supply agreement. EX-2.1 2 ef20082995_ex2-1.htm EXHIBIT 2.1 Exhibit 2.1 CERTAIN INFORMATION CONTAINED IN THIS AGREEMENT HAS BEEN OMITTED BY MEANS OF REDACTING A PORTION OF THE TEXT AND REPLACING IT WITH [***] BECAUSE IT IS BOTH: (I) NOT MATERIAL AND (II) THE TYPE THAT THE REGISTRANT TREATS AS PRIVATE OR CONFIDENTIAL. SHARE AND ASSET PURCHASE AGREEMENT BY AND BETWEEN STANDARD BIOTOOLS INC. and ELEMENT BIOSYSTEMS, LLC DATED AS OF September 30, 2026 TABLE OF CONTENTS Page ARTICLE I DEFINITIONS 2 Section 1.01 Certain Definitions 2 Section 1.02 Other Definitions 17 Section 1.03 Terms Generally 19 ARTICLE II PURCHASE AND SALE 21 Section 2.01 Purchase and Sale of the Shares and the Transferred Assets 21 Section 2.02 Excluded Assets 23 Section 2.03 Assumption of Assumed Liabilities 24 Section 2.04 Excluded Liabilities 25 Section 2.05 Closing 25 Section 2.06 Purchase Price 25 Section 2.07 Determination of Estimated Purchase Price 26 Section 2.08 Payment of Estimated Closing Payment 26 Section 2.09 Purchase Price Adjustment 27 Section 2.10 Purchase Price Allocation 30 Section 2.11 Closing Deliverables 30 Section 2.12 Restricted Contracts 31 Section 2.13 Local Transfer Documents 32 Section 2.14 Wrong Pockets 32 Section 2.15 Non-Assignability of Assets 33 ARTICLE III REPRESENTATIONS AND WARRANTIES OF SELLER 34 Section 3.01 Organization, Good Standing and Power; Qualifications 34 Section 3.02 Capitalization of the Transferred Companies 35 Section 3.03 Business Subsidiaries 35 Section 3.04 Authority; Execution and Delivery; Enforceability 36 Section 3.05 No Conflicts; Consents and Approvals 37 Secti",
+      "_model_response": {
+        "evidence_quote": "(f) The Parties hereby acknowledge the intent of the Business to enter into a long-term supply agreement for the supply of products by the Markham, Ontario facility of the Business to the Retained Business, and Buyer agrees to cooperate in good faith with Seller in respect of the entry by the Business into such long-term supply agreement.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "planned",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "장기 공급 계약 체결 '의도'를 밝힌 계획 발표로, 확정된 계약이나 실행된 실적이 아니며, 루틴 법률 문구에 해당하여 구체적인 조기 투자 신호로 보기 어렵습니다.",
+        "subject": "STANDARD BIOTOOLS INC.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "STANDARD BIOTOOLS INC.의 자산 매각 계약서에서 매각 대상 사업부가 잔류 사업부에 제품을 장기 공급할 의도를 밝혔습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "장기 공급 계약 체결 '의도'를 밝힌 계획 발표로, 확정된 계약이나 실행된 실적이 아니며, 루틴 법률 문구에 해당하여 구체적인 조기 투자 신호로 보기 어렵습니다."
     },
     "content_hash": "43d554c2e022dbb95ec307328e90386cd54ba2c8c467c5067f0eaf331ee12009",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-01T06:07:50+00:00",
-    "reason": "HTTPError",
+    "attempts": 2,
+    "updated_at": "2026-10-03T05:27:44+00:00",
+    "reason": "장기 공급 계약 체결 '의도'를 밝힌 계획 발표로, 확정된 계약이나 실행된 실적이 아니며, 루틴 법률 문구에 해당하여 구체적인 조기 투자 신호로 보기 어렵습니다.",
     "next_retry_at": "2026-10-01T18:06:24.986333+00:00"
   },
   "0001493152-26-045111": {
@@ -4867,5 +4972,383 @@
     "attempts": 1,
     "updated_at": "2026-10-01T06:08:07+00:00",
     "reason": "해당 문서는 인수 제안에 대한 법률적 정의를 담고 있는 루틴 공시이며, 회사의 구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, CAPEX 등)를 포함하지 않습니다."
+  },
+  "0001213900-26-106420": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-106420",
+      "entity_id": "CIK:0002101698",
+      "source_role": "candidate",
+      "title": "Elmet Group Co. (ELMT) (CIK 0002101698) EX-99.1 2026-10-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/2101698/000121390026106420/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2101698/000121390026106420/ea030742001ex99-1.htm",
+      "published_at": "2026-10-02",
+      "raw_text": "Elmet Group Co. (ELMT) (CIK 0002101698) EX-99.1 2026-10-02. Starck Americas November 2023 (Acquired) Expansion of tungsten, molybdenum and niobium capabilities 7 Symphony November 2025 (Acquired) Expansion of engineering capabilities and new customer relationships 9 Schwabmünchen September 2026 (Asset Purchase Agreement)(1) Establishment of integrated tungsten and molybdenum manufacturing base in Europe 10 Schwabmünchen Metal Production Operations Blue Moon Metals and EQ Resources September 2026 (Strategic Joint Venture(2)) Commercial and investment agreements with key tungsten partners 11 EQ Resources (AUS + ESP) November 2024 (Investment Agreement) 5-year tungsten concentrate offtake arrangement 8 (1) Closing expected in Q1 2027. facilities CMC Capacity Expansion Across U.S. EX-99.1 2 ea030742001ex99-1.htm CORPORATE PRESENTATION DATED OCTOBER 2026 Exhibit 99.1 Critical Materials Critical Processes Critical Engineering Critical Manufacturing Securing Critical Components Supply Chain October 2026 Disclaimer 2 FORWARD-LOOKING STATEMENTS The information in this Presentation includes \"forward-looking statements\" within the meaning of the Private Securities Litigation Reform Act of 1995, as amended. All statements other than statements of historical fact included in this presentation regarding our business strategy, plans, goals, and objectives are forward-looking statements. When used in this presentation, the words \"believe,\" \"project,\" \"expect,\" \"anticipate,\" \"estimate,\" \"intend,\" \"budget,\" \"target,\" \"aim,\" \"strategy,\" \"plan,\" \"guidance,\" \"outlook,\" \"intent,\" \"may,\" \"should,\" \"could,\" \"will,\" \"would,\" \"will be,\" \"will continue,\" \"will likely result,\" and similar expressions are intended to identify forward-looking statements, although not all forward-looking statements contain such identifying words. These forward-looking statements are based on the current expectations of The Elmet Group Co. (\"we,\" \"us,\" \"our,\" or the \"Company\") and assumptions about future events a",
+      "_model_response": {
+        "evidence_quote": "Elmet Group Co. (ELMT) (CIK 0002101698) EX-99.1 2026-10-02. Starck Americas November 2023 (Acquired) Expansion of tungsten, molybdenum and niobium capabilities 7 Symphony November 2025 (Acquired) Expansion of engineering capabilities and new customer relationships 9 Schwabmünchen September 2026 (Asset Purchase Agreement)(1) Establishment of integrated tungsten and molybdenum manufacturing base in Europe 10 Schwabmünchen Metal Production Operations Blue Moon Metals and EQ Resources September 2026 (Strategic Joint Venture(2)) Commercial and investment agreements with key tungsten partners 11 EQ Resources (AUS + ESP) November 2024 (Investment Agreement) 5-year tungsten concentrate offtake arrangement 8 (1) Closing expected in Q1 2027.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Elmet Group Co. (ELMT) (CIK 0002101698)",
+          "earnings_leverage": "Expansion of tungsten, molybdenum and niobium capabilities... Establishment of integrated tungsten and molybdenum manufacturing base in Europe",
+          "supply_demand_tightness": "Critical Materials Critical Processes Critical Engineering Critical Manufacturing Securing Critical Components Supply Chain",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Closing expected in Q1 2027. ... 5-year tungsten concentrate offtake arrangement"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "tungsten, molybdenum, niobium supply chain",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ELMT",
+        "theme": "핵심광물, 공급망",
+        "signal_type": "CAPEX",
+        "what_happened": "Elmet Group Co.는 유럽에 텅스텐 및 몰리브덴 통합 제조 기지를 설립하기 위한 자산 구매 계약을 체결하고, 텅스텐 및 몰리브덴 역량을 확장했습니다.",
+        "why_it_matters": "핵심 광물 제조 역량을 유럽에 확보하여 공급망 안정성을 높이고, 미래 수요 증가에 대비한 생산 기반을 마련하여 장기적인 성장 동력을 확보할 수 있습니다.",
+        "what_to_watch": "Q1 2027 Schwabmünchen 공장 인수 완료 여부 및 생산능력 증대 추이, 새로운 제조 기지 가동에 따른 텅스텐/몰리브덴 제품 생산량 및 매출 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "Asset Purchase Agreement: 자산 구매 계약, Tungsten: 텅스텐 (핵심 광물)"
+      }
+    },
+    "content_hash": "a3857acaaf6f6ecf927c05850ff6f15bb16c2fec8fe14db07ab0cdc9bd1fd346",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:26:34+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001493152-26-045612": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-045612",
+      "entity_id": "CIK:0001549084",
+      "source_role": "candidate",
+      "title": "ChronoScale Holdings Corp (CHRN) (CIK 0001549084) EX-99.1 2026-10-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1549084/000149315226045612/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1549084/000149315226045612/ex99-1.htm",
+      "published_at": "2026-10-02",
+      "raw_text": "ChronoScale Holdings Corp (CHRN) (CIK 0001549084) EX-99.1 2026-10-02. EX-99.1 3 ex99-1.htm EX-99.1 Exhibit 99.1 Next-Gen Hybrid AI ChronoScale Announces Agreements Bringing Total Company Contracted Run-Rate Revenue to $1 Billion and Sale of Ekso Bionics Business Unit ● Expanded agreement with an existing AI infrastructure customer and new customer agreement increases contracted deployment pipeline and is expected to drive Company annualized revenue run rate to $1 billion by calendar Q3 2027 ● ChronoScale completes previously disclosed sale of Ekso Bionics business unit MENLO PARK, Calif., October 1, 2026 (GLOBE NEWSWIRE) — ChronoScale Holdings Corporation (NASDAQ: CHRN) (“ChronoScale” or the “Company”), an accelerated compute platform purpose-built to support demanding artificial intelligence (AI) workloads, today announced a significant expansion of an existing customer agreement and a separate agreement with a new customer, that increases the scale of its contracted AI infrastructure deployments and further strengthens the Company’s contracted revenues. “We view the expansion of this existing customer relationship and the onboarding of the new customer as an important validation of both the demand we are seeing and our ability to grow alongside our customers,” said Cenly Chen, Chief Executive Officer of ChronoScale .",
+      "_model_response": {
+        "evidence_quote": "ChronoScale Announces Agreements Bringing Total Company Contracted Run-Rate Revenue to $1 Billion and Sale of Ekso Bionics Business Unit ● Expanded agreement with an existing AI infrastructure customer and new customer agreement increases contracted deployment pipeline and is expected to drive Company annualized revenue run rate to $1 billion by calendar Q3 2027",
+        "axes_evidence": {
+          "underfollowed_pure_play": "ChronoScale Holdings Corporation (NASDAQ: CHRN), an accelerated compute platform purpose-built to support demanding artificial intelligence (AI) workloads",
+          "earnings_leverage": "is expected to drive Company annualized revenue run rate to $1 billion by calendar Q3 2027",
+          "supply_demand_tightness": "We view the expansion of this existing customer relationship and the onboarding of the new customer as an important validation of both the demand we are seeing and our ability to grow alongside our customers",
+          "structural_ai_demand": "accelerated compute platform purpose-built to support demanding artificial intelligence (AI) workloads",
+          "revision_momentum": "is expected to drive Company annualized revenue run rate to $1 billion by calendar Q3 2027",
+          "catalyst_visibility": "expected to drive Company annualized revenue run rate to $1 billion by calendar Q3 2027"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI 컴퓨팅 플랫폼",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CHRN",
+        "theme": "AI 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "ChronoScale이 기존 및 신규 고객과의 계약 확장을 통해 2027년 3분기까지 연간 계약 매출을 10억 달러로 늘릴 것으로 예상한다고 발표했다.",
+        "why_it_matters": "ChronoScale의 AI 컴퓨팅 플랫폼에 대한 강력한 수요를 보여주며, 이는 핵심 AI 인프라 부문에서 향후 상당한 매출 성장과 시장 점유율 확대로 이어질 수 있다.",
+        "what_to_watch": "2027년 3분기까지의 실제 매출액 달성 여부 및 추가 고객 확보 소식",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "Run-Rate Revenue: 특정 시점의 매출을 기준으로 1년 동안 발생할 것으로 예상되는 연간화된 매출액. Accelerated Compute Platform: AI와 같은 복잡한 연산을 빠르게 처리하도록 설계된 고성능 컴퓨팅 플랫폼."
+      }
+    },
+    "content_hash": "75b171021e10e71a4552e2539cfb9bfed7551fab7c45fef95bf833fbd78da525",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:28:01+00:00",
+    "signal_id": "SIG-0899",
+    "reason": "grounded extraction"
+  },
+  "0001493152-26-045368": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-045368",
+      "entity_id": "CIK:0002068385",
+      "source_role": "candidate",
+      "title": "SharonAI Holdings Inc. (SHAZ, SHAZW) (CIK 0002068385) 8-K 2026-10-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/2068385/000149315226045368/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2068385/000149315226045368/form8-k.htm",
+      "published_at": "2026-10-01",
+      "raw_text": "SharonAI Holdings Inc. (SHAZ, SHAZW) (CIK 0002068385) 8-K 2026-10-01. These forward-looking statements include, but are not limited to, statements regarding the expected use of proceeds of the Facility, the expected maturity date and repayment of the Facility, the expected mandatory prepayment of Facility A from a customer deposit held in escrow upon customer acceptance, the expected release of the Guarantee Deed Poll upon repayment of Facility A, the expected transition to non-recourse financing following the Facility A Repayment Date, the expected compliance with the loan-to-value covenant and related step-down schedule, the expected entry into a management agreement and intellectual property license agreement, and the expected deployment and operation of servers and related infrastructure at contracted data center facilities. false 0002068385 0002068385 2026-09-28 2026-09-28 iso4217:USD xbrli:shares iso4217:USD xbrli:shares UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 OR 15(d) of The Securities Exchange Act of 1934 Date of Report (date of earliest event reported): September 28, 2026 SHARONAI HOLDINGS INC. (Exact name of registrant as specified in its charter) Delaware 001-43129 41-2349750 (State or other jurisdiction of incorporation) (Commission File Number) (IRS Employer Identification No.) 745 Fifth Avenue , Suite 500 , New York , NY 10151 (Address of principal executive offices) (Zip Code) Registrant’s telephone number, including area code: ( 713 ) 826-6398 Not Applicable (Former name or former address, if changed since last report.) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions (see General Instructions A.2. below): ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Excha",
+      "_model_response": {
+        "evidence_quote": "These forward-looking statements include, but are not limited to, statements regarding the expected use of proceeds of the Facility, the expected maturity date and repayment of the Facility, the expected mandatory prepayment of Facility A from a customer deposit held in escrow upon customer acceptance, the expected release of the Guarantee Deed Poll upon repayment of Facility A, the expected transition to non-recourse financing following the Facility A Repayment Date, the expected compliance with the loan-to-value covenant and related step-down schedule, the expected entry into a management agreement and intellectual property license agreement, and the expected deployment and operation of servers and related infrastructure at contracted data center facilities.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "planned",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "이 공시는 회사의 시설 자금 사용, 상환, 그리고 서버 및 인프라 배포에 대한 '예상'을 담은 전향적 진술이며, 구체적인 가이던스 상향, 확정된 신규 수주, 디자인윈 등 식별 가능한 조기 투자 발굴 신호에 해당하지 않습니다. 특히, 고객 예치금으로부터의 의무 선지급은 대출 조기상환의 일종으로 수주 신호로 보지 않습니다.",
+        "subject": "SharonAI Holdings Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "SharonAI Holdings Inc.가 시설 자금의 예상 사용, 만기일 및 상환, 고객 수락 시 에스크로에 보관된 고객 예치금으로부터의 시설 A 의무 선지급, 그리고 계약된 데이터 센터 시설에 서버 및 관련 인프라의 예상 배포 및 운영에 대한 전향적 진술을 공시했습니다.",
+        "why_it_matters": "이 공시는 회사의 미래 재무 및 운영 계획에 대한 기대를 담고 있지만, 구체적인 사업 성과 개선이나 신규 수주를 나타내는 조기 투자 신호로 보기 어렵습니다.",
+        "what_to_watch": "향후 실제 계약 체결 및 서버 배포 실적, 그리고 재무 성과에 미치는 영향.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "이 공시는 회사의 시설 자금 사용, 상환, 그리고 서버 및 인프라 배포에 대한 '예상'을 담은 전향적 진술이며, 구체적인 가이던스 상향, 확정된 신규 수주, 디자인윈 등 식별 가능한 조기 투자 발굴 신호에 해당하지 않습니다. 특히, 고객 예치금으로부터의 의무 선지급은 대출 조기상환의 일종으로 수주 신호로 보지 않습니다."
+    },
+    "content_hash": "ac2eff10746fda619e3c57459fa21b7a69b3f82cac33fe29df4665b0576c31e7",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:28:17+00:00",
+    "reason": "이 공시는 회사의 시설 자금 사용, 상환, 그리고 서버 및 인프라 배포에 대한 '예상'을 담은 전향적 진술이며, 구체적인 가이던스 상향, 확정된 신규 수주, 디자인윈 등 식별 가능한 조기 투자 발굴 신호에 해당하지 않습니다. 특히, 고객 예치금으로부터의 의무 선지급은 대출 조기상환의 일종으로 수주 신호로 보지 않습니다."
+  },
+  "0001829126-26-010706": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001829126-26-010706",
+      "entity_id": "CIK:0002079013",
+      "source_role": "candidate",
+      "title": "Hall Chadwick Acquisition Corp (HCAC, HCACR, HCACU) (CIK 0002079013) EX-99.1 2026-10-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/2079013/000182912626010706/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2079013/000182912626010706/hallchadwickacq_ex99-1.htm",
+      "published_at": "2026-10-02",
+      "raw_text": "Hall Chadwick Acquisition Corp (HCAC, HCACR, HCACU) (CIK 0002079013) EX-99.1 2026-10-02. 21 HCAC Business Combination with REEcycle “Building America’s domestic rare earth supply chain” STRUCTURAL TAILWINDS Stream The build - out buys our oxide and supplies our feedstock AI PULLS ON MAGNET - BEARING HARDWARE ~US$400B five largest hyperscalers’ 2025 capex¹ Sold out HDDs for 2026; retail HDD prices up ~46%² 18 Months per ~US$40M, 160 tpa MREO plant vs >10 years³ for a mine WHERE THE MAGNETS SIT Hard disk drives ~10 to 15 g NdFeB per drive⁴ Cooling and power Fans, pumps and motors in cooling and power systems¹ Grid build - out Direct - drive wind: 51 to 180 kg Nd per MW; magnets up to 4 t per turbine⁵ DATA CENTRES: FEEDSTOCK SOURCE AND END - MARKET Data - centre hardware retires 5 to 7 yr refresh The closed loop Same magnets twice: recovered, then resold. Decommissioning / ITAD Magnets residual Drive Disassembly Machine ~25,000 HDDs a month per unit REEcycle MREO Nd, Pr, Dy, Tb recovered New drive magnets HDDs sold out for 2026 KEY STATISTICS 20M to 70M HDD Annual US end - of - life HDD feedstock⁴ 3 DDMs targeted with a US data - centre operator, 4Q26 2 partners data - centre operator and server OEM (1) Mining.com, 17 Jul 2026 (Sprott webcast): five largest hyperscalers ~US$400B 2025 spend; IEA: AI data centres ~3% of magn et REE demand by 2030; magnets in data - centre cooling, storage and communications. (2) Tom’s Hardware, 16 Feb 2026: Western Digital CEO, Q2 FY2026 call, “sold out for calendar 2026”; HDD prices up 46% since Sep 2025. Scalability REEcycle’s modular commercial plants have unrivaled scalability High Low SCALABILITY → Low Very high CAPEX → REEcycle: magnet to oxide Magnet to magnet Mixed e - waste to oxide Mine - waste recovery Mining and processing KEY TAKEAWAYS • REEcycle is in the “favourable” quadrant: high scalability at the lowest capex of any pathway shown • REEcycle modular plant capacity is added plant - by - plant, not through one capital hea",
+      "_model_response": {
+        "evidence_quote": "Sold out HDDs for 2026; retail HDD prices up ~46%² 18 Months per ~US$40M, 160 tpa MREO plant vs >10 years³ for a mine WHERE THE MAGNETS SIT Hard disk drives ~10 to 15 g NdFeB per drive⁴ Cooling and power Fans, pumps and motors in cooling and power systems¹ Grid build - out Direct - drive wind: 51 to 180 kg Nd per MW; magnets up to 4 t per turbine⁵ DATA CENTRES: FEEDSTOCK SOURCE AND END - MARKET Data - centre hardware retires 5 to 7 yr refresh The closed loop Same magnets twice: recovered, then resold. Decommissioning / ITAD Magnets residual Drive Disassembly Machine ~25,000 HDDs a month per unit REEcycle MREO Nd, Pr, Dy, Tb recovered New drive magnets HDDs sold out for 2026 KEY STATISTICS 20M to 70M HDD Annual US end - of - life HDD feedstock⁴ 3 DDMs targeted with a US data - centre operator, 4Q26 2 partners data - centre operator and server OEM (1) Mining.com, 17 Jul 2026 (Sprott webcast): five largest hyperscalers ~US$400B 2025 spend; IEA: AI data centres ~3% of magn et REE demand by 2030; magnets in data - centre cooling, storage and communications. (2) Tom’s Hardware, 16 Feb 2026: Western Digital CEO, Q2 FY2026 call, “sold out for calendar 2026”; HDD prices up 46% since Sep 2025.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "REEcycle is in the “favourable” quadrant: high scalability at the lowest capex of any pathway shown",
+          "earnings_leverage": "REEcycle’s modular commercial plants have unrivaled scalability High Low SCALABILITY → Low Very high CAPEX → REEcycle: magnet to oxide",
+          "supply_demand_tightness": "Sold out HDDs for 2026; retail HDD prices up ~46%²",
+          "structural_ai_demand": "AI PULLS ON MAGNET - BEARING HARDWARE ~US$400B five largest hyperscalers’ 2025 capex¹ ... IEA: AI data centres ~3% of magn et REE demand by 2030; magnets in data - centre cooling, storage and communications.",
+          "revision_momentum": "Sold out HDDs for 2026; retail HDD prices up ~46%²",
+          "catalyst_visibility": "3 DDMs targeted with a US data - centre operator, 4Q26"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "희토류",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "HCAC",
+        "theme": "희토류 재활용",
+        "signal_type": "수주/백로그",
+        "what_happened": "HCAC와 합병 예정인 REEcycle이 2026년 HDD 품절 및 가격 46% 상승 등 강력한 시장 수요를 언급하며, 4분기 미국 데이터센터 운영사와 3개의 DDM(Drive Disassembly Machine) 설치를 목표로 한다고 발표했습니다.",
+        "why_it_matters": "AI 수요 증가로 데이터센터 하드웨어 교체 주기가 짧아지면서 HDD 재활용을 통한 희토류 공급망 구축이 중요해지고 있으며, REEcycle은 이러한 구조적 수요 속에서 핵심 원자재를 확보하고 고객 확대를 계획하고 있어 성장 잠재력이 큽니다.",
+        "what_to_watch": "2026년 4분기 미국 데이터센터 운영사와의 DDM 설치 계약 진행 상황 및 실제 가동률; HDD 시장의 지속적인 수요 및 가격 추이.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "HDD (Hard Disk Drive): 데이터를 저장하는 컴퓨터 저장 장치. DDM (Drive Disassembly Machine): 하드 디스크 드라이브를 분해하여 희토류 자석 등을 회수하는 기계."
+      }
+    },
+    "content_hash": "af050632a4376c61ec67c960c73527334f26324b5b2cd87d182b8fbec23cf221",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:28:36+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001193125-26-412444": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-412444",
+      "entity_id": "CIK:0001076930",
+      "source_role": "candidate",
+      "title": "NOVANTA INC (NOVT, NOVTU) (CIK 0001076930) EX-99.1 2026-10-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1076930/000119312526412444/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1076930/000119312526412444/novt-ex99_1.htm",
+      "published_at": "2026-10-02",
+      "raw_text": "NOVANTA INC (NOVT, NOVTU) (CIK 0001076930) EX-99.1 2026-10-02. 7 Runway Buyer, LLC CONSOLIDATED STATEMENT OF CASH FLOWS For the year ended December 31, 2025 2025 Cash flows from operating activities: Net income $ 11,462,563 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 14,086,719 Amortization of debt issuance costs 785,764 Provision for doubtful accounts (114,843) Deferred income tax benefit (2,872,049) Changes in operating assets and liabilities: Accounts receivable, net 3,169,645 Inventory (1,166,004) Prepaid inventory 804,552 Prepaid expenses and other current assets 16,770 Right of use asset and lease liability 46,078 Accounts payable (1,502,129) Income taxes receivable/payable (641,539) Payroll liabilities 654,777 Accrued expenses 2,004,823 Customer prepayments 340,775 Net cash provided by operating activities 27,075,902 Cash flows from investing activities: Purchases of property and equipment (3,856,975) Net cash used in investing activities (3,856,975) Cash flows from financing activities: Payments on revolving debt (11,000,000) Borrowings on revolving debt 4,000,000 Payments on term debt (11,684,357) Net cash used in financing activities (18,684,357) CHANGE IN CASH 4,534,570 Cash, beginning of year 3,651,645 Cash, end of year $ 8,186,215 Supplemental information Cash paid for interest $ 21,893,910 Cash paid for taxes $ 4,905,570 Non-cash investing and financing activities Property and equipment purchased with accounts payable $ 127,613 The accompanying notes are an integral part of these consolidated financial statements. Contract liabilities related to customer prepayments and accrued customer rebates totaled $3,312,226 and $1,058,978 as of December 31, 2025 and January 1, 2025, respectively. NOTE 2 - Supplementary balance sheet information Inventories, net of reserve of $989,667 as of December 31 consisted of the following: 2025 Raw materials $ 22,916,340 Work in process 1,300,001 Finished g",
+      "_model_response": {
+        "evidence_quote": "Contract liabilities related to customer prepayments and accrued customer rebates totaled $3,312,226 and $1,058,978 as of December 31, 2025 and January 1, 2025, respectively.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Contract liabilities related to customer prepayments and accrued customer rebates totaled $3,312,226 and $1,058,978 as of December 31, 2025 and January 1, 2025, respectively.",
+          "supply_demand_tightness": "Contract liabilities related to customer prepayments and accrued customer rebates totaled $3,312,226 and $1,058,978 as of December 31, 2025 and January 1, 2025, respectively.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Contract liabilities related to customer prepayments and accrued customer rebates totaled $3,312,226 and $1,058,978 as of December 31, 2025 and January 1, 2025, respectively."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "NOVANTA INC",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "2025년 1월 1일 대비 12월 31일 기준 고객 선급금 관련 계약 부채가 약 213% 증가했다.",
+        "why_it_matters": "고객 선급금 증가는 향후 매출로 인식될 가능성이 높은 미래 수요를 나타내며, 이는 회사의 성장 잠재력을 시사한다.",
+        "what_to_watch": "향후 분기별 매출 성장률 및 고객 선급금의 지속적인 증가 여부",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 3,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "고객 선급금: 고객이 제품이나 서비스를 받기 전에 미리 지불한 금액으로, 기업의 부채로 기록되며 향후 매출로 전환됨."
+      }
+    },
+    "content_hash": "bb4f9fdca812bf7105bc6b8cedc416504f970609fda9cea8ba773fd110d97f7b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:28:54+00:00",
+    "signal_id": "SIG-0900",
+    "reason": "grounded extraction"
+  },
+  "0000037996-26-000184": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000037996-26-000184",
+      "entity_id": "CIK:0000037996",
+      "source_role": "candidate",
+      "title": "FORD MOTOR CO (F, F-PB, F-PC, F-PD) (CIK 0000037996) EX-99 2026-10-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000184/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/37996/000003799626000184/exhibit99q32026salesrele.htm",
+      "published_at": "2026-10-02",
+      "raw_text": "FORD MOTOR CO (F, F-PB, F-PC, F-PD) (CIK 0000037996) EX-99 2026-10-02. Demand for Expedition, Explorer and Bronco, as well as Ford’s off-road performance lineup, contributed to the company’s retail share and pricing power as Ford continued its planned portfolio transition. Affordable Trucks and SUVs Attract New Customers Ford’s range of powertrains, price points and certified pre-owned vehicles continued to attract customers. EX-99 2 exhibit99q32026salesrele.htm EX-99 exhibit99q32026salesrele For news releases, related materials and high-resolution photos and video, visit Ford From the Road. https://x.com/ford https://ford.to/facebook https://ford.to/linkedin News Ford Builds Q3 Momentum with Retail Share Gains, Strong Truck and Large SUV Performance • Retail share gains: Excluding the planned phase-out of Escape and Corsair, Ford estimates its third-quarter retail share increased approximately 0.4 percentage points year over year to 12.1%. • F-Series strength: September sales rose 2.4%, keeping F-Series on track for a 50th consecutive year as America’s best-selling truck. • Super Duty production: Third-quarter production reached 110,275 trucks, up 4.4% and the best quarterly result in 19 years. • F-150 production: The expected financial impact of a short-term supplier issue that affected production of F-150 trucks at the end of September is containable within Ford’s existing full-year 2026 adjusted EBIT guidance. • Maverick Hybrid record: America’s best-selling hybrid pickup set a third-quarter sales record with 27,793 trucks, up 59.6%. • Bronco milestone: Bronco delivered record third-quarter and year-to-date sales • Mustang leadership: Mustang sales increased 7.5% in the third quarter and 17.9% through September. • Software growth: Active paid software subscriptions exceeded 1.7 million through September, increasing more than 40% year over year. DEARBORN, Mich., October 2, 2026 — Ford gained retail share and delivered strong truck and large SUV results in the thi",
+      "_model_response": {
+        "evidence_quote": "Ford Builds Q3 Momentum with Retail Share Gains, Strong Truck and Large SUV Performance • Retail share gains: Excluding the planned phase-out of Escape and Corsair, Ford estimates its third-quarter retail share increased approximately 0.4 percentage points year over year to 12.1%. • F-Series strength: September sales rose 2.4%, keeping F-Series on track for a 50th consecutive year as America’s best-selling truck. • Super Duty production: Third-quarter production reached 110,275 trucks, up 4.4% and the best quarterly result in 19 years. • F-150 production: The expected financial impact of a short-term supplier issue that affected production of F-150 trucks at the end of September is containable within Ford’s existing full-year 2026 adjusted EBIT guidance. • Maverick Hybrid record: America’s best-selling hybrid pickup set a third-quarter sales record with 27,793 trucks, up 59.6%. • Bronco milestone: Bronco delivered record third-quarter and year-to-date sales • Mustang leadership: Mustang sales increased 7.5% in the third quarter and 17.9% through September. • Software growth: Active paid software subscriptions exceeded 1.7 million through September, increasing more than 40% year over year.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "이 공시는 2026년 3분기 소매 판매 및 생산 실적을 보고하는 루틴 공시이며, 가이던스 상향, 신규 수주, 생산능력 증설 계획, EPS 리비전 등 투자 발굴 신호로 정의된 구체적인 조기 지표를 포함하지 않습니다. F-150 생산 이슈가 기존 가이던스 내에서 관리 가능하다고 언급하여 가이던스 변경 신호도 아닙니다.",
+        "subject": "F",
+        "theme": "자동차",
+        "signal_type": "공시(8-K)",
+        "what_happened": "포드 자동차가 2026년 3분기 소매 판매 점유율 증가, 트럭 및 대형 SUV 판매 호조, 소프트웨어 구독자 증가 등 긍정적인 실적을 발표했습니다.",
+        "why_it_matters": "이 공시는 이미 발생한 과거 실적을 보고하는 것으로, 회사의 긍정적인 사업 성과를 보여주지만, 투자 발굴 신호로 정의된 가이던스 상향, 수주 변화, 생산능력 증설 계획 등 미래 실적 변화를 암시하는 구체적인 조기 지표에 해당하지 않아 시장의 새로운 평가를 유도할 만한 정보로 보기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "이 공시는 2026년 3분기 소매 판매 및 생산 실적을 보고하는 루틴 공시이며, 가이던스 상향, 신규 수주, 생산능력 증설 계획, EPS 리비전 등 투자 발굴 신호로 정의된 구체적인 조기 지표를 포함하지 않습니다. F-150 생산 이슈가 기존 가이던스 내에서 관리 가능하다고 언급하여 가이던스 변경 신호도 아닙니다."
+    },
+    "content_hash": "69ecf63a2e5b1f92fbdcfc548d4b311a79bb7895c3dec208f1003d2fbb7c8db6",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:26:52+00:00",
+    "reason": "이 공시는 2026년 3분기 소매 판매 및 생산 실적을 보고하는 루틴 공시이며, 가이던스 상향, 신규 수주, 생산능력 증설 계획, EPS 리비전 등 투자 발굴 신호로 정의된 구체적인 조기 지표를 포함하지 않습니다. F-150 생산 이슈가 기존 가이던스 내에서 관리 가능하다고 언급하여 가이던스 변경 신호도 아닙니다."
+  },
+  "0001104659-26-113273": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-113273",
+      "entity_id": "CIK:0001884046",
+      "source_role": "candidate",
+      "title": "Spark I Acquisition Corp (SPKL, SPKLU, SPKLW) (CIK 0001884046) EX-99.1 2026-10-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1884046/000110465926113273/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1884046/000110465926113273/tm2617742d17_ex99-1.htm",
+      "published_at": "2026-10-02",
+      "raw_text": "Spark I Acquisition Corp (SPKL, SPKLU, SPKLW) (CIK 0001884046) EX-99.1 2026-10-02. customers directly, reducing lead times, tariffs, and mitigating supply chain risk ZincFive estimates that ~$30 million of manufacturing CAPEX in the U.S. 1) Contracted Backlog / Forward Revenue Coverage calculated as December Year End Contracted Backlog / Forward Revenue 2) 2025A to 2026F revenue growth calculated using 2025A revenue and high - low range of 2026F revenue $47.7 $81.2 $126.5 2024A 2025A YTD - 6/30/2026 Historical Financials 29 Unaudited Financial Summary 1H 2025A – 1H 2026A ($MM) 1 ▪ Revenue increased from $34.9 million (1H 2025A) to $38.9 million (1H 2026A), representing 11% growth year - over - year, driven by continued expansion of end - market demand and new customer acquisition ▪ Gross margin enhancement of 24% from 1H 2025A to 1H 2026A as revenue scales across the existing cost base, demonstrating stronger benefits of revenue scale over fixed manufacturing costs ▪ Operating expenses increased by $10.3 million (up 52%) as the company scales with targeted investment in sales and marketing to drive growth Commentary 1H 2026A 1H 2025A $38.9 $34.9 Revenues 35.2 39.9 COGS $3.7 ($4.9) Gross Profit 9.5% (14.2%) Margin % 5.8 4.1 Research & Development 24.2 15.6 SG&A ($26.3) ($24.7) Operating Loss 0.1 (0.1) Other Income/(Expense) 10.9 4.3 Change in fair value of securities (30.0) (24.4) Loss on issuance of debt (5.8) (5.4) Interest Expense (0.1) (0.0) Income Tax Expense ($51.2) ($50.3) Net Loss Adj.",
+      "_model_response": {
+        "evidence_quote": "ZincFive estimates that ~$30 million of manufacturing CAPEX in the U.S. ... Unaudited Financial Summary 1H 2025A – 1H 2026A ($MM) 1 ▪ Revenue increased from $34.9 million (1H 2025A) to $38.9 million (1H 2026A), representing 11% growth year - over - year, driven by continued expansion of end - market demand and new customer acquisition ▪ Gross margin enhancement of 24% from 1H 2025A to 1H 2026A as revenue scales across the existing cost base, demonstrating stronger benefits of revenue scale over fixed manufacturing costs",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Spark I Acquisition Corp (SPKL, SPKLU, SPKLW) (CIK 0001884046) EX-99.1 2026-10-02. customers directly, reducing lead times, tariffs, and mitigating supply chain risk ZincFive estimates that ~$30 million of manufacturing CAPEX in the U.S.",
+          "earnings_leverage": "Gross margin enhancement of 24% from 1H 2025A to 1H 2026A as revenue scales across the existing cost base, demonstrating stronger benefits of revenue scale over fixed manufacturing costs",
+          "supply_demand_tightness": "continued expansion of end-market demand and new customer acquisition",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "ZincFive estimates that ~$30 million of manufacturing CAPEX in the U.S. ... Revenue increased from $34.9 million (1H 2025A) to $38.9 million (1H 2026A), representing 11% growth year - over - year"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ZincFive",
+        "theme": "Energy Storage",
+        "signal_type": "CAPEX",
+        "what_happened": "ZincFive가 미국 내 약 3천만 달러 규모의 제조 CAPEX를 계획하고 있으며, 1H 2025A 대비 1H 2026A 매출이 11% 성장하고 총 마진이 24% 개선될 것으로 예상한다.",
+        "why_it_matters": "회사의 생산 능력 확충과 매출 및 마진 개선은 견고한 수요와 효율적인 비용 구조를 바탕으로 향후 실적 성장을 가속화할 잠재력을 보여준다.",
+        "what_to_watch": "실제 CAPEX 집행 현황 및 신규 고객 확보 추이, 그리고 2026년 이후의 매출 가이던스 변화.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출. SPAC: 특수목적 인수회사로, 비상장 기업을 인수합병하여 우회 상장시키는 회사."
+      }
+    },
+    "content_hash": "ff8305d7ccce0af64112c786bfef07c4586c3ccee482e51b862dd054039ac3be",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-03T05:27:14+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   }
 }

@@ -1,0 +1,100 @@
+{
+  "context_id": "CTX-2CEA03A0C6A3BE21",
+  "candidate_id": "CAN-3D30FF7D03231FE1",
+  "ticker": "PSX",
+  "issuer_cik": "0001534701",
+  "document_ids": [
+    "DOC-D9C0CECC172F9418"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-D9C0CECC172F9418#p5",
+    "DOC-D9C0CECC172F9418#p10",
+    "DOC-D9C0CECC172F9418#p16",
+    "DOC-D9C0CECC172F9418#t1",
+    "DOC-D9C0CECC172F9418#p24",
+    "DOC-D9C0CECC172F9418#p28",
+    "DOC-D9C0CECC172F9418#p35",
+    "DOC-D9C0CECC172F9418#t5",
+    "DOC-D9C0CECC172F9418#t6",
+    "DOC-D9C0CECC172F9418#t7",
+    "DOC-D9C0CECC172F9418#t8",
+    "DOC-D9C0CECC172F9418#t9",
+    "DOC-D9C0CECC172F9418#t12"
+  ],
+  "input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-03T05:43:34+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다",
+      "note_ko": "골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다",
+      "kind": "guidance",
+      "quote": "Chevron Phillips Chemical Company LLC (“CPChem”) progressed the Golden Triangle Polymers Project in Orange, Texas, and Ras Laffan Polymers Project in Qatar, with full operations expected in 2027.",
+      "document_id": "DOC-D9C0CECC172F9418",
+      "block_id": "p16",
+      "metric": "full operations",
+      "figures": [],
+      "period": "2027",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "subsidiary",
+      "subject_name": "Chevron Phillips Chemical Company LLC",
+      "core": false,
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "EPS 예상치 상향의 원인이 무엇인지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "총 부채가 감소했다",
+      "figures": [
+        "$6.6 billion",
+        "$20.6 billion"
+      ],
+      "quote": "Decreased total debt by $6.6 billion to $20.6 billion; net debt reduced to $16.5 billion",
+      "where": "DOC-D9C0CECC172F9418#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "희석 주당 조정 순이익을 기록했다",
+      "figures": [
+        "9.41"
+      ],
+      "quote": "Adjusted Earnings Per Share - Diluted ; 9.41 ; 0.49",
+      "where": "DOC-D9C0CECC172F9418#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "화학 부문의 조정 세전 이익이 이전 분기보다 증가했다",
+      "figures": [],
+      "quote": "Chemicals adjusted pre-tax income increased compared with the first quarter mainly due to higher margins.",
+      "where": "DOC-D9C0CECC172F9418#p24"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "법인 및 기타 부문의 세전 손실이 이전 분기보다 감소했다",
+      "figures": [],
+      "quote": "Corporate and Other pre-tax loss decreased compared with the first quarter primarily due to lower net interest expense and employee-related costs.",
+      "where": "DOC-D9C0CECC172F9418#p28"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

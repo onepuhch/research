@@ -1,0 +1,176 @@
+{
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "candidate_version": "CV-AF024BA82FC4CB4F",
+  "identity": {
+    "entity_id": "NYSE:MPC",
+    "ticker": "MPC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Marathon Petroleum Corporation",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MPC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:29:51+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MPC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/history",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:29:51+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MPC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:29:51+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-683FD7B3F9B87824",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-80ADD5ED7A3A87DF",
+    "input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "[MPLX] annual distribution growth · 2026 and 2027: 12.5% — 자회사 MPLX의 연간 배당금 증가율이 예상된다",
+        "note_ko": "자회사 MPLX의 연간 배당금 증가율이 예상된다",
+        "kind": "guidance",
+        "quote": "Advancing MPLX Natural Gas and NGL value chain growth strategy, expected to support 12.5% annual distribution growth in 2026 and 2027",
+        "document_id": "DOC-683FD7B3F9B87824",
+        "block_id": "p8",
+        "metric": "annual distribution growth",
+        "figures": [
+          "12.5%"
+        ],
+        "period": "2026 and 2027",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "subsidiary",
+        "subject_name": "MPLX",
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "capital returned: $2.8 billion — 자본이 반환되었다",
+        "note_ko": "자본이 반환되었다",
+        "kind": "fact",
+        "quote": "$2.8 billion of capital returned, reflecting strong cash generation and disciplined execution of our capital allocation priorities",
+        "document_id": "DOC-683FD7B3F9B87824",
+        "block_id": "p9",
+        "metric": "capital returned",
+        "figures": [
+          "$2.8 billion"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "buyback_sharecount"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-683FD7B3F9B87824",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 48.65213,
+    "eps_30d": 32.41446,
+    "eps_90d": 23.99006,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 12,
+    "down30": 0,
+    "pct_90": 102.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

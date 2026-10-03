@@ -1,0 +1,110 @@
+{
+  "context_id": "CTX-971061B10EF84A2B",
+  "candidate_id": "CAN-EE8A92AC2C2D3E8C",
+  "ticker": "PGY",
+  "issuer_cik": "0001883085",
+  "document_ids": [
+    "DOC-16EEC0F8F2129A3A"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-16EEC0F8F2129A3A#p3",
+    "DOC-16EEC0F8F2129A3A#p6",
+    "DOC-16EEC0F8F2129A3A#p7",
+    "DOC-16EEC0F8F2129A3A#p11",
+    "DOC-16EEC0F8F2129A3A#p12"
+  ],
+  "input_sha": "971061b10ef84a2b62bfdc779b11e146985433d294a952df22229d377ed4a2ff",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-03T05:43:34+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "GAAP net income · Second Quarter 2026: $45 million — 전년 같은 기간보다 늘었다",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "$45 million GAAP net income; up $29 million YoY",
+      "document_id": "DOC-16EEC0F8F2129A3A",
+      "block_id": "p3",
+      "metric": "GAAP net income",
+      "figures": [
+        "$45 million"
+      ],
+      "period": "Second Quarter 2026",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "순이익(net income) · Full-Year — 회사가 연간 순이익 전망치를 상향 조정했다",
+      "note_ko": "회사가 연간 순이익 전망치를 상향 조정했다",
+      "kind": "guidance",
+      "quote": "Raises Full-Year Net Income Guidance",
+      "document_id": "DOC-16EEC0F8F2129A3A",
+      "block_id": "p3",
+      "metric": "net income",
+      "figures": [],
+      "period": "Full-Year",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "회사의 연간 순이익 전망치 상향 조정에 대한 구체적인 수치를 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "figures": [
+        "$124 million",
+        "43%"
+      ],
+      "quote": "$124 million Adjusted EBITDA; up 43% YoY",
+      "where": "DOC-16EEC0F8F2129A3A#p3"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "figures": [
+        "$387 million",
+        "19%"
+      ],
+      "quote": "$387 million Total revenue and other income; up 19% YoY",
+      "where": "DOC-16EEC0F8F2129A3A#p3"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "figures": [
+        "$3.5 billion",
+        "33%"
+      ],
+      "quote": "$3.5 billion Network volume; up 33% YoY",
+      "where": "DOC-16EEC0F8F2129A3A#p3"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

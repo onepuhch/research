@@ -1,0 +1,153 @@
+{
+  "candidate_id": "CAN-3D30FF7D03231FE1",
+  "candidate_version": "CV-BA24603CAEA1F911",
+  "identity": {
+    "entity_id": "NYSE:PSX",
+    "ticker": "PSX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Phillips 66",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유 정제, 석유화학 제품 생산, 석유 및 천연가스 운송·저장·처리 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Phillips 66 operates as an integrated downstream energy provider in the United States, the United Kingdom, Germany, and internationally. It operates through five segments: Midstream, Chemicals, Refining, Marketing and Specialties (M&S), and Renewable Fuels. The Midstream segment provides crude oil and refined petroleum product transportation, terminaling, and storage services, as well as natural gas and natural gas liquids (NGL) gathering, processing, transportation, fractionation, storage and marketing services. It also exports liquefied petroleum gas. The Chemicals segment produces and marke"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PSX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSX/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:29:55+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PSX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSX/history",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:29:55+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PSX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSX/profile",
+      "published_at": null,
+      "observed_at": "2026-10-03T05:29:55+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-D9C0CECC172F9418",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000030/psx-2026630_ex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-28T05:47:17+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v4",
+  "context": {
+    "context_id": "CTX-2CEA03A0C6A3BE21",
+    "input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다",
+        "note_ko": "골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다",
+        "kind": "guidance",
+        "quote": "Chevron Phillips Chemical Company LLC (“CPChem”) progressed the Golden Triangle Polymers Project in Orange, Texas, and Ras Laffan Polymers Project in Qatar, with full operations expected in 2027.",
+        "document_id": "DOC-D9C0CECC172F9418",
+        "block_id": "p16",
+        "metric": "full operations",
+        "figures": [],
+        "period": "2027",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "subsidiary",
+        "subject_name": "Chevron Phillips Chemical Company LLC",
+        "core": false,
+        "drivers": [
+          "capacity"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "EPS 예상치 상향의 원인이 무엇인지 확인해야 한다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-D9C0CECC172F9418",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000030/psx-2026630_ex991.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-28T05:47:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 25.75825,
+    "eps_30d": 21.00231,
+    "eps_90d": 17.40386,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 15,
+    "down30": 1,
+    "pct_90": 48.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

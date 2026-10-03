@@ -1,0 +1,129 @@
+{
+  "context_id": "CTX-B80220E5DD347856",
+  "candidate_id": "CAN-7F0690B785E31226",
+  "ticker": "CLF",
+  "issuer_cik": "0000764065",
+  "document_ids": [
+    "DOC-067BE90E51AC5E3F"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-067BE90E51AC5E3F#p8",
+    "DOC-067BE90E51AC5E3F#p11",
+    "DOC-067BE90E51AC5E3F#p12",
+    "DOC-067BE90E51AC5E3F#p14",
+    "DOC-067BE90E51AC5E3F#p15",
+    "DOC-067BE90E51AC5E3F#p16",
+    "DOC-067BE90E51AC5E3F#p17",
+    "DOC-067BE90E51AC5E3F#p21",
+    "DOC-067BE90E51AC5E3F#t1",
+    "DOC-067BE90E51AC5E3F#p24",
+    "DOC-067BE90E51AC5E3F#p28",
+    "DOC-067BE90E51AC5E3F#p29",
+    "DOC-067BE90E51AC5E3F#p30",
+    "DOC-067BE90E51AC5E3F#p43",
+    "DOC-067BE90E51AC5E3F#t3",
+    "DOC-067BE90E51AC5E3F#p57",
+    "DOC-067BE90E51AC5E3F#p58",
+    "DOC-067BE90E51AC5E3F#t6",
+    "DOC-067BE90E51AC5E3F#p61",
+    "DOC-067BE90E51AC5E3F#p62",
+    "DOC-067BE90E51AC5E3F#t7"
+  ],
+  "input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v3",
+  "parser_version": "context-check-v7",
+  "generated_at": "2026-10-03T05:43:34+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenues) · Second-quarter 2026: $5.2 billion — 매출이 전 분기보다 늘었다",
+      "note_ko": "매출이 전 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Second-quarter 2026 consolidated revenues were $5.2 billion, compared to $4.9 billion in the first quarter of 2026.",
+      "document_id": "DOC-067BE90E51AC5E3F",
+      "block_id": "p14",
+      "metric": "Revenues",
+      "figures": [
+        "$5.2 billion"
+      ],
+      "period": "Second-quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "GAAP net loss · second quarter of 2026: $0.25 per diluted share — 희석 주당 순손실이 전 분기보다 줄었다",
+      "note_ko": "희석 주당 순손실이 전 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "For the second quarter of 2026, the Company recorded a GAAP net loss of $134 million, or $0.25 per diluted share, with an adjusted net loss1 of $0.20 per diluted share. This compares to a first quarter 2026 GAAP net loss of $229 million, or $0.42 per diluted share, with an adjusted net loss1 of $0.40 per diluted share.",
+      "document_id": "DOC-067BE90E51AC5E3F",
+      "block_id": "p15",
+      "metric": "GAAP net loss",
+      "figures": [
+        "$0.25 per diluted share"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "조정 에비타가 전 분기보다 늘었다",
+      "figures": [
+        "$286 million"
+      ],
+      "quote": "For the second quarter of 2026, the Company reported Adjusted EBITDA2 of $286 million, a $191 million improvement compared to Adjusted EBITDA2 of $95 million recorded in the first quarter of 2026.",
+      "where": "DOC-067BE90E51AC5E3F#p16"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "조정 에비타가 약 얼마가 될 것으로 예상한다",
+      "figures": [
+        "approximately $575 million"
+      ],
+      "quote": "The Company expects third-quarter 2026 adjusted EBITDA2 to be approximately $575 million.",
+      "where": "DOC-067BE90E51AC5E3F#p29"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "평균 판매 가격, 물량, 비용이 모두 긍정적인 방향으로 움직이고 있어 하반기 실적은 이천이십일년 이후 가장 좋을 것으로 예상한다",
+      "figures": [],
+      "quote": "With average selling prices, volumes, and costs all moving in the right direction, our second-half earnings performance should be our strongest since 2021 as Q4 EBITDA is currently expected to even fu",
+      "where": "DOC-067BE90E51AC5E3F#p21"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "예상 조정 에비타를 가장 직접적으로 비교 가능한 GAAP 재무 측정치인 순이익과 합리적인 노력 없이 조정할 수 없다",
+      "figures": [],
+      "quote": "We are unable to reconcile, without unreasonable effort, our expected adjusted EBITDA for the third quarter of 2026 to its most directly comparable GAAP financial measure, net income, due to the uncer",
+      "where": "DOC-067BE90E51AC5E3F#p62"
+    }
+  ],
+  "context_status": "draft_ready"
+}
