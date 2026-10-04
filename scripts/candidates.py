@@ -916,6 +916,19 @@ def eps_change(eps: dict) -> str:
     return "기저가 작아 % 생략"
 
 
+def estimate_cautions(cand: dict) -> list[str]:
+    """What may make the estimate change smaller than it looks, from the screen's own fields (O4):
+    a 30-day rise carried by a single revision, and a REIT whose provider EPS may not be FFO/AFFO."""
+    eps, out = cand.get("eps") or {}, []
+    up, analysts = eps.get("up30"), eps.get("analysts")
+    if isinstance(up, int) and up <= 1 and isinstance(analysts, int):
+        out.append(f"최근 30일 상향 수정 {up}건(분석가 {analysts}명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — "
+                   "다른 분석가 추정이 따라오는지 확인")
+    if "REIT" in str(cand.get("industry") or ""):
+        out.append("REIT: 제공처 EPS가 FFO·AFFO가 아닌 순이익 기준일 수 있어(기준 미표시) 이익 변화 해석에 주의")
+    return out
+
+
 def revision_timing(cand: dict, context: dict) -> str | None:
     """When the next-year estimate rose, against the date of the newest linked filing. Facts only:
     a filing before the recent rise may not explain it, which is said as a possibility, never a cause."""
@@ -1182,6 +1195,7 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
     else:
         lines.append(("text", "아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다."))
     lines.append(("section", "미확인 · 반증"))
+    lines += [("item", text) for text in estimate_cautions(cand)]
     for item in cand["missing"]:
         lines.append(("item", f"자료 부족: {item['field']} ({PRICE_NOTES.get(item['reason'], item['reason'])})"))
     gap = cand["explanations"]["market_expectation_gap"]["statements"]

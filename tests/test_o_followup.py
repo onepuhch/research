@@ -137,6 +137,21 @@ class RevisionTimingTest(unittest.TestCase):
         self.assertIsNone(k.revision_timing({"observed_at": "2026-10-04T00:00:00+00:00", "eps": {}}, {}))
 
 
+class EstimateCautionTest(unittest.TestCase):
+    """O4: a single revision and a REIT's EPS basis are shown as cautions, from the screen's own fields."""
+
+    def test_single_revision_and_reit(self):
+        nbr = {"eps": {"up30": 1, "analysts": 3}, "industry": "Oil & Gas Drilling"}
+        self.assertEqual(len(k.estimate_cautions(nbr)), 1)
+        self.assertIn("최근 30일 상향 수정 1건(분석가 3명)", k.estimate_cautions(nbr)[0])
+        pstl = {"eps": {"up30": 2, "analysts": 3}, "industry": "REIT - Office"}
+        self.assertEqual(len(k.estimate_cautions(pstl)), 1)
+        self.assertIn("FFO", k.estimate_cautions(pstl)[0])
+        broad = {"eps": {"up30": 10, "analysts": 19}, "industry": "Oil & Gas Refining & Marketing"}
+        self.assertEqual(k.estimate_cautions(broad), [])
+        self.assertEqual(k.estimate_cautions({"eps": {}}), [])
+
+
 UPDATE_ACC = "0000000001-26-000012"
 UPDATE_BASE = f"https://www.sec.gov/Archives/edgar/data/1/{UPDATE_ACC.replace('-', '')}/"
 UPDATE = b"""<html><body><p>AAA Inc. raises fiscal 2027 revenue guidance to $150 million after signing a
