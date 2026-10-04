@@ -240,5 +240,80 @@ class DisplayPathTest(StoredDraftViewTest):
         self.assertIn("격리되어 사용 중지", reply)
 
 
+def fact(metric, period, kind="fact", subject="issuer", subject_name=None, doc="DOC-A", core=False):
+    return {"kind": kind, "metric": metric, "period": period, "document_id": doc, "subject": subject,
+            "subject_name": subject_name, "core": core, "figures": ["$1 million"], "text_ko": f"{metric} {period}"}
+
+
+class ComparablePeriodTest(unittest.TestCase):
+    """M3-1: 'past' only within the same document, subject, calendar, period length and form."""
+
+    def order(self, claims):
+        return [x["text_ko"] for x in k.stated_order(claims)]
+
+    def test_an_annual_or_fiscal_fact_does_not_push_the_current_quarter_down(self):
+        claims = [fact("revenue", "fiscal year 2026"), fact("net income", "quarter ended June 30, 2026"),
+                  fact("net income", "six months ended June 30, 2026"), fact("net income", "quarter ended June 30, 2025")]
+        self.assertEqual(self.order(claims)[-1], "net income quarter ended June 30, 2025")
+        self.assertEqual(self.order(claims)[0], "net income quarter ended June 30, 2026")
+        # v8 compared everything in a document: 'fiscal 2026' made the second quarter of 2026 'past'.
+        mixed = [fact("revenue", "fiscal 2026"), fact("net income", "second quarter 2026")]
+        self.assertEqual(self.order(mixed)[0], "net income second quarter 2026")
+
+    def test_same_quarter_of_two_years_is_compared(self):
+        claims = [fact("net loss", "second quarter 2025", core=True), fact("net income", "second quarter 2026")]
+        self.assertEqual(self.order(claims), ["net income second quarter 2026", "net loss second quarter 2025"])
+
+    def test_non_december_fiscal_years_and_other_forms_are_not_compared(self):
+        claims = [fact("net income", "quarter ended May 29, 2026"), fact("revenue", "fourth quarter of fiscal 2026"),
+                  fact("revenue", "fourth quarter of fiscal 2025"), fact("revenue", "first quarter 2027")]
+        ordered = self.order(claims)
+        self.assertEqual(ordered[-1], "revenue fourth quarter of fiscal 2025")  # only within the fiscal ordinal group
+        self.assertIn("net income quarter ended May 29, 2026", ordered[:2])
+
+    def test_other_subjects_and_unclear_periods_are_never_made_past(self):
+        claims = [fact("net income", "second quarter 2026"),
+                  fact("revenue", "second quarter 2025", subject="segment", subject_name="Retail"),
+                  fact("revenue", "second quarter"), fact("revenue", "2026 and 2027"), fact("revenue", "2025")]
+        ordered = self.order(claims)
+        self.assertEqual(ordered[:2], ["net income second quarter 2026", "revenue second quarter 2025"])
+        self.assertEqual(ordered[2:], ["revenue second quarter", "revenue 2026 and 2027", "revenue 2025"])  # stable
+
+    def test_guidance_does_not_set_the_latest_point(self):
+        claims = [fact("revenue", "fiscal year 2027", kind="guidance"), fact("revenue", "fiscal year 2026")]
+        self.assertEqual(self.order(claims), ["revenue fiscal year 2027", "revenue fiscal year 2026"])
+
+
+PUBM_P68 = ("Adjusted EBITDA does not reflect: (a) changes in, or cash requirements for, our working capital needs; "
+            "(b) the potentially dilutive impact of stock-based compensation; or (c) tax payments that may represent "
+            "a reduction in cash available to us;")
+PUBM_P70 = ("Non-GAAP net income does not include: (a) the potentially dilutive impact of stock-based compensation; "
+            "(b) non-ordinary course litigation related expenses; or (c) income tax effects for stock-based compensation")
+
+
+class DisclaimerRankTest(unittest.TestCase):
+    """M3-2: a measure's definition is supporting text; a real one-off with an amount or a period stays first."""
+
+    def rank(self, quote):
+        return k.limitation_rank({"quote": quote})
+
+    def test_pubm_definitions_are_supporting_text(self):
+        self.assertEqual((self.rank(PUBM_P68), self.rank(PUBM_P70)), (2, 2))
+        self.assertEqual(self.rank("We believe non-GAAP net income per share provides consistency, as it eliminates "
+                                   "the effect of restructuring and related charges."), 2)
+
+    def test_real_one_offs_stay_first_and_bare_words_do_not(self):
+        self.assertEqual(self.rank(PBF), 0)
+        self.assertEqual(self.rank("Adjusted net income excludes a $40 million impairment charge in the second quarter "
+                                   "of 2026; non-GAAP measures should not be considered a substitute for GAAP."), 0)
+        self.assertEqual(self.rank("Adjusted EBITDA excludes impairment charges."), 2)
+        self.assertEqual(self.rank("Results included restructuring charges at the Retail segment."), 1)
+        self.assertEqual(self.rank("Revenue was partially offset by lower year-over-year membership."), 1)
+
+    def test_only_definitions_say_no_specific_warning_was_found(self):
+        ordered = k.limitation_order([{"quote": PUBM_P68}, {"quote": PUBM_P70}])
+        self.assertTrue(all(rank == 2 for rank, _ in ordered))
+
+
 if __name__ == "__main__":
     unittest.main()

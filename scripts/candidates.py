@@ -965,24 +965,39 @@ MONTH_RE = re.compile(r"\b(" + "|".join(("january", "february", "march", "april"
 ORDINAL = {"first": 1, "second": 2, "third": 3, "fourth": 4}
 MONTHS_ORDER = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october",
                 "november", "december"]
+LENGTHS = (("quarter", re.compile(r"\b(?:three|3) months\b|\bquarter\b|\bq[1-4]\b")),
+           ("half", re.compile(r"\b(?:six|6) months\b|\bfirst half\b|\bsecond half\b")),
+           ("nine_months", re.compile(r"\b(?:nine|9) months\b")),
+           ("year", re.compile(r"\b(?:twelve|12) months\b|\bfull[- ]year\b|\bfiscal year\b|\byear ended\b|"
+                               r"\bfiscal (?:19|20)\d{2}\b")))
 
 
-def period_point(period: str | None) -> tuple[int, int] | None:
-    """(year, quarter) only from an explicitly written year: 'second quarter' alone is unknown, never
-    given a year. A month is placed in its calendar quarter; a period without one counts as its year end."""
-    text = str(period or "")
-    years = [int(y) for y in YEAR_RE.findall(text)]
-    if not years:
+def period_descriptor(item: dict) -> tuple[tuple, tuple[int, int]] | None:
+    """(comparison group, point) for ordering a card only, never stored as a fact about the period.
+    The group is the document, the subject, the written calendar (fiscal or not), the period length
+    and the way the period is written (an ordinal quarter or a month end), so 'second quarter 2026'
+    is compared with 'second quarter 2025' but never with 'fiscal 2026', 'six months ended' or a
+    subsidiary's period. One explicit year is required: '2026' alone, several years or a quarter
+    without a year cannot be compared (no year is invented)."""
+    text = str(item.get("period") or "").lower()
+    years = set(YEAR_RE.findall(text))
+    if len(years) != 1:
         return None
-    quarter = QUARTER_RE.search(text)
-    month = MONTH_RE.search(text)
-    if quarter:
-        part = ORDINAL.get((quarter.group(1) or "").lower()) or int(quarter.group(2))
+    length = next((name for name, pattern in LENGTHS if pattern.search(text)), None)
+    if length is None:
+        return None
+    quarter, month = QUARTER_RE.search(text), MONTH_RE.search(text)
+    if quarter and length == "quarter":
+        form, part = "ordinal", ORDINAL.get((quarter.group(1) or "").lower()) or int(quarter.group(2))
     elif month:
-        part = MONTHS_ORDER.index(month.group(1).lower()) // 3 + 1
+        form, part = "month", MONTHS_ORDER.index(month.group(1).lower()) + 1
+    elif length == "year":
+        form, part = "year", 0
     else:
-        part = 5  # a whole year comes after its quarters
-    return max(years), part
+        return None
+    group = (item.get("document_id"), item.get("subject") or "issuer", str(item.get("subject_name") or "").lower(),
+             "fiscal" if "fiscal" in text else "plain", length, form)
+    return group, (int(years.pop()), part)
 
 
 NET_EPS = re.compile(r"\b(?:net income|net earnings|earnings per share|eps|per (?:diluted )?share)\b")
@@ -996,25 +1011,26 @@ def period_missing(item: dict) -> bool:
 
 def stated_order(claims: list[dict]) -> list[dict]:
     """Facts and guidance as the card shows them (all outputs use this): current or forecast periods
-    first, then unknown ones, then explicit past comparisons; within that adjusted net income/EPS,
-    then net income/EPS/operating income, then the rest; core before non-core; then the original
-    order. 'Past' is only against the latest explicitly dated fact of the same document."""
+    first, then periods that cannot be compared, then explicit past comparisons; within that adjusted
+    net income/EPS, then net income/EPS/operating income, then the rest; core before non-core; then
+    the original order. 'Past' only means older than the latest fact of the same comparison group
+    (period_descriptor); guidance never sets that latest point."""
     stated = [x for x in claims if x.get("kind") in ("fact", "guidance")]
-    latest: dict[str, tuple[int, int]] = {}
+    latest: dict[tuple, tuple[int, int]] = {}
     for x in stated:
-        point = period_point(x.get("period")) if x["kind"] == "fact" else None
-        if point and point > latest.get(x.get("document_id"), (0, 0)):
-            latest[x.get("document_id")] = point
+        found = period_descriptor(x) if x["kind"] == "fact" else None
+        if found and found[1] > latest.get(found[0], (0, 0)):
+            latest[found[0]] = found[1]
 
     def key(pair):
         position, x = pair
-        point = period_point(x.get("period"))
-        if point is None:
+        found = period_descriptor(x)
+        if x["kind"] == "guidance":
+            when = 0 if YEAR_RE.search(str(x.get("period") or "")) else 1
+        elif found is None:
             when = 1
-        elif x["kind"] == "guidance" or point >= latest.get(x.get("document_id"), point):
-            when = 0
         else:
-            when = 2
+            when = 2 if found[1] < latest[found[0]] else 0
         metric = str(x.get("metric") or "").lower()
         adjusted = x.get("gaap") == "non-GAAP" or re.search(r"\b(?:adjusted|non-gaap)\b", metric)
         earnings = 0 if adjusted and NET_EPS.search(metric) else 1 if EARNINGS.search(metric) else 2
@@ -1029,16 +1045,29 @@ ONE_OFF = re.compile(r"\b(?:one-time|non-recurring|nonrecurring|not recur|will n
 DISCLAIMER = re.compile(r"\bnot\b[^.;]{0,80}\b(?:substitute|alternative|superior|comparable)\b|\bin isolation\b|"
                         r"\bmay (?:be|differ)\b[^.;]{0,40}\bother companies\b|\bdo(?:es)? not reflect all\b|"
                         r"\bdifferent from the non-gaap\b")
+# What a non-GAAP measure is or leaves out, not what happened in a period (PUBM p68/p70, SPT, PARR):
+# 'Adjusted EBITDA does not reflect: ...', 'We believe non-GAAP net income per share provides ...'.
+DEFINITION = re.compile(r"\b(?:adjusted|non-gaap)\b[^.;:]{0,60}\b(?:does|do) not (?:reflect|include|account for)\b|"
+                        r"\b(?:we|management) (?:believes?|defines?|uses?|considers?)\b[^.;]{0,80}\b(?:adjusted|non-gaap)\b|"
+                        r"\b(?:adjusted|non-gaap)\b[^.;:]{0,60}\b(?:excludes?|is defined as|represents|is calculated as)\b")
+EVENT = re.compile(r"[$€£]\s?\d|\b\d[\d,.]* (?:million|billion|thousand)\b|\b(?:19|20)\d{2}\b|"
+                   r"\b(?:first|second|third|fourth)[ -]quarter\b")
+
+
+def limitation_rank(item: dict) -> int:
+    """0 a one-off/impairment/non-recurring item tied to an amount or a period in the checked quote,
+    1 a specific risk or offset, 2 a general disclaimer or a measure's definition. 'Adjusted EBITDA
+    excludes impairment charges' stays a definition; a $40M impairment in the same passage is a
+    warning. Never judged on a model tag."""
+    quote = str(item.get("quote") or "").lower()
+    if ONE_OFF.search(quote) and EVENT.search(quote):
+        return 0
+    return 2 if DISCLAIMER.search(quote) or DEFINITION.search(quote) else 1
 
 
 def limitation_order(limitations: list[dict]) -> list[tuple[int, dict]]:
-    """(rank, item): 0 a specific one-off/impairment/non-recurring item, 1 a specific risk or offset,
-    2 a general non-GAAP disclaimer. Judged on the checked quote, never on a model tag; a passage
-    naming a real one-off stays 0 even if it also carries disclaimer words."""
-    def rank(x):
-        quote = str(x.get("quote") or "").lower()
-        return 0 if ONE_OFF.search(quote) else 2 if DISCLAIMER.search(quote) else 1
-    return sorted(((rank(x), x) for x in limitations), key=lambda pair: pair[0])
+    """(rank, item) in the order the card shows them; ties keep the draft's order."""
+    return sorted(((limitation_rank(x), x) for x in limitations), key=lambda pair: pair[0])
 
 
 def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, str]]:
