@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v4"
+GENERATOR_VERSION = "cards-v5"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -362,6 +362,79 @@ LINK_LABELS = {
 KIND_LABELS = {"fact": "실적", "guidance": "회사 전망", "interpretation": "해석"}
 
 
+QUARANTINE_WARNINGS = {
+    "delta_reported_as_level": "공식 발표 초안 재검증 중 — 변화량과 실제 값의 혼동이 확인되어 해당 초안 표시를 중지했습니다.",
+}
+QUARANTINE_UNREADABLE = "자동 초안 격리 목록을 읽지 못해 자동 초안 표시를 모두 중지했습니다."
+CONTEXT_ID = re.compile(r"CTX-[0-9A-F]{16}")
+
+
+class QuarantineUnavailable(ValueError):
+    """The quarantine list is missing or broken: never read as 'nothing is withheld'."""
+
+
+def quarantine_path() -> Path:
+    return c.ROOT / "config" / "context_quarantine.json"
+
+
+def load_quarantine() -> dict[str, dict]:
+    """{context_id: entry} of drafts withheld from every current use. Only an explicit, valid file
+    (an empty 'contexts' included) counts; a missing or broken one raises."""
+    try:
+        data = json.loads(quarantine_path().read_text(encoding="utf-8"))
+    except (OSError, ValueError) as error:
+        raise QuarantineUnavailable(f"context quarantine list unreadable ({type(error).__name__})") from error
+    if not isinstance(data, dict) or data.get("schema_version") != 1 or not isinstance(data.get("contexts"), dict):
+        raise QuarantineUnavailable("context quarantine list has no schema_version 1 'contexts' object")
+    for context_id, entry in data["contexts"].items():
+        if not CONTEXT_ID.fullmatch(str(context_id)) or not isinstance(entry, dict):
+            raise QuarantineUnavailable(f"context quarantine entry {context_id!r} is malformed")
+        try:
+            c.validate_record("context_quarantine_entry", entry)
+        except ValueError as error:
+            raise QuarantineUnavailable(str(error)) from error
+        if not normalize_id(str(entry["candidate_id"])) or not str(entry["reason"]).strip():
+            raise QuarantineUnavailable(f"context quarantine entry {context_id} has no valid candidate_id/reason")
+    return data["contexts"]
+
+
+def hold_note(context_id: str, entry: dict) -> dict:
+    """What the card keeps of a withheld draft: its ID and why, never its claims."""
+    return {"context_id": context_id, "reason": entry["reason"], "decided_at": entry["decided_at"]}
+
+
+def display_view(cand: dict) -> dict:
+    """The candidate as it may be shown now: a draft on the quarantine list (or every draft, when
+    the list cannot be read) is replaced by a hold note. Works on a copy; stored cards, versions
+    and observations are not changed, so an index or observation written before the quarantine
+    is filtered the same way."""
+    try:
+        quarantine = load_quarantine()
+    except QuarantineUnavailable:
+        quarantine = None
+    context = cand.get("context") or {}
+    last_valid = cand.get("last_valid_context") or {}
+    if quarantine is None:
+        if not context and not last_valid:
+            return cand
+        return {**cand, "context": None, "last_valid_context": None,
+                "context_hold": {"context_id": context.get("context_id"), "reason": "quarantine_unavailable"}}
+    shown = dict(cand)
+    if context.get("context_id") in quarantine:
+        shown["context"] = None
+        shown["context_hold"] = hold_note(context["context_id"], quarantine[context["context_id"]])
+    if last_valid.get("context_id") in quarantine:
+        shown["last_valid_context"] = None
+    return shown
+
+
+def hold_warning(hold: dict) -> str:
+    if hold.get("reason") == "quarantine_unavailable":
+        return QUARANTINE_UNREADABLE
+    return QUARANTINE_WARNINGS.get(hold.get("reason"),
+                                   "공식 발표 초안 재검증 중 — 오류가 확인되어 해당 초안 표시를 중지했습니다.")
+
+
 def context_view(record: dict | None) -> dict | None:
     """The part of a draft that is a claim on the card (generation time is not part of it)."""
     if not record:
@@ -370,8 +443,11 @@ def context_view(record: dict | None) -> dict | None:
                                        "next_check", "link", "link_note", "source_coverage", "documents")}
 
 
-def research_state(entry: dict | None, context: dict | None, human: dict | None) -> str:
-    """not_started / queued / source_linked / draft_ready / review_needed; never a recommendation."""
+def research_state(entry: dict | None, context: dict | None, human: dict | None, held: bool = False) -> str:
+    """not_started / queued / source_linked / draft_ready / review_needed / draft_withheld;
+    never a recommendation."""
+    if held:
+        return "draft_withheld"  # a known-wrong draft: neither a source failure nor 'nothing found'
     if context and context.get("context_status") == "draft_ready":
         imported = (human or {}).get("imported_from") == context.get("context_id")
         return "review_needed" if imported and not (human or {}).get("approval") else "draft_ready"
@@ -382,8 +458,12 @@ def research_state(entry: dict | None, context: dict | None, human: dict | None)
 
 def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, translations: dict,
           ideas: list[dict], policy_version: str, contexts: dict | None = None,
-          research: dict | None = None) -> list[dict]:
-    """Candidates in display order from one screener snapshot (pure: no I/O)."""
+          research: dict | None = None, quarantine: dict | None = None) -> list[dict]:
+    """Candidates in display order from one screener snapshot (pure: no I/O).
+
+    quarantine ({context_id: entry}) withholds a draft and any human evidence imported from it;
+    the card keeps only a hold note (ID, reason, date)."""
+    quarantine = quarantine or {}
     derived = snapshot.get("derived", {})
     rows = {r["ticker"]: r for r in derived.get("rows", []) if r.get("candidate")}
     partial = snapshot.get("run", {}).get("status") != "success"
@@ -411,14 +491,20 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
         if not row.get("industry"):
             missing.append({"field": "industry", "reason": "profile_missing"})
         human = evidence.get(cid) if cid else None
+        imported_hold = (human or {}).get("imported_from") in quarantine
+        if imported_hold:
+            human = None  # copied from a withheld draft: not used until a person re-checks it
         problems = evidence_problems(human)
-        flagged = (human or {}).get("review_status") == "needs_evidence"
+        flagged = imported_hold or (human or {}).get("review_status") == "needs_evidence"
         explanations = {"company_description_ko": description}
         for field in EXPLANATIONS:
             statements = (human or {}).get("explanations", {}).get(field) or []
             explanations[field] = ({"statements": statements} if statements else
                                    {"statements": [], "reason": "원문 근거 미연결 (EPS 스크린만 통과)"})
-        context = context_view((contexts or {}).get(cid)) if cid else None
+        research_entry = (research or {}).get(cid) if cid else None
+        draft_id = (research_entry or {}).get("context_id") or ((contexts or {}).get(cid) or {}).get("context_id")
+        held = hold_note(draft_id, quarantine[draft_id]) if draft_id in quarantine else None
+        context = context_view((contexts or {}).get(cid)) if cid and not held else None
         if context and (contexts or {}).get(cid, {}).get("eps_target_period") not in (None, row.get("eps_target_period")):
             context = None  # researched for another fiscal year: wait for a new source check
         doc_sources = [{"id": d["document_id"], "provider": "SEC EDGAR", "url": d["url"],
@@ -429,13 +515,16 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
         content = {
             "candidate_id": cid, "identity": identity, "thesis_key": THESIS_KEY,
             "context": context,
+            "context_hold": held,
             "name": row.get("name"), "industry": row.get("industry"), "sector": row.get("sector"),
             "eps": {k: row.get(k) for k in VERSION_EPS_KEYS},
             "eps_provider": "Yahoo Finance earningsTrend (+1y)",
             "lists": sorted({m["list"] for m in lists}),
             "missing": missing,
             # Data completeness (missing) and a human 'needs evidence' mark are shown apart.
-            "evidence_review": ({"status": "needs_evidence", "reason": (human or {}).get("review_reason") or "사유 미기재"}
+            "evidence_review": ({"status": "needs_evidence",
+                                 "reason": ("가져온 자동 초안이 격리되어 사용 중지: 원문 재검토 필요" if imported_hold
+                                            else (human or {}).get("review_reason") or "사유 미기재")}
                                 if flagged else None),
             "base_classification": "needs_evidence" if missing or flagged else "found",
             "explanations": explanations,
@@ -444,9 +533,10 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "generator_version": GENERATOR_VERSION,
         }
         version = content_version(content)
-        research_entry = (research or {}).get(cid) if cid else None
         source = source_view(research_entry)
         last_valid = (research_entry or {}).get("last_valid_context")
+        if (last_valid or {}).get("context_id") in quarantine:
+            last_valid = None
         approval = (human or {}).get("approval")
         approved = (bool(approval) and approval.get("candidate_version") == version and not problems
                     and not missing and not flagged
@@ -469,9 +559,10 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "observed_at": observed, "run_quality": "partial" if partial else "complete",
             "scope_note": "확보 범위 내 순위 (일부 조회 누락)" if partial else "전체 조회 범위 순위",
             "tracking": ledger_tracking(identity["entity_id"], ideas, THESIS_KEY),
-            "research_status": research_state(research_entry, context, human),
+            "research_status": research_state(research_entry, context, human, bool(held)),
             **source, "last_valid_context": last_valid,
-            "research_note": RESEARCH_NOTES.get((research_entry or {}).get("status")) if not context else None,
+            "research_note": (RESEARCH_NOTES.get((research_entry or {}).get("status"))
+                              if not context and not held else None),
             "context_id": (context or {}).get("context_id"),
             "source_snapshot": snapshot_ref, "policy_version": policy_version,
         })
@@ -488,7 +579,7 @@ def version_record(candidate: dict) -> dict:
     """The immutable claim of a version (no observation time, price window or rank)."""
     keys = ("candidate_id", "candidate_version", "identity", "thesis_key", "name", "industry", "sector",
             "eps_provider", "lists", "missing", "base_classification", "explanations", "sources",
-            "generator_version", "context", "evidence_review")
+            "generator_version", "context", "context_hold", "evidence_review")
     record = {k: candidate.get(k) for k in keys}
     record["eps"] = {k: candidate["eps"].get(k) for k in VERSION_EPS_KEYS}
     return c.validate_record("candidate_version", record)
@@ -820,6 +911,7 @@ def tracking_label(cand: dict) -> str:
 
 def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, str]]:
     """(kind, text) lines in the card order shared by Telegram, Markdown and HTML."""
+    cand = display_view(cand)
     eps = cand["eps"]
     desc = cand["explanations"]["company_description_ko"]
     lines = [("title", f"{headline(cand)} · {cand['identity']['ticker']} {cand.get('name') or ''}".strip()),
@@ -865,7 +957,9 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                                  "이전에 확보한 유효 근거 없음")))
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
     stated = [x for x in context.get("claims") or [] if x.get("kind") in ("fact", "guidance")][:3]
-    if stated:
+    if cand.get("context_hold"):
+        lines.append(("warn", hold_warning(cand["context_hold"])))
+    elif stated:
         lines += [claim_line(x, KIND_LABELS[x["kind"]]) for x in stated]
     elif context.get("context_status") == "no_supported_claims":
         lines.append(("text", "원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다."))
@@ -1114,7 +1208,7 @@ def departed_rows(index: dict, limit: int = 30) -> list[dict]:
 def render_html(index: dict) -> str:
     payload = {"index": {k: v for k, v in index.items() if k not in ("candidates", "known", "departed")},
                "departed": departed_rows(index),
-               "cards": [{"candidate": cand, "lines": card_lines(cand, index.get("stale")),
+               "cards": [{"candidate": display_view(cand), "lines": card_lines(cand, index.get("stale")),
                           "headline": headline(cand), "tracking": tracking_label(cand),
                           "change": eps_change(cand["eps"])} for cand in index.get("candidates", [])]}
     data = json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c").replace("&", "\\u0026")
@@ -1159,7 +1253,8 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
         contexts, research = context_inputs()
         cands = build(snapshot, ref, c.read_json(c.ROOT / "config" / "entities.json", {}),
                       c.read_json(evidence_path(), {}), cache,
-                      c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research)
+                      c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research,
+                      quarantine=load_quarantine())
         report["new_versions"] = store_versions(cands)
         report["new_observations"] = store_observations(cands)
         earnings = snapshot.get("stages", {}).get("earnings", {})
@@ -1200,9 +1295,13 @@ def context_inputs() -> tuple[dict, dict]:
     """(drafts with their document titles, research state) as cards and approval both read them."""
     import candidate_context
     import company_filings
+    quarantine = load_quarantine()  # raises when unreadable: no draft is used without the list
     research = {cid: dict(entry) for cid, entry in candidate_context.load_state()["candidates"].items()}
     contexts = {}
     for cid, entry in research.items():
+        if entry.get("context_id") in quarantine:
+            entry["context_quarantined"] = hold_note(entry["context_id"], quarantine[entry["context_id"]])
+            continue  # withheld: never a card claim, a last valid draft, an import or an approval basis
         record = c.read_json(candidate_context.history_dir() / f"{entry.get('context_id')}.json", None) \
             if entry.get("context_id") else None
         if not record:
@@ -1258,7 +1357,8 @@ def recompute(cid: str, index: dict) -> dict | None:
     contexts, research = context_inputs()
     cands = build(read_snapshot(path), ref, c.read_json(c.ROOT / "config" / "entities.json", {}),
                   c.read_json(evidence_path(), {}), c.read_json(translation_path(), {}),
-                  c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research)
+                  c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research,
+                  quarantine=load_quarantine())
     return next((x for x in cands if x["candidate_id"] == cid), None)
 
 
@@ -1284,6 +1384,8 @@ def approve(cid: str, approver: str) -> str:
     if current["missing"]:
         raise ValueError("candidate data incomplete: " + ", ".join(m["field"] for m in current["missing"]))
     evidence = c.read_json(evidence_path(), {})
+    if (evidence.get(cid) or {}).get("imported_from") in load_quarantine():
+        raise ValueError(f"evidence was imported from withheld draft {evidence[cid]['imported_from']}; re-check it first")
     problems = evidence_problems(evidence.get(cid))
     if problems:
         raise ValueError("evidence incomplete: " + ", ".join(problems))
@@ -1321,8 +1423,11 @@ def import_context(cid: str) -> str:
     evidence = c.read_json(evidence_path(), {})
     if cid in evidence:
         raise ValueError("candidate already has human evidence; merge by hand")
-    contexts, _ = context_inputs()
+    contexts, research = context_inputs()
     context = contexts.get(cid)
+    held = (research.get(cid) or {}).get("context_quarantined")
+    if held:
+        raise ValueError(f"automatic draft {held['context_id']} is withheld ({held['reason']}); nothing to import")
     if not context or context.get("context_status") != "draft_ready":
         raise ValueError("no automatic draft with supported claims for this candidate")
     docs = {d["document_id"]: d for d in context["documents"]}

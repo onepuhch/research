@@ -310,6 +310,9 @@ class CandidateFixture(unittest.TestCase):
         real = pathlib.Path(__file__).resolve().parents[1]
         for name in ("research_policy.json", "entities.json"):
             (pathlib.Path(self.tmp.name) / "config" / name).write_bytes((real / "config" / name).read_bytes())
+        # An explicit, valid empty list: a missing one is refused, never read as 'nothing withheld'.
+        (pathlib.Path(self.tmp.name) / "config" / "context_quarantine.json").write_text(
+            json.dumps({"schema_version": 1, "contexts": {}}), encoding="utf-8")
         (pathlib.Path(self.tmp.name) / "templates").mkdir()
         (pathlib.Path(self.tmp.name) / "templates" / "candidates.html").write_bytes(
             (real / "templates" / "candidates.html").read_bytes())
@@ -904,6 +907,145 @@ class ContextCardTest(CandidateFixture):
 
     def write_evidence(self, entry):
         c.atomic_json(k.evidence_path(), {self.aaa["candidate_id"]: entry})
+
+
+class ContextQuarantineTest(CandidateFixture):
+    """L0: one known-wrong draft (CLBK CTX-1CD87BF73F9D0762 in production) is withheld from every
+    current use, while stored records stay as they were and other drafts keep working."""
+
+    add_context = ContextCardTest.add_context
+    card = ContextCardTest.card
+    BAD = "CTX-0000000000000001"
+    CLAIM = "매출이 전년 대비 40% 늘었다."
+
+    def quarantine(self, contexts=None, raw=None):
+        path = k.quarantine_path()
+        if raw is not None:
+            path.write_text(raw, encoding="utf-8")
+            return
+        contexts = contexts if contexts is not None else {self.BAD: {
+            "candidate_id": self.aaa["candidate_id"], "reason": "delta_reported_as_level",
+            "source_ref": "DOC-00000000000000AA#p2", "decided_at": "2026-10-04T07:44:07+00:00",
+            "decided_by": "test", "note": "증가분을 수준값으로 표시"}}
+        path.write_text(json.dumps({"schema_version": 1, "contexts": contexts}), encoding="utf-8")
+
+    def stored_hashes(self):
+        import candidate_context
+        files = sorted(candidate_context.history_dir().glob("CTX-*.json")) + sorted(k.observations_dir().glob("OB-*.json")) \
+            + sorted(k.history_dir().glob("CV-*.json")) + [candidate_context.state_path()]
+        return {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
+
+    def assert_withheld(self, text):
+        self.assertNotIn(self.CLAIM, text)
+        self.assertNotIn("Revenue grew 40%", text)
+        self.assertNotIn("일회성 세금 이익", text)  # the draft's limitation goes with it
+        self.assertIn(k.QUARANTINE_WARNINGS["delta_reported_as_level"], text)
+
+    def test_every_current_output_drops_the_draft_and_keeps_the_screen_facts(self):
+        first = self.add_context()
+        self.assertIn(self.CLAIM, k.telegram_card(first))
+        before = self.stored_hashes()
+        self.quarantine()
+        card = self.card()
+        self.assertIsNone(card["context"])
+        self.assertEqual(card["context_hold"]["context_id"], self.BAD)
+        self.assertEqual(card["research_status"], "draft_withheld")
+        self.assertNotEqual(card["candidate_version"], first["candidate_version"])  # a new version, not a rewrite
+        reply = k.telegram_candidate(self.aaa["candidate_id"])[0]
+        self.assert_withheld(reply)
+        self.assertIn("내년 EPS 예상", reply)
+        self.assertNotIn("원문 접근 실패", reply)  # not a source or model failure
+        self.assert_withheld((c.ROOT / "docs" / "candidates.md").read_text(encoding="utf-8"))
+        html_text = (c.ROOT / "reports" / "generated" / "candidates.html").read_text(encoding="utf-8")
+        self.assertNotIn(self.CLAIM, html_text)
+        self.assertNotIn("Revenue grew 40%", html_text)
+        after = self.stored_hashes()
+        self.assertEqual({n: h for n, h in after.items() if n in before}, before)  # nothing stored was changed
+
+    def test_an_index_written_before_the_quarantine_is_filtered_when_read(self):
+        self.add_context()
+        self.quarantine()  # no regeneration: the index on disk still carries the draft
+        self.assertIn(self.CLAIM, json.dumps(k.load_index(), ensure_ascii=False))
+        self.assert_withheld(k.telegram_candidate(self.aaa["candidate_id"])[0])
+        self.assert_withheld(k.render_markdown(k.load_index()))
+        page = k.render_html(k.load_index())
+        self.assertNotIn(self.CLAIM, page)
+        self.assertNotIn("Revenue grew 40%", page)
+
+    def test_a_past_observation_shows_the_hold_not_the_draft(self):
+        first = self.add_context()
+        self.quarantine()
+        version, obs = k.load_observation(first["observation_id"])
+        self.assertEqual(version["context"]["context_id"], self.BAD)  # the stored record is unchanged
+        self.assert_withheld(k.telegram_card(k.assemble(version, obs, [])))
+
+    def test_import_and_approval_are_refused_and_imported_evidence_is_held(self):
+        self.add_context()
+        k.import_context(self.aaa["candidate_id"])
+        self.quarantine()
+        card = self.card()
+        self.assertEqual(card["base_classification"], "needs_evidence")
+        self.assertIn("격리", card["evidence_review"]["reason"])
+        self.assertNotIn(self.CLAIM, k.telegram_card(card))  # the copy is not shown as human evidence either
+        with self.assertRaisesRegex(ValueError, "withheld"):
+            k.approve(self.aaa["candidate_id"], "user")
+        entry = c.read_json(k.evidence_path(), {})
+        del entry[self.aaa["candidate_id"]]
+        c.atomic_json(k.evidence_path(), entry)
+        with self.assertRaisesRegex(ValueError, "withheld"):
+            k.import_context(self.aaa["candidate_id"])
+
+    def test_independent_human_evidence_and_a_newer_draft_are_not_blocked(self):
+        self.add_context()
+        self.quarantine()
+        c.atomic_json(k.evidence_path(), {self.aaa["candidate_id"]: sourced_evidence()})
+        card = self.card()
+        self.assertIsNone(card["evidence_review"])
+        self.assertIn("Q2 guidance raised on AI demand", k.telegram_card(card))
+        newer = [{"text_ko": "순이익은 15.2백만 달러였다.", "kind": "fact", "quote": "Net income was $15.2 million",
+                  "document_id": "DOC-00000000000000AA", "block_id": "p2", "period": "Q2"}]
+        card = self.add_context("CTX-0000000000000002", claims=newer)  # one exact CTX, not the whole ticker
+        self.assertEqual(card["context"]["context_id"], "CTX-0000000000000002")
+        self.assertIsNone(card["context_hold"])
+        self.assertIn("15.2백만", k.telegram_card(card))
+        other = next(x for x in k.load_index()["candidates"] if x["candidate_id"] != self.aaa["candidate_id"])
+        self.assertIsNone(other["context_hold"])
+
+    def test_a_missing_or_broken_list_stops_drafts_instead_of_allowing_them(self):
+        self.add_context()
+        for raw in (None, "{not json", json.dumps({"schema_version": 1, "contexts": {"CTX-1": {}}}),
+                    json.dumps({"schema_version": 1, "contexts": {self.BAD: {"candidate_id": self.aaa["candidate_id"]}}}),
+                    json.dumps({"contexts": {}})):
+            with self.subTest(raw=raw):
+                if raw is None:
+                    k.quarantine_path().unlink(missing_ok=True)
+                else:
+                    self.quarantine(raw=raw)
+                with self.assertRaises(k.QuarantineUnavailable):
+                    k.generate(now=NOW, translate_now=False)
+                with self.assertRaises(k.QuarantineUnavailable):
+                    k.import_context(self.aaa["candidate_id"])
+                reply = k.telegram_candidate(self.aaa["candidate_id"])[0]
+                self.assertNotIn(self.CLAIM, reply)
+                self.assertIn(k.QUARANTINE_UNREADABLE, reply)
+        self.assertEqual(k.main(["generate", "--no-translate"]), 1)  # the cards step fails and says so
+
+    def test_the_list_is_an_input_of_the_cards_step(self):
+        import daily_run_state
+        self.assertIn("@quarantine", daily_run_state.STEPS["cards"].inputs)
+        self.assertEqual(daily_run_state.STEPS["cards"].version, k.GENERATOR_VERSION)
+        before = daily_run_state.quarantine_revision()
+        self.quarantine()
+        self.assertNotEqual(daily_run_state.quarantine_revision(), before)
+
+    def test_the_production_list_holds_exactly_the_clbk_draft(self):
+        real = pathlib.Path(__file__).resolve().parents[1] / "config" / "context_quarantine.json"
+        with mock.patch.object(k, "quarantine_path", return_value=real):
+            listed = k.load_quarantine()
+        self.assertEqual(list(listed), ["CTX-1CD87BF73F9D0762"])
+        entry = listed["CTX-1CD87BF73F9D0762"]
+        self.assertEqual((entry["candidate_id"], entry["reason"], entry["source_ref"]),
+                         ("CAN-E763F753A2D7609F", "delta_reported_as_level", "DOC-AC201A9BE0E4E848#p19"))
 
 
 class ColumnMigrationTest(unittest.TestCase):

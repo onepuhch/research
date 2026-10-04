@@ -78,7 +78,7 @@ STEPS: dict[str, Step] = {
     # times (24 h after failures, 7 days after 'nothing relevant'), so no generic partial top-up.
     "context": Step(inputs=("screen",), version="context-v7", partial_top_up=False),
     # Version tracks candidates.GENERATOR_VERSION: a new card generator redoes the cards.
-    "cards": Step(inputs=("screen", "context", "@tracking", "@evidence"), version="cards-v4"),
+    "cards": Step(inputs=("screen", "context", "@tracking", "@evidence", "@quarantine"), version="cards-v5"),
     # New-candidate alerts (news + screen, one daily budget). A failed cards step stops only these.
     "alerts": Step(requires=("cards",), inputs=("extract",)),
     # research_journal --capture-only reads research case files and metric_log; tracking changes
@@ -144,6 +144,12 @@ def evidence_revision() -> str:
     return hashlib.sha256(file_bytes(path)).hexdigest()[:16] if path.exists() else "none"
 
 
+def quarantine_revision() -> str:
+    """The withheld-draft list: a change redoes the cards (a missing file makes the cards step fail)."""
+    path = c.ROOT / "config" / "context_quarantine.json"
+    return hashlib.sha256(file_bytes(path)).hexdigest()[:16] if path.exists() else "none"
+
+
 def cases_revision() -> str:
     directory = c.DATA_DIR.parent / "research" / "cases"
     digest = hashlib.sha256()
@@ -152,7 +158,8 @@ def cases_revision() -> str:
     return digest.hexdigest()[:16]
 
 
-EXTERNAL = {"@tracking": tracking_revision, "@evidence": evidence_revision, "@cases": cases_revision}
+EXTERNAL = {"@tracking": tracking_revision, "@evidence": evidence_revision, "@cases": cases_revision,
+            "@quarantine": quarantine_revision}
 
 
 def input_revisions(steps: dict, name: str) -> dict:
