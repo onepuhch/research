@@ -295,7 +295,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v4"
-PARSER_VERSION = "context-check-v8"
+PARSER_VERSION = "context-check-v9"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -449,7 +449,7 @@ def figure_problem(figure: str, quote_raw: str) -> str | None:
     return None
 
 
-# ---- what a number is (context-check-v8): a level, a change, or an effect on another figure
+# ---- what a number is (context-check-v9): a level, a change, or an effect on another figure
 # Small words allowed between a change/effect phrase and its number ('by a net, after-tax benefit of').
 ROLE_FILL = r"(?:(?:approximately|about|around|nearly|roughly|almost|over|more than|less than|an?|the|net|" \
             r"after-tax|pre-tax|total|additional|further|another)[ ,]+)*"
@@ -465,94 +465,173 @@ DELTA_AFTER = re.compile(rf"^ ?(?:{CHANGE_NOUN}\b|(?:higher|lower|more|less) tha
                          rf"(?:quarter-over-quarter|sequential(?:ly)?)\b)")
 EFFECT_BEFORE = re.compile(rf"\b(?:(?:benefit|charge|impact|effect)s? (?:of|from) |(?:impacted|affected|hurt|helped|"
                            rf"benefited|benefitted|reduced|offset) by ){ROLE_FILL}\(?$")
+# 'a $12 million gain lifted net income', '$5 million of charges that reduced operating income'
+EFFECT_AFTER = re.compile(r"^ (?:of )?(?:[\w-]+ ){0,3}(?:gain|charge|benefit|loss|impairment|expense|item|cost)s?,? "
+                          r"(?:that |which )?(?:increas|decreas|lift|boost|reduc|lower|rais|hurt|impact|affect|offset|"
+                          r"weigh|add)\w*\b")
 LIST_JOIN = re.compile(r"(?:,| and| or|, and|, or)\s+(?:an? )?$")
 TO_LEVEL = re.compile(rf"\bto {ROLE_FILL}$")  # 'increased 25 basis points to 2.44%': the target value is a level
 RATE = re.compile(r"%|\bpercent(?:age points?)?\b|\bbasis points?\b|\bbps\b|\bpoints?\b")
+UP_WORD = re.compile(r"\b(?:increas\w*|rais\w*|grew|grow\w*|rose|ris(?:e|es|ing)|improv\w*|expand\w*|boost\w*|"
+                     r"lift\w*|gain\w*|climb\w*|higher|up)\b")
+DOWN_WORD = re.compile(r"\b(?:decreas\w*|lower\w*|reduc\w*|cut\w*|fell|fall\w*|declin\w*|contract\w*|drop\w*|down)\b")
+# Verbs that say an amount moved another figure: 'which increased net income by ...', 'net loss was impacted by'.
+EFFECT_VERB = re.compile(r"\b(?:increas|decreas|reduc|lower|rais|lift|boost|impact|affect|benefit|hurt|offset)\w*\b")
+NOT_A_MODIFIER = re.compile(rf"^(?:{CHANGE_VERB}|\w+ed|was|were|is|are|to|by|of|in|for|from|and|or)$")
 
 
-def figure_role(q: str, start: int, end: int, previous: str | None) -> str:
-    """'level', 'delta' or 'effect' for the number phrase q[start:end] (squashed quote).
-    Only grammar touching the number counts: an 'increase' elsewhere in the sentence does not
-    make every number a change, and 'increased to X' / 'from X to Y' keep X and Y as levels."""
+def word_direction(text: str) -> str | None:
+    """'up'/'down' only when the matched grammar itself says so; never guessed from the sentence."""
+    up, down = UP_WORD.search(text), DOWN_WORD.search(text)
+    return "up" if up and not down else "down" if down and not up else None
+
+
+def unit_kind(q: str, start: int, end: int) -> str:
+    """amount / pct / bp / pp: 25 basis points is a different unit from 25%, never converted."""
+    span = q[start:end]
+    if re.match(r"^\(?[\d.,]+\)? ?(?:basis points?|bps)\b", q[start:]):
+        return "bp"
+    if re.match(r"^\(?[\d.,]+\)? ?percentage points?\b", q[start:]):
+        return "pp"  # the number phrase stops at 'percent', so the words after it decide
+    return "pct" if "%" in span or "percent" in span else "amount"
+
+
+def figure_role(q: str, start: int, end: int, previous: dict | None) -> dict:
+    """{'role': level|delta|effect, 'direction': up|down|None} for the number phrase q[start:end].
+    Only grammar touching the number counts: an 'increase' elsewhere in the sentence does not make
+    every number a change, and 'increased to X' / 'from X to Y' keep X and Y as levels."""
     before, after = q[max(0, start - 120):start], q[end:end + 40].lstrip(")")
-    if DELTA_AFTER.search(after):
-        return "delta"  # '$1.8 million increase in provision', also after 'offset by' or 'attributable to a'
+    found = DELTA_AFTER.search(after)
+    if found:  # '$1.8 million increase in provision', also after 'offset by' or 'attributable to a'
+        direction = word_direction(found.group(0))
+        if direction is None:  # 'grew 23% year-over-year': the word right before the number says which way
+            touching = next((p.search(before) for p in DELTA_BEFORE if p.search(before)), None)
+            direction = word_direction(touching.group(0).split()[0]) if touching else None
+        return {"role": "delta", "direction": direction}
     if TO_LEVEL.search(before) and not DELTA_BEFORE[1].search(before):
-        return "level"
-    if EFFECT_BEFORE.search(before):
-        return "effect"
-    if any(p.search(before) for p in DELTA_BEFORE):
-        return "delta"
-    if previous in ("delta", "effect") and LIST_JOIN.search(before):
-        return previous  # 'an increase of $9.2 million, or 17.2%,' / 'by a $103.8 million and a $138.9 million ...'
-    return "level"
+        return {"role": "level", "direction": None}
+    if EFFECT_BEFORE.search(before) or EFFECT_AFTER.search(after):
+        return {"role": "effect", "direction": None}
+    for pattern in DELTA_BEFORE:
+        found = pattern.search(before)
+        if found:  # the change word is the first word of the match
+            return {"role": "delta", "direction": word_direction(found.group(0).split()[0])}
+    if previous and previous["role"] in ("delta", "effect") and LIST_JOIN.search(before):
+        return {**previous, "joined": True}  # 'an increase of $9.2 million, or 17.2%,'
+    return {"role": "level", "direction": None}
 
 
-def quote_roles(q: str) -> list[tuple[int, int, str]]:
-    """Every number phrase of the squashed quote with its role, in order."""
+def quote_roles(q: str) -> list[dict]:
+    """Every number phrase of the squashed quote with its role, direction and unit, in order."""
     roles, previous = [], None
     for s, e in number_spans(q):
-        role = figure_role(q, s, e, previous)
-        roles.append((s, e, role))
+        role = {**figure_role(q, s, e, previous), "start": s, "end": e, "unit": unit_kind(q, s, e)}
+        roles.append(role)
         previous = role
     return roles
 
 
-def role_problem(metric: str, figures: list[str], quote_raw: str) -> tuple[str | None, list[str]]:
+def bound_to_metric(q: str, at: int, end: int, m: str) -> bool:
+    """The amount measures the metric itself: 'tax benefit of $12 million' or '$138.9 million goodwill
+    impairment loss' (up to two modifiers between, never a verb). '$12 million increased net income'
+    does not make $12 million net income."""
+    if not m:
+        return False
+    if re.search(r"(?<![a-z])" + re.escape(m) + rf"s? (?:of|from) {ROLE_FILL}\(?$", q[max(0, at - 120):at]):
+        return True
+    words = re.findall(r"[\w$'-]+", q[end:end + 80])
+    target = re.findall(r"[\w$'-]+", m)
+    for skip in range(3):
+        if words[skip:skip + len(target)] == target and not any(NOT_A_MODIFIER.match(w) for w in words[:skip]):
+            return True
+    return False
+
+
+def effect_target(q: str, at: int, m: str) -> dict | None:
+    """For a limitation: the effect's target is the claimed metric, named with an effect verb in the
+    same clause before the amount ('which increased net income by a net, after-tax benefit of')."""
+    start = max([0] + [x.end() for x in re.finditer(r"[.;]\s", q[:at])])
+    clause = q[start:at]
+    if not m or not re.search(r"(?<![a-z])" + re.escape(m) + r"(?![a-z])", clause):
+        return None
+    verb = EFFECT_VERB.search(clause)
+    if not verb:
+        return None
+    phrase = clause[clause.rfind(" by ") + 1:] if " by " in clause else clause[-60:]
+    return {"direction": word_direction(verb.group(0)), "after_tax": "after-tax" in phrase,
+            "net": bool(re.search(r"\bnet\b", phrase.replace(m, "")))}
+
+
+def role_problem(metric: str, figures: list[str], quote_raw: str, what: str = "claim") -> tuple[str | None, list[dict]]:
     """(problem, role per figure). A change or effect amount offered as the metric's value is refused:
     '$9.2 million increase in net interest income' is not net interest income (CLBK, 10/2 run), and
-    'increased net income by a net, after-tax benefit of $159.8 million' is not net income (PBF).
-    A rate change ('rose 5%', 'up 25 basis points') stays, labelled as a change on the card, and so
-    does a figure that carries its own change wording ('decreased oil revenues by $28.5 million').
-    An effect named as the metric itself ('$138.9 million goodwill impairment loss') is that level."""
+    'a one-time tax benefit of $12 million increased net income' does not make $12 million net income.
+    A pure rate change ('decreased 9%', 'up 25 basis points') stays, labelled as a change, and so does a
+    figure that carries its own change wording ('decreased oil revenues by $28.5 million'). A figure
+    mixing an amount with a rate, or two roles, is refused whole: nothing is cut into new facts.
+    A limitation may show an effect on its metric (PBF special items) only when the clause names the
+    metric with an effect verb; the card then says 'effect on', never the metric's value."""
     q, m = squash(quote_raw), squash(metric)
     spans = quote_roles(q)
-    roles = []
+    details = []
     for figure in figures:
         f = squash(figure)
-        seen = set()  # the role at every place the figure appears: two different roles is ambiguous
+        seen = []  # the reading at every place the figure appears: two different readings is ambiguous
         for at in (i for i in range(len(q)) if q.startswith(f, i)):
-            inside = [role for s, e, role in spans if at <= s < at + len(f)]
+            inside = [x for x in spans if at <= x["start"] < at + len(f)]
             if not inside:
                 continue
-            role = "delta" if "delta" in inside else ("effect" if "effect" in inside else "level")
+            roles, units = {x["role"] for x in inside}, {x["unit"] for x in inside}
+            if len(roles) > 1:
+                return "figure_role_mixed", []
+            role = roles.pop()
+            if role != "level" and "amount" in units and len(units) > 1:
+                return "figure_mixes_amount_and_rate", []  # '$9.2 million, or 17.2%'
+            first = inside[0]
+            reading = {"role": role, "unit": first["unit"], "direction": first["direction"]}
             if role == "delta" and re.search(rf"\b{CHANGE_VERB}\b|\b{CHANGE_NOUN}\b|\b(?:up|down)\b", f):
-                role = "described_delta"  # the figure itself says it is a change
-            if role == "effect" and m and re.search(r"(?<![a-z])" + re.escape(m) + r"(?![a-z])", q[at + len(f):at + len(f) + 60]):
-                role = "level"  # '$138.9 million goodwill impairment loss' claimed as that loss
-            if role == "effect" and m and re.search(r"\b(?:benefit|charge|impact|effect|impairment)\b", m):
-                role = "level"  # the metric is the effect itself ('tax benefit')
-            seen.add(role)
-        if len(seen) > 1:
+                reading["role"] = "described_delta"  # the figure itself says it is a change
+            if role == "effect" and bound_to_metric(q, at, at + len(f), m):
+                reading = {"role": "level", "unit": first["unit"], "direction": None}
+            if reading["role"] == "effect" and m:
+                target = effect_target(q, at, m) if what == "limitation" else None
+                if target is None:
+                    return "effect_presented_as_level", []
+                if "per share" in f or "per diluted share" in f:
+                    # Only as the per-share form of the effect amount just before it: 'X, or $1.32 per share'.
+                    prior = [x for x in spans if x["end"] <= at]
+                    if not (first.get("joined") and prior and prior[-1]["role"] == "effect"
+                            and any(squash(g) in q[prior[-1]["start"]:prior[-1]["end"] + 12] for g in figures if g != figure)):
+                        return "effect_presented_as_level", []
+                    target = {**target, "per_share": True}
+                reading = {"role": "effect_on_metric", "unit": first["unit"], **target}
+            seen.append(reading)
+        if any(x != seen[0] for x in seen[1:]):
             return "figure_role_ambiguous", []
-        role = seen.pop() if seen else "level"
-        # Without a metric no level is asserted: the amount is shown as what it is ('one-time tax
-        # benefit of $12 million' in a limitation).
-        if role == "effect" and m:
-            return "effect_presented_as_level", []
-        if role == "delta" and m and not RATE.search(f):
+        reading = seen[0] if seen else {"role": "level", "unit": "amount", "direction": None}
+        if reading["role"] == "delta" and m and reading["unit"] == "amount":
             return "delta_presented_as_level", []
-        roles.append(role)
-    return None, roles
+        details.append(reading)
+    if any(x["role"] == "effect_on_metric" for x in details) and any(x["role"] != "effect_on_metric" for x in details):
+        return "figure_role_mixed", []  # an effect shown next to another metric's or period's number
+    return None, details
 
 
-def labelled(figure: str, role: str, quote_raw: str) -> str:
-    """The figure as the card shows it: a change is never shown bare next to a level."""
+def labelled(figure: str, reading: dict) -> str:
+    """The figure as the card shows it: a change or an effect is never shown bare next to a level."""
+    role, direction = reading["role"], reading.get("direction")
     if role == "level":
         return figure
-    q, f = squash(quote_raw), squash(figure)
-    at = q.find(f)
-    near = q[max(0, at - 60):at + len(f) + 30] if at >= 0 else f
-    down = re.search(r"\b(?:decreas|declin|lower|reduc|fell|fall|drop|down|contract|cut)\w*", near)
-    up = re.search(r"\b(?:increas|grew|grow|rose|rise|rising|up|improv|higher|expand|gain|climb|rais|boost)\w*", near)
     if role == "effect":
         return f"{figure}(영향 금액)"
-    kind = "변화율" if RATE.search(f) else "변화량"
-    if down and not up:
-        kind += "·감소"
-    elif up and not down:
-        kind += "·증가"
-    return f"{figure}({kind})"
+    change = {"up": "증가", "down": "감소"}.get(direction, "")
+    if role == "effect_on_metric":
+        if reading.get("per_share"):
+            return f"{figure}(주당 {change + ' ' if change else ''}효과)"
+        basis = ("세후 " if reading.get("after_tax") else "") + ("순" if reading.get("net") else "")
+        return f"{figure}({basis}{change} 효과)" if basis or change else f"{figure}(효과)"
+    kind = {"pct": "변화율", "bp": "변화폭", "pp": "변화폭"}.get(reading.get("unit"), "변화량")
+    return f"{figure}({kind}·{change})" if change else f"{figure}({kind})"
 
 
 PREDICATE = r"(?:is|was|were|are|totaled|totalled|totals|reached|stood at|amounted to|of)\b"
@@ -856,7 +935,7 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
         problem = figure_problem(figure, quote_raw)
         if problem:
             return problem, {}
-    problem, roles = role_problem(str(item.get("metric") or ""), figures, quote_raw)
+    problem, roles = role_problem(str(item.get("metric") or ""), figures, quote_raw, what)
     if problem:
         return problem, {}
     note = str(item.get("note_ko") or "").strip()
@@ -924,16 +1003,19 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
     if what == "claim" and item.get("direction", "unknown") not in DIRECTIONS:
         return "bad_tag", {}
     label = METRIC_KO.get(metric.lower(), metric) if metric else ""
+    if any(r["role"] == "effect_on_metric" for r in roles):
+        label = f"{label}에 미친 영향"  # never the metric's value (PBF special items)
     period = item.get("period") if item.get("period") and item["period"] != "unknown" else ""
     head = "".join([f"[{subject_name}] " if subject != "issuer" else "",
                     f"{label}({metric})" if label and label != metric else label,
                     f" · {period}" if period else ""])
-    body = " / ".join(labelled(f, r, quote_raw) for f, r in zip(figures, roles))
+    body = " / ".join(labelled(f, r) for f, r in zip(figures, roles))
     text_ko = f"{head}: {body} — {note}" if head and body else (f"{head} — {note}" if head else note)
     return None, {"text_ko": text_ko, "note_ko": note, "kind": kind, "quote": quote_raw, "document_id": key[0],
                   "block_id": key[1], "metric": metric or None, "figures": figures, "period": item.get("period") or "unknown",
                   "currency": derived[0] if len(derived) == 1 else None, "gaap": expected, "subject": subject,
-                  "subject_name": subject_name or None, "core": core, "figure_roles": roles,
+                  "subject_name": subject_name or None, "core": core,
+                  "figure_roles": [r["role"] for r in roles], "figure_readings": roles,
                   "drivers": drivers, "direction": item.get("direction", "unknown"),
                   **({"normalized": notes} if notes else {})}
 
@@ -976,7 +1058,7 @@ def validate_draft(answer: dict, blocks: list[dict], issuer: dict | None = None)
 
 
 # Stored drafts of these validator versions are re-checked with the current one when read (L1 4.2).
-REVALIDATED_VERSIONS = ("context-check-v7",)
+REVALIDATED_VERSIONS = ("context-check-v7", "context-check-v8")
 
 
 class RevalidationUnavailable(ValueError):

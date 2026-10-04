@@ -309,7 +309,7 @@ class StoredDraftViewTest(CandidateFixture):
                          ("context-check-v7", ctx.PARSER_VERSION, "accepted_only", "2026-10-01T15:16:23+00:00"))
         reply = k.telegram_card(card)
         self.assertNotIn("$9.2 million", reply)
-        self.assertIn("현재 검증기(context-check-v8)로 다시 확인", reply)
+        self.assertIn(f"현재 검증기({ctx.PARSER_VERSION})로 다시 확인", reply)
         self.assertEqual(path.read_bytes(), before)
         observations = sorted(p.name for p in k.observations_dir().glob("OB-*.json"))
         again = self.card()  # reading the same inputs again adds nothing

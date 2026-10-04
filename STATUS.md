@@ -1,5 +1,13 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 검토자: Codex, 2026-10-04 KST. 기준 HEAD `6915bc9`. [L 인수 판정과 M 후속 지시](docs/m_l_acceptance_and_followup_2026-10-04.md). 진행 중인 쓰기/테스트 없음. 이번 변경은 **STATUS·M 지시서·합성 재현 스크립트만 로컬 미커밋**이며 운영 코드/카드/원장·일정 변경, 추가 요청·전송 없음.
+  - **L0 인수**: 로컬 운영 index cards-v5의 CLBK context=null/격리 ID와 카드 JSON·MD의 $9.2 million 부재를 직접 확인. 원격 L0 run·HTML·발송 0과 420개 시험/CI 성공은 Claude 인수인계 근거이며 이번에 원격 재조회/전체 Python 재실행한 것은 아님.
+  - **L1~L3 최종 인수 보류**: M1 효과 금액 뒤 대상 metric이 나오면 level로 뒤집는 예외, 금액+비율 figures의 RATE 예외를 보완. M2 기존 index/목록 이탈/과거 관측의 직접 표시에는 재검증이 빠져 있음(context_inputs에서만 수행).
+  - M1은 코드·Node 분기 추적으로 확인한 경계 문제이며 Python validate_draft 전체 재현은 미실행(현재 실행기 접근 불가). 다음 구현 담당자는 `python docs/m_boundary_probe_2026-10-04.py`부터 실행하고 결과를 남긴다. 실제 운영에서 합성 문제가 발생했다는 뜻은 아님.
+  - 결정 5개: PBF 효과 경고는 검증된 영향 표시로 복원 / 순수 비율 변화 라벨 수용(혼합 금액은 제외) / 같은 문서 최신 기간은 비교 가능한 주체·달력·기간 길이 안으로 제한 / PUBM 비GAAP 정의 문구는 보조로 / 옛 CLBK CTX 격리는 보존하고 새 유효 CTX는 표시 가능.
+  - L4 보관본 36=28응답+8실패, manifest 대응·archive SHA 확인. 고정 표본의 개선은 수용. role_errors가 같은 v8 검사 함수를 재사용하므로 독립 정확도 표가 필요하며, 입력 내용 해시 검증도 M4에서 보완한다. core 8/9·나머지 50/51 정정은 수용.
+  - 다음: M1 숫자 역할/PBF → M2 모든 현재 조회 경로 → M3 기간/면책 → M4 독립 기대표·무결성 검사. 새 버전은 context-check-v9/context-v9·cards-v7. 저장 자료로 진행 가능해 10/5를 기다릴 필요 없음. 정상 운영 확인 시 실제 버전을 기록하고, CLBK는 '옛 CTX면 격리 경고, 새 유효 CTX면 새 근거, 과거 CTX는 계속 격리'로 확인한다.
+
 - 마지막 작업자: Claude, 2026-10-04 KST. **L0~L4 구현 완료**: [L 인수인계](docs/l_handoff_2026-10-04.md). 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
   - L0(6d4211d, cards-v5): CLBK `CTX-1CD87BF73F9D0762` 격리. **운영 반영 확인**: dispatch run 37187080398(cards·alerts·views만, 모델·SEC 0, 발송 0). 운영 카드·MD·HTML에서 `$9.2 million` 0건, 경고 표시.
   - L1+L2(31678be, context-check-v8, context-ko-v4, 일간 context-v8): 변화량·효과 검사, 저장 v7 초안 읽기 시 재검증 뷰, goodwill(Codex 패치), AXTI·drivers·adjusted·상향 활용형. L3(81d04d0, cards-v6): 핵심·현재 기간 우선, 실질 한계 우선, 기간 미확인 라벨.
