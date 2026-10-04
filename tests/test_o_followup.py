@@ -109,30 +109,38 @@ class IndustryGroupCardTest(CandidateFixture):
 
 
 class RevisionTimingTest(unittest.TestCase):
-    """O2: when the estimate rose, against the newest linked filing; a possibility, never a cause."""
+    """O2 (as revised by P1-A): when the estimate rose, against the filings the shown statements cite."""
 
     def cand(self, now, d30, d90):
         return {"observed_at": "2026-10-04T06:15:47+00:00", "eps": {"eps_now": now, "eps_30d": d30, "eps_90d": d90}}
 
-    def test_a_recent_rise_after_an_older_filing_is_flagged(self):
-        text = k.revision_timing(self.cand(1.38, 0.30, 0.30), {"documents": [{"filed_at": "2026-07-14"}]})
-        self.assertIn("최근 30일(2026-09-04 이후) 몫 100%", text)
-        self.assertIn("연결 원문 최신 제출 2026-07-14(최근 30일 시작 이전)", text)
+    @staticmethod
+    def context(cited, others=()):
+        docs = [{"document_id": f"DOC-C{i}", "filed_at": d} for i, d in enumerate(cited)]
+        docs += [{"document_id": f"DOC-U{i}", "filed_at": d} for i, d in enumerate(others)]
+        return {"documents": docs, "claims": [{"document_id": f"DOC-C{i}"} for i in range(len(cited))]}
+
+    def test_a_recent_rise_after_an_older_cited_filing_is_flagged(self):
+        text = k.revision_timing(self.cand(1.38, 0.30, 0.30), self.context(["2026-07-14"]))
+        self.assertIn("제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-04 이후) 몫 100%", text)
+        self.assertIn("근거 문장 원문 최신 제출 2026-07-14(최근 30일 시작 이전)", text)
         self.assertIn("설명하지 못할 수 있음", text)
         self.assertNotIn("때문", text)  # no cause is claimed
 
-    def test_an_older_rise_or_a_recent_filing_is_not_flagged(self):
-        early = k.revision_timing(self.cand(1.66, 1.44, -0.09), {"documents": [{"filed_at": "2026-08-04"}]})
+    def test_an_uncited_newer_document_does_not_clear_the_warning(self):
+        text = k.revision_timing(self.cand(1.38, 0.30, 0.30), self.context(["2026-07-14"], ["2026-09-20"]))
+        self.assertIn("설명하지 못할 수 있음", text)
+        self.assertIn("최근 조사 문서 2026-09-20(채택 근거 없음)", text)
+        cited_recent = k.revision_timing(self.cand(1.38, 0.30, 0.30), self.context(["2026-07-14", "2026-09-20"]))
+        self.assertIn("2026-09-20(최근 30일 시작 이후)", cited_recent)
+        self.assertNotIn("설명하지 못할", cited_recent)
+
+    def test_an_older_rise_dip_no_rise_and_no_cited_document(self):
+        early = k.revision_timing(self.cand(1.66, 1.44, -0.09), self.context(["2026-08-04"]))
         self.assertIn("몫 13%", early)
         self.assertNotIn("설명하지 못할", early)
-        recent = k.revision_timing(self.cand(1.38, 0.30, 0.30),
-                                   {"documents": [{"filed_at": "2026-07-14"}, {"filed_at": "2026-09-20"}]})
-        self.assertIn("2026-09-20(최근 30일 시작 이후)", recent)
-        self.assertNotIn("설명하지 못할", recent)
-
-    def test_dip_no_rise_and_no_document(self):
-        self.assertIn("90일 전체 변화보다 큼", k.revision_timing(self.cand(3.0, 1.0, 2.0), {"documents": []}))
-        self.assertIn("연결된 공식 원문 없음", k.revision_timing(self.cand(3.0, 1.0, 2.0), {}))
+        self.assertIn("90일 전체보다 큼", k.revision_timing(self.cand(3.0, 1.0, 2.0), {"documents": []}))
+        self.assertIn("채택된 근거 문장의 원문 없음", k.revision_timing(self.cand(3.0, 1.0, 2.0), {}))
         self.assertIsNone(k.revision_timing(self.cand(1.0, 1.0, 1.0), {}))
         self.assertIsNone(k.revision_timing({"observed_at": "2026-10-04T00:00:00+00:00", "eps": {}}, {}))
 

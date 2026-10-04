@@ -245,13 +245,15 @@ def filing_documents(index_html: str, base_url: str) -> list[dict]:
     return docs
 
 
-def pick_documents(docs: list[dict], form: str) -> list[dict]:
-    """Earnings exhibits (EX-99*) for 8-K/6-K; the main report for periodic forms. The body decides later."""
+def pick_documents(docs: list[dict], form: str, include_main: bool = False) -> list[dict]:
+    """Earnings exhibits (EX-99*) for 8-K/6-K; the main report for periodic forms. The body decides later.
+    include_main (business-update 8-Ks): the 8-K's own text comes after its EX-99s, for an agreement
+    stated only there. Contract exhibits (EX-10) are never collected."""
     if form in ("8-K", "6-K"):
         exhibits = [d for d in docs if d["type"].upper().startswith("EX-99")]
         main = [d for d in docs if d["type"].upper() == form]
         exhibits.sort(key=lambda d: not any(w in (d["description"] + " " + d["name"]).lower() for w in ("earning", "result", "financial", "guidance")))
-        return exhibits + (main if form == "6-K" else [])
+        return exhibits + (main if form == "6-K" or include_main or not exhibits else [])  # no EX-99: the 8-K text
     return [d for d in docs if d["type"].upper() == form]
 
 
@@ -387,17 +389,52 @@ def block_scopes(blocks: list[dict]) -> dict[str, str]:
     return scopes
 
 
-def looks_like_business_update(blocks: list[dict]) -> tuple[bool, str]:
-    """A recent 8-K exhibit that states a business change with a number (a raised outlook, a contract
-    or order of a size, an acquisition): decided from the body. Board changes, dividends and legal
-    notices are not updates."""
-    boilerplate = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
-    kept = [b for b in blocks[:400] if not any(w in block_text(b).lower() for w in boilerplate)]
-    body = " ".join(block_text(b) for b in kept).lower()
-    hits = [w for w in UPDATE_WORDS if w in body]
-    if len(hits) >= 2 and re.search(r"[$%]\s?\d|\d[\d,.]*\s?(?:million|billion|%)", body):
-        return True, "business_update_terms:" + ",".join(hits[:5])
-    return False, "not_a_business_update:" + ",".join(hits[:5])
+UPDATE_CHECK_VERSION = "update-check-v2"
+# One sentence must state the business event and carry its number (P1-A): words spread over a document
+# no longer add up. A sentence about a dividend, buyback, borrowing, credit agreement, pay or litigation
+# is never an update, even if it says 'increases' or 'capacity'.
+UPDATE_EVENTS = (
+    ("guidance", re.compile(r"\b(?:rais|increas|lift|updat|reaffirm|lower|reduc|cut)\w*\b[^.;]{0,80}\b(?:guidance|outlook)\b"
+                            r"|\b(?:guidance|outlook)\b[^.;]{0,60}\b(?:rais|increas|lift|lower|reduc|cut)\w*")),
+    ("customer_contract", re.compile(r"\b(?:supply|purchase|customer|long-term|multi-year|master)\s+(?:supply\s+)?"
+                                     r"(?:agreement|contract)\b|\b(?:award(?:ed)?|order|orders|purchase order|backlog|design win)\b")),
+    ("capacity", re.compile(r"\b(?:production|manufacturing|plant|fab|factory|output)\s+capacity\b|\bcapacity expansion\b")),
+    ("acquisition", re.compile(r"\b(?:acquire|acquired|acquisition of|to acquire|completed the acquisition|merger agreement)\b")),
+    ("pricing", re.compile(r"\bprice increase\b|\bpricing actions?\b")),
+)
+UPDATE_EXCLUDE = re.compile(r"\b(?:dividend|repurchase|buyback|share repurchase|credit agreement|credit facility|"
+                            r"revolving|borrowing|notes due|indenture|loan|compensation|severance|bonus|settlement|"
+                            r"litigation|lawsuit|complaint|appoint|resign|director)\w*\b")
+UPDATE_NUMBER = re.compile(r"[$€£]\s?\d|\b\d[\d,.]*\s?(?:million|billion|%|percent|units|tons|mw|gw)\b")
+BOILERPLATE_WORDS = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
+
+
+def business_update_judgment(blocks: list[dict], issuer_name: str | None = None) -> tuple[bool, str]:
+    """Search eligibility of a recent 8-K text (not proof of a cause): a sentence naming a business event
+    (guidance change, customer contract/order/backlog, capacity, acquisition, price increase) with its own
+    number, outside excluded topics and outside another company's statements (P0)."""
+    scopes = block_scopes(blocks)
+    for block in blocks[:400]:
+        text = block_text(block)
+        low = text.lower()
+        if any(w in low for w in BOILERPLATE_WORDS):
+            continue
+        heading = scopes.get(block.get("id"))
+        if heading and same_entity(heading, issuer_name) is False:
+            continue  # an acquired business's own statements are not the filer's update
+        for sentence in re.split(r"(?<=[.;])\s+", text):
+            s = sentence.lower()
+            if UPDATE_EXCLUDE.search(s) or not UPDATE_NUMBER.search(s):
+                continue
+            for name, pattern in UPDATE_EVENTS:
+                if pattern.search(s):
+                    return True, f"{UPDATE_CHECK_VERSION}:{name}:{block.get('id')}"
+    return False, f"{UPDATE_CHECK_VERSION}:no_event_sentence"
+
+
+def looks_like_business_update(blocks: list[dict], issuer_name: str | None = None) -> tuple[bool, str]:
+    """Kept for stored records; the current rule is business_update_judgment."""
+    return business_update_judgment(blocks, issuer_name)
 
 
 def looks_like_earnings(blocks: list[dict]) -> tuple[bool, str]:
@@ -449,7 +486,8 @@ def build_record(issuer: dict, filing: dict, doc: dict, raw: bytes, final_url: s
     content_type = "pdf" if raw[:5] == b"%PDF-" or doc["name"].lower().endswith(".pdf") else "html"
     blocks = normalize_html(raw) if content_type == "html" else []
     relevant, reason = looks_like_earnings(blocks) if blocks else (False, "unsupported_content")
-    update, update_reason = looks_like_business_update(blocks) if blocks else (False, "unsupported_content")
+    update, update_reason = (business_update_judgment(blocks, issuer.get("name")) if blocks
+                             else (False, "unsupported_content"))
     return {
         "document_id": document_id(issuer["cik"], filing["accessionNumber"], doc["url"], sha),
         "issuer": issuer, "url": doc["url"], "final_url": final_url,

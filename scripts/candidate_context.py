@@ -34,7 +34,7 @@ import company_filings as cf  # noqa: E402
 
 STATUSES = ("queued", "success", "no_relevant_document", "unavailable", "failed", "deferred_budget", "identity_conflict")
 DEFAULTS = {"companies_per_day": 10, "filings_per_company": 5, "documents_per_company": 4,
-            "update_days": 45, "update_filings_per_company": 2,
+            "update_days": 45, "update_filings_per_company": 2, "update_documents_per_company": 2,
             "http_attempts_per_day": 100, "time_budget_s": 180, "timeout_s": 15, "max_document_bytes": 2_000_000,
             "lookback_days": 120, "revisit_days": 7, "retry_failed_hours": 24, "no_document_days": 7}
 
@@ -131,8 +131,20 @@ def choose_filings(listed: list[dict], cfg: dict) -> list[dict]:
             + [f for f in listed if not f.get("update")][:cfg["filings_per_company"]])
 
 
+def own_statements(record: dict, issuer_name: str | None) -> bool:
+    """No block of the document sits under another company's statement heading (P0)."""
+    return all(cf.same_entity(e, issuer_name) is not False for e in cf.block_scopes(record.get("blocks") or []).values())
+
+
 def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg: dict) -> dict:
-    """One company's recent filings: returns {status, document_ids, notes}; raises Budget/Blocked."""
+    """One company's recent filings: returns {status, document_ids, notes}; raises Budget/Blocked.
+
+    Three passes over one download budget (documents_per_company, cached bodies are free):
+    1. recent business-update 8-Ks, at most update_documents_per_company downloads;
+    2. results releases and periodic reports with what is left (so at least the rest is theirs);
+    3. update attachments skipped in pass 1, only if budget remains.
+    An update is linked only when business_update_judgment finds an event sentence with its number;
+    it never counts as the filer's results release, nor does another company's statement."""
     issuer = dict(target["issuer"])
     observed = now.isoformat(timespec="seconds")
     try:
@@ -144,50 +156,101 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
     issuer["name"] = submissions.get("name") or issuer.get("name")
     filings = choose_filings(cf.recent_filings(submissions, now.date(), cfg["lookback_days"], cfg.get("update_days")),
                              cfg)
-    found, examined, notes, bodies, failures = [], [], [], 0, 0
-    for filing in filings:
-        if bodies >= cfg["documents_per_company"]:
-            break
-        if found and filing["rank"] == 2 and any(cf.load_document(d).get("relevance", {}).get("core_earnings") for d in found):
-            break  # a results release was found: the large periodic report is not needed
-        index_url = cf.filing_index_url(issuer["cik"], filing["accessionNumber"])
+    cap, update_cap = cfg["documents_per_company"], cfg.get("update_documents_per_company", 2)
+    updates_found, results_found, examined, notes, checks = [], [], [], [], []
+    spent = {"bodies": 0, "update": 0, "failures": 0}
+
+    def documents(filing):
         try:
-            page, final, _ = client.get(index_url)
+            page, final, _ = client.get(cf.filing_index_url(issuer["cik"], filing["accessionNumber"]))
         except (HTTPError, URLError, TimeoutError, OSError, ValueError) as error:
             # One unreachable filing does not discard what other filings gave (quality=partial).
-            failures += 1
+            spent["failures"] += 1
             notes.append(f"{filing['accessionNumber']} index {getattr(error, 'code', type(error).__name__)}")
-            continue
+            return None
         base = final.rsplit("/", 1)[0] + "/"
-        for doc in cf.pick_documents(cf.filing_documents(page.decode("utf-8", "replace"), base), filing["form"]):
-            if bodies >= cfg["documents_per_company"]:
+        return cf.pick_documents(cf.filing_documents(page.decode("utf-8", "replace"), base), filing["form"],
+                                 include_main=bool(filing.get("update")))
+
+    def cached(filing, doc):
+        key = f"{filing['accessionNumber']}|{doc['url']}"
+        return cf.load_document(state["documents_by_source"][key]) if key in state["documents_by_source"] else None
+
+    def read(filing, doc):
+        record = cached(filing, doc)
+        if record is not None:
+            return record
+        try:
+            raw, final_url, truncated = client.get(doc["url"])
+        except (HTTPError, URLError, TimeoutError, OSError, ValueError) as error:
+            spent["failures"] += 1
+            notes.append(f"{doc['name']} {getattr(error, 'code', type(error).__name__)}")
+            return None
+        spent["bodies"] += 1
+        if filing.get("update"):
+            spent["update"] += 1
+        record = cf.build_record(issuer, filing, doc, raw, final_url, truncated, observed)
+        cf.store_document(record)
+        state["documents_by_source"][f"{filing['accessionNumber']}|{doc['url']}"] = record["document_id"]
+        return record
+
+    def judge_update(record):
+        # Judged from the stored blocks with the current rule; the stored record is never rewritten.
+        ok, reason = cf.business_update_judgment(record.get("blocks") or [], issuer["name"])
+        checks.append({"document_id": record["document_id"], "eligible": ok, "reason": reason})
+        return ok
+
+    leftover = []
+    for filing in (f for f in filings if f.get("update")):
+        picks = documents(filing)
+        for i, doc in enumerate(picks or []):
+            if cached(filing, doc) is None and (spent["update"] >= update_cap or spent["bodies"] >= cap):
+                leftover.append((filing, picks[i:]))
                 break
-            key = f"{filing['accessionNumber']}|{doc['url']}"
-            cached = state["documents_by_source"].get(key)
-            record = cf.load_document(cached) if cached else None
+            record = read(filing, doc)
             if record is None:
-                try:
-                    raw, final_url, truncated = client.get(doc["url"])
-                except (HTTPError, URLError, TimeoutError, OSError, ValueError) as error:
-                    failures += 1
-                    notes.append(f"{doc['name']} {getattr(error, 'code', type(error).__name__)}")
-                    continue
-                bodies += 1
-                record = cf.build_record(issuer, filing, doc, raw, final_url, truncated, observed)
-                cf.store_document(record)
-                state["documents_by_source"][key] = record["document_id"]
+                continue
             examined.append(record["document_id"])
-            relevance = record["relevance"]
-            if relevance["earnings"] or (filing.get("update") and relevance.get("business_update")):
-                found.append(record["document_id"])
-                break  # one results or update document per filing
+            if judge_update(record):
+                updates_found.append(record["document_id"])
+                break
+    for filing in (f for f in filings if not f.get("update")):
+        if spent["bodies"] >= cap:
+            notes.append("document budget reached before every results filing was read")
+            break
+        if results_found and filing["rank"] == 2 and any(
+                (cf.load_document(d) or {}).get("relevance", {}).get("core_earnings") for d in results_found):
+            break  # the filer's own results release was found: the large periodic report is not needed
+        for doc in documents(filing) or []:
+            if spent["bodies"] >= cap and cached(filing, doc) is None:
+                break
+            record = read(filing, doc)
+            if record is None:
+                continue
+            examined.append(record["document_id"])
+            if record["relevance"]["earnings"] and own_statements(record, issuer["name"]):
+                results_found.append(record["document_id"])
+                break  # one results document per filing
+    for filing, picks in leftover:
+        for doc in picks:
+            if spent["bodies"] >= cap and cached(filing, doc) is None:
+                break
+            record = read(filing, doc)
+            if record is None:
+                continue
+            examined.append(record["document_id"])
+            if judge_update(record):
+                updates_found.append(record["document_id"])
+                break
+    found = updates_found + results_found
+    failures = spent["failures"]
     if found:
         return {"status": "success", "quality": "partial" if failures else "complete", "document_ids": found,
-                "examined": examined, "notes": notes, "failures": failures}
+                "examined": examined, "notes": notes, "failures": failures, "update_checks": checks}
     if not filings:
         notes.append(f"no 8-K/6-K results or periodic report in {cfg['lookback_days']} days")
     return {"status": "failed" if failures else "no_relevant_document", "document_ids": [], "examined": examined,
-            "notes": notes, "failures": failures}
+            "notes": notes, "failures": failures, "update_checks": checks}
 
 
 def screen_ready(now: datetime) -> tuple[dict | None, list[str]]:
@@ -287,6 +350,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
                      eps_target_period=target["eps_target_period"], document_ids=result["document_ids"],
                      quality=result.get("quality", "unknown"), failures=result.get("failures", 0),
                      examined=result.get("examined", []), notes=result["notes"],
+                     update_checks=result.get("update_checks", []),
                      next_eligible_at=(now + wait.get(result["status"], timedelta(days=cfg["no_document_days"])))
                      .isoformat(timespec="seconds"))
         report["researched"] += 1

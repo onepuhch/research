@@ -78,6 +78,117 @@ class SubjectDraftPathTest(unittest.TestCase):
         self.assertEqual([scopes.get(b["id"]) for b in blocks], [None, "Runway Buyer, LLC", "Runway Buyer, LLC"])
 
 
+def html(*paragraphs):
+    return ("<html><body>" + "".join(f"<p>{p}</p>" for p in paragraphs) + "</body></html>").encode()
+
+
+BOARD = html("AAA Inc. announced that its board appointed a new director effective October 1, 2026.")
+DIVIDEND = html("The board increases the quarterly dividend to $0.25 per share and expects payment in October.")
+CONTRACT_MAIN = html("On September 22, 2026, AAA Inc. entered into a multi-year supply agreement with a data center "
+                     "customer that is expected to generate approximately $40 million of revenue in fiscal 2027.")
+
+
+class UpdateJudgmentTest(unittest.TestCase):
+    """P1-A: one sentence names the business event and carries its number; excluded topics never count."""
+
+    def judge(self, *paragraphs):
+        return cf.business_update_judgment(cf.normalize_html(html(*paragraphs)), "AAA Inc.")[0]
+
+    def test_words_and_numbers_from_different_sentences_do_not_add_up(self):
+        self.assertFalse(self.judge("Revenue was $50 million in the quarter.", "The company signed a supply agreement."))
+        self.assertFalse(self.judge("We expect growth. Our capacity is large.", "Net income was $5 million."))
+
+    def test_finance_and_a_real_event_in_one_document(self):
+        self.assertFalse(self.judge("The company entered into a credit agreement with borrowing capacity of $500 million."))
+        self.assertTrue(self.judge("The board declared a dividend of $0.25 per share.",
+                                   "AAA Inc. received orders of $35 million from a new customer for delivery in 2027."))
+        self.assertTrue(self.judge("AAA Inc. raises fiscal 2027 revenue guidance to $150 million."))
+
+    def test_an_acquired_business_statement_is_not_the_filers_update(self):
+        blocks = cf.normalize_html(html("Runway Buyer, LLC CONSOLIDATED STATEMENT OF CASH FLOWS",
+                                        "Customer orders of $3.3 million were received."))
+        self.assertFalse(cf.business_update_judgment(blocks, "Novanta Inc.")[0])
+
+
+class UpdateResearchPathTest(unittest.TestCase):
+    """P1-A through research(): budget protection, EX-99-less text, cached judgment."""
+
+    def setUp(self):
+        import test_candidate_context as tc
+        self.tc = tc
+        self.fixture = tc.RunFixture()
+        self.fixture.setUp()
+        self.addCleanup(self.fixture.doCleanups)
+
+    def routes(self, update_docs, update_main=None):
+        tc = self.tc
+        acc_a, acc_b = "0000000001-26-000020", "0000000001-26-000021"
+        base_a = f"https://www.sec.gov/Archives/edgar/data/1/{acc_a.replace('-', '')}/"
+        base_b = f"https://www.sec.gov/Archives/edgar/data/1/{acc_b.replace('-', '')}/"
+        routes = tc.default_routes()
+        filings = [{"accessionNumber": acc_a, "filingDate": "2026-09-20", "form": "8-K", "items": "7.01,9.01"},
+                   {"accessionNumber": acc_b, "filingDate": "2026-09-22", "form": "8-K", "items": "8.01"},
+                   {"accessionNumber": tc.ACC, "filingDate": "2026-09-10", "form": "8-K", "items": "2.02,9.01"}]
+        routes[cf.submissions_url(tc.CIK)] = json.dumps(tc.submissions(filings)).encode()
+        rows = [(f"Exhibit {i}", f"ex99{i}.htm", base_a + f"ex99{i}.htm", f"EX-99.{i}") for i in range(1, len(update_docs) + 1)]
+        routes[cf.filing_index_url(tc.CIK, acc_a)] = tc.index_page(rows).encode()
+        for i, body in enumerate(update_docs, 1):
+            routes[base_a + f"ex99{i}.htm"] = body
+        main_rows = [("8-K", "form8k.htm", base_b + "form8k.htm", "8-K")]
+        routes[cf.filing_index_url(tc.CIK, acc_b)] = tc.index_page(main_rows).encode()
+        routes[base_b + "form8k.htm"] = update_main or BOARD
+        return routes
+
+    def research(self, routes, state=None):
+        sec, fake = self.tc.client(routes)
+        result = ctx.research({"issuer": {"cik": self.tc.CIK, "ticker": "AAA"}}, sec, state or ctx.load_state(),
+                              self.tc.NOW, ctx.settings())
+        return result, [u for u in fake.calls if u.endswith(".htm") and not u.endswith("-index.htm")]
+
+    def test_many_irrelevant_update_attachments_do_not_push_the_results_release_out(self):
+        result, fetched = self.research(self.routes([BOARD, BOARD, BOARD, BOARD]))
+        self.assertIn(self.tc.BASE + "ex991.htm", fetched)  # the results release was downloaded
+        self.assertEqual(len(fetched), 4)  # documents_per_company
+        self.assertEqual(fetched.index(self.tc.BASE + "ex991.htm"), 2)  # right after the 2 update downloads
+        docs = [cf.load_document(d) for d in result["document_ids"]]
+        self.assertEqual([d["accession"] for d in docs], [self.tc.ACC])
+        self.assertTrue(all(not c["eligible"] for c in result["update_checks"]))
+
+    def test_an_eligible_8k_text_without_exhibit_is_linked_first(self):
+        result, _ = self.research(self.routes([BOARD], update_main=CONTRACT_MAIN))
+        docs = [cf.load_document(d) for d in result["document_ids"]]
+        self.assertEqual([d["document_type"] for d in docs], ["8-K", "EX-99.1"])
+        self.assertIn("customer_contract", next(c["reason"] for c in result["update_checks"] if c["eligible"]))
+
+    def test_a_cached_document_is_judged_again_without_rewriting_it(self):
+        routes = self.routes([DIVIDEND])
+        self.research(routes)  # stores the dividend exhibit
+        state = ctx.load_state()
+        stored = None
+        import gzip
+        for path in cf.documents_dir().glob("*.json.gz"):
+            record = json.loads(gzip.open(path, "rt", encoding="utf-8").read())
+            if record["accession"] == "0000000001-26-000020":
+                stored = path
+                record["relevance"]["business_update"] = True  # as the O3 word rule would have stored it
+                record["relevance"]["update_reason"] = "business_update_terms:increases,expects"
+                cf.store_document(record)
+        before = stored.read_bytes()
+        result, fetched = self.research(routes, state)
+        self.assertNotIn("0000000001-26-000020", [cf.load_document(d)["accession"] for d in result["document_ids"]])
+        self.assertEqual(stored.read_bytes(), before)  # judged from stored blocks, never rewritten
+
+    def test_stored_pbf_and_aehr_results_documents_stay_results(self):
+        for doc_id in ("DOC-9FC60A7023735EC9", "DOC-EA4425A446380C5A"):
+            record = None
+            path = ROOT / "data" / "processed" / "company_documents" / f"{doc_id}.json.gz"
+            import gzip
+            record = json.loads(gzip.open(path, "rt", encoding="utf-8").read())
+            with self.subTest(doc_id):
+                self.assertTrue(record["relevance"]["earnings"])
+                self.assertTrue(ctx.own_statements(record, record["issuer"]["name"]))
+
+
 class SignalQuarantineTest(unittest.TestCase):
     """P0: SIG-0900 is withheld from every reader; the ledger is unchanged; a broken list stops readers."""
 
