@@ -33,7 +33,8 @@ import common as c  # noqa: E402
 import company_filings as cf  # noqa: E402
 
 STATUSES = ("queued", "success", "no_relevant_document", "unavailable", "failed", "deferred_budget", "identity_conflict")
-DEFAULTS = {"companies_per_day": 10, "filings_per_company": 5, "documents_per_company": 3,
+DEFAULTS = {"companies_per_day": 10, "filings_per_company": 5, "documents_per_company": 4,
+            "update_days": 45, "update_filings_per_company": 2,
             "http_attempts_per_day": 100, "time_budget_s": 180, "timeout_s": 15, "max_document_bytes": 2_000_000,
             "lookback_days": 120, "revisit_days": 7, "retry_failed_hours": 24, "no_document_days": 7}
 
@@ -123,6 +124,13 @@ def select(all_targets: list[dict], state: dict, now: datetime, limit: int) -> l
 
 # ------------------------------------------------------------------ research
 
+def choose_filings(listed: list[dict], cfg: dict) -> list[dict]:
+    """Recent business updates first (at most update_filings_per_company), then the results releases and
+    reports as before (filings_per_company), so an update never pushes the last results release out."""
+    return ([f for f in listed if f.get("update")][:cfg.get("update_filings_per_company", 0)]
+            + [f for f in listed if not f.get("update")][:cfg["filings_per_company"]])
+
+
 def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg: dict) -> dict:
     """One company's recent filings: returns {status, document_ids, notes}; raises Budget/Blocked."""
     issuer = dict(target["issuer"])
@@ -134,7 +142,8 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 "notes": [f"submissions HTTP {error.code}"]}
     submissions = json.loads(body.decode("utf-8"))
     issuer["name"] = submissions.get("name") or issuer.get("name")
-    filings = cf.recent_filings(submissions, now.date(), cfg["lookback_days"])[:cfg["filings_per_company"]]
+    filings = choose_filings(cf.recent_filings(submissions, now.date(), cfg["lookback_days"], cfg.get("update_days")),
+                             cfg)
     found, examined, notes, bodies, failures = [], [], [], 0, 0
     for filing in filings:
         if bodies >= cfg["documents_per_company"]:
@@ -168,9 +177,10 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 cf.store_document(record)
                 state["documents_by_source"][key] = record["document_id"]
             examined.append(record["document_id"])
-            if record["relevance"]["earnings"]:
+            relevance = record["relevance"]
+            if relevance["earnings"] or (filing.get("update") and relevance.get("business_update")):
                 found.append(record["document_id"])
-                break  # one results document per filing
+                break  # one results or update document per filing
     if found:
         return {"status": "success", "quality": "partial" if failures else "complete", "document_ids": found,
                 "examined": examined, "notes": notes, "failures": failures}
@@ -332,6 +342,7 @@ BLOCK_SIGNALS = {
     "results": ("revenue", "net sales", "net income", "earnings per share", "operating income", "gross margin",
                 "ebitda", "per diluted share"),
     "guidance": ("guidance", "outlook", "expect", "forecast", "anticipate"),
+    "update": ("agreement", "contract", "award", "backlog", "orders", "acquisition", "capacity", "price increase"),
     "cause": ("driven by", "due to", "primarily", "reflect", "as a result", "because"),
     "one_off": ("one-time", "non-recurring", "impairment", "restructuring", "gain on", "tax benefit", "divest",
                 "special item"),

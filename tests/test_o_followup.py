@@ -137,5 +137,84 @@ class RevisionTimingTest(unittest.TestCase):
         self.assertIsNone(k.revision_timing({"observed_at": "2026-10-04T00:00:00+00:00", "eps": {}}, {}))
 
 
+UPDATE_ACC = "0000000001-26-000012"
+UPDATE_BASE = f"https://www.sec.gov/Archives/edgar/data/1/{UPDATE_ACC.replace('-', '')}/"
+UPDATE = b"""<html><body><p>AAA Inc. raises fiscal 2027 revenue guidance to $150 million after signing a
+multi-year supply agreement with a new data center customer.</p>
+<p>The agreement adds approximately $40 million of backlog.</p></body></html>"""
+DIVIDEND = b"<html><body><p>AAA Inc. declared a quarterly dividend of $0.245 per share payable in October.</p></body></html>"
+
+
+class RecentUpdateFilingTest(unittest.TestCase):
+    """O3: an 8-K of a business change after the last results release is read first, within limits."""
+
+    def setUp(self):
+        import test_candidate_context as tc
+        self.tc = tc
+
+    def listing(self):
+        tc = self.tc
+        return tc.submissions([
+            {"accessionNumber": UPDATE_ACC, "filingDate": "2026-09-20", "form": "8-K", "items": "7.01,9.01"},
+            {"accessionNumber": tc.ACC, "filingDate": "2026-09-10", "form": "8-K", "items": "2.02,9.01"},
+            {"accessionNumber": "0000000001-26-000009", "filingDate": "2026-09-01", "form": "8-K", "items": "5.02"},
+            {"accessionNumber": "0000000001-26-000003", "filingDate": "2026-06-01", "form": "8-K", "items": "1.01"}])
+
+    def test_recent_update_items_come_first_and_old_or_other_items_stay_out(self):
+        import company_filings as cf
+        today = self.tc.NOW.date()
+        plain = cf.recent_filings(self.listing(), today, 120)
+        self.assertEqual([f["accessionNumber"] for f in plain], [self.tc.ACC])
+        listed = cf.recent_filings(self.listing(), today, 120, 45)
+        self.assertEqual([(f["accessionNumber"], f.get("update", False)) for f in listed],
+                         [(UPDATE_ACC, True), (self.tc.ACC, False)])  # 1.01 of June is older than 45 days
+
+    def test_update_body_decides(self):
+        import company_filings as cf
+        self.assertTrue(cf.looks_like_business_update(cf.normalize_html(UPDATE))[0])
+        self.assertFalse(cf.looks_like_business_update(cf.normalize_html(DIVIDEND))[0])
+        self.assertFalse(cf.looks_like_business_update(cf.normalize_html(self.tc.UNRELATED))[0])
+
+    def test_research_links_the_update_and_keeps_the_results_release(self):
+        import candidate_context as ctx
+        import company_filings as cf
+        tc = self.tc
+        routes = tc.default_routes()
+        routes[cf.submissions_url(tc.CIK)] = json.dumps(self.listing()).encode()
+        routes[cf.filing_index_url(tc.CIK, UPDATE_ACC)] = tc.index_page([
+            ("Investor update", "ex991.htm", UPDATE_BASE + "ex991.htm", "EX-99.1")]).encode()
+        routes[UPDATE_BASE + "ex991.htm"] = UPDATE
+        fixture = tc.RunFixture()
+        fixture.setUp()
+        try:
+            sec, fake = tc.client(routes)
+            result = ctx.research({"issuer": {"cik": tc.CIK, "ticker": "AAA"}}, sec, ctx.load_state(), tc.NOW,
+                                  ctx.settings())
+            docs = [cf.load_document(d) for d in result["document_ids"]]
+            self.assertEqual([(d["accession"], d["filed_at"]) for d in docs],
+                             [(UPDATE_ACC, "2026-09-20"), (tc.ACC, "2026-09-10")])
+            self.assertTrue(docs[0]["relevance"]["business_update"])
+            routes[UPDATE_BASE + "ex991.htm"] = DIVIDEND  # an update without a business change is not linked
+            sec, fake = tc.client(routes)
+            state = ctx.load_state()
+            state["documents_by_source"] = {}
+            result = ctx.research({"issuer": {"cik": tc.CIK, "ticker": "AAA"}}, sec, state, tc.NOW, ctx.settings())
+            self.assertEqual([cf.load_document(d)["accession"] for d in result["document_ids"]], [tc.ACC])
+        finally:
+            fixture.doCleanups()
+
+    def test_many_updates_never_push_the_results_release_out(self):
+        import candidate_context as ctx
+        import company_filings as cf
+        tc = self.tc
+        entries = [{"accessionNumber": f"0000000001-26-0001{i:02d}", "filingDate": "2026-09-2" + str(i % 5),
+                    "form": "8-K", "items": "8.01"} for i in range(6)]
+        entries.append({"accessionNumber": tc.ACC, "filingDate": "2026-09-10", "form": "8-K", "items": "2.02"})
+        listed = cf.recent_filings(tc.submissions(entries), tc.NOW.date(), 120, 45)
+        chosen = ctx.choose_filings(listed, ctx.settings())
+        self.assertEqual(sum(1 for f in chosen if f.get("update")), 2)
+        self.assertIn(tc.ACC, [f["accessionNumber"] for f in chosen])
+
+
 if __name__ == "__main__":
     unittest.main()

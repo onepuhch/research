@@ -59,7 +59,9 @@
   "candidate_context": {
     "companies_per_day": 10,
     "filings_per_company": 5,
-    "documents_per_company": 3,
+    "documents_per_company": 4,
+    "update_days": 45,
+    "update_filings_per_company": 2,
     "http_attempts_per_day": 100,
     "time_budget_s": 180,
     "timeout_s": 15,

@@ -29,6 +29,11 @@ NORMALIZATION_VERSION = "norm-v1"
 SEC_HOSTS = ("sec.gov",)
 MIN_INTERVAL_S = 0.5   # at most 2 requests per second, one at a time (SEC allows 10)
 EARNINGS_ITEMS = ("2.02",)
+# 8-K items that can carry a business change between results: material agreement, completed acquisition,
+# Regulation FD (investor day, guidance update) and other events. Only recent ones are read (O3).
+UPDATE_ITEMS = ("1.01", "2.01", "7.01", "8.01")
+UPDATE_WORDS = ("guidance", "outlook", "raises", "raised", "increases", "agreement", "contract", "award", "order",
+                "backlog", "acquisition", "acquire", "capacity", "pricing", "price increase", "expects")
 EARNINGS_WORDS = ("results", "revenue", "net income", "earnings per share", "outlook", "guidance",
                   "quarter", "fiscal", "operating income", "net sales")
 _last_request = [0.0]
@@ -157,8 +162,10 @@ def submissions_url(cik: str) -> str:
     return f"https://data.sec.gov/submissions/CIK{cik10(cik)}.json"
 
 
-def recent_filings(submissions: dict, today: date, days: int = 120) -> list[dict]:
-    """Recent 8-K/6-K results and 10-Q/10-K/20-F reports, newest first, earnings releases first."""
+def recent_filings(submissions: dict, today: date, days: int = 120, update_days: int | None = None) -> list[dict]:
+    """Recent 8-K/6-K results and 10-Q/10-K/20-F reports, newest first, earnings releases first. With
+    update_days, 8-Ks of UPDATE_ITEMS filed within that many days come before them ('update': True):
+    what happened after the last results release (an investor day, a guidance raise, a contract)."""
     recent = (submissions.get("filings") or {}).get("recent") or {}
     keys = ("accessionNumber", "filingDate", "reportDate", "form", "primaryDocument", "primaryDocDescription", "items")
     rows = [dict(zip(keys, values)) for values in zip(*(recent.get(k) or [] for k in keys))]
@@ -174,6 +181,10 @@ def recent_filings(submissions: dict, today: date, days: int = 120) -> list[dict
         items = str(row.get("items") or "")
         if form == "8-K" and any(i in items for i in EARNINGS_ITEMS):
             rank = 0
+        elif (form == "8-K" and update_days is not None and (today - filed).days <= update_days
+              and any(i in items for i in UPDATE_ITEMS)):
+            chosen.append({**row, "rank": -1, "update": True})
+            continue
         elif form == "6-K":
             rank = 1
         elif form in ("10-Q", "10-K", "20-F", "40-F"):
@@ -331,6 +342,19 @@ def block_text(block: dict) -> str:
     return block["text"] if block["kind"] == "p" else " | ".join(" ; ".join(r) for r in block["rows"])
 
 
+def looks_like_business_update(blocks: list[dict]) -> tuple[bool, str]:
+    """A recent 8-K exhibit that states a business change with a number (a raised outlook, a contract
+    or order of a size, an acquisition): decided from the body. Board changes, dividends and legal
+    notices are not updates."""
+    boilerplate = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
+    kept = [b for b in blocks[:400] if not any(w in block_text(b).lower() for w in boilerplate)]
+    body = " ".join(block_text(b) for b in kept).lower()
+    hits = [w for w in UPDATE_WORDS if w in body]
+    if len(hits) >= 2 and re.search(r"[$%]\s?\d|\d[\d,.]*\s?(?:million|billion|%)", body):
+        return True, "business_update_terms:" + ",".join(hits[:5])
+    return False, "not_a_business_update:" + ",".join(hits[:5])
+
+
 def looks_like_earnings(blocks: list[dict]) -> tuple[bool, str]:
     """Decided from the body, not the exhibit label: EX-99 is not always a results release."""
     boilerplate = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
@@ -380,6 +404,7 @@ def build_record(issuer: dict, filing: dict, doc: dict, raw: bytes, final_url: s
     content_type = "pdf" if raw[:5] == b"%PDF-" or doc["name"].lower().endswith(".pdf") else "html"
     blocks = normalize_html(raw) if content_type == "html" else []
     relevant, reason = looks_like_earnings(blocks) if blocks else (False, "unsupported_content")
+    update, update_reason = looks_like_business_update(blocks) if blocks else (False, "unsupported_content")
     return {
         "document_id": document_id(issuer["cik"], filing["accessionNumber"], doc["url"], sha),
         "issuer": issuer, "url": doc["url"], "final_url": final_url,
@@ -391,6 +416,7 @@ def build_record(issuer: dict, filing: dict, doc: dict, raw: bytes, final_url: s
         "content_type": content_type, "coverage": "partial" if truncated else ("complete" if blocks else "none"),
         "status": "unsupported_content" if content_type != "html" or not blocks else "parsed",
         "relevance": {"earnings": relevant, "reason": reason,
-                      "core_earnings": relevant and any(w in " ".join(block_text(b) for b in blocks).lower() for w in ("net income", "net sales", "earnings per share", "operating income"))},
+                      "core_earnings": relevant and any(w in " ".join(block_text(b) for b in blocks).lower() for w in ("net income", "net sales", "earnings per share", "operating income")),
+                      "business_update": update, "update_reason": update_reason},
         "normalization_version": NORMALIZATION_VERSION, "blocks": blocks,
     }
