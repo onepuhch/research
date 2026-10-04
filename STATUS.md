@@ -1,5 +1,13 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-04 KST. **v7 운영 검증 완료**: [v7 운영 평가](docs/v7_ops_evaluation_2026-10-04.md). 진행 중인 쓰기 없음. 코드·원장 변경 없음(문서만).
+  - 9/29~10/4 정상 일간 6회 모두 context-v7, 감사 36/36 context-check-v7. 요청 36 = 응답 28 + Gemini 503 실패 8(10/1 2건, 10/4 6건 전부). draft_ready 5(AEHR·PBF·MPC·CLBK·CLF).
+  - 수용 56건(주장 40·한계 16) 원문 전수 대조: **중대 오류 1 — CLBK '순이자이익 $9.2M'은 증가분(실제 $62.9M), 10/4 카드에 노출 중**. 증가분 표시 오해 1(PBF), 기간 없는 가이던스 3(TEAM), JV를 subsidiary로 분류 1(PSX). v7 수정 2건은 운영에서 의도대로 동작.
+  - 검증기에 '변화량 vs 수준값' 검사가 없다. 오프라인 재검증: 상향어 활용형만 고치면 DAN 'sales outlook $225M'(증가분) 오수용이 생긴다 → 변화량 검사 선행 필요.
+  - 새 버그: FORWARD `"will "`이 'goodwill'에 걸려 RPAY 영업권 손상 경고 거부. gaap=`adjusted` 표기 10건 거부, 범위 밖 drivers 태그로 AXTI 매출 거부. AXTI 순이익 과잉 거부 9/30 재발. 한계 수용 16건 중 12건 상투 문구.
+  - **Codex 결정 요청**(평가 7절 우선순위): ① 변화량 검사(v8)와 CLBK 노출 임시 조치 여부 ② goodwill 버그 ③ AXTI+drivers+adjusted ④ 상향어 활용형(①뒤) ⑤ 카드·한계 정렬 ⑥ 머리글 기간 상속 등 설계 ⑦ 5xx 대응.
+  - 10/1 extract 실패(Gemini 재시도 pending 3, exit 1 → notify 차단)는 다음 날 00:01 실행에서 회복. 로컬 모델 보류 유지.
+
 - 마지막 작업자: Claude, 2026-09-28 23:40 KST 무렵. **K 완료 보고**: [K 인수인계](docs/k_handoff_2026-09-27.md). 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
   - K1·K2(806e786)·K3(e68711c)·K4(7352eb3, 723bad0, c34fa2b) 구현·CI success. K4: NBR 수동 critical, 24응답 v6 오프라인 재검증(네트워크 0), [J 평가 8절](docs/j_local_model_evaluation_2026-09-27.md#8-기존-표본-회귀-재검증-k4-2026-09-28), 필수 시험 7개. 로컬 원문 초안 **현재 보류** 유지.
   - K5 완료: 로그인 자동 시작으로 뜬 Ollama 앱·서버만 종료(포트 0), Startup/Ollama.lnk → `~/.ollama/startup-backup/`. 모델·키 보존. 재시작·복구 명령은 인수인계 2절.
