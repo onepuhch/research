@@ -1,0 +1,117 @@
+{
+ "schema_version": 1,
+ "base_commit": "b358704",
+ "evaluated_at_head": "5203165",
+ "base_date_kst": "2026-10-04",
+ "window_kst": [
+  "2026-09-29",
+  "2026-10-04"
+ ],
+ "inputs_sha256_line_normalized": {
+  "data/eval/l4_2026-10-04/audits.json.gz": "41c330c336783df30335d1a1dbff06749bb0f07b22243294f50813c935f5f51e",
+  "data/processed/candidate_alerts.json": "0f3a80ea25aae3567a554cdad0b7fd5d9ae33b3667bcd6ac58f686ec45b9602c",
+  "data/processed/candidates/index.json": "7a8c75f95d037889227f9519f6ae5055ab57e4e52184168c8308c4a86b9891df",
+  "data/processed/notify_state.json": "5ee3d544a74c57aa6ecbe8bbe47a9fceb2a50859a1e9e4afd1ee7b911d0600f6",
+  "data/processed/revision_screen/20260929T055354Z_36528079469-1.json.gz": "8ed329adabed61bb365a5ac046a5a3c8475f59790c5c4acd2d21c42e0d20c8c8",
+  "data/processed/revision_screen/20260930T054134Z_36674489444-1.json.gz": "4647c8db3335e69eb218ec7174cf39abbaaa4237c6e3559c348b4545d59b5fbe",
+  "data/processed/revision_screen/20261001T060811Z_36822997450-1.json.gz": "5b7fb91963e839a7e2d9e260e957e2bc2e54ed021f095e96e584e6f42417bcb0",
+  "data/processed/revision_screen/20261001T150156Z_36880974655-1.json.gz": "242e5155959818939953dfc99da9cedfa96bce4667e49a1f2193041c56fcf610",
+  "data/processed/revision_screen/20261003T052857Z_37099766046-1.json.gz": "19ed3830acb4abc065fa255ad7d3ced8366417a25169eb78c89880d504526682",
+  "data/processed/revision_screen/20261004T060125Z_37181539693-1.json.gz": "ed629b330f74d4f1e8a42d5c8285b324bca6bc5b9ecc7e62aa9e07afc3e92376",
+  "data/processed/signal_log.csv": "86fb5ea3e830b0c15a4825add911df387cc3ae6629b34120927ed7a75e670280",
+  "data/processed/source_state.json": "7516012e73f785c468bbc63677437b2eaaae0f5ea087148d3d080b6a855aa950"
+ },
+ "outputs_sha256": {
+  "funnel.json": "1e4377dc429aebc36d6141cf552d1b035f6b8cc45c8e626262c3d1fd576f4d61",
+  "case_reviews.json": "d9c9185172b740d5aa133549b38fba76cb2fa491b21b4dd561d71b6f6a454a04",
+  "export_inputs.py": "4656d97cce4e515080b76be239a86f9161bc565cacc5dcf08095bbab8f7438cf"
+ },
+ "cases": [
+  {
+   "ticker": "PBF",
+   "zone": "top_card",
+   "selection": "10/4 index 1번째"
+  },
+  {
+   "ticker": "AEHR",
+   "zone": "top_card",
+   "selection": "10/4 index 2번째"
+  },
+  {
+   "ticker": "TALO",
+   "zone": "top_card",
+   "selection": "10/4 index 3번째"
+  },
+  {
+   "ticker": "DK",
+   "zone": "top_card",
+   "selection": "10/4 index 4번째"
+  },
+  {
+   "ticker": "NBR",
+   "zone": "top_card",
+   "selection": "10/4 index 5번째"
+  },
+  {
+   "ticker": "MPC",
+   "zone": "top_card",
+   "selection": "10/4 index 6번째"
+  },
+  {
+   "ticker": "OSCR",
+   "zone": "pass_outside_cards",
+   "selection": "카드 밖 pct_90 1위(45.9%)"
+  },
+  {
+   "ticker": "VSEC",
+   "zone": "pass_outside_cards",
+   "selection": "카드 밖 pct_90 2위(44.8%)"
+  },
+  {
+   "ticker": "PSTL",
+   "zone": "pass_outside_cards",
+   "selection": "카드 밖 pct_90 3위(41.2%)"
+  },
+  {
+   "ticker": "ALAB",
+   "zone": "boundary_control",
+   "selection": "90일 상향 있으나 eps_now == eps_30d로 제외; 이미 추적 중(신규 발견 분모 제외)"
+  },
+  {
+   "ticker": "CHRN",
+   "zone": "news",
+   "selection": "SIG-0899 (계약/높은 점수 8, B)"
+  },
+  {
+   "ticker": "NOVT",
+   "zone": "news",
+   "selection": "SIG-0900 (실현/낮은 점수 3, 관망)"
+  }
+ ],
+ "job_log_figures": "export_inputs.py LOG_FIGURES: GitHub Actions job logs of runs 36528079469, 36674489444, 36822997450, 36880974655, 37099766046, 37181539693 (read 2026-10-04)",
+ "post_hoc_supplements": {
+  "OSCR": {
+   "url": "https://www.nasdaq.com/press-release/oscar-health-announces-record-financial-results-first-half-2026-and-raises-full-year",
+   "published": "2026-08-06",
+   "fetched_at": "2026-10-04T11:28Z",
+   "text_sha256_16": "7b8cb8e539cf6334",
+   "note": "회사 IR 원본 URL은 페이지 없음 응답 → 같은 보도자료의 Nasdaq 게재본. 사후 보완"
+  },
+  "VSEC": {
+   "url": "https://ir.vsecorp.com/news/press-releases/detail/413/vse-corporation-announces-second-quarter-2026-results",
+   "published": "2026-08-05",
+   "fetched_at": "2026-10-04T11:26Z",
+   "text_sha256_16": "11d14ea671105c9b",
+   "note": "사후 보완"
+  },
+  "PSTL": {
+   "url": "https://investor.postalrealtytrust.com/Investors/news/news-details/2026/Postal-Realty-Trust-Inc--Reports-Second-Quarter-2026-Results/default.aspx",
+   "published": "2026-08-04",
+   "fetched_at": "2026-10-04T11:28Z",
+   "text_sha256_16": "782cbc05bc4a15a2",
+   "note": "사후 보완"
+  }
+ },
+ "card_display": "v9/cards-v7 offline render of the stored data (not the cards users received)",
+ "reproduce": "python data/eval/n_2026-10-04/export_inputs.py"
+}

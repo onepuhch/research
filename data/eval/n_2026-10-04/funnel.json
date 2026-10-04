@@ -1,0 +1,1471 @@
+{
+ "base_commit": "b358704",
+ "window_kst": [
+  "2026-09-29",
+  "2026-10-04"
+ ],
+ "eps_path_by_day": {
+  "2026-09-29": {
+   "run_id": "36528079469-1",
+   "snapshot": "data/processed/revision_screen/20260929T055354Z_36528079469-1.json.gz",
+   "universe": 7676,
+   "quotes": {
+    "requested": 7676,
+    "success": 7673,
+    "unavailable": 3,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "earnings": {
+    "requested": 3291,
+    "success": 2432,
+    "unavailable": 859,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "comparable_rows": 2432,
+   "exclusions": {
+    "no_eps_estimate": 450,
+    "not_equity": 150,
+    "market_cap_below_min": 3751,
+    "not_usd": 31,
+    "eps_currency_mismatch": 164,
+    "analysts_below_min": 559,
+    "eps_currency_missing": 31,
+    "past_estimate_zero": 47,
+    "period_missing": 56,
+    "no_next_fiscal_year": 2
+   },
+   "condition_pass": 102,
+   "card_targets": 30,
+   "pass_outside_cards": 72,
+   "pass_by_list": {
+    "yield_only": 41,
+    "growth_only": 12,
+    "both": 49
+   },
+   "source_research": {
+    "targets": 30,
+    "researched": 4,
+    "statuses": {
+     "success": 4
+    }
+   },
+   "drafts": {
+    "requests": 6,
+    "attempts": 6,
+    "outcomes": {
+     "answered": 6
+    },
+    "http_errors": {},
+    "statuses_v7": {
+     "insufficient_earnings_context": 2,
+     "draft_ready": 2,
+     "no_supported_claims": 2
+    }
+   },
+   "alerts": [
+    {
+     "slots": 3,
+     "selected": 1,
+     "sent": 1,
+     "bootstrap": false
+    }
+   ]
+  },
+  "2026-09-30": {
+   "run_id": "36674489444-1",
+   "snapshot": "data/processed/revision_screen/20260930T054134Z_36674489444-1.json.gz",
+   "universe": 7673,
+   "quotes": {
+    "requested": 7673,
+    "success": 7668,
+    "unavailable": 5,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "earnings": {
+    "requested": 3236,
+    "success": 2414,
+    "unavailable": 822,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "comparable_rows": 2414,
+   "exclusions": {
+    "no_eps_estimate": 425,
+    "not_equity": 150,
+    "market_cap_below_min": 3826,
+    "not_usd": 31,
+    "eps_currency_mismatch": 162,
+    "analysts_below_min": 544,
+    "eps_currency_missing": 27,
+    "past_estimate_zero": 48,
+    "period_missing": 40,
+    "no_next_fiscal_year": 1
+   },
+   "condition_pass": 100,
+   "card_targets": 31,
+   "pass_outside_cards": 69,
+   "pass_by_list": {
+    "yield_only": 41,
+    "growth_only": 12,
+    "both": 47
+   },
+   "source_research": {
+    "targets": 31,
+    "researched": 3,
+    "statuses": {
+     "success": 3
+    }
+   },
+   "drafts": {
+    "requests": 6,
+    "attempts": 6,
+    "outcomes": {
+     "answered": 6
+    },
+    "http_errors": {},
+    "statuses_v7": {
+     "insufficient_earnings_context": 3,
+     "draft_ready": 1,
+     "no_supported_claims": 2
+    }
+   },
+   "alerts": [
+    {
+     "slots": 3,
+     "selected": 2,
+     "sent": 2,
+     "bootstrap": false
+    }
+   ]
+  },
+  "2026-10-01": {
+   "run_id": "36822997450-1",
+   "snapshot": "data/processed/revision_screen/20261001T060811Z_36822997450-1.json.gz",
+   "universe": 7673,
+   "quotes": {
+    "requested": 7673,
+    "success": 7670,
+    "unavailable": 3,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "earnings": {
+    "requested": 3238,
+    "success": 2416,
+    "unavailable": 822,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "comparable_rows": 2416,
+   "exclusions": {
+    "no_eps_estimate": 427,
+    "not_equity": 150,
+    "market_cap_below_min": 3824,
+    "not_usd": 31,
+    "eps_currency_mismatch": 163,
+    "analysts_below_min": 543,
+    "eps_currency_missing": 28,
+    "past_estimate_zero": 47,
+    "period_missing": 40,
+    "no_next_fiscal_year": 1
+   },
+   "condition_pass": 105,
+   "card_targets": 32,
+   "pass_outside_cards": 73,
+   "pass_by_list": {
+    "yield_only": 46,
+    "growth_only": 13,
+    "both": 46
+   },
+   "source_research": {
+    "targets": 32,
+    "researched": 5,
+    "statuses": {
+     "success": 5
+    }
+   },
+   "drafts": {
+    "requests": 6,
+    "attempts": 6,
+    "outcomes": {
+     "answered": 4,
+     "failed": 2
+    },
+    "http_errors": {
+     "503": 2
+    },
+    "statuses_v7": {
+     "insufficient_earnings_context": 2,
+     "no_supported_claims": 2
+    }
+   },
+   "alerts": [
+    {
+     "slots": 3,
+     "selected": 2,
+     "sent": 2,
+     "bootstrap": false
+    }
+   ]
+  },
+  "2026-10-02": {
+   "run_id": "36880974655-1",
+   "snapshot": "data/processed/revision_screen/20261001T150156Z_36880974655-1.json.gz",
+   "universe": 7675,
+   "quotes": {
+    "requested": 7675,
+    "success": 7672,
+    "unavailable": 3,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "earnings": {
+    "requested": 3230,
+    "success": 2412,
+    "unavailable": 818,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "comparable_rows": 2412,
+   "exclusions": {
+    "no_eps_estimate": 426,
+    "market_cap_below_min": 3835,
+    "not_equity": 150,
+    "not_usd": 31,
+    "eps_currency_mismatch": 162,
+    "analysts_below_min": 541,
+    "eps_currency_missing": 27,
+    "past_estimate_zero": 47,
+    "period_missing": 39,
+    "no_next_fiscal_year": 2
+   },
+   "condition_pass": 105,
+   "card_targets": 32,
+   "pass_outside_cards": 73,
+   "pass_by_list": {
+    "yield_only": 45,
+    "growth_only": 13,
+    "both": 47
+   },
+   "source_research": {
+    "targets": 32,
+    "researched": 2,
+    "statuses": {
+     "success": 2
+    }
+   },
+   "drafts": {
+    "requests": 6,
+    "attempts": 6,
+    "outcomes": {
+     "answered": 6
+    },
+    "http_errors": {},
+    "statuses_v7": {
+     "draft_ready": 1,
+     "insufficient_earnings_context": 4,
+     "no_supported_claims": 1
+    }
+   },
+   "alerts": [
+    {
+     "slots": 3,
+     "selected": 1,
+     "sent": 1,
+     "bootstrap": false
+    }
+   ]
+  },
+  "2026-10-03": {
+   "run_id": "37099766046-1",
+   "snapshot": "data/processed/revision_screen/20261003T052857Z_37099766046-1.json.gz",
+   "universe": 7675,
+   "quotes": {
+    "requested": 7675,
+    "success": 7673,
+    "unavailable": 2,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "earnings": {
+    "requested": 3237,
+    "success": 2415,
+    "unavailable": 822,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "comparable_rows": 2415,
+   "exclusions": {
+    "no_eps_estimate": 427,
+    "not_equity": 150,
+    "market_cap_below_min": 3827,
+    "not_usd": 32,
+    "eps_currency_mismatch": 163,
+    "analysts_below_min": 546,
+    "eps_currency_missing": 26,
+    "period_missing": 41,
+    "past_estimate_zero": 45,
+    "no_next_fiscal_year": 1
+   },
+   "condition_pass": 98,
+   "card_targets": 32,
+   "pass_outside_cards": 66,
+   "pass_by_list": {
+    "yield_only": 42,
+    "growth_only": 12,
+    "both": 44
+   },
+   "source_research": {
+    "targets": 32,
+    "researched": 9,
+    "statuses": {
+     "success": 9
+    }
+   },
+   "drafts": {
+    "requests": 6,
+    "attempts": 6,
+    "outcomes": {
+     "answered": 6
+    },
+    "http_errors": {},
+    "statuses_v7": {
+     "no_supported_claims": 1,
+     "insufficient_earnings_context": 4,
+     "draft_ready": 1
+    }
+   },
+   "alerts": [
+    {
+     "slots": 3,
+     "selected": 3,
+     "sent": 3,
+     "bootstrap": false
+    }
+   ]
+  },
+  "2026-10-04": {
+   "run_id": "37181539693-1",
+   "snapshot": "data/processed/revision_screen/20261004T060125Z_37181539693-1.json.gz",
+   "universe": 7675,
+   "quotes": {
+    "requested": 7675,
+    "success": 7673,
+    "unavailable": 2,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "earnings": {
+    "requested": 3237,
+    "success": 2414,
+    "unavailable": 823,
+    "failed": 0,
+    "not_attempted": 0
+   },
+   "comparable_rows": 2414,
+   "exclusions": {
+    "no_eps_estimate": 427,
+    "not_equity": 150,
+    "market_cap_below_min": 3827,
+    "not_usd": 32,
+    "eps_currency_mismatch": 163,
+    "analysts_below_min": 547,
+    "eps_currency_missing": 26,
+    "period_missing": 41,
+    "past_estimate_zero": 45,
+    "no_next_fiscal_year": 1
+   },
+   "condition_pass": 102,
+   "card_targets": 32,
+   "pass_outside_cards": 70,
+   "pass_by_list": {
+    "yield_only": 44,
+    "growth_only": 12,
+    "both": 46
+   },
+   "source_research": {
+    "targets": 32,
+    "researched": 10,
+    "statuses": {
+     "no_relevant_document": 1,
+     "success": 9
+    }
+   },
+   "drafts": {
+    "requests": 6,
+    "attempts": 6,
+    "outcomes": {
+     "failed": 6
+    },
+    "http_errors": {
+     "503": 6
+    },
+    "statuses_v7": {}
+   },
+   "alerts": [
+    {
+     "slots": 3,
+     "selected": 0,
+     "sent": 0,
+     "bootstrap": false
+    }
+   ]
+  }
+ },
+ "eps_path_unique": {
+  "condition_pass_companies": 117,
+  "card_companies": 38,
+  "card_companies_with_any_ctx": 28,
+  "card_companies_ctx_in_window": 28,
+  "card_companies_latest_draft_ready": 5,
+  "card_companies_alerted_ever": 10,
+  "alert_status": {
+   "bootstrap_9_25_marked_seen": 28,
+   "sent": 10
+  },
+  "card_days_histogram": {
+   "6": 25,
+   "1": 3,
+   "4": 3,
+   "2": 3,
+   "5": 3,
+   "3": 1
+  },
+  "sector": {
+   "Energy": 14,
+   "Technology": 11,
+   "Healthcare": 5,
+   "Consumer Cyclical": 2,
+   "Financial Services": 2,
+   "Basic Materials": 2,
+   "Communication Services": 1,
+   "Industrials": 1
+  },
+  "industry_top": {
+   "Oil & Gas Refining & Marketing": 8,
+   "Software - Application": 4,
+   "Semiconductor Equipment & Materials": 3,
+   "Biotechnology": 3,
+   "Oil & Gas Midstream": 3,
+   "Banks - Regional": 2,
+   "Steel": 2,
+   "Semiconductors": 2
+  }
+ },
+ "companies": [
+  {
+   "ticker": "AEHR",
+   "entity_id": "NASDAQ:AEHR",
+   "candidate_id": "CAN-D50A4151AB176FB7",
+   "industry": "Semiconductor Equipment & Materials",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 3,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "draft_ready",
+   "filing_dates": [
+    "2026-07-14"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2028-05-31",
+   "pct_90": 361.1,
+   "yield_change_90_pp": 1.01
+  },
+  {
+   "ticker": "AGL",
+   "entity_id": "NYSE:AGL",
+   "candidate_id": "CAN-5A9E947A6AEC56D7",
+   "industry": "Medical Care Facilities",
+   "sector": "Healthcare",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-08-05"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": null,
+   "yield_change_90_pp": 3.587
+  },
+  {
+   "ticker": "AMCX",
+   "entity_id": "NASDAQ:AMCX",
+   "candidate_id": "CAN-14C6F602D0868FB9",
+   "industry": "Entertainment",
+   "sector": "Communication Services",
+   "card_days": 1,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 3,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-07-30"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": [
+    {
+     "day": "2026-09-25",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 91.5,
+   "yield_change_90_pp": 11.292
+  },
+  {
+   "ticker": "AXTI",
+   "entity_id": "NASDAQ:AXTI",
+   "candidate_id": "CAN-DC6D3F92ECFFD019",
+   "industry": "Semiconductor Equipment & Materials",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 2,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-07-30"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 199.2,
+   "yield_change_90_pp": 1.744
+  },
+  {
+   "ticker": "BLTE",
+   "entity_id": "NASDAQ:BLTE",
+   "candidate_id": "CAN-3D7A7E3B7BFBE2CE",
+   "industry": "Biotechnology",
+   "sector": "Healthcare",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 139.3,
+   "yield_change_90_pp": 0.825
+  },
+  {
+   "ticker": "CBRL",
+   "entity_id": "NASDAQ:CBRL",
+   "candidate_id": "CAN-DF76D3AD7ADC73CF",
+   "industry": "Restaurants",
+   "sector": "Consumer Cyclical",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2028-07-31",
+   "pct_90": 83.3,
+   "yield_change_90_pp": 1.731
+  },
+  {
+   "ticker": "CIB",
+   "entity_id": "NYSE:CIB",
+   "candidate_id": "CAN-23C223C070F4B3C3",
+   "industry": "Banks - Regional",
+   "sector": "Financial Services",
+   "card_days": 1,
+   "first_card_day_in_window": "2026-10-02",
+   "first_observed_ever": "2026-10-02",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": [
+    {
+     "day": "2026-10-02",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 28.7,
+   "yield_change_90_pp": 2.863
+  },
+  {
+   "ticker": "CLBK",
+   "entity_id": "NASDAQ:CLBK",
+   "candidate_id": "CAN-E763F753A2D7609F",
+   "industry": "Banks - Regional",
+   "sector": "Financial Services",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "draft_ready",
+   "filing_dates": [
+    "2026-07-30"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 78.7,
+   "yield_change_90_pp": 2.446
+  },
+  {
+   "ticker": "CLF",
+   "entity_id": "NYSE:CLF",
+   "candidate_id": "CAN-7F0690B785E31226",
+   "industry": "Steel",
+   "sector": "Basic Materials",
+   "card_days": 4,
+   "first_card_day_in_window": "2026-10-01",
+   "first_observed_ever": "2026-10-01",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "draft_ready",
+   "filing_dates": [
+    "2026-07-23"
+   ],
+   "first_document_stored": "2026-10-01",
+   "alerts_sent": [
+    {
+     "day": "2026-10-01",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 54.1,
+   "yield_change_90_pp": 2.397
+  },
+  {
+   "ticker": "CODI",
+   "entity_id": "NYSE:CODI",
+   "candidate_id": "CAN-36582E27909720FE",
+   "industry": "Conglomerates",
+   "sector": "Industrials",
+   "card_days": 4,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-10"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 130.0,
+   "yield_change_90_pp": 3.372
+  },
+  {
+   "ticker": "CORT",
+   "entity_id": "NASDAQ:CORT",
+   "candidate_id": "CAN-700B10D9B75B0040",
+   "industry": "Biotechnology",
+   "sector": "Healthcare",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 2,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-07-29"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 170.1,
+   "yield_change_90_pp": 2.385
+  },
+  {
+   "ticker": "CVI",
+   "entity_id": "NYSE:CVI",
+   "candidate_id": "CAN-F451582E2056444F",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 2,
+   "first_card_day_in_window": "2026-10-03",
+   "first_observed_ever": "2026-10-03",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": [
+    {
+     "day": "2026-10-03",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 62.0,
+   "yield_change_90_pp": 2.449
+  },
+  {
+   "ticker": "DAN",
+   "entity_id": "NYSE:DAN",
+   "candidate_id": "CAN-0584EAE068460D91",
+   "industry": "Auto Parts",
+   "sector": "Consumer Cyclical",
+   "card_days": 5,
+   "first_card_day_in_window": "2026-09-30",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-06"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 24.1,
+   "yield_change_90_pp": 2.919
+  },
+  {
+   "ticker": "DINO",
+   "entity_id": "NYSE:DINO",
+   "candidate_id": "CAN-11B1565B12AFE2F9",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-07-28"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 72.4,
+   "yield_change_90_pp": 4.72
+  },
+  {
+   "ticker": "DK",
+   "entity_id": "NYSE:DK",
+   "candidate_id": "CAN-D577F2C38FBBCFF7",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 3,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-08-05"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 344.7,
+   "yield_change_90_pp": 8.627
+  },
+  {
+   "ticker": "FSLY",
+   "entity_id": "NASDAQ:FSLY",
+   "candidate_id": "CAN-8ED72F330C1AE34D",
+   "industry": "Software - Application",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-05"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 59.8,
+   "yield_change_90_pp": 0.914
+  },
+  {
+   "ticker": "LPG",
+   "entity_id": "NYSE:LPG",
+   "candidate_id": "CAN-6AC97D7E0081C82D",
+   "industry": "Oil & Gas Midstream",
+   "sector": "Energy",
+   "card_days": 2,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2028-03-31",
+   "pct_90": 55.5,
+   "yield_change_90_pp": 3.079
+  },
+  {
+   "ticker": "MPC",
+   "entity_id": "NYSE:MPC",
+   "candidate_id": "CAN-77F79A3B05ABB893",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 2,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "draft_ready",
+   "filing_dates": [
+    "2026-08-04"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 106.7,
+   "yield_change_90_pp": 6.063
+  },
+  {
+   "ticker": "MU",
+   "entity_id": "NASDAQ:MU",
+   "candidate_id": "CAN-43EA86A18E5096A9",
+   "industry": "Semiconductors",
+   "sector": "Technology",
+   "card_days": 2,
+   "first_card_day_in_window": "2026-10-03",
+   "first_observed_ever": "2026-10-03",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": [
+    {
+     "day": "2026-10-03",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-08-31",
+   "pct_90": 26.1,
+   "yield_change_90_pp": 3.964
+  },
+  {
+   "ticker": "NBR",
+   "entity_id": "NYSE:NBR",
+   "candidate_id": "CAN-E460E34B1D8B66CE",
+   "industry": "Oil & Gas Drilling",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 2,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-07-28"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 223.8,
+   "yield_change_90_pp": 3.133
+  },
+  {
+   "ticker": "PARR",
+   "entity_id": "NYSE:PARR",
+   "candidate_id": "CAN-FDA6B7F62852042F",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 2,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-08-05"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 48.2,
+   "yield_change_90_pp": 5.746
+  },
+  {
+   "ticker": "PBF",
+   "entity_id": "NYSE:PBF",
+   "candidate_id": "CAN-82719B27698E3C22",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 3,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "draft_ready",
+   "filing_dates": [
+    "2026-07-30"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 184.4,
+   "yield_change_90_pp": 14.171
+  },
+  {
+   "ticker": "PGY",
+   "entity_id": "NASDAQ:PGY",
+   "candidate_id": "CAN-EE8A92AC2C2D3E8C",
+   "industry": "Software - Infrastructure",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-07-30"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 15.9,
+   "yield_change_90_pp": 3.146
+  },
+  {
+   "ticker": "PSX",
+   "entity_id": "NYSE:PSX",
+   "candidate_id": "CAN-3D30FF7D03231FE1",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-05"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 50.6,
+   "yield_change_90_pp": 3.33
+  },
+  {
+   "ticker": "PUBM",
+   "entity_id": "NASDAQ:PUBM",
+   "candidate_id": "CAN-C8B827862A3B86D5",
+   "industry": "Software - Application",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-06"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 66.6,
+   "yield_change_90_pp": 1.764
+  },
+  {
+   "ticker": "RPAY",
+   "entity_id": "NASDAQ:RPAY",
+   "candidate_id": "CAN-490AC1686F9442CE",
+   "industry": "Software - Infrastructure",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 2,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-10"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 19.9,
+   "yield_change_90_pp": 5.049
+  },
+  {
+   "ticker": "SMTC",
+   "entity_id": "NASDAQ:SMTC",
+   "candidate_id": "CAN-782282A0C20A29F1",
+   "industry": "Semiconductors",
+   "sector": "Technology",
+   "card_days": 5,
+   "first_card_day_in_window": "2026-09-30",
+   "first_observed_ever": "2026-09-30",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": [
+    {
+     "day": "2026-09-30",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2028-01-31",
+   "pct_90": 50.7,
+   "yield_change_90_pp": 1.012
+  },
+  {
+   "ticker": "SPT",
+   "entity_id": "NASDAQ:SPT",
+   "candidate_id": "CAN-E87900AEFDDE7B07",
+   "industry": "Software - Application",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-08-06"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 28.5,
+   "yield_change_90_pp": 3.382
+  },
+  {
+   "ticker": "SUNC",
+   "entity_id": "NYSE:SUNC",
+   "candidate_id": "CAN-A0761326A7E13159",
+   "industry": "Oil & Gas Midstream",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-04"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 27.3,
+   "yield_change_90_pp": 3.484
+  },
+  {
+   "ticker": "TALO",
+   "entity_id": "NYSE:TALO",
+   "candidate_id": "CAN-ABBBE42278126D28",
+   "industry": "Oil & Gas E&P",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 3,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-08-04"
+   ],
+   "first_document_stored": "2026-09-26",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": null,
+   "yield_change_90_pp": 10.452
+  },
+  {
+   "ticker": "TEAM",
+   "entity_id": "NASDAQ:TEAM",
+   "candidate_id": "CAN-4E5151866E863998",
+   "industry": "Software - Application",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-27",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-06"
+   ],
+   "first_document_stored": "2026-09-29",
+   "alerts_sent": [
+    {
+     "day": "2026-09-27",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2028-06-30",
+   "pct_90": 56.8,
+   "yield_change_90_pp": 0.422
+  },
+  {
+   "ticker": "TNK",
+   "entity_id": "NYSE:TNK",
+   "candidate_id": "CAN-E95987D989EF1145",
+   "industry": "Oil & Gas Midstream",
+   "sector": "Energy",
+   "card_days": 3,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 35.0,
+   "yield_change_90_pp": 2.911
+  },
+  {
+   "ticker": "TRLV",
+   "entity_id": "NYSE:TRLV",
+   "candidate_id": "CAN-713C837ADADE8D8B",
+   "industry": "Drug Manufacturers - Specialty & Generic",
+   "sector": "Healthcare",
+   "card_days": 4,
+   "first_card_day_in_window": "2026-10-01",
+   "first_observed_ever": "2026-10-01",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": [
+    {
+     "day": "2026-10-01",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 132.4,
+   "yield_change_90_pp": 2.958
+  },
+  {
+   "ticker": "TX",
+   "entity_id": "NYSE:TX",
+   "candidate_id": "CAN-D386F57F584A20DC",
+   "industry": "Steel",
+   "sector": "Basic Materials",
+   "card_days": 1,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-29",
+   "ctx_total": 0,
+   "ctx_in_window": 0,
+   "latest_ctx_status": null,
+   "filing_dates": null,
+   "first_document_stored": null,
+   "alerts_sent": [
+    {
+     "day": "2026-09-29",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 52.5,
+   "yield_change_90_pp": 4.837
+  },
+  {
+   "ticker": "TXO",
+   "entity_id": "NYSE:TXO",
+   "candidate_id": "CAN-0733D6B2B6A41784",
+   "industry": "Oil & Gas E&P",
+   "sector": "Energy",
+   "card_days": 5,
+   "first_card_day_in_window": "2026-09-30",
+   "first_observed_ever": "2026-09-30",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-04"
+   ],
+   "first_document_stored": "2026-09-30",
+   "alerts_sent": [
+    {
+     "day": "2026-09-30",
+     "channel": "screen",
+     "event": "new_discovery"
+    }
+   ],
+   "alert_status": "sent",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 46.8,
+   "yield_change_90_pp": 3.006
+  },
+  {
+   "ticker": "UCTT",
+   "entity_id": "NASDAQ:UCTT",
+   "candidate_id": "CAN-4BD491C8D3F1EC4F",
+   "industry": "Semiconductor Equipment & Materials",
+   "sector": "Technology",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-08-03"
+   ],
+   "first_document_stored": "2026-09-28",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 62.3,
+   "yield_change_90_pp": 3.376
+  },
+  {
+   "ticker": "URGN",
+   "entity_id": "NASDAQ:URGN",
+   "candidate_id": "CAN-4DB66C064FC2ED7C",
+   "industry": "Biotechnology",
+   "sector": "Healthcare",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "insufficient_earnings_context",
+   "filing_dates": [
+    "2026-08-05"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 94.5,
+   "yield_change_90_pp": 3.279
+  },
+  {
+   "ticker": "VLO",
+   "entity_id": "NYSE:VLO",
+   "candidate_id": "CAN-325B2A6C30755476",
+   "industry": "Oil & Gas Refining & Marketing",
+   "sector": "Energy",
+   "card_days": 6,
+   "first_card_day_in_window": "2026-09-29",
+   "first_observed_ever": "2026-09-25",
+   "ctx_total": 1,
+   "ctx_in_window": 1,
+   "latest_ctx_status": "no_supported_claims",
+   "filing_dates": [
+    "2026-07-30"
+   ],
+   "first_document_stored": "2026-09-27",
+   "alerts_sent": null,
+   "alert_status": "bootstrap_9_25_marked_seen",
+   "eps_target_period": "2027-12-31",
+   "pct_90": 87.4,
+   "yield_change_90_pp": 4.615
+  }
+ ],
+ "business_change_path": {
+  "by_day_logs": {
+   "2026-09-29": {
+    "collected_edgar": 27,
+    "collected_rss": 0,
+    "model_candidates": 8
+   },
+   "2026-09-30": {
+    "collected_edgar": 24,
+    "collected_rss": 0,
+    "model_candidates": 2
+   },
+   "2026-10-01": {
+    "collected_edgar": 25,
+    "collected_rss": 0,
+    "model_candidates": 6
+   },
+   "2026-10-02": {
+    "collected_edgar": 25,
+    "collected_rss": 0,
+    "model_candidates": 0
+   },
+   "2026-10-03": {
+    "collected_edgar": 23,
+    "collected_rss": 0,
+    "model_candidates": 10
+   },
+   "2026-10-04": {
+    "collected_edgar": 23,
+    "collected_rss": 0,
+    "model_candidates": 0
+   }
+  },
+  "judged_items_by_status": {
+   "accepted": 6,
+   "rejected": 17
+  },
+  "rejection_reasons": {
+   "evidence_grounding_failed": 9,
+   "model_judged_not_a_signal": 8
+  },
+  "accepted_signals": [
+   {
+    "signal_id": "SIG-0895",
+    "날짜": "2026-09-29",
+    "종목/티커": "Cambium Networks Corp",
+    "신호유형": "공시(8-K)",
+    "upside_score": "3",
+    "티어": "관망",
+    "event_state": "contracted",
+    "entity_id": "CIK:0001738177",
+    "published_at": "2026-09-28"
+   },
+   {
+    "signal_id": "SIG-0896",
+    "날짜": "2026-09-29",
+    "종목/티커": "CORE MOLDING TECHNOLOGIES INC (CMT)",
+    "신호유형": "CAPEX",
+    "upside_score": "2",
+    "티어": "관망",
+    "event_state": "planned",
+    "entity_id": "CIK:0001026655",
+    "published_at": "2026-09-28"
+   },
+   {
+    "signal_id": "SIG-0897",
+    "날짜": "2026-10-01",
+    "종목/티커": "INGN",
+    "신호유형": "수주/백로그",
+    "upside_score": "3",
+    "티어": "관망",
+    "event_state": "contracted",
+    "entity_id": "CIK:0001294133",
+    "published_at": "2026-09-30"
+   },
+   {
+    "signal_id": "SIG-0898",
+    "날짜": "2026-10-03",
+    "종목/티커": "CALM",
+    "신호유형": "ASP/가격",
+    "upside_score": "5",
+    "티어": "관망",
+    "event_state": "realized",
+    "entity_id": "CIK:0000016160",
+    "published_at": "2026-09-30"
+   },
+   {
+    "signal_id": "SIG-0899",
+    "날짜": "2026-10-03",
+    "종목/티커": "CHRN",
+    "신호유형": "수주/백로그",
+    "upside_score": "8",
+    "티어": "B",
+    "event_state": "contracted",
+    "entity_id": "CIK:0001549084",
+    "published_at": "2026-10-02"
+   },
+   {
+    "signal_id": "SIG-0900",
+    "날짜": "2026-10-03",
+    "종목/티커": "NOVANTA INC",
+    "신호유형": "수주/백로그",
+    "upside_score": "3",
+    "티어": "관망",
+    "event_state": "realized",
+    "entity_id": "CIK:0001076930",
+    "published_at": "2026-10-02"
+   }
+  ],
+  "news_alerts_sent": [
+   {
+    "signal_id": "SIG-0899",
+    "day": "2026-10-03",
+    "entity_id": "CIK:0001549084"
+   }
+  ],
+  "notify_sent": {
+   "SIG-0899": {
+    "date": "2026-10-03",
+    "kind": "candidate"
+   }
+  },
+  "unmeasurable": [
+   "EDGAR full-text search hits beyond search_limit and the query's phrase list (no log of what the search did not return)",
+   "items dropped as already seen before the window (only kept items carry a ledger entry)",
+   "RSS: 2 semiconductor feeds returned 0 items on all six days"
+  ]
+ },
+ "definitions": {
+  "comparable_rows": "rows with a same-period, same-currency EPS estimate and its 30/90-day history",
+  "condition_pass": "row.candidate (A: yield change >= 1.0pp or B: 90-day growth >= 25% with steady revisions)",
+  "card_targets": "union of the A and B top-20 lists (display_order)",
+  "drafts": "candidate_context attempts of that daily run (L4 audits); requests = model requests sent",
+  "alert_status": "sent / bootstrap_9_25_marked_seen (never a new-discovery alert by design) / data_missing (screen_items skips) / not_selected"
+ }
+}

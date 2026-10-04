@@ -1,0 +1,146 @@
+{
+ "schema_version": 1,
+ "reviewer": "Claude (구현 담당), 2026-10-04 KST, 저장 원문·스크린 필드 대조. 자동 점수로 대체하지 않음",
+ "base_date": "2026-10-04",
+ "screen": "data/processed/revision_screen/20261004T060125Z_37181539693-1.json.gz",
+ "card_display": "v9/cards-v7 오프라인 렌더(HEAD 5203165 사본, 2026-10-04T11:29:29Z). 과거 실제 전달 카드(v5)와 섞지 않음",
+ "post_hoc_sources": {
+  "OSCR": {"url": "https://www.nasdaq.com/press-release/oscar-health-announces-record-financial-results-first-half-2026-and-raises-full-year", "published": "2026-08-06", "fetched_at": "2026-10-04T11:28Z", "text_sha256_16": "7b8cb8e539cf6334", "note": "회사 IR 원본 URL은 페이지 없음 응답 → 같은 보도자료의 Nasdaq 게재본. 사후 보완"},
+  "VSEC": {"url": "https://ir.vsecorp.com/news/press-releases/detail/413/vse-corporation-announces-second-quarter-2026-results", "published": "2026-08-05", "fetched_at": "2026-10-04T11:26Z", "text_sha256_16": "11d14ea671105c9b", "note": "사후 보완"},
+  "PSTL": {"url": "https://investor.postalrealtytrust.com/Investors/news/news-details/2026/Postal-Realty-Trust-Inc--Reports-Second-Quarter-2026-Results/default.aspx", "published": "2026-08-04", "fetched_at": "2026-10-04T11:28Z", "text_sha256_16": "782cbc05bc4a15a2", "note": "사후 보완"}
+ },
+ "cases": [
+  {
+   "ticker": "PBF", "zone": "top_card", "selection": "10/4 index 1번째",
+   "business_and_change": "원유 정제·판매. 2026 2분기 귀속 순이익 $906.4M(전년 2분기 귀속 순손실 $5.2M), 특별항목 제외 조정 순이익 $753.1M. 원인은 crack spread·원유 차액 개선과 판매량 증가, RFS 비용이 일부 상쇄. [DOC-9FC60A7023735EC9#p10, DOC-DF8157DE720BEF5F#p409]",
+   "earnings_importance": "이익 경로는 정제 마진(가격)과 처리량. 2분기 조정 순이익 $753.1M은 회사 전체 수준값. 2027 EPS 전망 $6.21→$17.66(90일)과 원문 숫자는 기간·기준이 달라 비율을 만들지 않음. [screen rows.PBF]",
+   "durability_and_one_offs": "일회성: 마르티네즈 화재 보험금 이익(2분기 세후 $185.0M), LCM 재고평가 환입(상반기 순이익 영향 $231.6M). 마진의 지속성은 원문에 없음(실현된 분기 실적만). [DOC-9FC60A7023735EC9#t13]",
+   "market_expectation_gap": "미확인. 같은 기간 주가 +64.0%, 2027 EPS 전망 +184%, 애널리스트 4명. 주가·PER만으로 미반영 판단 불가. 동업종 7개사가 동시에 카드에 있어 공통 원인(정제 마진)이 공개적. [index.PBF.price]",
+   "counter_evidence": "확인된 위험: 일회성 이익 포함, RFS 비용. 가설 반증: 3분기 실적에서 정제 마진이 2분기보다 크게 낮으면 상향 근거 약화. 독립 교차확인 미실시.",
+   "next_check": "3분기 실적 발표의 정제 마진·처리량(일정 미확인).",
+   "investigation_value": "보류", "investigation_reason": "이익 변화는 크고 실제이지만 업종 공통의 정제 마진 순환에서 나옴(DK 10-Q p343: 중동 분쟁·호르무즈 운송 차질로 crack spread 상승). 회사 고유의 숨은 변화 근거 없음",
+   "card_usefulness": "중요한 근거 누락", "card_reason": "조정 순이익·귀속 순이익·일회성 효과(순이익에 미친 영향)는 정확히 표시. 그러나 이익 원인(정제 마진·처리량)과 상향 시점 연결이 없음('연결 확인되지 않음')"
+  },
+  {
+   "ticker": "AEHR", "zone": "top_card", "selection": "10/4 index 2번째",
+   "business_and_change": "반도체 웨이퍼·패키지 번인/테스트 장비. FY2026 매출은 EV용 접촉기 감소로 $9.0M 줄었으나 실리콘 포토닉스 고객 시스템 매출은 $10.4M 증가. 회사 전망: FY(2027-06-25 종료) 매출 $130~150M(약 160~200% 성장), 비GAAP 순이익 매출의 18~22%. 근거로 실효 수주잔고 약 $100M 제시. [DOC-EA4425A446380C5A#p27, DOC-E4F38E21E77621D0#p274,p276]",
+   "earnings_importance": "물량(시스템 출하)과 제품 구성 변화. 회사 전망 기준 FY2027 비GAAP 순이익은 매출 범위×비율로 회사가 제시한 범위 안. 스크린의 EPS 대상기간은 2028-05-31로 회사 전망 기간과 다름(비교하지 않음). [screen rows.AEHR.eps_target_period]",
+   "durability_and_one_offs": "계획(회사 전망)과 수주잔고(계약)가 근거. FY2026은 순손실 $(7.1)M로 실현 이익은 아직 없음. 고객 집중·수주 시점 위험은 원문(10-K p149)이 고정비 구조와 함께 언급. [DOC-E4F38E21E77621D0#p149]",
+   "market_expectation_gap": "미확인. 2028/5 EPS 전망 $0.30→$1.38이 최근 30일에만 상향(90일 전=30일 전). 상향 원인은 보관 원문(7/14 발표, 7/27 10-K) 이후 일로 원인 연결 없음. 주가 +48.2%, 애널리스트 3명. [screen rows.AEHR]",
+   "counter_evidence": "확인: FY2026 매출 감소·순손실, 관세로 총마진 5.3%p 하락. 반증 조건: 다음 분기 수주·잔고가 $100M 수준에서 늘지 않거나 FY2027 전망이 하향되면 근거 약화. 독립 교차확인 미실시.",
+   "next_check": "FY2027 1분기 실적의 수주(bookings)와 수주잔고 변화(일정 미확인).",
+   "investigation_value": "우선 조사", "investigation_reason": "AI/실리콘 포토닉스 수요라는 회사 고유 변화, 회사 전망·수주잔고로 이익 경로가 구체적이며, 9월 추정치 급상향의 원인이 확인되지 않아 검증 질문이 명확",
+   "card_usefulness": "판단에 충분", "card_reason": "회사 전망 두 문장(매출 범위, 비GAAP 순이익률)이 핵심 변화를 정확히 보여 조사 착수 판단에 충분. 다만 수주잔고 $100M과 EPS 대상기간(2028/5) 차이, 9월 상향 원인은 없음"
+  },
+  {
+   "ticker": "TALO", "zone": "top_card", "selection": "10/4 index 3번째",
+   "business_and_change": "미국 걸프 연안 석유·가스 탐사·생산. 2026 2분기 순이익 $149.9M(전년 2분기 순손실 $185.9M), 석유 매출 $620.8M(전년 $373.2M), 생산량 68.6MBo/d로 가이던스 초과, 연간 생산 가이던스 상향(64~68MBo/d). [DOC-70283ADC988D0C81#p8,p94,t22]",
+   "earnings_importance": "유가(가격)와 생산량. 2027 EPS 전망이 적자(−$0.09)→흑자($1.66)로 전환(turnaround), 90일 상향의 87%는 30일 이전 발생. [screen rows.TALO]",
+   "durability_and_one_offs": "생산 초과는 실현, 가이던스 상향은 계획. 2분기 LOE에 일회성 웰 작업 $1.75/Boe 포함. 걸프 볼트온 인수 대기(인수 후 가이던스 재제시 예정). [p56, p94]",
+   "market_expectation_gap": "미확인. 주가 +27.1%. 유가 상승은 공개 정보.",
+   "counter_evidence": "확인: 1분기 손상차손 $145.0M, 파생상품 손실. 반증: 유가 하락 또는 인수 후 가이던스 하향.",
+   "next_check": "볼트온 인수 종료 후 회사의 2026 가이던스 재제시(일정 미확인).",
+   "investigation_value": "보류", "investigation_reason": "이익 개선의 주원인이 유가(공개 변수)이고 회사 고유 변화는 생산 초과 정도",
+   "card_usefulness": "중요한 근거 누락", "card_reason": "카드는 '근거가 붙은 문장을 만들지 못했습니다'뿐(모든 사실 거부: 기간 머리글·지표명 불일치). 생산량·순이익 전환이 보이지 않음"
+  },
+  {
+   "ticker": "DK", "zone": "top_card", "selection": "10/4 index 4번째",
+   "business_and_change": "정유(미 남부)·물류. 2026 2분기 순이익(회사 귀속) $169.5M(전년 2분기 $(106.4)M). 원인: 중동 분쟁·호르무즈 운송 차질에 따른 crack spread 상승과 유리한 원유 차액. [DOC-80DB053BD25896A0#t14, p343]",
+   "earnings_importance": "정제 마진(가격). 2027 EPS 전망 $1.86→$8.26(+345%).",
+   "durability_and_one_offs": "구조조정비 감소로 G&A $19.9M 감소(일부 비반복). 마진 지속성은 원문이 변동성으로 서술. [p486, p343]",
+   "market_expectation_gap": "미확인. 주가 +40.1%. 동업종 공통.",
+   "counter_evidence": "확인: RINs 비용 변동, 마진 하락 시 손상 가능성 언급. 반증: 3분기 정제 마진 하락.",
+   "next_check": "3분기 실적의 정제 마진(일정 미확인).",
+   "investigation_value": "보류", "investigation_reason": "PBF와 같은 업종 공통 원인",
+   "card_usefulness": "중요한 근거 누락", "card_reason": "보도자료 없이 10-Q만 연결되어 표 행·일반 위험 문장만 추출. 카드에 사실 0개, 한계는 일반 위험 문구(구체 원인 p343 미선택)"
+  },
+  {
+   "ticker": "NBR", "zone": "top_card", "selection": "10/4 index 5번째",
+   "business_and_change": "육상·해상 시추 서비스. 2026 2분기 매출 $814.8M(전년 $832.8M), 조정 EBITDA $221.7M(전년 $248.5M, 전분기 $204.8M). 연간 조정 EBITDA 전망 $920~930M. 리그 가동 증가(171.2기). [DOC-9B80B26347EA4928#t2,p16,p17]",
+   "earnings_importance": "리그 수·일일 마진. 2분기 실적은 전년보다 낮음. 2027 EPS 전망 $1.12→$3.61의 전부가 최근 30일 발생(애널리스트 3명, 30일 상향 1건). [screen rows.NBR]",
+   "durability_and_one_offs": "보관 원문은 7월 실적. 9월 상향 원인을 설명하는 자료 없음.",
+   "market_expectation_gap": "미확인. 주가 +4.3%로 추정치 상향과 괴리. 그러나 상향 원인이 미확보라 '미반영'이라고 쓸 수 없음.",
+   "counter_evidence": "확인: 상반기 순이익 $2.7M(전년 $55.0M), 고레버리지. 반증: 상향이 단일 애널리스트의 일시 수정이면 근거 약함.",
+   "next_check": "9월 이후 회사 공시(8-K)·추정 변경 원인 확인.",
+   "investigation_value": "판단 불가", "investigation_reason": "핵심 판단 대상인 9월 추정치 급상향의 원인 자료를 확보하지 못함",
+   "card_usefulness": "중요한 근거 누락", "card_reason": "사업부 EBITDA와 연간 전망은 정확하나, 실적이 전년보다 낮다는 점과 추정치 상향 원인이 없음. 한계는 일반 면책뿐"
+  },
+  {
+   "ticker": "MPC", "zone": "top_card", "selection": "10/4 index 6번째",
+   "business_and_change": "대형 정유·마케팅·미드스트림(MPLX). 2분기 정유 마진 환경 강세, 미드스트림 조정 EBITDA $1.8B. 45Z 청정연료 세액공제(2025분) 인식은 일회성. [DOC-683FD7B3F9B87824#p21,p23,p101]",
+   "earnings_importance": "정제 마진과 MPLX. 2027 EPS 전망 $23.99→$49.60(+107%), 애널리스트 19명.",
+   "durability_and_one_offs": "45Z 세액공제 인식(과거분)은 일회성. 정유 설비 투자 일부 완료(제트·수율). [t2, p101]",
+   "market_expectation_gap": "미확인. 시가총액 $118.6B, 주가 +57.0%, 다수 커버리지 — 숨은 변화 가능성 낮음.",
+   "counter_evidence": "확인: 정유 운영비 상승(가동률). 반증: 정제 마진 하락.",
+   "next_check": "3분기 R&M 마진(일정 미확인).",
+   "investigation_value": "제외", "investigation_reason": "대형·다수 커버리지·업종 공통 원인으로 '시장이 덜 알아챈 변화' 목적에 맞지 않음",
+   "card_usefulness": "중요한 근거 누락", "card_reason": "카드 첫 줄이 자회사 MPLX 배당 성장, 둘째가 기간 미확인 자본환원. 정유 이익 원인이 없음"
+  },
+  {
+   "ticker": "OSCR", "zone": "pass_outside_cards", "selection": "카드 밖 pct_90 1위(45.9%)",
+   "business_and_change": "개인 건강보험(ACA) 운영. 2026 2분기 매출 $4.88B(전년 $2.86B), 의료비율 79.2%(전년 91.1%), 귀속 순이익 $361.8M(전년 −$228.4M), 가입자 296만 명(전년 203만). 연간 영업이익 전망 상향. [사후 보완 OSCR 보도자료]",
+   "earnings_importance": "가입자 증가(물량)와 의료비율 개선(비용)·SG&A 비율 하락. 상반기 희석 EPS $3.16(실현), 스크린의 2027 EPS 전망 $2.17 — 기간이 달라 비율을 만들지 않음. [screen rows.OSCR]",
+   "durability_and_one_offs": "보도자료가 '유리한 전기 조정(favorable prior period development)'을 언급 — 일부 비반복 가능. 2027 가격·보조금 환경은 원문에 없음.",
+   "market_expectation_gap": "미확인. 2027 EPS 전망이 상반기 실현 EPS보다 낮게 형성되어 있어 시장이 2027 이익 하락을 가정하는지 확인할 가치. 주가 변화 자료 없음(카드 밖이라 가격 조회 안 됨).",
+   "counter_evidence": "확인: 전기 조정 효과 포함. 반증: 2027 요율·의료비율 악화 공시.",
+   "next_check": "3분기 의료비율과 2027 요율/가입 전망(일정 미확인).",
+   "investigation_value": "우선 조사", "investigation_reason": "회사 전체 이익의 대규모 실현 전환과 가입자 46% 증가가 확인되며, 2027 전망과 현재 이익 수준의 차이라는 구체적 검증 질문이 있음",
+   "card_usefulness": "카드 없음", "card_reason": "A·B 조건 모두 통과했으나 상위 20 밖(정유주 대규모 % 상향에 밀림)"
+  },
+  {
+   "ticker": "VSEC", "zone": "pass_outside_cards", "selection": "카드 밖 pct_90 2위(44.8%)",
+   "business_and_change": "항공 애프터마켓 부품 유통·정비. 2분기 매출 $449.1M(+65%), 유기적 성장 약 14%, 조정 EBITDA 마진 19.2%. 사상 최대 인수(PAG) 완료. 연간 매출 성장 전망 61~64%로 상향. [사후 보완 VSEC 보도자료]",
+   "earnings_importance": "인수(규모)와 유기적 성장·마진. 2분기 GAAP EPS $0.91(+37.9%).",
+   "durability_and_one_offs": "이번 분기부터 조정 EPS 정의 변경(무형자산 상각·주식보상 가산, 소급 적용) — 추정치 상향 일부가 정의 변경일 수 있음. 인수·통합 비용 $9.0M.",
+   "market_expectation_gap": "미확인. 추정치 기준(GAAP/조정) 불명이라 상향의 의미 판단 어려움. 30일 상향 9/하향 1, steady=false.",
+   "counter_evidence": "확인: 인수 효과가 성장의 대부분, 정의 변경. 반증: 유기적 성장 둔화.",
+   "next_check": "3분기 유기적 성장률(일정 미확인).",
+   "investigation_value": "보류", "investigation_reason": "이익 증가의 주원인이 인수와 조정 EPS 정의 변경이라 '숨은 이익 변화'로 보기 어려움",
+   "card_usefulness": "카드 없음", "card_reason": "상위 20 밖"
+  },
+  {
+   "ticker": "PSTL", "zone": "pass_outside_cards", "selection": "카드 밖 pct_90 3위(41.2%)",
+   "business_and_change": "USPS 임대 부동산 리츠. 2분기 임대수익 +23.3%(인수 포함), AFFO $0.36/주, 연간 AFFO 전망 $1.41~1.43(중간값 +7.6%). [사후 보완 PSTL 보도자료]",
+   "earnings_importance": "인수에 의한 임대수익 증가. 회사 전망 성장률(+7.6%)과 스크린 EPS 전망 상향(+41%)이 크게 다름 — 제공처 EPS가 GAAP 순이익 기반의 작은 분모(0.54)일 가능성. 기준 미확인. [screen rows.PSTL.eps_basis=provider-unspecified]",
+   "durability_and_one_offs": "장기 임대 기반으로 안정적이나 큰 이익 변화 근거 없음.",
+   "market_expectation_gap": "해당 없음(큰 변화 미확인).",
+   "counter_evidence": "확인: 지분 발행(ATM)으로 주당 희석.",
+   "next_check": "없음(제외).",
+   "investigation_value": "제외", "investigation_reason": "회사 자체 전망상 성장 7.6%로 목적(큰 이익 변화)에 맞지 않음. 스크린 통과는 EPS 기준·낮은 분모 효과로 보임",
+   "card_usefulness": "카드 없음", "card_reason": "상위 20 밖"
+  },
+  {
+   "ticker": "ALAB", "zone": "boundary_control", "selection": "90일 상향 있으나 eps_now == eps_30d로 제외; 이미 추적 중(신규 발견 분모 제외)",
+   "business_and_change": "추적 종목(별도 원장). 이번 평가는 조건 경계만 봄.",
+   "earnings_importance": "2027 EPS 전망 $4.25→$6.39(+50.5%), 30일 상향 20건·하향 0건인데 30일 전 값=현재 값(6.39348). [screen rows.ALAB]",
+   "durability_and_one_offs": "해당 없음(경계 분석).",
+   "market_expectation_gap": "해당 없음.",
+   "counter_evidence": "조건 rising = cur > d30 and up30 > down30에서 cur == d30이라 거짓. 20건 상향과 평균 불변은 제공처 자료의 불일치 가능성. [scripts/screen_revisions.py:407]",
+   "next_check": "다음 관측에서 eps_30d가 갱신되는지(자료 지연인지) 확인.",
+   "investigation_value": "보류", "investigation_reason": "이미 추적 중. 조건 완화 없이 자료 품질 경계 사례로만 기록",
+   "card_usefulness": "카드 없음", "card_reason": "조건 미충족(제공처 30일 값)"
+  },
+  {
+   "ticker": "CHRN", "zone": "news", "selection": "SIG-0899 (계약/높은 점수 8, B)",
+   "business_and_change": "ChronoScale(구 Ekso Bionics 사업 매각, CIK 0001549084, NASDAQ CHRN)의 AI 연산 인프라 플랫폼. 기존 고객 계약 확장과 신규 고객 계약으로 2027년 3분기까지 연환산 매출 $1B 도달 예상이라고 발표(10/1). [signal_log SIG-0899, source_state raw_text]",
+   "earnings_importance": "매출 런레이트 목표는 '예상'(계획)이며 이익률·투자 재원·고객 정보가 원문에 없음. 이익 영향 미확인.",
+   "durability_and_one_offs": "계약 확장은 계약 단계, 런레이트 달성은 전망. Ekso 사업 매각 완료 동시 공시.",
+   "market_expectation_gap": "미확인. EPS 비교 행 없음(추정치 부재 또는 시총·애널리스트 조건 미달 — 행 단위 사유 미보관).",
+   "counter_evidence": "확인: 구체 계약 조건·고객명·자본조달 미공개. 반증: 후속 공시에서 계약 규모·조달이 확인되지 않음.",
+   "next_check": "다음 10-Q/8-K의 계약 조건·설비 투자 재원.",
+   "investigation_value": "보류", "investigation_reason": "주장 규모는 크지만 이익 경로·재원이 원문으로 확인되지 않음. 식별은 CIK·거래소로 확인",
+   "card_usefulness": "카드 없음", "card_reason": "뉴스 경로로 10/3 알림 발송됨(스크린 카드 아님 — 놓친 사례로 세지 않음)"
+  },
+  {
+   "ticker": "NOVT", "zone": "news", "selection": "SIG-0900 (실현/낮은 점수 3, 관망)",
+   "business_and_change": "신호는 Novanta(CIK 0001076930) 8-K의 EX-99.1. 그러나 근거 문서는 인수 대상 'Runway Buyer, LLC'의 2025 재무제표이며, 선급금 계약부채 $1.06M→$3.31M은 그 회사 수치. [signal_log SIG-0900 evidence_quote, source_state raw_text]",
+   "earnings_importance": "Novanta 전체 이익과 무관한 규모(인수 대상의 순이익 $11.5M). 수혜 주체 오기.",
+   "durability_and_one_offs": "해당 없음.",
+   "market_expectation_gap": "해당 없음. NOVT 2027 EPS 전망 +5.4%로 조건 밖.",
+   "counter_evidence": "확인: 주체 오류(인수 대상 재무제표를 발행사 신호로 기록).",
+   "next_check": "없음(제외).",
+   "investigation_value": "제외", "investigation_reason": "근거 주체가 발행사가 아니라 인수 대상이고 규모가 미미",
+   "card_usefulness": "오해 유발", "card_reason": "신호 요약이 '고객 선급금 213% 증가'를 Novanta의 수요 신호처럼 기술(관망 등급이라 알림은 안 됨)"
+  }
+ ]
+}
