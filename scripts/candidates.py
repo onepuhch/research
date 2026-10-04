@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v5"
+GENERATOR_VERSION = "cards-v6"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -915,6 +915,89 @@ def tracking_label(cand: dict) -> str:
             "closed": "추적 종료됨", "untracked": "미추적"}[t["status"]]
 
 
+YEAR_RE = re.compile(r"\b((?:19|20)\d{2})\b")
+QUARTER_RE = re.compile(r"\b(first|second|third|fourth)[ -]quarter\b|\bq([1-4])\b", re.I)
+MONTH_RE = re.compile(r"\b(" + "|".join(("january", "february", "march", "april", "may", "june", "july", "august",
+                                         "september", "october", "november", "december")) + r")\b", re.I)
+ORDINAL = {"first": 1, "second": 2, "third": 3, "fourth": 4}
+MONTHS_ORDER = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october",
+                "november", "december"]
+
+
+def period_point(period: str | None) -> tuple[int, int] | None:
+    """(year, quarter) only from an explicitly written year: 'second quarter' alone is unknown, never
+    given a year. A month is placed in its calendar quarter; a period without one counts as its year end."""
+    text = str(period or "")
+    years = [int(y) for y in YEAR_RE.findall(text)]
+    if not years:
+        return None
+    quarter = QUARTER_RE.search(text)
+    month = MONTH_RE.search(text)
+    if quarter:
+        part = ORDINAL.get((quarter.group(1) or "").lower()) or int(quarter.group(2))
+    elif month:
+        part = MONTHS_ORDER.index(month.group(1).lower()) // 3 + 1
+    else:
+        part = 5  # a whole year comes after its quarters
+    return max(years), part
+
+
+NET_EPS = re.compile(r"\b(?:net income|net earnings|earnings per share|eps|per (?:diluted )?share)\b")
+EARNINGS = re.compile(r"\b(?:net income|net earnings|net loss|earnings per share|eps|per (?:diluted )?share|"
+                      r"operating income|operating loss)\b")
+
+
+def period_missing(item: dict) -> bool:
+    return str(item.get("period") or "unknown").strip().lower() in ("", "unknown")
+
+
+def stated_order(claims: list[dict]) -> list[dict]:
+    """Facts and guidance as the card shows them (all outputs use this): current or forecast periods
+    first, then unknown ones, then explicit past comparisons; within that adjusted net income/EPS,
+    then net income/EPS/operating income, then the rest; core before non-core; then the original
+    order. 'Past' is only against the latest explicitly dated fact of the same document."""
+    stated = [x for x in claims if x.get("kind") in ("fact", "guidance")]
+    latest: dict[str, tuple[int, int]] = {}
+    for x in stated:
+        point = period_point(x.get("period")) if x["kind"] == "fact" else None
+        if point and point > latest.get(x.get("document_id"), (0, 0)):
+            latest[x.get("document_id")] = point
+
+    def key(pair):
+        position, x = pair
+        point = period_point(x.get("period"))
+        if point is None:
+            when = 1
+        elif x["kind"] == "guidance" or point >= latest.get(x.get("document_id"), point):
+            when = 0
+        else:
+            when = 2
+        metric = str(x.get("metric") or "").lower()
+        adjusted = x.get("gaap") == "non-GAAP" or re.search(r"\b(?:adjusted|non-gaap)\b", metric)
+        earnings = 0 if adjusted and NET_EPS.search(metric) else 1 if EARNINGS.search(metric) else 2
+        return when, earnings, 0 if x.get("core") else 1, position
+
+    return [x for _, x in sorted(enumerate(stated), key=key)]
+
+
+ONE_OFF = re.compile(r"\b(?:one-time|non-recurring|nonrecurring|not recur|will not recur|impairment|special items?|"
+                     r"restructuring|write-?downs?|write-?offs?|gains? on|loss(?:es)? on|insurance recover\w*|divest\w*|"
+                     r"settlement|discontinued|transaction-related|merger-related|death benefit)\b")
+DISCLAIMER = re.compile(r"\bnot\b[^.;]{0,80}\b(?:substitute|alternative|superior|comparable)\b|\bin isolation\b|"
+                        r"\bmay (?:be|differ)\b[^.;]{0,40}\bother companies\b|\bdo(?:es)? not reflect all\b|"
+                        r"\bdifferent from the non-gaap\b")
+
+
+def limitation_order(limitations: list[dict]) -> list[tuple[int, dict]]:
+    """(rank, item): 0 a specific one-off/impairment/non-recurring item, 1 a specific risk or offset,
+    2 a general non-GAAP disclaimer. Judged on the checked quote, never on a model tag; a passage
+    naming a real one-off stays 0 even if it also carries disclaimer words."""
+    def rank(x):
+        quote = str(x.get("quote") or "").lower()
+        return 0 if ONE_OFF.search(quote) else 2 if DISCLAIMER.search(quote) else 1
+    return sorted(((rank(x), x) for x in limitations), key=lambda pair: pair[0])
+
+
 def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, str]]:
     """(kind, text) lines in the card order shared by Telegram, Markdown and HTML."""
     cand = display_view(cand)
@@ -945,6 +1028,8 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
 
     def claim_line(item, label):
         doc = docs.get(item.get("document_id"), {})
+        if (item.get("figures") or item.get("kind") == "guidance") and period_missing(item):
+            label = f"{label} · 기간 미확인"  # never placed under a nearby heading's period
         return ("claim", json.dumps({"label": label, "text": item["text_ko"], "quote": item.get("quote"),
                                      "title": (f"SEC {doc['form']} {doc['document_type']}" if doc.get("form")
                                                else item.get("document_id")), "url": doc.get("url"),
@@ -962,7 +1047,8 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                                  f"마지막 유효 근거 {last[:10]}(현재 확인 결과 아님)" if last else
                                  "이전에 확보한 유효 근거 없음")))
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
-    stated = [x for x in context.get("claims") or [] if x.get("kind") in ("fact", "guidance")][:3]
+    ordered = stated_order(context.get("claims") or [])
+    stated = ordered[:3]
     if context.get("validation_scope") == "accepted_only":
         lines.append(("item", f"{(context.get('generated_at') or '')[:10]} 생성 초안({context.get('source_parser_version')})을 "
                               f"현재 검증기({context.get('display_validator_version')})로 다시 확인해 통과한 문장만 표시"))
@@ -970,6 +1056,9 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
         lines.append(("warn", hold_warning(cand["context_hold"])))
     elif stated:
         lines += [claim_line(x, KIND_LABELS[x["kind"]]) for x in stated]
+        if len(ordered) > len(stated):
+            lines.append(("item", f"자동 정리 문장 {len(ordered)}개 중 {len(stated)}개 표시(현재 기간·이익 지표 우선). "
+                                  "나머지는 원문 검토에서 확인"))
     elif context.get("context_status") == "no_supported_claims":
         lines.append(("text", "원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다."))
     else:
@@ -998,8 +1087,11 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                               "30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다."))
     if not gap:
         lines.append(("item", "시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다."))
-    for item in (context.get("limitations") or [])[:2]:
-        lines.append(claim_line({**item, "kind": "fact"}, "반대 근거·한계"))
+    ranked = limitation_order(context.get("limitations") or [])
+    if ranked and all(rank == 2 for rank, _ in ranked):
+        lines.append(("item", "구체적인 일회성·반대 근거는 아직 확보하지 못했습니다."))
+    for rank, item in ranked[:2]:
+        lines.append(claim_line({**item, "kind": "fact"}, "일반 면책(보조)" if rank == 2 else "반대 근거·한계"))
     if context.get("link"):
         lines.append(("item", LINK_LABELS.get(context["link"], context["link"])))
     if cand.get("review_note"):

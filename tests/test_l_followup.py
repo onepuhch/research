@@ -355,5 +355,102 @@ class StoredDraftViewTest(CandidateFixture):
         self.assertNotIn("approval", entry)
 
 
+def fact(metric, figures, period, core=False, kind="fact", gaap="unknown", quote=None):
+    text = f"{metric} · {period}: {' / '.join(figures)} — 원문 문장" if period != "unknown" else f"{metric}: {' / '.join(figures)} — 원문 문장"
+    return {"text_ko": text, "note_ko": "원문 문장", "kind": kind, "quote": quote or f"{metric} was {figures[0]}.",
+            "document_id": "DOC-00000000000000AA", "block_id": "p2", "metric": metric, "figures": figures,
+            "period": period, "gaap": gaap, "subject": "issuer", "core": core}
+
+
+def limit(quote):
+    return {"text_ko": quote[:60], "note_ko": "한계", "kind": "fact", "quote": quote,
+            "document_id": "DOC-00000000000000AA", "block_id": "p4", "metric": None, "figures": [], "period": "unknown"}
+
+
+# The 9/27 production drafts behind the 'first three' problem (CTX-0FEBFA576C7DAAF0, CTX-11890494D9E46A8A).
+PBF_CLAIMS = [fact("net income attributable to PBF Energy Inc.", ["$906.4 million"], "second quarter 2026", core=True),
+              fact("net income attributable to PBF Energy Inc.", ["$7.54 per share"], "second quarter 2026", core=True),
+              fact("net loss attributable to PBF Energy Inc.", ["$5.2 million"], "second quarter 2025", core=True),
+              fact("net loss attributable to PBF Energy Inc.", ["$(0.05) per share"], "second quarter 2025", core=True),
+              fact("Adjusted fully-converted net income", ["$753.1 million"], "second quarter 2026", gaap="non-GAAP")]
+AMCX_CLAIMS = [fact("Operating income", ["$16 million"], "unknown"),
+               fact("Adjusted Operating Income", ["$46 million"], "unknown", gaap="non-GAAP"),
+               fact("Net revenue", ["$547 million", "9%"], "second quarter"),
+               fact("revenue", ["11%", "$470 million"], "unknown"),
+               fact("annual revenue", ["$200 million to $225 million"], "2026 and 2027", core=True, kind="guidance")]
+DISCLAIMERS = [limit("These non-GAAP measures should not be used in isolation or as a substitute for GAAP results."),
+               limit("Our definitions of these non-GAAP measures may not be comparable to those of other companies.")]
+ONE_OFF_LIMIT = limit("Non-cash special items, which increased net income by a net, after-tax benefit of $159.8 million, "
+                      "primarily consisted of gains on insurance recoveries.")
+
+
+class CardSelectionTest(CandidateFixture):
+    """L3: the card's three facts and two limitations, the same in every output."""
+
+    def show(self, claims, limitations=()):
+        import candidate_context
+        record = {"context_id": "CTX-00000000000000D1", "candidate_id": self.aaa["candidate_id"],
+                  "issuer_cik": "0000000001", "document_ids": ["DOC-00000000000000AA"], "source_blocks": [],
+                  "input_sha": "y" * 64, "model": "m", "prompt_version": "p", "parser_version": ctx.PARSER_VERSION,
+                  "generated_at": "2026-09-27T05:40:00+00:00", "context_status": "draft_ready", "claims": claims,
+                  "limitations": list(limitations), "next_check": [], "link": "unconfirmed", "link_note": None,
+                  "rejected": [], "source_coverage": "complete"}
+        c.atomic_json(candidate_context.history_dir() / "CTX-00000000000000D1.json", record)
+        state = candidate_context.load_state()
+        state["candidates"][self.aaa["candidate_id"]] = {"status": "success", "context_id": "CTX-00000000000000D1",
+                                                         "document_ids": ["DOC-00000000000000AA"]}
+        c.atomic_json(candidate_context.state_path(), state)
+        k.generate(now=NOW, translate_now=False)
+        return next(x for x in k.load_index()["candidates"] if x["candidate_id"] == self.aaa["candidate_id"])
+
+    def shown_claims(self, card):
+        return [json.loads(text) for kind, text in k.card_lines(card) if kind == "claim"]
+
+    def test_pbf_current_adjusted_net_income_comes_before_last_year(self):
+        card = self.show(PBF_CLAIMS)
+        texts = [x["text"] for x in self.shown_claims(card)]
+        self.assertEqual(len(texts), 3)
+        self.assertIn("$753.1 million", texts[0])
+        self.assertIn("$906.4 million", texts[1])
+        self.assertFalse(any("2025" in t for t in texts))
+        self.assertIn("자동 정리 문장 5개 중 3개 표시", k.telegram_card(card))
+        self.assertEqual(len(card["context"]["claims"]), 5)  # nothing is removed from the draft itself
+
+    def test_amcx_dated_guidance_comes_first_and_unknown_periods_are_labelled(self):
+        shown = self.shown_claims(self.show(AMCX_CLAIMS))
+        self.assertIn("$200 million to $225 million", shown[0]["text"])
+        self.assertEqual(shown[0]["label"], "회사 전망")
+        self.assertEqual(shown[1]["label"], "실적 · 기간 미확인")
+        self.assertNotIn("second quarter 2026", json.dumps(shown, ensure_ascii=False))  # no year is invented
+
+    def test_a_real_one_off_is_chosen_over_disclaimers(self):
+        card = self.show(PBF_CLAIMS, DISCLAIMERS + [ONE_OFF_LIMIT])
+        limits = [x for x in self.shown_claims(card) if x["label"] in ("반대 근거·한계", "일반 면책(보조)")]
+        self.assertEqual([x["label"] for x in limits], ["반대 근거·한계", "일반 면책(보조)"])
+        self.assertIn("insurance recoveries", limits[0]["quote"])
+        only = self.show(PBF_CLAIMS, DISCLAIMERS)
+        text = k.telegram_card(only)
+        self.assertIn("구체적인 일회성·반대 근거는 아직 확보하지 못했습니다.", text)
+        self.assertIn("[일반 면책(보조)]", text)
+        mixed = limit("Adjusted net income excludes a $40 million impairment charge; non-GAAP measures should not be "
+                      "considered a substitute for GAAP results.")
+        self.assertEqual(k.limitation_order([DISCLAIMERS[0], mixed])[0][1], mixed)
+        self.assertIn("$753.1 million", self.shown_claims(only)[0]["text"])  # a non-GAAP figure is not a disclaimer
+
+    def test_every_output_shows_the_same_selection_and_order_is_stable(self):
+        card = self.show(PBF_CLAIMS, DISCLAIMERS + [ONE_OFF_LIMIT])
+        texts = [x["text"] for x in self.shown_claims(card)]
+        telegram, markdown = k.telegram_card(card), k.markdown_card(card)
+        page = k.render_html(k.load_index())
+        for text in texts:
+            self.assertIn(text, telegram)
+            self.assertIn(text, markdown)
+            self.assertIn(json.dumps(text, ensure_ascii=False)[1:-1].replace("<", "\\u003c"), page)
+        self.assertEqual([telegram.index(t) for t in texts], sorted(telegram.index(t) for t in texts))
+        self.assertEqual([markdown.index(t) for t in texts], sorted(markdown.index(t) for t in texts))
+        again = self.show(PBF_CLAIMS, DISCLAIMERS + [ONE_OFF_LIMIT])
+        self.assertEqual(again["candidate_version"], card["candidate_version"])
+
+
 if __name__ == "__main__":
     unittest.main()
