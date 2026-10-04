@@ -1,0 +1,647 @@
+{
+ "S0_v7": {
+  "drafts": 28,
+  "accepted_claims": 40,
+  "accepted_limitations": 16,
+  "core_fact_guidance": 8,
+  "core_any_kind": 9,
+  "draft_ready": 5,
+  "statuses": {
+   "insufficient_earnings_context": 15,
+   "draft_ready": 5,
+   "no_supported_claims": 8
+  },
+  "rejected": {
+   "period_not_in_source": 21,
+   "figure_belongs_to_another_metric": 14,
+   "gaap_not_as_stated": 11,
+   "metric_not_in_quote": 10,
+   "figure_from_another_period": 10,
+   "ambiguous_table_figures": 9,
+   "guidance_written_as_fact": 9,
+   "period_not_a_period": 7,
+   "quote_not_in_block": 7,
+   "number_or_unit_in_note": 6,
+   "figure_cut_from_source": 4,
+   "guidance_without_forward_wording": 4,
+   "subject_not_in_quote": 3,
+   "figure_not_verbatim": 3,
+   "raise_not_in_quote": 2,
+   "bad_tag": 1,
+   "bad_note": 1,
+   "unverified_issuer_subject": 1
+  },
+  "change_or_effect_shown_as_level": [
+   [
+    "PBF",
+    "순이익(net income) · second quarter 2026: $159.8 million / $1.32 per share — 특별 비현금 항목이 순이익과 주당 순이익을 증가시켰다"
+   ],
+   [
+    "CLBK",
+    "net interest income · quarter ended June 30, 2026: $9.2 million — 순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다"
+   ]
+  ],
+  "limitation_rank": {
+   "one_off": 4,
+   "specific": 6,
+   "disclaimer": 6
+  },
+  "new_vs_previous": [],
+  "gone_vs_previous": []
+ },
+ "S1_goodwill": {
+  "drafts": 28,
+  "accepted_claims": 40,
+  "accepted_limitations": 16,
+  "core_fact_guidance": 8,
+  "core_any_kind": 9,
+  "draft_ready": 5,
+  "statuses": {
+   "insufficient_earnings_context": 15,
+   "draft_ready": 5,
+   "no_supported_claims": 8
+  },
+  "rejected": {
+   "period_not_in_source": 21,
+   "figure_belongs_to_another_metric": 14,
+   "gaap_not_as_stated": 11,
+   "metric_not_in_quote": 10,
+   "figure_from_another_period": 10,
+   "ambiguous_table_figures": 9,
+   "guidance_written_as_fact": 8,
+   "period_not_a_period": 7,
+   "quote_not_in_block": 7,
+   "number_or_unit_in_note": 6,
+   "figure_cut_from_source": 4,
+   "guidance_without_forward_wording": 4,
+   "subject_not_in_quote": 3,
+   "figure_not_verbatim": 3,
+   "raise_not_in_quote": 2,
+   "bad_tag": 1,
+   "subject_scope_conflict": 1,
+   "bad_note": 1,
+   "unverified_issuer_subject": 1
+  },
+  "change_or_effect_shown_as_level": [
+   [
+    "PBF",
+    "순이익(net income) · second quarter 2026: $159.8 million / $1.32 per share — 특별 비현금 항목이 순이익과 주당 순이익을 증가시켰다"
+   ],
+   [
+    "CLBK",
+    "net interest income · quarter ended June 30, 2026: $9.2 million — 순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다"
+   ]
+  ],
+  "limitation_rank": {
+   "one_off": 4,
+   "specific": 6,
+   "disclaimer": 6
+  },
+  "new_vs_previous": [],
+  "gone_vs_previous": []
+ },
+ "S2_L1": {
+  "drafts": 28,
+  "accepted_claims": 39,
+  "accepted_limitations": 15,
+  "core_fact_guidance": 8,
+  "core_any_kind": 9,
+  "draft_ready": 5,
+  "statuses": {
+   "insufficient_earnings_context": 15,
+   "draft_ready": 5,
+   "no_supported_claims": 8
+  },
+  "rejected": {
+   "period_not_in_source": 20,
+   "figure_belongs_to_another_metric": 14,
+   "metric_not_in_quote": 10,
+   "ambiguous_table_figures": 9,
+   "gaap_not_as_stated": 9,
+   "guidance_written_as_fact": 8,
+   "figure_from_another_period": 8,
+   "period_not_a_period": 7,
+   "delta_presented_as_level": 7,
+   "quote_not_in_block": 7,
+   "number_or_unit_in_note": 6,
+   "figure_cut_from_source": 4,
+   "guidance_without_forward_wording": 4,
+   "subject_not_in_quote": 3,
+   "figure_not_verbatim": 3,
+   "effect_presented_as_level": 2,
+   "bad_tag": 1,
+   "bad_note": 1,
+   "unverified_issuer_subject": 1,
+   "raise_not_in_quote": 1
+  },
+  "change_or_effect_shown_as_level": [],
+  "limitation_rank": {
+   "one_off": 3,
+   "specific": 6,
+   "disclaimer": 6
+  },
+  "new_vs_previous": [],
+  "gone_vs_previous": [
+   {
+    "ticker": "CLBK",
+    "day": "2026-10-02",
+    "quote": "The increase in net income was primarily attributable to a $9.2 million increase in net interest income and a $657,000 i",
+    "figures": [
+     "$9.2 million"
+    ]
+   },
+   {
+    "ticker": "PBF",
+    "day": "2026-09-29",
+    "quote": "Non-cash special items included in the second quarter 2026 results, which increased net income by a net, after-tax benef",
+    "figures": [
+     "$159.8 million",
+     "$1.32 per share"
+    ]
+   }
+  ]
+ },
+ "S3_L1L2": {
+  "drafts": 28,
+  "accepted_claims": 48,
+  "accepted_limitations": 15,
+  "core_fact_guidance": 11,
+  "core_any_kind": 12,
+  "draft_ready": 6,
+  "statuses": {
+   "insufficient_earnings_context": 14,
+   "draft_ready": 6,
+   "no_supported_claims": 8
+  },
+  "rejected": {
+   "period_not_in_source": 20,
+   "figure_belongs_to_another_metric": 11,
+   "metric_not_in_quote": 10,
+   "ambiguous_table_figures": 9,
+   "guidance_written_as_fact": 8,
+   "figure_from_another_period": 8,
+   "period_not_a_period": 7,
+   "delta_presented_as_level": 7,
+   "quote_not_in_block": 7,
+   "subject_not_in_quote": 6,
+   "number_or_unit_in_note": 6,
+   "figure_cut_from_source": 4,
+   "guidance_without_forward_wording": 4,
+   "figure_not_verbatim": 3,
+   "effect_presented_as_level": 2,
+   "bad_tag": 1,
+   "bad_note": 1,
+   "unverified_issuer_subject": 1,
+   "gaap_not_as_stated": 1
+  },
+  "change_or_effect_shown_as_level": [],
+  "limitation_rank": {
+   "one_off": 3,
+   "specific": 6,
+   "disclaimer": 6
+  },
+  "new_vs_previous": [
+   {
+    "ticker": "AXTI",
+    "day": "2026-09-30",
+    "text_ko": "GAAP net income · second quarter of 2026: $11.1 million — 회사의 GAAP 순이익은 해당 분기에 이 금액이었다"
+   },
+   {
+    "ticker": "AXTI",
+    "day": "2026-09-30",
+    "text_ko": "Non-GAAP gross margin · second quarter of 2026: 45.0 percent — 회사의 비 GAAP 매출 총 이익률은 해당 분기에 이 비율이었다"
+   },
+   {
+    "ticker": "AXTI",
+    "day": "2026-09-30",
+    "text_ko": "Non-GAAP net income · second quarter of 2026: $11.9 million — 회사의 비 GAAP 순이익은 해당 분기에 이 금액이었다"
+   },
+   {
+    "ticker": "AXTI",
+    "day": "2026-09-30",
+    "text_ko": "매출(Revenue) · second quarter of 2026: $47.6 million — 회사의 매출은 해당 분기에 이 금액이었다"
+   },
+   {
+    "ticker": "CLF",
+    "day": "2026-10-03",
+    "text_ko": "Adjusted EBITDA2 · Second quarter of 2026: $286 million — 조정 에비타가 전 분기보다 늘었다"
+   },
+   {
+    "ticker": "CLF",
+    "day": "2026-10-03",
+    "text_ko": "adjusted EBITDA2 · third-quarter 2026: approximately $575 million — 조정 에비타가 약 얼마가 될 것으로 예상한다"
+   },
+   {
+    "ticker": "SUNC",
+    "day": "2026-10-03",
+    "text_ko": "조정 EBITDA(Adjusted EBITDA) · second quarter of 2026: $982 million — 회사의 조정 에비타는 전년 같은 분기보다 늘었다"
+   },
+   {
+    "ticker": "SUNC",
+    "day": "2026-10-03",
+    "text_ko": "조정 EBITDA(Adjusted EBITDA) · second quarter: $996 million — 일회성 거래 관련 비용을 제외한 회사의 조정 에비타이다"
+   },
+   {
+    "ticker": "URGN",
+    "day": "2026-10-01",
+    "text_ko": "full-year 2026 operating expenses guidance · full-year 2026: $260 million to $270 million — 연간 영업 비용 가이던스를 상향 조정했다"
+   }
+  ],
+  "gone_vs_previous": []
+ },
+ "S4_L3_cards": {
+  "cards": 24,
+  "changed_fact_selection": 8,
+  "detail": [
+   {
+    "ticker": "AMCX",
+    "day": "2026-09-29",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "Net revenue · second quarter: $547 million / 9%(변화율·감소) — 회사의 순 매출은 전년 같은 기간보다 감소했다"
+    ],
+    "facts_first3_before": [
+     "Net revenue · second quarter: $547 million / 9%(변화율·감소) — 회사의 순 매출은 전년 같은 기간보다 감소했다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "AEHR",
+    "day": "2026-09-29",
+    "status": "draft_ready",
+    "facts_shown": [
+     "non-GAAP net income · fiscal year ending June 25, 2027: 18% to 22% — 회사는 다음 회계연도 비일반회계기준 순이익을 총 매출의 일정 비율로 예상한다",
+     "total company revenue · fiscal year ending June 25, 2027: $130 million and $150 million — 회사는 다음 회계연도 매출을 예상한다"
+    ],
+    "facts_first3_before": [
+     "total company revenue · fiscal year ending June 25, 2027: $130 million and $150 million — 회사는 다음 회계연도 매출을 예상한다",
+     "non-GAAP net income · fiscal year ending June 25, 2027: 18% to 22% — 회사는 다음 회계연도 비일반회계기준 순이익을 총 매출의 일정 비율로 예상한다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "DK",
+    "day": "2026-09-29",
+    "status": "no_supported_claims",
+    "facts_shown": [],
+    "facts_first3_before": [],
+    "limitations_shown": [
+     [
+      1,
+      "Refining EBITDA — 원유 가격 및 가용성 시장의 변동성으로 인해 포지션에 시간 차이가 발생하거나 의도한 대로 상쇄 포지션을 커버하지 못할 수 있으며, 이는 정제 EBITDA에 중대한 영향을 미칠 수 있다"
+     ]
+    ]
+   },
+   {
+    "ticker": "NBR",
+    "day": "2026-09-29",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "[International Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $131 million — 국제 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+     "[U.S. Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $94 million — 미국 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+     "조정 EBITDA(adjusted EBITDA) · full-year: $920 to $930 million — 회사의 연간 조정 EBITDA가 이 범위에 있을 것으로 예상된다"
+    ],
+    "facts_first3_before": [
+     "[International Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $131 million — 국제 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+     "[U.S. Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $94 million — 미국 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+     "조정 EBITDA(adjusted EBITDA) · full-year: $920 to $930 million — 회사의 연간 조정 EBITDA가 이 범위에 있을 것으로 예상된다"
+    ],
+    "limitations_shown": [
+     [
+      2,
+      "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다"
+     ],
+     [
+      2,
+      "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다"
+     ]
+    ]
+   },
+   {
+    "ticker": "PBF",
+    "day": "2026-09-29",
+    "status": "draft_ready",
+    "facts_shown": [
+     "Adjusted fully-converted net income · second quarter 2026: $753.1 million — 특별 항목을 제외한 조정 순이익은 해당 기간 이 금액을 기록했다",
+     "net income attributable to PBF Energy Inc. · second quarter 2026: $906.4 million — 회사의 순이익은 해당 기간 이 금액을 기록했다"
+    ],
+    "facts_first3_before": [
+     "net income attributable to PBF Energy Inc. · second quarter 2026: $906.4 million — 회사의 순이익은 해당 기간 이 금액을 기록했다",
+     "Adjusted fully-converted net income · second quarter 2026: $753.1 million — 특별 항목을 제외한 조정 순이익은 해당 기간 이 금액을 기록했다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "AXTI",
+    "day": "2026-09-30",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "Non-GAAP net income · second quarter of 2026: $11.9 million — 회사의 비 GAAP 순이익은 해당 분기에 이 금액이었다",
+     "GAAP net income · second quarter of 2026: $11.1 million — 회사의 GAAP 순이익은 해당 분기에 이 금액이었다",
+     "매출(Revenue) · second quarter of 2026: $47.6 million — 회사의 매출은 해당 분기에 이 금액이었다"
+    ],
+    "facts_first3_before": [
+     "매출(Revenue) · second quarter of 2026: $47.6 million — 회사의 매출은 해당 분기에 이 금액이었다",
+     "GAAP gross margin · second quarter of 2026: 44.9 percent — 회사의 GAAP 매출 총 이익률은 해당 분기에 이 비율이었다",
+     "Non-GAAP gross margin · second quarter of 2026: 45.0 percent — 회사의 비 GAAP 매출 총 이익률은 해당 분기에 이 비율이었다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "MPC",
+    "day": "2026-09-30",
+    "status": "draft_ready",
+    "facts_shown": [
+     "[MPLX] annual distribution growth · 2026 and 2027: 12.5% — 자회사 MPLX의 연간 배당금 증가율이 예상된다",
+     "capital returned: $2.8 billion — 자본이 반환되었다"
+    ],
+    "facts_first3_before": [
+     "[MPLX] annual distribution growth · 2026 and 2027: 12.5% — 자회사 MPLX의 연간 배당금 증가율이 예상된다",
+     "capital returned: $2.8 billion — 자본이 반환되었다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "CORT",
+    "day": "2026-09-30",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "Net income per common share (diluted) · second quarter of 2026: $0.36 — 전년 같은 기간보다 증가했다",
+     "revenue guidance · 2026: $1.1 – $1.2 billion — 매출 전망치를 상향 조정했다",
+     "[Korlym and authorized generic] product revenue · second quarter 2026: $208.6 million — 전년 같은 기간보다 증가했다"
+    ],
+    "facts_first3_before": [
+     "revenue guidance · 2026: $1.1 – $1.2 billion — 매출 전망치를 상향 조정했다",
+     "Net income per common share (diluted) · second quarter of 2026: $0.36 — 전년 같은 기간보다 증가했다",
+     "[Korlym and authorized generic] product revenue · second quarter 2026: $208.6 million — 전년 같은 기간보다 증가했다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "RPAY",
+    "day": "2026-09-30",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "[KUBRA] 매출(revenue) · 2026: between $150 million and $154 million — 큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다"
+    ],
+    "facts_first3_before": [
+     "[KUBRA] 매출(revenue) · 2026: between $150 million and $154 million — 큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "PARR",
+    "day": "2026-09-30",
+    "status": "no_supported_claims",
+    "facts_shown": [],
+    "facts_first3_before": [],
+    "limitations_shown": [
+     [
+      1,
+      "Adjusted Gross Margin — 조정 매출총이익은 변동성이 큰 원자재 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이와 순실현가능가치 조정 중 낮은 원가를 조정하여 투자자에게 유용한 정보를 제공한다. 이는 사업의 수익 잠재력을 보여주기 위함이다."
+     ]
+    ]
+   },
+   {
+    "ticker": "CODI",
+    "day": "2026-10-01",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [],
+    "facts_first3_before": [],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "AGL",
+    "day": "2026-10-01",
+    "status": "no_supported_claims",
+    "facts_shown": [],
+    "facts_first3_before": [],
+    "limitations_shown": [
+     [
+      1,
+      "Total members on the agilon platform · June 30, 2026: 549,000 / 437,000 / 112,000 — 플랫폼 총 회원 수가 감소했다"
+     ]
+    ]
+   },
+   {
+    "ticker": "URGN",
+    "day": "2026-10-01",
+    "status": "draft_ready",
+    "facts_shown": [
+     "full-year 2026 operating expenses guidance · full-year 2026: $260 million to $270 million — 연간 영업 비용 가이던스를 상향 조정했다",
+     "매출(Revenue) · second quarter ended June 30, 2026: $72.5 million — 총 매출은 전년 같은 분기보다 늘었다"
+    ],
+    "facts_first3_before": [
+     "매출(Revenue) · second quarter ended June 30, 2026: $72.5 million — 총 매출은 전년 같은 분기보다 늘었다",
+     "full-year 2026 operating expenses guidance · full-year 2026: $260 million to $270 million — 연간 영업 비용 가이던스를 상향 조정했다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "CLBK",
+    "day": "2026-10-02",
+    "status": "draft_ready",
+    "facts_shown": [
+     "순이익(net income) · quarter ended June 30, 2026: $14.5 million — 해당 분기 순이익은 전년 같은 분기보다 늘었다",
+     "순이익(net income) · six months ended June 30, 2026: $27.6 million — 해당 육개월 순이익은 전년 같은 기간보다 늘었다",
+     "net interest margin · quarter ended June 30, 2026: 2.44% — 순이자 마진은 이자부 부채의 평균 비용 감소로 늘었다"
+    ],
+    "facts_first3_before": [
+     "순이익(net income) · quarter ended June 30, 2026: $14.5 million — 해당 분기 순이익은 전년 같은 분기보다 늘었다",
+     "net interest margin · quarter ended June 30, 2026: 2.44% — 순이자 마진은 이자부 부채의 평균 비용 감소로 늘었다",
+     "non-interest expense · quarter ended June 30, 2026: $49.4 million — 비이자 비용은 보상 및 직원 복리후생 비용, 데이터 처리 및 소프트웨어 비용, 합병 관련 비용 증가로 늘었다"
+    ],
+    "limitations_shown": [
+     [
+      0,
+      "non-interest income · six months ended June 30, 2026 — 비이자 수입 감소는 주로 지분 증권의 공정 가치 변동과 기타 비이자 수입 감소에 기인하며, 이는 은행 소유 생명 보험의 증가로 부분적으로 상쇄되었다"
+     ],
+     [
+      1,
+      "순이익(net income) · quarter ended June 30, 2026 — 순이익 증가는 신용 손실 충당금 증가, 비이자 비용 증가, 소득세 비용 증가로 부분적으로 상쇄되었다"
+     ]
+    ]
+   },
+   {
+    "ticker": "PUBM",
+    "day": "2026-10-02",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "매출(Revenue) · second quarter of 2026: $78.6 million / 11%(변화율·증가) — 전년 같은 기간보다 증가했다",
+     "Non-GAAP net income · second quarter: $5.9 million / $0.12 — 전년 같은 기간보다 증가했다"
+    ],
+    "facts_first3_before": [
+     "매출(Revenue) · second quarter of 2026: $78.6 million / 11%(변화율·증가) — 전년 같은 기간보다 증가했다",
+     "Non-GAAP net income · second quarter: $5.9 million / $0.12 — 전년 같은 기간보다 증가했다"
+    ],
+    "limitations_shown": [
+     [
+      1,
+      "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 운전자본 필요성, 주식 기반 보상의 희석 효과, 현금 감소를 나타낼 수 있는 세금 납부를 반영하지 않는다"
+     ],
+     [
+      1,
+      "Non-GAAP net income — 비 GAAP 순이익은 주식 기반 보상의 희석 효과, 비정상적인 소송 관련 비용, 주식 기반 보상에 대한 소득세 효과를 포함하지 않는다"
+     ]
+    ]
+   },
+   {
+    "ticker": "FSLY",
+    "day": "2026-10-02",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "매출(revenue) · second quarter: $183.3 million / 23%(변화율·증가) — 매출이 전년 같은 분기보다 늘었다"
+    ],
+    "facts_first3_before": [
+     "매출(revenue) · second quarter: $183.3 million / 23%(변화율·증가) — 매출이 전년 같은 분기보다 늘었다"
+    ],
+    "limitations_shown": [
+     [
+      2,
+      "non-GAAP measures — 비일반회계기준 측정치는 일반회계기준에 따라 결정된 운영 결과와 관련된 모든 금액을 반영하지 않는다는 한계가 있다"
+     ],
+     [
+      2,
+      "non-GAAP financial measures — 비일반회계기준 재무 측정치는 다른 회사에서 사용하는 비일반회계기준 재무 측정치와 다를 수 있다"
+     ]
+    ]
+   },
+   {
+    "ticker": "DAN",
+    "day": "2026-10-02",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "Net income from continuing operations · second quarter of 2026: $11 million — 전년 같은 분기보다 순이익이 늘었다",
+     "Diluted earnings per share from continuing operations · second quarter of 2026: $0.06 — 전년 같은 분기보다 주당 순이익이 늘었다",
+     "Operating cash flow · second quarter of 2026: $109 million — 전년 같은 기간보다 영업 현금 흐름이 늘었다"
+    ],
+    "facts_first3_before": [
+     "Net income from continuing operations · second quarter of 2026: $11 million — 전년 같은 분기보다 순이익이 늘었다",
+     "Diluted earnings per share from continuing operations · second quarter of 2026: $0.06 — 전년 같은 분기보다 주당 순이익이 늘었다",
+     "Operating cash flow · second quarter of 2026: $109 million — 전년 같은 기간보다 영업 현금 흐름이 늘었다"
+    ],
+    "limitations_shown": [
+     [
+      2,
+      "Non-GAAP Measures — 비 GAAP 측정치는 미국 GAAP에 따라 결정된 결과와 별개로 사용되거나 대체될 수 없다"
+     ],
+     [
+      2,
+      "Non-GAAP Measures — 비 GAAP 측정치에 대한 정의는 다른 회사의 유사한 비 GAAP 재무 측정치와 비교 가능하지 않을 수 있다"
+     ]
+    ]
+   },
+   {
+    "ticker": "TEAM",
+    "day": "2026-10-02",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "Total revenue · fourth quarter of fiscal year 2026: $1,766 million / 28%(변화율·증가) — 총 매출이 전년 같은 기간보다 늘었다",
+     "Total revenue: $1,705 million to $1,715 million — 총 매출이 특정 범위에 있을 것으로 예상된다",
+     "Cloud revenue growth year-over-year: 28.5% — 클라우드 매출이 전년 대비 특정 비율로 성장할 것으로 예상된다"
+    ],
+    "facts_first3_before": [
+     "Total revenue · fourth quarter of fiscal year 2026: $1,766 million / 28%(변화율·증가) — 총 매출이 전년 같은 기간보다 늘었다",
+     "Total revenue: $1,705 million to $1,715 million — 총 매출이 특정 범위에 있을 것으로 예상된다",
+     "Cloud revenue growth year-over-year: 28.5% — 클라우드 매출이 전년 대비 특정 비율로 성장할 것으로 예상된다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "SPT",
+    "day": "2026-10-03",
+    "status": "no_supported_claims",
+    "facts_shown": [],
+    "facts_first3_before": [],
+    "limitations_shown": [
+     [
+      0,
+      "Non-GAAP net income per share — 비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다"
+     ],
+     [
+      0,
+      "Non-GAAP operating income — 비일반회계기준 영업 이익은 주식 기반 보상, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동의 영향을 제외한다"
+     ]
+    ]
+   },
+   {
+    "ticker": "SUNC",
+    "day": "2026-10-03",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "조정 EBITDA(Adjusted EBITDA) · second quarter of 2026: $982 million — 회사의 조정 에비타는 전년 같은 분기보다 늘었다",
+     "순이익(net income) · second quarter: $283 million — 회사의 순이익이다",
+     "조정 EBITDA(Adjusted EBITDA) · second quarter: $996 million — 일회성 거래 관련 비용을 제외한 회사의 조정 에비타이다"
+    ],
+    "facts_first3_before": [
+     "순이익(net income) · second quarter: $283 million — 회사의 순이익이다",
+     "조정 EBITDA(Adjusted EBITDA) · second quarter: $996 million — 일회성 거래 관련 비용을 제외한 회사의 조정 에비타이다",
+     "조정 EBITDA(Adjusted EBITDA) · second quarter of 2026: $982 million — 회사의 조정 에비타는 전년 같은 분기보다 늘었다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "PGY",
+    "day": "2026-10-03",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "GAAP net income · Second Quarter 2026: $45 million — 전년 같은 기간보다 늘었다",
+     "순이익(net income) · Full-Year — 회사가 연간 순이익 전망치를 상향 조정했다"
+    ],
+    "facts_first3_before": [
+     "GAAP net income · Second Quarter 2026: $45 million — 전년 같은 기간보다 늘었다",
+     "순이익(net income) · Full-Year — 회사가 연간 순이익 전망치를 상향 조정했다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "TXO",
+    "day": "2026-10-03",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "oil revenues · three months ended June 30, 2026: decreased oil revenues by $28.5 million(변화량·감소) — 석유 선물 및 매도 베이시스 스왑 계약의 순결제로 인해 석유 매출이 감소했다"
+    ],
+    "facts_first3_before": [
+     "oil revenues · three months ended June 30, 2026: decreased oil revenues by $28.5 million(변화량·감소) — 석유 선물 및 매도 베이시스 스왑 계약의 순결제로 인해 석유 매출이 감소했다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "PSX",
+    "day": "2026-10-03",
+    "status": "insufficient_earnings_context",
+    "facts_shown": [
+     "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    ],
+    "facts_first3_before": [
+     "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    ],
+    "limitations_shown": []
+   },
+   {
+    "ticker": "CLF",
+    "day": "2026-10-03",
+    "status": "draft_ready",
+    "facts_shown": [
+     "GAAP net loss · second quarter of 2026: $0.25 per diluted share — 희석 주당 순손실이 전 분기보다 줄었다",
+     "매출(Revenues) · Second-quarter 2026: $5.2 billion — 매출이 전 분기보다 늘었다",
+     "Adjusted EBITDA2 · Second quarter of 2026: $286 million — 조정 에비타가 전 분기보다 늘었다"
+    ],
+    "facts_first3_before": [
+     "매출(Revenues) · Second-quarter 2026: $5.2 billion — 매출이 전 분기보다 늘었다",
+     "Adjusted EBITDA2 · Second quarter of 2026: $286 million — 조정 에비타가 전 분기보다 늘었다",
+     "GAAP net loss · second quarter of 2026: $0.25 per diluted share — 희석 주당 순손실이 전 분기보다 줄었다"
+    ],
+    "limitations_shown": []
+   }
+  ]
+ },
+ "inputs": {
+  "audits": 36,
+  "answered": 28,
+  "failed": 8,
+  "failed_reasons": {
+   "{\"http_status\": 503, \"type\": \"HTTPError\"}": 8
+  }
+ }
+}

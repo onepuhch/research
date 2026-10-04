@@ -1416,7 +1416,8 @@ def context_inputs() -> tuple[dict, dict]:
             except candidate_context.RevalidationUnavailable as why:
                 entry["revalidation_unavailable"] = {"context_id": record["context_id"], "reason": str(why)[:120]}
                 continue  # never the unchecked numbers as a fallback
-        current_parser = record.get("display_validator_version", record.get("parser_version"))             == candidate_context.PARSER_VERSION
+        shown_by = record.get("display_validator_version", record.get("parser_version"))
+        current_parser = shown_by == candidate_context.PARSER_VERSION
         if current_parser and record.get("context_status") == "draft_ready":
             # Shown only as a date when the latest source attempt failed; never as today's result.
             entry["last_valid_context"] = {"context_id": record["context_id"], "generated_at": record["generated_at"],
