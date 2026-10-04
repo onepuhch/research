@@ -315,5 +315,140 @@ class DisclaimerRankTest(unittest.TestCase):
         self.assertTrue(all(rank == 2 for rank, _ in ordered))
 
 
+class ClbkReplacementTest(StoredDraftViewTest):
+    """Section 7: the old CTX stays withheld; a new valid CTX is shown; an empty new one is not a draft."""
+
+    test_bare_change_disappears_level_stays_record_unchanged = None
+    test_missing_document_or_other_issuer_blocks_the_draft = None
+    test_other_fiscal_year_and_unsupported_versions_are_not_attached = None
+    test_quarantine_comes_before_revalidation = None
+    test_import_uses_the_same_view = None
+
+    def withhold_old(self):
+        k.quarantine_path().write_text(json.dumps({"schema_version": 1, "contexts": {self.CTX_ID: {
+            "candidate_id": self.aaa["candidate_id"], "reason": "delta_reported_as_level", "source_ref": "x#p19",
+            "decided_at": "2026-10-04T07:44:07+00:00", "decided_by": "test", "note": "test"}}}), encoding="utf-8")
+
+    def test_three_cases(self):
+        self.store()
+        old_card = self.card()
+        self.withhold_old()
+        self.assertEqual(self.card()["context_hold"]["context_id"], self.CTX_ID)  # 1: old CTX current -> warning
+        self.store(parser=ctx.PARSER_VERSION, context_id="CTX-00000000000000C9")
+        new = self.card()  # 2: a new valid CTX -> its own checked evidence, no old warning
+        self.assertIsNone(new["context_hold"])
+        reply = k.telegram_card(new)
+        self.assertIn("$62.9 million", reply)
+        self.assertNotIn("변화량과 실제 값의 혼동", reply)
+        version, obs = k.load_observation(old_card["observation_id"])  # 3: the old observation stays withheld
+        self.assertIn("변화량과 실제 값의 혼동", k.telegram_card(k.assemble(version, obs, [])))
+
+    def test_an_empty_new_draft_is_not_shown_as_a_draft(self):
+        import candidate_context
+        self.store()
+        self.withhold_old()
+        path = self.store(parser=ctx.PARSER_VERSION, context_id="CTX-00000000000000CA")
+        record = c.read_json(path, {})
+        c.atomic_json(path, {**record, "claims": [], "limitations": [], "context_status": "no_supported_claims"})
+        card = self.card()
+        self.assertNotEqual(card["research_status"], "draft_ready")
+        self.assertIn("근거가 붙은 문장을 만들지 못했습니다", k.telegram_card(card))
+        self.assertTrue(candidate_context.history_dir().joinpath(f"{self.CTX_ID}.json").exists())
+
+
+class EvaluationIntegrityTest(unittest.TestCase):
+    """M4: fixed inputs are verified before anything is produced; accuracy comes from the table."""
+
+    M = ROOT / "data" / "eval" / "m_2026-10-04"
+
+    def setUp(self):
+        import shutil
+        import tempfile
+        import draft_eval
+        self.ev = draft_eval
+        self.lock = json.loads((self.M / "fixture_lock.json").read_text(encoding="utf-8"))
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.dir = pathlib.Path(self.tmp.name)
+        shutil.copytree(L4 / "stage_validators", self.dir / "stage_validators")
+        for name in ("audits.json.gz", "manifest.json"):
+            shutil.copy(L4 / name, self.dir / name)
+        self.records, self.manifest = draft_eval.read_fixture(self.dir)
+
+    def write(self, records, manifest):
+        with gzip.open(self.dir / "audits.json.gz", "wt", encoding="utf-8") as handle:
+            json.dump(records, handle, ensure_ascii=False)
+        (self.dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    def relock_files(self):
+        """A lock that accepts the rewritten files, so the record-level checks are what is tested."""
+        return {**self.lock, "audits_gz_sha256": self.ev.file_sha(self.dir / "audits.json.gz"),
+                "manifest_sha256": self.ev.file_sha(self.dir / "manifest.json")}
+
+    def test_the_kept_inputs_pass_and_reproduce_the_frozen_stage_results(self):
+        records = self.ev.load_fixture(self.dir, self.lock)
+        self.assertEqual(len(records), 36)
+        frozen = json.loads((L4 / "stages.json").read_text(encoding="utf-8"))
+        for stage, name in (("s0_v7.py", "S0_v7"), ("s3_l1l2.py", "S3_L1L2")):
+            outcomes = self.ev.run_stage(self.ev.load_validator(self.dir / "stage_validators" / stage), records)
+            self.assertEqual(sum(v["accepted"] for v in outcomes.values()),
+                             frozen[name]["accepted_claims"] + frozen[name]["accepted_limitations"])
+
+    def test_tampering_is_detected_before_any_output(self):
+        changed = copy.deepcopy(self.records)
+        changed[0]["blocks"][0]["text"] = changed[0]["blocks"][0]["text"][:-1] + "X"  # one character
+        swapped = self.records[1:2] + self.records[:1] + self.records[2:]
+        extra = self.records + [copy.deepcopy(self.records[0])]
+        duplicate = [self.records[0], copy.deepcopy(self.records[0])] + self.records[2:]
+        cases = {"one character": (changed, self.manifest),
+                 "order": (swapped, self.manifest[1:2] + self.manifest[:1] + self.manifest[2:]),
+                 "37th item": (extra, self.manifest + [self.manifest[0]]),
+                 "duplicate attempt": (duplicate, [self.manifest[0], self.manifest[0]] + self.manifest[2:])}
+        for name, (records, manifest) in cases.items():
+            with self.subTest(name):
+                self.write(records, manifest)
+                with self.assertRaises(self.ev.IntegrityError):
+                    self.ev.load_fixture(self.dir, self.lock)  # the archive bytes differ
+                with self.assertRaises(self.ev.IntegrityError):
+                    self.ev.load_fixture(self.dir, self.relock_files())  # and so does each record
+        self.write(self.records, self.manifest)
+        stage = self.dir / "stage_validators" / "s3_l1l2.py"
+        stage.write_text(stage.read_text(encoding="utf-8") + "\n# changed\n", encoding="utf-8")
+        with self.assertRaisesRegex(self.ev.IntegrityError, "stage validator"):
+            self.ev.load_fixture(self.dir, self.relock_files())
+
+    def test_items_with_one_quote_are_separate_and_the_table_decides(self):
+        record = {"run_id": "1-1", "attempt_id": "A", "candidate_id": "CAN-0000000000000001"}
+        item = {"quote": "Revenue was $5 million in 2026.", "figures": ["$5 million"]}
+        first = self.ev.item_key(record, "claims", 0, {**item, "metric": "revenue"})
+        second = self.ev.item_key(record, "claims", 1, {**item, "metric": "net income"})
+        self.assertNotEqual(first, second)
+        outcomes = {first: {"accepted": True, "metric": "revenue", "period": "2026", "subject": "issuer",
+                            "kind": "fact", "roles": ["level"], "text_ko": "a"},
+                    second: {"accepted": True, "metric": "net income", "period": "2026", "subject": "issuer",
+                             "kind": "fact", "roles": ["level"], "text_ko": "b"}}
+        table = [{"key": first, "accept": True, "roles": [["level"]], "figures": ["$5 million"], "metric": "revenue"},
+                 {"key": second, "accept": False, "roles": [["level"]], "figures": ["$5 million"]}]
+        scored = self.ev.score(outcomes, table)
+        self.assertEqual((scored["correct"], len(scored["critical"])), (1, 1))  # not hidden as 'accepted = right'
+        outcomes[first]["roles"] = ["delta"]
+        self.assertEqual(self.ev.score(outcomes, table)["critical"][0]["why"], "figure_role")
+        outcomes[first] = {**outcomes[first], "roles": ["level"], "period": "2025"}
+        self.assertEqual(self.ev.score(outcomes, table)["field_mismatch"], [])  # period not in this entry
+        unreviewed = {**outcomes, "x": {"accepted": True}}
+        self.assertEqual(self.ev.score(unreviewed, table)["unreviewed_accepted"], ["x"])
+
+    def test_the_current_validator_has_no_critical_error_on_the_table(self):
+        records = self.ev.load_fixture(self.dir, self.lock)
+        table = json.loads((self.M / "expected.json").read_text(encoding="utf-8"))["items"]
+        current = self.ev.score(self.ev.run_stage(ctx, records), table)  # the validator in this checkout
+        self.assertEqual((len(current["critical"]), len(current["over_refusal"])), (0, 0))
+        self.assertEqual([x["fields"] for x in current["field_mismatch"]], [["subject"]])  # PSX joint venture
+        v7 = self.ev.score(self.ev.run_stage(self.ev.load_validator(self.dir / "stage_validators" / "s0_v7.py"),
+                                             records), table)
+        self.assertEqual(sorted(x["why"] for x in v7["critical"]),
+                         ["accepted_but_should_be_refused", "figure_role"])  # CLBK, PBF
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,1241 @@
+{
+ "schema_version": 1,
+ "reviewed_by": "Claude, 2026-10-04, against the stored source blocks",
+ "scope": "56 v7-accepted + 9 L2-accepted items of the 9/29-10/4 runs; a regression baseline only",
+ "items": [
+  {
+   "key": "36528079469-1|20260929T060838613290Z-CAN-14C6F602D0868FB9|CAN-14C6F602D0868FB9|claims|2|5fa73cd5e70ef55a|ce8452c7010b9386",
+   "ticker": "AMCX",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "$547 million",
+    "9%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ],
+    [
+     "delta"
+    ]
+   ],
+   "metric": "Net revenue",
+   "period": "second quarter",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "'decreased 9%' is the change of net revenue"
+  },
+  {
+   "key": "36528079469-1|20260929T060843227574Z-CAN-D50A4151AB176FB7|CAN-D50A4151AB176FB7|claims|0|1fb6faf063a05d7d|39f351a3bef7cbad",
+   "ticker": "AEHR",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$130 million and $150 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "total company revenue",
+   "period": "fiscal year ending June 25, 2027",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060843227574Z-CAN-D50A4151AB176FB7|CAN-D50A4151AB176FB7|claims|1|8876d98c4d56cad8|a09c83302d635ef7",
+   "ticker": "AEHR",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "18% to 22%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "non-GAAP net income",
+   "period": "fiscal year ending June 25, 2027",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "'18% to 22% of total revenue' is a ratio level"
+  },
+  {
+   "key": "36528079469-1|20260929T060854313750Z-CAN-D577F2C38FBBCFF7|CAN-D577F2C38FBBCFF7|limitations|2|9900d4f06b9166ee|4f53cda18c2baa0c",
+   "ticker": "DK",
+   "section": "limitations",
+   "position": 2,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Refining EBITDA",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060902095915Z-CAN-E460E34B1D8B66CE|CAN-E460E34B1D8B66CE|claims|1|7cec3f16c2e1af06|fd13eb617998bb32",
+   "ticker": "NBR",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "$131 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "adjusted EBITDA",
+   "period": "second quarter",
+   "subject": "segment",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060902095915Z-CAN-E460E34B1D8B66CE|CAN-E460E34B1D8B66CE|claims|2|2d37d3c9e114e4da|74043b909fbd0c8b",
+   "ticker": "NBR",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "$94 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "adjusted EBITDA",
+   "period": "second quarter",
+   "subject": "segment",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060902095915Z-CAN-E460E34B1D8B66CE|CAN-E460E34B1D8B66CE|claims|3|e56782a69da71574|7700686c1b1f5561",
+   "ticker": "NBR",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$920 to $930 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "adjusted EBITDA",
+   "period": "full-year",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060902095915Z-CAN-E460E34B1D8B66CE|CAN-E460E34B1D8B66CE|claims|4|e56782a69da71574|202e694d2e25715c",
+   "ticker": "NBR",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "$20 to $30 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "adjusted free cash flow",
+   "period": "full-year",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060902095915Z-CAN-E460E34B1D8B66CE|CAN-E460E34B1D8B66CE|limitations|0|4f6aa63f60b12e4a|4f53cda18c2baa0c",
+   "ticker": "NBR",
+   "section": "limitations",
+   "position": 0,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Adjusted EBITDA",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060902095915Z-CAN-E460E34B1D8B66CE|CAN-E460E34B1D8B66CE|limitations|1|39a17480dd8255da|4f53cda18c2baa0c",
+   "ticker": "NBR",
+   "section": "limitations",
+   "position": 1,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Adjusted operating income (loss)",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|claims|0|115561361b696d80|c6d5c9754a5b8426",
+   "ticker": "PBF",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$906.4 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "net income attributable to PBF Energy Inc.",
+   "period": "second quarter 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|claims|3|9df513716b984274|a34dd0add17a79cc",
+   "ticker": "PBF",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$753.1 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Adjusted fully-converted net income",
+   "period": "second quarter 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|limitations|0|d0b8bc090392ec09|378dd2dd15406064",
+   "ticker": "PBF",
+   "section": "limitations",
+   "position": 0,
+   "figures": [
+    "$159.8 million",
+    "$1.32 per share"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "effect_on_metric"
+    ],
+    [
+     "effect_on_metric"
+    ]
+   ],
+   "metric": "net income",
+   "period": "second quarter 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "special items increased net income by $159.8M ($1.32/share): an effect"
+  },
+  {
+   "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|0|a46638dcdfcc29b3|c21a5d7e9a17b34a",
+   "ticker": "AXTI",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$47.6 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Revenue",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|1|0fe9a023d51e203c|1ff8ca5651d62ad2",
+   "ticker": "AXTI",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "44.9 percent"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "GAAP gross margin",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|2|d410fa9a29b35c5a|3d23dc83a2d49942",
+   "ticker": "AXTI",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "45.0 percent"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Non-GAAP gross margin",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|3|248723c53da84cdc|2ed81880ddac6d11",
+   "ticker": "AXTI",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$11.1 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "GAAP net income",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|4|c01d7d6ec9732b87|0dea79eaf42eecf2",
+   "ticker": "AXTI",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "$11.9 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Non-GAAP net income",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055608072475Z-CAN-77F79A3B05ABB893|CAN-77F79A3B05ABB893|claims|3|60bab378fbe1796c|a111afcbe6d846db",
+   "ticker": "MPC",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "12.5%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level",
+     "delta"
+    ]
+   ],
+   "metric": "annual distribution growth",
+   "period": "2026 and 2027",
+   "subject": "subsidiary",
+   "kind": "guidance",
+   "why": "12.5% is the value of a growth metric"
+  },
+  {
+   "key": "36674489444-1|20260930T055608072475Z-CAN-77F79A3B05ABB893|CAN-77F79A3B05ABB893|claims|4|07968623fe432713|7b6e26233bf737e7",
+   "ticker": "MPC",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "$2.8 billion"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "capital returned",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055613316565Z-CAN-700B10D9B75B0040|CAN-700B10D9B75B0040|claims|1|ccc292d6fa93e2a6|60c4f4ff27a86dff",
+   "ticker": "CORT",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "$1.1 – $1.2 billion"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "revenue guidance",
+   "period": "2026",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055613316565Z-CAN-700B10D9B75B0040|CAN-700B10D9B75B0040|claims|3|e48968ad6f94358a|fdb7af1345d43c5c",
+   "ticker": "CORT",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$0.36"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Net income per common share (diluted)",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055613316565Z-CAN-700B10D9B75B0040|CAN-700B10D9B75B0040|claims|4|c2297b9e20fcad4c|dded464f023df7b5",
+   "ticker": "CORT",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "$208.6 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "product revenue",
+   "period": "second quarter 2026",
+   "subject": "segment",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055618596722Z-CAN-490AC1686F9442CE|CAN-490AC1686F9442CE|claims|4|8fef34af8f563aa4|39c0f467ef303125",
+   "ticker": "RPAY",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "between $150 million and $154 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "revenue",
+   "period": "2026",
+   "subject": "subsidiary",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36674489444-1|20260930T055627752942Z-CAN-FDA6B7F62852042F|CAN-FDA6B7F62852042F|limitations|2|aa93f6bd983a2a8b|4f53cda18c2baa0c",
+   "ticker": "PARR",
+   "section": "limitations",
+   "position": 2,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Adjusted Gross Margin",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36822997450-1|20261001T062242438072Z-CAN-36582E27909720FE|CAN-36582E27909720FE|claims|3|2817de14e01395bf|4f53cda18c2baa0c",
+   "ticker": "CODI",
+   "section": "claims",
+   "position": 3,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "outlook",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "interpretation",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36822997450-1|20261001T062259708511Z-CAN-5A9E947A6AEC56D7|CAN-5A9E947A6AEC56D7|limitations|0|78b90bee1121e54f|270f5e429dd54415",
+   "ticker": "AGL",
+   "section": "limitations",
+   "position": 0,
+   "figures": [
+    "549,000",
+    "437,000",
+    "112,000"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ],
+    [
+     "level"
+    ],
+    [
+     "level"
+    ]
+   ],
+   "metric": "Total members on the agilon platform",
+   "period": "June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36822997450-1|20261001T062307478112Z-CAN-4DB66C064FC2ED7C|CAN-4DB66C064FC2ED7C|claims|0|d3141253a0a27234|c4c3db2f4b8fc84d",
+   "ticker": "URGN",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$72.5 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Revenue",
+   "period": "second quarter ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36822997450-1|20261001T062307478112Z-CAN-4DB66C064FC2ED7C|CAN-4DB66C064FC2ED7C|claims|3|3c18d7b8ab808b6a|b0fde891a6557ef7",
+   "ticker": "URGN",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$260 million to $270 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "full-year 2026 operating expenses guidance",
+   "period": "full-year 2026",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|0|af3cff6080756b16|d049c0091c00c8f3",
+   "ticker": "CLBK",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$14.5 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "net income",
+   "period": "quarter ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|1|787080f5b3a773ac|a9497bd1d05714da",
+   "ticker": "CLBK",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "$9.2 million"
+   ],
+   "accept": false,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "net interest income",
+   "period": "quarter ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "$9.2M is the increase of net interest income ($62.9M level, p20)"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|2|f21f4985949ae2d3|b24de0724e8db0ea",
+   "ticker": "CLBK",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "2.44%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "net interest margin",
+   "period": "quarter ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|3|0b5ba87832e19079|ec9569e63228e24e",
+   "ticker": "CLBK",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$49.4 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "non-interest expense",
+   "period": "quarter ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|4|673c64980b512013|f828027f23856e07",
+   "ticker": "CLBK",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "$27.6 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "net income",
+   "period": "six months ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|limitations|0|787080f5b3a773ac|4f53cda18c2baa0c",
+   "ticker": "CLBK",
+   "section": "limitations",
+   "position": 0,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "net income",
+   "period": "quarter ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|limitations|1|5ed782e8ab817947|4f53cda18c2baa0c",
+   "ticker": "CLBK",
+   "section": "limitations",
+   "position": 1,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "non-interest income",
+   "period": "six months ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151631201369Z-CAN-C8B827862A3B86D5|CAN-C8B827862A3B86D5|claims|0|f5bb628cd1f4b28e|7a46b3b2861f978e",
+   "ticker": "PUBM",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$78.6 million",
+    "11%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ],
+    [
+     "delta"
+    ]
+   ],
+   "metric": "Revenue",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "'up 11%' is a change"
+  },
+  {
+   "key": "36880974655-1|20261001T151631201369Z-CAN-C8B827862A3B86D5|CAN-C8B827862A3B86D5|claims|3|f84444f8c643b362|e2c6c8da1aa5710b",
+   "ticker": "PUBM",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$5.9 million",
+    "$0.12"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ],
+    [
+     "level"
+    ]
+   ],
+   "metric": "Non-GAAP net income",
+   "period": "second quarter",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151631201369Z-CAN-C8B827862A3B86D5|CAN-C8B827862A3B86D5|limitations|1|014102a3a962c78c|4f53cda18c2baa0c",
+   "ticker": "PUBM",
+   "section": "limitations",
+   "position": 1,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Adjusted EBITDA",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151631201369Z-CAN-C8B827862A3B86D5|CAN-C8B827862A3B86D5|limitations|2|5af1bec4150cbb18|4f53cda18c2baa0c",
+   "ticker": "PUBM",
+   "section": "limitations",
+   "position": 2,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Non-GAAP net income",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151638178176Z-CAN-8ED72F330C1AE34D|CAN-8ED72F330C1AE34D|claims|0|75fc1028142030d8|ed20ceaadabc423a",
+   "ticker": "FSLY",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$183.3 million",
+    "23%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ],
+    [
+     "delta"
+    ]
+   ],
+   "metric": "revenue",
+   "period": "second quarter",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "'grew 23%' is a change"
+  },
+  {
+   "key": "36880974655-1|20261001T151638178176Z-CAN-8ED72F330C1AE34D|CAN-8ED72F330C1AE34D|limitations|1|1deb36766246aa98|4f53cda18c2baa0c",
+   "ticker": "FSLY",
+   "section": "limitations",
+   "position": 1,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "non-GAAP measures",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151638178176Z-CAN-8ED72F330C1AE34D|CAN-8ED72F330C1AE34D|limitations|2|eb5582f7af49ac4f|4f53cda18c2baa0c",
+   "ticker": "FSLY",
+   "section": "limitations",
+   "position": 2,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "non-GAAP financial measures",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151649277731Z-CAN-0584EAE068460D91|CAN-0584EAE068460D91|claims|0|e177e6d8ae8ed431|e1772db1a342938e",
+   "ticker": "DAN",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$11 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Net income from continuing operations",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151649277731Z-CAN-0584EAE068460D91|CAN-0584EAE068460D91|claims|1|ef3e567d81e04544|6e6397cf1b39f8cc",
+   "ticker": "DAN",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "$0.06"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Diluted earnings per share from continuing operations",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151649277731Z-CAN-0584EAE068460D91|CAN-0584EAE068460D91|claims|2|7385d86b6fefe988|c960275a9cb323db",
+   "ticker": "DAN",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "$109 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Operating cash flow",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151649277731Z-CAN-0584EAE068460D91|CAN-0584EAE068460D91|limitations|0|5be1fe8226a220c2|4f53cda18c2baa0c",
+   "ticker": "DAN",
+   "section": "limitations",
+   "position": 0,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Non-GAAP Measures",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151649277731Z-CAN-0584EAE068460D91|CAN-0584EAE068460D91|limitations|1|b0f14f6cf9e4bf03|4f53cda18c2baa0c",
+   "ticker": "DAN",
+   "section": "limitations",
+   "position": 1,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Non-GAAP Measures",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151655783159Z-CAN-4E5151866E863998|CAN-4E5151866E863998|claims|0|6b6fd4d16369efa1|cd2abf1841d8ff0d",
+   "ticker": "TEAM",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$1,766 million",
+    "28%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ],
+    [
+     "delta"
+    ]
+   ],
+   "metric": "Total revenue",
+   "period": "fourth quarter of fiscal year 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "'up 28%' is a change"
+  },
+  {
+   "key": "36880974655-1|20261001T151655783159Z-CAN-4E5151866E863998|CAN-4E5151866E863998|claims|2|cafda8e763f04d04|6b21ccb255517fd7",
+   "ticker": "TEAM",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "$1,705 million to $1,715 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Total revenue",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "36880974655-1|20261001T151655783159Z-CAN-4E5151866E863998|CAN-4E5151866E863998|claims|3|125855851eae19cb|dbfc461a7441c37c",
+   "ticker": "TEAM",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "28.5%"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level",
+     "delta"
+    ]
+   ],
+   "metric": "Cloud revenue growth year-over-year",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "28.5% is the value of a growth metric"
+  },
+  {
+   "key": "36880974655-1|20261001T151655783159Z-CAN-4E5151866E863998|CAN-4E5151866E863998|claims|4|6607327a97154d16|a358f168f50f29ed",
+   "ticker": "TEAM",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "(4.0%)"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level",
+     "delta"
+    ]
+   ],
+   "metric": "Data Center revenue growth year-over-year",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "(4.0%) is the value of a growth metric"
+  },
+  {
+   "key": "37099766046-1|20261003T054334081551Z-CAN-E87900AEFDDE7B07|CAN-E87900AEFDDE7B07|limitations|0|0aad2b4b070b4ea8|4f53cda18c2baa0c",
+   "ticker": "SPT",
+   "section": "limitations",
+   "position": 0,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Non-GAAP net income per share",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054334081551Z-CAN-E87900AEFDDE7B07|CAN-E87900AEFDDE7B07|limitations|1|606047eb73bdf2f1|4f53cda18c2baa0c",
+   "ticker": "SPT",
+   "section": "limitations",
+   "position": 1,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "Non-GAAP operating income",
+   "period": "unknown",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|0|26452bc941d5bfeb|7fc614b1d6a5b7b8",
+   "ticker": "SUNC",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$283 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "net income",
+   "period": "second quarter",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|1|26452bc941d5bfeb|c08a07d6ed2ee989",
+   "ticker": "SUNC",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "$996 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Adjusted EBITDA",
+   "period": "second quarter",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|3|90b2f029c5394b95|daa821fd421eb522",
+   "ticker": "SUNC",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "$982 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Adjusted EBITDA",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054348265585Z-CAN-EE8A92AC2C2D3E8C|CAN-EE8A92AC2C2D3E8C|claims|0|f45a03693c7b0296|98bfc22538f9f8b8",
+   "ticker": "PGY",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$45 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "GAAP net income",
+   "period": "Second Quarter 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054348265585Z-CAN-EE8A92AC2C2D3E8C|CAN-EE8A92AC2C2D3E8C|claims|4|274378e2d732b7ba|4f53cda18c2baa0c",
+   "ticker": "PGY",
+   "section": "claims",
+   "position": 4,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "net income",
+   "period": "Full-Year",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054352218595Z-CAN-0733D6B2B6A41784|CAN-0733D6B2B6A41784|claims|4|0cdb05e5d4ecfc12|93f812f481c80743",
+   "ticker": "TXO",
+   "section": "claims",
+   "position": 4,
+   "figures": [
+    "decreased oil revenues by $28.5 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "described_delta",
+     "level"
+    ]
+   ],
+   "metric": "oil revenues",
+   "period": "three months ended June 30, 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "the figure itself says 'decreased ... by', so no reading mistakes it for a level"
+  },
+  {
+   "key": "37099766046-1|20261003T054358875359Z-CAN-3D30FF7D03231FE1|CAN-3D30FF7D03231FE1|claims|4|26b677887e09b503|4f53cda18c2baa0c",
+   "ticker": "PSX",
+   "section": "claims",
+   "position": 4,
+   "figures": [],
+   "accept": true,
+   "roles": [],
+   "metric": "full operations",
+   "period": "2027",
+   "subject": "other",
+   "kind": "guidance",
+   "why": "CPChem is a 50/50 joint venture, not a subsidiary"
+  },
+  {
+   "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|0|99ffacdf033b8fad|aa635845d2e2cac0",
+   "ticker": "CLF",
+   "section": "claims",
+   "position": 0,
+   "figures": [
+    "$5.2 billion"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Revenues",
+   "period": "Second-quarter 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|1|d1a7de2f507c9096|2256fea79de031fe",
+   "ticker": "CLF",
+   "section": "claims",
+   "position": 1,
+   "figures": [
+    "$286 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "Adjusted EBITDA2",
+   "period": "Second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|2|9c84aa7f8e3d6a30|bc8ab32ae4c9c34b",
+   "ticker": "CLF",
+   "section": "claims",
+   "position": 2,
+   "figures": [
+    "$0.25 per diluted share"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "GAAP net loss",
+   "period": "second quarter of 2026",
+   "subject": "issuer",
+   "kind": "fact",
+   "why": "source-checked: as written"
+  },
+  {
+   "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|3|6be94a9722333ad4|929a3e808012e929",
+   "ticker": "CLF",
+   "section": "claims",
+   "position": 3,
+   "figures": [
+    "approximately $575 million"
+   ],
+   "accept": true,
+   "roles": [
+    [
+     "level"
+    ]
+   ],
+   "metric": "adjusted EBITDA2",
+   "period": "third-quarter 2026",
+   "subject": "issuer",
+   "kind": "guidance",
+   "why": "source-checked: as written"
+  }
+ ]
+}

@@ -1,0 +1,324 @@
+{
+ "inputs": {
+  "records": 36,
+  "answered": 28,
+  "failed": 8,
+  "lock_sha256": "94d607ccd7693f3834d1b03ace58cb67208b3bafeabfa0ed1a864b59b88c9735",
+  "expected_sha256": "3ca05ba702d01473e1fb1346365bc82f689963e879d183397f2c9a976be017b0",
+  "current_validator_sha256": "721be956db650a85982381d8ddafa1271d12c4662a738930b063ada47baac228"
+ },
+ "stages": {
+  "s0_v7": {
+   "parser_version": "context-check-v7",
+   "accepted": 56,
+   "critical": [
+    {
+     "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|limitations|0|d0b8bc090392ec09|378dd2dd15406064",
+     "why": "figure_role",
+     "got": [
+      "level",
+      "level"
+     ],
+     "allowed": [
+      [
+       "effect_on_metric"
+      ],
+      [
+       "effect_on_metric"
+      ]
+     ],
+     "text_ko": "순이익(net income) · second quarter 2026: $159.8 million / $1.32 per share — 특별 비현금 항목이 순이익과 주당 순이익을 증가시켰다"
+    },
+    {
+     "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|1|787080f5b3a773ac|a9497bd1d05714da",
+     "why": "accepted_but_should_be_refused",
+     "text_ko": "net interest income · quarter ended June 30, 2026: $9.2 million — 순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다"
+    }
+   ],
+   "field_mismatch": [
+    {
+     "key": "36528079469-1|20260929T060838613290Z-CAN-14C6F602D0868FB9|CAN-14C6F602D0868FB9|claims|2|5fa73cd5e70ef55a|ce8452c7010b9386",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "Net revenue · second quarter: $547 million / 9% — 회사의 순 매출은 전년 같은 기간보다 감소했다"
+    },
+    {
+     "key": "36880974655-1|20261001T151631201369Z-CAN-C8B827862A3B86D5|CAN-C8B827862A3B86D5|claims|0|f5bb628cd1f4b28e|7a46b3b2861f978e",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "매출(Revenue) · second quarter of 2026: $78.6 million / 11% — 전년 같은 기간보다 증가했다"
+    },
+    {
+     "key": "36880974655-1|20261001T151638178176Z-CAN-8ED72F330C1AE34D|CAN-8ED72F330C1AE34D|claims|0|75fc1028142030d8|ed20ceaadabc423a",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "매출(revenue) · second quarter: $183.3 million / 23% — 매출이 전년 같은 분기보다 늘었다"
+    },
+    {
+     "key": "36880974655-1|20261001T151655783159Z-CAN-4E5151866E863998|CAN-4E5151866E863998|claims|0|6b6fd4d16369efa1|cd2abf1841d8ff0d",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "Total revenue · fourth quarter of fiscal year 2026: $1,766 million / 28% — 총 매출이 전년 같은 기간보다 늘었다"
+    },
+    {
+     "key": "37099766046-1|20261003T054358875359Z-CAN-3D30FF7D03231FE1|CAN-3D30FF7D03231FE1|claims|4|26b677887e09b503|4f53cda18c2baa0c",
+     "fields": [
+      "subject"
+     ],
+     "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    }
+   ],
+   "over_refusal": [
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|0|a46638dcdfcc29b3|c21a5d7e9a17b34a",
+     "reason": "bad_tag"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|2|d410fa9a29b35c5a|3d23dc83a2d49942",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|3|248723c53da84cdc|2ed81880ddac6d11",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|4|c01d7d6ec9732b87|0dea79eaf42eecf2",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36822997450-1|20261001T062307478112Z-CAN-4DB66C064FC2ED7C|CAN-4DB66C064FC2ED7C|claims|3|3c18d7b8ab808b6a|b0fde891a6557ef7",
+     "reason": "raise_not_in_quote"
+    },
+    {
+     "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|1|26452bc941d5bfeb|c08a07d6ed2ee989",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|3|90b2f029c5394b95|daa821fd421eb522",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|1|d1a7de2f507c9096|2256fea79de031fe",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|3|6be94a9722333ad4|929a3e808012e929",
+     "reason": "gaap_not_as_stated"
+    }
+   ],
+   "correct": 49,
+   "expected_items": 65,
+   "unreviewed_accepted": 0
+  },
+  "s1_goodwill": {
+   "parser_version": "context-check-v7",
+   "accepted": 56,
+   "critical": [
+    {
+     "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|limitations|0|d0b8bc090392ec09|378dd2dd15406064",
+     "why": "figure_role",
+     "got": [
+      "level",
+      "level"
+     ],
+     "allowed": [
+      [
+       "effect_on_metric"
+      ],
+      [
+       "effect_on_metric"
+      ]
+     ],
+     "text_ko": "순이익(net income) · second quarter 2026: $159.8 million / $1.32 per share — 특별 비현금 항목이 순이익과 주당 순이익을 증가시켰다"
+    },
+    {
+     "key": "36880974655-1|20261001T151623344403Z-CAN-E763F753A2D7609F|CAN-E763F753A2D7609F|claims|1|787080f5b3a773ac|a9497bd1d05714da",
+     "why": "accepted_but_should_be_refused",
+     "text_ko": "net interest income · quarter ended June 30, 2026: $9.2 million — 순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다"
+    }
+   ],
+   "field_mismatch": [
+    {
+     "key": "36528079469-1|20260929T060838613290Z-CAN-14C6F602D0868FB9|CAN-14C6F602D0868FB9|claims|2|5fa73cd5e70ef55a|ce8452c7010b9386",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "Net revenue · second quarter: $547 million / 9% — 회사의 순 매출은 전년 같은 기간보다 감소했다"
+    },
+    {
+     "key": "36880974655-1|20261001T151631201369Z-CAN-C8B827862A3B86D5|CAN-C8B827862A3B86D5|claims|0|f5bb628cd1f4b28e|7a46b3b2861f978e",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "매출(Revenue) · second quarter of 2026: $78.6 million / 11% — 전년 같은 기간보다 증가했다"
+    },
+    {
+     "key": "36880974655-1|20261001T151638178176Z-CAN-8ED72F330C1AE34D|CAN-8ED72F330C1AE34D|claims|0|75fc1028142030d8|ed20ceaadabc423a",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "매출(revenue) · second quarter: $183.3 million / 23% — 매출이 전년 같은 분기보다 늘었다"
+    },
+    {
+     "key": "36880974655-1|20261001T151655783159Z-CAN-4E5151866E863998|CAN-4E5151866E863998|claims|0|6b6fd4d16369efa1|cd2abf1841d8ff0d",
+     "fields": [
+      "rate_label"
+     ],
+     "text_ko": "Total revenue · fourth quarter of fiscal year 2026: $1,766 million / 28% — 총 매출이 전년 같은 기간보다 늘었다"
+    },
+    {
+     "key": "37099766046-1|20261003T054358875359Z-CAN-3D30FF7D03231FE1|CAN-3D30FF7D03231FE1|claims|4|26b677887e09b503|4f53cda18c2baa0c",
+     "fields": [
+      "subject"
+     ],
+     "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    }
+   ],
+   "over_refusal": [
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|0|a46638dcdfcc29b3|c21a5d7e9a17b34a",
+     "reason": "bad_tag"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|2|d410fa9a29b35c5a|3d23dc83a2d49942",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|3|248723c53da84cdc|2ed81880ddac6d11",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|4|c01d7d6ec9732b87|0dea79eaf42eecf2",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36822997450-1|20261001T062307478112Z-CAN-4DB66C064FC2ED7C|CAN-4DB66C064FC2ED7C|claims|3|3c18d7b8ab808b6a|b0fde891a6557ef7",
+     "reason": "raise_not_in_quote"
+    },
+    {
+     "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|1|26452bc941d5bfeb|c08a07d6ed2ee989",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|3|90b2f029c5394b95|daa821fd421eb522",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|1|d1a7de2f507c9096|2256fea79de031fe",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|3|6be94a9722333ad4|929a3e808012e929",
+     "reason": "gaap_not_as_stated"
+    }
+   ],
+   "correct": 49,
+   "expected_items": 65,
+   "unreviewed_accepted": 0
+  },
+  "s2_l1": {
+   "parser_version": "context-check-v8",
+   "accepted": 54,
+   "critical": [],
+   "field_mismatch": [
+    {
+     "key": "37099766046-1|20261003T054358875359Z-CAN-3D30FF7D03231FE1|CAN-3D30FF7D03231FE1|claims|4|26b677887e09b503|4f53cda18c2baa0c",
+     "fields": [
+      "subject"
+     ],
+     "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    }
+   ],
+   "over_refusal": [
+    {
+     "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|limitations|0|d0b8bc090392ec09|378dd2dd15406064",
+     "reason": "effect_presented_as_level"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|0|a46638dcdfcc29b3|c21a5d7e9a17b34a",
+     "reason": "bad_tag"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|2|d410fa9a29b35c5a|3d23dc83a2d49942",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|3|248723c53da84cdc|2ed81880ddac6d11",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36674489444-1|20260930T055601021066Z-CAN-DC6D3F92ECFFD019|CAN-DC6D3F92ECFFD019|claims|4|c01d7d6ec9732b87|0dea79eaf42eecf2",
+     "reason": "figure_belongs_to_another_metric"
+    },
+    {
+     "key": "36822997450-1|20261001T062307478112Z-CAN-4DB66C064FC2ED7C|CAN-4DB66C064FC2ED7C|claims|3|3c18d7b8ab808b6a|b0fde891a6557ef7",
+     "reason": "raise_not_in_quote"
+    },
+    {
+     "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|1|26452bc941d5bfeb|c08a07d6ed2ee989",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054340744896Z-CAN-A0761326A7E13159|CAN-A0761326A7E13159|claims|3|90b2f029c5394b95|daa821fd421eb522",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|1|d1a7de2f507c9096|2256fea79de031fe",
+     "reason": "gaap_not_as_stated"
+    },
+    {
+     "key": "37099766046-1|20261003T054403678821Z-CAN-7F0690B785E31226|CAN-7F0690B785E31226|claims|3|6be94a9722333ad4|929a3e808012e929",
+     "reason": "gaap_not_as_stated"
+    }
+   ],
+   "correct": 54,
+   "expected_items": 65,
+   "unreviewed_accepted": 0
+  },
+  "s3_l1l2": {
+   "parser_version": "context-check-v8",
+   "accepted": 63,
+   "critical": [],
+   "field_mismatch": [
+    {
+     "key": "37099766046-1|20261003T054358875359Z-CAN-3D30FF7D03231FE1|CAN-3D30FF7D03231FE1|claims|4|26b677887e09b503|4f53cda18c2baa0c",
+     "fields": [
+      "subject"
+     ],
+     "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    }
+   ],
+   "over_refusal": [
+    {
+     "key": "36528079469-1|20260929T060908856641Z-CAN-82719B27698E3C22|CAN-82719B27698E3C22|limitations|0|d0b8bc090392ec09|378dd2dd15406064",
+     "reason": "effect_presented_as_level"
+    }
+   ],
+   "correct": 63,
+   "expected_items": 65,
+   "unreviewed_accepted": 0
+  },
+  "s5_current": {
+   "parser_version": "context-check-v9",
+   "accepted": 64,
+   "critical": [],
+   "field_mismatch": [
+    {
+     "key": "37099766046-1|20261003T054358875359Z-CAN-3D30FF7D03231FE1|CAN-3D30FF7D03231FE1|claims|4|26b677887e09b503|4f53cda18c2baa0c",
+     "fields": [
+      "subject"
+     ],
+     "text_ko": "[Chevron Phillips Chemical Company LLC] full operations · 2027 — 골든 트라이앵글 폴리머 프로젝트와 라스 라판 폴리머 프로젝트의 완전 가동이 예상된다"
+    }
+   ],
+   "over_refusal": [],
+   "correct": 64,
+   "expected_items": 65,
+   "unreviewed_accepted": 0
+  }
+ }
+}
