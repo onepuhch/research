@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v6"
+GENERATOR_VERSION = "cards-v7"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -423,14 +423,48 @@ def display_view(cand: dict) -> dict:
     if context.get("context_id") in quarantine:
         shown["context"] = None
         shown["context_hold"] = hold_note(context["context_id"], quarantine[context["context_id"]])
+    elif context.get("context_id"):
+        # The card's own CTX (never a later one), checked as a new card would be.
+        import candidate_context
+        record = c.read_json(candidate_context.history_dir() / f"{context['context_id']}.json", None)
+        view, why = verified_context(record) if record else (None, "stored draft missing")
+        if view is None:
+            shown["context"] = None
+            shown["context_hold"] = {"context_id": context["context_id"], "reason": "revalidation_unavailable",
+                                     "detail": why}
+        else:
+            shown["context"] = context_view(view)
     if last_valid.get("context_id") in quarantine:
         shown["last_valid_context"] = None
-    return shown
+    return hold_imported(shown, quarantine)
+
+
+def hold_imported(cand: dict, quarantine: dict) -> dict:
+    """Human evidence copied from a withheld draft is not shown from an index or an observation
+    either: the statements that came with it are held and a re-check is asked for. Evidence a
+    person wrote independently stays."""
+    entry = c.read_json(evidence_path(), {}).get(cand.get("candidate_id") or "") or {}
+    if entry.get("imported_from") not in quarantine:
+        return cand
+    copied = {s.get("text") for statements in (entry.get("explanations") or {}).values() for s in statements or []}
+    explanations, held = dict(cand.get("explanations") or {}), False
+    for field, value in explanations.items():
+        statements = value.get("statements") if isinstance(value, dict) else None
+        if statements:
+            kept = [s for s in statements if s.get("text") not in copied]
+            held |= len(kept) != len(statements)
+            explanations[field] = {**value, "statements": kept}
+    if not held:
+        return cand
+    return {**cand, "explanations": explanations,
+            "evidence_review": {"status": "needs_evidence", "reason": "가져온 자동 초안이 격리되어 사용 중지: 원문 재검토 필요"}}
 
 
 def hold_warning(hold: dict) -> str:
     if hold.get("reason") == "quarantine_unavailable":
         return QUARANTINE_UNREADABLE
+    if hold.get("reason") == "revalidation_unavailable":
+        return "저장된 초안을 현재 검증기로 다시 확인하지 못해 표시하지 않습니다(재검증 불가)."
     return QUARANTINE_WARNINGS.get(hold.get("reason"),
                                    "공식 발표 초안 재검증 중 — 오류가 확인되어 해당 초안 표시를 중지했습니다.")
 
@@ -578,6 +612,8 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
 def content_version(content: dict) -> str:
     """Hash of what the card claims. When a source was observed is not part of the claim."""
     claim = {**content, "sources": [{k: v for k, v in s.items() if k != "observed_at"} for s in content["sources"]]}
+    if claim.get("context"):  # when a draft was generated is shown, but is not part of what it claims
+        claim["context"] = {k: v for k, v in claim["context"].items() if k != "generated_at"}
     return "CV-" + digest(claim)[:16].upper()
 
 
@@ -622,13 +658,16 @@ def store_versions(cands: list[dict]) -> int:
     return written
 
 
-def store_observations(cands: list[dict]) -> int:
-    """One immutable file per observation; re-rendering the same input writes nothing."""
+def store_observations(cands: list[dict], rendered_at: str | None = None) -> int:
+    """One immutable file per observation; re-rendering the same input writes nothing. rendered_at
+    (when this generator wrote it) orders two renders of the same snapshot; it is not part of the ID."""
     written = 0
     for cand in cands:
         if not cand.get("observation_id"):
             continue
         record = observation_record(cand)
+        if rendered_at:
+            record["rendered_at"] = rendered_at
         path = observations_dir() / f"{record['observation_id']}.json"
         if path.exists():
             if c.read_json(path, {}).get("candidate_id") != record["candidate_id"]:
@@ -671,8 +710,12 @@ def migrate_legacy_versions(now: datetime) -> int:
 
 
 def observation_order(record: dict) -> tuple:
-    # At the same instant a migrated cards-v1 record precedes the record the current generator made.
-    return (record["observed_at"], 0 if record.get("migrated") else 1, record["observation_id"])
+    # At the same instant a migrated cards-v1 record precedes the record the current generator made,
+    # and a card re-rendered from the same snapshot by a newer generator (L0 cards-v5 on 10/4) comes
+    # after the older render, so a departed candidate is shown from its latest render, not a hash order.
+    generator = re.search(r"(\d+)$", str(record.get("generator_version") or ""))
+    return (record["observed_at"], 0 if record.get("migrated") else 1, int(generator.group(1)) if generator else 0,
+            record.get("rendered_at") or "", record["observation_id"])
 
 
 def known_candidates() -> dict:
@@ -1357,7 +1400,7 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
                       c.read_live_rows("investment_review_log"), policy_version(), contexts=contexts, research=research,
                       quarantine=load_quarantine())
         report["new_versions"] = store_versions(cands)
-        report["new_observations"] = store_observations(cands)
+        report["new_observations"] = store_observations(cands, index["generated_at"])
         earnings = snapshot.get("stages", {}).get("earnings", {})
         index.update(observed_at=snapshot["run"]["finished_at"], run_status=snapshot["run"]["status"],
                      source_snapshot=ref, screen_candidates=sum(1 for r in derived.get("rows", []) if r.get("candidate")),
@@ -1407,17 +1450,15 @@ def context_inputs() -> tuple[dict, dict]:
             if entry.get("context_id") else None
         if not record:
             continue
-        loaded = {d: company_filings.load_document(d) for d in record.get("document_ids") or []}
-        if record.get("parser_version") in candidate_context.REVALIDATED_VERSIONS:
-            # An older validator's draft is shown only as the current validator accepts it now.
-            try:
-                record = candidate_context.revalidate_record(record, {d: x for d, x in loaded.items() if x},
-                                                             entry.get("issuer"))
-            except candidate_context.RevalidationUnavailable as why:
-                entry["revalidation_unavailable"] = {"context_id": record["context_id"], "reason": str(why)[:120]}
-                continue  # never the unchecked numbers as a fallback
-        shown_by = record.get("display_validator_version", record.get("parser_version"))
-        current_parser = shown_by == candidate_context.PARSER_VERSION
+        supported = record.get("parser_version") in (candidate_context.PARSER_VERSION,
+                                                     *candidate_context.REVALIDATED_VERSIONS)
+        if not supported:
+            continue  # an older validator's draft is never shown
+        record, why = verified_context(record, entry.get("issuer"))
+        if record is None:
+            entry["revalidation_unavailable"] = {"context_id": entry["context_id"], "reason": why}
+            continue  # never the unchecked numbers as a fallback
+        current_parser = True
         if current_parser and record.get("context_status") == "draft_ready":
             # Shown only as a date when the latest source attempt failed; never as today's result.
             entry["last_valid_context"] = {"context_id": record["context_id"], "generated_at": record["generated_at"],
@@ -1427,14 +1468,36 @@ def context_inputs() -> tuple[dict, dict]:
         if (not current_parser or entry.get("status") not in ("success", "failed")
                 or record.get("eps_target_period") != entry.get("eps_target_period")):
             continue
-        docs = []
-        for document_id in record["document_ids"]:
-            doc = loaded.get(document_id)
-            if doc:
-                docs.append({k: doc.get(k) for k in ("document_id", "title", "url", "filed_at", "observed_at",
-                                                      "form", "document_type")})
-        contexts[cid] = {**record, "documents": docs}
+        contexts[cid] = record
     return contexts, research
+
+
+def verified_context(record: dict, issuer_hint: dict | None = None) -> tuple[dict | None, str | None]:
+    """(view, None) or (None, why): a stored draft as it may be used now, for new cards and for every
+    card read back from an index or an observation. A current-validator draft is used as generated;
+    an older supported one (v7, v8) only as the current validator accepts its accepted items, on
+    the same source blocks, for the same issuer. The record is never changed, and a missing
+    document, block or issuer blocks the draft instead of showing old numbers."""
+    import candidate_context
+    import company_filings
+    loaded = {d: company_filings.load_document(d) for d in record.get("document_ids") or []}
+    parser = record.get("parser_version")
+    if parser == candidate_context.PARSER_VERSION:
+        view = {**record, "source_parser_version": parser, "display_validator_version": parser,
+                "validation_scope": "as_generated"}
+    elif parser in candidate_context.REVALIDATED_VERSIONS:
+        cik = record.get("issuer_cik")
+        issuer = issuer_hint if (issuer_hint or {}).get("cik") == cik else next(
+            (d["issuer"] for d in loaded.values() if d and (d.get("issuer") or {}).get("cik") == cik), None)
+        try:
+            view = candidate_context.revalidate_record(record, {d: x for d, x in loaded.items() if x}, issuer)
+        except candidate_context.RevalidationUnavailable as why:
+            return None, str(why)[:120]
+    else:
+        return None, f"validator {parser} is not supported"
+    docs = [{k: loaded[d].get(k) for k in ("document_id", "title", "url", "filed_at", "observed_at", "form",
+                                            "document_type")} for d in record.get("document_ids") or [] if loaded.get(d)]
+    return {**view, "documents": docs}, None
 
 
 def review_events_dir() -> Path:

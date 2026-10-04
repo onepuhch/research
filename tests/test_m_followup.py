@@ -12,7 +12,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "tests"))
 import candidate_context as ctx  # noqa: E402
-from test_l_followup import CLBK_P19_SENTENCE, DAN, PBF, RPAY, reason, run  # noqa: E402
+import candidates as k  # noqa: E402
+import common as c  # noqa: E402
+from test_l_followup import CLBK_P19_SENTENCE, DAN, PBF, RPAY, StoredDraftViewTest, reason, run  # noqa: E402
 
 L4 = ROOT / "data" / "eval" / "l4_2026-10-04"
 
@@ -121,6 +123,121 @@ class EffectLimitationTest(unittest.TestCase):
         result = run(quote, what="limitations", metric="net income", figures=["$159.8 million", "$7.54 per share"],
                      period="second quarter of 2026")
         self.assertEqual(result["limitations"], [])
+
+
+class DisplayPathTest(StoredDraftViewTest):
+    """M2: a card read back from an index or an observation is checked as a new card would be."""
+
+    test_bare_change_disappears_level_stays_record_unchanged = None  # inherited tests run in test_l_followup
+    test_missing_document_or_other_issuer_blocks_the_draft = None
+    test_other_fiscal_year_and_unsupported_versions_are_not_attached = None
+    test_quarantine_comes_before_revalidation = None
+    test_import_uses_the_same_view = None
+
+    def old_program_output(self):
+        """The card as an older program stored it: the v7 draft's own claims, unchecked."""
+        import candidate_context
+        self.store()
+        card = self.card()
+        raw = c.read_json(candidate_context.history_dir() / f"{self.CTX_ID}.json", {})
+        old = {**card["context"], "claims": raw["claims"], "limitations": raw["limitations"]}
+        for key in ("source_parser_version", "display_validator_version", "validation_scope"):
+            old.pop(key, None)
+        index = k.load_index()
+        for cand in index["candidates"]:
+            if cand["candidate_id"] == self.aaa["candidate_id"]:
+                cand["context"] = old
+        c.atomic_json(k.index_path(), index)
+        version_path = k.history_dir() / f"{card['candidate_version']}.json"
+        version = c.read_json(version_path, {})
+        version["context"] = old
+        c.atomic_json(version_path, version)
+        self.assertIn("$9.2 million", json.dumps(k.load_index(), ensure_ascii=False))
+        return card
+
+    def hashes(self):
+        import hashlib
+        import candidate_context
+        files = sorted(candidate_context.history_dir().glob("CTX-*.json")) + sorted(k.history_dir().glob("CV-*.json")) \
+            + sorted(k.observations_dir().glob("OB-*.json")) + [k.index_path()]
+        return {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
+
+    def assert_checked(self, text):
+        # The level's quote may mention the increase; no card line may show it as a value.
+        self.assertNotIn(": $9.2 million —", text)
+        self.assertIn("$62.9 million —", text)
+
+    def test_index_outputs_are_checked_without_regenerating(self):
+        self.old_program_output()
+        before = self.hashes()
+        self.assert_checked(k.telegram_candidate(self.aaa["candidate_id"])[0])
+        self.assert_checked(k.render_markdown(k.load_index()))
+        page = k.render_html(k.load_index())
+        self.assertNotIn("net interest income: $9.2 million", page)  # lines and the embedded candidate JSON
+        self.assertIn("Net interest income · quarter ended June 30, 2026: $62.9 million", page)
+        self.assertEqual(self.hashes(), before)  # reading changes nothing stored
+
+    def test_past_observation_and_departed_candidate_are_checked(self):
+        card = self.old_program_output()
+        version, obs = k.load_observation(card["observation_id"])
+        self.assertIn("$9.2 million", json.dumps(version, ensure_ascii=False))  # stored as it was
+        self.assert_checked(k.telegram_card(k.assemble(version, obs, [])))
+        index = k.load_index()
+        index["candidates"] = [x for x in index["candidates"] if x["candidate_id"] != self.aaa["candidate_id"]]
+        # The fixture renders twice at one fixed clock; name the observation that carried the draft.
+        index["known"][self.aaa["candidate_id"]]["latest_observation"] = card["observation_id"]
+        c.atomic_json(k.index_path(), index)
+        found, state = k.find(self.aaa["candidate_id"])
+        self.assertEqual(state, "not_current")
+        self.assert_checked(k.telegram_card(found))
+
+    def test_a_newer_render_of_the_same_snapshot_is_the_latest_observation(self):
+        older = {"observed_at": "2026-10-04T06:15:47+00:00", "observation_id": "OB-FFFFFFFFFFFFFFFF",
+                 "generator_version": "cards-v4"}
+        newer = {**older, "observation_id": "OB-0000000000000000", "generator_version": "cards-v5"}
+        tenth = {**older, "observation_id": "OB-0000000000000001", "generator_version": "cards-v10"}
+        self.assertEqual(sorted([newer, tenth, older], key=k.observation_order), [older, newer, tenth])
+        first = {**newer, "observation_id": "OB-FFFFFFFFFFFFFFFE", "rendered_at": "2026-10-04T06:16:19+00:00"}
+        again = {**newer, "observation_id": "OB-0000000000000002", "rendered_at": "2026-10-04T07:52:08+00:00"}
+        self.assertEqual(sorted([again, first], key=k.observation_order), [first, again])
+
+    def test_missing_document_or_other_issuer_hides_the_draft_on_read(self):
+        import company_filings
+        self.old_program_output()
+        for p in company_filings.documents_dir().glob("*.json.gz"):
+            p.unlink()
+        reply = k.telegram_candidate(self.aaa["candidate_id"])[0]
+        self.assertNotIn("$62.9 million", reply)
+        self.assertNotIn("$9.2 million", reply)
+        self.assertIn("재검증 불가", reply)
+
+    def test_other_issuer_on_read(self):
+        import candidate_context
+        self.old_program_output()
+        record = c.read_json(candidate_context.history_dir() / f"{self.CTX_ID}.json", {})
+        other = {**record, "context_id": "CTX-00000000000000C8", "issuer_cik": "0000000009"}
+        c.atomic_json(candidate_context.history_dir() / "CTX-00000000000000C8.json", other)
+        index = k.load_index()
+        for cand in index["candidates"]:
+            if cand["candidate_id"] == self.aaa["candidate_id"]:
+                cand["context"]["context_id"] = "CTX-00000000000000C8"
+        c.atomic_json(k.index_path(), index)
+        reply = k.telegram_candidate(self.aaa["candidate_id"])[0]
+        self.assertNotIn("$62.9 million", reply)
+        self.assertIn("재검증 불가", reply)
+
+    def test_imported_evidence_from_a_withheld_draft_is_held_on_read(self):
+        self.store()
+        self.card()
+        k.import_context(self.aaa["candidate_id"])
+        card = self.card()
+        self.assertIn("$62.9 million", json.dumps(card["explanations"], ensure_ascii=False))
+        k.quarantine_path().write_text(json.dumps({"schema_version": 1, "contexts": {self.CTX_ID: {
+            "candidate_id": self.aaa["candidate_id"], "reason": "delta_reported_as_level", "source_ref": "x#p19",
+            "decided_at": "2026-10-04T07:44:07+00:00", "decided_by": "test", "note": "test"}}}), encoding="utf-8")
+        reply = k.telegram_candidate(self.aaa["candidate_id"])[0]  # the index still holds the copied text
+        self.assertNotIn("$62.9 million", reply)
+        self.assertIn("격리되어 사용 중지", reply)
 
 
 if __name__ == "__main__":
