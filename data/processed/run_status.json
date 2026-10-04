@@ -1,29 +1,29 @@
 {
   "eps": {
-    "checked_at": "2026-10-03T05:28:55+00:00",
+    "checked_at": "2026-10-04T06:01:23+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:28:55+00:00",
+    "last_success_at": "2026-10-04T06:01:23+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-10-03T05:25:55+00:00",
+    "checked_at": "2026-10-04T06:01:21+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:25:55+00:00",
+    "last_success_at": "2026-10-04T06:01:21+00:00",
     "item_count": 23,
     "errors": [],
-    "collected_at": "2026-10-03T05:25:55.265805+00:00"
+    "collected_at": "2026-10-04T06:01:21.700980+00:00"
   },
   "extract": {
-    "checked_at": "2026-10-03T05:28:54+00:00",
+    "checked_at": "2026-10-04T06:01:21+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:28:54+00:00",
-    "accepted": 3,
+    "last_success_at": "2026-10-04T06:01:21+00:00",
+    "accepted": 0,
     "deferred_budget": 0,
-    "rejected": 7,
-    "validation_rejected": 4,
+    "rejected": 0,
+    "validation_rejected": 0,
     "validation_rejected_total": 31,
     "failed": 0,
     "pending": 0,
@@ -31,9 +31,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-10-03T21:27:32+00:00",
+    "checked_at": "2026-10-04T06:01:07+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T21:27:32+00:00",
+    "last_success_at": "2026-10-04T06:01:07+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -49,39 +49,39 @@
     "last_success_at": "2026-09-28T05:48:12+00:00"
   },
   "notify": {
-    "checked_at": "2026-10-03T05:28:56+00:00",
+    "checked_at": "2026-10-04T06:01:23+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:28:56+00:00"
+    "last_success_at": "2026-10-04T06:01:23+00:00"
   },
   "prices": {
-    "checked_at": "2026-10-03T05:43:20+00:00",
+    "checked_at": "2026-10-04T06:15:48+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:43:20+00:00",
+    "last_success_at": "2026-10-04T06:15:48+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-03T05:44:14+00:00",
+    "checked_at": "2026-10-04T06:16:25+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:44:14+00:00",
+    "last_success_at": "2026-10-04T06:16:25+00:00",
     "targets": 4,
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-10-03T05:28:57+00:00",
+    "checked_at": "2026-10-04T06:01:24+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:28:57+00:00",
+    "last_success_at": "2026-10-04T06:01:24+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-10-03T05:43:20+00:00",
+    "checked_at": "2026-10-04T06:15:48+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:43:20+00:00",
-    "snapshot": "20261003T052857Z_37099766046-1.json.gz",
-    "candidates": 98,
+    "last_success_at": "2026-10-04T06:15:48+00:00",
+    "snapshot": "20261004T060125Z_37181539693-1.json.gz",
+    "candidates": 102,
     "alert": false,
     "stages": {
       "universe": {
@@ -99,12 +99,12 @@
       },
       "earnings": {
         "requested": 3237,
-        "success": 2415,
-        "unavailable": 822
+        "success": 2414,
+        "unavailable": 823
       },
       "profile": {
-        "requested": 98,
-        "success": 98
+        "requested": 102,
+        "success": 102
       },
       "price": {
         "requested": 32,
@@ -113,18 +113,18 @@
     }
   },
   "cards": {
-    "checked_at": "2026-10-03T05:44:09+00:00",
+    "checked_at": "2026-10-04T06:16:24+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:44:09+00:00",
+    "last_success_at": "2026-10-04T06:16:24+00:00",
     "translation": {
-      "requested": 2,
+      "requested": 3,
       "translated": 0,
       "rejected": 0,
       "failed_calls": 0,
       "calls": 1,
       "budget_exhausted": true
     },
-    "new_versions": 17,
+    "new_versions": 14,
     "new_observations": 32,
     "migrated_legacy": 0,
     "cards": 32,
@@ -132,28 +132,27 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-03T05:44:14+00:00",
+    "checked_at": "2026-10-04T06:16:25+00:00",
     "status": "success",
-    "last_success_at": "2026-10-03T05:44:14+00:00",
+    "last_success_at": "2026-10-04T06:16:25+00:00",
     "slots": 3,
     "bootstrap": false,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 3,
+    "sent": 0,
     "failed": 0,
     "uncertain": 0,
-    "reservation_persisted": true,
-    "receipts_persisted": true,
-    "selected": 3
+    "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-10-03T05:44:09+00:00",
-    "status": "success",
+    "checked_at": "2026-10-04T06:16:18+00:00",
+    "status": "degraded",
     "last_success_at": "2026-10-03T05:44:09+00:00",
     "held": [],
-    "researched": 9,
+    "researched": 10,
     "statuses": {
+      "no_relevant_document": 1,
       "success": 9
     },
     "targets": 32,
@@ -166,43 +165,43 @@
       "CAN-77F79A3B05ABB893": "2027-12-31",
       "CAN-DC6D3F92ECFFD019": "2027-12-31",
       "CAN-FDA6B7F62852042F": "2027-12-31",
-      "CAN-700B10D9B75B0040": "2027-12-31",
       "CAN-490AC1686F9442CE": "2027-12-31",
-      "CAN-325B2A6C30755476": "2027-12-31",
-      "CAN-3D7A7E3B7BFBE2CE": "2027-12-31",
+      "CAN-700B10D9B75B0040": "2027-12-31",
       "CAN-11B1565B12AFE2F9": "2027-12-31",
-      "CAN-43EA86A18E5096A9": "2028-08-31",
+      "CAN-3D7A7E3B7BFBE2CE": "2027-12-31",
+      "CAN-325B2A6C30755476": "2027-12-31",
+      "CAN-43EA86A18E5096A9": "2027-08-31",
       "CAN-4DB66C064FC2ED7C": "2027-12-31",
       "CAN-5A9E947A6AEC56D7": "2027-12-31",
-      "CAN-DF76D3AD7ADC73CF": "2028-07-31",
       "CAN-A0761326A7E13159": "2027-12-31",
+      "CAN-DF76D3AD7ADC73CF": "2028-07-31",
       "CAN-E87900AEFDDE7B07": "2027-12-31",
       "CAN-E763F753A2D7609F": "2027-12-31",
-      "CAN-C8B827862A3B86D5": "2027-12-31",
+      "CAN-4BD491C8D3F1EC4F": "2027-12-31",
       "CAN-3D30FF7D03231FE1": "2027-12-31",
+      "CAN-C8B827862A3B86D5": "2027-12-31",
       "CAN-EE8A92AC2C2D3E8C": "2027-12-31",
       "CAN-F451582E2056444F": "2027-12-31",
       "CAN-8ED72F330C1AE34D": "2027-12-31",
       "CAN-0733D6B2B6A41784": "2027-12-31",
       "CAN-4E5151866E863998": "2028-06-30",
       "CAN-713C837ADADE8D8B": "2027-12-31",
-      "CAN-4BD491C8D3F1EC4F": "2027-12-31",
-      "CAN-0584EAE068460D91": "2027-12-31",
       "CAN-7F0690B785E31226": "2027-12-31",
+      "CAN-0584EAE068460D91": "2027-12-31",
       "CAN-782282A0C20A29F1": "2028-01-31"
     },
-    "http_attempts": 27,
+    "http_attempts": 39,
     "coverage": {
       "success": 31,
       "no_relevant_document": 1
     },
     "drafts": {
       "requests": 6,
-      "drafted": 1,
-      "insufficient_earnings_context": 4,
-      "no_supported_claims": 1,
-      "deferred": 7,
-      "failed": 0
+      "drafted": 0,
+      "insufficient_earnings_context": 0,
+      "no_supported_claims": 0,
+      "deferred": 6,
+      "failed": 6
     }
   },
   "context_verification": {

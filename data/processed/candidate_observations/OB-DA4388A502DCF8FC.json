@@ -1,0 +1,78 @@
+{
+  "observation_id": "OB-DA4388A502DCF8FC",
+  "candidate_id": "CAN-EE8A92AC2C2D3E8C",
+  "candidate_version": "CV-A1F9675DEFE83038",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:PGY",
+    "ticker": "PGY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-04T06:10:54+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261004T060125Z_37181539693-1.json.gz",
+    "sha256": "b13c6232c025fdabdb49d5ece30a4c4e16274a240188c799836f65ea7e61b875",
+    "run_id": "37181539693-1",
+    "finished_at": "2026-10-04T06:15:47+00:00"
+  },
+  "eps": {
+    "eps_now": 4.13106,
+    "eps_30d": 4.07106,
+    "eps_90d": 3.56548,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 15.9,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 3.146,
+    "yield_change_30_pp": 0.334
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-06",
+    "price_start_date": "2026-07-06",
+    "price_end_expected": "2026-10-02",
+    "price_end_date": "2026-10-02",
+    "close_start": 18.709999084472656,
+    "close_end": 17.979999542236328,
+    "price_pct_90": -3.9,
+    "adj_return_pct_90": -3.9,
+    "pe_change_pct": -17.1
+  },
+  "display_rank": 24,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 16
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "41d88768948f",
+  "generator_version": "cards-v4",
+  "market_cap": 1499996544,
+  "context_id": "CTX-971061B10EF84A2B",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-09-30T05:55:57+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "entity_id": "NASDAQ:PGY",
+  "approval_version": null
+}
