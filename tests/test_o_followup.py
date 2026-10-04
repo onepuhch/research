@@ -108,5 +108,34 @@ class IndustryGroupCardTest(CandidateFixture):
         self.assertEqual(departed["reason"], "industry_folded")
 
 
+class RevisionTimingTest(unittest.TestCase):
+    """O2: when the estimate rose, against the newest linked filing; a possibility, never a cause."""
+
+    def cand(self, now, d30, d90):
+        return {"observed_at": "2026-10-04T06:15:47+00:00", "eps": {"eps_now": now, "eps_30d": d30, "eps_90d": d90}}
+
+    def test_a_recent_rise_after_an_older_filing_is_flagged(self):
+        text = k.revision_timing(self.cand(1.38, 0.30, 0.30), {"documents": [{"filed_at": "2026-07-14"}]})
+        self.assertIn("최근 30일(2026-09-04 이후) 몫 100%", text)
+        self.assertIn("연결 원문 최신 제출 2026-07-14(최근 30일 시작 이전)", text)
+        self.assertIn("설명하지 못할 수 있음", text)
+        self.assertNotIn("때문", text)  # no cause is claimed
+
+    def test_an_older_rise_or_a_recent_filing_is_not_flagged(self):
+        early = k.revision_timing(self.cand(1.66, 1.44, -0.09), {"documents": [{"filed_at": "2026-08-04"}]})
+        self.assertIn("몫 13%", early)
+        self.assertNotIn("설명하지 못할", early)
+        recent = k.revision_timing(self.cand(1.38, 0.30, 0.30),
+                                   {"documents": [{"filed_at": "2026-07-14"}, {"filed_at": "2026-09-20"}]})
+        self.assertIn("2026-09-20(최근 30일 시작 이후)", recent)
+        self.assertNotIn("설명하지 못할", recent)
+
+    def test_dip_no_rise_and_no_document(self):
+        self.assertIn("90일 전체 변화보다 큼", k.revision_timing(self.cand(3.0, 1.0, 2.0), {"documents": []}))
+        self.assertIn("연결된 공식 원문 없음", k.revision_timing(self.cand(3.0, 1.0, 2.0), {}))
+        self.assertIsNone(k.revision_timing(self.cand(1.0, 1.0, 1.0), {}))
+        self.assertIsNone(k.revision_timing({"observed_at": "2026-10-04T00:00:00+00:00", "eps": {}}, {}))
+
+
 if __name__ == "__main__":
     unittest.main()

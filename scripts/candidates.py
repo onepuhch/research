@@ -916,6 +916,29 @@ def eps_change(eps: dict) -> str:
     return "기저가 작아 % 생략"
 
 
+def revision_timing(cand: dict, context: dict) -> str | None:
+    """When the next-year estimate rose, against the date of the newest linked filing. Facts only:
+    a filing before the recent rise may not explain it, which is said as a possibility, never a cause."""
+    eps = cand.get("eps") or {}
+    now, d30, d90 = eps.get("eps_now"), eps.get("eps_30d"), eps.get("eps_90d")
+    if not all(isinstance(v, (int, float)) for v in (now, d30, d90)) or now <= d90:
+        return None
+    observed = datetime.fromisoformat(cand["observed_at"]).date()
+    start = observed - timedelta(days=30)
+    share = (now - d30) / (now - d90)
+    when = (f"90일 상향 중 최근 30일({start.isoformat()} 이후) 몫 {share:.0%}" if share <= 1 else
+            f"최근 30일({start.isoformat()} 이후) 상향이 90일 전체 변화보다 큼(30일 전 값이 90일 전보다 낮았음)")
+    filed = sorted(d["filed_at"] for d in context.get("documents") or [] if d.get("filed_at"))
+    if not filed:
+        return f"상향 시기: {when}. 연결된 공식 원문 없음"
+    latest = filed[-1]
+    before = latest < start.isoformat()
+    text = f"상향 시기: {when}. 연결 원문 최신 제출 {latest}(최근 30일 시작 {'이전' if before else '이후'})"
+    if before and share >= 0.5:
+        text += " — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음"
+    return text
+
+
 def selection_lines(cand: dict) -> list[str]:
     eps = cand["eps"]
     lines = []
@@ -1127,6 +1150,9 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                                  f"마지막 유효 근거 {last[:10]}(현재 확인 결과 아님)" if last else
                                  "이전에 확보한 유효 근거 없음")))
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
+    timing = revision_timing(cand, context)
+    if timing:
+        lines.append(("item", timing))
     ordered = stated_order(context.get("claims") or [])
     stated = ordered[:3]
     if context.get("validation_scope") == "accepted_only":
