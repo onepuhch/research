@@ -1,0 +1,247 @@
+{
+  "candidate_id": "CAN-0584EAE068460D91",
+  "candidate_version": "CV-367544862DE53F74",
+  "identity": {
+    "entity_id": "NYSE:DAN",
+    "ticker": "DAN",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Dana Incorporated",
+  "industry": "Auto Parts",
+  "sector": "Consumer Cyclical",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "차량용 동력 전달 및 에너지 관리 솔루션, 부품, 냉각 시스템을 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Dana Incorporated, together with its subsidiaries, provides power-conveyance and energy-management solutions for on-highway vehicles in North America, Europe, South America, and the Asia Pacific. The Light Vehicle segment provides axles, driveshafts, internal combustion engine (ICE), hybrid and electric transmissions, e-axle and e-transmission systems, inverters, electric motors, controllers, sealing and thermal products, e-sealing, e-thermal cooling systems, battery and electronics cooling, hydrogen fuel cell cooling, and new power industrial cooling. The Commercial Vehicle segment offers axl"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "DAN analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DAN/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:08:51+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "DAN daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DAN/history",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:08:51+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "DAN company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DAN/profile",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:08:51+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-9BCC3ED21F2A62D7",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/26780/000119312526336664/d125905dex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-09-28T05:47:17+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v5",
+  "context": {
+    "context_id": "CTX-86982C39B33CC7A1",
+    "input_sha": "86982c39b33cc7a12ac0d9a63aea8d6349463d1c2fd840c0987205910bd8496f",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Net income from continuing operations · second quarter of 2026: $11 million — 전년 같은 분기보다 순이익이 늘었다",
+        "note_ko": "전년 같은 분기보다 순이익이 늘었다",
+        "kind": "fact",
+        "quote": "Net income from continuing operations was $11 million in the second quarter of 2026, compared with a loss of $12 million, in the second quarter of 2025.",
+        "document_id": "DOC-9BCC3ED21F2A62D7",
+        "block_id": "p10",
+        "metric": "Net income from continuing operations",
+        "figures": [
+          "$11 million"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "margin_cost",
+          "one_off"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Diluted earnings per share from continuing operations · second quarter of 2026: $0.06 — 전년 같은 분기보다 주당 순이익이 늘었다",
+        "note_ko": "전년 같은 분기보다 주당 순이익이 늘었다",
+        "kind": "fact",
+        "quote": "Diluted earnings per share from continuing operations were $0.06 in the second quarter of 2026 compared to a loss of $0.11 last year.",
+        "document_id": "DOC-9BCC3ED21F2A62D7",
+        "block_id": "p10",
+        "metric": "Diluted earnings per share from continuing operations",
+        "figures": [
+          "$0.06"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "margin_cost",
+          "one_off"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Operating cash flow · second quarter of 2026: $109 million — 전년 같은 기간보다 영업 현금 흐름이 늘었다",
+        "note_ko": "전년 같은 기간보다 영업 현금 흐름이 늘었다",
+        "kind": "fact",
+        "quote": "Operating cash flow in the second quarter of 2026 was $109 million, compared with $32 million in the same period of 2025.",
+        "document_id": "DOC-9BCC3ED21F2A62D7",
+        "block_id": "p12",
+        "metric": "Operating cash flow",
+        "figures": [
+          "$109 million"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "margin_cost",
+          "one_off",
+          "tax",
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "Non-GAAP Measures — 비 GAAP 측정치는 미국 GAAP에 따라 결정된 결과와 별개로 사용되거나 대체될 수 없다",
+        "note_ko": "비 GAAP 측정치는 미국 GAAP에 따라 결정된 결과와 별개로 사용되거나 대체될 수 없다",
+        "kind": "fact",
+        "quote": "These Non-GAAP Measures should not be used in isolation or as a substitute or alternative to results determined in accordance with U.S. GAAP.",
+        "document_id": "DOC-9BCC3ED21F2A62D7",
+        "block_id": "p48",
+        "metric": "Non-GAAP Measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Non-GAAP Measures — 비 GAAP 측정치에 대한 정의는 다른 회사의 유사한 비 GAAP 재무 측정치와 비교 가능하지 않을 수 있다",
+        "note_ko": "비 GAAP 측정치에 대한 정의는 다른 회사의 유사한 비 GAAP 재무 측정치와 비교 가능하지 않을 수 있다",
+        "kind": "fact",
+        "quote": "In addition, Dana’s and Eaton’s definitions of these Non-GAAP Measures may not be comparable to similarly titled non-GAAP financial measures reported by other companies.",
+        "document_id": "DOC-9BCC3ED21F2A62D7",
+        "block_id": "p48",
+        "metric": "Non-GAAP Measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "What were the specific cost-reduction initiatives mentioned?",
+      "What were the specific operational improvements mentioned?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-9BCC3ED21F2A62D7",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/26780/000119312526336664/d125905dex991.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-09-28T05:47:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.18621,
+    "eps_30d": 4.07184,
+    "eps_90d": 3.3725,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 24.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

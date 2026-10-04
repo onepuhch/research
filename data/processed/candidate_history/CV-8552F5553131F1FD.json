@@ -1,0 +1,100 @@
+{
+  "candidate_id": "CAN-782282A0C20A29F1",
+  "candidate_version": "CV-8552F5553131F1FD",
+  "identity": {
+    "entity_id": "NASDAQ:SMTC",
+    "ticker": "SMTC",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Semtech Corporation",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "반도체, 사물 인터넷 시스템, 클라우드 연결 서비스 솔루션을 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Semtech Corporation provides semiconductor, Internet of Things systems, and cloud connectivity service solutions in the Asia- Pacific, North America, and Europe. The company operates in three segments: Signal Integrity, Analog Mixed Signal and Wireless, and IoT Systems and Connectivity. It provides signal integrity products, including a portfolio of optical and copper data communications and video transport products used in various infrastructure, and industrial applications; a portfolio of integrated circuits for data centers, enterprise networks, passive optical networks, wireless base stati"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SMTC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMTC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:04:24+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SMTC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMTC/history",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:04:24+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SMTC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMTC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:04:24+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v5",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.85723,
+    "eps_30d": 5.83561,
+    "eps_90d": 3.88561,
+    "eps_target_period": "2028-01-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 13,
+    "down30": 0,
+    "pct_90": 50.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

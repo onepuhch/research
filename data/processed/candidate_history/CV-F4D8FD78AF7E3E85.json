@@ -1,0 +1,199 @@
+{
+  "candidate_id": "CAN-8ED72F330C1AE34D",
+  "candidate_version": "CV-F4D8FD78AF7E3E85",
+  "identity": {
+    "entity_id": "NASDAQ:FSLY",
+    "ticker": "FSLY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Fastly, Inc.",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "고객 애플리케이션 처리, 제공, 보안을 위한 엣지 클라우드 플랫폼 및 네트워크 서비스를 운영합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Fastly, Inc. operates an edge cloud platform for processing, serving, and securing its customer's applications in the United States, the Asia Pacific, Europe, and internationally. The edge cloud is a category of Infrastructure as a Service that enables developers to build, secure, and deliver digital experiences at the edge of the internet. The company offers network services to speed up and optimize the delivery of web and application traffic; content delivery network, such as dynamic site acceleration, origin shield, instant purge, surrogate keys, programmatic control, content compression, r"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "FSLY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FSLY/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:07:56+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "FSLY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FSLY/history",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:07:56+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "FSLY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FSLY/profile",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:07:56+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-756AB63F072FAB95",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-28T05:47:17+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v5",
+  "context": {
+    "context_id": "CTX-C492D7246CA9AF06",
+    "input_sha": "c492d7246ca9af06d9468efafcbe62faf8401777ba8cacad82f71dcd82d11bbe",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(revenue) · second quarter: $183.3 million / 23% — 매출이 전년 같은 분기보다 늘었다",
+        "note_ko": "매출이 전년 같은 분기보다 늘었다",
+        "kind": "fact",
+        "quote": "Record second quarter revenue of $183.3 million grew 23% year-over-year",
+        "document_id": "DOC-756AB63F072FAB95",
+        "block_id": "p5",
+        "metric": "revenue",
+        "figures": [
+          "$183.3 million",
+          "23%"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "non-GAAP measures — 비일반회계기준 측정치는 일반회계기준에 따라 결정된 운영 결과와 관련된 모든 금액을 반영하지 않는다는 한계가 있다",
+        "note_ko": "비일반회계기준 측정치는 일반회계기준에 따라 결정된 운영 결과와 관련된 모든 금액을 반영하지 않는다는 한계가 있다",
+        "kind": "fact",
+        "quote": "These non-GAAP measures have limitations in that they do not reflect all of the amounts associated with our results of operations as determined in accordance with GAAP.",
+        "document_id": "DOC-756AB63F072FAB95",
+        "block_id": "p38",
+        "metric": "non-GAAP measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP financial measures — 비일반회계기준 재무 측정치는 다른 회사에서 사용하는 비일반회계기준 재무 측정치와 다를 수 있다",
+        "note_ko": "비일반회계기준 재무 측정치는 다른 회사에서 사용하는 비일반회계기준 재무 측정치와 다를 수 있다",
+        "kind": "fact",
+        "quote": "In addition, these non-GAAP financial measures may be different from the non-GAAP financial measures used by other companies.",
+        "document_id": "DOC-756AB63F072FAB95",
+        "block_id": "p38",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "Fastly의 플랫폼 전략이 사업 모멘텀을 이끌고 있는지 확인해야 한다",
+      "Fastly가 연간 전망치를 상향 조정한 이유를 확인해야 한다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-756AB63F072FAB95",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-28T05:47:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.6305,
+    "eps_30d": 0.58384,
+    "eps_90d": 0.39454,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 12,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": 59.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

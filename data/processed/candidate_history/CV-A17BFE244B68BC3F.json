@@ -1,0 +1,154 @@
+{
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "candidate_version": "CV-A17BFE244B68BC3F",
+  "identity": {
+    "entity_id": "NYSE:TXO",
+    "ticker": "TXO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "TXO Partners, L.P.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유, 천연가스 및 천연가스액 매장량을 인수, 개발, 최적화, 채굴합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "TXO Partners, L.P., an oil and natural gas company, focuses on the acquisition, development, optimization, and exploitation of conventional oil, natural gas, and natural gas liquid reserves in North America. Its acreage positions are concentrated in the Permian Basin of West Texas and New Mexico; the San Juan Basin of New Mexico and Colorado; and the Williston Basin of Montana and North Dakota. TXO Partners, L.P. was formerly known as TXO Energy Partners, L.P. and changed its name to TXO Partners, L.P. in May 2023. The company was incorporated in 2012 and is based in Fort Worth, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TXO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TXO/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:12:39+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TXO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TXO/history",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:12:39+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TXO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TXO/profile",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:12:39+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-439BA8AE037B9273",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1559432/000155943226000014/txo-20260630.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-30T05:55:57+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v5",
+  "context": {
+    "context_id": "CTX-4516CDD65F6EAE41",
+    "input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "oil revenues · three months ended June 30, 2026: decreased oil revenues by $28.5 million — 석유 선물 및 매도 베이시스 스왑 계약의 순결제로 인해 석유 매출이 감소했다",
+        "note_ko": "석유 선물 및 매도 베이시스 스왑 계약의 순결제로 인해 석유 매출이 감소했다",
+        "kind": "fact",
+        "quote": "Net settlements on oil futures and sell basis swap contracts decreased oil revenues by $28.5 million in the three months ended June 30, 2026 and increased oil revenues by $2.0 million in the three months ended June 30, 2025.",
+        "document_id": "DOC-439BA8AE037B9273",
+        "block_id": "p141",
+        "metric": "oil revenues",
+        "figures": [
+          "decreased oil revenues by $28.5 million"
+        ],
+        "period": "three months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-439BA8AE037B9273",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1559432/000155943226000014/txo-20260630.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-30T05:55:57+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ]
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.30667,
+    "eps_30d": 1.14,
+    "eps_90d": 0.89,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 46.8,
+    "steady": false,
+    "turnaround": false
+  }
+}

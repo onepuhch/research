@@ -1,0 +1,176 @@
+{
+  "candidate_id": "CAN-7F0690B785E31226",
+  "candidate_version": "CV-F551A62AA56F5527",
+  "identity": {
+    "entity_id": "NYSE:CLF",
+    "ticker": "CLF",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Cleveland-Cliffs Inc.",
+  "industry": "Steel",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "다양한 철강 제품과 철광석, 석탄 등 비철강 제품을 생산 및 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Cleveland-Cliffs Inc. operates as a steel producer in the United States and Canada. It offers hot-rolled, cold-rolled, and coated products, such as aluminized, electrogalvanized, and galvalume products, as well as galvanneal and hot-dipped galvanized products; stainless and electrical products, including GOES, NOES, and auto chrome; plate products; and slab and other steel products. The company also provides non- steelmaking products comprising stamped components, tool and die, and tubing; and scrap, iron ore, HBI, coal, and coke products. It also provides tubular components, including carbon"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CLF analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLF/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:06:31+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CLF daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLF/history",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:06:31+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CLF company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLF/profile",
+      "published_at": null,
+      "observed_at": "2026-10-04T06:06:31+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-067BE90E51AC5E3F",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-23",
+      "observed_at": "2026-10-01T06:22:35+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v5",
+  "context": {
+    "context_id": "CTX-B80220E5DD347856",
+    "input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "매출(Revenues) · Second-quarter 2026: $5.2 billion — 매출이 전 분기보다 늘었다",
+        "note_ko": "매출이 전 분기보다 늘었다",
+        "kind": "fact",
+        "quote": "Second-quarter 2026 consolidated revenues were $5.2 billion, compared to $4.9 billion in the first quarter of 2026.",
+        "document_id": "DOC-067BE90E51AC5E3F",
+        "block_id": "p14",
+        "metric": "Revenues",
+        "figures": [
+          "$5.2 billion"
+        ],
+        "period": "Second-quarter 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "GAAP net loss · second quarter of 2026: $0.25 per diluted share — 희석 주당 순손실이 전 분기보다 줄었다",
+        "note_ko": "희석 주당 순손실이 전 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "For the second quarter of 2026, the Company recorded a GAAP net loss of $134 million, or $0.25 per diluted share, with an adjusted net loss1 of $0.20 per diluted share. This compares to a first quarter 2026 GAAP net loss of $229 million, or $0.42 per diluted share, with an adjusted net loss1 of $0.40 per diluted share.",
+        "document_id": "DOC-067BE90E51AC5E3F",
+        "block_id": "p15",
+        "metric": "GAAP net loss",
+        "figures": [
+          "$0.25 per diluted share"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-067BE90E51AC5E3F",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm",
+        "filed_at": "2026-07-23",
+        "observed_at": "2026-10-01T06:22:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ]
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.77259,
+    "eps_30d": 0.62827,
+    "eps_90d": 0.50124,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 54.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

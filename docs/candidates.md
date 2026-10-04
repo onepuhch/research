@@ -930,9 +930,7 @@ CAN-E763F753A2D7609F · Banks - Regional · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- [실적] 순이익(net income) · quarter ended June 30, 2026: $14.5 million — 해당 분기 순이익은 전년 같은 분기보다 늘었다 — “Columbia Financial, Inc. (the “Company”) (NASDAQ: CLBK), the holding company for Columbia Bank ("Columbia"), reported net income of $14.5 million, or $0.14 per basic and diluted share, for the quarter ended June 30, 2026, as compared to $12.3 million, or $0.12 per basic and diluted share, for the quarter ended June 30, 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2115119/000211511926000026/exhibit9912q20266302026.htm), 제출 2026-07-30, 기간 quarter ended June 30, 2026)
-- [실적] net interest income · quarter ended June 30, 2026: $9.2 million — 순이자 이익은 이자 수입 증가와 이자 비용 감소로 늘었다 — “The increase in net income was primarily attributable to a $9.2 million increase in net interest income and a $657,000 increase in non-interest income, partially offset by a $1.8 million increase in provision for credit losses, $4.5 million increase in non-interest expense, and a $1.3 million increase in income tax expense.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2115119/000211511926000026/exhibit9912q20266302026.htm), 제출 2026-07-30, 기간 quarter ended June 30, 2026)
-- [실적] net interest margin · quarter ended June 30, 2026: 2.44% — 순이자 마진은 이자부 부채의 평균 비용 감소로 늘었다 — “The Company's net interest margin for the quarter ended June 30, 2026 increased 25 basis points to 2.44% when compared to 2.19%, for the quarter ended June 30, 2025, mostly due to a decrease in the average cost of interest-bearing liabilities.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2115119/000211511926000026/exhibit9912q20266302026.htm), 제출 2026-07-30, 기간 quarter ended June 30, 2026)
+> ⚠️ 공식 발표 초안 재검증 중 — 변화량과 실제 값의 혼동이 확인되어 해당 초안 표시를 중지했습니다.
 
 **사람이 확인한 사업 근거**
 
@@ -942,9 +940,6 @@ CAN-E763F753A2D7609F · Banks - Regional · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- [반대 근거·한계] 순이익(net income) · quarter ended June 30, 2026 — 순이익 증가는 신용 손실 충당금 증가, 비이자 비용 증가, 소득세 비용 증가로 부분적으로 상쇄되었다 — “The increase in net income was primarily attributable to a $9.2 million increase in net interest income and a $657,000 increase in non-interest income, partially offset by a $1.8 million increase in provision for credit losses, $4.5 million increase in non-interest expense, and a $1.3 million increase in income tax expense.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2115119/000211511926000026/exhibit9912q20266302026.htm), 제출 2026-07-30, 기간 quarter ended June 30, 2026)
-- [반대 근거·한계] non-interest income · six months ended June 30, 2026 — 비이자 수입 감소는 주로 지분 증권의 공정 가치 변동과 기타 비이자 수입 감소에 기인하며, 이는 은행 소유 생명 보험의 증가로 부분적으로 상쇄되었다 — “The decrease was primarily attributable to a change in fair value of equity securities of $1.6 million and a decrease in other non-interest income of $627,000, mainly due to interest rate swaps, partially offset by a $1.1 million increase in bank-owned life insurance partially attributable to a death benefit claim in June 2026, and income related to the transition and exchange into higher yielding bank-owed life insurance policies.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2115119/000211511926000026/exhibit9912q20266302026.htm), 제출 2026-07-30, 기간 six months ended June 30, 2026)
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -955,7 +950,6 @@ CAN-E763F753A2D7609F · Banks - Regional · 미추적
 - [CLBK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CLBK/analysis) (관측 2026-10-04)
 - [CLBK daily closes](https://finance.yahoo.com/quote/CLBK/history) (관측 2026-10-04)
 - [CLBK company profile](https://finance.yahoo.com/quote/CLBK/profile) (관측 2026-10-04)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2115119/000211511926000026/exhibit9912q20266302026.htm) (제출 2026-07-30)
 
 텔레그램: `/track CAN-E763F753A2D7609F`
 
