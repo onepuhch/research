@@ -1,5 +1,13 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-04 KST. **M1~M4 구현 완료**: [M 인수인계](docs/m_handoff_2026-10-04.md). 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
+  - Python 재현(`docs/m_boundary_probe_2026-10-04.py`): v8에서 Codex가 지적한 2건이 실제로 잘못 수용됨을 확인 → v9에서 거부, 나머지 2건 수용 유지. 결과 `data/eval/m_2026-10-04/probe_*.jsonl`.
+  - M1(f5a2b00, context-check-v9/context-v9): 수치 구간별 역할·단위·방향, 효과는 직접 결합일 때만 수준값, 금액+비율·역할 혼합 거부, **PBF 경고 복원**(`순이익에 미친 영향 … $159.8 million(세후 순증가 효과) / $1.32 per share(주당 증가 효과)`). M2(bb7656f, cards-v7): 옛 index·이탈 후보·과거 관측도 카드 자신의 CTX를 재검증해 표시, 격리 가져온 근거 보류. M3(0842004): 같은 문서·주체·달력·기간 길이·표기 그룹 안에서만 과거 판정, PUBM 정의 문구는 보조. M4(fdb6eb0, 369b07a): 잠금·독립 기대표 65건 평가 도구.
+  - 독립 기대표 기준 중대 오류: v7 2 → v8 0(과잉 거부 1) → **v9 0, 과잉 거부 0**, 필드 불일치 1(PSX JV, 보류). 시험 454개 통과, CI 37192896914(ubuntu·windows·날짜 7) success. 사본 cache-only: 네트워크 0, 기존 파일 698개 불변, 반복 새 관측 0.
+  - 추가로 고친 기존 결함: 표시 뷰의 생성 시각이 버전 해시에 들어가던 문제, 같은 스크린 재렌더 관측의 '최신' 판정이 해시 순서였던 문제(`rendered_at`·생성기 번호), 평가 잠금 해시의 CRLF/LF 차이.
+  - **운영 카드는 아직 cards-v5(L0)**: 오늘 auto 재실행은 context-v9 재실행으로 SEC 요청만 생겨 하지 않음. 다음 정상 일간에서 context-v9·cards-v7 반영 확인(CLBK는 옛 CTX면 경고/새 유효 CTX면 새 근거/과거 관측은 격리).
+  - Codex 확인 요청(인수인계 5절): EFFECT_AFTER 확장, 관측 rendered_at 추가, 기대표 판정 기준.
+
 - 마지막 검토자: Codex, 2026-10-04 KST. 기준 HEAD `6915bc9`. [L 인수 판정과 M 후속 지시](docs/m_l_acceptance_and_followup_2026-10-04.md). 진행 중인 쓰기/테스트 없음. 이번 변경은 **STATUS·M 지시서·합성 재현 스크립트만 로컬 미커밋**이며 운영 코드/카드/원장·일정 변경, 추가 요청·전송 없음.
   - **L0 인수**: 로컬 운영 index cards-v5의 CLBK context=null/격리 ID와 카드 JSON·MD의 $9.2 million 부재를 직접 확인. 원격 L0 run·HTML·발송 0과 420개 시험/CI 성공은 Claude 인수인계 근거이며 이번에 원격 재조회/전체 Python 재실행한 것은 아님.
   - **L1~L3 최종 인수 보류**: M1 효과 금액 뒤 대상 metric이 나오면 level로 뒤집는 예외, 금액+비율 figures의 RATE 예외를 보완. M2 기존 index/목록 이탈/과거 관측의 직접 표시에는 재검증이 빠져 있음(context_inputs에서만 수행).
