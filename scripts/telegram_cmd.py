@@ -156,7 +156,7 @@ def find_signal(target: str) -> dict[str, str] | None:
         return promote.find_signal(normalized)
 
     today = date.fromisoformat(c.today())
-    for row in reversed(c.read_live_rows("signal_log")):
+    for row in reversed(c.read_signals()):
         if not notify.within_lookback(row.get(SIGNAL_DATE_COLUMN), today, c.policy()["signal_lookback_days"]):
             continue
         if subject_matches(row.get(SIGNAL_SUBJECT_COLUMN, ""), target):

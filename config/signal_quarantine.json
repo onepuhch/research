@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "_comment": "Signals withheld from every current use (boards, digests, reports, alerts, /track promotion). signal_log.csv, source_state.json and sent records stay unchanged. A missing or broken file stops those readers instead of meaning 'nothing withheld'.",
+  "signals": {
+    "SIG-0900": {
+      "source_id": "0001193125-26-412444",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1076930/000119312526412444/novt-ex99_1.htm",
+      "content_sha256_16": "bb4f9fdca812bf71",
+      "reason": "subject_other_entity",
+      "reviewed_at": "2026-10-04T15:40:00+00:00",
+      "reviewed_by": "Codex specification (docs/p_o_acceptance_and_discovery_followup_2026-10-05.md P0) / Claude implementation",
+      "note": "근거 수치가 Novanta가 아닌 인수 대상 Runway Buyer, LLC의 재무제표(고객 선급금+리베이트 합계)였다. 발행사 수요 신호로 사용 금지. 회사명만 바꿔 복구하지 않음"
+    }
+  }
+}

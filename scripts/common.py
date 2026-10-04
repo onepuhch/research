@@ -193,6 +193,30 @@ def read_live_rows(table: str) -> list[dict[str, str]]:
     return [row for row in read_rows(table) if row.get("data_quality") not in {"example", "quarantine"}]
 
 
+def signal_quarantine() -> dict[str, dict]:
+    """{signal_id: entry} withheld from every current use (P0). A missing or broken file raises:
+    it is never read as 'nothing withheld'."""
+    path = ROOT / "config" / "signal_quarantine.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as error:
+        raise ValueError(f"signal quarantine list unreadable ({type(error).__name__})") from error
+    if not isinstance(data, dict) or data.get("schema_version") != 1 or not isinstance(data.get("signals"), dict):
+        raise ValueError("signal quarantine list has no schema_version 1 'signals' object")
+    for signal_id, entry in data["signals"].items():
+        if not str(signal_id).startswith("SIG-") or not isinstance(entry, dict) or not entry.get("reason"):
+            raise ValueError(f"signal quarantine entry {signal_id!r} is malformed")
+    return data["signals"]
+
+
+def read_signals(live_only: bool = True) -> list[dict[str, str]]:
+    """signal_log rows as every reader may use them: withheld signals removed, and with live_only
+    the example/quarantine rows too. The ledger itself is never changed."""
+    withheld = signal_quarantine()
+    rows = read_live_rows("signal_log") if live_only else read_rows("signal_log")
+    return [row for row in rows if row.get("signal_id") not in withheld]
+
+
 def active_ideas() -> list[dict[str, str]]:
     return [row for row in read_live_rows("investment_review_log")
             if row.get("현재 단계") != "제외" and row.get("검토 상태") != "종료"]

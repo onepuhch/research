@@ -293,7 +293,7 @@ def run(dry_run: bool = False) -> dict:
         c.atomic_json(ledger_path(), ledger)
     notify_state = notify.load_state()
     index = candidates.load_index()
-    signal_rows = c.read_rows("signal_log")
+    signal_rows = c.read_signals(live_only=False)
     news = news_items(signal_rows, notify_state)
     recent, unknown_legacy = recent_new_alerts(ledger, notify_state, signal_rows)
     recommended, screen = screen_items(index)

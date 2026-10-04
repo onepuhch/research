@@ -448,7 +448,7 @@ def _main(argv: list[str]) -> int:
         console("[error] notification state unreadable; restore state before sending")
         return 1
     pushed = set(state["pushed"])
-    rows = c.read_rows("signal_log")
+    rows = c.read_signals(live_only=False)
     # Risk alerts for tracked companies only; they never wait on the candidate budget.
     selected = [r for r in select_signals(rows, pushed, args.min_tier, args.all)
                 if r.get("signal_direction") == "negative"]

@@ -313,6 +313,8 @@ class CandidateFixture(unittest.TestCase):
         # An explicit, valid empty list: a missing one is refused, never read as 'nothing withheld'.
         (pathlib.Path(self.tmp.name) / "config" / "context_quarantine.json").write_text(
             json.dumps({"schema_version": 1, "contexts": {}}), encoding="utf-8")
+        (pathlib.Path(self.tmp.name) / "config" / "signal_quarantine.json").write_text(
+            json.dumps({"schema_version": 1, "signals": {}}), encoding="utf-8")
         (pathlib.Path(self.tmp.name) / "templates").mkdir()
         (pathlib.Path(self.tmp.name) / "templates" / "candidates.html").write_bytes(
             (real / "templates" / "candidates.html").read_bytes())

@@ -26,7 +26,7 @@ def main():
     args = parser.parse_args()
     if args.per_tier < 1:
         parser.error("--per-tier must be positive")
-    rows = sample_rows(c.read_rows("signal_log"), args.per_tier)
+    rows = sample_rows(c.read_signals(live_only=False), args.per_tier)
     columns = c.table_def("evaluation_log")["columns"]
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding=c.ENCODING, newline="") as handle:

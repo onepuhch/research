@@ -124,7 +124,7 @@ def render_health():
 def render_bottlenecks():
     config = c.read_json(c.ROOT / "config" / "value_chain.json", {"nodes": []})
     cutoff = (date.fromisoformat(c.today()) - timedelta(days=14)).isoformat()
-    signals = [r for r in c.read_rows("signal_log") if r.get("data_quality") == "live" and cutoff <= r.get("published_at", "")[:10] <= c.today()]
+    signals = [r for r in c.read_signals(live_only=False) if r.get("data_quality") == "live" and cutoff <= r.get("published_at", "")[:10] <= c.today()]
     rows = []
     for node in config["nodes"]:
         matching = [r for r in signals if r.get("bottleneck_id") == node["id"]]

@@ -9,7 +9,7 @@ import add_entry
 
 
 def find_signal(signal_id):
-    return next((r for r in c.read_live_rows("signal_log") if r.get("signal_id") == signal_id.strip().upper()), None)
+    return next((r for r in c.read_signals() if r.get("signal_id") == signal_id.strip().upper()), None)
 
 
 def identity(signal, ticker=""):

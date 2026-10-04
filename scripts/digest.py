@@ -90,7 +90,7 @@ def main(argv: list[str]) -> int:
         print(f"[error] {error}")
         return 1
 
-    rows = c.read_rows("signal_log")
+    rows = c.read_signals(live_only=False)
     content = render_digest(rows, top)
     print(content)
     path = save(content)

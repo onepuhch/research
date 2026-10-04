@@ -305,7 +305,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v4"
-PARSER_VERSION = "context-check-v9"
+PARSER_VERSION = "context-check-v10"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -378,12 +378,13 @@ def relevant_blocks(documents: list[dict], limit: int = MAX_PROMPT_CHARS) -> tup
     for d_index, doc in enumerate(documents):
         if doc.get("coverage") == "partial":
             complete = False
+        scopes = cf.block_scopes(doc["blocks"])
         for b_index, block in enumerate(doc["blocks"]):
             text = cf.block_text(block)
             score = block_score(text)
             if score > 0:
                 scored.append((score, d_index, b_index, {"document_id": doc["document_id"], "block_id": block["id"],
-                                                         "text": text}))
+                                                         "text": text, "scope": scopes.get(block["id"])}))
     chosen, used = [], 0
     for score, d_index, b_index, block in sorted(scored, key=lambda x: (-x[0], x[1], x[2])):
         if used + len(block["text"]) > limit:
@@ -921,7 +922,7 @@ def has_forward_wording(quote: str) -> bool:
     return any(word in quote for word in FORWARD) or bool(re.search(r"\bwill\b", quote))
 
 
-def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str | None, dict]:
+def check_item(item: dict, blocks: dict, issuer: dict, what: str, scopes: dict | None = None) -> tuple[str | None, dict]:
     """(problem, checked item). Structural checks only: passing means 'automatic, unreviewed'."""
     if not isinstance(item, dict):
         return "not_an_object", {}
@@ -936,6 +937,13 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
     bare = LEADING_BULLET.sub("", quote)  # compared without its bullet; the quote itself is kept as given
     if len(bare) < 8 or bare not in squash(block):
         return "quote_not_in_block", {}
+    heading = (scopes or {}).get(key)
+    if heading:  # the block sits under a financial-statement heading (P0)
+        same = cf.same_entity(heading, issuer.get("name"))
+        if same is None:
+            return "subject_unverified", {}
+        if not same:
+            return "subject_other_entity", {}  # another company's statements, e.g. an acquired business
     kind = item.get("kind") or "fact"
     if kind not in KINDS:
         return "bad_kind", {}
@@ -1042,13 +1050,14 @@ def excerpt(item) -> dict:
 
 def validate_draft(answer: dict, blocks: list[dict], issuer: dict | None = None) -> dict:
     index = {(b["document_id"], b["block_id"]): b["text"] for b in blocks}
+    scopes = {(b["document_id"], b["block_id"]): b["scope"] for b in blocks if b.get("scope")}
     issuer = issuer or {}
     claims, limitations, rejected = [], [], []
     answer = answer if isinstance(answer, dict) else {}
     for what, items, out, cap in (("claim", answer.get("claims"), claims, 5),
                                   ("limitation", answer.get("limitations"), limitations, 3)):
         for item in (items or [])[:cap] if isinstance(items, list) else []:
-            problem, checked = check_item(item, index, issuer, what)
+            problem, checked = check_item(item, index, issuer, what, scopes)
             if problem:
                 rejected.append({"what": what, "reason": problem, **excerpt(item)})
             else:
@@ -1069,7 +1078,7 @@ def validate_draft(answer: dict, blocks: list[dict], issuer: dict | None = None)
 
 
 # Stored drafts of these validator versions are re-checked with the current one when read (L1 4.2).
-REVALIDATED_VERSIONS = ("context-check-v7", "context-check-v8")
+REVALIDATED_VERSIONS = ("context-check-v7", "context-check-v8", "context-check-v9")
 
 
 class RevalidationUnavailable(ValueError):
@@ -1095,7 +1104,8 @@ def revalidate_record(record: dict, documents: dict[str, dict], issuer: dict | N
         block = next((b for b in doc.get("blocks") or [] if b.get("id") == block_id), None)
         if block is None:
             raise RevalidationUnavailable(f"block {ref} missing")
-        blocks.append({"document_id": document_id, "block_id": block_id, "text": cf.block_text(block)})
+        blocks.append({"document_id": document_id, "block_id": block_id, "text": cf.block_text(block),
+                       "scope": cf.block_scopes(doc.get("blocks") or []).get(block_id)})
     if not blocks:
         raise RevalidationUnavailable("no source blocks recorded")
     checked = validate_draft({"claims": record.get("claims") or [], "limitations": record.get("limitations") or [],

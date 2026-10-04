@@ -19,7 +19,8 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import common as c  # noqa: E402
+import common as c
+import company_filings  # noqa: E402
 import add_entry
 
 RAW_LATEST = c.ROOT / "data" / "raw" / "discovery" / "latest.json"
@@ -571,6 +572,26 @@ def is_true(value: Any) -> bool:
     return isinstance(value, str) and value.strip().lower() == "true"
 
 
+def evidence_subject_problem(evidence: str, raw_text: str, item: dict[str, Any]) -> str | None:
+    """The quote must not sit in another company's own financial statements: an 8-K exhibit of the
+    filer can be an acquired business's statements (Novanta / Runway Buyer, LLC, SIG-0900). A quote
+    under such a heading is not the filer's signal; an unreadable filer name leaves it unverified."""
+    low_text, low_quote = " ".join(raw_text.split()).lower(), " ".join(evidence.split()).lower()
+    at = low_text.find(low_quote[:80])
+    if at < 0:
+        return None  # grounded_quote decided the quote exists; position unknown means no heading test
+    heading = company_filings.statement_scope(" ".join(raw_text.split())[:at])
+    if not heading:
+        return None
+    filer = str(item.get("title") or "").split(" (")[0]
+    same = company_filings.same_entity(heading, filer)
+    if same is None:
+        return f"subject_unverified: 근거가 '{heading}' 재무제표 구간에 있으나 제출 회사명을 확인하지 못함"
+    if not same:
+        return f"subject_other_entity: 근거가 제출 회사가 아닌 '{heading}'의 재무제표에 있음"
+    return None
+
+
 class InvalidEvidence(ValueError):
     """A model answer fails the source check; this is not an API outage."""
 
@@ -607,6 +628,12 @@ def build_gemini_signal(item: dict[str, Any], api_key: str) -> dict[str, str] | 
     raw_text = clean_text(item.get("raw_text"))
     if not grounded_quote(evidence, raw_text):
         raise InvalidEvidence("missing or ungrounded evidence quote")
+    problem = evidence_subject_problem(evidence, raw_text, item)
+    if problem:
+        item["_reject_reason"] = problem
+        item["_subject_check"] = company_filings.SUBJECT_CHECK_VERSION
+        print(f"[rejected] {problem}")
+        return None
     megacap = c.is_megacap(subject)
     signal_type = normalize_signal_type(data.get("signal_type"), item)
     axes_source = data.get("upside_axes")

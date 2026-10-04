@@ -342,6 +342,51 @@ def block_text(block: dict) -> str:
     return block["text"] if block["kind"] == "p" else " | ".join(" ; ".join(r) for r in block["rows"])
 
 
+# ---- whose financial statements a passage sits in (P0): a filer's 8-K can carry an acquired company's
+# own statements ('Runway Buyer, LLC CONSOLIDATED STATEMENT OF CASH FLOWS' in Novanta's EX-99.1).
+SUBJECT_CHECK_VERSION = "subject-check-v1"
+ENTITY_SUFFIX = r"(?:LLC|L\.L\.C\.|Inc\.?|Incorporated|Corp\.?|Corporation|Holdings?|L\.P\.|LP|Ltd\.?|Limited|Co\.|plc|N\.V\.|S\.A\.)"
+STATEMENT_HEAD = re.compile(
+    r"((?:[A-Z][\w&'.-]*,?\s+){1,6}" + ENTITY_SUFFIX + r")\s+(?:and\s+subsidiaries\s+)?(?:\(?unaudited\)?\s+)?"
+    r"(?:condensed\s+)?(?:consolidated\s+)?(?:statements?\s+of\s+(?:cash\s+flows|operations|income|comprehensive|"
+    r"financial\s+position|changes|members|stockholders|shareholders)|balance\s+sheets?)", re.I)
+GENERIC_NAME = {"inc", "inc.", "incorporated", "corp", "corp.", "corporation", "llc", "l.l.c.", "holdings", "holding",
+                "lp", "l.p.", "ltd", "ltd.", "limited", "co.", "plc", "the", "and", "subsidiaries", "group", "company"}
+
+
+def name_tokens(name: str) -> set[str]:
+    return {w for w in re.findall(r"[a-z0-9&'-]+", str(name).lower()) if w not in GENERIC_NAME and len(w) > 1}
+
+
+def same_entity(heading: str, issuer_name: str | None) -> bool | None:
+    """True/False when both names are readable; None when the filer's name is unknown (unverified)."""
+    mine = name_tokens(issuer_name or "")
+    theirs = name_tokens(heading)
+    if not mine or not theirs:
+        return None
+    return bool(mine & theirs)
+
+
+def statement_scope(text_before: str) -> str | None:
+    """The entity named by the last financial-statement heading in the text before a passage."""
+    heads = list(STATEMENT_HEAD.finditer(text_before))
+    return " ".join(heads[-1].group(1).split()) if heads else None
+
+
+def block_scopes(blocks: list[dict]) -> dict[str, str]:
+    """{block id: entity} for blocks under another statement heading, in document order. A heading
+    inside a block applies to that block and the ones after it until the next heading."""
+    scopes, current = {}, None
+    for block in blocks:
+        text = block_text(block)
+        found = statement_scope(text)
+        if found:
+            current = found
+        if current:
+            scopes[block["id"]] = current
+    return scopes
+
+
 def looks_like_business_update(blocks: list[dict]) -> tuple[bool, str]:
     """A recent 8-K exhibit that states a business change with a number (a raised outlook, a contract
     or order of a size, an acquisition): decided from the body. Board changes, dividends and legal
