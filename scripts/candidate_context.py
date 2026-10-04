@@ -294,8 +294,8 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 
 # ------------------------------------------------------------------ G2 drafts
 
-PROMPT_VERSION = "context-ko-v3"
-PARSER_VERSION = "context-check-v7"
+PROMPT_VERSION = "context-ko-v4"
+PARSER_VERSION = "context-check-v8"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -303,9 +303,11 @@ DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyb
 DIRECTIONS = ("positive", "negative", "mixed", "unknown")
 # Automatic drafts never assert a direct link to the estimate revision; a person confirms that elsewhere.
 LINKS = ("temporal_context", "unconfirmed")
-FORWARD = ("expect", "outlook", "guidance", "forecast", "anticipate", "project", "will ", "target")
-RAISE = ("raise", "raised", "increase", "increased", "higher", "above", "up from", "improv")
-LOWER = ("lower", "lowered", "reduce", "reduced", "cut", "decrease", "decreased", "below", "down from", "declin")
+FORWARD = ("expect", "outlook", "guidance", "forecast", "anticipate", "project", "target")
+# Whole words: 'increasing its guidance' is a raise (URGN, DAN), and 'execute' holds no 'cut'.
+RAISE = re.compile(r"\b(?:rais(?:e|es|ed|ing)|increas(?:e|es|ed|ing)|higher|above|up from|improv\w*)\b")
+LOWER = re.compile(r"\b(?:lower(?:s|ed|ing)?|reduc(?:e|es|ed|ing)|cut(?:s|ting)?|decreas(?:e|es|ed|ing)|below|"
+                   r"down from|declin\w*)\b")
 KO_UP = ("상향", "인상", "올렸", "높였", "늘렸")
 KO_DOWN = ("하향", "인하", "낮췄", "줄였")
 KO_CAUSAL = ("상향 원인", "때문에 추정치", "추정치가 올랐", "상향을 이끌", "상향의 원인", "추정치 상향", "컨센서스")
@@ -397,7 +399,8 @@ def draft_prompt(target: dict, documents: list[dict], blocks: list[dict]) -> str
         "4. metric은 quote에 있는 영어 지표명(예: revenue, net income, distributions), period는 quote/표 머리글의 기간 표기 그대로(모르면 unknown).\n"
         "5. subject: 회사 전체 수치면 issuer, 자회사면 subsidiary(subject_name에 이름), 사업부면 segment, 고객이면 customer.\n"
         "6. kind: 실적 fact, 회사 전망 guidance, 원문 인용이 있는 해석 interpretation(figures 없이).\n"
-        "7. gaap: 원문에 GAAP/non-GAAP/adjusted 표기가 있을 때만 적고 없으면 unknown.\n"
+        "7. gaap 값은 GAAP, non-GAAP, unknown 중 하나다. 원문 지표명 앞에 GAAP가 있으면 GAAP, non-GAAP 또는 adjusted가 "
+        "있으면 non-GAAP(adjusted라고 적힌 지표도 출력은 non-GAAP), 표기가 없으면 unknown.\n"
         "8. 일회성 이익·세금·자사주 매입으로 생긴 주당 수치 변화를 영업 성장으로 쓰지 마라. 반대 근거는 limitations에.\n"
         "9. link는 unconfirmed 또는 temporal_context만. 매수·목표가·주가 전망 금지. next_check는 확인할 질문 문장(숫자 없이).\n"
         f"drivers: {', '.join(DRIVERS)}. direction: {', '.join(DIRECTIONS)}.\n"
@@ -446,6 +449,112 @@ def figure_problem(figure: str, quote_raw: str) -> str | None:
     return None
 
 
+# ---- what a number is (context-check-v8): a level, a change, or an effect on another figure
+# Small words allowed between a change/effect phrase and its number ('by a net, after-tax benefit of').
+ROLE_FILL = r"(?:(?:approximately|about|around|nearly|roughly|almost|over|more than|less than|an?|the|net|" \
+            r"after-tax|pre-tax|total|additional|further|another)[ ,]+)*"
+CHANGE_NOUN = r"(?:increase|decrease|improvement|decline|reduction|rise|drop|growth|expansion|contraction)s?"
+CHANGE_VERB = r"(?:increas|decreas|rais|lower|reduc|cut|improv|grew|grow|rose|rise|rising|fell|fall|declin|expand|" \
+              r"contract|boost|lift|drop|gain|climb|revis)\w*"
+DELTA_BEFORE = [
+    re.compile(rf"\b{CHANGE_NOUN} of {ROLE_FILL}\(?$"),                     # 'an increase of $9.2 million'
+    re.compile(rf"\b{CHANGE_VERB}\b[^.;:]{{0,90}}?\bby {ROLE_FILL}\(?$"),   # 'increasing its outlook by approximately $225 million'
+    re.compile(rf"\b(?:up|down|{CHANGE_VERB}) {ROLE_FILL}\(?$"),            # 'up $29 million', 'grew 23%', 'decline approximately (4.0%)'
+]
+DELTA_AFTER = re.compile(rf"^ ?(?:{CHANGE_NOUN}\b|(?:higher|lower|more|less) than\b|year-over-year\b|yoy\b|y/y\b|"
+                         rf"(?:quarter-over-quarter|sequential(?:ly)?)\b)")
+EFFECT_BEFORE = re.compile(rf"\b(?:(?:benefit|charge|impact|effect)s? (?:of|from) |(?:impacted|affected|hurt|helped|"
+                           rf"benefited|benefitted|reduced|offset) by ){ROLE_FILL}\(?$")
+LIST_JOIN = re.compile(r"(?:,| and| or|, and|, or)\s+(?:an? )?$")
+TO_LEVEL = re.compile(rf"\bto {ROLE_FILL}$")  # 'increased 25 basis points to 2.44%': the target value is a level
+RATE = re.compile(r"%|\bpercent(?:age points?)?\b|\bbasis points?\b|\bbps\b|\bpoints?\b")
+
+
+def figure_role(q: str, start: int, end: int, previous: str | None) -> str:
+    """'level', 'delta' or 'effect' for the number phrase q[start:end] (squashed quote).
+    Only grammar touching the number counts: an 'increase' elsewhere in the sentence does not
+    make every number a change, and 'increased to X' / 'from X to Y' keep X and Y as levels."""
+    before, after = q[max(0, start - 120):start], q[end:end + 40].lstrip(")")
+    if DELTA_AFTER.search(after):
+        return "delta"  # '$1.8 million increase in provision', also after 'offset by' or 'attributable to a'
+    if TO_LEVEL.search(before) and not DELTA_BEFORE[1].search(before):
+        return "level"
+    if EFFECT_BEFORE.search(before):
+        return "effect"
+    if any(p.search(before) for p in DELTA_BEFORE):
+        return "delta"
+    if previous in ("delta", "effect") and LIST_JOIN.search(before):
+        return previous  # 'an increase of $9.2 million, or 17.2%,' / 'by a $103.8 million and a $138.9 million ...'
+    return "level"
+
+
+def quote_roles(q: str) -> list[tuple[int, int, str]]:
+    """Every number phrase of the squashed quote with its role, in order."""
+    roles, previous = [], None
+    for s, e in number_spans(q):
+        role = figure_role(q, s, e, previous)
+        roles.append((s, e, role))
+        previous = role
+    return roles
+
+
+def role_problem(metric: str, figures: list[str], quote_raw: str) -> tuple[str | None, list[str]]:
+    """(problem, role per figure). A change or effect amount offered as the metric's value is refused:
+    '$9.2 million increase in net interest income' is not net interest income (CLBK, 10/2 run), and
+    'increased net income by a net, after-tax benefit of $159.8 million' is not net income (PBF).
+    A rate change ('rose 5%', 'up 25 basis points') stays, labelled as a change on the card, and so
+    does a figure that carries its own change wording ('decreased oil revenues by $28.5 million').
+    An effect named as the metric itself ('$138.9 million goodwill impairment loss') is that level."""
+    q, m = squash(quote_raw), squash(metric)
+    spans = quote_roles(q)
+    roles = []
+    for figure in figures:
+        f = squash(figure)
+        seen = set()  # the role at every place the figure appears: two different roles is ambiguous
+        for at in (i for i in range(len(q)) if q.startswith(f, i)):
+            inside = [role for s, e, role in spans if at <= s < at + len(f)]
+            if not inside:
+                continue
+            role = "delta" if "delta" in inside else ("effect" if "effect" in inside else "level")
+            if role == "delta" and re.search(rf"\b{CHANGE_VERB}\b|\b{CHANGE_NOUN}\b|\b(?:up|down)\b", f):
+                role = "described_delta"  # the figure itself says it is a change
+            if role == "effect" and m and re.search(r"(?<![a-z])" + re.escape(m) + r"(?![a-z])", q[at + len(f):at + len(f) + 60]):
+                role = "level"  # '$138.9 million goodwill impairment loss' claimed as that loss
+            if role == "effect" and m and re.search(r"\b(?:benefit|charge|impact|effect|impairment)\b", m):
+                role = "level"  # the metric is the effect itself ('tax benefit')
+            seen.add(role)
+        if len(seen) > 1:
+            return "figure_role_ambiguous", []
+        role = seen.pop() if seen else "level"
+        # Without a metric no level is asserted: the amount is shown as what it is ('one-time tax
+        # benefit of $12 million' in a limitation).
+        if role == "effect" and m:
+            return "effect_presented_as_level", []
+        if role == "delta" and m and not RATE.search(f):
+            return "delta_presented_as_level", []
+        roles.append(role)
+    return None, roles
+
+
+def labelled(figure: str, role: str, quote_raw: str) -> str:
+    """The figure as the card shows it: a change is never shown bare next to a level."""
+    if role == "level":
+        return figure
+    q, f = squash(quote_raw), squash(figure)
+    at = q.find(f)
+    near = q[max(0, at - 60):at + len(f) + 30] if at >= 0 else f
+    down = re.search(r"\b(?:decreas|declin|lower|reduc|fell|fall|drop|down|contract|cut)\w*", near)
+    up = re.search(r"\b(?:increas|grew|grow|rose|rise|rising|up|improv|higher|expand|gain|climb|rais|boost)\w*", near)
+    if role == "effect":
+        return f"{figure}(영향 금액)"
+    kind = "변화율" if RATE.search(f) else "변화량"
+    if down and not up:
+        kind += "·감소"
+    elif up and not down:
+        kind += "·증가"
+    return f"{figure}({kind})"
+
+
 PREDICATE = r"(?:is|was|were|are|totaled|totalled|totals|reached|stood at|amounted to|of)\b"
 # ', including <words>, is ...': commas inside only in a date, periods only in a decimal number.
 ASIDE = re.compile(r", including (?:[^,.;]|(?<=\d)\.(?=\d)|, (?=(?:19|20)\d{2}\b))+?, (?=" + PREDICATE + ")")
@@ -478,13 +587,17 @@ def metric_problem(metric: str, figures: list[str], quote_raw: str) -> str | Non
         mentions = [x for x in all_mentions
                     if (inside and inside[0] <= x[0] < inside[1])
                     or (not inside and not any(a <= x[0] < b for a, b in aside_spans))]
+        if RATE.search(squash(figure)):
+            # '45.0 percent of revenue': revenue is the ratio's denominator, not the figure's metric (AXTI).
+            end_at = at + len(squash(figure))
+            mentions = [x for x in mentions if not re.fullmatch(r" of (?:total |net )?", q[end_at:x[0]])] or mentions
         if not mentions:
             return "figure_belongs_to_another_metric"
         # Nearest mention by distance; at a tie the longer name wins ('adjusted ebitda' over 'ebitda').
         s, e, name = min(mentions, key=lambda x: (min(abs(x[0] - at), abs(x[1] - at)), -len(x[2])))
         # A shorter name counts as the claimed metric only inside a mention of it: 'revenue' within
         # 'total company revenue', never a separate 'net income' next to 'net income attributable to ...'.
-        if name != m and not any(cs <= s and e <= ce for cs, ce in claimed):
+        if name != m and not any(cs <= s and e <= ce for cs, ce in claimed) and not repeated_name(q, m, name, s, claimed):
             return "figure_belongs_to_another_metric"
         # 'operating income' inside 'adjusted operating income' is another metric unless claimed so.
         qualifier = re.search(r"(adjusted|non-gaap|organic|core|segment|pro forma)\s+$", q[max(0, s - 14):s])
@@ -494,6 +607,24 @@ def metric_problem(metric: str, figures: list[str], quote_raw: str) -> str | Non
         if re.search(r"[.;]\s", between):
             return "figure_belongs_to_another_metric"
     return None
+
+
+def repeated_name(q: str, m: str, name: str, s: int, claimed: list[tuple[int, int]]) -> bool:
+    """'GAAP net income ... for the second quarter of 2026 was a net income of $11.1 million' (AXTI):
+    the second 'net income' repeats the claimed metric. Only the claimed name's own ending, written as
+    'was/is a <name> of', after a mention of the claimed metric in the same statement, with no other
+    metric, basis, attribution or scope word between."""
+    if not (m.endswith(" " + name) and re.search(r"\b(?:was|were|is|are) an? $", q[max(0, s - 8):s])
+            and q[s + len(name):s + len(name) + 4] == " of "):
+        return False
+    earlier = [ce for cs, ce in claimed if ce <= s]
+    if not earlier:
+        return False
+    between = q[max(earlier):s]
+    return not re.search(r"[.;]\s", between) and not any(
+        re.search(r"(?<![a-z])" + re.escape(x) + r"(?![a-z])", between) for x in set(METRIC_KO) - {name}) \
+        and not re.search(r"\b(?:adjusted|non-gaap|gaap|attributable|segment|consolidated|excluding|including)\b",
+                          between)
 
 
 def figure_phrases(text: str) -> set[str]:
@@ -695,6 +826,11 @@ def field_type_problem(item: dict) -> str | None:
     return None
 
 
+def has_forward_wording(quote: str) -> bool:
+    """Check normalized wording; the modal 'will' must not match 'goodwill'."""
+    return any(word in quote for word in FORWARD) or bool(re.search(r"\bwill\b", quote))
+
+
 def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str | None, dict]:
     """(problem, checked item). Structural checks only: passing means 'automatic, unreviewed'."""
     if not isinstance(item, dict):
@@ -720,6 +856,9 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
         problem = figure_problem(figure, quote_raw)
         if problem:
             return problem, {}
+    problem, roles = role_problem(str(item.get("metric") or ""), figures, quote_raw)
+    if problem:
+        return problem, {}
     note = str(item.get("note_ko") or "").strip()
     if not note or len(note) > 160:
         return "bad_note", {}
@@ -743,6 +882,11 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
         return problem, {}
     gaap = item.get("gaap") or "unknown"
     expected = gaap_basis(metric, quote, figures)
+    notes = {}
+    if squash(gaap) == "adjusted" and expected == "non-GAAP":
+        # Prompts up to context-ko-v3 invited 'adjusted'; it counts only where this metric's own
+        # basis in the source is non-GAAP, and the model's value is kept beside the result.
+        notes["gaap_original"], gaap = gaap, "non-GAAP"
     if gaap != "unknown" and gaap != expected:
         return "gaap_not_as_stated", {}  # an asserted label must be the source's; unknown is filled from it
     currencies = {"$": "USD", "€": "EUR", "£": "GBP"}
@@ -751,13 +895,13 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
         return "currency_not_in_figures", {}
     if item.get("unit") and not any(str(item["unit"]).lower() in f.lower() for f in figures):
         return "unit_not_in_figures", {}
-    if kind == "fact" and any(w in quote for w in FORWARD):
+    if kind == "fact" and has_forward_wording(quote):
         return "guidance_written_as_fact", {}
-    if kind == "guidance" and not any(w in quote for w in FORWARD):
+    if kind == "guidance" and not has_forward_wording(quote):
         return "guidance_without_forward_wording", {}
-    if any(w in note for w in KO_UP) and (not any(w in quote for w in RAISE) or any(w in quote for w in LOWER)):
+    if any(w in note for w in KO_UP) and (not RAISE.search(quote) or LOWER.search(quote)):
         return "raise_not_in_quote", {}
-    if any(w in note for w in KO_DOWN) and not any(w in quote for w in LOWER):
+    if any(w in note for w in KO_DOWN) and not LOWER.search(quote):
         return "cut_not_in_quote", {}
     subject = item.get("subject") or "issuer"
     if subject not in SUBJECTS:
@@ -772,21 +916,26 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str) -> tuple[str |
         if problem:
             return problem, {}
     core = subject == "issuer" and issuer_named(quote_raw, issuer)
-    if what == "claim" and (item.get("direction", "unknown") not in DIRECTIONS
-                            or not set(item.get("drivers") or ["unknown"]) <= set(DRIVERS)):
+    drivers = list(dict.fromkeys(x for x in item.get("drivers") or [] if x in DRIVERS)) or ["unknown"]
+    if what == "claim" and set(item.get("drivers") or []) - set(DRIVERS):
+        # A tag outside the list is a label, not a fact: dropped (never guessed into another tag),
+        # with the model's tags kept beside the result (AXTI 'customer_demand', 9/30 run).
+        notes["drivers_original"] = list(item["drivers"])
+    if what == "claim" and item.get("direction", "unknown") not in DIRECTIONS:
         return "bad_tag", {}
     label = METRIC_KO.get(metric.lower(), metric) if metric else ""
     period = item.get("period") if item.get("period") and item["period"] != "unknown" else ""
     head = "".join([f"[{subject_name}] " if subject != "issuer" else "",
                     f"{label}({metric})" if label and label != metric else label,
                     f" · {period}" if period else ""])
-    body = " / ".join(figures)
+    body = " / ".join(labelled(f, r, quote_raw) for f, r in zip(figures, roles))
     text_ko = f"{head}: {body} — {note}" if head and body else (f"{head} — {note}" if head else note)
     return None, {"text_ko": text_ko, "note_ko": note, "kind": kind, "quote": quote_raw, "document_id": key[0],
                   "block_id": key[1], "metric": metric or None, "figures": figures, "period": item.get("period") or "unknown",
                   "currency": derived[0] if len(derived) == 1 else None, "gaap": expected, "subject": subject,
-                  "subject_name": subject_name or None, "core": core,
-                  "drivers": item.get("drivers") or ["unknown"], "direction": item.get("direction", "unknown")}
+                  "subject_name": subject_name or None, "core": core, "figure_roles": roles,
+                  "drivers": drivers, "direction": item.get("direction", "unknown"),
+                  **({"normalized": notes} if notes else {})}
 
 
 def excerpt(item) -> dict:
@@ -824,6 +973,46 @@ def validate_draft(answer: dict, blocks: list[dict], issuer: dict | None = None)
     status = ("draft_ready" if core else "insufficient_earnings_context") if claims else "no_supported_claims"
     return {"claims": claims, "limitations": limitations, "next_check": checks, "link": link,
             "link_note": link_note, "rejected": rejected, "context_status": status}
+
+
+# Stored drafts of these validator versions are re-checked with the current one when read (L1 4.2).
+REVALIDATED_VERSIONS = ("context-check-v7",)
+
+
+class RevalidationUnavailable(ValueError):
+    """A stored draft cannot be re-checked (document, block or issuer missing or different)."""
+
+
+def revalidate_record(record: dict, documents: dict[str, dict], issuer: dict | None) -> dict:
+    """A stored older-validator draft as the current validator accepts it: only the items it
+    accepted then are checked again, on the same source blocks the model saw, for the same issuer.
+    Nothing is rescued from what it refused (only excerpts of those are stored), the record itself
+    is not changed, and its generation time stays its own. Raises RevalidationUnavailable instead
+    of passing anything through unchecked."""
+    if record.get("parser_version") not in REVALIDATED_VERSIONS:
+        raise RevalidationUnavailable(f"validator {record.get('parser_version')} is not re-checked")
+    if not issuer or not issuer.get("cik") or issuer.get("cik") != record.get("issuer_cik"):
+        raise RevalidationUnavailable("issuer missing or different from the draft's")
+    blocks = []
+    for ref in record.get("source_blocks") or []:
+        document_id, _, block_id = str(ref).partition("#")
+        doc = documents.get(document_id)
+        if doc is None or (doc.get("issuer") or {}).get("cik") != record.get("issuer_cik"):
+            raise RevalidationUnavailable(f"document {document_id} missing or of another issuer")
+        block = next((b for b in doc.get("blocks") or [] if b.get("id") == block_id), None)
+        if block is None:
+            raise RevalidationUnavailable(f"block {ref} missing")
+        blocks.append({"document_id": document_id, "block_id": block_id, "text": cf.block_text(block)})
+    if not blocks:
+        raise RevalidationUnavailable("no source blocks recorded")
+    checked = validate_draft({"claims": record.get("claims") or [], "limitations": record.get("limitations") or [],
+                              "next_check": record.get("next_check") or [], "link": record.get("link")},
+                             blocks, issuer)
+    return {**record, **{k: checked[k] for k in ("claims", "limitations", "next_check", "link", "context_status")},
+            "source_parser_version": record["parser_version"], "display_validator_version": PARSER_VERSION,
+            "validation_scope": "accepted_only",
+            "revalidation_dropped": [{"what": r["what"], "reason": r["reason"], "quote": r["quote"]}
+                                     for r in checked["rejected"]]}
 
 
 def input_sha(target: dict, document_ids: list[str]) -> str:

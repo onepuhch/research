@@ -126,6 +126,56 @@ class NumbersAndCausalityTest(unittest.TestCase):
         self.assertEqual(result["next_check"], ["다음 분기 수주를 확인"])
 
 
+class ForwardWordingTest(unittest.TestCase):
+    """Synthetic boundary cases for the RPAY goodwill false positive.
+
+    These isolate wording from the real response's separate metric/period checks;
+    passing them does not establish that the original RPAY item is fully supported.
+    """
+
+    def test_historical_goodwill_is_a_fact_in_claims_and_limitations(self):
+        quote = "Net loss was impacted by a goodwill impairment loss in 2025."
+        item = claim(quote=quote, block_id="p1", metric="net loss", figures=[], currency=None,
+                     period="2025", note_ko="순손실에 영업권 손상이 영향을 주었습니다.")
+        for field in ("claims", "limitations"):
+            with self.subTest(field=field):
+                result = ctx.validate_draft({field: [item]}, blocks_of(quote))
+                self.assertEqual(result["rejected"], [])
+                self.assertEqual(len(result[field]), 1)
+
+    def test_goodwill_alone_does_not_support_guidance(self):
+        quote = "Net loss was impacted by a goodwill impairment loss in 2025."
+        result = check(quote, kind="guidance", metric="net loss", figures=[], currency=None,
+                       period="2025", note_ko="영업권 손상 영향을 설명했습니다.")
+        self.assertEqual(result["claims"], [])
+        self.assertEqual(result["rejected"][0]["reason"], "guidance_without_forward_wording")
+
+    def test_standalone_will_still_requires_guidance(self):
+        for wording in ("will", "WILL", "will\n"):
+            quote = f"The company {wording} report revenue of $5 million in 2026."
+            fields = dict(metric="revenue", figures=["$5 million"], period="2026",
+                          note_ko="회사가 매출 전망을 제시했습니다.")
+            with self.subTest(wording=wording):
+                fact = check(quote, kind="fact", **fields)
+                guidance = check(quote, kind="guidance", **fields)
+                self.assertEqual(fact["claims"], [])
+                self.assertEqual(fact["rejected"][0]["reason"], "guidance_written_as_fact")
+                self.assertEqual(guidance["rejected"], [])
+                self.assertEqual(len(guidance["claims"]), 1)
+
+    def test_goodwill_does_not_hide_a_real_forward_word(self):
+        for wording in ("will", "expects to"):
+            quote = f"The company {wording} report a goodwill impairment loss in 2026."
+            fields = dict(metric="goodwill impairment loss", figures=[], currency=None,
+                          period="2026", note_ko="회사가 영업권 손상 전망을 설명했습니다.")
+            with self.subTest(wording=wording):
+                fact = check(quote, kind="fact", **fields)
+                guidance = check(quote, kind="guidance", **fields)
+                self.assertEqual(fact["rejected"][0]["reason"], "guidance_written_as_fact")
+                self.assertEqual(guidance["rejected"], [])
+                self.assertEqual(len(guidance["claims"]), 1)
+
+
 class RealOutputTest(unittest.TestCase):
     """Model outputs seen in verification run 36247419404, fixed as regressions: right ones pass,
     wrong ones stay refused."""

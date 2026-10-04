@@ -439,8 +439,12 @@ def context_view(record: dict | None) -> dict | None:
     """The part of a draft that is a claim on the card (generation time is not part of it)."""
     if not record:
         return None
-    return {k: record.get(k) for k in ("context_id", "input_sha", "context_status", "claims", "limitations",
+    view = {k: record.get(k) for k in ("context_id", "input_sha", "context_status", "claims", "limitations",
                                        "next_check", "link", "link_note", "source_coverage", "documents")}
+    if record.get("validation_scope"):  # a stored draft re-checked by the current validator (no check time)
+        view.update({k: record.get(k) for k in ("source_parser_version", "display_validator_version",
+                                                 "validation_scope", "generated_at")})
+    return view
 
 
 def research_state(entry: dict | None, context: dict | None, human: dict | None, held: bool = False) -> str:
@@ -561,8 +565,10 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "tracking": ledger_tracking(identity["entity_id"], ideas, THESIS_KEY),
             "research_status": research_state(research_entry, context, human, bool(held)),
             **source, "last_valid_context": last_valid,
-            "research_note": (RESEARCH_NOTES.get((research_entry or {}).get("status"))
-                              if not context and not held else None),
+            "research_note": (None if context or held else
+                              "저장된 초안을 현재 검증기로 다시 확인하지 못해 표시하지 않습니다(재검증 불가)."
+                              if (research_entry or {}).get("revalidation_unavailable") else
+                              RESEARCH_NOTES.get((research_entry or {}).get("status"))),
             "context_id": (context or {}).get("context_id"),
             "source_snapshot": snapshot_ref, "policy_version": policy_version,
         })
@@ -957,6 +963,9 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
                                  "이전에 확보한 유효 근거 없음")))
     lines.append(("section", "공식 발표에서 확인한 변화 (자동 정리·미검토)"))
     stated = [x for x in context.get("claims") or [] if x.get("kind") in ("fact", "guidance")][:3]
+    if context.get("validation_scope") == "accepted_only":
+        lines.append(("item", f"{(context.get('generated_at') or '')[:10]} 생성 초안({context.get('source_parser_version')})을 "
+                              f"현재 검증기({context.get('display_validator_version')})로 다시 확인해 통과한 문장만 표시"))
     if cand.get("context_hold"):
         lines.append(("warn", hold_warning(cand["context_hold"])))
     elif stated:
@@ -1306,7 +1315,16 @@ def context_inputs() -> tuple[dict, dict]:
             if entry.get("context_id") else None
         if not record:
             continue
-        current_parser = record.get("parser_version") == candidate_context.PARSER_VERSION
+        loaded = {d: company_filings.load_document(d) for d in record.get("document_ids") or []}
+        if record.get("parser_version") in candidate_context.REVALIDATED_VERSIONS:
+            # An older validator's draft is shown only as the current validator accepts it now.
+            try:
+                record = candidate_context.revalidate_record(record, {d: x for d, x in loaded.items() if x},
+                                                             entry.get("issuer"))
+            except candidate_context.RevalidationUnavailable as why:
+                entry["revalidation_unavailable"] = {"context_id": record["context_id"], "reason": str(why)[:120]}
+                continue  # never the unchecked numbers as a fallback
+        current_parser = record.get("display_validator_version", record.get("parser_version"))             == candidate_context.PARSER_VERSION
         if current_parser and record.get("context_status") == "draft_ready":
             # Shown only as a date when the latest source attempt failed; never as today's result.
             entry["last_valid_context"] = {"context_id": record["context_id"], "generated_at": record["generated_at"],
@@ -1318,7 +1336,7 @@ def context_inputs() -> tuple[dict, dict]:
             continue
         docs = []
         for document_id in record["document_ids"]:
-            doc = company_filings.load_document(document_id)
+            doc = loaded.get(document_id)
             if doc:
                 docs.append({k: doc.get(k) for k in ("document_id", "title", "url", "filed_at", "observed_at",
                                                       "form", "document_type")})
