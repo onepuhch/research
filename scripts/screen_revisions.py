@@ -50,6 +50,9 @@ OUTCOMES = ("success", "unavailable", "failed", "not_attempted")
 PRICE_BASIS = "Yahoo chart close: split-adjusted, not dividend-adjusted"
 DEFAULTS = {
     "min_market_cap_usd": 300_000_000, "min_analysts": 3, "top_n": 20,
+    # One industry moving together (refiners on crack spreads, 10/4: 9 of 102) keeps at most this many
+    # own cards per list; the rest are folded into an industry group and their places go to the next rank.
+    "max_per_industry": 3,
     "min_yield_change_pp": 1.0, "min_growth_pct": 25.0, "min_growth_base_eps": 0.25,
     # Pacing: ~4 requests/s finishes ~3,300 lookups in ~14 min. A run at ~32/s
     # (2026-09-25) lost 10% of lookups and every profile/price call.
@@ -527,12 +530,45 @@ def industry_clusters(candidates: list[dict], minimum: int = 3) -> list[dict]:
                    for k, v in groups.items() if len(v) >= minimum), key=lambda g: g["count"], reverse=True)
 
 
-def rank(rows: list[dict], top_n: int) -> tuple[list[dict], list[dict]]:
+def rank(rows: list[dict], top_n: int, per_industry: int | None = None) -> tuple[list[dict], list[dict], set[str]]:
+    """(top yield list, top growth list, tickers folded by the industry limit). Within each list an
+    industry keeps at most per_industry entries (the highest ranked); a company skipped while the list
+    still had room is 'folded': it would have had a card and is shown in its industry group instead.
+    A company without a known industry is never folded. None keeps the plain top_n lists."""
     candidates = [r for r in rows if r["candidate"]]
-    top_yield = sorted((r for r in candidates if r["by_yield"]),
-                       key=lambda r: r["yield_change_90_pp"], reverse=True)[:top_n]
-    top_growth = sorted((r for r in candidates if r["by_growth"]), key=lambda r: r["pct_90"], reverse=True)[:top_n]
-    return top_yield, top_growth
+    folded: set[str] = set()
+
+    def pick(flag: str, key: str) -> list[dict]:
+        chosen, counts = [], {}
+        for r in sorted((r for r in candidates if r[flag]), key=lambda r: r[key], reverse=True):
+            if len(chosen) >= top_n:
+                break
+            industry = r.get("industry")
+            if per_industry is not None and industry and counts.get(industry, 0) >= per_industry:
+                folded.add(r["ticker"])
+                continue
+            chosen.append(r)
+            counts[industry] = counts.get(industry, 0) + 1
+        return chosen
+
+    top_yield, top_growth = pick("by_yield", "yield_change_90_pp"), pick("by_growth", "pct_90")
+    shown = {r["ticker"] for r in top_yield + top_growth}
+    return top_yield, top_growth, folded - shown
+
+
+def industry_groups(candidates: list[dict], top_yield: list[dict], top_growth: list[dict],
+                    folded: set[str]) -> list[dict]:
+    """Industries that had companies folded: every passing company of the industry, which have own
+    cards and which were folded. A fact about co-movement, not a claim that the cause is shared."""
+    shown = {r["ticker"] for r in top_yield + top_growth}
+    groups = []
+    for cluster in industry_clusters(candidates, minimum=1):
+        members = [t for t in cluster["tickers"]]
+        if not set(members) & folded:
+            continue
+        groups.append({"industry": cluster["industry"], "count": len(members), "tickers": members,
+                       "shown": [t for t in members if t in shown], "folded": [t for t in members if t in folded]})
+    return groups
 
 
 def run_status(stages: dict[str, dict]) -> str:
@@ -804,7 +840,7 @@ def screen(cfg: dict, universe: list[dict], yahoo: Yahoo) -> dict:
             by_sym[symbol].update(o["value"])
     stages["profile"] = stage_stats(prof)
 
-    top_yield, top_growth = rank(rows, cfg["top_n"])
+    top_yield, top_growth, folded = rank(rows, cfg["top_n"], cfg.get("max_per_industry"))
     top = list(dict.fromkeys(r["symbol"] for r in top_yield + top_growth))
     price = run_stage(top, yahoo.chart, cfg["workers"], yahoo, cfg["retry_cooldown_s"])
     for symbol, o in price.items():
@@ -829,7 +865,8 @@ def screen(cfg: dict, universe: list[dict], yahoo: Yahoo) -> dict:
     return {"stages": stages, "issues": issues, "exclusions": exclusions, "source": source,
             "derived": {"rows": rows, "top_yield": [r["ticker"] for r in top_yield],
                         "top_growth": [r["ticker"] for r in top_growth],
-                        "clusters": industry_clusters(candidates)}}
+                        "clusters": industry_clusters(candidates),
+                        "industry_groups": industry_groups(candidates, top_yield, top_growth, folded)}}
 
 
 def main(argv: list[str] | None = None) -> int:

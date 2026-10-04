@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v7"
+GENERATOR_VERSION = "cards-v8"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")
@@ -505,6 +505,7 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
     derived = snapshot.get("derived", {})
     rows = {r["ticker"]: r for r in derived.get("rows", []) if r.get("candidate")}
     partial = snapshot.get("run", {}).get("status") != "success"
+    groups = {g["industry"]: g for g in derived.get("industry_groups") or []}
     result = []
     for position, (ticker, lists) in enumerate(display_order(derived), 1):
         row = rows.get(ticker)
@@ -559,6 +560,8 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "eps_provider": "Yahoo Finance earningsTrend (+1y)",
             "lists": sorted({m["list"] for m in lists}),
             "missing": missing,
+            "industry_group": ({k: groups[row["industry"]][k] for k in ("industry", "count", "shown", "folded")}
+                               if row.get("industry") in groups else None),
             # Data completeness (missing) and a human 'needs evidence' mark are shown apart.
             "evidence_review": ({"status": "needs_evidence",
                                  "reason": ("가져온 자동 초안이 격리되어 사용 중지: 원문 재검토 필요" if imported_hold
@@ -620,7 +623,7 @@ def content_version(content: dict) -> str:
 def version_record(candidate: dict) -> dict:
     """The immutable claim of a version (no observation time, price window or rank)."""
     keys = ("candidate_id", "candidate_version", "identity", "thesis_key", "name", "industry", "sector",
-            "eps_provider", "lists", "missing", "base_classification", "explanations", "sources",
+            "eps_provider", "lists", "missing", "industry_group", "base_classification", "explanations", "sources",
             "generator_version", "context", "context_hold", "evidence_review")
     record = {k: candidate.get(k) for k in keys}
     record["eps"] = {k: candidate["eps"].get(k) for k in VERSION_EPS_KEYS}
@@ -925,6 +928,11 @@ def selection_lines(cand: dict) -> list[str]:
                          f"(기준 +25% 이상, 90일 전 EPS $0.25 이상)")
     lines.append(f"최근 30일 추정 상향 {eps['up30']} / 하향 {eps['down30']}, 분석가 {eps['analysts']}명"
                  + (", 30일·90일 모두 상향" if eps.get("steady") else ""))
+    group = cand.get("industry_group")
+    if group:
+        lines.append(f"같은 업종 동반 상향: {group['industry']} {group['count']}곳이 함께 조건 통과 — 개별 카드 "
+                     f"{len(group['shown'])}곳, 묶음 표시 {len(group['folded'])}곳({', '.join(group['folded'])}). "
+                     "업종 공통 요인일 수 있음(원인은 미확인)")
     return lines
 
 
@@ -1257,6 +1265,7 @@ def load_index() -> dict:
 KST = timezone(timedelta(hours=9))
 DEPARTURES = {
     "rank_outside": "스크린 조건은 통과했지만 A·B 상위 목록 밖",
+    "industry_folded": "스크린 조건 통과, 같은 업종 묶음에 포함(업종당 개별 카드 수 제한)",
     "screen_condition_not_met": "최신 관측에서 스크린 조건 미충족",
     "not_observed": "최신 관측에서 EPS 자료 없음 또는 조회 대상 제외",
 }
@@ -1311,6 +1320,9 @@ def telegram_screen(limit: int = 5) -> list[str]:
                      f"{esc(cand.get('industry') or '업종 미확인')}\n   {esc(desc)}\n"
                      f"   내년 EPS 예상 {esc(money(eps['eps_90d']))} → {esc(money(eps['eps_now']))} ({esc(eps_change(eps))})"
                      f" · {esc(tracking_label(cand))}\n   <code>/candidate {esc(cand['candidate_id'])}</code>")
+    for g in index.get("industry_groups") or []:
+        lines.append(f"묶음: {esc(g['industry'])} {g['count']}곳 함께 상향 — 개별 카드 {esc(', '.join(g['shown']))}, "
+                     f"묶음만 {esc(', '.join(g['folded']))}")
     lines.append("\n순서는 A(이익수익률 변화)·B(90일 증가율) 목록을 번갈아 놓은 것이며 투자 점수가 아닙니다."
                  " 명령은 하루 4번(03:23·09:17·15:23·21:23 KST 무렵) 처리되며 실시간 응답이 아닙니다.")
     return ["\n".join(lines)]
@@ -1330,6 +1342,33 @@ def telegram_candidate(argument: str) -> list[str]:
         return [note + telegram_card(cand)]
     stale = load_index().get("stale") if state == "stale" else None
     return [telegram_card(cand, stale)]
+
+
+def group_view(derived: dict) -> list[dict]:
+    """Industry groups with each folded company's screen numbers (no card, no draft, no alert)."""
+    rows = {r["ticker"]: r for r in derived.get("rows", [])}
+    out = []
+    for group in derived.get("industry_groups") or []:
+        members = [{"ticker": t, "name": rows.get(t, {}).get("name"), "own_card": t in group["shown"],
+                    "eps_change": eps_change(rows[t]) if t in rows else "?",
+                    "yield_change_90_pp": rows.get(t, {}).get("yield_change_90_pp")} for t in group["tickers"]]
+        out.append({**group, "members": members})
+    return out
+
+
+def group_lines(index: dict) -> list[str]:
+    """Markdown lines for the industry groups of the latest screen."""
+    groups = index.get("industry_groups") or []
+    if not groups:
+        return []
+    lines = ["## 같은 업종 동반 상향 (묶음)", "",
+             "한 업종이 함께 상향되면 목록마다 상위 몇 곳만 개별 카드로 두고 나머지는 여기 묶어 둡니다. "
+             "같은 업종이라는 사실만 뜻하며, 공통 원인은 확인하지 않았습니다.", ""]
+    for g in groups:
+        folded = [m for m in g["members"] if not m["own_card"]]
+        lines.append(f"- **{g['industry']}** {g['count']}곳 (개별 카드 {len(g['shown'])}곳: {', '.join(g['shown'])}) — "
+                     + ", ".join(f"{m['ticker']} {m['eps_change']}" for m in folded))
+    return lines + [""]
 
 
 def render_markdown(index: dict) -> str:
@@ -1355,6 +1394,7 @@ def render_markdown(index: dict) -> str:
                      f"{(cand.get('industry') or '미확인')}|{eps_change(cand['eps'])}|{price}|"
                      f"{tracking_label(cand)}|`{cand['candidate_id'] or 'ID 없음(거래소 미확인)'}`|")
     lines.append("")
+    lines += group_lines(index)
     for cand in index["candidates"]:
         lines += [markdown_card(cand, index.get("stale")), ""]
     departed = departed_rows(index)
@@ -1438,7 +1478,8 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
                                "earnings_success": earnings.get("success", 0)},
                      # Unidentified rows stay visible (no ID, no tracking command) instead of vanishing.
                      candidates=cands,
-                     unidentified=[x["identity"]["ticker"] for x in cands if not x["candidate_id"]])
+                     unidentified=[x["identity"]["ticker"] for x in cands if not x["candidate_id"]],
+                     industry_groups=group_view(derived))
     report["migrated_legacy"] = migrate_legacy_versions(now)
     index["known"] = known_candidates()
     for cand in index["candidates"]:
@@ -1453,7 +1494,10 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
             if cid in current:
                 continue
             row = rows.get(item["ticker"])
-            reason = "not_observed" if row is None else ("rank_outside" if row.get("candidate") else "screen_condition_not_met")
+            folded = {t for g in choice["valid"]["snapshot"].get("derived", {}).get("industry_groups") or []
+                      for t in g["folded"]}
+            reason = ("not_observed" if row is None else "industry_folded" if item["ticker"] in folded
+                      else "rank_outside" if row.get("candidate") else "screen_condition_not_met")
             index["departed"][cid] = {"reason": reason, "as_of": index["observed_at"]}
     c.atomic_json(index_path(), index)
     (c.ROOT / "docs" / "candidates.md").write_text(render_markdown(index), encoding="utf-8")
