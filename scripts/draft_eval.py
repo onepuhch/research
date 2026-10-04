@@ -40,7 +40,8 @@ def canonical_sha(value) -> str:
 
 
 def file_sha(path: pathlib.Path) -> str:
-    return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()
+    """Line endings normalized: a Windows checkout (CRLF) and the CI runner (LF) hash one file alike."""
+    return hashlib.sha256(pathlib.Path(path).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def kst_day(stamp: str) -> str:
