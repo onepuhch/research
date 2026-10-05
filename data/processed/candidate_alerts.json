@@ -270,11 +270,19 @@
       "observation_id": "OB-75A0B87BF176F620",
       "signal_id": null,
       "day": "2026-10-05",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-05T06:08:36+00:00",
+          "status": "sent",
+          "message_id": 154,
+          "error": null
+        }
+      ],
       "reserved_by": "37269585919-1",
       "reserved_at": "2026-10-05T06:08:34+00:00",
-      "payload_sha256": "b3c2984746f916eab56dd12455f438141731fdb6f620a2a7385c0c7a4085e94a"
+      "payload_sha256": "b3c2984746f916eab56dd12455f438141731fdb6f620a2a7385c0c7a4085e94a",
+      "message_id": 154
     },
     "NYSE:HIPO|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -286,11 +294,19 @@
       "observation_id": "OB-B8C57C1E71899B87",
       "signal_id": null,
       "day": "2026-10-05",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-05T06:08:37+00:00",
+          "status": "sent",
+          "message_id": 155,
+          "error": null
+        }
+      ],
       "reserved_by": "37269585919-1",
       "reserved_at": "2026-10-05T06:08:34+00:00",
-      "payload_sha256": "e66c0f2f626e23255eba55f4e1807c0cde2174d2ec8775a8a4c6fe871b922f2c"
+      "payload_sha256": "e66c0f2f626e23255eba55f4e1807c0cde2174d2ec8775a8a4c6fe871b922f2c",
+      "message_id": 155
     },
     "NYSE:OSCR|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -302,11 +318,19 @@
       "observation_id": "OB-68EDBF5A05AC5D65",
       "signal_id": null,
       "day": "2026-10-05",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-05T06:08:38+00:00",
+          "status": "sent",
+          "message_id": 156,
+          "error": null
+        }
+      ],
       "reserved_by": "37269585919-1",
       "reserved_at": "2026-10-05T06:08:34+00:00",
-      "payload_sha256": "4ef82d3f32225c714539ae7b3bcd89a333059cdd33d70ae65f6e56cecdd98773"
+      "payload_sha256": "4ef82d3f32225c714539ae7b3bcd89a333059cdd33d70ae65f6e56cecdd98773",
+      "message_id": 156
     }
   },
   "bootstrap": {
