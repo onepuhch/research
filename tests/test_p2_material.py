@@ -22,6 +22,13 @@ THESIS = k.THESIS_KEY
 BOOT_DAY = "2026-09-25"
 
 
+def dateline(day):
+    """A release dateline as press releases print it: 'NEW YORK, October 9, 2026'."""
+    from datetime import date as _date
+    d = _date.fromisoformat(day)
+    return f"NEW YORK, {d.strftime('%B')} {d.day}, {d.year}"
+
+
 class MaterialFixture(AlertTest):
     def setUp(self):
         super().setUp()
@@ -77,14 +84,15 @@ class MaterialFixture(AlertTest):
                   "observed_at": f"{filed}T20:00:00+00:00", "raw_sha256": "0" * 64, "raw_bytes": 10,
                   "content_type": "html", "coverage": "complete", "status": "parsed", "relevance": {},
                   "normalization_version": cf.NORMALIZATION_VERSION,
-                  "blocks": [{"id": "p1", "kind": "p", "text": text or
+                  "blocks": [{"id": "p0", "kind": "p", "text": dateline(filed) + " -- AAA Inc. announced today."},
+                             {"id": "p1", "kind": "p", "text": text or
                               "AAA Inc. received a purchase order valued at $50 million from a data center customer."}]}
         missing = [f for f in c.SCHEMA["json_records"]["company_document"] if f not in record]
         record.update({f: None for f in missing})
         cf.store_document(record)
         state = candidate_context.load_state()
         entry = state["candidates"].setdefault(cid or self.cid(), {"issuer": {"cik": "0000000001"}, "update_checks": []})
-        entry["update_checks"].append({"document_id": doc_id, "eligible": True, "reason": "update-check-v3:x:p1"})
+        entry["update_checks"].append({"document_id": doc_id, "eligible": True, "reason": "update-check-v4:x:p1"})
         c.atomic_json(candidate_context.state_path(), state)
 
     def cid(self):
@@ -222,7 +230,9 @@ class TriggerATest(MaterialFixture):
         self.send_alerts()
         self.assertEqual(self.sent, [])
         notes = self.report()["candidates"][0]["a_notes"]
-        self.assertTrue(any("이전 제출" in n for n in notes) and any("공개 순서 미확인" in n for n in notes))
+        # the 9/20 filing is before the baseline and gives no note; the 9/24 one cannot be ordered
+        self.assertEqual([n for n in notes if "DOC-OLD1" in n], [])
+        self.assertTrue(any("DOC-SAME" in n and "공개 순서 미확인" in n for n in notes))
 
     def test_a_reposted_event_on_another_date_is_held(self):
         c.atomic_json(a.ledger_path(), {"events": {}, "bootstrap": {"date": BOOT_DAY, "keys": []}})

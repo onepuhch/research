@@ -7,7 +7,7 @@ baseline only moves by rebase; announced events in the real ledger are used as t
 Trigger A uses the current context state only on the last snapshot (earlier days would otherwise
 see documents collected later). Pseudo cards are complete by assumption (no price/quality check).
 
-    python data/eval/p_2026-10-05/material_replay.py
+    python data/eval/p_2026-10-05/material_replay.py [output.json]
 """
 import gzip
 import json
@@ -54,6 +54,7 @@ def pseudo_index(path: Path, names: dict[str, str]) -> dict:
 
 def main() -> int:
     ledger = a.load_ledger()
+    ledger = {**ledger, "material": m.empty_state()}  # replay from no pending state (Q: the live ledger has one)
     names = entities(ledger)
     boot = ledger["bootstrap"]["source_snapshot"]["finished_at"]
     paths = [p for p in screen_revisions.snapshots() if p.name[:16] > Path(ledger["bootstrap"]["source_snapshot"]["path"]).name[:16]]
@@ -75,7 +76,8 @@ def main() -> int:
     result = {"bootstrap_finished_at": boot, "snapshots": [p.name for p in paths], "timeline": timeline,
               "first_eligible": first_eligible, "last_day_known": known,
               "cancelled": ledger["material"]["cancelled"], "rebases": ledger["material"]["rebases"]}
-    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
+    out = Path(sys.argv[1]) if len(sys.argv) > 1 else OUT
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     print(json.dumps({"snapshots": len(paths), "known_last_day": len(known), "first_eligible": first_eligible,
                       "cancelled": len(result["cancelled"]), "rebases": len(result["rebases"])}, ensure_ascii=False))
     return 0

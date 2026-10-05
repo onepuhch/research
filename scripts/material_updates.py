@@ -6,11 +6,13 @@ snapshot, the new-discovery alert's observation, the last re-review alert, or a 
 comparison key changed, or the baseline source is gone). A rebase is never an event.
 
 Two triggers, one event:
-  A. an official business-update filing (P1-A event sentence with its number, P0 subject check) filed
-     after the baseline day. A filing whose date cannot be ordered against the baseline waits; an older
-     filing collected late is not new. One event signature (issuer, event type, numbers, event date)
-     is announced once, whatever document carries it; the same numbers on another date (a re-post) and
-     another set of numbers for the same event and date (ambiguous) are held, never sent.
+  A. a verified new business event (update-check-v4 alert judgment, confirmed subject) in any stored
+     filing of the company, results releases included: dated or announced after the baseline (an older
+     event retold in a later filing, an unchanged outlook, a restated result or an undatable sentence is
+     not new), and for guidance an explicit change of one comparable outlook. One event signature
+     (issuer, event type, its own values, event date, counterparty) is announced once, whatever document
+     carries it; a re-post and an ambiguous duplicate are held, never sent.
+     An A-only alert does not move the EPS baseline (v2): A history is the sent signatures.
   B. the stored next-year EPS is at least min_growth_pct above the baseline EPS (baseline positive and
      at least min_growth_base_eps, same comparison key), on normal daily screens of two different KST
      days. Only stored eps_now values are compared, never the provider's moving 30/90-day values.
@@ -28,7 +30,7 @@ from pathlib import Path
 
 import common as c
 
-VERSION = "material-update-v1"
+VERSION = "material-update-v2"
 KIND = "material_update"
 METRIC = "eps_next_fy_per_share"
 SCREEN_PROVIDER = "Yahoo Finance earningsTrend (+1y)"  # every stored screen row comes from this provider
@@ -54,6 +56,10 @@ def state_of(ledger: dict) -> dict:
     state = json.loads(json.dumps(ledger.get("material") or empty_state()))
     for key, default in empty_state().items():
         state.setdefault(key, default)
+    if state["version"] != VERSION:
+        # v1 -> v2 keeps pending first observations and rebases as they are: no A-only alert was ever
+        # sent under v1 rules that moved a baseline, so there is nothing to restore (idempotent).
+        state["previous_version"], state["version"] = state["version"], VERSION
     return state
 
 
@@ -136,8 +142,11 @@ def baseline(ledger: dict, state: dict, entity: str, thesis: str, ticker: str) -
         else:
             missing = "alert_observation_unavailable"
     for e in ledger["events"].values():
+        # Only a delivered alert that carried the EPS change moves the EPS baseline (Q1-B): an A-only
+        # alert keeps it, and an uncertain one is locked without being treated as delivered.
         if (e.get("event") == KIND and e.get("entity_id") == entity and e.get("thesis_key") == thesis
-                and e.get("status") in ANNOUNCED and (e.get("material") or {}).get("current")):
+                and e.get("status") == "sent" and "B" in (e.get("material") or {}).get("triggers", [])
+                and (e.get("material") or {}).get("current")):
             found.append({**e["material"]["current"], "source": KIND})
     rebase = state["rebases"].get(entity_key(entity, thesis))
     if rebase:
@@ -155,8 +164,8 @@ def et_dates(iso: str) -> tuple[str, str]:
     return tuple(sorted((moment - timedelta(hours=h)).date().isoformat() for h in (5, 4)))
 
 
-def signature(cik: str, event: str, numbers: list[str], event_date: str) -> str:
-    raw = json.dumps([str(cik), event, sorted(numbers), event_date], separators=(",", ":"))
+def signature(cik: str, event: str, values: list[str], event_date: str, party: str | None = None) -> str:
+    raw = json.dumps([str(cik), event, list(values), event_date, party], separators=(",", ":"))
     return "EV-" + hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16].upper()
 
 
@@ -165,49 +174,95 @@ def announced_events(ledger: dict) -> list[dict]:
             for d in (e.get("material") or {}).get("documents") or []]
 
 
+def checked_documents(entry: dict) -> list[str]:
+    """Every stored document the research read for this company: update checks (P1-A and v4 checks of
+    results releases) and the linked documents, in that order, once each."""
+    ids = [x["document_id"] for x in entry.get("update_checks") or []]
+    ids += list(entry.get("document_ids") or []) + list(entry.get("examined") or [])
+    return list(dict.fromkeys(ids))
+
+
+def prior_guidance(records: list[dict], before: str) -> list[dict]:
+    """Outlook values stated by this company's stored documents filed before 'before', oldest first."""
+    import company_filings as cf
+    out = []
+    for record in sorted((r for r in records if (r.get("filed_at") or "") < before), key=lambda r: r.get("filed_at") or ""):
+        out += [{**g, "document_id": record["document_id"]}
+                for g in cf.guidance_statements(record.get("blocks") or [], record.get("issuer_name"))]
+    return out
+
+
+def novelty(event: dict, base: dict, filed: str) -> str | None:
+    """None when the event is after the baseline; otherwise why it is not new (or cannot be ordered)."""
+    early, late = et_dates(base["observed_at"])
+    date, precision = event.get("event_date"), event.get("date_precision")
+    if not date:
+        return "사건 날짜 미확인 — 보류"
+    if precision == "month":
+        month = base["day"][:7] if base.get("day") else early[:7]
+        if date < early[:7]:
+            return f"사건 시점 {date}이 기준({base['day']}) 이전 — 새 사건 아님"
+        if date <= late[:7] or date <= month:
+            return f"사건 시점 {date}이 기준과 같은 달 — 선후 미확인, 보류"
+        return None
+    if date > filed:
+        return f"사건 날짜 {date}이 제출일 {filed}보다 뒤 — 사건일 아님, 보류"
+    if date < early:
+        return f"사건 날짜 {date}이 기준({base['day']}) 이전 — 새 사건 아님"
+    if date <= late:
+        return f"사건 날짜 {date}이 기준일과 같은 날 — 공개 순서 미확인, 보류"
+    return None
+
+
 def new_documents(cand: dict, base: dict, context_state: dict, sent: list[dict]) -> tuple[list[dict], list[str]]:
-    """Business-update filings after the baseline, one per signature, and notes on the ones not taken."""
+    """Verified new business events after the baseline (update-check-v4 alert judgment on every stored
+    document of the company, results releases included), one per signature, and notes on the rest."""
     import company_filings as cf
     entry = (context_state.get("candidates") or {}).get(cand["candidate_id"]) or {}
     cik = (entry.get("issuer") or {}).get("cik")
-    early, late = et_dates(base["observed_at"])
+    records = []
+    for doc_id in checked_documents(entry):
+        record = cf.load_document(doc_id)
+        if record and cik and (record.get("issuer") or {}).get("cik") == cik:
+            records.append(record)
     taken, notes, seen = [], [], set()
-    for check in entry.get("update_checks") or []:
-        if not check.get("eligible"):
-            continue
-        record = cf.load_document(check["document_id"])
-        if not record or not cik or (record.get("issuer") or {}).get("cik") != cik:
-            notes.append(f"{check['document_id']}: 문서 없음 또는 발행사 불일치")
-            continue
+    for record in records:
         filed = record.get("filed_at") or ""
+        early, _ = et_dates(base["observed_at"])
         if filed < early:
-            notes.append(f"{check['document_id']}: 기준({base['day']}) 이전 제출({filed}) — 새 사건 아님")
-            continue
-        if filed <= late:
-            notes.append(f"{check['document_id']}: 기준일과 같은 날 제출({filed}) — 공개 순서 미확인, 보류")
-            continue
-        found = cf.business_update_event(record.get("blocks") or [], record.get("issuer_name"))
-        if not found:
-            notes.append(f"{check['document_id']}: 현재 규칙으로 사건 문장 없음")
-            continue
-        event_date = record.get("report_date") or filed
-        sig = signature(cik, found["event"], found["numbers"], event_date)
-        same = [d for d in sent + taken if d.get("cik") == cik and d.get("event") == found["event"]]
-        if sig in seen or any(d["signature"] == sig for d in sent):
-            notes.append(f"{check['document_id']}: 이미 알린 사건 {sig}")
-            continue
-        if any(d.get("numbers") == found["numbers"] and d.get("event_date") != event_date for d in same):
-            notes.append(f"{check['document_id']}: 같은 수치의 사건 재게재로 보임 — 보류")
-            continue
-        if any(d.get("event_date") == event_date and d.get("numbers") != found["numbers"] for d in same):
-            notes.append(f"{check['document_id']}: 같은 날짜·유형의 다른 수치 — 같은 사건인지 모호, 보류")
-            continue
-        seen.add(sig)
-        taken.append({"document_id": record["document_id"], "url": record.get("url"), "form": record.get("form"),
-                      "document_type": record.get("document_type"), "filed_at": filed,
-                      "report_date": record.get("report_date"), "event_date": event_date, "cik": cik,
-                      "event": found["event"], "numbers": found["numbers"], "sentence": found["sentence"],
-                      "signature": sig})
+            continue  # filed before the baseline: nothing in it is new (no note: every old filing would add one)
+        prior = prior_guidance(records, filed)
+        for event in cf.business_events(record.get("blocks") or [], record.get("issuer_name"), prior):
+            label = f"{record['document_id']}#{event['block_id']} {event['event']}"
+            if not event["alert_eligible"]:
+                notes.append(f"{label}: 알림 근거 아님({event['alert_reason']})")
+                continue
+            why = novelty(event, base, filed)
+            if why:
+                notes.append(f"{label}: {why}")
+                continue
+            sig = signature(cik, event["event"], event["values"], event["event_date"], event.get("counterparty"))
+            same = [d for d in sent + taken if d.get("cik") == cik and d.get("event") == event["event"]]
+            if sig in seen or any(d["signature"] == sig for d in sent):
+                notes.append(f"{label}: 이미 알린 사건 {sig}")
+                continue
+            if any(d.get("values") == event["values"] and d.get("event_date") != event["event_date"]
+                   and d.get("counterparty") == event.get("counterparty") for d in same):
+                notes.append(f"{label}: 같은 내용의 사건 재게재로 보임 — 보류")
+                continue
+            if any(d.get("event_date") == event["event_date"] and d.get("values") != event["values"]
+                   and not (d.get("counterparty") and event.get("counterparty")
+                            and d["counterparty"] != event["counterparty"]) for d in same):
+                notes.append(f"{label}: 같은 날짜·유형의 다른 수치 — 같은 사건인지 모호, 보류")
+                continue
+            seen.add(sig)
+            taken.append({"document_id": record["document_id"], "url": record.get("url"), "form": record.get("form"),
+                          "document_type": record.get("document_type"), "filed_at": filed,
+                          "report_date": record.get("report_date"), "event_date": event["event_date"],
+                          "date_precision": event["date_precision"], "cik": cik, "event": event["event"],
+                          "values": event["values"], "counterparty": event.get("counterparty"),
+                          "guidance": event.get("guidance"), "sentence": event["sentence"], "signature": sig,
+                          "rule": cf.UPDATE_CHECK_VERSION})
     return taken[:2], notes
 
 
@@ -305,10 +360,27 @@ def evaluate(index: dict, ledger: dict, context_state: dict, cfg: dict | None = 
         if not triggers:
             diag["decision"] = "no_trigger"
             continue
+        # An unfinished event with any of these parts keeps its ID: reserved/uncertain stay locked,
+        # failed/released are retried as they were fixed, never re-issued with a new ID (Q1-B).
+        open_event = next((e for k, e in ledger["events"].items()
+                           if e.get("event") == KIND and e.get("entity_id") == entity
+                           and e.get("status") in ("reserved", "uncertain", "failed", "released")
+                           and set(parts) & set((e.get("material") or {}).get("parts") or [])), None)
+        if open_event and open_event["status"] in ("reserved", "uncertain"):
+            diag["decision"] = "locked_unconfirmed"
+            continue
+        if open_event:
+            key = next(k for k, e in ledger["events"].items() if e is open_event)
+            diag.update(decision="retry", triggers=open_event["material"]["triggers"])
+            items.append({"channel": "screen", "event": KIND, "entity_id": entity, "thesis_key": thesis,
+                          "candidate_id": cid, "candidate_version": cand.get("candidate_version"),
+                          "observation_id": cand.get("observation_id"), "cand": cand,
+                          "material": open_event["material"], "key": key})
+            continue
         material = c.validate_record("candidate_alert_material", {
             "version": VERSION, "triggers": triggers, "comparison_key": now["comparison_key"],
             "baseline": base, "first": first, "current": now, "pct": diag["pct"],
-            "thresholds": dict(cfg), "documents": docs})
+            "thresholds": dict(cfg), "documents": docs, "parts": sorted(parts)})
         diag["decision"] = "eligible"
         diag["triggers"] = triggers
         items.append({"channel": "screen", "event": KIND, "entity_id": entity, "thesis_key": thesis,
@@ -340,8 +412,19 @@ def message(item: dict) -> str:
     for d in m["documents"]:
         url = d.get("url") or ""
         link = f'<a href="{esc(url)}">원문</a>' if candidates.safe_url(url) else ""
-        lines.append(f"새 사업 공시: {esc(d.get('form'))} {esc(d['filed_at'])} 제출 · "
+        when = f"사건일 {d['event_date']}" + (" (보도자료 날짜)" if d.get("date_precision") == "document" else "")
+        lines.append(f"새 사업 공시: {esc(d.get('form'))} {esc(d['filed_at'])} 제출 · {esc(when)} · "
                      f"{esc(EVENT_LABELS.get(d['event'], d['event']))} — \"{esc(d['sentence'][:220])}\" {link}")
+        g = d.get("guidance") or {}
+        if g.get("status") == "changed":
+            key = g["key"]
+            shown = lambda r: "?" if not r else (f"{r[0]:,.2f}" if r[0] == r[1] else f"{r[0]:,.2f}~{r[1]:,.2f}")  # noqa: E731
+            change = (f"{shown(g['old'])} → {shown(g['new'])}" if g.get("old") else f"변경폭 {g['delta']:,.0f}"
+                      + (f", 새 값 {shown(g['new'])}" if g.get("new") else ""))
+            unit = {"per_share": "달러/주", "pct": "%"}.get(key["unit"], "백만 달러")
+            lines.append(f"  전망 {esc(key['metric'])} {esc(key['period'])}({esc(key['gaap'])}, {unit}): {esc(change)} "
+                         f"— {'상향' if g['direction'] == 'up' else '하향'}"
+                         + (" · 이전 값은 이전 공시에서" if g.get("prior_document") else ""))
     if "A" not in m["triggers"]:
         lines.append("사업 원인: 원문 미확인")
     lines += [esc(text) for text in candidates.estimate_cautions(cand)]

@@ -415,7 +415,7 @@ def block_scopes(blocks: list[dict]) -> dict[str, str]:
     return scopes
 
 
-UPDATE_CHECK_VERSION = "update-check-v3"
+UPDATE_CHECK_VERSION = "update-check-v4"
 # One sentence must state the business event and carry its number (P1-A): words spread over a document
 # no longer add up. A sentence about a dividend, buyback, borrowing, credit agreement, pay or litigation
 # is never an update, even if it says 'increases' or 'capacity'.
@@ -454,8 +454,207 @@ def business_update_judgment(blocks: list[dict], issuer_name: str | None = None)
 
 
 def business_update_event(blocks: list[dict], issuer_name: str | None = None) -> dict | None:
-    """The first event sentence business_update_judgment accepts: {event, block_id, sentence, numbers}."""
+    """The first event sentence business_update_judgment accepts (search eligibility only)."""
+    events = business_events(blocks, issuer_name)
+    return events[0] if events else None
+
+
+# ---- alert eligibility of an event sentence (Q1, update-check-v4). Search eligibility above only says a
+# document is worth reading; an alert needs a verified new event: a dated or announced event (not a
+# restated result, an unchanged outlook or a recounted past contract) and, for guidance, an explicit
+# change of one comparable outlook (old and new values, or a stated change amount).
+MONTHS = ("january", "february", "march", "april", "may", "june", "july", "august", "september", "october",
+          "november", "december")
+_MONTH = "(" + "|".join(MONTHS) + ")"
+DAY_DATE = re.compile(_MONTH + r"\s+(\d{1,2}),?\s+(20\d\d)")
+MONTH_DATE = re.compile(r"\b(?:in|during|since|from)\s+(?:early\s+|late\s+|mid-)?" + _MONTH + r",?\s+(20\d\d)")
+DATELINE = re.compile(r"^[A-Z][A-Za-z .,'&-]{1,60}?,?\s+" + _MONTH.replace("(", "(", 1) + r"\s+(\d{1,2}),\s+(20\d\d)", re.I)
+REAFFIRM = re.compile(r"\b(?:reaffirm\w*|unchanged|maintain\w*|reiterat\w*|continues? to expect|remains?|"
+                      r"in line with (?:its|the) (?:prior|previous))\b")
+RESULT_COMPARISON = re.compile(r"\b(?:compared (?:with|to)|versus|vs\.|year[- ]over[- ]year|prior[- ]year|"
+                               r"from the (?:prior|previous|same) (?:year|period|quarter)|as of|previously announced|"
+                               r"previously recorded)\b")
+PERIOD_RECOUNT = re.compile(r"\b(?:during|in) the (?:first|second|third|fourth) (?:fiscal )?quarter\b|"
+                            r"\b(?:during|in) (?:fiscal|the fiscal year|the year)\b|\b(?:months|quarter|year) ended\b")
+ANNOUNCE = re.compile(r"\b(?:today|announc\w*|(?:has|have|was|were) (?:been )?awarded|signed|entered into|"
+                      r"receiv(?:ed|es)|secured|won|rais(?:es|ed|ing)|lower(?:s|ed|ing)|increas(?:es|ed|ing)|"
+                      r"reduc(?:es|ed|ing)|cuts|will (?:expand|add|acquire)|plans to (?:expand|add|acquire)|"
+                      r"agreed to acquire|completed)\b")
+GUIDE_METRIC = re.compile(r"\b(net revenues?|revenues?|net sales|sales|adjusted ebitda|ebitda|adjusted (?:diluted )?eps|"
+                          r"(?:diluted )?eps|earnings per share|adjusted net income|net income|operating income|"
+                          r"free cash flow|capital expenditures?|capex|gross margin|operating margin)\b")
+GUIDE_PERIOD = re.compile(r"\b(?:fiscal(?: year)?|full[- ]year|fy)\s*'?(20\d\d|\d\d)\b|\b(20\d\d)\s+(?:full[- ]year|fiscal year)\b|"
+                          r"\b(?:for|in)\s+(20\d\d)\b|\b(20\d\d)\b")
+MONEY = r"\$\s?(\d[\d,]*(?:\.\d+)?)\s*(million|billion)?"
+MONEY_RANGE = re.compile(MONEY + r"(?:\s*(?:to|-|–|—|and)\s*\$?\s?(\d[\d,]*(?:\.\d+)?)\s*(million|billion)?)?")
+CHANGE_FROM_TO = re.compile(r"\bfrom\s+(" + MONEY_RANGE.pattern + r")\s+to\s+(" + MONEY_RANGE.pattern + r")")
+CHANGE_TO_FROM = re.compile(r"\bto\s+(" + MONEY_RANGE.pattern + r")\s*,?\s*(?:up |down )?from\s+(?:the prior |its prior |prior )?(?:guidance of\s+)?("
+                            + MONEY_RANGE.pattern + r")")
+CHANGE_BY = re.compile(r"\bby\s+(?:approximately\s+|about\s+)?(" + MONEY + r")")
+COUNTERPARTY = re.compile(r"\b(?:with|from|by|for)\s+((?:[A-Z][\w&.-]*\s){0,4}[A-Z][\w&.-]*(?:,? (?:Inc|LLC|Corp|Ltd)\.?)?)")
+NOT_PARTY = {"The", "The Company", "Company", "We", "Our", "It", "This", "Fiscal", "Q1", "Q2", "Q3", "Q4"}
+
+
+def money_range(text: str) -> list[float] | None:
+    """'$1.1 – $1.2 billion' -> [1100.0, 1200.0] in millions (a single value is a one-point range)."""
+    m = MONEY_RANGE.search(text)
+    if not m:
+        return None
+    lo, lo_unit, hi, hi_unit = m.group(1), m.group(2), m.group(3), m.group(4)
+    unit = hi_unit or lo_unit
+    scale = {"billion": 1000.0, "million": 1.0, None: 1.0}  # no unit word: dollars as written (per-share)
+
+    def value(number, own_unit):
+        return float(number.replace(",", "")) * scale[own_unit or unit]
+    return [value(lo, lo_unit), value(hi, hi_unit)] if hi else [value(lo, lo_unit)] * 2
+
+
+def guidance_key(sentence: str) -> dict | None:
+    s = sentence.lower()
+    metric = GUIDE_METRIC.search(s)
+    period = GUIDE_PERIOD.search(s)
+    if not metric or not period:
+        return None
+    year = next(g for g in period.groups() if g)
+    year = year if len(year) == 4 else "20" + year
+    name = re.sub(r"\b(?:adjusted|diluted)\s+", "", metric.group(1)).replace("earnings per share", "eps")
+    name = {"revenues": "revenue", "net revenue": "revenue", "net revenues": "revenue", "net sales": "sales",
+            "capital expenditure": "capex", "capital expenditures": "capex"}.get(name, name)
+    gaap = "non-GAAP" if re.search(r"\badjusted\b|\bnon-gaap\b", s) else "unspecified"
+    unit = "per_share" if name == "eps" else "pct" if "margin" in name else "usd_millions"
+    return {"metric": name, "period": f"FY{year}", "gaap": gaap, "unit": unit, "currency": "USD"}
+
+
+def range_direction(old: list[float], new: list[float]) -> str:
+    """Both ends move the same way (one may stay) -> up/down; ends moving apart or together -> mixed."""
+    signs = {(b > a) - (b < a) for a, b in zip(old, new)}
+    if signs == {0}:
+        return "unchanged"
+    if signs <= {0, 1}:
+        return "up"
+    if signs <= {0, -1}:
+        return "down"
+    return "mixed"
+
+
+def guidance_change(sentence: str, prior: list[dict] | None = None) -> dict:
+    """An outlook change stated in one sentence, or against the latest prior outlook of the same key
+    (issuer, metric, fiscal period, currency, unit, GAAP basis). Never a midpoint, never a first outlook."""
+    key = guidance_key(sentence)
+    low = sentence.lower()
+    out = {"key": key, "old": None, "new": None, "delta": None, "direction": None, "status": None}
+    if key is None:
+        return {**out, "status": "no_comparable_key"}
+    if REAFFIRM.search(low):
+        return {**out, "status": "unchanged"}
+    m = CHANGE_FROM_TO.search(sentence)
+    if m:
+        out["old"], out["new"] = money_range(m.group(1)), money_range(m.group(6))
+    else:
+        m = CHANGE_TO_FROM.search(sentence)
+        if m:
+            out["new"], out["old"] = money_range(m.group(1)), money_range(m.group(6))
+    if out["old"] and out["new"]:
+        out["direction"] = range_direction(out["old"], out["new"])
+    else:
+        by = CHANGE_BY.search(sentence)
+        verb = re.search(r"\b(rais|increas|lift|lower|reduc|cut)\w*", low)
+        if by and verb:
+            out["delta"] = money_range(by.group(1))[0]
+            out["direction"] = "up" if verb.group(1) in ("rais", "increas", "lift") else "down"
+            rest = sentence[by.end():]
+            out["new"] = money_range(rest) if re.match(r"\s*(?:,\s*)?to\s", rest) else None
+        else:
+            out["new"] = money_range(sentence)
+            same = [p for p in prior or [] if p.get("key") == key and p.get("new")]
+            if same and out["new"]:
+                out["old"] = same[-1]["new"]
+                out["prior_document"] = same[-1].get("document_id")
+                out["direction"] = range_direction(out["old"], out["new"])
+    if out["direction"] in ("up", "down"):
+        out["status"] = "changed"
+    elif out["direction"] == "mixed":
+        out["status"] = "mixed_range"
+    elif out["direction"] == "unchanged":
+        out["status"] = "unchanged"
+    else:
+        out["status"] = "no_prior_value"  # a first outlook or a change claim without its earlier value
+    return out
+
+
+def sentence_date(sentence: str) -> tuple[str | None, str | None]:
+    """The first date the sentence names ('In July 2025, ... through July 31, 2026' -> 2025-07)."""
+    low = sentence.lower()
+    found = [(m.start(), f"{m.group(3)}-{MONTHS.index(m.group(1)) + 1:02d}-{int(m.group(2)):02d}", "day")
+             for m in DAY_DATE.finditer(low)]
+    found += [(m.start(), f"{m.group(2)}-{MONTHS.index(m.group(1)) + 1:02d}", "month") for m in MONTH_DATE.finditer(low)]
+    if not found:
+        return None, None
+    _, date, precision = min(found)
+    return date, precision
+
+
+def document_date(blocks: list[dict]) -> str | None:
+    """The release's own dateline ('SAN ANTONIO, September 18, 2026 –') in its first paragraphs."""
+    for block in blocks[:12]:
+        if block.get("kind") == "p":
+            m = DATELINE.search(block_text(block).strip())
+            if m:
+                return f"{m.group(3)}-{MONTHS.index(m.group(1).lower()) + 1:02d}-{int(m.group(2)):02d}"
+    return None
+
+
+def event_values(sentence: str, match_at: int) -> list[str]:
+    """The amount of the event itself: the money/unit figure nearest after the event words (else before)."""
+    found = [(m.start(), re.sub(r"\s+", "", m.group(0)).lower()) for m in EVENT_NUMBER.finditer(sentence)]
+    after = [v for at, v in found if at >= match_at]
+    return [after[0]] if after else [found[-1][1]] if found else []
+
+
+def counterparty(sentence: str) -> str | None:
+    for m in COUNTERPARTY.finditer(sentence):
+        name = m.group(1).strip().rstrip(",")
+        if name.endswith(".") and not re.search(r"\b(?:Inc|Corp|Ltd|Co)\.$", name):
+            name = name[:-1]  # the sentence's full stop, not an abbreviation
+        if name not in NOT_PARTY and not re.match(r"(?:" + "|".join(MONTHS) + r")\b", name.lower()):
+            return name
+    return None
+
+
+def alert_judgment(name: str, sentence: str, match_at: int, doc_date: str | None,
+                   prior: list[dict] | None = None) -> dict:
+    """Content-level alert eligibility of one event sentence; novelty against a baseline is decided by
+    the caller with event_date and date_precision."""
+    low = sentence.lower()
+    out = {"alert_eligible": False, "alert_reason": None, "event_date": None, "date_precision": None,
+           "values": event_values(sentence, match_at), "counterparty": None, "guidance": None}
+    if name == "guidance":
+        change = guidance_change(sentence, prior)
+        out["guidance"] = change
+        if change["status"] != "changed":
+            return {**out, "alert_reason": f"guidance_{change['status']}"}
+        out["values"] = [change["key"]["period"], change["key"]["metric"], change["key"]["gaap"],
+                         json.dumps(change["new"] or change["delta"])]
+        out.update(event_date=doc_date, date_precision="document" if doc_date else None)
+        return {**out, "alert_eligible": bool(doc_date), "alert_reason": None if doc_date else "event_date_unknown"}
+    if REAFFIRM.search(low) or RESULT_COMPARISON.search(low):
+        return {**out, "alert_reason": "restated_result_or_unchanged"}
+    if PERIOD_RECOUNT.search(low):
+        return {**out, "alert_reason": "period_recount"}  # a reporting period's figures, not a new event
+    date, precision = sentence_date(sentence)
+    if date is None:
+        if not ANNOUNCE.search(low) or not doc_date:
+            return {**out, "alert_reason": "event_date_unknown"}
+        date, precision = doc_date, "document"
+    out.update(event_date=date, date_precision=precision, counterparty=counterparty(sentence))
+    return {**out, "alert_eligible": True}
+
+
+def business_events(blocks: list[dict], issuer_name: str | None = None, prior: list[dict] | None = None) -> list[dict]:
+    """Every event sentence that passes the search rule, with its alert judgment (update-check-v4)."""
     scopes = block_scopes(blocks)
+    doc_date = document_date(blocks)
+    events = []
     for block in blocks[:400]:
         if block.get("kind") != "p":
             continue  # table rows are figures, not event sentences
@@ -473,11 +672,32 @@ def business_update_event(blocks: list[dict], issuer_name: str | None = None) ->
             if UPDATE_EXCLUDE.search(s) or not UPDATE_NUMBER.search(s):
                 continue
             for name, pattern in UPDATE_EVENTS:
-                if pattern.search(s):
+                match = pattern.search(s)
+                if match:
                     numbers = sorted({re.sub(r"\s+", "", n) for n in EVENT_NUMBER.findall(s)})
-                    return {"event": name, "block_id": block.get("id"), "sentence": sentence.strip()[:600],
-                            "numbers": numbers}
-    return None
+                    events.append({"event": name, "block_id": block.get("id"), "sentence": sentence.strip()[:600],
+                                   "numbers": numbers, "document_date": doc_date,
+                                   **alert_judgment(name, sentence.strip(), match.start(), doc_date, prior)})
+                    break
+    return events
+
+
+def guidance_statements(blocks: list[dict], issuer_name: str | None = None) -> list[dict]:
+    """Outlook values a document states (any guidance sentence with a comparable key and values), the
+    'prior' a later document's outlook is compared with."""
+    out = []
+    for block in blocks[:400]:
+        if block.get("kind") != "p":
+            continue
+        for sentence in re.split(r"(?<=[.;])\s+", block_text(block)):
+            low = sentence.lower()
+            if re.search(r"\b(?:guidance|outlook|expects?)\b", low) and "$" in sentence:
+                key = guidance_key(sentence)
+                change = guidance_change(sentence)
+                new = change["new"] or (money_range(sentence) if change["status"] in ("no_prior_value", "unchanged") else None)
+                if key and new:
+                    out.append({"key": key, "new": new, "sentence": sentence.strip()[:300]})
+    return out
 
 
 def looks_like_business_update(blocks: list[dict], issuer_name: str | None = None) -> tuple[bool, str]:

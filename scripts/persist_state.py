@@ -51,6 +51,7 @@ def keep_unpushed():
 
 def commit_and_push(message=None):
     files = [c.csv_path(table) for table in c.TABLES] + [c.DATA_DIR / name for name in STATE_FILES]
+    files += list(c.DATA_DIR.glob('candidate_alerts.pre_*.json'))
     files += list((c.ROOT / 'data' / 'archive' / 'pre_v2').glob('*'))
     files += list((c.ROOT / 'data' / 'archive' / 'pre_columns').glob('*.csv'))
     files += list((c.DATA_DIR / 'research_journal').glob('*.json'))

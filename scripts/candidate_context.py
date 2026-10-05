@@ -211,8 +211,16 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
 
     def judge_update(record):
         # Judged from the stored blocks with the current rule; the stored record is never rewritten.
-        ok, reason = cf.business_update_judgment(record.get("blocks") or [], issuer["name"])
-        checks.append({"document_id": record["document_id"], "eligible": ok, "reason": reason})
+        # Search eligibility (worth reading) and alert eligibility (a verified dated event or an explicit
+        # outlook change; novelty against a baseline is decided later) are kept apart (Q1-A).
+        events = cf.business_events(record.get("blocks") or [], issuer["name"])
+        ok = bool(events)
+        reason = (f"{cf.UPDATE_CHECK_VERSION}:{events[0]['event']}:{events[0]['block_id']}" if ok
+                  else f"{cf.UPDATE_CHECK_VERSION}:no_event_sentence")
+        if not any(x["document_id"] == record["document_id"] for x in checks):
+            checks.append({"document_id": record["document_id"], "eligible": ok, "search_eligible": ok,
+                           "alert_eligible": any(e["alert_eligible"] for e in events), "reason": reason,
+                           "alert_reasons": sorted({e["alert_reason"] for e in events if e["alert_reason"]})})
         return ok
 
     leftover = []
@@ -258,6 +266,10 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 updates_found.append(record["document_id"])
                 break
     found = updates_found + results_found
+    for doc_id in examined:  # results releases too: an outlook change in them can be an A event (Q1-A)
+        record = cf.load_document(doc_id)
+        if record is not None:
+            judge_update(record)
     failures = spent["failures"]
     if found:
         return {"status": "success", "quality": "partial" if failures else "complete", "document_ids": found,

@@ -329,6 +329,10 @@ def material_step(index: dict, ledger: dict, dry_run: bool) -> tuple[list[dict],
     if not dry_run and state != ledger.get("material"):
         if "material" not in ledger and not material_backup_path().exists():
             c.atomic_json(material_backup_path(), ledger)
+        elif (ledger.get("material") or {}).get("version") != material_updates.VERSION:
+            backup = c.DATA_DIR / f"candidate_alerts.pre_{material_updates.VERSION}.json"
+            if not backup.exists():
+                c.atomic_json(backup, ledger)  # one copy before the first write under a new rule version
         ledger["material"] = state
         c.atomic_json(ledger_path(), ledger)
     return items, diagnostics
