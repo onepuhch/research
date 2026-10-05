@@ -1,5 +1,12 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-05 KST. **R0~R2 구현 완료, Q·R 운영 미반영(다음 정상 일간부터)**: [R 인수인계](docs/r_handoff_2026-10-05.md) · [진행 기록](docs/r_progress_2026-10-05.md). 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
+  - R0(91502c9, update-check-v5): 가이던스 변경도 문장 속 날짜 우선, 기간 종료일은 사건일이 아님, 분기와 연간 분리, 사건 연도를 대상 기간으로 쓰지 않음, 이전 전망도 같은 주체 검사를 거치고 출처 보존. 저장 공시 75개에서 판정 15건 변화, 새로 알림 적격 0건.
+  - R1(de157da, material-update-v3): 실패 알림은 예약 조건이 모두 유효할 때만 같은 ID·같은 본문(payload_text)으로 재시도. 조건이 사라지면 cancelled(이력 보존), 남은 조건은 다음 실행에서 supersedes로 새 이벤트. uncertain은 잠금.
+  - R2(dbc3684): 시세 실패 종목은 1/3/7일 대기, 하루 재시도 최대 5곳, 미시도 종목이 나머지 몫 사용. 429/5xx 멈춤은 그날 유지.
+  - 재현: R 5→0, Q 0 유지. 시험 568개 통과.
+  - 다음 정상 일간에서 확인: 실제 버전(context-v11/cards-v10/views-v4/update-check-v5/material-update-v3/discovery-timing-v2), 원장 v3 백업, 첫 후보 시세 배치, PBF 두 번째 확인과 10/9 이후, CLBK, folded 초안 몫, 503 재개.
+
 - 마지막 작업자: Codex, 2026-10-05 KST. 기준 HEAD `2858c90`. **Q 기존6건 수정·Q0/Q2/성과 기준 분리 인수, Q1/시세 예외 보완 필요**: [R 판정·보완 지시](docs/r_q_acceptance_and_targeted_fixes_2026-10-05.md). 진행 중인 쓰기/시험 없음. 이번 변경은 R 문서·합성 재현·결과 JSON·STATUS만 로컬 미커밋. 운영 코드·원장 수정, push, 모델/SEC/Yahoo 요청·외부 발송 없음.
   - 직접 검증: Python550개(60.829초) OK, 기존 Q 재현6→0·종료0. 최신 CI `37301892919`(`2858c90`)의 Linux·Windows·날짜7개 success 확인. 운영 보관본은 아직 cards-v9/material-update-v1/discovery-timing-v1이고 후보 시세 배치0개이며 Q 운영 미관측이다.
   - 추가 합성5사례/세 영역 재현: 옛 가이던스를 dateline으로 새 사건 처리(대상FY도 사건연도로 오인), 분기→연간 이전값 혼합, 타 법인 이전 전망을 발행사 비교에 사용 / failed A+B에서 B가 소멸해도 A 교집합으로 옛 B 재전송 / 시세 앞19종목404가 매일20회 예산을 소진해 뒤6종목 미시도. [수정 전 증거](data/eval/r_2026-10-05/probe_before.json). 실제 운영 오발송 증거가 아니라 가짜입력·가짜전송 재현이다.
