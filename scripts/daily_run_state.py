@@ -86,7 +86,7 @@ STEPS: dict[str, Step] = {
     "baseline": Step(inputs=("@cases",)),
     "returns": Step(inputs=("baseline",)),
     "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "alerts", "baseline", "returns"),
-                  version="views-v2"),
+                  version="views-v3"),
     "community": Step(weekday=MONDAY),
     "weekly_report": Step(requires=("views",), weekday=MONDAY),
 }

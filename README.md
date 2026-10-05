@@ -108,7 +108,7 @@ GitHub 예약 실행에는 지연이 발생할 수 있다. 9월 14일 일간 실
 
 `python scripts/research_journal.py`는 현재 가설 개정을 고정하고 실제 실적과 비교한 outcomes 보고서를 생성합니다(`--capture-only`는 고정만, `--render-only`는 보고서만. 일간 운영은 baseline 단계에서 고정하고 views 단계에서 보고서를 만듭니다). 일간 운영에도 연결되어 있으며 `python scripts/gen_report.py quality`와 텔레그램에 평가 상태가 표시됩니다. 저장소는 `data/processed/research_journal/`입니다. 재실행으로 기준 관측을 바꾸지 않으며 미래 실적이 없으면 대기합니다.
 
-[평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 2026-09-24 구현했습니다. `python scripts/research_returns.py`로 실행합니다.
+[평가 기준과 후속 연구](docs/research_followup_2026-09-14.md) · [최초 복기 보고서](docs/research_outcomes_2026-09-14.md). 주가 성과 자동 계산은 2026-09-24 구현했습니다. `python scripts/research_returns.py`로 실행합니다. 스크린 후보의 발견 시점은 `scripts/discovery_timing.py`(views 단계)가 `data/processed/discovery_timing.json`에 고정 기록합니다. 모집단은 조건 통과 기업 전체(대표 카드·업종 묶음·일반 순위 밖, 이탈 포함)이고, 최초 통과·대표 카드·묶음·유효 근거·알림 영수증은 한 번 쓰면 바뀌지 않습니다. 기록 시작 전 관측은 사후(retrospective), 이후는 전향(prospective)으로 구분합니다. 지연시간(제출→수집, 통과→카드, 카드→알림)과 이후 성과(기존 30/90/180일·SPY·0.20%p 정의, 보관 시세만 사용, 없으면 '시세 미수집')를 품질 보고서에 요약합니다.
 
 카드의 원문 품질(cards-v4): 후보마다 `source_quality`(complete=요청 모두 응답·관련 문서 없음 포함, partial=일부 요청 실패, unavailable=원문 접근 실패·발행사 미확보, unknown=미조사·v4 이전 관측), 실패 요청 수와 사유(접수번호·HTTP 코드만, URL 없음), 마지막 시도 시각, 마지막 유효 초안을 스크린 품질과 따로 싣는다. 일부 실패면 원문 구역 바로 위에 '공식 원문 일부 미확보 — 확보된 자료 기준', 전부 실패면 '최근 원문 확인 실패'와 마지막 유효 근거 날짜를 보인다. 접근 실패 때는 마지막 유효 초안을 그 날짜 기준으로 계속 보여 카드 버전과 사람 승인이 바뀌지 않고, '관련 문서 없음'·식별 충돌이면 초안을 뗀다. 카드와 다른 대상 회계연도의 초안은 붙이지 않는다. 원문 시도 시각은 관측 ID에 들어가 새 시도는 새 관측으로 남고 과거 관측은 당시 품질을 유지한다.
 

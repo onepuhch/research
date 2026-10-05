@@ -128,7 +128,7 @@ jobs:
         # Renders whatever its inputs hold, including their failures and last observation times.
         if: always() && steps.plan.outcome == 'success' && env.RUN_VIEWS == 'true'
         run: >-
-          python scripts/daily_run_state.py step views -- bash -ec 'python scripts/research_journal.py --render-only;
+          python scripts/daily_run_state.py step views -- bash -ec 'python scripts/discovery_timing.py; python scripts/research_journal.py --render-only;
           python scripts/gen_report.py weekly; python scripts/gen_report.py bottlenecks;
           python scripts/gen_report.py quality; python scripts/gen_report.py cases'
       - name: Weekly community watch
