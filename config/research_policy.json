@@ -44,7 +44,9 @@
     "timeout_s": 15,
     "min_interval_s": 0.5,
     "start_pad_days": 7,
-    "stop_after_5xx": 2
+    "stop_after_5xx": 2,
+    "retries_per_day": 5,
+    "retry_wait_days": [1, 3, 7]
   },
   "model_overload": {
     "after_consecutive_503": 2,

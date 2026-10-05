@@ -237,7 +237,7 @@ def outcomes(rec: dict, batch: dict | None, definition: str = "population") -> d
 # ------------------------------------------------------------------ candidate prices (Q3-B)
 
 PRICE_DEFAULTS = {"requests_per_day": 20, "time_budget_s": 120, "timeout_s": 15, "min_interval_s": 0.5,
-                  "start_pad_days": 7, "stop_after_5xx": 2}
+                  "start_pad_days": 7, "stop_after_5xx": 2, "retries_per_day": 5, "retry_wait_days": [1, 3, 7]}
 
 
 def price_settings() -> dict:
@@ -337,10 +337,24 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
     used = queue.setdefault("days", {}).setdefault(day, {"requests": 0})
     batches = price_batches()
     by_ticker = {r["ticker"]: r for r in store["records"].values() if r.get("entity_id")}
+    status = queue.setdefault("tickers", {})
+    # R2: a ticker whose last request failed waits 1/3/7 days and then competes only for the day's few
+    # retry places (rotated by its last attempt); untried and newly due tickers keep the rest, in order.
     due = [t for t in order if t in by_ticker and needs_prices(by_ticker[t], batch_for(t, batches), now)]
-    report = {"due": len(due), "requests": 0, "collected": 0, "failures": 0, "stopped": None}
-    if not due or used["requests"] >= cfg["requests_per_day"]:
-        report["stopped"] = "nothing_due" if not due else "daily_requests"
+    failing = {t for t in due if (status.get(t) or {}).get("state") == "failed"}
+    fresh = [t for t in due if t not in failing]
+    ready = sorted((t for t in failing if (status[t].get("next_eligible_at") or "") <= now.isoformat()),
+                   key=lambda t: (status[t].get("last_attempt_at") or "", order.index(t)))
+    report = {"due": len(due), "fresh": len(fresh), "retry_waiting": len(failing) - len(ready), "retry_ready": len(ready),
+              "requests": 0, "collected": 0, "failures": 0, "stopped": None}
+    if used.get("stopped"):
+        report["stopped"] = f"stopped_today:{used['stopped']}"  # a 429/5xx stop holds for the rest of the KST day
+        return report
+    room = cfg["requests_per_day"] - used["requests"] - 1  # one for SPY
+    retries = ready[:max(0, min(cfg["retries_per_day"], room))]
+    plan = fresh[:max(0, room - len(retries))] + retries
+    if not plan or used["requests"] >= cfg["requests_per_day"]:
+        report["stopped"] = "nothing_due" if not (fresh or ready) else "daily_requests"
         c.atomic_json(queue_path(), queue)
         return report
     deadline = clock() + cfg["time_budget_s"]
@@ -355,6 +369,8 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
             return "time_budget"
         used["requests"] += 1
         report["requests"] += 1
+        entry = status.setdefault(ticker, {"attempts": 0})
+        entry.update(attempts=entry.get("attempts", 0) + 1, last_attempt_at=now.isoformat())
         c.atomic_json(queue_path(), queue)  # counted before it is sent
         url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?period1={int(start.timestamp())}"
                f"&period2={int(now.timestamp())}&interval=1d&events=div%2Csplits&includeAdjustedClose=true")
@@ -363,28 +379,45 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
             batch["series"][ticker] = research_returns.parse(payload, ticker, now.isoformat())
             batch["sources"][ticker] = {"url": url, "payload": payload}
             fivexx = 0
+            entry.update(state="ok", failures=0, next_eligible_at=None, reason=None)
         except HTTPError as error:
             batch["failures"].append({"ticker": ticker, "error_type": "HTTPError", "http_status": error.code})
             if error.code == 429:
-                return "rate_limited"
+                return "rate_limited"  # the provider's limit, not this ticker's failure
             fivexx = fivexx + 1 if error.code >= 500 else 0
+            failed(entry, f"HTTP {error.code}")
             if fivexx >= cfg["stop_after_5xx"]:
                 return "server_errors"
         except (OSError, ValueError, KeyError, TypeError, IndexError, OverflowError) as error:
             batch["failures"].append({"ticker": ticker, "error_type": type(error).__name__})
+            failed(entry, type(error).__name__)
         sleep(cfg["min_interval_s"])
         return None
 
-    starts = {t: datetime.fromisoformat(by_ticker[t]["first_pass"]["observed_at"]) for t in due}
+    def failed(entry: dict, reason: str) -> None:
+        """Not delisted, not removed: the ticker stays in the population and waits 1, 3, then 7 days."""
+        if entry is status.get("SPY"):
+            return
+        entry["failures"] = entry.get("failures", 0) + 1
+        waits = cfg["retry_wait_days"]
+        entry.update(state="failed", reason=reason,
+                     next_eligible_at=(now + timedelta(days=waits[min(entry["failures"], len(waits)) - 1])).isoformat())
+
+    starts = {t: datetime.fromisoformat(by_ticker[t]["first_pass"]["observed_at"]) for t in plan}
     earliest = min(starts.values()) - timedelta(days=cfg["start_pad_days"])
     stop = request("SPY", earliest)
     if stop is None and "SPY" not in batch["series"]:
         stop = "spy_missing"  # a batch without SPY cannot be compared; the tickers wait for tomorrow
-    for ticker in due if stop is None else []:
+    for ticker in plan if stop is None else []:
         stop = request(ticker, earliest)
         if stop:
             break
-    report.update(stopped=stop, collected=len([t for t in batch["series"] if t != "SPY"]), failures=len(batch["failures"]))
+    if stop is None and len(fresh) + len(ready) > len(plan):
+        stop = "daily_requests"  # the day's share is used; the rest waits in order
+    if stop in ("rate_limited", "server_errors"):
+        used["stopped"] = stop  # a same-day rerun cannot go around it; tomorrow starts again
+    report.update(stopped=stop, collected=len([t for t in batch["series"] if t != "SPY"]), failures=len(batch["failures"]),
+                  retried=len([t for t in retries if status.get(t, {}).get("last_attempt_at") == now.isoformat()]))
     if batch["series"] or batch["failures"]:
         price_dir().mkdir(parents=True, exist_ok=True)
         c.atomic_json(price_dir() / (now.strftime("%Y%m%dT%H%M%S%f") + ".json"), batch)
@@ -396,7 +429,9 @@ def price_summary(store: dict, batches: list[dict]) -> dict:
     records = [r for r in store["records"].values()]
     held = {r["ticker"] for r in records if batch_for(r["ticker"], batches)}
     queue = c.read_json(queue_path(), {"order": []})
-    failed = {f["ticker"] for b in batches if b.get("kind") == "candidate" for f in b.get("failures", [])} - held
+    tickers = queue.get("tickers") or {}
+    failed = {t for t, e in tickers.items() if e.get("state") == "failed"} - held
+    untried = {r["ticker"] for r in records if r.get("entity_id") and r["ticker"] not in tickers and r["ticker"] not in held}
     state_of = lambda r: "card" if r.get("first_card") else "folded" if r.get("first_folded") else "outside"  # noqa: E731
     by_state = {}
     for r in records:
@@ -407,8 +442,8 @@ def price_summary(store: dict, batches: list[dict]) -> dict:
     identified = [r for r in records if r.get("entity_id")]
     return {"targets": len(identified), "held": len([r for r in identified if r["ticker"] in held]),
             "waiting": len([r for r in identified if r["ticker"] not in held and r["ticker"] not in failed]),
-            "failed": len(failed), "unidentified": len(records) - len(identified), "by_state": by_state,
-            "queue_fixed_at": queue.get("fixed_at")}
+            "failed": len(failed), "untried": len(untried), "unidentified": len(records) - len(identified),
+            "by_state": by_state, "queue_fixed_at": queue.get("fixed_at")}
 
 
 def median_text(values: list[float], unit: str, digits: int = 1) -> str:
@@ -452,7 +487,8 @@ def render(store: dict | None = None) -> str:
             lines.append(f"  - {h}일: " + ", ".join(f"{k} {v}" for k, v in sorted(statuses.items())))
     p = price_summary(store, batches)
     states = " · ".join(f"{name} {held}/{total}" for name, (total, held) in sorted(p["by_state"].items()))
-    lines += ["", f"후보 시세 보관: 대상 {p['targets']}곳 중 보유 {p['held']} · 대기 {p['waiting']} · 실패 {p['failed']} · "
+    lines += ["", f"후보 시세 보관: 대상 {p['targets']}곳 중 보유 {p['held']} · 대기 {p['waiting']}(미시도 {p['untried']}) · "
+              f"실패 후 재시도 대기 {p['failed']} · "
               f"식별 불가 {p['unidentified']} (상태별 보유/대상: {states}). 하루 추가 요청 {price_settings()['requests_per_day']}회 이내로 "
               "대표 카드·알림 경험 기업부터 순서대로 수집합니다. 시세가 없는 기업을 분모에서 빼지 않습니다.", ""]
     return "\n".join(lines)

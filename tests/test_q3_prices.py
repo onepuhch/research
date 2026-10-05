@@ -143,5 +143,59 @@ class PriceQueueTest(MaterialFixture):
         self.assertEqual(self.calls, ["SPY", "T00", "T01"])
 
 
+
+class FailedPriceQueueR2Test(PriceQueueTest):
+    """R2: failed tickers wait 1/3/7 days and take at most 5 retry places; the rest of the queue moves."""
+
+    def test_failing_heads_do_not_starve_later_tickers(self):
+        self.build(25)
+        self.answers = {f"T{i:02d}": 404 for i in range(19)}
+        self.collect("2026-10-10T03:00:00+00:00")
+        self.calls.clear()
+        report = self.collect("2026-10-11T03:00:00+00:00")
+        self.assertEqual(self.calls[:7], ["SPY", "T19", "T20", "T21", "T22", "T23", "T24"])
+        self.assertEqual(self.calls[7:], ["T00", "T01", "T02", "T03", "T04"])  # five retries, the rest wait
+        self.assertLessEqual(report["requests"], 20)
+        summary = t.price_summary(t.load(), t.price_batches())
+        self.assertEqual((summary["held"], summary["failed"], summary["targets"]), (6, 19, 25))  # failures stay counted
+
+    def test_retry_waits_grow_one_three_seven_days_and_recovery_clears(self):
+        self.build(1)
+        self.answers = {"T00": 404}
+        days = []
+        for day in range(10, 26):
+            self.calls.clear()
+            self.collect(f"2026-10-{day:02d}T03:00:00+00:00")
+            if "T00" in self.calls:
+                days.append(day)
+        self.assertEqual(days[:4], [10, 11, 14, 21])  # first try, then +1, +3, +7 days
+        self.answers = {}
+        self.calls.clear()
+        self.collect("2026-10-28T03:00:00+00:00")
+        entry = c.read_json(t.queue_path(), {})["tickers"]["T00"]
+        self.assertEqual((entry["state"], entry["failures"], entry["next_eligible_at"]), ("ok", 0, None))
+
+    def test_a_429_stop_holds_for_the_rest_of_the_day(self):
+        self.build(3)
+        self.answers = {"T01": 429}
+        self.assertEqual(self.collect()["stopped"], "rate_limited")
+        self.calls.clear()
+        self.answers = {}
+        self.assertEqual(self.collect("2026-10-10T08:00:00+00:00")["stopped"], "stopped_today:rate_limited")
+        self.assertEqual(self.calls, [])
+        self.collect("2026-10-11T03:00:00+00:00")
+        self.assertEqual(self.calls, ["SPY", "T01", "T02"])  # T01 was not marked failed by the provider limit
+
+    def test_a_failed_refetch_keeps_the_earlier_batch(self):
+        self.build(1)
+        self.collect()
+        kept = t.batch_for("T00", t.price_batches())
+        self.answers = {"T00": 404}
+        self.calls.clear()
+        self.collect("2026-11-04T03:00:00+00:00")  # evaluation end due: asked again, fails
+        self.assertEqual(self.calls, ["SPY", "T00"])
+        self.assertEqual(t.batch_for("T00", t.price_batches())["retrieved_at"], kept["retrieved_at"])
+
+
 if __name__ == "__main__":
     unittest.main()
