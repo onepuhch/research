@@ -84,7 +84,7 @@ class MaterialFixture(AlertTest):
         cf.store_document(record)
         state = candidate_context.load_state()
         entry = state["candidates"].setdefault(cid or self.cid(), {"issuer": {"cik": "0000000001"}, "update_checks": []})
-        entry["update_checks"].append({"document_id": doc_id, "eligible": True, "reason": "update-check-v2:x:p1"})
+        entry["update_checks"].append({"document_id": doc_id, "eligible": True, "reason": "update-check-v3:x:p1"})
         c.atomic_json(candidate_context.state_path(), state)
 
     def cid(self):

@@ -104,6 +104,21 @@ class UpdateJudgmentTest(unittest.TestCase):
                                    "AAA Inc. received orders of $35 million from a new customer for delivery in 2027."))
         self.assertTrue(self.judge("AAA Inc. raises fiscal 2027 revenue guidance to $150 million."))
 
+    def test_v3_company_description_tables_and_static_capacity_are_not_events(self):
+        # 10/5 operation: a director-election release passed on its 'About Valero' paragraph.
+        self.assertFalse(self.judge(
+            "Valero Energy Corporation Elects Matt Audette to its Board of Directors",
+            "About Valero",
+            "Valero is a joint venture member in Diamond Green Diesel Holdings LLC, which produces renewable diesel, "
+            "with a production capacity of approximately 1.2 billion gallons per year in the U.S."))
+        self.assertFalse(self.judge("Our plant has a production capacity of 40,000 tons per year at 90% utilization."))
+        self.assertTrue(self.judge("AAA Inc. will expand production capacity by 40% to 50,000 tons in 2027."))
+        self.assertFalse(self.judge("We raised prices in order to offset a 5% cost increase."))
+        blocks = cf.normalize_html("<html><body><table><tr><td>Amortization of acquired intangibles</td>"
+                                   "<td>$114,916</td></tr></table></body></html>".encode())
+        self.assertFalse(cf.business_update_judgment(blocks, "AAA Inc.")[0])
+        self.assertTrue(self.judge("The company has acquired Beta Systems for $400 million in cash."))
+
     def test_an_acquired_business_statement_is_not_the_filers_update(self):
         blocks = cf.normalize_html(html("Runway Buyer, LLC CONSOLIDATED STATEMENT OF CASH FLOWS",
                                         "Customer orders of $3.3 million were received."))

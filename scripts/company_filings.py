@@ -389,17 +389,22 @@ def block_scopes(blocks: list[dict]) -> dict[str, str]:
     return scopes
 
 
-UPDATE_CHECK_VERSION = "update-check-v2"
+UPDATE_CHECK_VERSION = "update-check-v3"
 # One sentence must state the business event and carry its number (P1-A): words spread over a document
 # no longer add up. A sentence about a dividend, buyback, borrowing, credit agreement, pay or litigation
 # is never an update, even if it says 'increases' or 'capacity'.
+# v3 (10/5 operation: a Valero director-election release passed on its 'About Valero' capacity sentence):
+# only prose before an 'About <company>' heading counts, a capacity must change, an amortization line of
+# 'acquired intangibles' is not an acquisition and 'in order to' is not an order.
 UPDATE_EVENTS = (
     ("guidance", re.compile(r"\b(?:rais|increas|lift|updat|reaffirm|lower|reduc|cut)\w*\b[^.;]{0,80}\b(?:guidance|outlook)\b"
                             r"|\b(?:guidance|outlook)\b[^.;]{0,60}\b(?:rais|increas|lift|lower|reduc|cut)\w*")),
     ("customer_contract", re.compile(r"\b(?:supply|purchase|customer|long-term|multi-year|master)\s+(?:supply\s+)?"
-                                     r"(?:agreement|contract)\b|\b(?:award(?:ed)?|order|orders|purchase order|backlog|design win)\b")),
-    ("capacity", re.compile(r"\b(?:production|manufacturing|plant|fab|factory|output)\s+capacity\b|\bcapacity expansion\b")),
-    ("acquisition", re.compile(r"\b(?:acquire|acquired|acquisition of|to acquire|completed the acquisition|merger agreement)\b")),
+                                     r"(?:agreement|contract)\b|\b(?:award(?:ed)?|purchase orders?|backlog|design wins?)\b|(?<!\bin )\borders?\b")),
+    ("capacity", re.compile(r"\b(?:expand|expansion|increas|add|adding|added|doubl|ramp|new|additional)\w*\b[^.;]{0,60}"
+                            r"\bcapacity\b|\bcapacity\s+(?:expansion|increase|addition)s?\b")),
+    ("acquisition", re.compile(r"\b(?:acquire|to acquire|acquisition of|has acquired|have acquired|"
+                               r"completed (?:its |the )?acquisition|merger agreement)\b")),
     ("pricing", re.compile(r"\bprice increase\b|\bpricing actions?\b")),
 )
 UPDATE_EXCLUDE = re.compile(r"\b(?:dividend|repurchase|buyback|share repurchase|credit agreement|credit facility|"
@@ -409,6 +414,7 @@ UPDATE_NUMBER = re.compile(r"[$€£]\s?\d|\b\d[\d,.]*\s?(?:million|billion|%|pe
 # The numbers of an event sentence, for the event signature (P2): '$1.2 billion' and '$1.2billion' are one.
 EVENT_NUMBER = re.compile(r"[$€£]\s?\d[\d,.]*(?:\s?(?:million|billion))?|\b\d[\d,.]*\s?(?:million|billion|%|percent|units|tons|mw|gw)\b")
 BOILERPLATE_WORDS = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
+ABOUT_HEADING = re.compile(r"^about\s+[\w&.,'’ -]{1,60}$")
 
 
 def business_update_judgment(blocks: list[dict], issuer_name: str | None = None) -> tuple[bool, str]:
@@ -425,8 +431,12 @@ def business_update_event(blocks: list[dict], issuer_name: str | None = None) ->
     """The first event sentence business_update_judgment accepts: {event, block_id, sentence, numbers}."""
     scopes = block_scopes(blocks)
     for block in blocks[:400]:
+        if block.get("kind") != "p":
+            continue  # table rows are figures, not event sentences
         text = block_text(block)
-        low = text.lower()
+        low = text.lower().strip()
+        if ABOUT_HEADING.match(low) and len(low.split()) <= 8:
+            break  # the company description and legal notices that follow are not this release's event
         if any(w in low for w in BOILERPLATE_WORDS):
             continue
         heading = scopes.get(block.get("id"))
