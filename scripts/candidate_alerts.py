@@ -27,6 +27,12 @@ guaranteed. Real sends run only in the CI single-writer job.
 
 First run: at most bootstrap_max screener candidates are sent; the other current
 candidates are stored as the bootstrap set and never announced as new later.
+
+Re-review changes (material_update, P2, see material_updates.py): a candidate already announced
+(or in the bootstrap set) can be announced again only for a change after its baseline observation.
+It shares the daily limit, the one-company-a-day rule and the 14-day gap with new discoveries; a
+bootstrap company's gap starts at the bootstrap date (no receipt is made up for it). In the screen
+channel, re-review changes alternate with new discoveries.
 Tracked-company risk alerts are sent by notify.py, not here, and do not use this budget.
 """
 from __future__ import annotations
@@ -44,10 +50,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 import candidates  # noqa: E402
+import material_updates  # noqa: E402
 import notify  # noqa: E402
 
 NEW = "new_discovery"
 RECOMMENDATION = "recommendation"
+MATERIAL = material_updates.KIND
+SPACED = (NEW, MATERIAL)  # events under the per-company gap
 COUNTED = ("reserved", "sent", "uncertain")
 RETRYABLE = ("failed", "released")
 DEFAULTS = {"bootstrap_max": 1, "entity_new_cooldown_days": 14}
@@ -67,6 +76,10 @@ def load_ledger() -> dict:
         raise ValueError("invalid candidate alert ledger; restore it before sending")
     ledger.setdefault("bootstrap", None)
     return ledger
+
+
+def material_backup_path() -> Path:
+    return c.DATA_DIR / "candidate_alerts.pre_material.json"
 
 
 def logical_key(entity: str, thesis: str, event: str, detail: str = "") -> str:
@@ -117,7 +130,7 @@ def recent_new_alerts(ledger: dict, notify_state: dict, signal_rows: list[dict])
             recent[entity] = day
 
     for e in ledger["events"].values():
-        if e.get("event") == NEW and e.get("status") in COUNTED:
+        if e.get("event") in SPACED and e.get("status") in COUNTED:
             note(e.get("entity_id"), e.get("day"))
     tracked = {e.get("signal_id") for e in ledger["events"].values() if e.get("signal_id")}
     by_id = {r.get("signal_id"): r for r in signal_rows}
@@ -133,12 +146,16 @@ def recent_new_alerts(ledger: dict, notify_state: dict, signal_rows: list[dict])
     return recent, unknown
 
 
+def screen_usable(index: dict) -> bool:
+    if not (index.get("candidates") or index.get("folded_candidates")) or index.get("run_status") != "success":
+        return False  # partial collection: no new automatic alerts
+    return not candidates.current_freshness(index)  # stale now (re-checked at send time, not at render time)
+
+
 def screen_items(index: dict) -> tuple[list[dict], list[dict]]:
     """(recommendation events, new-discovery events) that meet the data conditions."""
-    if not index.get("candidates") or index.get("run_status") != "success":
-        return [], []  # partial collection: no new automatic alerts
-    if candidates.current_freshness(index):
-        return [], []  # stale now (re-checked at send time, not at render time)
+    if not screen_usable(index):
+        return [], []
     recommended, new = [], []
     for cand in index["candidates"]:
         if not cand.get("candidate_id") or cand.get("missing") or cand.get("run_quality") != "complete":
@@ -153,6 +170,20 @@ def screen_items(index: dict) -> tuple[list[dict], list[dict]]:
         if cand["classification"] in ("found", "recommended"):
             new.append({**base, "event": NEW, "key": logical_key(base["entity_id"], base["thesis_key"], NEW)})
     return recommended, new
+
+
+def interleave(new: list[dict], updates: list[dict]) -> list[dict]:
+    """New discoveries and re-review changes take turns; the longer list keeps the rest."""
+    out = []
+    for i in range(max(len(new), len(updates))):
+        out += new[i:i + 1] + updates[i:i + 1]
+    return out
+
+
+def bootstrap_gap(ledger: dict) -> dict[str, str]:
+    """Bootstrap companies: the gap starts at the bootstrap date (not a receipt)."""
+    boot = ledger.get("bootstrap") or {}
+    return {key.split("|")[0]: boot["date"] for key in boot.get("keys") or [] if boot.get("date")}
 
 
 def blocked_keys(ledger: dict) -> set[str]:
@@ -174,7 +205,7 @@ def select(ledger: dict, news: list[dict], recommended: list[dict], screen: list
 
     def cooling(item) -> bool:
         last = recent.get(item["entity_id"])
-        return (item["event"] == NEW and last is not None
+        return (item["event"] in SPACED and last is not None
                 and (date.fromisoformat(day) - date.fromisoformat(last)).days < cooldown_days)
 
     def take(item) -> bool:
@@ -189,7 +220,7 @@ def select(ledger: dict, news: list[dict], recommended: list[dict], screen: list
             screen_used += 1
         chosen.append(item)
         alerted_today.add(item["entity_id"])
-        if item["event"] == NEW:
+        if item["event"] in SPACED:
             recent[item["entity_id"]] = day
         return True
 
@@ -245,6 +276,8 @@ def news_message(item: dict) -> str:
 
 
 def message(item: dict) -> str:
+    if item["event"] == MATERIAL:
+        return material_updates.message(item)
     return screen_message(item) if item["channel"] == "screen" else news_message(item)
 
 
@@ -279,12 +312,29 @@ def quarantine(ledger: dict, me: str, now: str) -> int:
 
 
 def event_record(item: dict, day: str) -> dict:
-    return {k: item.get(k) for k in ("channel", "event", "entity_id", "thesis_key", "candidate_id",
-                                     "candidate_version", "observation_id", "signal_id")} | {"day": day, "status": "reserved",
-                                                                          "attempts": []}
+    record = {k: item.get(k) for k in ("channel", "event", "entity_id", "thesis_key", "candidate_id",
+                                       "candidate_version", "observation_id", "signal_id")}
+    if item.get("material"):
+        record["material"] = item["material"]  # baseline, observations and documents fixed at reservation
+    return record | {"day": day, "status": "reserved", "attempts": []}
 
 
-def run(dry_run: bool = False) -> dict:
+def material_step(index: dict, ledger: dict, dry_run: bool) -> tuple[list[dict], list[dict]]:
+    """Re-review items and diagnostics; outside a dry run the pending/rebase state is stored, with a
+    one-time copy of a ledger written before P2."""
+    if not screen_usable(index):
+        return [], []
+    import candidate_context
+    items, diagnostics, state = material_updates.evaluate(index, ledger, candidate_context.load_state())
+    if not dry_run and state != ledger.get("material"):
+        if "material" not in ledger and not material_backup_path().exists():
+            c.atomic_json(material_backup_path(), ledger)
+        ledger["material"] = state
+        c.atomic_json(ledger_path(), ledger)
+    return items, diagnostics
+
+
+def run(dry_run: bool = False, material_report: str | None = None) -> dict:
     day = c.today()
     me = attempt_id()
     ledger = load_ledger()
@@ -296,15 +346,23 @@ def run(dry_run: bool = False) -> dict:
     signal_rows = c.read_signals(live_only=False)
     news = news_items(signal_rows, notify_state)
     recent, unknown_legacy = recent_new_alerts(ledger, notify_state, signal_rows)
+    for entity, start in bootstrap_gap(ledger).items():
+        if start > recent.get(entity, ""):
+            recent[entity] = start
     recommended, screen = screen_items(index)
+    updates, diagnostics = material_step(index, ledger, dry_run)
+    if material_report:
+        c.atomic_json(Path(material_report), {"day": day, "version": material_updates.VERSION,
+                                              "eligible": [x["key"] for x in updates], "candidates": diagnostics})
     slots = max(0, c.policy()["daily_candidate_limit"] - used_today(ledger, notify_state, day))
     bootstrap = ledger["bootstrap"] is None and bool(screen)
     cap = settings()["bootstrap_max"] if bootstrap else None
     # A confirmed failure keeps its key and is eligible again; it never becomes a second event.
     retry = [e for e in ledger["events"].values() if e.get("status") in RETRYABLE]
-    chosen = select(ledger, news, recommended, screen, slots, day, cap, recent,
+    chosen = select(ledger, news, recommended, interleave(screen, updates), slots, day, cap, recent,
                     settings()["entity_new_cooldown_days"])
     report = {"slots": slots, "selected": [x["key"] for x in chosen], "bootstrap": bootstrap,
+              "material_eligible": len(updates),
               "legacy_unknown_entity": unknown_legacy,
               "retry_pending": len(retry), "quarantined": quarantined, "sent": 0, "failed": 0, "uncertain": 0}
     if dry_run:
@@ -365,9 +423,12 @@ def run(dry_run: bool = False) -> dict:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true", help="print the selection; send and write nothing")
+    parser.add_argument("--material-report", help="with --dry-run: write every candidate's re-review decision here")
     args = parser.parse_args(argv)
+    if args.material_report and not args.dry_run:
+        parser.error("--material-report needs --dry-run")
     try:
-        report = run(args.dry_run)
+        report = run(args.dry_run, args.material_report)
     except (ValueError, OSError) as error:
         if not args.dry_run:
             c.record_run("candidate_alerts", "failed", error_type=type(error).__name__)

@@ -1,0 +1,634 @@
+{
+ "bootstrap_finished_at": "2026-09-25T12:25:51+00:00",
+ "snapshots": [
+  "20260926T133740Z_36245680144-1.json.gz",
+  "20260927T052542Z_36297143973-1.json.gz",
+  "20260928T053253Z_36382342890-1.json.gz",
+  "20260929T055354Z_36528079469-1.json.gz",
+  "20260930T054134Z_36674489444-1.json.gz",
+  "20261001T060811Z_36822997450-1.json.gz",
+  "20261001T150156Z_36880974655-1.json.gz",
+  "20261003T052857Z_37099766046-1.json.gz",
+  "20261004T060125Z_37181539693-1.json.gz"
+ ],
+ "timeline": [
+  {
+   "snapshot": "20260926T133740Z_36245680144-1.json.gz",
+   "kst_day": "2026-09-26",
+   "eligible": [],
+   "pending": [],
+   "known": 30
+  },
+  {
+   "snapshot": "20260927T052542Z_36297143973-1.json.gz",
+   "kst_day": "2026-09-27",
+   "eligible": [],
+   "pending": [],
+   "known": 31
+  },
+  {
+   "snapshot": "20260928T053253Z_36382342890-1.json.gz",
+   "kst_day": "2026-09-28",
+   "eligible": [],
+   "pending": [],
+   "known": 30
+  },
+  {
+   "snapshot": "20260929T055354Z_36528079469-1.json.gz",
+   "kst_day": "2026-09-29",
+   "eligible": [],
+   "pending": [],
+   "known": 30
+  },
+  {
+   "snapshot": "20260930T054134Z_36674489444-1.json.gz",
+   "kst_day": "2026-09-30",
+   "eligible": [],
+   "pending": [],
+   "known": 31
+  },
+  {
+   "snapshot": "20261001T060811Z_36822997450-1.json.gz",
+   "kst_day": "2026-10-01",
+   "eligible": [],
+   "pending": [],
+   "known": 32
+  },
+  {
+   "snapshot": "20261001T150156Z_36880974655-1.json.gz",
+   "kst_day": "2026-10-02",
+   "eligible": [],
+   "pending": [],
+   "known": 32
+  },
+  {
+   "snapshot": "20261003T052857Z_37099766046-1.json.gz",
+   "kst_day": "2026-10-03",
+   "eligible": [],
+   "pending": [
+    "NYSE:PBF|eps-revision-review:v1"
+   ],
+   "known": 32
+  },
+  {
+   "snapshot": "20261004T060125Z_37181539693-1.json.gz",
+   "kst_day": "2026-10-04",
+   "eligible": [
+    "NYSE:PBF"
+   ],
+   "pending": [
+    "NYSE:PBF|eps-revision-review:v1"
+   ],
+   "known": 32
+  }
+ ],
+ "first_eligible": {
+  "NYSE:PBF": {
+   "day": "2026-10-04",
+   "triggers": [
+    "B"
+   ],
+   "pct": 42.67
+  }
+ },
+ "last_day_known": [
+  {
+   "entity_id": "NYSE:PBF",
+   "ticker": "PBF",
+   "candidate_id": "replay-PBF",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 12.375,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 17.655,
+   "pct": 42.67,
+   "b": "confirmed",
+   "decision": "eligible",
+   "triggers": [
+    "B"
+   ]
+  },
+  {
+   "entity_id": "NASDAQ:AEHR",
+   "ticker": "AEHR",
+   "candidate_id": "replay-AEHR",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 1.38333,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 1.38333,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:TALO",
+   "ticker": "TALO",
+   "candidate_id": "replay-TALO",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 1.65844,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 1.66344,
+   "pct": 0.3,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:DK",
+   "ticker": "DK",
+   "candidate_id": "replay-DK",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 7.85407,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 8.25707,
+   "pct": 5.13,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:NBR",
+   "ticker": "NBR",
+   "candidate_id": "replay-NBR",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 3.60994,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 3.60994,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:MPC",
+   "ticker": "MPC",
+   "candidate_id": "replay-MPC",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 47.13423,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 49.59792,
+   "pct": 5.23,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:AXTI",
+   "ticker": "AXTI",
+   "candidate_id": "replay-AXTI",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 2.25,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 2.25,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:PARR",
+   "ticker": "PARR",
+   "candidate_id": "replay-PARR",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 13.83903,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 14.84237,
+   "pct": 7.25,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:RPAY",
+   "ticker": "RPAY",
+   "candidate_id": "replay-RPAY",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 1.1645,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 1.1645,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:CORT",
+   "ticker": "CORT",
+   "candidate_id": "replay-CORT",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 4.4025,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 4.4025,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:DINO",
+   "ticker": "DINO",
+   "candidate_id": "replay-DINO",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 11.82475,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 12.74103,
+   "pct": 7.75,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:BLTE",
+   "ticker": "BLTE",
+   "candidate_id": "replay-BLTE",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 2.26,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 2.26,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:VLO",
+   "ticker": "VLO",
+   "candidate_id": "replay-VLO",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 38.04043,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 40.19265,
+   "pct": 5.66,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:MU",
+   "ticker": "MU",
+   "candidate_id": "replay-MU",
+   "display_state": "card",
+   "decision": "rebased",
+   "reason": "comparison_key_changed",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-10-03",
+    "comparison_key": [
+     "eps_next_fy_per_share",
+     "2028-08-31",
+     "Yahoo Finance earningsTrend (+1y)",
+     "USD",
+     "provider-unspecified"
+    ]
+   }
+  },
+  {
+   "entity_id": "NASDAQ:URGN",
+   "ticker": "URGN",
+   "candidate_id": "replay-URGN",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 2.79429,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 2.79429,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:AGL",
+   "ticker": "AGL",
+   "candidate_id": "replay-AGL",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 3.19833,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 2.40143,
+   "pct": -24.92,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:SUNC",
+   "ticker": "SUNC",
+   "candidate_id": "replay-SUNC",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 12.33833,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 12.33833,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:CBRL",
+   "ticker": "CBRL",
+   "candidate_id": "replay-CBRL",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 1.84926,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 2.12415,
+   "pct": 14.86,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:SPT",
+   "ticker": "SPT",
+   "candidate_id": "replay-SPT",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 1.5398,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 1.5398,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:CLBK",
+   "ticker": "CLBK",
+   "candidate_id": "replay-CLBK",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 0.63364,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 0.63364,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:UCTT",
+   "ticker": "UCTT",
+   "candidate_id": "replay-UCTT",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 5.87,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 6.39117,
+   "pct": 8.88,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:PSX",
+   "ticker": "PSX",
+   "candidate_id": "replay-PSX",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 24.89667,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 26.21456,
+   "pct": 5.29,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:PUBM",
+   "ticker": "PUBM",
+   "candidate_id": "replay-PUBM",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 0.81333,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 0.81333,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:PGY",
+   "ticker": "PGY",
+   "candidate_id": "replay-PGY",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 4.14595,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 4.13106,
+   "pct": -0.36,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:CVI",
+   "ticker": "CVI",
+   "candidate_id": "replay-CVI",
+   "display_state": "card",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-10-03",
+    "eps_now": 3.50959,
+    "baseline_id": "OB-CCD37ACAC15FA702"
+   },
+   "eps_now": 3.50959,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:FSLY",
+   "ticker": "FSLY",
+   "candidate_id": "replay-FSLY",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 0.6305,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 0.6305,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:TXO",
+   "ticker": "TXO",
+   "candidate_id": "replay-TXO",
+   "display_state": "card",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-09-30",
+    "eps_now": 1.30667,
+    "baseline_id": "OB-32C442EF066AB09C"
+   },
+   "eps_now": 1.30667,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:TEAM",
+   "ticker": "TEAM",
+   "candidate_id": "replay-TEAM",
+   "display_state": "card",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-09-27",
+    "eps_now": 2.1871,
+    "baseline_id": "OB-88FD99AFB6571D9D"
+   },
+   "eps_now": 2.1871,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:TRLV",
+   "ticker": "TRLV",
+   "candidate_id": "replay-TRLV",
+   "display_state": "card",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-10-01",
+    "eps_now": 0.55667,
+    "baseline_id": "OB-DE3B52DADD8E8906"
+   },
+   "eps_now": 0.55667,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:CLF",
+   "ticker": "CLF",
+   "candidate_id": "replay-CLF",
+   "display_state": "card",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-10-01",
+    "eps_now": 0.77259,
+    "baseline_id": "OB-1DB9B74067ADDE80"
+   },
+   "eps_now": 0.77259,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NYSE:DAN",
+   "ticker": "DAN",
+   "candidate_id": "replay-DAN",
+   "display_state": "card",
+   "baseline": {
+    "source": "bootstrap",
+    "day": "2026-09-25",
+    "eps_now": 4.18621,
+    "baseline_id": "bootstrap:2026-09-25:48e01e7fb156"
+   },
+   "eps_now": 4.18621,
+   "pct": 0.0,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  },
+  {
+   "entity_id": "NASDAQ:SMTC",
+   "ticker": "SMTC",
+   "candidate_id": "replay-SMTC",
+   "display_state": "card",
+   "baseline": {
+    "source": "new_discovery",
+    "day": "2026-09-30",
+    "eps_now": 5.8359,
+    "baseline_id": "OB-DDA6C6F21D62E4AD"
+   },
+   "eps_now": 5.85723,
+   "pct": 0.37,
+   "b": "below_threshold",
+   "decision": "no_trigger"
+  }
+ ],
+ "cancelled": [],
+ "rebases": {
+  "NASDAQ:MU|eps-revision-review:v1": {
+   "observation_id": "replay:37181539693-1:MU",
+   "baseline_id": "replay:37181539693-1:MU",
+   "observed_at": "2026-10-04T06:15:47+00:00",
+   "day": "2026-10-04",
+   "snapshot_sha256": "b13c6232c025fdabdb49d5ece30a4c4e16274a240188c799836f65ea7e61b875",
+   "eps_now": 205.95447,
+   "comparison_key": [
+    "eps_next_fy_per_share",
+    "2027-08-31",
+    "Yahoo Finance earningsTrend (+1y)",
+    "USD",
+    "provider-unspecified"
+   ],
+   "source": "rebase",
+   "reason": "comparison_key_changed"
+  }
+ }
+}

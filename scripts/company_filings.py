@@ -406,6 +406,8 @@ UPDATE_EXCLUDE = re.compile(r"\b(?:dividend|repurchase|buyback|share repurchase|
                             r"revolving|borrowing|notes due|indenture|loan|compensation|severance|bonus|settlement|"
                             r"litigation|lawsuit|complaint|appoint|resign|director)\w*\b")
 UPDATE_NUMBER = re.compile(r"[$€£]\s?\d|\b\d[\d,.]*\s?(?:million|billion|%|percent|units|tons|mw|gw)\b")
+# The numbers of an event sentence, for the event signature (P2): '$1.2 billion' and '$1.2billion' are one.
+EVENT_NUMBER = re.compile(r"[$€£]\s?\d[\d,.]*(?:\s?(?:million|billion))?|\b\d[\d,.]*\s?(?:million|billion|%|percent|units|tons|mw|gw)\b")
 BOILERPLATE_WORDS = ("forward-looking", "could differ", "safe harbor", "risk factors", "undue reliance", "cautionary")
 
 
@@ -413,6 +415,14 @@ def business_update_judgment(blocks: list[dict], issuer_name: str | None = None)
     """Search eligibility of a recent 8-K text (not proof of a cause): a sentence naming a business event
     (guidance change, customer contract/order/backlog, capacity, acquisition, price increase) with its own
     number, outside excluded topics and outside another company's statements (P0)."""
+    found = business_update_event(blocks, issuer_name)
+    if found:
+        return True, f"{UPDATE_CHECK_VERSION}:{found['event']}:{found['block_id']}"
+    return False, f"{UPDATE_CHECK_VERSION}:no_event_sentence"
+
+
+def business_update_event(blocks: list[dict], issuer_name: str | None = None) -> dict | None:
+    """The first event sentence business_update_judgment accepts: {event, block_id, sentence, numbers}."""
     scopes = block_scopes(blocks)
     for block in blocks[:400]:
         text = block_text(block)
@@ -428,8 +438,10 @@ def business_update_judgment(blocks: list[dict], issuer_name: str | None = None)
                 continue
             for name, pattern in UPDATE_EVENTS:
                 if pattern.search(s):
-                    return True, f"{UPDATE_CHECK_VERSION}:{name}:{block.get('id')}"
-    return False, f"{UPDATE_CHECK_VERSION}:no_event_sentence"
+                    numbers = sorted({re.sub(r"\s+", "", n) for n in EVENT_NUMBER.findall(s)})
+                    return {"event": name, "block_id": block.get("id"), "sentence": sentence.strip()[:600],
+                            "numbers": numbers}
+    return None
 
 
 def looks_like_business_update(blocks: list[dict], issuer_name: str | None = None) -> tuple[bool, str]:

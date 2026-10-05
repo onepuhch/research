@@ -380,6 +380,9 @@
     "candidate_alert_event": [
       "channel", "event", "entity_id", "thesis_key", "day", "status", "attempts"
     ],
+    "candidate_alert_material": [
+      "version", "triggers", "comparison_key", "baseline", "first", "current", "documents"
+    ],
     "context_quarantine_entry": [
       "candidate_id", "reason", "source_ref", "decided_at", "decided_by", "note"
     ]
