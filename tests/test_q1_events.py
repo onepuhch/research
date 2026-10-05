@@ -235,3 +235,86 @@ class GuidanceR0Test(unittest.TestCase):
         self.assertEqual((e["alert_eligible"], e["guidance"]["prior"]["document_id"], e["guidance"]["prior"]["block_id"]),
                          (True, "DOC-OLD", "p2"))
         self.assertEqual(e["guidance"]["old"], [130.0, 130.0])
+
+
+class FailedRetryR1Test(MaterialFixture):
+    """R1 (material-update-v3): a failed event is retried only while every reserved condition holds."""
+
+    def failed_ab(self):
+        self.boot(eps=1.0)
+        self.screen("2026-10-10", eps=1.3)
+        self.send_alerts()
+        self.screen("2026-10-11", eps=1.3)
+        self.update_doc("2026-10-10")
+        self.outcomes = ["failed"]
+        self.send_alerts()
+        event = self.material_events()[0]
+        self.assertEqual((event["status"], sorted(event["material"]["triggers"])), ("failed", ["A", "B"]))
+        return event
+
+    def drop_documents(self):
+        state = candidate_context.load_state()
+        for entry in state["candidates"].values():
+            entry["update_checks"], entry["document_ids"], entry["examined"] = [], [], []
+        c.atomic_json(candidate_context.state_path(), state)
+
+    def test_b_lapse_cancels_the_old_composite_and_a_alone_follows_once(self):
+        self.failed_ab()
+        self.screen("2026-10-25", eps=1.0)  # B lapsed; A still valid
+        self.send_alerts()
+        old = self.material_events()[0]
+        self.assertEqual((old["status"], self.sent), ("cancelled", []))
+        self.assertEqual(old["cancellations"][0]["reason"], "condition_lapsed")
+        self.assertEqual(len(old["attempts"]), 1)  # the failed attempt is kept
+        self.screen("2026-10-26", eps=1.0)  # the next run reads the stored cancellation
+        self.send_alerts()
+        events = sorted(self.material_events(), key=lambda e: e["day"])
+        self.assertEqual(len(self.sent), 1)
+        self.assertEqual((events[-1]["material"]["triggers"], events[-1]["material"]["supersedes"]),
+                         (["A"], [next(k for k, e in self.ledger()["events"].items() if e["status"] == "cancelled")]))
+        self.screen("2026-10-27", eps=1.0)
+        self.send_alerts()
+        self.assertEqual(len(self.sent), 1)  # idempotent: nothing more
+
+    def test_a_no_longer_valid_leaves_b_but_never_the_old_composite(self):
+        self.failed_ab()
+        self.drop_documents()
+        self.screen("2026-10-25", eps=1.3)
+        self.send_alerts()
+        self.assertEqual((self.material_events()[0]["status"], self.sent), ("cancelled", []))
+        self.screen("2026-10-26", eps=1.3)
+        self.send_alerts()
+        new = [e for e in self.material_events() if e["status"] == "sent"]
+        self.assertEqual([e["material"]["triggers"] for e in new], [["B"]])
+
+    def test_holding_conditions_retry_the_same_id_and_the_same_text(self):
+        failed = self.failed_ab()
+        key = next(k for k, e in self.ledger()["events"].items() if e is not None and e.get("event") == m.KIND)
+        self.screen("2026-10-25", eps=1.3, name="Renamed Corp")  # today's card differs
+        self.send_alerts()
+        sent = self.ledger()["events"][key]
+        self.assertEqual((sent["status"], sent["payload_sha256"], sent["payload_text"]),
+                         ("sent", failed["payload_sha256"], failed["payload_text"]))
+        self.assertNotIn("Renamed Corp", self.sent[0])
+
+    def test_tracking_or_key_change_cancels(self):
+        self.failed_ab()
+        self.screen("2026-10-25", eps=1.3, eps_target_period="2028-12-31")
+        self.send_alerts()
+        old = self.material_events()[0]
+        self.assertEqual((old["status"], old["cancellations"][0]["reason"]), ("cancelled", "comparison_key_changed"))
+        self.assertEqual(self.sent, [])
+
+    def test_uncertain_composite_is_never_replaced(self):
+        self.boot(eps=1.0)
+        self.screen("2026-10-10", eps=1.3)
+        self.send_alerts()
+        self.screen("2026-10-11", eps=1.3)
+        self.update_doc("2026-10-10")
+        self.outcomes = ["uncertain"]
+        self.send_alerts()
+        for day in ("2026-10-25", "2026-10-26"):
+            self.screen(day, eps=1.0)
+            self.send_alerts()
+        self.assertEqual([e["status"] for e in self.material_events()], ["uncertain"])
+        self.assertEqual(self.sent, [])

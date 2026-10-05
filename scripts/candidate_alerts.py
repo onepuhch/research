@@ -326,15 +326,24 @@ def material_step(index: dict, ledger: dict, dry_run: bool) -> tuple[list[dict],
         return [], []
     import candidate_context
     items, diagnostics, state = material_updates.evaluate(index, ledger, candidate_context.load_state())
-    if not dry_run and state != ledger.get("material"):
-        if "material" not in ledger and not material_backup_path().exists():
-            c.atomic_json(material_backup_path(), ledger)
-        elif (ledger.get("material") or {}).get("version") != material_updates.VERSION:
-            backup = c.DATA_DIR / f"candidate_alerts.pre_{material_updates.VERSION}.json"
-            if not backup.exists():
-                c.atomic_json(backup, ledger)  # one copy before the first write under a new rule version
-        ledger["material"] = state
-        c.atomic_json(ledger_path(), ledger)
+    cancels = state.pop("cancel_events", [])
+    if dry_run or (state == ledger.get("material") and not cancels):
+        return items, diagnostics
+    # One copy of the ledger before the first write under a new rule version (P2 / v2 / v3).
+    if "material" not in ledger and not material_backup_path().exists():
+        c.atomic_json(material_backup_path(), ledger)
+    elif (ledger.get("material") or {}).get("version") != material_updates.VERSION:
+        backup = c.DATA_DIR / f"candidate_alerts.pre_{material_updates.VERSION}.json"
+        if not backup.exists():
+            c.atomic_json(backup, ledger)
+    for cancel in cancels:
+        # Confirmed-unsent events whose conditions lapsed: kept with their attempts, never sent (R1).
+        event = ledger["events"][cancel["key"]]
+        if event.get("status") in RETRYABLE:
+            event["status"] = "cancelled"
+            event.setdefault("cancellations", []).append({k: v for k, v in cancel.items() if k != "key"})
+    ledger["material"] = state
+    c.atomic_json(ledger_path(), ledger)
     return items, diagnostics
 
 
@@ -386,12 +395,16 @@ def run(dry_run: bool = False, material_report: str | None = None) -> dict:
     token, chat_id = c.load_dotenv_value("TELEGRAM_BOT_TOKEN"), c.load_dotenv_value("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
         raise ValueError("Telegram credentials missing")
-    texts = {item["key"]: message(item) for item in chosen}
+    # A retried event is sent with the text fixed at its first reservation (R1): today's card may differ.
+    texts = {item["key"]: ((ledger["events"].get(item["key"]) or {}).get("payload_text")
+                           if (ledger["events"].get(item["key"]) or {}).get("status") in RETRYABLE
+                           and (ledger["events"].get(item["key"]) or {}).get("payload_text") else message(item))
+             for item in chosen}
     for item in chosen:
         record = ledger["events"].get(item["key"])
         attempts = (record or {}).get("attempts", [])
         record = {**event_record(item, day), "attempts": attempts}
-        record.update(status="reserved", reserved_by=me, reserved_at=c.utc_now(),
+        record.update(status="reserved", reserved_by=me, reserved_at=c.utc_now(), payload_text=texts[item["key"]],
                       payload_sha256=hashlib.sha256(texts[item["key"]].encode("utf-8")).hexdigest())
         ledger["events"][item["key"]] = c.validate_record("candidate_alert_event", record)
     c.atomic_json(ledger_path(), ledger)

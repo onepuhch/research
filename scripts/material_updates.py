@@ -30,7 +30,7 @@ from pathlib import Path
 
 import common as c
 
-VERSION = "material-update-v2"
+VERSION = "material-update-v3"
 KIND = "material_update"
 METRIC = "eps_next_fy_per_share"
 SCREEN_PROVIDER = "Yahoo Finance earningsTrend (+1y)"  # every stored screen row comes from this provider
@@ -295,6 +295,24 @@ def evaluate(index: dict, ledger: dict, context_state: dict, cfg: dict | None = 
             state["cancelled"] = (state["cancelled"] + [{"entity": ek, "reason": reason, "at": c.utc_now(),
                                                          "pending": pending, **details}])[-CANCELLED_KEPT:]
 
+    # R1: unfinished events of a company. A failed/released one is sent again only while every condition
+    # it was reserved with still holds; otherwise it is cancelled (kept with its attempts), never sent.
+    state["cancel_events"] = []
+
+    def open_events(entity, thesis, statuses=("reserved", "uncertain", "failed", "released")):
+        return [(k, e) for k, e in ledger["events"].items()
+                if e.get("event") == KIND and e.get("entity_id") == entity and e.get("thesis_key") == thesis
+                and e.get("status") in statuses]
+
+    def lapse(entity, thesis, reason, keep=None, observed=None):
+        """Cancel confirmed-unsent events whose parts are not all in 'keep' (None: cancel them all)."""
+        for key, event in open_events(entity, thesis, ("failed", "released")):
+            parts_then = set((event.get("material") or {}).get("parts") or [])
+            if keep is None or not parts_then <= set(keep):
+                state["cancel_events"].append({"key": key, "reason": reason, "at": c.utc_now(),
+                                               "missing_parts": sorted(parts_then - set(keep or [])),
+                                               "observation_id": (observed or {}).get("observation_id")})
+
     for cand in cards:
         cid, identity = cand.get("candidate_id"), cand.get("identity") or {}
         entity, thesis = identity.get("entity_id"), cand.get("thesis_key")
@@ -312,6 +330,7 @@ def evaluate(index: dict, ledger: dict, context_state: dict, cfg: dict | None = 
         if (cand.get("tracking") or {}).get("status") in TRACKED:
             diag["decision"] = "tracked"
             cancel(ek, "tracked")
+            lapse(entity, thesis, "tracked")
             continue
         if cand.get("missing") or cand.get("run_quality") != "complete":
             diag["decision"] = "quality"
@@ -322,6 +341,7 @@ def evaluate(index: dict, ledger: dict, context_state: dict, cfg: dict | None = 
             if now["comparison_key"]:
                 state["rebases"][ek] = {**now, "source": "rebase", "reason": reason}
             cancel(ek, reason)
+            lapse(entity, thesis, reason, observed=now)
             diag.update(decision="rebased" if now["comparison_key"] else "no_comparison_key", reason=reason,
                         baseline=base and {k: base.get(k) for k in ("source", "day", "comparison_key")})
             continue
@@ -359,30 +379,40 @@ def evaluate(index: dict, ledger: dict, context_state: dict, cfg: dict | None = 
         if docs:
             triggers.append("A")
             parts += [f"A:{d['signature']}" for d in docs]
+        # Confirmed-unsent events with a condition that no longer holds are cancelled first (R1).
+        lapse(entity, thesis, "condition_lapsed", keep=parts, observed=now)
+        cancelling = {x["key"] for x in state["cancel_events"]}
         if not triggers:
             diag["decision"] = "no_trigger"
             continue
-        # An unfinished event with any of these parts keeps its ID: reserved/uncertain stay locked,
-        # failed/released are retried as they were fixed, never re-issued with a new ID (Q1-B).
-        open_event = next((e for k, e in ledger["events"].items()
-                           if e.get("event") == KIND and e.get("entity_id") == entity
-                           and e.get("status") in ("reserved", "uncertain", "failed", "released")
-                           and set(parts) & set((e.get("material") or {}).get("parts") or [])), None)
-        if open_event and open_event["status"] in ("reserved", "uncertain"):
+        # Unconfirmed delivery (reserved/uncertain) locks every overlapping part; nothing replaces it.
+        if any(set(parts) & set((e.get("material") or {}).get("parts") or [])
+               for _, e in open_events(entity, thesis, ("reserved", "uncertain"))):
             diag["decision"] = "locked_unconfirmed"
             continue
-        if open_event:
-            key = next(k for k, e in ledger["events"].items() if e is open_event)
-            diag.update(decision="retry", triggers=open_event["material"]["triggers"])
+        retry = next(((k, e) for k, e in open_events(entity, thesis, ("failed", "released"))
+                      if k not in cancelling and set(e["material"].get("parts") or []) <= set(parts)), None)
+        if retry:
+            # Every reserved condition still holds: the same ID, observations, documents and text.
+            key, event = retry
+            diag.update(decision="retry", triggers=event["material"]["triggers"])
             items.append({"channel": "screen", "event": KIND, "entity_id": entity, "thesis_key": thesis,
                           "candidate_id": cid, "candidate_version": cand.get("candidate_version"),
                           "observation_id": cand.get("observation_id"), "cand": cand,
-                          "material": open_event["material"], "key": key})
+                          "material": event["material"], "key": key})
             continue
+        if cancelling & {k for k, _ in open_events(entity, thesis, ("failed", "released"))}:
+            # A replacement waits until the cancellation is stored (the next run reads it from the ledger).
+            diag["decision"] = "replacement_after_cancel"
+            continue
+        supersedes = sorted(k for k, e in ledger["events"].items()
+                            if e.get("event") == KIND and e.get("entity_id") == entity and e.get("status") == "cancelled"
+                            and set(parts) & set((e.get("material") or {}).get("parts") or []))
         material = c.validate_record("candidate_alert_material", {
             "version": VERSION, "triggers": triggers, "comparison_key": now["comparison_key"],
             "baseline": base, "first": first, "current": now, "pct": diag["pct"],
-            "thresholds": dict(cfg), "documents": docs, "parts": sorted(parts)})
+            "thresholds": dict(cfg), "documents": docs, "parts": sorted(parts),
+            **({"supersedes": supersedes} if supersedes else {})})
         diag["decision"] = "eligible"
         diag["triggers"] = triggers
         items.append({"channel": "screen", "event": KIND, "entity_id": entity, "thesis_key": thesis,
