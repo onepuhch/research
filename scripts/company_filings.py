@@ -346,7 +346,7 @@ def block_text(block: dict) -> str:
 
 # ---- whose financial statements a passage sits in (P0): a filer's 8-K can carry an acquired company's
 # own statements ('Runway Buyer, LLC CONSOLIDATED STATEMENT OF CASH FLOWS' in Novanta's EX-99.1).
-SUBJECT_CHECK_VERSION = "subject-check-v1"
+SUBJECT_CHECK_VERSION = "subject-check-v2"
 ENTITY_SUFFIX = r"(?:LLC|L\.L\.C\.|Inc\.?|Incorporated|Corp\.?|Corporation|Holdings?|L\.P\.|LP|Ltd\.?|Limited|Co\.|plc|N\.V\.|S\.A\.)"
 STATEMENT_HEAD = re.compile(
     r"((?:[A-Z][\w&'.-]*,?\s+){1,6}" + ENTITY_SUFFIX + r")\s+(?:and\s+subsidiaries\s+)?(?:\(?unaudited\)?\s+)?"
@@ -357,22 +357,48 @@ GENERIC_NAME = {"inc", "inc.", "incorporated", "corp", "corp.", "corporation", "
 
 
 def name_tokens(name: str) -> set[str]:
-    return {w for w in re.findall(r"[a-z0-9&'-]+", str(name).lower()) if w not in GENERIC_NAME and len(w) > 1}
+    return set(entity_name(name))
 
 
-def same_entity(heading: str, issuer_name: str | None) -> bool | None:
-    """True/False when both names are readable; None when the filer's name is unknown (unverified)."""
-    mine = name_tokens(issuer_name or "")
-    theirs = name_tokens(heading)
-    if not mine or not theirs:
+def entity_name(name: str | None) -> tuple[str, ...]:
+    """The distinctive words of a company name in order: case, punctuation, the SEC state suffix
+    ('CORP/TX') and legal-form words removed ('Cracker Barrel Old Country Store, Inc' = '... INC.')."""
+    text = re.sub(r"/[a-z]{2,4}/?\s*$", "", str(name or "").lower().strip())
+    text = re.sub(r"\b(?:l\.l\.c\.|l\.p\.|n\.v\.|s\.a\.|co\.)", " ", text)
+    text = re.sub(r"\band subsidiaries\b", " ", text)
+    words = re.findall(r"[a-z0-9&]+", text.replace("'", "").replace("’", ""))
+    return tuple(w for w in words if w not in GENERIC_NAME and (len(w) > 1 or w.isdigit()))
+
+
+def same_entity(heading: str, issuer_name: str | None, aliases=()) -> bool | None:
+    """True only when the whole distinctive name equals the filer's name or one of its CIK-linked names
+    (SEC former names); False when the two names share no word; None (unverified) otherwise: a shared
+    word such as 'Northstar' or 'PBF' does not prove one legal entity (subject-check-v2, Q0)."""
+    theirs = entity_name(heading)
+    names = [entity_name(n) for n in [issuer_name, *(aliases or [])] if n]
+    names = [n for n in names if n]
+    if not theirs or not names:
         return None
-    return bool(mine & theirs)
+    if any(theirs == n for n in names):
+        return True
+    if all(not set(theirs) & set(n) for n in names):
+        return False
+    return None
 
 
 def statement_scope(text_before: str) -> str | None:
     """The entity named by the last financial-statement heading in the text before a passage."""
     heads = list(STATEMENT_HEAD.finditer(text_before))
-    return " ".join(heads[-1].group(1).split()) if heads else None
+    if not heads:
+        return None
+    name = " ".join(heads[-1].group(1).split())
+    # The capture can start inside a previous label or sentence ('EX-99.1. Novanta Inc.'): keep the last
+    # sentence piece that still names a company, without leading words that carry digits.
+    pieces = [p for p in re.split(r"(?<=\.)\s+(?=[A-Z])", name) if entity_name(p)]
+    words = (pieces[-1] if pieces else name).split()
+    while len(words) > 1 and re.search(r"\d", words[0]):
+        words.pop(0)
+    return " ".join(words)
 
 
 def block_scopes(blocks: list[dict]) -> dict[str, str]:
@@ -440,8 +466,8 @@ def business_update_event(blocks: list[dict], issuer_name: str | None = None) ->
         if any(w in low for w in BOILERPLATE_WORDS):
             continue
         heading = scopes.get(block.get("id"))
-        if heading and same_entity(heading, issuer_name) is False:
-            continue  # an acquired business's own statements are not the filer's update
+        if heading and same_entity(heading, issuer_name) is not True:
+            continue  # statements of another or an unconfirmed entity are not the filer's update
         for sentence in re.split(r"(?<=[.;])\s+", text):
             s = sentence.lower()
             if UPDATE_EXCLUDE.search(s) or not UPDATE_NUMBER.search(s):

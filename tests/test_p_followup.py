@@ -46,6 +46,13 @@ class SubjectNewsPathTest(unittest.TestCase):
         self.assertTrue(extract.evidence_subject_problem("Net income $ 11,462,563", deal, item)
                         .startswith("subject_other_entity"))
 
+    def test_q0_a_news_quote_under_a_name_sharing_entity_is_unverified(self):
+        text = ("NORTHSTAR MANUFACTURING INC (NSM) EX-99.1. Northstar Acquisition LLC CONSOLIDATED STATEMENTS OF "
+                "OPERATIONS Revenue was $40.0 million in 2025.")
+        item = {"title": "NORTHSTAR MANUFACTURING INC (NSM) (CIK 0000000009) EX-99.1 2026-10-02"}
+        self.assertTrue(extract.evidence_subject_problem("Revenue was $40.0 million in 2025.", text, item)
+                        .startswith("subject_unverified"))
+
     def test_an_unreadable_filer_is_unverified(self):
         item = stored_novt_item()
         problem = extract.evidence_subject_problem(NOVT_QUOTE, item["raw_text"], {"title": ""})
@@ -68,8 +75,25 @@ class SubjectDraftPathTest(unittest.TestCase):
         self.assertEqual(self.run_with("Runway Buyer, LLC", issuer_name=None)["rejected"][0]["reason"], "subject_unverified")
         self.assertEqual(len(self.run_with("Novanta Inc.")["claims"]), 1)
         self.assertEqual(len(self.run_with(None)["claims"]), 1)  # no statement heading: the usual checks only
-        self.assertEqual(ctx.PARSER_VERSION, "context-check-v10")
-        self.assertIn("context-check-v9", ctx.REVALIDATED_VERSIONS)
+        self.assertEqual(ctx.PARSER_VERSION, "context-check-v11")
+        self.assertIn("context-check-v10", ctx.REVALIDATED_VERSIONS)
+
+    def test_q0_a_shared_name_word_is_unverified_not_the_same_company(self):
+        answer = self.run_with("Northstar Acquisition LLC", issuer_name="Northstar Manufacturing Inc.")
+        self.assertEqual((len(answer["claims"]), answer["rejected"][0]["reason"]), (0, "subject_unverified"))
+        self.assertEqual(self.run_with("PBF Holding Company LLC", issuer_name="PBF Energy Inc.")["rejected"][0]["reason"],
+                         "subject_unverified")  # a subsidiary is not merged into the parent by a shared word
+        for heading, issuer in (("NOVANTA INC.", "Novanta Inc"), ("Valero Energy Corporation", "VALERO ENERGY CORP/TX"),
+                                ("Cracker Barrel Old Country Store, Inc.", "CRACKER BARREL OLD COUNTRY STORE, INC")):
+            self.assertEqual(len(self.run_with(heading, issuer_name=issuer)["claims"]), 1, heading)
+
+    def test_q0_a_a_cik_linked_former_name_is_the_filer(self):
+        blocks = [{"document_id": "DOC-A", "block_id": "p1", "text": self.TEXT, "scope": "Old Name Corp"}]
+        item = claim(quote=self.TEXT, block_id="p1", document_id="DOC-A", metric="Net income",
+                     figures=["$11.5 million"], period="2025", note_ko="순이익이 기재되어 있다")
+        issuer = {"ticker": "NEW", "name": "New Name Inc.", "aliases": ["OLD NAME CORP/DE"]}
+        self.assertEqual(len(ctx.validate_draft({"claims": [item], "link": "unconfirmed"}, blocks, issuer)["claims"]), 1)
+        self.assertEqual(cf.same_entity("Old Name Corp", "New Name Inc."), None)
 
     def test_block_scopes_follow_document_order(self):
         blocks = cf.normalize_html(b"<p>Novanta reports results.</p><p>Runway Buyer, LLC CONSOLIDATED STATEMENT OF "

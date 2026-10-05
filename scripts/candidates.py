@@ -46,7 +46,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
 
 THESIS_KEY = "eps-revision-review:v1"
-GENERATOR_VERSION = "cards-v9"
+GENERATOR_VERSION = "cards-v10"
 TRANSLATION_PROMPT_VERSION = "company-ko-v1"
 CAN_PATTERN = re.compile(r"^CAN-[0-9A-Fa-f]{16}$")
 EXPLANATIONS = ("earnings_path", "persistence_evidence", "market_expectation_gap", "falsification", "next_check")

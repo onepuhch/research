@@ -167,6 +167,8 @@ def research(target: dict, client: cf.SecClient, state: dict, now: datetime, cfg
                 "notes": [f"submissions HTTP {error.code}"]}
     submissions = json.loads(body.decode("utf-8"))
     issuer["name"] = submissions.get("name") or issuer.get("name")
+    # Names the SEC links to this CIK: a statement heading under a former name is still the filer's.
+    issuer["aliases"] = [x["name"] for x in submissions.get("formerNames") or [] if x.get("name")]
     filings = choose_filings(cf.recent_filings(submissions, now.date(), cfg["lookback_days"], cfg.get("update_days")),
                              cfg)
     cap, update_cap = cfg["documents_per_company"], cfg.get("update_documents_per_company", 2)
@@ -386,7 +388,7 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
 # ------------------------------------------------------------------ G2 drafts
 
 PROMPT_VERSION = "context-ko-v4"
-PARSER_VERSION = "context-check-v10"
+PARSER_VERSION = "context-check-v11"
 KINDS = ("fact", "guidance", "interpretation")
 SUBJECTS = ("issuer", "subsidiary", "segment", "customer", "other")
 DRIVERS = ("volume", "price", "mix", "margin_cost", "capacity", "backlog", "buyback_sharecount", "tax", "fx",
@@ -1020,7 +1022,7 @@ def check_item(item: dict, blocks: dict, issuer: dict, what: str, scopes: dict |
         return "quote_not_in_block", {}
     heading = (scopes or {}).get(key)
     if heading:  # the block sits under a financial-statement heading (P0)
-        same = cf.same_entity(heading, issuer.get("name"))
+        same = cf.same_entity(heading, issuer.get("name"), issuer.get("aliases"))
         if same is None:
             return "subject_unverified", {}
         if not same:
@@ -1159,7 +1161,7 @@ def validate_draft(answer: dict, blocks: list[dict], issuer: dict | None = None)
 
 
 # Stored drafts of these validator versions are re-checked with the current one when read (L1 4.2).
-REVALIDATED_VERSIONS = ("context-check-v7", "context-check-v8", "context-check-v9")
+REVALIDATED_VERSIONS = ("context-check-v7", "context-check-v8", "context-check-v9", "context-check-v10")
 
 
 class RevalidationUnavailable(ValueError):
