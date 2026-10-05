@@ -1,5 +1,13 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-05 KST(18시대). **Q0~Q3 구현 완료, 운영 미반영(다음 정상 일간부터)**: [Q 인수인계](docs/q_handoff_2026-10-05.md) · [진행 기록](docs/q_progress_2026-10-05.md). 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
+  - Q0-A(a859a11, subject-check-v2·context-check-v11·context-v11·cards-v10): 이름 전체가 같거나 CIK 이전 이름일 때만 같은 회사, 단어 일부만 겹치면 미확인으로 보류. Q0-B(d741168): 상태 영역 경로 규칙과 원격 커밋 전체 경로 검사, 재시도 1회, 실패 시 bundle 보존.
+  - Q1(be69f3e, update-check-v4·material-update-v2): 검색 적격과 알림 적격 분리, 사건 날짜(문장·보도자료 날짜), 전망 유지·확정 실적 제외, 같은 키의 실제 가이던스 변경만 인정(실적 발표 포함), A만 알린 경우 B 기준 유지, uncertain 잠금, failed는 고정 내용으로 재시도. 원장 v1→v2 이전은 한 번만, 백업 포함.
+  - Q2(4755fbb): 503 2회 → 30분 공용 대기, 탐색 실패마다 60/120/240/360분, 429 우선, 예산 유지. 같은 날 초안 전용 재개(SEC 0)는 하루 최대 2회.
+  - Q3(18ab8a2, discovery-timing-v2·views-v4): 성과 기준 population(첫 통과)·card·alert을 고정하고 섞지 않음. 새 일간 단계 `candidate_prices`는 Yahoo 하루 20회·120초, 카드·알림 기업 먼저 FIFO로 수집.
+  - 재현 스크립트: 수정 전 열린 경계 6건 → 수정 후 0건(`data/eval/q_2026-10-05/probe_after.json`). 시험 550개 통과.
+  - 다음 확인: 다음 정상 일간의 실제 버전, material v2 이전 백업, 첫 후보 시세 배치, PBF 두 번째 확인과 10/9 이후 간격, CLBK 새 초안, folded 초안 몫, 503 재개.
+
 - 마지막 작업자: Codex, 2026-10-05 KST. 기준 HEAD `fcab8a9`. **P 운영 반영 인수, 경계 보완 후 최종 인수**: [Q 판정·후속 지시](docs/q_p_acceptance_and_reliability_followup_2026-10-05.md). 진행 중인 쓰기/시험 없음. 이번 변경은 Q 문서·합성 재현·결과 JSON·STATUS만 로컬 미커밋이다. 운영 코드·원장·카드 변경, push, 모델/SEC/Yahoo 요청·외부 발송 없음.
   - 직접 검증: Python 516개(35.603초) OK. 최신 CI `37271813121`(`fcab8a9`)의 Linux·Windows·날짜7개 success와 정상 일간 `37269585919` success를 GitHub API로 확인. cards-v9/33개·folded5·정유3+5+1·PBF 효과/첫날대기·CLBK 현재격리·SIG-0900 제외·INDV/HIPO/OSCR sent·사후127곳/대표44곳을 보관 상태와 대조했다.
   - 추가 경계6건을 Python/임시 bare remote로 재현: 옛 사건의 새 제출과 전망 유지도 A 후보, A-only 뒤 B 기준 이동(1.00→1.30→1.31이 +31% 대신 +0.77%), 추후 카드 진입 시 성과 시작일 이동, 공통 이름 단어만으로 주체 동일 판정, 원격 새 상태 파일이 복구 차단에서 누락. [수정 전 증거](data/eval/q_2026-10-05/probe_before.json). 실제 오발송6건이라는 뜻이 아니며 기존516개는 통과다.
