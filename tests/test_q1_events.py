@@ -31,7 +31,9 @@ class AlertJudgmentTest(unittest.TestCase):
         self.assertEqual(self.one(DATE, "AAA reaffirmed its unchanged revenue outlook of $50 million for fiscal 2027.")
                          ["alert_reason"], "guidance_unchanged")
         self.assertEqual(self.one(DATE, "AAA raises fiscal 2027 revenue guidance to $150 million.")["alert_reason"],
-                         "guidance_no_prior_value")
+                         "guidance_prior_unverified")  # a raise claimed without a comparable earlier value
+        self.assertEqual(cf.guidance_change("AAA expects fiscal 2027 revenue of $150 million.")["status"],
+                         "no_prior_value")  # a first outlook
         self.assertEqual(self.one(DATE, "AAA updates fiscal 2027 revenue guidance from $130 million - $150 million to "
                                         "$120 million - $160 million.")["alert_reason"], "guidance_mixed_range")
 
@@ -187,3 +189,49 @@ class BaselineSplitTest(MaterialFixture):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GuidanceR0Test(unittest.TestCase):
+    """R0 (update-check-v5): the change's own date, the outlook's own period and an own prior outlook."""
+
+    def one(self, *paragraphs, prior=None):
+        events = cf.business_events(blocks(*paragraphs), "AAA Inc.", prior)
+        self.assertEqual(len(events), 1, events)
+        return events[0]
+
+    def test_retold_change_keeps_its_date_and_the_event_year_is_not_the_period(self):
+        e = self.one(DATE, "On September 1, 2026, AAA raised fiscal 2027 revenue guidance from $130 million to $150 million.")
+        self.assertEqual((e["event_date"], e["date_precision"]), ("2026-09-01", "day"))
+        self.assertEqual(e["guidance"]["key"]["period"], "FY2027")
+        fy_end = self.one(DATE, "AAA raises revenue guidance for the fiscal year ending June 25, 2027 to $150 million "
+                                "from $130 million.")
+        self.assertEqual((fy_end["event_date"], fy_end["date_precision"]), ("2026-10-09", "document"))
+
+    def test_quarter_annual_and_other_quarters_are_not_compared(self):
+        q3 = cf.guidance_statements(blocks("AAA expects third-quarter 2027 revenue of $130 million."))
+        self.assertEqual(q3[0]["key"]["period"], "FY2027-Q3")
+        annual = self.one(DATE, "AAA raises fiscal 2027 revenue guidance to $150 million.", prior=q3)
+        self.assertEqual(annual["alert_reason"], "guidance_prior_unverified")
+        q4 = self.one(DATE, "AAA raises fourth-quarter 2027 revenue guidance to $40 million.", prior=q3)
+        self.assertEqual(q4["alert_reason"], "guidance_prior_unverified")
+        same_q = self.one(DATE, "AAA raises third-quarter 2027 revenue guidance to $140 million.", prior=q3)
+        self.assertEqual((same_q["alert_eligible"], same_q["guidance"]["direction"]), (True, "up"))
+
+    def test_gaap_basis_and_currency_differences_are_not_compared(self):
+        adjusted = cf.guidance_statements(blocks("AAA expects fiscal 2027 adjusted EBITDA of $30 million."))
+        self.assertFalse(self.one(DATE, "AAA raises fiscal 2027 EBITDA guidance to $35 million.", prior=adjusted)
+                         ["alert_eligible"])
+        self.assertIsNone(cf.guidance_key("AAA raises fiscal 2027 revenue guidance to 150 million."))  # no currency
+
+    def test_another_entitys_outlook_is_not_a_prior_and_an_own_prior_keeps_its_place(self):
+        other = cf.guidance_statements(blocks("Other Buyer LLC CONSOLIDATED STATEMENTS OF OPERATIONS. "
+                                              "Other expects fiscal 2027 revenue of $130 million."), "AAA Inc.")
+        self.assertEqual(other, [])
+        own = cf.guidance_statements(blocks("NEW YORK, July 30, 2026 -- AAA reports.",
+                                            "AAA expects fiscal 2027 revenue of $130 million."), "AAA Inc.")
+        self.assertEqual((own[0]["block_id"], own[0]["document_date"]), ("p2", "2026-07-30"))
+        e = self.one(DATE, "AAA raises fiscal 2027 revenue guidance to $150 million.",
+                     prior=[{**own[0], "document_id": "DOC-OLD"}])
+        self.assertEqual((e["alert_eligible"], e["guidance"]["prior"]["document_id"], e["guidance"]["prior"]["block_id"]),
+                         (True, "DOC-OLD", "p2"))
+        self.assertEqual(e["guidance"]["old"], [130.0, 130.0])

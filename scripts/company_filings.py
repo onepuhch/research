@@ -415,7 +415,7 @@ def block_scopes(blocks: list[dict]) -> dict[str, str]:
     return scopes
 
 
-UPDATE_CHECK_VERSION = "update-check-v4"
+UPDATE_CHECK_VERSION = "update-check-v5"
 # One sentence must state the business event and carry its number (P1-A): words spread over a document
 # no longer add up. A sentence about a dividend, buyback, borrowing, credit agreement, pay or litigation
 # is never an update, even if it says 'increases' or 'capacity'.
@@ -483,8 +483,14 @@ ANNOUNCE = re.compile(r"\b(?:today|announc\w*|(?:has|have|was|were) (?:been )?aw
 GUIDE_METRIC = re.compile(r"\b(net revenues?|revenues?|net sales|sales|adjusted ebitda|ebitda|adjusted (?:diluted )?eps|"
                           r"(?:diluted )?eps|earnings per share|adjusted net income|net income|operating income|"
                           r"free cash flow|capital expenditures?|capex|gross margin|operating margin)\b")
-GUIDE_PERIOD = re.compile(r"\b(?:fiscal(?: year)?|full[- ]year|fy)\s*'?(20\d\d|\d\d)\b|\b(20\d\d)\s+(?:full[- ]year|fiscal year)\b|"
-                          r"\b(?:for|in)\s+(20\d\d)\b|\b(20\d\d)\b")
+# The outlook's own period (R0): a quarter stays a quarter, and a year elsewhere in the sentence (an event
+# date such as 'On September 1, 2026') is never taken for the target period.
+QUARTER_NAMES = {"first": 1, "second": 2, "third": 3, "fourth": 4, "q1": 1, "q2": 2, "q3": 3, "q4": 4}
+GUIDE_QUARTER = re.compile(r"\b(first|second|third|fourth)[- ]quarter(?:\s+of)?(?:\s+fiscal(?:\s+year)?)?\s+'?(20\d\d)\b|"
+                           r"\b(q[1-4])\s+(?:of\s+)?(?:fiscal(?:\s+year)?\s+|fy\s*)?'?(20\d\d|\d\d)\b")
+GUIDE_YEAR = re.compile(r"\b(?:fiscal(?: year)?|full[- ]year|fy)\s*'?(20\d\d|\d\d)\b|\b(20\d\d)\s+(?:full[- ]year|fiscal year)\b|"
+                        r"\b(20\d\d)\s+(?:[a-z-]+\s+){0,3}(?:guidance|outlook)\b|"
+                        r"\bfiscal year end(?:ing|ed)\s+[a-z]+\s+\d{1,2},\s+(20\d\d)\b")
 MONEY = r"\$\s?(\d[\d,]*(?:\.\d+)?)\s*(million|billion)?"
 MONEY_RANGE = re.compile(MONEY + r"(?:\s*(?:to|-|–|—|and)\s*\$?\s?(\d[\d,]*(?:\.\d+)?)\s*(million|billion)?)?")
 CHANGE_FROM_TO = re.compile(r"\bfrom\s+(" + MONEY_RANGE.pattern + r")\s+to\s+(" + MONEY_RANGE.pattern + r")")
@@ -510,19 +516,33 @@ def money_range(text: str) -> list[float] | None:
 
 
 def guidance_key(sentence: str) -> dict | None:
+    """Metric, the outlook's own period (annual FY or one fiscal quarter), currency, unit and GAAP basis;
+    None when any of them cannot be read (never a guessed period or currency)."""
     s = sentence.lower()
     metric = GUIDE_METRIC.search(s)
-    period = GUIDE_PERIOD.search(s)
-    if not metric or not period:
+    quarter = GUIDE_QUARTER.search(s)
+    if not metric:
         return None
-    year = next(g for g in period.groups() if g)
-    year = year if len(year) == 4 else "20" + year
+    if quarter:
+        name, year = (quarter.group(1), quarter.group(2)) if quarter.group(1) else (quarter.group(3), quarter.group(4))
+        year = year if len(year) == 4 else "20" + year
+        period = f"FY{year}-Q{QUARTER_NAMES[name]}"
+    else:
+        found = GUIDE_YEAR.search(s)
+        if not found:
+            return None
+        year = next(g for g in found.groups() if g)
+        year = year if len(year) == 4 else "20" + year
+        period = f"FY{year}"
+    currency = "USD" if "$" in sentence else "EUR" if "€" in sentence else "GBP" if "£" in sentence else None
+    if currency is None:
+        return None
     name = re.sub(r"\b(?:adjusted|diluted)\s+", "", metric.group(1)).replace("earnings per share", "eps")
     name = {"revenues": "revenue", "net revenue": "revenue", "net revenues": "revenue", "net sales": "sales",
             "capital expenditure": "capex", "capital expenditures": "capex"}.get(name, name)
     gaap = "non-GAAP" if re.search(r"\badjusted\b|\bnon-gaap\b", s) else "unspecified"
     unit = "per_share" if name == "eps" else "pct" if "margin" in name else "usd_millions"
-    return {"metric": name, "period": f"FY{year}", "gaap": gaap, "unit": unit, "currency": "USD"}
+    return {"metric": name, "period": period, "gaap": gaap, "unit": unit, "currency": currency}
 
 
 def range_direction(old: list[float], new: list[float]) -> str:
@@ -570,23 +590,34 @@ def guidance_change(sentence: str, prior: list[dict] | None = None) -> dict:
             if same and out["new"]:
                 out["old"] = same[-1]["new"]
                 out["prior_document"] = same[-1].get("document_id")
+                # Where the earlier value was stated: document, block, quote, date and subject (R0).
+                out["prior"] = {k: same[-1].get(k) for k in ("document_id", "block_id", "sentence", "document_date",
+                                                             "filed_at", "subject", "key")}
                 out["direction"] = range_direction(out["old"], out["new"])
+            elif out["new"] and re.search(r"\b(?:rais|increas|lift|lower|reduc|cut)\w*", low):
+                out["status_hint"] = "prior_unverified"  # a change is claimed, but no comparable earlier value
     if out["direction"] in ("up", "down"):
         out["status"] = "changed"
     elif out["direction"] == "mixed":
         out["status"] = "mixed_range"
     elif out["direction"] == "unchanged":
         out["status"] = "unchanged"
+    elif out.pop("status_hint", None):
+        out["status"] = "prior_unverified"  # a change claim whose earlier value is not a comparable own outlook
     else:
-        out["status"] = "no_prior_value"  # a first outlook or a change claim without its earlier value
+        out["status"] = "no_prior_value"  # a first outlook
     return out
 
 
+PERIOD_END_BEFORE = re.compile(r"(?:ending|ended|end of|ends|through|thru|until|by)\s*$")
+
+
 def sentence_date(sentence: str) -> tuple[str | None, str | None]:
-    """The first date the sentence names ('In July 2025, ... through July 31, 2026' -> 2025-07)."""
+    """The first date the sentence names ('In July 2025, ... through July 31, 2026' -> 2025-07). A date that
+    ends a period ('fiscal year ending June 25, 2027', 'through December 31') is not an event date."""
     low = sentence.lower()
     found = [(m.start(), f"{m.group(3)}-{MONTHS.index(m.group(1)) + 1:02d}-{int(m.group(2)):02d}", "day")
-             for m in DAY_DATE.finditer(low)]
+             for m in DAY_DATE.finditer(low) if not PERIOD_END_BEFORE.search(low[max(0, m.start() - 20):m.start()])]
     found += [(m.start(), f"{m.group(2)}-{MONTHS.index(m.group(1)) + 1:02d}", "month") for m in MONTH_DATE.finditer(low)]
     if not found:
         return None, None
@@ -635,8 +666,13 @@ def alert_judgment(name: str, sentence: str, match_at: int, doc_date: str | None
             return {**out, "alert_reason": f"guidance_{change['status']}"}
         out["values"] = [change["key"]["period"], change["key"]["metric"], change["key"]["gaap"],
                          json.dumps(change["new"] or change["delta"])]
-        out.update(event_date=doc_date, date_precision="document" if doc_date else None)
-        return {**out, "alert_eligible": bool(doc_date), "alert_reason": None if doc_date else "event_date_unknown"}
+        # The change's own date first (a release retelling 'On September 1, 2026, ... raised' is that old
+        # change); only an undated change sentence takes the release dateline (R0).
+        date, precision = sentence_date(sentence)
+        if date is None:
+            date, precision = doc_date, "document" if doc_date else None
+        out.update(event_date=date, date_precision=precision)
+        return {**out, "alert_eligible": bool(date), "alert_reason": None if date else "event_date_unknown"}
     if REAFFIRM.search(low) or RESULT_COMPARISON.search(low):
         return {**out, "alert_reason": "restated_result_or_unchanged"}
     if PERIOD_RECOUNT.search(low):
@@ -682,21 +718,33 @@ def business_events(blocks: list[dict], issuer_name: str | None = None, prior: l
     return events
 
 
-def guidance_statements(blocks: list[dict], issuer_name: str | None = None) -> list[dict]:
-    """Outlook values a document states (any guidance sentence with a comparable key and values), the
-    'prior' a later document's outlook is compared with."""
+def guidance_statements(blocks: list[dict], issuer_name: str | None = None, aliases=()) -> list[dict]:
+    """Outlook values a document states as the filer's own (the 'prior' a later outlook is compared with):
+    the same subject check as the new outlook (R0) -- no block under another or an unconfirmed entity's
+    statements, nothing after an 'About <company>' heading or in legal notices -- with the block and quote."""
     out = []
+    scopes = block_scopes(blocks)
+    doc_date = document_date(blocks)
     for block in blocks[:400]:
         if block.get("kind") != "p":
+            continue
+        low_block = block_text(block).lower().strip()
+        if ABOUT_HEADING.match(low_block) and len(low_block.split()) <= 8:
+            break
+        if any(w in low_block for w in BOILERPLATE_WORDS):
+            continue
+        heading = scopes.get(block.get("id"))
+        if heading and same_entity(heading, issuer_name, aliases) is not True:
             continue
         for sentence in re.split(r"(?<=[.;])\s+", block_text(block)):
             low = sentence.lower()
             if re.search(r"\b(?:guidance|outlook|expects?)\b", low) and "$" in sentence:
                 key = guidance_key(sentence)
                 change = guidance_change(sentence)
-                new = change["new"] or (money_range(sentence) if change["status"] in ("no_prior_value", "unchanged") else None)
+                new = change["new"] or (money_range(sentence) if change["status"] in ("no_prior_value", "prior_unverified", "unchanged") else None)
                 if key and new:
-                    out.append({"key": key, "new": new, "sentence": sentence.strip()[:300]})
+                    out.append({"key": key, "new": new, "sentence": sentence.strip()[:300],
+                                "block_id": block.get("id"), "document_date": doc_date, "subject": issuer_name})
     return out
 
 

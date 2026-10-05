@@ -1,0 +1,200 @@
+{
+ "documents": 75,
+ "rule_before": "update-check-v4",
+ "rule_after": "update-check-v5",
+ "changes": [
+  {
+   "document_id": "DOC-16EEC0F8F2129A3A",
+   "issuer": "Pagaya Technologies Ltd.",
+   "filed_at": "2026-07-30",
+   "block_id": "p3",
+   "sentence": "Pagaya Reports Second Quarter 2026 Results & Raises Full-Year Net Income Guidance Reported record performance across key metrics • $45 million GAAP net income;",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_prior_value",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_prior_unverified",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-16EEC0F8F2129A3A",
+   "issuer": "Pagaya Technologies Ltd.",
+   "guidance_statements_dropped": [
+    "Third Quarter 2026 Outlook 3Q26 Network Volume Expected to be between $3.425 billion and $3.625 billion Total Revenue and Other Income Expected to be between $370 million and $390 million Adjusted EBITDA Expected to be between $120 million and $130 million GAAP Net Income Expected to be between $42 "
+   ],
+   "added": []
+  },
+  {
+   "document_id": "DOC-3563CA2BB442B25A",
+   "issuer": "AMC Global Media Inc.",
+   "guidance_statements_dropped": [
+    "In each of 2026 and 2027, the Company expects to recognize annual revenue related to the license agreement between $200 million to $225 million."
+   ],
+   "added": []
+  },
+  {
+   "document_id": "DOC-668EE132B5D00A32",
+   "issuer": "CORCEPT THERAPEUTICS INC",
+   "filed_at": "2026-07-29",
+   "block_id": "p16",
+   "sentence": "We anticipate continued strength across our businesses and have increased our 2026 revenue guidance to $1.1 – $1.2 billion,” said Joseph K.",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_prior_value",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_prior_unverified",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-668EE132B5D00A32",
+   "issuer": "CORCEPT THERAPEUTICS INC",
+   "filed_at": "2026-07-29",
+   "block_id": "p8",
+   "sentence": "•Increase in 2026 revenue guidance to $1.1 – $1.2 billion",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_prior_value",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_prior_unverified",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-8369D977BE877B2D",
+   "issuer": "TALOS ENERGY INC.",
+   "filed_at": "2026-08-05",
+   "block_id": "p218",
+   "sentence": "The Shell Purchase Agreement also provides for (i) a price-based upside sharing arrangement and a commitment of 100% of oil volumes through December 31, 2027 via a crude oil purchase agreement with a Shell affiliate, (ii) a 1.25% overriding royalty interest granted to Shell for production from certa",
+   "v4": {
+    "alert_eligible": true,
+    "alert_reason": null,
+    "event_date": "2027-12-31"
+   },
+   "v5": {
+    "alert_eligible": true,
+    "alert_reason": null,
+    "event_date": "2026-06-30"
+   }
+  },
+  {
+   "document_id": "DOC-99C179A86297DD8F",
+   "issuer": "UroGen Pharma Ltd.",
+   "filed_at": "2026-08-05",
+   "block_id": "p21",
+   "sentence": "2026 JELMYTO Revenue and Updated Company Operating Expense Guidance: The Company continues to expect 2026 net product revenue for JELMYTO to be in the range of $97 million to $101 million.",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_unchanged",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_comparable_key",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-99C179A86297DD8F",
+   "issuer": "UroGen Pharma Ltd.",
+   "guidance_statements_dropped": [
+    "2026 JELMYTO Revenue and Updated Company Operating Expense Guidance: The Company continues to expect 2026 net product revenue for JELMYTO to be in the range of $97 million to $101 million."
+   ],
+   "added": []
+  },
+  {
+   "document_id": "DOC-9BCC3ED21F2A62D7",
+   "issuer": "DANA Inc",
+   "guidance_statements_dropped": [
+    "Eaton Mobility Transaction Update Key Transaction Elements Highly strategic combination – Brings together two companies with complementary product portfolios – Creates a focused, scaled powertrain leader, accelerating Dana 2030 plan Expect to achieve at least $250M of run-rate cost synergies within ",
+    "EPS revised lower as higher earnings more than offset by higher D&A and Adjusted EBITDA ~$825M ±$25M interest expense, and lower Increased $25M equity earnings Adjusted free cash flow Implied adjusted EBITDA consistent with last year, as ~10.6% benefits of the Off-Highway margin divestiture offset t"
+   ],
+   "added": []
+  },
+  {
+   "document_id": "DOC-9FC60A7023735EC9",
+   "issuer": "PBF Energy Inc.",
+   "filed_at": "2026-07-30",
+   "block_id": "p21",
+   "sentence": "As a result, we are reducing our 2026 capital expenditure guidance to $825-$875 million for the year, excluding capital related to the Martinez rebuild.",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_prior_value",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_prior_unverified",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-BA022B8E3B6B6141",
+   "issuer": "Intrepid Potash, Inc.",
+   "filed_at": "2026-08-04",
+   "block_id": "p15",
+   "sentence": "•Lowered full-year 2026 capital expenditure guidance to approximately $40 million.",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_prior_value",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_prior_unverified",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-BA022B8E3B6B6141",
+   "issuer": "Intrepid Potash, Inc.",
+   "guidance_statements_dropped": [
+    "We now expect 2026 capital expenditures of approximately $40 million."
+   ],
+   "added": []
+  },
+  {
+   "document_id": "DOC-D95B2ED009DF6F03",
+   "issuer": "Hippo Holdings Inc.",
+   "filed_at": "2026-07-30",
+   "block_id": "p3",
+   "sentence": "Our elevated confidence in the ability to execute as a unified, technology-native insurance platform has led us to increase guidance for full year 2026 where we now expect over $1.65 billion of gross written premium with upwards of $70 million of adjusted net income.” 1",
+   "v4": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_no_prior_value",
+    "event_date": null
+   },
+   "v5": {
+    "alert_eligible": false,
+    "alert_reason": "guidance_prior_unverified",
+    "event_date": null
+   }
+  },
+  {
+   "document_id": "DOC-D95B2ED009DF6F03",
+   "issuer": "Hippo Holdings Inc.",
+   "guidance_statements_dropped": [
+    "Prior Updated 2026 FY Guidance 2026 FY Guidance Gross Written Premium $1.45 - $1.525B $1.65 - $1.7B Net Written Premium $520 - $550M $565 - $580M Revenue $560 - $570M $580 - $585M Combined Ratio 103% - 105% 99% - 101% CAT Loss Ratio 13 % 10 % Adjusted Net Income (Loss)(1) $48 - $56M $62 - $70M Stock"
+   ],
+   "added": []
+  },
+  {
+   "document_id": "DOC-DCA2D5E4142540F1",
+   "issuer": "Compass Diversified Holdings",
+   "guidance_statements_dropped": [
+    "The outlook includes approximately $9 million of Adjusted EBITDA generated by the Sterno Food Service Business through its May 1, 2026 sale date."
+   ],
+   "added": []
+  }
+ ]
+}

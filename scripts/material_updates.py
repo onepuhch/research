@@ -187,8 +187,10 @@ def prior_guidance(records: list[dict], before: str) -> list[dict]:
     import company_filings as cf
     out = []
     for record in sorted((r for r in records if (r.get("filed_at") or "") < before), key=lambda r: r.get("filed_at") or ""):
-        out += [{**g, "document_id": record["document_id"]}
-                for g in cf.guidance_statements(record.get("blocks") or [], record.get("issuer_name"))]
+        issuer = record.get("issuer") or {}
+        out += [{**g, "document_id": record["document_id"], "filed_at": record.get("filed_at")}
+                for g in cf.guidance_statements(record.get("blocks") or [], record.get("issuer_name") or issuer.get("name"),
+                                                issuer.get("aliases") or ())]
     return out
 
 
