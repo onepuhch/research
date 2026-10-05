@@ -56,6 +56,7 @@ def commit_and_push(message=None):
     files += list((c.ROOT / 'data' / 'archive' / 'pre_columns').glob('*.csv'))
     files += list((c.DATA_DIR / 'research_journal').glob('*.json'))
     files += list((c.DATA_DIR / 'return_history').glob('*.json'))
+    files += list((c.DATA_DIR / 'candidate_prices').glob('*.json'))
     files += list((c.DATA_DIR / 'run_history').glob('*.json'))
     files += list((c.DATA_DIR / 'consensus_history').glob('*.json'))
     files += list((c.DATA_DIR / 'revision_screen').glob('*.json.gz'))

@@ -26,12 +26,13 @@ from __future__ import annotations
 
 import argparse
 import statistics
-from datetime import datetime, timezone
+import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import common as c
 
-VERSION = "discovery-timing-v1"
+VERSION = "discovery-timing-v2"
 HORIZONS = (30, 90, 180)
 PRICE_MISSING = "시세 미수집"
 
@@ -198,19 +199,216 @@ def own_eps_change(rec: dict) -> dict:
     return {"status": "관측", "pct": (b / a - 1) * 100, "days": days}
 
 
-def outcomes(rec: dict, batch: dict | None) -> dict[int, dict]:
+# ------------------------------------------------------------------ outcome definitions (Q3-A)
+
+# Each definition has its own fixed start; results of different definitions are never mixed.
+DEFINITIONS = {
+    "population": "최초 조건 통과 이후 첫 정규장 종가(모집단 기본, 카드 진입으로 바뀌지 않음)",
+    "card": "첫 대표 카드 이후 첫 정규장 종가(카드 경험 기업만)",
+    "alert": "첫 발송 영수증(sent) 이후 첫 정규장 종가(실제 알림 기업만)",
+}
+NO_START = {"card": "대표 카드 없음", "alert": "알림 영수증 없음"}
+
+
+def definition_start(rec: dict, definition: str) -> str | None:
+    if definition == "population":
+        return (rec.get("first_pass") or {}).get("observed_at")
+    if definition == "card":
+        return (rec.get("first_card") or {}).get("observed_at")
+    alert = rec.get("first_alert") or {}
+    return alert.get("at") if alert.get("status") == "sent" else None
+
+
+def outcomes(rec: dict, batch: dict | None, definition: str = "population") -> dict[int, dict]:
+    """research_returns.compare from the definition's own fixed start; a missing start is its own state
+    (never replaced by another definition's start)."""
     import research_returns
-    start = (rec.get("first_card") or rec.get("first_pass") or {}).get("observed_at")
-    if not batch or rec["ticker"] not in batch.get("series", {}):
-        return {h: {"status": PRICE_MISSING} for h in HORIZONS}
+    start = definition_start(rec, definition)
+    if start is None:
+        return {h: {"status": NO_START.get(definition, "기준 시각 없음"), "outcome_definition": definition} for h in HORIZONS}
+    if not batch or rec["ticker"] not in batch.get("series", {}) or "SPY" not in batch.get("series", {}):
+        return {h: {"status": PRICE_MISSING, "outcome_definition": definition} for h in HORIZONS}
     cohort = {"ticker": rec["ticker"], "captured_at": start}
-    return {h: research_returns.compare(cohort, batch["series"][rec["ticker"]], batch["series"].get("SPY", {}),
-                                        batch["retrieved_at"], h) for h in HORIZONS}
+    return {h: {**research_returns.compare(cohort, batch["series"][rec["ticker"]], batch["series"]["SPY"],
+                                           batch["retrieved_at"], h), "outcome_definition": definition}
+            for h in HORIZONS}
 
 
-def latest_batch() -> dict | None:
-    files = sorted((c.DATA_DIR / "return_history").glob("*.json"))
-    return c.read_json(files[-1], None) if files else None
+# ------------------------------------------------------------------ candidate prices (Q3-B)
+
+PRICE_DEFAULTS = {"requests_per_day": 20, "time_budget_s": 120, "timeout_s": 15, "min_interval_s": 0.5,
+                  "start_pad_days": 7, "stop_after_5xx": 2}
+
+
+def price_settings() -> dict:
+    return {**PRICE_DEFAULTS, **c.policy().get("candidate_prices", {})}
+
+
+def price_dir() -> Path:
+    return c.DATA_DIR / "candidate_prices"
+
+
+def queue_path() -> Path:
+    return price_dir() / "queue.json"
+
+
+def price_batches() -> list[dict]:
+    """Stored batches, oldest first: candidate batches and the tracked-company batches (same format)."""
+    files = sorted(price_dir().glob("2*.json")) + sorted((c.DATA_DIR / "return_history").glob("*.json"))
+    batches = [c.read_json(p, None) for p in files]
+    return sorted((b for b in batches if b and b.get("retrieved_at")), key=lambda b: b["retrieved_at"])
+
+
+def batch_for(ticker: str, batches: list[dict]) -> dict | None:
+    """The latest batch holding this ticker and SPY, used whole: prices from different retrievals are
+    never joined (adjusted closes can be revised). A newer failed batch never hides an older valid one."""
+    for batch in reversed(batches):
+        series = batch.get("series") or {}
+        if series.get(ticker) and series.get("SPY"):
+            return batch
+    return None
+
+
+def price_queue(store: dict, queue: dict) -> list[str]:
+    """The fixed collection order: the first build orders today's identified companies (card or alert
+    experience first, then first pass time); later entrants are appended in first-pass order (FIFO).
+    Departed companies stay."""
+    records = [r for r in store["records"].values() if r.get("entity_id") and r.get("first_pass")]
+    by_pass = sorted(records, key=lambda r: (r["first_pass"]["observed_at"], r["ticker"]))
+    if not queue.get("order"):
+        first = [r for r in by_pass if r.get("first_card") or r.get("first_alert")]
+        queue["order"] = [r["ticker"] for r in first] + [r["ticker"] for r in by_pass if r not in first]
+        queue["fixed_at"] = c.utc_now()
+    else:
+        known = set(queue["order"])
+        queue["order"] += [r["ticker"] for r in by_pass if r["ticker"] not in known]
+    return queue["order"]
+
+
+def end_confirmed(due: str, now: datetime) -> bool:
+    """The first regular session on or after 'due' has closed (and an hour passed) by now."""
+    import market_calendar
+    day = datetime.fromisoformat(due).date()
+    for _ in range(10):
+        close = market_calendar.close_time(day)
+        if close:
+            return close + timedelta(hours=1) <= now
+        day += timedelta(days=1)
+    return False
+
+
+def needs_prices(rec: dict, batch: dict | None, now: datetime) -> bool:
+    """No stored prices yet, or an evaluation end close (or the start close) is confirmed by now but not
+    in the stored batch. A data gap inside a batch is a state, not a reason to ask again every day.
+    False once every definition with a start is evaluated for all horizons."""
+    if batch is None:
+        return True
+    retrieved = datetime.fromisoformat(batch["retrieved_at"])
+    for definition in DEFINITIONS:
+        for result in outcomes(rec, batch, definition).values():
+            if (result["status"] == "평가일 대기" and end_confirmed(result["due"], now)
+                    and not end_confirmed(result["due"], retrieved)):
+                return True
+            if result["status"] == "기준 종가 대기" and retrieved.date() < now.date():
+                return True
+    return False
+
+
+def yahoo_fetch(url: str, timeout: float) -> dict:
+    from urllib.request import Request, urlopen
+    with urlopen(Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout) as response:
+        return json.load(response)
+
+
+def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=None) -> dict:
+    """At most requests_per_day Yahoo requests a KST day (SPY, failures and retries included), sequential,
+    within time_budget_s, each counted before it is sent; a 429 or stop_after_5xx consecutive 5xx ends
+    today's collection. One SPY request per batch. Raw payloads are kept with the batch."""
+    import time
+    from urllib.error import HTTPError
+    import research_returns
+    now = now or datetime.now(timezone.utc)
+    fetch, sleep, clock = fetch or yahoo_fetch, sleep or time.sleep, clock or time.monotonic
+    cfg = price_settings()
+    store = load()
+    queue = c.read_json(queue_path(), {"order": [], "days": {}})
+    order = price_queue(store, queue)
+    day = now.astimezone(timezone(timedelta(hours=9))).date().isoformat()
+    used = queue.setdefault("days", {}).setdefault(day, {"requests": 0})
+    batches = price_batches()
+    by_ticker = {r["ticker"]: r for r in store["records"].values() if r.get("entity_id")}
+    due = [t for t in order if t in by_ticker and needs_prices(by_ticker[t], batch_for(t, batches), now)]
+    report = {"due": len(due), "requests": 0, "collected": 0, "failures": 0, "stopped": None}
+    if not due or used["requests"] >= cfg["requests_per_day"]:
+        report["stopped"] = "nothing_due" if not due else "daily_requests"
+        c.atomic_json(queue_path(), queue)
+        return report
+    deadline = clock() + cfg["time_budget_s"]
+    batch = {"retrieved_at": now.isoformat(), "kind": "candidate", "series": {}, "sources": {}, "failures": []}
+    fivexx = 0
+
+    def request(ticker: str, start: datetime) -> str | None:
+        nonlocal fivexx
+        if used["requests"] >= cfg["requests_per_day"]:
+            return "daily_requests"
+        if clock() + cfg["timeout_s"] > deadline:
+            return "time_budget"
+        used["requests"] += 1
+        report["requests"] += 1
+        c.atomic_json(queue_path(), queue)  # counted before it is sent
+        url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?period1={int(start.timestamp())}"
+               f"&period2={int(now.timestamp())}&interval=1d&events=div%2Csplits&includeAdjustedClose=true")
+        try:
+            payload = fetch(url, cfg["timeout_s"])
+            batch["series"][ticker] = research_returns.parse(payload, ticker, now.isoformat())
+            batch["sources"][ticker] = {"url": url, "payload": payload}
+            fivexx = 0
+        except HTTPError as error:
+            batch["failures"].append({"ticker": ticker, "error_type": "HTTPError", "http_status": error.code})
+            if error.code == 429:
+                return "rate_limited"
+            fivexx = fivexx + 1 if error.code >= 500 else 0
+            if fivexx >= cfg["stop_after_5xx"]:
+                return "server_errors"
+        except (OSError, ValueError, KeyError, TypeError, IndexError, OverflowError) as error:
+            batch["failures"].append({"ticker": ticker, "error_type": type(error).__name__})
+        sleep(cfg["min_interval_s"])
+        return None
+
+    starts = {t: datetime.fromisoformat(by_ticker[t]["first_pass"]["observed_at"]) for t in due}
+    earliest = min(starts.values()) - timedelta(days=cfg["start_pad_days"])
+    stop = request("SPY", earliest)
+    if stop is None and "SPY" not in batch["series"]:
+        stop = "spy_missing"  # a batch without SPY cannot be compared; the tickers wait for tomorrow
+    for ticker in due if stop is None else []:
+        stop = request(ticker, earliest)
+        if stop:
+            break
+    report.update(stopped=stop, collected=len([t for t in batch["series"] if t != "SPY"]), failures=len(batch["failures"]))
+    if batch["series"] or batch["failures"]:
+        price_dir().mkdir(parents=True, exist_ok=True)
+        c.atomic_json(price_dir() / (now.strftime("%Y%m%dT%H%M%S%f") + ".json"), batch)
+    c.atomic_json(queue_path(), queue)
+    return report
+
+
+def price_summary(store: dict, batches: list[dict]) -> dict:
+    records = [r for r in store["records"].values()]
+    held = {r["ticker"] for r in records if batch_for(r["ticker"], batches)}
+    queue = c.read_json(queue_path(), {"order": []})
+    failed = {f["ticker"] for b in batches if b.get("kind") == "candidate" for f in b.get("failures", [])} - held
+    state_of = lambda r: "card" if r.get("first_card") else "folded" if r.get("first_folded") else "outside"  # noqa: E731
+    by_state = {}
+    for r in records:
+        if r.get("entity_id"):
+            s = by_state.setdefault(state_of(r), [0, 0])
+            s[0] += 1
+            s[1] += r["ticker"] in held
+    identified = [r for r in records if r.get("entity_id")]
+    return {"targets": len(identified), "held": len([r for r in identified if r["ticker"] in held]),
+            "waiting": len([r for r in identified if r["ticker"] not in held and r["ticker"] not in failed]),
+            "failed": len(failed), "unidentified": len(records) - len(identified), "by_state": by_state,
+            "queue_fixed_at": queue.get("fixed_at")}
 
 
 def median_text(values: list[float], unit: str, digits: int = 1) -> str:
@@ -221,7 +419,7 @@ def median_text(values: list[float], unit: str, digits: int = 1) -> str:
 def render(store: dict | None = None) -> str:
     store = store or load()
     records = list(store["records"].values())
-    batch = latest_batch()
+    batches = price_batches()
     lines = ["## 발견 시점과 이후 결과 (최소 기록)", "",
              f"조건 통과 기업 전체가 모집단입니다(대표 카드·업종 묶음·일반 순위 밖, 이탈 기업 포함). 기록 시작 "
              f"{store.get('created_at') or '-'}; 그 전에 처음 관측된 기업은 저장 스냅샷에서 복원한 **사후(retrospective)** 기록입니다. "
@@ -243,25 +441,37 @@ def render(store: dict | None = None) -> str:
     eps = [own_eps_change(r) for r in records]
     lines.append(f"- 첫 통과 이후 자체 관측 EPS(같은 비교 키): 관측 {sum(e['status'] == '관측' for e in eps)}곳, "
                  f"기준 변경 {sum(e['status'] == '비교 기준 변경' for e in eps)}곳, 단일 관측 {sum(e['status'] == '단일 관측' for e in eps)}곳")
-    lines += ["", "이후 주가(첫 대표 카드, 없으면 첫 통과 이후 첫 정규장 종가 기준, SPY 비교, 왕복 0.20%p; 기존 성과 정의):"]
-    results = [outcomes(r, batch) for r in records]
-    for h in HORIZONS:
-        statuses: dict[str, int] = {}
-        for res in results:
-            statuses[res[h]["status"]] = statuses.get(res[h]["status"], 0) + 1
-        lines.append(f"- {h}일: " + ", ".join(f"{k} {v}" for k, v in sorted(statuses.items())))
-    missing = sorted({r["ticker"] for r, res in zip(records, results) if res[30]["status"] == PRICE_MISSING})
-    lines += ["", f"보관 시세가 없는 기업 {len(missing)}곳: 성과를 계산하려면 종목당 Yahoo 일봉 요청 1회(총 약 {len(missing)}회)가 "
-              "필요합니다. 일간 자동 수집에는 추가하지 않았습니다(다음 변경에서 결정).", ""]
+    lines += ["", "이후 주가(기존 성과 정의: 30/90/180 달력일, USD 조정 종가, SPY 비교, 왕복 0.20%p). 기준마다 시작 시각이 고정되며 서로 섞지 않습니다:"]
+    for definition, label in DEFINITIONS.items():
+        lines.append(f"- {label}")
+        for h in HORIZONS:
+            statuses: dict[str, int] = {}
+            for r in records:
+                status = outcomes(r, batch_for(r["ticker"], batches), definition)[h]["status"]
+                statuses[status] = statuses.get(status, 0) + 1
+            lines.append(f"  - {h}일: " + ", ".join(f"{k} {v}" for k, v in sorted(statuses.items())))
+    p = price_summary(store, batches)
+    states = " · ".join(f"{name} {held}/{total}" for name, (total, held) in sorted(p["by_state"].items()))
+    lines += ["", f"후보 시세 보관: 대상 {p['targets']}곳 중 보유 {p['held']} · 대기 {p['waiting']} · 실패 {p['failed']} · "
+              f"식별 불가 {p['unidentified']} (상태별 보유/대상: {states}). 하루 추가 요청 {price_settings()['requests_per_day']}회 이내로 "
+              "대표 카드·알림 경험 기업부터 순서대로 수집합니다. 시세가 없는 기업을 분모에서 빼지 않습니다.", ""]
     return "\n".join(lines)
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--render", action="store_true", help="report only; the store is not updated")
+    parser.add_argument("--collect-prices", action="store_true",
+                        help="update the store, then fetch the day's share of candidate prices (Yahoo, budgeted)")
     args = parser.parse_args(argv)
     if not args.render:
         print(f"[discovery_timing] {update()}")
+    if args.collect_prices:
+        report = collect_prices()
+        trouble = report["failures"] or report["stopped"] in ("rate_limited", "server_errors", "spy_missing")
+        c.record_run("candidate_prices", "degraded" if trouble else "success", **report)
+        print(f"[candidate_prices] {report}")
+        return 0
     from gen_report import save
     print(save("discovery_timing", render()))
     return 0

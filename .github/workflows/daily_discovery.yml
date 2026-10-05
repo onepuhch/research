@@ -124,6 +124,10 @@ jobs:
       - name: Evaluate research price returns
         if: always() && steps.plan.outcome == 'success' && env.RUN_RETURNS == 'true'
         run: python scripts/daily_run_state.py step returns -- python scripts/research_returns.py
+      - name: Collect candidate prices (budgeted share)
+        # At most 20 Yahoo requests a KST day for discovery outcomes; tracked returns are the step above.
+        if: always() && steps.plan.outcome == 'success' && env.RUN_CANDIDATE_PRICES == 'true'
+        run: python scripts/daily_run_state.py step candidate_prices -- python scripts/discovery_timing.py --collect-prices
       - name: Build research views
         # Renders whatever its inputs hold, including their failures and last observation times.
         if: always() && steps.plan.outcome == 'success' && env.RUN_VIEWS == 'true'

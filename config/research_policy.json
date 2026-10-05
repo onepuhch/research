@@ -38,6 +38,14 @@
     "price_end_max_lag_sessions": 1,
     "price_start_max_gap_days": 7
   },
+  "candidate_prices": {
+    "requests_per_day": 20,
+    "time_budget_s": 120,
+    "timeout_s": 15,
+    "min_interval_s": 0.5,
+    "start_pad_days": 7,
+    "stop_after_5xx": 2
+  },
   "model_overload": {
     "after_consecutive_503": 2,
     "wait_minutes": [30, 60, 120, 240, 360],

@@ -1,0 +1,65 @@
+{
+  "baseline_head": "fcab8a9",
+  "probes": [
+    {
+      "case": "old_event_in_later_filing",
+      "expected": "no_A_alert",
+      "actual": "no_A_alert",
+      "filed_at": "2026-10-01",
+      "report_date": "2026-09-01",
+      "sentence": "On September 1, 2026, the company received a purchase order valued at $50 million.",
+      "triggers": [],
+      "fixed": true
+    },
+    {
+      "case": "unchanged_guidance_is_not_new_change",
+      "expected": "no_A_alert",
+      "actual": "no_A_alert",
+      "filed_at": "2026-10-01",
+      "report_date": "2026-10-01",
+      "sentence": "The company reaffirmed its unchanged revenue outlook of $50 million for fiscal 2027.",
+      "triggers": [],
+      "fixed": true
+    },
+    {
+      "case": "A_only_moves_B_baseline",
+      "first_alert_triggers": [
+        "A"
+      ],
+      "expected_B_baseline_eps": 1.0,
+      "actual_B_baseline_eps": 1.0,
+      "actual_B_pct": 31.0,
+      "actual_B_status": "confirmed",
+      "fixed": true
+    },
+    {
+      "case": "outcome_start_moves_on_later_card",
+      "expected": "fixed_population_start",
+      "before": {
+        "start": "2026-09-25",
+        "due": "2026-10-25",
+        "net_pct": 19.992307692307687
+      },
+      "after": {
+        "start": "2026-09-25",
+        "due": "2026-10-25",
+        "net_pct": 19.992307692307687
+      },
+      "fixed": true
+    },
+    {
+      "case": "shared_name_word_is_not_same_entity",
+      "expected": "withhold_unverified_subject",
+      "accepted_claims": 0,
+      "fixed": true
+    },
+    {
+      "case": "remote_new_state_path_must_block_replay",
+      "remote_added": "data/processed/company_documents/DOC-NEW.json.gz",
+      "expected": "blocked_other_writer",
+      "actual": "blocked",
+      "fixed": true
+    }
+  ],
+  "open_boundaries": 0
+}

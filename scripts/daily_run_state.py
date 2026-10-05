@@ -85,8 +85,10 @@ STEPS: dict[str, Step] = {
     # (/track) are not an input, so a new tracked ticker does not redo baselines or returns.
     "baseline": Step(inputs=("@cases",)),
     "returns": Step(inputs=("baseline",)),
-    "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "alerts", "baseline", "returns"),
-                  version="views-v3"),
+    # Candidate prices for discovery outcomes (Q3): a budgeted daily share, separate from tracked returns.
+    "candidate_prices": Step(),  # once a day; its queue picks up new screens and receipts the next day
+    "views": Step(inputs=("extract", "eps", "quarterly", "screen", "prices", "cards", "alerts", "baseline", "returns",
+                          "candidate_prices"), version="views-v4"),
     "community": Step(weekday=MONDAY),
     "weekly_report": Step(requires=("views",), weekday=MONDAY),
 }

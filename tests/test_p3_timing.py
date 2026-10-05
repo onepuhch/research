@@ -108,7 +108,7 @@ class TimingTest(MaterialFixture):
         result = t.outcomes(rec, batch)
         expected = research_returns.compare({"ticker": "AAA", "captured_at": rec["first_card"]["observed_at"]},
                                             batch["series"]["AAA"], batch["series"]["SPY"], batch["retrieved_at"], 30)
-        self.assertEqual(result[30], expected)
+        self.assertEqual({k: v for k, v in result[30].items() if k != "outcome_definition"}, expected)
         self.assertEqual(result[30]["start"], "2026-10-01")  # first close after 01:23Z, never an earlier one
         self.assertEqual(result[30]["status"], "평가")
         self.assertAlmostEqual(result[30]["net_pct"], result[30]["gross_pct"] - 0.20)
