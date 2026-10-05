@@ -1,0 +1,83 @@
+{
+  "baseline_head": "fcab8a9",
+  "probes": [
+    {
+      "case": "old_event_in_later_filing",
+      "expected": "no_A_alert",
+      "actual": "A_alert",
+      "filed_at": "2026-10-01",
+      "report_date": "2026-09-01",
+      "sentence": "On September 1, 2026, the company received a purchase order valued at $50 million.",
+      "triggers": [
+        [
+          "A"
+        ]
+      ],
+      "fixed": false
+    },
+    {
+      "case": "unchanged_guidance_is_not_new_change",
+      "expected": "no_A_alert",
+      "actual": "A_alert",
+      "filed_at": "2026-10-01",
+      "report_date": "2026-10-01",
+      "sentence": "The company reaffirmed its unchanged revenue outlook of $50 million for fiscal 2027.",
+      "triggers": [
+        [
+          "A"
+        ]
+      ],
+      "fixed": false
+    },
+    {
+      "case": "A_only_moves_B_baseline",
+      "first_alert_triggers": [
+        "A"
+      ],
+      "expected_B_baseline_eps": 1.0,
+      "actual_B_baseline_eps": 1.3,
+      "actual_B_pct": 0.77,
+      "actual_B_status": "below_threshold",
+      "fixed": false
+    },
+    {
+      "case": "outcome_start_moves_on_later_card",
+      "expected": "fixed_population_start",
+      "before": {
+        "start": "2026-09-25",
+        "due": "2026-10-25",
+        "net_pct": 19.992307692307687
+      },
+      "after": {
+        "start": "2026-10-05",
+        "due": "2026-11-04",
+        "net_pct": 19.799999999999997
+      },
+      "fixed": false
+    },
+    {
+      "case": "shared_name_word_is_not_same_entity",
+      "expected": "withhold_unverified_subject",
+      "accepted_claims": 1,
+      "fixed": false
+    },
+    {
+      "case": "remote_new_state_path_must_block_replay",
+      "remote_added": "data/processed/company_documents/DOC-NEW.json.gz",
+      "expected": "blocked_other_writer",
+      "actual": "replayed",
+      "fixed": false
+    }
+  ],
+  "open_boundaries": 6,
+  "exit_code": 1,
+  "reviewed_head": "fcab8a9c47b7af3955f291c7b3453c7a114d4df5",
+  "validation": {
+    "existing_suite_tests": 516,
+    "existing_suite_result": "OK",
+    "latest_ci_run": 37271813121,
+    "latest_ci_conclusion": "success",
+    "operational_run": 37269585919,
+    "operational_conclusion": "success"
+  }
+}
