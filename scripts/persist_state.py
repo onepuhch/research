@@ -38,11 +38,27 @@ def main(message=None):
         subprocess.run(['git', 'commit', '-m', message or f'chore: research state {c.today()}'], cwd=c.ROOT, check=True)
     # Push even with nothing new staged: an earlier commit may not have reached the remote.
     # On conflict, fail visibly; never force-push a competing writer's state.
-    subprocess.run(['git', 'push'], cwd=c.ROOT, check=True)
+    if subprocess.run(['git', 'push'], cwd=c.ROOT).returncode != 0:
+        replay_on_remote(paths)
+        subprocess.run(['git', 'push'], cwd=c.ROOT, check=True)
     head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=c.ROOT, check=True, capture_output=True, text=True)
     remote = subprocess.run(['git', 'rev-parse', '@{u}'], cwd=c.ROOT, check=True, capture_output=True, text=True)
     if head.stdout.strip() != remote.stdout.strip():
         raise subprocess.CalledProcessError(1, 'git push', output='remote branch does not hold HEAD')
+
+
+def replay_on_remote(paths):
+    """The branch moved during the run. Only when the new remote commits touch none of the state
+    files (a code or document push) are this run's state commits replayed on top of them, once;
+    a remote change to any state file is another writer's state and fails as before."""
+    subprocess.run(['git', 'fetch', '--quiet'], cwd=c.ROOT, check=True)
+    changed = subprocess.run(['git', 'diff', '--name-only', 'HEAD...@{u}'], cwd=c.ROOT, check=True,
+                             capture_output=True, text=True, encoding='utf-8').stdout.split()
+    if set(changed) & set(paths):
+        raise subprocess.CalledProcessError(1, 'git push', output='remote changed state files: not replayed')
+    if subprocess.run(['git', 'rebase', '--quiet', '@{u}'], cwd=c.ROOT).returncode != 0:
+        subprocess.run(['git', 'rebase', '--abort'], cwd=c.ROOT)
+        raise subprocess.CalledProcessError(1, 'git rebase', output='state commits do not replay on the remote')
 
 
 def persist(message):

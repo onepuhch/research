@@ -476,6 +476,46 @@ class GitRemoteTest(unittest.TestCase):
                 contextlib.redirect_stdout(io.StringIO()):
             self.assertFalse(persist_state.persist("x"))
 
+    def test_code_pushed_during_the_run_is_replayed_but_remote_state_is_not(self):
+        import persist_state
+        with tempfile.TemporaryDirectory() as tmp:
+            root = pathlib.Path(tmp)
+            self.git("init", "--bare", "-q", str(root / "remote.git"), cwd=root)
+            clones = {}
+            for name in ("work", "other"):
+                self.git("clone", "-q", str(root / "remote.git"), str(root / name), cwd=root)
+                for key, value in (("user.name", "t"), ("user.email", "t@example.invalid"), ("commit.gpgsign", "false")):
+                    self.git("config", key, value, cwd=root / name)
+                clones[name] = root / name
+            work, other = clones["work"], clones["other"]
+            data = work / "data" / "processed"
+            data.mkdir(parents=True)
+            with mock.patch.object(c, "ROOT", work), mock.patch.object(c, "DATA_DIR", data), \
+                    contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                c.atomic_json(data / "candidate_alerts.json", {"events": {}})
+                self.assertTrue(persist_state.persist("chore: first"))
+                self.git("pull", "-q", cwd=other)
+                # a code push lands while the run works
+                (other / "scripts").mkdir()
+                (other / "scripts" / "x.py").write_text("x = 1\n", encoding="utf-8")
+                self.git("add", ".", cwd=other)
+                self.git("commit", "-q", "-m", "code", cwd=other)
+                self.git("push", "-q", cwd=other)
+                c.atomic_json(data / "candidate_alerts.json", {"events": {"k": {"status": "reserved"}}})
+                self.assertTrue(persist_state.persist("chore: reserve"))
+                remote = lambda path: self.git("--git-dir", str(root / "remote.git"), "show", f"HEAD:{path}",  # noqa: E731
+                                               cwd=root).stdout
+                self.assertIn("reserved", remote("data/processed/candidate_alerts.json"))
+                self.assertEqual(remote("scripts/x.py"), "x = 1\n")
+                # another writer's state on the remote is never merged into
+                self.git("pull", "-q", cwd=other)
+                (other / "data" / "processed" / "candidate_alerts.json").write_text('{"events": {"o": 1}}', encoding="utf-8")
+                self.git("commit", "-q", "-am", "other state", cwd=other)
+                self.git("push", "-q", cwd=other)
+                c.atomic_json(data / "candidate_alerts.json", {"events": {"k": {"status": "sent"}}})
+                self.assertFalse(persist_state.persist("chore: receipts"))
+                self.assertIn('"o": 1', remote("data/processed/candidate_alerts.json"))
+
     def test_clean_tree_with_an_unreachable_remote_is_not_success(self):
         import persist_state
         with tempfile.TemporaryDirectory() as tmp:
