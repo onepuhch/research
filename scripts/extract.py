@@ -406,13 +406,14 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float
         left = remaining()
         if left is not None and left < 1:
             raise c.ModelBudgetExhausted("deadline")  # no reservation, no request
-        c.reserve_model_call(component)
+        c.reserve_model_call(component, GEMINI_MODEL)
         request_timeout = timeout or GEMINI_TIMEOUT
         if left is not None:
             request_timeout = max(1.0, min(request_timeout, left))
         try:
             with urlopen(request, timeout=request_timeout) as response:
                 payload = json.loads(response.read().decode("utf-8"))
+            c.record_model_result(GEMINI_MODEL, "ok")
             if deadline is not None and clock() >= deadline:
                 raise c.ModelBudgetExhausted("deadline")
             break
@@ -422,6 +423,12 @@ def call_gemini_prompt(prompt: str, api_key: str, component: str, timeout: float
                 raise c.ModelBudgetExhausted("provider_rate_limited") from None
             retryable = error.code in RETRY_STATUS
             failure = error
+            if error.code == 503:
+                # Overload is counted for every component; once a wait starts, the retry below is
+                # refused by reserve_model_call and the request is deferred, not repeated.
+                c.record_model_result(GEMINI_MODEL, "503")
+                if c.model_overload(GEMINI_MODEL):
+                    raise failure
         except (URLError, TimeoutError) as error:
             retryable, failure = True, error
         if not retryable or attempt + 1 >= attempts:

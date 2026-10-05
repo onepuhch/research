@@ -38,7 +38,13 @@
     "price_end_max_lag_sessions": 1,
     "price_start_max_gap_days": 7
   },
+  "model_overload": {
+    "after_consecutive_503": 2,
+    "wait_minutes": [30, 60, 120, 240, 360],
+    "jitter_s": 30
+  },
   "daily_run": {
+    "draft_resume_max": 2,
     "partial_retry_max": 1,
     "partial_retry_min_gap_minutes": 60
   },

@@ -310,8 +310,29 @@ def refresh_issuers(client):
     return len(rows)
 
 
+def draft_resume_due(now: datetime | None = None) -> str | None:
+    """Why the context step should run again today for drafts only (Q2), else None: a current
+    candidate waits for a draft after an overload or failure, its wait is over, the model is
+    neither blocked nor waiting, budget is left, and the cards are fresh. Reads stored state only."""
+    import candidates
+    import extract
+    now = now or datetime.now(timezone.utc)
+    index = candidates.load_index()
+    if not index.get("candidates") or candidates.current_freshness(index, now):
+        return None
+    if c.model_provider_blocked(now) or c.model_overload(extract.GEMINI_MODEL, now):
+        return None
+    if c.model_calls_remaining("candidate_context") <= 0:
+        return None
+    current = {x["candidate_id"]: (x.get("eps") or {}).get("eps_target_period")
+               for x in index.get("candidates", []) + index.get("folded_candidates", []) if x.get("candidate_id")}
+    waiting = [cid for cid, entry in draft_queue(load_state(), current, now)
+               if entry.get("draft_status") in ("failed", "provider_overloaded", "deferred_budget")]
+    return f"{len(waiting)} drafts waiting" if waiting else None
+
+
 def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
-                deadline: float | None = None) -> dict:
+                deadline: float | None = None, drafts_only: bool = False) -> dict:
     import candidates
     now = now or datetime.now(timezone.utc)
     cfg = settings()
@@ -321,6 +342,15 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
     snapshot, hold = screen_ready(now)
     report = {"day": day, "held": hold, "researched": 0, "statuses": {}}
     if snapshot is None or hold:
+        c.atomic_json(state_path(), state)
+        return report
+    if drafts_only:
+        # Draft resume: the current targets from the stored screen and issuers; no SEC request.
+        first_seen = {cid: item["first_seen_at"] for cid, item in candidates.known_candidates().items()}
+        all_targets = targets(snapshot, c.read_json(c.ROOT / "config" / "entities.json", {}), load_issuers(), first_seen)
+        report.update(targets=len(all_targets), drafts_only=True,
+                      current={t["candidate_id"]: t["eps_target_period"] for t in all_targets},
+                      folded=sorted(t["candidate_id"] for t in all_targets if t.get("folded")))
         c.atomic_json(state_path(), state)
         return report
     user_agent = os.environ.get("SEC_USER_AGENT") or "investment-research-system/2.0 research-bot"
@@ -1337,9 +1367,13 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
                         c.model_calls_remaining("candidate_context"), settings()["folded_drafts_per_day"])
     for cid, entry in queue:
         blocked = c.model_provider_blocked()
-        if blocked or c.model_calls_remaining("candidate_context") <= 0 or deadline - clock() < 5:
+        overload = c.model_overload(extract.GEMINI_MODEL)
+        if blocked or overload or c.model_calls_remaining("candidate_context") <= 0 or deadline - clock() < 5:
             report["deferred"] += 1
-            entry["draft_status"] = "deferred_budget" if not blocked else "provider_rate_limited"
+            entry["draft_status"] = ("provider_rate_limited" if blocked else "provider_overloaded" if overload
+                                     else "deferred_budget")
+            if overload:
+                entry["draft_next_at"] = overload["until"]  # resumes after the shared wait (Q2)
             continue
         documents = [d for d in (cf.load_document(x) for x in entry["document_ids"]) if d]
         target = {"candidate_id": cid, "ticker": entry.get("ticker"), "eps_target_period": entry.get("eps_target_period"),
@@ -1381,14 +1415,27 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
             answer = call(prompt)  # one company per request
         except c.ModelBudgetExhausted as reason:
             report["requests"] += c.model_calls_today() - before_calls
-            entry["draft_status"] = "provider_rate_limited" if "rate" in str(reason) else "deferred_budget"
+            entry["draft_status"] = ("provider_rate_limited" if "rate" in str(reason) else
+                                     "provider_overloaded" if "overloaded" in str(reason) else "deferred_budget")
+            if "overloaded" in str(reason):
+                entry["draft_next_at"] = (c.model_overload(extract.GEMINI_MODEL) or {}).get("until")
             report["deferred"] += 1
             finish("deferred", error={"type": "ModelBudgetExhausted", "reason": str(reason)[:60]})
             continue
         except (OSError, ValueError, KeyError, IndexError, TimeoutError) as error:
             report["requests"] += c.model_calls_today() - before_calls
-            entry.update(draft_status="failed", draft_error=type(error).__name__,
-                         draft_next_at=(now + timedelta(hours=settings()["retry_failed_hours"])).isoformat(timespec="seconds"))
+            if getattr(error, "code", None) == 503:
+                # Overload, not a bad input: the company waits for the shared wait (or the first wait
+                # length), never the 24 hours of a failed draft, and is not asked again in this run.
+                wait = c.model_overload(extract.GEMINI_MODEL)
+                next_at = (wait["until"] if wait else
+                           (now + timedelta(minutes=c.overload_settings()["wait_minutes"][0])).isoformat(timespec="seconds"))
+                entry.update(draft_status="failed", draft_error="HTTPError", draft_http_status=503,
+                             draft_failure="provider_overloaded", draft_next_at=next_at)
+            else:
+                entry.update(draft_status="failed", draft_error=type(error).__name__, draft_failure="failed",
+                             draft_http_status=getattr(error, "code", None),
+                             draft_next_at=(now + timedelta(hours=settings()["retry_failed_hours"])).isoformat(timespec="seconds"))
             report["failed"] += 1
             c.atomic_json(state_path(), state)
             # Type and HTTP status only: an exception's text can carry a URL.
@@ -1437,7 +1484,10 @@ def coverage(state: dict, ids: list[str]) -> dict:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--refresh-issuers", action="store_true")
+    parser.add_argument("--drafts-only", action="store_true",
+                        help="resume drafts from stored documents; no SEC request (also CONTEXT_DRAFTS_ONLY=true)")
     args = parser.parse_args(argv)
+    drafts_only = args.drafts_only or os.environ.get("CONTEXT_DRAFTS_ONLY") == "true"
     if args.refresh_issuers:
         # Share the normal daily HTTP accounting without invoking the screener.
         state = load_state()
@@ -1453,7 +1503,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         # One time budget for sources and drafts together; state is saved after each company.
         deadline = time.monotonic() + settings()["time_budget_s"]
-        report = run_sources(deadline=deadline)
+        report = run_sources(deadline=deadline, drafts_only=drafts_only)
         report["drafts"] = ({"held": True} if report["held"] else
                             run_drafts(deadline=deadline, current=report.get("current", {}),
                                        folded=report.get("folded", [])))

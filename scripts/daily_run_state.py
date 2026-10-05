@@ -51,7 +51,7 @@ SCHEMA_VERSION = 2
 KEEP_DAYS = 60
 KEEP_ATTEMPTS = 10
 MONDAY = 0
-DEFAULT_POLICY = {"partial_retry_max": 1, "partial_retry_min_gap_minutes": 60}
+DEFAULT_POLICY = {"partial_retry_max": 1, "partial_retry_min_gap_minutes": 60, "draft_resume_max": 2}
 
 
 @dataclass(frozen=True)
@@ -189,7 +189,8 @@ def retry_due(entry: dict, now: datetime, policy: dict, step: str = "screen") ->
 
 
 def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
-                policy: dict | None = None, redo: set[str] | frozenset = frozenset()) -> dict[str, str]:
+                policy: dict | None = None, redo: set[str] | frozenset = frozenset(),
+                draft_resume=None) -> dict[str, str]:
     """{step: why} for the steps to run now, in workflow order.
 
     redo (auto only) asks for named steps to run again today, with the steps that use them.
@@ -218,6 +219,9 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
             why[name] = "inputs_changed"
         elif retry_due(entry, now, policy, name):
             why[name] = "partial_retry"
+        elif (name == "context" and draft_resume is not None
+              and entry.get("draft_resumes", 0) < policy["draft_resume_max"] and draft_resume(now)):
+            why[name] = "draft_resume"  # drafts only, from stored documents (Q2); no screen or SEC
     for name in dependents(set(why), required) - set(why):
         why[name] = "dependency_rerun"
     return {name: why[name] for name in required if name in why}
@@ -249,6 +253,8 @@ def apply_plan(state: dict, day: str, run_id: str, mode: str, event: str, detail
         entry.update(execution_status="pending", planned_by=run_id, planned_at=stamp, plan_reason=why)
         if why == "partial_retry":
             entry["auto_retries"] = entry.get("auto_retries", 0) + 1
+        if why == "draft_resume":
+            entry["draft_resumes"] = entry.get("draft_resumes", 0) + 1
     return state
 
 
@@ -418,13 +424,24 @@ def cmd_plan(mode: str, event: str, redo: str = "") -> int:
     day = kst_day(now)
     state = prune(load(), day)
     names = {x.strip() for x in redo.split(",") if x.strip()}
-    detail = plan_detail(state, day, mode, now, run_policy(), names if mode == "auto" else frozenset())
+    resume = None
+    if mode == "auto":
+        def resume(at):
+            # A broken or missing input file must never stop the daily plan: no resume then.
+            try:
+                import candidate_context
+                return candidate_context.draft_resume_due(at)
+            except Exception as error:  # noqa: BLE001
+                print(f"[daily] draft resume check skipped: {type(error).__name__}", file=sys.stderr)
+                return None
+    detail = plan_detail(state, day, mode, now, run_policy(), names if mode == "auto" else frozenset(), resume)
     run_id = (f"{os.environ['GITHUB_RUN_ID']}-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
               if os.environ.get("GITHUB_RUN_ID") else f"local-{uuid.uuid4().hex[:8]}")
     if detail:  # A commands-only run leaves no daily run record.
         save(apply_plan(state, day, run_id, mode, event, detail, now, code_version(), policy_hash()))
     for name in STEPS:
         print(f"{env_name(name)}={'true' if name in detail else 'false'}")
+    print(f"CONTEXT_DRAFTS_ONLY={'true' if detail.get('context') == 'draft_resume' else 'false'}")
     print(f"DAILY_DAY={day}")
     print(f"DAILY_RUN_ID={run_id}")
     reasons = " ".join(f"{name}({why})" for name, why in detail.items()) or "none"

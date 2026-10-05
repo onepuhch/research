@@ -306,12 +306,57 @@ def block_model_provider(reason: str, retry_after_s: float | None = None, now: d
     return state["blocked"]
 
 
-def reserve_model_call(component: str) -> None:
+OVERLOAD_DEFAULTS = {"after_consecutive_503": 2, "wait_minutes": [30, 60, 120, 240, 360], "jitter_s": 30}
+
+
+def overload_settings() -> dict[str, Any]:
+    return {**OVERLOAD_DEFAULTS, **policy().get("model_overload", {})}
+
+
+def model_overload(model: str, now: datetime | None = None) -> dict | None:
+    """The model's 503 wait while it lasts (Q2); every component respects it. Separate from the 429
+    block: one never shortens the other."""
+    entry = read_json(DATA_DIR / "model_budget.json", {}).get("overload", {}).get(model) or {}
+    if not entry.get("until"):
+        return None
+    now = now or datetime.now(timezone.utc)
+    return entry if datetime.fromisoformat(entry["until"]) > now else None
+
+
+def record_model_result(model: str, outcome: str, now: datetime | None = None, rand=None) -> dict:
+    """outcome 'ok' resets the model's 503 state; '503' counts it. after_consecutive_503 failures start
+    a wait (first of wait_minutes); a 503 on the first request after a wait (a probe) moves to the next,
+    longer wait, up to the last. Each wait gets a 0..jitter_s jitter, stored so recomputing never moves
+    it. Other errors leave the state as it is (only overload is handled here)."""
+    import random
+    now = now or datetime.now(timezone.utc)
+    cfg = overload_settings()
+    path = DATA_DIR / "model_budget.json"
+    state = read_json(path, {"days": {}})
+    entry = state.setdefault("overload", {}).setdefault(model, {"consecutive_503": 0, "stage": 0, "until": None})
+    if outcome == "ok":
+        entry.update(consecutive_503=0, stage=0, until=None, jitter_s=None)
+    elif outcome == "503":
+        entry["consecutive_503"] = entry.get("consecutive_503", 0) + 1
+        if entry.get("stage", 0) > 0 or entry["consecutive_503"] >= cfg["after_consecutive_503"]:
+            waits = cfg["wait_minutes"]
+            entry["stage"] = min(entry.get("stage", 0) + 1, len(waits))
+            jitter = round((rand or random.random)() * cfg["jitter_s"], 1)
+            entry["jitter_s"] = jitter
+            entry["until"] = (now + timedelta(minutes=waits[entry["stage"] - 1], seconds=jitter)).isoformat(timespec="seconds")
+    entry["last_result"], entry["last_at"] = outcome, now.isoformat(timespec="seconds")
+    atomic_json(path, state)
+    return entry
+
+
+def reserve_model_call(component: str, model: str | None = None) -> None:
     """Count one HTTP request before it is sent (retries included); refuse when none is left
-    or the provider is blocked. A crash after this point keeps the count: an unknown outcome
-    is never refunded."""
+    or the provider is blocked (429) or the model is waiting after 503s. A crash after this point
+    keeps the count: an unknown outcome is never refunded."""
     if model_provider_blocked():
         raise ModelBudgetExhausted("provider_rate_limited")
+    if model and model_overload(model):
+        raise ModelBudgetExhausted("provider_overloaded")
     if model_calls_remaining(component) <= 0:
         raise ModelBudgetExhausted(component)
     record_model_call(component)
