@@ -36,7 +36,7 @@ class IndustryLimitTest(unittest.TestCase):
         self.assertEqual(folded, {"R3", "R4"})
         groups = sr.industry_groups([r for r in rows if r["candidate"]], a, b, folded)
         self.assertEqual(groups, [{"industry": "Refining", "count": 5, "tickers": ["R0", "R1", "R2", "R3", "R4"],
-                                   "shown": ["R0", "R1", "R2"], "folded": ["R3", "R4"]}])
+                                   "shown": ["R0", "R1", "R2"], "folded": ["R3", "R4"], "outside": []}])
 
     def test_unknown_industry_is_never_folded_and_a_card_elsewhere_is_not_folded(self):
         rows = [screen_row(f"N{i}", None, 100 - i, 10 - i) for i in range(5)]
@@ -84,13 +84,16 @@ class IndustryGroupCardTest(CandidateFixture):
         self.assertEqual(card["industry_group"]["folded"], ["DDD"])
         text = k.telegram_card(card)
         self.assertIn("같은 업종 동반 상향: Refining 3곳", text)
+        self.assertIn("업종 제한으로 접힘 1곳(DDD), 일반 순위 밖 0곳", text)
         self.assertIn("원인은 미확인", text)
         crdo = next(x for x in index["candidates"] if x["identity"]["ticker"] == "CRDO")
         self.assertIsNone(crdo["industry_group"])
         markdown = (c.ROOT / "docs" / "candidates.md").read_text(encoding="utf-8")
         self.assertIn("## 같은 업종 동반 상향 (묶음)", markdown)
-        self.assertIn("DDD +100%", markdown)
+        self.assertIn("개별 카드 2곳: AAA, BBB · 업종 제한으로 접힘 1곳: DDD · 일반 순위 밖 0곳", markdown)
+        self.assertIn("- DDD DDD Inc. · Refining · 내년 EPS 예상 +100%", markdown)
         self.assertIn("묶음: Refining 3곳", k.telegram_screen()[0])
+        self.assertEqual([x["identity"]["ticker"] for x in index["folded_candidates"]], ["DDD"])
 
     def test_a_folded_known_candidate_is_labelled_as_grouped(self):
         snap = snapshot(rows=[row("AAA", industry="Refining"), row("BBB", by_yield=False), row("CRDO", by_growth=False)],
@@ -104,8 +107,12 @@ class IndustryGroupCardTest(CandidateFixture):
         later["run"].update(finished_at="2026-09-25T02:30:00+00:00", run_id="3-1")
         self.write(later, "20260925T023000Z_3-1.json.gz")
         k.generate(now=NOW, translate_now=False)
-        departed = k.load_index()["departed"][self.aaa["candidate_id"]]
-        self.assertEqual(departed["reason"], "industry_folded")
+        index = k.load_index()
+        # P1-B: a folded company stays current (summary, no card rank), not 'departed'.
+        self.assertNotIn(self.aaa["candidate_id"], index["departed"])
+        self.assertEqual([x["identity"]["ticker"] for x in index["folded_candidates"]], ["AAA", "DDD"])
+        found, state = k.find(self.aaa["candidate_id"])
+        self.assertEqual((state, found["display_state"]), ("folded", "industry_folded"))
 
 
 class RevisionTimingTest(unittest.TestCase):

@@ -33,7 +33,8 @@ import common as c  # noqa: E402
 import company_filings as cf  # noqa: E402
 
 STATUSES = ("queued", "success", "no_relevant_document", "unavailable", "failed", "deferred_budget", "identity_conflict")
-DEFAULTS = {"companies_per_day": 10, "filings_per_company": 5, "documents_per_company": 4,
+DEFAULTS = {"companies_per_day": 10, "folded_companies_per_day": 2, "folded_drafts_per_day": 1,
+            "filings_per_company": 5, "documents_per_company": 4,
             "update_days": 45, "update_filings_per_company": 2, "update_documents_per_company": 2,
             "http_attempts_per_day": 100, "time_budget_s": 180, "timeout_s": 15, "max_document_bytes": 2_000_000,
             "lookback_days": 120, "revisit_days": 7, "retry_failed_hours": 24, "no_document_days": 7}
@@ -87,9 +88,13 @@ def issuer_for(row: dict, registry: dict, issuers: dict) -> tuple[dict | None, s
 
 def targets(snapshot: dict, registry: dict, issuers: dict, first_seen: dict) -> list[dict]:
     import candidates
-    rows = {r["ticker"]: r for r in snapshot.get("derived", {}).get("rows", []) if r.get("candidate")}
+    derived = snapshot.get("derived", {})
+    rows = {r["ticker"]: r for r in derived.get("rows", []) if r.get("candidate")}
+    order = [t for t, _ in candidates.display_order(derived)]
+    # Companies folded by the industry limit stay research targets after the cards (P1-B).
+    folded = [t for g in derived.get("industry_groups") or [] for t in g.get("folded", []) if t not in order]
     out = []
-    for position, (ticker, _) in enumerate(candidates.display_order(snapshot.get("derived", {})), 1):
+    for position, ticker in enumerate(order + folded, 1):
         row = rows.get(ticker)
         if row is None:
             continue
@@ -101,7 +106,8 @@ def targets(snapshot: dict, registry: dict, issuers: dict, first_seen: dict) -> 
         out.append({"candidate_id": cid, "ticker": ticker, "entity_id": identity["entity_id"], "rank": position,
                     "first_seen_at": first_seen.get(cid) or snapshot["run"]["finished_at"],
                     "eps_key": f"{row.get('eps_target_period')}|{row.get('eps_now')}",
-                    "eps_target_period": row.get("eps_target_period"), "issuer": issuer, "problem": problem})
+                    "eps_target_period": row.get("eps_target_period"), "issuer": issuer, "problem": problem,
+                    "folded": ticker in folded})
     return out
 
 
@@ -114,12 +120,19 @@ def eligible(entry: dict | None, target: dict, now: datetime) -> bool:
     return due is None or datetime.fromisoformat(due) <= now
 
 
-def select(all_targets: list[dict], state: dict, now: datetime, limit: int) -> list[dict]:
+def select(all_targets: list[dict], state: dict, now: datetime, limit: int, folded_limit: int = 0) -> list[dict]:
+    """Up to limit companies: card companies first, with up to folded_limit of the places for companies
+    folded by the industry limit; a share one side cannot use goes to the other."""
     pool = [t for t in all_targets if eligible(state["candidates"].get(t["candidate_id"]), t, now)]
     # First seen by day: candidates seen the same day keep the A1/B1/A2... display order.
     pool.sort(key=lambda t: (state["candidates"].get(t["candidate_id"], {}).get("status") == "success",
                              t["first_seen_at"][:10], t["rank"], t["candidate_id"]))
-    return pool[:limit]
+    cards = [t for t in pool if not t.get("folded")]
+    folded = [t for t in pool if t.get("folded")]
+    take_folded = min(len(folded), max(0, folded_limit), limit)
+    take_cards = min(len(cards), limit - take_folded)
+    take_folded = min(len(folded), limit - take_cards)  # unused card places go to folded companies
+    return cards[:take_cards] + folded[:take_folded]
 
 
 # ------------------------------------------------------------------ research
@@ -326,10 +339,14 @@ def run_sources(now: datetime | None = None, client: cf.SecClient | None = None,
         elif entry and entry.pop("identity_problem", False):
             entry.update(status="queued", next_eligible_at=None)
     ready = [t for t in all_targets if not t["problem"]]
-    chosen = select(ready, state, now, max(0, cfg["companies_per_day"] - usage["companies"]))
+    report["folded"] = sorted(t["candidate_id"] for t in all_targets if t.get("folded"))
+    chosen = select(ready, state, now, max(0, cfg["companies_per_day"] - usage["companies"]),
+                    max(0, cfg["folded_companies_per_day"] - usage.get("folded_companies", 0)))
     for target in chosen:
         entry = state["candidates"].setdefault(target["candidate_id"], {})
         usage["companies"] += 1
+        if target.get("folded"):
+            usage["folded_companies"] = usage.get("folded_companies", 0) + 1
         c.atomic_json(state_path(), state)
         try:
             result = research(target, client, state, now, cfg)
@@ -1266,8 +1283,18 @@ def write_audit(record: dict, day: str) -> bool:
         return False
 
 
+def draft_order(queue: list[tuple[str, dict]], folded: set[str], remaining: int, folded_slots: int) -> list:
+    """Card companies first, but folded_slots of today's remaining model requests stay for folded
+    companies when any wait; requests they cannot use go back to the cards (P1-B)."""
+    cards = [q for q in queue if q[0] not in folded]
+    others = [q for q in queue if q[0] in folded]
+    keep = min(len(others), max(0, folded_slots))
+    head = max(0, remaining - keep)
+    return cards[:head] + others[:keep] + cards[head:] + others[keep:]
+
+
 def run_drafts(now: datetime | None = None, call=None, deadline: float | None = None,
-               current: dict[str, str] | None = None, clock=time.monotonic) -> dict:
+               current: dict[str, str] | None = None, clock=time.monotonic, folded: list[str] | None = None) -> dict:
     """One company per model request and one attempt per company in a run; a failed company
     waits 24 hours so the others get their turn. Budget, provider block and time are checked
     before every request (and inside the shared model call)."""
@@ -1292,7 +1319,9 @@ def run_drafts(now: datetime | None = None, call=None, deadline: float | None = 
     sha_of_code = code_sha()
     if current is None:
         current = {cid: e.get("eps_target_period") for cid, e in state["candidates"].items()}
-    for cid, entry in draft_queue(state, current, now):
+    queue = draft_order(draft_queue(state, current, now), set(folded or []),
+                        c.model_calls_remaining("candidate_context"), settings()["folded_drafts_per_day"])
+    for cid, entry in queue:
         blocked = c.model_provider_blocked()
         if blocked or c.model_calls_remaining("candidate_context") <= 0 or deadline - clock() < 5:
             report["deferred"] += 1
@@ -1411,7 +1440,9 @@ def main(argv: list[str] | None = None) -> int:
         # One time budget for sources and drafts together; state is saved after each company.
         deadline = time.monotonic() + settings()["time_budget_s"]
         report = run_sources(deadline=deadline)
-        report["drafts"] = {"held": True} if report["held"] else run_drafts(deadline=deadline, current=report.get("current", {}))
+        report["drafts"] = ({"held": True} if report["held"] else
+                            run_drafts(deadline=deadline, current=report.get("current", {}),
+                                       folded=report.get("folded", [])))
     except (OSError, ValueError, KeyError) as error:
         c.record_run("candidate_context", "failed", error_type=type(error).__name__)
         print(f"[context] failed: {type(error).__name__}")

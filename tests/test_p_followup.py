@@ -189,6 +189,106 @@ class UpdateResearchPathTest(unittest.TestCase):
                 self.assertTrue(ctx.own_statements(record, record["issuer"]["name"]))
 
 
+from test_candidates import NOW, CandidateFixture, row, snapshot  # noqa: E402
+
+SNAPSHOT_10_4 = ROOT / "data" / "processed" / "revision_screen" / "20261004T060125Z_37181539693-1.json.gz"
+
+
+class FoldedGroupTest(unittest.TestCase):
+    """P1-B on the stored 10/4 screen: three states add up, SUN is 'outside', not folded."""
+
+    def test_three_states_add_up(self):
+        import gzip
+        import screen_revisions as sr
+        import candidates as k
+        derived = json.loads(gzip.open(SNAPSHOT_10_4, "rt", encoding="utf-8").read())["derived"]
+        a, b, folded = sr.rank(derived["rows"], 20, 3)
+        cands = [r for r in derived["rows"] if r["candidate"]]
+        group = next(g for g in sr.industry_groups(cands, a, b, folded) if g["industry"] == "Oil & Gas Refining & Marketing")
+        self.assertEqual((len(group["shown"]), len(group["folded"]), group["outside"]), (3, 5, ["SUN"]))
+        self.assertEqual(len(group["shown"]) + len(group["folded"]) + len(group["outside"]), group["count"])
+        self.assertEqual(len({r["ticker"] for r in a + b}), 33)
+        old = {**group}
+        del old["outside"]  # a snapshot written before 'outside' existed
+        self.assertEqual(k.group_states(old)["outside"], ["SUN"])
+
+
+class FoldedCandidateCardTest(CandidateFixture):
+    """P1-B: a folded company has a current summary everywhere; other members never change a version."""
+
+    def write(self, snap, name):
+        import gzip
+        with gzip.open(c.DATA_DIR / "revision_screen" / name, "wt", encoding="utf-8") as h:
+            json.dump(snap, h)
+
+    def grouped(self, folded, run_id="2-1", minute="02"):
+        rows = [row("AAA", industry="Refining"), row("BBB", by_yield=False, industry="Refining"),
+                row("CRDO", by_growth=False)] + [row(t, industry="Refining") for t in folded]
+        snap = snapshot(rows=rows, finished=f"2026-09-25T02:{minute}:00+00:00", run_id=run_id)
+        snap["derived"]["industry_groups"] = [{"industry": "Refining", "count": 2 + len(folded),
+                                               "tickers": ["AAA", "BBB"] + folded, "shown": ["AAA", "BBB"],
+                                               "folded": folded, "outside": []}]
+        return snap
+
+    def test_first_folded_company_opens_everywhere(self):
+        import candidates as k
+        self.write(self.grouped(["DDD"]), "20260925T020200Z_2-1.json.gz")
+        k.generate(now=NOW, translate_now=False)
+        index = k.load_index()
+        ddd = index["folded_candidates"][0]
+        self.assertEqual((ddd["identity"]["ticker"], ddd["display_rank"], ddd["display_state"]), ("DDD", None, "industry_folded"))
+        self.assertNotIn("DDD", [x["identity"]["ticker"] for x in index["candidates"]])  # no card rank, no alert
+        reply = k.telegram_candidate(ddd["candidate_id"])[0]
+        self.assertIn("업종 묶음에 포함되어 개별 카드는 없습니다", reply)
+        self.assertIn("내년 EPS 예상", reply)
+        markdown = (c.ROOT / "docs" / "candidates.md").read_text(encoding="utf-8")
+        self.assertIn(f"`/candidate {ddd['candidate_id']}`", markdown)
+        page = k.render_html(index)
+        self.assertIn('"folded": [{"candidate"', page)
+        self.assertIn("업종 제한으로 접힌 기업", (ROOT / "templates" / "candidates.html").read_text(encoding="utf-8"))
+        line = next(t for kind, t in k.card_lines(index["candidates"][0]) if "같은 업종" in t)
+        self.assertIn("업종 제한으로 접힘 1곳(DDD), 일반 순위 밖 0곳", line)
+
+    def test_other_members_do_not_change_this_companys_version(self):
+        import candidates as k
+        self.write(self.grouped(["DDD"]), "20260925T020200Z_2-1.json.gz")
+        k.generate(now=NOW, translate_now=False)
+        before = next(x for x in k.load_index()["candidates"] if x["identity"]["ticker"] == "AAA")["candidate_version"]
+        self.write(self.grouped(["DDD", "EEE"], run_id="3-1", minute="30"), "20260925T023000Z_3-1.json.gz")
+        k.generate(now=NOW, translate_now=False)
+        after = next(x for x in k.load_index()["candidates"] if x["identity"]["ticker"] == "AAA")
+        self.assertEqual(after["candidate_version"], before)
+        self.assertEqual(after["industry_group"]["folded"], ["DDD", "EEE"])  # shown as observation metadata
+
+
+class FoldedResearchShareTest(unittest.TestCase):
+    """P1-B: folded companies keep research and draft turns without starving the cards."""
+
+    @staticmethod
+    def target(i, folded):
+        return {"candidate_id": f"CAN-{'F' if folded else 'C'}{i:015d}", "first_seen_at": "2026-10-04T00:00:00+00:00",
+                "rank": i + (100 if folded else 0), "folded": folded, "eps_key": "x"}
+
+    def test_research_places(self):
+        state = {"candidates": {}}
+        many = [self.target(i, False) for i in range(12)] + [self.target(i, True) for i in range(5)]
+        chosen = ctx.select(many, state, NOW, 10, 2)
+        self.assertEqual((sum(not t["folded"] for t in chosen), sum(t["folded"] for t in chosen)), (8, 2))
+        few = [self.target(i, False) for i in range(3)] + [self.target(i, True) for i in range(5)]
+        chosen = ctx.select(few, state, NOW, 10, 2)
+        self.assertEqual((sum(not t["folded"] for t in chosen), sum(t["folded"] for t in chosen)), (3, 5))
+        only_cards = [self.target(i, False) for i in range(12)]
+        self.assertEqual(len(ctx.select(only_cards, state, NOW, 10, 2)), 10)
+
+    def test_draft_order_keeps_one_model_request_for_folded(self):
+        queue = [(f"C{i}", {}) for i in range(8)] + [("F0", {}), ("F1", {})]
+        order = [cid for cid, _ in ctx.draft_order(queue, {"F0", "F1"}, 6, 1)]
+        self.assertEqual(order[:6], ["C0", "C1", "C2", "C3", "C4", "F0"])
+        self.assertEqual(order[6:], ["C5", "C6", "C7", "F1"])
+        no_folded = [cid for cid, _ in ctx.draft_order(queue[:8], set(), 6, 1)]
+        self.assertEqual(no_folded[:6], ["C0", "C1", "C2", "C3", "C4", "C5"])
+
+
 class SignalQuarantineTest(unittest.TestCase):
     """P0: SIG-0900 is withheld from every reader; the ledger is unchanged; a broken list stops readers."""
 

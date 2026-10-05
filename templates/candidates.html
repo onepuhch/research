@@ -34,7 +34,7 @@ button{font:inherit;font-size:14px;padding:6px 12px;border-radius:6px;border:1px
 <div><label for="cls">분류</label><select id="cls"><option value="">전체</option><option value="recommended">추적 추천</option><option value="found">발굴 후보</option><option value="needs_evidence">자료 부족·근거 보강 필요</option></select></div>
 <div><label for="trk">추적 상태</label><select id="trk"><option value="">전체</option><option value="untracked">미추적</option><option value="tracked">이 가설 추적 중</option><option value="entity_tracked">기업만 추적(다른 가설)</option><option value="closed">추적 종료</option></select></div>
 </div>
-<p id="count" class="muted"></p><div id="list"></div><section id="departed"></section>
+<p id="count" class="muted"></p><div id="list"></div><section id="folded"></section><section id="departed"></section>
 <p class="muted">순서는 A(이익수익률 변화)·B(90일 증가율) 목록을 번갈아 놓은 것이며 투자 점수가 아닙니다. 새 후보의 과거 그래프는 만들지 않습니다. 추적을 시작한 뒤부터 관측이 쌓입니다. 이 화면의 버튼은 명령을 복사만 합니다. 추적 등록은 텔레그램에 붙여 넣어야 이뤄집니다.</p>
 </main>
 <script type="application/json" id="dataset">__CANDIDATES__</script>
@@ -51,7 +51,7 @@ function safeLink(url){try{const u=new URL(url);return ['http:','https:'].includ
 function render(item){
  const c=item.candidate,d=el('details','card');d.dataset.cls=c.classification;d.dataset.trk=c.tracking.status;
  d.dataset.q=`${c.identity.ticker} ${c.name||''} ${c.industry||''} ${c.sector||''}`.toLowerCase();
- const s=el('summary');s.appendChild(el('span','rank',`${c.display_rank}`));
+ const s=el('summary');s.appendChild(el('span','rank',c.display_rank==null?'추적':`${c.display_rank}`));
  const t=el('span');t.appendChild(el('span','tick',c.identity.ticker+' '));t.appendChild(el('span','muted',c.name||''));s.appendChild(t);
  s.appendChild(el('span','chg',`EPS 예상 ${item.change}`));
  const sub=el('span','sub');sub.appendChild(el('span','chip'+(c.classification==='recommended'?' rec':''),item.headline));
@@ -79,6 +79,10 @@ function render(item){
   (ul||body).appendChild(li)}
  d.appendChild(body);return d}
 const list=document.getElementById('list');cards.forEach(x=>list.appendChild(render(x)));
+const fold=document.getElementById('folded');
+if(data.folded&&data.folded.length){fold.appendChild(el('h2',null,'업종 제한으로 접힌 기업'));
+ fold.appendChild(el('p','muted','같은 업종이 함께 상향되어 개별 카드 수 제한으로 접힌 기업입니다. 최신 스크린 기준 요약이며 알림은 보내지 않습니다. 공통 원인은 확인하지 않았습니다.'));
+ for(const x of data.folded){const r=render(x);r.querySelector('.rank').textContent='묶음';fold.appendChild(r)}}
 const gone=document.getElementById('departed');
 if(data.departed&&data.departed.length){gone.appendChild(el('h2',null,'최근 목록에서 빠진 후보'));
  gone.appendChild(el('p','muted','이유는 최신 관측에서 확인되는 범위만 적습니다. 상세는 텔레그램 /candidate로 마지막 관측 당시 카드를 봅니다.'));

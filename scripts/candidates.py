@@ -505,9 +505,14 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
     derived = snapshot.get("derived", {})
     rows = {r["ticker"]: r for r in derived.get("rows", []) if r.get("candidate")}
     partial = snapshot.get("run", {}).get("status") != "success"
-    groups = {g["industry"]: g for g in derived.get("industry_groups") or []}
+    groups = {g["industry"]: group_states(g) for g in derived.get("industry_groups") or []}
+    shown_order = display_order(derived)
+    shown = {t for t, _ in shown_order}
+    entries = [(i, t, lists, "card") for i, (t, lists) in enumerate(shown_order, 1)]
+    # Companies folded by the industry limit keep a current summary (no rank, no alert, P1-B).
+    entries += [(None, t, [], "industry_folded") for g in groups.values() for t in g["folded"] if t not in shown]
     result = []
-    for position, (ticker, lists) in enumerate(display_order(derived), 1):
+    for position, ticker, lists, display_state in entries:
         row = rows.get(ticker)
         if row is None:
             continue
@@ -560,8 +565,6 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
             "eps_provider": "Yahoo Finance earningsTrend (+1y)",
             "lists": sorted({m["list"] for m in lists}),
             "missing": missing,
-            "industry_group": ({k: groups[row["industry"]][k] for k in ("industry", "count", "shown", "folded")}
-                               if row.get("industry") in groups else None),
             # Data completeness (missing) and a human 'needs evidence' mark are shown apart.
             "evidence_review": ({"status": "needs_evidence",
                                  "reason": ("가져온 자동 초안이 격리되어 사용 중지: 원문 재검토 필요" if imported_hold
@@ -587,6 +590,9 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
         if approval and not approved:
             review_note = ("승인 후 내용이 바뀜: 재검토 필요" if approval.get("candidate_version") != version
                            else "승인 근거 불충분: " + ", ".join(problems))
+        tracking = ledger_tracking(identity["entity_id"], ideas, THESIS_KEY)
+        if display_state == "industry_folded" and (approved or tracking["status"] in ("tracked", "entity_tracked")):
+            display_state = "card"  # an approved or tracked company is never hidden by the industry limit
         result.append({
             **content, "eps": {**content["eps"], **{k: row.get(k) for k in MARKET_EPS_KEYS}},
             "candidate_version": version, "classification": classification,
@@ -595,11 +601,13 @@ def build(snapshot: dict, snapshot_ref: dict, registry: dict, evidence: dict, tr
                                if cid else None),
             "approval": approval if approved else None, "review_note": review_note,
             "evidence_problems": problems,
-            "display_rank": position, "memberships": lists,
+            "display_rank": position, "memberships": lists, "display_state": display_state,
+            # Co-movement of other companies is display metadata, never part of this company's version.
+            "industry_group": groups.get(row.get("industry")),
             "price": price, "market_cap": row.get("market_cap"),
             "observed_at": observed, "run_quality": "partial" if partial else "complete",
             "scope_note": "확보 범위 내 순위 (일부 조회 누락)" if partial else "전체 조회 범위 순위",
-            "tracking": ledger_tracking(identity["entity_id"], ideas, THESIS_KEY),
+            "tracking": tracking,
             "research_status": research_state(research_entry, context, human, bool(held)),
             **source, "last_valid_context": last_valid,
             "research_note": (None if context or held else
@@ -623,7 +631,7 @@ def content_version(content: dict) -> str:
 def version_record(candidate: dict) -> dict:
     """The immutable claim of a version (no observation time, price window or rank)."""
     keys = ("candidate_id", "candidate_version", "identity", "thesis_key", "name", "industry", "sector",
-            "eps_provider", "lists", "missing", "industry_group", "base_classification", "explanations", "sources",
+            "eps_provider", "lists", "missing", "base_classification", "explanations", "sources",
             "generator_version", "context", "context_hold", "evidence_review")
     record = {k: candidate.get(k) for k in keys}
     record["eps"] = {k: candidate["eps"].get(k) for k in VERSION_EPS_KEYS}
@@ -637,7 +645,8 @@ def observation_record(candidate: dict) -> dict:
         "source_snapshot", "eps", "price", "display_rank", "memberships", "lists", "missing", "run_quality",
         "scope_note", "classification", "policy_version", "generator_version", "market_cap",
         "context_id", "research_status", "research_note", "source_quality", "source_failures",
-        "source_failure_reasons", "source_attempt_at", "source_status", "last_valid_context")}
+        "source_failure_reasons", "source_attempt_at", "source_status", "last_valid_context",
+        "display_state", "industry_group")}
     record["entity_id"] = candidate["identity"]["entity_id"]
     record["approval_version"] = (candidate.get("approval") or {}).get("candidate_version")
     return c.validate_record("candidate_observation", record)
@@ -771,7 +780,8 @@ def _assemble(version: dict, observation: dict, ideas: list[dict]) -> dict:
                                                "source_snapshot", "policy_version", "market_cap",
                                                "context_id", "research_status", "research_note",
                                                "source_quality", "source_failures", "source_failure_reasons",
-                                               "source_attempt_at", "source_status", "last_valid_context")},
+                                               "source_attempt_at", "source_status", "last_valid_context",
+                                               "display_state", "industry_group")},
             "source_quality": observation.get("source_quality") or "unknown",  # recorded before cards-v4
             # The draft is the one this observation showed, never a later one.
             "context": version.get("context"),
@@ -974,9 +984,11 @@ def selection_lines(cand: dict) -> list[str]:
                  + (", 30일·90일 모두 상향" if eps.get("steady") else ""))
     group = cand.get("industry_group")
     if group:
+        group = group_states(group)
         lines.append(f"같은 업종 동반 상향: {group['industry']} {group['count']}곳이 함께 조건 통과 — 개별 카드 "
-                     f"{len(group['shown'])}곳, 묶음 표시 {len(group['folded'])}곳({', '.join(group['folded'])}). "
-                     "업종 공통 요인일 수 있음(원인은 미확인)")
+                     f"{len(group['shown'])}곳, 업종 제한으로 접힘 {len(group['folded'])}곳"
+                     + (f"({', '.join(group['folded'])})" if group['folded'] else "")
+                     + f", 일반 순위 밖 {len(group['outside'])}곳. 업종 공통 요인일 수 있음(원인은 미확인)")
     return lines
 
 
@@ -1332,6 +1344,9 @@ def find(cid: str) -> tuple[dict | None, str]:
     for cand in index.get("candidates", []):
         if cand["candidate_id"] and cand["candidate_id"] == cid:
             return cand, "stale" if index.get("stale") else "current"
+    for cand in index.get("folded_candidates", []):
+        if cand["candidate_id"] and cand["candidate_id"] == cid:
+            return cand, "folded"
     known = index.get("known", {}).get(cid)
     loaded = load_observation(known["latest_observation"]) if known else None
     if loaded:
@@ -1369,8 +1384,10 @@ def telegram_screen(limit: int = 5) -> list[str]:
                      f"   내년 EPS 예상 {esc(money(eps['eps_90d']))} → {esc(money(eps['eps_now']))} ({esc(eps_change(eps))})"
                      f" · {esc(tracking_label(cand))}\n   <code>/candidate {esc(cand['candidate_id'])}</code>")
     for g in index.get("industry_groups") or []:
+        g = group_states(g)
         lines.append(f"묶음: {esc(g['industry'])} {g['count']}곳 함께 상향 — 개별 카드 {esc(', '.join(g['shown']))}, "
-                     f"묶음만 {esc(', '.join(g['folded']))}")
+                     f"업종 제한으로 접힘 {esc(', '.join(g['folded']) or '없음')}, 일반 순위 밖 {len(g['outside'])}곳 "
+                     "(접힌 기업도 /candidate로 조회)")
     lines.append("\n순서는 A(이익수익률 변화)·B(90일 증가율) 목록을 번갈아 놓은 것이며 투자 점수가 아닙니다."
                  " 명령은 하루 4번(03:23·09:17·15:23·21:23 KST 무렵) 처리되며 실시간 응답이 아닙니다.")
     return ["\n".join(lines)]
@@ -1388,19 +1405,40 @@ def telegram_candidate(argument: str) -> list[str]:
         note = (f"⚠️ 최신 후보 목록에 없습니다({esc(reason)}). 아래는 마지막 관측 "
                 f"{esc(kst_date(cand['observed_at']))}(KST) 당시 카드입니다.\n\n")
         return [note + telegram_card(cand)]
+    if state == "folded":
+        group = cand.get("industry_group") or {}
+        note = (f"ℹ️ 업종 묶음에 포함되어 개별 카드는 없습니다({esc(group.get('industry') or '')}, 목록당 개별 카드 수 제한). "
+                "아래는 최신 스크린 기준 요약입니다.\n\n")
+        return [note + telegram_card(cand, load_index().get("stale"))]
     stale = load_index().get("stale") if state == "stale" else None
     return [telegram_card(cand, stale)]
 
 
+def group_states(group: dict) -> dict:
+    """shown / folded / outside of an industry group; the three always add up to count (snapshots
+    written before 'outside' existed get it computed)."""
+    shown, folded = list(group.get("shown") or []), list(group.get("folded") or [])
+    outside = group.get("outside")
+    if outside is None:
+        outside = [t for t in group.get("tickers") or [] if t not in shown and t not in folded]
+    return {"industry": group["industry"], "count": len(shown) + len(folded) + len(outside),
+            "shown": shown, "folded": folded, "outside": list(outside)}
+
+
+GROUP_STATE_LABELS = {"shown": "개별 카드", "folded": "업종 제한으로 접힘", "outside": "일반 순위 밖"}
+
+
 def group_view(derived: dict) -> list[dict]:
-    """Industry groups with each folded company's screen numbers (no card, no draft, no alert)."""
+    """Industry groups with each member's state and screen numbers."""
     rows = {r["ticker"]: r for r in derived.get("rows", [])}
     out = []
     for group in derived.get("industry_groups") or []:
-        members = [{"ticker": t, "name": rows.get(t, {}).get("name"), "own_card": t in group["shown"],
+        g = group_states(group)
+        state = {t: k for k in ("shown", "folded", "outside") for t in g[k]}
+        members = [{"ticker": t, "name": rows.get(t, {}).get("name"), "state": state[t],
                     "eps_change": eps_change(rows[t]) if t in rows else "?",
                     "yield_change_90_pp": rows.get(t, {}).get("yield_change_90_pp")} for t in group["tickers"]]
-        out.append({**group, "members": members})
+        out.append({**g, "members": members})
     return out
 
 
@@ -1413,9 +1451,17 @@ def group_lines(index: dict) -> list[str]:
              "한 업종이 함께 상향되면 목록마다 상위 몇 곳만 개별 카드로 두고 나머지는 여기 묶어 둡니다. "
              "같은 업종이라는 사실만 뜻하며, 공통 원인은 확인하지 않았습니다.", ""]
     for g in groups:
-        folded = [m for m in g["members"] if not m["own_card"]]
-        lines.append(f"- **{g['industry']}** {g['count']}곳 (개별 카드 {len(g['shown'])}곳: {', '.join(g['shown'])}) — "
-                     + ", ".join(f"{m['ticker']} {m['eps_change']}" for m in folded))
+        g = {**g, **group_states(g)}
+        parts = [f"{GROUP_STATE_LABELS[k]} {len(g[k])}곳" + (f": {', '.join(g[k])}" if g[k] else "")
+                 for k in ("shown", "folded", "outside")]
+        lines.append(f"- **{g['industry']}** {g['count']}곳 — " + " · ".join(parts))
+    folded = index.get("folded_candidates") or []
+    if folded:
+        lines += ["", "### 업종 제한으로 접힌 기업 (최신 스크린 요약, 알림 없음)", ""]
+        for cand in folded:
+            lines.append(f"- {cand['identity']['ticker']} {cand.get('name') or ''} · {cand.get('industry') or '업종 미확인'} · "
+                         f"내년 EPS 예상 {eps_change(cand['eps'])} · {tracking_label(cand)} · 근거 상태 {cand['research_status']} · "
+                         f"`/candidate {cand['candidate_id'] or 'ID 없음'}`")
     return lines + [""]
 
 
@@ -1471,7 +1517,10 @@ def render_html(index: dict) -> str:
                "departed": departed_rows(index),
                "cards": [{"candidate": display_view(cand), "lines": card_lines(cand, index.get("stale")),
                           "headline": headline(cand), "tracking": tracking_label(cand),
-                          "change": eps_change(cand["eps"])} for cand in index.get("candidates", [])]}
+                          "change": eps_change(cand["eps"])} for cand in index.get("candidates", [])],
+               "folded": [{"candidate": display_view(cand), "lines": card_lines(cand, index.get("stale")),
+                           "headline": headline(cand), "tracking": tracking_label(cand),
+                           "change": eps_change(cand["eps"])} for cand in index.get("folded_candidates", [])]}
     data = json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c").replace("&", "\\u0026")
     template = (c.ROOT / "templates" / "candidates.html").read_text(encoding="utf-8")
     return template.replace("__CANDIDATES__", data).replace("__DATE__", c.today())
@@ -1525,7 +1574,8 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
                                "earnings_requested": earnings.get("requested", 0),
                                "earnings_success": earnings.get("success", 0)},
                      # Unidentified rows stay visible (no ID, no tracking command) instead of vanishing.
-                     candidates=cands,
+                     candidates=[x for x in cands if x.get("display_state") == "card"],
+                     folded_candidates=[x for x in cands if x.get("display_state") == "industry_folded"],
                      unidentified=[x["identity"]["ticker"] for x in cands if not x["candidate_id"]],
                      industry_groups=group_view(derived))
     report["migrated_legacy"] = migrate_legacy_versions(now)
@@ -1535,7 +1585,7 @@ def generate(now: datetime | None = None, translate_now: bool = True, call=None)
         cand["first_seen_at"], cand["last_seen_at"] = seen.get("first_seen_at"), seen.get("last_seen_at")
     if choice["valid"] and not choice["stale"]:
         # Why a known candidate is not on today's list, only as far as today's snapshot shows.
-        current = {x["candidate_id"] for x in index["candidates"]}
+        current = {x["candidate_id"] for x in index["candidates"] + index.get("folded_candidates", [])}
         rows = {r["ticker"]: r for r in choice["valid"]["snapshot"].get("derived", {}).get("rows", [])}
         index["departed"] = {}
         for cid, item in index["known"].items():

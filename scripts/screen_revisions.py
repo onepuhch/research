@@ -567,7 +567,9 @@ def industry_groups(candidates: list[dict], top_yield: list[dict], top_growth: l
         if not set(members) & folded:
             continue
         groups.append({"industry": cluster["industry"], "count": len(members), "tickers": members,
-                       "shown": [t for t in members if t in shown], "folded": [t for t in members if t in folded]})
+                       "shown": [t for t in members if t in shown], "folded": [t for t in members if t in folded],
+                       # passing, but below the top lists even without the industry limit
+                       "outside": [t for t in members if t not in shown and t not in folded]})
     return groups
 
 
