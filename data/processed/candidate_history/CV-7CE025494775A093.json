@@ -1,0 +1,312 @@
+{
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "candidate_version": "CV-7CE025494775A093",
+  "identity": {
+    "entity_id": "NYSE:NBR",
+    "ticker": "NBR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Nabors Industries Ltd.",
+  "industry": "Oil & Gas Drilling",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "육상 및 해상 유정, 가스정 시추 및 관련 서비스를 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Nabors Industries Ltd. provides drilling and drilling-related services for land-based and offshore oil and natural gas wells in the United States and internationally. The company operates through four segments: U.S. Drilling, International Drilling, Drilling Solutions, and Rig Technologies. The company offers tubular running services, including casing and tubing running, and torque monitoring; managed pressure drilling services; and drilling-bit steering systems and rig instrumentation software. The company also offers drilling systems comprising ROCKit, a directional steering control system;"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "NBR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-05T06:01:35+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "NBR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/history",
+      "published_at": null,
+      "observed_at": "2026-10-05T06:01:35+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "NBR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/profile",
+      "published_at": null,
+      "observed_at": "2026-10-05T06:01:35+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-9B80B26347EA4928",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-07-28",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v9",
+  "context": {
+    "context_id": "CTX-3A49D7297BE7A680",
+    "input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[International Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $131 million — 국제 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+        "note_ko": "국제 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+        "kind": "fact",
+        "quote": "International Drilling adjusted EBITDA was $131 million in the second quarter, compared to $121 million in the first quarter.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "p16",
+        "metric": "adjusted EBITDA",
+        "figures": [
+          "$131 million"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "segment",
+        "subject_name": "International Drilling",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "[U.S. Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $94 million — 미국 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+        "note_ko": "미국 시추 부문의 조정 EBITDA가 해당 분기에 이 금액을 기록했다",
+        "kind": "fact",
+        "quote": "The U.S. Drilling segment reported second quarter adjusted EBITDA of $94 million, compared to $88 million in the previous quarter.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "p17",
+        "metric": "adjusted EBITDA",
+        "figures": [
+          "$94 million"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "segment",
+        "subject_name": "U.S. Drilling",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "조정 EBITDA(adjusted EBITDA) · full-year: $920 to $930 million — 회사의 연간 조정 EBITDA가 이 범위에 있을 것으로 예상된다",
+        "note_ko": "회사의 연간 조정 EBITDA가 이 범위에 있을 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "“We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "p25",
+        "metric": "adjusted EBITDA",
+        "figures": [
+          "$920 to $930 million"
+        ],
+        "period": "full-year",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "adjusted free cash flow · full-year: $20 to $30 million — 회사의 연간 조정 잉여 현금 흐름이 이 범위에 있을 것으로 예상된다",
+        "note_ko": "회사의 연간 조정 잉여 현금 흐름이 이 범위에 있을 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "“We now expect full-year adjusted EBITDA of $920 to $930 million and full-year adjusted free cash flow of $20 to $30 million.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "p25",
+        "metric": "adjusted free cash flow",
+        "figures": [
+          "$20 to $30 million"
+        ],
+        "period": "full-year",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+        "note_ko": "조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "t19",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+        "note_ko": "조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 되는 비 GAAP 재무 측정치이다",
+        "kind": "fact",
+        "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+        "document_id": "DOC-9B80B26347EA4928",
+        "block_id": "t19",
+        "metric": "Adjusted operating income (loss)",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-9B80B26347EA4928",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+        "filed_at": "2026-07-28",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v7",
+    "display_validator_version": "context-check-v10",
+    "validation_scope": "accepted_only",
+    "generated_at": "2026-09-29T06:08:38+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.60994,
+    "eps_30d": 1.115,
+    "eps_90d": 1.115,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 223.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "context_id": "CTX-D7CCF9DF6338D50D",
+  "candidate_id": "CAN-4DB66C064FC2ED7C",
+  "ticker": "URGN",
+  "issuer_cik": "0001668243",
+  "document_ids": [
+    "DOC-99C179A86297DD8F"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-99C179A86297DD8F#p4",
+    "DOC-99C179A86297DD8F#t1",
+    "DOC-99C179A86297DD8F#t2",
+    "DOC-99C179A86297DD8F#t3",
+    "DOC-99C179A86297DD8F#p6",
+    "DOC-99C179A86297DD8F#t5",
+    "DOC-99C179A86297DD8F#t10",
+    "DOC-99C179A86297DD8F#t12",
+    "DOC-99C179A86297DD8F#t13",
+    "DOC-99C179A86297DD8F#t15",
+    "DOC-99C179A86297DD8F#t16",
+    "DOC-99C179A86297DD8F#p14",
+    "DOC-99C179A86297DD8F#p15",
+    "DOC-99C179A86297DD8F#p16",
+    "DOC-99C179A86297DD8F#p18",
+    "DOC-99C179A86297DD8F#p21",
+    "DOC-99C179A86297DD8F#t20",
+    "DOC-99C179A86297DD8F#p33",
+    "DOC-99C179A86297DD8F#t42",
+    "DOC-99C179A86297DD8F#p47"
+  ],
+  "input_sha": "d7ccf9df6338d50d156da272a6317a1350a87f916f88e715609826efdd842657",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v10",
+  "generated_at": "2026-10-05T06:06:20+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net product revenue for JELMYTO · full-year 2026: $97 million to $101 million — 주력 제품 중 하나의 연간 매출 전망치이다",
+      "note_ko": "주력 제품 중 하나의 연간 매출 전망치이다",
+      "kind": "guidance",
+      "quote": "The Company continues to expect 2026 net product revenue for JELMYTO to be in the range of $97 million to $101 million.",
+      "document_id": "DOC-99C179A86297DD8F",
+      "block_id": "p21",
+      "metric": "net product revenue for JELMYTO",
+      "figures": [
+        "$97 million to $101 million"
+      ],
+      "period": "full-year 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "ZUSDURI의 연간 매출 가이던스가 언제 제공될 예정인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "주력 제품 중 하나의 매출이다",
+      "figures": [
+        "$50.4 million"
+      ],
+      "quote": "ZUSDURI® generated $50.4 million in revenue in the second quarter of 2026, representing 73% quarter-over-quarter growth",
+      "where": "DOC-99C179A86297DD8F#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "다른 주력 제품의 매출이 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$22.0 million",
+        "$24.2 million"
+      ],
+      "quote": "Generated net product revenue of $22.0 million in the quarter ended June 30, 2026, compared with $24.2 million reported for the second quarter of 2025.",
+      "where": "DOC-99C179A86297DD8F#t12"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "총 매출이 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$72.5 million",
+        "$24.2 million"
+      ],
+      "quote": "Total revenue was $72.5 million in the second quarter ended June 30, 2026, compared with $24.2 million in the second quarter of 2025.",
+      "where": "DOC-99C179A86297DD8F#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "연구 개발 비용이 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$17.3 million",
+        "$18.9 million"
+      ],
+      "quote": "R&D expenses were $17.3 million in the second quarter of 2026, including non-cash share-based compensation expense of $0.9 million. This compares to $18.9 million, including non-cash share-based compe",
+      "where": "DOC-99C179A86297DD8F#p15"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "연구 개발 비용 감소는 일회성 회계 처리로 인한 것이다",
+      "figures": [
+        "$17.3 million",
+        "$18.9 million"
+      ],
+      "quote": "The decrease in R&D expenses was primarily attributable to ZUSDURI manufacturing costs, which were recognized as an R&D expense in the second quarter of 2025 prior to receiving FDA approval.",
+      "where": "DOC-99C179A86297DD8F#p15"
+    }
+  ],
+  "context_status": "draft_ready"
+}

@@ -1,0 +1,93 @@
+{
+  "context_id": "CTX-00C1D48A4294E166",
+  "candidate_id": "CAN-4BD491C8D3F1EC4F",
+  "ticker": "UCTT",
+  "issuer_cik": "0001275014",
+  "document_ids": [
+    "DOC-A19880431D2CB470"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A19880431D2CB470#p6",
+    "DOC-A19880431D2CB470#p8",
+    "DOC-A19880431D2CB470#p10",
+    "DOC-A19880431D2CB470#p11",
+    "DOC-A19880431D2CB470#p12",
+    "DOC-A19880431D2CB470#p16",
+    "DOC-A19880431D2CB470#p18",
+    "DOC-A19880431D2CB470#p19",
+    "DOC-A19880431D2CB470#p20",
+    "DOC-A19880431D2CB470#t2",
+    "DOC-A19880431D2CB470#t6",
+    "DOC-A19880431D2CB470#t7",
+    "DOC-A19880431D2CB470#t8",
+    "DOC-A19880431D2CB470#t10"
+  ],
+  "input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v10",
+  "generated_at": "2026-10-05T06:06:20+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐다는 내용이 이 발표로 인한 것인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "총 매출액이다",
+      "figures": [
+        "$644.9 million"
+      ],
+      "quote": "Total revenue was $644.9 million.",
+      "where": "DOC-A19880431D2CB470#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "순이익이다",
+      "figures": [
+        "$8.7 million"
+      ],
+      "quote": "net income was $8.7 million or $0.19 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "희석 주당 순이익이다",
+      "figures": [
+        "$0.19"
+      ],
+      "quote": "net income was $8.7 million or $0.19 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "비일반회계기준 순이익이다",
+      "figures": [
+        "$32.3 million"
+      ],
+      "quote": "On a non-GAAP basis, gross margin was 16.7%, operating margin was 7.0%, and net income was $32.3 million or $0.70 per diluted share.",
+      "where": "DOC-A19880431D2CB470#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 매출액을 예상한다",
+      "figures": [
+        "$700 million to $750 million"
+      ],
+      "quote": "The Company expects revenue in the range of $700 million to $750 million.",
+      "where": "DOC-A19880431D2CB470#p12"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

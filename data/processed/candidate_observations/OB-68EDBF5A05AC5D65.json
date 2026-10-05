@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-68EDBF5A05AC5D65",
+  "candidate_id": "CAN-7D75F8332DBCEEFC",
+  "candidate_version": "CV-6AAE806BF3816B2A",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:OSCR",
+    "ticker": "OSCR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-05T05:55:51+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261005T055133Z_37269585919-1.json.gz",
+    "sha256": "ac52790e3c2f34e08d230ec482b8da3088e32c29a818b97d6c8d60ff0364dcd7",
+    "run_id": "37269585919-1",
+    "finished_at": "2026-10-05T06:05:56+00:00"
+  },
+  "eps": {
+    "eps_now": 2.16551,
+    "eps_30d": 1.8819,
+    "eps_90d": 1.48466,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": 45.9,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.201,
+    "yield_change_30_pp": 0.917
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-07",
+    "price_start_date": "2026-07-07",
+    "price_end_expected": "2026-10-02",
+    "price_end_date": "2026-10-02",
+    "close_start": 31.1200008392334,
+    "close_end": 30.940000534057617,
+    "price_pct_90": -0.6,
+    "adj_return_pct_90": -0.6,
+    "pe_change_pct": -31.8
+  },
+  "display_rank": 31,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 19
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "0cc76d33876d",
+  "generator_version": "cards-v9",
+  "market_cap": 9549475840,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-05T06:05:58+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:OSCR",
+  "approval_version": null,
+  "rendered_at": "2026-10-05T06:06:46+00:00"
+}

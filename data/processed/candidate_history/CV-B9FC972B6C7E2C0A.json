@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-C05377BEC03AE25C",
+  "candidate_version": "CV-B9FC972B6C7E2C0A",
+  "identity": {
+    "entity_id": "NASDAQ:VSEC",
+    "ticker": "VSEC",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "VSE Corporation",
+  "industry": "Aerospace & Defense",
+  "sector": "Industrials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "VSE Corporation engages in providing aviation aftermarket parts distribution and maintenance, repair, and overhaul services for air transportation assets for commercial and government markets. It offers its services to global client base of commercial airlines, regional airlines, air cargo transporters, MRO integrators and providers, aviation manufacturers, corporate and private aircraft owners, and fixed-base operators. The company was incorporated in 1959 and is headquartered in Miramar, Florida."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "VSEC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSEC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-05T05:57:30+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "VSEC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSEC/history",
+      "published_at": null,
+      "observed_at": "2026-10-05T05:57:30+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "VSEC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSEC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-05T05:57:30+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v9",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 8.28332,
+    "eps_30d": 8.01132,
+    "eps_90d": 5.72162,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 9,
+    "down30": 1,
+    "pct_90": 44.8,
+    "steady": false,
+    "turnaround": false
+  }
+}

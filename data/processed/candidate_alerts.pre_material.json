@@ -259,54 +259,6 @@
       "reserved_at": "2026-10-03T05:44:10+00:00",
       "payload_sha256": "86bdb24e1574e98b2f81ab4da3bb831c37ccc19b670ed09397961d528fe49cd8",
       "message_id": 150
-    },
-    "NASDAQ:INDV|eps-revision-review:v1|new_discovery": {
-      "channel": "screen",
-      "event": "new_discovery",
-      "entity_id": "NASDAQ:INDV",
-      "thesis_key": "eps-revision-review:v1",
-      "candidate_id": "CAN-14DF13D991DA6490",
-      "candidate_version": "CV-8A39923159630224",
-      "observation_id": "OB-75A0B87BF176F620",
-      "signal_id": null,
-      "day": "2026-10-05",
-      "status": "reserved",
-      "attempts": [],
-      "reserved_by": "37269585919-1",
-      "reserved_at": "2026-10-05T06:08:34+00:00",
-      "payload_sha256": "b3c2984746f916eab56dd12455f438141731fdb6f620a2a7385c0c7a4085e94a"
-    },
-    "NYSE:HIPO|eps-revision-review:v1|new_discovery": {
-      "channel": "screen",
-      "event": "new_discovery",
-      "entity_id": "NYSE:HIPO",
-      "thesis_key": "eps-revision-review:v1",
-      "candidate_id": "CAN-D9076638B950E851",
-      "candidate_version": "CV-B231DEC40045C411",
-      "observation_id": "OB-B8C57C1E71899B87",
-      "signal_id": null,
-      "day": "2026-10-05",
-      "status": "reserved",
-      "attempts": [],
-      "reserved_by": "37269585919-1",
-      "reserved_at": "2026-10-05T06:08:34+00:00",
-      "payload_sha256": "e66c0f2f626e23255eba55f4e1807c0cde2174d2ec8775a8a4c6fe871b922f2c"
-    },
-    "NYSE:OSCR|eps-revision-review:v1|new_discovery": {
-      "channel": "screen",
-      "event": "new_discovery",
-      "entity_id": "NYSE:OSCR",
-      "thesis_key": "eps-revision-review:v1",
-      "candidate_id": "CAN-7D75F8332DBCEEFC",
-      "candidate_version": "CV-6AAE806BF3816B2A",
-      "observation_id": "OB-68EDBF5A05AC5D65",
-      "signal_id": null,
-      "day": "2026-10-05",
-      "status": "reserved",
-      "attempts": [],
-      "reserved_by": "37269585919-1",
-      "reserved_at": "2026-10-05T06:08:34+00:00",
-      "payload_sha256": "4ef82d3f32225c714539ae7b3bcd89a333059cdd33d70ae65f6e56cecdd98773"
     }
   },
   "bootstrap": {
@@ -348,48 +300,5 @@
       "NYSE:TNK|eps-revision-review:v1|new_discovery",
       "NYSE:VLO|eps-revision-review:v1|new_discovery"
     ]
-  },
-  "material": {
-    "version": "material-update-v1",
-    "pending": {
-      "NYSE:PBF|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-644DAF9D6798D3C5",
-          "baseline_id": "OB-644DAF9D6798D3C5",
-          "observed_at": "2026-10-05T06:05:56+00:00",
-          "day": "2026-10-05",
-          "snapshot_sha256": "ac52790e3c2f34e08d230ec482b8da3088e32c29a818b97d6c8d60ff0364dcd7",
-          "eps_now": 17.655,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      }
-    },
-    "rebases": {
-      "NASDAQ:MU|eps-revision-review:v1": {
-        "observation_id": "OB-C3EC57D1352A4832",
-        "baseline_id": "OB-C3EC57D1352A4832",
-        "observed_at": "2026-10-05T06:05:56+00:00",
-        "day": "2026-10-05",
-        "snapshot_sha256": "ac52790e3c2f34e08d230ec482b8da3088e32c29a818b97d6c8d60ff0364dcd7",
-        "eps_now": 205.95447,
-        "comparison_key": [
-          "eps_next_fy_per_share",
-          "2027-08-31",
-          "Yahoo Finance earningsTrend (+1y)",
-          "USD",
-          "provider-unspecified"
-        ],
-        "source": "rebase",
-        "reason": "comparison_key_changed"
-      }
-    },
-    "cancelled": []
   }
 }

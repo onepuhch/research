@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-D9076638B950E851",
+  "candidate_version": "CV-B231DEC40045C411",
+  "identity": {
+    "entity_id": "NYSE:HIPO",
+    "ticker": "HIPO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Hippo Holdings Inc.",
+  "industry": "Insurance - Property & Casualty",
+  "sector": "Financial Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Hippo Holdings Inc., together with its subsidiaries, provides property and casualty insurance products to individuals and business customers primarily in the United States. The company provides a multi-carrier platform through owned and partner managing general agents (MGAs), serving as a licensed insurance carrier for MGAs and providing admitted and non-admitted (excess and surplus) paper, regulatory licenses, and reinsurance across multiple lines of business. The company also offers insurance products, including homeowners, renters, commercial multi-peril, casualty, and other specialty insur"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "HIPO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/HIPO/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-05T06:02:39+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "HIPO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/HIPO/history",
+      "published_at": null,
+      "observed_at": "2026-10-05T06:02:39+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "HIPO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/HIPO/profile",
+      "published_at": null,
+      "observed_at": "2026-10-05T06:02:39+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v9",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.515,
+    "eps_30d": 2.7925,
+    "eps_90d": 2.68,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 31.2,
+    "steady": true,
+    "turnaround": false
+  }
+}
