@@ -1,0 +1,255 @@
+{
+  "review_baseline": "2858c90",
+  "probes": [
+    {
+      "case": "old_guidance_retold_in_new_release",
+      "expected": "no_A_alert",
+      "actual": "A_alert",
+      "current_sentence": "On September 1, 2026, AAA raised fiscal 2027 revenue guidance from $130 million to $150 million.",
+      "prior_sentence": null,
+      "accepted_documents": [
+        {
+          "document_id": "DOC-A1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1/DOC-A1.htm",
+          "form": "8-K",
+          "document_type": "EX-99.1",
+          "filed_at": "2026-10-09",
+          "report_date": "2026-10-09",
+          "event_date": "2026-10-09",
+          "date_precision": "document",
+          "cik": "0000000001",
+          "event": "guidance",
+          "values": [
+            "FY2026",
+            "revenue",
+            "unspecified",
+            "[150.0, 150.0]"
+          ],
+          "counterparty": null,
+          "guidance": {
+            "key": {
+              "metric": "revenue",
+              "period": "FY2026",
+              "gaap": "unspecified",
+              "unit": "usd_millions",
+              "currency": "USD"
+            },
+            "old": [
+              130.0,
+              130.0
+            ],
+            "new": [
+              150.0,
+              150.0
+            ],
+            "delta": null,
+            "direction": "up",
+            "status": "changed"
+          },
+          "sentence": "On September 1, 2026, AAA raised fiscal 2027 revenue guidance from $130 million to $150 million.",
+          "signature": "EV-455B3F1B5E752E6E",
+          "rule": "update-check-v4"
+        }
+      ],
+      "fixed": false
+    },
+    {
+      "case": "quarter_used_as_annual_prior",
+      "expected": "no_A_alert",
+      "actual": "A_alert",
+      "current_sentence": "AAA raises fiscal 2027 revenue guidance to $150 million.",
+      "prior_sentence": "AAA expects third-quarter 2027 revenue of $130 million.",
+      "accepted_documents": [
+        {
+          "document_id": "DOC-A1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1/DOC-A1.htm",
+          "form": "8-K",
+          "document_type": "EX-99.1",
+          "filed_at": "2026-10-09",
+          "report_date": "2026-10-09",
+          "event_date": "2026-10-09",
+          "date_precision": "document",
+          "cik": "0000000001",
+          "event": "guidance",
+          "values": [
+            "FY2027",
+            "revenue",
+            "unspecified",
+            "[150.0, 150.0]"
+          ],
+          "counterparty": null,
+          "guidance": {
+            "key": {
+              "metric": "revenue",
+              "period": "FY2027",
+              "gaap": "unspecified",
+              "unit": "usd_millions",
+              "currency": "USD"
+            },
+            "old": [
+              130.0,
+              130.0
+            ],
+            "new": [
+              150.0,
+              150.0
+            ],
+            "delta": null,
+            "direction": "up",
+            "status": "changed",
+            "prior_document": "DOC-OLD"
+          },
+          "sentence": "AAA raises fiscal 2027 revenue guidance to $150 million.",
+          "signature": "EV-1F4DCE6C92625E7B",
+          "rule": "update-check-v4"
+        }
+      ],
+      "fixed": false
+    },
+    {
+      "case": "another_entity_used_as_prior",
+      "expected": "no_A_alert",
+      "actual": "A_alert",
+      "current_sentence": "AAA raises fiscal 2027 revenue guidance to $150 million.",
+      "prior_sentence": "Other Buyer LLC CONSOLIDATED STATEMENTS OF OPERATIONS. Other expects fiscal 2027 revenue of $130 million.",
+      "accepted_documents": [
+        {
+          "document_id": "DOC-A1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1/DOC-A1.htm",
+          "form": "8-K",
+          "document_type": "EX-99.1",
+          "filed_at": "2026-10-09",
+          "report_date": "2026-10-09",
+          "event_date": "2026-10-09",
+          "date_precision": "document",
+          "cik": "0000000001",
+          "event": "guidance",
+          "values": [
+            "FY2027",
+            "revenue",
+            "unspecified",
+            "[150.0, 150.0]"
+          ],
+          "counterparty": null,
+          "guidance": {
+            "key": {
+              "metric": "revenue",
+              "period": "FY2027",
+              "gaap": "unspecified",
+              "unit": "usd_millions",
+              "currency": "USD"
+            },
+            "old": [
+              130.0,
+              130.0
+            ],
+            "new": [
+              150.0,
+              150.0
+            ],
+            "delta": null,
+            "direction": "up",
+            "status": "changed",
+            "prior_document": "DOC-OLD"
+          },
+          "sentence": "AAA raises fiscal 2027 revenue guidance to $150 million.",
+          "signature": "EV-1F4DCE6C92625E7B",
+          "rule": "update-check-v4"
+        }
+      ],
+      "fixed": false
+    },
+    {
+      "case": "failed_AB_retries_after_B_lapses",
+      "expected": "no_stale_B_send",
+      "before_status": "failed",
+      "before_triggers": [
+        "B",
+        "A"
+      ],
+      "after_status": "sent",
+      "after_triggers": [
+        "B",
+        "A"
+      ],
+      "latest_eps": 1.0,
+      "payload_eps": 1.3,
+      "fake_sent_count": 1,
+      "fixed": false
+    },
+    {
+      "case": "failed_price_heads_starve_later_candidates",
+      "expected": "later_untried_progress",
+      "day_one": {
+        "due": 25,
+        "requests": 20,
+        "collected": 0,
+        "failures": 19,
+        "stopped": "daily_requests"
+      },
+      "day_two": {
+        "due": 25,
+        "requests": 20,
+        "collected": 0,
+        "failures": 19,
+        "stopped": "daily_requests"
+      },
+      "day_one_calls": [
+        "SPY",
+        "T00",
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T09",
+        "T10",
+        "T11",
+        "T12",
+        "T13",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "T18"
+      ],
+      "day_two_calls": [
+        "SPY",
+        "T00",
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T09",
+        "T10",
+        "T11",
+        "T12",
+        "T13",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "T18"
+      ],
+      "fixed": false
+    }
+  ],
+  "open_boundaries": 5,
+  "exit_code": 1,
+  "reviewed_head": "2858c90be65e92bc7a498e0a770bc12443338392",
+  "validation": {
+    "existing_suite_tests": 550,
+    "existing_suite_result": "OK",
+    "elapsed_s": 60.829,
+    "previous_q_probe_open_boundaries": 0,
+    "ci_run": 37301892919,
+    "ci_conclusion": "success"
+  }
+}
