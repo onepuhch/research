@@ -535,6 +535,105 @@ class GitRemoteTest(unittest.TestCase):
                 self.assertFalse(persist_state.persist("chore: clean tree"))
 
 
+class StateAreaReplayTest(unittest.TestCase):
+    """Q0-B: a replay over remote commits is allowed only when they touch nothing in the state area."""
+
+    def git(self, *args, cwd):
+        return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True, text=True, encoding="utf-8")
+
+    def setUp(self):
+        import persist_state
+        self.persist_state = persist_state
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = pathlib.Path(tmp.name)
+        self.root = root
+        self.git("init", "--bare", "-q", str(root / "remote.git"), cwd=root)
+        for name in ("work", "other"):
+            self.git("clone", "-q", str(root / "remote.git"), str(root / name), cwd=root)
+            for key, value in (("user.name", "t"), ("user.email", "t@example.invalid"), ("commit.gpgsign", "false")):
+                self.git("config", key, value, cwd=root / name)
+        self.work, self.other = root / "work", root / "other"
+        self.data = self.work / "data" / "processed"
+        self.data.mkdir(parents=True)
+        for patch in (mock.patch.object(c, "ROOT", self.work), mock.patch.object(c, "DATA_DIR", self.data),
+                      contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO())):
+            patch.__enter__()
+            self.addCleanup(patch.__exit__, None, None, None)
+        c.atomic_json(self.data / "candidate_alerts.json", {"events": {}})
+        (self.data / "model_budget.json").write_text("{}", encoding="utf-8")
+        self.assertTrue(persist_state.persist("chore: first"))
+        self.git("pull", "-q", cwd=self.other)
+
+    def remote_commit(self, change, message="other"):
+        change(self.other)
+        self.git("add", "-A", ".", cwd=self.other)
+        self.git("commit", "-q", "-m", message, cwd=self.other)
+        self.git("push", "-q", cwd=self.other)
+
+    def local_state_then_persist(self):
+        c.atomic_json(self.data / "candidate_alerts.json", {"events": {"k": {"status": "reserved"}}})
+        return self.persist_state.persist("chore: reserve")
+
+    def remote_alerts(self):
+        return self.git("--git-dir", str(self.root / "remote.git"), "show", "HEAD:data/processed/candidate_alerts.json",
+                        cwd=self.root).stdout
+
+    def write(self, path, text):
+        def change(where):
+            target = where / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(text, encoding="utf-8")
+        return change
+
+    def test_code_and_ordinary_documents_with_spaces_and_korean_are_replayed(self):
+        self.remote_commit(self.write("scripts/x.py", "x = 1\n"))
+        self.remote_commit(self.write("docs/진행 기록.md", "기록\n"))
+        self.assertTrue(self.local_state_then_persist())
+        self.assertIn("reserved", self.remote_alerts())
+
+    def test_any_remote_state_change_blocks_the_replay(self):
+        cases = {
+            "changed": self.write("data/processed/candidate_alerts.json", '{"events": {"o": 1}}'),
+            "new document": self.write("data/processed/company_documents/DOC-NEW.json.gz", "x"),
+            "new observation": self.write("data/processed/candidate_observations/OB-NEW.json", "{}"),
+            "new price batch": self.write("data/processed/return_history/20261006T000000.json", "{}"),
+            "deleted": lambda where: (where / "data" / "processed" / "model_budget.json").unlink(),
+            "renamed out": lambda where: (where / "data" / "processed" / "model_budget.json").rename(where / "budget.txt"),
+            "state doc": self.write("docs/candidates.md", "other\n"),
+        }
+        for name, change in cases.items():
+            with self.subTest(name):
+                self.setUp()
+                before = self.remote_alerts()
+                self.remote_commit(change)
+                self.assertFalse(self.local_state_then_persist())
+                self.assertNotIn("reserved", self.remote_alerts())
+                self.assertEqual(before if name != "changed" else '{"events": {"o": 1}}', self.remote_alerts())
+                self.assertTrue(list((self.work / "reports" / "generated").glob("unpersisted_state_*.bundle")))
+
+    def test_a_state_change_reverted_later_still_blocks(self):
+        self.remote_commit(self.write("data/processed/company_documents/DOC-T.json.gz", "x"), "add")
+        self.remote_commit(lambda where: (where / "data/processed/company_documents/DOC-T.json.gz").unlink(), "revert")
+        self.assertFalse(self.local_state_then_persist())
+
+    def test_a_second_race_after_the_replay_is_not_retried(self):
+        self.remote_commit(self.write("scripts/x.py", "x = 1\n"))
+        real_run = subprocess.run
+        calls = []
+
+        def run(args, **kwargs):
+            calls.append(args[:2])
+            if args[:2] == ["git", "push"] and calls.count(["git", "push"]) == 2:
+                return subprocess.CompletedProcess(args, 1)  # someone pushed again after our rebase
+            return real_run(args, **kwargs)
+
+        with mock.patch.object(self.persist_state.subprocess, "run", side_effect=run):
+            self.assertFalse(self.local_state_then_persist())
+        self.assertEqual(calls.count(["git", "rebase"]), 1)
+        self.assertNotIn("reserved", self.remote_alerts())
+
+
 class DeliverClassificationTest(unittest.TestCase):
     def setUp(self):
         # How replies are classified is tested with sending allowed; the block has its own test.
