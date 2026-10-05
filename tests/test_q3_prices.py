@@ -197,5 +197,72 @@ class FailedPriceQueueR2Test(PriceQueueTest):
         self.assertEqual(t.batch_for("T00", t.price_batches())["retrieved_at"], kept["retrieved_at"])
 
 
+
+class RetryShareTest(PriceQueueTest):
+    """R2 review: at most retries_per_day failed tickers retried per KST day, across every call."""
+
+    def fail_heads(self, n=25, heads=19):
+        self.build(n)
+        self.answers = {f"T{i:02d}": 404 for i in range(heads)}
+        self.collect("2026-10-10T03:00:00+00:00")
+        self.calls.clear()
+
+    def retried(self):
+        return [x for x in self.calls if x != "SPY" and int(x[1:]) < 19]
+
+    def test_a_second_call_the_same_day_retries_nothing_more(self):
+        self.fail_heads()
+        first = self.collect("2026-10-11T03:00:00+00:00")
+        self.assertEqual((first["collected"], first["retries"]), (6, 5))
+        self.calls.clear()
+        second = self.collect("2026-10-11T04:00:00+00:00")
+        self.assertEqual((self.calls, second["stopped"]), ([], "retry_share_used"))  # not even SPY
+        day = c.read_json(t.queue_path(), {})["days"]["2026-10-11"]
+        self.assertEqual((day["retries"], day["requests"]), (5, 12))
+        self.collect("2026-10-12T03:00:00+00:00")  # a new KST day: a new share
+        self.assertEqual(len(self.retried()), 5)
+
+    def test_a_stop_before_sending_charges_nothing_and_a_request_sent_is_charged(self):
+        self.fail_heads(n=19)
+        ticks = iter([0, 0, 0, 0, 200])  # deadline, SPY, two retries, then the time budget ends
+        report = self.collect("2026-10-11T03:00:00+00:00", clock=lambda: next(ticks))
+        self.assertEqual((report["stopped"], report["retries"]), ("time_budget", 2))
+        self.calls.clear()
+
+        def broken(url, timeout):
+            if self.calls:  # SPY went through; the first retry request dies after being counted
+                raise RuntimeError("runner killed mid-request")
+            return self.fetch(url, timeout)
+        with self.assertRaises(RuntimeError):
+            t.collect_prices(datetime.fromisoformat("2026-10-11T05:00:00+00:00"), fetch=broken,
+                             sleep=lambda s: None, clock=lambda: 0.0)
+        self.assertEqual(c.read_json(t.queue_path(), {})["days"]["2026-10-11"]["retries"], 3)  # stays charged
+        self.calls.clear()
+        self.collect("2026-10-11T06:00:00+00:00")
+        self.assertEqual(len(self.retried()), 2)  # 2 + 1 + 2 = the day's 5
+
+    def test_a_used_retry_share_leaves_the_rest_to_new_candidates(self):
+        self.fail_heads(n=19)
+        self.collect("2026-10-11T03:00:00+00:00")
+        self.write_snapshot("2026-10-11", [row("NEW")], top=["NEW"])
+        t.update(datetime.fromisoformat("2026-10-11T04:00:00+00:00"))
+        self.calls.clear()
+        self.collect("2026-10-11T05:00:00+00:00")
+        self.assertEqual(self.calls, ["SPY", "NEW"])
+
+    def test_days_recorded_before_the_counter(self):
+        self.fail_heads(n=19)
+        queue = c.read_json(t.queue_path(), {})
+        queue["days"]["2026-10-11"] = {"requests": 3}  # requests sent, retries unknown: the share counts as used
+        c.atomic_json(t.queue_path(), queue)
+        self.assertEqual(self.collect("2026-10-11T03:00:00+00:00")["stopped"], "retry_share_used")
+        queue = c.read_json(t.queue_path(), {})
+        queue["days"]["2026-10-12"] = {"requests": 0}
+        c.atomic_json(t.queue_path(), queue)
+        self.calls.clear()
+        self.collect("2026-10-12T03:00:00+00:00")
+        self.assertEqual(len(self.retried()), 5)
+
+
 if __name__ == "__main__":
     unittest.main()

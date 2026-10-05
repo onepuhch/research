@@ -334,7 +334,11 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
     queue = c.read_json(queue_path(), {"order": [], "days": {}})
     order = price_queue(store, queue)
     day = now.astimezone(timezone(timedelta(hours=9))).date().isoformat()
-    used = queue.setdefault("days", {}).setdefault(day, {"requests": 0})
+    used = queue.setdefault("days", {}).setdefault(day, {"requests": 0, "retries": 0})
+    if "retries" not in used:
+        # A day recorded before retries were counted: none if it sent nothing, else its share is
+        # treated as used (its retries cannot be proven) -- for that day only.
+        used["retries"] = 0 if not used.get("requests") else cfg["retries_per_day"]
     batches = price_batches()
     by_ticker = {r["ticker"]: r for r in store["records"].values() if r.get("entity_id")}
     status = queue.setdefault("tickers", {})
@@ -346,15 +350,23 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
     ready = sorted((t for t in failing if (status[t].get("next_eligible_at") or "") <= now.isoformat()),
                    key=lambda t: (status[t].get("last_attempt_at") or "", order.index(t)))
     report = {"due": len(due), "fresh": len(fresh), "retry_waiting": len(failing) - len(ready), "retry_ready": len(ready),
+              "retries": 0,
               "requests": 0, "collected": 0, "failures": 0, "stopped": None}
     if used.get("stopped"):
         report["stopped"] = f"stopped_today:{used['stopped']}"  # a 429/5xx stop holds for the rest of the KST day
         return report
     room = cfg["requests_per_day"] - used["requests"] - 1  # one for SPY
-    retries = ready[:max(0, min(cfg["retries_per_day"], room))]
+    # The retry share is per KST day across every call (R2 review), not per call.
+    retry_left = max(0, cfg["retries_per_day"] - used["retries"])
+    retries = ready[:max(0, min(retry_left, room))]
     plan = fresh[:max(0, room - len(retries))] + retries
+    retry_set = set(retries)
+    report.update(retry_share_left=retry_left)
     if not plan or used["requests"] >= cfg["requests_per_day"]:
-        report["stopped"] = "nothing_due" if not (fresh or ready) else "daily_requests"
+        # Nothing to fetch means no SPY request either.
+        report["stopped"] = ("daily_requests" if used["requests"] >= cfg["requests_per_day"] and (fresh or ready)
+                             else "retry_share_used" if ready and not fresh and not retry_left
+                             else "daily_requests" if (fresh or ready) else "nothing_due")
         c.atomic_json(queue_path(), queue)
         return report
     deadline = clock() + cfg["time_budget_s"]
@@ -370,6 +382,9 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
         used["requests"] += 1
         report["requests"] += 1
         entry = status.setdefault(ticker, {"attempts": 0})
+        if ticker in retry_set:
+            used["retries"] += 1  # stored with the request count, before sending; never given back
+            report["retries"] += 1
         entry.update(attempts=entry.get("attempts", 0) + 1, last_attempt_at=now.isoformat())
         c.atomic_json(queue_path(), queue)  # counted before it is sent
         url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?period1={int(start.timestamp())}"
@@ -417,7 +432,7 @@ def collect_prices(now: datetime | None = None, fetch=None, sleep=None, clock=No
     if stop in ("rate_limited", "server_errors"):
         used["stopped"] = stop  # a same-day rerun cannot go around it; tomorrow starts again
     report.update(stopped=stop, collected=len([t for t in batch["series"] if t != "SPY"]), failures=len(batch["failures"]),
-                  retried=len([t for t in retries if status.get(t, {}).get("last_attempt_at") == now.isoformat()]))
+                  day_requests=used["requests"], day_retries=used["retries"])
     if batch["series"] or batch["failures"]:
         price_dir().mkdir(parents=True, exist_ok=True)
         c.atomic_json(price_dir() / (now.strftime("%Y%m%dT%H%M%S%f") + ".json"), batch)
