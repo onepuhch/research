@@ -1,0 +1,75 @@
+{
+  "case": "same_KST_day_two_price_invocations",
+  "input": {
+    "candidates": 25,
+    "first_19_return": 404,
+    "first_day": "2026-10-10",
+    "review_day": "2026-10-11"
+  },
+  "limits": {
+    "requests_per_day": 20,
+    "retries_per_day": 5
+  },
+  "setup_report": {
+    "due": 25,
+    "fresh": 25,
+    "retry_waiting": 0,
+    "retry_ready": 0,
+    "requests": 20,
+    "collected": 0,
+    "failures": 19,
+    "stopped": "daily_requests",
+    "retried": 0
+  },
+  "first_run": {
+    "due": 25,
+    "fresh": 6,
+    "retry_waiting": 0,
+    "retry_ready": 19,
+    "requests": 12,
+    "collected": 6,
+    "failures": 5,
+    "stopped": "daily_requests",
+    "retried": 5
+  },
+  "second_run": {
+    "due": 19,
+    "fresh": 0,
+    "retry_waiting": 5,
+    "retry_ready": 14,
+    "requests": 6,
+    "collected": 0,
+    "failures": 5,
+    "stopped": "daily_requests",
+    "retried": 5
+  },
+  "first_calls": [
+    "SPY",
+    "T19",
+    "T20",
+    "T21",
+    "T22",
+    "T23",
+    "T24",
+    "T00",
+    "T01",
+    "T02",
+    "T03",
+    "T04"
+  ],
+  "second_calls": [
+    "SPY",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09"
+  ],
+  "retry_ticker_count": 10,
+  "persisted_day_usage": {
+    "requests": 18
+  },
+  "resolved": false,
+  "open_boundaries": 1,
+  "network": "fake fetch; temporary data only"
+}
