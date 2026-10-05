@@ -38,15 +38,15 @@
     "failed": 0
   },
   "telegram_delivery": {
-    "checked_at": "2026-10-05T06:08:38+00:00",
+    "checked_at": "2026-10-05T06:08:51+00:00",
     "status": "success",
-    "last_success_at": "2026-10-05T06:08:38+00:00",
-    "message_id": 156
+    "last_success_at": "2026-10-05T06:08:51+00:00",
+    "message_id": 159
   },
   "review_report": {
-    "checked_at": "2026-09-28T05:48:12+00:00",
+    "checked_at": "2026-10-05T06:08:51+00:00",
     "status": "success",
-    "last_success_at": "2026-09-28T05:48:12+00:00"
+    "last_success_at": "2026-10-05T06:08:51+00:00"
   },
   "notify": {
     "checked_at": "2026-10-05T05:51:31+00:00",
@@ -62,9 +62,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-04T06:16:25+00:00",
+    "checked_at": "2026-10-05T06:08:40+00:00",
     "status": "success",
-    "last_success_at": "2026-10-04T06:16:25+00:00",
+    "last_success_at": "2026-10-05T06:08:40+00:00",
     "targets": 4,
     "failures": []
   },
@@ -132,18 +132,21 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-04T07:52:09+00:00",
+    "checked_at": "2026-10-05T06:08:39+00:00",
     "status": "success",
-    "last_success_at": "2026-10-04T07:52:09+00:00",
+    "last_success_at": "2026-10-05T06:08:39+00:00",
     "slots": 3,
     "bootstrap": false,
+    "material_eligible": 0,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 0,
+    "sent": 3,
     "failed": 0,
     "uncertain": 0,
-    "selected": 0
+    "reservation_persisted": true,
+    "receipts_persisted": true,
+    "selected": 3
   },
   "candidate_context": {
     "checked_at": "2026-10-05T06:06:46+00:00",
