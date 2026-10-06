@@ -331,6 +331,40 @@
       "reserved_at": "2026-10-05T06:08:34+00:00",
       "payload_sha256": "4ef82d3f32225c714539ae7b3bcd89a333059cdd33d70ae65f6e56cecdd98773",
       "message_id": 156
+    },
+    "NASDAQ:SPCX|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:SPCX",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-5790099EDC6F3301",
+      "candidate_version": "CV-7E2A2C59C4270FA3",
+      "observation_id": "OB-F3A3612CE36AA85B",
+      "signal_id": null,
+      "day": "2026-10-06",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "37424027804-1",
+      "reserved_at": "2026-10-06T06:49:00+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · SPCX Space Exploration Technologies Corp.</b>\n회사 설명 확인 중 (SPCX)\n내년 EPS 예상(2027-12-31 회계연도 말) $0.64 → $1.94 (+204%), 최근 30일 상향 3/하향 0\n주가 2026-07-08 → 2026-10-05 +15.4%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-5790099EDC6F3301</code> · 추적 <code>/track CAN-5790099EDC6F3301</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
+      "payload_sha256": "a6c96cca7315b61bf62cbd4f5e75547a35606e76b665f7cb54af248f31a4fc34"
+    },
+    "NYSE:BP|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:BP",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-ECB2C73CA19DA4AB",
+      "candidate_version": "CV-2933DAB4E62BDB42",
+      "observation_id": "OB-3D3E203380D6A1CD",
+      "signal_id": null,
+      "day": "2026-10-06",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "37424027804-1",
+      "reserved_at": "2026-10-06T06:49:00+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · BP BP p.l.c.</b>\n회사 설명 확인 중 (BP)\n내년 EPS 예상(2027-12-31 회계연도 말) $4.07 → $5.29 (+30%), 최근 30일 상향 6/하향 1\n주가 2026-07-08 → 2026-10-05 +13.8%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-ECB2C73CA19DA4AB</code> · 추적 <code>/track CAN-ECB2C73CA19DA4AB</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
+      "payload_sha256": "28a034f7d3833b9158d44ab959b71a87fcd479e22ac5582c1598661b04c5fcc3"
     }
   },
   "bootstrap": {
@@ -374,7 +408,7 @@
     ]
   },
   "material": {
-    "version": "material-update-v1",
+    "version": "material-update-v3",
     "pending": {
       "NYSE:PBF|eps-revision-review:v1": {
         "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
@@ -414,6 +448,7 @@
         "reason": "comparison_key_changed"
       }
     },
-    "cancelled": []
+    "cancelled": [],
+    "previous_version": "material-update-v1"
   }
 }

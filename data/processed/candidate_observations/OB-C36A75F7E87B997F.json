@@ -1,0 +1,97 @@
+{
+  "observation_id": "OB-C36A75F7E87B997F",
+  "candidate_id": "CAN-11B1565B12AFE2F9",
+  "candidate_version": "CV-3E1B604CEBD95ECD",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DINO",
+    "ticker": "DINO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-06T06:34:43+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261006T063159Z_37424027804-1.json.gz",
+    "sha256": "d6205768a29561230a1987823d30bdcb66dcc33c7c1bfe3dda91b11c74288667",
+    "run_id": "37424027804-1",
+    "finished_at": "2026-10-06T06:46:34+00:00"
+  },
+  "eps": {
+    "eps_now": 13.2206,
+    "eps_30d": 9.61552,
+    "eps_90d": 8.00818,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 65.1,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.524,
+    "yield_change_30_pp": 3.129
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 20484255744,
+  "context_id": "CTX-F9D9AA0C6D3787B9",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-04T06:15:49+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 9,
+    "shown": [
+      "MPC",
+      "PBF",
+      "DK"
+    ],
+    "folded": [
+      "VLO",
+      "PSX",
+      "DINO",
+      "CVI",
+      "PARR"
+    ],
+    "outside": [
+      "SUN"
+    ]
+  },
+  "entity_id": "NYSE:DINO",
+  "approval_version": null,
+  "rendered_at": "2026-10-06T06:47:32+00:00"
+}

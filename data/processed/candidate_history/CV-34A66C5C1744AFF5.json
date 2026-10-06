@@ -1,0 +1,201 @@
+{
+  "candidate_id": "CAN-D386F57F584A20DC",
+  "candidate_version": "CV-34A66C5C1744AFF5",
+  "identity": {
+    "entity_id": "NYSE:TX",
+    "ticker": "TX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Ternium S.A.",
+  "industry": "Steel",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Ternium S.A., together with its subsidiaries, manufactures and distributes steel products in Mexico, Southern Region, Brazil, and internationally. The company operates through two segments, Steel and Mining. The Steel segment offers slabs, heavy plates, hot and cold rolled products, coated products, stamped steel parts for the automotive industry, roll-formed and tubular products, billets, bars, and other products, including sales of energy. Its Mining segment sells iron ore and pellets. It also provides medical and social; scrap; and engineering and other services. In addition, the company en"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TX/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-06T06:45:50+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TX/history",
+      "published_at": null,
+      "observed_at": "2026-10-06T06:45:50+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TX/profile",
+      "published_at": null,
+      "observed_at": "2026-10-06T06:45:50+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-29F6CDBE38A4A95D",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000046/a2026junternium6-k.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-29T06:08:31+00:00",
+      "fields": "6-K 6-K"
+    },
+    {
+      "id": "DOC-7711E2B3F13517D4",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000044/prternium2q2026.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-29T06:08:31+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-0BFF06C8F442C6BE",
+    "input_sha": "0bff06c8f442c6be1cefb0fd758b22fdddd3b78b7f7569b6457370f010800ac8",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter of 2026 — 회사는 조정 EBITDA가 전 분기 대비 증가할 것으로 예상한다",
+        "note_ko": "회사는 조정 EBITDA가 전 분기 대비 증가할 것으로 예상한다",
+        "kind": "guidance",
+        "quote": "Ternium expects Adjusted EBITDA to increase in the third quarter of 2026 compared to the second quarter, driven by higher shipments and an improved Adjusted EBITDA margin.",
+        "document_id": "DOC-7711E2B3F13517D4",
+        "block_id": "p50",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "third quarter of 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "volume",
+          "margin_cost"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "[Mining Segment] Cash Operating Income · second quarter of 2026 — 광업 부문의 현금 영업 이익은 전 분기 대비 소폭 감소했다",
+        "note_ko": "광업 부문의 현금 영업 이익은 전 분기 대비 소폭 감소했다",
+        "kind": "fact",
+        "quote": "The Mining Segment’s Cash Operating Income decreased slightly sequentially in the second quarter of 2026, primarily driven by lower realized iron ore prices partially offset by higher sales volumes.",
+        "document_id": "DOC-7711E2B3F13517D4",
+        "block_id": "p85",
+        "metric": "Cash Operating Income",
+        "figures": [],
+        "period": "second quarter of 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Mining Segment",
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "price",
+          "volume"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-29F6CDBE38A4A95D",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000046/a2026junternium6-k.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-29T06:08:31+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      },
+      {
+        "document_id": "DOC-7711E2B3F13517D4",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000044/prternium2q2026.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-29T06:08:31+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-06T06:46:56+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 7.65036,
+    "eps_30d": 6.59529,
+    "eps_90d": 5.01552,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 52.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

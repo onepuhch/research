@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-2318B631491B192F",
+  "candidate_id": "CAN-5A9E947A6AEC56D7",
+  "candidate_version": "CV-0EAEF6655819DB7B",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:AGL",
+    "ticker": "AGL",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-06T06:41:34+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261006T063159Z_37424027804-1.json.gz",
+    "sha256": "d6205768a29561230a1987823d30bdcb66dcc33c7c1bfe3dda91b11c74288667",
+    "run_id": "37424027804-1",
+    "finished_at": "2026-10-06T06:46:34+00:00"
+  },
+  "eps": {
+    "eps_now": 2.36143,
+    "eps_30d": 1.76475,
+    "eps_90d": -0.61688,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": null,
+    "steady": false,
+    "turnaround": true,
+    "yield_change_90_pp": 3.534,
+    "yield_change_30_pp": 0.708
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-08",
+    "price_start_date": "2026-07-08",
+    "price_end_expected": "2026-10-05",
+    "price_end_date": "2026-10-05",
+    "close_start": 111.79000091552734,
+    "close_end": 84.27999877929688,
+    "price_pct_90": -24.6,
+    "adj_return_pct_90": -24.6,
+    "pe_change_pct": null
+  },
+  "display_rank": 15,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 9
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 1415163136,
+  "context_id": "CTX-489EBDB3A330DB87",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-06T06:46:36+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:AGL",
+  "approval_version": null,
+  "rendered_at": "2026-10-06T06:47:32+00:00"
+}

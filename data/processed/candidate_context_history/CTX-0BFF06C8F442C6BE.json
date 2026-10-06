@@ -1,0 +1,120 @@
+{
+  "context_id": "CTX-0BFF06C8F442C6BE",
+  "candidate_id": "CAN-D386F57F584A20DC",
+  "ticker": "TX",
+  "issuer_cik": "0001342874",
+  "document_ids": [
+    "DOC-29F6CDBE38A4A95D",
+    "DOC-7711E2B3F13517D4"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-29F6CDBE38A4A95D#t6",
+    "DOC-29F6CDBE38A4A95D#t21",
+    "DOC-29F6CDBE38A4A95D#p78",
+    "DOC-29F6CDBE38A4A95D#t28",
+    "DOC-29F6CDBE38A4A95D#p111",
+    "DOC-29F6CDBE38A4A95D#p112",
+    "DOC-29F6CDBE38A4A95D#p128",
+    "DOC-29F6CDBE38A4A95D#p129",
+    "DOC-29F6CDBE38A4A95D#p180",
+    "DOC-29F6CDBE38A4A95D#p188",
+    "DOC-29F6CDBE38A4A95D#p192",
+    "DOC-7711E2B3F13517D4#p49",
+    "DOC-7711E2B3F13517D4#p50",
+    "DOC-7711E2B3F13517D4#p77",
+    "DOC-7711E2B3F13517D4#p85"
+  ],
+  "input_sha": "0bff06c8f442c6be1cefb0fd758b22fdddd3b78b7f7569b6457370f010800ac8",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-06T06:46:56+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter of 2026 — 회사는 조정 EBITDA가 전 분기 대비 증가할 것으로 예상한다",
+      "note_ko": "회사는 조정 EBITDA가 전 분기 대비 증가할 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "Ternium expects Adjusted EBITDA to increase in the third quarter of 2026 compared to the second quarter, driven by higher shipments and an improved Adjusted EBITDA margin.",
+      "document_id": "DOC-7711E2B3F13517D4",
+      "block_id": "p50",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "third quarter of 2026",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "volume",
+        "margin_cost"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[Mining Segment] Cash Operating Income · second quarter of 2026 — 광업 부문의 현금 영업 이익은 전 분기 대비 소폭 감소했다",
+      "note_ko": "광업 부문의 현금 영업 이익은 전 분기 대비 소폭 감소했다",
+      "kind": "fact",
+      "quote": "The Mining Segment’s Cash Operating Income decreased slightly sequentially in the second quarter of 2026, primarily driven by lower realized iron ore prices partially offset by higher sales volumes.",
+      "document_id": "DOC-7711E2B3F13517D4",
+      "block_id": "p85",
+      "metric": "Cash Operating Income",
+      "figures": [],
+      "period": "second quarter of 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Mining Segment",
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "price",
+        "volume"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 당기순이익은 해당 기간에 이 금액을 기록했다",
+      "figures": [
+        "464,527"
+      ],
+      "quote": "Profit for the period ; 464,527 ; 259,315 ; 836,917 ; 401,646",
+      "where": "DOC-29F6CDBE38A4A95D#t6"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 주주에게 귀속되는 기본 및 희석 주당 이익은 해당 기간에 이 금액을 기록했다",
+      "figures": [
+        "0.18"
+      ],
+      "quote": "Basic and diluted earnings per share for profit attributable to the equity holders of the company (expressed in $ per share) ; 0.18 ; 0.11 ; 0.28 ; 0.14",
+      "where": "DOC-29F6CDBE38A4A95D#t6"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "철강 부문의 현금 영업 이익은 전 분기 대비 이 금액만큼 증가했다",
+      "figures": [
+        "$240 million"
+      ],
+      "quote": "The Steel Segment’s Cash Operating Income rose by $240 million sequentially in the second quarter of 2026, driven by higher realized steel prices and greater sales volumes, partially offset by slightl",
+      "where": "DOC-7711E2B3F13517D4#p77"
+    }
+  ],
+  "context_status": "draft_ready"
+}

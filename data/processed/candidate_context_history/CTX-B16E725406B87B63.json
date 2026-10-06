@@ -1,0 +1,210 @@
+{
+  "context_id": "CTX-B16E725406B87B63",
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "ticker": "PARR",
+  "issuer_cik": "0000821483",
+  "document_ids": [
+    "DOC-45EC7F1F3C20E448"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-45EC7F1F3C20E448#p6",
+    "DOC-45EC7F1F3C20E448#p21",
+    "DOC-45EC7F1F3C20E448#p35",
+    "DOC-45EC7F1F3C20E448#p40",
+    "DOC-45EC7F1F3C20E448#p77",
+    "DOC-45EC7F1F3C20E448#p79",
+    "DOC-45EC7F1F3C20E448#t7",
+    "DOC-45EC7F1F3C20E448#t8",
+    "DOC-45EC7F1F3C20E448#t12",
+    "DOC-45EC7F1F3C20E448#t16",
+    "DOC-45EC7F1F3C20E448#t17",
+    "DOC-45EC7F1F3C20E448#t18",
+    "DOC-45EC7F1F3C20E448#t20"
+  ],
+  "input_sha": "b16e725406b87b6379f19ce47501a0e83259e4135bdeb929c4031daad8577768",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-06T06:46:56+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Net income attributable to Par Pacific stockholders: $462.1 million — 회사 주주에게 귀속되는 순이익이다",
+      "note_ko": "회사 주주에게 귀속되는 순이익이다",
+      "kind": "fact",
+      "quote": "Net income attributable to Par Pacific stockholders of $462.1 million, or $9.35 per diluted share",
+      "document_id": "DOC-45EC7F1F3C20E448",
+      "block_id": "p6",
+      "metric": "Net income attributable to Par Pacific stockholders",
+      "figures": [
+        "$462.1 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "[Retail] fuel sales volumes · second quarter of 2026: 30.7 million gallons — 소매 부문의 연료 판매량이다",
+      "note_ko": "소매 부문의 연료 판매량이다",
+      "kind": "fact",
+      "quote": "The Retail segment reported fuel sales volumes of 30.7 million gallons in the second quarter of 2026, compared to 30.8 million gallons in the same quarter of 2025.",
+      "document_id": "DOC-45EC7F1F3C20E448",
+      "block_id": "p35",
+      "metric": "fuel sales volumes",
+      "figures": [
+        "30.7 million gallons"
+      ],
+      "period": "second quarter of 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Retail",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Net cash provided by operations · three months ended June 30, 2026: $282.6 million — 영업 활동으로 인한 순 현금 흐름이다",
+      "note_ko": "영업 활동으로 인한 순 현금 흐름이다",
+      "kind": "fact",
+      "quote": "Net cash provided by operations totaled $282.6 million for the three months ended June 30, 2026, including working capital outflows of $(312.2) million and deferred turnaround expenditures of $(19.5) million.",
+      "document_id": "DOC-45EC7F1F3C20E448",
+      "block_id": "p40",
+      "metric": "Net cash provided by operations",
+      "figures": [
+        "$282.6 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "net price lag impact · second quarter 2026 — 하와이 정유소의 계약 판매량은 전월 및 전주 평균 시장 가격을 기준으로 가격이 책정된다",
+      "note_ko": "하와이 정유소의 계약 판매량은 전월 및 전주 평균 시장 가격을 기준으로 가격이 책정된다",
+      "kind": "fact",
+      "quote": "The net price lag impact reflects the Hawaii refinery's contractual sales volumes that are priced based on prior-month and prior-week average market prices.",
+      "document_id": "DOC-45EC7F1F3C20E448",
+      "block_id": "p21",
+      "metric": "net price lag impact",
+      "figures": [],
+      "period": "second quarter 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted Gross Margin — 변동성이 큰 상품 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이를 조정하여 투자자에게 유용한 정보를 제공한다",
+      "note_ko": "변동성이 큰 상품 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이를 조정하여 투자자에게 유용한 정보를 제공한다",
+      "kind": "fact",
+      "quote": "We believe Adjusted Gross Margin (as defined below) provides useful information to investors because it eliminates the gross impact of volatile commodity prices and adjusts for certain non-cash items and timing differences created by our inventory financing agreements and lower of cost and net realizable value adjustments to demonstrate the earnings potential of the business before other fixed and variable costs, which are reported separately in Operating expense (excluding depreciation) and Depreciation and amortization.",
+      "document_id": "DOC-45EC7F1F3C20E448",
+      "block_id": "p77",
+      "metric": "Adjusted Gross Margin",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "희석 주당 순이익이다",
+      "figures": [
+        "$9.35"
+      ],
+      "quote": "Net income attributable to Par Pacific stockholders of $462.1 million, or $9.35 per diluted share",
+      "where": "DOC-45EC7F1F3C20E448#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "소매 부문의 조정 EBITDA이다",
+      "figures": [
+        "$17.3 million"
+      ],
+      "quote": "Retail segment Adjusted EBITDA was $17.3 million in the second quarter of 2026, compared to $23.3 million in the second quarter of 2025.",
+      "where": "DOC-45EC7F1F3C20E448#p35"
+    },
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "2025년 10월 21일에 설립된 합작 투자 회사의 비지배 지분과 관련된 비 GAAP 조정 부분을 제외한다",
+      "figures": [],
+      "quote": "Beginning with the financial results reported for the fourth quarter of 2025, Adjusted Net Income (Loss) attributable to Par Pacific stockholders excludes the portion of non-GAAP adjustments associate",
+      "where": "DOC-45EC7F1F3C20E448#p79"
+    }
+  ],
+  "context_status": "draft_ready"
+}

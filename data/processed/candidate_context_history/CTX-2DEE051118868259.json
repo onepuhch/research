@@ -1,0 +1,181 @@
+{
+  "context_id": "CTX-2DEE051118868259",
+  "candidate_id": "CAN-8ED72F330C1AE34D",
+  "ticker": "FSLY",
+  "issuer_cik": "0001517413",
+  "document_ids": [
+    "DOC-756AB63F072FAB95"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-756AB63F072FAB95#p5",
+    "DOC-756AB63F072FAB95#p6",
+    "DOC-756AB63F072FAB95#p9",
+    "DOC-756AB63F072FAB95#p14",
+    "DOC-756AB63F072FAB95#p27",
+    "DOC-756AB63F072FAB95#p38",
+    "DOC-756AB63F072FAB95#p41",
+    "DOC-756AB63F072FAB95#p42",
+    "DOC-756AB63F072FAB95#p44",
+    "DOC-756AB63F072FAB95#p45",
+    "DOC-756AB63F072FAB95#p48",
+    "DOC-756AB63F072FAB95#p49",
+    "DOC-756AB63F072FAB95#p50",
+    "DOC-756AB63F072FAB95#p51",
+    "DOC-756AB63F072FAB95#p52",
+    "DOC-756AB63F072FAB95#p53",
+    "DOC-756AB63F072FAB95#p54",
+    "DOC-756AB63F072FAB95#p55",
+    "DOC-756AB63F072FAB95#p60",
+    "DOC-756AB63F072FAB95#p61",
+    "DOC-756AB63F072FAB95#t9"
+  ],
+  "input_sha": "2dee05111886825925afaeb79135b2fd463b7799b731c8f73c7d86484e36bff4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-06T06:46:56+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(revenue) · second quarter: $183.3 million / 23%(변화율·증가) — 회사의 이분기 매출이 전년 같은 기간보다 늘었다",
+      "note_ko": "회사의 이분기 매출이 전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "Record second quarter revenue of $183.3 million grew 23% year-over-year",
+      "document_id": "DOC-756AB63F072FAB95",
+      "block_id": "p5",
+      "metric": "revenue",
+      "figures": [
+        "$183.3 million",
+        "23%"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "outlook · full-year — 회사는 연간 전망을 상향 조정할 자신감을 얻었다",
+      "note_ko": "회사는 연간 전망을 상향 조정할 자신감을 얻었다",
+      "kind": "guidance",
+      "quote": "Our platform strategy is driving business momentum, giving us the confidence to raise our full-year outlook.",
+      "document_id": "DOC-756AB63F072FAB95",
+      "block_id": "p9",
+      "metric": "outlook",
+      "figures": [],
+      "period": "full-year",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 결정된 영업 실적의 모든 금액을 반영하지 않으며, 다른 회사에서 사용하는 비일반회계기준 재무 지표와 다를 수 있다",
+      "note_ko": "비일반회계기준 지표는 일반회계기준에 따라 결정된 영업 실적의 모든 금액을 반영하지 않으며, 다른 회사에서 사용하는 비일반회계기준 재무 지표와 다를 수 있다",
+      "kind": "fact",
+      "quote": "These non-GAAP measures have limitations in that they do not reflect all of the amounts associated with our results of operations as determined in accordance with GAAP. In addition, these non-GAAP financial measures may be different from the non-GAAP financial measures used by other companies.",
+      "document_id": "DOC-756AB63F072FAB95",
+      "block_id": "p38",
+      "metric": "non-GAAP measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "회사의 연간 전망 상향 조정이 구체적으로 어떤 수치에 영향을 미쳤는지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "회사의 이분기 매출총이익률은 전년 같은 기간보다 늘었다",
+      "figures": [
+        "63.3%"
+      ],
+      "quote": "GAAP gross margin of 63.3%, compared to 54.5% in the second quarter of 2025.",
+      "where": "DOC-756AB63F072FAB95#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "회사의 이분기 비일반회계기준 매출총이익률은 전년 같은 기간보다 늘었다",
+      "figures": [
+        "65.8%"
+      ],
+      "quote": "Non-GAAP gross margin1 of 65.8%, compared to 59.0% in the second quarter of 2025.",
+      "where": "DOC-756AB63F072FAB95#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업활동 현금흐름은 전년 같은 기간보다 늘었다",
+      "figures": [
+        "39,334"
+      ],
+      "quote": "Net cash provided by operating activities ; 39,334 ; 25,798 ; 68,200 ; 43,086",
+      "where": "DOC-756AB63F072FAB95#t9"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "비일반회계기준 전망치는 미래에 발생할 수 있는 불확실한 비용 때문에 일반회계기준과 조정하기 어렵다",
+      "figures": [],
+      "quote": "A reconciliation of non-GAAP guidance measures to corresponding GAAP measures is not available on a forward-looking basis without unreasonable effort due to the uncertainty of expenses that may be inc",
+      "where": "DOC-756AB63F072FAB95#p27"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "주식 기반 보상 비용 및 관련 고용주 급여세는 회사의 비용이지만, 경영진은 핵심 사업, 지속적인 운영 결과 또는 미래 전망을 반영한다고 보지 않아 비일반회계기준 실적 평가 시 제외한다",
+      "figures": [],
+      "quote": "Although stock-based compensation and its related employer payroll taxes are expenses for the Company, management considers its operating results without this activity when evaluating its ongoing non-",
+      "where": "DOC-756AB63F072FAB95#p54"
+    }
+  ],
+  "context_status": "draft_ready"
+}

@@ -1,0 +1,217 @@
+{
+  "context_id": "CTX-92ED65CF1157122E",
+  "candidate_id": "CAN-C8B827862A3B86D5",
+  "ticker": "PUBM",
+  "issuer_cik": "0001422930",
+  "document_ids": [
+    "DOC-3D1694AF9B866D05"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3D1694AF9B866D05#p5",
+    "DOC-3D1694AF9B866D05#p7",
+    "DOC-3D1694AF9B866D05#p8",
+    "DOC-3D1694AF9B866D05#p11",
+    "DOC-3D1694AF9B866D05#p13",
+    "DOC-3D1694AF9B866D05#p14",
+    "DOC-3D1694AF9B866D05#p15",
+    "DOC-3D1694AF9B866D05#p16",
+    "DOC-3D1694AF9B866D05#p21",
+    "DOC-3D1694AF9B866D05#p23",
+    "DOC-3D1694AF9B866D05#p29",
+    "DOC-3D1694AF9B866D05#p40",
+    "DOC-3D1694AF9B866D05#p41",
+    "DOC-3D1694AF9B866D05#p42",
+    "DOC-3D1694AF9B866D05#p43",
+    "DOC-3D1694AF9B866D05#p44",
+    "DOC-3D1694AF9B866D05#p50",
+    "DOC-3D1694AF9B866D05#p51",
+    "DOC-3D1694AF9B866D05#p52",
+    "DOC-3D1694AF9B866D05#p53",
+    "DOC-3D1694AF9B866D05#p54",
+    "DOC-3D1694AF9B866D05#p55",
+    "DOC-3D1694AF9B866D05#p56",
+    "DOC-3D1694AF9B866D05#p57",
+    "DOC-3D1694AF9B866D05#p63",
+    "DOC-3D1694AF9B866D05#p64",
+    "DOC-3D1694AF9B866D05#p65",
+    "DOC-3D1694AF9B866D05#p66",
+    "DOC-3D1694AF9B866D05#p68",
+    "DOC-3D1694AF9B866D05#p69",
+    "DOC-3D1694AF9B866D05#p70",
+    "DOC-3D1694AF9B866D05#p71",
+    "DOC-3D1694AF9B866D05#t1",
+    "DOC-3D1694AF9B866D05#t2",
+    "DOC-3D1694AF9B866D05#t3",
+    "DOC-3D1694AF9B866D05#p94",
+    "DOC-3D1694AF9B866D05#p98"
+  ],
+  "input_sha": "92ed65cf1157122ec01bae83806b82349f9c80310229825b8a34ab11a83718ec",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-06T06:46:56+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · second quarter of 2026: $78.6 million / 11%(변화율·증가) — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Revenue in the second quarter of 2026 was $78.6 million, up 11% compared to the same period of 2025;",
+      "document_id": "DOC-3D1694AF9B866D05",
+      "block_id": "p13",
+      "metric": "Revenue",
+      "figures": [
+        "$78.6 million",
+        "11%"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Non-GAAP net income · second quarter: $5.9 million / $0.12 — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Non-GAAP net income was $5.9 million, or $0.12 per non-GAAP diluted share in the second quarter, compared to non-GAAP net income of $2.5 million, or $0.05 per non-GAAP diluted share in the same period of 2025;",
+      "document_id": "DOC-3D1694AF9B866D05",
+      "block_id": "p16",
+      "metric": "Non-GAAP net income",
+      "figures": [
+        "$5.9 million",
+        "$0.12"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 운전자본 필요성, 주식 기반 보상의 희석 효과, 현금 감소를 나타낼 수 있는 세금 납부를 반영하지 않는다",
+      "note_ko": "조정 EBITDA는 운전자본 필요성, 주식 기반 보상의 희석 효과, 현금 감소를 나타낼 수 있는 세금 납부를 반영하지 않는다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA does not reflect: (a) changes in, or cash requirements for, our working capital needs; (b) the potentially dilutive impact of stock-based compensation; or (c) tax payments that may represent a reduction in cash available to us;",
+      "document_id": "DOC-3D1694AF9B866D05",
+      "block_id": "p68",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "전년 같은 기간보다 손실이 줄었다",
+      "figures": [
+        "$(1.2) million",
+        "(1)%",
+        "$(0.03)"
+      ],
+      "quote": "GAAP net loss was $(1.2) million with a margin of (1)%, or $(0.03) per diluted share in the second quarter, compared to GAAP net loss of $(5.2) million with a margin of (7)%, or $(0.11) per diluted sh",
+      "where": "DOC-3D1694AF9B866D05#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "figures": [
+        "$19.6 million",
+        "25%"
+      ],
+      "quote": "Adjusted EBITDA was $19.6 million, or 25% margin, an increase over $14.2 million, or 20% margin in the same period of 2025;",
+      "where": "DOC-3D1694AF9B866D05#p15"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사가 예상하는 매출 범위이다",
+      "figures": [
+        "$75 million to $77 million"
+      ],
+      "quote": "Revenue to be in the range of $75 million to $77 million.",
+      "where": "DOC-3D1694AF9B866D05#p54"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 순이익에 대한 가이던스를 제공할 수 없다",
+      "figures": [],
+      "quote": "Although we provide guidance for adjusted EBITDA, we are not able to provide guidance for net income (loss), the most directly comparable GAAP measure.",
+      "where": "DOC-3D1694AF9B866D05#p56"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "주식 기반 보상 비용을 포함한 GAAP 순이익 구성 요소는 예측할 수 없다",
+      "figures": [],
+      "quote": "Certain elements of the composition of GAAP net income (loss), including stock-based compensation expenses, are not predictable, making it impractical for us to provide guidance on net income or to re",
+      "where": "DOC-3D1694AF9B866D05#p56"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}
