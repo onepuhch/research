@@ -1,0 +1,97 @@
+{
+  "observation_id": "OB-8D049CB22BB836AB",
+  "candidate_id": "CAN-F451582E2056444F",
+  "candidate_version": "CV-CD834FC225C8062D",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:CVI",
+    "ticker": "CVI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-07T06:15:29+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261007T060957Z_37579928333-1.json.gz",
+    "sha256": "fc2f655097636555d19b915b82f51cfc27804e55824b807cbc4da72da0f15f8a",
+    "run_id": "37579928333-1",
+    "finished_at": "2026-10-07T06:24:19+00:00"
+  },
+  "eps": {
+    "eps_now": 3.50959,
+    "eps_30d": 2.18866,
+    "eps_90d": 2.16667,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 62.0,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 2.339,
+    "yield_change_30_pp": 2.3
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 5772466688,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-03T05:43:20+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 9,
+    "shown": [
+      "MPC",
+      "PBF",
+      "DK"
+    ],
+    "folded": [
+      "VLO",
+      "PSX",
+      "DINO",
+      "CVI",
+      "PARR"
+    ],
+    "outside": [
+      "SUN"
+    ]
+  },
+  "entity_id": "NYSE:CVI",
+  "approval_version": null,
+  "rendered_at": "2026-10-07T06:24:34+00:00"
+}

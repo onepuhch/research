@@ -5666,5 +5666,151 @@
     "attempts": 1,
     "updated_at": "2026-10-06T06:30:44+00:00",
     "reason": "회사의 사업 운영 및 재무 상태에 대한 일반적인 위험 요소를 설명하는 루틴 공시이며, 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주 변화 등)를 포함하고 있지 않습니다."
+  },
+  "0001493152-26-045978": {
+    "status": "retry",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-045978",
+      "entity_id": "CIK:0002026767",
+      "source_role": "candidate",
+      "title": "Calisa Acquisition Corp (ALIS, ALISR, ALISU) (CIK 0002026767) EX-99.1 2026-10-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/2026767/000149315226045978/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2026767/000149315226045978/ex99-1.htm",
+      "published_at": "2026-10-06",
+      "raw_text": "Calisa Acquisition Corp (ALIS, ALISR, ALISU) (CIK 0002026767) EX-99.1 2026-10-06. The lightweight pilot structure is intended to reduce initial capital requirements and shorten deployment cycles, while supporting phased investment and incremental capacity expansion. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 GoodVision AI Enters into Two Collaboration Agreements: 15MW Modular Factory with TDTC and 100-Node Inference Pilot with Hop Global Redwood City, CA, October 5, 2026 — GoodVision AI (“GoodVision”), a developer of next-generation AI compute infrastructure purpose-built for inference, today announced further progress in its U.S. AI infrastructure strategy through separate collaboration agreements with Tokenomics Digital Tech Corp. (“TDTC”) and HOP Global Service Inc. (“HOP Global”) in Texas. The two initiatives represent complementary deployment paths within GoodVision’s U.S. AI data center (“AIDC”) and inference infrastructure strategy. The TDTC collaboration focuses on the development of dedicated modular AI Factory infrastructure, while the HOP Global project is designed to validate a lighter and more flexible deployment model based on smaller AI inference clusters that can be expanded incrementally. By expanding GoodVision’s physical AIDC footprint in the U.S., these collaborations are aimed at providing a strong infrastructure anchor for the deployment and commercialization of GoodVision AI’s software capabilities, including its Smart Routing Engine. Together, the projects are intended to broaden GoodVision’s ability to deploy AI inference capacity across sites with different infrastructure conditions, investment requirements and customer demand profiles, while further integrating its software and infrastructure capabilities into a more complete AI inference ecosystem. TDTC Collaboration: Modular AI Factory Infrastructure Pursuant to the cooperation agreement with TDTC, the parties will look to jointly invest in, develop and operate modular AI Factory inferenc"
+    },
+    "content_hash": "898aa041f1520a149afdc494b25df631a4c531d8bd5b7c0ed581c011d46f0135",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-07T06:09:49+00:00",
+    "reason": "HTTPError",
+    "next_retry_at": "2026-10-07T18:09:22.905220+00:00"
+  },
+  "0001493152-26-045870": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-045870",
+      "entity_id": "CIK:0001096275",
+      "source_role": "candidate",
+      "title": "Worksport Ltd (WKSP) (CIK 0001096275) EX-99.1 2026-10-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1096275/000149315226045870/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1096275/000149315226045870/ex99-1.htm",
+      "published_at": "2026-10-06",
+      "raw_text": "Worksport Ltd (WKSP) (CIK 0001096275) EX-99.1 2026-10-06. Preliminary net sales increased 5.6% to $2.34 million , while estimated month-end backlog rose to approximately $898,000 , reflecting order intake that exceeded invoicing during August. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 Worksport (Nasdaq: WKSP) Books $2.92M August Orders; Annualized Order Run Rate Reaches $35M August orders increase 16.4%, while estimated backlog grows 145.1% to approximately $898,000. Preliminary net sales reach $2.34 million, extending the Company’s eight-month sales climb West Seneca, New York, October 6, 2026 — Worksport Ltd. (Nasdaq: WKSP) (“Worksport” or the “Company”), a U.S.-based innovator and manufacturer of hybrid and clean energy solutions primarily for the light truck, overlanding, and global consumer goods markets, today announced preliminary August 2026 sales orders of approximately $2.92 million , an increase of 16.4% from July 2026 , representing an annualized sales-order run rate of $35.05 million . Preliminary net sales increased 5.6% to $2.34 million , while estimated month-end backlog rose to approximately $898,000 , reflecting order intake that exceeded invoicing during August. Monthly Net Sales Extend Eight-Month Climb Worksport’s preliminary monthly net sales increased from approximately $937,000 in January to $2.34 million in August , representing growth of approximately 150% . Each successive month exceeded the previous month across the January-to-August period, with monthly growth averaging approximately 14.6% across 2026. Orders Outpace Invoicing; Estimated Backlog Increases 145.1% August sales orders increased 16.4% from approximately $2.51 million in July to approximately $2.92 million , while invoiced sales increased 5.6% from approximately $2.27 million in July to approximately $2.39 million . August orders exceeded invoicing by approximately $532,000 , increasing Worksport’s estimated backlog from an updated July balance of approximately $366,000 to $8"
+    },
+    "content_hash": "8f2c9cb7cbe12d82a1e4d858a7170a2ec747b98d16580c5f79ee2569bb8873db",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-07T06:09:53+00:00",
+    "reason": "deferred_budget"
+  },
+  "0001437749-26-032177": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-032177",
+      "entity_id": "CIK:0001378590",
+      "source_role": "candidate",
+      "title": "Bridgeline Digital, Inc. (BLIN) (CIK 0001378590) EX-99.1 2026-10-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1378590/000143774926032177/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1378590/000143774926032177/ex_1022590.htm",
+      "published_at": "2026-10-06",
+      "raw_text": "Bridgeline Digital, Inc. (BLIN) (CIK 0001378590) EX-99.1 2026-10-06. Fiscal 2026 Sales Bridgeline recorded its third consecutive quarterly record for new customer acquisitions in the fourth quarter of fiscal 2026, adding 12 new customers, an average of one per week. These new customers represented more than $1.4M in TCV and $400K in ARR, surpassing the prior quarter’s record of nine new customers. Fiscal 2026 was also a record year for new customer acquisition, with 38 new customers. Fourth Quarter Sales Highlights ● Record quarter for new customer acquisitions ● 12 new customers with $1.4M TCV and over $400K ARR ● 11 sales to existing customers with $750K TCV and $200K ARR ● 53% increase in ARPU Fiscal 2026 Sales Highlights ● Record year for new customer acquisitions ● 38 new customers with $3.9M TCV and $1.2M ARR ● 37 sales to existing customers with $4.0M TCV and $1.0M ARR ● 35% increase in ARPU Fiscal 2026 Core Products Bridgeline expects its Core products to represent 61% of total revenue and 64% of subscription revenue for fiscal 2026. Initial contracts from new customers were 35% higher than last year, and net revenue retention of 105% demonstrates continued customer investment in the platform. Average Revenue per Unit (“ARPU”) represents average new customer subscription ARR per sale. These forward-looking statements are not guarantees of future results and are subject to risks, uncertainties and assumptions, including, but not limited to, business operations and the business of our customers, suppliers and partners; our ability to retain and upgrade current customers, increasing our recurring revenue, our ability to attract new customers, our revenue growth rate; our history of net loss and our ability to achieve or maintain profitability, instability in the financial markets, including the banking sector; our liability for any unauthorized access to our data or our users' content, including through privacy and data security breaches; any decline in demand "
+    },
+    "content_hash": "da8efc94ebf091b53f4454220ab04be73043cca3f3cab3f1cda35d136cd606b6",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-07T06:09:22.905220+00:00"
+  },
+  "0001193125-26-415597": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-415597",
+      "entity_id": "CIK:0001130464",
+      "source_role": "candidate",
+      "title": "BLACK HILLS CORP /SD/ (BKH) (CIK 0001130464) EX-99.1 2026-10-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1130464/000119312526415597/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1130464/000119312526415597/bkh-ex99_1.htm",
+      "published_at": "2026-10-06",
+      "raw_text": "BLACK HILLS CORP /SD/ (BKH) (CIK 0001130464) EX-99.1 2026-10-06. EX-99.1 2 bkh-ex99_1.htm EX-99.1 EX-99.1 Black Hills Corp. Executes Definitive Agreements to Serve Google’s Planned Data Center in Cheyenne, Wyoming • Investing $1.8 billion in new company-owned natural gas generation • Providing up to 590 megawatts (MW) of grid-connected energy service and managing 2.1 gigawatts (GW) of third-party contracted resources through a private microgrid • Strong customer protections including no cost shifting to other customers • Return on generation investment and microgrid management fees are contracted to begin contributing to earnings in 2027, and expected to provide approximately $150 million of net income in 2030 • Expected to generate approximately $2.4 billion of unlevered free cash flow through 2048, net of $1.8 billion of capital expenditures RAPID CITY, S.D. — Oct. 6, 2026 — Black Hills Corp. (NYSE: BKH) today announced it has signed definitive agreements effective Sept. 30, 2026, with terms through 2048, to serve a planned Google data center to be constructed in Cheyenne, Wyoming. The negotiated agreements include a Large Power Contract Services Agreement (LPCSA) and a Generation Facilities Agreement (GFA). The project, exclusive of additional transmission system expansion investments, is anticipated to be served by a total resource mix of 2.7 GW, including reserve margins, and is planned to begin taking energy service in late 2027 and ramp to the project’s peak load in 2030. Black Hills will provide up to 590 MW of grid-connected energy service through company-owned generation and market energy. In addition, Black Hills will manage the output of approximately 2.1 GW of Wyoming-based, third-party contracted resources through a privately managed microgrid under the company’s Large Power Contract Service (LPCS) tariff. To support the project, Black Hills plans to invest $1.8 billion between 2027 and 2029 to construct 564 MW (nameplate capacity) of company-owned gen"
+    },
+    "content_hash": "973fae367d798394a62be3fb646a3d3a65d3f8d91b39917cce376866fe8dd15d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-07T06:09:22.905220+00:00"
+  },
+  "0001871638-26-000063": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001871638-26-000063",
+      "entity_id": "CIK:0001871638",
+      "source_role": "candidate",
+      "title": "Blaize Holdings, Inc. (BZAI, BZAIW) (CIK 0001871638) EX-99.1 2026-10-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1871638/000187163826000063/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1871638/000187163826000063/ex991-1052026revenueannoun.htm",
+      "published_at": "2026-10-06",
+      "raw_text": "Blaize Holdings, Inc. (BZAI, BZAIW) (CIK 0001871638) EX-99.1 2026-10-06. Any increased costs that are able to be passed through to customers or new customer commitments received during the fourth quarter that can be fulfilled through inventory on hand or software service agreements and recognized in the quarter would be additive to the Company’s revenue expectations. EX-99.1 2 ex991-1052026revenueannoun.htm EX-99.1 Document EXHIBIT 99.1 Blaize Provides Preliminary Third Quarter 2026 Revenue Update and Full-Year Guidance Update SAN JOSE, Calif. – October 5, 2026 - Blaize Holdings, Inc. (Nasdaq: BZAI; BZAIW) (“Blaize” or the “Company”) , a leader in programmable, energy-efficient AI computing, today announced its preliminary third quarter 2026 revenue. The Company also provided an update regarding its previously issued full-year 2026 revenue guidance. These matters are further described in a Current Report on Form 8-K filed today with the U.S. Securities and Exchange Commission. Preliminary Third Quarter 2026 Revenue and Full Year Outlook The Company expects to report preliminary revenue of approximately $0.5 million for the third quarter ending September 30, 2026. The Company’s preliminary third-quarter revenue estimate is based on currently available information and remains subject to completion of the Company’s quarter-end closing procedures. Actual results could differ materially from this preliminary estimate. Given the foregoing and as noted below, the Company is revising its full-year revenue guidance for 2026 to be between $32.0 million and $36.0 million. The revised guidance is based on binding, non-cancellable purchase orders from NeoTensr and a new purchase order from an existing customer in process of signature. The product shipments to NeoTensr this quarter relate to the contract announced by the Company in April 2026 for up to $50.0 million. The revision reflects the Company’s updated expectations regarding shipment timing and management of working capit"
+    },
+    "content_hash": "aec98b176fb79d665375d4b3a49c00bb4692c437ba9a8b9140bae6e7e7ca5ed2",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-07T06:09:22.905220+00:00"
+  },
+  "0001193125-26-414991": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-414991",
+      "entity_id": "CIK:0001640384",
+      "source_role": "candidate",
+      "title": "POWERCOMPUTE, INC. (PWCM) (CIK 0001640384) EX-10.1 2026-10-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640384/000119312526414991/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1640384/000119312526414991/lmfa-ex10_1.htm",
+      "published_at": "2026-10-06",
+      "raw_text": "POWERCOMPUTE, INC. (PWCM) (CIK 0001640384) EX-10.1 2026-10-06. For applicability of this Rider, a customer (served by either the Tennessee Valley Authority (“TVA”) or a Distributor under Schedule DC) is required to pay the Capacity Commitment Charge for new or expanded load if the customer meets one or more of the following criteria: • is a new customer that will be served by TVA or by a Distributor at a new end-use delivery point and the power consumed by the customer meets the eligibility requirements in the “Availability” section of Schedule DC; • is a new customer that has acquired an existing end-use delivery point served by TVA or by a Distributor and the power consumed by the new customer meets the eligibility requirements in the “Availability” section of Schedule DC; • is an existing customer that repurposes its existing end-use delivery point that was most recently utilized to consume power that met the eligibility requirements for a rate schedule other than Schedule DC and the power consumed by the customer at the repurposed delivery point meets the eligibility requirements in the “Availability” section of Schedule DC; or • is an existing customer requesting an increase in the specified contract demand for its existing end-use delivery point and the power consumed by the customer meets the eligibility requirements in the “Availability” section of Schedule DC. Residential customer deposits shall not exceed twice the average of the highest monthly bill for all residential customers, which is calculated annually. Customer deposits will earn interest at the same rate as Columbus Light and Water's primary bank account.",
+      "_model_response": {
+        "evidence_quote": "For applicability of this Rider, a customer (served by either the Tennessee Valley Authority (“TVA”) or a Distributor under Schedule DC) is required to pay the Capacity Commitment Charge for new or expanded load if the customer meets one or more of the following criteria: • is a new customer that will be served by TVA or by a Distributor at a new end-use delivery point and the power consumed by the customer meets the eligibility requirements in the “Availability” section of Schedule DC; • is a new customer that has acquired an existing end-use delivery point served by TVA or by a Distributor and the power consumed by the new customer meets the eligibility requirements in the “Availability” section of Schedule DC; • is an existing customer that repurposes its existing end-use delivery point that was most recently utilized to consume power that met the eligibility requirements for a rate schedule other than Schedule DC and the power consumed by the customer at the repurposed delivery point meets the eligibility requirements in the “Availability” section of Schedule DC; or • is an existing customer requesting an increase in the specified contract demand for its existing end-use delivery point and the power consumed by the customer meets the eligibility requirements in the “Availability” section of Schedule DC.",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "이 문서는 POWERCOMPUTE, INC.의 고객 또는 사업 운영에 대한 구체적인 조기 투자 신호가 아닌, 전력 용량 약정 요금(Capacity Commitment Charge)에 대한 일반적인 적용 규칙을 설명하는 공시입니다. 회사의 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등 구체적인 사업 성과 지표가 포함되어 있지 않습니다.",
+        "subject": "POWERCOMPUTE, INC.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "POWERCOMPUTE, INC.의 EX-10.1 공시에서 전력 용량 약정 요금(Capacity Commitment Charge)의 적용 기준에 대해 설명했습니다.",
+        "why_it_matters": "이 공시는 회사의 사업 성과나 미래 전망에 대한 직접적인 투자 신호가 아니므로 투자 관점에서 중요하지 않습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "이 문서는 POWERCOMPUTE, INC.의 고객 또는 사업 운영에 대한 구체적인 조기 투자 신호가 아닌, 전력 용량 약정 요금(Capacity Commitment Charge)에 대한 일반적인 적용 규칙을 설명하는 공시입니다. 회사의 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등 구체적인 사업 성과 지표가 포함되어 있지 않습니다."
+    },
+    "content_hash": "9aa3f73516692ca93580853f1e793a976de4080f8078d80f4301fe9b7dbdfe16",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-07T06:09:35+00:00",
+    "reason": "이 문서는 POWERCOMPUTE, INC.의 고객 또는 사업 운영에 대한 구체적인 조기 투자 신호가 아닌, 전력 용량 약정 요금(Capacity Commitment Charge)에 대한 일반적인 적용 규칙을 설명하는 공시입니다. 회사의 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등 구체적인 사업 성과 지표가 포함되어 있지 않습니다."
   }
 }

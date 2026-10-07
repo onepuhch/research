@@ -52,13 +52,13 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-45B4C790D13177FE",
       "context_input_sha": "45b4c790d13177fe0ee8aa72d5aaaebaee952dbe76ef828adcc8e1ac5141b8cd",
       "quality": "complete",
       "failures": 0,
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-05T06:16:08+00:00"
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-ABBBE42278126D28": {
       "status": "success",
@@ -85,13 +85,13 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-F44C3140360C58BE",
       "context_input_sha": "f44c3140360c58be9298bef43d45772b72510f6dbe41a8a9b15145cb1cf62a92",
       "quality": "complete",
       "failures": 0,
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-05T06:16:08+00:00"
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-D577F2C38FBBCFF7": {
       "status": "success",
@@ -116,11 +116,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-4AF8EDED57B44FFC",
       "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-E460E34B1D8B66CE": {
       "status": "success",
@@ -152,7 +153,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
       "context_id": "CTX-3A49D7297BE7A680",
       "context_input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
@@ -211,7 +212,8 @@
             "event_date_unknown"
           ]
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-82719B27698E3C22": {
       "status": "success",
@@ -238,11 +240,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-3052BA46969F76BA",
       "context_input_sha": "3052ba46969f76baff47b9ebb00b79ebdec646f47d432ce4d227b33969ccf187",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-DC6D3F92ECFFD019": {
       "status": "success",
@@ -269,11 +272,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-C0F40E5CBBA2627E",
       "context_input_sha": "c0f40e5cbba2627ec2d99c197ae82a67f2d733cbfff3d8d86710d15ca7b3224e",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-77F79A3B05ABB893": {
       "status": "success",
@@ -300,7 +304,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
       "quality": "complete",
@@ -327,7 +331,8 @@
             "restated_result_or_unchanged"
           ]
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-700B10D9B75B0040": {
       "status": "success",
@@ -354,11 +359,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-9880C8070DA7574A",
       "context_input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-490AC1686F9442CE": {
       "status": "success",
@@ -385,11 +391,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-5CD5637243E02192",
       "context_input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-68E9292E49558246": {
       "status": "success",
@@ -491,8 +498,8 @@
         "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
         "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-10-06T06:46:36+00:00",
-      "eps_key": "2027-12-31|40.93043",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
+      "eps_key": "2027-12-31|41.45762",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9DA9F71500981FB2"
@@ -505,8 +512,8 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-C6D280F99B770EDC",
       "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
       "update_checks": [
@@ -534,7 +541,8 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-36582E27909720FE": {
       "status": "success",
@@ -574,11 +582,11 @@
         "exchange": "NYSE",
         "name": "HF Sinclair Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
-      "eps_key": "2027-12-31|12.74103",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
+      "eps_key": "2027-12-31|13.2206",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-0F62310DD65064FB"
@@ -586,13 +594,33 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-1D4FFDA045A91754",
         "DOC-0F62310DD65064FB"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-F9D9AA0C6D3787B9",
-      "context_input_sha": "f9d9aa0c6d3787b99b7f7e8412462d00b6a6e2220c8bd93755d89974c57dc3bc"
+      "context_input_sha": "f9d9aa0c6d3787b99b7f7e8412462d00b6a6e2220c8bd93755d89974c57dc3bc",
+      "update_checks": [
+        {
+          "document_id": "DOC-1D4FFDA045A91754",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-0F62310DD65064FB",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-5A9E947A6AEC56D7": {
       "status": "success",
@@ -619,7 +647,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-489EBDB3A330DB87",
       "context_input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
       "update_checks": [
@@ -631,7 +659,8 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-E95987D989EF1145": {
       "status": "success",
@@ -660,7 +689,8 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-08T06:22:35+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-4DB66C064FC2ED7C": {
       "status": "success",
@@ -687,7 +717,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-D7CCF9DF6338D50D",
       "context_input_sha": "d7ccf9df6338d50d156da272a6317a1350a87f916f88e715609826efdd842657",
       "update_checks": [
@@ -701,7 +731,8 @@
             "guidance_no_comparable_key"
           ]
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-E87900AEFDDE7B07": {
       "status": "success",
@@ -729,11 +760,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
       "context_id": "CTX-BC75ACFAFFC06F1A",
       "context_input_sha": "bc75acfaffc06f1afa78da14c113bc3eae0e38bfa109fbbdeb1aa756c295381f",
-      "update_checks": []
+      "update_checks": [],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-A0761326A7E13159": {
       "status": "success",
@@ -762,7 +794,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
       "context_id": "CTX-8CFBA1DBF9585DC2",
       "context_input_sha": "8cfba1dbf9585dc2d9d851650bd35b7201b8f4584c6dbe6ad2dcc777a0c3493d",
@@ -777,7 +809,8 @@
           "eligible": false,
           "reason": "update-check-v2:no_event_sentence"
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-EE8A92AC2C2D3E8C": {
       "status": "success",
@@ -833,11 +866,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-1CD87BF73F9D0762",
       "context_input_sha": "1cd87bf73f9d0762ffe5bad0e43471ea71d0947218c488e0fe263fffea95756d",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-06T06:06:20+00:00",
+      "draft_next_at": "2026-10-07T06:40:14+00:00",
       "update_checks": [
         {
           "document_id": "DOC-AC201A9BE0E4E848",
@@ -876,9 +909,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-05T06:16:08+00:00"
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-C8B827862A3B86D5": {
       "status": "success",
@@ -889,10 +922,10 @@
         "exchange": "Nasdaq",
         "name": "PubMatic, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "affa8f025ab31bab39b60e06cf0bcc401bb87f23151412d686258fc9b99ef091",
-        "mapping_observed_at": "2026-09-28T05:32:53+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-09-28T05:47:17+00:00",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
       "eps_key": "2027-12-31|0.81333",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -904,11 +937,21 @@
         "DOC-3D1694AF9B866D05"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-05T05:47:17+00:00",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-92ED65CF1157122E",
       "context_input_sha": "92ed65cf1157122ec01bae83806b82349f9c80310229825b8a34ab11a83718ec",
-      "draft_error": "HTTPError"
+      "draft_error": "HTTPError",
+      "update_checks": [
+        {
+          "document_id": "DOC-3D1694AF9B866D05",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-6AC97D7E0081C82D": {
       "status": "success",
@@ -946,10 +989,10 @@
         "exchange": "Nasdaq",
         "name": "Fastly, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "affa8f025ab31bab39b60e06cf0bcc401bb87f23151412d686258fc9b99ef091",
-        "mapping_observed_at": "2026-09-28T05:32:53+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-09-28T05:47:17+00:00",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
       "eps_key": "2027-12-31|0.6305",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -961,10 +1004,20 @@
         "DOC-756AB63F072FAB95"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-05T05:47:17+00:00",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-2DEE051118868259",
-      "context_input_sha": "2dee05111886825925afaeb79135b2fd463b7799b731c8f73c7d86484e36bff4"
+      "context_input_sha": "2dee05111886825925afaeb79135b2fd463b7799b731c8f73c7d86484e36bff4",
+      "update_checks": [
+        {
+          "document_id": "DOC-756AB63F072FAB95",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-3D30FF7D03231FE1": {
       "status": "success",
@@ -991,7 +1044,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
       "update_checks": [
@@ -1003,7 +1056,8 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-4BD491C8D3F1EC4F": {
       "status": "success",
@@ -1030,7 +1084,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-00C1D48A4294E166",
       "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
       "update_checks": [
@@ -1042,7 +1096,8 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-0584EAE068460D91": {
       "status": "success",
@@ -1053,10 +1108,10 @@
         "exchange": "NYSE",
         "name": "Dana Incorporated",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "affa8f025ab31bab39b60e06cf0bcc401bb87f23151412d686258fc9b99ef091",
-        "mapping_observed_at": "2026-09-28T05:32:53+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-09-28T05:47:17+00:00",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
       "eps_key": "2027-12-31|4.18621",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -1068,10 +1123,22 @@
         "DOC-9BCC3ED21F2A62D7"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-05T05:47:17+00:00",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-5677208FD4537CBC",
-      "context_input_sha": "5677208fd4537cbc91433d973d32ed38389fcee95dd80b7612b01b91bc3a7640"
+      "context_input_sha": "5677208fd4537cbc91433d973d32ed38389fcee95dd80b7612b01b91bc3a7640",
+      "update_checks": [
+        {
+          "document_id": "DOC-9BCC3ED21F2A62D7",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:guidance:p17",
+          "alert_reasons": [
+            "guidance_no_comparable_key"
+          ]
+        }
+      ]
     },
     "CAN-4E5151866E863998": {
       "status": "success",
@@ -1082,10 +1149,10 @@
         "exchange": "Nasdaq",
         "name": "Atlassian Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "affa8f025ab31bab39b60e06cf0bcc401bb87f23151412d686258fc9b99ef091",
-        "mapping_observed_at": "2026-09-28T05:32:53+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-09-29T06:08:31+00:00",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
       "eps_key": "2028-06-30|2.1871",
       "eps_target_period": "2028-06-30",
       "document_ids": [
@@ -1097,10 +1164,20 @@
         "DOC-AAA5C2B5425B0947"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-06T06:08:31+00:00",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-AD4D51B8741A9339",
-      "context_input_sha": "ad4d51b8741a9339ba987e1d4fa60a1caa8328478d95bd3c88e3501061e0af82"
+      "context_input_sha": "ad4d51b8741a9339ba987e1d4fa60a1caa8328478d95bd3c88e3501061e0af82",
+      "update_checks": [
+        {
+          "document_id": "DOC-AAA5C2B5425B0947",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-D386F57F584A20DC": {
       "status": "success",
@@ -1143,10 +1220,10 @@
         "exchange": "NYSE",
         "name": "TXO Partners, L.P.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "ec78fbd272ecb158e65b60d774e2ee5715b454eaadc3c9a670214fa0c2bcce13",
-        "mapping_observed_at": "2026-09-30T05:41:34+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-09-30T05:55:57+00:00",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
       "eps_key": "2027-12-31|1.30667",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -1158,10 +1235,21 @@
         "DOC-439BA8AE037B9273"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-07T05:55:57+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-4516CDD65F6EAE41",
-      "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905"
+      "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
+      "update_checks": [
+        {
+          "document_id": "DOC-439BA8AE037B9273",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p76",
+          "alert_reasons": []
+        }
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-782282A0C20A29F1": {
       "status": "success",
@@ -1188,9 +1276,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-08T15:16:19+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-05T06:16:08+00:00"
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-7F0690B785E31226": {
       "status": "success",
@@ -1201,11 +1289,11 @@
         "exchange": "NYSE",
         "name": "Cleveland-Cliffs Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "ec78fbd272ecb158e65b60d774e2ee5715b454eaadc3c9a670214fa0c2bcce13",
-        "mapping_observed_at": "2026-09-30T05:41:34+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-10-01T06:22:35+00:00",
-      "eps_key": "2027-12-31|0.77259",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
+      "eps_key": "2027-12-31|0.92607",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-067BE90E51AC5E3F"
@@ -1216,10 +1304,21 @@
         "DOC-067BE90E51AC5E3F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-08T06:22:35+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-B80220E5DD347856",
-      "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d"
+      "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
+      "update_checks": [
+        {
+          "document_id": "DOC-067BE90E51AC5E3F",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-713C837ADADE8D8B": {
       "status": "success",
@@ -1246,9 +1345,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-08T06:22:35+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-05T06:16:08+00:00"
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-23C223C070F4B3C3": {
       "status": "success",
@@ -1289,12 +1388,12 @@
         "exchange": "Nasdaq",
         "name": "Micron Technology, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
       },
-      "attempted_at": "2026-10-03T05:43:20+00:00",
-      "eps_key": "2028-08-31|204.7875",
-      "eps_target_period": "2028-08-31",
+      "attempted_at": "2026-10-07T06:24:22+00:00",
+      "eps_key": "2027-08-31|206.33243",
+      "eps_target_period": "2027-08-31",
       "document_ids": [
         "DOC-39C08ABD9C77B7B0",
         "DOC-72E4E5C51654E6AA"
@@ -1306,8 +1405,27 @@
         "DOC-72E4E5C51654E6AA"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "deferred_budget"
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "draft_status": "provider_overloaded",
+      "update_checks": [
+        {
+          "document_id": "DOC-39C08ABD9C77B7B0",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-72E4E5C51654E6AA",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-F451582E2056444F": {
       "status": "success",
@@ -1334,9 +1452,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-05T06:16:08+00:00"
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-14DF13D991DA6490": {
       "status": "success",
@@ -1377,7 +1495,8 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-D9076638B950E851": {
       "status": "success",
@@ -1440,7 +1559,8 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-CA0C8E92D2718B06": {
       "status": "success",
@@ -1553,7 +1673,8 @@
         }
       ],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     },
     "CAN-ECB2C73CA19DA4AB": {
       "status": "no_relevant_document",
@@ -1617,6 +1738,44 @@
         }
       ],
       "next_eligible_at": "2026-10-13T06:46:36+00:00"
+    },
+    "CAN-02BF26B752677B69": {
+      "status": "success",
+      "ticker": "JXN",
+      "issuer": {
+        "cik": "0001822993",
+        "ticker": "JXN",
+        "exchange": "NYSE",
+        "name": "Jackson Financial Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
+        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+      },
+      "attempted_at": "2026-10-07T06:24:22+00:00",
+      "eps_key": "2027-12-31|30.901",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-3D29425664C7E8D9"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-3D29425664C7E8D9"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-3D29425664C7E8D9",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-07T06:40:14+00:00"
     }
   },
   "days": {
@@ -1664,6 +1823,11 @@
     "2026-10-06": {
       "companies": 10,
       "http_attempts": 38,
+      "folded_companies": 2
+    },
+    "2026-10-07": {
+      "companies": 10,
+      "http_attempts": 25,
       "folded_companies": 2
     }
   },
@@ -1752,6 +1916,8 @@
     "0001104659-26-105673|https://www.sec.gov/Archives/edgar/data/1163739/000110465926105673/tm2624844d1_8k.htm": "DOC-8688EFE76D36BC73",
     "0001104659-26-101937|https://www.sec.gov/Archives/edgar/data/1163739/000110465926101937/tm2622350d4_ex99-1.htm": "DOC-C7EAB0094752736D",
     "0001104659-26-101937|https://www.sec.gov/Archives/edgar/data/1163739/000110465926101937/tm2622350d4_8k.htm": "DOC-CFE4C67A24B731D8",
-    "0001628280-26-062625|https://www.sec.gov/Archives/edgar/data/1035002/000162828026062625/vlo-20260917.htm": "DOC-32F60A1C22C35EC4"
+    "0001628280-26-062625|https://www.sec.gov/Archives/edgar/data/1035002/000162828026062625/vlo-20260917.htm": "DOC-32F60A1C22C35EC4",
+    "0001822993-26-000123|https://www.sec.gov/Archives/edgar/data/1822993/000182299326000123/exhibit991-2q26.htm": "DOC-3D29425664C7E8D9",
+    "0001628280-26-059117|https://www.sec.gov/Archives/edgar/data/1915657/000162828026059117/dino-20260826.htm": "DOC-1D4FFDA045A91754"
   }
 }

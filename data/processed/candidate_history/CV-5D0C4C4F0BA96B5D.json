@@ -1,0 +1,175 @@
+{
+  "candidate_id": "CAN-A0761326A7E13159",
+  "candidate_version": "CV-5D0C4C4F0BA96B5D",
+  "identity": {
+    "entity_id": "NYSE:SUNC",
+    "ticker": "SUNC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "SunocoCorp LLC",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "stale_end_price"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": "에너지 인프라를 운영하고, 연료를 유통하며, 파이프라인과 터미널을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "SunocoCorp LLC engages in energy infrastructure and distribution of motor fuels in North America, the Greater Caribbean, and Europe. It operates through four segments: Fuel Distribution, Pipeline Systems, Terminals, and Refinery. Its midstream operations include a network of approximately 14,000 miles of pipeline and 160 terminals. It distributes its fuel to partner-branded retail locations, as well as to independent dealers and commercial customers. credit card processing, car washes, lottery, and other services. The company was incorporated in 1886 and is based in Dallas, Texas. SunocoCorp L"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SUNC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SUNC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-07T06:16:34+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SUNC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SUNC/history",
+      "published_at": null,
+      "observed_at": "2026-10-07T06:16:34+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SUNC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SUNC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-07T06:16:34+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-80DC8C8E299B416B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2089661/000208966126000043/ex991sunerq22026.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-28T05:47:17+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-8CFBA1DBF9585DC2",
+    "input_sha": "8cfba1dbf9585dc2d9d851650bd35b7201b8f4584c6dbe6ad2dcc777a0c3493d",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "순이익(net income) · second quarter: $283 million — 회사의 순이익이다",
+        "note_ko": "회사의 순이익이다",
+        "kind": "fact",
+        "quote": "Reports strong second quarter results, including net income of $283 million, Adjusted EBITDA(1) of $996 million, excluding one-time transaction-related expenses(2), and Distributable Cash Flow, as adjusted(1), of $608 million",
+        "document_id": "DOC-80DC8C8E299B416B",
+        "block_id": "p5",
+        "metric": "net income",
+        "figures": [
+          "$283 million"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "내년 EPS 예상치가 올라간 것이 이 발표와 관련이 있는지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-80DC8C8E299B416B",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2089661/000208966126000043/ex991sunerq22026.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-28T05:47:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v7",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "accepted_only",
+    "generated_at": "2026-10-03T05:43:34+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 12.33833,
+    "eps_30d": 4.9895,
+    "eps_90d": 9.695,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 27.3,
+    "steady": false,
+    "turnaround": false
+  }
+}
