@@ -392,12 +392,20 @@
       "observation_id": "OB-23BCC6A37342465A",
       "signal_id": null,
       "day": "2026-10-07",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-07T06:26:05+00:00",
+          "status": "sent",
+          "message_id": 162,
+          "error": null
+        }
+      ],
       "reserved_by": "37579928333-1",
       "reserved_at": "2026-10-07T06:26:03+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · JXN Jackson Financial Inc.</b>\n회사 설명 확인 중 (JXN)\n내년 EPS 예상(2027-12-31 회계연도 말) $26.52 → $30.90 (+16%), 최근 30일 상향 4/하향 0\n주가 2026-07-09 → 2026-10-06 +20.0%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-02BF26B752677B69</code> · 추적 <code>/track CAN-02BF26B752677B69</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "61f5d12785d03a45f33ea41eb133f14a8bebe56fb8e9b411d783621364a19fd5"
+      "payload_sha256": "61f5d12785d03a45f33ea41eb133f14a8bebe56fb8e9b411d783621364a19fd5",
+      "message_id": 162
     }
   },
   "bootstrap": {
