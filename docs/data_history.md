@@ -1,4 +1,4 @@
-# 데이터 누적 현황 — 2026-10-08
+# 데이터 누적 현황 — 2026-10-09
 
 숫자 관측 548건 / 비교 가능한 정의 39개
 연간 EPS 6개 시계열 · 변동 없는 날도 보존
@@ -11,45 +11,45 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 
 |기업|지표|대상 기간|출처 / 기준|관측 건 / 일|최초 → 최근|최초값 → 최근값|값 변동 일수|최근 관측 경과일|
 |---|---|---|---|---|---|---|---|---|
-|ALAB|EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|4.0322 → 4.0322|0|0|
-|ALAB|EPS consensus|2027-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|6.39348 → 6.39348|0|0|
-|ALAB|Gross margin|2026-06-30|ALAB IR / non-GAAP / not-applicable percent|1 / 1|2026-09-09 → 2026-09-09|73.7 → 73.7|0|29|
-|ALAB|Quarterly EPS consensus|2026-09-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.19161 → 1.19161|0|0|
-|ALAB|Quarterly EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.41847 → 1.41847|0|0|
-|ALAB|Quarterly revenue consensus|2026-09-30|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|550.63635 → 550.63635|0|0|
-|ALAB|Quarterly revenue consensus|2026-12-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|655.30752 → 655.30752|0|0|
-|ALAB|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|268.205 → 382.25|18|0|
-|ALAB|Revenue|2026-06-30|ALAB IR / GAAP / USD million|1 / 1|2026-09-09 → 2026-09-09|392.4 → 392.4|0|29|
-|CRDO|Diluted EPS|2026-05-02|Credo IR / GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|0.88 → 0.88|0|32|
-|CRDO|Diluted EPS|2026-05-02|Credo IR / non-GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|1.16 → 1.16|0|32|
-|CRDO|Diluted EPS|2026-08-01|Credo IR / GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|0.67 → 0.67|0|32|
-|CRDO|Diluted EPS|2026-08-01|Credo IR / non-GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|1.2 → 1.2|0|32|
-|CRDO|EPS consensus|2027-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|31 / 31|2026-09-07 → 2026-10-08|6.2736 → 6.30634|4|0|
-|CRDO|EPS consensus|2028-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|31 / 31|2026-09-07 → 2026-10-08|9.62603 → 9.69063|4|0|
-|CRDO|Gross margin|2026-05-02|Credo IR / GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.2 → 68.2|0|32|
-|CRDO|Gross margin|2026-05-02|Credo IR / non-GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.3 → 68.3|0|32|
-|CRDO|Gross margin|2026-08-01|Credo IR / GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|64.5 → 64.5|0|32|
-|CRDO|Gross margin|2026-08-01|Credo IR / non-GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.0 → 68.0|0|32|
-|CRDO|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.28252 → 1.28294|1|0|
-|CRDO|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.59273 → 1.60492|1|0|
-|CRDO|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|531.75574 → 531.65246|1|0|
-|CRDO|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|638.75488 → 642.4577|1|0|
-|CRDO|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|152.16 → 220.01|18|0|
-|CRDO|Revenue|2026-05-02|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|437.0 → 437.0|0|32|
-|CRDO|Revenue|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|479.0 → 479.0|0|32|
-|CRDO|Revenue guidance high|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|475 → 475|0|32|
-|CRDO|Revenue guidance high|2026-10-31|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|535 → 535|0|32|
-|CRDO|Revenue guidance low|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|465 → 465|0|32|
-|CRDO|Revenue guidance low|2026-10-31|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|525 → 525|0|32|
-|MRVL|EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|4.20105 → 4.22002|6|0|
-|MRVL|EPS consensus|2028-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|6.72085 → 7.28277|8|0|
-|MRVL|Gross margin|2026-08-01|MRVL IR / non-GAAP / not-applicable percent|1 / 1|2026-09-09 → 2026-09-09|58.9 → 58.9|0|29|
-|MRVL|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.09978 → 1.10124|1|0|
-|MRVL|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.35573 → 1.35991|1|0|
-|MRVL|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|3149.22325 → 3152.20203|1|0|
-|MRVL|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|3720.50093 → 3730.24155|1|0|
-|MRVL|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|220.84 → 284.68|18|0|
-|MRVL|Revenue|2026-08-01|MRVL IR / GAAP / USD million|1 / 1|2026-09-09 → 2026-09-09|2739 → 2739|0|29|
+|ALAB|EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|4.0322 → 4.0322|0|1|
+|ALAB|EPS consensus|2027-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|6.39348 → 6.39348|0|1|
+|ALAB|Gross margin|2026-06-30|ALAB IR / non-GAAP / not-applicable percent|1 / 1|2026-09-09 → 2026-09-09|73.7 → 73.7|0|30|
+|ALAB|Quarterly EPS consensus|2026-09-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.19161 → 1.19161|0|1|
+|ALAB|Quarterly EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.41847 → 1.41847|0|1|
+|ALAB|Quarterly revenue consensus|2026-09-30|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|550.63635 → 550.63635|0|1|
+|ALAB|Quarterly revenue consensus|2026-12-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|655.30752 → 655.30752|0|1|
+|ALAB|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|268.205 → 382.25|18|1|
+|ALAB|Revenue|2026-06-30|ALAB IR / GAAP / USD million|1 / 1|2026-09-09 → 2026-09-09|392.4 → 392.4|0|30|
+|CRDO|Diluted EPS|2026-05-02|Credo IR / GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|0.88 → 0.88|0|33|
+|CRDO|Diluted EPS|2026-05-02|Credo IR / non-GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|1.16 → 1.16|0|33|
+|CRDO|Diluted EPS|2026-08-01|Credo IR / GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|0.67 → 0.67|0|33|
+|CRDO|Diluted EPS|2026-08-01|Credo IR / non-GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|1.2 → 1.2|0|33|
+|CRDO|EPS consensus|2027-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|31 / 31|2026-09-07 → 2026-10-08|6.2736 → 6.30634|4|1|
+|CRDO|EPS consensus|2028-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|31 / 31|2026-09-07 → 2026-10-08|9.62603 → 9.69063|4|1|
+|CRDO|Gross margin|2026-05-02|Credo IR / GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.2 → 68.2|0|33|
+|CRDO|Gross margin|2026-05-02|Credo IR / non-GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.3 → 68.3|0|33|
+|CRDO|Gross margin|2026-08-01|Credo IR / GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|64.5 → 64.5|0|33|
+|CRDO|Gross margin|2026-08-01|Credo IR / non-GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.0 → 68.0|0|33|
+|CRDO|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.28252 → 1.28294|1|1|
+|CRDO|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.59273 → 1.60492|1|1|
+|CRDO|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|531.75574 → 531.65246|1|1|
+|CRDO|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|638.75488 → 642.4577|1|1|
+|CRDO|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|152.16 → 220.01|18|1|
+|CRDO|Revenue|2026-05-02|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|437.0 → 437.0|0|33|
+|CRDO|Revenue|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|479.0 → 479.0|0|33|
+|CRDO|Revenue guidance high|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|475 → 475|0|33|
+|CRDO|Revenue guidance high|2026-10-31|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|535 → 535|0|33|
+|CRDO|Revenue guidance low|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|465 → 465|0|33|
+|CRDO|Revenue guidance low|2026-10-31|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|525 → 525|0|33|
+|MRVL|EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|4.20105 → 4.22002|6|1|
+|MRVL|EPS consensus|2028-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|6.72085 → 7.28277|8|1|
+|MRVL|Gross margin|2026-08-01|MRVL IR / non-GAAP / not-applicable percent|1 / 1|2026-09-09 → 2026-09-09|58.9 → 58.9|0|30|
+|MRVL|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.09978 → 1.10124|1|1|
+|MRVL|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.35573 → 1.35991|1|1|
+|MRVL|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|3149.22325 → 3152.20203|1|1|
+|MRVL|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|3720.50093 → 3730.24155|1|1|
+|MRVL|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|220.84 → 284.68|18|1|
+|MRVL|Revenue|2026-08-01|MRVL IR / GAAP / USD million|1 / 1|2026-09-09 → 2026-09-09|2739 → 2739|0|30|
 
 ## 원장과 보존 위치
 
