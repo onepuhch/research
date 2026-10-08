@@ -1,39 +1,39 @@
 {
   "eps": {
-    "checked_at": "2026-10-07T06:09:55+00:00",
+    "checked_at": "2026-10-08T06:15:52+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:09:55+00:00",
+    "last_success_at": "2026-10-08T06:15:52+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-10-07T06:09:22+00:00",
+    "checked_at": "2026-10-08T06:15:44+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:09:22+00:00",
-    "item_count": 25,
+    "last_success_at": "2026-10-08T06:15:44+00:00",
+    "item_count": 24,
     "errors": [],
-    "collected_at": "2026-10-07T06:09:22.710958+00:00"
+    "collected_at": "2026-10-08T06:15:44.720091+00:00"
   },
   "extract": {
-    "checked_at": "2026-10-07T06:09:53+00:00",
+    "checked_at": "2026-10-08T06:15:49+00:00",
     "status": "degraded",
     "last_success_at": "2026-10-06T06:31:54+00:00",
     "accepted": 0,
     "deferred_budget": 1,
-    "rejected": 1,
+    "rejected": 0,
     "validation_rejected": 0,
     "validation_rejected_total": 34,
     "failed": 1,
-    "pending": 5,
+    "pending": 10,
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-10-07T23:11:32+00:00",
+    "checked_at": "2026-10-08T06:15:30+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T23:11:32+00:00",
+    "last_success_at": "2026-10-08T06:15:30+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -54,33 +54,33 @@
     "last_success_at": "2026-10-06T06:31:57+00:00"
   },
   "prices": {
-    "checked_at": "2026-10-07T06:24:21+00:00",
+    "checked_at": "2026-10-08T06:30:16+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:24:21+00:00",
+    "last_success_at": "2026-10-08T06:30:16+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-07T06:26:06+00:00",
+    "checked_at": "2026-10-08T06:31:14+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:26:06+00:00",
+    "last_success_at": "2026-10-08T06:31:14+00:00",
     "targets": 4,
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-10-07T06:09:57+00:00",
+    "checked_at": "2026-10-08T06:15:54+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:09:57+00:00",
+    "last_success_at": "2026-10-08T06:15:54+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-10-07T06:24:21+00:00",
+    "checked_at": "2026-10-08T06:30:16+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:24:21+00:00",
-    "snapshot": "20261007T060957Z_37579928333-1.json.gz",
+    "last_success_at": "2026-10-08T06:30:16+00:00",
+    "snapshot": "20261008T061554Z_37736585169-1.json.gz",
     "candidates": 109,
     "alert": false,
     "stages": {
@@ -98,25 +98,24 @@
         "unavailable": 1
       },
       "earnings": {
-        "requested": 3230,
+        "requested": 3225,
         "success": 2413,
-        "unavailable": 817
+        "unavailable": 812
       },
       "profile": {
         "requested": 109,
         "success": 109
       },
       "price": {
-        "requested": 32,
-        "success": 31,
-        "unavailable": 1
+        "requested": 31,
+        "success": 31
       }
     }
   },
   "cards": {
-    "checked_at": "2026-10-07T06:26:01+00:00",
+    "checked_at": "2026-10-08T06:31:12+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:26:01+00:00",
+    "last_success_at": "2026-10-08T06:31:12+00:00",
     "translation": {
       "requested": 7,
       "translated": 0,
@@ -125,40 +124,38 @@
       "calls": 1,
       "budget_exhausted": true
     },
-    "new_versions": 9,
-    "new_observations": 37,
+    "new_versions": 8,
+    "new_observations": 36,
     "migrated_legacy": 0,
-    "cards": 32,
+    "cards": 31,
     "unidentified": 0,
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-07T06:26:06+00:00",
+    "checked_at": "2026-10-08T06:31:13+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:26:06+00:00",
+    "last_success_at": "2026-10-08T06:31:13+00:00",
     "slots": 3,
     "bootstrap": false,
     "material_eligible": 1,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 1,
+    "sent": 0,
     "failed": 0,
     "uncertain": 0,
-    "reservation_persisted": true,
-    "receipts_persisted": true,
-    "selected": 1
+    "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-10-07T06:24:34+00:00",
+    "checked_at": "2026-10-08T06:30:27+00:00",
     "status": "success",
-    "last_success_at": "2026-10-07T06:24:34+00:00",
+    "last_success_at": "2026-10-08T06:30:27+00:00",
     "held": [],
-    "researched": 10,
+    "researched": 7,
     "statuses": {
-      "success": 10
+      "success": 7
     },
-    "targets": 37,
+    "targets": 36,
     "current": {
       "CAN-82719B27698E3C22": "2027-12-31",
       "CAN-D50A4151AB176FB7": "2028-05-31",
@@ -168,28 +165,27 @@
       "CAN-77F79A3B05ABB893": "2027-12-31",
       "CAN-DC6D3F92ECFFD019": "2027-12-31",
       "CAN-490AC1686F9442CE": "2027-12-31",
-      "CAN-43EA86A18E5096A9": "2027-08-31",
+      "CAN-02BF26B752677B69": "2027-12-31",
       "CAN-700B10D9B75B0040": "2027-12-31",
       "CAN-7F0690B785E31226": "2027-12-31",
       "CAN-E460E34B1D8B66CE": "2027-12-31",
-      "CAN-A0761326A7E13159": "2027-12-31",
+      "CAN-43EA86A18E5096A9": "2027-08-31",
       "CAN-3D7A7E3B7BFBE2CE": "2027-12-31",
+      "CAN-A0761326A7E13159": "2027-12-31",
       "CAN-5A9E947A6AEC56D7": "2027-12-31",
-      "CAN-E87900AEFDDE7B07": "2027-12-31",
       "CAN-4BD491C8D3F1EC4F": "2027-12-31",
       "CAN-4DB66C064FC2ED7C": "2027-12-31",
-      "CAN-02BF26B752677B69": "2027-12-31",
       "CAN-DF76D3AD7ADC73CF": "2028-07-31",
+      "CAN-E87900AEFDDE7B07": "2027-12-31",
       "CAN-E763F753A2D7609F": "2027-12-31",
       "CAN-C8B827862A3B86D5": "2027-12-31",
       "CAN-0733D6B2B6A41784": "2027-12-31",
       "CAN-713C837ADADE8D8B": "2027-12-31",
       "CAN-8ED72F330C1AE34D": "2027-12-31",
-      "CAN-0584EAE068460D91": "2027-12-31",
+      "CAN-ECB2C73CA19DA4AB": "2027-12-31",
       "CAN-4E5151866E863998": "2028-06-30",
       "CAN-E95987D989EF1145": "2027-12-31",
       "CAN-782282A0C20A29F1": "2028-01-31",
-      "CAN-ECB2C73CA19DA4AB": "2027-12-31",
       "CAN-14DF13D991DA6490": "2027-12-31",
       "CAN-7D75F8332DBCEEFC": "2027-12-31",
       "CAN-325B2A6C30755476": "2027-12-31",
@@ -205,9 +201,9 @@
       "CAN-F451582E2056444F",
       "CAN-FDA6B7F62852042F"
     ],
-    "http_attempts": 25,
+    "http_attempts": 21,
     "coverage": {
-      "success": 35,
+      "success": 34,
       "no_relevant_document": 2
     },
     "drafts": {
@@ -228,20 +224,20 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-10-07T06:26:20+00:00",
-    "status": "degraded",
-    "last_success_at": "2026-10-06T06:49:19+00:00",
-    "due": 117,
-    "fresh": 117,
+    "checked_at": "2026-10-08T06:31:29+00:00",
+    "status": "success",
+    "last_success_at": "2026-10-08T06:31:29+00:00",
+    "due": 102,
+    "fresh": 101,
     "retry_waiting": 0,
-    "retry_ready": 0,
-    "retries": 0,
+    "retry_ready": 1,
+    "retries": 1,
     "requests": 20,
-    "collected": 18,
-    "failures": 1,
+    "collected": 19,
+    "failures": 0,
     "stopped": "daily_requests",
     "retry_share_left": 5,
     "day_requests": 20,
-    "day_retries": 0
+    "day_retries": 1
   }
 }

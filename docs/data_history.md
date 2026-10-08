@@ -1,6 +1,6 @@
 # 데이터 누적 현황 — 2026-10-08
 
-숫자 관측 527건 / 비교 가능한 정의 39개
+숫자 관측 548건 / 비교 가능한 정의 39개
 연간 EPS 6개 시계열 · 변동 없는 날도 보존
 이력: /history CRDO · 전체 저장 현황: /data
 명령은 약 6시간 간격 예약 처리이며 지연될 수 있습니다.
@@ -11,44 +11,44 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 
 |기업|지표|대상 기간|출처 / 기준|관측 건 / 일|최초 → 최근|최초값 → 최근값|값 변동 일수|최근 관측 경과일|
 |---|---|---|---|---|---|---|---|---|
-|ALAB|EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|29 / 29|2026-09-09 → 2026-10-07|4.0322 → 4.0322|0|1|
-|ALAB|EPS consensus|2027-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|29 / 29|2026-09-09 → 2026-10-07|6.39348 → 6.39348|0|1|
+|ALAB|EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|4.0322 → 4.0322|0|0|
+|ALAB|EPS consensus|2027-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|6.39348 → 6.39348|0|0|
 |ALAB|Gross margin|2026-06-30|ALAB IR / non-GAAP / not-applicable percent|1 / 1|2026-09-09 → 2026-09-09|73.7 → 73.7|0|29|
-|ALAB|Quarterly EPS consensus|2026-09-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-24 → 2026-10-07|1.19161 → 1.19161|0|1|
-|ALAB|Quarterly EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|19 / 13|2026-09-25 → 2026-10-07|1.41847 → 1.41847|0|1|
-|ALAB|Quarterly revenue consensus|2026-09-30|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-24 → 2026-10-07|550.63635 → 550.63635|0|1|
-|ALAB|Quarterly revenue consensus|2026-12-31|Yahoo Finance non-GAAP / not-applicable / USD million|19 / 13|2026-09-25 → 2026-10-07|655.30752 → 655.30752|0|1|
-|ALAB|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|33 / 24|2026-09-14 → 2026-10-07|268.205 → 389.8|17|1|
+|ALAB|Quarterly EPS consensus|2026-09-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.19161 → 1.19161|0|0|
+|ALAB|Quarterly EPS consensus|2026-12-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.41847 → 1.41847|0|0|
+|ALAB|Quarterly revenue consensus|2026-09-30|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|550.63635 → 550.63635|0|0|
+|ALAB|Quarterly revenue consensus|2026-12-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|655.30752 → 655.30752|0|0|
+|ALAB|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|268.205 → 382.25|18|0|
 |ALAB|Revenue|2026-06-30|ALAB IR / GAAP / USD million|1 / 1|2026-09-09 → 2026-09-09|392.4 → 392.4|0|29|
 |CRDO|Diluted EPS|2026-05-02|Credo IR / GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|0.88 → 0.88|0|32|
 |CRDO|Diluted EPS|2026-05-02|Credo IR / non-GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|1.16 → 1.16|0|32|
 |CRDO|Diluted EPS|2026-08-01|Credo IR / GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|0.67 → 0.67|0|32|
 |CRDO|Diluted EPS|2026-08-01|Credo IR / non-GAAP / USD per share|1 / 1|2026-09-06 → 2026-09-06|1.2 → 1.2|0|32|
-|CRDO|EPS consensus|2027-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-07 → 2026-10-07|6.2736 → 6.30634|4|1|
-|CRDO|EPS consensus|2028-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-07 → 2026-10-07|9.62603 → 9.69063|4|1|
+|CRDO|EPS consensus|2027-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|31 / 31|2026-09-07 → 2026-10-08|6.2736 → 6.30634|4|0|
+|CRDO|EPS consensus|2028-04-30|Yahoo Finance non-GAAP / non-GAAP / USD per share|31 / 31|2026-09-07 → 2026-10-08|9.62603 → 9.69063|4|0|
 |CRDO|Gross margin|2026-05-02|Credo IR / GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.2 → 68.2|0|32|
 |CRDO|Gross margin|2026-05-02|Credo IR / non-GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.3 → 68.3|0|32|
 |CRDO|Gross margin|2026-08-01|Credo IR / GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|64.5 → 64.5|0|32|
 |CRDO|Gross margin|2026-08-01|Credo IR / non-GAAP / not-applicable percent|1 / 1|2026-09-06 → 2026-09-06|68.0 → 68.0|0|32|
-|CRDO|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-24 → 2026-10-07|1.28252 → 1.28294|1|1|
-|CRDO|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|19 / 13|2026-09-25 → 2026-10-07|1.59273 → 1.60492|1|1|
-|CRDO|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-24 → 2026-10-07|531.75574 → 531.65246|1|1|
-|CRDO|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|19 / 13|2026-09-25 → 2026-10-07|638.75488 → 642.4577|1|1|
-|CRDO|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|33 / 24|2026-09-14 → 2026-10-07|152.16 → 220.83|17|1|
+|CRDO|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.28252 → 1.28294|1|0|
+|CRDO|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.59273 → 1.60492|1|0|
+|CRDO|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|531.75574 → 531.65246|1|0|
+|CRDO|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|638.75488 → 642.4577|1|0|
+|CRDO|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|152.16 → 220.01|18|0|
 |CRDO|Revenue|2026-05-02|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|437.0 → 437.0|0|32|
 |CRDO|Revenue|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|479.0 → 479.0|0|32|
 |CRDO|Revenue guidance high|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|475 → 475|0|32|
 |CRDO|Revenue guidance high|2026-10-31|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|535 → 535|0|32|
 |CRDO|Revenue guidance low|2026-08-01|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|465 → 465|0|32|
 |CRDO|Revenue guidance low|2026-10-31|Credo IR / GAAP / USD million|1 / 1|2026-09-06 → 2026-09-06|525 → 525|0|32|
-|MRVL|EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|29 / 29|2026-09-09 → 2026-10-07|4.20105 → 4.2113|5|1|
-|MRVL|EPS consensus|2028-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|29 / 29|2026-09-09 → 2026-10-07|6.72085 → 6.74936|7|1|
+|MRVL|EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|4.20105 → 4.22002|6|0|
+|MRVL|EPS consensus|2028-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|30 / 30|2026-09-09 → 2026-10-08|6.72085 → 7.28277|8|0|
 |MRVL|Gross margin|2026-08-01|MRVL IR / non-GAAP / not-applicable percent|1 / 1|2026-09-09 → 2026-09-09|58.9 → 58.9|0|29|
-|MRVL|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-24 → 2026-10-07|1.09978 → 1.09978|0|1|
-|MRVL|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|19 / 13|2026-09-25 → 2026-10-07|1.35573 → 1.35573|0|1|
-|MRVL|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-24 → 2026-10-07|3149.22325 → 3149.22325|0|1|
-|MRVL|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|19 / 13|2026-09-25 → 2026-10-07|3720.50093 → 3720.50093|0|1|
-|MRVL|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|33 / 24|2026-09-14 → 2026-10-07|220.84 → 287.01|17|1|
+|MRVL|Quarterly EPS consensus|2026-10-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|21 / 15|2026-09-24 → 2026-10-08|1.09978 → 1.10124|1|0|
+|MRVL|Quarterly EPS consensus|2027-01-31|Yahoo Finance non-GAAP / non-GAAP / USD per share|20 / 14|2026-09-25 → 2026-10-08|1.35573 → 1.35991|1|0|
+|MRVL|Quarterly revenue consensus|2026-10-31|Yahoo Finance non-GAAP / not-applicable / USD million|21 / 15|2026-09-24 → 2026-10-08|3149.22325 → 3152.20203|1|0|
+|MRVL|Quarterly revenue consensus|2027-01-31|Yahoo Finance non-GAAP / not-applicable / USD million|20 / 14|2026-09-25 → 2026-10-08|3720.50093 → 3730.24155|1|0|
+|MRVL|Regular session price|시세|Yahoo Finance chart / not-applicable / USD per share|34 / 25|2026-09-14 → 2026-10-08|220.84 → 284.68|18|0|
 |MRVL|Revenue|2026-08-01|MRVL IR / GAAP / USD million|1 / 1|2026-09-09 → 2026-09-09|2739 → 2739|0|29|
 
 ## 원장과 보존 위치
@@ -97,6 +97,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05|4.0322||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-06|4.0322||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-07|4.0322||https://finance.yahoo.com/quote/ALAB/analysis/|
+|2026-10-08|4.0322||https://finance.yahoo.com/quote/ALAB/analysis/|
 
 ### ALAB / EPS consensus / 2027-12-31 / 77e71b60885f
 
@@ -133,6 +134,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05|6.39348||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-06|6.39348||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-07|6.39348||https://finance.yahoo.com/quote/ALAB/analysis/|
+|2026-10-08|6.39348||https://finance.yahoo.com/quote/ALAB/analysis/|
 
 ### ALAB / Quarterly EPS consensus / 2026-09-30 / f28036339044
 
@@ -154,6 +156,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:32+09:00|1.19161||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-06T15:31:58+09:00|1.19161||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-07T15:09:56+09:00|1.19161||https://finance.yahoo.com/quote/ALAB/analysis/|
+|2026-10-08T15:15:53+09:00|1.19161||https://finance.yahoo.com/quote/ALAB/analysis/|
 
 ### ALAB / Quarterly EPS consensus / 2026-12-31 / c82043dad1f7
 
@@ -174,6 +177,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:32+09:00|1.41847||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-06T15:31:58+09:00|1.41847||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-07T15:09:56+09:00|1.41847||https://finance.yahoo.com/quote/ALAB/analysis/|
+|2026-10-08T15:15:53+09:00|1.41847||https://finance.yahoo.com/quote/ALAB/analysis/|
 
 ### ALAB / Quarterly revenue consensus / 2026-09-30 / dac019820f5c
 
@@ -195,6 +199,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:32+09:00|550.63635||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-06T15:31:58+09:00|550.63635||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-07T15:09:56+09:00|550.63635||https://finance.yahoo.com/quote/ALAB/analysis/|
+|2026-10-08T15:15:53+09:00|550.63635||https://finance.yahoo.com/quote/ALAB/analysis/|
 
 ### ALAB / Quarterly revenue consensus / 2026-12-31 / 269df1d2598e
 
@@ -215,6 +220,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:32+09:00|655.30752||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-06T15:31:58+09:00|655.30752||https://finance.yahoo.com/quote/ALAB/analysis/|
 |2026-10-07T15:09:56+09:00|655.30752||https://finance.yahoo.com/quote/ALAB/analysis/|
+|2026-10-08T15:15:53+09:00|655.30752||https://finance.yahoo.com/quote/ALAB/analysis/|
 
 ### ALAB / Regular session price / 시세 / a2e137bf7308
 
@@ -246,6 +252,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T15:05:58.515412+09:00|350.33|{"market_time_utc": "2026-10-02T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d|
 |2026-10-06T15:46:36.557463+09:00|362.34|{"market_time_utc": "2026-10-05T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d|
 |2026-10-07T15:24:21.690345+09:00|389.8|{"market_time_utc": "2026-10-06T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d|
+|2026-10-08T15:30:16.705885+09:00|382.25|{"market_time_utc": "2026-10-07T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/ALAB?range=5d&interval=1d|
 
 ### CRDO / EPS consensus / 2027-04-30 / 70d0ff67ced2
 
@@ -283,6 +290,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05|6.30634||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-06|6.30634||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-07|6.30634||https://finance.yahoo.com/quote/CRDO/analysis/|
+|2026-10-08|6.30634||https://finance.yahoo.com/quote/CRDO/analysis/|
 
 ### CRDO / EPS consensus / 2028-04-30 / e282aa73747a
 
@@ -320,6 +328,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05|9.69063||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-06|9.69063||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-07|9.69063||https://finance.yahoo.com/quote/CRDO/analysis/|
+|2026-10-08|9.69063||https://finance.yahoo.com/quote/CRDO/analysis/|
 
 ### CRDO / Quarterly EPS consensus / 2026-10-31 / 45f9fe016bd0
 
@@ -341,6 +350,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:31+09:00|1.28294||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-06T15:31:57+09:00|1.28294||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-07T15:09:56+09:00|1.28294||https://finance.yahoo.com/quote/CRDO/analysis/|
+|2026-10-08T15:15:53+09:00|1.28294||https://finance.yahoo.com/quote/CRDO/analysis/|
 
 ### CRDO / Quarterly EPS consensus / 2027-01-31 / b376e712c6ac
 
@@ -361,6 +371,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:31+09:00|1.60492||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-06T15:31:57+09:00|1.60492||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-07T15:09:56+09:00|1.60492||https://finance.yahoo.com/quote/CRDO/analysis/|
+|2026-10-08T15:15:53+09:00|1.60492||https://finance.yahoo.com/quote/CRDO/analysis/|
 
 ### CRDO / Quarterly revenue consensus / 2026-10-31 / 0257fa566d50
 
@@ -382,6 +393,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:31+09:00|531.65246||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-06T15:31:57+09:00|531.65246||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-07T15:09:56+09:00|531.65246||https://finance.yahoo.com/quote/CRDO/analysis/|
+|2026-10-08T15:15:53+09:00|531.65246||https://finance.yahoo.com/quote/CRDO/analysis/|
 
 ### CRDO / Quarterly revenue consensus / 2027-01-31 / c75d30cb6c8a
 
@@ -402,6 +414,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:31+09:00|642.4577||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-06T15:31:57+09:00|642.4577||https://finance.yahoo.com/quote/CRDO/analysis/|
 |2026-10-07T15:09:56+09:00|642.4577||https://finance.yahoo.com/quote/CRDO/analysis/|
+|2026-10-08T15:15:53+09:00|642.4577||https://finance.yahoo.com/quote/CRDO/analysis/|
 
 ### CRDO / Regular session price / 시세 / 27d50c0de9ac
 
@@ -433,6 +446,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T15:05:58.424657+09:00|218.64|{"market_time_utc": "2026-10-02T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d|
 |2026-10-06T15:46:36.476328+09:00|212.48|{"market_time_utc": "2026-10-05T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d|
 |2026-10-07T15:24:21.514868+09:00|220.83|{"market_time_utc": "2026-10-06T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d|
+|2026-10-08T15:30:16.602470+09:00|220.01|{"market_time_utc": "2026-10-07T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=5d&interval=1d|
 
 ### MRVL / EPS consensus / 2027-01-31 / ceb276548e47
 
@@ -469,6 +483,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05|4.2113||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-06|4.2113||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-07|4.2113||https://finance.yahoo.com/quote/MRVL/analysis/|
+|2026-10-08|4.22002||https://finance.yahoo.com/quote/MRVL/analysis/|
 
 ### MRVL / EPS consensus / 2028-01-31 / d1d968f9d67e
 
@@ -505,6 +520,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05|6.74936||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-06|6.74936||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-07|6.74936||https://finance.yahoo.com/quote/MRVL/analysis/|
+|2026-10-08|7.28277||https://finance.yahoo.com/quote/MRVL/analysis/|
 
 ### MRVL / Quarterly EPS consensus / 2026-10-31 / 9e9519f3ee1a
 
@@ -526,6 +542,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:33+09:00|1.09978||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-06T15:31:59+09:00|1.09978||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-07T15:09:57+09:00|1.09978||https://finance.yahoo.com/quote/MRVL/analysis/|
+|2026-10-08T15:15:54+09:00|1.10124||https://finance.yahoo.com/quote/MRVL/analysis/|
 
 ### MRVL / Quarterly EPS consensus / 2027-01-31 / be98ef821a0d
 
@@ -546,6 +563,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:33+09:00|1.35573||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-06T15:31:59+09:00|1.35573||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-07T15:09:57+09:00|1.35573||https://finance.yahoo.com/quote/MRVL/analysis/|
+|2026-10-08T15:15:54+09:00|1.35991||https://finance.yahoo.com/quote/MRVL/analysis/|
 
 ### MRVL / Quarterly revenue consensus / 2026-10-31 / 76c4fcadb6f5
 
@@ -567,6 +585,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:33+09:00|3149.22325||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-06T15:31:59+09:00|3149.22325||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-07T15:09:57+09:00|3149.22325||https://finance.yahoo.com/quote/MRVL/analysis/|
+|2026-10-08T15:15:54+09:00|3152.20203||https://finance.yahoo.com/quote/MRVL/analysis/|
 
 ### MRVL / Quarterly revenue consensus / 2027-01-31 / ea71544f6edd
 
@@ -587,6 +606,7 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T14:51:33+09:00|3720.50093||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-06T15:31:59+09:00|3720.50093||https://finance.yahoo.com/quote/MRVL/analysis/|
 |2026-10-07T15:09:57+09:00|3720.50093||https://finance.yahoo.com/quote/MRVL/analysis/|
+|2026-10-08T15:15:54+09:00|3730.24155||https://finance.yahoo.com/quote/MRVL/analysis/|
 
 ### MRVL / Regular session price / 시세 / f96b2e9bdb35
 
@@ -618,4 +638,5 @@ CSV 원장의 live 관측만 집계합니다. 시계열은 기업·지표·대�
 |2026-10-05T15:05:58.632204+09:00|272.29|{"market_time_utc": "2026-10-02T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d|
 |2026-10-06T15:46:36.650724+09:00|271.25|{"market_time_utc": "2026-10-05T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d|
 |2026-10-07T15:24:21.809727+09:00|287.01|{"market_time_utc": "2026-10-06T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d|
+|2026-10-08T15:30:16.805285+09:00|284.68|{"market_time_utc": "2026-10-07T20:00:01+00:00", "session": "regular", "limitation": "Latest regular-session quote, not necessarily a closing auction price. Retrieval date is not trading date."}|https://query1.finance.yahoo.com/v8/finance/chart/MRVL?range=5d&interval=1d|
 

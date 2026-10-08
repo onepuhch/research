@@ -1,0 +1,86 @@
+{
+  "observation_id": "OB-16FB1CDCBB6DF595",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "candidate_version": "CV-E870C70EA18F03F3",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:NBR",
+    "ticker": "NBR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-08T06:25:51+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261008T061554Z_37736585169-1.json.gz",
+    "sha256": "7f9c3da6cd7965e5eb994cbab8dc66aeefe06ad01aefb94aa5f587a80cbe1ffd",
+    "run_id": "37736585169-1",
+    "finished_at": "2026-10-08T06:30:15+00:00"
+  },
+  "eps": {
+    "eps_now": 4.00328,
+    "eps_30d": 3.60994,
+    "eps_90d": 1.57,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 155.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.038,
+    "yield_change_30_pp": 0.491
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-10",
+    "price_start_date": "2026-07-10",
+    "price_end_expected": "2026-10-07",
+    "price_end_date": "2026-10-07",
+    "close_start": 82.08999633789062,
+    "close_end": 80.08999633789062,
+    "price_pct_90": -2.4,
+    "adj_return_pct_90": -2.4,
+    "pe_change_pct": -61.7
+  },
+  "display_rank": 12,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 7
+    },
+    {
+      "list": "A",
+      "rank": 14
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 1216693888,
+  "context_id": "CTX-3A49D7297BE7A680",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-06T06:46:36+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:NBR",
+  "approval_version": null,
+  "rendered_at": "2026-10-08T06:30:27+00:00"
+}

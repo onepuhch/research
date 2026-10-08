@@ -54,6 +54,9 @@
     },
     "2026-10-07": {
       "extract": 3
+    },
+    "2026-10-08": {
+      "extract": 1
     }
   },
   "counting_since": "2026-09-25, first counted call by the cards step of run 36133507734 (about 12:25 UTC); extract calls earlier that day were not counted",
@@ -65,12 +68,12 @@
   },
   "overload": {
     "gemini-2.5-flash": {
-      "consecutive_503": 2,
-      "stage": 1,
-      "until": "2026-10-07T06:40:14+00:00",
-      "jitter_s": 24.5,
+      "consecutive_503": 3,
+      "stage": 2,
+      "until": "2026-10-08T07:15:56+00:00",
+      "jitter_s": 10.5,
       "last_result": "503",
-      "last_at": "2026-10-07T06:09:49+00:00"
+      "last_at": "2026-10-08T06:15:45+00:00"
     }
   }
 }

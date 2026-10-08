@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-A04303D6DB3FDAB8",
+  "candidate_id": "CAN-43EA86A18E5096A9",
+  "candidate_version": "CV-87A4C19DB321148B",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:MU",
+    "ticker": "MU",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-08T06:16:15+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261008T061554Z_37736585169-1.json.gz",
+    "sha256": "7f9c3da6cd7965e5eb994cbab8dc66aeefe06ad01aefb94aa5f587a80cbe1ffd",
+    "run_id": "37736585169-1",
+    "finished_at": "2026-10-08T06:30:15+00:00"
+  },
+  "eps": {
+    "eps_now": 206.33243,
+    "eps_30d": 171.02492,
+    "eps_90d": 163.34702,
+    "eps_target_period": "2027-08-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 36,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 26.3,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.951,
+    "yield_change_30_pp": 3.245
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-10",
+    "price_start_date": "2026-07-10",
+    "price_end_expected": "2026-10-07",
+    "price_end_date": "2026-10-07",
+    "close_start": 979.2999877929688,
+    "close_end": 1088.0,
+    "price_pct_90": 11.1,
+    "adj_return_pct_90": 11.1,
+    "pe_change_pct": -12.0
+  },
+  "display_rank": 13,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 8
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 1228779814912,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-07T06:24:22+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:MU",
+  "approval_version": null,
+  "rendered_at": "2026-10-08T06:30:27+00:00"
+}
