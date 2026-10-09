@@ -137,7 +137,8 @@
     "SNDK",
     "AMG",
     "CVX",
-    "HTB"
+    "HTB",
+    "CHRD"
   ],
   "days": {
     "2026-10-06": {
@@ -151,13 +152,17 @@
     "2026-10-08": {
       "requests": 20,
       "retries": 1
+    },
+    "2026-10-09": {
+      "requests": 20,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -364,8 +369,8 @@
       "reason": null
     },
     "PBF": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-07T06:26:08.174357+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -500,8 +505,8 @@
       "reason": null
     },
     "VSEC": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -598,6 +603,142 @@
     "BFH": {
       "attempts": 1,
       "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CECO": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CIEN": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CLS": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CNC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "DAR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "DCH": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "DELL": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "DHT": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "ECPG": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "FRO": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "FSM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "GM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "GPRE": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "HBT": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "HRTG": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "INTC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "KLIC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
