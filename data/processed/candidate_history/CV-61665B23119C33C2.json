@@ -1,0 +1,315 @@
+{
+  "candidate_id": "CAN-DC6D3F92ECFFD019",
+  "candidate_version": "CV-61665B23119C33C2",
+  "identity": {
+    "entity_id": "NASDAQ:AXTI",
+    "ticker": "AXTI",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "AXT, Inc.",
+  "industry": "Semiconductor Equipment & Materials",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "화합물 및 단일 원소 반도체 기판을 설계, 제조, 유통하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "AXT, Inc. designs, develops, manufactures, and distributes compound and single element semiconductor substrates. The company provides indium phosphide for use in data center connectivity using light/lasers, high-speed data transfer in data centers, 5G communications, fiber optic lasers and detectors, consumer devices, passive optical networks, silicon photonics, photonic integrated circuits, thermo-photovoltaics, RF amplifier and switching, infrared light-emitting diode (LEDS) motion control, lidar for robotics and autonomous vehicles, and infrared thermal imaging. It also offers semi-insulati"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AXTI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AXTI/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-09T06:28:43+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AXTI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AXTI/history",
+      "published_at": null,
+      "observed_at": "2026-10-09T06:28:43+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AXTI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AXTI/profile",
+      "published_at": null,
+      "observed_at": "2026-10-09T06:28:43+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-A6967554C2E4C643",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-F3CA634B35CC46FB",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926027677/axti20260630_10q.htm",
+      "title": "SEC 10-Q 10-Q — FORM 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-13",
+      "observed_at": "2026-10-04T06:15:49+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-08A8428683C12874",
+    "input_sha": "08a8428683c128748821d567702219acef730a7e1c00614638a517c30c0616d2",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "total worldwide revenue · 2024: 8% — 전체 매출에서 북미 지역 매출이 차지하는 비중",
+        "note_ko": "전체 매출에서 북미 지역 매출이 차지하는 비중",
+        "kind": "fact",
+        "quote": "In 2024, 8% of our total worldwide revenue was from sales in North America, primarily in the U.S.",
+        "document_id": "DOC-F3CA634B35CC46FB",
+        "block_id": "p320",
+        "metric": "total worldwide revenue",
+        "figures": [
+          "8%"
+        ],
+        "period": "2024",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "매출(revenue) · 2025: approximately 2% — 북미 지역 고객 대상 매출이 전체 매출에서 차지하는 비중",
+        "note_ko": "북미 지역 고객 대상 매출이 전체 매출에서 차지하는 비중",
+        "kind": "fact",
+        "quote": "As such, in 2025, only approximately 2% of our revenue was generated by sales to customers in North America.",
+        "document_id": "DOC-F3CA634B35CC46FB",
+        "block_id": "p320",
+        "metric": "revenue",
+        "figures": [
+          "approximately 2%"
+        ],
+        "period": "2025",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "tax"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "매출총이익률(gross margin) · third quarter of 2022: 42.0% — 총 마진",
+        "note_ko": "총 마진",
+        "kind": "fact",
+        "quote": "For example, in the third quarter of 2022 our gross margin was 42.0% but it dropped to 10.7% in the third quarter of 2023 as a result of several of these factors.",
+        "document_id": "DOC-F3CA634B35CC46FB",
+        "block_id": "p529",
+        "metric": "gross margin",
+        "figures": [
+          "42.0%"
+        ],
+        "period": "third quarter of 2022",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "매출총이익률(gross margin) · third quarter of 2023: 10.7% — 총 마진",
+        "note_ko": "총 마진",
+        "kind": "fact",
+        "quote": "For example, in the third quarter of 2022 our gross margin was 42.0% but it dropped to 10.7% in the third quarter of 2023 as a result of several of these factors.",
+        "document_id": "DOC-F3CA634B35CC46FB",
+        "block_id": "p529",
+        "metric": "gross margin",
+        "figures": [
+          "10.7%"
+        ],
+        "period": "third quarter of 2023",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "매출총이익률(gross margin) · first quarter of 2025: a negative 6.4% — 총 마진",
+        "note_ko": "총 마진",
+        "kind": "fact",
+        "quote": "In the first quarter of 2025, our gross margin was a negative 6.4% but improved to 8.0% in the second quarter of 2025; in the third quarter of 2025, our gross margin has further improved to 22.3%.",
+        "document_id": "DOC-F3CA634B35CC46FB",
+        "block_id": "p529",
+        "metric": "gross margin",
+        "figures": [
+          "a negative 6.4%"
+        ],
+        "period": "first quarter of 2025",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-A6967554C2E4C643",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926025061/ex_974537.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-F3CA634B35CC46FB",
+        "title": "FORM 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1051627/000143774926027677/axti20260630_10q.htm",
+        "filed_at": "2026-08-13",
+        "observed_at": "2026-10-04T06:15:49+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-09T06:37:58+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.25,
+    "eps_30d": 2.226,
+    "eps_90d": 0.752,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 199.2,
+    "steady": true,
+    "turnaround": false
+  }
+}

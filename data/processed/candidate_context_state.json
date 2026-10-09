@@ -52,13 +52,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-45B4C790D13177FE",
-      "context_input_sha": "45b4c790d13177fe0ee8aa72d5aaaebaee952dbe76ef828adcc8e1ac5141b8cd",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-4A14F23F18783B5E",
+      "context_input_sha": "4a14f23f18783b5ed998e5ff841c44e03fe055773dc829daaf25a1afc8da3662",
       "quality": "complete",
       "failures": 0,
-      "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_error": "HTTPError"
     },
     "CAN-ABBBE42278126D28": {
       "status": "success",
@@ -85,13 +84,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-F44C3140360C58BE",
-      "context_input_sha": "f44c3140360c58be9298bef43d45772b72510f6dbe41a8a9b15145cb1cf62a92",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-3C51A38DB3C2F150",
+      "context_input_sha": "3c51a38db3c2f1501ff9af5a7e29f36ff7fc6ad15af349a8d4b5f94eb5f677f6",
       "quality": "complete",
       "failures": 0,
-      "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_error": "HTTPError"
     },
     "CAN-D577F2C38FBBCFF7": {
       "status": "success",
@@ -119,7 +117,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-4AF8EDED57B44FFC",
       "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
       "quality": "complete",
@@ -193,7 +191,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "context_id": "CTX-3A49D7297BE7A680",
       "context_input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
@@ -280,12 +278,15 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "failed",
       "context_id": "CTX-3052BA46969F76BA",
       "context_input_sha": "3052ba46969f76baff47b9ebb00b79ebdec646f47d432ce4d227b33969ccf187",
       "quality": "complete",
       "failures": 0,
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:37:58+00:00",
+      "draft_error": "TimeoutError",
+      "draft_failure": "failed",
+      "draft_http_status": null
     },
     "CAN-DC6D3F92ECFFD019": {
       "status": "success",
@@ -312,12 +313,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-C0F40E5CBBA2627E",
-      "context_input_sha": "c0f40e5cbba2627ec2d99c197ae82a67f2d733cbfff3d8d86710d15ca7b3224e",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-08A8428683C12874",
+      "context_input_sha": "08a8428683c128748821d567702219acef730a7e1c00614638a517c30c0616d2",
       "quality": "complete",
-      "failures": 0,
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "failures": 0
     },
     "CAN-77F79A3B05ABB893": {
       "status": "success",
@@ -344,7 +344,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
       "quality": "complete",
@@ -399,7 +399,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-9880C8070DA7574A",
       "context_input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552",
       "quality": "complete",
@@ -431,7 +431,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-5CD5637243E02192",
       "context_input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed",
       "quality": "complete",
@@ -535,11 +535,11 @@
         "exchange": "NYSE",
         "name": "Valero Energy Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
+        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
       },
-      "attempted_at": "2026-10-08T06:30:16+00:00",
-      "eps_key": "2027-12-31|41.43429",
+      "attempted_at": "2026-10-09T06:37:49+00:00",
+      "eps_key": "2027-12-31|42.27417",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9DA9F71500981FB2"
@@ -552,8 +552,8 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "next_eligible_at": "2026-10-16T06:37:49+00:00",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-C6D280F99B770EDC",
       "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
       "update_checks": [
@@ -639,7 +639,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-F9D9AA0C6D3787B9",
       "context_input_sha": "f9d9aa0c6d3787b99b7f7e8412462d00b6a6e2220c8bd93755d89974c57dc3bc",
       "update_checks": [
@@ -687,7 +687,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-489EBDB3A330DB87",
       "context_input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
       "update_checks": [
@@ -729,7 +729,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-08T07:15:56+00:00",
       "update_checks": [
         {
@@ -823,7 +823,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "context_id": "CTX-BC75ACFAFFC06F1A",
       "context_input_sha": "bc75acfaffc06f1afa78da14c113bc3eae0e38bfa109fbbdeb1aa756c295381f",
@@ -929,7 +929,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-1CD87BF73F9D0762",
       "context_input_sha": "1cd87bf73f9d0762ffe5bad0e43471ea71d0947218c488e0fe263fffea95756d",
       "draft_error": "HTTPError",
@@ -972,9 +972,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "provider_overloaded",
-      "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_status": "failed",
+      "draft_error": "TimeoutError",
+      "draft_next_at": "2026-10-10T06:37:58+00:00",
+      "draft_failure": "failed",
+      "draft_http_status": null
     },
     "CAN-C8B827862A3B86D5": {
       "status": "success",
@@ -1107,7 +1109,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
       "update_checks": [
@@ -1147,7 +1149,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-00C1D48A4294E166",
       "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
       "update_checks": [
@@ -1251,11 +1253,11 @@
         "exchange": "NYSE",
         "name": "Ternium S.A.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "affa8f025ab31bab39b60e06cf0bcc401bb87f23151412d686258fc9b99ef091",
-        "mapping_observed_at": "2026-09-28T05:32:53+00:00"
+        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
+        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
       },
-      "attempted_at": "2026-09-29T06:08:31+00:00",
-      "eps_key": "2027-12-31|7.65036",
+      "attempted_at": "2026-10-09T06:37:49+00:00",
+      "eps_key": "2027-12-31|7.70036",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-29F6CDBE38A4A95D",
@@ -1264,15 +1266,71 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-7F00A9ED7479F2D4",
         "DOC-29F6CDBE38A4A95D",
         "DOC-7711E2B3F13517D4",
-        "DOC-BD4A51269165B058"
+        "DOC-BD4A51269165B058",
+        "DOC-929E1549A5650065",
+        "DOC-A59A21A0D1012902"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-06T06:08:31+00:00",
+      "next_eligible_at": "2026-10-16T06:37:49+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-0BFF06C8F442C6BE",
-      "context_input_sha": "0bff06c8f442c6be1cefb0fd758b22fdddd3b78b7f7569b6457370f010800ac8"
+      "context_input_sha": "0bff06c8f442c6be1cefb0fd758b22fdddd3b78b7f7569b6457370f010800ac8",
+      "update_checks": [
+        {
+          "document_id": "DOC-7F00A9ED7479F2D4",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-29F6CDBE38A4A95D",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:acquisition:p39",
+          "alert_reasons": [
+            "event_date_unknown",
+            "restated_result_or_unchanged"
+          ]
+        },
+        {
+          "document_id": "DOC-7711E2B3F13517D4",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-BD4A51269165B058",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-929E1549A5650065",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-A59A21A0D1012902",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-0733D6B2B6A41784": {
       "status": "success",
@@ -1283,11 +1341,11 @@
         "exchange": "NYSE",
         "name": "TXO Partners, L.P.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
+        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
       },
-      "attempted_at": "2026-10-07T06:24:22+00:00",
-      "eps_key": "2027-12-31|1.30667",
+      "attempted_at": "2026-10-09T06:37:49+00:00",
+      "eps_key": "2027-12-31|1.5625",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-439BA8AE037B9273"
@@ -1298,8 +1356,8 @@
         "DOC-439BA8AE037B9273"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_overloaded",
+      "next_eligible_at": "2026-10-16T06:37:49+00:00",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-4516CDD65F6EAE41",
       "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
       "update_checks": [
@@ -1323,10 +1381,10 @@
         "exchange": "Nasdaq",
         "name": "Semtech Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
+        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
       },
-      "attempted_at": "2026-10-01T15:16:19+00:00",
+      "attempted_at": "2026-10-09T06:37:49+00:00",
       "eps_key": "2028-01-31|5.85723",
       "eps_target_period": "2028-01-31",
       "document_ids": [
@@ -1338,10 +1396,20 @@
         "DOC-CBBC405DFC60E662"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-08T15:16:19+00:00",
-      "draft_status": "provider_overloaded",
+      "next_eligible_at": "2026-10-16T06:37:49+00:00",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-08T07:15:56+00:00",
+      "update_checks": [
+        {
+          "document_id": "DOC-CBBC405DFC60E662",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-7F0690B785E31226": {
       "status": "success",
@@ -1368,7 +1436,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-B80220E5DD347856",
       "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
       "update_checks": [
@@ -1408,7 +1476,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-08T07:15:56+00:00",
       "update_checks": [
@@ -1481,7 +1549,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "update_checks": [
         {
           "document_id": "DOC-39C08ABD9C77B7B0",
@@ -1527,9 +1595,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "provider_overloaded",
-      "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_status": "failed",
+      "draft_error": "TimeoutError",
+      "draft_next_at": "2026-10-10T06:37:58+00:00",
+      "draft_failure": "failed",
+      "draft_http_status": null
     },
     "CAN-14DF13D991DA6490": {
       "status": "success",
@@ -1570,7 +1640,7 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-08T07:15:56+00:00"
     },
     "CAN-D9076638B950E851": {
@@ -1634,7 +1704,7 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-08T07:15:56+00:00"
     },
     "CAN-CA0C8E92D2718B06": {
@@ -1691,11 +1761,11 @@
         "exchange": "Nasdaq",
         "name": "VSE Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
+        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
       },
-      "attempted_at": "2026-10-05T06:05:58+00:00",
-      "eps_key": "2027-12-31|8.28332",
+      "attempted_at": "2026-10-09T06:37:49+00:00",
+      "eps_key": "2027-12-31|8.27679",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-637999F6299E19AE"
@@ -1706,8 +1776,17 @@
         "DOC-637999F6299E19AE"
       ],
       "notes": [],
-      "update_checks": [],
-      "next_eligible_at": "2026-10-12T06:05:58+00:00",
+      "update_checks": [
+        {
+          "document_id": "DOC-637999F6299E19AE",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p27",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-10-16T06:37:49+00:00",
       "draft_status": "deferred_budget"
     },
     "CAN-5790099EDC6F3301": {
@@ -1748,7 +1827,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-08T07:15:56+00:00"
     },
     "CAN-ECB2C73CA19DA4AB": {
@@ -1849,7 +1928,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-08T07:15:56+00:00"
     }
   },
@@ -1909,6 +1988,11 @@
       "companies": 7,
       "http_attempts": 21,
       "folded_companies": 2
+    },
+    "2026-10-09": {
+      "companies": 5,
+      "http_attempts": 18,
+      "folded_companies": 1
     }
   },
   "documents_by_source": {
@@ -2001,6 +2085,9 @@
     "0001628280-26-059117|https://www.sec.gov/Archives/edgar/data/1915657/000162828026059117/dino-20260826.htm": "DOC-1D4FFDA045A91754",
     "0001193125-26-407833|https://www.sec.gov/Archives/edgar/data/1694426/000119312526407833/d133400dex991.htm": "DOC-FA8A26E78512BA94",
     "0001193125-26-407833|https://www.sec.gov/Archives/edgar/data/1694426/000119312526407833/d133400dex992.htm": "DOC-77D6AE80EAB3B680",
-    "0001193125-26-407833|https://www.sec.gov/Archives/edgar/data/1694426/000119312526407833/d133400d8k.htm": "DOC-8C1023DB31E461B2"
+    "0001193125-26-407833|https://www.sec.gov/Archives/edgar/data/1694426/000119312526407833/d133400d8k.htm": "DOC-8C1023DB31E461B2",
+    "0001342874-26-000048|https://www.sec.gov/Archives/edgar/data/1342874/000134287426000048/analystdaypresentation8oct.htm": "DOC-7F00A9ED7479F2D4",
+    "0001554855-26-001510|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001510/MainDocument.htm": "DOC-929E1549A5650065",
+    "0001554855-26-001509|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001509/MainDocument.htm": "DOC-A59A21A0D1012902"
   }
 }

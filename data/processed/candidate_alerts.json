@@ -406,6 +406,108 @@
       "payload_text": "<b>🆕 새 발굴 후보 · JXN Jackson Financial Inc.</b>\n회사 설명 확인 중 (JXN)\n내년 EPS 예상(2027-12-31 회계연도 말) $26.52 → $30.90 (+16%), 최근 30일 상향 4/하향 0\n주가 2026-07-09 → 2026-10-06 +20.0%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-02BF26B752677B69</code> · 추적 <code>/track CAN-02BF26B752677B69</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
       "payload_sha256": "61f5d12785d03a45f33ea41eb133f14a8bebe56fb8e9b411d783621364a19fd5",
       "message_id": 162
+    },
+    "NYSE:PBF|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-644DAF9D6798D3C5": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:PBF",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-82719B27698E3C22",
+      "candidate_version": "CV-CE436873DD569D0D",
+      "observation_id": "OB-6D9681391DC78BFA",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 12.375,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-644DAF9D6798D3C5",
+          "baseline_id": "OB-644DAF9D6798D3C5",
+          "observed_at": "2026-10-05T06:05:56+00:00",
+          "day": "2026-10-05",
+          "snapshot_sha256": "ac52790e3c2f34e08d230ec482b8da3088e32c29a818b97d6c8d60ff0364dcd7",
+          "eps_now": 17.655,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-6D9681391DC78BFA",
+          "baseline_id": "OB-6D9681391DC78BFA",
+          "observed_at": "2026-10-09T06:37:47+00:00",
+          "day": "2026-10-09",
+          "snapshot_sha256": "cbd6f3d789e38978cdd33b30a065f5e6ce6a88fde842b3ba61aed0645bddd356",
+          "eps_now": 17.655,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 42.67,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-644DAF9D6798D3C5"
+        ]
+      },
+      "day": "2026-10-09",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "37892786686-1",
+      "reserved_at": "2026-10-09T06:41:52+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · PBF PBF Energy Inc.</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $12.38 → 현재 $17.66 (+43%), 2026-10-05·2026-10-09 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-82719B27698E3C22</code> · 추적 <code>/track CAN-82719B27698E3C22</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "345583ce971273b63724430536777bc3a4e67f5c31502e28a096dccd32007471"
+    },
+    "NASDAQ:VSEC|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:VSEC",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-C05377BEC03AE25C",
+      "candidate_version": "CV-3D4356C3CCCF597F",
+      "observation_id": "OB-8683B2248E867DFC",
+      "signal_id": null,
+      "day": "2026-10-09",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "37892786686-1",
+      "reserved_at": "2026-10-09T06:41:52+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · VSEC VSE Corporation</b>\n항공 운송 자산의 부품 유통 및 유지보수, 수리 서비스를 상업 및 정부 시장에 제공합니다.\n내년 EPS 예상(2027-12-31 회계연도 말) $5.68 → $8.28 (+46%), 최근 30일 상향 9/하향 1\n주가 2026-07-10 → 2026-10-08 -19.6%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-C05377BEC03AE25C</code> · 추적 <code>/track CAN-C05377BEC03AE25C</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
+      "payload_sha256": "cb1b37c7cfd902855c1e9c8820d5165ad56b69b25d8918c7b72ee55d29066351"
     }
   },
   "bootstrap": {

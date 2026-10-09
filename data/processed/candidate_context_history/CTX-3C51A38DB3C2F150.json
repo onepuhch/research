@@ -1,0 +1,242 @@
+{
+  "context_id": "CTX-3C51A38DB3C2F150",
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "ticker": "TALO",
+  "issuer_cik": "0001724965",
+  "document_ids": [
+    "DOC-70283ADC988D0C81",
+    "DOC-8369D977BE877B2D"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-70283ADC988D0C81#p8",
+    "DOC-70283ADC988D0C81#p29",
+    "DOC-70283ADC988D0C81#p33",
+    "DOC-70283ADC988D0C81#p56",
+    "DOC-70283ADC988D0C81#p57",
+    "DOC-70283ADC988D0C81#p61",
+    "DOC-70283ADC988D0C81#p64",
+    "DOC-70283ADC988D0C81#p86",
+    "DOC-70283ADC988D0C81#p94",
+    "DOC-70283ADC988D0C81#p97",
+    "DOC-70283ADC988D0C81#p110",
+    "DOC-70283ADC988D0C81#t24",
+    "DOC-70283ADC988D0C81#p151",
+    "DOC-70283ADC988D0C81#p175",
+    "DOC-8369D977BE877B2D#t13",
+    "DOC-8369D977BE877B2D#p208",
+    "DOC-8369D977BE877B2D#p217",
+    "DOC-8369D977BE877B2D#p228",
+    "DOC-8369D977BE877B2D#p345"
+  ],
+  "input_sha": "3c51a38db3c2f1501ff9af5a7e29f36ff7fc6ad15af349a8d4b5f94eb5f677f6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-09T06:37:58+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "production guidance · full-year 2026: 66 MBo/d and 89 MBoe/d — 연간 생산량 가이던스 중간값이 상향 조정되었다",
+      "note_ko": "연간 생산량 가이던스 중간값이 상향 조정되었다",
+      "kind": "guidance",
+      "quote": "Increased midpoint of full-year 2026 production guidance to 66 MBo/d and 89 MBoe/d; excluding the announced Gulf of America bolt-on acquisition and after adjusting for the closed non-core shelf divestment.",
+      "document_id": "DOC-70283ADC988D0C81",
+      "block_id": "p29",
+      "metric": "production guidance",
+      "figures": [
+        "66 MBo/d and 89 MBoe/d"
+      ],
+      "period": "full-year 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "생산량(production) · full-year 2026: 64 to 68 MBo/d and 87 to 91 MBoe/d — 연간 생산량 가이던스가 상향 조정되었다",
+      "note_ko": "연간 생산량 가이던스가 상향 조정되었다",
+      "kind": "guidance",
+      "quote": "Talos has increased its full-year 2026 production guidance and now expects production to range from 64 to 68 MBo/d and 87 to 91 MBoe/d.",
+      "document_id": "DOC-70283ADC988D0C81",
+      "block_id": "p94",
+      "metric": "production",
+      "figures": [
+        "64 to 68 MBo/d and 87 to 91 MBoe/d"
+      ],
+      "period": "full-year 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Lease operating expense · second quarter: $18.25 per Boe — 임대 운영 비용이 발생했다",
+      "note_ko": "임대 운영 비용이 발생했다",
+      "kind": "fact",
+      "quote": "Lease operating expense totaled $18.25 per Boe, including approximately $1.75 per Boe associated with one-time well intervention work performed during the quarter.",
+      "document_id": "DOC-70283ADC988D0C81",
+      "block_id": "p56",
+      "metric": "Lease operating expense",
+      "figures": [
+        "$18.25 per Boe"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "자사주 매입(share repurchases) · second quarter 2025: $135 million / 7%(변화율·감소) — 자사주 매입을 통해 주주들에게 자본을 환원하여 발행 주식 수가 감소했다",
+      "note_ko": "자사주 매입을 통해 주주들에게 자본을 환원하여 발행 주식 수가 감소했다",
+      "kind": "fact",
+      "quote": "Since announcing its current return of capital framework in the second quarter 2025, Talos has returned approximately $135 million to shareholders through share repurchases resulting in a reduction to outstanding share count by approximately 7%.",
+      "document_id": "DOC-70283ADC988D0C81",
+      "block_id": "p64",
+      "metric": "share repurchases",
+      "figures": [
+        "$135 million",
+        "7%"
+      ],
+      "period": "second quarter 2025",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "down"
+        }
+      ],
+      "drivers": [
+        "buyback_sharecount"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Lease operating expense · second quarter: $1.75 per Boe — 임대 운영 비용에는 일회성 유정 개입 작업 관련 비용이 포함되어 있다",
+      "note_ko": "임대 운영 비용에는 일회성 유정 개입 작업 관련 비용이 포함되어 있다",
+      "kind": "fact",
+      "quote": "Lease operating expense totaled $18.25 per Boe, including approximately $1.75 per Boe associated with one-time well intervention work performed during the quarter.",
+      "document_id": "DOC-70283ADC988D0C81",
+      "block_id": "p56",
+      "metric": "Lease operating expense",
+      "figures": [
+        "$1.75 per Boe"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "원유 생산량이 가이던스 범위를 초과했다",
+      "figures": [
+        "68.6 thousand barrels of oil per day"
+      ],
+      "quote": "Produced 68.6 thousand barrels of oil per day (“MBo/d”) and 93.7 thousand barrels of oil equivalent per day (“MBoe/d”); oil and total equivalent production exceeded guidance ranges driven by strong up",
+      "where": "DOC-70283ADC988D0C81#p8"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "이 가이던스는 Gulf of America 인수를 제외하고 비핵심 자산 매각의 영향을 반영한다",
+      "figures": [],
+      "quote": "This guidance excludes the previously announced Gulf of America bolt-on acquisition and reflects the impact of the closed non-core shelf divestment.",
+      "where": "DOC-70283ADC988D0C81#p94"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사는 기업의 블랙아웃 기간으로 인해 자사주를 매입하지 않았다",
+      "figures": [],
+      "quote": "During the second quarter of 2026, Talos did not repurchase any shares due to the Company's corporate blackout period associated with the previously announced Gulf of America acquisition.",
+      "where": "DOC-70283ADC988D0C81#p64"
+    }
+  ],
+  "context_status": "draft_ready"
+}
