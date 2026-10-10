@@ -1,0 +1,100 @@
+{
+  "candidate_id": "CAN-7506B6BECE695B39",
+  "candidate_version": "CV-E4B152CD3FF4D616",
+  "identity": {
+    "entity_id": "NYSE:FRO",
+    "ticker": "FRO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Frontline plc",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Frontline plc, a shipping company, engages in the ownership and operation of oil and product tankers worldwide. The company owns and operates oil and product tankers, such as very large crude carriers (VLCCs), Suezmax tankers, and LR2/Aframax tankers. As of December 31, 2025, it operated a fleet of 80 vessels, including 41 VLCCs, 21 Suezmax tankers, and 18 LR2/Aframax tankers. The company is also involved in the charter, purchase, and sale of vessels. Frontline plc was founded in 1985 and is based in Limassol, Cyprus."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "FRO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FRO/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:05:19+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "FRO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FRO/history",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:05:19+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "FRO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FRO/profile",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:05:19+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.24214,
+    "eps_30d": 4.48414,
+    "eps_90d": 3.52958,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 48.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

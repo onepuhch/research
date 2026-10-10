@@ -5683,10 +5683,10 @@
     },
     "content_hash": "898aa041f1520a149afdc494b25df631a4c531d8bd5b7c0ed581c011d46f0135",
     "prompt_version": "research-v2-20260906",
-    "attempts": 3,
-    "updated_at": "2026-10-09T06:19:37+00:00",
-    "reason": "TimeoutError",
-    "next_retry_at": "2026-10-09T18:18:32.235457+00:00"
+    "attempts": 4,
+    "updated_at": "2026-10-10T06:01:34+00:00",
+    "reason": "HTTPError",
+    "next_retry_at": "2026-10-10T18:00:59.270865+00:00"
   },
   "0001493152-26-045870": {
     "status": "rejected",
@@ -6219,5 +6219,25 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-09T06:18:32.235457+00:00"
+  },
+  "0001437749-26-032423": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-032423",
+      "entity_id": "CIK:0000007623",
+      "source_role": "candidate",
+      "title": "ARTS WAY MANUFACTURING CO INC (ARTW) (CIK 0000007623) EX-99.1 2026-10-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/7623/000143774926032423/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/7623/000143774926032423/ex_1024122.htm",
+      "published_at": "2026-10-09",
+      "raw_text": "ARTS WAY MANUFACTURING CO INC (ARTW) (CIK 0000007623) EX-99.1 2026-10-09. We strategically deployed an experienced product specialist into our primary beet territory beginning in April 2026 to drive new customer activity and further technological development. EX-99.1 3 ex_1024122.htm EXHIBIT 99.1 ex_1024122.htm Exhibit 99.1 FOR IMMEDIATE RELEASE October 9, 2026 ART ’ S WAY REPORTS A 12% REVENUE INCREASE THROUGH FIRST NINE MONTHS OF FISCAL 2026 ARMSTRONG, IOWA, October 9, 2026 – Art’s-Way Manufacturing Co., Inc. (Nasdaq: ARTW) (the “Company”), a diversified manufacturer and distributor of equipment serving agricultural and research needs, announces its financial results for the third quarter and first nine months of fiscal 2026. ​ ​ For the Three Months Ended ​ ​ ​ (Consolidated) ​ ​ ​ August 31, 2026 ​ ​ August 31, 2025 ​ Sales ​ $ 5,615,000 ​ ​ $ 6,432,000 ​ Operating Income (Loss) ​ $ (70,000 ) ​ $ 345,000 ​ Net Income (Loss) ​ $ (140,000 ) ​ $ 254,000 ​ EPS ​ $ (0.03 ) ​ $ 0.05 ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ Weighted Average Shares Outstanding ​ ​ 5,201,440 ​ ​ ​ 5,106,033 ​ ​ ​ For the Nine Months Ended ​ ​ ​ (Consolidated) ​ ​ ​ August 31, 2026 ​ ​ August 31, 2025 ​ Sales ​ $ 20,110,000 ​ ​ $ 17,910,000 ​ Operating Income ​ $ 547,000 ​ ​ $ 858,000 ​ Net Income ​ $ 230,000 ​ ​ $ 1,680,000 ​ EPS ​ $ 0.04 ​ ​ $ 0.33 ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ Weighted Average Shares Outstanding ​ ​ 5,176,868 ​ ​ ​ 5,085,183 ​ Marc McConnell, the Company’s President, CEO, and Chairman, reports, “We are pleased to announce our third quarter results, although we believe these results aren’t entirely representative of how the year is evolving for us. We continue to be pleased with the strong demand for livestock equipment we’ve experienced for much of the year, resulting in Agricultural Equipment sales that remain ahead of 2025 levels. In our Modular Buildings segment, our reduced revenue for the quarter was largely attributable to timing of revenue recognition on projects under contract. Demand remain"
+    },
+    "content_hash": "8c486756adffc65baafcce02a91ef6d21152ee4d49de1dd58d533d09c811472b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-10T06:01:38+00:00",
+    "reason": "deferred_budget"
   }
 }

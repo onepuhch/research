@@ -1,0 +1,83 @@
+{
+  "observation_id": "OB-93E928988F3820B1",
+  "candidate_id": "CAN-ECB2C73CA19DA4AB",
+  "candidate_version": "CV-7C633A0690EFABD9",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:BP",
+    "ticker": "BP",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-10T06:02:36+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
+    "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
+    "run_id": "38029430169-1",
+    "finished_at": "2026-10-10T06:16:03+00:00"
+  },
+  "eps": {
+    "eps_now": 5.33457,
+    "eps_30d": 4.75129,
+    "eps_90d": 4.07075,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 16,
+    "up30": 6,
+    "down30": 1,
+    "pct_90": 31.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.733,
+    "yield_change_30_pp": 1.261
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-12",
+    "price_start_date": "2026-07-10",
+    "price_end_expected": "2026-10-09",
+    "price_end_date": "2026-10-09",
+    "close_start": 39.20000076293945,
+    "close_end": 46.25,
+    "price_pct_90": 18.0,
+    "adj_return_pct_90": 19.4,
+    "pe_change_pct": -10.0
+  },
+  "display_rank": 28,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 17
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 119121100800,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [
+    "document budget reached before every results filing was read"
+  ],
+  "source_attempt_at": "2026-10-06T06:46:36+00:00",
+  "source_status": "no_relevant_document",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:BP",
+  "approval_version": null,
+  "rendered_at": "2026-10-10T06:16:25+00:00"
+}

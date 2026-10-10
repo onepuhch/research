@@ -1,0 +1,280 @@
+{
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "candidate_version": "CV-F9C30D522DAF7A09",
+  "identity": {
+    "entity_id": "NYSE:PARR",
+    "ticker": "PARR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Par Pacific Holdings, Inc.",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": "에너지 회사로, 정유, 소매점 운영, 물류를 통해 재생 및 기존 연료를 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Par Pacific Holdings, Inc., an energy company, provides renewable and conventional fuels in the United States. The company operates through three segments: Refining, Retail, and Logistics. The Refining segment owns and operates refineries that convert crude oil into gasoline, distillate, asphalt, and other products. The Retail segment operates convenience stores and fuel retail outlets that sell gasoline, diesel, and retail merchandise, such as soft drinks, prepared food, and other sundries under the Hele, 76, and nomnom brands, as well as unattended cardlock stations. The Logistics segment ow"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PARR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PARR/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:07:59+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PARR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PARR/history",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:07:59+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PARR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PARR/profile",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:07:59+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-45EC7F1F3C20E448",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/821483/000162828026052766/a20260630991earningsreleas.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-B16E725406B87B63",
+    "input_sha": "b16e725406b87b6379f19ce47501a0e83259e4135bdeb929c4031daad8577768",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "Net income attributable to Par Pacific stockholders: $462.1 million — 회사 주주에게 귀속되는 순이익이다",
+        "note_ko": "회사 주주에게 귀속되는 순이익이다",
+        "kind": "fact",
+        "quote": "Net income attributable to Par Pacific stockholders of $462.1 million, or $9.35 per diluted share",
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "block_id": "p6",
+        "metric": "Net income attributable to Par Pacific stockholders",
+        "figures": [
+          "$462.1 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "[Retail] fuel sales volumes · second quarter of 2026: 30.7 million gallons — 소매 부문의 연료 판매량이다",
+        "note_ko": "소매 부문의 연료 판매량이다",
+        "kind": "fact",
+        "quote": "The Retail segment reported fuel sales volumes of 30.7 million gallons in the second quarter of 2026, compared to 30.8 million gallons in the same quarter of 2025.",
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "block_id": "p35",
+        "metric": "fuel sales volumes",
+        "figures": [
+          "30.7 million gallons"
+        ],
+        "period": "second quarter of 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Retail",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Net cash provided by operations · three months ended June 30, 2026: $282.6 million — 영업 활동으로 인한 순 현금 흐름이다",
+        "note_ko": "영업 활동으로 인한 순 현금 흐름이다",
+        "kind": "fact",
+        "quote": "Net cash provided by operations totaled $282.6 million for the three months ended June 30, 2026, including working capital outflows of $(312.2) million and deferred turnaround expenditures of $(19.5) million.",
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "block_id": "p40",
+        "metric": "Net cash provided by operations",
+        "figures": [
+          "$282.6 million"
+        ],
+        "period": "three months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "net price lag impact · second quarter 2026 — 하와이 정유소의 계약 판매량은 전월 및 전주 평균 시장 가격을 기준으로 가격이 책정된다",
+        "note_ko": "하와이 정유소의 계약 판매량은 전월 및 전주 평균 시장 가격을 기준으로 가격이 책정된다",
+        "kind": "fact",
+        "quote": "The net price lag impact reflects the Hawaii refinery's contractual sales volumes that are priced based on prior-month and prior-week average market prices.",
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "block_id": "p21",
+        "metric": "net price lag impact",
+        "figures": [],
+        "period": "second quarter 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted Gross Margin — 변동성이 큰 상품 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이를 조정하여 투자자에게 유용한 정보를 제공한다",
+        "note_ko": "변동성이 큰 상품 가격의 총 영향을 제거하고 특정 비현금 항목 및 재고 금융 계약으로 인한 시점 차이를 조정하여 투자자에게 유용한 정보를 제공한다",
+        "kind": "fact",
+        "quote": "We believe Adjusted Gross Margin (as defined below) provides useful information to investors because it eliminates the gross impact of volatile commodity prices and adjusts for certain non-cash items and timing differences created by our inventory financing agreements and lower of cost and net realizable value adjustments to demonstrate the earnings potential of the business before other fixed and variable costs, which are reported separately in Operating expense (excluding depreciation) and Depreciation and amortization.",
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "block_id": "p77",
+        "metric": "Adjusted Gross Margin",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-45EC7F1F3C20E448",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/821483/000162828026052766/a20260630991earningsreleas.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-06T06:46:56+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 15.04737,
+    "eps_30d": 11.81722,
+    "eps_90d": 10.30297,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 46.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

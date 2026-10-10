@@ -1,0 +1,280 @@
+{
+  "candidate_id": "CAN-4E5151866E863998",
+  "candidate_version": "CV-3BC8CE9FD407C71A",
+  "identity": {
+    "entity_id": "NASDAQ:TEAM",
+    "ticker": "TEAM",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Atlassian Corporation",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "조직의 생산성을 높이는 협업 소프트웨어와 클라우드 기반 앱을 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at scale worldwide. The company's product portfolio includes Jira, Confluence, Loom, Jira Service Management, Rovo, Bitbucket, Compass, Jira Product Discovery, Focus, Talent, Trello, and Guard. It also offers Collections, a curated sets of apps and agents built on the Atlassian cloud platform and designed to solve cross-functional customer workflows, including teamwork, service, strategy, software, and product collections. The company was fo"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TEAM analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TEAM/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:03:20+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TEAM daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TEAM/history",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:03:20+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TEAM company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TEAM/profile",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:03:20+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-AAA5C2B5425B0947",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-09-29T06:08:31+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-AD4D51B8741A9339",
+    "input_sha": "ad4d51b8741a9339ba987e1d4fa60a1caa8328478d95bd3c88e3501061e0af82",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(Revenue) · fourth quarter of fiscal year 2026: $1,766 million / 28%(변화율·증가) — 총 매출은 전년 같은 분기보다 늘었다",
+        "note_ko": "총 매출은 전년 같은 분기보다 늘었다",
+        "kind": "fact",
+        "quote": "Total revenue was $1,766 million for the fourth quarter of fiscal year 2026, up 28% from $1,384 million for the fourth quarter of fiscal year 2025.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p14",
+        "metric": "Revenue",
+        "figures": [
+          "$1,766 million",
+          "28%"
+        ],
+        "period": "fourth quarter of fiscal year 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "매출(Revenue) · fiscal year 2026: $6,572 million / 26%(변화율·증가) — 총 매출은 전년보다 늘었다",
+        "note_ko": "총 매출은 전년보다 늘었다",
+        "kind": "fact",
+        "quote": "Total revenue was $6,572 million for fiscal year 2026, up 26% from $5,215 million for fiscal year 2025.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p25",
+        "metric": "Revenue",
+        "figures": [
+          "$6,572 million",
+          "26%"
+        ],
+        "period": "fiscal year 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Total revenue: $1,705 million to $1,715 million — 총 매출은 특정 범위에 있을 것으로 예상된다",
+        "note_ko": "총 매출은 특정 범위에 있을 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "•Total revenue is expected to be in the range of $1,705 million to $1,715 million.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p64",
+        "metric": "Total revenue",
+        "figures": [
+          "$1,705 million to $1,715 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Cloud revenue growth year-over-year: 28.5% — 클라우드 매출은 전년 대비 성장할 것으로 예상된다",
+        "note_ko": "클라우드 매출은 전년 대비 성장할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "•Cloud revenue growth year-over-year is expected to be approximately 28.5%.",
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "block_id": "p65",
+        "metric": "Cloud revenue growth year-over-year",
+        "figures": [
+          "28.5%"
+        ],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-AAA5C2B5425B0947",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-09-29T06:08:31+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-06T06:46:56+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.1871,
+    "eps_30d": 2.0571,
+    "eps_90d": 1.39452,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 56.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "candidate_version": "CV-57607490D8F849C2",
+  "identity": {
+    "entity_id": "NYSE:TALO",
+    "ticker": "TALO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Talos Energy Inc.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "석유 및 가스 탐사, 생산, 탄소 포집 및 저장 사업을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Talos Energy Inc., through its subsidiaries, engages in the exploration and production of oil and gas in the United States and Mexico. The company operates through two segments: Upstream, and Carbon Capture and Sequestration. It also engages in the exploration and production of natural gas liquid. Talos Energy Inc. was founded in 2011 and is headquartered in Houston, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TALO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TALO/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:09:13+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TALO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TALO/history",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:09:13+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TALO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TALO/profile",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:09:13+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-70283ADC988D0C81",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-8369D977BE877B2D",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333290/talo-20260630.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-04T06:15:49+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-3C51A38DB3C2F150",
+    "input_sha": "3c51a38db3c2f1501ff9af5a7e29f36ff7fc6ad15af349a8d4b5f94eb5f677f6",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "production guidance · full-year 2026: 66 MBo/d and 89 MBoe/d — 연간 생산량 가이던스 중간값이 상향 조정되었다",
+        "note_ko": "연간 생산량 가이던스 중간값이 상향 조정되었다",
+        "kind": "guidance",
+        "quote": "Increased midpoint of full-year 2026 production guidance to 66 MBo/d and 89 MBoe/d; excluding the announced Gulf of America bolt-on acquisition and after adjusting for the closed non-core shelf divestment.",
+        "document_id": "DOC-70283ADC988D0C81",
+        "block_id": "p29",
+        "metric": "production guidance",
+        "figures": [
+          "66 MBo/d and 89 MBoe/d"
+        ],
+        "period": "full-year 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "생산량(production) · full-year 2026: 64 to 68 MBo/d and 87 to 91 MBoe/d — 연간 생산량 가이던스가 상향 조정되었다",
+        "note_ko": "연간 생산량 가이던스가 상향 조정되었다",
+        "kind": "guidance",
+        "quote": "Talos has increased its full-year 2026 production guidance and now expects production to range from 64 to 68 MBo/d and 87 to 91 MBoe/d.",
+        "document_id": "DOC-70283ADC988D0C81",
+        "block_id": "p94",
+        "metric": "production",
+        "figures": [
+          "64 to 68 MBo/d and 87 to 91 MBoe/d"
+        ],
+        "period": "full-year 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Lease operating expense · second quarter: $18.25 per Boe — 임대 운영 비용이 발생했다",
+        "note_ko": "임대 운영 비용이 발생했다",
+        "kind": "fact",
+        "quote": "Lease operating expense totaled $18.25 per Boe, including approximately $1.75 per Boe associated with one-time well intervention work performed during the quarter.",
+        "document_id": "DOC-70283ADC988D0C81",
+        "block_id": "p56",
+        "metric": "Lease operating expense",
+        "figures": [
+          "$18.25 per Boe"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "margin_cost"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "자사주 매입(share repurchases) · second quarter 2025: $135 million / 7%(변화율·감소) — 자사주 매입을 통해 주주들에게 자본을 환원하여 발행 주식 수가 감소했다",
+        "note_ko": "자사주 매입을 통해 주주들에게 자본을 환원하여 발행 주식 수가 감소했다",
+        "kind": "fact",
+        "quote": "Since announcing its current return of capital framework in the second quarter 2025, Talos has returned approximately $135 million to shareholders through share repurchases resulting in a reduction to outstanding share count by approximately 7%.",
+        "document_id": "DOC-70283ADC988D0C81",
+        "block_id": "p64",
+        "metric": "share repurchases",
+        "figures": [
+          "$135 million",
+          "7%"
+        ],
+        "period": "second quarter 2025",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "down"
+          }
+        ],
+        "drivers": [
+          "buyback_sharecount"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "Lease operating expense · second quarter: $1.75 per Boe — 임대 운영 비용에는 일회성 유정 개입 작업 관련 비용이 포함되어 있다",
+        "note_ko": "임대 운영 비용에는 일회성 유정 개입 작업 관련 비용이 포함되어 있다",
+        "kind": "fact",
+        "quote": "Lease operating expense totaled $18.25 per Boe, including approximately $1.75 per Boe associated with one-time well intervention work performed during the quarter.",
+        "document_id": "DOC-70283ADC988D0C81",
+        "block_id": "p56",
+        "metric": "Lease operating expense",
+        "figures": [
+          "$1.75 per Boe"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-70283ADC988D0C81",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-8369D977BE877B2D",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333290/talo-20260630.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-04T06:15:49+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-09T06:37:58+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.66344,
+    "eps_30d": 1.44218,
+    "eps_90d": -0.35729,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 5,
+    "down30": 0,
+    "pct_90": null,
+    "steady": true,
+    "turnaround": true
+  }
+}

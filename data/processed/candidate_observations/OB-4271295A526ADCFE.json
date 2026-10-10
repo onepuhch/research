@@ -1,0 +1,95 @@
+{
+  "observation_id": "OB-4271295A526ADCFE",
+  "candidate_id": "CAN-3D30FF7D03231FE1",
+  "candidate_version": "CV-8CC3505AC8731819",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PSX",
+    "ticker": "PSX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-10T06:02:37+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
+    "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
+    "run_id": "38029430169-1",
+    "finished_at": "2026-10-10T06:16:03+00:00"
+  },
+  "eps": {
+    "eps_now": 26.7963,
+    "eps_30d": 21.29483,
+    "eps_90d": 17.79899,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 10,
+    "down30": 0,
+    "pct_90": 50.5,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.234,
+    "yield_change_30_pp": 1.978
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "da908f5269ac",
+  "generator_version": "cards-v10",
+  "market_cap": 111532097536,
+  "context_id": "CTX-2CEA03A0C6A3BE21",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-10T06:16:06+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 8,
+    "shown": [
+      "MPC",
+      "PBF",
+      "CVI",
+      "DK"
+    ],
+    "folded": [
+      "VLO",
+      "PSX",
+      "DINO",
+      "PARR"
+    ],
+    "outside": []
+  },
+  "entity_id": "NYSE:PSX",
+  "approval_version": null,
+  "rendered_at": "2026-10-10T06:16:25+00:00"
+}

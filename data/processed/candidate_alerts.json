@@ -524,6 +524,57 @@
       "payload_text": "<b>🆕 새 발굴 후보 · VSEC VSE Corporation</b>\n항공 운송 자산의 부품 유통 및 유지보수, 수리 서비스를 상업 및 정부 시장에 제공합니다.\n내년 EPS 예상(2027-12-31 회계연도 말) $5.68 → $8.28 (+46%), 최근 30일 상향 9/하향 1\n주가 2026-07-10 → 2026-10-08 -19.6%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-C05377BEC03AE25C</code> · 추적 <code>/track CAN-C05377BEC03AE25C</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
       "payload_sha256": "cb1b37c7cfd902855c1e9c8820d5165ad56b69b25d8918c7b72ee55d29066351",
       "message_id": 164
+    },
+    "NYSE:DHT|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:DHT",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-FD88AA0D924CF1C8",
+      "candidate_version": "CV-75360113DC9DF916",
+      "observation_id": "OB-9B007EE68965810F",
+      "signal_id": null,
+      "day": "2026-10-10",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "38029430169-1",
+      "reserved_at": "2026-10-10T06:17:03+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · DHT DHT Holdings, Inc.</b>\n회사 설명 확인 중 (DHT)\n내년 EPS 예상(2027-12-31 회계연도 말) $1.74 → $2.50 (+44%), 최근 30일 상향 2/하향 0\n주가 2026-07-10 → 2026-10-09 +38.7%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-FD88AA0D924CF1C8</code> · 추적 <code>/track CAN-FD88AA0D924CF1C8</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
+      "payload_sha256": "bbcafea7be9b017f574dcedcfe0d0c7f487c7e65af842c53e6d36f6266d53c67"
+    },
+    "NYSE:FRO|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:FRO",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-7506B6BECE695B39",
+      "candidate_version": "CV-E4B152CD3FF4D616",
+      "observation_id": "OB-AD62B8FECCA80C6B",
+      "signal_id": null,
+      "day": "2026-10-10",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "38029430169-1",
+      "reserved_at": "2026-10-10T06:17:03+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · FRO Frontline plc</b>\n회사 설명 확인 중 (FRO)\n내년 EPS 예상(2027-12-31 회계연도 말) $3.53 → $5.24 (+48%), 최근 30일 상향 4/하향 1\n주가 2026-07-10 → 2026-10-09 +47.1%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-7506B6BECE695B39</code> · 추적 <code>/track CAN-7506B6BECE695B39</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
+      "payload_sha256": "700576ec1c07e79b047ee8a17528c5d8dff5a3997f0aa756589421c956df22d6"
+    },
+    "NYSE:INSW|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:INSW",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-71C24817F9DA0FA8",
+      "candidate_version": "CV-893D72B4D0EC971F",
+      "observation_id": "OB-027615179E3CD16C",
+      "signal_id": null,
+      "day": "2026-10-10",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "38029430169-1",
+      "reserved_at": "2026-10-10T06:17:03+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · INSW International Seaways, Inc.</b>\n회사 설명 확인 중 (INSW)\n내년 EPS 예상(2027-12-31 회계연도 말) $6.44 → $9.56 (+48%), 최근 30일 상향 1/하향 0\n주가 2026-07-10 → 2026-10-09 +35.4%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-71C24817F9DA0FA8</code> · 추적 <code>/track CAN-71C24817F9DA0FA8</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
+      "payload_sha256": "351d8352300c7120ec3c3a2832bc96e038e31891973cbc8d077b1b12396dfb04"
     }
   },
   "bootstrap": {
@@ -568,26 +619,7 @@
   },
   "material": {
     "version": "material-update-v3",
-    "pending": {
-      "NYSE:PBF|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-644DAF9D6798D3C5",
-          "baseline_id": "OB-644DAF9D6798D3C5",
-          "observed_at": "2026-10-05T06:05:56+00:00",
-          "day": "2026-10-05",
-          "snapshot_sha256": "ac52790e3c2f34e08d230ec482b8da3088e32c29a818b97d6c8d60ff0364dcd7",
-          "eps_now": 17.655,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      }
-    },
+    "pending": {},
     "rebases": {
       "NASDAQ:MU|eps-revision-review:v1": {
         "observation_id": "OB-C3EC57D1352A4832",

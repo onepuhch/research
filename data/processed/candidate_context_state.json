@@ -100,11 +100,11 @@
         "exchange": "NYSE",
         "name": "Delek US Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-08T06:30:16+00:00",
-      "eps_key": "2027-12-31|7.79006",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|7.78733",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-80DB053BD25896A0"
@@ -112,17 +112,17 @@
       "examined": [
         "DOC-FA8A26E78512BA94",
         "DOC-77D6AE80EAB3B680",
-        "DOC-80DB053BD25896A0",
-        "DOC-8C1023DB31E461B2"
+        "DOC-8C1023DB31E461B2",
+        "DOC-80DB053BD25896A0"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-4AF8EDED57B44FFC",
       "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
       "quality": "complete",
       "failures": 0,
-      "draft_next_at": "2026-10-08T07:15:56+00:00",
+      "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
         {
           "document_id": "DOC-FA8A26E78512BA94",
@@ -191,7 +191,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
       "context_id": "CTX-3A49D7297BE7A680",
       "context_input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
@@ -251,7 +251,7 @@
           ]
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-82719B27698E3C22": {
       "status": "success",
@@ -262,22 +262,24 @@
         "exchange": "NYSE",
         "name": "PBF Energy Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
-      "eps_key": "2027-12-31|17.655",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|17.405",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9FC60A7023735EC9",
         "DOC-DF8157DE720BEF5F"
       ],
       "examined": [
+        "DOC-7235E4C9914E09E9",
+        "DOC-1B2A4D993FF57372",
         "DOC-9FC60A7023735EC9",
         "DOC-DF8157DE720BEF5F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
       "draft_status": "failed",
       "context_id": "CTX-3052BA46969F76BA",
       "context_input_sha": "3052ba46969f76baff47b9ebb00b79ebdec646f47d432ce4d227b33969ccf187",
@@ -286,7 +288,43 @@
       "draft_next_at": "2026-10-10T06:37:58+00:00",
       "draft_error": "TimeoutError",
       "draft_failure": "failed",
-      "draft_http_status": null
+      "draft_http_status": null,
+      "update_checks": [
+        {
+          "document_id": "DOC-7235E4C9914E09E9",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-1B2A4D993FF57372",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-9FC60A7023735EC9",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:guidance:p21",
+          "alert_reasons": [
+            "guidance_prior_unverified"
+          ]
+        },
+        {
+          "document_id": "DOC-DF8157DE720BEF5F",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-DC6D3F92ECFFD019": {
       "status": "success",
@@ -328,11 +366,11 @@
         "exchange": "NYSE",
         "name": "Marathon Petroleum Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-06T06:46:36+00:00",
-      "eps_key": "2027-12-31|50.68686",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|51.76689",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-683FD7B3F9B87824",
@@ -343,8 +381,8 @@
         "DOC-BE1000530D20CF2E"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
       "quality": "complete",
@@ -372,7 +410,7 @@
           ]
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-700B10D9B75B0040": {
       "status": "success",
@@ -399,12 +437,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-9880C8070DA7574A",
       "context_input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552",
       "quality": "complete",
       "failures": 0,
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-490AC1686F9442CE": {
       "status": "success",
@@ -431,12 +469,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-5CD5637243E02192",
       "context_input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed",
       "quality": "complete",
       "failures": 0,
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-68E9292E49558246": {
       "status": "success",
@@ -535,11 +573,11 @@
         "exchange": "NYSE",
         "name": "Valero Energy Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
-        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-09T06:37:49+00:00",
-      "eps_key": "2027-12-31|42.27417",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|43.1387",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9DA9F71500981FB2"
@@ -552,8 +590,8 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-C6D280F99B770EDC",
       "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
       "update_checks": [
@@ -582,7 +620,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-36582E27909720FE": {
       "status": "success",
@@ -639,7 +677,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-F9D9AA0C6D3787B9",
       "context_input_sha": "f9d9aa0c6d3787b99b7f7e8412462d00b6a6e2220c8bd93755d89974c57dc3bc",
       "update_checks": [
@@ -660,7 +698,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-5A9E947A6AEC56D7": {
       "status": "success",
@@ -687,7 +725,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-489EBDB3A330DB87",
       "context_input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
       "update_checks": [
@@ -700,7 +738,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-E95987D989EF1145": {
       "status": "success",
@@ -823,12 +861,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
       "context_id": "CTX-BC75ACFAFFC06F1A",
       "context_input_sha": "bc75acfaffc06f1afa78da14c113bc3eae0e38bfa109fbbdeb1aa756c295381f",
       "update_checks": [],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-A0761326A7E13159": {
       "status": "success",
@@ -954,29 +992,37 @@
         "exchange": "Nasdaq",
         "name": "Cracker Barrel Old Country Store, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-03T05:43:20+00:00",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
       "eps_key": "2028-07-31|2.12415",
       "eps_target_period": "2028-07-31",
       "document_ids": [
-        "DOC-D70EE3410CF45533",
-        "DOC-44B9ADB6B8CF4C13"
+        "DOC-D70EE3410CF45533"
       ],
       "quality": "complete",
       "failures": 0,
       "examined": [
-        "DOC-D70EE3410CF45533",
-        "DOC-44B9ADB6B8CF4C13"
+        "DOC-D70EE3410CF45533"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-10T05:43:20+00:00",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
       "draft_status": "failed",
       "draft_error": "TimeoutError",
       "draft_next_at": "2026-10-10T06:37:58+00:00",
       "draft_failure": "failed",
-      "draft_http_status": null
+      "draft_http_status": null,
+      "update_checks": [
+        {
+          "document_id": "DOC-D70EE3410CF45533",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-C8B827862A3B86D5": {
       "status": "success",
@@ -1093,11 +1139,11 @@
         "exchange": "NYSE",
         "name": "Phillips 66",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-06T06:46:36+00:00",
-      "eps_key": "2027-12-31|26.67825",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|26.7963",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-D9C0CECC172F9418"
@@ -1108,8 +1154,8 @@
         "DOC-D9C0CECC172F9418"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
       "update_checks": [
@@ -1122,7 +1168,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-4BD491C8D3F1EC4F": {
       "status": "success",
@@ -1133,11 +1179,11 @@
         "exchange": "Nasdaq",
         "name": "Ultra Clean Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-06T06:46:36+00:00",
-      "eps_key": "2027-12-31|6.39117",
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|6.24431",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-A19880431D2CB470"
@@ -1148,8 +1194,8 @@
         "DOC-A19880431D2CB470"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-00C1D48A4294E166",
       "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
       "update_checks": [
@@ -1162,7 +1208,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-0584EAE068460D91": {
       "status": "success",
@@ -1357,7 +1403,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-4516CDD65F6EAE41",
       "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
       "update_checks": [
@@ -1370,7 +1416,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-782282A0C20A29F1": {
       "status": "success",
@@ -1397,9 +1443,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00",
+      "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
         {
           "document_id": "DOC-CBBC405DFC60E662",
@@ -1436,7 +1482,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-B80220E5DD347856",
       "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
       "update_checks": [
@@ -1449,7 +1495,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-713C837ADADE8D8B": {
       "status": "success",
@@ -1476,9 +1522,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "draft_error": "HTTPError",
-      "draft_next_at": "2026-10-08T07:15:56+00:00",
+      "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
         {
           "document_id": "DOC-F17429F199F2C94B",
@@ -1549,7 +1595,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_overloaded",
       "update_checks": [
         {
           "document_id": "DOC-39C08ABD9C77B7B0",
@@ -1568,7 +1614,7 @@
           "alert_reasons": []
         }
       ],
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-F451582E2056444F": {
       "status": "success",
@@ -1640,8 +1686,8 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-D9076638B950E851": {
       "status": "success",
@@ -1704,8 +1750,8 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-CA0C8E92D2718B06": {
       "status": "success",
@@ -1827,8 +1873,8 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-ECB2C73CA19DA4AB": {
       "status": "no_relevant_document",
@@ -1928,8 +1974,160 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
-      "draft_next_at": "2026-10-08T07:15:56+00:00"
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
+    },
+    "CAN-FD88AA0D924CF1C8": {
+      "status": "success",
+      "ticker": "DHT",
+      "issuer": {
+        "cik": "0001331284",
+        "ticker": "DHT",
+        "exchange": "NYSE",
+        "name": "DHT Holdings, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+      },
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|2.50383",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-3D866BF98EA62F30"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-3D866BF98EA62F30",
+        "DOC-C962E42803EFEF10",
+        "DOC-FE86BCE4F1E06392",
+        "DOC-B5E160160F23945C"
+      ],
+      "notes": [
+        "document budget reached before every results filing was read"
+      ],
+      "update_checks": [
+        {
+          "document_id": "DOC-3D866BF98EA62F30",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-C962E42803EFEF10",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-FE86BCE4F1E06392",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-B5E160160F23945C",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
+    },
+    "CAN-7506B6BECE695B39": {
+      "status": "success",
+      "ticker": "FRO",
+      "issuer": {
+        "cik": "0000913290",
+        "ticker": "FRO",
+        "exchange": "NYSE",
+        "name": "Frontline plc",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+      },
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|5.24214",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-9257C52A1302173B"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-9257C52A1302173B",
+        "DOC-E3806234A273B4D0"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-9257C52A1302173B",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p103",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-E3806234A273B4D0",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
+    },
+    "CAN-71C24817F9DA0FA8": {
+      "status": "success",
+      "ticker": "INSW",
+      "issuer": {
+        "cik": "0001679049",
+        "ticker": "INSW",
+        "exchange": "NYSE",
+        "name": "International Seaways, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+      },
+      "attempted_at": "2026-10-10T06:16:06+00:00",
+      "eps_key": "2027-12-31|9.56367",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-66CDE89BADA482E2"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-66CDE89BADA482E2"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-66CDE89BADA482E2",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-10T06:31:42+00:00"
     }
   },
   "days": {
@@ -1993,6 +2191,11 @@
       "companies": 5,
       "http_attempts": 18,
       "folded_companies": 1
+    },
+    "2026-10-10": {
+      "companies": 10,
+      "http_attempts": 38,
+      "folded_companies": 2
     }
   },
   "documents_by_source": {
@@ -2088,6 +2291,15 @@
     "0001193125-26-407833|https://www.sec.gov/Archives/edgar/data/1694426/000119312526407833/d133400d8k.htm": "DOC-8C1023DB31E461B2",
     "0001342874-26-000048|https://www.sec.gov/Archives/edgar/data/1342874/000134287426000048/analystdaypresentation8oct.htm": "DOC-7F00A9ED7479F2D4",
     "0001554855-26-001510|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001510/MainDocument.htm": "DOC-929E1549A5650065",
-    "0001554855-26-001509|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001509/MainDocument.htm": "DOC-A59A21A0D1012902"
+    "0001554855-26-001509|https://www.sec.gov/Archives/edgar/data/1342874/000155485526001509/MainDocument.htm": "DOC-A59A21A0D1012902",
+    "0000950157-26-000847|https://www.sec.gov/Archives/edgar/data/1331284/000095015726000847/ex99-1.htm": "DOC-3D866BF98EA62F30",
+    "0000950157-26-000813|https://www.sec.gov/Archives/edgar/data/1331284/000095015726000813/ex99-1.htm": "DOC-C962E42803EFEF10",
+    "0000950157-26-000813|https://www.sec.gov/Archives/edgar/data/1331284/000095015726000813/form6k.htm": "DOC-FE86BCE4F1E06392",
+    "0000950157-26-000799|https://www.sec.gov/Archives/edgar/data/1331284/000095015726000799/ex99-1.htm": "DOC-B5E160160F23945C",
+    "0001628280-26-062234|https://www.sec.gov/Archives/edgar/data/913290/000162828026062234/fro-20260630.htm": "DOC-9257C52A1302173B",
+    "0000919574-26-005942|https://www.sec.gov/Archives/edgar/data/913290/000091957426005942/p15060813_6k.htm": "DOC-E3806234A273B4D0",
+    "0001104659-26-093033|https://www.sec.gov/Archives/edgar/data/1679049/000110465926093033/tm2622617d1_ex99-1.htm": "DOC-66CDE89BADA482E2",
+    "0001534504-26-000033|https://www.sec.gov/Archives/edgar/data/1534504/000153450426000033/pbf-20260930.htm": "DOC-7235E4C9914E09E9",
+    "0001193125-26-394108|https://www.sec.gov/Archives/edgar/data/1534504/000119312526394108/d175053d8k.htm": "DOC-1B2A4D993FF57372"
   }
 }
