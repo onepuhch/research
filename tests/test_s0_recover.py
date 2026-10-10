@@ -32,7 +32,9 @@ def nothing(at):
     return None
 
 
-class RecoverTest(unittest.TestCase):
+class RecoverBase(unittest.TestCase):
+    """Fixtures only (no tests), shared with the S0 review tests."""
+
     def setUp(self):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
@@ -62,11 +64,28 @@ class RecoverTest(unittest.TestCase):
                                                                    "status": "partial" if quality == "partial" else "degraded"}})
         return state
 
+    def run_out(self, state, run_id, at):
+        """Finish every step run_id planned: the model is still unavailable (extract fails again)."""
+        for name, entry in d.day_steps(state, THU).items():
+            if entry.get("planned_by") != run_id or entry.get("execution_status") != "pending":
+                continue
+            if name == "notify":
+                d.record_step(state, THU, name, "blocked", run_id, at, reason="extract failed")
+                continue
+            failed = name == "extract"
+            d.record_step(state, THU, name, "started", run_id, at)
+            d.record_step(state, THU, name, "failed" if failed else "success", run_id, at + timedelta(minutes=1),
+                          1 if failed else 0)
+        c.atomic_json(self.data / "run_status.json", {"extract": {"run_id": run_id, "outcome": "model_unavailable",
+                                                                   "status": "degraded"}})
+
     def plan(self, state, at, extract_resume=due, draft_resume=nothing, notes=None):
         return d.plan_detail(state, THU if at.astimezone(d.KST).date().isoformat() == THU else
                              at.astimezone(d.KST).date().isoformat(), "recover", at, {}, frozenset(),
                              draft_resume, extract_resume, notes)
 
+
+class RecoverTest(RecoverBase):
     def test_resumes_a_model_stopped_extract_and_its_users_only(self):
         state = self.daily()
         detail = self.plan(state, EVENING)
@@ -103,11 +122,13 @@ class RecoverTest(unittest.TestCase):
     def test_two_recoveries_a_day_at_least_60_minutes_apart(self):
         state = self.daily()
         d.apply_plan(state, THU, "r2", "recover", "schedule", self.plan(state, EVENING), EVENING, "sha", "pol")
+        self.run_out(state, "r2", EVENING)
         notes = {}
         self.assertEqual(self.plan(state, EVENING + timedelta(minutes=59), notes=notes), {})
         self.assertIn("last recovery", notes["recover"])
         second = EVENING + timedelta(minutes=61)
         d.apply_plan(state, THU, "r3", "recover", "schedule", self.plan(state, second), second, "sha", "pol")
+        self.run_out(state, "r3", second)
         notes = {}
         self.assertEqual(self.plan(state, second + timedelta(minutes=5), notes=notes), {})
         self.assertEqual(notes["recover"], "recover_max 2 used")

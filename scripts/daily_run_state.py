@@ -100,6 +100,9 @@ STEPS: dict[str, Step] = {
 }
 MODES = ("daily", "auto", "commands", "recover")
 RESUMES = ("extract_resume", "draft_resume")  # reasons counted as same-day recoveries
+# An interrupted recovery is continued under these reasons: no new slot, no new draft resume count.
+CONTINUES = {"extract_resume": "extract_resume_continue", "draft_resume": "draft_resume_continue"}
+DRAFTS_ONLY = ("draft_resume", "draft_resume_continue")
 EXECUTION = ("pending", "started", "success", "failed", "blocked")
 QUALITY = ("complete", "partial", "unavailable", "unknown")
 
@@ -197,16 +200,27 @@ def retry_due(entry: dict, now: datetime, policy: dict, step: str = "screen") ->
     return datetime.fromisoformat(entry["finished_at"]) + gap <= now
 
 
-def extract_recoverable(entry: dict) -> bool:
-    """An extract worth a same-day resume: partial (S0-A), or failed only because the model could
-    not serve it (that run's own status record says so). Other failures are not resumed here."""
-    if entry.get("execution_status") == "success":
-        return entry.get("quality_status") == "partial"
+def extract_model_stopped(entry: dict) -> bool:
+    """A failed extract whose own run status says the model could not serve it (model_unavailable)."""
     if entry.get("execution_status") != "failed":
         return False
     status = c.read_json(c.DATA_DIR / "run_status.json", {}).get("extract", {})
     return bool(entry.get("run_id")) and status.get("run_id") == entry["run_id"] \
         and status.get("outcome") == "model_unavailable"
+
+
+def extract_recoverable(entry: dict) -> bool:
+    """An extract worth a same-day resume: partial (S0-A), or failed only because the model could
+    not serve it. Other failures are not resumed here."""
+    if entry.get("execution_status") == "success":
+        return entry.get("quality_status") == "partial"
+    return extract_model_stopped(entry)
+
+
+def recovery_runs(record: dict) -> set[str]:
+    """Run ids of the day's latest recovery and of the runs that continued it."""
+    done = record.get("recoveries", [])
+    return {done[-1]["run_id"], *done[-1].get("continued_by", [])} if done and done[-1].get("run_id") else set()
 
 
 def recovery_room(record: dict, now: datetime, policy: dict) -> str | None:
@@ -251,18 +265,34 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
         entry = steps.get(name, {})
         if name in redo:
             why[name] = "requested"
+        elif name == "extract" and (extract_model_stopped(entry) or
+                                    (entry.get("execution_status") == "success" and extract_recoverable(entry))):
+            # Already tried today and stopped (or left partial) by the model: the same recovery
+            # limits, spacing and waits as the six-hourly recovery (S0-B), counted the same way.
+            if room is not None:
+                notes["extract"] = room
+            elif extract_resume is None or not extract_resume(now):
+                notes["extract"] = "nothing to resume now"
+            else:
+                why[name] = "extract_resume"  # stored pending items only; no new collection
         elif entry.get("execution_status") != "success":
             why[name] = entry.get("execution_status") or "not_run"
         elif stale(steps, name):
             why[name] = "inputs_changed"
         elif retry_due(entry, now, policy, name):
             why[name] = "partial_retry"
-        elif (name == "context" and draft_resume is not None
-              and entry.get("draft_resumes", 0) < policy["draft_resume_max"] and draft_resume(now)):
-            why[name] = "draft_resume"  # drafts only, from stored documents (Q2); no screen or SEC
-        elif (name == "extract" and extract_resume is not None and room is None
-              and extract_recoverable(entry) and extract_resume(now)):
-            why[name] = "extract_resume"  # stored pending items only (S0-B); no new collection
+        elif name == "context" and draft_resume is not None:
+            if entry.get("draft_resumes", 0) >= policy["draft_resume_max"]:
+                notes["context"] = "draft_resume_max used"
+            elif room is not None:
+                notes["context"] = room
+            elif draft_resume(now):
+                why[name] = "draft_resume"  # drafts only, from stored documents (Q2); no screen or SEC
+    # A step recorded blocked runs again only when what blocks it runs again (else it is blocked again).
+    for name in [n for n, reason in why.items() if reason == "blocked"]:
+        dep = blocking(steps, name)
+        if dep and dep[0] not in why:
+            del why[name]
     for name in dependents(set(why), required) - set(why):
         why[name] = "dependency_rerun"
     return {name: why[name] for name in required if name in why}
@@ -276,11 +306,16 @@ def recover_detail(state: dict, day: str, now: datetime, policy: dict, required:
     if not record.get("runs"):
         notes["recover"] = "no daily run today"
         return {}
+    steps = record.get("steps", {})
+    runs = recovery_runs(record)
+    unfinished = [name for name in required if steps.get(name, {}).get("planned_by") in runs
+                  and steps[name].get("execution_status") in ("pending", "started")]
+    if unfinished:
+        return continue_recovery(steps, unfinished, now, required, draft_resume, extract_resume, notes)
     room = recovery_room(record, now, policy)
     if room:
         notes["recover"] = room
         return {}
-    steps = record.get("steps", {})
     why: dict[str, str] = {}
     entry = steps.get("extract", {})
     if "extract" not in required or blocking(steps, "extract"):
@@ -302,6 +337,30 @@ def recover_detail(state: dict, day: str, now: datetime, policy: dict, required:
         why["context"] = "draft_resume"
     for name in dependents(set(why), required) - set(why):
         why[name] = "dependency_rerun"
+    return {name: why[name] for name in required if name in why}
+
+
+def continue_recovery(steps: dict, unfinished: list[str], now: datetime, required: list[str],
+                      draft_resume, extract_resume, notes: dict) -> dict[str, str]:
+    """The steps a stopped recovery left pending/started, under the same day's slot (none consumed).
+    Model steps check their waits again; a model step that must wait holds its users with it."""
+    checks = {"extract": extract_resume, "context": draft_resume}
+    held = set()
+    for name in unfinished:
+        if name in checks and (checks[name] is None or not checks[name](now)):
+            held.add(name)
+            notes[name] = "continuation waits"
+    held = dependents(held, required) & set(unfinished) if held else set()
+    why = {}
+    for name in unfinished:
+        if name in held:
+            continue
+        reason = steps[name].get("plan_reason")
+        why[name] = CONTINUES.get(reason, "recovery_continue")
+    for name in dependents(set(why), required) - set(why) - held:
+        why[name] = "dependency_rerun"
+    if not why:
+        notes["recover"] = "interrupted recovery waits"
     return {name: why[name] for name in required if name in why}
 
 
@@ -334,10 +393,13 @@ def apply_plan(state: dict, day: str, run_id: str, mode: str, event: str, detail
         if why == "draft_resume":
             entry["draft_resumes"] = entry.get("draft_resumes", 0) + 1
     # Stored with the plan, before any step runs: a restart never resets the day's count.
-    if mode == "recover" or "extract_resume" in detail.values():
+    resumed = [name for name, why in detail.items() if why in RESUMES]
+    if resumed:
         record.setdefault("recoveries", []).append(
-            {"run_id": run_id, "mode": mode, "started_at": stamp,
-             "steps": [name for name, why in detail.items() if why in RESUMES]})
+            {"run_id": run_id, "mode": mode, "started_at": stamp, "steps": resumed})
+    elif record.get("recoveries") and any(why in CONTINUES.values() or why == "recovery_continue"
+                                          for why in detail.values()):
+        record["recoveries"][-1].setdefault("continued_by", []).append(run_id)  # same slot
     return state
 
 
@@ -549,7 +611,7 @@ def cmd_plan(mode: str, event: str, redo: str = "") -> int:
         save(apply_plan(state, day, run_id, mode, event, detail, now, code_version(), policy_hash()))
     for name in STEPS:
         print(f"{env_name(name)}={'true' if name in detail else 'false'}")
-    print(f"CONTEXT_DRAFTS_ONLY={'true' if detail.get('context') == 'draft_resume' else 'false'}")
+    print(f"CONTEXT_DRAFTS_ONLY={'true' if detail.get('context') in DRAFTS_ONLY else 'false'}")
     print(f"DAILY_DAY={day}")
     print(f"DAILY_RUN_ID={run_id}")
     reasons = " ".join(f"{name}({why})" for name, why in detail.items()) or "none"

@@ -26,7 +26,9 @@ def http(code):
     return HTTPError("https://example.invalid", code, "x", {}, None)
 
 
-class PartialExtractTest(unittest.TestCase):
+class PartialExtractBase(unittest.TestCase):
+    """Fixtures only (no tests), shared with the S0 review tests."""
+
     def setUp(self):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
@@ -77,6 +79,8 @@ class PartialExtractTest(unittest.TestCase):
         d.record_step(state, c.today(), "extract", status, run_id, datetime.now(timezone.utc), code, quality)
         return state, d.blocking(d.day_steps(state, c.today()), "notify")
 
+
+class PartialExtractTest(PartialExtractBase):
     def test_nine_answers_and_one_503_is_partial_and_opens_risk_alerts(self):
         items = [self.item(n) for n in range(10)]
         self.assertEqual(self.run_extract(items, {"acc-9": http(503)}), 0)
