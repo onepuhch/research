@@ -252,10 +252,10 @@ class ResearchTests(unittest.TestCase):
         self.assertIn("raw_text", record["item"])
 
     def test_same_day_rerun_without_collection_file_uses_stored_items(self):
-        # First run: the model is overloaded after the item was stored as pending.
+        # First run: the model is overloaded after the item was stored as pending (no answer today: S0-A blocks).
         def overloaded(*args):
             raise c.ModelBudgetExhausted("provider_overloaded")
-        self.assertEqual(self.run_extract([self.item()], overloaded), 0)
+        self.assertEqual(self.run_extract([self.item()], overloaded), 1)
         self.assertEqual(c.read_json(self.data / "source_state.json", {})["accession-test"]["status"], "deferred")
         # A later run of the same day starts from a fresh checkout: the collection file is not committed.
         def reject(*args):

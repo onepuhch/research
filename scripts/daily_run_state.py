@@ -68,7 +68,9 @@ class Step:
 # Order is the workflow order: collection/calculation -> baseline -> returns -> views -> weekly.
 STEPS: dict[str, Step] = {
     "collect": Step(),
-    "extract": Step(requires=("collect",)),   # never extracts from an older collection
+    # Never extracts from an older collection. A partial extract (S0-A) is retried by the
+    # extract resume rule (S0-B), which knows the model waits; no generic top-up.
+    "extract": Step(requires=("collect",), partial_top_up=False),
     "eps": Step(inputs=("@tracking",)),          # a newly tracked ticker is collected the same day
     "notify": Step(requires=("extract",)),     # tracked-company risk alerts; independent of cards
     "quarterly": Step(inputs=("@tracking",)),
@@ -391,7 +393,20 @@ def context_quality(run_id: str) -> str:
     return {"success": "complete", "held": "unavailable", "degraded": "partial"}.get(status, "unknown")
 
 
-QUALITY_PROBES = {"screen": screen_quality, "context": context_quality}
+def extract_quality(run_id: str) -> str:
+    """complete only when this run's extract left nothing waiting; partial when items still wait
+    (503 wait, budget, 429). A status written by another run is never read as this run's."""
+    entry = c.read_json(c.DATA_DIR / "run_status.json", {}).get("extract", {})
+    if not run_id or entry.get("run_id") != run_id:
+        return "unknown"
+    if entry.get("status") == "partial":
+        return "partial"
+    if entry.get("status") == "success":
+        return "partial" if entry.get("pending") else "complete"
+    return "unknown"
+
+
+QUALITY_PROBES = {"screen": screen_quality, "context": context_quality, "extract": extract_quality}
 
 
 # ------------------------------------------------------------------------ CLI

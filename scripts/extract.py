@@ -732,6 +732,31 @@ def append_signal(signal: dict[str, str]) -> str:
     return add_entry.process({"target_table": "signal_log", "data": signal})
 
 
+UNAVAILABLE_REASONS = ("provider_overloaded", "provider_rate_limited")
+
+
+def current_run_id() -> str:
+    """The daily run id ('<run>-<attempt>') this extract belongs to; 'local' outside the workflow."""
+    if os.environ.get("DAILY_RUN_ID"):
+        return os.environ["DAILY_RUN_ID"]
+    if os.environ.get("GITHUB_RUN_ID"):
+        return f"{os.environ['GITHUB_RUN_ID']}-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
+    return "local"
+
+
+def extract_outcome(failed: int, unserved_failed: int, overload_deferred: int, processed_today: int) -> str:
+    """ok: no request failed and no 503 wait stopped the run (budget or 429 deferrals stay as before);
+    partial: only temporary model unavailability (503/5xx/timeout or a 503 wait) and model answers
+    were stored today, so verified risk signals may be sent while the rest waits (S0-A);
+    model_unavailable: the same with no model answer stored today; error: any other failure
+    (bad response, credentials, 401/403/429 request errors)."""
+    if failed > unserved_failed:
+        return "error"
+    if unserved_failed or overload_deferred:
+        return "partial" if processed_today else "model_unavailable"
+    return "ok"
+
+
 def main(argv: list[str]) -> int:
     path = Path(argv[1]) if len(argv) > 1 else RAW_LATEST
     state_path = c.DATA_DIR / "source_state.json"
@@ -776,6 +801,7 @@ def main(argv: list[str]) -> int:
                            "prompt_version": version, "attempts": 0, "updated_at": now.isoformat()}
         c.atomic_json(state_path, ledger)
         candidates = []
+        expired = 0
         for key, record in ledger.items():
             if record.get("status") not in {"retry", "deferred"}:
                 continue
@@ -788,7 +814,13 @@ def main(argv: list[str]) -> int:
                 if not 0 <= age <= policy["signal_lookback_days"]:
                     raise ValueError("out of lookback")
             except ValueError:
-                record.update(status="rejected", reason="missing, future, or stale publication date", updated_at=now.isoformat())
+                if int(record.get("attempts", 0)) > 0:
+                    # Tried before but never processed within the lookback (S0-A): counted, not hidden.
+                    record.update(status="rejected", reason="expired_unprocessed", updated_at=now.isoformat())
+                    expired += 1
+                else:
+                    record.update(status="rejected", reason="missing, future, or stale publication date",
+                                  updated_at=now.isoformat())
                 continue
             reason = non_signal_reason(item)
             if reason:
@@ -800,6 +832,9 @@ def main(argv: list[str]) -> int:
         remaining = c.model_calls_remaining("extract")
         selected = prefilter_items(candidates, min(limit, remaining), phrases)
         accepted = rejected = failed = validation_rejected = deferred_budget = 0
+        # The model could not serve these (S0-A): 503/5xx/timeout failures and items deferred by a 503 wait.
+        unserved_failed = overload_deferred = 0
+        day, run_id = c.today(), current_run_id()
         circuit_open = False
         for index, item in enumerate(selected):
             if circuit_open:
@@ -809,6 +844,7 @@ def main(argv: list[str]) -> int:
             record["attempts"] = int(record.get("attempts", 0)) + 1
             try:
                 signal = build_signal(item, api_key)
+                # non_signal_reason was checked before selection, so both outcomes are model answers.
                 if signal:
                     signal_id = append_signal(signal)
                     record.update(status="accepted", signal_id=signal_id, reason="grounded extraction")
@@ -816,10 +852,13 @@ def main(argv: list[str]) -> int:
                 else:
                     record.update(status="rejected", reason=item.get("_reject_reason", "not a concrete signal"))
                     rejected += 1
-            except c.ModelBudgetExhausted:
-                # Nothing was sent: the item waits for tomorrow's budget; not a failure.
-                record.update(status="deferred", reason="deferred_budget")
+                record.update(processed_day=day, processed_run=run_id)
+            except c.ModelBudgetExhausted as stop:
+                # Nothing was sent: the item waits (budget, 429 block or 503 wait); not a failure itself.
+                why = str(stop)
+                record.update(status="deferred", reason=why if why in UNAVAILABLE_REASONS else "deferred_budget")
                 deferred_budget += 1
+                overload_deferred += why == "provider_overloaded"
                 circuit_open = True
             except InvalidEvidence:
                 record.update(status="rejected", reason="evidence_grounding_failed", validation_rejected=True)
@@ -827,10 +866,23 @@ def main(argv: list[str]) -> int:
                 validation_rejected += 1
             except (HTTPError, URLError, TimeoutError, KeyError, IndexError, json.JSONDecodeError, ValueError) as error:
                 # Never log credential-bearing URLs or turn an API failure into a signal.
-                record.update(status="retry", reason=type(error).__name__,
-                              next_retry_at=(now + timedelta(hours=policy["retry_hours"])).isoformat())
+                code = error.code if isinstance(error, HTTPError) else None
+                if code == 503:
+                    # Overload, not a bad input: the item waits for the shared wait (or its first
+                    # length), not the 12 hours of a failed request (S0-B). Older plain 'HTTPError'
+                    # records keep their own times.
+                    wait = c.model_overload(GEMINI_MODEL)
+                    next_at = (wait["until"] if wait else
+                               (now + timedelta(minutes=c.overload_settings()["wait_minutes"][0])).isoformat())
+                    record.update(status="retry", reason="provider_overloaded", http_status=503, next_retry_at=next_at)
+                    unserved_failed += 1
+                else:
+                    record.update(status="retry", reason=type(error).__name__, http_status=code,
+                                  next_retry_at=(now + timedelta(hours=policy["retry_hours"])).isoformat())
+                    # HTTPError is a URLError: only network errors without a status count as outages.
+                    unserved_failed += code in RETRY_STATUS or (code is None and isinstance(error, (URLError, TimeoutError)))
                 failed += 1
-                if isinstance(error, HTTPError) and error.code in {401, 403, 429}:
+                if code in {401, 403, 429}:
                     circuit_open = True
                 if not api_key:
                     circuit_open = True
@@ -840,12 +892,20 @@ def main(argv: list[str]) -> int:
                 time.sleep(GEMINI_SLEEP)
         c.atomic_json(state_path, ledger)
         pending = sum(r.get("status") in {"retry", "deferred"} for r in ledger.values())
-        c.record_run("extract", "degraded" if failed else "success", accepted=accepted, deferred_budget=deferred_budget,
+        # Model answers stored today by any run (this KST day only); earlier days never count.
+        processed_today = sum(r.get("processed_day") == day for r in ledger.values())
+        outcome = extract_outcome(failed, unserved_failed, overload_deferred, processed_today)
+        status = {"ok": "success", "partial": "partial"}.get(outcome, "degraded")
+        c.record_run("extract", status, accepted=accepted, deferred_budget=deferred_budget,
                      rejected=rejected, validation_rejected=validation_rejected,
                      validation_rejected_total=sum(bool(r.get("validation_rejected")) for r in ledger.values()),
-                     failed=failed, pending=pending, model=GEMINI_MODEL, prompt_version=version)
-        print(f"[extract] accepted={accepted} rejected={rejected} retry={failed} pending={pending}")
-        return 1 if failed else 0
+                     failed=failed, unserved_failed=unserved_failed, overload_deferred=overload_deferred, expired=expired,
+                     processed_today=processed_today, pending=pending, outcome=outcome, day=day, run_id=run_id,
+                     model=GEMINI_MODEL, prompt_version=version)
+        print(f"[extract] outcome={outcome} accepted={accepted} rejected={rejected} retry={failed} "
+              f"unserved={unserved_failed}+{overload_deferred} processed_today={processed_today} "
+              f"expired={expired} pending={pending}")
+        return 0 if outcome in ("ok", "partial") else 1
     except (OSError, ValueError, KeyError, TypeError) as error:
         c.record_run("extract", "failed", error_type=type(error).__name__)
         print(f"[error] extraction failed: {type(error).__name__}")
