@@ -740,14 +740,19 @@ def main(argv: list[str]) -> int:
     version = policy["prompt_version"]
     ledger = c.read_json(state_path, {})
     try:
-        if path == RAW_LATEST and not path.exists():
+        try:
+            payload = load_payload(path)
+        except FileNotFoundError:
+            if path != RAW_LATEST:
+                raise
             # The collection file is not committed, so a same-day rerun (collect succeeded in an
             # earlier run) starts without it. The first extract stored every collected item in the
             # ledger before any model call; only those stored pending items are processed now.
             print("[extract] no collection file in this checkout; stored pending items only")
+            payload = None
+        if payload is None:
             items = []
         else:
-            payload = load_payload(path)
             items = payload.get("items", [])
             if not isinstance(items, list):
                 raise ValueError("items must be a list")
