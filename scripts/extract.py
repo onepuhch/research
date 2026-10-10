@@ -744,6 +744,39 @@ def current_run_id() -> str:
     return "local"
 
 
+def extract_resume_check(now: datetime | None = None) -> tuple[str | None, str]:
+    """(why, note) for a same-day extract resume (S0-B), from stored state only: items whose own
+    retry time has come, within the lookback, while the model is neither blocked (429) nor waiting
+    after 503s and extract budget is left. why is None when nothing should run; note says why."""
+    now = now or datetime.now(timezone.utc)
+    if c.model_provider_blocked(now):
+        return None, "provider_rate_limited"
+    wait = c.model_overload(GEMINI_MODEL, now)
+    if wait:
+        return None, f"provider_overloaded until {wait['until']}"
+    if c.model_calls_remaining("extract") <= 0:
+        return None, "extract budget used"
+    lookback = c.policy()["signal_lookback_days"]
+    due, later = 0, []
+    for record in c.read_json(c.DATA_DIR / "source_state.json", {}).values():
+        if record.get("status") not in {"retry", "deferred"}:
+            continue
+        item = record.get("item", {})
+        try:
+            age = (date.fromisoformat(c.today()) - date.fromisoformat(str(item.get("published_at", ""))[:10])).days
+        except ValueError:
+            continue
+        if not 0 <= age <= lookback or non_signal_reason(item):
+            continue
+        if record.get("next_retry_at", "") > now.isoformat():
+            later.append(record["next_retry_at"])
+            continue
+        due += 1
+    if due:
+        return f"{due} items due", f"{due} items due"
+    return None, f"nothing due (next {min(later)})" if later else "nothing waiting"
+
+
 def extract_outcome(failed: int, unserved_failed: int, overload_deferred: int, processed_today: int) -> str:
     """ok: no request failed and no 503 wait stopped the run (budget or 429 deferrals stay as before);
     partial: only temporary model unavailability (503/5xx/timeout or a 503 wait) and model answers

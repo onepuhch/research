@@ -24,6 +24,9 @@ Modes:
   auto      only steps not yet done today, stale renders, due partial top-ups,
             plus every step that requires or reads them
   commands  Telegram commands only; never counts toward the daily run
+  recover   the six-hourly schedule (S0-B): only a same-day resume of an extract left partial or
+            stopped by model unavailability, and the context draft resume, with the steps that
+            use them; never without today's daily record, at most recover_max a day
 
 Usage (from the workflow):
   python scripts/daily_run_state.py plan --mode auto >> "$GITHUB_ENV"
@@ -51,7 +54,8 @@ SCHEMA_VERSION = 2
 KEEP_DAYS = 60
 KEEP_ATTEMPTS = 10
 MONDAY = 0
-DEFAULT_POLICY = {"partial_retry_max": 1, "partial_retry_min_gap_minutes": 60, "draft_resume_max": 2}
+DEFAULT_POLICY = {"partial_retry_max": 1, "partial_retry_min_gap_minutes": 60, "draft_resume_max": 2,
+                  "recover_max": 2, "recover_min_gap_minutes": 60}
 
 
 @dataclass(frozen=True)
@@ -94,7 +98,8 @@ STEPS: dict[str, Step] = {
     "community": Step(weekday=MONDAY),
     "weekly_report": Step(requires=("views",), weekday=MONDAY),
 }
-MODES = ("daily", "auto", "commands")
+MODES = ("daily", "auto", "commands", "recover")
+RESUMES = ("extract_resume", "draft_resume")  # reasons counted as same-day recoveries
 EXECUTION = ("pending", "started", "success", "failed", "blocked")
 QUALITY = ("complete", "partial", "unavailable", "unknown")
 
@@ -192,12 +197,37 @@ def retry_due(entry: dict, now: datetime, policy: dict, step: str = "screen") ->
     return datetime.fromisoformat(entry["finished_at"]) + gap <= now
 
 
+def extract_recoverable(entry: dict) -> bool:
+    """An extract worth a same-day resume: partial (S0-A), or failed only because the model could
+    not serve it (that run's own status record says so). Other failures are not resumed here."""
+    if entry.get("execution_status") == "success":
+        return entry.get("quality_status") == "partial"
+    if entry.get("execution_status") != "failed":
+        return False
+    status = c.read_json(c.DATA_DIR / "run_status.json", {}).get("extract", {})
+    return bool(entry.get("run_id")) and status.get("run_id") == entry["run_id"] \
+        and status.get("outcome") == "model_unavailable"
+
+
+def recovery_room(record: dict, now: datetime, policy: dict) -> str | None:
+    """None when another same-day recovery may start, else why not (daily limit or spacing)."""
+    done = record.get("recoveries", [])
+    if len(done) >= policy["recover_max"]:
+        return f"recover_max {policy['recover_max']} used"
+    gap = timedelta(minutes=policy["recover_min_gap_minutes"])
+    if done and datetime.fromisoformat(done[-1]["started_at"]) + gap > now:
+        return f"last recovery at {done[-1]['started_at']}"
+    return None
+
+
 def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
                 policy: dict | None = None, redo: set[str] | frozenset = frozenset(),
-                draft_resume=None) -> dict[str, str]:
+                draft_resume=None, extract_resume=None, notes: dict | None = None) -> dict[str, str]:
     """{step: why} for the steps to run now, in workflow order.
 
     redo (auto only) asks for named steps to run again today, with the steps that use them.
+    extract_resume(now) and draft_resume(now) return a reason or None from stored waits and queues;
+    notes, when given, receives why a resume was not planned (S0-B output).
     """
     if mode not in MODES:
         raise ValueError(f"unknown mode {mode}")
@@ -212,6 +242,10 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
     now = now or datetime.now(timezone.utc)
     policy = {**DEFAULT_POLICY, **(policy or {})}
     steps = day_steps(state, day)
+    notes = {} if notes is None else notes
+    if mode == "recover":
+        return recover_detail(state, day, now, policy, required, draft_resume, extract_resume, notes)
+    room = recovery_room(state.get("days", {}).get(day, {}), now, policy)
     why: dict[str, str] = {}
     for name in required:
         entry = steps.get(name, {})
@@ -226,6 +260,46 @@ def plan_detail(state: dict, day: str, mode: str, now: datetime | None = None,
         elif (name == "context" and draft_resume is not None
               and entry.get("draft_resumes", 0) < policy["draft_resume_max"] and draft_resume(now)):
             why[name] = "draft_resume"  # drafts only, from stored documents (Q2); no screen or SEC
+        elif (name == "extract" and extract_resume is not None and room is None
+              and extract_recoverable(entry) and extract_resume(now)):
+            why[name] = "extract_resume"  # stored pending items only (S0-B); no new collection
+    for name in dependents(set(why), required) - set(why):
+        why[name] = "dependency_rerun"
+    return {name: why[name] for name in required if name in why}
+
+
+def recover_detail(state: dict, day: str, now: datetime, policy: dict, required: list[str],
+                   draft_resume, extract_resume, notes: dict) -> dict[str, str]:
+    """The six-hourly schedule's limited plan (S0-B). Successful collection and screening are never
+    rerun; a blocked step only runs as a user of a resumed step."""
+    record = state.get("days", {}).get(day, {})
+    if not record.get("runs"):
+        notes["recover"] = "no daily run today"
+        return {}
+    room = recovery_room(record, now, policy)
+    if room:
+        notes["recover"] = room
+        return {}
+    steps = record.get("steps", {})
+    why: dict[str, str] = {}
+    entry = steps.get("extract", {})
+    if "extract" not in required or blocking(steps, "extract"):
+        notes["extract"] = "collect not done today"
+    elif not extract_recoverable(entry):
+        notes["extract"] = f"not resumable ({entry.get('execution_status')}/{entry.get('quality_status')})"
+    elif extract_resume is None or not extract_resume(now):
+        notes["extract"] = "nothing to resume now"
+    else:
+        why["extract"] = "extract_resume"
+    entry = steps.get("context", {})
+    if "context" not in required or entry.get("execution_status") != "success":
+        notes["context"] = "context not done today"
+    elif entry.get("draft_resumes", 0) >= policy["draft_resume_max"]:
+        notes["context"] = "draft_resume_max used"
+    elif draft_resume is None or not draft_resume(now):
+        notes["context"] = "no drafts to resume now"
+    else:
+        why["context"] = "draft_resume"
     for name in dependents(set(why), required) - set(why):
         why[name] = "dependency_rerun"
     return {name: why[name] for name in required if name in why}
@@ -259,6 +333,11 @@ def apply_plan(state: dict, day: str, run_id: str, mode: str, event: str, detail
             entry["auto_retries"] = entry.get("auto_retries", 0) + 1
         if why == "draft_resume":
             entry["draft_resumes"] = entry.get("draft_resumes", 0) + 1
+    # Stored with the plan, before any step runs: a restart never resets the day's count.
+    if mode == "recover" or "extract_resume" in detail.values():
+        record.setdefault("recoveries", []).append(
+            {"run_id": run_id, "mode": mode, "started_at": stamp,
+             "steps": [name for name, why in detail.items() if why in RESUMES]})
     return state
 
 
@@ -441,8 +520,9 @@ def cmd_plan(mode: str, event: str, redo: str = "") -> int:
     day = kst_day(now)
     state = prune(load(), day)
     names = {x.strip() for x in redo.split(",") if x.strip()}
-    resume = None
-    if mode == "auto":
+    resume = extract_resume = None
+    checks: dict[str, str] = {}
+    if mode in ("auto", "recover"):
         def resume(at):
             # A broken or missing input file must never stop the daily plan: no resume then.
             try:
@@ -451,7 +531,18 @@ def cmd_plan(mode: str, event: str, redo: str = "") -> int:
             except Exception as error:  # noqa: BLE001
                 print(f"[daily] draft resume check skipped: {type(error).__name__}", file=sys.stderr)
                 return None
-    detail = plan_detail(state, day, mode, now, run_policy(), names if mode == "auto" else frozenset(), resume)
+
+        def extract_resume(at):
+            try:
+                import extract
+                why, note = extract.extract_resume_check(at)
+            except Exception as error:  # noqa: BLE001
+                why, note = None, f"check skipped: {type(error).__name__}"
+            checks["extract_wait"] = note
+            return why
+    notes: dict[str, str] = {}
+    detail = plan_detail(state, day, mode, now, run_policy(), names if mode == "auto" else frozenset(),
+                         resume, extract_resume, notes)
     run_id = (f"{os.environ['GITHUB_RUN_ID']}-{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
               if os.environ.get("GITHUB_RUN_ID") else f"local-{uuid.uuid4().hex[:8]}")
     if detail:  # A commands-only run leaves no daily run record.
@@ -463,6 +554,10 @@ def cmd_plan(mode: str, event: str, redo: str = "") -> int:
     print(f"DAILY_RUN_ID={run_id}")
     reasons = " ".join(f"{name}({why})" for name, why in detail.items()) or "none"
     print(f"DAILY_STEPS={reasons}", file=sys.stderr)
+    if mode == "recover":
+        done = len(state.get("days", {}).get(day, {}).get("recoveries", []))
+        print(f"[recover] {day} planned={reasons} recoveries_today={done}/{run_policy().get('recover_max', DEFAULT_POLICY['recover_max'])} "
+              f"waiting={ {**notes, **checks} or 'none'}", file=sys.stderr)
     return 0
 
 
@@ -500,6 +595,14 @@ def cmd_finish() -> int:
           f"auto_plan_now={plan(state, day, 'auto', policy=run_policy()) or 'none'}")
     if os.environ.get("DAILY_MODE") == "commands":
         return 0  # a commands run never owes the daily steps
+    if os.environ.get("DAILY_MODE") == "recover":
+        # A recovery owes only what it planned; a failed or blocked planned step fails it.
+        run = next((r for r in state.get("days", {}).get(day, {}).get("runs", []) if r["run_id"] == run_id), None)
+        steps = day_steps(state, day)
+        failed = [name for name in (run or {}).get("planned", [])
+                  if steps.get(name, {}).get("execution_status") != "success"]
+        print(f"[recover] {day} unfinished={failed or 'none'}")
+        return 1 if failed else 0
     return 1 if unfinished else 0
 
 

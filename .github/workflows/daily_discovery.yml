@@ -5,7 +5,9 @@ on:
     - cron: '23 */6 * * *'
   # The schedules are fallbacks: GitHub starts them hours late. An external timer
   # dispatches on time (mode=auto at 09:17 KST, mode=commands for command checks).
-  # The daily cron acts as auto; the six-hourly cron is commands only.
+  # The daily cron acts as auto; the six-hourly cron is recover: Telegram commands, plus a limited
+  # same-day resume of a partial or model-stopped extract and of context drafts (S0-B).
+  # A dispatched mode=commands stays commands only.
   # scripts/daily_run_state.py decides which required steps still need to run today.
   workflow_dispatch:
     inputs:
@@ -47,7 +49,7 @@ jobs:
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       # Secret first: public-repo logs would print a plain variable (it holds a contact email).
       SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT || vars.SEC_USER_AGENT }}
-      DAILY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '17 0 * * *' && 'auto' || 'commands') }}
+      DAILY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '17 0 * * *' && 'auto' || 'recover') }}
     steps:
       - uses: actions/checkout@v4
         with:

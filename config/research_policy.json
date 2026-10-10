@@ -56,7 +56,9 @@
   "daily_run": {
     "draft_resume_max": 2,
     "partial_retry_max": 1,
-    "partial_retry_min_gap_minutes": 60
+    "partial_retry_min_gap_minutes": 60,
+    "recover_max": 2,
+    "recover_min_gap_minutes": 60
   },
   "candidate_cards": {
     "stale_hours": 36,
