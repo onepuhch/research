@@ -5814,8 +5814,8 @@
     },
     "content_hash": "973fae367d798394a62be3fb646a3d3a65d3f8d91b39917cce376866fe8dd15d",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-09T06:23:09+00:00",
+    "attempts": 2,
+    "updated_at": "2026-10-10T11:00:39+00:00",
     "reason": "deferred_budget"
   },
   "0001871638-26-000063": {
@@ -6221,7 +6221,7 @@
     "updated_at": "2026-10-09T06:18:32.235457+00:00"
   },
   "0001437749-26-032423": {
-    "status": "deferred",
+    "status": "retry",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -6236,8 +6236,9 @@
     },
     "content_hash": "8c486756adffc65baafcce02a91ef6d21152ee4d49de1dd58d533d09c811472b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-10T06:01:38+00:00",
-    "reason": "deferred_budget"
+    "attempts": 2,
+    "updated_at": "2026-10-10T11:00:35+00:00",
+    "reason": "HTTPError",
+    "next_retry_at": "2026-10-10T23:00:28.847776+00:00"
   }
 }
