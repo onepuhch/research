@@ -1,5 +1,12 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-11 KST. **S0-A(22d0f6a)·S0-B(9f6a714) 구현·push, S3 후보 8개 평가 완료**: [S 인수인계](docs/s_handoff_2026-10-11.md) · [후보 평가](docs/s_candidate_value_review_2026-10-10.md). 진행 중인 쓰기 없음. 시험 606개 통과(깨끗한 복제본 포함), Q·R 재현 0.
+  - S0-A: 모델 일시 장애만 남고 오늘 저장된 모델 답이 있으면 extract partial(종료 0) → notify 열림. 답 0건·다른 오류는 실패. 503 항목은 공용 대기 뒤 재시도.
+  - S0-B: 6시간 예약 = recover 모드. partial/model_unavailable extract와 초안 재개만, 하루 2회·60분 간격, 횟수는 계획 저장 때 기록.
+  - 지시서와 다르게 정한 2가지(Codex 확인 요청): 타임아웃·5xx도 partial 대상(10/9 실제 실패가 TimeoutError), 429는 기존 동작(대기·종료 0) 유지.
+  - S3 결론: 조사 대상 ① PBF ② 유조선 테마(DHT 대표; FRO·INSW 같은 원인) ③ VSEC(조정 EPS 정의 변경 확인이 먼저). JXN·BP·SPCX 제외. 8건 모두 원인 설명 없이 발송, 5건이 같은 에너지 테마.
+  - 다음: 10/11 일간에서 S0-A 운영 관측(outcome·notify·대기 감소), 장애 시 22:30 recover 관측. S1은 예산 여유일에만. CLBK·folded 미관측.
+
 - 마지막 작업자: Codex, 2026-10-10 KST. **사용자 수정안 채택, S 지시서 개정 완료**: [수정 계획](docs/s_recovery_plan_2026-10-10.md). 진행 중인 쓰기 없음. 계획·STATUS만 수정했으며 미커밋 상태다. 구현·시험 실행·모델 호출·운영 원장 변경·외부 전송 없음.
   - 확정 순서: S0-A 부분 성공 시 위험 알림 허용 → S0-B 자동 복구. S3는 SPCX/BP/JXN/VSEC/DHT/FRO/INSW/PBF 8개를 대상으로 S0와 병행 시작한다. 첫 인수인계에 8개 검토표를 포함한다.
   - 직접 코드 확인: extract는 failed 1건 이상이면 종료1, notify는 extract success 요구. success/partial과 현재 실행 품질 기록을 연결하고 partial도 재개 대상으로 포함하도록 지시했다. 당일 유효 결과 없는 전면 실패·원장 손상은 예외로 통과시키지 않는다.
