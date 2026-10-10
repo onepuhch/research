@@ -535,12 +535,20 @@
       "observation_id": "OB-9B007EE68965810F",
       "signal_id": null,
       "day": "2026-10-10",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-10T06:17:05+00:00",
+          "status": "sent",
+          "message_id": 165,
+          "error": null
+        }
+      ],
       "reserved_by": "38029430169-1",
       "reserved_at": "2026-10-10T06:17:03+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · DHT DHT Holdings, Inc.</b>\n회사 설명 확인 중 (DHT)\n내년 EPS 예상(2027-12-31 회계연도 말) $1.74 → $2.50 (+44%), 최근 30일 상향 2/하향 0\n주가 2026-07-10 → 2026-10-09 +38.7%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-FD88AA0D924CF1C8</code> · 추적 <code>/track CAN-FD88AA0D924CF1C8</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "bbcafea7be9b017f574dcedcfe0d0c7f487c7e65af842c53e6d36f6266d53c67"
+      "payload_sha256": "bbcafea7be9b017f574dcedcfe0d0c7f487c7e65af842c53e6d36f6266d53c67",
+      "message_id": 165
     },
     "NYSE:FRO|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -552,12 +560,20 @@
       "observation_id": "OB-AD62B8FECCA80C6B",
       "signal_id": null,
       "day": "2026-10-10",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-10T06:17:06+00:00",
+          "status": "sent",
+          "message_id": 166,
+          "error": null
+        }
+      ],
       "reserved_by": "38029430169-1",
       "reserved_at": "2026-10-10T06:17:03+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · FRO Frontline plc</b>\n회사 설명 확인 중 (FRO)\n내년 EPS 예상(2027-12-31 회계연도 말) $3.53 → $5.24 (+48%), 최근 30일 상향 4/하향 1\n주가 2026-07-10 → 2026-10-09 +47.1%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-7506B6BECE695B39</code> · 추적 <code>/track CAN-7506B6BECE695B39</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "700576ec1c07e79b047ee8a17528c5d8dff5a3997f0aa756589421c956df22d6"
+      "payload_sha256": "700576ec1c07e79b047ee8a17528c5d8dff5a3997f0aa756589421c956df22d6",
+      "message_id": 166
     },
     "NYSE:INSW|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -569,12 +585,20 @@
       "observation_id": "OB-027615179E3CD16C",
       "signal_id": null,
       "day": "2026-10-10",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-10T06:17:06+00:00",
+          "status": "sent",
+          "message_id": 167,
+          "error": null
+        }
+      ],
       "reserved_by": "38029430169-1",
       "reserved_at": "2026-10-10T06:17:03+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · INSW International Seaways, Inc.</b>\n회사 설명 확인 중 (INSW)\n내년 EPS 예상(2027-12-31 회계연도 말) $6.44 → $9.56 (+48%), 최근 30일 상향 1/하향 0\n주가 2026-07-10 → 2026-10-09 +35.4%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-71C24817F9DA0FA8</code> · 추적 <code>/track CAN-71C24817F9DA0FA8</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "351d8352300c7120ec3c3a2832bc96e038e31891973cbc8d077b1b12396dfb04"
+      "payload_sha256": "351d8352300c7120ec3c3a2832bc96e038e31891973cbc8d077b1b12396dfb04",
+      "message_id": 167
     }
   },
   "bootstrap": {
