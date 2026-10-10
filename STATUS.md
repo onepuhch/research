@@ -1,5 +1,13 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-10 KST. **10/7~10/10 신호 추출이 매일 실패(알림 4일 차단) — 원인 2개 확인, 1개 수정.** 진행 중인 쓰기 없음.
+  - 증상: 일간(06Z 전후) 첫 모델 요청이 503 2회 → 공용 대기 시작 → 그날 나머지 추출·초안이 모두 미뤄짐. 10/9만 성공(APLD·Braemar 2건 채택)했으나 notify는 그날도 차단. 맨 앞 항목(Calisa SPAC)이 4일 연속 실패했지만 같은 시각 로컬 재현 4회(사고 켬/끔, 대조 항목)는 모두 성공 → 항목 문제가 아니라 그 시간대의 일시 과부하로 판단.
+  - 원인 1(수정): `data/raw/discovery/`는 커밋되지 않아 같은 날 auto 재실행 때 extract가 FileNotFoundError로 즉시 실패. 즉 '실패한 추출의 당일 재시도'는 지금까지 한 번도 작동할 수 없었다(10/10 19:48 KST 수동 auto `38046176902`에서 확인). 수정: 기본 경로 파일이 없으면 첫 실행이 원장에 저장한 대기 항목만 처리(명시 경로 누락은 여전히 오류). 시험 1개 추가, 578개 통과.
+  - 원인 2(제안, 미구현 — Codex 결정 필요): 당일 재시도는 PC 타이머 auto에만 의존한다. 6시간 cron은 commands 전용이라 PC가 꺼진 날(10/7·10/8·10/9)은 재시도 자체가 없다. 제안: commands 실행에서도 '오늘 일간 기록에 failed/blocked 단계가 있고 모델 대기·차단이 끝났으면' 그 단계와 사용 단계만 계획(하루 최대 1~2회). 
+  - PC 타이머: 10/6·10/10 부팅 직후 DNS 실패로 dispatch 실패. 저장소 밖 `%USERPROFILE%\.research-timer\dispatch.ps1`에 60초 간격 5회 재시도 추가(문법 검사만, 실제 발송 시험은 안 함).
+  - Q·R 운영 확인(10/6~): context-v11·cards-v10·views-v4·material-update-v3·discovery-timing-v2 기록, v3 백업 1개(`pre_material-update-v3`) 확인. 후보 시세 매일 20회(10/7 실패1 → 10/8 재시도1). **PBF 첫 material_update 10/9 발송(message 163).** 503 후 초안 재개는 10/10 수동 auto에서 관측(context 6회 성공, draft_ready 6→9, provider_overloaded 25→2). CLBK·folded 몫은 이번에 보지 않음.
+  - 보안 메모: 상위 폴더 `setup-24h-timer.ps1`(OneDrive 동기화 폴더)에 GitHub 토큰이 평문으로 있다. 저장소 밖이며 커밋된 적 없음. 사용자 판단 대기.
+
 - 마지막 작업자: Claude, 2026-10-05 KST. **Codex R 검토의 남은 한 건(같은 날 누적 재시도 한도) 보완 완료**(5543dd7). Codex가 쓰다 멈춘 검토 문서·재현 스크립트는 그대로 커밋했고, 수정 전 증거는 같은 스크립트로 생성했다(e809d28). 재현 1→0(`data/eval/r_2026-10-05/review_retry_budget_after.json`), Q·R 재현 0 유지, 시험 577개 통과. 진행 중인 쓰기 없음. 로컬 = origin/main(push 후).
   - 날짜별 `retries`는 요청 전에 저장하며 되돌리지 않는다. 각 호출에는 남은 몫만 배정한다. 이전 형식 날짜는 요청이 있었으면 그날 몫을 모두 쓴 것으로 본다. 받을 종목이 없으면 SPY도 요청하지 않는다.
   - 12:23Z Daily Discovery `37309157424`은 명령 처리 전용(계획된 단계 없음)이라 Q·R 운영 확인이 아니다. 운영 확인은 다음 정상 일간(10/6)의 실제 SHA·버전으로 한다: context-v11/cards-v10/views-v4/update-check-v5/material-update-v3/discovery-timing-v2, v3 백업, 후보 시세 첫 배치(전체·재시도 요청 수), PBF(빠르면 10/9), CLBK, folded 몫, 503 재개.

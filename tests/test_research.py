@@ -251,6 +251,26 @@ class ResearchTests(unittest.TestCase):
         self.assertEqual(record["status"], "retry")
         self.assertIn("raw_text", record["item"])
 
+    def test_same_day_rerun_without_collection_file_uses_stored_items(self):
+        # First run: the model is overloaded after the item was stored as pending.
+        def overloaded(*args):
+            raise c.ModelBudgetExhausted("provider_overloaded")
+        self.assertEqual(self.run_extract([self.item()], overloaded), 0)
+        self.assertEqual(c.read_json(self.data / "source_state.json", {})["accession-test"]["status"], "deferred")
+        # A later run of the same day starts from a fresh checkout: the collection file is not committed.
+        def reject(*args):
+            return None
+        with patch.object(extract, "RAW_LATEST", self.root / "missing" / "latest.json"), \
+             patch.object(extract, "load_seen_sources", return_value=set()), \
+             patch.object(extract, "load_edgar_extract_config", return_value=(40, [])), \
+             patch.object(c, "load_dotenv_value", return_value="fake"), patch.object(extract, "GEMINI_SLEEP", 0), \
+             patch.object(extract, "build_signal", side_effect=reject):
+            self.assertEqual(extract.main(["extract"]), 0)
+        self.assertEqual(c.read_json(self.data / "source_state.json", {})["accession-test"]["status"], "rejected")
+        # An explicitly named file that is missing is still an error.
+        with patch.object(c, "load_dotenv_value", return_value="fake"):
+            self.assertEqual(extract.main(["extract", str(self.root / "missing.json")]), 1)
+
     def test_duplicate_source_recovery_after_append(self):
         signal = self.signal(source_id="stable-source")
         signal.pop("signal_id")

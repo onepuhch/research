@@ -740,13 +740,20 @@ def main(argv: list[str]) -> int:
     version = policy["prompt_version"]
     ledger = c.read_json(state_path, {})
     try:
-        payload = load_payload(path)
-        items = payload.get("items", [])
-        if not isinstance(items, list):
-            raise ValueError("items must be a list")
-        collected = str(payload.get("collected_at", ""))
-        if not collected or not 0 <= (now - datetime.fromisoformat(collected.replace("Z", "+00:00"))).total_seconds() <= 86400:
-            raise ValueError("stale or missing collection timestamp")
+        if path == RAW_LATEST and not path.exists():
+            # The collection file is not committed, so a same-day rerun (collect succeeded in an
+            # earlier run) starts without it. The first extract stored every collected item in the
+            # ledger before any model call; only those stored pending items are processed now.
+            print("[extract] no collection file in this checkout; stored pending items only")
+            items = []
+        else:
+            payload = load_payload(path)
+            items = payload.get("items", [])
+            if not isinstance(items, list):
+                raise ValueError("items must be a list")
+            collected = str(payload.get("collected_at", ""))
+            if not collected or not 0 <= (now - datetime.fromisoformat(collected.replace("Z", "+00:00"))).total_seconds() <= 86400:
+                raise ValueError("stale or missing collection timestamp")
         api_key = c.load_dotenv_value("GEMINI_API_KEY")
         old_seen = load_seen_sources()
         # Persist even ranked-out inputs so a temporary budget shortage does not lose them.
