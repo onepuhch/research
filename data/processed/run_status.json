@@ -62,9 +62,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-09T06:41:58+00:00",
+    "checked_at": "2026-10-10T06:17:09+00:00",
     "status": "success",
-    "last_success_at": "2026-10-09T06:41:58+00:00",
+    "last_success_at": "2026-10-10T06:17:09+00:00",
     "targets": 4,
     "failures": []
   },
@@ -132,21 +132,21 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-09T06:41:57+00:00",
+    "checked_at": "2026-10-10T06:17:07+00:00",
     "status": "success",
-    "last_success_at": "2026-10-09T06:41:57+00:00",
+    "last_success_at": "2026-10-10T06:17:07+00:00",
     "slots": 3,
     "bootstrap": false,
-    "material_eligible": 1,
+    "material_eligible": 0,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 2,
+    "sent": 3,
     "failed": 0,
     "uncertain": 0,
     "reservation_persisted": true,
     "receipts_persisted": true,
-    "selected": 2
+    "selected": 3
   },
   "candidate_context": {
     "checked_at": "2026-10-10T06:16:25+00:00",
@@ -225,11 +225,11 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-10-09T06:42:12+00:00",
+    "checked_at": "2026-10-10T06:17:24+00:00",
     "status": "success",
-    "last_success_at": "2026-10-09T06:42:12+00:00",
-    "due": 86,
-    "fresh": 86,
+    "last_success_at": "2026-10-10T06:17:24+00:00",
+    "due": 72,
+    "fresh": 72,
     "retry_waiting": 0,
     "retry_ready": 0,
     "retries": 0,
