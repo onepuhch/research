@@ -1,0 +1,59 @@
+{
+  "503_wait_rerun": {
+    "first_exit": 1,
+    "second_exit": 0,
+    "status": {
+      "checked_at": "2026-10-10T18:15:26+00:00",
+      "status": "success",
+      "last_success_at": "2026-10-10T18:15:26+00:00",
+      "accepted": 0,
+      "deferred_budget": 0,
+      "rejected": 0,
+      "validation_rejected": 0,
+      "validation_rejected_total": 0,
+      "failed": 0,
+      "unserved_failed": 0,
+      "overload_deferred": 0,
+      "expired": 0,
+      "processed_today": 0,
+      "pending": 1,
+      "outcome": "ok",
+      "day": "2026-10-11",
+      "run_id": "run-2",
+      "model": "gemini-2.5-flash",
+      "prompt_version": "research-v2-20260906"
+    }
+  },
+  "401_wait_rerun": {
+    "first_exit": 1,
+    "second_exit": 0,
+    "status": {
+      "checked_at": "2026-10-10T18:15:26+00:00",
+      "status": "success",
+      "last_success_at": "2026-10-10T18:15:26+00:00",
+      "accepted": 0,
+      "deferred_budget": 0,
+      "rejected": 0,
+      "validation_rejected": 0,
+      "validation_rejected_total": 0,
+      "failed": 0,
+      "unserved_failed": 0,
+      "overload_deferred": 0,
+      "expired": 0,
+      "processed_today": 1,
+      "pending": 1,
+      "outcome": "ok",
+      "day": "2026-10-11",
+      "run_id": "run-2",
+      "model": "gemini-2.5-flash",
+      "prompt_version": "research-v2-20260906"
+    }
+  },
+  "auto_after_recovery_limit": {
+    "extract": "failed",
+    "notify": "blocked",
+    "alerts": "dependency_rerun",
+    "views": "dependency_rerun"
+  },
+  "recover_after_interruption": {}
+}
