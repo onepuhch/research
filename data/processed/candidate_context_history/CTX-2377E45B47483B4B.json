@@ -1,0 +1,95 @@
+{
+  "context_id": "CTX-2377E45B47483B4B",
+  "candidate_id": "CAN-11B1565B12AFE2F9",
+  "ticker": "DINO",
+  "issuer_cik": "0001915657",
+  "document_ids": [
+    "DOC-0F62310DD65064FB"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-0F62310DD65064FB#p10",
+    "DOC-0F62310DD65064FB#p11",
+    "DOC-0F62310DD65064FB#p14",
+    "DOC-0F62310DD65064FB#t2",
+    "DOC-0F62310DD65064FB#p41",
+    "DOC-0F62310DD65064FB#p55",
+    "DOC-0F62310DD65064FB#p63",
+    "DOC-0F62310DD65064FB#p80",
+    "DOC-0F62310DD65064FB#t14",
+    "DOC-0F62310DD65064FB#t15",
+    "DOC-0F62310DD65064FB#t16",
+    "DOC-0F62310DD65064FB#p99",
+    "DOC-0F62310DD65064FB#p105",
+    "DOC-0F62310DD65064FB#p115",
+    "DOC-0F62310DD65064FB#t23"
+  ],
+  "input_sha": "2377e45b47483b4bd484af2e9189c00a7842d8001ce4dddd435f20d6daab96e3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-10T10:48:47+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "회사의 조정된 희석 주당 순이익은 얼마인가?",
+    "회사의 조정된 순이익은 얼마인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익이 해당 기간에 발생했다",
+      "figures": [
+        "$892"
+      ],
+      "quote": "Net income attributable to HF Sinclair stockholders ; $892 ; $208 ; $684 ; 329%",
+      "where": "DOC-0F62310DD65064FB#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 희석 주당 순이익이 해당 기간에 발생했다",
+      "figures": [
+        "$4.93"
+      ],
+      "quote": "Diluted ; $4.93 ; $1.10 ; $3.83 ; 348%",
+      "where": "DOC-0F62310DD65064FB#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "정유 부문의 조정 에비타가 해당 기간에 발생했다",
+      "figures": [
+        "$1,023 million"
+      ],
+      "quote": "The segment reported Adjusted EBITDA of $1,023 million for the second quarter of 2026 compared to $476 million for the second quarter of 2025.",
+      "where": "DOC-0F62310DD65064FB#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "재생에너지 부문의 조정 에비타가 해당 기간에 발생했다",
+      "figures": [
+        "$123 million"
+      ],
+      "quote": "Excluding the Lower of cost or market inventory valuation adjustment charge of $30 million, and an impairment charge of $47 million, the segment reported Adjusted EBITDA of $123 million in the second ",
+      "where": "DOC-0F62310DD65064FB#p11"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "윤활유 및 특수제품 부문의 조정 에비타가 해당 기간에 발생했다",
+      "figures": [
+        "$207 million"
+      ],
+      "quote": "The segment reported Adjusted EBITDA of $207 million for the second quarter of 2026 compared to $55 million in the second quarter of 2025.",
+      "where": "DOC-0F62310DD65064FB#p14"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

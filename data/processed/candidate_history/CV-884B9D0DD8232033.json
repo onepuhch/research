@@ -1,0 +1,245 @@
+{
+  "candidate_id": "CAN-F451582E2056444F",
+  "candidate_version": "CV-884B9D0DD8232033",
+  "identity": {
+    "entity_id": "NYSE:CVI",
+    "ticker": "CVI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "CVR Energy, Inc.",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "재생 연료, 석유 정제 및 판매, 질소 비료 제조 사업을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "CVR Energy, Inc., together with its subsidiaries, engages in renewable fuels and petroleum refining and marketing, and nitrogen fertilizer manufacturing activities in the United States. It operates through three segments: Petroleum, Renewables, and Nitrogen Fertilizer. The Petroleum segment refines and markets transportation fuels, such as gasoline, diesel, jet fuel, and distillates; and includes crude gathering and logistics activities that support refinery operations. This segment also owns and operates a coking, medium-sour crude oil refinery in Kansas; and a crude oil refinery in Oklahoma."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CVI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CVI/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:07:01+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CVI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CVI/history",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:07:01+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CVI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CVI/profile",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:07:01+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-10DCC661422C1107",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-29",
+      "observed_at": "2026-10-03T05:43:20+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-B31EF21C734B1D73",
+    "input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "net loss attributable to CVR Energy stockholders · Second quarter 2026: $3 million — 회사의 순손실이다",
+        "note_ko": "회사의 순손실이다",
+        "kind": "fact",
+        "quote": "Second quarter 2026 net loss attributable to CVR Energy stockholders of $3 million",
+        "document_id": "DOC-10DCC661422C1107",
+        "block_id": "p5",
+        "metric": "net loss attributable to CVR Energy stockholders",
+        "figures": [
+          "$3 million"
+        ],
+        "period": "Second quarter 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · Second quarter 2026: $209 million — 회사의 조정 에비타이다",
+        "note_ko": "회사의 조정 에비타이다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA of $209 million",
+        "document_id": "DOC-10DCC661422C1107",
+        "block_id": "p5",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$209 million"
+        ],
+        "period": "Second quarter 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다",
+        "note_ko": "조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA, Petroleum Adjusted EBITDA, and Nitrogen Fertilizer Adjusted EBITDA - EBITDA, Petroleum EBITDA, and Nitrogen Fertilizer EBITDA adjusted for certain significant non-cash items and items that management believes are not attributable to or indicative of our underlying operational results of the period or that may obscure results and trends we deem useful.",
+        "document_id": "DOC-10DCC661422C1107",
+        "block_id": "p46",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Non-GAAP measures — 비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다",
+        "note_ko": "비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다",
+        "kind": "fact",
+        "quote": "Non-GAAP measures have important limitations as analytical tools, because they exclude some, but not all, items that affect net earnings and operating income.",
+        "document_id": "DOC-10DCC661422C1107",
+        "block_id": "p49",
+        "metric": "Non-GAAP measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-10DCC661422C1107",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm",
+        "filed_at": "2026-07-29",
+        "observed_at": "2026-10-03T05:43:20+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-10T10:48:47+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.85793,
+    "eps_30d": 2.18866,
+    "eps_90d": 1.70451,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 126.3,
+    "steady": true,
+    "turnaround": false
+  }
+}

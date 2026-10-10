@@ -117,7 +117,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-4AF8EDED57B44FFC",
       "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
       "quality": "complete",
@@ -191,7 +191,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "context_id": "CTX-3A49D7297BE7A680",
       "context_input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
@@ -280,7 +280,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "failed",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-3052BA46969F76BA",
       "context_input_sha": "3052ba46969f76baff47b9ebb00b79ebdec646f47d432ce4d227b33969ccf187",
       "quality": "complete",
@@ -382,7 +382,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
       "quality": "complete",
@@ -437,12 +437,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-9880C8070DA7574A",
-      "context_input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-A6AE3BB6CF9D88F0",
+      "context_input_sha": "a6ae3bb6cf9d88f00597590f809612b6ce282b4583d592544fc59aa118ba2c62",
       "quality": "complete",
-      "failures": 0,
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "failures": 0
     },
     "CAN-490AC1686F9442CE": {
       "status": "success",
@@ -469,12 +468,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-5CD5637243E02192",
-      "context_input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-73B7E18FB19F9751",
+      "context_input_sha": "73b7e18fb19f9751907a9856c10d1f5db6457e60b36d4e31a4b34405b02d8712",
       "quality": "complete",
-      "failures": 0,
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "failures": 0
     },
     "CAN-68E9292E49558246": {
       "status": "success",
@@ -591,7 +589,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-C6D280F99B770EDC",
       "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
       "update_checks": [
@@ -677,9 +675,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-F9D9AA0C6D3787B9",
-      "context_input_sha": "f9d9aa0c6d3787b99b7f7e8412462d00b6a6e2220c8bd93755d89974c57dc3bc",
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-2377E45B47483B4B",
+      "context_input_sha": "2377e45b47483b4bd484af2e9189c00a7842d8001ce4dddd435f20d6daab96e3",
       "update_checks": [
         {
           "document_id": "DOC-1D4FFDA045A91754",
@@ -697,8 +695,7 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ],
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      ]
     },
     "CAN-5A9E947A6AEC56D7": {
       "status": "success",
@@ -725,7 +722,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-489EBDB3A330DB87",
       "context_input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
       "update_checks": [
@@ -861,12 +858,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "no_supported_claims",
       "draft_error": "HTTPError",
-      "context_id": "CTX-BC75ACFAFFC06F1A",
-      "context_input_sha": "bc75acfaffc06f1afa78da14c113bc3eae0e38bfa109fbbdeb1aa756c295381f",
-      "update_checks": [],
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "context_id": "CTX-2E27536B72F40EA1",
+      "context_input_sha": "2e27536b72f40ea1ac2793d0f8df73dd3171419ce21eda192eb63438b7c93fd2",
+      "update_checks": []
     },
     "CAN-A0761326A7E13159": {
       "status": "success",
@@ -1008,7 +1004,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "failed",
+      "draft_status": "deferred_budget",
       "draft_error": "TimeoutError",
       "draft_next_at": "2026-10-10T06:37:58+00:00",
       "draft_failure": "failed",
@@ -1155,7 +1151,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
       "update_checks": [
@@ -1195,7 +1191,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-00C1D48A4294E166",
       "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
       "update_checks": [
@@ -1403,7 +1399,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-4516CDD65F6EAE41",
       "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
       "update_checks": [
@@ -1443,7 +1439,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
@@ -1482,7 +1478,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-B80220E5DD347856",
       "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
       "update_checks": [
@@ -1522,7 +1518,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
@@ -1595,7 +1591,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "update_checks": [
         {
           "document_id": "DOC-39C08ABD9C77B7B0",
@@ -1641,11 +1637,12 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-10T05:43:20+00:00",
-      "draft_status": "failed",
+      "draft_status": "draft_ready",
       "draft_error": "TimeoutError",
-      "draft_next_at": "2026-10-10T06:37:58+00:00",
       "draft_failure": "failed",
-      "draft_http_status": null
+      "draft_http_status": null,
+      "context_id": "CTX-B31EF21C734B1D73",
+      "context_input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038"
     },
     "CAN-14DF13D991DA6490": {
       "status": "success",
@@ -1686,8 +1683,11 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_overloaded",
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "draft_status": "failed",
+      "draft_next_at": "2026-10-10T11:18:47+00:00",
+      "draft_error": "HTTPError",
+      "draft_http_status": 503,
+      "draft_failure": "provider_overloaded"
     },
     "CAN-D9076638B950E851": {
       "status": "success",
@@ -1750,7 +1750,7 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-CA0C8E92D2718B06": {
@@ -1873,7 +1873,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-ECB2C73CA19DA4AB": {
@@ -1974,7 +1974,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-FD88AA0D924CF1C8": {
@@ -2041,7 +2041,7 @@
         }
       ],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-7506B6BECE695B39": {
@@ -2088,7 +2088,7 @@
         }
       ],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-71C24817F9DA0FA8": {
@@ -2126,7 +2126,7 @@
         }
       ],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_overloaded",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     }
   },

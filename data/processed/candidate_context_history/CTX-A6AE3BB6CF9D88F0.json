@@ -1,0 +1,280 @@
+{
+  "context_id": "CTX-A6AE3BB6CF9D88F0",
+  "candidate_id": "CAN-700B10D9B75B0040",
+  "ticker": "CORT",
+  "issuer_cik": "0001088856",
+  "document_ids": [
+    "DOC-668EE132B5D00A32",
+    "DOC-951D4779FE19CE85"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-668EE132B5D00A32#p8",
+    "DOC-951D4779FE19CE85#p77",
+    "DOC-951D4779FE19CE85#p79",
+    "DOC-951D4779FE19CE85#p84",
+    "DOC-951D4779FE19CE85#p85",
+    "DOC-951D4779FE19CE85#p129",
+    "DOC-951D4779FE19CE85#p134",
+    "DOC-951D4779FE19CE85#p201",
+    "DOC-951D4779FE19CE85#p207",
+    "DOC-951D4779FE19CE85#p209",
+    "DOC-951D4779FE19CE85#p219",
+    "DOC-951D4779FE19CE85#p226",
+    "DOC-951D4779FE19CE85#p302",
+    "DOC-951D4779FE19CE85#p306",
+    "DOC-951D4779FE19CE85#p319",
+    "DOC-951D4779FE19CE85#p444"
+  ],
+  "input_sha": "a6ae3bb6cf9d88f00597590f809612b6ce282b4583d592544fc59aa118ba2c62",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-10T10:48:47+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(revenue) · 2026: $1.1 – $1.2 billion — 회사의 연간 매출 전망이 상향 조정되었다",
+      "note_ko": "회사의 연간 매출 전망이 상향 조정되었다",
+      "kind": "guidance",
+      "quote": "Increase in 2026 revenue guidance to $1.1 – $1.2 billion",
+      "document_id": "DOC-668EE132B5D00A32",
+      "block_id": "p8",
+      "metric": "revenue",
+      "figures": [
+        "$1.1 – $1.2 billion"
+      ],
+      "period": "2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Net product revenue · three months ended June 30, 2026: $208.6 million — 하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+      "note_ko": "하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Net product revenue from our Hypercortisolism Products was $208.6 million and $373.5 million for the three and six months ended June 30, 2026, respectively, compared to $194.4 million and $351.6 million for the comparable periods in 2025.",
+      "document_id": "DOC-951D4779FE19CE85",
+      "block_id": "p207",
+      "metric": "Net product revenue",
+      "figures": [
+        "$208.6 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume",
+        "price"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Net product revenue · six months ended June 30, 2026: $373.5 million — 하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+      "note_ko": "하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Net product revenue from our Hypercortisolism Products was $208.6 million and $373.5 million for the three and six months ended June 30, 2026, respectively, compared to $194.4 million and $351.6 million for the comparable periods in 2025.",
+      "document_id": "DOC-951D4779FE19CE85",
+      "block_id": "p207",
+      "metric": "Net product revenue",
+      "figures": [
+        "$373.5 million"
+      ],
+      "period": "six months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume",
+        "price"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Cost of sales as a percentage of revenue · three and six months ended June 30, 2026: 1.6 percent — 매출원가율은 전년 같은 기간보다 감소했다",
+      "note_ko": "매출원가율은 전년 같은 기간보다 감소했다",
+      "kind": "fact",
+      "quote": "Cost of sales as a percentage of revenue was 1.6 percent for each of the three and six months ended June 30, 2026, compared to 1.8 percent and 1.7 percent for the comparable periods in 2025, respectively.",
+      "document_id": "DOC-951D4779FE19CE85",
+      "block_id": "p209",
+      "metric": "Cost of sales as a percentage of revenue",
+      "figures": [
+        "1.6 percent"
+      ],
+      "period": "three and six months ended June 30, 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "income tax expense · three months ended June 30, 2026: $2.9 million — 법인세 비용은 전년 같은 기간보다 증가했다",
+      "note_ko": "법인세 비용은 전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Income tax expense was $2.9 million for the three months ended June 30, 2026, while income tax benefit was $10.0 million for the six months ended June 30, 2026, compared with income tax benefits of $3.5 million and $14.4 million for the comparable periods in 2025, respectively.",
+      "document_id": "DOC-951D4779FE19CE85",
+      "block_id": "p219",
+      "metric": "income tax expense",
+      "figures": [
+        "$2.9 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "tax"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Net cash provided by operating activities · six months ended June 30, 2026: $16.8 million — 영업활동 현금흐름은 전년 같은 기간보다 감소했다",
+      "note_ko": "영업활동 현금흐름은 전년 같은 기간보다 감소했다",
+      "kind": "fact",
+      "quote": "Net cash provided by operating activities was $16.8 million for the six months ended June 30, 2026, compared to $49.1 million for the comparable period in 2025.",
+      "document_id": "DOC-951D4779FE19CE85",
+      "block_id": "p226",
+      "metric": "Net cash provided by operating activities",
+      "figures": [
+        "$16.8 million"
+      ],
+      "period": "six months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "income tax benefit · six months ended June 30, 2026: $10.0 million — 법인세 혜택은 전년 같은 기간보다 감소했다",
+      "note_ko": "법인세 혜택은 전년 같은 기간보다 감소했다",
+      "kind": "fact",
+      "quote": "Income tax expense was $2.9 million for the three months ended June 30, 2026, while income tax benefit was $10.0 million for the six months ended June 30, 2026, compared with income tax benefits of $3.5 million and $14.4 million for the comparable periods in 2025, respectively.",
+      "document_id": "DOC-951D4779FE19CE85",
+      "block_id": "p219",
+      "metric": "income tax benefit",
+      "figures": [
+        "$10.0 million"
+      ],
+      "period": "six months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "인플레이션 감축법 조항으로 인해 메디케어 환자로부터 받는 매출이 제한될 수 있으며, 2026년 이후 수익이 실질적으로 감소할 수 있다",
+      "figures": [],
+      "quote": "We anticipate that this provision will limit the revenue we receive from Medicare patients and may materially reduce our revenue and profits in 2026 and beyond.",
+      "where": "DOC-951D4779FE19CE85#p306"
+    }
+  ],
+  "context_status": "draft_ready"
+}

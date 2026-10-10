@@ -1,0 +1,101 @@
+{
+  "candidate_id": "CAN-71C24817F9DA0FA8",
+  "candidate_version": "CV-A596202DD82EA889",
+  "identity": {
+    "entity_id": "NYSE:INSW",
+    "ticker": "INSW",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "International Seaways, Inc.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유 및 석유제품 운반선을 소유, 운영하고 선박 간 환적 지원 서비스를 제공하여 수익을 얻는다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "International Seaways, Inc. owns and operates a fleet of oceangoing vessels for the transportation of crude oil and petroleum products in the international flag trade. The company operates in two segments: Crude Tankers and Product Carriers. It operates fleet of 70 vessels of VLCCs, Suezmaxes, and Aframaxes, as well as MRs, LR1, and LR2 product carrier. The company provides ship-to-ship (STS) lightering support services, such as hoses and fenders; and full-service STS lightering that includes lightering vessels. It also offers MR product carriers, including IMO III compliant for carrying edibl"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "INSW analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/INSW/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:06:58+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "INSW daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/INSW/history",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:06:58+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "INSW company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/INSW/profile",
+      "published_at": null,
+      "observed_at": "2026-10-10T06:06:58+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 9.56367,
+    "eps_30d": 6.29967,
+    "eps_90d": 6.44136,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 48.5,
+    "steady": false,
+    "turnaround": false
+  }
+}

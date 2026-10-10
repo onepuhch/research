@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T06:16:25+00:00",
+  "generated_at": "2026-10-10T10:49:23+00:00",
   "generator_version": "cards-v10",
   "thesis_key": "eps-revision-review:v1",
   "stale": [],
@@ -2032,20 +2032,52 @@
       },
       "thesis_key": "eps-revision-review:v1",
       "context": {
-        "context_id": "CTX-5CD5637243E02192",
-        "input_sha": "5cd5637243e02192fc7d8dd502cf238e2a8f464387d93bebd6017c126b804aed",
-        "context_status": "insufficient_earnings_context",
+        "context_id": "CTX-73B7E18FB19F9751",
+        "input_sha": "73b7e18fb19f9751907a9856c10d1f5db6457e60b36d4e31a4b34405b02d8712",
+        "context_status": "draft_ready",
         "claims": [
           {
-            "text_ko": "[KUBRA] 매출(revenue) · 2026: between $150 million and $154 million — 큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다",
-            "note_ko": "큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다",
+            "text_ko": "매출(revenue) · full year 2026: approximately 10% to 12% — 회사는 유기적 매출 성장을 예상한다",
+            "note_ko": "회사는 유기적 매출 성장을 예상한다",
+            "kind": "guidance",
+            "quote": "On an organic basis, REPAY expects approximately 10% to 12% revenue growth.",
+            "document_id": "DOC-93050982946C0EE4",
+            "block_id": "p31",
+            "metric": "revenue",
+            "figures": [
+              "approximately 10% to 12%"
+            ],
+            "period": "full year 2026",
+            "currency": null,
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "pct",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "[KUBRA] 매출(revenue) · 2026: $150 million and $154 million — 쿠브라가 매출에 기여할 것으로 예상된다",
+            "note_ko": "쿠브라가 매출에 기여할 것으로 예상된다",
             "kind": "guidance",
             "quote": "KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.",
             "document_id": "DOC-93050982946C0EE4",
             "block_id": "p31",
             "metric": "revenue",
             "figures": [
-              "between $150 million and $154 million"
+              "$150 million and $154 million"
             ],
             "period": "2026",
             "currency": "USD",
@@ -2070,9 +2102,7 @@
           }
         ],
         "limitations": [],
-        "next_check": [
-          "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
-        ],
+        "next_check": [],
         "link": "unconfirmed",
         "link_note": null,
         "source_coverage": "partial",
@@ -2085,12 +2115,21 @@
             "observed_at": "2026-09-26T13:52:04+00:00",
             "form": "8-K",
             "document_type": "EX-99.1"
+          },
+          {
+            "document_id": "DOC-EC769633F745B7F4",
+            "title": "10-Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342440/rpay-20260630.htm",
+            "filed_at": "2026-08-10",
+            "observed_at": "2026-10-04T06:15:49+00:00",
+            "form": "10-Q",
+            "document_type": "10-Q"
           }
         ],
-        "source_parser_version": "context-check-v7",
+        "source_parser_version": "context-check-v11",
         "display_validator_version": "context-check-v11",
-        "validation_scope": "accepted_only",
-        "generated_at": "2026-09-30T05:56:01+00:00"
+        "validation_scope": "as_generated",
+        "generated_at": "2026-10-10T10:48:47+00:00"
       },
       "context_hold": null,
       "name": "Repay Holdings Corporation",
@@ -2188,12 +2227,22 @@
           "filed_at": "2026-08-10",
           "observed_at": "2026-09-26T13:52:04+00:00",
           "fields": "8-K EX-99.1"
+        },
+        {
+          "id": "DOC-EC769633F745B7F4",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1720592/000119312526342440/rpay-20260630.htm",
+          "title": "SEC 10-Q 10-Q",
+          "published_at": null,
+          "filed_at": "2026-08-10",
+          "observed_at": "2026-10-04T06:15:49+00:00",
+          "fields": "10-Q 10-Q"
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-1BCBBDD0B08675C7",
+      "candidate_version": "CV-EC88935B3BA28205",
       "classification": "found",
-      "observation_id": "OB-802BA1684891AE68",
+      "observation_id": "OB-B507FD09D6DD3D55",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2230,15 +2279,19 @@
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "source_linked",
+      "research_status": "draft_ready",
       "source_quality": "complete",
       "source_failures": 0,
       "source_failure_reasons": [],
       "source_attempt_at": "2026-10-04T06:15:49+00:00",
       "source_status": "success",
-      "last_valid_context": null,
+      "last_valid_context": {
+        "context_id": "CTX-73B7E18FB19F9751",
+        "generated_at": "2026-10-10T10:48:47+00:00",
+        "eps_target_period": "2027-12-31"
+      },
       "research_note": null,
-      "context_id": "CTX-5CD5637243E02192",
+      "context_id": "CTX-73B7E18FB19F9751",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
         "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
@@ -2418,18 +2471,18 @@
       },
       "thesis_key": "eps-revision-review:v1",
       "context": {
-        "context_id": "CTX-9880C8070DA7574A",
-        "input_sha": "9880c8070da7574aff8fbd2065527853158cc4e21922eb0268acb048cec7e552",
-        "context_status": "insufficient_earnings_context",
+        "context_id": "CTX-A6AE3BB6CF9D88F0",
+        "input_sha": "a6ae3bb6cf9d88f00597590f809612b6ce282b4583d592544fc59aa118ba2c62",
+        "context_status": "draft_ready",
         "claims": [
           {
-            "text_ko": "revenue guidance · 2026: $1.1 – $1.2 billion — 매출 전망치를 상향 조정했다",
-            "note_ko": "매출 전망치를 상향 조정했다",
+            "text_ko": "매출(revenue) · 2026: $1.1 – $1.2 billion — 회사의 연간 매출 전망이 상향 조정되었다",
+            "note_ko": "회사의 연간 매출 전망이 상향 조정되었다",
             "kind": "guidance",
             "quote": "Increase in 2026 revenue guidance to $1.1 – $1.2 billion",
             "document_id": "DOC-668EE132B5D00A32",
             "block_id": "p8",
-            "metric": "revenue guidance",
+            "metric": "revenue",
             "figures": [
               "$1.1 – $1.2 billion"
             ],
@@ -2455,17 +2508,149 @@
             "direction": "positive"
           },
           {
-            "text_ko": "Net income per common share (diluted) · second quarter of 2026: $0.36 — 전년 같은 기간보다 증가했다",
-            "note_ko": "전년 같은 기간보다 증가했다",
+            "text_ko": "Net product revenue · three months ended June 30, 2026: $208.6 million — 하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+            "note_ko": "하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
             "kind": "fact",
-            "quote": "Net income per common share (diluted) was $0.36 in the second quarter of 2026, compared to $0.29 in the prior year period.",
-            "document_id": "DOC-668EE132B5D00A32",
-            "block_id": "p18",
-            "metric": "Net income per common share (diluted)",
+            "quote": "Net product revenue from our Hypercortisolism Products was $208.6 million and $373.5 million for the three and six months ended June 30, 2026, respectively, compared to $194.4 million and $351.6 million for the comparable periods in 2025.",
+            "document_id": "DOC-951D4779FE19CE85",
+            "block_id": "p207",
+            "metric": "Net product revenue",
             "figures": [
-              "$0.36"
+              "$208.6 million"
             ],
-            "period": "second quarter of 2026",
+            "period": "three months ended June 30, 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "amount",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "volume",
+              "price"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "Net product revenue · six months ended June 30, 2026: $373.5 million — 하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+            "note_ko": "하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다",
+            "kind": "fact",
+            "quote": "Net product revenue from our Hypercortisolism Products was $208.6 million and $373.5 million for the three and six months ended June 30, 2026, respectively, compared to $194.4 million and $351.6 million for the comparable periods in 2025.",
+            "document_id": "DOC-951D4779FE19CE85",
+            "block_id": "p207",
+            "metric": "Net product revenue",
+            "figures": [
+              "$373.5 million"
+            ],
+            "period": "six months ended June 30, 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "amount",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "volume",
+              "price"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "Cost of sales as a percentage of revenue · three and six months ended June 30, 2026: 1.6 percent — 매출원가율은 전년 같은 기간보다 감소했다",
+            "note_ko": "매출원가율은 전년 같은 기간보다 감소했다",
+            "kind": "fact",
+            "quote": "Cost of sales as a percentage of revenue was 1.6 percent for each of the three and six months ended June 30, 2026, compared to 1.8 percent and 1.7 percent for the comparable periods in 2025, respectively.",
+            "document_id": "DOC-951D4779FE19CE85",
+            "block_id": "p209",
+            "metric": "Cost of sales as a percentage of revenue",
+            "figures": [
+              "1.6 percent"
+            ],
+            "period": "three and six months ended June 30, 2026",
+            "currency": null,
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "pct",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "margin_cost"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "income tax expense · three months ended June 30, 2026: $2.9 million — 법인세 비용은 전년 같은 기간보다 증가했다",
+            "note_ko": "법인세 비용은 전년 같은 기간보다 증가했다",
+            "kind": "fact",
+            "quote": "Income tax expense was $2.9 million for the three months ended June 30, 2026, while income tax benefit was $10.0 million for the six months ended June 30, 2026, compared with income tax benefits of $3.5 million and $14.4 million for the comparable periods in 2025, respectively.",
+            "document_id": "DOC-951D4779FE19CE85",
+            "block_id": "p219",
+            "metric": "income tax expense",
+            "figures": [
+              "$2.9 million"
+            ],
+            "period": "three months ended June 30, 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "amount",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "tax"
+            ],
+            "direction": "negative"
+          }
+        ],
+        "limitations": [
+          {
+            "text_ko": "Net cash provided by operating activities · six months ended June 30, 2026: $16.8 million — 영업활동 현금흐름은 전년 같은 기간보다 감소했다",
+            "note_ko": "영업활동 현금흐름은 전년 같은 기간보다 감소했다",
+            "kind": "fact",
+            "quote": "Net cash provided by operating activities was $16.8 million for the six months ended June 30, 2026, compared to $49.1 million for the comparable period in 2025.",
+            "document_id": "DOC-951D4779FE19CE85",
+            "block_id": "p226",
+            "metric": "Net cash provided by operating activities",
+            "figures": [
+              "$16.8 million"
+            ],
+            "period": "six months ended June 30, 2026",
             "currency": "USD",
             "gaap": "unknown",
             "subject": "issuer",
@@ -2484,24 +2669,24 @@
             "drivers": [
               "unknown"
             ],
-            "direction": "positive"
+            "direction": "unknown"
           },
           {
-            "text_ko": "[Korlym and authorized generic] product revenue · second quarter 2026: $208.6 million — 전년 같은 기간보다 증가했다",
-            "note_ko": "전년 같은 기간보다 증가했다",
+            "text_ko": "income tax benefit · six months ended June 30, 2026: $10.0 million — 법인세 혜택은 전년 같은 기간보다 감소했다",
+            "note_ko": "법인세 혜택은 전년 같은 기간보다 감소했다",
             "kind": "fact",
-            "quote": "Korlym and authorized generic product revenue was $208.6 million, compared to $194.4 million in the prior year period.",
-            "document_id": "DOC-668EE132B5D00A32",
-            "block_id": "p17",
-            "metric": "product revenue",
+            "quote": "Income tax expense was $2.9 million for the three months ended June 30, 2026, while income tax benefit was $10.0 million for the six months ended June 30, 2026, compared with income tax benefits of $3.5 million and $14.4 million for the comparable periods in 2025, respectively.",
+            "document_id": "DOC-951D4779FE19CE85",
+            "block_id": "p219",
+            "metric": "income tax benefit",
             "figures": [
-              "$208.6 million"
+              "$10.0 million"
             ],
-            "period": "second quarter 2026",
+            "period": "six months ended June 30, 2026",
             "currency": "USD",
             "gaap": "unknown",
-            "subject": "segment",
-            "subject_name": "Korlym and authorized generic",
+            "subject": "issuer",
+            "subject_name": null,
             "core": false,
             "figure_roles": [
               "level"
@@ -2516,16 +2701,13 @@
             "drivers": [
               "unknown"
             ],
-            "direction": "positive"
+            "direction": "unknown"
           }
         ],
-        "limitations": [],
-        "next_check": [
-          "CATALYST 및 MOMENTUM 연구 결과가 임상 진료에 완전히 통합될 때까지 Cushing 증후군 사업의 신규 처방 증가 추세가 계속될 것인가?"
-        ],
+        "next_check": [],
         "link": "unconfirmed",
         "link_note": null,
-        "source_coverage": "complete",
+        "source_coverage": "partial",
         "documents": [
           {
             "document_id": "DOC-668EE132B5D00A32",
@@ -2535,12 +2717,21 @@
             "observed_at": "2026-09-26T13:52:04+00:00",
             "form": "8-K",
             "document_type": "EX-99.1"
+          },
+          {
+            "document_id": "DOC-951D4779FE19CE85",
+            "title": "10-Q",
+            "url": "https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm",
+            "filed_at": "2026-07-29",
+            "observed_at": "2026-10-04T06:15:49+00:00",
+            "form": "10-Q",
+            "document_type": "10-Q"
           }
         ],
-        "source_parser_version": "context-check-v7",
+        "source_parser_version": "context-check-v11",
         "display_validator_version": "context-check-v11",
-        "validation_scope": "accepted_only",
-        "generated_at": "2026-09-30T05:56:01+00:00"
+        "validation_scope": "as_generated",
+        "generated_at": "2026-10-10T10:48:47+00:00"
       },
       "context_hold": null,
       "name": "Corcept Therapeutics Incorporated",
@@ -2638,12 +2829,22 @@
           "filed_at": "2026-07-29",
           "observed_at": "2026-09-26T13:52:04+00:00",
           "fields": "8-K EX-99.1"
+        },
+        {
+          "id": "DOC-951D4779FE19CE85",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm",
+          "title": "SEC 10-Q 10-Q",
+          "published_at": null,
+          "filed_at": "2026-07-29",
+          "observed_at": "2026-10-04T06:15:49+00:00",
+          "fields": "10-Q 10-Q"
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-399B2072AA694E38",
+      "candidate_version": "CV-C8AC54BF448DC750",
       "classification": "found",
-      "observation_id": "OB-421167A81C0AF14A",
+      "observation_id": "OB-D084E71108E22BA3",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -2680,15 +2881,19 @@
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "source_linked",
+      "research_status": "draft_ready",
       "source_quality": "complete",
       "source_failures": 0,
       "source_failure_reasons": [],
       "source_attempt_at": "2026-10-04T06:15:49+00:00",
       "source_status": "success",
-      "last_valid_context": null,
+      "last_valid_context": {
+        "context_id": "CTX-A6AE3BB6CF9D88F0",
+        "generated_at": "2026-10-10T10:48:47+00:00",
+        "eps_target_period": "2027-12-31"
+      },
       "research_note": null,
-      "context_id": "CTX-9880C8070DA7574A",
+      "context_id": "CTX-A6AE3BB6CF9D88F0",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
         "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
@@ -3909,7 +4114,142 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-B31EF21C734B1D73",
+        "input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038",
+        "context_status": "draft_ready",
+        "claims": [
+          {
+            "text_ko": "net loss attributable to CVR Energy stockholders · Second quarter 2026: $3 million — 회사의 순손실이다",
+            "note_ko": "회사의 순손실이다",
+            "kind": "fact",
+            "quote": "Second quarter 2026 net loss attributable to CVR Energy stockholders of $3 million",
+            "document_id": "DOC-10DCC661422C1107",
+            "block_id": "p5",
+            "metric": "net loss attributable to CVR Energy stockholders",
+            "figures": [
+              "$3 million"
+            ],
+            "period": "Second quarter 2026",
+            "currency": "USD",
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "amount",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "negative"
+          },
+          {
+            "text_ko": "조정 EBITDA(Adjusted EBITDA) · Second quarter 2026: $209 million — 회사의 조정 에비타이다",
+            "note_ko": "회사의 조정 에비타이다",
+            "kind": "fact",
+            "quote": "Adjusted EBITDA of $209 million",
+            "document_id": "DOC-10DCC661422C1107",
+            "block_id": "p5",
+            "metric": "Adjusted EBITDA",
+            "figures": [
+              "$209 million"
+            ],
+            "period": "Second quarter 2026",
+            "currency": "USD",
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "amount",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          }
+        ],
+        "limitations": [
+          {
+            "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다",
+            "note_ko": "조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다",
+            "kind": "fact",
+            "quote": "Adjusted EBITDA, Petroleum Adjusted EBITDA, and Nitrogen Fertilizer Adjusted EBITDA - EBITDA, Petroleum EBITDA, and Nitrogen Fertilizer EBITDA adjusted for certain significant non-cash items and items that management believes are not attributable to or indicative of our underlying operational results of the period or that may obscure results and trends we deem useful.",
+            "document_id": "DOC-10DCC661422C1107",
+            "block_id": "p46",
+            "metric": "Adjusted EBITDA",
+            "figures": [],
+            "period": "unknown",
+            "currency": null,
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": true,
+            "figure_roles": [],
+            "figure_readings": [],
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          },
+          {
+            "text_ko": "Non-GAAP measures — 비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다",
+            "note_ko": "비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다",
+            "kind": "fact",
+            "quote": "Non-GAAP measures have important limitations as analytical tools, because they exclude some, but not all, items that affect net earnings and operating income.",
+            "document_id": "DOC-10DCC661422C1107",
+            "block_id": "p49",
+            "metric": "Non-GAAP measures",
+            "figures": [],
+            "period": "unknown",
+            "currency": null,
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "figure_roles": [],
+            "figure_readings": [],
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "unknown"
+          }
+        ],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-10DCC661422C1107",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm",
+            "filed_at": "2026-07-29",
+            "observed_at": "2026-10-03T05:43:20+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          }
+        ],
+        "source_parser_version": "context-check-v11",
+        "display_validator_version": "context-check-v11",
+        "validation_scope": "as_generated",
+        "generated_at": "2026-10-10T10:48:47+00:00"
+      },
       "context_hold": null,
       "name": "CVR Energy, Inc.",
       "industry": "Oil & Gas Refining & Marketing",
@@ -3939,12 +4279,13 @@
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": null,
+          "text": "재생 연료, 석유 정제 및 판매, 질소 비료 제조 사업을 통해 돈을 번다.",
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "pending",
+          "status": "translated",
+          "model": "gemini-2.5-flash",
           "source_text": "CVR Energy, Inc., together with its subsidiaries, engages in renewable fuels and petroleum refining and marketing, and nitrogen fertilizer manufacturing activities in the United States. It operates through three segments: Petroleum, Renewables, and Nitrogen Fertilizer. The Petroleum segment refines and markets transportation fuels, such as gasoline, diesel, jet fuel, and distillates; and includes crude gathering and logistics activities that support refinery operations. This segment also owns and operates a coking, medium-sour crude oil refinery in Kansas; and a crude oil refinery in Oklahoma."
         },
         "earnings_path": {
@@ -3995,12 +4336,22 @@
           "published_at": null,
           "observed_at": "2026-10-10T06:07:01+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-10DCC661422C1107",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-07-29",
+          "observed_at": "2026-10-03T05:43:20+00:00",
+          "fields": "8-K EX-99.1"
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-4BEC5ED09FEEEF34",
+      "candidate_version": "CV-884B9D0DD8232033",
       "classification": "found",
-      "observation_id": "OB-8AD88A4F0192A454",
+      "observation_id": "OB-BF8675CB6D65B960",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4053,15 +4404,19 @@
         "status": "untracked",
         "idea_ids": []
       },
-      "research_status": "source_linked",
+      "research_status": "draft_ready",
       "source_quality": "complete",
       "source_failures": 0,
       "source_failure_reasons": [],
       "source_attempt_at": "2026-10-03T05:43:20+00:00",
       "source_status": "success",
-      "last_valid_context": null,
+      "last_valid_context": {
+        "context_id": "CTX-B31EF21C734B1D73",
+        "generated_at": "2026-10-10T10:48:47+00:00",
+        "eps_target_period": "2027-12-31"
+      },
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-B31EF21C734B1D73",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
         "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
@@ -4283,57 +4638,14 @@
       },
       "thesis_key": "eps-revision-review:v1",
       "context": {
-        "context_id": "CTX-BC75ACFAFFC06F1A",
-        "input_sha": "bc75acfaffc06f1afa78da14c113bc3eae0e38bfa109fbbdeb1aa756c295381f",
+        "context_id": "CTX-2E27536B72F40EA1",
+        "input_sha": "2e27536b72f40ea1ac2793d0f8df73dd3171419ce21eda192eb63438b7c93fd2",
         "context_status": "no_supported_claims",
         "claims": [],
-        "limitations": [
-          {
-            "text_ko": "Non-GAAP net income per share — 비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다",
-            "note_ko": "비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다",
-            "kind": "fact",
-            "quote": "We believe non-GAAP net income per share provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operations, as this non-GAAP financial measure eliminates the effect of stock-based compensation, acquisition-related expenses, amortization expense, restructuring and related charges, non-cash (gains)/losses from lease modifications and terminations and changes in the fair value of contingent consideration, which are often unrelated to overall operating performance.",
-            "document_id": "DOC-450C06FD810BE835",
-            "block_id": "p7",
-            "metric": "Non-GAAP net income per share",
-            "figures": [],
-            "period": "unknown",
-            "currency": null,
-            "gaap": "non-GAAP",
-            "subject": "issuer",
-            "subject_name": null,
-            "core": true,
-            "figure_roles": [],
-            "figure_readings": [],
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "unknown"
-          },
-          {
-            "text_ko": "Non-GAAP operating income — 비일반회계기준 영업 이익은 주식 기반 보상, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동의 영향을 제외한다",
-            "note_ko": "비일반회계기준 영업 이익은 주식 기반 보상, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동의 영향을 제외한다",
-            "kind": "fact",
-            "quote": "We believe non-GAAP operating income provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operations, as it eliminates the effect of stock-based compensation, acquisition-related expenses, amortization expense, restructuring and related charges, non-cash (gains)/losses from lease modifications and termination and changes in the fair value of contingent consideration, which are often unrelated to overall operating performance.",
-            "document_id": "DOC-450C06FD810BE835",
-            "block_id": "p7",
-            "metric": "Non-GAAP operating income",
-            "figures": [],
-            "period": "unknown",
-            "currency": null,
-            "gaap": "non-GAAP",
-            "subject": "issuer",
-            "subject_name": null,
-            "core": true,
-            "figure_roles": [],
-            "figure_readings": [],
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "unknown"
-          }
+        "limitations": [],
+        "next_check": [
+          "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
         ],
-        "next_check": [],
         "link": "unconfirmed",
         "link_note": null,
         "source_coverage": "partial",
@@ -4348,10 +4660,10 @@
             "document_type": "EX-99.1"
           }
         ],
-        "source_parser_version": "context-check-v7",
+        "source_parser_version": "context-check-v11",
         "display_validator_version": "context-check-v11",
-        "validation_scope": "accepted_only",
-        "generated_at": "2026-10-03T05:43:34+00:00"
+        "validation_scope": "as_generated",
+        "generated_at": "2026-10-10T10:48:47+00:00"
       },
       "context_hold": null,
       "name": "Sprout Social, Inc.",
@@ -4452,9 +4764,9 @@
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-CABCEF806D0953F9",
+      "candidate_version": "CV-13F02195AFD2325D",
       "classification": "found",
-      "observation_id": "OB-E34AE19D27A4C341",
+      "observation_id": "OB-04B6AA09E82015CE",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -4499,7 +4811,7 @@
       "source_status": "success",
       "last_valid_context": null,
       "research_note": null,
-      "context_id": "CTX-BC75ACFAFFC06F1A",
+      "context_id": "CTX-2E27536B72F40EA1",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
         "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
@@ -4708,12 +5020,13 @@
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": null,
+          "text": "원유 운반선을 소유, 운영하고 기술 관리 서비스를 제공하여 수익을 창출한다.",
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "pending",
+          "status": "translated",
+          "model": "gemini-2.5-flash",
           "source_text": "DHT Holdings, Inc., through its subsidiaries, owns and operates crude oil tankers primarily in Monaco, Singapore, Norway, and India. The company also offers technical management services. As of December 15, 2025, it had a fleet of 22 very large crude carriers. The company was incorporated in 2005 and is headquartered in Hamilton, Bermuda."
         },
         "earnings_path": {
@@ -4767,9 +5080,9 @@
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-75360113DC9DF916",
+      "candidate_version": "CV-61CA00C219F813B0",
       "classification": "found",
-      "observation_id": "OB-9B007EE68965810F",
+      "observation_id": "OB-D6BDEACE96107DAB",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -5165,12 +5478,13 @@
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": null,
+          "text": "유조선과 석유제품 운반선을 소유, 운영하며 용선, 매매를 통해 돈을 번다.",
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "pending",
+          "status": "translated",
+          "model": "gemini-2.5-flash",
           "source_text": "Frontline plc, a shipping company, engages in the ownership and operation of oil and product tankers worldwide. The company owns and operates oil and product tankers, such as very large crude carriers (VLCCs), Suezmax tankers, and LR2/Aframax tankers. As of December 31, 2025, it operated a fleet of 80 vessels, including 41 VLCCs, 21 Suezmax tankers, and 18 LR2/Aframax tankers. The company is also involved in the charter, purchase, and sale of vessels. Frontline plc was founded in 1985 and is based in Limassol, Cyprus."
         },
         "earnings_path": {
@@ -5224,9 +5538,9 @@
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-E4B152CD3FF4D616",
+      "candidate_version": "CV-7355523936EFC52B",
       "classification": "found",
-      "observation_id": "OB-AD62B8FECCA80C6B",
+      "observation_id": "OB-69E652BDEDE276AF",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -7072,12 +7386,13 @@
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": null,
+          "text": "원유 및 석유제품 운반선을 소유, 운영하고 선박 간 환적 지원 서비스를 제공하여 수익을 얻는다.",
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "pending",
+          "status": "translated",
+          "model": "gemini-2.5-flash",
           "source_text": "International Seaways, Inc. owns and operates a fleet of oceangoing vessels for the transportation of crude oil and petroleum products in the international flag trade. The company operates in two segments: Crude Tankers and Product Carriers. It operates fleet of 70 vessels of VLCCs, Suezmaxes, and Aframaxes, as well as MRs, LR1, and LR2 product carrier. The company provides ship-to-ship (STS) lightering support services, such as hoses and fenders; and full-service STS lightering that includes lightering vessels. It also offers MR product carriers, including IMO III compliant for carrying edibl"
         },
         "earnings_path": {
@@ -7131,9 +7446,9 @@
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-893D72B4D0EC971F",
+      "candidate_version": "CV-A596202DD82EA889",
       "classification": "found",
-      "observation_id": "OB-027615179E3CD16C",
+      "observation_id": "OB-E2A6F84564B260E9",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -7813,13 +8128,14 @@
       },
       "thesis_key": "eps-revision-review:v1",
       "context": {
-        "context_id": "CTX-F9D9AA0C6D3787B9",
-        "input_sha": "f9d9aa0c6d3787b99b7f7e8412462d00b6a6e2220c8bd93755d89974c57dc3bc",
+        "context_id": "CTX-2377E45B47483B4B",
+        "input_sha": "2377e45b47483b4bd484af2e9189c00a7842d8001ce4dddd435f20d6daab96e3",
         "context_status": "no_supported_claims",
         "claims": [],
         "limitations": [],
         "next_check": [
-          "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+          "회사의 조정된 희석 주당 순이익은 얼마인가?",
+          "회사의 조정된 순이익은 얼마인가?"
         ],
         "link": "unconfirmed",
         "link_note": null,
@@ -7835,10 +8151,10 @@
             "document_type": "EX-99.1"
           }
         ],
-        "source_parser_version": "context-check-v7",
+        "source_parser_version": "context-check-v11",
         "display_validator_version": "context-check-v11",
-        "validation_scope": "accepted_only",
-        "generated_at": "2026-10-01T06:22:42+00:00"
+        "validation_scope": "as_generated",
+        "generated_at": "2026-10-10T10:48:47+00:00"
       },
       "context_hold": null,
       "name": "HF Sinclair Corporation",
@@ -7942,9 +8258,9 @@
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-B25ECAF8329BBE96",
+      "candidate_version": "CV-19AC244844E9C5FE",
       "classification": "needs_evidence",
-      "observation_id": "OB-C819FBF271FFDA9D",
+      "observation_id": "OB-847B0DBAE651618B",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -8000,7 +8316,7 @@
       "source_status": "success",
       "last_valid_context": null,
       "research_note": null,
-      "context_id": "CTX-F9D9AA0C6D3787B9",
+      "context_id": "CTX-2377E45B47483B4B",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261010T060144Z_38029430169-1.json.gz",
         "sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
@@ -8715,8 +9031,8 @@
       "ticker": "DINO",
       "first_seen_at": "2026-09-25T12:14:17+00:00",
       "last_seen_at": "2026-10-10T06:04:24+00:00",
-      "latest_observation": "OB-C819FBF271FFDA9D",
-      "latest_version": "CV-B25ECAF8329BBE96",
+      "latest_observation": "OB-847B0DBAE651618B",
+      "latest_version": "CV-19AC244844E9C5FE",
       "timeline": [
         {
           "version": "CV-EDC55F683C958D03",
@@ -8775,6 +9091,11 @@
         },
         {
           "version": "CV-B25ECAF8329BBE96",
+          "from": "2026-10-10T06:04:24+00:00",
+          "to": "2026-10-10T06:04:24+00:00"
+        },
+        {
+          "version": "CV-19AC244844E9C5FE",
           "from": "2026-10-10T06:04:24+00:00",
           "to": "2026-10-10T06:04:24+00:00"
         }
@@ -9365,8 +9686,8 @@
       "ticker": "CORT",
       "first_seen_at": "2026-09-25T12:15:04+00:00",
       "last_seen_at": "2026-10-10T06:05:14+00:00",
-      "latest_observation": "OB-421167A81C0AF14A",
-      "latest_version": "CV-399B2072AA694E38",
+      "latest_observation": "OB-D084E71108E22BA3",
+      "latest_version": "CV-C8AC54BF448DC750",
       "timeline": [
         {
           "version": "CV-3F6E50FBA0DDC58E",
@@ -9416,6 +9737,11 @@
         {
           "version": "CV-399B2072AA694E38",
           "from": "2026-10-06T06:35:34+00:00",
+          "to": "2026-10-10T06:05:14+00:00"
+        },
+        {
+          "version": "CV-C8AC54BF448DC750",
+          "from": "2026-10-10T06:05:14+00:00",
           "to": "2026-10-10T06:05:14+00:00"
         }
       ]
@@ -9665,8 +9991,8 @@
       "ticker": "SPT",
       "first_seen_at": "2026-09-25T12:23:36+00:00",
       "last_seen_at": "2026-10-10T06:13:22+00:00",
-      "latest_observation": "OB-E34AE19D27A4C341",
-      "latest_version": "CV-CABCEF806D0953F9",
+      "latest_observation": "OB-04B6AA09E82015CE",
+      "latest_version": "CV-13F02195AFD2325D",
       "timeline": [
         {
           "version": "CV-EDF7689610E360C0",
@@ -9706,6 +10032,11 @@
         {
           "version": "CV-CABCEF806D0953F9",
           "from": "2026-10-06T06:43:57+00:00",
+          "to": "2026-10-10T06:13:22+00:00"
+        },
+        {
+          "version": "CV-13F02195AFD2325D",
+          "from": "2026-10-10T06:13:22+00:00",
           "to": "2026-10-10T06:13:22+00:00"
         }
       ]
@@ -9985,6 +10316,91 @@
         }
       ]
     },
+    "CAN-FD88AA0D924CF1C8": {
+      "key": "NYSE:DHT|eps-revision-review:v1",
+      "ticker": "DHT",
+      "first_seen_at": "2026-10-10T06:08:13+00:00",
+      "last_seen_at": "2026-10-10T06:08:13+00:00",
+      "latest_observation": "OB-D6BDEACE96107DAB",
+      "latest_version": "CV-61CA00C219F813B0",
+      "timeline": [
+        {
+          "version": "CV-75360113DC9DF916",
+          "from": "2026-10-10T06:08:13+00:00",
+          "to": "2026-10-10T06:08:13+00:00"
+        },
+        {
+          "version": "CV-61CA00C219F813B0",
+          "from": "2026-10-10T06:08:13+00:00",
+          "to": "2026-10-10T06:08:13+00:00"
+        }
+      ]
+    },
+    "CAN-490AC1686F9442CE": {
+      "key": "NASDAQ:RPAY|eps-revision-review:v1",
+      "ticker": "RPAY",
+      "first_seen_at": "2026-09-25T12:24:58+00:00",
+      "last_seen_at": "2026-10-10T06:15:03+00:00",
+      "latest_observation": "OB-B507FD09D6DD3D55",
+      "latest_version": "CV-EC88935B3BA28205",
+      "timeline": [
+        {
+          "version": "CV-3933E29FAFB1F33A",
+          "from": "2026-09-25T12:24:58+00:00",
+          "to": "2026-09-25T12:24:58+00:00"
+        },
+        {
+          "version": "CV-4E1A2E5356F48BB9",
+          "from": "2026-09-25T12:24:58+00:00",
+          "to": "2026-09-25T12:24:58+00:00"
+        },
+        {
+          "version": "CV-6F633DF556AEE827",
+          "from": "2026-09-26T13:51:01+00:00",
+          "to": "2026-09-26T13:51:01+00:00"
+        },
+        {
+          "version": "CV-E19C01A103591B78",
+          "from": "2026-09-27T05:39:10+00:00",
+          "to": "2026-09-27T05:39:10+00:00"
+        },
+        {
+          "version": "CV-9D39A28971D33E8A",
+          "from": "2026-09-28T05:46:13+00:00",
+          "to": "2026-09-28T05:46:13+00:00"
+        },
+        {
+          "version": "CV-E19C01A103591B78",
+          "from": "2026-09-29T06:07:19+00:00",
+          "to": "2026-09-29T06:07:19+00:00"
+        },
+        {
+          "version": "CV-43DB53F7078B6E40",
+          "from": "2026-09-30T05:55:02+00:00",
+          "to": "2026-10-04T06:14:53+00:00"
+        },
+        {
+          "version": "CV-03E17AEA61781B79",
+          "from": "2026-10-04T06:14:53+00:00",
+          "to": "2026-10-04T06:14:53+00:00"
+        },
+        {
+          "version": "CV-E9CAEC5DE975A5BB",
+          "from": "2026-10-05T06:05:01+00:00",
+          "to": "2026-10-05T06:05:01+00:00"
+        },
+        {
+          "version": "CV-1BCBBDD0B08675C7",
+          "from": "2026-10-06T06:45:28+00:00",
+          "to": "2026-10-10T06:15:03+00:00"
+        },
+        {
+          "version": "CV-EC88935B3BA28205",
+          "from": "2026-10-10T06:15:03+00:00",
+          "to": "2026-10-10T06:15:03+00:00"
+        }
+      ]
+    },
     "CAN-0733D6B2B6A41784": {
       "key": "NYSE:TXO|eps-revision-review:v1",
       "ticker": "TXO",
@@ -10155,66 +10571,6 @@
         }
       ]
     },
-    "CAN-490AC1686F9442CE": {
-      "key": "NASDAQ:RPAY|eps-revision-review:v1",
-      "ticker": "RPAY",
-      "first_seen_at": "2026-09-25T12:24:58+00:00",
-      "last_seen_at": "2026-10-10T06:15:03+00:00",
-      "latest_observation": "OB-802BA1684891AE68",
-      "latest_version": "CV-1BCBBDD0B08675C7",
-      "timeline": [
-        {
-          "version": "CV-3933E29FAFB1F33A",
-          "from": "2026-09-25T12:24:58+00:00",
-          "to": "2026-09-25T12:24:58+00:00"
-        },
-        {
-          "version": "CV-4E1A2E5356F48BB9",
-          "from": "2026-09-25T12:24:58+00:00",
-          "to": "2026-09-25T12:24:58+00:00"
-        },
-        {
-          "version": "CV-6F633DF556AEE827",
-          "from": "2026-09-26T13:51:01+00:00",
-          "to": "2026-09-26T13:51:01+00:00"
-        },
-        {
-          "version": "CV-E19C01A103591B78",
-          "from": "2026-09-27T05:39:10+00:00",
-          "to": "2026-09-27T05:39:10+00:00"
-        },
-        {
-          "version": "CV-9D39A28971D33E8A",
-          "from": "2026-09-28T05:46:13+00:00",
-          "to": "2026-09-28T05:46:13+00:00"
-        },
-        {
-          "version": "CV-E19C01A103591B78",
-          "from": "2026-09-29T06:07:19+00:00",
-          "to": "2026-09-29T06:07:19+00:00"
-        },
-        {
-          "version": "CV-43DB53F7078B6E40",
-          "from": "2026-09-30T05:55:02+00:00",
-          "to": "2026-10-04T06:14:53+00:00"
-        },
-        {
-          "version": "CV-03E17AEA61781B79",
-          "from": "2026-10-04T06:14:53+00:00",
-          "to": "2026-10-04T06:14:53+00:00"
-        },
-        {
-          "version": "CV-E9CAEC5DE975A5BB",
-          "from": "2026-10-05T06:05:01+00:00",
-          "to": "2026-10-05T06:05:01+00:00"
-        },
-        {
-          "version": "CV-1BCBBDD0B08675C7",
-          "from": "2026-10-06T06:45:28+00:00",
-          "to": "2026-10-10T06:15:03+00:00"
-        }
-      ]
-    },
     "CAN-6AC97D7E0081C82D": {
       "key": "NYSE:LPG|eps-revision-review:v1",
       "ticker": "LPG",
@@ -10302,6 +10658,26 @@
           "version": "CV-E870C70EA18F03F3",
           "from": "2026-10-06T06:41:58+00:00",
           "to": "2026-10-10T06:11:35+00:00"
+        }
+      ]
+    },
+    "CAN-71C24817F9DA0FA8": {
+      "key": "NYSE:INSW|eps-revision-review:v1",
+      "ticker": "INSW",
+      "first_seen_at": "2026-10-10T06:06:58+00:00",
+      "last_seen_at": "2026-10-10T06:06:58+00:00",
+      "latest_observation": "OB-E2A6F84564B260E9",
+      "latest_version": "CV-A596202DD82EA889",
+      "timeline": [
+        {
+          "version": "CV-893D72B4D0EC971F",
+          "from": "2026-10-10T06:06:58+00:00",
+          "to": "2026-10-10T06:06:58+00:00"
+        },
+        {
+          "version": "CV-A596202DD82EA889",
+          "from": "2026-10-10T06:06:58+00:00",
+          "to": "2026-10-10T06:06:58+00:00"
         }
       ]
     },
@@ -10455,6 +10831,26 @@
         }
       ]
     },
+    "CAN-7506B6BECE695B39": {
+      "key": "NYSE:FRO|eps-revision-review:v1",
+      "ticker": "FRO",
+      "first_seen_at": "2026-10-10T06:05:19+00:00",
+      "last_seen_at": "2026-10-10T06:05:19+00:00",
+      "latest_observation": "OB-69E652BDEDE276AF",
+      "latest_version": "CV-7355523936EFC52B",
+      "timeline": [
+        {
+          "version": "CV-E4B152CD3FF4D616",
+          "from": "2026-10-10T06:05:19+00:00",
+          "to": "2026-10-10T06:05:19+00:00"
+        },
+        {
+          "version": "CV-7355523936EFC52B",
+          "from": "2026-10-10T06:05:19+00:00",
+          "to": "2026-10-10T06:05:19+00:00"
+        }
+      ]
+    },
     "CAN-68E9292E49558246": {
       "key": "NYSE:IPI|eps-revision-review:v1",
       "ticker": "IPI",
@@ -10515,28 +10911,13 @@
         }
       ]
     },
-    "CAN-7506B6BECE695B39": {
-      "key": "NYSE:FRO|eps-revision-review:v1",
-      "ticker": "FRO",
-      "first_seen_at": "2026-10-10T06:05:19+00:00",
-      "last_seen_at": "2026-10-10T06:05:19+00:00",
-      "latest_observation": "OB-AD62B8FECCA80C6B",
-      "latest_version": "CV-E4B152CD3FF4D616",
-      "timeline": [
-        {
-          "version": "CV-E4B152CD3FF4D616",
-          "from": "2026-10-10T06:05:19+00:00",
-          "to": "2026-10-10T06:05:19+00:00"
-        }
-      ]
-    },
     "CAN-F451582E2056444F": {
       "key": "NYSE:CVI|eps-revision-review:v1",
       "ticker": "CVI",
       "first_seen_at": "2026-10-03T05:34:45+00:00",
       "last_seen_at": "2026-10-10T06:07:01+00:00",
-      "latest_observation": "OB-8AD88A4F0192A454",
-      "latest_version": "CV-4BEC5ED09FEEEF34",
+      "latest_observation": "OB-BF8675CB6D65B960",
+      "latest_version": "CV-884B9D0DD8232033",
       "timeline": [
         {
           "version": "CV-16985D67582F555E",
@@ -10560,6 +10941,11 @@
         },
         {
           "version": "CV-4BEC5ED09FEEEF34",
+          "from": "2026-10-10T06:07:01+00:00",
+          "to": "2026-10-10T06:07:01+00:00"
+        },
+        {
+          "version": "CV-884B9D0DD8232033",
           "from": "2026-10-10T06:07:01+00:00",
           "to": "2026-10-10T06:07:01+00:00"
         }
@@ -10730,21 +11116,6 @@
         }
       ]
     },
-    "CAN-71C24817F9DA0FA8": {
-      "key": "NYSE:INSW|eps-revision-review:v1",
-      "ticker": "INSW",
-      "first_seen_at": "2026-10-10T06:06:58+00:00",
-      "last_seen_at": "2026-10-10T06:06:58+00:00",
-      "latest_observation": "OB-027615179E3CD16C",
-      "latest_version": "CV-893D72B4D0EC971F",
-      "timeline": [
-        {
-          "version": "CV-893D72B4D0EC971F",
-          "from": "2026-10-10T06:06:58+00:00",
-          "to": "2026-10-10T06:06:58+00:00"
-        }
-      ]
-    },
     "CAN-D9076638B950E851": {
       "key": "NYSE:HIPO|eps-revision-review:v1",
       "ticker": "HIPO",
@@ -10772,21 +11143,6 @@
           "version": "CV-5CCEA132D221227E",
           "from": "2026-10-05T06:00:47+00:00",
           "to": "2026-10-05T06:00:47+00:00"
-        }
-      ]
-    },
-    "CAN-FD88AA0D924CF1C8": {
-      "key": "NYSE:DHT|eps-revision-review:v1",
-      "ticker": "DHT",
-      "first_seen_at": "2026-10-10T06:08:13+00:00",
-      "last_seen_at": "2026-10-10T06:08:13+00:00",
-      "latest_observation": "OB-9B007EE68965810F",
-      "latest_version": "CV-75360113DC9DF916",
-      "timeline": [
-        {
-          "version": "CV-75360113DC9DF916",
-          "from": "2026-10-10T06:08:13+00:00",
-          "to": "2026-10-10T06:08:13+00:00"
         }
       ]
     }

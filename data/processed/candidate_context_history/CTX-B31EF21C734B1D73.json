@@ -1,0 +1,203 @@
+{
+  "context_id": "CTX-B31EF21C734B1D73",
+  "candidate_id": "CAN-F451582E2056444F",
+  "ticker": "CVI",
+  "issuer_cik": "0001376139",
+  "document_ids": [
+    "DOC-10DCC661422C1107"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-10DCC661422C1107#p5",
+    "DOC-10DCC661422C1107#p8",
+    "DOC-10DCC661422C1107#p10",
+    "DOC-10DCC661422C1107#t1",
+    "DOC-10DCC661422C1107#t2",
+    "DOC-10DCC661422C1107#p16",
+    "DOC-10DCC661422C1107#p29",
+    "DOC-10DCC661422C1107#p40",
+    "DOC-10DCC661422C1107#p41",
+    "DOC-10DCC661422C1107#p42",
+    "DOC-10DCC661422C1107#p46",
+    "DOC-10DCC661422C1107#p49",
+    "DOC-10DCC661422C1107#t4",
+    "DOC-10DCC661422C1107#t7",
+    "DOC-10DCC661422C1107#t9",
+    "DOC-10DCC661422C1107#t10",
+    "DOC-10DCC661422C1107#p71",
+    "DOC-10DCC661422C1107#p83",
+    "DOC-10DCC661422C1107#p85",
+    "DOC-10DCC661422C1107#p90",
+    "DOC-10DCC661422C1107#t23",
+    "DOC-10DCC661422C1107#p95",
+    "DOC-10DCC661422C1107#t27",
+    "DOC-10DCC661422C1107#t28",
+    "DOC-10DCC661422C1107#p97",
+    "DOC-10DCC661422C1107#p99"
+  ],
+  "input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-10T10:48:47+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net loss attributable to CVR Energy stockholders · Second quarter 2026: $3 million — 회사의 순손실이다",
+      "note_ko": "회사의 순손실이다",
+      "kind": "fact",
+      "quote": "Second quarter 2026 net loss attributable to CVR Energy stockholders of $3 million",
+      "document_id": "DOC-10DCC661422C1107",
+      "block_id": "p5",
+      "metric": "net loss attributable to CVR Energy stockholders",
+      "figures": [
+        "$3 million"
+      ],
+      "period": "Second quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Second quarter 2026: $209 million — 회사의 조정 에비타이다",
+      "note_ko": "회사의 조정 에비타이다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA of $209 million",
+      "document_id": "DOC-10DCC661422C1107",
+      "block_id": "p5",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$209 million"
+      ],
+      "period": "Second quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다",
+      "note_ko": "조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA, Petroleum Adjusted EBITDA, and Nitrogen Fertilizer Adjusted EBITDA - EBITDA, Petroleum EBITDA, and Nitrogen Fertilizer EBITDA adjusted for certain significant non-cash items and items that management believes are not attributable to or indicative of our underlying operational results of the period or that may obscure results and trends we deem useful.",
+      "document_id": "DOC-10DCC661422C1107",
+      "block_id": "p46",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Non-GAAP measures — 비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다",
+      "note_ko": "비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다",
+      "kind": "fact",
+      "quote": "Non-GAAP measures have important limitations as analytical tools, because they exclude some, but not all, items that affect net earnings and operating income.",
+      "document_id": "DOC-10DCC661422C1107",
+      "block_id": "p49",
+      "metric": "Non-GAAP measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "회사의 순손실은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$3 million",
+        "$114 million"
+      ],
+      "quote": "CVR Energy, Inc. (“CVR Energy” or the “Company”) (NYSE: CVI) today announced its second quarter 2026 results including a net loss attributable to CVR Energy stockholders of $3 million, or 3 cents per ",
+      "where": "DOC-10DCC661422C1107#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "회사의 조정 에비타는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$209 million",
+        "$99 million"
+      ],
+      "quote": "Adjusted EBITDA for the second quarter of 2026 was $209 million, compared to adjusted EBITDA of $99 million for the second quarter of 2025.",
+      "where": "DOC-10DCC661422C1107#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "자회사의 암모니아 생산 능력이 증가할 것으로 예상된다",
+      "figures": [
+        "approximately 5%"
+      ],
+      "quote": "“The planned turnaround at the East Dubuque fertilizer facility is expected to begin in August, during which we plan to complete the brownfield ammonia expansion that is expected to increase productio",
+      "where": "DOC-10DCC661422C1107#p10"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "비일반회계기준 지표는 가장 직접적으로 비교 가능한 일반회계기준 재무 지표를 대체하는 것으로 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "These measures should not be considered substitutes for their most directly comparable GAAP financial measures.",
+      "where": "DOC-10DCC661422C1107#p49"
+    }
+  ],
+  "context_status": "draft_ready"
+}

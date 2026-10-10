@@ -17,23 +17,15 @@
     "collected_at": "2026-10-10T06:00:59.130214+00:00"
   },
   "extract": {
-    "checked_at": "2026-10-10T06:01:38+00:00",
-    "status": "degraded",
+    "checked_at": "2026-10-10T10:48:47+00:00",
+    "status": "failed",
     "last_success_at": "2026-10-06T06:31:54+00:00",
-    "accepted": 0,
-    "deferred_budget": 1,
-    "rejected": 0,
-    "validation_rejected": 0,
-    "validation_rejected_total": 38,
-    "failed": 1,
-    "pending": 5,
-    "model": "gemini-2.5-flash",
-    "prompt_version": "research-v2-20260906"
+    "error_type": "FileNotFoundError"
   },
   "commands": {
-    "checked_at": "2026-10-10T06:17:52+00:00",
+    "checked_at": "2026-10-10T10:48:47+00:00",
     "status": "success",
-    "last_success_at": "2026-10-10T06:17:52+00:00",
+    "last_success_at": "2026-10-10T10:48:47+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -113,51 +105,47 @@
     }
   },
   "cards": {
-    "checked_at": "2026-10-10T06:17:01+00:00",
+    "checked_at": "2026-10-10T10:50:19+00:00",
     "status": "success",
-    "last_success_at": "2026-10-10T06:17:01+00:00",
+    "last_success_at": "2026-10-10T10:50:19+00:00",
     "translation": {
       "requested": 4,
-      "translated": 0,
+      "translated": 4,
       "rejected": 0,
       "failed_calls": 0,
-      "calls": 1,
-      "budget_exhausted": true
+      "calls": 1
     },
-    "new_versions": 19,
-    "new_observations": 36,
+    "new_versions": 8,
+    "new_observations": 8,
     "migrated_legacy": 0,
     "cards": 32,
     "unidentified": 0,
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-10T06:17:07+00:00",
+    "checked_at": "2026-10-10T10:50:21+00:00",
     "status": "success",
-    "last_success_at": "2026-10-10T06:17:07+00:00",
-    "slots": 3,
+    "last_success_at": "2026-10-10T10:50:21+00:00",
+    "slots": 0,
     "bootstrap": false,
     "material_eligible": 0,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 3,
+    "sent": 0,
     "failed": 0,
     "uncertain": 0,
-    "reservation_persisted": true,
-    "receipts_persisted": true,
-    "selected": 3
+    "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-10-10T06:16:25+00:00",
-    "status": "success",
+    "checked_at": "2026-10-10T10:49:23+00:00",
+    "status": "degraded",
     "last_success_at": "2026-10-10T06:16:25+00:00",
     "held": [],
-    "researched": 10,
-    "statuses": {
-      "success": 10
-    },
+    "researched": 0,
+    "statuses": {},
     "targets": 36,
+    "drafts_only": true,
     "current": {
       "CAN-82719B27698E3C22": "2027-12-31",
       "CAN-D50A4151AB176FB7": "2028-05-31",
@@ -202,18 +190,13 @@
       "CAN-3D30FF7D03231FE1",
       "CAN-FDA6B7F62852042F"
     ],
-    "http_attempts": 38,
-    "coverage": {
-      "success": 34,
-      "no_relevant_document": 2
-    },
     "drafts": {
-      "requests": 0,
-      "drafted": 0,
+      "requests": 6,
+      "drafted": 3,
       "insufficient_earnings_context": 0,
-      "no_supported_claims": 0,
-      "deferred": 23,
-      "failed": 0
+      "no_supported_claims": 2,
+      "deferred": 20,
+      "failed": 1
     }
   },
   "context_verification": {

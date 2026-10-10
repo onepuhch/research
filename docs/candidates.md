@@ -417,8 +417,8 @@ CAN-490AC1686F9442CE · Software - Infrastructure · 미추적
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
 - 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-10 이후) 몫 26%. 근거 문장 원문 최신 제출 2026-08-10(최근 30일 시작 이전)
-- 2026-09-30 생성 초안(context-check-v7)을 현재 검증기(context-check-v11)로 다시 확인해 통과한 문장만 표시
-- [회사 전망] [KUBRA] 매출(revenue) · 2026: between $150 million and $154 million — 큐브라는 이천이십육년 동안 매출에 기여할 것으로 예상된다 — “KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm), 제출 2026-08-10, 기간 2026)
+- [회사 전망] 매출(revenue) · full year 2026: approximately 10% to 12% — 회사는 유기적 매출 성장을 예상한다 — “On an organic basis, REPAY expects approximately 10% to 12% revenue growth.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm), 제출 2026-08-10, 기간 full year 2026)
+- [회사 전망] [KUBRA] 매출(revenue) · 2026: $150 million and $154 million — 쿠브라가 매출에 기여할 것으로 예상된다 — “KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm), 제출 2026-08-10, 기간 2026)
 
 **사람이 확인한 사업 근거**
 
@@ -432,7 +432,7 @@ CAN-490AC1686F9442CE · Software - Infrastructure · 미추적
 
 **다음 확인**
 
-- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다. (자동 제안)
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
 
 **출처**
 
@@ -440,6 +440,7 @@ CAN-490AC1686F9442CE · Software - Infrastructure · 미추적
 - [RPAY daily closes](https://finance.yahoo.com/quote/RPAY/history) (관측 2026-10-10)
 - [RPAY company profile](https://finance.yahoo.com/quote/RPAY/profile) (관측 2026-10-10)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1720592/000119312526342425/rpay-ex99_1.htm) (제출 2026-08-10)
+- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1720592/000119312526342440/rpay-20260630.htm) (제출 2026-08-10)
 
 텔레그램: `/track CAN-490AC1686F9442CE`
 
@@ -508,10 +509,10 @@ CAN-700B10D9B75B0040 · Biotechnology · 미추적
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
 - 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-10 이후) 몫 43%. 근거 문장 원문 최신 제출 2026-07-29(최근 30일 시작 이전)
-- 2026-09-30 생성 초안(context-check-v7)을 현재 검증기(context-check-v11)로 다시 확인해 통과한 문장만 표시
-- [실적] Net income per common share (diluted) · second quarter of 2026: $0.36 — 전년 같은 기간보다 증가했다 — “Net income per common share (diluted) was $0.36 in the second quarter of 2026, compared to $0.29 in the prior year period.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm), 제출 2026-07-29, 기간 second quarter of 2026)
-- [회사 전망] revenue guidance · 2026: $1.1 – $1.2 billion — 매출 전망치를 상향 조정했다 — “Increase in 2026 revenue guidance to $1.1 – $1.2 billion” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm), 제출 2026-07-29, 기간 2026)
-- [실적] [Korlym and authorized generic] product revenue · second quarter 2026: $208.6 million — 전년 같은 기간보다 증가했다 — “Korlym and authorized generic product revenue was $208.6 million, compared to $194.4 million in the prior year period.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm), 제출 2026-07-29, 기간 second quarter 2026)
+- [실적] Net product revenue · three months ended June 30, 2026: $208.6 million — 하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다 — “Net product revenue from our Hypercortisolism Products was $208.6 million and $373.5 million for the three and six months ended June 30, 2026, respectively, compared to $194.4 million and $351.6 million for the comparable periods in 2025.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm), 제출 2026-07-29, 기간 three months ended June 30, 2026)
+- [실적] Net product revenue · six months ended June 30, 2026: $373.5 million — 하이퍼코티솔증 제품의 순매출은 전년 같은 기간보다 증가했다 — “Net product revenue from our Hypercortisolism Products was $208.6 million and $373.5 million for the three and six months ended June 30, 2026, respectively, compared to $194.4 million and $351.6 million for the comparable periods in 2025.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm), 제출 2026-07-29, 기간 six months ended June 30, 2026)
+- [회사 전망] 매출(revenue) · 2026: $1.1 – $1.2 billion — 회사의 연간 매출 전망이 상향 조정되었다 — “Increase in 2026 revenue guidance to $1.1 – $1.2 billion” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm), 제출 2026-07-29, 기간 2026)
+- 자동 정리 문장 5개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
 
 **사람이 확인한 사업 근거**
 
@@ -521,11 +522,13 @@ CAN-700B10D9B75B0040 · Biotechnology · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- [반대 근거·한계] Net cash provided by operating activities · six months ended June 30, 2026: $16.8 million — 영업활동 현금흐름은 전년 같은 기간보다 감소했다 — “Net cash provided by operating activities was $16.8 million for the six months ended June 30, 2026, compared to $49.1 million for the comparable period in 2025.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm), 제출 2026-07-29, 기간 six months ended June 30, 2026)
+- [반대 근거·한계] income tax benefit · six months ended June 30, 2026: $10.0 million — 법인세 혜택은 전년 같은 기간보다 감소했다 — “Income tax expense was $2.9 million for the three months ended June 30, 2026, while income tax benefit was $10.0 million for the six months ended June 30, 2026, compared with income tax benefits of $3.5 million and $14.4 million for the comparable periods in 2025, respectively.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm), 제출 2026-07-29, 기간 six months ended June 30, 2026)
 - EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- CATALYST 및 MOMENTUM 연구 결과가 임상 진료에 완전히 통합될 때까지 Cushing 증후군 사업의 신규 처방 증가 추세가 계속될 것인가? (자동 제안)
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
 
 **출처**
 
@@ -533,6 +536,7 @@ CAN-700B10D9B75B0040 · Biotechnology · 미추적
 - [CORT daily closes](https://finance.yahoo.com/quote/CORT/history) (관측 2026-10-10)
 - [CORT company profile](https://finance.yahoo.com/quote/CORT/profile) (관측 2026-10-10)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050607/cort072926ex991pressrelease.htm) (제출 2026-07-29)
+- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1088856/000162828026050613/cort-20260630.htm) (제출 2026-07-29)
 
 텔레그램: `/track CAN-700B10D9B75B0040`
 
@@ -782,7 +786,7 @@ CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (CVI)
+재생 연료, 석유 정제 및 판매, 질소 비료 제조 사업을 통해 돈을 번다.
 <small>원문(영문): CVR Energy, Inc., together with its subsidiaries, engages in renewable fuels and petroleum refining and marketing, and nitrogen fertilizer manufacturing activities in the United States. It operates through three segments: Petroleum, Renewables, and Nitrogen Fertilizer. The Petroleum segment refines and markets transportation fuels, such as gasoline, diesel, jet fuel, and distillates; and includes crude gathering and logistics activities that support refinery operations. This segment also owns and operates a coking, medium-sour crude oil refinery in Kansas; and a crude oil refinery in Oklahoma.</small>
 
 **후보가 된 이유**
@@ -798,8 +802,9 @@ CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-10 이후) 몫 78%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
-아직 공식 발표 원문을 연결하지 않았습니다.
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-10 이후) 몫 78%. 근거 문장 원문 최신 제출 2026-07-29(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
+- [실적] net loss attributable to CVR Energy stockholders · Second quarter 2026: $3 million — 회사의 순손실이다 — “Second quarter 2026 net loss attributable to CVR Energy stockholders of $3 million” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm), 제출 2026-07-29, 기간 Second quarter 2026)
+- [실적] 조정 EBITDA(Adjusted EBITDA) · Second quarter 2026: $209 million — 회사의 조정 에비타이다 — “Adjusted EBITDA of $209 million” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm), 제출 2026-07-29, 기간 Second quarter 2026)
 
 **사람이 확인한 사업 근거**
 
@@ -809,6 +814,9 @@ CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- [반대 근거·한계] 조정 EBITDA(Adjusted EBITDA) — 조정 에비타는 비일반회계기준 지표이며, 특정 비현금성 항목 및 경영진이 운영 결과와 관련이 없거나 유용하다고 판단하는 결과 및 추세를 가릴 수 있다고 판단하는 항목에 대해 조정되었다 — “Adjusted EBITDA, Petroleum Adjusted EBITDA, and Nitrogen Fertilizer Adjusted EBITDA - EBITDA, Petroleum EBITDA, and Nitrogen Fertilizer EBITDA adjusted for certain significant non-cash items and items that management believes are not attributable to or indicative of our underlying operational results of the period or that may obscure results and trends we deem useful.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm), 제출 2026-07-29, 기간 unknown)
+- [반대 근거·한계] Non-GAAP measures — 비일반회계기준 지표는 분석 도구로서 중요한 한계가 있으며, 순이익 및 영업이익에 영향을 미치는 모든 항목을 제외하지 않는다 — “Non-GAAP measures have important limitations as analytical tools, because they exclude some, but not all, items that affect net earnings and operating income.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm), 제출 2026-07-29, 기간 unknown)
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -819,6 +827,7 @@ CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
 - [CVI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CVI/analysis) (관측 2026-10-10)
 - [CVI daily closes](https://finance.yahoo.com/quote/CVI/history) (관측 2026-10-10)
 - [CVI company profile](https://finance.yahoo.com/quote/CVI/profile) (관측 2026-10-10)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm) (제출 2026-07-29)
 
 텔레그램: `/track CAN-F451582E2056444F`
 
@@ -890,8 +899,7 @@ CAN-E87900AEFDDE7B07 · Software - Application · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 최근 30일(2026-09-10 이후) 순변화가 90일 전체보다 큼(30일 전 값이 90일 전보다 낮았음). 근거 문장 원문 최신 제출 2026-08-06(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
-- 2026-10-03 생성 초안(context-check-v7)을 현재 검증기(context-check-v11)로 다시 확인해 통과한 문장만 표시
+- 상향 시기: 최근 30일(2026-09-10 이후) 순변화가 90일 전체보다 큼(30일 전 값이 90일 전보다 낮았음). 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-08-06(채택 근거 없음)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -902,14 +910,11 @@ CAN-E87900AEFDDE7B07 · Software - Application · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- 구체적인 일회성·반대 근거는 아직 확보하지 못했습니다.
-- [일반 면책(보조)] Non-GAAP net income per share — 비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다 — “We believe non-GAAP net income per share provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operations, as this non-GAAP financial measure eliminates the effect of stock-based compensation, acquisition-related expenses, amortization expense, restructuring and related charges, non-cash (gains)/losses from lease modifications and terminations and changes in the fair value of contingent consideration, which are often unrelated to overall operating performance.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517375/000151737526000056/a2q26earningsrelease.htm), 제출 2026-08-06, 기간 unknown)
-- [일반 면책(보조)] Non-GAAP operating income — 비일반회계기준 영업 이익은 주식 기반 보상, 인수 관련 비용, 상각 비용, 구조조정 및 관련 비용, 리스 수정 및 종료로 인한 비현금 손익, 우발적 대가 공정 가치 변동의 영향을 제외한다 — “We believe non-GAAP operating income provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operations, as it eliminates the effect of stock-based compensation, acquisition-related expenses, amortization expense, restructuring and related charges, non-cash (gains)/losses from lease modifications and termination and changes in the fair value of contingent consideration, which are often unrelated to overall operating performance.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517375/000151737526000056/a2q26earningsrelease.htm), 제출 2026-08-06, 기간 unknown)
 - EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다. (자동 제안)
 
 **출처**
 
@@ -969,7 +974,7 @@ CAN-FD88AA0D924CF1C8 · Oil & Gas Midstream · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (DHT)
+원유 운반선을 소유, 운영하고 기술 관리 서비스를 제공하여 수익을 창출한다.
 <small>원문(영문): DHT Holdings, Inc., through its subsidiaries, owns and operates crude oil tankers primarily in Monaco, Singapore, Norway, and India. The company also offers technical management services. As of December 15, 2025, it had a fleet of 22 very large crude carriers. The company was incorporated in 2005 and is headquartered in Hamilton, Bermuda.</small>
 
 **후보가 된 이유**
@@ -1062,7 +1067,7 @@ CAN-7506B6BECE695B39 · Oil & Gas Midstream · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (FRO)
+유조선과 석유제품 운반선을 소유, 운영하며 용선, 매매를 통해 돈을 번다.
 <small>원문(영문): Frontline plc, a shipping company, engages in the ownership and operation of oil and product tankers worldwide. The company owns and operates oil and product tankers, such as very large crude carriers (VLCCs), Suezmax tankers, and LR2/Aframax tankers. As of December 31, 2025, it operated a fleet of 80 vessels, including 41 VLCCs, 21 Suezmax tankers, and 18 LR2/Aframax tankers. The company is also involved in the charter, purchase, and sale of vessels. Frontline plc was founded in 1985 and is based in Limassol, Cyprus.</small>
 
 **후보가 된 이유**
@@ -1479,7 +1484,7 @@ CAN-71C24817F9DA0FA8 · Oil & Gas Midstream · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (INSW)
+원유 및 석유제품 운반선을 소유, 운영하고 선박 간 환적 지원 서비스를 제공하여 수익을 얻는다.
 <small>원문(영문): International Seaways, Inc. owns and operates a fleet of oceangoing vessels for the transportation of crude oil and petroleum products in the international flag trade. The company operates in two segments: Crude Tankers and Product Carriers. It operates fleet of 70 vessels of VLCCs, Suezmaxes, and Aframaxes, as well as MRs, LR1, and LR2 product carrier. The company provides ship-to-ship (STS) lightering support services, such as hoses and fenders; and full-service STS lightering that includes lightering vessels. It also offers MR product carriers, including IMO III compliant for carrying edibl</small>
 
 **후보가 된 이유**

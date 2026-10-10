@@ -1,0 +1,154 @@
+{
+  "context_id": "CTX-73B7E18FB19F9751",
+  "candidate_id": "CAN-490AC1686F9442CE",
+  "ticker": "RPAY",
+  "issuer_cik": "0001720592",
+  "document_ids": [
+    "DOC-93050982946C0EE4",
+    "DOC-EC769633F745B7F4"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-93050982946C0EE4#p31",
+    "DOC-93050982946C0EE4#p49",
+    "DOC-93050982946C0EE4#p55",
+    "DOC-93050982946C0EE4#t6",
+    "DOC-93050982946C0EE4#t10",
+    "DOC-93050982946C0EE4#t11",
+    "DOC-93050982946C0EE4#p111"
+  ],
+  "input_sha": "73b7e18fb19f9751907a9856c10d1f5db6457e60b36d4e31a4b34405b02d8712",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-10T10:48:47+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(revenue) · full year 2026: approximately 10% to 12% — 회사는 유기적 매출 성장을 예상한다",
+      "note_ko": "회사는 유기적 매출 성장을 예상한다",
+      "kind": "guidance",
+      "quote": "On an organic basis, REPAY expects approximately 10% to 12% revenue growth.",
+      "document_id": "DOC-93050982946C0EE4",
+      "block_id": "p31",
+      "metric": "revenue",
+      "figures": [
+        "approximately 10% to 12%"
+      ],
+      "period": "full year 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[KUBRA] 매출(revenue) · 2026: $150 million and $154 million — 쿠브라가 매출에 기여할 것으로 예상된다",
+      "note_ko": "쿠브라가 매출에 기여할 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.",
+      "document_id": "DOC-93050982946C0EE4",
+      "block_id": "p31",
+      "metric": "revenue",
+      "figures": [
+        "$150 million and $154 million"
+      ],
+      "period": "2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "subsidiary",
+      "subject_name": "KUBRA",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "쿠브라가 조정 이자, 세금, 감가상각비 및 상각 전 이익에 기여할 것으로 예상된다",
+      "figures": [
+        "$27.5 million and $30 million"
+      ],
+      "quote": "KUBRA is expected to contribute between $150 million and $154 million in revenue and between $27.5 million and $30 million in Adjusted EBITDA during 2026.",
+      "where": "DOC-93050982946C0EE4#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 매출은 해당 분기에 이 금액이었다",
+      "figures": [
+        "$100,705"
+      ],
+      "quote": "Revenue ; $100,705 ; $75,626",
+      "where": "DOC-93050982946C0EE4#t10"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 조정 순이익 주당 금액은 해당 분기에 이 금액이었다",
+      "figures": [
+        "$0.20"
+      ],
+      "quote": "Adjusted Net Income per share ; $0.20 ; $0.20",
+      "where": "DOC-93050982946C0EE4#t10"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "경영진은 조정 순이익이 GAAP 재무 측정치에 대한 보완 정보를 제공한다고 믿지만, 이는 GAAP에 따라 계산된 재무 측정치가 아니며 순이익 또는 기타 운영 성과 측정치를 대체하는 것으로 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "However, these non-GAAP financial measures are not financial measures calculated in accordance with GAAP and should not be considered as a substitute for net income, operating profit, net cash provide",
+      "where": "DOC-93050982946C0EE4#p49"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "경영진은 조정 이자, 세금, 감가상각비 및 상각 전 이익이 GAAP 재무 측정치에 대한 보완 정보를 제공한다고 믿지만, 이는 GAAP에 따라 계산된 재무 측정치가 아니며 순이익 또는 기타 운영 성과 측정치를 대체하는 것으로 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "However, these non-GAAP financial measures are not financial measures calculated in accordance with GAAP and should not be considered as a substitute for net income, operating profit, net cash provide",
+      "where": "DOC-93050982946C0EE4#p49"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "예상 및 추정치는 예시 목적으로만 사용되며 예측이 아니며 실제 결과와 다를 수 있다",
+      "figures": [],
+      "quote": "projected and estimated numbers are used for illustrative purpose only, are not forecasts and may not reflect actual results.",
+      "where": "DOC-93050982946C0EE4#p55"
+    }
+  ],
+  "context_status": "draft_ready"
+}

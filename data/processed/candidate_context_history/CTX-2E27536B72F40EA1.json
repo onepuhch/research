@@ -1,0 +1,93 @@
+{
+  "context_id": "CTX-2E27536B72F40EA1",
+  "candidate_id": "CAN-E87900AEFDDE7B07",
+  "ticker": "SPT",
+  "issuer_cik": "0001517375",
+  "document_ids": [
+    "DOC-450C06FD810BE835"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-450C06FD810BE835#p4",
+    "DOC-450C06FD810BE835#p7",
+    "DOC-450C06FD810BE835#p9",
+    "DOC-450C06FD810BE835#p15",
+    "DOC-450C06FD810BE835#p16"
+  ],
+  "input_sha": "2e27536b72f40ea1ac2793d0f8df73dd3171419ce21eda192eb63438b7c93fd2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-10T10:48:47+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사의 총 매출 전망치이다",
+      "figures": [
+        "$123.3 million and $124.1 million"
+      ],
+      "quote": "Total revenue between $123.3 million and $124.1 million.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사의 비일반회계기준 영업 이익 전망치이다",
+      "figures": [
+        "$17.5 million and $18.3 million"
+      ],
+      "quote": "Non-GAAP operating income between $17.5 million and $18.3 million.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사의 비일반회계기준 주당 순이익 전망치이다",
+      "figures": [
+        "$0.29 and $0.30"
+      ],
+      "quote": "Non-GAAP net income per share between $0.29 and $0.30 based on approximately 60.7 million weighted-average shares of common stock outstanding.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사의 총 매출 연간 전망치이다",
+      "figures": [
+        "$493.0 million and $495.6 million"
+      ],
+      "quote": "Total revenue between $493.0 million and $495.6 million.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "연간 반복 매출이 삼만 달러 이상인 고객 수가 전년 같은 기간보다 늘었다",
+      "figures": [
+        "3,926 customers",
+        "11%"
+      ],
+      "quote": "Grew number of customers contributing $30,000 or more in ARR to 3,926 customers as of June 30, 2026, up 11% compared to June 30, 2025.",
+      "where": "DOC-450C06FD810BE835#p4"
+    },
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "비일반회계기준 주당 순이익은 주식 기반 보상 비용, 인수 관련 비용, 무형 자산 상각 비용, 구조 조정 및 관련 비용, 리스 수정 및 해지에 따른 비현금 손익, 우발적 대가 공정 가치 변동을 제외한다",
+      "figures": [],
+      "quote": "We believe non-GAAP net income per share provides our management and investors consistency and comparability with our past financial performance and facilitates period-to-period comparisons of operati",
+      "where": "DOC-450C06FD810BE835#p7"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
