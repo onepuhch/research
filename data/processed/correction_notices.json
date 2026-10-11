@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "notices": {
+    "CN-20261011-PI-20261010-yahoo-eps": {
+      "incident": "PI-20261010-yahoo-eps",
+      "alerts": [
+        "NYSE:DHT|eps-revision-review:v1|new_discovery",
+        "NYSE:FRO|eps-revision-review:v1|new_discovery",
+        "NYSE:INSW|eps-revision-review:v1|new_discovery"
+      ],
+      "alert_message_ids": [
+        165,
+        166,
+        167
+      ],
+      "reply_to_message_id": 165,
+      "text_source": "docs/u_correction_notices_2026-10-11.md, 발송 검토본 A (Codex review)",
+      "text_sha256": "d0e0034319734edf59fb88968ca0c6bc10a46e90eb4be96cf7bc378deefa71fe",
+      "approved": "user, 2026-10-11 KST: \"네네 추천하는대로 갈게요\" (Codex recommendation: draft A, one message)",
+      "status": "sent",
+      "attempted_at": "2026-10-11T03:44:31+00:00",
+      "message_id": 168,
+      "error": null,
+      "finished_at": "2026-10-11T03:44:32+00:00"
+    }
+  }
+}

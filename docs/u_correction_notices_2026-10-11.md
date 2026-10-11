@@ -1,4 +1,6 @@
-# 정정 안내 문안 — 10/10 유조선 새 발굴 알림 3건 (미발송)
+# 정정 안내 — 10/10 유조선 새 발굴 알림 3건 (발송 완료)
+
+> **발송 결과(2026-10-11):** 사용자 승인('네네 추천하는대로 갈게요') 뒤 검토본 A를 1회 보냈다. 원래 알림 165에 답장으로 보냈는데, 165가 그 채팅에 없으면 Telegram이 거절하므로 원래 수신 채팅이 맞는지도 함께 확인됐다. 결과는 sent, message_id 168, 문안 SHA-256 `d0e0034319734edf59fb88968ca0c6bc10a46e90eb4be96cf7bc378deefa71fe`. 기록은 `data/processed/correction_notices.json`(CN-20261011-PI-20261010-yahoo-eps)이다. 기록이 있으면 다시 보내지 않는다.
 
 작성: Claude, 2026-10-11. Codex 결정에 따라 **문안만** 준비했다. 실제 발송은 사용자 승인 뒤에만 한다(외부 전송). 근거: [U1 판정](u_candidate_decisions_2026-10-11.md) §4, `data/processed/provider_inconsistencies.json`(PI-20261010-yahoo-eps).
 
