@@ -385,6 +385,9 @@
     ],
     "context_quarantine_entry": [
       "candidate_id", "reason", "source_ref", "decided_at", "decided_by", "note"
+    ],
+    "candidate_feedback_event": [
+      "kind", "scope", "update_id", "event_key", "candidate_id"
     ]
   },
   "version": 2,

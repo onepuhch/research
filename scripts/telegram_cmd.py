@@ -15,6 +15,7 @@ from urllib.request import Request, urlopen
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common as c  # noqa: E402
+import candidate_feedback as fb  # noqa: E402
 import candidates  # noqa: E402
 import notify  # noqa: E402
 import promote  # noqa: E402
@@ -38,7 +39,12 @@ HELP_TEXT = """지원 명령어
 /list - 활성 아이디어 목록
 /history CRDO - 같은 정의의 날짜별 숫자 관측
 /data - 데이터 누적 현황
-/help - 명령어 목록"""
+/help - 명령어 목록
+
+후보 알림에 답장: 추적 · 관심없음 · 보류 · 자세히 (한 낱말만)"""
+
+REPLY_GUIDE = ("후보 알림 메시지(🆕 새 발굴 후보 등)에 답장으로 '추적', '관심없음', '보류', '자세히' 중 "
+               "한 낱말만 보내 주세요.")
 
 
 def console(value: Any) -> None:
@@ -59,6 +65,11 @@ def parse_args(args: list[str]) -> argparse.Namespace:
         help="command text for --dry-run (example: /help)",
     )
     parser.add_argument(
+        "--reply-to",
+        type=int,
+        help="with --dry-run: treat --command as a reply to this alert message_id",
+    )
+    parser.add_argument(
         "--poll-timeout",
         type=int,
         default=0,
@@ -69,6 +80,8 @@ def parse_args(args: list[str]) -> argparse.Namespace:
         parser.error("--command requires --dry-run")
     if parsed.dry_run and not parsed.command:
         parser.error("--dry-run requires --command")
+    if parsed.reply_to is not None and not parsed.dry_run:
+        parser.error("--reply-to requires --dry-run")
     if parsed.poll_timeout < 0 or parsed.poll_timeout > 50:
         parser.error("--poll-timeout must be between 0 and 50")
     return parsed
@@ -171,6 +184,34 @@ def active_review_messages() -> list[str]:
     return notify.build_report_chunks(rows)
 
 
+def track_result(cand: dict, tracked_before=promote.UNKNOWN) -> dict:
+    """promote.track_candidate; a record that the ledger refuses for another reason is a rejection too."""
+    try:
+        return promote.track_candidate(cand, tracked_before=tracked_before)
+    except json.JSONDecodeError:
+        raise
+    except ValueError:
+        return {"outcome": "rejected", "reason_code": "invalid_record", "idea_id": None}
+
+
+def track_text(cand: dict, state: str, result: dict) -> str:
+    ticker = html.escape(cand["identity"]["ticker"])
+    if result["outcome"] == "rejected":
+        if result["reason_code"] == "observation_too_old":
+            return f"{ticker} 후보 관측이 오래됐습니다. /screen으로 최신 결과를 본 뒤 다시 등록해 주세요."
+        if result["reason_code"] == "capacity":
+            return f"활성 추적이 {c.policy()['max_active_ideas']}개로 가득 찼습니다. 기존 추적을 정리한 뒤 다시 등록해 주세요."
+        return f"{ticker} 후보는 식별·통화 확인이 부족해 등록하지 않았습니다. 다음 스크린 후 다시 시도해 주세요."
+    idea_id = result["idea_id"]
+    note = " (최신 목록에는 없는 후보)" if state == "not_current" else ""
+    if os.environ.get("DAILY_MODE") in ("auto", "daily"):
+        when = "이번 일간 실행에서 EPS 예상·주가·분기 숫자 수집을 시작합니다."
+    else:
+        when = "다음 auto 일간 실행(09:17 KST 무렵)에서 EPS 예상·주가·분기 숫자 수집을 시작합니다."
+    return (f"추적 등록 완료: {ticker} → {html.escape(idea_id)}{note}\n{when} "
+            "자료 확보 여부는 /data로 확인하세요. 추적 선택은 검증 완료나 매수 추천이 아닙니다.")
+
+
 def handle_track_candidate(cid: str, dry_run: bool) -> list[str]:
     cand, state = candidates.find(cid)
     if state == "unknown":
@@ -178,22 +219,79 @@ def handle_track_candidate(cid: str, dry_run: bool) -> list[str]:
     ticker = html.escape(cand["identity"]["ticker"])
     if dry_run:
         return [f"[dry-run] {html.escape(cid)} ({ticker}) 추적 등록 예정"]
-    try:
-        idea_id = promote.promote_candidate(cand)
-    except ValueError as error:
-        reason = str(error)
-        if "too old" in reason:
-            return [f"{ticker} 후보 관측이 오래됐습니다. /screen으로 최신 결과를 본 뒤 다시 등록해 주세요."]
-        if "capacity" in reason:
-            return [f"활성 추적이 {c.policy()['max_active_ideas']}개로 가득 찼습니다. 기존 추적을 정리한 뒤 다시 등록해 주세요."]
-        return [f"{ticker} 후보는 식별·통화 확인이 부족해 등록하지 않았습니다. 다음 스크린 후 다시 시도해 주세요."]
-    note = " (최신 목록에는 없는 후보)" if state == "not_current" else ""
-    if os.environ.get("DAILY_MODE") in ("auto", "daily"):
-        when = "이번 일간 실행에서 EPS 예상·주가·분기 숫자 수집을 시작합니다."
-    else:
-        when = "다음 auto 일간 실행(09:17 KST 무렵)에서 EPS 예상·주가·분기 숫자 수집을 시작합니다."
-    return [f"추적 등록 완료: {ticker} → {html.escape(idea_id)}{note}\n{when} "
-            "자료 확보 여부는 /data로 확인하세요. 추적 선택은 검증 완료나 매수 추천이 아닙니다."]
+    return [track_text(cand, state, track_result(cand))]
+
+
+def handle_reply(item: dict, update_id: int, dry_run: bool = False) -> list[str]:
+    """A fixed-word reply to a candidate alert (candidate_feedback.py). The judgment is stored before
+    anything else; a track reply stores its result as a separate event; nothing is guessed."""
+    action = item.get("action")
+    if action not in fb.LABELS:
+        return [HELP_TEXT]
+    target = fb.resolve(item.get("reply_to_message_id"), item.get("reply_to_date"), item.get("reply_to_from_bot"))
+    if target["state"] in ("not_alert", "ambiguous"):
+        return [f"후보 알림에 대한 답장이 아니어서 판단을 기록하지 않았습니다. {REPLY_GUIDE}"]
+    if target["state"] == "no_candidate":
+        return ["후보 ID가 없는 알림(뉴스 신호 등)이라 답장 판단을 기록하지 않았습니다. "
+                "알림에 적힌 /track 명령을 그대로 보내 주세요."]
+    if target["state"] == "unconfirmed":
+        return ["이 알림은 발송 확인이 끝나지 않은 상태라 답장으로 처리하지 않았습니다. "
+                "알림에 적힌 /candidate 또는 /track 명령을 그대로 보내 주세요."]
+    key, event = target["key"], target["event"]
+    cid = event["candidate_id"]
+    ticker = html.escape(key.split("|", 1)[0].rsplit(":", 1)[-1])
+    disputed = fb.disputed(key)
+    cand, state = candidates.find(cid)
+    label = fb.LABELS[action]
+    if dry_run:
+        return [f"[dry-run] {ticker} 알림({html.escape(key)}) 답장 '{label}' 기록 예정"
+                + (f" · 제공처 값 불일치 {', '.join(disputed)}" if disputed else "")]
+    stored, _ = fb.append_once({
+        "kind": "reply", "scope": fb.SCOPE, "update_id": update_id,
+        "message_at": fb.iso(item.get("message_date")), "received_at": item.get("received_at"),
+        "event_key": key, "candidate_id": cid, "candidate_version": event.get("candidate_version"),
+        "reply_to_message_id": item["reply_to_message_id"], "action": action, "source": fb.SOURCE,
+        "disputed_source": disputed,
+        "tracked_before": promote.active_candidate_idea(cand) if action == "track" and cand else None})
+    if action == "detail":
+        if cand is None:
+            return [f"없는 후보 ID입니다: {html.escape(cid)}. /screen으로 최신 목록을 확인해 주세요."]
+        same = cand.get("candidate_version") == event.get("candidate_version")
+        note = (f"ℹ️ 알림 당시 버전 {html.escape(str(event.get('candidate_version')))} · 최신 카드 버전 "
+                f"{html.escape(str(cand.get('candidate_version')))} "
+                + ("(알림 이후 숫자 변화 없음)" if same else "(알림 이후 숫자가 바뀌었습니다)"))
+        if disputed:
+            note += f"\n⚠️ 제공처 값 불일치로 표시된 알림입니다({html.escape(', '.join(disputed))})."
+        replies = candidates.telegram_candidate(cid)
+        return notify.split_lines([note + "\n\n" + replies[0], *replies[1:]])
+    if action in ("dismiss", "hold"):
+        return [f"판단 기록: {ticker} · {label}. 추적 등록과 알림 예약은 바꾸지 않습니다."
+                + (f" (제공처 값 불일치 알림: {html.escape(', '.join(disputed))})" if disputed else "")
+                + " 관심 기록이며 투자 판단의 정답으로 쓰지 않습니다."]
+    # track: the result is its own event; a stored result is reused, so a retry never registers twice.
+    operation = fb.operation_key(update_id)
+    done = fb.find(fb.load(), "track_result", operation_key=operation)
+    if done is None:
+        if disputed:
+            result = {"outcome": "rejected", "reason_code": "disputed_source", "idea_id": None}
+        elif cand is None:
+            result = {"outcome": "rejected", "reason_code": "unknown_candidate", "idea_id": None}
+        else:
+            result = track_result(cand, stored.get("tracked_before"))
+        done, _ = fb.append_once({
+            "kind": "track_result", "scope": fb.SCOPE, "update_id": update_id, "operation_key": operation,
+            "event_key": key, "candidate_id": cid, **result,
+            "processed_version": (cand or {}).get("candidate_version"), "candidate_state": state,
+            "at": c.utc_now()})
+    if done["reason_code"] == "disputed_source":
+        return [f"{ticker} 알림은 제공처 값 불일치({html.escape(', '.join(disputed))})로 표시되어 답장으로는 추적 "
+                f"등록하지 않았습니다. 최신 상세 <code>/candidate {html.escape(cid)}</code>를 확인한 뒤 "
+                f"<code>/track {html.escape(cid)}</code>로 직접 선택해 주세요."]
+    if done["reason_code"] == "unknown_candidate":
+        return [f"없는 후보 ID입니다: {html.escape(cid)}. /screen으로 최신 목록을 확인해 주세요."]
+    if done["outcome"] == "already_tracked":
+        return [f"이미 추적 중입니다: {ticker} → {html.escape(done['idea_id'])}. 새로 등록하지 않았습니다."]
+    return [track_text(cand, state, done)]
 
 
 def handle_track(target: str, dry_run: bool) -> list[str]:
@@ -259,6 +357,17 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
         key = str(update_id)
         if key not in queue:
             raw = str(message.get("text", "")).strip()
+            replied = message.get("reply_to_message")
+            action = fb.reply_action(raw) if isinstance(replied, dict) else None
+            if action and isinstance(replied.get("message_id"), int):
+                # A reply keeps only the action and the replied message's reference (no text of either).
+                sender = replied.get("from") or {}
+                queue[key] = {"text": "/reply", "action": action, "reply_to_message_id": replied["message_id"],
+                              "reply_to_date": replied.get("date") if isinstance(replied.get("date"), int) else None,
+                              "reply_to_from_bot": sender.get("is_bot") if isinstance(sender.get("is_bot"), bool) else None,
+                              "message_date": message.get("date") if isinstance(message.get("date"), int) else None,
+                              "status": "pending", "received_at": c.utc_now()}
+                continue
             parts = raw.split(maxsplit=1)
             command = parts[0].split("@", 1)[0].lower() if parts else ""
             arg = parts[1].strip().upper() if len(parts) > 1 else ""
@@ -287,7 +396,12 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
         try:
             if item.get("status") != "reply_pending":
                 try:
-                    replies = handle_command(item.get("text", ""))
+                    if item.get("text") == "/reply":
+                        replies = handle_reply(item, int(key))
+                    else:
+                        replies = handle_command(item.get("text", ""))
+                except json.JSONDecodeError:
+                    raise  # a damaged state file is kept for retry, never answered as an input error
                 except ValueError as error:
                     # A permanent user-input error is a reply, not a poison retry loop.
                     replies = ["명령을 처리할 수 없습니다. 신호 ID와 추적 제한을 확인해주세요."]
@@ -300,6 +414,7 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
             item.update(status="done", completed_at=c.utc_now())
             # Completed text and replies are not needed in the repository.
             item.pop("text", None)
+            item.pop("action", None)
             processed += 1
         except (OSError, RuntimeError, TimeoutError, json.JSONDecodeError) as error:
             item["last_error_type"] = type(error).__name__
@@ -313,6 +428,13 @@ def process_updates(token: str, allowed_chat_id: str, updates: list[dict[str, An
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv or [])
+    if args.dry_run and args.reply_to is not None:
+        action = fb.reply_action(args.command)
+        replies = (handle_reply({"action": action, "reply_to_message_id": args.reply_to}, 0, dry_run=True)
+                   if action else [HELP_TEXT])
+        for reply in replies:
+            console(reply)
+        return 0
     if args.dry_run:
         replies = handle_command(args.command, dry_run=True)
         for reply in replies:

@@ -59,6 +59,39 @@ def promote_signal(signal, idea_type="병목 확산형", strength="1", trigger="
         "추적 지표 정의": json.dumps(spec, ensure_ascii=False), "data_quality": "live"}})
 
 
+class Refused(ValueError):
+    """A refused candidate registration with a fixed reason code (stored instead of the message)."""
+
+    def __init__(self, code, message):
+        super().__init__(message)
+        self.code = code
+
+
+def active_candidate_idea(cand):
+    """The active idea of the candidate's company + thesis, or None."""
+    entity, thesis = (cand.get("identity") or {}).get("entity_id"), cand.get("thesis_key")
+    if not entity:
+        return None
+    return next((row["idea_id"] for row in c.read_live_rows("investment_review_log")
+                 if row.get("entity_id") == entity and row.get("thesis_key") == thesis
+                 and row.get("검토 상태") != "종료" and row.get("현재 단계") != "제외"), None)
+
+
+UNKNOWN = object()  # tracked_before not taken yet
+
+
+def track_candidate(cand, now_day=None, tracked_before=UNKNOWN):
+    """promote_candidate as a result: {"outcome": success | already_tracked | rejected, "reason_code",
+    "idea_id"}. already_tracked means the company + thesis had an active idea before this request;
+    pass tracked_before (taken before an interrupted attempt) so a retry is not counted as one."""
+    before = active_candidate_idea(cand) if tracked_before is UNKNOWN else tracked_before
+    try:
+        idea_id = promote_candidate(cand, now_day)
+    except Refused as refusal:
+        return {"outcome": "rejected", "reason_code": refusal.code, "idea_id": None}
+    return {"outcome": "already_tracked" if before else "success", "reason_code": None, "idea_id": idea_id}
+
+
 def promote_candidate(cand, now_day=None):
     """Register the user's choice to track a screener candidate. No signal is invented.
 
@@ -73,7 +106,7 @@ def promote_candidate(cand, now_day=None):
     identity = cand.get("identity") or {}
     eps = cand.get("eps") or {}
     if not candidates.normalize_id(cid) or not identity.get("verified") or not identity.get("entity_id"):
-        raise ValueError("candidate identity not verified")
+        raise Refused("identity_unverified", "candidate identity not verified")
     entity, ticker, thesis = identity["entity_id"], identity.get("ticker", ""), cand["thesis_key"]
     active = [row for row in c.read_live_rows("investment_review_log")
               if row.get("entity_id") == entity and row.get("thesis_key") == thesis
@@ -82,13 +115,13 @@ def promote_candidate(cand, now_day=None):
         if cid in json.loads(row.get("origin_candidate_ids") or "[]"):
             return row["idea_id"]
     if not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", ticker) or not eps.get("eps_currency"):
-        raise ValueError("candidate ticker or estimate currency missing")
+        raise Refused("ticker_or_currency_missing", "candidate ticker or estimate currency missing")
     # Freshness is the real last observation, as a KST date; a future observation is refused.
     observed = date.fromisoformat(candidates.kst_date(str(cand.get("observed_at", ""))))
     if observed > today:
-        raise ValueError("candidate observation in the future")
+        raise Refused("observation_in_future", "candidate observation in the future")
     if (today - observed).days > c.policy()["signal_lookback_days"]:
-        raise ValueError("candidate observation too old; view the latest screen first")
+        raise Refused("observation_too_old", "candidate observation too old; view the latest screen first")
     for row in active:
         linked = json.loads(row.get("origin_candidate_ids") or "[]")
         return add_entry.process({"target_table": "investment_review_log", "data": {
@@ -96,7 +129,7 @@ def promote_candidate(cand, now_day=None):
             "변경 사유": f"동일 가설에 후보 연결: {cid} 버전 {cand['candidate_version']}",
             "최근 점검일": row.get("최근 점검일", "")}})
     if len(c.active_ideas()) >= c.policy()["max_active_ideas"]:
-        raise ValueError("active idea capacity reached; review existing ideas first")
+        raise Refused("capacity", "active idea capacity reached; review existing ideas first")
     snapshot = cand.get("source_snapshot") or {}
     price = cand.get("price") or {}
     price_text = (f"주가 {price['price_start_date']}→{price['price_end_date']} {price['price_pct_90']:+.1f}%"

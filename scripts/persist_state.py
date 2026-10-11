@@ -21,7 +21,7 @@ def state_area(path):
 STATE_FILES = ['source_state.json', 'seen_sources.json', 'notify_state.json', 'run_status.json', 'daily_runs.json',
                'telegram_offset.json', 'command_queue.json', 'pending_tables.json', 'reddit_watch.csv',
                'model_budget.json', 'candidate_alerts.json', 'candidate_alerts.pre_material.json',
-               'discovery_timing.json']
+               'discovery_timing.json', 'candidate_feedback.json']
 
 
 def main(message=None):

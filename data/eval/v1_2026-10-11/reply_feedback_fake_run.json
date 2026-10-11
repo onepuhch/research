@@ -1,0 +1,252 @@
+{
+ "cases": [
+  {
+   "input": {
+    "update_id": 1,
+    "text": "관심없음",
+    "reply_to_message_id": 501
+   },
+   "replies": [
+    "판단 기록: AAA · 관심없음. 추적 등록과 알림 예약은 바꾸지 않습니다. 관심 기록이며 투자 판단의 정답으로 쓰지 않습니다."
+   ]
+  },
+  {
+   "input": {
+    "update_id": 2,
+    "text": "자세히",
+    "reply_to_message_id": 501
+   },
+   "replies": [
+    "ℹ️ 알림 당시 버전 CV-2CDB87D3DC8F6466 · 최신 카드 버전 CV-2CDB87D3DC8F6466 (알림 이후 숫자 변화 없음)\n\n<b>발굴 후보 · AAA AAA Inc.</b>\nCAN-05D6842AF46DC2C6 · Semiconductors · 미추적\n사용자 판단: 관심없음 (2026-09-25, 이 카드와 같은 버전). 관심 기록이며 검증 결과가 아닙니다.\n\n<b>무엇으로 돈을 버나</b>\n회사 설명 확인 중 (AAA)\n\n<b>후보가 된 이유</b>\n· A 1위: 이익수익률 변화 +2.00%p (내년 EPS  …(이하 생략)"
+   ]
+  },
+  {
+   "input": {
+    "update_id": 3,
+    "text": "추적",
+    "reply_to_message_id": 501
+   },
+   "replies": [
+    "추적 등록 완료: AAA → IDEA-0001\n다음 auto 일간 실행(09:17 KST 무렵)에서 EPS 예상·주가·분기 숫자 수집을 시작합니다. 자료 확보 여부는 /data로 확인하세요. 추적 선택은 검증 완료나 매수 추천이 아닙니다."
+   ]
+  },
+  {
+   "input": {
+    "update_id": 4,
+    "text": "추적",
+    "reply_to_message_id": 502
+   },
+   "replies": [
+    "BBB 알림은 제공처 값 불일치(PI-TEST)로 표시되어 답장으로는 추적 등록하지 않았습니다. 최신 상세 <code>/candidate CAN-BBE40B0D680651A6</code>를 확인한 뒤 <code>/track CAN-BBE40B0D680651A6</code>로 직접 선택해 주세요."
+   ]
+  },
+  {
+   "input": {
+    "update_id": 5,
+    "text": "보류",
+    "reply_to_message_id": 168
+   },
+   "replies": [
+    "후보 알림에 대한 답장이 아니어서 판단을 기록하지 않았습니다. 후보 알림 메시지(🆕 새 발굴 후보 등)에 답장으로 '추적', '관심없음', '보류', '자세히' 중 한 낱말만 보내 주세요."
+   ]
+  },
+  {
+   "input": {
+    "update_id": 6,
+    "text": "이 회사 좋네",
+    "reply_to_message_id": 501
+   },
+   "replies": [
+    "지원 명령어\n/screen - 최신 EPS 상향 발굴 후보 상위 5개\n/candidate CAN-0123456789ABCDEF - 후보 카드 상세\n/track ALGM - 최근 14일의 최신 종목 신호를 추적 등록\n/track SIG-0001 - 지정한 신호를 추적 등록\n/track CAN-0123456789ABCDEF - 발굴 후보를 추적 등록\n/list - 활성 아이디어 목록\n/history CRDO - 같은 정의의 날짜별 숫자 관측\n/data - 데이터 누적 현황\n/help - 명령어 목록\n\n후보 알림에 답장: 추적 · 관심없 …(이하 생략)"
+   ]
+  }
+ ],
+ "command_queue.json": {
+  "1": {
+   "reply_to_message_id": 501,
+   "reply_to_date": 1790305200,
+   "reply_to_from_bot": true,
+   "message_date": 1790308800,
+   "status": "done",
+   "received_at": "2026-10-11T10:51:01+00:00",
+   "replies": [],
+   "completed_at": "2026-10-11T10:51:01+00:00"
+  },
+  "2": {
+   "reply_to_message_id": 501,
+   "reply_to_date": 1790305200,
+   "reply_to_from_bot": true,
+   "message_date": 1790308800,
+   "status": "done",
+   "received_at": "2026-10-11T10:51:01+00:00",
+   "replies": [],
+   "completed_at": "2026-10-11T10:51:01+00:00"
+  },
+  "3": {
+   "reply_to_message_id": 501,
+   "reply_to_date": 1790305200,
+   "reply_to_from_bot": true,
+   "message_date": 1790308800,
+   "status": "done",
+   "received_at": "2026-10-11T10:51:01+00:00",
+   "replies": [],
+   "completed_at": "2026-10-11T10:51:01+00:00"
+  },
+  "4": {
+   "reply_to_message_id": 502,
+   "reply_to_date": 1790305200,
+   "reply_to_from_bot": true,
+   "message_date": 1790308800,
+   "status": "done",
+   "received_at": "2026-10-11T10:51:01+00:00",
+   "replies": [],
+   "completed_at": "2026-10-11T10:51:01+00:00"
+  },
+  "5": {
+   "reply_to_message_id": 168,
+   "reply_to_date": 1790305200,
+   "reply_to_from_bot": true,
+   "message_date": 1790308800,
+   "status": "done",
+   "received_at": "2026-10-11T10:51:01+00:00",
+   "replies": [],
+   "completed_at": "2026-10-11T10:51:01+00:00"
+  },
+  "6": {
+   "status": "done",
+   "received_at": "2026-10-11T10:51:01+00:00",
+   "replies": [],
+   "completed_at": "2026-10-11T10:51:01+00:00"
+  }
+ },
+ "candidate_feedback.json": {
+  "version": 1,
+  "events": [
+   {
+    "kind": "reply",
+    "scope": "telegram:primary",
+    "update_id": 1,
+    "message_at": "2026-09-25T04:00:00+00:00",
+    "received_at": "2026-10-11T10:51:01+00:00",
+    "event_key": "NASDAQ:AAA|eps-revision-review:v1|new_discovery",
+    "candidate_id": "CAN-05D6842AF46DC2C6",
+    "candidate_version": "CV-2CDB87D3DC8F6466",
+    "reply_to_message_id": 501,
+    "action": "dismiss",
+    "source": "telegram_reply",
+    "disputed_source": [],
+    "tracked_before": null
+   },
+   {
+    "kind": "reply",
+    "scope": "telegram:primary",
+    "update_id": 2,
+    "message_at": "2026-09-25T04:00:00+00:00",
+    "received_at": "2026-10-11T10:51:01+00:00",
+    "event_key": "NASDAQ:AAA|eps-revision-review:v1|new_discovery",
+    "candidate_id": "CAN-05D6842AF46DC2C6",
+    "candidate_version": "CV-2CDB87D3DC8F6466",
+    "reply_to_message_id": 501,
+    "action": "detail",
+    "source": "telegram_reply",
+    "disputed_source": [],
+    "tracked_before": null
+   },
+   {
+    "kind": "reply",
+    "scope": "telegram:primary",
+    "update_id": 3,
+    "message_at": "2026-09-25T04:00:00+00:00",
+    "received_at": "2026-10-11T10:51:01+00:00",
+    "event_key": "NASDAQ:AAA|eps-revision-review:v1|new_discovery",
+    "candidate_id": "CAN-05D6842AF46DC2C6",
+    "candidate_version": "CV-2CDB87D3DC8F6466",
+    "reply_to_message_id": 501,
+    "action": "track",
+    "source": "telegram_reply",
+    "disputed_source": [],
+    "tracked_before": null
+   },
+   {
+    "kind": "track_result",
+    "scope": "telegram:primary",
+    "update_id": 3,
+    "operation_key": "telegram:primary:3:track",
+    "event_key": "NASDAQ:AAA|eps-revision-review:v1|new_discovery",
+    "candidate_id": "CAN-05D6842AF46DC2C6",
+    "outcome": "success",
+    "reason_code": null,
+    "idea_id": "IDEA-0001",
+    "processed_version": "CV-2CDB87D3DC8F6466",
+    "candidate_state": "current",
+    "at": "2026-10-11T10:51:01+00:00"
+   },
+   {
+    "kind": "reply",
+    "scope": "telegram:primary",
+    "update_id": 4,
+    "message_at": "2026-09-25T04:00:00+00:00",
+    "received_at": "2026-10-11T10:51:01+00:00",
+    "event_key": "NASDAQ:BBB|eps-revision-review:v1|new_discovery",
+    "candidate_id": "CAN-BBE40B0D680651A6",
+    "candidate_version": "CV-28EDE6B3181B6750",
+    "reply_to_message_id": 502,
+    "action": "track",
+    "source": "telegram_reply",
+    "disputed_source": [
+     "PI-TEST"
+    ],
+    "tracked_before": null
+   },
+   {
+    "kind": "track_result",
+    "scope": "telegram:primary",
+    "update_id": 4,
+    "operation_key": "telegram:primary:4:track",
+    "event_key": "NASDAQ:BBB|eps-revision-review:v1|new_discovery",
+    "candidate_id": "CAN-BBE40B0D680651A6",
+    "outcome": "rejected",
+    "reason_code": "disputed_source",
+    "idea_id": null,
+    "processed_version": "CV-28EDE6B3181B6750",
+    "candidate_state": "current",
+    "at": "2026-10-11T10:51:01+00:00"
+   }
+  ]
+ },
+ "summary": {
+  "normal": {
+   "alerts": 1,
+   "companies": 1,
+   "latest": {
+    "track": 1,
+    "dismiss": 0,
+    "hold": 0
+   },
+   "no_judgment": 0,
+   "detail_only": 0,
+   "judged_companies": 1
+  },
+  "disputed": {
+   "alerts": 1,
+   "companies": 1,
+   "latest": {
+    "track": 1,
+    "dismiss": 0,
+    "hold": 0
+   },
+   "no_judgment": 0,
+   "detail_only": 0,
+   "judged_companies": 1
+  },
+  "detail_events": 1,
+  "track_requests": 2,
+  "track_outcomes": {
+   "success": 1,
+   "rejected": 1
+  },
+  "track_reasons": {
+   "disputed_source": 1
+  }
+ }
+}

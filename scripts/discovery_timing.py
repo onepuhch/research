@@ -534,7 +534,8 @@ def render(store: dict | None = None) -> str:
               f"실패 후 재시도 대기 {p['failed']} · "
               f"식별 불가 {p['unidentified']} (상태별 보유/대상: {states}). 하루 추가 요청 {price_settings()['requests_per_day']}회 이내로 "
               "대표 카드·알림 경험 기업부터 순서대로 수집합니다. 시세가 없는 기업을 분모에서 빼지 않습니다.", ""]
-    return "\n".join(lines)
+    import candidate_feedback
+    return "\n".join(lines + candidate_feedback.render_lines())
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -7,7 +7,7 @@ import common as c
 
 
 PROTECTED = ("candidate_alerts.json", "notify_state.json", "command_queue.json", "telegram_offset.json",
-             "daily_runs.json")
+             "daily_runs.json", "candidate_feedback.json")
 # A cache-only run must not spend or record any SEC/model request, nor rewrite a stored observation.
 CACHE_ONLY = ("model_budget.json", "candidate_context_state.json")
 

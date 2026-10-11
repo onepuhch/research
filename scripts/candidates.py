@@ -1142,6 +1142,10 @@ def card_lines(cand: dict, stale: list[str] | None = None) -> list[tuple[str, st
     lines = [("title", f"{headline(cand)} · {cand['identity']['ticker']} {cand.get('name') or ''}".strip()),
              ("meta", f"{cand['candidate_id'] or 'ID 없음(거래소 미확인)'} · {cand.get('industry') or '업종 미확인'}"
                       f" · {tracking_label(cand)}")]
+    import candidate_feedback
+    reaction = candidate_feedback.card_note(cand)
+    if reaction:
+        lines.append(("meta", reaction))
     if stale:
         lines.append(("warn", "최신 수집 실패 또는 오래된 결과: 마지막 유효 관측 " + cand["observed_at"][:10]))
     if cand["run_quality"] == "partial":
