@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "events": [
+    {
+      "kind": "reply",
+      "scope": "telegram:primary",
+      "update_id": 871890993,
+      "message_at": "2026-10-11T13:07:42+00:00",
+      "received_at": "2026-10-11T22:07:57+00:00",
+      "event_key": "NYSE:INSW|eps-revision-review:v1|new_discovery",
+      "candidate_id": "CAN-71C24817F9DA0FA8",
+      "candidate_version": "CV-893D72B4D0EC971F",
+      "reply_to_message_id": 167,
+      "action": "detail",
+      "source": "telegram_reply",
+      "disputed_source": [
+        "PI-20261010-yahoo-eps"
+      ],
+      "tracked_before": null
+    }
+  ]
+}
