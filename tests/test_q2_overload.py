@@ -85,6 +85,27 @@ class OverloadCallTest(RunFixture):
             self.assertEqual(c.model_calls_remaining("candidate_context"), 6)
             self.assertIsNotNone(c.model_overload(MODEL))
 
+    def test_a_429_keeps_which_limit_it_hit_and_nothing_else(self):
+        body = {"error": {"code": 429, "message": "Quota exceeded for project 1234567890", "details": [
+            {"@type": "type.googleapis.com/google.rpc.QuotaFailure", "violations": [
+                {"quotaMetric": "m", "quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+                 "quotaDimensions": {"model": MODEL}, "quotaValue": "20"}]},
+            {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": "37s"}]}}
+        error = HTTPError("u", 429, "x", {}, io.BytesIO(json.dumps(body).encode()))
+        with mock.patch.object(extract, "urlopen", side_effect=error):
+            with self.assertRaisesRegex(c.ModelBudgetExhausted, "rate_limited"):
+                extract.call_gemini_prompt("p", "k", "extract")
+        blocked = c.model_provider_blocked()
+        self.assertEqual(blocked["quota"], {"violations": [{"quotaId": "GenerateRequestsPerDayPerProjectPerModel-FreeTier",
+                                                            "quotaValue": "20"}], "retry_delay": "37s"})
+        self.assertIsNone(blocked["retry_after_s"])  # kept as evidence only: the block still lasts to the KST day
+        self.assertNotIn("1234567890", (self.data / "model_budget.json").read_text(encoding="utf-8"))
+        with mock.patch.object(extract, "urlopen", side_effect=HTTPError("u", 429, "x", {}, None)):
+            c.atomic_json(self.data / "model_budget.json", {"days": {}})
+            with self.assertRaisesRegex(c.ModelBudgetExhausted, "rate_limited"):
+                extract.call_gemini_prompt("p", "k", "extract")  # no body: blocked the same way
+        self.assertNotIn("quota", c.model_provider_blocked())
+
 
 class DraftOverloadTest(RunFixture):
     def setUp(self):

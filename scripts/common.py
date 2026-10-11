@@ -288,9 +288,11 @@ def model_provider_blocked(now: datetime | None = None) -> dict | None:
     return block if datetime.fromisoformat(block["until"]) > now else None
 
 
-def block_model_provider(reason: str, retry_after_s: float | None = None, now: datetime | None = None) -> dict:
+def block_model_provider(reason: str, retry_after_s: float | None = None, now: datetime | None = None,
+                         quota: dict | None = None) -> dict:
     """Stop model requests until the server's Retry-After, else the next KST day. A 429 is not
-    assumed to mean the daily quota is spent; the reason stays 'provider_rate_limited'."""
+    assumed to mean the daily quota is spent; the reason stays 'provider_rate_limited'. `quota` is
+    the evidence the server gave (which limit, its value, its retry delay); it is kept, not used."""
     now = now or datetime.now(timezone.utc)
     if retry_after_s is not None:
         until = now + timedelta(seconds=retry_after_s)
@@ -302,6 +304,8 @@ def block_model_provider(reason: str, retry_after_s: float | None = None, now: d
     state["blocked"] = {"reason": reason, "since": now.isoformat(timespec="seconds"),
                         "until": until.astimezone(timezone.utc).isoformat(timespec="seconds"),
                         "retry_after_s": retry_after_s}
+    if quota:
+        state["blocked"]["quota"] = quota
     atomic_json(path, state)
     return state["blocked"]
 
