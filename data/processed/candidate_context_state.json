@@ -103,8 +103,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2027-12-31|7.78733",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
+      "eps_key": "2027-12-31|7.79006",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-80DB053BD25896A0"
@@ -116,8 +116,8 @@
         "DOC-80DB053BD25896A0"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-4AF8EDED57B44FFC",
       "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
       "quality": "complete",
@@ -191,7 +191,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_error": "HTTPError",
       "context_id": "CTX-3A49D7297BE7A680",
       "context_input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
@@ -265,8 +265,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2027-12-31|17.405",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
+      "eps_key": "2027-12-31|17.655",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9FC60A7023735EC9",
@@ -279,8 +279,8 @@
         "DOC-DF8157DE720BEF5F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-3052BA46969F76BA",
       "context_input_sha": "3052ba46969f76baff47b9ebb00b79ebdec646f47d432ce4d227b33969ccf187",
       "quality": "complete",
@@ -369,8 +369,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2027-12-31|51.76689",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
+      "eps_key": "2027-12-31|50.68686",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-683FD7B3F9B87824",
@@ -381,8 +381,8 @@
         "DOC-BE1000530D20CF2E"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
       "quality": "complete",
@@ -512,10 +512,10 @@
         "exchange": "NYSE",
         "name": "Par Pacific Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-03T05:43:20+00:00",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
       "eps_key": "2027-12-31|14.84237",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -524,14 +524,42 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-101A442B7322BF6D",
+        "DOC-3EBE91EBDD47F27C",
         "DOC-45EC7F1F3C20E448"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-10T05:43:20+00:00",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-B16E725406B87B63",
       "context_input_sha": "b16e725406b87b6379f19ce47501a0e83259e4135bdeb929c4031daad8577768",
-      "draft_error": "HTTPError"
+      "draft_error": "HTTPError",
+      "update_checks": [
+        {
+          "document_id": "DOC-101A442B7322BF6D",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-3EBE91EBDD47F27C",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-45EC7F1F3C20E448",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-3D7A7E3B7BFBE2CE": {
       "status": "no_relevant_document",
@@ -574,8 +602,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2027-12-31|43.1387",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
+      "eps_key": "2027-12-31|42.27417",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9DA9F71500981FB2"
@@ -588,8 +616,8 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-C6D280F99B770EDC",
       "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
       "update_checks": [
@@ -722,7 +750,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-489EBDB3A330DB87",
       "context_input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
       "update_checks": [
@@ -764,7 +792,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_next_at": "2026-10-08T07:15:56+00:00",
       "update_checks": [
         {
@@ -963,7 +991,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-1CD87BF73F9D0762",
       "context_input_sha": "1cd87bf73f9d0762ffe5bad0e43471ea71d0947218c488e0fe263fffea95756d",
       "draft_error": "HTTPError",
@@ -1004,7 +1032,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_error": "TimeoutError",
       "draft_next_at": "2026-10-10T06:37:58+00:00",
       "draft_failure": "failed",
@@ -1138,8 +1166,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2027-12-31|26.7963",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
+      "eps_key": "2027-12-31|26.67825",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-D9C0CECC172F9418"
@@ -1150,8 +1178,8 @@
         "DOC-D9C0CECC172F9418"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
       "update_checks": [
@@ -1178,8 +1206,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2027-12-31|6.24431",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
+      "eps_key": "2027-12-31|6.39117",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-A19880431D2CB470"
@@ -1190,8 +1218,8 @@
         "DOC-A19880431D2CB470"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-00C1D48A4294E166",
       "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
       "update_checks": [
@@ -1399,7 +1427,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-4516CDD65F6EAE41",
       "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
       "update_checks": [
@@ -1439,7 +1467,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
@@ -1478,7 +1506,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-B80220E5DD347856",
       "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
       "update_checks": [
@@ -1518,7 +1546,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
@@ -1591,7 +1619,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "update_checks": [
         {
           "document_id": "DOC-39C08ABD9C77B7B0",
@@ -1621,10 +1649,10 @@
         "exchange": "NYSE",
         "name": "CVR Energy, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-03T05:43:20+00:00",
+      "attempted_at": "2026-10-11T00:33:11+00:00",
       "eps_key": "2027-12-31|3.50959",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -1633,16 +1661,44 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-8419A30FF72F08B9",
+        "DOC-8855BD37731A714F",
         "DOC-10DCC661422C1107"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-10T05:43:20+00:00",
+      "next_eligible_at": "2026-10-18T00:33:11+00:00",
       "draft_status": "draft_ready",
       "draft_error": "TimeoutError",
       "draft_failure": "failed",
       "draft_http_status": null,
       "context_id": "CTX-B31EF21C734B1D73",
-      "context_input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038"
+      "context_input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038",
+      "update_checks": [
+        {
+          "document_id": "DOC-8419A30FF72F08B9",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-8855BD37731A714F",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-10DCC661422C1107",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-14DF13D991DA6490": {
       "status": "success",
@@ -1683,7 +1739,7 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "failed",
+      "draft_status": "provider_rate_limited",
       "draft_next_at": "2026-10-10T11:18:47+00:00",
       "draft_error": "HTTPError",
       "draft_http_status": 503,
@@ -1750,7 +1806,7 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-CA0C8E92D2718B06": {
@@ -1833,7 +1889,7 @@
         }
       ],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "provider_rate_limited"
     },
     "CAN-5790099EDC6F3301": {
       "status": "success",
@@ -1873,7 +1929,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-ECB2C73CA19DA4AB": {
@@ -1974,7 +2030,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "deferred_budget",
+      "draft_status": "provider_rate_limited",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-FD88AA0D924CF1C8": {
@@ -2196,6 +2252,11 @@
       "companies": 10,
       "http_attempts": 38,
       "folded_companies": 2
+    },
+    "2026-10-11": {
+      "companies": 8,
+      "http_attempts": 28,
+      "folded_companies": 3
     }
   },
   "documents_by_source": {
@@ -2300,6 +2361,10 @@
     "0000919574-26-005942|https://www.sec.gov/Archives/edgar/data/913290/000091957426005942/p15060813_6k.htm": "DOC-E3806234A273B4D0",
     "0001104659-26-093033|https://www.sec.gov/Archives/edgar/data/1679049/000110465926093033/tm2622617d1_ex99-1.htm": "DOC-66CDE89BADA482E2",
     "0001534504-26-000033|https://www.sec.gov/Archives/edgar/data/1534504/000153450426000033/pbf-20260930.htm": "DOC-7235E4C9914E09E9",
-    "0001193125-26-394108|https://www.sec.gov/Archives/edgar/data/1534504/000119312526394108/d175053d8k.htm": "DOC-1B2A4D993FF57372"
+    "0001193125-26-394108|https://www.sec.gov/Archives/edgar/data/1534504/000119312526394108/d175053d8k.htm": "DOC-1B2A4D993FF57372",
+    "0001437749-26-031335|https://www.sec.gov/Archives/edgar/data/821483/000143774926031335/ex_1020279_source.htm": "DOC-101A442B7322BF6D",
+    "0001437749-26-031335|https://www.sec.gov/Archives/edgar/data/821483/000143774926031335/parr20260928_8k.htm": "DOC-3EBE91EBDD47F27C",
+    "0001376139-26-000041|https://www.sec.gov/Archives/edgar/data/1376139/000137613926000041/exhibit991-investorprese.htm": "DOC-8419A30FF72F08B9",
+    "0001376139-26-000041|https://www.sec.gov/Archives/edgar/data/1376139/000137613926000041/cvi-20260908.htm": "DOC-8855BD37731A714F"
   }
 }
