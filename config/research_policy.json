@@ -67,7 +67,12 @@
   },
   "candidate_alerts": {
     "bootstrap_max": 1,
-    "entity_new_cooldown_days": 14
+    "entity_new_cooldown_days": 14,
+    "unconfirmed_jump_hold": {
+      "threshold": 0.1,
+      "threshold_status": "provisional",
+      "note": "U3 2026-10-11: chosen from 20 past new-discovery alerts and one anomalous day (2026-10-10); not validated, to be reviewed with observations after registration"
+    }
   },
   "model_budget": {
     "extract": 11,

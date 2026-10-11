@@ -34,6 +34,14 @@ It shares the daily limit, the one-company-a-day rule and the 14-day gap with ne
 bootstrap company's gap starts at the bootstrap date (no receipt is made up for it). In the screen
 channel, re-review changes alternate with new discoveries.
 Tracked-company risk alerts are sent by notify.py, not here, and do not use this budget.
+
+Unconfirmed jumps (U3, provisional): a screener new discovery whose next-year EPS estimate moved more
+than unconfirmed_jump_hold.threshold (10%, a provisional value, not a validated one) against the latest
+usable snapshot of an earlier KST day, while analysts, up30 and down30 all stayed the same, is held
+(ledger "holds"), not sent. It is released only on a later KST day, when the company is again an
+eligible new discovery and the estimate stayed within the threshold of the held value; a rerun on the
+same day never releases it. A hold uses no slot and is not an event. On 2026-10-10 one provider
+snapshot changed 660 of 2,407 estimates for that day only; this keeps such values from being announced.
 """
 from __future__ import annotations
 
@@ -44,7 +52,7 @@ import os
 import re
 import sys
 import uuid
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -52,6 +60,7 @@ import common as c  # noqa: E402
 import candidates  # noqa: E402
 import material_updates  # noqa: E402
 import notify  # noqa: E402
+import screen_revisions  # noqa: E402
 
 NEW = "new_discovery"
 RECOMMENDATION = "recommendation"
@@ -60,6 +69,10 @@ SPACED = (NEW, MATERIAL)  # events under the per-company gap
 COUNTED = ("reserved", "sent", "uncertain")
 RETRYABLE = ("failed", "released")
 DEFAULTS = {"bootstrap_max": 1, "entity_new_cooldown_days": 14}
+HOLD_DEFAULTS = {"threshold": 0.10, "threshold_status": "provisional"}
+HOLD_UNCHANGED = ("analysts", "up30", "down30")
+HOLD_EPS = ("eps_now", "eps_target_period") + HOLD_UNCHANGED
+KST = timezone(timedelta(hours=9))
 
 
 def ledger_path() -> Path:
@@ -170,6 +183,132 @@ def screen_items(index: dict) -> tuple[list[dict], list[dict]]:
         if cand["classification"] in ("found", "recommended"):
             new.append({**base, "event": NEW, "key": logical_key(base["entity_id"], base["thesis_key"], NEW)})
     return recommended, new
+
+
+# ------------------------------------------------------------------ unconfirmed jumps (U3)
+
+def hold_settings() -> dict:
+    return {**HOLD_DEFAULTS, **settings().get("unconfirmed_jump_hold", {})}
+
+
+def kst_day(stamp: str | None) -> str | None:
+    try:
+        return datetime.fromisoformat(stamp).astimezone(KST).date().isoformat()
+    except (TypeError, ValueError):
+        return None
+
+
+def snapshot_day(path: Path) -> str | None:
+    """KST day of a snapshot from its name: a UTC timestamp, or a KST date for schema 1 names."""
+    if re.match(r"\d{4}-\d{2}-\d{2}\.json\.gz$", path.name):
+        return path.name[:10]
+    try:
+        moment = datetime.strptime(screen_revisions.snapshot_key(path), "%Y%m%dT%H%M%SZ")
+    except ValueError:
+        return None
+    return moment.replace(tzinfo=timezone.utc).astimezone(KST).date().isoformat()
+
+
+def baseline_rows(before_day: str) -> tuple[str | None, dict[str, dict]]:
+    """Rows by ticker of the latest usable snapshot of a KST day before `before_day` (a ticker listed
+    twice is left out). An unreadable snapshot is skipped; none found means nothing is compared."""
+    for path in reversed(screen_revisions.snapshots()):
+        day = snapshot_day(path)
+        if day is None or day >= before_day:
+            continue
+        try:
+            snap = screen_revisions.load_snapshot(path)
+        except (OSError, EOFError, ValueError):
+            continue
+        rows = (snap.get("derived") or {}).get("rows") or []
+        if (snap.get("run") or {}).get("status") == "failed" or not rows:
+            continue
+        by_ticker: dict[str, dict] = {}
+        twice = set()
+        for row in rows:
+            if row.get("ticker") in by_ticker:
+                twice.add(row.get("ticker"))
+            by_ticker[row.get("ticker")] = row
+        return path.name, {t: r for t, r in by_ticker.items() if t not in twice}
+    return None, {}
+
+
+def number(value) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and value == value
+
+
+def move(old: float, new: float) -> float:
+    """Relative change, rounded so an exact 10% is not read as more (float noise)."""
+    return round(abs(new / old - 1), 9)
+
+
+def silent_jump(eps: dict, base: dict | None, threshold: float) -> bool:
+    """The estimate moved more than the threshold while analysts, up30 and down30 stayed the same."""
+    if not base or base.get("eps_target_period") != eps.get("eps_target_period"):
+        return False
+    old, new = base.get("eps_now"), eps.get("eps_now")
+    if not number(old) or not number(new) or old == 0:
+        return False
+    return move(old, new) > threshold and all(base.get(k) == eps.get(k) for k in HOLD_UNCHANGED)
+
+
+def maintained(eps: dict, held: dict, threshold: float) -> bool:
+    old, new = held.get("eps_now"), eps.get("eps_now")
+    return (eps.get("eps_target_period") == held.get("eps_target_period") and number(old) and number(new)
+            and old != 0 and move(old, new) <= threshold)
+
+
+def hold_unconfirmed(screen: list[dict], index: dict, ledger: dict, day: str) -> tuple[list[dict], dict]:
+    """Screener new discoveries left to select, and what was held or released (module docstring).
+    Items already in the ledger as events, and bootstrap keys, are never held."""
+    cfg = hold_settings()
+    threshold = float(cfg["threshold"])
+    holds = ledger.setdefault("holds", {})
+    bootstrap = set((ledger.get("bootstrap") or {}).get("keys", []))
+    current_day = kst_day(index.get("observed_at")) or day
+    snapshot = ((index.get("source_snapshot") or {}).get("path") or "").rsplit("/", 1)[-1] or None
+    base_name, base = None, None
+    kept: list[dict] = []
+    report = {"held": [], "released": [], "not_compared": 0}
+    for item in screen:
+        key = item["key"]
+        if item["event"] != NEW or key in ledger["events"] or key in bootstrap:
+            kept.append(item)
+            continue
+        eps = item["cand"].get("eps") or {}
+        hold = holds.get(key)
+        if hold and hold.get("status") == "held":
+            if hold.get("day", "") >= day:
+                report["held"].append(key)  # the same KST day: a rerun never releases it
+                continue
+            if maintained(eps, hold["current"], threshold):
+                hold.update(status="released", released_day=day,
+                            released={"snapshot": snapshot, **{k: eps.get(k) for k in HOLD_EPS}})
+                report["released"].append(key)
+                kept.append(item)
+                continue
+            hold.update(status="not_maintained", resolved_day=day)  # checked again below as new
+        if base is None:
+            base_name, base = baseline_rows(current_day)
+        previous = base.get(item["cand"]["identity"].get("ticker"))
+        if previous is None:
+            report["not_compared"] += 1
+        if silent_jump(eps, previous, threshold):
+            earlier = holds.get(key)
+            holds[key] = {
+                "entity_id": item["entity_id"], "candidate_id": item.get("candidate_id"),
+                "ticker": item["cand"]["identity"].get("ticker"), "day": day, "status": "held",
+                "reason": "provider_silent_jump", "threshold": threshold,
+                "threshold_status": cfg["threshold_status"],
+                "baseline": {"snapshot": base_name, **{k: previous.get(k) for k in HOLD_EPS}},
+                "current": {"snapshot": snapshot, **{k: eps.get(k) for k in HOLD_EPS}},
+                "history": (earlier.get("history", []) + [{k: v for k, v in earlier.items() if k != "history"}]
+                            if earlier else []),
+            }
+            report["held"].append(key)
+            continue
+        kept.append(item)
+    return kept, report
 
 
 def interleave(new: list[dict], updates: list[dict]) -> list[dict]:
@@ -364,6 +503,10 @@ def run(dry_run: bool = False, material_report: str | None = None) -> dict:
             recent[entity] = start
     recommended, screen = screen_items(index)
     updates, diagnostics = material_step(index, ledger, dry_run)
+    before = json.dumps(ledger.get("holds"), sort_keys=True)
+    screen, holds = hold_unconfirmed(screen, index, ledger, day)
+    if not dry_run and json.dumps(ledger.get("holds"), sort_keys=True) != before:
+        c.atomic_json(ledger_path(), ledger)
     if material_report:
         c.atomic_json(Path(material_report), {"day": day, "version": material_updates.VERSION,
                                               "eligible": [x["key"] for x in updates], "candidates": diagnostics})
@@ -377,7 +520,9 @@ def run(dry_run: bool = False, material_report: str | None = None) -> dict:
     report = {"slots": slots, "selected": [x["key"] for x in chosen], "bootstrap": bootstrap,
               "material_eligible": len(updates),
               "legacy_unknown_entity": unknown_legacy,
-              "retry_pending": len(retry), "quarantined": quarantined, "sent": 0, "failed": 0, "uncertain": 0}
+              "retry_pending": len(retry), "quarantined": quarantined, "sent": 0, "failed": 0, "uncertain": 0,
+              "held_unconfirmed": holds["held"], "released_unconfirmed": holds["released"],
+              "hold_not_compared": holds["not_compared"]}
     if dry_run:
         for item in chosen:
             print(f"--- {item['channel']} {item['key']}\n{message(item)}\n")

@@ -135,6 +135,20 @@ class TimingTest(MaterialFixture):
         self.assertIn("시세 미수집 1", text)
         self.assertNotIn("적중률:", text)
 
+    def test_provider_inconsistency_samples_are_counted_apart_and_records_stay(self):
+        self.write_snapshot("2026-10-01", [row("AAA"), row("BBB")])
+        self.update("2026-10-01T10:00:00+00:00")
+        self.assertNotIn("불일치 표본", t.render())
+        before = self.records()[KEY]
+        c.atomic_json(t.inconsistency_path(), {"version": 1, "entries": [
+            {"id": "PI-X", "affected_observations": [{"record": KEY, "fields": ["first_pass"]}],
+             "affected_alerts": [{"key": "NASDAQ:ZZZ|eps-revision-review:v1|new_discovery"}]}]})  # unknown: ignored
+        text = t.render()
+        self.assertIn("제공처 값 불일치 표본 1곳(AAA; PI-X)", text)
+        self.assertIn("불일치 표본(별도): 시세 미수집 1", text)
+        self.assertEqual(self.records()[KEY], before)  # nothing is moved or rewritten
+        self.assertEqual(t.flagged_records({"records": {KEY: {}}}), {KEY: ["PI-X"]})
+
     def test_broken_store_is_not_replaced_by_an_empty_one(self):
         t.store_path().write_text(json.dumps({"records": []}), encoding="utf-8")
         with self.assertRaises(ValueError):

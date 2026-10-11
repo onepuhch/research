@@ -461,6 +461,23 @@ def price_summary(store: dict, batches: list[dict]) -> dict:
             "by_state": by_state, "queue_fixed_at": queue.get("fixed_at")}
 
 
+def inconsistency_path() -> Path:
+    return c.DATA_DIR / "provider_inconsistencies.json"
+
+
+def flagged_records(store: dict) -> dict[str, list[str]]:
+    """Record key -> ids of recorded provider inconsistencies that touch its fixed observations or its
+    alert (data/processed/provider_inconsistencies.json, entries only added). The fixed first values
+    stay as they are; reports count these samples apart."""
+    flags: dict[str, list[str]] = {}
+    for entry in c.read_json(inconsistency_path(), {}).get("entries", []):
+        keys = {o.get("record") for o in entry.get("affected_observations", [])}
+        keys |= {a.get("key", "").rsplit("|", 1)[0] for a in entry.get("affected_alerts", [])}
+        for key in sorted(k for k in keys if k in store["records"]):
+            flags.setdefault(key, []).append(entry["id"])
+    return flags
+
+
 def median_text(values: list[float], unit: str, digits: int = 1) -> str:
     values = [v for v in values if v is not None]
     return f"중앙값 {statistics.median(values):.{digits}f}{unit} (n={len(values)})" if values else "자료 없음 (n=0)"
@@ -483,6 +500,12 @@ def render(store: dict | None = None) -> str:
               f"{count(lambda r: r['first_folded'])} · 일반 순위 밖만 {count(lambda r: not r['first_card'] and not r['first_folded'])}",
               f"- 실제 알림 {count(lambda r: r['first_alert'])} · 초기 관측 목록(알림 없음) "
               f"{count(lambda r: r['bootstrap'] and not r['first_alert'])} · 유효 근거 초안 {count(lambda r: r['first_evidence'])}"]
+    flags = flagged_records(store)
+    if flags:
+        names = ", ".join(sorted(store["records"][k]["ticker"] for k in flags))
+        ids = ", ".join(sorted({i for v in flags.values() for i in v}))
+        lines.append(f"- 제공처 값 불일치 표본 {len(flags)}곳({names}; {ids}): 고정 기록은 그대로 두고 "
+                     "아래 이후 주가 집계에서 따로 셉니다(`provider_inconsistencies.json`).")
     lat = [latencies(r) for r in records]
     lines += ["", "지연시간(빠르다는 뜻이 아니라 우리 경로의 소요 시간):",
               f"- 근거 문서 제출일→수집: {median_text([d for x in lat for d in x['filing_to_download_days']], '일')} (날짜 정밀도)",
@@ -496,10 +519,15 @@ def render(store: dict | None = None) -> str:
         lines.append(f"- {label}")
         for h in HORIZONS:
             statuses: dict[str, int] = {}
-            for r in records:
+            apart: dict[str, int] = {}
+            for key, r in store["records"].items():
                 status = outcomes(r, batch_for(r["ticker"], batches), definition)[h]["status"]
-                statuses[status] = statuses.get(status, 0) + 1
-            lines.append(f"  - {h}일: " + ", ".join(f"{k} {v}" for k, v in sorted(statuses.items())))
+                bucket = apart if key in flags else statuses
+                bucket[status] = bucket.get(status, 0) + 1
+            line = f"  - {h}일: " + ", ".join(f"{k} {v}" for k, v in sorted(statuses.items()))
+            if apart:
+                line += " · 불일치 표본(별도): " + ", ".join(f"{k} {v}" for k, v in sorted(apart.items()))
+            lines.append(line)
     p = price_summary(store, batches)
     states = " · ".join(f"{name} {held}/{total}" for name, (total, held) in sorted(p["by_state"].items()))
     lines += ["", f"후보 시세 보관: 대상 {p['targets']}곳 중 보유 {p['held']} · 대기 {p['waiting']}(미시도 {p['untried']}) · "

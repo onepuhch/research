@@ -425,6 +425,114 @@ class RemoteReservationTest(AlertTest):
         self.assertIn('href="https://example.org/filing"', text)
 
 
+class UnconfirmedJumpTest(AlertTest):
+    """U3 (provisional 10%): a new discovery whose estimate jumped with unchanged analyst counts
+    against an earlier KST day's snapshot waits a day; same-day reruns never release it."""
+    KEY = "NASDAQ:AAA|eps-revision-review:v1|new_discovery"
+
+    def setUp(self):
+        super().setUp()
+        c.atomic_json(a.ledger_path(), {"events": {}, "bootstrap": {"date": "2026-09-01", "keys": []}})
+
+    def snap(self, stamp, rows, name="r-1"):
+        import gzip
+        moment = datetime.strptime(stamp, "%Y%m%dT%H%M%SZ").isoformat() + "+00:00"
+        path = self.data / "revision_screen" / f"{stamp}_{name}.json.gz"
+        with gzip.open(path, "wt", encoding="utf-8") as fh:
+            json.dump({"schema_version": screen_revisions.SCHEMA_VERSION,
+                       "run": {"status": "success", "finished_at": moment}, "derived": {"rows": rows}}, fh)
+        return path
+
+    def prior(self, stamp, **eps):
+        """An earlier snapshot whose rows are AAA (with these estimates) and BBB."""
+        return self.snap(stamp, [row("AAA", **eps), row("BBB")])
+
+    def today_index(self, tickers=("AAA", "BBB"), at="012302", name="r-1", **eps):
+        """Today's snapshot (written, so the cards are fresh) and the cards built from it."""
+        rows = [row(t, **(eps if t == "AAA" else {})) for t in tickers]
+        stamp = self.day.replace("-", "") + "T" + at + "Z"
+        path = self.snap(stamp, rows, name)
+        finished = datetime.strptime(stamp, "%Y%m%dT%H%M%SZ").isoformat() + "+00:00"
+        ref = {**REF, "path": f"data/processed/revision_screen/{path.name}", "finished_at": finished}
+        cands = build(snapshot(rows=rows, top_yield=list(tickers), top_growth=[]), ref=ref)
+        c.atomic_json(k.index_path(), {"observed_at": finished, "run_status": "success",
+                                       "stale": [], "source_snapshot": ref, "candidates": cands})
+
+    def sent_tickers(self):
+        return sorted(e["entity_id"] for e in self.ledger()["events"].values() if e["status"] == "sent")
+
+    def hold(self):
+        return self.ledger()["holds"][self.KEY]
+
+    def test_the_10_10_shape_is_held_and_a_rerun_the_same_day_keeps_it(self):
+        self.prior("20260925T012302Z", eps_now=2.0)
+        self.today_index(eps_now=2.5)  # +25%, analysts/up30/down30 unchanged
+        self.send_alerts()
+        self.assertEqual(self.sent_tickers(), ["NASDAQ:BBB"])
+        hold = self.hold()
+        self.assertEqual((hold["status"], hold["day"], hold["threshold_status"]), ("held", ODD, "provisional"))
+        self.assertEqual((hold["baseline"]["eps_now"], hold["current"]["eps_now"]), (2.0, 2.5))
+        self.assertEqual(hold["baseline"]["snapshot"], "20260925T012302Z_r-1.json.gz")
+        self.today_index(eps_now=2.5, at="020000", name="r-2")  # a same-day rerun with the same value
+        self.send_alerts()
+        self.assertEqual(self.sent_tickers(), ["NASDAQ:BBB"])
+        self.assertEqual(self.hold()["status"], "held")
+
+    def test_next_day_it_is_sent_only_if_the_value_held_and_it_is_still_eligible(self):
+        self.prior("20260925T012302Z", eps_now=2.0)
+        self.today_index(eps_now=2.5)
+        self.send_alerts()
+        self.day = EVEN
+        self.today_index(tickers=("BBB",))  # not a candidate any more: nothing is released
+        self.send_alerts()
+        self.assertEqual(self.hold()["status"], "held")
+        self.today_index(eps_now=2.55, at="020000", name="r-2")  # eligible again, within 10% of 2.5
+        self.send_alerts()
+        self.assertEqual(self.sent_tickers(), ["NASDAQ:AAA", "NASDAQ:BBB"])
+        self.assertEqual((self.hold()["status"], self.hold()["released_day"]), ("released", EVEN))
+
+    def test_a_value_that_went_back_is_not_released(self):
+        self.prior("20260925T012302Z", eps_now=2.0)
+        self.today_index(eps_now=2.5)
+        self.send_alerts()
+        self.day = EVEN
+        self.today_index(eps_now=2.0)  # back to the old value, still on the list
+        self.send_alerts()
+        hold = self.hold()
+        self.assertEqual(self.sent_tickers(), ["NASDAQ:BBB"])
+        self.assertEqual((hold["status"], hold["day"], hold["history"][0]["status"]), ("held", EVEN, "not_maintained"))
+
+    def test_counted_revisions_another_year_a_small_move_or_no_earlier_snapshot_are_sent(self):
+        for name, prior, today in (("counts", {"eps_now": 2.0, "up30": 3}, {"eps_now": 2.5}),
+                                   ("year", {"eps_now": 2.0, "eps_target_period": "2026-12-31"}, {"eps_now": 2.5}),
+                                   ("small", {"eps_now": 2.0}, {"eps_now": 2.2}),
+                                   ("none", None, {"eps_now": 2.5})):
+            with self.subTest(name):
+                for f in (self.data / "revision_screen").glob("*"):
+                    f.unlink()
+                c.atomic_json(a.ledger_path(), {"events": {}, "bootstrap": {"date": "2026-09-01", "keys": []}})
+                if prior is not None:
+                    self.prior("20260925T012302Z", **prior)
+                self.today_index(**today)
+                self.send_alerts()
+                self.assertEqual(self.sent_tickers(), ["NASDAQ:AAA", "NASDAQ:BBB"])
+                self.assertEqual(self.ledger().get("holds", {}), {})
+
+    def test_an_unreadable_earlier_snapshot_is_skipped(self):
+        self.prior("20260924T012302Z", eps_now=2.0)
+        (self.data / "revision_screen" / "20260925T012302Z_r-2.json.gz").write_bytes(b"not gzip")
+        self.today_index(eps_now=2.5)
+        with mock.patch.object(k, "choose_snapshot", return_value={"valid": None}):  # freshness is not under test
+            self.send_alerts()
+        self.assertEqual(self.sent_tickers(), ["NASDAQ:BBB"])  # compared with 09-24, the readable one
+
+    def test_a_dry_run_stores_no_hold(self):
+        self.prior("20260925T012302Z", eps_now=2.0)
+        self.today_index(eps_now=2.5)
+        self.send_alerts(dry=True)
+        self.assertNotIn("holds", self.ledger())
+
+
 class GitRemoteTest(unittest.TestCase):
     """persist_state.persist against a real temporary git remote."""
 

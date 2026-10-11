@@ -1,7 +1,10 @@
 # U3 발굴 방식 검토 — 판단을 막은 문제와 개선 후보 1개 (2026-10-11, 1차)
 
 작성: Claude, 2026-10-11. [U 계획](u_research_direction_plan_2026-10-11.md) U3. 입력은 [U1 판정](u_candidate_decisions_2026-10-11.md)과 [S3 개정본](s_candidate_value_review_2026-10-10.md)이다.
-U2(새 후보 비교)는 아직 하지 않았다. U2에서 다른 문제가 나오면 이 표를 다시 본다. 아래 개선안은 **Codex 검토 대상 제안**이며 구현하지 않았다.
+U2(새 후보 비교)는 아직 하지 않았다. U2에서 다른 문제가 나오면 이 표를 다시 본다. 아래 개선안은 Codex 검토를 거쳐 10/11 **잠정 구현**했다.
+- 보류 규칙: `candidate_alerts.py` `hold_unconfirmed`, 정책 `candidate_alerts.unconfirmed_jump_hold`(10%, threshold_status provisional). 실제 10/9·10/10·10/11 카드로 재현하면 10/10에 DHT·FRO·INSW만 보류된다.
+- 과거 기록 표시: `provider_inconsistencies.json`(PI-20261010-yahoo-eps). 발견 시점 보고에서 그 표본을 따로 센다.
+- 정정 안내: [문안만](u_correction_notices_2026-10-11.md) 작성했고 미발송이다.
 
 ## 문제 사례표
 
@@ -82,7 +85,7 @@ U2(새 후보 비교)는 아직 하지 않았다. U2에서 다른 문제가 나�
 | 예상치를 같은 제공처·같은 대상 연도로 비교 가능 | 5 (단, 회계 기준은 5곳 모두 미표시) |
 | 지속 근거와 반증 조건을 갖춤 | 4 (PBF·DHT·FRO·VSEC) |
 | 기대차 확인 / 미확인 | 0 / 5 |
-| 판정: 추적 검토 가치 있음 / 특정 자료 대기 / 현재 가설 기각 | 0 / 2 (DHT·FRO) / 3 (PBF·INSW·VSEC) |
+| 판정: 추적 검토 가치 있음 / 특정 자료 대기 / 현재 가설 기각 | 0 / 3 (DHT·FRO·VSEC) / 2 (PBF·INSW) |
 | 알림 근거값이 재현되지 않은 기업 | 3 (DHT·FRO·INSW) |
 
 사전 수익률 성과: 평가 기간을 채운 표본이 없어 계산하지 않았다.
