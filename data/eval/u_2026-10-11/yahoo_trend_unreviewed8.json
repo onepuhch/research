@@ -1,0 +1,582 @@
+{
+ "source": "Yahoo Finance quoteSummary earningsTrend etc., read once (scripts/screen_revisions.Yahoo client)",
+ "basis": "provider-unspecified",
+ "tickers": {
+  "MU": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-08-31",
+     "eps_avg": 38.21061,
+     "eps_low": 30.2,
+     "eps_high": 40.47,
+     "eps_n": 33,
+     "eps_90d": 34.81046,
+     "eps_30d": 34.89147,
+     "rev_avg": 61670130780,
+     "rev_low": 58065000000,
+     "rev_high": 65610000000,
+     "rev_n": 33,
+     "rev_growth": 3.5203
+    },
+    {
+     "period": "+1q",
+     "end": "2026-11-30",
+     "eps_avg": 42.12014,
+     "eps_low": 39.71,
+     "eps_high": 46.85,
+     "eps_n": 30,
+     "eps_90d": 37.48482,
+     "eps_30d": 37.76854,
+     "rev_avg": 66970314159,
+     "rev_low": 58853000000,
+     "rev_high": 74381000000,
+     "rev_n": 31,
+     "rev_growth": 1.8067999
+    },
+    {
+     "period": "0y",
+     "end": "2026-08-31",
+     "eps_avg": 176.15115,
+     "eps_low": 72.29,
+     "eps_high": 214.7,
+     "eps_n": 36,
+     "eps_90d": 150.00752,
+     "eps_30d": 156.24937,
+     "rev_avg": 275209858760,
+     "rev_low": 212417000000,
+     "rev_high": 307231000000,
+     "rev_n": 40,
+     "rev_growth": 1.0662999
+    },
+    {
+     "period": "+1y",
+     "end": "2027-08-31",
+     "eps_avg": 206.33243,
+     "eps_low": 161.0,
+     "eps_high": 335.5,
+     "eps_n": 36,
+     "eps_90d": 163.34702,
+     "eps_30d": 171.02492,
+     "rev_avg": 320567608700,
+     "rev_low": 224163000000,
+     "rev_high": 396620000000,
+     "rev_n": 42,
+     "rev_growth": 0.16479999
+    }
+   ],
+   "earnings_dates": [
+    "2026-12-23"
+   ],
+   "shares": 1131423212,
+   "price": 1029.0,
+   "target_mean": 1555.1304,
+   "analysts_rec": 46,
+   "retrieved_at": "2026-10-11T05:02:54+00:00"
+  },
+  "CLF": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-09-30",
+     "eps_avg": 0.24023,
+     "eps_low": 0.15162,
+     "eps_high": 0.39,
+     "eps_n": 7,
+     "eps_90d": 0.20746,
+     "eps_30d": 0.22309,
+     "rev_avg": 5724048210,
+     "rev_low": 5634000000,
+     "rev_high": 5805000000,
+     "rev_n": 7,
+     "rev_growth": 0.2091
+    },
+    {
+     "period": "+1q",
+     "end": "2026-12-31",
+     "eps_avg": 0.33438,
+     "eps_low": 0.16065,
+     "eps_high": 0.58,
+     "eps_n": 7,
+     "eps_90d": 0.08877,
+     "eps_30d": 0.25724,
+     "rev_avg": 5681735980,
+     "rev_low": 5498500000,
+     "rev_high": 5879000000,
+     "rev_n": 7,
+     "rev_growth": 0.3174
+    },
+    {
+     "period": "0y",
+     "end": "2026-12-31",
+     "eps_avg": -0.17292,
+     "eps_low": -0.35755,
+     "eps_high": -0.06,
+     "eps_n": 6,
+     "eps_90d": -0.31407,
+     "eps_30d": -0.19626,
+     "rev_avg": 21581978180,
+     "rev_low": 21280500000,
+     "rev_high": 21831817150,
+     "rev_n": 10,
+     "rev_growth": 0.1597
+    },
+    {
+     "period": "+1y",
+     "end": "2027-12-31",
+     "eps_avg": 0.96341,
+     "eps_low": 0.22069,
+     "eps_high": 1.55,
+     "eps_n": 9,
+     "eps_90d": 0.43187,
+     "eps_30d": 0.66153,
+     "rev_avg": 22477021260,
+     "rev_low": 21313737500,
+     "rev_high": 23565000000,
+     "rev_n": 11,
+     "rev_growth": 0.041500002
+    }
+   ],
+   "earnings_dates": [
+    "2026-10-19"
+   ],
+   "shares": 570540047,
+   "price": 12.98,
+   "target_mean": 12.6,
+   "analysts_rec": 10,
+   "retrieved_at": "2026-10-11T05:02:55+00:00"
+  },
+  "TX": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-09-30",
+     "eps_avg": 1.94036,
+     "eps_low": 1.9,
+     "eps_high": 2.01,
+     "eps_n": 4,
+     "eps_90d": 1.27067,
+     "eps_30d": 1.99286,
+     "rev_avg": 4638597520,
+     "rev_low": 4539842730,
+     "rev_high": 4746000000,
+     "rev_n": 7,
+     "rev_growth": 0.1728
+    },
+    {
+     "period": "+1q",
+     "end": "2026-12-31",
+     "eps_avg": 1.84433,
+     "eps_low": 1.69298,
+     "eps_high": 2.1,
+     "eps_n": 3,
+     "eps_90d": 1.11911,
+     "eps_30d": 1.99099,
+     "rev_avg": 4500635010,
+     "rev_low": 4415540000,
+     "rev_high": 4571648730,
+     "rev_n": 4,
+     "rev_growth": 0.19229999
+    },
+    {
+     "period": "0y",
+     "end": "2026-12-31",
+     "eps_avg": 6.68003,
+     "eps_low": 6.45011,
+     "eps_high": 6.9,
+     "eps_n": 4,
+     "eps_90d": 4.81258,
+     "eps_30d": 6.79253,
+     "rev_avg": 17412549350,
+     "rev_low": 16589000000,
+     "rev_high": 17748000000,
+     "rev_n": 12,
+     "rev_growth": 0.1155
+    },
+    {
+     "period": "+1y",
+     "end": "2027-12-31",
+     "eps_avg": 7.70036,
+     "eps_low": 4.62,
+     "eps_high": 10.17,
+     "eps_n": 5,
+     "eps_90d": 5.68279,
+     "eps_30d": 7.65036,
+     "rev_avg": 18262532100,
+     "rev_low": 17278000000,
+     "rev_high": 19250065020,
+     "rev_n": 13,
+     "rev_growth": 0.048800003
+    }
+   ],
+   "earnings_dates": [
+    "2026-11-03"
+   ],
+   "shares": 196307678,
+   "price": 58.18,
+   "target_mean": 60.61538,
+   "analysts_rec": 13,
+   "retrieved_at": "2026-10-11T05:02:56+00:00"
+  },
+  "TRLV": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-09-30",
+     "eps_avg": 0.07,
+     "eps_low": 0.02,
+     "eps_high": 0.12,
+     "eps_n": 2,
+     "eps_90d": 0.03,
+     "eps_30d": 0.07,
+     "rev_avg": 221633330,
+     "rev_low": 221000000,
+     "rev_high": 222000000,
+     "rev_n": 3,
+     "rev_growth": -0.231
+    },
+    {
+     "period": "+1q",
+     "end": "2026-12-31",
+     "eps_avg": 0.075,
+     "eps_low": 0.02,
+     "eps_high": 0.13,
+     "eps_n": 2,
+     "eps_90d": 0.04,
+     "eps_30d": 0.075,
+     "rev_avg": 229466670,
+     "rev_low": 227700000,
+     "rev_high": 231700000,
+     "rev_n": 3,
+     "rev_growth": -0.2171
+    },
+    {
+     "period": "0y",
+     "end": "2026-12-31",
+     "eps_avg": -1.82278,
+     "eps_low": -2.05,
+     "eps_high": -1.63388,
+     "eps_n": 5,
+     "eps_90d": 0.20667,
+     "eps_30d": -1.822,
+     "rev_avg": 1008933330,
+     "rev_low": 1006500000,
+     "rev_high": 1011300000,
+     "rev_n": 3,
+     "rev_growth": -0.1458
+    },
+    {
+     "period": "+1y",
+     "end": "2027-12-31",
+     "eps_avg": 0.55667,
+     "eps_low": 0.42,
+     "eps_high": 0.66,
+     "eps_n": 3,
+     "eps_90d": 0.23953,
+     "eps_30d": 0.55566,
+     "rev_avg": 936359820,
+     "rev_low": 905898000,
+     "rev_high": 988000000,
+     "rev_n": 6,
+     "rev_growth": -0.0719
+    }
+   ],
+   "earnings_dates": [
+    "2026-11-05"
+   ],
+   "shares": 170158916,
+   "price": 10.67,
+   "target_mean": 18.17857,
+   "analysts_rec": 7,
+   "retrieved_at": "2026-10-11T05:02:57+00:00"
+  },
+  "TEAM": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-09-30",
+     "eps_avg": 0.34972,
+     "eps_low": 0.21,
+     "eps_high": 0.54807,
+     "eps_n": 7,
+     "eps_90d": 0.06847,
+     "eps_30d": 0.35134,
+     "rev_avg": 1713982520,
+     "rev_low": 1705104000,
+     "rev_high": 1760043000,
+     "rev_n": 28,
+     "rev_growth": 0.1965
+    },
+    {
+     "period": "+1q",
+     "end": "2026-12-31",
+     "eps_avg": 1.30281,
+     "eps_low": 1.11,
+     "eps_high": 1.67,
+     "eps_n": 30,
+     "eps_90d": 1.49767,
+     "eps_30d": 1.29981,
+     "rev_avg": 1817083410,
+     "rev_low": 1788427730,
+     "rev_high": 1866930000,
+     "rev_n": 27,
+     "rev_growth": 0.1455
+    },
+    {
+     "period": "0y",
+     "end": "2027-06-30",
+     "eps_avg": 5.42681,
+     "eps_low": 4.81,
+     "eps_high": 6.11177,
+     "eps_n": 30,
+     "eps_90d": 6.21305,
+     "eps_30d": 5.42187,
+     "rev_avg": 7477338560,
+     "rev_low": 7401000000,
+     "rev_high": 7939000000,
+     "rev_n": 32,
+     "rev_growth": 0.1377
+    },
+    {
+     "period": "+1y",
+     "end": "2028-06-30",
+     "eps_avg": 2.1871,
+     "eps_low": 1.16,
+     "eps_high": 3.83,
+     "eps_n": 8,
+     "eps_90d": 1.39452,
+     "eps_30d": 2.0571,
+     "rev_avg": 8565595219,
+     "rev_low": 8318500000,
+     "rev_high": 9154672000,
+     "rev_n": 30,
+     "rev_growth": 0.1455
+    }
+   ],
+   "earnings_dates": [
+    "2026-11-05"
+   ],
+   "shares": 159005198,
+   "price": 206.79,
+   "target_mean": 207.49097,
+   "analysts_rec": 31,
+   "retrieved_at": "2026-10-11T05:02:58+00:00"
+  },
+  "INDV": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-09-30",
+     "eps_avg": 1.119,
+     "eps_low": 1.088,
+     "eps_high": 1.15,
+     "eps_n": 2,
+     "eps_90d": 0.99,
+     "eps_30d": 0.97075,
+     "rev_avg": 329350000,
+     "rev_low": 326700000,
+     "rev_high": 332000000,
+     "rev_n": 2,
+     "rev_growth": 0.048899997
+    },
+    {
+     "period": "+1q",
+     "end": "2026-12-31",
+     "eps_avg": 1.2145,
+     "eps_low": 1.209,
+     "eps_high": 1.22,
+     "eps_n": 2,
+     "eps_90d": 1.06333,
+     "eps_30d": 1.0425,
+     "rev_avg": 337900000,
+     "rev_low": 331500000,
+     "rev_high": 344300000,
+     "rev_n": 2,
+     "rev_growth": -0.0561
+    },
+    {
+     "period": "0y",
+     "end": "2026-12-31",
+     "eps_avg": 4.40867,
+     "eps_low": 4.36,
+     "eps_high": 4.47,
+     "eps_n": 3,
+     "eps_90d": 3.8525,
+     "eps_30d": 3.8248,
+     "rev_avg": 1331966670,
+     "rev_low": 1318100000,
+     "rev_high": 1341500000,
+     "rev_n": 3,
+     "rev_growth": 0.075
+    },
+    {
+     "period": "+1y",
+     "end": "2027-12-31",
+     "eps_avg": 4.88333,
+     "eps_low": 4.74,
+     "eps_high": 5.02,
+     "eps_n": 3,
+     "eps_90d": 3.92,
+     "eps_30d": 4.1422,
+     "rev_avg": 1399533330,
+     "rev_low": 1373800000,
+     "rev_high": 1413500000,
+     "rev_n": 3,
+     "rev_growth": 0.0507
+    }
+   ],
+   "earnings_dates": [
+    "2026-11-05"
+   ],
+   "shares": 118031934,
+   "price": 35.83,
+   "target_mean": 49.0,
+   "analysts_rec": 4,
+   "retrieved_at": "2026-10-11T05:02:59+00:00"
+  },
+  "SMTC": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-10-31",
+     "eps_avg": 1.05666,
+     "eps_low": 1.05,
+     "eps_high": 1.08,
+     "eps_n": 15,
+     "eps_90d": 0.72579,
+     "eps_30d": 1.0557,
+     "rev_avg": 410616640,
+     "rev_low": 409900000,
+     "rev_high": 415000000,
+     "rev_n": 14,
+     "rev_growth": 0.53790003
+    },
+    {
+     "period": "+1q",
+     "end": "2027-01-31",
+     "eps_avg": 1.20346,
+     "eps_low": 1.1,
+     "eps_high": 1.41,
+     "eps_n": 15,
+     "eps_90d": 0.80665,
+     "eps_30d": 1.20442,
+     "rev_avg": 435735670,
+     "rev_low": 385000000,
+     "rev_high": 467900000,
+     "rev_n": 13,
+     "rev_growth": 0.588
+    },
+    {
+     "period": "0y",
+     "end": "2027-01-31",
+     "eps_avg": 3.47749,
+     "eps_low": 3.37,
+     "eps_high": 3.69,
+     "eps_n": 14,
+     "eps_90d": 2.65765,
+     "eps_30d": 3.47422,
+     "rev_avg": 1486475190,
+     "rev_low": 1427900000,
+     "rev_high": 1538008000,
+     "rev_n": 15,
+     "rev_growth": 0.4157
+    },
+    {
+     "period": "+1y",
+     "end": "2028-01-31",
+     "eps_avg": 5.85723,
+     "eps_low": 4.98,
+     "eps_high": 7.0,
+     "eps_n": 15,
+     "eps_90d": 3.88561,
+     "eps_30d": 5.83561,
+     "rev_avg": 1926890860,
+     "rev_low": 1550000000,
+     "rev_high": 2456709000,
+     "rev_n": 15,
+     "rev_growth": 0.2963
+    }
+   ],
+   "earnings_dates": [
+    "2026-11-23"
+   ],
+   "shares": 93325626,
+   "price": 187.3,
+   "target_mean": 214.64285,
+   "analysts_rec": 14,
+   "retrieved_at": "2026-10-11T05:03:00+00:00"
+  },
+  "OSCR": {
+   "trend": [
+    {
+     "period": "0q",
+     "end": "2026-09-30",
+     "eps_avg": -0.16774,
+     "eps_low": -0.4,
+     "eps_high": 0.07,
+     "eps_n": 7,
+     "eps_90d": -0.203,
+     "eps_30d": -0.24602,
+     "rev_avg": 4717988020,
+     "rev_low": 4492000000,
+     "rev_high": 4883711380,
+     "rev_n": 9,
+     "rev_growth": 0.58
+    },
+    {
+     "period": "+1q",
+     "end": "2026-12-31",
+     "eps_avg": -1.12607,
+     "eps_low": -1.52248,
+     "eps_high": -0.95,
+     "eps_n": 7,
+     "eps_90d": -1.20715,
+     "eps_30d": -1.25561,
+     "rev_avg": 4475085010,
+     "rev_low": 4357000000,
+     "rev_high": 4676500000,
+     "rev_n": 9,
+     "rev_growth": 0.59529996
+    },
+    {
+     "period": "0y",
+     "end": "2026-12-31",
+     "eps_avg": 1.91293,
+     "eps_low": 1.75344,
+     "eps_high": 2.12,
+     "eps_n": 8,
+     "eps_90d": 1.05832,
+     "eps_30d": 1.75056,
+     "rev_avg": 18732197730,
+     "rev_low": 18376000000,
+     "rev_high": 18850400300,
+     "rev_n": 10,
+     "rev_growth": 0.60080004
+    },
+    {
+     "period": "+1y",
+     "end": "2027-12-31",
+     "eps_avg": 2.16551,
+     "eps_low": 1.8541,
+     "eps_high": 2.35,
+     "eps_n": 8,
+     "eps_90d": 1.48476,
+     "eps_30d": 1.8819,
+     "rev_avg": 20795048080,
+     "rev_low": 16808000000,
+     "rev_high": 22559647000,
+     "rev_n": 10,
+     "rev_growth": 0.1101
+    }
+   ],
+   "earnings_dates": [
+    "2026-11-09"
+   ],
+   "shares": 273469000,
+   "price": 33.37,
+   "target_mean": 35.4,
+   "analysts_rec": 10,
+   "retrieved_at": "2026-10-11T05:03:02+00:00"
+  }
+ }
+}
