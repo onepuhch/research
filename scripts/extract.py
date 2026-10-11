@@ -361,19 +361,26 @@ def retry_after_seconds(error: HTTPError) -> float | None:
 
 def rate_limit_detail(error: HTTPError) -> dict[str, Any]:
     """Which limit a 429 hit, from the error body: quota ids and values (per minute or per day) and
-    the server's retry delay. Only these fields are kept (no message text, project or key)."""
-    try:
-        details = json.loads(error.read().decode("utf-8")).get("error", {}).get("details", [])
-    except Exception:  # no body, not JSON: the block works without it
-        return {}
+    the server's retry delay. Only these fields are kept (no message text, project or key). Diagnostic
+    only: any body (none, not JSON, an unexpected shape) gives what could be read, never an error."""
     detail: dict[str, Any] = {}
-    for entry in details if isinstance(details, list) else []:
-        kind = str(entry.get("@type", "")) if isinstance(entry, dict) else ""
-        if kind.endswith("QuotaFailure"):
-            detail["violations"] = [{key: str(v.get(key))[:120] for key in ("quotaId", "quotaValue") if v.get(key) is not None}
-                                    for v in entry.get("violations", [])[:5] if isinstance(v, dict)]
-        elif kind.endswith("RetryInfo") and entry.get("retryDelay") is not None:
-            detail["retry_delay"] = str(entry["retryDelay"])[:20]
+    try:
+        details = json.loads(error.read().decode("utf-8"))["error"]["details"]
+        for entry in details if isinstance(details, list) else []:
+            if not isinstance(entry, dict):
+                continue
+            kind = str(entry.get("@type", ""))
+            violations = entry.get("violations")
+            if kind.endswith("QuotaFailure") and isinstance(violations, list):
+                for v in violations[:5]:
+                    kept = {key: str(v[key])[:120] for key in ("quotaId", "quotaValue")
+                            if isinstance(v, dict) and v.get(key) not in (None, "")}
+                    if kept:
+                        detail.setdefault("violations", []).append(kept)
+            elif kind.endswith("RetryInfo") and entry.get("retryDelay") not in (None, ""):
+                detail["retry_delay"] = str(entry["retryDelay"])[:20]
+    except Exception:  # no body, not JSON, another shape: the block works without it
+        pass
     return detail
 
 

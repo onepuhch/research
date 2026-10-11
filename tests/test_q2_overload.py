@@ -106,6 +106,30 @@ class OverloadCallTest(RunFixture):
                 extract.call_gemini_prompt("p", "k", "extract")  # no body: blocked the same way
         self.assertNotIn("quota", c.model_provider_blocked())
 
+    def test_an_odd_429_body_never_stops_the_block(self):
+        quota = "type.googleapis.com/google.rpc.QuotaFailure"
+        bodies = {
+            b"not json": {},
+            b"[1, 2]": {},
+            json.dumps({"error": {"details": {"x": 1}}}).encode(): {},
+            json.dumps({"error": {"details": [{"@type": quota, "violations": {"quotaId": "x"}}]}}).encode(): {},
+            json.dumps({"error": {"details": [7, {"@type": quota, "violations": [
+                {"quotaId": "PerMinute", "quotaValue": "10"}, {"quotaId": "PerDay", "quotaValue": ""}, {}, "bad"]}]}}).encode():
+                {"violations": [{"quotaId": "PerMinute", "quotaValue": "10"}, {"quotaId": "PerDay"}]},
+            json.dumps({"error": {"details": [{"@type": "type.googleapis.com/google.rpc.RetryInfo",
+                                               "retryDelay": "12s"}]}}).encode(): {"retry_delay": "12s"},
+        }
+        for body, expected in bodies.items():
+            with self.subTest(body=body[:40]):
+                c.atomic_json(self.data / "model_budget.json", {"days": {}})
+                error = HTTPError("u", 429, "x", {}, io.BytesIO(body))
+                with mock.patch.object(extract, "urlopen", side_effect=error):
+                    with self.assertRaisesRegex(c.ModelBudgetExhausted, "rate_limited"):
+                        extract.call_gemini_prompt("p", "k", "extract")
+                blocked = c.model_provider_blocked()
+                self.assertEqual(blocked.get("quota", {}), expected)
+                self.assertIsNone(blocked["retry_after_s"])
+
 
 class DraftOverloadTest(RunFixture):
     def setUp(self):
