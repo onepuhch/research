@@ -72,6 +72,15 @@
       "threshold": 0.1,
       "threshold_status": "provisional",
       "note": "U3 2026-10-11: chosen from 20 past new-discovery alerts and one anomalous day (2026-10-10); not validated, to be reviewed with observations after registration"
+    },
+    "verdict": {
+      "min_up30": 2,
+      "min_up_share": 0.3,
+      "up_per_down": 3,
+      "few_analysts": 3,
+      "min_own_rise_pct": 1.0,
+      "status": "provisional",
+      "note": "2026-10-12: suggested judgment on new-discovery alerts (alert_verdict.py), set from 23 past alerts at the user's request; not validated, review against the user's replies and later observations"
     }
   },
   "model_budget": {

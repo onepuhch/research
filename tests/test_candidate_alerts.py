@@ -350,7 +350,8 @@ class DeliveryLedgerTest(AlertTest):
         cid = self.event()["candidate_id"]
         self.assertIn(f"/candidate {cid}", text)
         self.assertIn(f"/track {cid}", text)
-        self.assertIn("핵심 미확인", text)
+        self.assertIn("시스템 판단:", text)
+        self.assertIn("❓", text)
 
 
 class RemoteReservationTest(AlertTest):

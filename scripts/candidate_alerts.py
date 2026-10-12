@@ -56,6 +56,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import alert_verdict  # noqa: E402
 import common as c  # noqa: E402
 import candidates  # noqa: E402
 import material_updates  # noqa: E402
@@ -377,7 +378,46 @@ def select(ledger: dict, news: list[dict], recommended: list[dict], screen: list
 
 # ------------------------------------------------------------------ messages
 
+def attach_verdicts(items: list[dict], index: dict, day: str) -> None:
+    """The suggested judgment of each chosen screen new discovery (alert_verdict), against the latest usable
+    snapshot of an earlier KST day."""
+    new = [x for x in items if x.get("channel") == "screen" and x.get("event") == NEW]
+    if not new:
+        return
+    _, base = baseline_rows(kst_day(index.get("observed_at")) or day)
+    for item in new:
+        item["verdict"] = alert_verdict.assess(item["cand"], base.get(item["cand"]["identity"].get("ticker")))
+
+
+def new_message(item: dict) -> str:
+    """A new discovery: the suggested judgment and its reasons first, then the numbers and commands."""
+    cand = item["cand"]
+    eps, price = cand["eps"], cand["price"]
+    esc = candidates.esc
+    verdict = item.get("verdict") or alert_verdict.assess(cand, None)
+    desc = cand["explanations"]["company_description_ko"]["text"] or f"회사 설명 확인 중 ({cand['identity']['ticker']})"
+    price_text = (f"주가 같은 기간 {price['price_pct_90']:+.1f}%" if price.get("price_status") == "success"
+                  else "주가 비교 미확보")
+    cid = esc(cand["candidate_id"])
+    return "\n".join([
+        f"<b>🆕 새 발굴 후보 · {esc(cand['identity']['ticker'])} {esc(cand.get('name') or '')}</b>",
+        f"<b>{verdict['mark']} 시스템 판단: {esc(verdict['label'])}</b>",
+        esc(desc),
+        f"내년 이익 예상(EPS, {esc(eps['eps_target_period'])} 회계연도 말) 90일 전 {esc(candidates.money(eps['eps_90d']))} → "
+        f"지금 {esc(candidates.money(eps['eps_now']))} ({esc(candidates.eps_change(eps))}) · {esc(price_text)}",
+        "",
+        *[f"👍 {esc(x)}" for x in verdict["pros"]],
+        *[f"👎 {esc(x)}" for x in verdict["cons"]],
+        f"❓ {esc(verdict['cause'])}",
+        f"→ {esc(verdict['next'])}",
+        "",
+        f"자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate {cid}</code> · 추적 <code>/track {cid}</code>",
+        "시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다."])
+
+
 def screen_message(item: dict) -> str:
+    if item["event"] == NEW:
+        return new_message(item)
     cand = item["cand"]
     eps, price = cand["eps"], cand["price"]
     esc = candidates.esc
@@ -455,6 +495,8 @@ def event_record(item: dict, day: str) -> dict:
                                        "candidate_version", "observation_id", "signal_id")}
     if item.get("material"):
         record["material"] = item["material"]  # baseline, observations and documents fixed at reservation
+    if item.get("verdict"):
+        record["verdict"] = item["verdict"]["verdict"]  # the suggestion sent, kept to review the rule later
     return record | {"day": day, "status": "reserved", "attempts": []}
 
 
@@ -517,6 +559,7 @@ def run(dry_run: bool = False, material_report: str | None = None) -> dict:
     retry = [e for e in ledger["events"].values() if e.get("status") in RETRYABLE]
     chosen = select(ledger, news, recommended, interleave(screen, updates), slots, day, cap, recent,
                     settings()["entity_new_cooldown_days"])
+    attach_verdicts(chosen, index, day)
     report = {"slots": slots, "selected": [x["key"] for x in chosen], "bootstrap": bootstrap,
               "material_eligible": len(updates),
               "legacy_unknown_entity": unknown_legacy,
