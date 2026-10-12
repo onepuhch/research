@@ -36,10 +36,10 @@
         "exchange": "Nasdaq",
         "name": "Aehr Test Systems, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
       "eps_key": "2028-05-31|1.38333",
       "eps_target_period": "2028-05-31",
       "document_ids": [
@@ -51,13 +51,37 @@
         "DOC-E4F38E21E77621D0"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-4A14F23F18783B5E",
       "context_input_sha": "4a14f23f18783b5ed998e5ff841c44e03fe055773dc829daaf25a1afc8da3662",
       "quality": "complete",
       "failures": 0,
-      "draft_error": "HTTPError"
+      "draft_error": "HTTPError",
+      "update_checks": [
+        {
+          "document_id": "DOC-EA4425A446380C5A",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:customer_contract:p4",
+          "alert_reasons": [
+            "event_date_unknown",
+            "restated_result_or_unchanged"
+          ]
+        },
+        {
+          "document_id": "DOC-E4F38E21E77621D0",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:customer_contract:p86",
+          "alert_reasons": [
+            "period_recount",
+            "restated_result_or_unchanged"
+          ]
+        }
+      ]
     },
     "CAN-ABBBE42278126D28": {
       "status": "success",
@@ -68,28 +92,87 @@
         "exchange": "NYSE",
         "name": "Talos Energy Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
       "eps_key": "2027-12-31|1.66344",
       "eps_target_period": "2027-12-31",
       "document_ids": [
+        "DOC-0B3BFF1722C21ED2",
         "DOC-70283ADC988D0C81",
         "DOC-8369D977BE877B2D"
       ],
       "examined": [
+        "DOC-090134AFA960D453",
+        "DOC-059C2F86DE73B23B",
         "DOC-70283ADC988D0C81",
-        "DOC-8369D977BE877B2D"
+        "DOC-8369D977BE877B2D",
+        "DOC-C2CC4B2435449EE3",
+        "DOC-0B3BFF1722C21ED2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00",
-      "draft_status": "draft_ready",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-3C51A38DB3C2F150",
       "context_input_sha": "3c51a38db3c2f1501ff9af5a7e29f36ff7fc6ad15af349a8d4b5f94eb5f677f6",
       "quality": "complete",
       "failures": 0,
-      "draft_error": "HTTPError"
+      "draft_error": "HTTPError",
+      "update_checks": [
+        {
+          "document_id": "DOC-090134AFA960D453",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-059C2F86DE73B23B",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-C2CC4B2435449EE3",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-0B3BFF1722C21ED2",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:customer_contract:p22",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-70283ADC988D0C81",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p37",
+          "alert_reasons": [
+            "event_date_unknown"
+          ]
+        },
+        {
+          "document_id": "DOC-8369D977BE877B2D",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p212",
+          "alert_reasons": [
+            "event_date_unknown"
+          ]
+        }
+      ]
     },
     "CAN-D577F2C38FBBCFF7": {
       "status": "success",
@@ -117,7 +200,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-4AF8EDED57B44FFC",
       "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
       "quality": "complete",
@@ -191,10 +274,10 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "insufficient_earnings_context",
       "draft_error": "HTTPError",
-      "context_id": "CTX-3A49D7297BE7A680",
-      "context_input_sha": "3a49d7297be7a680ec3e38594e68bb3a56f813776861a8d458375aec08385fcd",
+      "context_id": "CTX-F0EA88EF71DDC9A8",
+      "context_input_sha": "f0ea88ef71ddc9a8434c8bca60c1010fa647976a269bccca527db141a58778d4",
       "quality": "complete",
       "failures": 0,
       "update_checks": [
@@ -250,8 +333,7 @@
             "event_date_unknown"
           ]
         }
-      ],
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      ]
     },
     "CAN-82719B27698E3C22": {
       "status": "success",
@@ -280,7 +362,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-3052BA46969F76BA",
       "context_input_sha": "3052ba46969f76baff47b9ebb00b79ebdec646f47d432ce4d227b33969ccf187",
       "quality": "complete",
@@ -335,10 +417,10 @@
         "exchange": "Nasdaq",
         "name": "AXT, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
       "eps_key": "2027-12-31|2.25",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -350,12 +432,32 @@
         "DOC-F3CA634B35CC46FB"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-08A8428683C12874",
       "context_input_sha": "08a8428683c128748821d567702219acef730a7e1c00614638a517c30c0616d2",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "update_checks": [
+        {
+          "document_id": "DOC-A6967554C2E4C643",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-F3CA634B35CC46FB",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:acquisition:p280",
+          "alert_reasons": [
+            "event_date_unknown"
+          ]
+        }
+      ]
     },
     "CAN-77F79A3B05ABB893": {
       "status": "success",
@@ -369,8 +471,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-11T00:33:11+00:00",
-      "eps_key": "2027-12-31|50.68686",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
+      "eps_key": "2027-12-31|50.7611",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-683FD7B3F9B87824",
@@ -381,8 +483,8 @@
         "DOC-BE1000530D20CF2E"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "provider_rate_limited",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
       "quality": "complete",
@@ -452,10 +554,10 @@
         "exchange": "Nasdaq",
         "name": "Repay Holdings Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
       "eps_key": "2027-12-31|1.1645",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -467,12 +569,32 @@
         "DOC-EC769633F745B7F4"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-73B7E18FB19F9751",
       "context_input_sha": "73b7e18fb19f9751907a9856c10d1f5db6457e60b36d4e31a4b34405b02d8712",
       "quality": "complete",
-      "failures": 0
+      "failures": 0,
+      "update_checks": [
+        {
+          "document_id": "DOC-93050982946C0EE4",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-EC769633F745B7F4",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:customer_contract:p59",
+          "alert_reasons": [
+            "event_date_unknown"
+          ]
+        }
+      ]
     },
     "CAN-68E9292E49558246": {
       "status": "success",
@@ -570,10 +692,10 @@
         "exchange": "Nasdaq",
         "name": "Belite Bio, Inc",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-04T06:15:49+00:00",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
       "eps_key": "2027-12-31|2.26",
       "eps_target_period": "2027-12-31",
       "document_ids": [],
@@ -585,10 +707,78 @@
         "DOC-6230F89359C53CCD",
         "DOC-C340C5292DA00FC0",
         "DOC-43A0E82581FDE829",
-        "DOC-78C2C8B92DC7868B"
+        "DOC-78C2C8B92DC7868B",
+        "DOC-D40A4D26A4E7FAC8",
+        "DOC-D9910310120EC28C"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-11T06:15:49+00:00"
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "update_checks": [
+        {
+          "document_id": "DOC-CE85349F176584D3",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-45A6160CC02123E0",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-6230F89359C53CCD",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-C340C5292DA00FC0",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-43A0E82581FDE829",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-78C2C8B92DC7868B",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-D40A4D26A4E7FAC8",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-D9910310120EC28C",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-325B2A6C30755476": {
       "status": "success",
@@ -602,8 +792,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-11T00:33:11+00:00",
-      "eps_key": "2027-12-31|42.27417",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
+      "eps_key": "2027-12-31|42.555",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9DA9F71500981FB2"
@@ -616,10 +806,10 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "provider_rate_limited",
-      "context_id": "CTX-C6D280F99B770EDC",
-      "context_input_sha": "c6d280f99b770edc2aecea489c547fb2f5ae5135b0a04d8efc8da65ecd3846a6",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-654C43F916CE1DAD",
+      "context_input_sha": "654c43f916ce1daddaebab0996bead2c437f38aee331392cc4ce460fd5e9026e",
       "update_checks": [
         {
           "document_id": "DOC-919F42DB832A5C02",
@@ -645,8 +835,7 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ],
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      ]
     },
     "CAN-36582E27909720FE": {
       "status": "success",
@@ -750,9 +939,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-13T06:46:36+00:00",
-      "draft_status": "provider_rate_limited",
-      "context_id": "CTX-489EBDB3A330DB87",
-      "context_input_sha": "489ebdb3a330db87955e7add6c0ad88b4c68d93f22edb550396ef11a00ae3a9d",
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-66366DC66765697C",
+      "context_input_sha": "66366dc66765697cacb0a1127d30cf70ca142b716a1fc92e30f190ed7ef89cfb",
       "update_checks": [
         {
           "document_id": "DOC-7387CF5E90D2794F",
@@ -762,8 +951,7 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ],
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      ]
     },
     "CAN-E95987D989EF1145": {
       "status": "success",
@@ -1032,7 +1220,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "draft_error": "TimeoutError",
       "draft_next_at": "2026-10-10T06:37:58+00:00",
       "draft_failure": "failed",
@@ -1166,8 +1354,8 @@
         "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
         "mapping_observed_at": "2026-10-10T06:01:44+00:00"
       },
-      "attempted_at": "2026-10-11T00:33:11+00:00",
-      "eps_key": "2027-12-31|26.67825",
+      "attempted_at": "2026-10-12T06:23:49+00:00",
+      "eps_key": "2027-12-31|26.74945",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-D9C0CECC172F9418"
@@ -1178,8 +1366,8 @@
         "DOC-D9C0CECC172F9418"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "provider_rate_limited",
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
       "update_checks": [
@@ -1219,7 +1407,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-00C1D48A4294E166",
       "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
       "update_checks": [
@@ -1427,7 +1615,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-4516CDD65F6EAE41",
       "context_input_sha": "4516cdd65f6eae41d9681da0d3b7ad75c1344fb9db733b10077f67f9b5d20905",
       "update_checks": [
@@ -1467,7 +1655,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
@@ -1506,7 +1694,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "context_id": "CTX-B80220E5DD347856",
       "context_input_sha": "b80220e5dd3478569d09284b9cf450d79dfd865da856b0d365f33ab44b6c8a1d",
       "update_checks": [
@@ -1546,7 +1734,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "draft_error": "HTTPError",
       "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
@@ -1619,7 +1807,7 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "update_checks": [
         {
           "document_id": "DOC-39C08ABD9C77B7B0",
@@ -1739,11 +1927,12 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_rate_limited",
-      "draft_next_at": "2026-10-10T11:18:47+00:00",
+      "draft_status": "insufficient_earnings_context",
       "draft_error": "HTTPError",
       "draft_http_status": 503,
-      "draft_failure": "provider_overloaded"
+      "draft_failure": "provider_overloaded",
+      "context_id": "CTX-98E71A8759723E90",
+      "context_input_sha": "98e71a8759723e907c0beda1f3187b9152299054d42fe026fc3d002e3eb2c2d9"
     },
     "CAN-D9076638B950E851": {
       "status": "success",
@@ -1806,8 +1995,9 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "provider_rate_limited",
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-D088715174947728",
+      "context_input_sha": "d088715174947728b0cc23fc2158f51aaa42af47276d5567a39705dde05f1b48"
     },
     "CAN-CA0C8E92D2718B06": {
       "status": "success",
@@ -1852,7 +2042,9 @@
         }
       ],
       "next_eligible_at": "2026-10-12T06:05:58+00:00",
-      "draft_status": "deferred_budget"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-FABF2FF8484F7CCF",
+      "context_input_sha": "fabf2ff8484f7ccf3afdfffd95186c572ed6e73a94da98e417c282dd111c53bf"
     },
     "CAN-C05377BEC03AE25C": {
       "status": "success",
@@ -1889,7 +2081,7 @@
         }
       ],
       "next_eligible_at": "2026-10-16T06:37:49+00:00",
-      "draft_status": "provider_rate_limited"
+      "draft_status": "deferred_budget"
     },
     "CAN-5790099EDC6F3301": {
       "status": "success",
@@ -1929,7 +2121,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-ECB2C73CA19DA4AB": {
@@ -2030,7 +2222,7 @@
         }
       ],
       "next_eligible_at": "2026-10-15T06:30:16+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
     },
     "CAN-FD88AA0D924CF1C8": {
@@ -2184,6 +2376,118 @@
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
       "draft_status": "deferred_budget",
       "draft_next_at": "2026-10-10T06:31:42+00:00"
+    },
+    "CAN-61FEF5DA79A23D65": {
+      "status": "success",
+      "ticker": "SABR",
+      "issuer": {
+        "cik": "0001597033",
+        "ticker": "SABR",
+        "exchange": "Nasdaq",
+        "name": "Sabre Corporation",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+      },
+      "attempted_at": "2026-10-12T06:23:49+00:00",
+      "eps_key": "2027-12-31|0.19159",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-173D18E589F8FFD6"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-0A7EACAF06FB1C19",
+        "DOC-C068CDC758440A48",
+        "DOC-173D18E589F8FFD6",
+        "DOC-6FDB3DBA3B0ECD96"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-0A7EACAF06FB1C19",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-C068CDC758440A48",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-6FDB3DBA3B0ECD96",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-173D18E589F8FFD6",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "draft_status": "deferred_budget"
+    },
+    "CAN-E5554136472B2202": {
+      "status": "success",
+      "ticker": "PSTL",
+      "issuer": {
+        "cik": "0001759774",
+        "ticker": "PSTL",
+        "exchange": "NYSE",
+        "name": "Postal Realty Trust, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
+        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+      },
+      "attempted_at": "2026-10-12T06:23:49+00:00",
+      "eps_key": "2027-12-31|0.76741",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-ADBC52D6610A0561"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-3376DE4B31648372",
+        "DOC-ADBC52D6610A0561"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-3376DE4B31648372",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-ADBC52D6610A0561",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:guidance:p5",
+          "alert_reasons": [
+            "guidance_no_comparable_key"
+          ]
+        }
+      ],
+      "next_eligible_at": "2026-10-19T06:23:49+00:00",
+      "draft_status": "deferred_budget"
     }
   },
   "days": {
@@ -2257,6 +2561,11 @@
       "companies": 8,
       "http_attempts": 28,
       "folded_companies": 3
+    },
+    "2026-10-12": {
+      "companies": 10,
+      "http_attempts": 46,
+      "folded_companies": 2
     }
   },
   "documents_by_source": {
@@ -2365,6 +2674,18 @@
     "0001437749-26-031335|https://www.sec.gov/Archives/edgar/data/821483/000143774926031335/ex_1020279_source.htm": "DOC-101A442B7322BF6D",
     "0001437749-26-031335|https://www.sec.gov/Archives/edgar/data/821483/000143774926031335/parr20260928_8k.htm": "DOC-3EBE91EBDD47F27C",
     "0001376139-26-000041|https://www.sec.gov/Archives/edgar/data/1376139/000137613926000041/exhibit991-investorprese.htm": "DOC-8419A30FF72F08B9",
-    "0001376139-26-000041|https://www.sec.gov/Archives/edgar/data/1376139/000137613926000041/cvi-20260908.htm": "DOC-8855BD37731A714F"
+    "0001376139-26-000041|https://www.sec.gov/Archives/edgar/data/1376139/000137613926000041/cvi-20260908.htm": "DOC-8855BD37731A714F",
+    "0001104659-26-073668|https://www.sec.gov/Archives/edgar/data/1889109/000110465926073668/tm2617120d1_ex99-1.htm": "DOC-D40A4D26A4E7FAC8",
+    "0001104659-26-073668|https://www.sec.gov/Archives/edgar/data/1889109/000110465926073668/tm2617120d1_6k.htm": "DOC-D9910310120EC28C",
+    "0001193125-26-405576|https://www.sec.gov/Archives/edgar/data/1597033/000119312526405576/d435567dex991.htm": "DOC-0A7EACAF06FB1C19",
+    "0001193125-26-405576|https://www.sec.gov/Archives/edgar/data/1597033/000119312526405576/d435567dex992.htm": "DOC-C068CDC758440A48",
+    "0001628280-26-053858|https://www.sec.gov/Archives/edgar/data/1597033/000162828026053858/q22026earningsrelease.htm": "DOC-173D18E589F8FFD6",
+    "0001193125-26-405576|https://www.sec.gov/Archives/edgar/data/1597033/000119312526405576/d435567d8k.htm": "DOC-6FDB3DBA3B0ECD96",
+    "0001628280-26-060996|https://www.sec.gov/Archives/edgar/data/1759774/000162828026060996/pstl-20260904.htm": "DOC-3376DE4B31648372",
+    "0001628280-26-052564|https://www.sec.gov/Archives/edgar/data/1759774/000162828026052564/pstl-2q26earningsrelease.htm": "DOC-ADBC52D6610A0561",
+    "0001193125-26-401182|https://www.sec.gov/Archives/edgar/data/1724965/000119312526401182/talo-ex99_1.htm": "DOC-090134AFA960D453",
+    "0001193125-26-401182|https://www.sec.gov/Archives/edgar/data/1724965/000119312526401182/talo-20260922.htm": "DOC-059C2F86DE73B23B",
+    "0001193125-26-398060|https://www.sec.gov/Archives/edgar/data/1724965/000119312526398060/talo-ex99_1.htm": "DOC-C2CC4B2435449EE3",
+    "0001193125-26-398060|https://www.sec.gov/Archives/edgar/data/1724965/000119312526398060/talo-20260922.htm": "DOC-0B3BFF1722C21ED2"
   }
 }

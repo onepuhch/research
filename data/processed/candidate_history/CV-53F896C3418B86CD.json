@@ -1,0 +1,100 @@
+{
+  "candidate_id": "CAN-E5554136472B2202",
+  "candidate_version": "CV-53F896C3418B86CD",
+  "identity": {
+    "entity_id": "NYSE:PSTL",
+    "ticker": "PSTL",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Postal Realty Trust, Inc.",
+  "industry": "REIT - Office",
+  "sector": "Real Estate",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "부동산을 소유하고 관리하며, 주로 우편 관련 시설을 임대하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Postal Realty Trust, Inc. is an internally managed real estate investment trust that owns and manages over 2,300 properties leased primarily to the USPS. Postal Realty Trust, Inc. is based in Cedarhurst, New York."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PSTL analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSTL/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-12T06:19:59+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PSTL daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSTL/history",
+      "published_at": null,
+      "observed_at": "2026-10-12T06:19:59+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PSTL company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PSTL/profile",
+      "published_at": null,
+      "observed_at": "2026-10-12T06:19:59+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.76741,
+    "eps_30d": 0.58772,
+    "eps_90d": 0.54353,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 41.2,
+    "steady": true,
+    "turnaround": false
+  }
+}

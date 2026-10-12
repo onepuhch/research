@@ -1,0 +1,98 @@
+{
+  "context_id": "CTX-FABF2FF8484F7CCF",
+  "candidate_id": "CAN-CA0C8E92D2718B06",
+  "ticker": "PRGS",
+  "issuer_cik": "0000876167",
+  "document_ids": [
+    "DOC-50D10237C87F62F3",
+    "DOC-9C607C1EC4FE684B"
+  ],
+  "eps_target_period": "2027-11-30",
+  "source_blocks": [
+    "DOC-50D10237C87F62F3#p6",
+    "DOC-50D10237C87F62F3#p9",
+    "DOC-50D10237C87F62F3#p14",
+    "DOC-50D10237C87F62F3#p22",
+    "DOC-50D10237C87F62F3#t3",
+    "DOC-50D10237C87F62F3#t4",
+    "DOC-50D10237C87F62F3#p25",
+    "DOC-50D10237C87F62F3#p27",
+    "DOC-50D10237C87F62F3#t6",
+    "DOC-50D10237C87F62F3#t9",
+    "DOC-50D10237C87F62F3#t10",
+    "DOC-50D10237C87F62F3#t12",
+    "DOC-50D10237C87F62F3#t13",
+    "DOC-50D10237C87F62F3#t16",
+    "DOC-50D10237C87F62F3#p63",
+    "DOC-50D10237C87F62F3#p68",
+    "DOC-50D10237C87F62F3#p72",
+    "DOC-50D10237C87F62F3#p75",
+    "DOC-50D10237C87F62F3#p77",
+    "DOC-9C607C1EC4FE684B#p11"
+  ],
+  "input_sha": "fabf2ff8484f7ccf3afdfffd95186c572ed6e73a94da98e417c282dd111c53bf",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-12T06:24:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 연간 매출 전망치이다",
+      "figures": [
+        "$1,044 - $1,052"
+      ],
+      "quote": "Revenue ; $1,044 - $1,052 ; $1,044 - $1,052 ; $990 - $1,002 ; $990 - $1,002",
+      "where": "DOC-50D10237C87F62F3#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 연간 희석 주당 순이익 전망치이다",
+      "figures": [
+        "$1.18 - $1.28"
+      ],
+      "quote": "Diluted earnings per share ; $1.18 - $1.28 ; $6.15 - $6.23 ; $1.60 - $1.74 ; $6.09 - $6.21",
+      "where": "DOC-50D10237C87F62F3#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 연간 희석 주당 순이익 전망치이다",
+      "figures": [
+        "$6.15 - $6.23"
+      ],
+      "quote": "Diluted earnings per share ; $1.18 - $1.28 ; $6.15 - $6.23 ; $1.60 - $1.74 ; $6.09 - $6.21",
+      "where": "DOC-50D10237C87F62F3#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 연간 영업 이익률 전망치이다",
+      "figures": [
+        "13%"
+      ],
+      "quote": "Operating margin ; 13% ; 38% ; 16% ; 39%",
+      "where": "DOC-50D10237C87F62F3#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 연간 영업 이익률 전망치이다",
+      "figures": [
+        "38%"
+      ],
+      "quote": "Operating margin ; 13% ; 38% ; 16% ; 39%",
+      "where": "DOC-50D10237C87F62F3#t3"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

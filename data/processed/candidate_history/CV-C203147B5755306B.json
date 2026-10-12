@@ -1,0 +1,154 @@
+{
+  "candidate_id": "CAN-CA0C8E92D2718B06",
+  "candidate_version": "CV-C203147B5755306B",
+  "identity": {
+    "entity_id": "NASDAQ:PRGS",
+    "ticker": "PRGS",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Progress Software Corporation",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "AI 기반 애플리케이션 및 디지털 경험 개발, 배포, 관리를 위한 소프트웨어 제품을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Progress Software Corporation provides software products that develops, deploys, and manages artificial intelligence (AI) powered applications and digital experiences in the United States and internationally. The company offers Agentic RAG, a next-generation Agentic Rag-as-a-Service platform; Automate MFT, a cloud-native Software-as-a-Service (SaaS) platform for automated and secure file transfers; Chef, a DevOps/DevSecOps automation software; Corticon, a decision automation platform; DataDirect, a secure data connectivity tools for Relational, NoSQL, Big Data, and SaaS data sources; Developer"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PRGS analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PRGS/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-12T06:18:29+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PRGS daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PRGS/history",
+      "published_at": null,
+      "observed_at": "2026-10-12T06:18:29+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PRGS company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PRGS/profile",
+      "published_at": null,
+      "observed_at": "2026-10-12T06:18:29+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-50D10237C87F62F3",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/876167/000087616726000110/exhibit991-q32026earningsr.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-09-30",
+      "observed_at": "2026-10-05T06:05:58+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-9C607C1EC4FE684B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/876167/000155278126000390/e26303_ex99-1.htm",
+      "title": "SEC 8-K EX-99.1 — e26303_ex99-1.htm",
+      "published_at": null,
+      "filed_at": "2026-07-22",
+      "observed_at": "2026-10-05T06:05:58+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-FABF2FF8484F7CCF",
+    "input_sha": "fabf2ff8484f7ccf3afdfffd95186c572ed6e73a94da98e417c282dd111c53bf",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-50D10237C87F62F3",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/876167/000087616726000110/exhibit991-q32026earningsr.htm",
+        "filed_at": "2026-09-30",
+        "observed_at": "2026-10-05T06:05:58+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-9C607C1EC4FE684B",
+        "title": "e26303_ex99-1.htm",
+        "url": "https://www.sec.gov/Archives/edgar/data/876167/000155278126000390/e26303_ex99-1.htm",
+        "filed_at": "2026-07-22",
+        "observed_at": "2026-10-05T06:05:58+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-12T06:24:24+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 7.17732,
+    "eps_30d": 6.22955,
+    "eps_90d": 6.23963,
+    "eps_target_period": "2027-11-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 15.0,
+    "steady": false,
+    "turnaround": false
+  }
+}

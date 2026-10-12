@@ -1,0 +1,167 @@
+{
+  "context_id": "CTX-F0EA88EF71DDC9A8",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "ticker": "NBR",
+  "issuer_cik": "0001163739",
+  "document_ids": [
+    "DOC-CFE4C67A24B731D8",
+    "DOC-9B80B26347EA4928",
+    "DOC-FA05283160645717"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9B80B26347EA4928#p12",
+    "DOC-9B80B26347EA4928#p17",
+    "DOC-9B80B26347EA4928#p26",
+    "DOC-9B80B26347EA4928#p35",
+    "DOC-9B80B26347EA4928#p45",
+    "DOC-9B80B26347EA4928#t19",
+    "DOC-9B80B26347EA4928#p80",
+    "DOC-FA05283160645717#t9",
+    "DOC-FA05283160645717#p160",
+    "DOC-FA05283160645717#p173"
+  ],
+  "input_sha": "f0ea88ef71ddc9a8434c8bca60c1010fa647976a269bccca527db141a58778d4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-12T06:24:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[U.S. Drilling] 조정 EBITDA(adjusted EBITDA) · second quarter: $94 million — 미국 시추 부문의 조정 EBITDA는 이전 분기보다 증가했다",
+      "note_ko": "미국 시추 부문의 조정 EBITDA는 이전 분기보다 증가했다",
+      "kind": "fact",
+      "quote": "The U.S. Drilling segment reported second quarter adjusted EBITDA of $94 million, compared to $88 million in the previous quarter.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "p17",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "$94 million"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "segment",
+      "subject_name": "U.S. Drilling",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 비 GAAP 측정치이며 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "note_ko": "조정 EBITDA는 비 GAAP 측정치이며 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted operating income (loss) — 조정 영업 이익(손실)은 비 GAAP 측정치이며 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "note_ko": "조정 영업 이익(손실)은 비 GAAP 측정치이며 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted operating income (loss)",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "Lower 48 지역의 일일 마진이 확대되었다",
+      "figures": [
+        "5%"
+      ],
+      "quote": "Lower 48 results improved as daily margin expanded 5% and the working fleet grew 4%.",
+      "where": "DOC-9B80B26347EA4928#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "Lower 48 지역의 가동 중인 장비 수가 증가했다",
+      "figures": [
+        "4%"
+      ],
+      "quote": "Lower 48 results improved as daily margin expanded 5% and the working fleet grew 4%.",
+      "where": "DOC-9B80B26347EA4928#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 하반기 조정 EBITDA가 연간 환산 기준 십억 달러에 도달할 것으로 예상한다",
+      "figures": [
+        "$1 billion"
+      ],
+      "quote": "As we look forward, we anticipate second-half adjusted EBITDA to reach an annualized run-rate of $1 billion.",
+      "where": "DOC-9B80B26347EA4928#p35"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동으로 인한 순 현금 흐름은 이십사만 팔천오백팔십일이었다",
+      "figures": [
+        "248,581"
+      ],
+      "quote": "Net cash provided by (used for) operating activities ; ​ ; 248,581 ; ​ ; 239,545",
+      "where": "DOC-FA05283160645717#t9"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 미래 전망에 대한 세그먼트 조정 EBITDA, 세그먼트 총 마진 또는 조정 잉여 현금 흐름의 GAAP 재무 측정치와 비교 가능한 조정 내역을 제공하지 않는다",
+      "figures": [],
+      "quote": "We do not provide a forward-looking reconciliation of our outlook for Segment Adjusted EBITDA, Segment Gross Margin or Adjusted Free Cash Flow, as the amount and significance of items required to deve",
+      "where": "DOC-9B80B26347EA4928#p45"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

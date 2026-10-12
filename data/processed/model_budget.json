@@ -1,9 +1,5 @@
 {
   "days": {
-    "2026-09-27": {
-      "candidate_context": 6,
-      "cards": 1
-    },
     "2026-09-28": {
       "candidate_context": 6
     },
@@ -62,6 +58,11 @@
     },
     "2026-10-11": {
       "extract": 4
+    },
+    "2026-10-12": {
+      "extract": 2,
+      "candidate_context": 6,
+      "cards": 1
     }
   },
   "counting_since": "2026-09-25, first counted call by the cards step of run 36133507734 (about 12:25 UTC); extract calls earlier that day were not counted",
@@ -78,7 +79,7 @@
       "until": null,
       "jitter_s": null,
       "last_result": "ok",
-      "last_at": "2026-10-11T00:18:30+00:00"
+      "last_at": "2026-10-12T06:25:08+00:00"
     }
   }
 }

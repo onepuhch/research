@@ -1,0 +1,255 @@
+{
+  "context_id": "CTX-98E71A8759723E90",
+  "candidate_id": "CAN-14DF13D991DA6490",
+  "ticker": "INDV",
+  "issuer_cik": "0001625297",
+  "document_ids": [
+    "DOC-A2BA180FEC9D1764"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A2BA180FEC9D1764#p4",
+    "DOC-A2BA180FEC9D1764#p5",
+    "DOC-A2BA180FEC9D1764#p6",
+    "DOC-A2BA180FEC9D1764#p7",
+    "DOC-A2BA180FEC9D1764#p8",
+    "DOC-A2BA180FEC9D1764#p10",
+    "DOC-A2BA180FEC9D1764#p11",
+    "DOC-A2BA180FEC9D1764#p12",
+    "DOC-A2BA180FEC9D1764#t2",
+    "DOC-A2BA180FEC9D1764#t4",
+    "DOC-A2BA180FEC9D1764#t5",
+    "DOC-A2BA180FEC9D1764#p14",
+    "DOC-A2BA180FEC9D1764#p15",
+    "DOC-A2BA180FEC9D1764#t6",
+    "DOC-A2BA180FEC9D1764#t7",
+    "DOC-A2BA180FEC9D1764#t8",
+    "DOC-A2BA180FEC9D1764#t9",
+    "DOC-A2BA180FEC9D1764#t10",
+    "DOC-A2BA180FEC9D1764#t11",
+    "DOC-A2BA180FEC9D1764#t12",
+    "DOC-A2BA180FEC9D1764#t14",
+    "DOC-A2BA180FEC9D1764#t15",
+    "DOC-A2BA180FEC9D1764#t16",
+    "DOC-A2BA180FEC9D1764#t17",
+    "DOC-A2BA180FEC9D1764#t18",
+    "DOC-A2BA180FEC9D1764#p20",
+    "DOC-A2BA180FEC9D1764#p28",
+    "DOC-A2BA180FEC9D1764#p30",
+    "DOC-A2BA180FEC9D1764#p37",
+    "DOC-A2BA180FEC9D1764#t22",
+    "DOC-A2BA180FEC9D1764#p62",
+    "DOC-A2BA180FEC9D1764#t23",
+    "DOC-A2BA180FEC9D1764#t26",
+    "DOC-A2BA180FEC9D1764#p64",
+    "DOC-A2BA180FEC9D1764#p65",
+    "DOC-A2BA180FEC9D1764#p70",
+    "DOC-A2BA180FEC9D1764#p71"
+  ],
+  "input_sha": "98e71a8759723e907c0beda1f3187b9152299054d42fe026fc3d002e3eb2c2d9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-12T06:24:24+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Total Net Revenue · Q2’26: $343 Million / 14%(변화율·증가) — 전년 동기 대비 증가했다",
+      "note_ko": "전년 동기 대비 증가했다",
+      "kind": "fact",
+      "quote": "Q2’26 Total Net Revenue of $343 Million, Up 14% YoY",
+      "document_id": "DOC-A2BA180FEC9D1764",
+      "block_id": "p5",
+      "metric": "Total Net Revenue",
+      "figures": [
+        "$343 Million",
+        "14%"
+      ],
+      "period": "Q2’26",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[SUBLOCADE] Net Revenue · Q2’26: $253 Million / 21%(변화율·증가) — 분기별 최고치를 기록했으며 전년 동기 대비 증가했다",
+      "note_ko": "분기별 최고치를 기록했으며 전년 동기 대비 증가했다",
+      "kind": "fact",
+      "quote": "Record Quarterly Total SUBLOCADE® Net Revenue of $253 Million in Q2’26, Up 21% YoY",
+      "document_id": "DOC-A2BA180FEC9D1764",
+      "block_id": "p6",
+      "metric": "Net Revenue",
+      "figures": [
+        "$253 Million",
+        "21%"
+      ],
+      "period": "Q2’26",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "SUBLOCADE",
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "GAAP Net Income · Q2’26: $122 Million — 분기별 최고치를 기록했다",
+      "note_ko": "분기별 최고치를 기록했다",
+      "kind": "fact",
+      "quote": "Record Quarterly GAAP Net Income of $122 Million and Record Non-GAAP Net Income of $142 Million in Q2’26",
+      "document_id": "DOC-A2BA180FEC9D1764",
+      "block_id": "p7",
+      "metric": "GAAP Net Income",
+      "figures": [
+        "$122 Million"
+      ],
+      "period": "Q2’26",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Q2’26: $186 Million / 111%(변화율·증가) — 분기별 최고치를 기록했으며 전년 동기 대비 증가했다",
+      "note_ko": "분기별 최고치를 기록했으며 전년 동기 대비 증가했다",
+      "kind": "fact",
+      "quote": "Record Quarterly Adjusted EBITDA of $186 Million in Q2’26, Up 111% YoY",
+      "document_id": "DOC-A2BA180FEC9D1764",
+      "block_id": "p8",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$186 Million",
+        "111%"
+      ],
+      "period": "Q2’26",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "forward-looking U.S. GAAP equivalents — 특정 비일반회계기준 지표에 대한 미래예측 일반회계기준 등가물은 불확실성과 조정 항목의 잠재적 가변성으로 인해 제공되지 않았다",
+      "note_ko": "특정 비일반회계기준 지표에 대한 미래예측 일반회계기준 등가물은 불확실성과 조정 항목의 잠재적 가변성으로 인해 제공되지 않았다",
+      "kind": "fact",
+      "quote": "We have not provided the forward-looking U.S. GAAP equivalents for certain forward-looking non-U.S. GAAP metrics as a result of the uncertainty and potential variability of reconciling items.",
+      "document_id": "DOC-A2BA180FEC9D1764",
+      "block_id": "t7",
+      "metric": "forward-looking U.S. GAAP equivalents",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "이전 연간 가이던스보다 상향 조정되었다",
+      "figures": [
+        "$1,295 million to $1,365 million"
+      ],
+      "quote": "Revised FY 2026 Guidance | Net Revenue ; $1,215 million to $1,285 million ; $1,295 million to $1,365 million",
+      "where": "DOC-A2BA180FEC9D1764#t6"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "비일반회계기준 재무 측정치는 다른 회사에서 사용하는 유사한 명칭의 측정치와 계산 방식이 다를 수 있으므로 비교 가능하지 않을 수 있다",
+      "figures": [],
+      "quote": "Adjusted EBITDA, as used by us, may be calculated differently from, and therefore may not be comparable to, similarly titled measures used by other companies.",
+      "where": "DOC-A2BA180FEC9D1764#p71"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

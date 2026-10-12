@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-C897036A779FAE84",
+  "candidate_id": "CAN-3D7A7E3B7BFBE2CE",
+  "candidate_version": "CV-0A7194531895FFFC",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:BLTE",
+    "ticker": "BLTE",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-12T06:14:25+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261012T060914Z_38211040781-1.json.gz",
+    "sha256": "a1aeae358df4f003302c7c1273362825107e9f5aa2c7c94423088814d0215bd2",
+    "run_id": "38211040781-1",
+    "finished_at": "2026-10-12T06:23:47+00:00"
+  },
+  "eps": {
+    "eps_now": 2.26,
+    "eps_30d": 0.94714,
+    "eps_90d": 0.94429,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 5,
+    "down30": 2,
+    "pct_90": 139.3,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 0.852,
+    "yield_change_30_pp": 0.85
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-14",
+    "price_start_date": "2026-07-14",
+    "price_end_expected": "2026-10-09",
+    "price_end_date": "2026-10-09",
+    "close_start": 146.67999267578125,
+    "close_end": 154.49000549316406,
+    "price_pct_90": 5.3,
+    "adj_return_pct_90": 5.3,
+    "pe_change_pct": -56.0
+  },
+  "display_rank": 14,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 8
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "44bcd7bb2fba",
+  "generator_version": "cards-v10",
+  "market_cap": 6221643776,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-12T06:23:49+00:00",
+  "source_status": "no_relevant_document",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:BLTE",
+  "approval_version": null,
+  "rendered_at": "2026-10-12T06:24:59+00:00"
+}

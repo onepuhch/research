@@ -1,0 +1,85 @@
+{
+  "observation_id": "OB-5E5633045F294F85",
+  "candidate_id": "CAN-D50A4151AB176FB7",
+  "candidate_version": "CV-8268BA4B7AAE9777",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:AEHR",
+    "ticker": "AEHR",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-12T06:16:44+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261012T060914Z_38211040781-1.json.gz",
+    "sha256": "a1aeae358df4f003302c7c1273362825107e9f5aa2c7c94423088814d0215bd2",
+    "run_id": "38211040781-1",
+    "finished_at": "2026-10-12T06:23:47+00:00"
+  },
+  "eps": {
+    "eps_now": 1.38333,
+    "eps_30d": 0.3,
+    "eps_90d": 0.3,
+    "eps_target_period": "2028-05-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 361.1,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 1.28,
+    "yield_change_30_pp": 1.28
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-14",
+    "price_start_date": "2026-07-14",
+    "price_end_expected": "2026-10-09",
+    "price_end_date": "2026-10-09",
+    "close_start": 72.01000213623047,
+    "close_end": 84.63999938964844,
+    "price_pct_90": 17.5,
+    "adj_return_pct_90": 17.5,
+    "pe_change_pct": -74.5
+  },
+  "display_rank": 2,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 1
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "44bcd7bb2fba",
+  "generator_version": "cards-v10",
+  "market_cap": 2764303872,
+  "context_id": "CTX-4A14F23F18783B5E",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-12T06:23:49+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-4A14F23F18783B5E",
+    "generated_at": "2026-10-09T06:37:58+00:00",
+    "eps_target_period": "2028-05-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:AEHR",
+  "approval_version": null,
+  "rendered_at": "2026-10-12T06:24:59+00:00"
+}
