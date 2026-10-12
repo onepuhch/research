@@ -165,13 +165,17 @@
     "2026-10-11": {
       "requests": 20,
       "retries": 0
+    },
+    "2026-10-12": {
+      "requests": 20,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 6,
-      "last_attempt_at": "2026-10-11T00:34:14.780710+00:00",
+      "attempts": 7,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -530,8 +534,8 @@
       "reason": null
     },
     "PRGS": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -674,8 +678,8 @@
       "reason": null
     },
     "DHT": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-11T00:34:14.780710+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -690,8 +694,8 @@
       "reason": null
     },
     "FRO": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-11T00:34:14.780710+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -930,16 +934,16 @@
       "reason": null
     },
     "PSTL": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-11T00:34:14.780710+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "SABR": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-11T00:34:14.780710+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1004,6 +1008,118 @@
     "VAC": {
       "attempts": 1,
       "last_attempt_at": "2026-10-11T00:34:14.780710+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "VIRT": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "WDC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "BLMN": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SNX": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "TAL": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "F": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "IP": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "EQNR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "FORM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "HPE": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SQM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "VBNK": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "E": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "PEBO": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-12T06:25:56.937905+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
