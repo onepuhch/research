@@ -610,12 +610,20 @@
       "observation_id": "OB-6726C631DDEC2053",
       "signal_id": null,
       "day": "2026-10-12",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-12T06:25:52+00:00",
+          "status": "sent",
+          "message_id": 175,
+          "error": null
+        }
+      ],
       "reserved_by": "38211040781-1",
       "reserved_at": "2026-10-12T06:25:49+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · SABR Sabre Corporation</b>\n여행 산업을 위한 소프트웨어 및 기술 회사로, 여행 공급자와 구매자를 위한 솔루션을 제공하여 수익을 창출합니다.\n내년 EPS 예상(2027-12-31 회계연도 말) $0.14 → $0.19 (+32%), 최근 30일 상향 1/하향 0\n주가 2026-07-14 → 2026-10-09 +11.1%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-61FEF5DA79A23D65</code> · 추적 <code>/track CAN-61FEF5DA79A23D65</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "e6c9fb1f41775fe4359b896d31d98862634dfc1638ef93df75b7804275fc1778"
+      "payload_sha256": "e6c9fb1f41775fe4359b896d31d98862634dfc1638ef93df75b7804275fc1778",
+      "message_id": 175
     },
     "NASDAQ:PRGS|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -627,12 +635,20 @@
       "observation_id": "OB-DA61A8F789759612",
       "signal_id": null,
       "day": "2026-10-12",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-12T06:25:52+00:00",
+          "status": "sent",
+          "message_id": 176,
+          "error": null
+        }
+      ],
       "reserved_by": "38211040781-1",
       "reserved_at": "2026-10-12T06:25:49+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · PRGS Progress Software Corporation</b>\nAI 기반 애플리케이션 및 디지털 경험 개발, 배포, 관리를 위한 소프트웨어 제품을 제공하여 수익을 창출합니다.\n내년 EPS 예상(2027-11-30 회계연도 말) $6.24 → $7.18 (+15%), 최근 30일 상향 1/하향 0\n주가 2026-07-14 → 2026-10-09 +4.9%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-CA0C8E92D2718B06</code> · 추적 <code>/track CAN-CA0C8E92D2718B06</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "c62037cdb442e1ef0c89f836416e41fea9a45a80e95e594d1ee385332933b741"
+      "payload_sha256": "c62037cdb442e1ef0c89f836416e41fea9a45a80e95e594d1ee385332933b741",
+      "message_id": 176
     },
     "NYSE:PSTL|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -644,12 +660,20 @@
       "observation_id": "OB-E3A7E55EE7BA67C1",
       "signal_id": null,
       "day": "2026-10-12",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-12T06:25:53+00:00",
+          "status": "sent",
+          "message_id": 177,
+          "error": null
+        }
+      ],
       "reserved_by": "38211040781-1",
       "reserved_at": "2026-10-12T06:25:49+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · PSTL Postal Realty Trust, Inc.</b>\n부동산을 소유하고 관리하며, 주로 우편 관련 시설을 임대하여 수익을 얻습니다.\n내년 EPS 예상(2027-12-31 회계연도 말) $0.54 → $0.77 (+41%), 최근 30일 상향 2/하향 0\n주가 2026-07-14 → 2026-10-09 -4.4%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-E5554136472B2202</code> · 추적 <code>/track CAN-E5554136472B2202</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
-      "payload_sha256": "6e3d26c4556b30ad37d1060f475735921602d174b4ef73872b5afae76d268c8f"
+      "payload_sha256": "6e3d26c4556b30ad37d1060f475735921602d174b4ef73872b5afae76d268c8f",
+      "message_id": 177
     }
   },
   "bootstrap": {
