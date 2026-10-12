@@ -9,10 +9,15 @@ A reply to a candidate alert with one exact word (spaces around it removed) is a
 Dismiss and hold change nothing else: tracking, alert slots and schedules stay as they are.
 
 The replied-to message is matched only to a receipt in candidate_alerts.json: a sent event with a
-candidate_id, exactly one event holding that message_id (in its receipt or attempts), sent by the bot,
-and, when Telegram gives the replied message's time, within MATCH_WINDOW_S of the receipt. Receipts
-carry no chat ID; every alert goes to the one allowed chat, kept here under the fixed alias SCOPE (the
-chat ID is never written). Replies to anything else (command replies, correction notice 168, news
+candidate_id, exactly one event holding that message_id (in its receipt or attempts), a replied
+message Telegram marks as sent by a bot, and the replied message's own time (not the reply's) within
+MATCH_WINDOW_S of the receipt time, so a reply days later still links. If the bot mark, the replied
+message's time or the receipt time is missing or unreadable, nothing is linked (unverified) and the
+reply points to the ID commands; nothing is guessed. The window is a cross-check of the same message,
+not proof of which bot sent it: receipts carry no chat ID; every alert goes to the one allowed chat,
+kept here under the fixed alias SCOPE (the chat ID is never written), and after a chat or bot change
+old receipts are not linked by this rule (a scope change is a checked migration). lookup_unverified
+is the CLI dry-run's diagnostic lookup without these checks; it never records. Replies to anything else (command replies, correction notice 168, news
 alerts without a candidate_id, ambiguous matches) record nothing and ask for a reply to the alert
 itself. An event that is not 'sent' (uncertain, failed, reserved) is never changed by a reply and gets
 no judgment or tracking; the reply points to the /candidate and /track commands. The alert's text and
@@ -129,28 +134,57 @@ def receipt_time(event: dict, message_id: int) -> str | None:
     return (attempt or {}).get("at")
 
 
-def resolve(message_id: int, message_date: int | None = None, from_bot: bool | None = None) -> dict:
-    """{"state": ok | not_alert | ambiguous | no_candidate | unconfirmed, "key", "event"}."""
-    if from_bot is False or not isinstance(message_id, int) or isinstance(message_id, bool):
+def matches(message_id: int) -> dict:
+    """The receipt holding message_id: {"state": not_alert | ambiguous | None, "key", "event"}."""
+    if not isinstance(message_id, int) or isinstance(message_id, bool):
         return {"state": "not_alert", "key": None, "event": None}
-    ledger = alert_ledger()
-    hits = [(k, e) for k, e in ledger["events"].items()
+    hits = [(k, e) for k, e in alert_ledger()["events"].items()
             if e.get("message_id") == message_id
             or any(a.get("message_id") == message_id for a in e.get("attempts") or [])]
-    if not hits:
-        return {"state": "not_alert", "key": None, "event": None}
-    if len(hits) > 1:
-        return {"state": "ambiguous", "key": None, "event": None}
-    key, event = hits[0]
-    sent_at, replied_at = receipt_time(event, message_id), iso(message_date)
-    if sent_at and replied_at and abs((datetime.fromisoformat(sent_at)
-                                       - datetime.fromisoformat(replied_at)).total_seconds()) > MATCH_WINDOW_S:
-        return {"state": "ambiguous", "key": None, "event": None}  # same number, another message
+    if len(hits) != 1:
+        return {"state": "ambiguous" if hits else "not_alert", "key": None, "event": None}
+    return {"state": None, "key": hits[0][0], "event": hits[0][1]}
+
+
+def linkable(found: dict) -> dict:
+    event = found["event"]
     if event.get("status") != "sent":
-        return {"state": "unconfirmed", "key": key, "event": event}
+        return {**found, "state": "unconfirmed"}
     if not event.get("candidate_id"):
-        return {"state": "no_candidate", "key": key, "event": event}
-    return {"state": "ok", "key": key, "event": event}
+        return {**found, "state": "no_candidate"}
+    return {**found, "state": "ok"}
+
+
+def parse_time(value: str | None) -> datetime | None:
+    try:
+        parsed = datetime.fromisoformat(value) if isinstance(value, str) else None
+    except ValueError:
+        return None
+    return parsed if parsed and parsed.tzinfo else None
+
+
+def resolve(message_id: int, message_date: int | None = None, from_bot: bool | None = None) -> dict:
+    """{"state": ok | not_alert | ambiguous | unverified | no_candidate | unconfirmed, "key", "event"}.
+
+    Used for every real reply: the bot mark and both times are required, never assumed."""
+    if from_bot is False:
+        return {"state": "not_alert", "key": None, "event": None}
+    found = matches(message_id)
+    if found["state"]:
+        return found
+    sent_at = parse_time(receipt_time(found["event"], message_id))
+    replied_at = parse_time(iso(message_date))
+    if from_bot is not True or sent_at is None or replied_at is None:
+        return {"state": "unverified", "key": None, "event": None}
+    if abs((sent_at - replied_at).total_seconds()) > MATCH_WINDOW_S:
+        return {"state": "ambiguous", "key": None, "event": None}  # same number, another message
+    return linkable(found)
+
+
+def lookup_unverified(message_id: int) -> dict:
+    """CLI dry-run diagnostics only: the receipt by message_id alone, without the bot and time checks."""
+    found = matches(message_id)
+    return found if found["state"] else linkable(found)
 
 
 def disputed(event_key: str) -> list[str]:

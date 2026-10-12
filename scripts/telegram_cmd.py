@@ -185,13 +185,13 @@ def active_review_messages() -> list[str]:
 
 
 def track_result(cand: dict, tracked_before=promote.UNKNOWN) -> dict:
-    """promote.track_candidate; a record that the ledger refuses for another reason is a rejection too."""
+    """promote.track_candidate. Every input refusal is already a rejected result with its code; any
+    other ValueError (a damaged cell, a ledger or schema the write refuses) is a state error, kept for
+    retry instead of being answered as a rejection."""
     try:
         return promote.track_candidate(cand, tracked_before=tracked_before)
-    except json.JSONDecodeError:
-        raise
-    except ValueError:
-        return {"outcome": "rejected", "reason_code": "invalid_record", "idea_id": None}
+    except ValueError as error:
+        raise promote.TrackStateError(f"tracking state unreadable: {type(error).__name__}") from error
 
 
 def track_text(cand: dict, state: str, result: dict) -> str:
@@ -201,6 +201,8 @@ def track_text(cand: dict, state: str, result: dict) -> str:
             return f"{ticker} 후보 관측이 오래됐습니다. /screen으로 최신 결과를 본 뒤 다시 등록해 주세요."
         if result["reason_code"] == "capacity":
             return f"활성 추적이 {c.policy()['max_active_ideas']}개로 가득 찼습니다. 기존 추적을 정리한 뒤 다시 등록해 주세요."
+        if result["reason_code"] in ("invalid_record", "observation_in_future"):
+            return f"{ticker} 후보 카드의 관측 시각이 올바르지 않아 등록하지 않았습니다. /screen으로 최신 결과를 확인해 주세요."
         return f"{ticker} 후보는 식별·통화 확인이 부족해 등록하지 않았습니다. 다음 스크린 후 다시 시도해 주세요."
     idea_id = result["idea_id"]
     note = " (최신 목록에는 없는 후보)" if state == "not_current" else ""
@@ -228,9 +230,14 @@ def handle_reply(item: dict, update_id: int, dry_run: bool = False) -> list[str]
     action = item.get("action")
     if action not in fb.LABELS:
         return [HELP_TEXT]
-    target = fb.resolve(item.get("reply_to_message_id"), item.get("reply_to_date"), item.get("reply_to_from_bot"))
+    # The CLI dry-run has no bot mark or times: its lookup is diagnostic and never records.
+    target = (fb.lookup_unverified(item.get("reply_to_message_id")) if dry_run else
+              fb.resolve(item.get("reply_to_message_id"), item.get("reply_to_date"), item.get("reply_to_from_bot")))
     if target["state"] in ("not_alert", "ambiguous"):
         return [f"후보 알림에 대한 답장이 아니어서 판단을 기록하지 않았습니다. {REPLY_GUIDE}"]
+    if target["state"] == "unverified":
+        return ["답장 대상 메시지의 발신·시각 정보를 확인하지 못해 판단을 기록하지 않았습니다. "
+                "알림에 적힌 /candidate 또는 /track 명령을 후보 ID와 함께 그대로 보내 주세요."]
     if target["state"] == "no_candidate":
         return ["후보 ID가 없는 알림(뉴스 신호 등)이라 답장 판단을 기록하지 않았습니다. "
                 "알림에 적힌 /track 명령을 그대로 보내 주세요."]
@@ -244,7 +251,7 @@ def handle_reply(item: dict, update_id: int, dry_run: bool = False) -> list[str]
     cand, state = candidates.find(cid)
     label = fb.LABELS[action]
     if dry_run:
-        return [f"[dry-run] {ticker} 알림({html.escape(key)}) 답장 '{label}' 기록 예정"
+        return [f"[dry-run·진단: 봇·시각 미검증 조회] {ticker} 알림({html.escape(key)}) 답장 '{label}' 기록 예정"
                 + (f" · 제공처 값 불일치 {', '.join(disputed)}" if disputed else "")]
     stored, _ = fb.append_once({
         "kind": "reply", "scope": fb.SCOPE, "update_id": update_id,
@@ -256,10 +263,12 @@ def handle_reply(item: dict, update_id: int, dry_run: bool = False) -> list[str]
     if action == "detail":
         if cand is None:
             return [f"없는 후보 ID입니다: {html.escape(cid)}. /screen으로 최신 목록을 확인해 주세요."]
+        # A version covers description, sources and context too, and not every price move: say only
+        # whether the card is the same, never that the numbers did or did not change.
         same = cand.get("candidate_version") == event.get("candidate_version")
         note = (f"ℹ️ 알림 당시 버전 {html.escape(str(event.get('candidate_version')))} · 최신 카드 버전 "
                 f"{html.escape(str(cand.get('candidate_version')))} "
-                + ("(알림 이후 숫자 변화 없음)" if same else "(알림 이후 숫자가 바뀌었습니다)"))
+                + ("(알림 당시와 같은 카드 버전입니다)" if same else "(알림 이후 카드 내용이 변경되었습니다)"))
         if disputed:
             note += f"\n⚠️ 제공처 값 불일치로 표시된 알림입니다({html.escape(', '.join(disputed))})."
         replies = candidates.telegram_candidate(cid)

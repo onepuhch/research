@@ -80,6 +80,10 @@ def active_candidate_idea(cand):
 UNKNOWN = object()  # tracked_before not taken yet
 
 
+class TrackStateError(RuntimeError):
+    """Tracking failed on stored state, not on the request: kept for retry, never a rejection."""
+
+
 def track_candidate(cand, now_day=None, tracked_before=UNKNOWN):
     """promote_candidate as a result: {"outcome": success | already_tracked | rejected, "reason_code",
     "idea_id"}. already_tracked means the company + thesis had an active idea before this request;
@@ -117,7 +121,10 @@ def promote_candidate(cand, now_day=None):
     if not re.fullmatch(r"[A-Z][A-Z0-9.-]{0,9}", ticker) or not eps.get("eps_currency"):
         raise Refused("ticker_or_currency_missing", "candidate ticker or estimate currency missing")
     # Freshness is the real last observation, as a KST date; a future observation is refused.
-    observed = date.fromisoformat(candidates.kst_date(str(cand.get("observed_at", ""))))
+    try:
+        observed = date.fromisoformat(candidates.kst_date(str(cand.get("observed_at", ""))))
+    except ValueError:
+        raise Refused("invalid_record", "candidate observation time unreadable") from None
     if observed > today:
         raise Refused("observation_in_future", "candidate observation in the future")
     if (today - observed).days > c.policy()["signal_lookback_days"]:

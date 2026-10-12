@@ -51,11 +51,17 @@ class ReplyFixture(CandidateFixture):
             {"id": "PI-TEST", "affected_alerts": [{"key": self.key_b, "message_id": 502}]}]})
         self.sent = []
 
-    def reply(self, update_id, text, to=501, date=SENT_UNIX, from_bot=True):
-        message = {"chat": {"id": "allowed"}, "date": SENT_UNIX + 3600, "text": text}
+    MISSING = object()
+
+    def reply(self, update_id, text, to=501, date=SENT_UNIX, from_bot=True, sent=SENT_UNIX + 3600):
+        message = {"chat": {"id": "allowed"}, "date": sent, "text": text}
         if to is not None:
-            message["reply_to_message"] = {"message_id": to, "date": date, "from": {"is_bot": from_bot},
-                                           "text": "ALERT BODY TEXT"}
+            replied = {"message_id": to, "date": date, "from": {"is_bot": from_bot}, "text": "ALERT BODY TEXT"}
+            if date is self.MISSING:
+                del replied["date"]
+            if from_bot is self.MISSING:
+                del replied["from"]
+            message["reply_to_message"] = replied
         return {"update_id": update_id, "message": message}
 
     def run_updates(self, *updates, send=None):
@@ -80,7 +86,7 @@ class ReplyWordsTest(ReplyFixture):
                          ["dismiss", "hold", "detail", "dismiss", "detail", "track"])
         self.assertIn("판단 기록: AAA · 관심없음", self.sent[0])
         self.assertIn("추적 등록과 알림 예약은 바꾸지 않습니다", self.sent[1])
-        self.assertIn("알림 이후 숫자 변화 없음", self.sent[2])
+        self.assertIn("알림 당시와 같은 카드 버전입니다", self.sent[2])
         self.assertIn(f"/track {self.aaa['candidate_id']}", self.sent[2])  # the existing detail card
         self.assertIn("추적 등록 완료", self.sent[-1])
         self.assertEqual(len(self.ideas()), 1)
@@ -126,11 +132,32 @@ class ReplyWordsTest(ReplyFixture):
         ledger = c.read_json(c.DATA_DIR / "candidate_alerts.json", {})
         self.assertEqual(ledger["events"][f"NASDAQ:CRDO|{k.THESIS_KEY}|new_discovery"]["status"], "uncertain")
 
+    def test_missing_or_unreadable_identification_links_nothing(self):
+        ledger = c.read_json(c.DATA_DIR / "candidate_alerts.json", {})
+        ledger["events"][self.key_b]["attempts"][0]["at"] = "not a time"
+        c.atomic_json(c.DATA_DIR / "candidate_alerts.json", ledger)
+        self.run_updates(self.reply(1, "관심없음", from_bot=self.MISSING),   # no bot mark
+                         self.reply(2, "추적", date=self.MISSING),           # no time of the alert
+                         self.reply(3, "보류", to=502))                      # receipt time unreadable
+        self.assertEqual((self.events(), self.ideas()), ([], []))
+        self.assertEqual(len(self.sent), 3)
+        for message in self.sent:
+            self.assertIn("발신·시각 정보를 확인하지 못해", message)
+        self.assertEqual(fb.resolve(501, SENT_UNIX)["state"], "unverified")  # bot mark not given
+        del ledger["events"][self.key_a]["attempts"][0]["at"]
+        c.atomic_json(c.DATA_DIR / "candidate_alerts.json", ledger)
+        self.assertEqual(fb.resolve(501, SENT_UNIX, True)["state"], "unverified")  # receipt without time
+
+    def test_a_reply_days_later_to_the_same_message_links(self):
+        self.run_updates(self.reply(1, "보류", sent=SENT_UNIX + 5 * 86400))
+        self.assertEqual([e["action"] for e in self.events("reply")], ["hold"])
+        self.assertIn("판단 기록: AAA · 보류", self.sent[0])
+
     def test_two_events_with_one_message_id_are_ambiguous(self):
         ledger = c.read_json(c.DATA_DIR / "candidate_alerts.json", {})
         ledger["events"][self.key_b]["message_id"] = 501
         c.atomic_json(c.DATA_DIR / "candidate_alerts.json", ledger)
-        self.assertEqual(fb.resolve(501, SENT_UNIX)["state"], "ambiguous")
+        self.assertEqual(fb.resolve(501, SENT_UNIX, True)["state"], "ambiguous")
 
 
 class VerdictTest(ReplyFixture):
@@ -152,12 +179,22 @@ class VerdictTest(ReplyFixture):
         self.assertEqual((s["normal"]["no_judgment"], s["normal"]["detail_only"], s["detail_events"]), (1, 1, 1))
         self.assertEqual(s["normal"]["latest"], {"track": 0, "dismiss": 0, "hold": 0})
 
-    def test_detail_shows_a_changed_version(self):
+    def test_detail_says_card_changed_never_that_numbers_changed(self):
+        # The version also changes with description, sources or context alone; the reply says only
+        # whether the card is the same.
         ledger = c.read_json(c.DATA_DIR / "candidate_alerts.json", {})
-        ledger["events"][self.key_a]["candidate_version"] = "CV-OLD"
+        ledger["events"][self.key_a]["candidate_version"] = "CV-OLD-DESCRIPTION"
         c.atomic_json(c.DATA_DIR / "candidate_alerts.json", ledger)
         self.run_updates(self.reply(1, "자세히"))
-        self.assertIn("알림 이후 숫자가 바뀌었습니다", self.sent[0])
+        note = self.sent[0].split("\n")[0]
+        self.assertIn("알림 이후 카드 내용이 변경되었습니다", note)
+        self.assertNotIn("숫자", note)
+
+    def test_detail_on_the_same_version_claims_no_numbers(self):
+        self.run_updates(self.reply(1, "자세히"))
+        note = self.sent[0].split("\n")[0]
+        self.assertIn("알림 당시와 같은 카드 버전입니다", note)
+        self.assertNotIn("숫자", note)
 
 
 class TrackReplyTest(ReplyFixture):
@@ -188,6 +225,30 @@ class TrackReplyTest(ReplyFixture):
         self.assertEqual((self.result()["outcome"], self.result()["reason_code"]), ("rejected", "capacity"))
         self.assertIn("가득 찼습니다", self.sent[0])
         self.assertEqual(self.ideas(), [])
+
+    def test_unreadable_observation_time_is_an_input_rejection(self):
+        index = k.load_index()
+        index["candidates"][0]["observed_at"] = "unknown"
+        with mock.patch.object(k, "load_index", return_value=index):
+            self.run_updates(self.reply(1, "추적"))
+        self.assertEqual((self.result()["outcome"], self.result()["reason_code"]), ("rejected", "invalid_record"))
+        self.assertIn("관측 시각이 올바르지 않아", self.sent[0])
+        self.assertEqual(self.ideas(), [])
+
+    def test_ledger_state_error_is_retried_not_rejected(self):
+        import add_entry
+        with mock.patch.object(add_entry, "process", side_effect=ValueError("enum validation failed")),                 self.assertRaises(RuntimeError):
+            self.run_updates(self.reply(1, "추적"), self.update(2, f"/track {self.aaa['candidate_id']}"))
+        queue = c.read_json(c.DATA_DIR / "command_queue.json", {})
+        self.assertEqual([queue[key]["status"] for key in ("1", "2")], ["pending", "pending"])
+        self.assertEqual({queue[key]["last_error_type"] for key in ("1", "2")}, {"TrackStateError"})
+        self.assertEqual((self.sent, self.events("track_result"), self.ideas()), ([], [], []))
+        self.assertEqual(len(self.events("reply")), 1)  # the judgment itself is kept
+        self.run_updates()
+        self.assertEqual(self.events("track_result")[0]["outcome"], "success")
+        self.assertEqual((len(self.events("reply")), len(self.ideas())), (1, 1))
+        self.assertIn("추적 등록 완료", self.sent[0])
+        self.assertIn(self.ideas()[0]["idea_id"], self.sent[1])  # the /track command reached the same idea
 
     def test_old_candidate_is_a_rejection(self):
         with mock.patch.object(c, "today", return_value="2026-10-30"):
@@ -279,7 +340,7 @@ class RetryTest(ReplyFixture):
                 self.assertEqual(telegram_cmd.main(["--dry-run", "--command", word, "--reply-to", "501"]), 0)
             self.assertEqual(telegram_cmd.main(["--dry-run", "--command", "추적", "--reply-to", "502"]), 0)
         self.assertEqual(digest_tree(), before)
-        self.assertIn("[dry-run] AAA", out.getvalue())
+        self.assertIn("[dry-run·진단: 봇·시각 미검증 조회] AAA", out.getvalue())
         self.assertIn("PI-TEST", out.getvalue())
 
 

@@ -1,5 +1,16 @@
 # 인수인계 — 작업자가 멈출 때 갱신
 
+- 마지막 작업자: Claude, 2026-10-12 KST. **V1 보완 구현 완료**: [V1 보완 결과](docs/v1_followup_2026-10-12.md). 진행 중인 쓰기 없음. 실제 발송·모델 호출 없음. 시험 663개 통과(V1 28개).
+  - 보완1: 운영 resolve는 봇 표시·원 메시지 시각·영수증 시각이 모두 있어야 연결(없거나 깨지면 `unverified`, 기록 0, ID 명령 안내). CLI dry-run은 `lookup_unverified`로 '진단·미검증 조회' 표시. README에 채팅·봇 교체 시 자동 연결 안 함 명시. 실제 21건 영수증 시각 모두 읽힘.
+  - 보완2: 자세히 회신 '알림 당시와 같은 카드 버전입니다/알림 이후 카드 내용이 변경되었습니다'.
+  - 8번: track_result가 Refused 외 ValueError(원장·스키마 상태 오류)를 invalid_record로 삼키던 경로를 `TrackStateError` 재시도로 수정(답장·`/track CAN` 공통). invalid_record는 관측 시각을 읽을 수 없는 카드로 한정.
+  - 다음: Codex 결과 검토. 실제 답장 관측, 10/12 보류 규칙 첫 운영 확인은 계속 남음.
+
+- 마지막 작업자: Codex, 2026-10-11 KST. **V1 기본 동작 수용, 좁은 보완 지시**: [V1 검토](docs/v1_acceptance_review_2026-10-11.md). 진행 중인 쓰기/시험 없음. V1 시험23개 직접 통과(2.927초), 전체658개/CI는 Claude 보고. 실제 답장은 미관측.
+  - 10분은 원 알림시각↔영수증시각 비교이며 사용자 답장 제한이 아님. 운영에서 봇/시각 정보 누락도 resolve가 허용하는 부분은 거절로 보완하고 CLI 진단과 분리. 카드 버전 변경을 숫자 변경으로 단정한 detail 문구는 카드 내용 변경으로 수정.
+  - tracked_before·불일치 판단/등록 분리·material_update·JSON손상 재시도·도움말·큐 참조 보존 수용. invalid_record는 영구 입력 오류 범위로 한정하는 호출 경로 점검. V2/V3 보류, U 연구 계속.
+  - 이번 변경은 문서뿐이며 코드/원장 수정·발송·push 없음. 사용자 실제 답장은 기존 명령 주기에서 관측하며 자동 모니터링은 설정하지 않았다.
+
 - 마지막 작업자: Claude, 2026-10-11 KST. **V1 구현: 알림 답장(추적/관심없음/보류/자세히)을 사용자 반응으로 기록.** [V1 결과](docs/v1_reply_feedback_2026-10-11.md). 진행 중인 쓰기 없음. 실제 발송·모델 호출 없음, 가짜 업데이트·전송으로만 검증. 시험 658개 통과(V1 23개 포함).
   - 새 `scripts/candidate_feedback.py`, 원장 `data/processed/candidate_feedback.json`(추가 전용, reply와 track_result 분리, scope+update_id / operation_key 중복 방지, 원문 미저장). telegram_cmd 수신 큐에는 action과 답장 대상 참조만 저장. promote에 거절 사유 코드(`Refused`)와 `track_candidate`. 카드 판단 한 줄, 발견 시점 보고 '사용자 반응·활용'. 상태 커밋·검증 보호 목록에 새 원장 추가.
   - Codex 검토 요청(결과 문서 '구현자가 정한 것' 8개): 메시지 시각 10분·봇 여부 확인, tracked_before 보존, 불일치 알림 추적 답장의 판단/결과 처리, 재검토 알림 포함, 큐 전체의 JSON 손상 재시도화, /help 한 줄 추가 등.
