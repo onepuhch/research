@@ -35,7 +35,10 @@ class PartialExtractBase(unittest.TestCase):
         self.root = pathlib.Path(tmp.name)
         self.data = self.root / "processed"
         self.data.mkdir()
+        # Item counts here assume an extract share above ten; pinned so a policy change keeps the scenarios.
+        policy = {**c.policy(), "max_model_calls": 20, "model_budget": {"extract": 11, "cards": 3, "candidate_context": 6}}
         for p in (mock.patch.object(c, "DATA_DIR", self.data),
+                  mock.patch.object(c, "policy", return_value=policy),
                   mock.patch.dict(os.environ, {"DAILY_RUN_ID": "run-1"}),
                   contextlib.redirect_stdout(io.StringIO())):
             p.__enter__()

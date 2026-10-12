@@ -84,9 +84,10 @@
     }
   },
   "model_budget": {
-    "extract": 11,
+    "extract": 5,
     "cards": 3,
-    "candidate_context": 6
+    "candidate_context": 12,
+    "note": "2026-10-12: 11/3/6 -> 5/3/12 with the user's approval. News extract gave 20 live signals in a month (18 low tier, 1 alert ever) while cause drafts waited 17-30 a day and alerts went out without a cause; total stays max_model_calls 20"
   },
   "candidate_context": {
     "companies_per_day": 10,
