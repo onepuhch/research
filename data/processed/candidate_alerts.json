@@ -674,6 +674,24 @@
       "payload_text": "<b>🆕 새 발굴 후보 · PSTL Postal Realty Trust, Inc.</b>\n부동산을 소유하고 관리하며, 주로 우편 관련 시설을 임대하여 수익을 얻습니다.\n내년 EPS 예상(2027-12-31 회계연도 말) $0.54 → $0.77 (+41%), 최근 30일 상향 2/하향 0\n주가 2026-07-14 → 2026-10-09 -4.4%\n핵심 미확인: EPS 예상 상향의 사업 원인(원문 미확인)\n상세 <code>/candidate CAN-E5554136472B2202</code> · 추적 <code>/track CAN-E5554136472B2202</code>\n추적 여부를 고르기 위한 후보이며 투자 권유가 아닙니다.",
       "payload_sha256": "6e3d26c4556b30ad37d1060f475735921602d174b4ef73872b5afae76d268c8f",
       "message_id": 177
+    },
+    "NYSE:NOG|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:NOG",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-BA5D4320F9188F9F",
+      "candidate_version": "CV-37317BF1FDF3E803",
+      "observation_id": "OB-040C90543FAE09BE",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-10-13",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "38359168209-1",
+      "reserved_at": "2026-10-13T07:09:01+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · NOG Northern Oil and Gas, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n회사 설명 확인 중 (NOG)\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $3.89 → 지금 $4.58 (+18%) · 주가 같은 기간 +24.9%\n\n👎 최근 30일 분석가 7명 중 2명만 올림 — 일부 분석가의 상향\n👎 같은 30일에 내린 분석가도 1명\n👎 주가가 같은 90일에 +25% 올라 이익 예상 상향(+18%)만큼 이미 움직임\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-BA5D4320F9188F9F</code> · 추적 <code>/track CAN-BA5D4320F9188F9F</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "2c2bed01d30f475c2a9e11424bf874f39cd3d322c24052e178b06ba028523655"
     }
   },
   "bootstrap": {
@@ -721,15 +739,15 @@
     "pending": {},
     "rebases": {
       "NASDAQ:MU|eps-revision-review:v1": {
-        "observation_id": "OB-C3EC57D1352A4832",
-        "baseline_id": "OB-C3EC57D1352A4832",
-        "observed_at": "2026-10-05T06:05:56+00:00",
-        "day": "2026-10-05",
-        "snapshot_sha256": "ac52790e3c2f34e08d230ec482b8da3088e32c29a818b97d6c8d60ff0364dcd7",
-        "eps_now": 205.95447,
+        "observation_id": "OB-F33774954D06D02F",
+        "baseline_id": "OB-F33774954D06D02F",
+        "observed_at": "2026-10-13T07:07:11+00:00",
+        "day": "2026-10-13",
+        "snapshot_sha256": "781dc239bf0be78d5f5e4e85214816ccd9df6dd335f9be49e83af8d7fef05ecf",
+        "eps_now": 206.33243,
         "comparison_key": [
           "eps_next_fy_per_share",
-          "2027-08-31",
+          "2028-08-31",
           "Yahoo Finance earningsTrend (+1y)",
           "USD",
           "provider-unspecified"

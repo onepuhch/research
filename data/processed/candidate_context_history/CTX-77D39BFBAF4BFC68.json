@@ -1,0 +1,222 @@
+{
+  "context_id": "CTX-77D39BFBAF4BFC68",
+  "candidate_id": "CAN-713C837ADADE8D8B",
+  "ticker": "TRLV",
+  "issuer_cik": "0001754195",
+  "document_ids": [
+    "DOC-F17429F199F2C94B"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-F17429F199F2C94B#p77",
+    "DOC-F17429F199F2C94B#p91",
+    "DOC-F17429F199F2C94B#p284",
+    "DOC-F17429F199F2C94B#p288",
+    "DOC-F17429F199F2C94B#p313",
+    "DOC-F17429F199F2C94B#p317",
+    "DOC-F17429F199F2C94B#p319",
+    "DOC-F17429F199F2C94B#p340",
+    "DOC-F17429F199F2C94B#p348",
+    "DOC-F17429F199F2C94B#p349",
+    "DOC-F17429F199F2C94B#t46",
+    "DOC-F17429F199F2C94B#p355",
+    "DOC-F17429F199F2C94B#p363",
+    "DOC-F17429F199F2C94B#p371"
+  ],
+  "input_sha": "77d39bfbaf4bfc6805c21aaa9762bb0d60381d8f2ad10031780c2d0ffdb13211",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-13T07:07:35+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · three months ended June 30, 2026: $271.0 million — 매출은 전년 같은 분기보다 줄었다",
+      "note_ko": "매출은 전년 같은 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "Revenue for the three months ended June 30, 2026 was $271.0 million, a decrease of $31.1 million, from $302.1 million for the three months ended June 30, 2025.",
+      "document_id": "DOC-F17429F199F2C94B",
+      "block_id": "p284",
+      "metric": "Revenue",
+      "figures": [
+        "$271.0 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal",
+        "price"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Cost of goods sold · three months ended June 30, 2026: $108.7 million — 매출원가는 전년 같은 분기보다 줄었다",
+      "note_ko": "매출원가는 전년 같은 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "Cost of goods sold for the three months ended June 30, 2026 was $108.7 million, a decrease of $10.5 million from $119.2 million for the three months ended June 30, 2025.",
+      "document_id": "DOC-F17429F199F2C94B",
+      "block_id": "p288",
+      "metric": "Cost of goods sold",
+      "figures": [
+        "$108.7 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Gross profit · three months ended June 30, 2026: $162.3 million — 매출총이익은 전년 같은 분기보다 줄었다",
+      "note_ko": "매출총이익은 전년 같은 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "Gross profit for the three months ended June 30, 2026 was $162.3 million, a decrease of $20.6 million from $182.9 million for the three months ended June 30, 2025.",
+      "document_id": "DOC-F17429F199F2C94B",
+      "block_id": "p288",
+      "metric": "Gross profit",
+      "figures": [
+        "$162.3 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · three months ended June 30, 2026: $98.0 million — 조정 에비타는 전년 같은 분기보다 줄었다",
+      "note_ko": "조정 에비타는 전년 같은 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA for the three months ended June 30, 2026 was $98.0 million, a decrease of $12.6 million from $110.6 million for the three months ended June 30, 2025, primarily driven by lower revenue primarily resulting from the Deconsolidation Transaction.",
+      "document_id": "DOC-F17429F199F2C94B",
+      "block_id": "p348",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$98.0 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Net cash provided by operating activities · six months ended June 30, 2026: $108.8 million — 영업활동으로 인한 순현금은 전년 같은 기간보다 줄었다",
+      "note_ko": "영업활동으로 인한 순현금은 전년 같은 기간보다 줄었다",
+      "kind": "fact",
+      "quote": "Net cash provided by operating activities was $108.8 million for the six months ended June 30, 2026, a decrease of $28.4 million compared to $137.2 million of net cash provided by operating activities for the six months ended June 30, 2025.",
+      "document_id": "DOC-F17429F199F2C94B",
+      "block_id": "p363",
+      "metric": "Net cash provided by operating activities",
+      "figures": [
+        "$108.8 million"
+      ],
+      "period": "six months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "하베스트의 연결 해제 거래가 회사의 재무 상태, 영업 실적 및 현금 흐름에 미치는 영향은 무엇인가?",
+    "회사의 매출총이익률에 영향을 미치는 제품 및 시장 구성, 재고 판매, 판촉 활동 및 유휴 생산 능력 비용의 구체적인 내용은 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "하베스트의 연결 해제 거래 이후 회사의 재무 상태, 영업 실적 및 현금 흐름은 이전 기간과 직접 비교할 수 없다",
+      "figures": [],
+      "quote": "Following the Deconsolidation Transaction, the Company’s retained noncontrolling investment in Harvest is accounted for under the equity method of accounting in accordance with ASC 323, Investments - ",
+      "where": "DOC-F17429F199F2C94B#p77"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "매출총이익률은 제품 및 시장 구성, 재고 판매, 판촉 활동 및 유휴 생산 능력 비용에 따라 분기별로 계속 변동할 것이다",
+      "figures": [],
+      "quote": "Gross margin will continue to fluctuate quarter to quarter depending on product and market mix, inventory sell through, promotional activity and idle capacity costs.",
+      "where": "DOC-F17429F199F2C94B#p288"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

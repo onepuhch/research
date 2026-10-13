@@ -1,0 +1,112 @@
+{
+  "context_id": "CTX-72174EE1E8789D42",
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "ticker": "TXO",
+  "issuer_cik": "0001559432",
+  "document_ids": [
+    "DOC-439BA8AE037B9273"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-439BA8AE037B9273#p67",
+    "DOC-439BA8AE037B9273#p75",
+    "DOC-439BA8AE037B9273#p88",
+    "DOC-439BA8AE037B9273#p141",
+    "DOC-439BA8AE037B9273#p144",
+    "DOC-439BA8AE037B9273#p154",
+    "DOC-439BA8AE037B9273#p168",
+    "DOC-439BA8AE037B9273#p179",
+    "DOC-439BA8AE037B9273#p228",
+    "DOC-439BA8AE037B9273#p254",
+    "DOC-439BA8AE037B9273#p276",
+    "DOC-439BA8AE037B9273#p280",
+    "DOC-439BA8AE037B9273#p299",
+    "DOC-439BA8AE037B9273#p300",
+    "DOC-439BA8AE037B9273#p303",
+    "DOC-439BA8AE037B9273#p304"
+  ],
+  "input_sha": "72174ee1e8789d42d4c05e58dccedbcbeba6b089715c33e3201b11c14777f964",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-13T07:07:35+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "Cross Timbers Energy의 매각이 TXO Partners의 순이익에 미치는 영향은 무엇인가?",
+    "원유, NGL, 가스 선물 및 스왑 계약의 순결제 및 미실현 손익이 TXO Partners의 매출에 미치는 전반적인 영향은 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "자회사 Cross Timbers Energy의 순이익은 해당 기간 동안 이익을 기록했다",
+      "figures": [
+        "income of $10.0 million"
+      ],
+      "quote": "The net income (loss) related to these properties, net to TXO Partners, was income of $10.0 million for the three months ended June 30, 2026 , a loss of ($3.8) million for the three months ended June ",
+      "where": "DOC-439BA8AE037B9273#p75"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "자회사 Cross Timbers Energy의 순이익은 전년 같은 기간 동안 손실을 기록했다",
+      "figures": [
+        "loss of ($3.8) million"
+      ],
+      "quote": "The net income (loss) related to these properties, net to TXO Partners, was income of $10.0 million for the three months ended June 30, 2026 , a loss of ($3.8) million for the three months ended June ",
+      "where": "DOC-439BA8AE037B9273#p75"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "원유 선물 및 매도 베이시스 스왑 계약의 순결제가 원유 매출을 감소시켰다",
+      "figures": [
+        "$28.5 million"
+      ],
+      "quote": "Net settlements on oil futures and sell basis swap contracts decreased oil revenues by $28.5 million in the three months ended June 30, 2026 and increased oil revenues by $2.0 million in the three mon",
+      "where": "DOC-439BA8AE037B9273#p141"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "미실현 이익이 원유 매출을 증가시켰다",
+      "figures": [
+        "$41.9 million"
+      ],
+      "quote": "An unrealized gain increased oil revenues by $41.9 million in the three months ended June 30, 2026 and $3.3 million in three months ended June 30, 2025.",
+      "where": "DOC-439BA8AE037B9273#p141"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "가스 선물 및 매도 베이시스 스왑 계약의 순결제가 가스 매출을 증가시켰다",
+      "figures": [
+        "$5.3 million"
+      ],
+      "quote": "Net settlements on gas futures and sell basis swap contracts increased gas revenues by $5.3 million in the three months ended June 30, 2026 and $5.4 million in the three months ended June 30, 2025.",
+      "where": "DOC-439BA8AE037B9273#p154"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 예측 가능한 미래에 비용 구조에 대한 인플레이션 압력을 경험할 것으로 예상한다",
+      "figures": [],
+      "quote": "Nevertheless, we expect for the foreseeable future to experience inflationary pressure on our cost structure.",
+      "where": "DOC-439BA8AE037B9273#p280"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사는 원자재 비용, 운송 및 연료 비용, 임금 인상으로 인한 운영 비용 증가가 단기적으로 역전될 것으로 예상하지 않는다",
+      "figures": [],
+      "quote": "We do not expect these cost increases to reverse in the short term.",
+      "where": "DOC-439BA8AE037B9273#p280"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

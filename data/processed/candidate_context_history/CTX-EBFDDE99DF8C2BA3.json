@@ -1,0 +1,193 @@
+{
+  "context_id": "CTX-EBFDDE99DF8C2BA3",
+  "candidate_id": "CAN-5790099EDC6F3301",
+  "ticker": "SPCX",
+  "issuer_cik": "0001181412",
+  "document_ids": [
+    "DOC-5082FE59E92D0AA1"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-5082FE59E92D0AA1#p3",
+    "DOC-5082FE59E92D0AA1#p7",
+    "DOC-5082FE59E92D0AA1#p8",
+    "DOC-5082FE59E92D0AA1#p9"
+  ],
+  "input_sha": "ebfdde99df8c2ba3f6b302fe0d80959d3fcd264f86c20b169745c408595643eb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-13T07:07:35+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenues) · quarter ended June 30, 2026: $7.8 billion / 92%(변화율·증가) / $4.1 billion — 매출이 전년 같은 분기보다 늘었다",
+      "note_ko": "매출이 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Revenues of $7.8 billion, up 92% from $4.1 billion",
+      "document_id": "DOC-5082FE59E92D0AA1",
+      "block_id": "p3",
+      "metric": "Revenues",
+      "figures": [
+        "$7.8 billion",
+        "92%",
+        "$4.1 billion"
+      ],
+      "period": "quarter ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · quarter ended June 30, 2026: $3.5 billion / 191%(변화율·증가) / $1.2 billion — 조정 에비타가 전년 같은 분기보다 늘었다",
+      "note_ko": "조정 에비타가 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA of $3.5 billion, up 191% from $1.2 billion",
+      "document_id": "DOC-5082FE59E92D0AA1",
+      "block_id": "p3",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$3.5 billion",
+        "191%",
+        "$1.2 billion"
+      ],
+      "period": "quarter ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[AI] AI revenues · June 30, 2026: 213%(변화율·증가) / 247%(변화율) / $2.6 billion — 인공지능 매출이 직전 분기보다 늘고 전년 같은 분기보다 늘었다",
+      "note_ko": "인공지능 매출이 직전 분기보다 늘고 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "AI revenues were up 213% sequentially and 247% year-over-year to $2.6 billion, primarily driven by an increase in AI solutions and infrastructure revenues from new Cloud Service Agreements, as well as an increase in Grok and X subscription revenues",
+      "document_id": "DOC-5082FE59E92D0AA1",
+      "block_id": "p8",
+      "metric": "AI revenues",
+      "figures": [
+        "213%",
+        "247%",
+        "$2.6 billion"
+      ],
+      "period": "June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "AI",
+      "core": false,
+      "figure_roles": [
+        "delta",
+        "delta",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "mix"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "순손실이 전년 같은 분기보다 개선되었다",
+      "figures": [
+        "$541 million",
+        "$467 million",
+        "$1.0 billion"
+      ],
+      "quote": "Net loss of $541 million, an improvement of $467 million from net loss of $1.0 billion",
+      "where": "DOC-5082FE59E92D0AA1#p3"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "스타링크 가입자 수가 전년 같은 분기보다 두 배 늘었다",
+      "figures": [
+        "12.0 million",
+        "6.0"
+      ],
+      "quote": "Reached 12.0 million Starlink Subscribers as of the end of Q2 2026, doubling year-over-year and up 1.7 million sequentially, while maintaining ARPU at $66, in line with Q1 2026",
+      "where": "DOC-5082FE59E92D0AA1#p7"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

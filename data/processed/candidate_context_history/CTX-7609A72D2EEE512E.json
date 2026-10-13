@@ -1,0 +1,189 @@
+{
+  "context_id": "CTX-7609A72D2EEE512E",
+  "candidate_id": "CAN-02BF26B752677B69",
+  "ticker": "JXN",
+  "issuer_cik": "0001822993",
+  "document_ids": [
+    "DOC-3D29425664C7E8D9"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3D29425664C7E8D9#p9",
+    "DOC-3D29425664C7E8D9#p10",
+    "DOC-3D29425664C7E8D9#p12",
+    "DOC-3D29425664C7E8D9#p13",
+    "DOC-3D29425664C7E8D9#p14",
+    "DOC-3D29425664C7E8D9#p17",
+    "DOC-3D29425664C7E8D9#p23",
+    "DOC-3D29425664C7E8D9#p24",
+    "DOC-3D29425664C7E8D9#p26",
+    "DOC-3D29425664C7E8D9#p27",
+    "DOC-3D29425664C7E8D9#p28",
+    "DOC-3D29425664C7E8D9#p31",
+    "DOC-3D29425664C7E8D9#p33",
+    "DOC-3D29425664C7E8D9#p34",
+    "DOC-3D29425664C7E8D9#p39",
+    "DOC-3D29425664C7E8D9#p41",
+    "DOC-3D29425664C7E8D9#p42",
+    "DOC-3D29425664C7E8D9#p74",
+    "DOC-3D29425664C7E8D9#p80",
+    "DOC-3D29425664C7E8D9#t3",
+    "DOC-3D29425664C7E8D9#p84",
+    "DOC-3D29425664C7E8D9#t9"
+  ],
+  "input_sha": "7609a72d2eee512ecba957f556d6963c067700e8ac1f4a509c66f7fe3bb78e6e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-13T07:07:35+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Adjusted operating earnings · second quarter of 2026: $513 million / $7.30 per diluted share — 전년 같은 분기보다 늘었다",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "▪Adjusted operating earnings2 of $513 million, or a record $7.30 per diluted share in the second quarter of 2026, compared to $350 million, or $4.87 per diluted share in the second quarter of 2025, primarily reflecting higher spread income from growth in average RILA, FIA, and Institutional AUM, higher fee income from growth in average VA AUM, and a reduced share count due to repurchases",
+      "document_id": "DOC-3D29425664C7E8D9",
+      "block_id": "p13",
+      "metric": "Adjusted operating earnings",
+      "figures": [
+        "$513 million",
+        "$7.30 per diluted share"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost",
+        "volume",
+        "buyback_sharecount"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "잉여현금흐름(Free cash flow) · second quarter of 2026: $287 million — 영업 회사로부터의 배당금을 반영한다",
+      "note_ko": "영업 회사로부터의 배당금을 반영한다",
+      "kind": "fact",
+      "quote": "▪Free cash flow2 of $287 million in the second quarter of 2026 reflecting distributions from our operating company of $325 million",
+      "document_id": "DOC-3D29425664C7E8D9",
+      "block_id": "p17",
+      "metric": "Free cash flow",
+      "figures": [
+        "$287 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Adjusted operating earnings — 조정된 영업 이익은 파생 상품의 공정 가치 변화와 시장 움직임에 따른 시장 위험 혜택 등 미국 GAAP 회계 처리로 인해 기간별로 매우 가변적이거나 비반복적인 특정 항목을 제외한다",
+      "note_ko": "조정된 영업 이익은 파생 상품의 공정 가치 변화와 시장 움직임에 따른 시장 위험 혜택 등 미국 GAAP 회계 처리로 인해 기간별로 매우 가변적이거나 비반복적인 특정 항목을 제외한다",
+      "kind": "fact",
+      "quote": "Adjusted Operating Earnings is an after-tax, non-GAAP financial measure, which we believe should be used to evaluate our financial performance on a consolidated basis by excluding certain items that may be highly variable from period to period due to accounting treatment under U.S. GAAP or that are non-recurring in nature, as well as certain other revenues and expenses that we do not view as driving our underlying performance.",
+      "document_id": "DOC-3D29425664C7E8D9",
+      "block_id": "p74",
+      "metric": "Adjusted operating earnings",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치 상향이 이 발표와 관련이 있는지 확인해야 한다."
+  ],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "figures": [
+        "$2.7 billion",
+        "8%"
+      ],
+      "quote": "–Variable annuity (VA) sales1 of $2.7 billion were up 8% from the second quarter of 2025, primarily reflecting higher sales of products without lifetime benefits",
+      "where": "DOC-3D29425664C7E8D9#p9"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "figures": [
+        "$812 million",
+        "73%"
+      ],
+      "quote": "–Fixed and fixed index annuity (FIA) sales of $812 million were up 73% from the second quarter of 2025, driven by our Jackson Income Assurance℠ FIA",
+      "where": "DOC-3D29425664C7E8D9#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "figures": [
+        "$644 million",
+        "$9.16 per diluted share"
+      ],
+      "quote": "▪Net income attributable to Jackson Financial Inc. common shareholders of $644 million, or $9.16 per diluted share in the second quarter of 2026, compared to $168 million, or $2.34 per diluted share i",
+      "where": "DOC-3D29425664C7E8D9#p12"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "순이익은 전년 같은 분기보다 더 유리한 헤징 결과를 포함하며, 이는 현재 분기의 낮은 변동성에 부분적으로 기인한다",
+      "figures": [],
+      "quote": "Second quarter net income included a more favorable net hedging result versus the prior year’s second quarter, driven in part by lower volatility in the current quarter.",
+      "where": "DOC-3D29425664C7E8D9#p26"
+    }
+  ],
+  "context_status": "draft_ready"
+}

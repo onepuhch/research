@@ -1,0 +1,85 @@
+{
+  "observation_id": "OB-FDEBBB606DF699C0",
+  "candidate_id": "CAN-490AC1686F9442CE",
+  "candidate_version": "CV-EC88935B3BA28205",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:RPAY",
+    "ticker": "RPAY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-13T07:06:04+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261013T065241Z_38359168209-1.json.gz",
+    "sha256": "781dc239bf0be78d5f5e4e85214816ccd9df6dd335f9be49e83af8d7fef05ecf",
+    "run_id": "38359168209-1",
+    "finished_at": "2026-10-13T07:07:11+00:00"
+  },
+  "eps": {
+    "eps_now": 1.1645,
+    "eps_30d": 1.11365,
+    "eps_90d": 0.97163,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 19.9,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 5.049,
+    "yield_change_30_pp": 1.331
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-15",
+    "price_start_date": "2026-07-15",
+    "price_end_expected": "2026-10-12",
+    "price_end_date": "2026-10-12",
+    "close_start": 4.090000152587891,
+    "close_end": 3.819999933242798,
+    "price_pct_90": -6.6,
+    "adj_return_pct_90": -6.6,
+    "pe_change_pct": -22.1
+  },
+  "display_rank": 8,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 5
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 336864384,
+  "context_id": "CTX-73B7E18FB19F9751",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-12T06:23:49+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-73B7E18FB19F9751",
+    "generated_at": "2026-10-10T10:48:47+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:RPAY",
+  "approval_version": null,
+  "rendered_at": "2026-10-13T07:08:24+00:00"
+}

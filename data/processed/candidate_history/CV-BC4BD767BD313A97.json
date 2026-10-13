@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-43EA86A18E5096A9",
+  "candidate_version": "CV-BC4BD767BD313A97",
+  "identity": {
+    "entity_id": "NASDAQ:MU",
+    "ticker": "MU",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Micron Technology, Inc.",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internationally. It operates through Cloud Memory Business Unit, Core Data Center Business Unit, Mobile and Client Business Unit, and Automotive and Embedded Business Unit segments. The company provides dynamic random access memory (DRAM) products, including High-Bandwidth Memory, doublie data rate, low-power DRAM, and graphics DRAM products; NAND products comprising solid state drives, managed NAND, and mul"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MU analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MU/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-13T06:53:02+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MU daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MU/history",
+      "published_at": null,
+      "observed_at": "2026-10-13T06:53:02+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MU company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MU/profile",
+      "published_at": null,
+      "observed_at": "2026-10-13T06:53:02+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 206.33243,
+    "eps_30d": 172.47629,
+    "eps_90d": 163.34702,
+    "eps_target_period": "2028-08-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 36,
+    "up30": 19,
+    "down30": 1,
+    "pct_90": 26.3,
+    "steady": true,
+    "turnaround": false
+  }
+}

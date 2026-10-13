@@ -1,8 +1,5 @@
 {
   "days": {
-    "2026-09-28": {
-      "candidate_context": 6
-    },
     "2026-09-29": {
       "extract": 9,
       "candidate_context": 6,
@@ -63,14 +60,26 @@
       "extract": 2,
       "candidate_context": 6,
       "cards": 1
+    },
+    "2026-10-13": {
+      "candidate_context": 8
     }
   },
   "counting_since": "2026-09-25, first counted call by the cards step of run 36133507734 (about 12:25 UTC); extract calls earlier that day were not counted",
   "blocked": {
     "reason": "provider_rate_limited",
-    "since": "2026-10-11T00:18:34+00:00",
-    "until": "2026-10-11T15:00:00+00:00",
-    "retry_after_s": null
+    "since": "2026-10-13T07:08:24+00:00",
+    "until": "2026-10-13T15:00:00+00:00",
+    "retry_after_s": null,
+    "quota": {
+      "violations": [
+        {
+          "quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier",
+          "quotaValue": "5"
+        }
+      ],
+      "retry_delay": "35s"
+    }
   },
   "overload": {
     "gemini-2.5-flash": {
@@ -79,7 +88,7 @@
       "until": null,
       "jitter_s": null,
       "last_result": "ok",
-      "last_at": "2026-10-12T06:25:08+00:00"
+      "last_at": "2026-10-13T07:08:24+00:00"
     }
   }
 }
