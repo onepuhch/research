@@ -143,7 +143,9 @@
     "APA",
     "ICHR",
     "MAX",
-    "SM"
+    "SM",
+    "GRNT",
+    "PR"
   ],
   "days": {
     "2026-10-06": {
@@ -177,13 +179,17 @@
     "2026-10-13": {
       "requests": 20,
       "retries": 0
+    },
+    "2026-10-14": {
+      "requests": 16,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 8,
-      "last_attempt_at": "2026-10-13T07:09:08.740071+00:00",
+      "attempts": 9,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1190,8 +1196,8 @@
       "reason": null
     },
     "NOG": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-13T07:09:08.740071+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1240,6 +1246,118 @@
     "TTE": {
       "attempts": 1,
       "last_attempt_at": "2026-10-13T07:09:08.740071+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "TTMI": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "JXN": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SNDK": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "AMG": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CVX": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "HTB": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CHRD": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "INSW": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "APA": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "ICHR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "MAX": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "GRNT": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "PR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,

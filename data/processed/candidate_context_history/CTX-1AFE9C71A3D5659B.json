@@ -1,0 +1,175 @@
+{
+  "context_id": "CTX-1AFE9C71A3D5659B",
+  "candidate_id": "CAN-71C24817F9DA0FA8",
+  "ticker": "INSW",
+  "issuer_cik": "0001679049",
+  "document_ids": [
+    "DOC-66CDE89BADA482E2"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-66CDE89BADA482E2#t1",
+    "DOC-66CDE89BADA482E2#t2",
+    "DOC-66CDE89BADA482E2#t5",
+    "DOC-66CDE89BADA482E2#t8",
+    "DOC-66CDE89BADA482E2#t9",
+    "DOC-66CDE89BADA482E2#p11",
+    "DOC-66CDE89BADA482E2#p14",
+    "DOC-66CDE89BADA482E2#p18",
+    "DOC-66CDE89BADA482E2#p26",
+    "DOC-66CDE89BADA482E2#p27",
+    "DOC-66CDE89BADA482E2#p28",
+    "DOC-66CDE89BADA482E2#t13",
+    "DOC-66CDE89BADA482E2#t15",
+    "DOC-66CDE89BADA482E2#p55",
+    "DOC-66CDE89BADA482E2#p56",
+    "DOC-66CDE89BADA482E2#t18",
+    "DOC-66CDE89BADA482E2#p57",
+    "DOC-66CDE89BADA482E2#p58",
+    "DOC-66CDE89BADA482E2#t19",
+    "DOC-66CDE89BADA482E2#p66"
+  ],
+  "input_sha": "1afe9c71a3d5659b47efc26ed75a240c0e566de02aaff4ad4e42cea792e398a9",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-14T05:18:04+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Crude Tankers] Shipping revenues · second quarter of 2026: $285 million — 해당 사업부의 운송 매출은 해당 기간 동안 이 금액을 기록했다",
+      "note_ko": "해당 사업부의 운송 매출은 해당 기간 동안 이 금액을 기록했다",
+      "kind": "fact",
+      "quote": "Shipping revenues for the Crude Tankers segment were $285 million for the second quarter of 2026, compared to $104 million for the second quarter of 2025.",
+      "document_id": "DOC-66CDE89BADA482E2",
+      "block_id": "p18",
+      "metric": "Shipping revenues",
+      "figures": [
+        "$285 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Crude Tankers",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "contracted revenue · second quarter: $45 million — 회사는 해당 기간 동안 추가 용선 계약을 체결하여 이 금액의 미래 계약 매출을 확보했다",
+      "note_ko": "회사는 해당 기간 동안 추가 용선 계약을 체결하여 이 금액의 미래 계약 매출을 확보했다",
+      "kind": "fact",
+      "quote": "During the second quarter, the Company entered into an additional time charter agreement for three years on a 2017-built Suezmax with future contracted revenue of approximately $45 million.",
+      "document_id": "DOC-66CDE89BADA482E2",
+      "block_id": "p28",
+      "metric": "contracted revenue",
+      "figures": [
+        "$45 million"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "backlog"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — EBITDA 및 조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 현금 흐름을 나타내지 않으며 대체해서도 안 된다",
+      "note_ko": "EBITDA 및 조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 현금 흐름을 나타내지 않으며 대체해서도 안 된다",
+      "kind": "fact",
+      "quote": "EBITDA and Adjusted EBITDA do not represent, and should not be a substitute for, net income or cash flows from operations as determined in accordance with GAAP.",
+      "document_id": "DOC-66CDE89BADA482E2",
+      "block_id": "p58",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "이 발표가 애널리스트의 내년 EPS 예상치 상향에 영향을 미쳤는지 여부를 확인해야 한다"
+  ],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사의 순이익은 해당 기간 동안 이 금액을 기록했다",
+      "figures": [
+        "$295 million"
+      ],
+      "quote": "Net income for the second quarter of 2026 was $295 million, or $5.91 per diluted share, compared to net income of $62 million, or $1.25 per diluted share, for the second quarter of 2025.",
+      "where": "DOC-66CDE89BADA482E2#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 조정 순이익은 해당 기간 동안 이 금액을 기록했다",
+      "figures": [
+        "$294,968"
+      ],
+      "quote": "Adjusted Net Income ; $294,968 ; $50,417 ; $489,021 ; $89,961",
+      "where": "DOC-66CDE89BADA482E2#t18"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 조정 EBITDA는 해당 기간 동안 이 금액을 기록했다",
+      "figures": [
+        "$345,217"
+      ],
+      "quote": "Adjusted EBITDA ; $345,217 ; $101,527 ; $588,796 ; $192,228",
+      "where": "DOC-66CDE89BADA482E2#t19"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "조정 순이익은 GAAP에 따라 결정된 순이익 또는 기타 재무 항목을 나타내거나 대체하지 않는다",
+      "figures": [],
+      "quote": "This measure does not represent or substitute net income or any other financial item that is determined in accordance with GAAP.",
+      "where": "DOC-66CDE89BADA482E2#p56"
+    }
+  ],
+  "context_status": "draft_ready"
+}

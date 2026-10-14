@@ -1,0 +1,106 @@
+{
+  "context_id": "CTX-D431900433962EEC",
+  "candidate_id": "CAN-FD88AA0D924CF1C8",
+  "ticker": "DHT",
+  "issuer_cik": "0001331284",
+  "document_ids": [
+    "DOC-3D866BF98EA62F30"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3D866BF98EA62F30#t22",
+    "DOC-3D866BF98EA62F30#p26",
+    "DOC-3D866BF98EA62F30#p28",
+    "DOC-3D866BF98EA62F30#p29",
+    "DOC-3D866BF98EA62F30#p30",
+    "DOC-3D866BF98EA62F30#p32",
+    "DOC-3D866BF98EA62F30#p33",
+    "DOC-3D866BF98EA62F30#p34",
+    "DOC-3D866BF98EA62F30#p36",
+    "DOC-3D866BF98EA62F30#p42",
+    "DOC-3D866BF98EA62F30#p43",
+    "DOC-3D866BF98EA62F30#p45",
+    "DOC-3D866BF98EA62F30#p48",
+    "DOC-3D866BF98EA62F30#p49",
+    "DOC-3D866BF98EA62F30#p50",
+    "DOC-3D866BF98EA62F30#p51",
+    "DOC-3D866BF98EA62F30#p53",
+    "DOC-3D866BF98EA62F30#t51",
+    "DOC-3D866BF98EA62F30#p106"
+  ],
+  "input_sha": "d431900433962eecd9a5921db98bc2ab46263bc4210fef7b892dd82d3532b1d3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-14T05:18:04+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 순이익은 이백만 달러를 기록했다",
+      "figures": [
+        "$198.3 million"
+      ],
+      "quote": "As a result of the foregoing, the Company had a net profit in the second quarter of 2026 of $198.3 million, or earnings of $1.23 per basic share and $1.23 per diluted share, compared to a net profit i",
+      "where": "DOC-3D866BF98EA62F30#p33"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 주당 기본 순이익은 일 달러 이십삼 센트를 기록했다",
+      "figures": [
+        "$1.23"
+      ],
+      "quote": "As a result of the foregoing, the Company had a net profit in the second quarter of 2026 of $198.3 million, or earnings of $1.23 per basic share and $1.23 per diluted share, compared to a net profit i",
+      "where": "DOC-3D866BF98EA62F30#p33"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 순이익은 삼백육십이백만 달러를 기록했다",
+      "figures": [
+        "$362.9 million"
+      ],
+      "quote": "As a result of the foregoing, the Company had net profit for the first half of 2026 of $362.9 million, or earnings of $2.25 per basic share and $2.25 per diluted share, compared to net profit of $100.",
+      "where": "DOC-3D866BF98EA62F30#p50"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 주당 기본 순이익은 이 달러 이십오 센트를 기록했다",
+      "figures": [
+        "$2.25"
+      ],
+      "quote": "As a result of the foregoing, the Company had net profit for the first half of 2026 of $362.9 million, or earnings of $2.25 per basic share and $2.25 per diluted share, compared to net profit of $100.",
+      "where": "DOC-3D866BF98EA62F30#p50"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 해운 매출은 사백칠십일백만 달러를 기록했다",
+      "figures": [
+        "$471.1 million"
+      ],
+      "quote": "The Company reported shipping revenues for the first half of 2026 of $471.1 million compared to $246.1 million in the first half of 2025.",
+      "where": "DOC-3D866BF98EA62F30#p42"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사의 영업 이익에는 선박 매각으로 인한 이익이 포함되어 있다",
+      "figures": [
+        "$60.0 million"
+      ],
+      "quote": "Operating income in the first half of 2026 included a $60.0 million gain on the sale of DHT China and DHT Europe, compared to a $37.3 million gain on the sale of DHT Scandinavia and DHT Lotus in the f",
+      "where": "DOC-3D866BF98EA62F30#p50"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

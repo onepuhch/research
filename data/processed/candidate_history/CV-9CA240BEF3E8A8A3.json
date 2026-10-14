@@ -1,0 +1,225 @@
+{
+  "candidate_id": "CAN-71C24817F9DA0FA8",
+  "candidate_version": "CV-9CA240BEF3E8A8A3",
+  "identity": {
+    "entity_id": "NYSE:INSW",
+    "ticker": "INSW",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "International Seaways, Inc.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유 및 석유제품 운반선을 소유, 운영하고 선박 간 환적 지원 서비스를 제공하여 수익을 얻는다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "International Seaways, Inc. owns and operates a fleet of oceangoing vessels for the transportation of crude oil and petroleum products in the international flag trade. The company operates in two segments: Crude Tankers and Product Carriers. It operates fleet of 70 vessels of VLCCs, Suezmaxes, and Aframaxes, as well as MRs, LR1, and LR2 product carrier. The company provides ship-to-ship (STS) lightering support services, such as hoses and fenders; and full-service STS lightering that includes lightering vessels. It also offers MR product carriers, including IMO III compliant for carrying edibl"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "INSW analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/INSW/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-14T05:08:45+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "INSW daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/INSW/history",
+      "published_at": null,
+      "observed_at": "2026-10-14T05:08:45+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "INSW company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/INSW/profile",
+      "published_at": null,
+      "observed_at": "2026-10-14T05:08:45+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-66CDE89BADA482E2",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1679049/000110465926093033/tm2622617d1_ex99-1.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-08-10",
+      "observed_at": "2026-10-10T06:16:06+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-1AFE9C71A3D5659B",
+    "input_sha": "1afe9c71a3d5659b47efc26ed75a240c0e566de02aaff4ad4e42cea792e398a9",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "[Crude Tankers] Shipping revenues · second quarter of 2026: $285 million — 해당 사업부의 운송 매출은 해당 기간 동안 이 금액을 기록했다",
+        "note_ko": "해당 사업부의 운송 매출은 해당 기간 동안 이 금액을 기록했다",
+        "kind": "fact",
+        "quote": "Shipping revenues for the Crude Tankers segment were $285 million for the second quarter of 2026, compared to $104 million for the second quarter of 2025.",
+        "document_id": "DOC-66CDE89BADA482E2",
+        "block_id": "p18",
+        "metric": "Shipping revenues",
+        "figures": [
+          "$285 million"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Crude Tankers",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "contracted revenue · second quarter: $45 million — 회사는 해당 기간 동안 추가 용선 계약을 체결하여 이 금액의 미래 계약 매출을 확보했다",
+        "note_ko": "회사는 해당 기간 동안 추가 용선 계약을 체결하여 이 금액의 미래 계약 매출을 확보했다",
+        "kind": "fact",
+        "quote": "During the second quarter, the Company entered into an additional time charter agreement for three years on a 2017-built Suezmax with future contracted revenue of approximately $45 million.",
+        "document_id": "DOC-66CDE89BADA482E2",
+        "block_id": "p28",
+        "metric": "contracted revenue",
+        "figures": [
+          "$45 million"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "backlog"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — EBITDA 및 조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 현금 흐름을 나타내지 않으며 대체해서도 안 된다",
+        "note_ko": "EBITDA 및 조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 현금 흐름을 나타내지 않으며 대체해서도 안 된다",
+        "kind": "fact",
+        "quote": "EBITDA and Adjusted EBITDA do not represent, and should not be a substitute for, net income or cash flows from operations as determined in accordance with GAAP.",
+        "document_id": "DOC-66CDE89BADA482E2",
+        "block_id": "p58",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "이 발표가 애널리스트의 내년 EPS 예상치 상향에 영향을 미쳤는지 여부를 확인해야 한다"
+    ],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-66CDE89BADA482E2",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1679049/000110465926093033/tm2622617d1_ex99-1.htm",
+        "filed_at": "2026-08-10",
+        "observed_at": "2026-10-10T06:16:06+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-14T05:18:04+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 9.56367,
+    "eps_30d": 6.29967,
+    "eps_90d": 6.44136,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 48.5,
+    "steady": false,
+    "turnaround": false
+  }
+}

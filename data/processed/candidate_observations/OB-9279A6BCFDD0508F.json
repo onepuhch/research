@@ -1,0 +1,86 @@
+{
+  "observation_id": "OB-9279A6BCFDD0508F",
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "candidate_version": "CV-11956D326782189D",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:TXO",
+    "ticker": "TXO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-14T05:14:35+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261014T050334Z_38514422416-1.json.gz",
+    "sha256": "da0b38a897af54f7545359be6d63db8d0e1e94a642085c93343b554bbf85ab13",
+    "run_id": "38514422416-1",
+    "finished_at": "2026-10-14T05:17:48+00:00"
+  },
+  "eps": {
+    "eps_now": 1.30667,
+    "eps_30d": 1.14,
+    "eps_90d": 0.875,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 49.3,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.963,
+    "yield_change_30_pp": 1.144
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-16",
+    "price_start_date": "2026-07-16",
+    "price_end_expected": "2026-10-13",
+    "price_end_date": "2026-10-13",
+    "close_start": 13.050000190734863,
+    "close_end": 14.569999694824219,
+    "price_pct_90": 11.6,
+    "adj_return_pct_90": 14.9,
+    "pe_change_pct": -25.2
+  },
+  "display_rank": 22,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 14
+    },
+    {
+      "list": "B",
+      "rank": 17
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 807854144,
+  "context_id": "CTX-72174EE1E8789D42",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-14T05:17:51+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:TXO",
+  "approval_version": null,
+  "rendered_at": "2026-10-14T05:18:50+00:00"
+}

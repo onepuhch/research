@@ -1,0 +1,144 @@
+{
+  "context_id": "CTX-FC7419062DE56F28",
+  "candidate_id": "CAN-7506B6BECE695B39",
+  "ticker": "FRO",
+  "issuer_cik": "0000913290",
+  "document_ids": [
+    "DOC-9257C52A1302173B"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9257C52A1302173B#p33",
+    "DOC-9257C52A1302173B#p40",
+    "DOC-9257C52A1302173B#p41",
+    "DOC-9257C52A1302173B#p42",
+    "DOC-9257C52A1302173B#p44",
+    "DOC-9257C52A1302173B#p45",
+    "DOC-9257C52A1302173B#p47",
+    "DOC-9257C52A1302173B#p57",
+    "DOC-9257C52A1302173B#p58",
+    "DOC-9257C52A1302173B#p59",
+    "DOC-9257C52A1302173B#t4",
+    "DOC-9257C52A1302173B#p66",
+    "DOC-9257C52A1302173B#p67",
+    "DOC-9257C52A1302173B#p75",
+    "DOC-9257C52A1302173B#p77",
+    "DOC-9257C52A1302173B#p79",
+    "DOC-9257C52A1302173B#p81",
+    "DOC-9257C52A1302173B#p82",
+    "DOC-9257C52A1302173B#p83",
+    "DOC-9257C52A1302173B#p85",
+    "DOC-9257C52A1302173B#p99",
+    "DOC-9257C52A1302173B#p109",
+    "DOC-9257C52A1302173B#p126",
+    "DOC-9257C52A1302173B#p127",
+    "DOC-9257C52A1302173B#p130",
+    "DOC-9257C52A1302173B#p132",
+    "DOC-9257C52A1302173B#p136",
+    "DOC-9257C52A1302173B#p139",
+    "DOC-9257C52A1302173B#p159",
+    "DOC-9257C52A1302173B#p161",
+    "DOC-9257C52A1302173B#t25",
+    "DOC-9257C52A1302173B#p271",
+    "DOC-9257C52A1302173B#p291",
+    "DOC-9257C52A1302173B#p306",
+    "DOC-9257C52A1302173B#p314",
+    "DOC-9257C52A1302173B#p338",
+    "DOC-9257C52A1302173B#p352"
+  ],
+  "input_sha": "fc7419062de56f2874a3bd67fc5f8ce421235a58c324186ff09d26a39a16103b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-14T05:18:04+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "figures": [
+        "$644.8 million"
+      ],
+      "quote": "Voyage charter revenues increased by $644.8 million in the six months ended June 30, 2026 as compared to the six months ended June 30, 2025 primarily due to:",
+      "where": "DOC-9257C52A1302173B#p41"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "시장 운임 상승으로 증가했다",
+      "figures": [
+        "$671.8 million"
+      ],
+      "quote": "•an increase of $671.8 million due to higher market freight rates, and",
+      "where": "DOC-9257C52A1302173B#p42"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "figures": [
+        "$102.6 million"
+      ],
+      "quote": "Time charter revenues increased by $102.6 million in the six months ended June 30, 2026 as compared to the six months ended June 30, 2025 primarily due to:",
+      "where": "DOC-9257C52A1302173B#p45"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "선박 매각 이익이 발생했다",
+      "figures": [
+        "265,636"
+      ],
+      "quote": "Gain on sale of vessels ; 265,636 ; —",
+      "where": "DOC-9257C52A1302173B#t4"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "총 기타 영업 이익이 발생했다",
+      "figures": [
+        "290,465"
+      ],
+      "quote": "Total other operating income ; 290,465 ; 92",
+      "where": "DOC-9257C52A1302173B#t4"
+    },
+    {
+      "what": "limitation",
+      "reason": "delta_presented_as_level",
+      "note_ko": "VLCC 8척과 Suezmax 탱커 3척 매각으로 감소했다",
+      "figures": [
+        "$74.2 million"
+      ],
+      "quote": "These factors were partially offset by a decrease of $74.2 million due to the sale of eight VLCCs and three Suezmax tankers since January 1, 2025.",
+      "where": "DOC-9257C52A1302173B#p44"
+    },
+    {
+      "what": "limitation",
+      "reason": "delta_presented_as_level",
+      "note_ko": "VLCC 8척과 Suezmax 탱커 3척 처분으로 감소했다",
+      "figures": [
+        "$42.8 million"
+      ],
+      "quote": "•a decrease of $42.8 million due to the disposal of eight VLCCs and three Suezmax tankers, and",
+      "where": "DOC-9257C52A1302173B#p57"
+    },
+    {
+      "what": "limitation",
+      "reason": "delta_presented_as_level",
+      "note_ko": "전년 같은 기간보다 감소했다",
+      "figures": [
+        "$1.0 million"
+      ],
+      "quote": "Ship operating expenses decreased by $1.0 million in the six months ended June 30, 2026 as compared to the six months ended June 30, 2025 primarily due to:",
+      "where": "DOC-9257C52A1302173B#p66"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

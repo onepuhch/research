@@ -1,0 +1,83 @@
+{
+  "observation_id": "OB-961CEF0948CF2C90",
+  "candidate_id": "CAN-FD88AA0D924CF1C8",
+  "candidate_version": "CV-168325EA9127D445",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DHT",
+    "ticker": "DHT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-14T05:09:55+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261014T050334Z_38514422416-1.json.gz",
+    "sha256": "da0b38a897af54f7545359be6d63db8d0e1e94a642085c93343b554bbf85ab13",
+    "run_id": "38514422416-1",
+    "finished_at": "2026-10-14T05:17:48+00:00"
+  },
+  "eps": {
+    "eps_now": 2.50333,
+    "eps_30d": 1.8805,
+    "eps_90d": 1.73459,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 44.3,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 2.891,
+    "yield_change_30_pp": 2.342
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-16",
+    "price_start_date": "2026-07-16",
+    "price_end_expected": "2026-10-13",
+    "price_end_date": "2026-10-13",
+    "close_start": 17.84000015258789,
+    "close_end": 26.59000015258789,
+    "price_pct_90": 49.0,
+    "adj_return_pct_90": 59.0,
+    "pe_change_pct": 3.3
+  },
+  "display_rank": 28,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 17
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 4287253760,
+  "context_id": "CTX-D431900433962EEC",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [
+    "document budget reached before every results filing was read"
+  ],
+  "source_attempt_at": "2026-10-10T06:16:06+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:DHT",
+  "approval_version": null,
+  "rendered_at": "2026-10-14T05:18:50+00:00"
+}

@@ -1,0 +1,85 @@
+{
+  "observation_id": "OB-5B7138EE98F5C84A",
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "candidate_version": "CV-DD0FCBF29C70B6DF",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:TALO",
+    "ticker": "TALO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-14T05:11:00+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261014T050334Z_38514422416-1.json.gz",
+    "sha256": "da0b38a897af54f7545359be6d63db8d0e1e94a642085c93343b554bbf85ab13",
+    "run_id": "38514422416-1",
+    "finished_at": "2026-10-14T05:17:48+00:00"
+  },
+  "eps": {
+    "eps_now": 1.66344,
+    "eps_30d": 1.44218,
+    "eps_90d": -0.35729,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 5,
+    "down30": 0,
+    "pct_90": null,
+    "steady": true,
+    "turnaround": true,
+    "yield_change_90_pp": 11.508,
+    "yield_change_30_pp": 1.26
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-16",
+    "price_start_date": "2026-07-16",
+    "price_end_expected": "2026-10-13",
+    "price_end_date": "2026-10-13",
+    "close_start": 14.119999885559082,
+    "close_end": 17.559999465942383,
+    "price_pct_90": 24.4,
+    "adj_return_pct_90": 24.4,
+    "pe_change_pct": null
+  },
+  "display_rank": 3,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 2
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 2931913472,
+  "context_id": "CTX-49D5C361449CB50B",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-12T06:23:49+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-49D5C361449CB50B",
+    "generated_at": "2026-10-14T05:18:04+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:TALO",
+  "approval_version": null,
+  "rendered_at": "2026-10-14T05:18:50+00:00"
+}

@@ -113,9 +113,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-19T06:23:49+00:00",
-      "draft_status": "provider_rate_limited",
-      "context_id": "CTX-3C51A38DB3C2F150",
-      "context_input_sha": "3c51a38db3c2f1501ff9af5a7e29f36ff7fc6ad15af349a8d4b5f94eb5f677f6",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-49D5C361449CB50B",
+      "context_input_sha": "49d5c361449cb50b39de9b04e0c37e3cf74d1c6d88c1e70a2efdcc721a268d96",
       "quality": "complete",
       "failures": 0,
       "draft_error": "HTTPError",
@@ -200,12 +200,11 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-20T07:07:13+00:00",
-      "draft_status": "provider_rate_limited",
-      "context_id": "CTX-4AF8EDED57B44FFC",
-      "context_input_sha": "4af8eded57b44ffc9660347cf5a5b4bf568fed48020814375e1f61eb2f6fa465",
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-B8DFC6207093AAB5",
+      "context_input_sha": "b8dfc6207093aab545cc58f460fcd8e6fbe69c6cacbcbaf64870a0ae7bcd5d8b",
       "quality": "complete",
       "failures": 0,
-      "draft_next_at": "2026-10-10T06:31:42+00:00",
       "update_checks": [
         {
           "document_id": "DOC-FA8A26E78512BA94",
@@ -271,10 +270,10 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-10-20T07:07:13+00:00",
-      "draft_status": "provider_rate_limited",
+      "draft_status": "no_supported_claims",
       "draft_error": "HTTPError",
-      "context_id": "CTX-F0EA88EF71DDC9A8",
-      "context_input_sha": "f0ea88ef71ddc9a8434c8bca60c1010fa647976a269bccca527db141a58778d4",
+      "context_id": "CTX-D420E5CC1254951A",
+      "context_input_sha": "d420e5cc1254951ac72dfd604cf7dd507f23d786262393829ba9ce0d09c16c18",
       "quality": "complete",
       "failures": 0,
       "update_checks": [
@@ -447,11 +446,11 @@
         "exchange": "NYSE",
         "name": "Marathon Petroleum Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
-        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-13T07:07:13+00:00",
-      "eps_key": "2027-12-31|52.16478",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|55.13104",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-683FD7B3F9B87824",
@@ -462,7 +461,7 @@
         "DOC-BE1000530D20CF2E"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-20T07:07:13+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "provider_rate_limited",
       "context_id": "CTX-80ADD5ED7A3A87DF",
       "context_input_sha": "80add5ed7a3a87dfb967635b8878e4ce1bf1372c726034ff9d7b594d03f32984",
@@ -808,11 +807,11 @@
         "exchange": "NYSE",
         "name": "Valero Energy Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
-        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-13T07:07:13+00:00",
-      "eps_key": "2027-12-31|44.88326",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|46.7398",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-9DA9F71500981FB2"
@@ -825,7 +824,7 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-20T07:07:13+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-654C43F916CE1DAD",
       "context_input_sha": "654c43f916ce1daddaebab0996bead2c437f38aee331392cc4ce460fd5e9026e",
@@ -865,11 +864,11 @@
         "exchange": "NYSE",
         "name": "Compass Diversified",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "934b2cf31597017f4da5dbf1da2a717fa03fc1a240e6cfa219f0289788f7c5e2",
-        "mapping_observed_at": "2026-09-27T05:25:42+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-09-27T05:40:06+00:00",
-      "eps_key": "2027-12-31|0.644",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|0.67",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-DCA2D5E4142540F1"
@@ -877,13 +876,41 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-1F27EEB59615664E",
+        "DOC-685A108061402F56",
         "DOC-DCA2D5E4142540F1"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-04T05:40:06+00:00",
-      "draft_status": "insufficient_earnings_context",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
+      "draft_status": "provider_rate_limited",
       "context_id": "CTX-B1F7138D24B2BA42",
-      "context_input_sha": "b1f7138d24b2ba421b8d51f9f1ea39de461584bb5657acd5e0b63aed8c97a1ea"
+      "context_input_sha": "b1f7138d24b2ba421b8d51f9f1ea39de461584bb5657acd5e0b63aed8c97a1ea",
+      "update_checks": [
+        {
+          "document_id": "DOC-1F27EEB59615664E",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-685A108061402F56",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-DCA2D5E4142540F1",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-11B1565B12AFE2F9": {
       "status": "success",
@@ -1076,10 +1103,10 @@
         "exchange": "Nasdaq",
         "name": "Sprout Social, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "2df6dbed748a66dfbb6ed403e1e88b4d7b5590e61188ea74d5548d0f8aec09c1",
-        "mapping_observed_at": "2026-10-01T15:01:56+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-05T06:05:58+00:00",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
       "eps_key": "2027-12-31|1.5398",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -1092,12 +1119,29 @@
         "DOC-73E8D5E3097AE999"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-12T06:05:58+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "no_supported_claims",
       "draft_error": "HTTPError",
       "context_id": "CTX-2E27536B72F40EA1",
       "context_input_sha": "2e27536b72f40ea1ac2793d0f8df73dd3171419ce21eda192eb63438b7c93fd2",
-      "update_checks": []
+      "update_checks": [
+        {
+          "document_id": "DOC-450C06FD810BE835",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-73E8D5E3097AE999",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ]
     },
     "CAN-A0761326A7E13159": {
       "status": "success",
@@ -1223,11 +1267,11 @@
         "exchange": "Nasdaq",
         "name": "Cracker Barrel Old Country Store, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
-        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-10T06:16:06+00:00",
-      "eps_key": "2028-07-31|2.12415",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2028-07-31|2.19987",
       "eps_target_period": "2028-07-31",
       "document_ids": [
         "DOC-D70EE3410CF45533"
@@ -1238,7 +1282,7 @@
         "DOC-D70EE3410CF45533"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-17T06:16:06+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "provider_rate_limited",
       "draft_error": "TimeoutError",
       "draft_next_at": "2026-10-10T06:37:58+00:00",
@@ -1331,11 +1375,11 @@
         "exchange": "Nasdaq",
         "name": "Fastly, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-07T06:24:22+00:00",
-      "eps_key": "2027-12-31|0.6305",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|0.64217",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-756AB63F072FAB95"
@@ -1346,7 +1390,7 @@
         "DOC-756AB63F072FAB95"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-2DEE051118868259",
       "context_input_sha": "2dee05111886825925afaeb79135b2fd463b7799b731c8f73c7d86484e36bff4",
@@ -1370,11 +1414,11 @@
         "exchange": "NYSE",
         "name": "Phillips 66",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
-        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-13T07:07:13+00:00",
-      "eps_key": "2027-12-31|28.13266",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|29.4455",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-D9C0CECC172F9418"
@@ -1385,7 +1429,7 @@
         "DOC-D9C0CECC172F9418"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-20T07:07:13+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "provider_rate_limited",
       "context_id": "CTX-2CEA03A0C6A3BE21",
       "context_input_sha": "2cea03a0c6a3be217e244cf78844672fc452f2542b78a03e4a98022043a1e808",
@@ -1618,11 +1662,11 @@
         "exchange": "NYSE",
         "name": "TXO Partners, L.P.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "d981e6f99ecf09c53163932671bab9aa6e3184e4cdecdd89ac0fd06805c21f88",
-        "mapping_observed_at": "2026-10-09T06:23:16+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-09T06:37:49+00:00",
-      "eps_key": "2027-12-31|1.5625",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|1.30667",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-439BA8AE037B9273"
@@ -1633,7 +1677,7 @@
         "DOC-439BA8AE037B9273"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-16T06:37:49+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-72174EE1E8789D42",
       "context_input_sha": "72174ee1e8789d42d4c05e58dccedbcbeba6b089715c33e3201b11c14777f964",
@@ -1697,11 +1741,11 @@
         "exchange": "NYSE",
         "name": "Cleveland-Cliffs Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-07T06:24:22+00:00",
-      "eps_key": "2027-12-31|0.92607",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2027-12-31|0.96341",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-067BE90E51AC5E3F"
@@ -1712,7 +1756,7 @@
         "DOC-067BE90E51AC5E3F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-14T06:24:22+00:00",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-E7663D98420192B6",
       "context_input_sha": "e7663d98420192b6c9b30f331b502347eee11314ef68af042f22bac32da23e70",
@@ -1808,12 +1852,12 @@
         "exchange": "Nasdaq",
         "name": "Micron Technology, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e0033204d27cbf7149023b2e94432b2c90735fe9c4743ae4f156fd82843bcb3c",
-        "mapping_observed_at": "2026-10-06T06:31:59+00:00"
+        "mapping_sha256": "db0d8539b2ac6b56113ed49a7005fe85fdefe60b220ef9e6b2eea568d697d36c",
+        "mapping_observed_at": "2026-10-14T05:03:34+00:00"
       },
-      "attempted_at": "2026-10-07T06:24:22+00:00",
-      "eps_key": "2027-08-31|206.33243",
-      "eps_target_period": "2027-08-31",
+      "attempted_at": "2026-10-14T05:17:51+00:00",
+      "eps_key": "2028-08-31|206.33243",
+      "eps_target_period": "2028-08-31",
       "document_ids": [
         "DOC-39C08ABD9C77B7B0",
         "DOC-72E4E5C51654E6AA"
@@ -1825,8 +1869,8 @@
         "DOC-72E4E5C51654E6AA"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-14T06:24:22+00:00",
-      "draft_status": "deferred_budget",
+      "next_eligible_at": "2026-10-21T05:17:51+00:00",
+      "draft_status": "provider_rate_limited",
       "update_checks": [
         {
           "document_id": "DOC-39C08ABD9C77B7B0",
@@ -2317,8 +2361,9 @@
         }
       ],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_rate_limited",
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-D431900433962EEC",
+      "context_input_sha": "d431900433962eecd9a5921db98bc2ab46263bc4210fef7b892dd82d3532b1d3"
     },
     "CAN-7506B6BECE695B39": {
       "status": "success",
@@ -2364,8 +2409,9 @@
         }
       ],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_rate_limited",
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-FC7419062DE56F28",
+      "context_input_sha": "fc7419062de56f2874a3bd67fc5f8ce421235a58c324186ff09d26a39a16103b"
     },
     "CAN-71C24817F9DA0FA8": {
       "status": "success",
@@ -2402,8 +2448,9 @@
         }
       ],
       "next_eligible_at": "2026-10-17T06:16:06+00:00",
-      "draft_status": "provider_rate_limited",
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      "draft_status": "draft_ready",
+      "context_id": "CTX-1AFE9C71A3D5659B",
+      "context_input_sha": "1afe9c71a3d5659b47efc26ed75a240c0e566de02aaff4ad4e42cea792e398a9"
     },
     "CAN-61FEF5DA79A23D65": {
       "status": "success",
@@ -2467,7 +2514,9 @@
         }
       ],
       "next_eligible_at": "2026-10-19T06:23:49+00:00",
-      "draft_status": "provider_rate_limited"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-83FD958CC1AFAA95",
+      "context_input_sha": "83fd958cc1afaa9555ef6af157b4166ab0cc59c2bcd96e81f5eb53fdf4f7bfea"
     },
     "CAN-E5554136472B2202": {
       "status": "success",
@@ -2647,6 +2696,11 @@
       "companies": 10,
       "http_attempts": 40,
       "folded_companies": 2
+    },
+    "2026-10-14": {
+      "companies": 10,
+      "http_attempts": 27,
+      "folded_companies": 2
     }
   },
   "documents_by_source": {
@@ -2772,6 +2826,8 @@
     "0001104485-26-000025|https://www.sec.gov/Archives/edgar/data/1104485/000110448526000025/pre-oppressreleasexjuly2026.htm": "DOC-6D787CF0871D73E5",
     "0001654954-26-008023|https://www.sec.gov/Archives/edgar/data/313807/000165495426008023/a9266s.htm": "DOC-697C841B326FF40F",
     "0001193125-26-398561|https://www.sec.gov/Archives/edgar/data/1088856/000119312526398561/d148256dex991.htm": "DOC-0CA5E7B7BED77FE4",
-    "0001193125-26-398561|https://www.sec.gov/Archives/edgar/data/1088856/000119312526398561/d148256d8k.htm": "DOC-17560445D3FA5C3D"
+    "0001193125-26-398561|https://www.sec.gov/Archives/edgar/data/1088856/000119312526398561/d148256d8k.htm": "DOC-17560445D3FA5C3D",
+    "0001345126-26-000065|https://www.sec.gov/Archives/edgar/data/1345122/000134512626000065/codidistributionpressrelea.htm": "DOC-1F27EEB59615664E",
+    "0001345126-26-000065|https://www.sec.gov/Archives/edgar/data/1345122/000134512626000065/codi-20261001.htm": "DOC-685A108061402F56"
   }
 }

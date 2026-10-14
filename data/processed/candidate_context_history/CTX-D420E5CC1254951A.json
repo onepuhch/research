@@ -1,0 +1,143 @@
+{
+  "context_id": "CTX-D420E5CC1254951A",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "ticker": "NBR",
+  "issuer_cik": "0001163739",
+  "document_ids": [
+    "DOC-9B80B26347EA4928",
+    "DOC-FA05283160645717"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9B80B26347EA4928#p12",
+    "DOC-9B80B26347EA4928#p17",
+    "DOC-9B80B26347EA4928#p26",
+    "DOC-9B80B26347EA4928#p35",
+    "DOC-9B80B26347EA4928#p45",
+    "DOC-9B80B26347EA4928#t19",
+    "DOC-9B80B26347EA4928#p80",
+    "DOC-FA05283160645717#t9",
+    "DOC-FA05283160645717#p160",
+    "DOC-FA05283160645717#p173"
+  ],
+  "input_sha": "d420e5cc1254951ac72dfd604cf7dd507f23d786262393829ba9ce0d09c16c18",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-14T05:18:04+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 비일반회계기준 지표이며, GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "note_ko": "조정 EBITDA는 비일반회계기준 지표이며, GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted operating income (loss) — 조정 영업 이익(손실)은 비일반회계기준 지표이며, GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "note_ko": "조정 영업 이익(손실)은 비일반회계기준 지표이며, GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-9B80B26347EA4928",
+      "block_id": "t19",
+      "metric": "Adjusted operating income (loss)",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "미국 시추 부문의 조정 EBITDA는 이전 분기보다 증가했다",
+      "figures": [
+        "$94 million",
+        "$88 million"
+      ],
+      "quote": "The U.S. Drilling segment reported second quarter adjusted EBITDA of $94 million, compared to $88 million in the previous quarter.",
+      "where": "DOC-9B80B26347EA4928#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "Lower 48 지역의 일일 마진이 확대되었다",
+      "figures": [
+        "5%"
+      ],
+      "quote": "Lower 48 results improved as daily margin expanded 5% and the working fleet grew 4%.",
+      "where": "DOC-9B80B26347EA4928#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "Lower 48 지역의 가동 중인 장비 수가 증가했다",
+      "figures": [
+        "4%"
+      ],
+      "quote": "Lower 48 results improved as daily margin expanded 5% and the working fleet grew 4%.",
+      "where": "DOC-9B80B26347EA4928#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 하반기 조정 EBITDA가 연간 환산 기준으로 십억 달러에 도달할 것으로 예상한다",
+      "figures": [
+        "$1 billion"
+      ],
+      "quote": "As we look forward, we anticipate second-half adjusted EBITDA to reach an annualized run-rate of $1 billion.",
+      "where": "DOC-9B80B26347EA4928#p35"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동으로 인한 순 현금 흐름은 전년 동기보다 증가했다",
+      "figures": [
+        "248,581",
+        "239,545"
+      ],
+      "quote": "Net cash provided by (used for) operating activities ; ​ ; 248,581 ; ​ ; 239,545 ; ​",
+      "where": "DOC-FA05283160645717#t9"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 미래 예상치에 대한 GAAP 재무 지표와의 조정을 제공하지 않는데, 이는 의미 있는 비교 가능한 GAAP 재무 지표를 개발하는 데 필요한 항목의 금액과 중요성을 현재로서는 불합리한 노력 없이 추정할 수 없기 때문이다",
+      "figures": [],
+      "quote": "We do not provide a forward-looking reconciliation of our outlook for Segment Adjusted EBITDA, Segment Gross Margin or Adjusted Free Cash Flow, as the amount and significance of items required to deve",
+      "where": "DOC-9B80B26347EA4928#p45"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

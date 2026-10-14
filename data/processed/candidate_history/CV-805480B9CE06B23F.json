@@ -1,0 +1,180 @@
+{
+  "candidate_id": "CAN-61FEF5DA79A23D65",
+  "candidate_version": "CV-805480B9CE06B23F",
+  "identity": {
+    "entity_id": "NASDAQ:SABR",
+    "ticker": "SABR",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Sabre Corporation",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "여행 산업을 위한 소프트웨어 및 기술 회사로, 여행 공급자와 구매자를 위한 솔루션을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Sabre Corporation, together with its subsidiaries, operates as a software and technology company for the travel industry in the United States, Europe, Asia-Pacific, and internationally. It offers the Sabre Mosaic marketplace, a business-to-business travel marketplace that provides travel solutions for travel suppliers and buyers. The company also provides software technology products and solutions for airlines and other travel suppliers, including reservation systems for full-cost and low-cost carriers, commercial and operations products, agency solutions, and data-driven intelligence solution"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SABR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SABR/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-14T05:14:44+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SABR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SABR/history",
+      "published_at": null,
+      "observed_at": "2026-10-14T05:14:44+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SABR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SABR/profile",
+      "published_at": null,
+      "observed_at": "2026-10-14T05:14:44+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-173D18E589F8FFD6",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1597033/000162828026053858/q22026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-10-12T06:23:49+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-83FD958CC1AFAA95",
+    "input_sha": "83fd958cc1afaa9555ef6af157b4166ab0cc59c2bcd96e81f5eb53fdf4f7bfea",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Pro Forma Adjusted EBITDA · 2026 — 회사는 연간 프로 포르마 조정 EBITDA에 대한 가이던스를 상향 조정했다",
+        "note_ko": "회사는 연간 프로 포르마 조정 EBITDA에 대한 가이던스를 상향 조정했다",
+        "kind": "guidance",
+        "quote": "Raising 2026 guidance for Pro Forma Adjusted EBITDA and Free Cash Flow",
+        "document_id": "DOC-173D18E589F8FFD6",
+        "block_id": "p7",
+        "metric": "Pro Forma Adjusted EBITDA",
+        "figures": [],
+        "period": "2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "잉여현금흐름(Free Cash Flow) · 2026 — 회사는 연간 잉여 현금 흐름에 대한 가이던스를 상향 조정했다",
+        "note_ko": "회사는 연간 잉여 현금 흐름에 대한 가이던스를 상향 조정했다",
+        "kind": "guidance",
+        "quote": "Raising 2026 guidance for Pro Forma Adjusted EBITDA and Free Cash Flow",
+        "document_id": "DOC-173D18E589F8FFD6",
+        "block_id": "p7",
+        "metric": "Free Cash Flow",
+        "figures": [],
+        "period": "2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-173D18E589F8FFD6",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1597033/000162828026053858/q22026earningsrelease.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-10-12T06:23:49+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-14T05:18:04+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.19159,
+    "eps_30d": 0.17667,
+    "eps_90d": 0.145,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 32.1,
+    "steady": false,
+    "turnaround": false
+  }
+}

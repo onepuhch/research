@@ -1,0 +1,123 @@
+{
+  "context_id": "CTX-83FD958CC1AFAA95",
+  "candidate_id": "CAN-61FEF5DA79A23D65",
+  "ticker": "SABR",
+  "issuer_cik": "0001597033",
+  "document_ids": [
+    "DOC-173D18E589F8FFD6"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-173D18E589F8FFD6#p4",
+    "DOC-173D18E589F8FFD6#p6",
+    "DOC-173D18E589F8FFD6#p7",
+    "DOC-173D18E589F8FFD6#p8",
+    "DOC-173D18E589F8FFD6#p9",
+    "DOC-173D18E589F8FFD6#p19",
+    "DOC-173D18E589F8FFD6#p21",
+    "DOC-173D18E589F8FFD6#p24",
+    "DOC-173D18E589F8FFD6#p27",
+    "DOC-173D18E589F8FFD6#p28",
+    "DOC-173D18E589F8FFD6#p29",
+    "DOC-173D18E589F8FFD6#p30",
+    "DOC-173D18E589F8FFD6#p32",
+    "DOC-173D18E589F8FFD6#p43",
+    "DOC-173D18E589F8FFD6#p44",
+    "DOC-173D18E589F8FFD6#p45",
+    "DOC-173D18E589F8FFD6#t6",
+    "DOC-173D18E589F8FFD6#p98",
+    "DOC-173D18E589F8FFD6#p99",
+    "DOC-173D18E589F8FFD6#t7",
+    "DOC-173D18E589F8FFD6#p140"
+  ],
+  "input_sha": "83fd958cc1afaa9555ef6af157b4166ab0cc59c2bcd96e81f5eb53fdf4f7bfea",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-14T05:18:04+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Pro Forma Adjusted EBITDA · 2026 — 회사는 연간 프로 포르마 조정 EBITDA에 대한 가이던스를 상향 조정했다",
+      "note_ko": "회사는 연간 프로 포르마 조정 EBITDA에 대한 가이던스를 상향 조정했다",
+      "kind": "guidance",
+      "quote": "Raising 2026 guidance for Pro Forma Adjusted EBITDA and Free Cash Flow",
+      "document_id": "DOC-173D18E589F8FFD6",
+      "block_id": "p7",
+      "metric": "Pro Forma Adjusted EBITDA",
+      "figures": [],
+      "period": "2026",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "잉여현금흐름(Free Cash Flow) · 2026 — 회사는 연간 잉여 현금 흐름에 대한 가이던스를 상향 조정했다",
+      "note_ko": "회사는 연간 잉여 현금 흐름에 대한 가이던스를 상향 조정했다",
+      "kind": "guidance",
+      "quote": "Raising 2026 guidance for Pro Forma Adjusted EBITDA and Free Cash Flow",
+      "document_id": "DOC-173D18E589F8FFD6",
+      "block_id": "p7",
+      "metric": "Free Cash Flow",
+      "figures": [],
+      "period": "2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "마켓플레이스 매출은 전년 동기 대비 증가했다",
+      "figures": [
+        "6%"
+      ],
+      "quote": "Marketplace revenue grew 6%, driven by growth in air bookings and booking fees",
+      "where": "DOC-173D18E589F8FFD6#p9"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "회사의 매출은 전년 동기 대비 증가했다",
+      "figures": [
+        "4%"
+      ],
+      "quote": "Despite the impact of the conflict in the Middle East and higher fuel prices on global travel demand, we grew revenue by 4% and Normalized Adjusted EBITDA by 19% in the quarter.",
+      "where": "DOC-173D18E589F8FFD6#p19"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "회사의 조정 EBITDA는 전년 동기 대비 증가했다",
+      "figures": [
+        "19%"
+      ],
+      "quote": "Despite the impact of the conflict in the Middle East and higher fuel prices on global travel demand, we grew revenue by 4% and Normalized Adjusted EBITDA by 19% in the quarter.",
+      "where": "DOC-173D18E589F8FFD6#p19"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}
