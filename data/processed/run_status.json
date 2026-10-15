@@ -1,48 +1,48 @@
 {
   "eps": {
-    "checked_at": "2026-10-14T05:03:32+00:00",
+    "checked_at": "2026-10-15T04:51:48+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:03:32+00:00",
+    "last_success_at": "2026-10-15T04:51:48+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-10-14T05:01:53+00:00",
+    "checked_at": "2026-10-15T04:50:34+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:01:53+00:00",
-    "item_count": 14,
+    "last_success_at": "2026-10-15T04:50:34+00:00",
+    "item_count": 13,
     "errors": [],
-    "collected_at": "2026-10-14T05:01:53.564755+00:00"
+    "collected_at": "2026-10-15T04:50:34.461285+00:00"
   },
   "extract": {
-    "checked_at": "2026-10-14T05:03:30+00:00",
+    "checked_at": "2026-10-15T04:51:46+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:03:30+00:00",
-    "accepted": 1,
-    "deferred_budget": 1,
-    "rejected": 3,
-    "validation_rejected": 3,
+    "last_success_at": "2026-10-15T04:51:46+00:00",
+    "accepted": 0,
+    "deferred_budget": 0,
+    "rejected": 5,
+    "validation_rejected": 0,
     "validation_rejected_total": 44,
     "failed": 0,
     "unserved_failed": 0,
     "overload_deferred": 0,
     "expired": 0,
-    "processed_today": 1,
+    "processed_today": 5,
     "open_errors": 0,
     "open_unserved": 0,
-    "pending": 2,
+    "pending": 1,
     "outcome": "ok",
-    "day": "2026-10-14",
-    "run_id": "38514422416-1",
+    "day": "2026-10-15",
+    "run_id": "38683526891-1",
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-10-14T21:48:33+00:00",
+    "checked_at": "2026-10-15T04:50:25+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T21:48:33+00:00",
+    "last_success_at": "2026-10-15T04:50:25+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -58,14 +58,14 @@
     "last_success_at": "2026-10-12T06:26:17+00:00"
   },
   "notify": {
-    "checked_at": "2026-10-14T05:03:32+00:00",
+    "checked_at": "2026-10-15T04:51:48+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:03:32+00:00"
+    "last_success_at": "2026-10-15T04:51:48+00:00"
   },
   "prices": {
-    "checked_at": "2026-10-14T05:17:50+00:00",
+    "checked_at": "2026-10-15T05:06:14+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:17:50+00:00",
+    "last_success_at": "2026-10-15T05:06:14+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
@@ -78,19 +78,19 @@
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-10-14T05:03:33+00:00",
+    "checked_at": "2026-10-15T04:51:50+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:03:33+00:00",
+    "last_success_at": "2026-10-15T04:51:50+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-10-14T05:17:50+00:00",
+    "checked_at": "2026-10-15T05:06:13+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:17:50+00:00",
-    "snapshot": "20261014T050334Z_38514422416-1.json.gz",
-    "candidates": 102,
+    "last_success_at": "2026-10-15T05:06:13+00:00",
+    "snapshot": "20261015T045150Z_38683526891-1.json.gz",
+    "candidates": 103,
     "alert": false,
     "stages": {
       "universe": {
@@ -102,40 +102,41 @@
         "success": 1
       },
       "quotes": {
-        "requested": 7648,
-        "success": 7648
+        "requested": 7653,
+        "success": 7652,
+        "unavailable": 1
       },
       "earnings": {
-        "requested": 3204,
-        "success": 2414,
-        "unavailable": 790
+        "requested": 3235,
+        "success": 2418,
+        "unavailable": 817
       },
       "profile": {
-        "requested": 102,
-        "success": 102
+        "requested": 103,
+        "success": 103
       },
       "price": {
-        "requested": 33,
-        "success": 33
+        "requested": 31,
+        "success": 31
       }
     }
   },
   "cards": {
-    "checked_at": "2026-10-14T05:19:09+00:00",
+    "checked_at": "2026-10-15T05:07:26+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:19:09+00:00",
+    "last_success_at": "2026-10-15T05:07:26+00:00",
     "translation": {
-      "requested": 2,
+      "requested": 4,
       "translated": 0,
       "rejected": 0,
       "failed_calls": 0,
       "calls": 1,
       "budget_exhausted": true
     },
-    "new_versions": 15,
-    "new_observations": 37,
+    "new_versions": 21,
+    "new_observations": 35,
     "migrated_legacy": 0,
-    "cards": 33,
+    "cards": 31,
     "unidentified": 0,
     "stale": []
   },
@@ -158,49 +159,47 @@
     "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-10-14T05:18:50+00:00",
+    "checked_at": "2026-10-15T05:07:21+00:00",
     "status": "success",
-    "last_success_at": "2026-10-14T05:18:50+00:00",
+    "last_success_at": "2026-10-15T05:07:21+00:00",
     "held": [],
     "researched": 10,
     "statuses": {
       "success": 10
     },
-    "targets": 37,
+    "targets": 35,
     "current": {
-      "CAN-82719B27698E3C22": "2027-12-31",
-      "CAN-D50A4151AB176FB7": "2028-05-31",
       "CAN-ABBBE42278126D28": "2027-12-31",
+      "CAN-D50A4151AB176FB7": "2028-05-31",
+      "CAN-82719B27698E3C22": "2027-12-31",
       "CAN-D577F2C38FBBCFF7": "2027-12-31",
       "CAN-5790099EDC6F3301": "2027-12-31",
       "CAN-77F79A3B05ABB893": "2027-12-31",
       "CAN-DC6D3F92ECFFD019": "2027-12-31",
       "CAN-490AC1686F9442CE": "2027-12-31",
-      "CAN-43EA86A18E5096A9": "2028-08-31",
-      "CAN-700B10D9B75B0040": "2027-12-31",
-      "CAN-7F0690B785E31226": "2027-12-31",
       "CAN-E460E34B1D8B66CE": "2027-12-31",
-      "CAN-36582E27909720FE": "2027-12-31",
+      "CAN-43EA86A18E5096A9": "2028-08-31",
       "CAN-3D7A7E3B7BFBE2CE": "2027-12-31",
-      "CAN-5A9E947A6AEC56D7": "2027-12-31",
       "CAN-BA5D4320F9188F9F": "2027-12-31",
-      "CAN-F451582E2056444F": "2027-12-31",
+      "CAN-36582E27909720FE": "2027-12-31",
+      "CAN-7F0690B785E31226": "2027-12-31",
       "CAN-713C837ADADE8D8B": "2027-12-31",
-      "CAN-E87900AEFDDE7B07": "2027-12-31",
+      "CAN-F451582E2056444F": "2027-12-31",
       "CAN-DF76D3AD7ADC73CF": "2028-07-31",
-      "CAN-C8B827862A3B86D5": "2027-12-31",
-      "CAN-0733D6B2B6A41784": "2027-12-31",
-      "CAN-8ED72F330C1AE34D": "2027-12-31",
-      "CAN-ECB2C73CA19DA4AB": "2027-12-31",
-      "CAN-4E5151866E863998": "2028-06-30",
-      "CAN-7506B6BECE695B39": "2027-12-31",
-      "CAN-782282A0C20A29F1": "2028-01-31",
       "CAN-FD88AA0D924CF1C8": "2027-12-31",
+      "CAN-C8B827862A3B86D5": "2027-12-31",
+      "CAN-7506B6BECE695B39": "2027-12-31",
+      "CAN-8ED72F330C1AE34D": "2027-12-31",
+      "CAN-0733D6B2B6A41784": "2027-12-31",
+      "CAN-4E5151866E863998": "2028-06-30",
+      "CAN-ECB2C73CA19DA4AB": "2027-12-31",
+      "CAN-782282A0C20A29F1": "2028-01-31",
+      "CAN-14DF13D991DA6490": "2027-12-31",
       "CAN-02BF26B752677B69": "2027-12-31",
       "CAN-7D75F8332DBCEEFC": "2027-12-31",
-      "CAN-14DF13D991DA6490": "2027-12-31",
-      "CAN-61FEF5DA79A23D65": "2027-12-31",
-      "CAN-71C24817F9DA0FA8": "2027-12-31",
+      "CAN-F86977A7DD2C4CB3": "2027-12-31",
+      "CAN-8C3BF50290A4D125": "2027-12-31",
+      "CAN-CA0C8E92D2718B06": "2027-11-30",
       "CAN-325B2A6C30755476": "2027-12-31",
       "CAN-3D30FF7D03231FE1": "2027-12-31",
       "CAN-11B1565B12AFE2F9": "2027-12-31",
@@ -212,18 +211,21 @@
       "CAN-3D30FF7D03231FE1",
       "CAN-FDA6B7F62852042F"
     ],
-    "alert_first": [],
-    "http_attempts": 27,
+    "alert_first": [
+      "CAN-8C3BF50290A4D125",
+      "CAN-F86977A7DD2C4CB3"
+    ],
+    "http_attempts": 36,
     "coverage": {
-      "success": 35,
+      "success": 33,
       "no_relevant_document": 2
     },
     "drafts": {
       "requests": 8,
       "drafted": 2,
       "insufficient_earnings_context": 1,
-      "no_supported_claims": 4,
-      "deferred": 6,
+      "no_supported_claims": 5,
+      "deferred": 0,
       "failed": 0
     }
   },

@@ -1,0 +1,155 @@
+{
+  "candidate_id": "CAN-F86977A7DD2C4CB3",
+  "candidate_version": "CV-A22031DA9F5072E6",
+  "identity": {
+    "entity_id": "NYSE:BLSH",
+    "ticker": "BLSH",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Bullish",
+  "industry": "Software - Infrastructure",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Bullish, a global digital asset platform that provides market infrastructure and information services in United States. The company operates Bullish Exchange, a digital assets spot and derivatives exchange that integrates a central limit order book matching engine with automated market making to provide deep and predictable liquidity. It also offers CoinDesk Indices, a collection of tradable proprietary and single-asset benchmarks and indices that track the performance of digital assets to leading traditional finance institutions, including exchanges and asset managers; CoinDesk Data, a compre"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "BLSH analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BLSH/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-15T04:57:45+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "BLSH daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BLSH/history",
+      "published_at": null,
+      "observed_at": "2026-10-15T04:57:45+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "BLSH company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BLSH/profile",
+      "published_at": null,
+      "observed_at": "2026-10-15T04:57:45+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-26B7E211EFFE336B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926032097/ex_1013593.htm",
+      "title": "SEC 6-K EX-99.2 — EXHIBIT 99.2",
+      "published_at": null,
+      "filed_at": "2026-10-06",
+      "observed_at": "2026-10-15T05:06:14+00:00",
+      "fields": "6-K EX-99.2"
+    },
+    {
+      "id": "DOC-841052C3259DFDB5",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926029751/ex_1001233.htm",
+      "title": "SEC 6-K EX-99.2 — EXHIBIT 99.2",
+      "published_at": null,
+      "filed_at": "2026-09-08",
+      "observed_at": "2026-10-15T05:06:14+00:00",
+      "fields": "6-K EX-99.2"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-35B019A0C2DACCEE",
+    "input_sha": "35b019a0c2daccee9d804bc6ceacc805f496c5cf7fc52e63509f72a357f385d3",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "BLSH의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+    ],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "complete",
+    "documents": [
+      {
+        "document_id": "DOC-26B7E211EFFE336B",
+        "title": "EXHIBIT 99.2",
+        "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926032097/ex_1013593.htm",
+        "filed_at": "2026-10-06",
+        "observed_at": "2026-10-15T05:06:14+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.2"
+      },
+      {
+        "document_id": "DOC-841052C3259DFDB5",
+        "title": "EXHIBIT 99.2",
+        "url": "https://www.sec.gov/Archives/edgar/data/1872195/000143774926029751/ex_1001233.htm",
+        "filed_at": "2026-09-08",
+        "observed_at": "2026-10-15T05:06:14+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.2"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-15T05:06:33+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.27,
+    "eps_30d": 2.535,
+    "eps_90d": 2.53,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 29.2,
+    "steady": false,
+    "turnaround": false
+  }
+}

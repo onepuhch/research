@@ -1,0 +1,105 @@
+{
+  "context_id": "CTX-343D694E5B209EB7",
+  "candidate_id": "CAN-DF76D3AD7ADC73CF",
+  "ticker": "CBRL",
+  "issuer_cik": "0001067294",
+  "document_ids": [
+    "DOC-D70EE3410CF45533"
+  ],
+  "eps_target_period": "2028-07-31",
+  "source_blocks": [
+    "DOC-D70EE3410CF45533#p3",
+    "DOC-D70EE3410CF45533#p8",
+    "DOC-D70EE3410CF45533#t2",
+    "DOC-D70EE3410CF45533#t3",
+    "DOC-D70EE3410CF45533#p15",
+    "DOC-D70EE3410CF45533#p18",
+    "DOC-D70EE3410CF45533#t19",
+    "DOC-D70EE3410CF45533#t23",
+    "DOC-D70EE3410CF45533#p47",
+    "DOC-D70EE3410CF45533#t26",
+    "DOC-D70EE3410CF45533#t27",
+    "DOC-D70EE3410CF45533#t28"
+  ],
+  "input_sha": "343d694e5b209eb704cb0abfea0b29c45b8c6ae4405d2ceee81f4184e22647ad",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-15T05:06:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "총 매출액은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$849.3 million"
+      ],
+      "quote": "Total revenue was $849.3 million. Compared to the prior year quarter, total revenue decreased 2.2%.",
+      "where": "DOC-D70EE3410CF45533#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 줄었다",
+      "figures": [
+        "2.1%"
+      ],
+      "quote": "Compared to the prior year quarter, comparable store restaurant sales decreased 2.1%, and comparable store retail sales increased 0.7%.",
+      "where": "DOC-D70EE3410CF45533#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "figures": [
+        "0.7%"
+      ],
+      "quote": "Compared to the prior year quarter, comparable store restaurant sales decreased 2.1%, and comparable store retail sales increased 0.7%.",
+      "where": "DOC-D70EE3410CF45533#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회계연도 2026년 4분기 순이익은 전년 같은 기간보다 늘었다",
+      "figures": [
+        "$12,204"
+      ],
+      "quote": "Net income ; $12,204 ; $6,754 ; 81",
+      "where": "DOC-D70EE3410CF45533#t19"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회계연도 2026년 4분기 희석 주당 순이익은 전년 같은 기간보다 늘었다",
+      "figures": [
+        "$0.54"
+      ],
+      "quote": "Earnings per share – Diluted: ; $0.54 ; $0.30 ; 80",
+      "where": "DOC-D70EE3410CF45533#t19"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 이 지표를 GAAP에 따라 계산된 순이익의 추정치와 조정할 수 없다. 이 추정치에 영향을 미치는 특정 항목의 중요성을 합리적인 정확도로 예측, 예보 또는 결정할 수 없기 때문이다. 따라서 가장 직접적으로 비교 가능한 미래 지향적 GAAP 추정치는 제공되지 않는다.",
+      "figures": [],
+      "quote": "The Company is not able to reconcile the forward-looking estimate of adjusted EBITDA1 set forth above to a forward-looking estimate of net income, the most directly comparable estimated measure calcul",
+      "where": "DOC-D70EE3410CF45533#p15"
+    },
+    {
+      "what": "limitation",
+      "reason": "bad_note",
+      "note_ko": "조정 순이익은 GAAP에 따라 계산된 순이익에서 특정 항목을 제외한 것이다. 이러한 항목에는 손상 비용, 주주총회 관련 비용, 전략적 전환 이니셔티브 관련 비용, 기업 구조조정 비용, 부채 소멸 이익, 소송 합의 이익, 매각 후 재임대 거래 이익, 사업 매각 손실, CEO 전환 비용 및 관련 세금 영향이 포함된다.",
+      "figures": [],
+      "quote": "The Company defines adjusted net income as net income, calculated in accordance with GAAP, excluding, to the extent the following items occurred during the periods presented: (i) impairment charges re",
+      "where": "DOC-D70EE3410CF45533#p47"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

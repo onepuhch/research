@@ -1,10 +1,5 @@
 {
   "days": {
-    "2026-09-30": {
-      "extract": 2,
-      "candidate_context": 6,
-      "cards": 1
-    },
     "2026-10-01": {
       "extract": 10,
       "candidate_context": 6,
@@ -62,13 +57,18 @@
     "2026-10-14": {
       "extract": 5,
       "candidate_context": 8
+    },
+    "2026-10-15": {
+      "extract": 5,
+      "candidate_context": 8,
+      "cards": 1
     }
   },
   "counting_since": "2026-09-25, first counted call by the cards step of run 36133507734 (about 12:25 UTC); extract calls earlier that day were not counted",
   "blocked": {
     "reason": "provider_rate_limited",
-    "since": "2026-10-14T05:18:50+00:00",
-    "until": "2026-10-14T15:00:00+00:00",
+    "since": "2026-10-15T05:07:22+00:00",
+    "until": "2026-10-15T15:00:00+00:00",
     "retry_after_s": null,
     "quota": {
       "violations": [
@@ -77,7 +77,7 @@
           "quotaValue": "5"
         }
       ],
-      "retry_delay": "9s"
+      "retry_delay": "37s"
     }
   },
   "overload": {
@@ -87,7 +87,7 @@
       "until": null,
       "jitter_s": null,
       "last_result": "ok",
-      "last_at": "2026-10-14T05:18:49+00:00"
+      "last_at": "2026-10-15T05:07:21+00:00"
     }
   }
 }

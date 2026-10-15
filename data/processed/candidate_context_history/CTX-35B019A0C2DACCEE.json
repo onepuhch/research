@@ -1,0 +1,35 @@
+{
+  "context_id": "CTX-35B019A0C2DACCEE",
+  "candidate_id": "CAN-F86977A7DD2C4CB3",
+  "ticker": "BLSH",
+  "issuer_cik": "0001872195",
+  "document_ids": [
+    "DOC-26B7E211EFFE336B",
+    "DOC-841052C3259DFDB5"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-26B7E211EFFE336B#p7",
+    "DOC-26B7E211EFFE336B#p11",
+    "DOC-26B7E211EFFE336B#p15",
+    "DOC-841052C3259DFDB5#p7",
+    "DOC-841052C3259DFDB5#p11",
+    "DOC-841052C3259DFDB5#p15"
+  ],
+  "input_sha": "35b019a0c2daccee9d804bc6ceacc805f496c5cf7fc52e63509f72a357f385d3",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-15T05:06:33+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "BLSH의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [],
+  "context_status": "no_supported_claims"
+}

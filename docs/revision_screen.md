@@ -1,15 +1,15 @@
 # 이익 예상치 상향 스크리너
 
-최신 시도: 2026-10-14 14:03 KST · 상태 **정상** · 마지막 완전 정상 결과: 2026-10-14 14:03 KST
+최신 시도: 2026-10-15 13:51 KST · 상태 **정상** · 마지막 완전 정상 결과: 2026-10-15 13:51 KST
 
 |단계|요청|정상|자료 부족|실패|미시도|
 |---|---|---|---|---|---|
 |상장 목록(SEC)|1|1|0|0|0|
 |Yahoo 접속|1|1|0|0|0|
-|시세 일괄 조회|7648|7648|0|0|0|
-|EPS 예상치|3204|2414|790|0|0|
-|업종(후보)|102|102|0|0|0|
-|주가 비교(상위)|33|33|0|0|0|
+|시세 일괄 조회|7653|7652|1|0|0|
+|EPS 예상치|3235|2418|817|0|0|
+|업종(후보)|103|103|0|0|0|
+|주가 비교(상위)|31|31|0|0|0|
 
 증권사들이 **내년(다음 회계연도) EPS 예상치**를 최근 90일 동안 얼마나 올렸는지 본다. 내년에 흑자이고, 최근 30일에도 오르고, 올린 증권사가 내린 곳보다 많은 회사만 남긴다.
 
@@ -23,66 +23,64 @@
 
 같은 업종에서 3곳 이상이 동시에 후보에 오르면 업종 전체의 이익 환경이 바뀌는 중일 수 있다.
 
-- **Oil & Gas E&P** 10곳: PR, APA, SM, CHRD, MTDR, TALO, NOG, KOS, TXO, GRNT
+- **Oil & Gas E&P** 13곳: OXY, PR, APA, SM, CHRD, MTDR, MUR, CRGY, TALO, NOG, KOS, TXO, GRNT
 - **Oil & Gas Refining & Marketing** 8곳: MPC, VLO, PSX, DINO, PBF, CVI, DK, PARR
-- **Semiconductors** 6곳: NVDA, MU, INTC, LSCC, SMTC, MXL
-- **Oil & Gas Integrated** 6곳: CVX, SHEL, TTE, BP, EQNR, E
-- **Semiconductor Equipment & Materials** 6곳: FORM, ACMR, KLIC, AXTI, AEHR, ICHR
-- **Banks - Regional** 6곳: HBT, AMTB, HTB, VBNK, PEBO, BSVN
+- **Semiconductors** 7곳: NVDA, MU, INTC, ALAB, LSCC, SMTC, MXL
+- **Oil & Gas Integrated** 7곳: CVX, SHEL, TTE, BP, EQNR, E, CVE
+- **Semiconductor Equipment & Materials** 6곳: FORM, KLIC, ACMR, AXTI, AEHR, ICHR
+- **Banks - Regional** 6곳: PEBO, HBT, AMTB, HTB, VBNK, BSVN
 - **Computer Hardware** 5곳: DELL, SNDK, STX, WDC, P
-- **Software - Application** 5곳: TEAM, FSLY, MNDY, PUBM, SPT
-- **Software - Infrastructure** 4곳: BLSH, PRGS, SABR, RPAY
-- **Medical Care Facilities** 3곳: THC, AVAH, AGL
-- **Oil & Gas Midstream** 3곳: FRO, INSW, DHT
+- **Software - Application** 4곳: TEAM, FSLY, MNDY, PUBM
+- **Software - Infrastructure** 3곳: BLSH, PRGS, RPAY
 
 ## A. 이익 규모 대비 상향
 
 |순위|종목|업종|시가총액|내년 EPS 예상 (90일 전 → 지금)|변화|이익수익률 변화|30일 상향/하향|주가 90일|PER 변화|꾸준히 상향|
 |---|---|---|---|---|---|---|---|---|---|---|
-|1|PBF|Oil & Gas Refining & Marketing|$10.8B|$6.10 → $17.41|+185%|+12.40%p|3/0|+50%|-48%|예|
-|2|TALO|Oil & Gas E&P|$2.9B|$-0.36 → $1.66|적자→흑자|+11.51%p|5/0|+24%|미산출|예|
-|3|DK|Oil & Gas Refining & Marketing|$4.9B|$2.17 → $8.35|+284%|+7.65%p|4/0|+31%|-66%|예|
-|4|MPC|Oil & Gas Refining & Marketing|$133.9B|$25.27 → $55.13|+118%|+6.26%p|13/0|+56%|-28%|예|
-|5|RPAY|Software - Infrastructure|$348M|$0.97 → $1.16|+20%|+4.88%p|2/1|-3%|-19%|-|
-|6|MU|Semiconductors|$1078.5B|$163.35 → $206.33|+26%|+4.51%p|19/1|+12%|-12%|예|
-|7|CLF|Steel|$7.3B|$0.43 → $0.96|+123%|+4.13%p|1/0|+35%|-40%|예|
-|8|CODI|Conglomerates|$831M|$0.28 → $0.67|+139%|+3.53%p|4/1|+6%|-56%|예|
-|9|AGL|Medical Care Facilities|$1.4B|$-0.62 → $2.36|적자→흑자|+3.47%p|6/0|-29%|미산출|-|
-|10|NOG|Oil & Gas E&P|$2.8B|$3.85 → $4.69|+22%|+3.20%p|2/1|+30%|+6%|예|
-|11|TRLV|Drug Manufacturers - Specialty & Generic|$1.9B|$0.24 → $0.56|+132%|+3.14%p|1/0|+20%|-48%|예|
-|12|SPT|Software - Application|$679M|$1.20 → $1.54|+28%|+3.05%p|9/0|+30%|+1%|-|
-|13|NBR|Oil & Gas Drilling|$1.2B|$1.57 → $4.00|+155%|+3.03%p|1/0|-3%|-62%|예|
-|14|TXO|Oil & Gas E&P|$808M|$0.88 → $1.31|+49%|+2.96%p|1/0|+12%|-25%|예|
-|15|BP|Oil & Gas Integrated|$125.0B|$3.92 → $5.35|+37%|+2.95%p|8/0|+18%|-14%|예|
-|16|FRO|Oil & Gas Midstream|$13.1B|$3.53 → $5.24|+48%|+2.90%p|4/1|+59%|+7%|예|
-|17|DHT|Oil & Gas Midstream|$4.3B|$1.73 → $2.50|+44%|+2.89%p|2/0|+49%|+3%|-|
-|18|JXN|Insurance - Life|$8.9B|$28.02 → $31.63|+13%|+2.75%p|4/0|+4%|-8%|예|
-|19|INDV|Drug Manufacturers - Specialty & Generic|$4.2B|$3.92 → $4.88|+25%|+2.72%p|3/0|-13%|-30%|예|
-|20|SABR|Software - Infrastructure|$730M|$0.14 → $0.19|+32%|+2.57%p|1/0|+0%|-24%|-|
+|1|TALO|Oil & Gas E&P|$2.8B|$-0.36 → $1.77|적자→흑자|+12.47%p|5/0|+14%|미산출|예|
+|2|PBF|Oil & Gas Refining & Marketing|$10.6B|$7.41 → $17.38|+135%|+11.14%p|3/0|+43%|-39%|-|
+|3|DK|Oil & Gas Refining & Marketing|$4.8B|$2.17 → $8.35|+284%|+7.82%p|4/0|+25%|-68%|예|
+|4|MPC|Oil & Gas Refining & Marketing|$141.6B|$25.27 → $55.19|+118%|+6.17%p|13/0|+55%|-29%|예|
+|5|RPAY|Software - Infrastructure|$353M|$0.97 → $1.16|+20%|+4.82%p|2/1|+3%|-14%|-|
+|6|MU|Semiconductors|$1034.3B|$163.35 → $206.33|+26%|+4.70%p|19/1|+8%|-15%|예|
+|7|NOG|Oil & Gas E&P|$2.8B|$3.89 → $5.04|+30%|+4.37%p|2/1|+24%|-4%|예|
+|8|CLF|Steel|$7.2B|$0.43 → $0.96|+123%|+4.22%p|1/0|+36%|-39%|예|
+|9|CODI|Conglomerates|$803M|$0.28 → $0.67|+139%|+3.65%p|4/1|+3%|-57%|예|
+|10|TRLV|Drug Manufacturers - Specialty & Generic|$1.9B|$0.24 → $0.56|+132%|+3.18%p|1/0|+13%|-51%|예|
+|11|NBR|Oil & Gas Drilling|$1.2B|$1.57 → $4.00|+155%|+3.11%p|1/0|-7%|-63%|예|
+|12|DHT|Oil & Gas Midstream|$4.0B|$1.73 → $2.50|+44%|+3.08%p|2/0|+43%|-1%|-|
+|13|FRO|Oil & Gas Midstream|$12.5B|$3.53 → $5.24|+48%|+3.04%p|4/1|+54%|+4%|예|
+|14|TXO|Oil & Gas E&P|$790M|$0.88 → $1.31|+49%|+3.03%p|1/0|+11%|-26%|예|
+|15|BP|Oil & Gas Integrated|$125.7B|$4.10 → $5.49|+34%|+2.84%p|8/0|+16%|-13%|예|
+|16|INDV|Drug Manufacturers - Specialty & Generic|$4.0B|$3.92 → $4.88|+25%|+2.82%p|3/0|-16%|-32%|예|
+|17|JXN|Insurance - Life|$8.8B|$28.02 → $31.63|+13%|+2.77%p|4/0|+4%|-8%|예|
+|18|BLSH|Software - Infrastructure|$4.6B|$2.53 → $3.27|+29%|+2.44%p|1/0|+36%|+5%|-|
+|19|AXTI|Semiconductor Equipment & Materials|$4.0B|$0.75 → $2.25|+199%|+2.43%p|1/0|+34%|-55%|예|
+|20|PRGS|Software - Infrastructure|$1.6B|$6.24 → $7.18|+15%|+2.43%p|4/0|-5%|-17%|-|
 
 ## B. 성장률 상향
 
 |순위|종목|업종|시가총액|내년 EPS 예상 (90일 전 → 지금)|변화|이익수익률 변화|30일 상향/하향|주가 90일|PER 변화|꾸준히 상향|
 |---|---|---|---|---|---|---|---|---|---|---|
-|1|AEHR|Semiconductor Equipment & Materials|$2.5B|$0.30 → $1.38|+361%|+1.40%p|1/0|-8%|-80%|예|
-|2|DK|Oil & Gas Refining & Marketing|$4.9B|$2.17 → $8.35|+284%|+7.65%p|4/0|+31%|-66%|예|
-|3|SPCX|Aerospace & Defense|$2063.5B|$0.68 → $2.08|+208%|+0.90%p|3/0|+19%|-61%|예|
-|4|AXTI|Semiconductor Equipment & Materials|$4.2B|$0.75 → $2.25|+199%|+2.32%p|1/0|+42%|-53%|예|
-|5|PBF|Oil & Gas Refining & Marketing|$10.8B|$6.10 → $17.41|+185%|+12.40%p|3/0|+50%|-48%|예|
-|6|CORT|Biotechnology|$12.7B|$1.63 → $4.40|+170%|+2.35%p|2/0|+31%|-51%|-|
-|7|NBR|Oil & Gas Drilling|$1.2B|$1.57 → $4.00|+155%|+3.03%p|1/0|-3%|-62%|예|
-|8|BLTE|Biotechnology|$6.1B|$0.94 → $2.26|+139%|+0.87%p|5/2|+1%|-58%|예|
-|9|CODI|Conglomerates|$831M|$0.28 → $0.67|+139%|+3.53%p|4/1|+6%|-56%|예|
-|10|CVI|Oil & Gas Refining & Marketing|$6.3B|$1.70 → $3.86|+126%|+3.41%p|2/0|+89%|-17%|예|
-|11|CLF|Steel|$7.3B|$0.43 → $0.96|+123%|+4.13%p|1/0|+35%|-40%|예|
-|12|CBRL|Restaurants|$1.4B|$1.16 → $2.20|+90%|+1.70%p|3/0|+20%|-37%|예|
-|13|PUBM|Software - Application|$860M|$0.49 → $0.81|+67%|+1.72%p|5/0|+39%|-17%|예|
-|14|FSLY|Software - Application|$4.3B|$0.39 → $0.64|+63%|+0.91%p|6/0|+33%|-18%|예|
-|15|TEAM|Software - Application|$52.7B|$1.39 → $2.19|+57%|+0.38%p|1/0|+125%|+44%|예|
-|16|SMTC|Semiconductors|$16.1B|$3.89 → $5.86|+51%|+1.14%p|1/0|+35%|-10%|예|
-|17|TXO|Oil & Gas E&P|$808M|$0.88 → $1.31|+49%|+2.96%p|1/0|+12%|-25%|예|
-|18|OSCR|Healthcare Plans|$10.4B|$1.49 → $2.22|+49%|+2.16%p|6/0|+17%|-22%|예|
-|19|FRO|Oil & Gas Midstream|$13.1B|$3.53 → $5.24|+48%|+2.90%p|4/1|+59%|+7%|예|
-|20|INSW|Oil & Gas Midstream|$6.2B|$6.44 → $9.56|+48%|+2.50%p|1/0|+42%|-4%|-|
+|1|AEHR|Semiconductor Equipment & Materials|$2.3B|$0.30 → $1.38|+361%|+1.51%p|1/0|-12%|-81%|예|
+|2|DK|Oil & Gas Refining & Marketing|$4.8B|$2.17 → $8.35|+284%|+7.82%p|4/0|+25%|-68%|예|
+|3|SPCX|Aerospace & Defense|$2004.6B|$0.65 → $2.08|+218%|+0.94%p|3/0|+23%|-61%|예|
+|4|AXTI|Semiconductor Equipment & Materials|$4.0B|$0.75 → $2.25|+199%|+2.43%p|1/0|+34%|-55%|예|
+|5|NBR|Oil & Gas Drilling|$1.2B|$1.57 → $4.00|+155%|+3.11%p|1/0|-7%|-63%|예|
+|6|BLTE|Biotechnology|$6.2B|$0.94 → $2.26|+139%|+0.86%p|5/2|+2%|-58%|예|
+|7|CODI|Conglomerates|$803M|$0.28 → $0.67|+139%|+3.65%p|4/1|+3%|-57%|예|
+|8|PBF|Oil & Gas Refining & Marketing|$10.6B|$7.41 → $17.38|+135%|+11.14%p|3/0|+43%|-39%|-|
+|9|CLF|Steel|$7.2B|$0.43 → $0.96|+123%|+4.22%p|1/0|+36%|-39%|예|
+|10|CVI|Oil & Gas Refining & Marketing|$6.2B|$1.74 → $3.86|+121%|+3.41%p|2/0|+76%|-20%|예|
+|11|CBRL|Restaurants|$1.4B|$1.16 → $2.20|+90%|+1.66%p|3/0|+17%|-38%|예|
+|12|PUBM|Software - Application|$804M|$0.49 → $0.81|+67%|+1.84%p|5/0|+39%|-17%|예|
+|13|FSLY|Software - Application|$4.0B|$0.39 → $0.64|+63%|+0.99%p|6/0|+21%|-26%|예|
+|14|TEAM|Software - Application|$51.8B|$1.36 → $2.19|+60%|+0.40%p|1/0|+119%|+37%|예|
+|15|SMTC|Semiconductors|$15.0B|$3.89 → $5.86|+51%|+1.23%p|1/0|+28%|-15%|예|
+|16|TXO|Oil & Gas E&P|$790M|$0.88 → $1.31|+49%|+3.03%p|1/0|+11%|-26%|예|
+|17|OSCR|Healthcare Plans|$10.6B|$1.49 → $2.22|+49%|+2.13%p|6/0|+18%|-21%|예|
+|18|FRO|Oil & Gas Midstream|$12.5B|$3.53 → $5.24|+48%|+3.04%p|4/1|+54%|+4%|예|
+|19|ALAB|Semiconductors|$52.1B|$4.37 → $6.40|+47%|+0.68%p|20/0|-1%|-32%|-|
+|20|DHT|Oil & Gas Midstream|$4.0B|$1.73 → $2.50|+44%|+3.08%p|2/0|+43%|-1%|-|
 
-전체 결과: `data/processed/revision_screen/20261014T050334Z_38514422416-1.json.gz`
+전체 결과: `data/processed/revision_screen/20261015T045150Z_38683526891-1.json.gz`

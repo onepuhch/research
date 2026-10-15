@@ -1,0 +1,165 @@
+{
+  "context_id": "CTX-1D3C56D47BDCA5DA",
+  "candidate_id": "CAN-8C3BF50290A4D125",
+  "ticker": "ALAB",
+  "issuer_cik": "0001736297",
+  "document_ids": [
+    "DOC-3B83CAE2CDF3F68F"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3B83CAE2CDF3F68F#p7",
+    "DOC-3B83CAE2CDF3F68F#p8",
+    "DOC-3B83CAE2CDF3F68F#p9",
+    "DOC-3B83CAE2CDF3F68F#p11",
+    "DOC-3B83CAE2CDF3F68F#p14",
+    "DOC-3B83CAE2CDF3F68F#p15",
+    "DOC-3B83CAE2CDF3F68F#p16",
+    "DOC-3B83CAE2CDF3F68F#p18",
+    "DOC-3B83CAE2CDF3F68F#p19",
+    "DOC-3B83CAE2CDF3F68F#p21",
+    "DOC-3B83CAE2CDF3F68F#p22",
+    "DOC-3B83CAE2CDF3F68F#p24",
+    "DOC-3B83CAE2CDF3F68F#p25",
+    "DOC-3B83CAE2CDF3F68F#p33",
+    "DOC-3B83CAE2CDF3F68F#p35",
+    "DOC-3B83CAE2CDF3F68F#p36",
+    "DOC-3B83CAE2CDF3F68F#p37",
+    "DOC-3B83CAE2CDF3F68F#p40",
+    "DOC-3B83CAE2CDF3F68F#p41",
+    "DOC-3B83CAE2CDF3F68F#p42",
+    "DOC-3B83CAE2CDF3F68F#p45",
+    "DOC-3B83CAE2CDF3F68F#p47",
+    "DOC-3B83CAE2CDF3F68F#p49",
+    "DOC-3B83CAE2CDF3F68F#p51",
+    "DOC-3B83CAE2CDF3F68F#p54",
+    "DOC-3B83CAE2CDF3F68F#p55",
+    "DOC-3B83CAE2CDF3F68F#p56",
+    "DOC-3B83CAE2CDF3F68F#p60",
+    "DOC-3B83CAE2CDF3F68F#t2",
+    "DOC-3B83CAE2CDF3F68F#t3",
+    "DOC-3B83CAE2CDF3F68F#t4",
+    "DOC-3B83CAE2CDF3F68F#p79",
+    "DOC-3B83CAE2CDF3F68F#t5"
+  ],
+  "input_sha": "1d3c56d47bdca5da56224fc63ee3311b087cc342a90d4917d7677f32d8e3244d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-15T05:06:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "Stock-based compensation expense — 회사는 비일반회계기준 재무 측정치에서 비현금성 주식 기반 보상 비용을 제외하는데, 이는 이 항목을 제외하면 운영 성과에 대한 의미 있는 보충 정보를 제공한다고 믿기 때문이다",
+      "note_ko": "회사는 비일반회계기준 재무 측정치에서 비현금성 주식 기반 보상 비용을 제외하는데, 이는 이 항목을 제외하면 운영 성과에 대한 의미 있는 보충 정보를 제공한다고 믿기 때문이다",
+      "kind": "fact",
+      "quote": "We exclude non-cash stock-based compensation expense from certain of our non-GAAP financial measures because we believe that excluding this item provides meaningful supplemental information regarding operational performance. In particular, companies calculate non-cash stock-based compensation expense using a variety of valuation methodologies and subjective assumptions. Moreover, stock-based compensation expense is a non-cash charge that can vary significantly from period to period for reasons that are unrelated to our core operating performance, and therefore excluding this item provides investors and other users of our financial information with information that allows meaningful comparisons of our business performance across periods.",
+      "document_id": "DOC-3B83CAE2CDF3F68F",
+      "block_id": "p54",
+      "metric": "Stock-based compensation expense",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Acquisition-related costs — 회사는 비일반회계기준 측정치에서 인수 관련 비용을 제외하는데, 이는 이러한 비용이 지속적인 운영 결과에 반영되지 않는다고 믿기 때문이다",
+      "note_ko": "회사는 비일반회계기준 측정치에서 인수 관련 비용을 제외하는데, 이는 이러한 비용이 지속적인 운영 결과에 반영되지 않는다고 믿기 때문이다",
+      "kind": "fact",
+      "quote": "We exclude acquisition-related costs incurred in connection with our acquisitions, which we generally would have not otherwise incurred in the periods presented as part of our continuing operations. Acquisition-related costs include certain incremental expenses incurred to effect a business combination such as third-party costs: advisory, legal, accounting, valuation, and other professional fees. We believe that providing the non-GAAP measures excluding these costs assists our investors because such costs are not reflective of our ongoing operating results.",
+      "document_id": "DOC-3B83CAE2CDF3F68F",
+      "block_id": "p56",
+      "metric": "Acquisition-related costs",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "해당 분기 매출은 전 분기 대비 증가했고 전년 동기 대비 증가했다",
+      "figures": [
+        "$392.4 million",
+        "27%",
+        "104%"
+      ],
+      "quote": "Record quarterly revenue of $392.4 million, up 27% QoQ and up 104% year-over-year",
+      "where": "DOC-3B83CAE2CDF3F68F#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "해당 분기 주당 순이익은 이 금액이다",
+      "figures": [
+        "$0.83"
+      ],
+      "quote": "GAAP diluted net income per share of $0.83",
+      "where": "DOC-3B83CAE2CDF3F68F#p19"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "해당 분기 비일반회계기준 주당 순이익은 이 금액이다",
+      "figures": [
+        "$0.80"
+      ],
+      "quote": "Non-GAAP diluted net income per share of $0.80",
+      "where": "DOC-3B83CAE2CDF3F68F#p25"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 해당 분기 매출이 이 범위에 있을 것으로 예상한다",
+      "figures": [
+        "$540 million to $560 million"
+      ],
+      "quote": "Revenue within a range of $540 million to $560 million",
+      "where": "DOC-3B83CAE2CDF3F68F#p36"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 해당 분기 비일반회계기준 희석 주당 순이익이 이 범위에 있을 것으로 예상한다",
+      "figures": [
+        "$1.16 to $1.21"
+      ],
+      "quote": "Non-GAAP diluted net income per share of approximately $1.16 to $1.21 on weighted-average diluted shares outstanding of approximately 185 million",
+      "where": "DOC-3B83CAE2CDF3F68F#p45"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 비일반회계기준 재무 측정치가 일반회계기준 재무제표의 보완책으로 사용되며, 일반회계기준 결과의 대체물로 간주되어서는 안 된다고 명시했다",
+      "figures": [],
+      "quote": "We use certain non-GAAP financial measures, including those concerning our financial outlook, to supplement the performance measures in our consolidated financial statements, which are presented in ac",
+      "where": "DOC-3B83CAE2CDF3F68F#p51"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

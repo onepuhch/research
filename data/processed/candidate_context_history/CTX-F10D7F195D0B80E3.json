@@ -1,0 +1,116 @@
+{
+  "context_id": "CTX-F10D7F195D0B80E3",
+  "candidate_id": "CAN-43EA86A18E5096A9",
+  "ticker": "MU",
+  "issuer_cik": "0000723125",
+  "document_ids": [
+    "DOC-39C08ABD9C77B7B0",
+    "DOC-72E4E5C51654E6AA"
+  ],
+  "eps_target_period": "2028-08-31",
+  "source_blocks": [
+    "DOC-39C08ABD9C77B7B0#p10",
+    "DOC-39C08ABD9C77B7B0#p11",
+    "DOC-39C08ABD9C77B7B0#p12",
+    "DOC-39C08ABD9C77B7B0#p15",
+    "DOC-39C08ABD9C77B7B0#p16",
+    "DOC-39C08ABD9C77B7B0#p17",
+    "DOC-39C08ABD9C77B7B0#p19",
+    "DOC-39C08ABD9C77B7B0#t2",
+    "DOC-39C08ABD9C77B7B0#t3",
+    "DOC-39C08ABD9C77B7B0#t4",
+    "DOC-39C08ABD9C77B7B0#p23",
+    "DOC-39C08ABD9C77B7B0#p24",
+    "DOC-39C08ABD9C77B7B0#t5",
+    "DOC-39C08ABD9C77B7B0#p25",
+    "DOC-39C08ABD9C77B7B0#p27",
+    "DOC-39C08ABD9C77B7B0#p29",
+    "DOC-39C08ABD9C77B7B0#p37",
+    "DOC-39C08ABD9C77B7B0#p46",
+    "DOC-39C08ABD9C77B7B0#t8",
+    "DOC-39C08ABD9C77B7B0#p72",
+    "DOC-39C08ABD9C77B7B0#p77",
+    "DOC-39C08ABD9C77B7B0#t11",
+    "DOC-39C08ABD9C77B7B0#p78",
+    "DOC-39C08ABD9C77B7B0#p79",
+    "DOC-72E4E5C51654E6AA#p7",
+    "DOC-72E4E5C51654E6AA#p10",
+    "DOC-72E4E5C51654E6AA#p11",
+    "DOC-72E4E5C51654E6AA#p12",
+    "DOC-72E4E5C51654E6AA#p14",
+    "DOC-72E4E5C51654E6AA#t2",
+    "DOC-72E4E5C51654E6AA#p17",
+    "DOC-72E4E5C51654E6AA#t4",
+    "DOC-72E4E5C51654E6AA#p26",
+    "DOC-72E4E5C51654E6AA#t7",
+    "DOC-72E4E5C51654E6AA#t10",
+    "DOC-72E4E5C51654E6AA#p74"
+  ],
+  "input_sha": "f10d7f195d0b80e33522333383cdd7e65fe88fe8d5f33b8fa234c6710e2c9f10",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-15T05:06:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "Micron Technology의 Strategic Customer Agreements가 재무 성과에 미치는 영향은 무엇인가요?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "이 분기 매출은 이전 분기 매출보다 늘었다",
+      "figures": [
+        "$54.23 billion"
+      ],
+      "quote": "Revenue of $54.23 billion versus $41.46 billion for the prior quarter and $11.32 billion for the same period last year",
+      "where": "DOC-39C08ABD9C77B7B0#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "이 분기 순이익은 주당 순이익을 기록했다",
+      "figures": [
+        "$37.70 billion"
+      ],
+      "quote": "GAAP net income of $37.70 billion, or $32.87 per diluted share",
+      "where": "DOC-39C08ABD9C77B7B0#p11"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "이 분기 비일반회계기준 순이익은 주당 순이익을 기록했다",
+      "figures": [
+        "$38.40 billion"
+      ],
+      "quote": "Non-GAAP net income of $38.40 billion, or $33.42 per diluted share",
+      "where": "DOC-39C08ABD9C77B7B0#p12"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "다음 분기 매출은 이 범위가 될 것으로 예상된다",
+      "figures": [
+        "$61.5 billion ± $1.5 billion"
+      ],
+      "quote": "Revenue ; $61.5 billion ± $1.5 billion ; $61.5 billion ± $1.5 billion",
+      "where": "DOC-39C08ABD9C77B7B0#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "다음 분기 희석 주당 순이익은 이 범위가 될 것으로 예상된다",
+      "figures": [
+        "$37.84 ± $1.00"
+      ],
+      "quote": "Diluted earnings per share ; $37.84 ± $1.00 ; $38.15 ± $1.00",
+      "where": "DOC-39C08ABD9C77B7B0#t5"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

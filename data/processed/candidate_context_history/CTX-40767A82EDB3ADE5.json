@@ -1,0 +1,99 @@
+{
+  "context_id": "CTX-40767A82EDB3ADE5",
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "ticker": "MPC",
+  "issuer_cik": "0001510295",
+  "document_ids": [
+    "DOC-683FD7B3F9B87824",
+    "DOC-BE1000530D20CF2E"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-683FD7B3F9B87824#p18",
+    "DOC-683FD7B3F9B87824#p19",
+    "DOC-683FD7B3F9B87824#p21",
+    "DOC-BE1000530D20CF2E#p89",
+    "DOC-BE1000530D20CF2E#p110",
+    "DOC-BE1000530D20CF2E#p146",
+    "DOC-BE1000530D20CF2E#p166",
+    "DOC-BE1000530D20CF2E#p167",
+    "DOC-BE1000530D20CF2E#p184",
+    "DOC-BE1000530D20CF2E#p219",
+    "DOC-BE1000530D20CF2E#p323",
+    "DOC-BE1000530D20CF2E#p326",
+    "DOC-BE1000530D20CF2E#p335",
+    "DOC-BE1000530D20CF2E#p373",
+    "DOC-BE1000530D20CF2E#p378",
+    "DOC-BE1000530D20CF2E#p390",
+    "DOC-BE1000530D20CF2E#p394",
+    "DOC-BE1000530D20CF2E#p406",
+    "DOC-BE1000530D20CF2E#p407",
+    "DOC-BE1000530D20CF2E#p460",
+    "DOC-BE1000530D20CF2E#p462"
+  ],
+  "input_sha": "40767a82edb3ade5f116a7942dab28a7d6cbf56c00007a446cb395ba5be3d3dc",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-15T05:06:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "정제 및 마케팅 마진이 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$36.33 per barrel"
+      ],
+      "quote": "R&M margin was $36.33 per barrel for the second quarter of 2026, versus $17.58 per barrel for the second quarter of 2025.",
+      "where": "DOC-683FD7B3F9B87824#p18"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "정제 사업부의 운영 비용이 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$5.72 per barrel"
+      ],
+      "quote": "Refining operating costs were $5.72 per barrel for the second quarter of 2026, versus $5.34 per barrel for the second quarter of 2025, primarily driven by decreased utilization due to planned downtime",
+      "where": "DOC-683FD7B3F9B87824#p19"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "미드스트림 사업부의 조정 EBITDA가 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$1.8 billion"
+      ],
+      "quote": "Segment adjusted EBITDA was $1.8 billion in the second quarter of 2026, versus $1.6 billion for the second quarter of 2025.",
+      "where": "DOC-683FD7B3F9B87824#p21"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 법인세 비용이 전년 같은 기간보다 늘었다",
+      "figures": [
+        "$1.44 billion"
+      ],
+      "quote": "We recorded a combined federal, state and foreign income tax provision of $1.44 billion and $1.63 billion for the three and six months ended June 30, 2026, respectively, which was lower than the U.S. ",
+      "where": "DOC-BE1000530D20CF2E#p166"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "회사의 계약 부채가 전년 말보다 늘었다",
+      "figures": [
+        "$284 million"
+      ],
+      "quote": "At June 30, 2026 and December 31, 2025, contract liabilities were $284 million and $215 million, respectively.",
+      "where": "DOC-BE1000530D20CF2E#p219"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
