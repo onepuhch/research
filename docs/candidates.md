@@ -35,7 +35,7 @@
 |27|JXN|발굴 후보|Insurance - Life|+13%|+4%|미추적|`CAN-02BF26B752677B69`|
 |28|OSCR|발굴 후보|Healthcare Plans|+49%|+18%|미추적|`CAN-7D75F8332DBCEEFC`|
 |29|BLSH|발굴 후보|Software - Infrastructure|+29%|+36%|미추적|`CAN-F86977A7DD2C4CB3`|
-|30|ALAB|발굴 후보|Semiconductors|+47%|-1%|기업은 추적 중·이 가설 미등록 (IDEA-0003)|`CAN-8C3BF50290A4D125`|
+|30|ALAB|발굴 후보|Semiconductors|+47%|-1%|이 가설 추적 중 (IDEA-0005)|`CAN-8C3BF50290A4D125`|
 |31|PRGS|발굴 후보|Software - Infrastructure|+15%|-5%|미추적|`CAN-CA0C8E92D2718B06`|
 
 ## 같은 업종 동반 상향 (묶음)
@@ -1456,7 +1456,8 @@ CAN-F86977A7DD2C4CB3 · Software - Infrastructure · 미추적
 텔레그램: `/track CAN-F86977A7DD2C4CB3`
 
 ### 발굴 후보 · ALAB Astera Labs, Inc.
-CAN-8C3BF50290A4D125 · Semiconductors · 기업은 추적 중·이 가설 미등록 (IDEA-0003)
+CAN-8C3BF50290A4D125 · Semiconductors · 이 가설 추적 중 (IDEA-0005)
+사용자 판단: 추적 (2026-10-15, 이 카드와 같은 버전). 관심 기록이며 검증 결과가 아닙니다.
 
 **무엇으로 돈을 버나**
 
@@ -1502,8 +1503,6 @@ CAN-8C3BF50290A4D125 · Semiconductors · 기업은 추적 중·이 가설 미�
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1736297/000173629726000033/q226exhibit991.htm) (제출 2026-08-04)
 
 텔레그램: `/history ALAB`
-
-텔레그램: `/track CAN-8C3BF50290A4D125`
 
 ### 발굴 후보 · PRGS Progress Software Corporation
 CAN-CA0C8E92D2718B06 · Software - Infrastructure · 미추적
