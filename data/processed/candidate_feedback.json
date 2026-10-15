@@ -17,6 +17,35 @@
         "PI-20261010-yahoo-eps"
       ],
       "tracked_before": null
+    },
+    {
+      "kind": "reply",
+      "scope": "telegram:primary",
+      "update_id": 871890995,
+      "message_at": "2026-10-15T05:40:55+00:00",
+      "received_at": "2026-10-15T11:43:13+00:00",
+      "event_key": "NASDAQ:ALAB|eps-revision-review:v1|new_discovery",
+      "candidate_id": "CAN-8C3BF50290A4D125",
+      "candidate_version": "CV-633399C91F65910B",
+      "reply_to_message_id": 183,
+      "action": "track",
+      "source": "telegram_reply",
+      "disputed_source": [],
+      "tracked_before": null
+    },
+    {
+      "kind": "track_result",
+      "scope": "telegram:primary",
+      "update_id": 871890995,
+      "operation_key": "telegram:primary:871890995:track",
+      "event_key": "NASDAQ:ALAB|eps-revision-review:v1|new_discovery",
+      "candidate_id": "CAN-8C3BF50290A4D125",
+      "outcome": "success",
+      "reason_code": null,
+      "idea_id": "IDEA-0005",
+      "processed_version": "CV-633399C91F65910B",
+      "candidate_state": "current",
+      "at": "2026-10-15T11:43:14+00:00"
     }
   ]
 }
