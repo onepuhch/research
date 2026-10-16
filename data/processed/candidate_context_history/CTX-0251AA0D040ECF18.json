@@ -1,0 +1,152 @@
+{
+  "context_id": "CTX-0251AA0D040ECF18",
+  "candidate_id": "CAN-6776B8978D264E96",
+  "ticker": "MTDR",
+  "issuer_cik": "0001520006",
+  "document_ids": [
+    "DOC-A3287F7BAEF15FD6",
+    "DOC-761DA2FAA228E75C"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A3287F7BAEF15FD6#p28",
+    "DOC-761DA2FAA228E75C#p15",
+    "DOC-761DA2FAA228E75C#p22",
+    "DOC-761DA2FAA228E75C#p24",
+    "DOC-761DA2FAA228E75C#p52",
+    "DOC-761DA2FAA228E75C#p61",
+    "DOC-761DA2FAA228E75C#p66",
+    "DOC-761DA2FAA228E75C#p67",
+    "DOC-761DA2FAA228E75C#p78",
+    "DOC-761DA2FAA228E75C#p125",
+    "DOC-761DA2FAA228E75C#p126",
+    "DOC-761DA2FAA228E75C#p134"
+  ],
+  "input_sha": "0251aa0d040ecf18cf120e4c7a373d3973e17e4e5bd5ba14e30b9fe903f77059",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-16T04:56:46+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "oil production growth · third quarter of 2026: approximately 3%(변화율·증가) — 회사는 유가 생산량의 순차적 증가를 예상한다",
+      "note_ko": "회사는 유가 생산량의 순차적 증가를 예상한다",
+      "kind": "guidance",
+      "quote": "Matador anticipates sequential oil production growth of approximately 3% to a quarterly record of approximately 129,500 barrels per day in the third quarter of 2026, primarily as a result of the 13 Guss wells and the 30 to 33 net operated horizontal wells Matador expects to turn to sales in the Delaware Basin during the third quarter of 2026.",
+      "document_id": "DOC-761DA2FAA228E75C",
+      "block_id": "p78",
+      "metric": "oil production growth",
+      "figures": [
+        "approximately 3%"
+      ],
+      "period": "third quarter of 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금과 비교할 수 없다",
+      "note_ko": "조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금과 비교할 수 없다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA should not be considered an alternative to, or more meaningful than, net income (loss) or net cash provided by operating activities as determined in accordance with GAAP or as an indicator of the Company’s operating performance or liquidity.",
+      "document_id": "DOC-761DA2FAA228E75C",
+      "block_id": "p126",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "총 BOE 생산량은 전년 같은 분기보다 증가했다",
+      "figures": [
+        "215,631 BOE per day"
+      ],
+      "quote": "Matador’s total BOE production averaged 215,631 BOE per day in the second quarter of 2026, which was a 3% year-over-year increase from an average of 209,013 BOE per day in the second quarter of 2025 a",
+      "where": "DOC-761DA2FAA228E75C#p61"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "운영 비용은 예상 범위의 상단에 있었다",
+      "figures": [
+        "$32.90 per BOE"
+      ],
+      "quote": "For the second quarter of 2026, operating expenses of $32.90 per BOE were at the high end of Matador’s expected 2026 guidance range of $31.00 to $33.00 per BOE, primarily due to higher non-cash deplet",
+      "where": "DOC-761DA2FAA228E75C#p66"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_role_mixed",
+      "note_ko": "회사는 생산량의 순차적 증가를 예상한다",
+      "figures": [
+        "approximately 5% to 6%"
+      ],
+      "quote": "The Company expects sequential production growth of approximately 5% to 6% in the fourth quarter of 2026, primarily as a result of the Paloma and Ridge Runner acquisitions, which are expected to contr",
+      "where": "DOC-761DA2FAA228E75C#p78"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사는 미래 유정 비용이 현재 시추 및 완료 비용보다 낮을 것으로 예상한다",
+      "figures": [
+        "15% to 20%"
+      ],
+      "quote": "Matador expects future well costs associated with the Federal lease sale and Paloma acquisition will be 15% to 20% below Matador’s current drilling and completion cost per completed lateral foot avera",
+      "where": "DOC-761DA2FAA228E75C#p22"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "이러한 비 GAAP 재무 정보는 GAAP 재무 측정에 따른 것이 아니거나 그 대안이 아니다",
+      "figures": [],
+      "quote": "This non-GAAP financial information is provided as additional information for investors and is not in accordance with, or an alternative to, GAAP financial measures.",
+      "where": "DOC-761DA2FAA228E75C#p134"
+    },
+    {
+      "what": "limitation",
+      "reason": "forbidden_wording",
+      "note_ko": "매수 계약의 진술, 보증 및 약정은 실제 사실 또는 상황의 특성으로 의존해서는 안 된다",
+      "figures": [],
+      "quote": "Accordingly, investors are not third-party beneficiaries under the Purchase Agreement, and the representations, warranties and covenants in the Purchase Agreement, and any descriptions thereof, should",
+      "where": "DOC-A3287F7BAEF15FD6#p28"
+    }
+  ],
+  "context_status": "draft_ready"
+}

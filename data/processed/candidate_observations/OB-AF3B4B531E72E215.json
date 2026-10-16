@@ -1,0 +1,90 @@
+{
+  "observation_id": "OB-AF3B4B531E72E215",
+  "candidate_id": "CAN-1F6D82ED5782C3F5",
+  "candidate_version": "CV-4857A92192408138",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DEC",
+    "ticker": "DEC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-16T04:52:29+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261016T044212Z_38851792506-1.json.gz",
+    "sha256": "22bf1f505844cecdaccf0a959d3dce4059551e63ad64f8598ef31bd954bca161",
+    "run_id": "38851792506-1",
+    "finished_at": "2026-10-16T04:56:24+00:00"
+  },
+  "eps": {
+    "eps_now": 5.83525,
+    "eps_30d": 3.58333,
+    "eps_90d": 2.577,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 126.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 22.58,
+    "yield_change_30_pp": 15.606
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-18",
+    "price_start_date": "2026-07-17",
+    "price_end_expected": "2026-10-15",
+    "price_end_date": "2026-10-15",
+    "close_start": 13.359999656677246,
+    "close_end": 14.430000305175781,
+    "price_pct_90": 8.0,
+    "adj_return_pct_90": 10.1,
+    "pe_change_pct": -52.3
+  },
+  "display_rank": 1,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 1
+    },
+    {
+      "list": "B",
+      "rank": 10
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 996207040,
+  "context_id": "CTX-4A75BAD6EF419DFE",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-16T04:56:26+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-4A75BAD6EF419DFE",
+    "generated_at": "2026-10-16T04:56:46+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:DEC",
+  "approval_version": null,
+  "rendered_at": "2026-10-16T04:57:06+00:00"
+}

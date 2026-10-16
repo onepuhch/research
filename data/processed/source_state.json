@@ -6888,7 +6888,7 @@
     "processed_run": "38683526891-1"
   },
   "0001213900-26-109222": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -6899,11 +6899,290 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1805521/000121390026109222/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1805521/000121390026109222/ea030838701ex2-1.htm",
       "published_at": "2026-10-14",
-      "raw_text": "FARADAY FUTURE INTELLIGENT ELECTRIC INC. (FFAI) (CIK 0001805521) EX-2.1 2026-10-14. Article VI Noncompetition and Nonsolicitation In consideration of the Purchaser and the Seller Parties entering into the Transactions described herein and performing their obligations hereunder or under other Transaction Documents, the Seller Parties and the Purchaser hereby agree that: 6.1 During the period from the Closing Date to and including the second (2nd) anniversary of the Closing Date (the “ Noncompete and Non-Solicitation Period ”), each Seller Party shall not, and shall cause its Affiliates (which shall exclude the Purchaser and its Affiliates) not to, without the prior written consent of the Purchaser, directly or indirectly, (i) engage in any business that is competitive with the Robotics Business (the “ Competitive Business ”) in the territories that the Purchaser or any of its controlled Affiliates (such entity, each a “ Covered Entity ”) will have presence from time to time (such territory, each a “ Covered Territory ”), (ii) contact, solicit or develop any new customer in connection with the Competitive Business in any Covered Territory, or (iii) own any interest in, manage, control, participate in (whether as a partner, member, shareholder, lender, co-venturer, consultant or otherwise) any other Person that engages in a Competitive Business in any Covered Territory."
+      "raw_text": "FARADAY FUTURE INTELLIGENT ELECTRIC INC. (FFAI) (CIK 0001805521) EX-2.1 2026-10-14. Article VI Noncompetition and Nonsolicitation In consideration of the Purchaser and the Seller Parties entering into the Transactions described herein and performing their obligations hereunder or under other Transaction Documents, the Seller Parties and the Purchaser hereby agree that: 6.1 During the period from the Closing Date to and including the second (2nd) anniversary of the Closing Date (the “ Noncompete and Non-Solicitation Period ”), each Seller Party shall not, and shall cause its Affiliates (which shall exclude the Purchaser and its Affiliates) not to, without the prior written consent of the Purchaser, directly or indirectly, (i) engage in any business that is competitive with the Robotics Business (the “ Competitive Business ”) in the territories that the Purchaser or any of its controlled Affiliates (such entity, each a “ Covered Entity ”) will have presence from time to time (such territory, each a “ Covered Territory ”), (ii) contact, solicit or develop any new customer in connection with the Competitive Business in any Covered Territory, or (iii) own any interest in, manage, control, participate in (whether as a partner, member, shareholder, lender, co-venturer, consultant or otherwise) any other Person that engages in a Competitive Business in any Covered Territory.",
+      "_model_response": {
+        "evidence_quote": "Article VI Noncompetition and Nonsolicitation In consideration of the Purchaser and the Seller Parties entering into the Transactions described herein and performing their obligations hereunder or under other Transaction Documents, the Seller Parties and the Purchaser hereby agree that: 6.1 During the period from the Closing Date to and including the second (2nd) anniversary of the Closing Date (the “ Noncompete and Non-Solicitation Period ”), each Seller Party shall not, and shall cause its Affiliates (which shall exclude the Purchaser and its Affiliates) not to, without the prior written consent of the Purchaser, directly or indirectly, (i) engage in any business that is competitive with the Robotics Business (the “ Competitive Business ”) in the territories that the Purchaser or any of its controlled Affiliates (such entity, each a “ Covered Entity ”) will have presence from time to time (such territory, each a “ Covered Territory ”), (ii) contact, solicit or develop any new customer in connection with the Competitive Business in any Covered Territory, or (iii) own any interest in, manage, control, participate in (whether as a partner, member, shareholder, lender, co-venturer, consultant or otherwise) any other Person that engages in a Competitive Business in any Covered Territory.",
+        "axes_evidence": {},
+        "event_state": "contracted",
+        "signal_direction": "neutral",
+        "bottleneck_id": "FFAI",
+        "is_signal": false,
+        "reject_reason": "해당 문서는 특정 거래(Transactions)와 관련된 비경쟁 및 비영업 유인 조항(Noncompetition and Nonsolicitation)을 명시한 법률 문서(EX-2.1)입니다. 이는 회사의 구체적인 사업 성과, 가이던스 변화, 수주, 생산 능력 증설 등 조기 투자 발굴 신호로 볼 수 있는 운영 지표를 포함하지 않으며, 일반적인 계약 관련 공시로 판단됩니다.",
+        "subject": "FARADAY FUTURE INTELLIGENT ELECTRIC INC.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "FARADAY FUTURE INTELLIGENT ELECTRIC INC.가 특정 로봇 사업(Robotics Business)과 관련하여 비경쟁 및 비영업 유인 조항이 포함된 계약을 공시했습니다.",
+        "why_it_matters": "이 공시는 회사의 사업 운영이나 재무 성과에 대한 구체적인 조기 지표를 제공하지 않으므로 투자 관점에서 중요성이 낮습니다.",
+        "what_to_watch": "해당 공시만으로는 추가로 확인할 지표가 없습니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "해당 문서는 특정 거래(Transactions)와 관련된 비경쟁 및 비영업 유인 조항(Noncompetition and Nonsolicitation)을 명시한 법률 문서(EX-2.1)입니다. 이는 회사의 구체적인 사업 성과, 가이던스 변화, 수주, 생산 능력 증설 등 조기 투자 발굴 신호로 볼 수 있는 운영 지표를 포함하지 않으며, 일반적인 계약 관련 공시로 판단됩니다."
     },
     "content_hash": "54e63959fb50e661b4ed0d3c44abbfae3fe76c8aae28f5a423699cfe04473134",
     "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-16T04:40:55+00:00",
+    "reason": "해당 문서는 특정 거래(Transactions)와 관련된 비경쟁 및 비영업 유인 조항(Noncompetition and Nonsolicitation)을 명시한 법률 문서(EX-2.1)입니다. 이는 회사의 구체적인 사업 성과, 가이던스 변화, 수주, 생산 능력 증설 등 조기 투자 발굴 신호로 볼 수 있는 운영 지표를 포함하지 않으며, 일반적인 계약 관련 공시로 판단됩니다.",
+    "processed_day": "2026-10-16",
+    "processed_run": "38851792506-1"
+  },
+  "0001213900-26-109622": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-109622",
+      "entity_id": "CIK:0001866226",
+      "source_role": "candidate",
+      "title": "Evolution Metals & Technologies Corp. (EMAT) (CIK 0001866226) EX-99.1 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1866226/000121390026109622/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1866226/000121390026109622/ea030872301ex99-1.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "Evolution Metals & Technologies Corp. (EMAT) (CIK 0001866226) EX-99.1 2026-10-15. Takes Delivery of Additional ULVAC Magnet Production Equipment, Unlocking Ten-Fold Magnet Capacity Expansion 13 of 57 containers of additional ULVAC magnet production equipment arrived in Pohang today, beginning EM&T’s ten-fold expansion to approximately 10,000 metric tons of annual non-China capacity Expansion positions EM&T to meet the January 1, 2027 DFARS deadline barring Chinese-origin rare earth magnets in U.S. The thirteen additional ULVAC machines are the core of EM&T’s ten-fold capacity expansion and underpin its previously announced fiscal 2027 revenue guidance of $400 million to $460 million, which the Company today reaffirms. EX-99.1 2 ea030872301ex99-1.htm PRESS RELEASE DATED OCTOBER 15, 2026 Exhibit 99.1 Evolution Metals & Technologies Corp. Takes Delivery of Additional ULVAC Magnet Production Equipment, Unlocking Ten-Fold Magnet Capacity Expansion 13 of 57 containers of additional ULVAC magnet production equipment arrived in Pohang today, beginning EM&T’s ten-fold expansion to approximately 10,000 metric tons of annual non-China capacity Expansion positions EM&T to meet the January 1, 2027 DFARS deadline barring Chinese-origin rare earth magnets in U.S. defense systems EM&T reaffirms fiscal 2027 revenue guidance of $400 million to $460 million MIAMI, FL, Oct. 15, 2026 -- Evolution Metals & Technologies Corp. (“EM&T” or the “Company”) (Nasdaq: EMAT), a U.S.-based critical materials and advanced manufacturing company, today announced that it has taken delivery of additional magnet equipment from ULVAC at its Pohang facility, with thirteen of 57 containers arriving today and the remaining containers to be delivered before the end of October. The thirteen additional ULVAC machines are the core of EM&T’s ten-fold capacity expansion and underpin its previously announced fiscal 2027 revenue guidance of $400 million to $460 million, which the Company today reaffirms. The expansi",
+      "_model_response": {
+        "evidence_quote": "Takes Delivery of Additional ULVAC Magnet Production Equipment, Unlocking Ten-Fold Magnet Capacity Expansion 13 of 57 containers of additional ULVAC magnet production equipment arrived in Pohang today, beginning EM&T’s ten-fold expansion to approximately 10,000 metric tons of annual non-China capacity Expansion positions EM&T to meet the January 1, 2027 DFARS deadline barring Chinese-origin rare earth magnets in U.S. The thirteen additional ULVAC machines are the core of EM&T’s ten-fold capacity expansion and underpin its previously announced fiscal 2027 revenue guidance of $400 million to $460 million, which the Company today reaffirms.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "a U.S.-based critical materials and advanced manufacturing company",
+          "earnings_leverage": "ten-fold expansion to approximately 10,000 metric tons of annual non-China capacity and underpin its previously announced fiscal 2027 revenue guidance of $400 million to $460 million, which the Company today reaffirms.",
+          "supply_demand_tightness": "Expansion positions EM&T to meet the January 1, 2027 DFARS deadline barring Chinese-origin rare earth magnets in U.S. defense systems",
+          "structural_ai_demand": "",
+          "revision_momentum": "which the Company today reaffirms.",
+          "catalyst_visibility": "Takes Delivery of Additional ULVAC Magnet Production Equipment, 13 of 57 containers... arrived today, January 1, 2027 DFARS deadline"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "Rare Earth Magnets, Non-China Supply Chain",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "EMAT",
+        "theme": "희토류 자석",
+        "signal_type": "CAPEX",
+        "what_happened": "Evolution Metals & Technologies Corp. (EMAT)가 ULVAC 자석 생산 장비 13개 컨테이너를 인도받아 연간 비중국 생산 능력을 10배 확장하기 시작했으며, 2027 회계연도 매출 가이던스를 재확인했다.",
+        "why_it_matters": "미국 국방 시스템의 중국산 희토류 자석 사용 금지 규제에 맞춰 비중국 생산 능력을 10배 확장하여 구조적인 수요 증가에 대응하고 시장 점유율을 확대할 기회를 얻었다.",
+        "what_to_watch": "나머지 ULVAC 장비 인도 완료 및 생산 능력 증설 진행 상황, 그리고 DFARS 규제 관련 추가 고객 확보 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "DFARS: Defense Federal Acquisition Regulation Supplement (미국 국방 연방 조달 규정 보충서), ULVAC: 일본의 진공 기술 및 장비 제조업체"
+      }
+    },
+    "content_hash": "837d0c695b1be90772291d19679c5c2f5903a3c199765d9c75dbf3c2793f0830",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-16T04:41:22+00:00",
+    "signal_id": "SIG-0904",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-16",
+    "processed_run": "38851792506-1"
+  },
+  "0001493152-26-047278": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-047278",
+      "entity_id": "CIK:0001549084",
+      "source_role": "candidate",
+      "title": "ChronoScale Holdings Corp (CHRN) (CIK 0001549084) EX-99.1 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1549084/000149315226047278/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1549084/000149315226047278/ex99-1.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "ChronoScale Holdings Corp (CHRN) (CIK 0001549084) EX-99.1 2026-10-15. ● Announced a contract extension with an existing AI customer and a new customer agreement, putting ChronoScale on track for $1 billion in annualized run-rate revenue* by calendar Q3 2027. The increase was primarily attributable to revenue generated from a new customer during the three months ended August 31, 2026, including revenue recognized from the sale of AI infrastructure hardware and related support and maintenance services pursuant to resale arrangements with the customer. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 ChronoScale Reports Fiscal First Quarter 2027 Results MENLO PARK, Calif. – October 15, 2026 — ChronoScale Holdings Corporation (NASDAQ: CHRN) (“ChronoScale” or the “Company”), an accelerated compute platform purpose-built to support demanding artificial intelligence workloads, reported financial results for the fiscal first quarter ended August 31, 2026. Following the business combination completed on May 5, 2026, the Company classified its legacy Ekso Bionics business (“Legacy Ekso Business”) as held for sale and reported its results in discontinued operations in accordance with U.S. generally accepted accounting principles (“GAAP”). Accordingly, Legacy Ekso Business’ results are excluded from the Company’s continuing operations and presented separately in its consolidated financial statements. Subsequent to quarter end, the Company completed the sale of the Legacy Ekso Business on September 30, 2026. Unless otherwise specified, disclosures in this earnings release, including the below, reflect continuing operations only. Fiscal First Quarter 2027 Financial Highlights ● Revenue: $41.5 million, up 148% from $16.7 million in the prior-year comparable period. ● Net loss: $26.4 million. ● Net loss per basic and diluted share: $0.18. ● Adjusted EBITDA: $5.9 million. Adjusted EBITDA is a non-GAAP financial measure. A reconciliation of this non-GAAP measure to the most directly compara",
+      "_model_response": {
+        "evidence_quote": "Announced a contract extension with an existing AI customer and a new customer agreement, putting ChronoScale on track for $1 billion in annualized run-rate revenue* by calendar Q3 2027. The increase was primarily attributable to revenue generated from a new customer during the three months ended August 31, 2026, including revenue recognized from the sale of AI infrastructure hardware and related support and maintenance services pursuant to resale arrangements with the customer.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "ChronoScale Holdings Corporation (NASDAQ: CHRN) (“ChronoScale or the Company”), an accelerated compute platform purpose-built to support demanding artificial intelligence workloads",
+          "earnings_leverage": "Announced a contract extension with an existing AI customer and a new customer agreement, putting ChronoScale on track for $1 billion in annualized run-rate revenue* by calendar Q3 2027. Revenue: $41.5 million, up 148% from $16.7 million in the prior-year comparable period.",
+          "supply_demand_tightness": "purpose-built to support demanding artificial intelligence workloads",
+          "structural_ai_demand": "existing AI customer and a new customer agreement... sale of AI infrastructure hardware... demanding artificial intelligence workloads",
+          "revision_momentum": "putting ChronoScale on track for $1 billion in annualized run-rate revenue* by calendar Q3 2027.",
+          "catalyst_visibility": "Announced a contract extension with an existing AI customer and a new customer agreement, putting ChronoScale on track for $1 billion in annualized run-rate revenue* by calendar Q3 2027."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI 컴퓨트 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ChronoScale Holdings Corp",
+        "theme": "AI 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "ChronoScale Holdings Corp는 기존 AI 고객과의 계약 연장 및 신규 고객 계약을 발표하며, 2027년 3분기까지 연간 10억 달러의 매출 달성 궤도에 올랐다고 밝혔다.",
+        "why_it_matters": "AI 인프라 시장에서 신규 및 기존 고객과의 계약 확대로 회사의 성장 가시성이 높아졌으며, 이는 향후 실적 추정치 상향의 촉매가 될 수 있다.",
+        "what_to_watch": "2027년 3분기까지의 연간 매출 달성 여부 및 신규 고객과의 구체적인 계약 내용.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "Annualized run-rate revenue: 연간 환산 매출 (현재 매출 추이를 연간으로 환산한 값), Accelerated compute platform: 가속 컴퓨팅 플랫폼 (AI 등 고성능 연산에 특화된 컴퓨팅 환경)"
+      }
+    },
+    "content_hash": "013f609796c102d5b7bb5158dd3b9a3dceda549e1c443a67c7dffc60aa4a9e90",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-16T04:41:49+00:00",
+    "signal_id": "SIG-0905",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-16",
+    "processed_run": "38851792506-1"
+  },
+  "0001193125-26-422936": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-422936",
+      "entity_id": "CIK:0000090498",
+      "source_role": "candidate",
+      "title": "SIMMONS FIRST NATIONAL CORP (SFNC) (CIK 0000090498) EX-99.2 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/90498/000119312526422936/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/90498/000119312526422936/d439916dex992.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "SIMMONS FIRST NATIONAL CORP (SFNC) (CIK 0000090498) EX-99.2 2026-10-15. See appendix for Non-GAAP reconciliations Deposits, Interest Rate Sensitivity, Hedging Program and Capital 10 Deposits Deposit Mix $ in billions; Period End Balances Evolution of Funding Rates $19.8 $20.2 $20.2 $19.7 $18.6 5.0% 5.33% 9.3% 9.4% 9.2% 5.27% 9.5% 13.2% 4.66% 12.5% 13.4% 14.2% 13.8% 4.33% 4.33% 4.30% 13.5% Customer 3.90% 3.67% 3.64% 3.63% 14.7% 14.0% 13.2% 3.53% 3.52% 13.3% 3.28% Deposits 3.05% 2.97% 2.86% 2.62% 2.47% 2.46% 2.39% 95.0% 45.3% 41.4% 41.7% 2.79% 2.79% 41.8% 41.8% 2.60% 2.44% 2.36% 2.25% 2.04% 1.96% 1.93% 1.85% Interest Bearing Deposits Cost of Deposits Avg Fed Funds Rate 23.0% 22.1% 21.5% 21.2% 22.1% 2Q24 3Q24 4Q24 1Q25 2Q25 3Q25 4Q25 1Q26 2Q26 3Q26 3Q25 4Q25 1Q26 2Q26 3Q26 Noninterest Bearing Interest Bearing Transaction Accounts Time Deposits Public Funds (interest bearing) Brokered Deposits 1 Linked Quarter Deposit Change Commentary $ in millions; Period End Balances ❑ Grew core customer transaction account balances by $173M; improved customer deposit mix Total Deposits $(1,112) ❑ Brokered deposits declined due to deleveraging balance sheet and further Noninterest Bearing Transaction Accounts $(36) $173M net growth utilization of FHLB given relative favorable pricing customer NIB/IB Interest Bearing Transaction and Savings Accounts $209 ❑ Public funds decline reflects normal seasonality deposits Time Deposits $(109) ❑ Continued to effectively manage deposit costs, reflected by 8 bps decrease on a linked quarter basis Public Funds (interest bearing) $(270) ❑ Decrease in time deposits reflects continued, planned run-off of non- relationship CDs or subsequent reinvestment into lower cost deposits Brokered (MM & CDs) and Other Non-Customer Deposits $(906) Totals may not add due to rounding Source: Average Fed Funds rate based on data from www.macrotrends.net 11 1 Linked quarter change is 3Q26 vs 2Q26 Interest Rate Sensitivity CD Maturities (over the next 12 months) Loan ",
+      "_model_response": {
+        "evidence_quote": "Grew core customer transaction account balances by $173M; improved customer deposit mix Total Deposits $(1,112) ❑ Brokered deposits declined due to deleveraging balance sheet and further Noninterest Bearing Transaction Accounts $(36) $173M net growth utilization of FHLB given relative favorable pricing customer NIB/IB Interest Bearing Transaction and Savings Accounts $209 ❑ Public funds decline reflects normal seasonality deposits Time Deposits $(109) ❑ Continued to effectively manage deposit costs, reflected by 8 bps decrease on a linked quarter basis Public Funds (interest bearing) $(270) ❑ Decrease in time deposits reflects continued, planned run-off of non- relationship CDs or subsequent reinvestment into lower cost deposits Brokered (MM & CDs) and Other Non-Customer Deposits $(906)",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "은행의 정기적인 재무 공시로, 핵심 예금 증가 및 비용 관리 등 운영 성과를 보고하는 내용입니다. 이는 회사의 일상적인 사업 활동에 대한 정보이며, 가이던스 상향, 수주 증가, 생산능력 증설 등 투자 발굴을 위한 구체적인 조기 지표에 해당하지 않습니다.",
+        "subject": "SFNC",
+        "theme": "은행/금융",
+        "signal_type": "기타",
+        "what_happened": "SIMMONS FIRST NATIONAL CORP(SFNC)가 핵심 고객 거래 계좌 잔액을 1.73억 달러 늘리고 예금 구성을 개선했으며, 계획에 따라 비관계성 정기예금과 브로커드 예금을 줄여 예금 비용을 효과적으로 관리했다고 보고했습니다.",
+        "why_it_matters": "이 공시는 은행의 정기적인 운영 성과 및 재무 관리 전략에 대한 보고로, 특정 산업의 수요 증가나 기술적 우위 등 투자 발굴을 위한 조기 신호로 보기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "제외",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "은행의 정기적인 재무 공시로, 핵심 예금 증가 및 비용 관리 등 운영 성과를 보고하는 내용입니다. 이는 회사의 일상적인 사업 활동에 대한 정보이며, 가이던스 상향, 수주 증가, 생산능력 증설 등 투자 발굴을 위한 구체적인 조기 지표에 해당하지 않습니다."
+    },
+    "content_hash": "3eea5f34520478e5a195089e38bafef1187db257834247a7eca0702763844694",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-16T04:42:05+00:00",
+    "reason": "은행의 정기적인 재무 공시로, 핵심 예금 증가 및 비용 관리 등 운영 성과를 보고하는 내용입니다. 이는 회사의 일상적인 사업 활동에 대한 정보이며, 가이던스 상향, 수주 증가, 생산능력 증설 등 투자 발굴을 위한 구체적인 조기 지표에 해당하지 않습니다.",
+    "processed_day": "2026-10-16",
+    "processed_run": "38851792506-1"
+  },
+  "0000036966-26-000178": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000036966-26-000178",
+      "entity_id": "CIK:0000036966",
+      "source_role": "candidate",
+      "title": "FIRST HORIZON CORP (FHN, FHN-PE, FHN-PF, FHN-PH) (CIK 0000036966) EX-99.1 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/36966/000003696626000178/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/36966/000003696626000178/a3q2026earningsrelease.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "FIRST HORIZON CORP (FHN, FHN-PE, FHN-PF, FHN-PH) (CIK 0000036966) EX-99.1 2026-10-15. The NIM decrease was driven by higher interest bearing deposit costs of 2.45%, a 12 basis points increase, associated with higher average brokered deposits and higher customer deposit costs. EX-99.1 2 a3q2026earningsrelease.htm EX-99.1 Document First Horizon Corporation Reports Third Quarter 2026 Results and Announces Strategic Balance Sheet Changes to Support Earnings and Growth MEMPHIS, TN (October 15, 2026) – First Horizon Corporation (NYSE: FHN or “First Horizon”) today reported financial results for the third quarter of a net loss available to common shareholders of $(94) million or loss per share of $(0.20). These results reflect the impact of strategic actions to further align the balance sheet with the Company's growth priorities. During the quarter, the Company began evaluating the possibility of selling ~$4.5 billion of select lower yielding consumer mortgages and, in early October, entered into an agreement to sell these mortgages. This transaction will be accretive to earnings on a go forward basis and will provide balance sheet flexibility to support future loan growth. The transaction is expected to settle early in the fourth quarter. Excluding notable items, adjusted earnings per share for third quarter 2026 was $0.53, down $0.01 from second quarter 2026 and up $0.02 from third quarter 2025. Reported results include the impacts of notable items totaling $0.73 per share, or $347 million after tax, primarily related to the reclassification of targeted mortgage loans to held for sale in relation to the pending mortgage portfolio sale. CEO Commentary “This quarter’s results are a testament to our disciplined approach and clear strategic priorities,” said Bryan Jordan, Chairman, President and CEO of First Horizon Corporation. “Average client deposit balances increased $1.3 billion in the quarter, and we continue to focus on growing and maintaining full client relationship"
+    },
+    "content_hash": "414ceae3ac8aa8d290dda5113e5b85964a320135c1754163bbeee9bf16f68b4a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-16T04:42:09+00:00",
+    "reason": "deferred_budget"
+  },
+  "0001163370-26-000032": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001163370-26-000032",
+      "entity_id": "CIK:0001163370",
+      "source_role": "candidate",
+      "title": "NORTHRIM BANCORP INC (NRIM) (CIK 0001163370) EX-99.1 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1163370/000116337026000032/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1163370/000116337026000032/exhibit991q32026.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "NORTHRIM BANCORP INC (NRIM) (CIK 0001163370) EX-99.1 2026-10-15. • Portfolio loans were $2.40 billion at September 30, 2026, up 1% from the preceding quarter and up 8% from a year ago, primarily due to new customer relationships and expanding market share, as well as retaining certain mortgages originated by Residential Mortgage, a subsidiary of Northrim Bank (the “Bank”). EX-99.1 2 exhibit991q32026.htm EX-99.1 Document Exhibit 99.1 Contact: Mike Huston, President and CEO (907) 261-8750 Jed Ballard, Chief Financial Officer (907) 261-3539 NEWS RELEASE Northrim BanCorp Earns $14.4 Million, or $0.63 Per Diluted Share, in Third Quarter 2026 ANCHORAGE, Alaska - October 15, 2026 - Northrim BanCorp, Inc. (NASDAQ:NRIM) (“Northrim” or the “Company”) today reported net income of $14.4 million, or $0.63 per diluted share, in the third quarter of 2026, compared to $15.3 million, or $0.68 per diluted share, in the second quarter of 2026, and $27.1 million, or $1.20 per diluted share, in the third quarter a year ago. The decrease in the third quarter 2026 profitability as compared to the third quarter a year ago was mostly due to an increase in provision for credit losses in the third quarter of 2026, as well as the gain on sale of certain assets by Pacific Wealth Advisors in the third quarter of 2025. Dividends per share in the third quarter of 2026 increased to $0.17 per share as compared to $0.16 per share in the second quarter of 2026 and the third quarter of 2025. “Record net interest income, strong deposit growth and a net interest margin above 5% drove a 21% increase in pre-provision net revenue in the third quarter,” said Mike Huston, Northrim's President and Chief Executive Officer. “Our earnings this quarter were reduced by a higher provision for credit losses tied to a single relationship in our Specialty Finance segment. Credit quality across our Community Banking portfolio remains solid, and we continue to see the benefits of our diversified business model, including"
+    },
+    "content_hash": "69e919c3dd5c3d8f7dfa3246fcab9b5a75fe024405f3255868c8ebc71141385c",
+    "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-15T04:50:34.669358+00:00"
+    "updated_at": "2026-10-16T04:40:43.246749+00:00"
+  },
+  "0001193125-26-422877": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-422877",
+      "entity_id": "CIK:0000944809",
+      "source_role": "candidate",
+      "title": "OPKO HEALTH, INC. (OPK) (CIK 0000944809) EX-2.1 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/944809/000119312526422877/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/944809/000119312526422877/opk-ex2_1.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "OPKO HEALTH, INC. (OPK) (CIK 0000944809) EX-2.1 2026-10-15. At the Agreement Date and periodically thereafter as set forth in Section 4.21(a) , (A) Section 2.7(a)-1 of the Disclosure Schedules accurately sets forth in all material respects, with respect to each Business Customer, the information required by Annex A (such information, the “ Customer Cross Reference Data ”), (B) Section 2.7(a)-2 of the Disclosure Schedules accurately sets forth in all material respects the information required by Annex B (the “ Business Customer Revenue Attributable by Sales Representative ”) and (C) Section 2.7(a)-3 of the Disclosure Schedules accurately sets forth in all material respects the name of each Business Customer by practice and the open Standing Orders in electronic form (it being understood that any Standing Orders kept in physical form shall be maintained at the applicable patient service centers in accordance with the ordinary course of business prior to the date hereof) attributable to each such practice, as of each such date (including to reflect any new customer accounts gained since the previous date of delivery). (a) At the Agreement Date until the Closing, the Seller Parties shall deliver to Buyer, consistent with applicable Law, (i) every two weeks during the Interim Period, updates to 60 MACROBUTTON DocID \\\\4155-5384-5610 v2 (A) the Customer Cross Reference Data in the form of Annex A, (B) the Business Data in the form of Annex C , and (C) the Financial Data in the form of Annex E , (ii) any time there are material changes during the Interim Period, updates to (A) the Business Customer Revenue Attributable by Sales Representative in the form of Annex B , (B) updates to the open Standing Orders and Hold Orders attributable to each Business Customer by practice in the form of Section 2.7(a)-3 of the Disclosure Schedules , and (C) the Test Cross Reference Data in the form of Annex F , in each case, with all fields accurately updated and completed as of each such d"
+    },
+    "content_hash": "0755c83a7f7c2236c341f243f563f385af5569f66e01b8a24c2ed1235cf4ec18",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-16T04:40:43.246749+00:00"
+  },
+  "0001213900-26-109824": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-109824",
+      "entity_id": "CIK:0001805521",
+      "source_role": "candidate",
+      "title": "FARADAY FUTURE INTELLIGENT ELECTRIC INC. (FFAI) (CIK 0001805521) EX-2.1 2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/1805521/000121390026109824/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1805521/000121390026109824/ea030876701ex2-1.htm",
+      "published_at": "2026-10-15",
+      "raw_text": "FARADAY FUTURE INTELLIGENT ELECTRIC INC. (FFAI) (CIK 0001805521) EX-2.1 2026-10-15. Article VI Noncompetition and Nonsolicitation In consideration of the Purchaser and the Seller Parties entering into the Transactions described herein and performing their obligations hereunder or under other Transaction Documents, the Seller Parties and the Purchaser hereby agree that: 6.1 During the period from the Closing Date to and including the second (2nd) anniversary of the Closing Date (the “ Noncompete and Non-Solicitation Period ”), each Seller Party shall not, and shall cause its Affiliates (which shall exclude the Purchaser and its Affiliates) not to, without the prior written consent of the Purchaser, directly or indirectly, (i) engage in any business that is competitive with the Robotics Business (the “ Competitive Business ”) in the territories that the Purchaser or any of its controlled Affiliates (such entity, each a “ Covered Entity ”) will have presence from time to time (such territory, each a “ Covered Territory ”), (ii) contact, solicit or develop any new customer in connection with the Competitive Business in any Covered Territory, or (iii) own any interest in, manage, control, participate in (whether as a partner, member, shareholder, lender, co-venturer, consultant or otherwise) any other Person that engages in a Competitive Business in any Covered Territory."
+    },
+    "content_hash": "7cac1d99ac2c9f8cf3047a312b54d692f77661d8b36e02cc8699cda7c55e6f04",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-16T04:40:43.246749+00:00"
   }
 }

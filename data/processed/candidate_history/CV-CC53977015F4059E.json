@@ -1,0 +1,183 @@
+{
+  "candidate_id": "CAN-782282A0C20A29F1",
+  "candidate_version": "CV-CC53977015F4059E",
+  "identity": {
+    "entity_id": "NASDAQ:SMTC",
+    "ticker": "SMTC",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Semtech Corporation",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "반도체, 사물 인터넷 시스템, 클라우드 연결 서비스 솔루션을 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Semtech Corporation provides semiconductor, Internet of Things systems, and cloud connectivity service solutions in the Asia- Pacific, North America, and Europe. The company operates in three segments: Signal Integrity, Analog Mixed Signal and Wireless, and IoT Systems and Connectivity. It provides signal integrity products, including a portfolio of optical and copper data communications and video transport products used in various infrastructure, and industrial applications; a portfolio of integrated circuits for data centers, enterprise networks, passive optical networks, wireless base stati"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SMTC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMTC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-16T04:45:23+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SMTC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMTC/history",
+      "published_at": null,
+      "observed_at": "2026-10-16T04:45:23+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SMTC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMTC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-16T04:45:23+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-CBBC405DFC60E662",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/88941/000008894126000028/smtc-07262026x8k991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-25",
+      "observed_at": "2026-09-30T05:55:57+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-B96A8E5C4F15DC86",
+    "input_sha": "b96a8e5c4f15dc8616c4ffa121032418907c8cf1515c71fc343237a12b36f995",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "forward-looking non-GAAP results — 회사는 미래 비일반회계기준 결과와 해당 일반회계기준 측정치 간의 조정을 합리적인 노력 없이 포함할 수 없다",
+        "note_ko": "회사는 미래 비일반회계기준 결과와 해당 일반회계기준 측정치 간의 조정을 합리적인 노력 없이 포함할 수 없다",
+        "kind": "fact",
+        "quote": "The Company is unable to include a reconciliation of forward-looking non-GAAP results to the corresponding GAAP measures as they are not available without unreasonable efforts due to the high variability and low visibility with respect to the impact of transaction, integration and restructuring expenses, share-based awards, amortization of acquisition-related intangible assets and other items that are excluded from these non-GAAP measures.",
+        "document_id": "DOC-CBBC405DFC60E662",
+        "block_id": "p21",
+        "metric": "forward-looking non-GAAP results",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP financial measures — 이러한 비일반회계기준 재무 측정치는 일반회계기준에 따라 도출된 어떠한 측정치도 대체하는 것으로 간주되어서는 안 되며, 다른 회사에서 제시하는 유사한 측정치와 일치하지 않을 수 있다",
+        "note_ko": "이러한 비일반회계기준 재무 측정치는 일반회계기준에 따라 도출된 어떠한 측정치도 대체하는 것으로 간주되어서는 안 되며, 다른 회사에서 제시하는 유사한 측정치와 일치하지 않을 수 있다",
+        "kind": "fact",
+        "quote": "These additional non-GAAP financial measures should not be considered substitutes for any measures derived in accordance with GAAP and may be inconsistent with similar measures presented by",
+        "document_id": "DOC-CBBC405DFC60E662",
+        "block_id": "p44",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "Semtech Corporation의 다음 회계연도 말은 언제인가?",
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-CBBC405DFC60E662",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/88941/000008894126000028/smtc-07262026x8k991.htm",
+        "filed_at": "2026-08-25",
+        "observed_at": "2026-09-30T05:55:57+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-13T07:07:35+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.85723,
+    "eps_30d": 5.83561,
+    "eps_90d": 3.90253,
+    "eps_target_period": "2028-01-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 50.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

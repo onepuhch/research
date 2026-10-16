@@ -1,0 +1,267 @@
+{
+  "context_id": "CTX-4A75BAD6EF419DFE",
+  "candidate_id": "CAN-1F6D82ED5782C3F5",
+  "ticker": "DEC",
+  "issuer_cik": "0001922446",
+  "document_ids": [
+    "DOC-07B42A2E19FC5C4B",
+    "DOC-0C2F6D5605F1F385"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-07B42A2E19FC5C4B#t7",
+    "DOC-07B42A2E19FC5C4B#p25",
+    "DOC-07B42A2E19FC5C4B#p26",
+    "DOC-07B42A2E19FC5C4B#p27",
+    "DOC-07B42A2E19FC5C4B#p28",
+    "DOC-07B42A2E19FC5C4B#p30",
+    "DOC-0C2F6D5605F1F385#p14",
+    "DOC-0C2F6D5605F1F385#p15",
+    "DOC-0C2F6D5605F1F385#p22",
+    "DOC-0C2F6D5605F1F385#p40",
+    "DOC-0C2F6D5605F1F385#p44",
+    "DOC-0C2F6D5605F1F385#p54",
+    "DOC-0C2F6D5605F1F385#t1",
+    "DOC-0C2F6D5605F1F385#p60",
+    "DOC-0C2F6D5605F1F385#p70",
+    "DOC-0C2F6D5605F1F385#p71",
+    "DOC-0C2F6D5605F1F385#t2",
+    "DOC-0C2F6D5605F1F385#p74",
+    "DOC-0C2F6D5605F1F385#t5",
+    "DOC-0C2F6D5605F1F385#p91",
+    "DOC-0C2F6D5605F1F385#p92",
+    "DOC-0C2F6D5605F1F385#p98",
+    "DOC-0C2F6D5605F1F385#p99",
+    "DOC-0C2F6D5605F1F385#p106",
+    "DOC-0C2F6D5605F1F385#p109"
+  ],
+  "input_sha": "4a75bad6ef419dfed99c598f8b92cbf51a8f19ffbb79874b6f1058ae7e0b7dd6",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-16T04:56:46+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Total Commodity Revenue: $504M — 총 상품 매출액이다",
+      "note_ko": "총 상품 매출액이다",
+      "kind": "fact",
+      "quote": "•Total Commodity Revenue: $504M",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p14",
+      "metric": "Total Commodity Revenue",
+      "figures": [
+        "$504M"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "순이익(Net Income): $248M — 순이익은 미결제 파생상품의 비현금 이익을 포함한다",
+      "note_ko": "순이익은 미결제 파생상품의 비현금 이익을 포함한다",
+      "kind": "fact",
+      "quote": "•Net Income: $248M, inclusive of gain on non-cash unsettled derivatives",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p15",
+      "metric": "Net Income",
+      "figures": [
+        "$248M"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "gross proceeds: $130 million — 바넷 셰일 자산 매각으로 총 수익이 발생했다",
+      "note_ko": "바넷 셰일 자산 매각으로 총 수익이 발생했다",
+      "kind": "fact",
+      "quote": "◦Barnett Shale assets sale: Generated approximately $130 million in gross proceeds.",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p44",
+      "metric": "gross proceeds",
+      "figures": [
+        "$130 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive",
+      "normalized": {
+        "drivers_original": [
+          "disposal"
+        ]
+      }
+    },
+    {
+      "text_ko": "Adjusted EBITDA Margin · June 30, 2026: 52% — 조정 EBITDA 마진은 이 기간 동안이다",
+      "note_ko": "조정 EBITDA 마진은 이 기간 동안이다",
+      "kind": "fact",
+      "quote": "For the three months ended June 30, 2026, Diversified delivered per unit revenues of $4.22/Mcfe(e) ($25.32/Boe) and Adjusted EBITDA Margin(b) of 52%.",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p54",
+      "metric": "Adjusted EBITDA Margin",
+      "figures": [
+        "52%"
+      ],
+      "period": "June 30, 2026",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Full Year 2026 — 조정 EBITDA는 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+      "note_ko": "조정 EBITDA는 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA and Adjusted Free Cash Flow are non-GAAP financial measures and have not been reconciled to the most comparable GAAP financial measures because it is not possible to do so without unreasonable efforts due to the uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p74",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "Full Year 2026",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted Free Cash Flow · Full Year 2026 — 조정 자유 현금 흐름은 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+      "note_ko": "조정 자유 현금 흐름은 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA and Adjusted Free Cash Flow are non-GAAP financial measures and have not been reconciled to the most comparable GAAP financial measures because it is not possible to do so without unreasonable efforts due to the uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p74",
+      "metric": "Adjusted Free Cash Flow",
+      "figures": [],
+      "period": "Full Year 2026",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 영업 이익 또는 손실, 순이익 또는 손실, 또는 영업, 투자 및 재무 활동으로 인한 현금 흐름과 별도로 또는 그 대용으로 간주되어서는 안 된다",
+      "note_ko": "조정 EBITDA는 영업 이익 또는 손실, 순이익 또는 손실, 또는 영업, 투자 및 재무 활동으로 인한 현금 흐름과 별도로 또는 그 대용으로 간주되어서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA and pro forma adjusted EBITDA should not be considered in isolation or as a substitute for operating profit or loss, net income or loss, or cash flows provided by operating, investing and financing activities.",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p92",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "증분 생산량 추가는 회사 포트폴리오 생산량 감소의 약 절반을 상쇄할 것으로 예상되며, 이 기간 동안 약 이만 오백 배럴유가스환산량의 평균 기여를 나타낸다",
+      "figures": [
+        "approximately 50%",
+        "approximately 12,500 Boepd"
+      ],
+      "quote": "•Incremental production addition: Expected to offset approximately 50% of the Company's portfolio production decline, representing an estimated average contribution of approximately 12,500 Boepd durin",
+      "where": "DOC-0C2F6D5605F1F385#p40"
+    }
+  ],
+  "context_status": "draft_ready"
+}
