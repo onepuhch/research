@@ -153,7 +153,11 @@
     "MEOH",
     "MUR",
     "OXY",
-    "UPST"
+    "UPST",
+    "DEC",
+    "EC",
+    "FANG",
+    "KRP"
   ],
   "days": {
     "2026-10-06": {
@@ -195,13 +199,17 @@
     "2026-10-15": {
       "requests": 11,
       "retries": 0
+    },
+    "2026-10-16": {
+      "requests": 14,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 10,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 11,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1192,8 +1200,8 @@
       "reason": null
     },
     "BLSH": {
-      "attempts": 2,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1360,8 +1368,8 @@
       "reason": null
     },
     "GRNT": {
-      "attempts": 2,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1376,56 +1384,88 @@
       "reason": null
     },
     "BBVA": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "CRGY": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "CVE": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "MEOH": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "MUR": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "OXY": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "UPST": {
+      "attempts": 2,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "DEC": {
       "attempts": 1,
-      "last_attempt_at": "2026-10-15T05:07:37.173776+00:00",
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "EC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "FANG": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "KRP": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
