@@ -1,0 +1,358 @@
+{
+  "candidate_id": "CAN-1F6D82ED5782C3F5",
+  "candidate_version": "CV-609F32DDA9A4D2F9",
+  "identity": {
+    "entity_id": "NYSE:DEC",
+    "ticker": "DEC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Diversified Energy Company",
+  "industry": "Oil & Gas Integrated",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "천연가스, 원유 및 액체 연료의 생산, 운송, 마케팅을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Diversified Energy Company, an independent energy company, engages in the production, transportation and marketing of natural gas, oil, and liquids primarily in the Appalachian and Central regions of the United States. It also operates in the Bossier and Haynesville shale formations and the Cotton Valley sandstones in East Texas and West Louisiana, the Barnett Shale in North Texas and the Mid-Continent producing areas across Central Texas, along with the Anadarko Basin across North Texas and Oklahoma and Permian Basin in West Texas and New Mexico. Diversified Energy Company was founded in 2001"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "DEC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DEC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-17T04:49:41+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "DEC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DEC/history",
+      "published_at": null,
+      "observed_at": "2026-10-17T04:49:41+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "DEC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DEC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-17T04:49:41+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-07B42A2E19FC5C4B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1922446/000192244626000086/dec-20260902.htm",
+      "title": "SEC 8-K 8-K",
+      "published_at": null,
+      "filed_at": "2026-09-09",
+      "observed_at": "2026-10-16T04:56:26+00:00",
+      "fields": "8-K 8-K"
+    },
+    {
+      "id": "DOC-0C2F6D5605F1F385",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1922446/000192244626000070/a2q26earningspr.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-16T04:56:26+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-4A75BAD6EF419DFE",
+    "input_sha": "4a75bad6ef419dfed99c598f8b92cbf51a8f19ffbb79874b6f1058ae7e0b7dd6",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "Total Commodity Revenue: $504M — 총 상품 매출액이다",
+        "note_ko": "총 상품 매출액이다",
+        "kind": "fact",
+        "quote": "•Total Commodity Revenue: $504M",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p14",
+        "metric": "Total Commodity Revenue",
+        "figures": [
+          "$504M"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "순이익(Net Income): $248M — 순이익은 미결제 파생상품의 비현금 이익을 포함한다",
+        "note_ko": "순이익은 미결제 파생상품의 비현금 이익을 포함한다",
+        "kind": "fact",
+        "quote": "•Net Income: $248M, inclusive of gain on non-cash unsettled derivatives",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p15",
+        "metric": "Net Income",
+        "figures": [
+          "$248M"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "gross proceeds: $130 million — 바넷 셰일 자산 매각으로 총 수익이 발생했다",
+        "note_ko": "바넷 셰일 자산 매각으로 총 수익이 발생했다",
+        "kind": "fact",
+        "quote": "◦Barnett Shale assets sale: Generated approximately $130 million in gross proceeds.",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p44",
+        "metric": "gross proceeds",
+        "figures": [
+          "$130 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive",
+        "normalized": {
+          "drivers_original": [
+            "disposal"
+          ]
+        }
+      },
+      {
+        "text_ko": "Adjusted EBITDA Margin · June 30, 2026: 52% — 조정 EBITDA 마진은 이 기간 동안이다",
+        "note_ko": "조정 EBITDA 마진은 이 기간 동안이다",
+        "kind": "fact",
+        "quote": "For the three months ended June 30, 2026, Diversified delivered per unit revenues of $4.22/Mcfe(e) ($25.32/Boe) and Adjusted EBITDA Margin(b) of 52%.",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p54",
+        "metric": "Adjusted EBITDA Margin",
+        "figures": [
+          "52%"
+        ],
+        "period": "June 30, 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · Full Year 2026 — 조정 EBITDA는 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+        "note_ko": "조정 EBITDA는 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA and Adjusted Free Cash Flow are non-GAAP financial measures and have not been reconciled to the most comparable GAAP financial measures because it is not possible to do so without unreasonable efforts due to the uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p74",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "Full Year 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted Free Cash Flow · Full Year 2026 — 조정 자유 현금 흐름은 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+        "note_ko": "조정 자유 현금 흐름은 가장 유사한 GAAP 재무 측정치와 조정될 수 없다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA and Adjusted Free Cash Flow are non-GAAP financial measures and have not been reconciled to the most comparable GAAP financial measures because it is not possible to do so without unreasonable efforts due to the uncertainty and potential variability of reconciling items, which are dependent on future events and often outside of management’s control and which could be significant.",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p74",
+        "metric": "Adjusted Free Cash Flow",
+        "figures": [],
+        "period": "Full Year 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 영업 이익 또는 손실, 순이익 또는 손실, 또는 영업, 투자 및 재무 활동으로 인한 현금 흐름과 별도로 또는 그 대용으로 간주되어서는 안 된다",
+        "note_ko": "조정 EBITDA는 영업 이익 또는 손실, 순이익 또는 손실, 또는 영업, 투자 및 재무 활동으로 인한 현금 흐름과 별도로 또는 그 대용으로 간주되어서는 안 된다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA and pro forma adjusted EBITDA should not be considered in isolation or as a substitute for operating profit or loss, net income or loss, or cash flows provided by operating, investing and financing activities.",
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "block_id": "p92",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-07B42A2E19FC5C4B",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1922446/000192244626000086/dec-20260902.htm",
+        "filed_at": "2026-09-09",
+        "observed_at": "2026-10-16T04:56:26+00:00",
+        "form": "8-K",
+        "document_type": "8-K"
+      },
+      {
+        "document_id": "DOC-0C2F6D5605F1F385",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1922446/000192244626000070/a2q26earningspr.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-16T04:56:26+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-16T04:56:46+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 7.4002,
+    "eps_30d": 3.58333,
+    "eps_90d": 2.687,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 175.4,
+    "steady": true,
+    "turnaround": false
+  }
+}

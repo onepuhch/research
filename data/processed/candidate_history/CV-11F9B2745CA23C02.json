@@ -1,0 +1,156 @@
+{
+  "candidate_id": "CAN-43EA86A18E5096A9",
+  "candidate_version": "CV-11F9B2745CA23C02",
+  "identity": {
+    "entity_id": "NASDAQ:MU",
+    "ticker": "MU",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Micron Technology, Inc.",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "반도체 메모리 및 저장 제품(DRAM, NAND 등)을 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internationally. It operates through Cloud Memory Business Unit, Core Data Center Business Unit, Mobile and Client Business Unit, and Automotive and Embedded Business Unit segments. The company provides dynamic random access memory (DRAM) products, including High-Bandwidth Memory, doublie data rate, low-power DRAM, and graphics DRAM products; NAND products comprising solid state drives, managed NAND, and mul"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MU analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MU/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-17T04:39:45+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MU daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MU/history",
+      "published_at": null,
+      "observed_at": "2026-10-17T04:39:45+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MU company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MU/profile",
+      "published_at": null,
+      "observed_at": "2026-10-17T04:39:45+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-39C08ABD9C77B7B0",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+      "title": "SEC 8-K EX-99.1 — EX-99.1 EARNINGS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-09-30",
+      "observed_at": "2026-10-03T05:43:20+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-72E4E5C51654E6AA",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+      "title": "SEC 8-K EX-99.1 — EX-99.1 - PRESS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-06-24",
+      "observed_at": "2026-10-03T05:43:20+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-F10D7F195D0B80E3",
+    "input_sha": "f10d7f195d0b80e33522333383cdd7e65fe88fe8d5f33b8fa234c6710e2c9f10",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "Micron Technology의 Strategic Customer Agreements가 재무 성과에 미치는 영향은 무엇인가요?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-39C08ABD9C77B7B0",
+        "title": "EX-99.1 EARNINGS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm",
+        "filed_at": "2026-09-30",
+        "observed_at": "2026-10-03T05:43:20+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-72E4E5C51654E6AA",
+        "title": "EX-99.1 - PRESS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/a2026q3ex991-pressrelease.htm",
+        "filed_at": "2026-06-24",
+        "observed_at": "2026-10-03T05:43:20+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-15T05:06:33+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 206.89381,
+    "eps_30d": 172.47629,
+    "eps_90d": 163.34702,
+    "eps_target_period": "2028-08-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 36,
+    "up30": 19,
+    "down30": 1,
+    "pct_90": 26.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

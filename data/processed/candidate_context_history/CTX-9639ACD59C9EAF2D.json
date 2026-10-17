@@ -1,0 +1,148 @@
+{
+  "context_id": "CTX-9639ACD59C9EAF2D",
+  "candidate_id": "CAN-DFC3DBDD820FAC95",
+  "ticker": "ECHO",
+  "issuer_cik": "0001415404",
+  "document_ids": [
+    "DOC-5D90E7179A9A5AF0"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-5D90E7179A9A5AF0#t6",
+    "DOC-5D90E7179A9A5AF0#t16",
+    "DOC-5D90E7179A9A5AF0#t25",
+    "DOC-5D90E7179A9A5AF0#p98",
+    "DOC-5D90E7179A9A5AF0#t39",
+    "DOC-5D90E7179A9A5AF0#p161",
+    "DOC-5D90E7179A9A5AF0#p167",
+    "DOC-5D90E7179A9A5AF0#p207",
+    "DOC-5D90E7179A9A5AF0#p244",
+    "DOC-5D90E7179A9A5AF0#p246",
+    "DOC-5D90E7179A9A5AF0#p350",
+    "DOC-5D90E7179A9A5AF0#p362",
+    "DOC-5D90E7179A9A5AF0#p432",
+    "DOC-5D90E7179A9A5AF0#p518",
+    "DOC-5D90E7179A9A5AF0#p583"
+  ],
+  "input_sha": "9639acd59c9eaf2d19c74a61659b9dbee6c03721d9632f45c371b2b5e242b49f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-17T04:53:53+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "satellite capacity — 회사는 위성 용량이 제한적이며, 운영 및 환경 위험 등으로 인한 고장이나 용량 감소는 사업, 재무 상태 및 운영 결과에 부정적인 영향을 미칠 수 있다",
+      "note_ko": "회사는 위성 용량이 제한적이며, 운영 및 환경 위험 등으로 인한 고장이나 용량 감소는 사업, 재무 상태 및 운영 결과에 부정적인 영향을 미칠 수 있다",
+      "kind": "fact",
+      "quote": "We have limited satellite capacity and any failures or reduced capacity, caused by, among other things, operational and environmental risks, could adversely affect our business, financial condition and results of operations.",
+      "document_id": "DOC-5D90E7179A9A5AF0",
+      "block_id": "t16",
+      "metric": "satellite capacity",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "products — 제품에 결함이 있을 경우, 결함 수정에 상당한 비용이 발생할 수 있으며 제품 및 네트워크 서비스 계약이 지연되거나 취소되어 매출에 부정적인 영향을 미칠 수 있다",
+      "note_ko": "제품에 결함이 있을 경우, 결함 수정에 상당한 비용이 발생할 수 있으며 제품 및 네트워크 서비스 계약이 지연되거나 취소되어 매출에 부정적인 영향을 미칠 수 있다",
+      "kind": "fact",
+      "quote": "If our products contain defects, we could be subject to significant costs to correct such defects and our product and network service contracts could be delayed or cancelled, which could adversely affect our revenue.",
+      "document_id": "DOC-5D90E7179A9A5AF0",
+      "block_id": "t25",
+      "metric": "products",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "SpaceX 거래가 예상보다 늦게 완료되거나 완료되지 않을 경우, 회사의 예상 레버리지, 가용 현금, 비용 및 수익에 어떤 영향을 미칠 수 있는가?",
+    "회사의 위성 용량 제한이 사업, 재무 상태 및 운영 결과에 미치는 구체적인 영향은 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "$8,315,245"
+      ],
+      "quote": "Net income (loss) ; ​ ​ ​ ; $8,315,245 ; ​ ; $(510,125)",
+      "where": "DOC-5D90E7179A9A5AF0#t39"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업활동 현금흐름이다",
+      "figures": [
+        "228,324"
+      ],
+      "quote": "Net cash flows from operating activities ; ​ ; ​ ; 228,324 ; ​ ; ​ ; 214,267",
+      "where": "DOC-5D90E7179A9A5AF0#t39"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 투자활동 현금흐름이다",
+      "figures": [
+        "811,734"
+      ],
+      "quote": "Net cash flows from investing activities ; ​ ; ​ ; 811,734 ; ​ ; ​ ; (1,799,721)",
+      "where": "DOC-5D90E7179A9A5AF0#t39"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 재무활동 현금흐름이다",
+      "figures": [
+        "(1,778,914)"
+      ],
+      "quote": "Net cash flows from financing activities ; ​ ; ​ ; (1,778,914) ; ​ ; ​ ; (365,997)",
+      "where": "DOC-5D90E7179A9A5AF0#t39"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 현금, 현금 등가물, 제한된 현금 및 현금 등가물 기말 잔액이다",
+      "figures": [
+        "$1,443,318"
+      ],
+      "quote": "Cash, cash equivalents, restricted cash and cash equivalents, end of period (Note 6) ; ​ ; $1,443,318 ; ​ ; $2,645,318",
+      "where": "DOC-5D90E7179A9A5AF0#t39"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "SpaceX 거래의 시기와 완료는 불확실하며, 통제할 수 없는 특정 조건에 따라 달라질 수 있다",
+      "figures": [],
+      "quote": "The timing and closing of the SpaceX Transactions are not certain, and are subject to certain conditions, some of which we cannot control, which could result in the SpaceX Transactions not being compl",
+      "where": "DOC-5D90E7179A9A5AF0#t6"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
