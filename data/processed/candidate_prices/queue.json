@@ -157,7 +157,13 @@
     "DEC",
     "EC",
     "FANG",
-    "KRP"
+    "KRP",
+    "AR",
+    "COP",
+    "ECHO",
+    "LIFE",
+    "OVV",
+    "PBR-A"
   ],
   "days": {
     "2026-10-06": {
@@ -203,13 +209,17 @@
     "2026-10-16": {
       "requests": 14,
       "retries": 0
+    },
+    "2026-10-17": {
+      "requests": 12,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 11,
-      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "attempts": 12,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1368,8 +1378,8 @@
       "reason": null
     },
     "GRNT": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1440,32 +1450,80 @@
       "reason": null
     },
     "DEC": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "EC": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "FANG": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "KRP": {
+      "attempts": 2,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "AR": {
       "attempts": 1,
-      "last_attempt_at": "2026-10-16T04:57:30.503808+00:00",
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "COP": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "ECHO": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "LIFE": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "OVV": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "PBR-A": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-17T04:54:16.811836+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
