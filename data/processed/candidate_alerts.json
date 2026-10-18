@@ -856,6 +856,91 @@
       "payload_text": "<b>🆕 새 발굴 후보 · PBR-A Petróleo Brasileiro S.A. - Petrobras</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n페트로브라스는 석유와 천연가스를 탐사, 생산, 정제, 운송 및 판매하여 돈을 법니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $3.41 → 지금 $4.07 (+20%) · 주가 같은 기간 +45.6%\n\n👎 최근 30일 분석가 5명 중 2명만 올림 — 일부 분석가의 상향\n👎 같은 30일에 내린 분석가도 1명\n👎 주가가 같은 90일에 +46% 올라 이익 예상 상향(+20%)만큼 이미 움직임\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-B42E091E8BC42B9F</code> · 추적 <code>/track CAN-B42E091E8BC42B9F</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "48cc6a424b6f1634187b32ef978cab6ccc456dc1ea4038c72d8b84c2d678996a",
       "message_id": 195
+    },
+    "NYSE:TXO|eps-revision-review:v1|material_update|B:OB-32C442EF066AB09C>OB-72668BE8E0A59C77": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:TXO",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-0733D6B2B6A41784",
+      "candidate_version": "CV-5DC3B47218ED12BC",
+      "observation_id": "OB-331796D758652F48",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-32C442EF066AB09C",
+          "observed_at": "2026-09-30T05:55:55+00:00",
+          "day": "2026-09-30",
+          "observation_id": "OB-32C442EF066AB09C",
+          "snapshot_sha256": "3c5f110b019f840c18cf31bae6c1cd8934aedbd42afd525ba3de431e050053a4",
+          "eps_now": 1.30667,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-72668BE8E0A59C77",
+          "baseline_id": "OB-72668BE8E0A59C77",
+          "observed_at": "2026-10-17T04:53:32+00:00",
+          "day": "2026-10-17",
+          "snapshot_sha256": "9168a55df2eaa160e878e0670e92e3a85cf5ed3b76ef1821071964f9c8b56d58",
+          "eps_now": 1.92,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-331796D758652F48",
+          "baseline_id": "OB-331796D758652F48",
+          "observed_at": "2026-10-18T04:57:34+00:00",
+          "day": "2026-10-18",
+          "snapshot_sha256": "b00b48b6025bfbe918065b877c72b5f97b67c5bcf4709a8c36ae8f97651d7694",
+          "eps_now": 1.92,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 46.94,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-32C442EF066AB09C>OB-72668BE8E0A59C77"
+        ]
+      },
+      "day": "2026-10-18",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39098040090-1",
+      "reserved_at": "2026-10-18T04:58:01+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · TXO TXO Partners, L.P.</b>\n기준: 2026-09-30 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $1.31 → 현재 $1.92 (+47%), 2026-10-17·2026-10-18 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n최근 30일 상향 수정 1건(분석가 3명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인\n상세 <code>/candidate CAN-0733D6B2B6A41784</code> · 추적 <code>/track CAN-0733D6B2B6A41784</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "726116ae1b6963236de5a3f9b547d50338f3d1adbc1ae0a20ea00ed35c1be099"
     }
   },
   "bootstrap": {

@@ -1,0 +1,83 @@
+{
+  "observation_id": "OB-105B0E4BA141B8F8",
+  "candidate_id": "CAN-B42E091E8BC42B9F",
+  "candidate_version": "CV-7094F3B7F1281524",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PBR-A",
+    "ticker": "PBR-A",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-18T04:56:54+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261018T044325Z_39098040090-1.json.gz",
+    "sha256": "b00b48b6025bfbe918065b877c72b5f97b67c5bcf4709a8c36ae8f97651d7694",
+    "run_id": "39098040090-1",
+    "finished_at": "2026-10-18T04:57:34+00:00"
+  },
+  "eps": {
+    "eps_now": 4.06971,
+    "eps_30d": 3.68792,
+    "eps_90d": 3.40698,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 19.5,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.844,
+    "yield_change_30_pp": 1.639
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-20",
+    "price_start_date": "2026-07-20",
+    "price_end_expected": "2026-10-16",
+    "price_end_date": "2026-10-16",
+    "close_start": 16.219999313354492,
+    "close_end": 23.299999237060547,
+    "price_pct_90": 43.6,
+    "adj_return_pct_90": 48.3,
+    "pe_change_pct": 20.3
+  },
+  "display_rank": 28,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 19
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 159523782656,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [
+    "document budget reached before every results filing was read"
+  ],
+  "source_attempt_at": "2026-10-17T04:53:34+00:00",
+  "source_status": "no_relevant_document",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:PBR-A",
+  "approval_version": null,
+  "rendered_at": "2026-10-18T04:57:53+00:00"
+}

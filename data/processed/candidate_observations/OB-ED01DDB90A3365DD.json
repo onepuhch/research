@@ -1,0 +1,102 @@
+{
+  "observation_id": "OB-ED01DDB90A3365DD",
+  "candidate_id": "CAN-D577F2C38FBBCFF7",
+  "candidate_version": "CV-066157A7648CD595",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DK",
+    "ticker": "DK",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-18T04:49:17+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261018T044325Z_39098040090-1.json.gz",
+    "sha256": "b00b48b6025bfbe918065b877c72b5f97b67c5bcf4709a8c36ae8f97651d7694",
+    "run_id": "39098040090-1",
+    "finished_at": "2026-10-18T04:57:34+00:00"
+  },
+  "eps": {
+    "eps_now": 9.54569,
+    "eps_30d": 7.85374,
+    "eps_90d": 2.17333,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 11,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 339.2,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 9.626,
+    "yield_change_30_pp": 2.209
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-20",
+    "price_start_date": "2026-07-20",
+    "price_end_expected": "2026-10-16",
+    "price_end_date": "2026-10-16",
+    "close_start": 64.63999938964844,
+    "close_end": 76.58999633789062,
+    "price_pct_90": 18.5,
+    "adj_return_pct_90": 18.9,
+    "pe_change_pct": -73.0
+  },
+  "display_rank": 4,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 2
+    },
+    {
+      "list": "A",
+      "rank": 3
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 4689772032,
+  "context_id": "CTX-B8DFC6207093AAB5",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-17T04:53:34+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 8,
+    "shown": [
+      "MPC",
+      "PBF",
+      "CVI",
+      "DK"
+    ],
+    "folded": [
+      "VLO",
+      "PSX",
+      "DINO",
+      "PARR"
+    ],
+    "outside": []
+  },
+  "entity_id": "NYSE:DK",
+  "approval_version": null,
+  "rendered_at": "2026-10-18T04:57:53+00:00"
+}
