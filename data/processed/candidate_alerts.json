@@ -935,12 +935,20 @@
         ]
       },
       "day": "2026-10-18",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-18T04:58:03+00:00",
+          "status": "sent",
+          "message_id": 196,
+          "error": null
+        }
+      ],
       "reserved_by": "39098040090-1",
       "reserved_at": "2026-10-18T04:58:01+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · TXO TXO Partners, L.P.</b>\n기준: 2026-09-30 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $1.31 → 현재 $1.92 (+47%), 2026-10-17·2026-10-18 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n최근 30일 상향 수정 1건(분석가 3명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인\n상세 <code>/candidate CAN-0733D6B2B6A41784</code> · 추적 <code>/track CAN-0733D6B2B6A41784</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "726116ae1b6963236de5a3f9b547d50338f3d1adbc1ae0a20ea00ed35c1be099"
+      "payload_sha256": "726116ae1b6963236de5a3f9b547d50338f3d1adbc1ae0a20ea00ed35c1be099",
+      "message_id": 196
     }
   },
   "bootstrap": {
