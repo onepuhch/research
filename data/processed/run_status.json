@@ -71,9 +71,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-17T04:54:15+00:00",
+    "checked_at": "2026-10-18T04:58:05+00:00",
     "status": "success",
-    "last_success_at": "2026-10-17T04:54:15+00:00",
+    "last_success_at": "2026-10-18T04:58:05+00:00",
     "targets": 4,
     "failures": []
   },
@@ -139,24 +139,24 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-17T04:54:14+00:00",
+    "checked_at": "2026-10-18T04:58:04+00:00",
     "status": "success",
-    "last_success_at": "2026-10-17T04:54:14+00:00",
+    "last_success_at": "2026-10-18T04:58:04+00:00",
     "slots": 3,
     "bootstrap": false,
-    "material_eligible": 0,
+    "material_eligible": 2,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 2,
+    "sent": 1,
     "failed": 0,
     "uncertain": 0,
     "held_unconfirmed": [],
     "released_unconfirmed": [],
-    "hold_not_compared": 1,
+    "hold_not_compared": 0,
     "reservation_persisted": true,
     "receipts_persisted": true,
-    "selected": 2
+    "selected": 1
   },
   "candidate_context": {
     "checked_at": "2026-10-18T04:57:53+00:00",
@@ -234,20 +234,20 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-10-17T04:54:24+00:00",
+    "checked_at": "2026-10-18T04:58:11+00:00",
     "status": "success",
-    "last_success_at": "2026-10-17T04:54:24+00:00",
-    "due": 11,
-    "fresh": 11,
+    "last_success_at": "2026-10-18T04:58:11+00:00",
+    "due": 6,
+    "fresh": 6,
     "retry_waiting": 0,
     "retry_ready": 0,
     "retries": 0,
-    "requests": 12,
-    "collected": 11,
+    "requests": 7,
+    "collected": 6,
     "failures": 0,
     "stopped": null,
     "retry_share_left": 5,
-    "day_requests": 12,
+    "day_requests": 7,
     "day_retries": 0
   }
 }
