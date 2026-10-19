@@ -1,25 +1,25 @@
 {
   "eps": {
-    "checked_at": "2026-10-18T04:43:23+00:00",
+    "checked_at": "2026-10-19T04:51:37+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:43:23+00:00",
+    "last_success_at": "2026-10-19T04:51:37+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-10-18T04:43:22+00:00",
+    "checked_at": "2026-10-19T04:51:34+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:43:22+00:00",
+    "last_success_at": "2026-10-19T04:51:34+00:00",
     "item_count": 18,
     "errors": [],
-    "collected_at": "2026-10-18T04:43:22.039021+00:00"
+    "collected_at": "2026-10-19T04:51:34.569543+00:00"
   },
   "extract": {
-    "checked_at": "2026-10-18T04:43:22+00:00",
+    "checked_at": "2026-10-19T04:51:34+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:43:22+00:00",
+    "last_success_at": "2026-10-19T04:51:34+00:00",
     "accepted": 0,
     "deferred_budget": 0,
     "rejected": 0,
@@ -34,62 +34,62 @@
     "open_unserved": 0,
     "pending": 0,
     "outcome": "ok",
-    "day": "2026-10-18",
-    "run_id": "39098040090-1",
+    "day": "2026-10-19",
+    "run_id": "39201523987-1",
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-10-18T20:53:54+00:00",
+    "checked_at": "2026-10-19T04:51:22+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T20:53:54+00:00",
+    "last_success_at": "2026-10-19T04:51:22+00:00",
     "processed": 0,
     "failed": 0
   },
   "telegram_delivery": {
-    "checked_at": "2026-10-18T04:58:03+00:00",
+    "checked_at": "2026-10-19T05:06:27+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:58:03+00:00",
-    "message_id": 196
+    "last_success_at": "2026-10-19T05:06:27+00:00",
+    "message_id": 199
   },
   "review_report": {
-    "checked_at": "2026-10-12T06:26:17+00:00",
+    "checked_at": "2026-10-19T05:06:27+00:00",
     "status": "success",
-    "last_success_at": "2026-10-12T06:26:17+00:00"
+    "last_success_at": "2026-10-19T05:06:27+00:00"
   },
   "notify": {
-    "checked_at": "2026-10-18T04:43:24+00:00",
+    "checked_at": "2026-10-19T04:51:37+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:43:24+00:00"
+    "last_success_at": "2026-10-19T04:51:37+00:00"
   },
   "prices": {
-    "checked_at": "2026-10-18T04:57:36+00:00",
+    "checked_at": "2026-10-19T05:06:02+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:57:36+00:00",
+    "last_success_at": "2026-10-19T05:06:02+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-18T04:58:05+00:00",
+    "checked_at": "2026-10-19T05:06:13+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:58:05+00:00",
+    "last_success_at": "2026-10-19T05:06:13+00:00",
     "targets": 4,
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-10-18T04:43:25+00:00",
+    "checked_at": "2026-10-19T04:51:39+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:43:25+00:00",
+    "last_success_at": "2026-10-19T04:51:39+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-10-18T04:57:35+00:00",
+    "checked_at": "2026-10-19T05:06:01+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:57:35+00:00",
-    "snapshot": "20261018T044325Z_39098040090-1.json.gz",
+    "last_success_at": "2026-10-19T05:06:01+00:00",
+    "snapshot": "20261019T045139Z_39201523987-1.json.gz",
     "candidates": 102,
     "alert": false,
     "stages": {
@@ -106,9 +106,9 @@
         "success": 7649
       },
       "earnings": {
-        "requested": 3182,
-        "success": 2407,
-        "unavailable": 775
+        "requested": 3229,
+        "success": 2418,
+        "unavailable": 811
       },
       "profile": {
         "requested": 102,
@@ -121,17 +121,17 @@
     }
   },
   "cards": {
-    "checked_at": "2026-10-18T04:57:57+00:00",
+    "checked_at": "2026-10-19T05:06:10+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:57:57+00:00",
+    "last_success_at": "2026-10-19T05:06:10+00:00",
     "translation": {
-      "requested": 0,
-      "translated": 0,
+      "requested": 1,
+      "translated": 1,
       "rejected": 0,
       "failed_calls": 0,
-      "calls": 0
+      "calls": 1
     },
-    "new_versions": 2,
+    "new_versions": 1,
     "new_observations": 34,
     "migrated_legacy": 0,
     "cards": 30,
@@ -139,34 +139,30 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-18T04:58:04+00:00",
+    "checked_at": "2026-10-19T05:06:12+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:58:04+00:00",
+    "last_success_at": "2026-10-19T05:06:12+00:00",
     "slots": 3,
     "bootstrap": false,
-    "material_eligible": 2,
+    "material_eligible": 1,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 1,
+    "sent": 0,
     "failed": 0,
     "uncertain": 0,
     "held_unconfirmed": [],
     "released_unconfirmed": [],
     "hold_not_compared": 0,
-    "reservation_persisted": true,
-    "receipts_persisted": true,
-    "selected": 1
+    "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-10-18T04:57:53+00:00",
+    "checked_at": "2026-10-19T05:06:02+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:57:53+00:00",
+    "last_success_at": "2026-10-19T05:06:02+00:00",
     "held": [],
-    "researched": 7,
-    "statuses": {
-      "success": 7
-    },
+    "researched": 0,
+    "statuses": {},
     "targets": 34,
     "current": {
       "CAN-1F6D82ED5782C3F5": "2027-12-31",
@@ -211,7 +207,7 @@
       "CAN-FDA6B7F62852042F"
     ],
     "alert_first": [],
-    "http_attempts": 32,
+    "http_attempts": 0,
     "coverage": {
       "success": 32,
       "no_relevant_document": 2
@@ -234,9 +230,9 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-10-18T04:58:11+00:00",
+    "checked_at": "2026-10-19T05:06:20+00:00",
     "status": "success",
-    "last_success_at": "2026-10-18T04:58:11+00:00",
+    "last_success_at": "2026-10-19T05:06:20+00:00",
     "due": 6,
     "fresh": 6,
     "retry_waiting": 0,

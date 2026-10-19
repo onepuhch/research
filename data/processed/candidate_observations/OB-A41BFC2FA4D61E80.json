@@ -1,0 +1,86 @@
+{
+  "observation_id": "OB-A41BFC2FA4D61E80",
+  "candidate_id": "CAN-7506B6BECE695B39",
+  "candidate_version": "CV-84AA220CA987891E",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:FRO",
+    "ticker": "FRO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-19T04:55:12+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261019T045139Z_39201523987-1.json.gz",
+    "sha256": "f4fd3df1ce62ed04258b4ba034e4b14d2d04f1be4a1c4e567b69c39c08af189a",
+    "run_id": "39201523987-1",
+    "finished_at": "2026-10-19T05:05:59+00:00"
+  },
+  "eps": {
+    "eps_now": 5.24214,
+    "eps_30d": 4.48414,
+    "eps_90d": 3.52958,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 48.5,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.263,
+    "yield_change_30_pp": 1.444
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-21",
+    "price_start_date": "2026-07-21",
+    "price_end_expected": "2026-10-16",
+    "price_end_date": "2026-10-16",
+    "close_start": 38.45000076293945,
+    "close_end": 52.4900016784668,
+    "price_pct_90": 36.5,
+    "adj_return_pct_90": 45.7,
+    "pe_change_pct": -8.1
+  },
+  "display_rank": 16,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 11
+    },
+    {
+      "list": "B",
+      "rank": 19
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 11685476352,
+  "context_id": "CTX-FC7419062DE56F28",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-18T04:57:36+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:FRO",
+  "approval_version": null,
+  "rendered_at": "2026-10-19T05:06:02+00:00"
+}
