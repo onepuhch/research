@@ -1,0 +1,183 @@
+{
+  "candidate_id": "CAN-DFC3DBDD820FAC95",
+  "candidate_version": "CV-B4659A3AC2525A82",
+  "identity": {
+    "entity_id": "NASDAQ:ECHO",
+    "ticker": "ECHO",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "EchoStar Corporation",
+  "industry": "Telecom Services",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "에코스타는 유료 TV 서비스, 위성 방송 및 스트리밍 서비스를 제공하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "EchoStar Corporation provides pay-tv services in the United States, Mexico, Canada, South and Central America, Asia, Africa, Australia, Europe, India, and the Middle East. The Pay-TV segment offers a direct broadcast and fixed satellite, owned and leased satellites, leased fiber optic networks, in-home services, and call center operation services; digital broadcast operations, including satellite uplinking/downlinking, transmission and, other services to third-party pay-TV providers; multichannel, live-linear and on-demand streaming over-the-top Internet-based domestic, international, Latino,"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "ECHO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ECHO/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-20T05:03:04+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "ECHO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ECHO/history",
+      "published_at": null,
+      "observed_at": "2026-10-20T05:03:04+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "ECHO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ECHO/profile",
+      "published_at": null,
+      "observed_at": "2026-10-20T05:03:04+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-5D90E7179A9A5AF0",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1415404/000110465926089370/sats-20260630x10q.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-03",
+      "observed_at": "2026-10-17T04:53:34+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-9639ACD59C9EAF2D",
+    "input_sha": "9639acd59c9eaf2d19c74a61659b9dbee6c03721d9632f45c371b2b5e242b49f",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "satellite capacity — 회사는 위성 용량이 제한적이며, 운영 및 환경 위험 등으로 인한 고장이나 용량 감소는 사업, 재무 상태 및 운영 결과에 부정적인 영향을 미칠 수 있다",
+        "note_ko": "회사는 위성 용량이 제한적이며, 운영 및 환경 위험 등으로 인한 고장이나 용량 감소는 사업, 재무 상태 및 운영 결과에 부정적인 영향을 미칠 수 있다",
+        "kind": "fact",
+        "quote": "We have limited satellite capacity and any failures or reduced capacity, caused by, among other things, operational and environmental risks, could adversely affect our business, financial condition and results of operations.",
+        "document_id": "DOC-5D90E7179A9A5AF0",
+        "block_id": "t16",
+        "metric": "satellite capacity",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "products — 제품에 결함이 있을 경우, 결함 수정에 상당한 비용이 발생할 수 있으며 제품 및 네트워크 서비스 계약이 지연되거나 취소되어 매출에 부정적인 영향을 미칠 수 있다",
+        "note_ko": "제품에 결함이 있을 경우, 결함 수정에 상당한 비용이 발생할 수 있으며 제품 및 네트워크 서비스 계약이 지연되거나 취소되어 매출에 부정적인 영향을 미칠 수 있다",
+        "kind": "fact",
+        "quote": "If our products contain defects, we could be subject to significant costs to correct such defects and our product and network service contracts could be delayed or cancelled, which could adversely affect our revenue.",
+        "document_id": "DOC-5D90E7179A9A5AF0",
+        "block_id": "t25",
+        "metric": "products",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "SpaceX 거래가 예상보다 늦게 완료되거나 완료되지 않을 경우, 회사의 예상 레버리지, 가용 현금, 비용 및 수익에 어떤 영향을 미칠 수 있는가?",
+      "회사의 위성 용량 제한이 사업, 재무 상태 및 운영 결과에 미치는 구체적인 영향은 무엇인가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-5D90E7179A9A5AF0",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1415404/000110465926089370/sats-20260630x10q.htm",
+        "filed_at": "2026-08-03",
+        "observed_at": "2026-10-17T04:53:34+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-17T04:53:53+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 13.42917,
+    "eps_30d": 13.03917,
+    "eps_90d": 10.37534,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 29.4,
+    "steady": false,
+    "turnaround": false
+  }
+}

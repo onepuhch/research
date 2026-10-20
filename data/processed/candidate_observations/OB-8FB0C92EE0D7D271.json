@@ -1,0 +1,108 @@
+{
+  "observation_id": "OB-8FB0C92EE0D7D271",
+  "candidate_id": "CAN-2365AA0167A432A4",
+  "candidate_version": "CV-F1139F6F1FFA1C59",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:KOS",
+    "ticker": "KOS",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-20T05:09:51+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261020T050038Z_39372419498-1.json.gz",
+    "sha256": "4799563aed0e423a540db6430d032ddc65a1dc8f029b3aba92b2525fd774ac51",
+    "run_id": "39372419498-1",
+    "finished_at": "2026-10-20T05:14:58+00:00"
+  },
+  "eps": {
+    "eps_now": 0.31,
+    "eps_30d": 0.304,
+    "eps_90d": 0.23286,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 33.1,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 2.765,
+    "yield_change_30_pp": 0.215
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 1661410560,
+  "context_id": "CTX-FC2D6D9143847AC2",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-20T05:15:00+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-FC2D6D9143847AC2",
+    "generated_at": "2026-10-20T05:15:25+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 16,
+    "shown": [
+      "CRGY",
+      "TXO",
+      "GRNT"
+    ],
+    "folded": [
+      "CHRD",
+      "MTDR",
+      "NOG",
+      "KOS"
+    ],
+    "outside": [
+      "COP",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "AR",
+      "SM",
+      "MUR"
+    ]
+  },
+  "entity_id": "NYSE:KOS",
+  "approval_version": null,
+  "rendered_at": "2026-10-20T05:15:49+00:00"
+}

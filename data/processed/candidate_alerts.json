@@ -949,6 +949,42 @@
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · TXO TXO Partners, L.P.</b>\n기준: 2026-09-30 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $1.31 → 현재 $1.92 (+47%), 2026-10-17·2026-10-18 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n최근 30일 상향 수정 1건(분석가 3명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인\n상세 <code>/candidate CAN-0733D6B2B6A41784</code> · 추적 <code>/track CAN-0733D6B2B6A41784</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
       "payload_sha256": "726116ae1b6963236de5a3f9b547d50338f3d1adbc1ae0a20ea00ed35c1be099",
       "message_id": 196
+    },
+    "NYSE:CRGY|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:CRGY",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-FC7BBBC12A5093CF",
+      "candidate_version": "CV-38C752392724A66F",
+      "observation_id": "OB-27F65CAED97369C2",
+      "signal_id": null,
+      "verdict": "consider",
+      "day": "2026-10-20",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39372419498-1",
+      "reserved_at": "2026-10-20T05:16:01+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · CRGY Crescent Energy Company</b>\n<b>🟢 시스템 판단: 추적 고려</b>\n크레센트 에너지는 원유, 천연가스, 천연가스액을 탐사 및 생산하고 광물 지분을 소유하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $2.29 → 지금 $2.86 (+25%) · 주가 같은 기간 +20.4%\n\n👍 최근 30일 분석가 10명 중 7명이 올림(내린 사람 없음)\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+17%)\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-FC7BBBC12A5093CF</code> · 추적 <code>/track CAN-FC7BBBC12A5093CF</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "aea937dda059526c27edcb437d6ccf1993a9fe4600407b87bf8ba0259fcb1641"
+    },
+    "NASDAQ:TTMI|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:TTMI",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-486C908614BC89B1",
+      "candidate_version": "CV-584E1A6C795DAECC",
+      "observation_id": "OB-6232CFC213A95D3C",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-10-20",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39372419498-1",
+      "reserved_at": "2026-10-20T05:16:01+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · TTMI TTM Technologies, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\nTTM 테크놀로지스는 임무 시스템, 무선 주파수 부품, 인쇄 회로 기판 및 관련 어셈블리를 제조 및 판매합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $5.40 → 지금 $7.86 (+46%) · 주가 같은 기간 -31.5%\n\n👍 최근 30일 분석가 3명 중 4명이 올림(내린 사람 없음)\n👍 주가는 같은 90일에 -32%로, 이익 예상 상향(+46%)보다 덜 움직임\n👎 이 회사를 보는 분석가가 3명뿐이라 예상치가 몇 명의 수정에 크게 흔들림\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-486C908614BC89B1</code> · 추적 <code>/track CAN-486C908614BC89B1</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "86ad9dd06165ec02425e32a6d98ed55d0b5d23ef1dd99bcc00c148a4be860796"
     }
   },
   "bootstrap": {

@@ -1,0 +1,139 @@
+{
+  "context_id": "CTX-4074C68BC68E2AA3",
+  "candidate_id": "CAN-486C908614BC89B1",
+  "ticker": "TTMI",
+  "issuer_cik": "0001116942",
+  "document_ids": [
+    "DOC-C01418619C8AE57A",
+    "DOC-97E3825F76888A73"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C01418619C8AE57A#p8",
+    "DOC-97E3825F76888A73#t3",
+    "DOC-97E3825F76888A73#t8",
+    "DOC-97E3825F76888A73#t9",
+    "DOC-97E3825F76888A73#p14",
+    "DOC-97E3825F76888A73#p17",
+    "DOC-97E3825F76888A73#p18",
+    "DOC-97E3825F76888A73#t12",
+    "DOC-97E3825F76888A73#t13",
+    "DOC-97E3825F76888A73#t18",
+    "DOC-97E3825F76888A73#t19",
+    "DOC-97E3825F76888A73#t21"
+  ],
+  "input_sha": "4074c68bc68e2aa3336e4872dbbacf5f46d5be74c909a28e74ca18b6e6826ab2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-20T05:15:25+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Data Center and Networking] total net sales: 40% — 데이터 센터 및 네트워킹 최종 시장이 총 순매출에서 차지하는 비중이다",
+      "note_ko": "데이터 센터 및 네트워킹 최종 시장이 총 순매출에서 차지하는 비중이다",
+      "kind": "fact",
+      "quote": "Data Center and Networking end market was 40% of total net sales driven by continued AI demand",
+      "document_id": "DOC-97E3825F76888A73",
+      "block_id": "t9",
+      "metric": "total net sales",
+      "figures": [
+        "40%"
+      ],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Data Center and Networking",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "$83.0 million"
+      ],
+      "quote": "GAAP net income of $83.0 million, or $0.77 per diluted share",
+      "where": "DOC-97E3825F76888A73#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "회사의 희석 주당 순이익이다",
+      "figures": [
+        "$0.77"
+      ],
+      "quote": "GAAP net income of $83.0 million, or $0.77 per diluted share",
+      "where": "DOC-97E3825F76888A73#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "항공우주 및 방위 최종 시장이 총 순매출에서 차지하는 비중이다",
+      "figures": [
+        "37%"
+      ],
+      "quote": "A&D end market was 37% of total net sales; and total program backlog was over $1.7 billion",
+      "where": "DOC-97E3825F76888A73#t8"
+    },
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사의 순매출 예상치이다",
+      "figures": [
+        "$1.10 billion to $1.14 billion"
+      ],
+      "quote": "For the third quarter of 2026, TTM estimates that net sales will be in the range of $1.10 billion to $1.14 billion, and non-GAAP net income will be in the range of $1.21 to $1.27 per diluted share.",
+      "where": "DOC-97E3825F76888A73#p17"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 비일반회계기준 희석 주당 순이익을 일반회계기준과 비교 가능한 측정치로 예측하거나 조정할 수 없다",
+      "figures": [],
+      "quote": "With respect to TTM’s outlook for non-GAAP net income per diluted share, we are unable to predict with reasonable certainty or without unreasonable effort certain items that may affect a comparable me",
+      "where": "DOC-97E3825F76888A73#p18"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사의 예상 비일반회계기준 희석 주당 순이익은 구조조정, 손상차손, 비정상적인 이익 및 손실, 세금 조정의 미래 영향을 제외한다",
+      "figures": [],
+      "quote": "Our expected non-GAAP net income per diluted share exclude the future impact of restructuring actions, impairment charges, unusual gains and losses including but not limited to unrealized foreign exch",
+      "where": "DOC-97E3825F76888A73#p18"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "이러한 조정 항목들은 경영진의 통제 범위를 벗어나는 다양한 요인들로 인해 매우 가변적이며 예측하기 어렵다",
+      "figures": [],
+      "quote": "These reconciling items are highly variable and difficult to predict due to various factors outside of management’s control and could have a material impact on our future period net income per diluted",
+      "where": "DOC-97E3825F76888A73#p18"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

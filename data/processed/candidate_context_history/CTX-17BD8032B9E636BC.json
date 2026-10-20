@@ -1,0 +1,124 @@
+{
+  "context_id": "CTX-17BD8032B9E636BC",
+  "candidate_id": "CAN-B50C69675A4DBCEA",
+  "ticker": "CHRD",
+  "issuer_cik": "0001486159",
+  "document_ids": [
+    "DOC-3CD440C398BEADA6"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3CD440C398BEADA6#p18",
+    "DOC-3CD440C398BEADA6#p32",
+    "DOC-3CD440C398BEADA6#p36",
+    "DOC-3CD440C398BEADA6#p40",
+    "DOC-3CD440C398BEADA6#p42",
+    "DOC-3CD440C398BEADA6#p43",
+    "DOC-3CD440C398BEADA6#p46",
+    "DOC-3CD440C398BEADA6#t11",
+    "DOC-3CD440C398BEADA6#p120",
+    "DOC-3CD440C398BEADA6#t15",
+    "DOC-3CD440C398BEADA6#p126",
+    "DOC-3CD440C398BEADA6#p130",
+    "DOC-3CD440C398BEADA6#t16",
+    "DOC-3CD440C398BEADA6#p134"
+  ],
+  "input_sha": "17bd8032b9e636bc9b5d4ccafdfc8d1fa74c35ee0f73276e89160d11aced47bd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-20T05:15:25+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · 2026: $3.0B — 회사는 조정 에비타를 창출할 것으로 예상한다",
+      "note_ko": "회사는 조정 에비타를 창출할 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "In 2026, Chord expects to generate approximately $3.0B of Adjusted EBITDA and $1.3B of Adjusted Free Cash Flow including the impact of derivatives ($75/Bbl WTI and $3.00/MMBtu Henry Hub for 2H26).",
+      "document_id": "DOC-3CD440C398BEADA6",
+      "block_id": "p36",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$3.0B"
+      ],
+      "period": "2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Production Taxes — 생산세 지침이 약간 증가하고 있다",
+      "note_ko": "생산세 지침이 약간 증가하고 있다",
+      "kind": "guidance",
+      "quote": "Production Taxes: Slightly increasing guidance reflecting higher oil revenue (oil production tax is a higher percentage than gas and NGLs);",
+      "document_id": "DOC-3CD440C398BEADA6",
+      "block_id": "p46",
+      "metric": "Production Taxes",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "tax"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사는 조정 잉여 현금 흐름을 창출할 것으로 예상한다",
+      "figures": [
+        "$1.3B"
+      ],
+      "quote": "In 2026, Chord expects to generate approximately $3.0B of Adjusted EBITDA and $1.3B of Adjusted Free Cash Flow including the impact of derivatives ($75/Bbl WTI and $3.00/MMBtu Henry Hub for 2H26).",
+      "where": "DOC-3CD440C398BEADA6#p36"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "유류 생산량은 3분기 수준에서 감소할 것으로 예상된다",
+      "figures": [],
+      "quote": "4Q26 oil volumes expected to decline from 3Q26 levels reflecting fewer TILs and the acceleration of completions activity and volumes into 2Q26;",
+      "where": "DOC-3CD440C398BEADA6#p40"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "자본 지출 중간 지침은 2분기 활동 감소를 반영한다",
+      "figures": [
+        "$375MM"
+      ],
+      "quote": "3Q26 CapEx midpoint guidance of $375MM reflects a decline in activity from 2Q26 and plans to drop the second frac crew in 3Q26;",
+      "where": "DOC-3CD440C398BEADA6#p42"
+    }
+  ],
+  "context_status": "draft_ready"
+}

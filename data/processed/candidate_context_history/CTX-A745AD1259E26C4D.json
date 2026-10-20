@@ -1,0 +1,135 @@
+{
+  "context_id": "CTX-A745AD1259E26C4D",
+  "candidate_id": "CAN-C05377BEC03AE25C",
+  "ticker": "VSEC",
+  "issuer_cik": "0000102752",
+  "document_ids": [
+    "DOC-637999F6299E19AE"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-637999F6299E19AE#p18",
+    "DOC-637999F6299E19AE#p21",
+    "DOC-637999F6299E19AE#p22",
+    "DOC-637999F6299E19AE#p23",
+    "DOC-637999F6299E19AE#p31",
+    "DOC-637999F6299E19AE#p35",
+    "DOC-637999F6299E19AE#p38",
+    "DOC-637999F6299E19AE#p44",
+    "DOC-637999F6299E19AE#t2",
+    "DOC-637999F6299E19AE#t9"
+  ],
+  "input_sha": "a745ad1259e26c4de75d41e011bf480de5053d3041f2a872c1999dbe0d7353ee",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-20T05:15:25+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(revenue) · 2026 — 회사는 연간 매출액 가이던스를 상향 조정했다",
+      "note_ko": "회사는 연간 매출액 가이던스를 상향 조정했다",
+      "kind": "guidance",
+      "quote": "The strength of our first-half performance, together with our visibility into the remainder of the year, supports our decision to raise both revenue and Adjusted EBITDA margin(2) guidance for 2026,” concluded Mr. Cuomo.",
+      "document_id": "DOC-637999F6299E19AE",
+      "block_id": "p22",
+      "metric": "revenue",
+      "figures": [],
+      "period": "2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Adjusted EPS (Diluted) from continuing operations · second quarter of 2026 — 조정 주당순이익 계산에 무형자산 상각 및 주식 기반 보상이 포함되도록 업데이트되었다",
+      "note_ko": "조정 주당순이익 계산에 무형자산 상각 및 주식 기반 보상이 포함되도록 업데이트되었다",
+      "kind": "fact",
+      "quote": "Beginning with the second quarter of 2026, Adjusted Net Income from Continuing Operations and Adjusted EPS (Diluted) from Continuing Operations now include adjustments for amortization of intangible assets and stock-based compensation, with retrospective adjustments included for prior periods presented.",
+      "document_id": "DOC-637999F6299E19AE",
+      "block_id": "p44",
+      "metric": "Adjusted EPS (Diluted) from continuing operations",
+      "figures": [],
+      "period": "second quarter of 2026",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 기간보다 늘었으며, 매출액은 기록을 경신했다",
+      "figures": [
+        "65%",
+        "$449 million"
+      ],
+      "quote": "In the second quarter and compared to the same period last year, revenue increased 65% to $449 million, net income from continuing operations increased 109% to $29 million, Adjusted EBITDA from contin",
+      "where": "DOC-637999F6299E19AE#p23"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "figures": [
+        "109%",
+        "$29 million"
+      ],
+      "quote": "In the second quarter and compared to the same period last year, revenue increased 65% to $449 million, net income from continuing operations increased 109% to $29 million, Adjusted EBITDA from contin",
+      "where": "DOC-637999F6299E19AE#p23"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "전년 같은 기간보다 거의 두 배 늘었다",
+      "figures": [
+        "nearly doubled",
+        "$86 million"
+      ],
+      "quote": "In the second quarter and compared to the same period last year, revenue increased 65% to $449 million, net income from continuing operations increased 109% to $29 million, Adjusted EBITDA from contin",
+      "where": "DOC-637999F6299E19AE#p23"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "전년 같은 기간보다 늘었으며, 마진율은 기록을 경신했다",
+      "figures": [
+        "approximately 320 basis points",
+        "19.2%"
+      ],
+      "quote": "In the second quarter and compared to the same period last year, revenue increased 65% to $449 million, net income from continuing operations increased 109% to $29 million, Adjusted EBITDA from contin",
+      "where": "DOC-637999F6299E19AE#p23"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 순이익 및 조정 주당순이익의 정의가 변경되었다",
+      "figures": [],
+      "quote": "2 Non-GAAP measures, which reflect a change in the definition of Adjusted Net Income and Adjusted EPS (Diluted).",
+      "where": "DOC-637999F6299E19AE#p18"
+    }
+  ],
+  "context_status": "draft_ready"
+}

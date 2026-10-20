@@ -1,0 +1,108 @@
+{
+  "observation_id": "OB-27F65CAED97369C2",
+  "candidate_id": "CAN-FC7BBBC12A5093CF",
+  "candidate_version": "CV-38C752392724A66F",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:CRGY",
+    "ticker": "CRGY",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-20T05:06:32+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261020T050038Z_39372419498-1.json.gz",
+    "sha256": "4799563aed0e423a540db6430d032ddc65a1dc8f029b3aba92b2525fd774ac51",
+    "run_id": "39372419498-1",
+    "finished_at": "2026-10-20T05:14:58+00:00"
+  },
+  "eps": {
+    "eps_now": 2.85787,
+    "eps_30d": 2.34402,
+    "eps_90d": 2.286,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 25.0,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 4.174,
+    "yield_change_30_pp": 3.751
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-22",
+    "price_start_date": "2026-07-22",
+    "price_end_expected": "2026-10-19",
+    "price_end_date": "2026-10-19",
+    "close_start": 11.380000114440918,
+    "close_end": 13.699999809265137,
+    "price_pct_90": 20.4,
+    "adj_return_pct_90": 21.6,
+    "pe_change_pct": -3.7
+  },
+  "display_rank": 11,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 7
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 4526530560,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [
+    "document budget reached before every results filing was read"
+  ],
+  "source_attempt_at": "2026-10-20T05:15:00+00:00",
+  "source_status": "no_relevant_document",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 16,
+    "shown": [
+      "CRGY",
+      "TXO",
+      "GRNT"
+    ],
+    "folded": [
+      "CHRD",
+      "MTDR",
+      "NOG",
+      "KOS"
+    ],
+    "outside": [
+      "COP",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "AR",
+      "SM",
+      "MUR"
+    ]
+  },
+  "entity_id": "NYSE:CRGY",
+  "approval_version": null,
+  "rendered_at": "2026-10-20T05:15:49+00:00"
+}

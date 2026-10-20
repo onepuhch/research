@@ -1,0 +1,161 @@
+{
+  "context_id": "CTX-FC2D6D9143847AC2",
+  "candidate_id": "CAN-2365AA0167A432A4",
+  "ticker": "KOS",
+  "issuer_cik": "0001509991",
+  "document_ids": [
+    "DOC-B83DEABA07D13FF3"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-B83DEABA07D13FF3#p5",
+    "DOC-B83DEABA07D13FF3#p17",
+    "DOC-B83DEABA07D13FF3#p34",
+    "DOC-B83DEABA07D13FF3#p37",
+    "DOC-B83DEABA07D13FF3#p46",
+    "DOC-B83DEABA07D13FF3#p54",
+    "DOC-B83DEABA07D13FF3#p55",
+    "DOC-B83DEABA07D13FF3#t2",
+    "DOC-B83DEABA07D13FF3#t4",
+    "DOC-B83DEABA07D13FF3#p72",
+    "DOC-B83DEABA07D13FF3#t6",
+    "DOC-B83DEABA07D13FF3#p79",
+    "DOC-B83DEABA07D13FF3#t10",
+    "DOC-B83DEABA07D13FF3#p97",
+    "DOC-B83DEABA07D13FF3#p98"
+  ],
+  "input_sha": "fc2d6d9143847ac2dd4f2ccea72fe975f6c6efa3535f2363ac43aedca5a84b83",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-20T05:15:25+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "순이익(net income) · second quarter of 2026: $185 million — 회사가 순이익을 기록했다",
+      "note_ko": "회사가 순이익을 기록했다",
+      "kind": "fact",
+      "quote": "For the quarter, the Company generated net income of $185 million, or $0.31 per diluted share.",
+      "document_id": "DOC-B83DEABA07D13FF3",
+      "block_id": "p5",
+      "metric": "net income",
+      "figures": [
+        "$185 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "adjusted net income · second quarter of 2026: $68 million — 회사가 조정한 순이익을 기록했다",
+      "note_ko": "회사가 조정한 순이익을 기록했다",
+      "kind": "fact",
+      "quote": "When adjusted for certain items that impact the comparability of results, the Company generated an adjusted net income(1) of $68 million, or $0.11 per diluted share for the second quarter of 2026.",
+      "document_id": "DOC-B83DEABA07D13FF3",
+      "block_id": "p5",
+      "metric": "adjusted net income",
+      "figures": [
+        "$68 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "gross LNG cargos · Full year: 32-36 — 연간 총 액화천연가스 화물선 인도량에 대한 전망은 변동이 없다",
+      "note_ko": "연간 총 액화천연가스 화물선 인도량에 대한 전망은 변동이 없다",
+      "kind": "guidance",
+      "quote": "Full year guidance of 32-36 gross LNG cargos remains unchanged.",
+      "document_id": "DOC-B83DEABA07D13FF3",
+      "block_id": "p34",
+      "metric": "gross LNG cargos",
+      "figures": [
+        "32-36"
+      ],
+      "period": "Full year",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "회사의 희석 주당 순이익이다",
+      "figures": [
+        "$0.31"
+      ],
+      "quote": "For the quarter, the Company generated net income of $185 million, or $0.31 per diluted share.",
+      "where": "DOC-B83DEABA07D13FF3#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "회사의 조정한 희석 주당 순이익이다",
+      "figures": [
+        "$0.11"
+      ],
+      "quote": "When adjusted for certain items that impact the comparability of results, the Company generated an adjusted net income(1) of $68 million, or $0.11 per diluted share for the second quarter of 2026.",
+      "where": "DOC-B83DEABA07D13FF3#p5"
+    }
+  ],
+  "context_status": "draft_ready"
+}
