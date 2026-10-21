@@ -1,0 +1,204 @@
+{
+  "context_id": "CTX-5304D2E53A7879D9",
+  "candidate_id": "CAN-ECB2C73CA19DA4AB",
+  "ticker": "BP",
+  "issuer_cik": "0000313807",
+  "document_ids": [
+    "DOC-2AB79E941098A6C5"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-2AB79E941098A6C5#p26",
+    "DOC-2AB79E941098A6C5#p27",
+    "DOC-2AB79E941098A6C5#p29",
+    "DOC-2AB79E941098A6C5#p30",
+    "DOC-2AB79E941098A6C5#p32",
+    "DOC-2AB79E941098A6C5#p33",
+    "DOC-2AB79E941098A6C5#p34",
+    "DOC-2AB79E941098A6C5#p35",
+    "DOC-2AB79E941098A6C5#p36",
+    "DOC-2AB79E941098A6C5#p37",
+    "DOC-2AB79E941098A6C5#p38",
+    "DOC-2AB79E941098A6C5#p39",
+    "DOC-2AB79E941098A6C5#p41",
+    "DOC-2AB79E941098A6C5#p42",
+    "DOC-2AB79E941098A6C5#p43",
+    "DOC-2AB79E941098A6C5#p47",
+    "DOC-2AB79E941098A6C5#p48",
+    "DOC-2AB79E941098A6C5#p56",
+    "DOC-2AB79E941098A6C5#p57",
+    "DOC-2AB79E941098A6C5#p58",
+    "DOC-2AB79E941098A6C5#p63",
+    "DOC-2AB79E941098A6C5#t4",
+    "DOC-2AB79E941098A6C5#p64",
+    "DOC-2AB79E941098A6C5#p65",
+    "DOC-2AB79E941098A6C5#p69",
+    "DOC-2AB79E941098A6C5#p70",
+    "DOC-2AB79E941098A6C5#p71",
+    "DOC-2AB79E941098A6C5#p72",
+    "DOC-2AB79E941098A6C5#p73"
+  ],
+  "input_sha": "5304d2e53a7879d97cbad2155b4a9766f1b62a7cdd7f0823ab49cb58af5a1a1b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-21T05:15:14+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Oil production & operations] realizations · Third quarter: $(0.2) to (0.4) billion — 석유 생산 및 운영 부문의 실현액은 이전 분기 대비 감소할 것으로 예상된다",
+      "note_ko": "석유 생산 및 운영 부문의 실현액은 이전 분기 대비 감소할 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "Oil production & operations segment: realizations, compared to the prior quarter, are expected to have an impact in the range of $(0.2) to (0.4) billion including the impact of changes in non-Henry Hub natural gas markers.",
+      "document_id": "DOC-2AB79E941098A6C5",
+      "block_id": "p36",
+      "metric": "realizations",
+      "figures": [
+        "$(0.2) to (0.4) billion"
+      ],
+      "period": "Third quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Oil production & operations",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "price"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Net debt · end of the third quarter: $13.5 to 14.5 billion — 순부채는 하이브리드 증권 상환을 포함하여 감소할 것으로 예상된다",
+      "note_ko": "순부채는 하이브리드 증권 상환을 포함하여 감소할 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "Net debt at the end of the third quarter is expected to be in the range of $13.5 to 14.5 billion (2Q 2026: $22.3 billion). This reduction includes:",
+      "document_id": "DOC-2AB79E941098A6C5",
+      "block_id": "p42",
+      "metric": "Net debt",
+      "figures": [
+        "$13.5 to 14.5 billion"
+      ],
+      "period": "end of the third quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "buyback_sharecount"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "group results · third quarter 2026 — 제시된 정보는 그룹 실적에 영향을 미칠 수 있는 모든 요소를 포괄하지 않으며, 해당 실적에 대한 추정치가 아니다",
+      "note_ko": "제시된 정보는 그룹 실적에 영향을 미칠 수 있는 모든 요소를 포괄하지 않으며, 해당 실적에 대한 추정치가 아니다",
+      "kind": "fact",
+      "quote": "The information presented is not comprehensive of all factors which may impact bp's group results for the third quarter 2026 and is not an estimate of those results.",
+      "document_id": "DOC-2AB79E941098A6C5",
+      "block_id": "p26",
+      "metric": "group results",
+      "figures": [],
+      "period": "third quarter 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "financial reporting processes — 제공된 모든 정보는 재무 보고 프로세스의 최종 확정 여부에 따라 달라질 수 있으며 실제 결과는 다를 수 있다",
+      "note_ko": "제공된 모든 정보는 재무 보고 프로세스의 최종 확정 여부에 따라 달라질 수 있으며 실제 결과는 다를 수 있다",
+      "kind": "fact",
+      "quote": "All information provided is subject to the finalization of bp's financial reporting processes and actual results may vary.",
+      "document_id": "DOC-2AB79E941098A6C5",
+      "block_id": "p27",
+      "metric": "financial reporting processes",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "보고된 업스트림 생산량은 계절적 유지보수 회복을 주로 반영하지만, 라틴 아메리카 지분 감소로 부분적으로 상쇄될 것으로 예상된다",
+      "figures": [
+        "2,190 to 2,240mboe/d"
+      ],
+      "quote": "Reported upstream production in the third quarter is expected to be 2,190 to 2,240mboe/d (2Q 2026: 2,201mboe/d), mainly reflecting seasonal maintenance recovery partly offset by bp's reduced equity in",
+      "where": "DOC-2AB79E941098A6C5#p32"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "가스 및 저탄소 에너지 부문의 실현액은 이전 분기 대비 증가할 것으로 예상된다",
+      "figures": [
+        "+$0.1 to 0.3 billion"
+      ],
+      "quote": "Gas & low carbon energy segment: realizations, compared to the prior quarter, are expected to have an impact in the range of +$0.1 to 0.3 billion, including the impact of changes in non-Henry Hub natu",
+      "where": "DOC-2AB79E941098A6C5#p35"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "고객 및 제품 부문에서 정제 마진이 강세를 보일 것으로 예상된다",
+      "figures": [
+        "+$1.9 to 2.1 billion"
+      ],
+      "quote": "products - stronger realized refining margins in the range of +$1.9 to 2.1 billion.",
+      "where": "DOC-2AB79E941098A6C5#p39"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "순부채와 재무 부채 간의 미래 정보 조정은 불합리한 노력 없이는 제시할 수 없다",
+      "figures": [],
+      "quote": "We are unable to present reconciliations of forward-looking information for net debt to finance debt, because without unreasonable efforts, we are unable to forecast accurately certain adjusting items",
+      "where": "DOC-2AB79E941098A6C5#p69"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

@@ -1,0 +1,192 @@
+{
+  "context_id": "CTX-F061CBE3E757926C",
+  "candidate_id": "CAN-8D0129B58E252637",
+  "ticker": "CMRC",
+  "issuer_cik": "0001626450",
+  "document_ids": [
+    "DOC-DE16AABE34662611",
+    "DOC-50AD202C6ED96DDA"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-DE16AABE34662611#p6",
+    "DOC-DE16AABE34662611#p9",
+    "DOC-DE16AABE34662611#p14",
+    "DOC-DE16AABE34662611#p22",
+    "DOC-DE16AABE34662611#p28",
+    "DOC-DE16AABE34662611#p29",
+    "DOC-DE16AABE34662611#p36",
+    "DOC-DE16AABE34662611#p44",
+    "DOC-DE16AABE34662611#p47",
+    "DOC-50AD202C6ED96DDA#p25",
+    "DOC-50AD202C6ED96DDA#p49",
+    "DOC-50AD202C6ED96DDA#p106",
+    "DOC-50AD202C6ED96DDA#p118",
+    "DOC-50AD202C6ED96DDA#p119",
+    "DOC-50AD202C6ED96DDA#p125",
+    "DOC-50AD202C6ED96DDA#p127",
+    "DOC-50AD202C6ED96DDA#p132",
+    "DOC-50AD202C6ED96DDA#p134",
+    "DOC-50AD202C6ED96DDA#t2",
+    "DOC-50AD202C6ED96DDA#t4",
+    "DOC-50AD202C6ED96DDA#t7",
+    "DOC-50AD202C6ED96DDA#t8",
+    "DOC-50AD202C6ED96DDA#t9"
+  ],
+  "input_sha": "f061cbe3e757926c0009f0c70dc5682b3c4255e365f22bbb95d1ee56ebb144a1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-21T05:15:14+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "anticipated savings · 2026: $3 million / 4% — 회사는 예상 절감액의 일부를 실현할 것으로 예상한다",
+      "note_ko": "회사는 예상 절감액의 일부를 실현할 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "Commerce expects to realize approximately $3 million, or 4%, of the anticipated savings during 2026, with the full annualized benefit reflected in 2027.",
+      "document_id": "DOC-DE16AABE34662611",
+      "block_id": "p9",
+      "metric": "anticipated savings",
+      "figures": [
+        "$3 million",
+        "4%"
+      ],
+      "period": "2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "restructuring and other one-time expenses · third quarter ended September 30, 2026: $4.2 million to $8.8 million — 회사는 구조조정 및 기타 일회성 비용이 발생할 것으로 예상한다",
+      "note_ko": "회사는 구조조정 및 기타 일회성 비용이 발생할 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "The Company currently expects to incur approximately $4.2 million to $8.8 million of restructuring and other one-time expenses in the Company’s third quarter ended September 30, 2026 and $4.3 million to $17.5 million of restructuring expenses in the Company’s fourth quarter of fiscal 2026.",
+      "document_id": "DOC-DE16AABE34662611",
+      "block_id": "p22",
+      "metric": "restructuring and other one-time expenses",
+      "figures": [
+        "$4.2 million to $8.8 million"
+      ],
+      "period": "third quarter ended September 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "one_off"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP operating income — 회사는 비일반회계기준 영업 이익과 가장 직접적으로 비교 가능한 일반회계기준 측정치 간의 조정을 제공할 수 없다",
+      "note_ko": "회사는 비일반회계기준 영업 이익과 가장 직접적으로 비교 가능한 일반회계기준 측정치 간의 조정을 제공할 수 없다",
+      "kind": "fact",
+      "quote": "A reconciliation of forward-looking non-GAAP operating income and free cash flow to the most directly comparable GAAP measures is not available without unreasonable effort because reliable estimates for certain reconciling items are unavailable.",
+      "document_id": "DOC-DE16AABE34662611",
+      "block_id": "p47",
+      "metric": "non-GAAP operating income",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 연간 비용 절감 효과를 기대한다",
+      "figures": [
+        "$60 million to $80 million"
+      ],
+      "quote": "Plan expected to generate approximately $60 million to $80 million of annualized cost savings, or $0.73 to $0.97 on a per diluted share basis",
+      "where": "DOC-DE16AABE34662611#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 희석 주당 연간 비용 절감 효과를 기대한다",
+      "figures": [
+        "$0.73 to $0.97"
+      ],
+      "quote": "Plan expected to generate approximately $60 million to $80 million of annualized cost savings, or $0.73 to $0.97 on a per diluted share basis",
+      "where": "DOC-DE16AABE34662611#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "회사는 연간 비일반회계기준 영업 이익 전망치를 상향 조정했다",
+      "figures": [
+        "$3 million"
+      ],
+      "quote": "The Company is reaffirming its full-year revenue guidance and raising its full-year non-GAAP operating income guidance by $3 million to reflect savings expected to be realized in 2026.",
+      "where": "DOC-DE16AABE34662611#p29"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 일반회계기준 영업 이익 또는 손실에 대한 가이던스를 제공하지 않는다",
+      "figures": [],
+      "quote": "The Company does not provide guidance for GAAP income or loss from operations or cash flows from operating activities.",
+      "where": "DOC-DE16AABE34662611#p47"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 영업 활동으로 인한 현금 흐름에 대한 가이던스를 제공하지 않는다",
+      "figures": [],
+      "quote": "The Company does not provide guidance for GAAP income or loss from operations or cash flows from operating activities.",
+      "where": "DOC-DE16AABE34662611#p47"
+    }
+  ],
+  "context_status": "draft_ready"
+}

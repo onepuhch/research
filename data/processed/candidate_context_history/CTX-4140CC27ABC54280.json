@@ -1,0 +1,140 @@
+{
+  "context_id": "CTX-4140CC27ABC54280",
+  "candidate_id": "CAN-93F2BA020F4C5D68",
+  "ticker": "SM",
+  "issuer_cik": "0000893538",
+  "document_ids": [
+    "DOC-2347B5486A1ED33D"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-2347B5486A1ED33D#p5",
+    "DOC-2347B5486A1ED33D#p10",
+    "DOC-2347B5486A1ED33D#p11",
+    "DOC-2347B5486A1ED33D#p13",
+    "DOC-2347B5486A1ED33D#p15",
+    "DOC-2347B5486A1ED33D#p16",
+    "DOC-2347B5486A1ED33D#p18",
+    "DOC-2347B5486A1ED33D#p26",
+    "DOC-2347B5486A1ED33D#p30",
+    "DOC-2347B5486A1ED33D#p32",
+    "DOC-2347B5486A1ED33D#t4",
+    "DOC-2347B5486A1ED33D#p39",
+    "DOC-2347B5486A1ED33D#t17",
+    "DOC-2347B5486A1ED33D#p68",
+    "DOC-2347B5486A1ED33D#t22",
+    "DOC-2347B5486A1ED33D#t24"
+  ],
+  "input_sha": "4140cc27abc5428041fc2b11955e1624ab218b7dff494e59a8a8692a84c8a4a2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-21T05:15:14+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Adjusted EBITDAX: $1.4 billion — 조정 EBITDAX를 기록했다",
+      "note_ko": "조정 EBITDAX를 기록했다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDAX1 was $1.4 billion.",
+      "document_id": "DOC-2347B5486A1ED33D",
+      "block_id": "p16",
+      "metric": "Adjusted EBITDAX",
+      "figures": [
+        "$1.4 billion"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "production guidance · second-half 2026: 435–440 MBoe/d — 하반기 생산량 가이던스를 상향했다",
+      "note_ko": "하반기 생산량 가이던스를 상향했다",
+      "kind": "guidance",
+      "quote": "Increased second-half 2026 production guidance to 435–440 MBoe/d, including approximately 238 MBbl/d of oil.",
+      "document_id": "DOC-2347B5486A1ED33D",
+      "block_id": "p18",
+      "metric": "production guidance",
+      "figures": [
+        "435–440 MBoe/d"
+      ],
+      "period": "second-half 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "이 발표가 애널리스트의 내년 EPS 예상치 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "희석 주당 순이익을 기록했다",
+      "figures": [
+        "$4.46"
+      ],
+      "quote": "Net income was $4.46 per diluted share; adjusted net income1 was $2.19 per diluted share.",
+      "where": "DOC-2347B5486A1ED33D#p13"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "조정 희석 주당 순이익을 기록했다",
+      "figures": [
+        "$2.19"
+      ],
+      "quote": "Net income was $4.46 per diluted share; adjusted net income1 was $2.19 per diluted share.",
+      "where": "DOC-2347B5486A1ED33D#p13"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "연간 경상 판매비와 관리비 가이던스를 중간값에서 줄였다",
+      "figures": [
+        "$50 million"
+      ],
+      "quote": "Lowered full-year 2026 recurring G&A guidance by $50 million at the midpoint, reflecting accelerated integration and full capture of Merger-related G&A synergies.",
+      "where": "DOC-2347B5486A1ED33D#p11"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

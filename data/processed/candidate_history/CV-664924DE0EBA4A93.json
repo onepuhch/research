@@ -1,0 +1,232 @@
+{
+  "candidate_id": "CAN-D5F91D853BD4402E",
+  "candidate_version": "CV-664924DE0EBA4A93",
+  "identity": {
+    "entity_id": "NYSE:GRNT",
+    "ticker": "GRNT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Granite Ridge Resources, Inc.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "에너지 회사로서 자산을 소유하고 운영하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Granite Ridge Resources, Inc. operates as an energy company. It owns assets in six prolific unconventional basins across the United States. The company is based in Dallas, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "GRNT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GRNT/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:12:04+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "GRNT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GRNT/history",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:12:04+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "GRNT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GRNT/profile",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:12:04+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-DCCE60A559029170",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-10-16T04:56:26+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-7737BF8336FDD7E0",
+    "input_sha": "7737bf8336fdd7e06c7b073ab03d93cc4f347c1321ab0ef09eb722cdc93ed4f8",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Adjusted Net Income: $11.1 million — 회사의 조정 순이익이다",
+        "note_ko": "회사의 조정 순이익이다",
+        "kind": "fact",
+        "quote": "Adjusted Net Income (non-GAAP) totaled $11.1 million, or $0.09 Adjusted Earnings Per Diluted Share (non-GAAP).",
+        "document_id": "DOC-DCCE60A559029170",
+        "block_id": "p8",
+        "metric": "Adjusted Net Income",
+        "figures": [
+          "$11.1 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted EBITDAX: $79.6 million — 회사의 조정 EBITDAX이다",
+        "note_ko": "회사의 조정 EBITDAX이다",
+        "kind": "fact",
+        "quote": "Generated $79.6 million of Adjusted EBITDAX (non-GAAP).",
+        "document_id": "DOC-DCCE60A559029170",
+        "block_id": "p9",
+        "metric": "Adjusted EBITDAX",
+        "figures": [
+          "$79.6 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Oil and natural gas sales · second quarter of 2026: $149.3 million — 회사의 원유 및 천연가스 판매액이다",
+        "note_ko": "회사의 원유 및 천연가스 판매액이다",
+        "kind": "fact",
+        "quote": "Oil and natural gas sales for the second quarter of 2026 were $149.3 million.",
+        "document_id": "DOC-DCCE60A559029170",
+        "block_id": "p20",
+        "metric": "Oil and natural gas sales",
+        "figures": [
+          "$149.3 million"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-DCCE60A559029170",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-10-16T04:56:26+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-16T04:56:46+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.885,
+    "eps_30d": 0.74,
+    "eps_90d": 0.64,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 38.3,
+    "steady": false,
+    "turnaround": false
+  }
+}

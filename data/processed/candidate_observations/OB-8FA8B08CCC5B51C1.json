@@ -1,0 +1,111 @@
+{
+  "observation_id": "OB-8FA8B08CCC5B51C1",
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "candidate_version": "CV-5DC3B47218ED12BC",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:TXO",
+    "ticker": "TXO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-21T05:11:30+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261021T050029Z_39546929296-1.json.gz",
+    "sha256": "e92e7529035ebd74ffe1ab53777ab839863d6c92a9f6e03f26b3fb6fea389cce",
+    "run_id": "39546929296-1",
+    "finished_at": "2026-10-21T05:14:49+00:00"
+  },
+  "eps": {
+    "eps_now": 1.92,
+    "eps_30d": 1.13667,
+    "eps_90d": 0.875,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 119.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 7.438,
+    "yield_change_30_pp": 5.575
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-23",
+    "price_start_date": "2026-07-23",
+    "price_end_expected": "2026-10-20",
+    "price_end_date": "2026-10-20",
+    "close_start": 13.239999771118164,
+    "close_end": 14.050000190734863,
+    "price_pct_90": 6.1,
+    "adj_return_pct_90": 9.2,
+    "pe_change_pct": -51.6
+  },
+  "display_rank": 7,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 4
+    },
+    {
+      "list": "B",
+      "rank": 11
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 779022016,
+  "context_id": "CTX-72174EE1E8789D42",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-17T04:53:34+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 16,
+    "shown": [
+      "CRGY",
+      "TXO",
+      "GRNT"
+    ],
+    "folded": [
+      "SM",
+      "CHRD",
+      "MTDR",
+      "NOG",
+      "KOS"
+    ],
+    "outside": [
+      "COP",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "AR",
+      "MUR"
+    ]
+  },
+  "entity_id": "NYSE:TXO",
+  "approval_version": null,
+  "rendered_at": "2026-10-21T05:15:39+00:00"
+}

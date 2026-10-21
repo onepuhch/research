@@ -1,0 +1,112 @@
+{
+  "context_id": "CTX-F17BD01FE8D4E121",
+  "candidate_id": "CAN-7F0690B785E31226",
+  "ticker": "CLF",
+  "issuer_cik": "0000764065",
+  "document_ids": [
+    "DOC-FB738D337778C4F4",
+    "DOC-067BE90E51AC5E3F"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-FB738D337778C4F4#p17",
+    "DOC-FB738D337778C4F4#p19",
+    "DOC-FB738D337778C4F4#p20",
+    "DOC-FB738D337778C4F4#p27",
+    "DOC-FB738D337778C4F4#p28",
+    "DOC-FB738D337778C4F4#p29",
+    "DOC-FB738D337778C4F4#p39",
+    "DOC-FB738D337778C4F4#t3",
+    "DOC-FB738D337778C4F4#t6",
+    "DOC-FB738D337778C4F4#p58",
+    "DOC-067BE90E51AC5E3F#p17",
+    "DOC-067BE90E51AC5E3F#p21",
+    "DOC-067BE90E51AC5E3F#p28",
+    "DOC-067BE90E51AC5E3F#p29",
+    "DOC-067BE90E51AC5E3F#p62"
+  ],
+  "input_sha": "f17bd01fe8d4e1211120ede0f16d3ba9c0dde10501097d0b09948601c301a2ca",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-21T05:15:14+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Stelco] EBITDA — 스텔코의 에비타 기여는 더욱 증가할 것이다",
+      "note_ko": "스텔코의 에비타 기여는 더욱 증가할 것이다",
+      "kind": "guidance",
+      "quote": "In the meantime, as we concentrate on hot rolled products that actually have a market, total production tonnage at Stelco will be maintained, Stelco’s contribution to Cliffs’ EBITDA will further increase, and approximately 2,000 Canadian jobs are preserved.”",
+      "document_id": "DOC-FB738D337778C4F4",
+      "block_id": "p20",
+      "metric": "EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "subsidiary",
+      "subject_name": "Stelco",
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "mix"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "조정 에비타는 회사가 제시한 가이던스보다 높았다",
+      "figures": [
+        "$612 million"
+      ],
+      "quote": "Third quarter was our strongest quarter in three years, with adjusted EBITDA of $612 million, a number above the $575 million guidance we provided three months ago.",
+      "where": "DOC-FB738D337778C4F4#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 4분기 조정 에비타가 증가할 것으로 예상한다",
+      "figures": [
+        "$715 million"
+      ],
+      "quote": "The Company expects fourth-quarter 2026 adjusted EBITDA2 to be approximately $715 million, an increase from the third quarter as a result of increased pricing, partially offset by seasonality, increas",
+      "where": "DOC-FB738D337778C4F4#p28"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 2027년 조정 에비타가 40억 달러를 초과할 것으로 예상한다",
+      "figures": [
+        "exceed $4 billion"
+      ],
+      "quote": "Based on 2027 contract changes and prevailing price forecasts, the Company would expect 2027 adjusted EBITDA to exceed $4 billion.",
+      "where": "DOC-FB738D337778C4F4#p29"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "스텔코는 3분기에 에비타에 긍정적으로 기여했다",
+      "figures": [],
+      "quote": "The Canadian hot-rolled market has improved substantially, turning Stelco into a positive contributor to EBITDA in Q3.",
+      "where": "DOC-FB738D337778C4F4#p20"
+    },
+    {
+      "what": "limitation",
+      "reason": "unknown_block",
+      "note_ko": "회사는 2026년 4분기와 2027년 전체 조정 에비타를 가장 직접적으로 비교 가능한 GAAP 재무 측정치인 순이익과 합리적인 노력 없이 조정할 수 없다",
+      "figures": [],
+      "quote": "We are unable to reconcile, without unreasonable effort, our expected adjusted EBITDA for the fourth quarter of 2026 and full-year 2027 to its most directly comparable GAAP financial measure, net inco",
+      "where": "DOC-FB738D33738C4F4#p58"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

@@ -1,0 +1,157 @@
+{
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "candidate_version": "CV-67E2B3B4DDDDD740",
+  "identity": {
+    "entity_id": "NYSE:MPC",
+    "ticker": "MPC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Marathon Petroleum Corporation",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MPC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:01:17+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MPC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/history",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:01:17+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MPC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MPC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:01:17+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-683FD7B3F9B87824",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-BE1000530D20CF2E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000061/mpc-20260630.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-10-03T05:43:20+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-40767A82EDB3ADE5",
+    "input_sha": "40767a82edb3ade5f116a7942dab28a7d6cbf56c00007a446cb395ba5be3d3dc",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-683FD7B3F9B87824",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-BE1000530D20CF2E",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1510295/000151029526000061/mpc-20260630.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-10-03T05:43:20+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-15T05:06:33+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 58.32262,
+    "eps_30d": 43.51118,
+    "eps_90d": 29.1915,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 12,
+    "down30": 2,
+    "pct_90": 99.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

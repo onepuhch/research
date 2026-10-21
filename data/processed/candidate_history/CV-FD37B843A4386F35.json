@@ -1,0 +1,181 @@
+{
+  "candidate_id": "CAN-C05377BEC03AE25C",
+  "candidate_version": "CV-FD37B843A4386F35",
+  "identity": {
+    "entity_id": "NASDAQ:VSEC",
+    "ticker": "VSEC",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "VSE Corporation",
+  "industry": "Aerospace & Defense",
+  "sector": "Industrials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "항공 운송 자산의 부품 유통 및 유지보수, 수리 서비스를 상업 및 정부 시장에 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "VSE Corporation engages in providing aviation aftermarket parts distribution and maintenance, repair, and overhaul services for air transportation assets for commercial and government markets. It offers its services to global client base of commercial airlines, regional airlines, air cargo transporters, MRO integrators and providers, aviation manufacturers, corporate and private aircraft owners, and fixed-base operators. The company was incorporated in 1959 and is headquartered in Miramar, Florida."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "VSEC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSEC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:06:37+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "VSEC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSEC/history",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:06:37+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "VSEC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSEC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:06:37+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-637999F6299E19AE",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/102752/000010275226000055/vse-prxq2x2026earningsrele.htm",
+      "title": "SEC 8-K EX-99.1 — VSE CORPORATION EX 99.1 - PRESS RELEASE DATED AUGUST 5, 2026",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-05T06:05:58+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-A745AD1259E26C4D",
+    "input_sha": "a745ad1259e26c4de75d41e011bf480de5053d3041f2a872c1999dbe0d7353ee",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "매출(revenue) · 2026 — 회사는 연간 매출액 가이던스를 상향 조정했다",
+        "note_ko": "회사는 연간 매출액 가이던스를 상향 조정했다",
+        "kind": "guidance",
+        "quote": "The strength of our first-half performance, together with our visibility into the remainder of the year, supports our decision to raise both revenue and Adjusted EBITDA margin(2) guidance for 2026,” concluded Mr. Cuomo.",
+        "document_id": "DOC-637999F6299E19AE",
+        "block_id": "p22",
+        "metric": "revenue",
+        "figures": [],
+        "period": "2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "Adjusted EPS (Diluted) from continuing operations · second quarter of 2026 — 조정 주당순이익 계산에 무형자산 상각 및 주식 기반 보상이 포함되도록 업데이트되었다",
+        "note_ko": "조정 주당순이익 계산에 무형자산 상각 및 주식 기반 보상이 포함되도록 업데이트되었다",
+        "kind": "fact",
+        "quote": "Beginning with the second quarter of 2026, Adjusted Net Income from Continuing Operations and Adjusted EPS (Diluted) from Continuing Operations now include adjustments for amortization of intangible assets and stock-based compensation, with retrospective adjustments included for prior periods presented.",
+        "document_id": "DOC-637999F6299E19AE",
+        "block_id": "p44",
+        "metric": "Adjusted EPS (Diluted) from continuing operations",
+        "figures": [],
+        "period": "second quarter of 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-637999F6299E19AE",
+        "title": "VSE CORPORATION EX 99.1 - PRESS RELEASE DATED AUGUST 5, 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/102752/000010275226000055/vse-prxq2x2026earningsrele.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-05T06:05:58+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-20T05:15:25+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 8.26308,
+    "eps_30d": 8.01393,
+    "eps_90d": 5.68165,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 45.4,
+    "steady": false,
+    "turnaround": false
+  }
+}

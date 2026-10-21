@@ -1,0 +1,245 @@
+{
+  "candidate_id": "CAN-ECB2C73CA19DA4AB",
+  "candidate_version": "CV-93CDB39D40FE31CD",
+  "identity": {
+    "entity_id": "NYSE:BP",
+    "ticker": "BP",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "BP p.l.c.",
+  "industry": "Oil & Gas Integrated",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "석유, 가스, 재생에너지 사업을 하며 연료, 윤활유, 충전 서비스 등을 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "BP p.l.c., an integrated energy company, engages in the oil and gas business worldwide. The company operates through Gas & Low Carbon Energy, Oil Production & Operations, and Customers & Products segments. It engages in the production of natural gas, marketing, and trading activities, as well as solar, wind, and hydrogen businesses. The company also offers aviation fuel products and services, such as jet fuel; aviation gasoline; UL91 aviation fuel; and sustainable aviation fuel. In addition, it engages in the convenience and retail fuel; EV charging; Castrol lubricants and fluids; B2B; midstre"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "BP analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BP/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:01:18+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "BP daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BP/history",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:01:18+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "BP company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BP/profile",
+      "published_at": null,
+      "observed_at": "2026-10-21T05:01:18+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-2AB79E941098A6C5",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/313807/000165495426008895/a6390y.htm",
+      "title": "SEC 6-K 6-K — 3Q26 BP TRADING STATEMENT PART 1 OF 1",
+      "published_at": null,
+      "filed_at": "2026-10-13",
+      "observed_at": "2026-10-21T05:14:51+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-5304D2E53A7879D9",
+    "input_sha": "5304d2e53a7879d97cbad2155b4a9766f1b62a7cdd7f0823ab49cb58af5a1a1b",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Oil production & operations] realizations · Third quarter: $(0.2) to (0.4) billion — 석유 생산 및 운영 부문의 실현액은 이전 분기 대비 감소할 것으로 예상된다",
+        "note_ko": "석유 생산 및 운영 부문의 실현액은 이전 분기 대비 감소할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "Oil production & operations segment: realizations, compared to the prior quarter, are expected to have an impact in the range of $(0.2) to (0.4) billion including the impact of changes in non-Henry Hub natural gas markers.",
+        "document_id": "DOC-2AB79E941098A6C5",
+        "block_id": "p36",
+        "metric": "realizations",
+        "figures": [
+          "$(0.2) to (0.4) billion"
+        ],
+        "period": "Third quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Oil production & operations",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "price"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Net debt · end of the third quarter: $13.5 to 14.5 billion — 순부채는 하이브리드 증권 상환을 포함하여 감소할 것으로 예상된다",
+        "note_ko": "순부채는 하이브리드 증권 상환을 포함하여 감소할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "Net debt at the end of the third quarter is expected to be in the range of $13.5 to 14.5 billion (2Q 2026: $22.3 billion). This reduction includes:",
+        "document_id": "DOC-2AB79E941098A6C5",
+        "block_id": "p42",
+        "metric": "Net debt",
+        "figures": [
+          "$13.5 to 14.5 billion"
+        ],
+        "period": "end of the third quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "buyback_sharecount"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "group results · third quarter 2026 — 제시된 정보는 그룹 실적에 영향을 미칠 수 있는 모든 요소를 포괄하지 않으며, 해당 실적에 대한 추정치가 아니다",
+        "note_ko": "제시된 정보는 그룹 실적에 영향을 미칠 수 있는 모든 요소를 포괄하지 않으며, 해당 실적에 대한 추정치가 아니다",
+        "kind": "fact",
+        "quote": "The information presented is not comprehensive of all factors which may impact bp's group results for the third quarter 2026 and is not an estimate of those results.",
+        "document_id": "DOC-2AB79E941098A6C5",
+        "block_id": "p26",
+        "metric": "group results",
+        "figures": [],
+        "period": "third quarter 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "financial reporting processes — 제공된 모든 정보는 재무 보고 프로세스의 최종 확정 여부에 따라 달라질 수 있으며 실제 결과는 다를 수 있다",
+        "note_ko": "제공된 모든 정보는 재무 보고 프로세스의 최종 확정 여부에 따라 달라질 수 있으며 실제 결과는 다를 수 있다",
+        "kind": "fact",
+        "quote": "All information provided is subject to the finalization of bp's financial reporting processes and actual results may vary.",
+        "document_id": "DOC-2AB79E941098A6C5",
+        "block_id": "p27",
+        "metric": "financial reporting processes",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "complete",
+    "documents": [
+      {
+        "document_id": "DOC-2AB79E941098A6C5",
+        "title": "3Q26 BP TRADING STATEMENT PART 1 OF 1",
+        "url": "https://www.sec.gov/Archives/edgar/data/313807/000165495426008895/a6390y.htm",
+        "filed_at": "2026-10-13",
+        "observed_at": "2026-10-21T05:14:51+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-21T05:15:14+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.76636,
+    "eps_30d": 4.88287,
+    "eps_90d": 4.11566,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 8,
+    "down30": 0,
+    "pct_90": 40.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

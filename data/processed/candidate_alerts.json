@@ -1001,6 +1001,24 @@
       "payload_text": "<b>🆕 새 발굴 후보 · TTMI TTM Technologies, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\nTTM 테크놀로지스는 임무 시스템, 무선 주파수 부품, 인쇄 회로 기판 및 관련 어셈블리를 제조 및 판매합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $5.40 → 지금 $7.86 (+46%) · 주가 같은 기간 -31.5%\n\n👍 최근 30일 분석가 3명 중 4명이 올림(내린 사람 없음)\n👍 주가는 같은 90일에 -32%로, 이익 예상 상향(+46%)보다 덜 움직임\n👎 이 회사를 보는 분석가가 3명뿐이라 예상치가 몇 명의 수정에 크게 흔들림\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-486C908614BC89B1</code> · 추적 <code>/track CAN-486C908614BC89B1</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "86ad9dd06165ec02425e32a6d98ed55d0b5d23ef1dd99bcc00c148a4be860796",
       "message_id": 201
+    },
+    "NASDAQ:CMRC|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:CMRC",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-8D0129B58E252637",
+      "candidate_version": "CV-5A0835971888946B",
+      "observation_id": "OB-80C145A6E52D5036",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-10-21",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39546929296-1",
+      "reserved_at": "2026-10-21T05:15:49+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · CMRC Commerce.com, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n상인들이 디지털 상거래 경험을 관리하고 최적화할 수 있도록 인공지능 기반 소프트웨어 플랫폼과 솔루션을 제공하여 돈을 번다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.47 → 지금 $0.58 (+22%) · 주가 같은 기간 +45.9%\n\n👍 최근 30일 분석가 7명 중 4명이 올림(내린 사람 없음)\n👎 주가가 같은 90일에 +46% 올라 이익 예상 상향(+22%)만큼 이미 움직임\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-8D0129B58E252637</code> · 추적 <code>/track CAN-8D0129B58E252637</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "2398e6cc78555187b38cb0a5cc25eb5818d33eb45dc565d2730a28ef332c9927"
     }
   },
   "bootstrap": {
@@ -1055,6 +1073,42 @@
           "day": "2026-10-17",
           "snapshot_sha256": "9168a55df2eaa160e878e0670e92e3a85cf5ed3b76ef1821071964f9c8b56d58",
           "eps_now": 7.4002,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:CLF|eps-revision-review:v1": {
+        "baseline_id": "OB-1DB9B74067ADDE80",
+        "first": {
+          "observation_id": "OB-95E344A27ECBB20A",
+          "baseline_id": "OB-95E344A27ECBB20A",
+          "observed_at": "2026-10-21T05:14:49+00:00",
+          "day": "2026-10-21",
+          "snapshot_sha256": "e92e7529035ebd74ffe1ab53777ab839863d6c92a9f6e03f26b3fb6fea389cce",
+          "eps_now": 1.00178,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:CVI|eps-revision-review:v1": {
+        "baseline_id": "OB-CCD37ACAC15FA702",
+        "first": {
+          "observation_id": "OB-F7A9843D76378CA3",
+          "baseline_id": "OB-F7A9843D76378CA3",
+          "observed_at": "2026-10-21T05:14:49+00:00",
+          "day": "2026-10-21",
+          "snapshot_sha256": "e92e7529035ebd74ffe1ab53777ab839863d6c92a9f6e03f26b3fb6fea389cce",
+          "eps_now": 4.55204,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",
