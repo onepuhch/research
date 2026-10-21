@@ -163,7 +163,10 @@
     "ECHO",
     "LIFE",
     "OVV",
-    "PBR-A"
+    "PBR-A",
+    "CMRC",
+    "STLD",
+    "VG"
   ],
   "days": {
     "2026-10-06": {
@@ -225,13 +228,17 @@
     "2026-10-20": {
       "requests": 9,
       "retries": 0
+    },
+    "2026-10-21": {
+      "requests": 6,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 15,
-      "last_attempt_at": "2026-10-20T05:16:09.177518+00:00",
+      "attempts": 16,
+      "last_attempt_at": "2026-10-21T05:15:56.614666+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1294,8 +1301,8 @@
       "reason": null
     },
     "TTMI": {
-      "attempts": 2,
-      "last_attempt_at": "2026-10-20T05:16:09.177518+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-10-21T05:15:56.614666+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1414,8 +1421,8 @@
       "reason": null
     },
     "CRGY": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-20T05:16:09.177518+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-21T05:15:56.614666+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1536,6 +1543,30 @@
     "PBR-A": {
       "attempts": 4,
       "last_attempt_at": "2026-10-20T05:16:09.177518+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CMRC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-21T05:15:56.614666+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "STLD": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-21T05:15:56.614666+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "VG": {
+      "attempts": 1,
+      "last_attempt_at": "2026-10-21T05:15:56.614666+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
