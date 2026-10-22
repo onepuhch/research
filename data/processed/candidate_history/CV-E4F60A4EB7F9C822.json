@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-A00785AF9CF7E07A",
+  "candidate_version": "CV-E4F60A4EB7F9C822",
+  "identity": {
+    "entity_id": "NYSE:SEI",
+    "ticker": "SEI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Solaris Energy Infrastructure, Inc.",
+  "industry": "Oil & Gas Equipment & Services",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Solaris Energy Infrastructure, Inc. provides modular and scalable equipment-based solutions for power generation, control and distribution, and management of raw materials used in the completion of oil and natural gas wells in the United States. It operates in Solaris Power Solutions and Solaris Logistics Solutions segments. The Solaris Power Solutions segment delivers power generation, control, and distribution solutions; and offers support to data center, energy, and other commercial and industrial sector. It also provides site preparation, specialized structural and foundational work, and g"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SEI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SEI/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:52+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SEI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SEI/history",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:52+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SEI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SEI/profile",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:52+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.66041,
+    "eps_30d": 3.48575,
+    "eps_90d": 2.33407,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 56.8,
+    "steady": false,
+    "turnaround": false
+  }
+}

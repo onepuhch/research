@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-B85C9F47594458D2",
+  "candidate_version": "CV-4058EB32C08DE13A",
+  "identity": {
+    "entity_id": "NASDAQ:TBLA",
+    "ticker": "TBLA",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Taboola.com Ltd.",
+  "industry": "Internet Content & Information",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Taboola.com Ltd., together with its subsidiaries, operates an artificial intelligence-based algorithmic engine platform in Israel, the United States, the United Kingdom, Germany, and internationally. It offers Taboola, which is a platform that partners with websites, devices, and mobile apps to recommend editorial content and advertisements on the open web. The company was incorporated in 2006 and is headquartered in New York, New York."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TBLA analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TBLA/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:11:16+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TBLA daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TBLA/history",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:11:16+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TBLA company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TBLA/profile",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:11:16+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.32143,
+    "eps_30d": 0.31545,
+    "eps_90d": 0.232,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 7,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 38.5,
+    "steady": true,
+    "turnaround": false
+  }
+}

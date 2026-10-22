@@ -1027,6 +1027,194 @@
       "payload_text": "<b>🆕 새 발굴 후보 · CMRC Commerce.com, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n상인들이 디지털 상거래 경험을 관리하고 최적화할 수 있도록 인공지능 기반 소프트웨어 플랫폼과 솔루션을 제공하여 돈을 번다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.47 → 지금 $0.58 (+22%) · 주가 같은 기간 +45.9%\n\n👍 최근 30일 분석가 7명 중 4명이 올림(내린 사람 없음)\n👎 주가가 같은 90일에 +46% 올라 이익 예상 상향(+22%)만큼 이미 움직임\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-8D0129B58E252637</code> · 추적 <code>/track CAN-8D0129B58E252637</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "2398e6cc78555187b38cb0a5cc25eb5818d33eb45dc565d2730a28ef332c9927",
       "message_id": 202
+    },
+    "NYSE:CLF|eps-revision-review:v1|material_update|B:OB-1DB9B74067ADDE80>OB-95E344A27ECBB20A": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:CLF",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-7F0690B785E31226",
+      "candidate_version": "CV-74D4A140EBB89A59",
+      "observation_id": "OB-2CEF37F43B26B978",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-1DB9B74067ADDE80",
+          "observed_at": "2026-10-01T06:22:34+00:00",
+          "day": "2026-10-01",
+          "observation_id": "OB-1DB9B74067ADDE80",
+          "snapshot_sha256": "c73435006bdb72d794fdf33ac500fdb67c1ae306c0636327ae7298515fe2679f",
+          "eps_now": 0.77259,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-95E344A27ECBB20A",
+          "baseline_id": "OB-95E344A27ECBB20A",
+          "observed_at": "2026-10-21T05:14:49+00:00",
+          "day": "2026-10-21",
+          "snapshot_sha256": "e92e7529035ebd74ffe1ab53777ab839863d6c92a9f6e03f26b3fb6fea389cce",
+          "eps_now": 1.00178,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-2CEF37F43B26B978",
+          "baseline_id": "OB-2CEF37F43B26B978",
+          "observed_at": "2026-10-22T05:14:57+00:00",
+          "day": "2026-10-22",
+          "snapshot_sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+          "eps_now": 1.33512,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 72.81,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-1DB9B74067ADDE80>OB-95E344A27ECBB20A"
+        ]
+      },
+      "day": "2026-10-22",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39725432827-1",
+      "reserved_at": "2026-10-22T05:15:27+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CLF Cleveland-Cliffs Inc.</b>\n기준: 2026-10-01 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $0.77 → 현재 $1.34 (+73%), 2026-10-21·2026-10-22 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n최근 30일 상향 수정 1건(분석가 6명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인\n상세 <code>/candidate CAN-7F0690B785E31226</code> · 추적 <code>/track CAN-7F0690B785E31226</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "c5fda441c619db69c2109bf1b02fb84e369cc28c73f63892eb16a7947c55efcc"
+    },
+    "NYSE:CVI|eps-revision-review:v1|material_update|B:OB-CCD37ACAC15FA702>OB-F7A9843D76378CA3": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:CVI",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-F451582E2056444F",
+      "candidate_version": "CV-7CA97D06DCCEAF83",
+      "observation_id": "OB-4D030CA74CC16F2B",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-CCD37ACAC15FA702",
+          "observed_at": "2026-10-03T05:43:19+00:00",
+          "day": "2026-10-03",
+          "observation_id": "OB-CCD37ACAC15FA702",
+          "snapshot_sha256": "096c90fd47eb46740818c48838d43d777e95507cb3950bf6a583ecae1f600e20",
+          "eps_now": 3.50959,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-F7A9843D76378CA3",
+          "baseline_id": "OB-F7A9843D76378CA3",
+          "observed_at": "2026-10-21T05:14:49+00:00",
+          "day": "2026-10-21",
+          "snapshot_sha256": "e92e7529035ebd74ffe1ab53777ab839863d6c92a9f6e03f26b3fb6fea389cce",
+          "eps_now": 4.55204,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-4D030CA74CC16F2B",
+          "baseline_id": "OB-4D030CA74CC16F2B",
+          "observed_at": "2026-10-22T05:14:57+00:00",
+          "day": "2026-10-22",
+          "snapshot_sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+          "eps_now": 4.55204,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 29.7,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-CCD37ACAC15FA702>OB-F7A9843D76378CA3"
+        ]
+      },
+      "day": "2026-10-22",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39725432827-1",
+      "reserved_at": "2026-10-22T05:15:27+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CVI CVR Energy, Inc.</b>\n기준: 2026-10-03 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $3.51 → 현재 $4.55 (+30%), 2026-10-21·2026-10-22 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-F451582E2056444F</code> · 추적 <code>/track CAN-F451582E2056444F</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "d25864509a0bc1a28d683673efb48764116e0bcb86c48d2dca9493383e1d0f4a"
+    },
+    "NYSE:KOS|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:KOS",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-2365AA0167A432A4",
+      "candidate_version": "CV-242C0B94EAAF6EDA",
+      "observation_id": "OB-74BE3290C73769A2",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-10-22",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39725432827-1",
+      "reserved_at": "2026-10-22T05:15:27+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · KOS Kosmos Energy Ltd.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n회사 설명 확인 중 (KOS)\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.23 → 지금 $0.47 (+101%) · 주가 같은 기간 +2.7%\n\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+51%)\n👍 주가는 같은 90일에 +3%로, 이익 예상 상향(+101%)보다 덜 움직임\n👎 최근 30일 분석가 4명 중 1명만 올림 — 한 곳의 수정일 수 있음\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-2365AA0167A432A4</code> · 추적 <code>/track CAN-2365AA0167A432A4</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "5f2d2892a021fc7ac956d76012d683dcf6730226ecdd691ea24119b48033f5ab"
     }
   },
   "bootstrap": {
@@ -1117,6 +1305,24 @@
           "day": "2026-10-21",
           "snapshot_sha256": "e92e7529035ebd74ffe1ab53777ab839863d6c92a9f6e03f26b3fb6fea389cce",
           "eps_now": 4.55204,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NASDAQ:SPCX|eps-revision-review:v1": {
+        "baseline_id": "OB-F3A3612CE36AA85B",
+        "first": {
+          "observation_id": "OB-35755E742AE3EB15",
+          "baseline_id": "OB-35755E742AE3EB15",
+          "observed_at": "2026-10-22T05:14:57+00:00",
+          "day": "2026-10-22",
+          "snapshot_sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+          "eps_now": 3.18818,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",

@@ -1,0 +1,204 @@
+{
+  "candidate_id": "CAN-93F2BA020F4C5D68",
+  "candidate_version": "CV-4A1CE300B53DCAA3",
+  "identity": {
+    "entity_id": "NYSE:SM",
+    "ticker": "SM",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "SM Energy Company",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "SM Energy Company, an independent energy company, engages in the acquisition, exploration, development, and production of oil, gas, and natural gas liquids in the United States. The company holds working interests in oil and gas producing wells in the Midland Basin, South Texas, Uinta Basin, and DJ Basin. The company was formerly known as St. Mary Land & Exploration Company and changed its name to SM Energy Company in May 2010. SM Energy Company was founded in 1908 and is headquartered in Denver, Colorado."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SM analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SM/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:07+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SM daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SM/history",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:07+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SM company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SM/profile",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:07+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-2347B5486A1ED33D",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/893538/000089353826000119/exhibit99108052026er.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-21T05:14:51+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-4140CC27ABC54280",
+    "input_sha": "4140cc27abc5428041fc2b11955e1624ab218b7dff494e59a8a8692a84c8a4a2",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Adjusted EBITDAX: $1.4 billion — 조정 EBITDAX를 기록했다",
+        "note_ko": "조정 EBITDAX를 기록했다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDAX1 was $1.4 billion.",
+        "document_id": "DOC-2347B5486A1ED33D",
+        "block_id": "p16",
+        "metric": "Adjusted EBITDAX",
+        "figures": [
+          "$1.4 billion"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "production guidance · second-half 2026: 435–440 MBoe/d — 하반기 생산량 가이던스를 상향했다",
+        "note_ko": "하반기 생산량 가이던스를 상향했다",
+        "kind": "guidance",
+        "quote": "Increased second-half 2026 production guidance to 435–440 MBoe/d, including approximately 238 MBbl/d of oil.",
+        "document_id": "DOC-2347B5486A1ED33D",
+        "block_id": "p18",
+        "metric": "production guidance",
+        "figures": [
+          "435–440 MBoe/d"
+        ],
+        "period": "second-half 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "이 발표가 애널리스트의 내년 EPS 예상치 상향을 일으켰는지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-2347B5486A1ED33D",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/893538/000089353826000119/exhibit99108052026er.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-21T05:14:51+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-21T05:15:14+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 8.43262,
+    "eps_30d": 7.61673,
+    "eps_90d": 7.33659,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 11,
+    "up30": 6,
+    "down30": 1,
+    "pct_90": 14.9,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -7825,7 +7825,7 @@
     "updated_at": "2026-10-21T04:59:12.607152+00:00"
   },
   "0001336706-26-000072": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -7836,13 +7836,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1336706/000133670626000072/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1336706/000133670626000072/q32026earningscallslides.htm",
       "published_at": "2026-10-20",
-      "raw_text": "NORTHPOINTE BANCSHARES INC (NPB) (CIK 0001336706) EX-99.2 2026-10-20.  Vast majority of production is sold in the secondary market  Specialize in first-lien home equity lines tied seamlessly to demand deposit sweep account $11.5M Net gain on sale of loans (1) $493.3M Residential mortgage originations 7.46% AIO loan yield (2) Residential Lending Q3 2026 Highlights $30.5M AIO loan growth (excluding purchased loans)  Focus on servicing first-lien home equity lines tied seamlessly to demand deposit sweep account  Rating agency (Fitch) approved servicer for securitized loans  Approved servicer and sub-servicer for Fannie Mae, Freddie Mac, FHLB, Ginnie Mae, and various private investors  Approved to accept and hold custodial deposits $6.0B UPB of loans serviced for others $2.6M Loan servicing fees (4) Specialized Mortgage Servicing Q3 2026 Highlights  Direct to customer deposit platform and product suite  Digital delivery of retail deposit banking nationwide  Single-branch operation in Grand Rapids, Michigan  Simple online account opening experience with user-friendly features  Deposit customer focus tied to Balance Sheet funding strategy $5.4B Total deposits $294.3M Non-interest bearing demand Digital Deposit Banking Q3 2026 Highlights $24.7K Average retail depositor balance 6.39% Liquidity ratio (3) 17.4K # of loans serviced 8 Retail Banking 1 2 3 (1) Excludes increases or decreases related to change in fair value of loans held for investment and lender risk account (“LRA”), see slide 14 for more detail."
+      "raw_text": "NORTHPOINTE BANCSHARES INC (NPB) (CIK 0001336706) EX-99.2 2026-10-20.  Vast majority of production is sold in the secondary market  Specialize in first-lien home equity lines tied seamlessly to demand deposit sweep account $11.5M Net gain on sale of loans (1) $493.3M Residential mortgage originations 7.46% AIO loan yield (2) Residential Lending Q3 2026 Highlights $30.5M AIO loan growth (excluding purchased loans)  Focus on servicing first-lien home equity lines tied seamlessly to demand deposit sweep account  Rating agency (Fitch) approved servicer for securitized loans  Approved servicer and sub-servicer for Fannie Mae, Freddie Mac, FHLB, Ginnie Mae, and various private investors  Approved to accept and hold custodial deposits $6.0B UPB of loans serviced for others $2.6M Loan servicing fees (4) Specialized Mortgage Servicing Q3 2026 Highlights  Direct to customer deposit platform and product suite  Digital delivery of retail deposit banking nationwide  Single-branch operation in Grand Rapids, Michigan  Simple online account opening experience with user-friendly features  Deposit customer focus tied to Balance Sheet funding strategy $5.4B Total deposits $294.3M Non-interest bearing demand Digital Deposit Banking Q3 2026 Highlights $24.7K Average retail depositor balance 6.39% Liquidity ratio (3) 17.4K # of loans serviced 8 Retail Banking 1 2 3 (1) Excludes increases or decreases related to change in fair value of loans held for investment and lender risk account (“LRA”), see slide 14 for more detail.",
+      "_model_response": {
+        "evidence_quote": "NORTHPOINTE BANCSHARES INC (NPB) (CIK 0001336706) EX-99.2 2026-10-20. Residential Lending Q3 2026 Highlights $11.5M Net gain on sale of loans (1) $493.3M Residential mortgage originations 7.46% AIO loan yield (2) Residential Lending Q3 2026 Highlights $30.5M AIO loan growth (excluding purchased loans) Specialized Mortgage Servicing Q3 2026 Highlights $6.0B UPB of loans serviced for others $2.6M Loan servicing fees (4) Specialized Mortgage Servicing Q3 2026 Highlights 17.4K # of loans serviced Digital Deposit Banking Q3 2026 Highlights $5.4B Total deposits $294.3M Non-interest bearing demand Digital Deposit Banking Q3 2026 Highlights $24.7K Average retail depositor balance 6.39% Liquidity ratio (3)",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "이 항목은 NORTHPOINTE BANCSHARES INC의 2026년 3분기 실적 하이라이트를 담은 루틴 공시입니다. 이는 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 미래 실적에 대한 조기 지표가 아닌, 이미 발생한 과거 실적을 보고하는 내용이므로 투자 발굴 신호로 볼 수 없습니다.",
+        "subject": "NORTHPOINTE BANCSHARES INC",
+        "theme": "은행/금융",
+        "signal_type": "기타",
+        "what_happened": "NORTHPOINTE BANCSHARES INC가 2026년 3분기 주택담보대출, 모기지 서비스, 디지털 예금 부문의 주요 실적 지표들을 발표했습니다.",
+        "why_it_matters": "분기별 실적 발표는 회사의 재무 상태를 파악하는 데 중요하지만, 이 단일 공시만으로는 미래 투자 기회를 시사하는 조기 신호로 보기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "이 항목은 NORTHPOINTE BANCSHARES INC의 2026년 3분기 실적 하이라이트를 담은 루틴 공시입니다. 이는 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 미래 실적에 대한 조기 지표가 아닌, 이미 발생한 과거 실적을 보고하는 내용이므로 투자 발굴 신호로 볼 수 없습니다."
     },
     "content_hash": "e8d410e8cb118ca3240d8ea31b97cbe04ec867ba7bff858ce102db61faf97fbe",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-21T05:00:24+00:00",
-    "reason": "deferred_budget"
+    "attempts": 2,
+    "updated_at": "2026-10-22T05:00:27+00:00",
+    "reason": "이 항목은 NORTHPOINTE BANCSHARES INC의 2026년 3분기 실적 하이라이트를 담은 루틴 공시입니다. 이는 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 미래 실적에 대한 조기 지표가 아닌, 이미 발생한 과거 실적을 보고하는 내용이므로 투자 발굴 신호로 볼 수 없습니다.",
+    "processed_day": "2026-10-22",
+    "processed_run": "39725432827-1"
   },
   "0001104659-26-117113": {
     "status": "deferred",
@@ -7864,7 +7894,7 @@
     "updated_at": "2026-10-21T04:59:12.607152+00:00"
   },
   "0001628280-26-066548": {
-    "status": "deferred",
+    "status": "retry",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -7879,8 +7909,14 @@
     },
     "content_hash": "c09de8827d06a808166426fa9b4df0507ddf26a3d20c359c188ae326dcfa619a",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-21T04:59:12.607152+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-22T05:00:40+00:00",
+    "reason": "provider_overloaded",
+    "http_status": 503,
+    "next_retry_at": "2026-10-22T05:30:46+00:00",
+    "failure_class": "unserved",
+    "failure_day": "2026-10-22",
+    "failure_run": "39725432827-1"
   },
   "0000883948-26-000077": {
     "status": "deferred",
@@ -7898,7 +7934,163 @@
     },
     "content_hash": "1ffd531bd7407651f60a3753820a5e36f02ca7f1d5b407005c6a24b864d978a1",
     "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-22T05:00:44+00:00",
+    "reason": "provider_overloaded",
+    "failure_class": "unserved",
+    "failure_day": "2026-10-22",
+    "failure_run": "39725432827-1"
+  },
+  "0001590714-26-000069": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001590714-26-000069",
+      "entity_id": "CIK:0001590714",
+      "source_role": "candidate",
+      "title": "Element Solutions Inc (ESI) (CIK 0001590714) EX-99.1 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/1590714/000159071426000069/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1590714/000159071426000069/aearningsreleaseex99120269.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "Element Solutions Inc (ESI) (CIK 0001590714) EX-99.1 2026-10-21. This growth is the product of several years of focused investment in technology, customer engagement, capacity expansion and operational excellence, which have strengthened our competitive position in the fastest-growing and highest-value areas of the electronics ecosystem. EX-99.1 2 aearningsreleaseex99120269.htm EX-99.1 Document EXHIBIT 99.1 Element Solutions Inc Reports Record Results for Third Quarter 2026 • Net sales of $995 million, representing 52% growth on a reported basis and 13% organic growth from the third quarter of 2025 • Reported net income of $66 million, compared to $39 million in the same period last year • Adjusted EBITDA of $191 million, representing 29% constant currency growth • Third quarter 2026 Cash flows from operating activities of $159 million and free cash flow of $135 million • Increasing 2026 Adjusted EBITDA guidance to approximately $720 million Miami, Fla., October 21, 2026 -- Element Solutions Inc (NYSE:ESI) (“Element Solutions” or the “Company”), a global and diversified specialty chemicals technology company, today announced its financial results for the three and nine months ended September 30, 2026. Executive Commentary Chief Executive Officer Benjamin Gliklich commented, “Our team continued to execute exceptionally well and delivered another quarter of record results. We are translating the tailwinds in the Electronics market to profitable growth, and seizing the opportunities created by the pace of technological change to gain market share. Demand across AI infrastructure and other high-performance electronics applications drove broad-based double-digit organic growth in each of our Electronics verticals. This growth is the product of several years of focused investment in technology, customer engagement, capacity expansion and operational excellence, which have strengthened our competitive position in the fastest-growing and highest-value areas of the electroni"
+    },
+    "content_hash": "c9c16dfcb5163fb7fa3448e20d341d2ac9306900e3888c528bef370e0d88b7fb",
+    "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-21T04:59:12.607152+00:00"
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0001628280-26-066738": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-066738",
+      "entity_id": "CIK:0001318605",
+      "source_role": "demand_evidence",
+      "title": "Tesla, Inc. (TSLA) (CIK 0001318605) EX-99.1 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "Tesla, Inc. (TSLA) (CIK 0001318605) EX-99.1 2026-10-21. Cash We will manage the business such that we ensure a strong balance sheet, maintaining sufficient liquidity to fund our product roadmap, long-term capacity expansion plans – including further vertical integration – and other expenses. EX-99.1 2 exhibit9914.htm EX-99.1 exhibit9914 Q3 2026 Update 1 Exhibit 99.1 Highlights 03 Financial Summary 04 Operational Summary 05 Manufacturing & Hardware 06 Supporting Infrastructure 07 SI & Other Services 08 Outlook 09 Photos & Charts 10 Key Metrics 23 Financial Statements 26 Additional Information 32 2 S U M M A R YH I G H L I G H T S (1) Refer to the Reconciliation of GAAP to Non–GAAP Financial Information slide (2) Free cash flow = operating cash flow less capex; (3) Includes cash, cash equivalents and short-term investments; (4)Active driver supervision required; does not make the vehicle autonomous; Note: all information herein refers to the current quarter unless otherwise noted. Profitability $0.7B GAAP operating income $0.8B GAAP net income $1.7B non-GAAP net income1 In Q3, we maintained strong momentum on many projects spanning Super Intelligence (SI), robotics and renewable energy that will be critical to building a future of Amazing Abundance. Strength in our core business also continued, and we achieved our second consecutive quarter of TTM revenue in excess of $100B. deliveries in North America – our most mature market – a nearly twenty percentage point sequential increase. We believe that FSD is driving demand in markets where it is available, and we continue to work with regulators to get it approved in other markets. We started providing Robotaxi rides using Cybercabs on September 3 in Austin. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth. We ended the quarter with the largest backlog for our passenger vehicles in four years. We rolled out the updated Tesla Semi that is produced on"
+    },
+    "content_hash": "32043addaeb5a3ed982546e5bdcde4a74501136d20712bb8a0c3c0b80848dc4a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0001493152-26-047930": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-047930",
+      "entity_id": "CIK:0000064463",
+      "source_role": "candidate",
+      "title": "Soluna Holdings, Inc (SLNH, SLNHP) (CIK 0000064463) 8-K 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/64463/000149315226047930/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/64463/000149315226047930/form8-k.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "Soluna Holdings, Inc (SLNH, SLNHP) (CIK 0000064463) 8-K 2026-10-21. false 0000064463 0000064463 2026-10-20 2026-10-20 0000064463 SLNH:CommonStockParValue0.001PerShareMember 2026-10-20 2026-10-20 0000064463 SLNH:Sec9.0SeriesCumulativePerpetualPreferredStockParValue0.001PerShareMember 2026-10-20 2026-10-20 iso4217:USD xbrli:shares iso4217:USD xbrli:shares UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): October 20, 2026 SOLUNA HOLDINGS, INC. (Exact name of Registrant as Specified in Its Charter) Nevada 001-40261 14-1462255 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 325 Washington Avenue Extension Albany , New York 12205 (Address of Principal Executive Offices) (Zip Code) Registrant’s Telephone Number, Including Area Code: (516) 216-9257 N/A (Former Name or Former Address, if Changed Since Last Report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common stock, par value $0.001 per share SLNH The Nasdaq Stock Market LLC 9.0% Series A Cumulative Perpetual Preferred Stock, par value $0.001 per share SLNHP The Nasdaq Stock Market LLC Indicate by check mark whether the registrant is an emerging growth comp"
+    },
+    "content_hash": "7f7e306fec48df47bdf6b781b59a6b8ba22d383f72f403595081b2843ff3e6f8",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0001552781-26-000524": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001552781-26-000524",
+      "entity_id": "CIK:0000932781",
+      "source_role": "candidate",
+      "title": "FIRST COMMUNITY CORP /SC/ (FCCO) (CIK 0000932781) EX-99.1 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000524/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000524/e26429_ex99-1.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "FIRST COMMUNITY CORP /SC/ (FCCO) (CIK 0000932781) EX-99.1 2026-10-21. The average balance per customer deposit account as of September 30, 2026 was $33,893, with the average balance per consumer account of $17,657 and per non-consumer account of $72,690. EX-99.1 2 e26429_ex99-1.htm Exhibit 99.1 News Release For Release October 21, 2026 9:00 A.M. Contact: Michael C. Crapps, Chief Executive Officer and President D. Shawn Jordan, Executive Vice President & Chief Financial Officer Robin D. Brown, Executive Vice President & Chief Marketing Officer (803) 951-2265 First Community Corporation Announces Third Quarter Results and Cash Dividend LEXINGTON, S.C., October 21, 2026 –Today, First Community Corporation (Nasdaq: FCCO), the holding company for First Community Bank, announced earnings and discussed the results of operations and the company’s activities during the third quarter of 2026. Highlights for the third quarter of 2026 include: · Net income of $8.044 million during the third quarter of 2026, an increase of 54.9% year-over-year and 5.9% on a linked quarter basis. Net income excluding the after-tax effect of merger expenses 1 during the third quarter of 2026 of $8.123 million, an increase of 44.3% year-over-year and 1.8%, on a linked quarter basis. · Net income for the nine months ended September 30, 2026 of $21.137 million, a 47.0% increase over the same time period in 2025. Net income for the nine months ended September 30, 2026, excluding the after-tax effect of merger expenses 1 , of $22.857 million, an increase of 52.5% year-over-year. · Diluted EPS of $0.85 per common share during the third quarter of 2026, an increase of 26.9% year-over-year and 6.3% on a linked quarter basis. Diluted EPS for the third quarter of 2026, excluding the after-tax effect of merger expenses 1 of $0.86, an increase of 19.4% year-over-year and 2.4% on a linked quarter basis. · Diluted EPS of $2.24 per common share for the nine months ended September 30, 2026, an increase of 21.1% o"
+    },
+    "content_hash": "87721ade1939fe3e22b31f6f0321e16b509cb11001d3f8f7597f980b80669126",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0001193125-26-427862": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-427862",
+      "entity_id": "CIK:0001811414",
+      "source_role": "candidate",
+      "title": "QuantumScape Corp (QS) (CIK 0001811414) EX-99.1 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-ex99_1.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "QuantumScape Corp (QS) (CIK 0001811414) EX-99.1 2026-10-21. In addition, we have signed an agreement with a new customer to further advance automotive commercialization. EX-99.1 2 qs-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 1 Dear shareholders, We’re excited to provide an update on our progress over the past quarter. Eagle Line Update We inaugurated the Eagle Line pilot cell production line in February of this year, and it has already become the workhorse of our customer engagement, allowing an increased pace of customer sampling which is flowing into customer billings. Our progress on demonstrating scalable production has given us the confidence to take the next steps for production scale-up beyond the designed capacity of the Eagle Line. Today we announced a QS ecosystem partnership with Muehlbauer Group to provide cell assembly equipment for a planned 100 megawatt-hour (MWh) cell production line. This 100-MWh line will represent the first commercial-scale mass production of QS cells, with output aimed at meeting the rapidly emerging opportunities for our QSDC and QSAS business verticals. Engineering work on higher-throughput processes and equipment is already underway and start of production for this new line is targeted for 2028. Muehlbauer Group is a highly respected German provider of manufacturing and automation equipment. Working on site in San Jose, their engineers evaluated the Eagle Line pilot processes for scalability and readiness and developed design enhancements to bring the technology to mass production, beginning with this 100-MWh line and working toward gigawatt-hour scale. QS CEO and President Dr. Siva Sivaram (right) and Muehlbauer Group CEO Josef Markus Mühlbauer signing the QS ecosystem partnership in San Jose. AI Data Center – QSDC Update On October 8 we launched the QS PowerBlock for AI data centers in conjunction with the Open Compute Project (OCP) Global Summit in San Jose, California , a leading forum for AI data center solution providers. "
+    },
+    "content_hash": "8313af7d42b1112365636a4424397e44f4d029a15cb34b6b69553106a7822457",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0001628280-26-066610": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-066610",
+      "entity_id": "CIK:0000717954",
+      "source_role": "candidate",
+      "title": "UNIFIRST CORP (UNF) (CIK 0000717954) EX-99 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/717954/000162828026066610/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/717954/000162828026066610/unf-2026xq4xex99earningsre.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "UNIFIRST CORP (UNF) (CIK 0000717954) EX-99 2026-10-21. • New customer account acquisitions were solid during the quarter and customer retention rates continued to improve, building on the year-to-date progress that the Company has seen in these areas. EX-99 2 unf-2026xq4xex99earningsre.htm EX-99 Document Exhibit 99 Investor Relations Contact Shane O'Connor, Executive Vice President & CFO UniFirst Corporation 978-658-8888 shane_oconnor@unifirst.com UNIFIRST ANNOUNCES FINANCIAL RESULTS FOR THE FOURTH QUARTER AND FULL YEAR OF FISCAL 2026 Wilmington, MA – October 21, 2026 – UniFirst Corporation (NYSE: UNF) (the “Company,” “UniFirst” or “we”) today reported results for its fourth quarter and full year ended August 29, 2026, as compared to the corresponding periods in the prior fiscal year. Fourth Quarter 2026 Consolidated Financial Results • Consolidated revenues for the fourth quarter increased 5.0% to $645.0 million, driven primarily by organic growth in the core Uniform & Facility Service Solutions segment. • Operating income and Adjusted EBITDA were $41.7 million and $94.9 million, respectively, compared to $49.6 million and $88.1 million, respectively, in the fourth quarter of fiscal 2025. • Operating margin was 6.5% of revenues compared to 8.1% of revenues in the prior year period. • Adjusted EBITDA margin was 14.7% of revenues compared to 14.3% of revenues in the prior year period. • Net income was $34.7 million compared to $41.0 million in the prior year period and diluted earnings per share was $1.90 compared to $2.23 in the prior year period. • The quarterly tax rate was 19.8% compared to 20.2% in the prior year period. The Company’s financial results for the fourth quarter of fiscal 2026 included approximately $14.4 million of costs associated with the proposed merger with Cintas Corporation (“Cintas”), consisting primarily of legal, advisory and other professional service fees (“Transaction-related Costs”). In addition, the Company’s results for the fourth qu"
+    },
+    "content_hash": "8a721fff2d002efefc88e2a4b013f39163b91a9ce3c045d2871849102bca4c31",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0000736772-26-000091": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000736772-26-000091",
+      "entity_id": "CIK:0000736772",
+      "source_role": "candidate",
+      "title": "CNB FINANCIAL CORP/PA (CCNE, CCNEP) (CIK 0000736772) EX-99.1 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/736772/000073677226000091/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/736772/000073677226000091/ccne10-21x2699x1.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "CNB FINANCIAL CORP/PA (CCNE, CCNEP) (CIK 0000736772) EX-99.1 2026-10-21. The $78.0 million in deposits classified as held for sale as of September 30, 2026 are associated with a planned sale of certain customer deposit accounts that are part of a broader strategic initiative to optimize the Corporation’s branch and market footprint following the ESSA acquisition. EX-99.1 2 ccne10-21x2699x1.htm EX-99.1 Document News Release Contact: Tito L. Lima Treasurer (814) 765-9621 FOR IMMEDIATE RELEASE CNB FINANCIAL CORPORATION REPORTS THIRD QUARTER 2026 RESULTS Clearfield, Pennsylvania – October 21, 2026 CNB Financial Corporation (“Corporation”) (NASDAQ: CCNE), the parent company of CNB Bank, today announced its earnings for the three and nine months ended September 30, 2026. Certain comparative financial information for the prior year's three and nine month periods ended September 30, 2025 has been recast to reflect the Corporation's adoption of Accounting Standards Update 2025-08, Financial Services - Credit Losses (Topic 326): Purchased Financial Assets . The recast primarily eliminates the recognition of Day 1 provision expense associated with acquired loans and records an allowance for credit losses as of the acquisition date. The adoption had no impact on the economics or cash flows of the acquired assets but affected the timing of credit loss expense recognition. This change is not the result of an error, correction, or restatement of previously issued financial statements, but rather, it enhances comparability among periods presented in accordance with applicable financial reporting guidance. Accordingly, certain comparative amounts presented herein differ from those previously reported for these prior year periods. Key Financial Trends • Earnings - Net income available to common shareholders (\"earnings\") was $27.0 million, or $0.91 per diluted share, for the three months ended September 30, 2026, compared to $27.2 million, or $0.91 per diluted share, for the three mon"
+    },
+    "content_hash": "53ae96304688192f3702ac4b9d37ec9b6f8d06b171ca0b6ad60f15059a13a183",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0001051470-26-000085": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001051470-26-000085",
+      "entity_id": "CIK:0001051470",
+      "source_role": "candidate",
+      "title": "CROWN CASTLE INC. (CCI) (CIK 0001051470) EX-99.1 2026-10-21",
+      "url": "https://www.sec.gov/Archives/edgar/data/1051470/000105147026000085/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1051470/000105147026000085/q32026earningsrelease.htm",
+      "published_at": "2026-10-21",
+      "raw_text": "CROWN CASTLE INC. (CCI) (CIK 0001051470) EX-99.1 2026-10-21. tower business and the potential benefits therefrom, (4) benefits stemming from our capital allocation framework, (5) net income (loss) (including on a per share basis), (6) AFFO (including on a per share basis) and its components and growth, (7) Adjusted EBITDA and its components and growth, (8) Organic Contribution to Site Rental Billings (including as Adjusted for Impact of Sprint Cancellations and DISH Terminations) and its components and growth, (9) site rental revenues and its components and growth, (10) the impact of Sprint Cancellations, (11) our balance sheet, liquidity, leverage and credit ratings, (12) capital expenditures, including discretionary capital expenditures, (13) the impact of DISH Terminations, (14) operating efficiencies and the potential benefits therefrom, (15) potential land acquisitions under our towers, including activity levels with respect to ground lease buyouts, (16) modernizing our systems and processes, (17) acquisition of an outstanding residual economic interest and the potential impact thereof, (18) entry into new customer agreements and recent contractual term extensions, and the potential impacts thereof on our financial results, and (19) dividends, including dividend levels, rates and amounts."
+    },
+    "content_hash": "c59550cc7546deeb867bfb5006151fcc49c1c389060b99554245521c78133be7",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-22T05:00:05.929908+00:00"
   }
 }

@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-84C12BDCA9E66437",
+  "candidate_id": "CAN-A00785AF9CF7E07A",
+  "candidate_version": "CV-E4F60A4EB7F9C822",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:SEI",
+    "ticker": "SEI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-22T05:05:52+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261022T050048Z_39725432827-1.json.gz",
+    "sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+    "run_id": "39725432827-1",
+    "finished_at": "2026-10-22T05:14:57+00:00"
+  },
+  "eps": {
+    "eps_now": 3.66041,
+    "eps_30d": 3.48575,
+    "eps_90d": 2.33407,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 56.8,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 1.912,
+    "yield_change_30_pp": 0.252
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-24",
+    "price_start_date": "2026-07-24",
+    "price_end_expected": "2026-10-21",
+    "price_end_date": "2026-10-21",
+    "close_start": 54.029998779296875,
+    "close_end": 69.37000274658203,
+    "price_pct_90": 28.4,
+    "adj_return_pct_90": 28.6,
+    "pe_change_pct": -18.1
+  },
+  "display_rank": 25,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 16
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 6980450816,
+  "context_id": null,
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-22T05:15:00+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:SEI",
+  "approval_version": null,
+  "rendered_at": "2026-10-22T05:15:19+00:00"
+}
