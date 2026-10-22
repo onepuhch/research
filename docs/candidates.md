@@ -266,7 +266,7 @@ CAN-2365AA0167A432A4 · Oil & Gas E&P · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (KOS)
+심해 유전 및 가스전의 탐사, 개발, 생산을 통해 석유와 천연가스를 판매하여 돈을 법니다.
 <small>원문(영문): Kosmos Energy Ltd., a deepwater exploration and production company, engages in the exploration, development, and production of oil and natural gas properties. It has oil and gas production projects in offshore Ghana, Equatorial Guinea, Mauritania, Senegal, and the Gulf of America. The company was founded in 2003 and is headquartered in Dallas, Texas.</small>
 
 **후보가 된 이유**
@@ -762,7 +762,7 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (SMCI)
+모듈형 서버 및 스토리지 솔루션, 특히 AI 서버를 개발하고 판매하여 돈을 법니다.
 <small>원문(영문): Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and internationally. The company offers liquid and air-cooled AI servers for training and inferencing with integrated graphics processing units (GPUs) or PCIe based architectures; SuperBlade, MicroBlade, FlexTwin, GrandTwin, and BigTwin blade and multi-node systems; SuperStorage systems; Hyper, CloudDC, and WIO and rackmount systems; embedded (5G/IoT/Edge) systems; and MicroCloud server systems. It also p</small>
 
 **후보가 된 이유**
@@ -777,8 +777,8 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-22 이후) 몫 15%. 채택된 근거 문장의 원문 없음
-아직 공식 발표 원문을 연결하지 않았습니다.
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-22 이후) 몫 15%. 근거 문장 원문 최신 제출 2026-10-20(최근 30일 시작 이후)
+- [회사 전망] 매출(Revenues) · first quarter of fiscal year 2027: $18.5 billion to $19.5 billion — 회사의 매출 예상치이다 — “Revenues for the first quarter of fiscal year 2027 are estimated to be in the range of $18.5 billion to $19.5 billion versus guidance of $14.5 billion to $15.5 billion, primarily due to increased demand for AI platforms.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm), 제출 2026-10-20, 기간 first quarter of fiscal year 2027)
 
 **사람이 확인한 사업 근거**
 
@@ -788,6 +788,9 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- [반대 근거·한계] financial results · quarter and fiscal year ended June 30, 2026 — 제시된 재무 결과는 예비 추정치이며, 실제 결과는 크게 다를 수 있다 — “The financial results presented reflect the Company's preliminary estimated unaudited financial results, based upon information available to the Company as of the date of this press release. The Company has provided preliminary estimates of financial results primarily because its financial closing procedures for the quarter and fiscal year ended June 30, 2026 are not yet complete. The data are not a comprehensive statement of the Company's results for such periods, and the actual results may differ materially from these preliminary estimated data.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm), 제출 2026-08-11, 기간 quarter and fiscal year ended June 30, 2026)
+- [일반 면책(보조)] non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 작성되지 않으며, 일반회계기준 재무 데이터의 대체용이 아니다 — “These non-GAAP measures are not prepared in accordance with GAAP or intended to be a replacement for GAAP financial data; and therefore, should be reviewed together with the GAAP measures and are not intended to serve as a substitute for results under GAAP, and may be different from non-GAAP measures used by other companies.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm), 제출 2026-08-11, 기간 unknown)
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -798,6 +801,9 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 - [SMCI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SMCI/analysis) (관측 2026-10-22)
 - [SMCI daily closes](https://finance.yahoo.com/quote/SMCI/history) (관측 2026-10-22)
 - [SMCI company profile](https://finance.yahoo.com/quote/SMCI/profile) (관측 2026-10-22)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm) (제출 2026-10-20)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm) (제출 2026-08-11)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/fq42026businessupdate.htm) (제출 2026-07-21)
 
 텔레그램: `/track CAN-5FD7409FDFE8F5EA`
 
@@ -1238,7 +1244,7 @@ CAN-A00785AF9CF7E07A · Oil & Gas Equipment & Services · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (SEI)
+전력 생산, 제어, 분배 솔루션과 유정 원자재 관리 솔루션을 제공하여 돈을 법니다.
 <small>원문(영문): Solaris Energy Infrastructure, Inc. provides modular and scalable equipment-based solutions for power generation, control and distribution, and management of raw materials used in the completion of oil and natural gas wells in the United States. It operates in Solaris Power Solutions and Solaris Logistics Solutions segments. The Solaris Power Solutions segment delivers power generation, control, and distribution solutions; and offers support to data center, energy, and other commercial and industrial sector. It also provides site preparation, specialized structural and foundational work, and g</small>
 
 **후보가 된 이유**
@@ -1253,8 +1259,10 @@ CAN-A00785AF9CF7E07A · Oil & Gas Equipment & Services · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-22 이후) 몫 13%. 채택된 근거 문장의 원문 없음
-아직 공식 발표 원문을 연결하지 않았습니다.
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-22 이후) 몫 13%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
+- [회사 전망] 조정 EBITDA(Adjusted EBITDA) · third quarter 2026: $90-105 million — 가이던스가 상향 조정되었다 — “Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 third quarter 2026)
+- [회사 전망] 조정 EBITDA(Adjusted EBITDA) · fourth quarter 2026: $100-120 million — 가이던스가 설정되었다 — “Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 fourth quarter 2026)
+- [실적] capacity earning revenue · Second quarter 2026: approximately 950 MW — 직전 분기보다 늘었다 — “Activity – Second quarter 2026 averaged approximately 950 MW of capacity earning revenue, which was up 4% compared to approximately 910 MW in first quarter 2026.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 Second quarter 2026)
 
 **사람이 확인한 사업 근거**
 
@@ -1264,16 +1272,20 @@ CAN-A00785AF9CF7E07A · Oil & Gas Equipment & Services · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- [반대 근거·한계] 조정 EBITDA(Adjusted EBITDA) · 2026 third and fourth quarter — 해당 지표는 GAAP와 직접 비교 가능한 지표에 대한 조정 내역을 합리적인 노력 없이 제공할 수 없다 — “Due to the forward-looking nature of such metrics, a reconciliation of 2026 third and fourth quarter Adjusted EBITDA to the most directly comparable GAAP measure cannot be provided without unreasonable efforts.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 2026 third and fourth quarter)
+- [일반 면책(보조)] Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share — 해당 지표는 다른 회사의 유사한 지표와 계산 방식이 달라 비교 가능성이 떨어진다 — “Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share are not necessarily comparable to similarly titled measures used by other companies due to different methods of calculation.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 unknown)
+- EPS 예상 상향과 같은 시기의 회사 발표(인과 미확인)
 
 **다음 확인**
 
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다. (자동 제안)
 
 **출처**
 
 - [SEI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SEI/analysis) (관측 2026-10-22)
 - [SEI daily closes](https://finance.yahoo.com/quote/SEI/history) (관측 2026-10-22)
 - [SEI company profile](https://finance.yahoo.com/quote/SEI/profile) (관측 2026-10-22)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-A00785AF9CF7E07A`
 
@@ -1477,7 +1489,7 @@ CAN-B85C9F47594458D2 · Internet Content & Information · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (TBLA)
+AI 기반 플랫폼으로 웹사이트에 기사 콘텐츠와 광고를 추천하여 수익을 창출합니다.
 <small>원문(영문): Taboola.com Ltd., together with its subsidiaries, operates an artificial intelligence-based algorithmic engine platform in Israel, the United States, the United Kingdom, Germany, and internationally. It offers Taboola, which is a platform that partners with websites, devices, and mobile apps to recommend editorial content and advertisements on the open web. The company was incorporated in 2006 and is headquartered in New York, New York.</small>
 
 **후보가 된 이유**
@@ -1492,8 +1504,9 @@ CAN-B85C9F47594458D2 · Internet Content & Information · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-22 이후) 몫 7%. 채택된 근거 문장의 원문 없음
-아직 공식 발표 원문을 연결하지 않았습니다.
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-22 이후) 몫 7%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
+- [실적 · 기간 미확인] 매출(Revenues): $476.8 million / 2.4%(변화율·증가) — 매출이 늘었다 — “Revenues of $476.8 million, an increase of 2.4%.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1840502/000114036126031336/ef20078191_ex99-1.htm), 제출 2026-08-05, 기간 unknown)
+- [실적 · 기간 미확인] 조정 EBITDA(Adjusted EBITDA): $55.5 million / 22.8%(변화율·증가) — 조정 EBITDA가 증가했다 — “Adjusted EBITDA was $55.5 million, up 22.8%.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1840502/000114036126031336/ef20078191_ex99-1.htm), 제출 2026-08-05, 기간 unknown)
 
 **사람이 확인한 사업 근거**
 
@@ -1503,16 +1516,19 @@ CAN-B85C9F47594458D2 · Internet Content & Information · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- [반대 근거·한계] non-GAAP financial measures — 비 GAAP 재무 측정치는 GAAP에 따른 재무 성과 측정치가 아니다 — “These non-GAAP financial measures are not measures of financial performance in accordance with GAAP and may exclude items that are significant in understanding and assessing the Company’s financial results.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1840502/000114036126031336/ef20078191_ex99-1.htm), 제출 2026-08-05, 기간 unknown)
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+- 애널리스트의 내년 EPS 예상치가 올라간 것이 이 발표와 관련이 있는지 확인해야 한다. (자동 제안)
 
 **출처**
 
 - [TBLA analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TBLA/analysis) (관측 2026-10-22)
 - [TBLA daily closes](https://finance.yahoo.com/quote/TBLA/history) (관측 2026-10-22)
 - [TBLA company profile](https://finance.yahoo.com/quote/TBLA/profile) (관측 2026-10-22)
+- [SEC 8-K EX-99.1 — EXHIBIT 99.1](https://www.sec.gov/Archives/edgar/data/1840502/000114036126031336/ef20078191_ex99-1.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-B85C9F47594458D2`
 
@@ -1584,8 +1600,8 @@ TTM 테크놀로지스는 임무 시스템, 무선 주파수 부품, 인쇄 회�
 |CORT|`CAN-700B10D9B75B0040`|2026-10-14|스크린 조건은 통과했지만 A·B 상위 목록 밖|
 |TX|`CAN-D386F57F584A20DC`|2026-10-12|최신 관측에서 EPS 자료 없음 또는 조회 대상 제외|
 |PSTL|`CAN-E5554136472B2202`|2026-10-12|최신 관측에서 EPS 자료 없음 또는 조회 대상 제외|
-|UCTT|`CAN-4BD491C8D3F1EC4F`|2026-10-12|최신 관측에서 스크린 조건 미충족|
 |DAN|`CAN-0584EAE068460D91`|2026-10-12|최신 관측에서 스크린 조건 미충족|
+|UCTT|`CAN-4BD491C8D3F1EC4F`|2026-10-12|최신 관측에서 스크린 조건 미충족|
 |CLBK|`CAN-E763F753A2D7609F`|2026-10-11|최신 관측에서 스크린 조건 미충족|
 |TNK|`CAN-E95987D989EF1145`|2026-10-11|최신 관측에서 스크린 조건 미충족|
 |URGN|`CAN-4DB66C064FC2ED7C`|2026-10-08|최신 관측에서 스크린 조건 미충족|

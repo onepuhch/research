@@ -1,0 +1,224 @@
+{
+  "context_id": "CTX-8CA40658C455052B",
+  "candidate_id": "CAN-A00785AF9CF7E07A",
+  "ticker": "SEI",
+  "issuer_cik": "0001697500",
+  "document_ids": [
+    "DOC-DC9A9D7FDA1EA3EE"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-DC9A9D7FDA1EA3EE#p4",
+    "DOC-DC9A9D7FDA1EA3EE#p7",
+    "DOC-DC9A9D7FDA1EA3EE#p12",
+    "DOC-DC9A9D7FDA1EA3EE#p13",
+    "DOC-DC9A9D7FDA1EA3EE#p22",
+    "DOC-DC9A9D7FDA1EA3EE#p27",
+    "DOC-DC9A9D7FDA1EA3EE#p31",
+    "DOC-DC9A9D7FDA1EA3EE#p33",
+    "DOC-DC9A9D7FDA1EA3EE#p35",
+    "DOC-DC9A9D7FDA1EA3EE#p36",
+    "DOC-DC9A9D7FDA1EA3EE#t1",
+    "DOC-DC9A9D7FDA1EA3EE#p44",
+    "DOC-DC9A9D7FDA1EA3EE#p57",
+    "DOC-DC9A9D7FDA1EA3EE#p67",
+    "DOC-DC9A9D7FDA1EA3EE#p75",
+    "DOC-DC9A9D7FDA1EA3EE#p76",
+    "DOC-DC9A9D7FDA1EA3EE#p77",
+    "DOC-DC9A9D7FDA1EA3EE#t5",
+    "DOC-DC9A9D7FDA1EA3EE#p83",
+    "DOC-DC9A9D7FDA1EA3EE#p84",
+    "DOC-DC9A9D7FDA1EA3EE#p90",
+    "DOC-DC9A9D7FDA1EA3EE#p91",
+    "DOC-DC9A9D7FDA1EA3EE#p92",
+    "DOC-DC9A9D7FDA1EA3EE#t7",
+    "DOC-DC9A9D7FDA1EA3EE#p96"
+  ],
+  "input_sha": "8ca40658c455052bbc25ce580188dbc7bc941a683974075df3f01786d283c444",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-22T12:05:48+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter 2026: $90-105 million — 가이던스가 상향 조정되었다",
+      "note_ko": "가이던스가 상향 조정되었다",
+      "kind": "guidance",
+      "quote": "Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.",
+      "document_id": "DOC-DC9A9D7FDA1EA3EE",
+      "block_id": "p22",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$90-105 million"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · fourth quarter 2026: $100-120 million — 가이던스가 설정되었다",
+      "note_ko": "가이던스가 설정되었다",
+      "kind": "guidance",
+      "quote": "Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.",
+      "document_id": "DOC-DC9A9D7FDA1EA3EE",
+      "block_id": "p22",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$100-120 million"
+      ],
+      "period": "fourth quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "capacity earning revenue · Second quarter 2026: approximately 950 MW — 직전 분기보다 늘었다",
+      "note_ko": "직전 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Activity – Second quarter 2026 averaged approximately 950 MW of capacity earning revenue, which was up 4% compared to approximately 910 MW in first quarter 2026.",
+      "document_id": "DOC-DC9A9D7FDA1EA3EE",
+      "block_id": "p31",
+      "metric": "capacity earning revenue",
+      "figures": [
+        "approximately 950 MW"
+      ],
+      "period": "Second quarter 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · 2026 third and fourth quarter — 해당 지표는 GAAP와 직접 비교 가능한 지표에 대한 조정 내역을 합리적인 노력 없이 제공할 수 없다",
+      "note_ko": "해당 지표는 GAAP와 직접 비교 가능한 지표에 대한 조정 내역을 합리적인 노력 없이 제공할 수 없다",
+      "kind": "fact",
+      "quote": "Due to the forward-looking nature of such metrics, a reconciliation of 2026 third and fourth quarter Adjusted EBITDA to the most directly comparable GAAP measure cannot be provided without unreasonable efforts.",
+      "document_id": "DOC-DC9A9D7FDA1EA3EE",
+      "block_id": "t1",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "2026 third and fourth quarter",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share — 해당 지표는 다른 회사의 유사한 지표와 계산 방식이 달라 비교 가능성이 떨어진다",
+      "note_ko": "해당 지표는 다른 회사의 유사한 지표와 계산 방식이 달라 비교 가능성이 떨어진다",
+      "kind": "fact",
+      "quote": "Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share are not necessarily comparable to similarly titled measures used by other companies due to different methods of calculation.",
+      "document_id": "DOC-DC9A9D7FDA1EA3EE",
+      "block_id": "p92",
+      "metric": "Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "직전 분기보다 늘었다",
+      "figures": [
+        "approximately $219 million"
+      ],
+      "quote": "Revenue of approximately $219 million increased 12% sequentially from first quarter 2026.",
+      "where": "DOC-DC9A9D7FDA1EA3EE#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "직전 분기보다 늘었다",
+      "figures": [
+        "$110,813"
+      ],
+      "quote": "Adjusted EBITDA attributable to Solaris ; $110,813 ; $62,237 ; $86,090 ; $196,864 ; $109,118",
+      "where": "DOC-DC9A9D7FDA1EA3EE#t5"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "해당 지표는 비지배 지분 보유자에게 귀속되는 이익을 설명하지 않으므로 순이익에 대한 완전한 이해를 제공하지 않는다",
+      "figures": [],
+      "quote": "While these measures are useful in evaluating the Company's performance, they do not account for the earnings attributable to the non-controlling interest holders and therefore do not provide a comple",
+      "where": "DOC-DC9A9D7FDA1EA3EE#p92"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

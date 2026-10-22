@@ -1,0 +1,279 @@
+{
+  "candidate_id": "CAN-A00785AF9CF7E07A",
+  "candidate_version": "CV-169DE4CC98ED5F41",
+  "identity": {
+    "entity_id": "NYSE:SEI",
+    "ticker": "SEI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Solaris Energy Infrastructure, Inc.",
+  "industry": "Oil & Gas Equipment & Services",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "전력 생산, 제어, 분배 솔루션과 유정 원자재 관리 솔루션을 제공하여 돈을 법니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Solaris Energy Infrastructure, Inc. provides modular and scalable equipment-based solutions for power generation, control and distribution, and management of raw materials used in the completion of oil and natural gas wells in the United States. It operates in Solaris Power Solutions and Solaris Logistics Solutions segments. The Solaris Power Solutions segment delivers power generation, control, and distribution solutions; and offers support to data center, energy, and other commercial and industrial sector. It also provides site preparation, specialized structural and foundational work, and g"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SEI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SEI/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:52+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SEI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SEI/history",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:52+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SEI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SEI/profile",
+      "published_at": null,
+      "observed_at": "2026-10-22T05:05:52+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-DC9A9D7FDA1EA3EE",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-22T05:15:00+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-8CA40658C455052B",
+    "input_sha": "8ca40658c455052bbc25ce580188dbc7bc941a683974075df3f01786d283c444",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter 2026: $90-105 million — 가이던스가 상향 조정되었다",
+        "note_ko": "가이던스가 상향 조정되었다",
+        "kind": "guidance",
+        "quote": "Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.",
+        "document_id": "DOC-DC9A9D7FDA1EA3EE",
+        "block_id": "p22",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$90-105 million"
+        ],
+        "period": "third quarter 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · fourth quarter 2026: $100-120 million — 가이던스가 설정되었다",
+        "note_ko": "가이던스가 설정되었다",
+        "kind": "guidance",
+        "quote": "Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.",
+        "document_id": "DOC-DC9A9D7FDA1EA3EE",
+        "block_id": "p22",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$100-120 million"
+        ],
+        "period": "fourth quarter 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "capacity earning revenue · Second quarter 2026: approximately 950 MW — 직전 분기보다 늘었다",
+        "note_ko": "직전 분기보다 늘었다",
+        "kind": "fact",
+        "quote": "Activity – Second quarter 2026 averaged approximately 950 MW of capacity earning revenue, which was up 4% compared to approximately 910 MW in first quarter 2026.",
+        "document_id": "DOC-DC9A9D7FDA1EA3EE",
+        "block_id": "p31",
+        "metric": "capacity earning revenue",
+        "figures": [
+          "approximately 950 MW"
+        ],
+        "period": "Second quarter 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "capacity"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · 2026 third and fourth quarter — 해당 지표는 GAAP와 직접 비교 가능한 지표에 대한 조정 내역을 합리적인 노력 없이 제공할 수 없다",
+        "note_ko": "해당 지표는 GAAP와 직접 비교 가능한 지표에 대한 조정 내역을 합리적인 노력 없이 제공할 수 없다",
+        "kind": "fact",
+        "quote": "Due to the forward-looking nature of such metrics, a reconciliation of 2026 third and fourth quarter Adjusted EBITDA to the most directly comparable GAAP measure cannot be provided without unreasonable efforts.",
+        "document_id": "DOC-DC9A9D7FDA1EA3EE",
+        "block_id": "t1",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "2026 third and fourth quarter",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share — 해당 지표는 다른 회사의 유사한 지표와 계산 방식이 달라 비교 가능성이 떨어진다",
+        "note_ko": "해당 지표는 다른 회사의 유사한 지표와 계산 방식이 달라 비교 가능성이 떨어진다",
+        "kind": "fact",
+        "quote": "Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share are not necessarily comparable to similarly titled measures used by other companies due to different methods of calculation.",
+        "document_id": "DOC-DC9A9D7FDA1EA3EE",
+        "block_id": "p92",
+        "metric": "Adjusted pro forma net income and adjusted pro forma earnings per fully diluted share",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-DC9A9D7FDA1EA3EE",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-22T05:15:00+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-22T12:05:48+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.66041,
+    "eps_30d": 3.48575,
+    "eps_90d": 2.33407,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 56.8,
+    "steady": false,
+    "turnaround": false
+  }
+}

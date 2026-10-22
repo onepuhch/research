@@ -7894,7 +7894,7 @@
     "updated_at": "2026-10-21T04:59:12.607152+00:00"
   },
   "0001628280-26-066548": {
-    "status": "retry",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -7905,18 +7905,60 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1825088/000162828026066548/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1825088/000162828026066548/ex993bzhunauditedinterimfi.htm",
       "published_at": "2026-10-20",
-      "raw_text": "Dream Finders Homes, Inc. (DFH) (CIK 0001825088) EX-99.3 2026-10-20. Contract liabilities include customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively. Of the customer deposits outstanding as of September 30, 2025, $1.1 million and $12.4 million were recognized in revenue during the three and nine months ended June 30, 2026, upon closing of the related homes. Certain of the fully developed lots in this category are reserved by a customer deposit or sales contract. Three Months Ended June 30, Nine Months Ended June 30, in thousands 2026 2025 2026 2025 Stock options 22 2 22 1 Time-based restricted stock 565 370 565 110 Performance-based restricted stock 336 307 336 2 (13) Other Liabilities Other liabilities include the following as of June 30, 2026 and September 30, 2025: in thousands As of June 30, 2026 As of September 30, 2025 Accrued compensation and benefits $ 21,491 $ 43,793 Customer deposits 21,309 14,260 Accrued interest 12,803 23,211 Warranty reserves 12,161 13,564 Litigation accruals 12,340 9,930 Income tax liabilities — 32 Obligations related to land not owned under option agreements 13,980 — Other 50,862 55,655 Total $ 144,946 $ 160,445 23 (14) Segment Information Per ASC Topic 280, Segment Reporting (ASC 280), an operating segment is defined as a component of an enterprise that engages in business activities from which it earns revenues and incurs expenses and has discrete financial information available that is reviewed regularly by the Company's chief operating decision maker (CODM) to evaluate performance, make operating decisions, and determine how to allocate resources."
+      "raw_text": "Dream Finders Homes, Inc. (DFH) (CIK 0001825088) EX-99.3 2026-10-20. Contract liabilities include customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively. Of the customer deposits outstanding as of September 30, 2025, $1.1 million and $12.4 million were recognized in revenue during the three and nine months ended June 30, 2026, upon closing of the related homes. Certain of the fully developed lots in this category are reserved by a customer deposit or sales contract. Three Months Ended June 30, Nine Months Ended June 30, in thousands 2026 2025 2026 2025 Stock options 22 2 22 1 Time-based restricted stock 565 370 565 110 Performance-based restricted stock 336 307 336 2 (13) Other Liabilities Other liabilities include the following as of June 30, 2026 and September 30, 2025: in thousands As of June 30, 2026 As of September 30, 2025 Accrued compensation and benefits $ 21,491 $ 43,793 Customer deposits 21,309 14,260 Accrued interest 12,803 23,211 Warranty reserves 12,161 13,564 Litigation accruals 12,340 9,930 Income tax liabilities — 32 Obligations related to land not owned under option agreements 13,980 — Other 50,862 55,655 Total $ 144,946 $ 160,445 23 (14) Segment Information Per ASC Topic 280, Segment Reporting (ASC 280), an operating segment is defined as a component of an enterprise that engages in business activities from which it earns revenues and incurs expenses and has discrete financial information available that is reviewed regularly by the Company's chief operating decision maker (CODM) to evaluate performance, make operating decisions, and determine how to allocate resources.",
+      "_model_response": {
+        "evidence_quote": "Contract liabilities include customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively. Of the customer deposits outstanding as of September 30, 2025, $1.1 million and $12.4 million were recognized in revenue during the three and nine months ended June 30, 2026, upon closing of the related homes.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Dream Finders Homes, Inc. (DFH)",
+          "earnings_leverage": "Contract liabilities include customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively.",
+          "supply_demand_tightness": "customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively.",
+          "structural_ai_demand": "",
+          "revision_momentum": "customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively.",
+          "catalyst_visibility": "customer deposits related to sold but undelivered homes and totaled $21.3 million and $14.3 million as of June 30, 2026 and September 30, 2025, respectively."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Dream Finders Homes, Inc. (DFH)",
+        "theme": "주택 건설",
+        "signal_type": "수주/백로그",
+        "what_happened": "Dream Finders Homes의 고객 예치금(미인도 주택 관련)이 2025년 9월 30일 1,430만 달러에서 2026년 6월 30일 2,130만 달러로 증가했습니다.",
+        "why_it_matters": "고객 예치금 증가는 향후 주택 판매 및 매출 인식이 증가할 가능성을 시사하며, 이는 회사의 실적 개선으로 이어질 수 있습니다.",
+        "what_to_watch": "향후 분기별 주택 인도량 및 매출액 추이, 신규 수주 계약 규모",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "고객 예치금(Customer deposits): 고객이 주택 구매 계약 후 인도 전에 미리 지불하는 금액으로, 향후 매출로 인식될 예정인 부채."
+      }
     },
     "content_hash": "c09de8827d06a808166426fa9b4df0507ddf26a3d20c359c188ae326dcfa619a",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-22T05:00:40+00:00",
-    "reason": "provider_overloaded",
+    "attempts": 2,
+    "updated_at": "2026-10-22T12:05:48+00:00",
+    "reason": "grounded extraction",
     "http_status": 503,
     "next_retry_at": "2026-10-22T05:30:46+00:00",
-    "failure_class": "unserved",
-    "failure_day": "2026-10-22",
-    "failure_run": "39725432827-1"
+    "signal_id": "SIG-0910",
+    "processed_day": "2026-10-22",
+    "processed_run": "39775487769-1",
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-10-22",
+      "failure_run": "39725432827-1",
+      "day": "2026-10-22",
+      "run": "39775487769-1",
+      "by": "model answer"
+    }
   },
   "0000883948-26-000077": {
     "status": "deferred",

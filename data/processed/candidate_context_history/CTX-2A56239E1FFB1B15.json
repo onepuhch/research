@@ -1,0 +1,190 @@
+{
+  "context_id": "CTX-2A56239E1FFB1B15",
+  "candidate_id": "CAN-B85C9F47594458D2",
+  "ticker": "TBLA",
+  "issuer_cik": "0001840502",
+  "document_ids": [
+    "DOC-AC90C1E94D418C55"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-AC90C1E94D418C55#p4",
+    "DOC-AC90C1E94D418C55#p6",
+    "DOC-AC90C1E94D418C55#t1",
+    "DOC-AC90C1E94D418C55#t3",
+    "DOC-AC90C1E94D418C55#p9",
+    "DOC-AC90C1E94D418C55#p10",
+    "DOC-AC90C1E94D418C55#t5",
+    "DOC-AC90C1E94D418C55#p11",
+    "DOC-AC90C1E94D418C55#p17",
+    "DOC-AC90C1E94D418C55#t6",
+    "DOC-AC90C1E94D418C55#t7",
+    "DOC-AC90C1E94D418C55#t8",
+    "DOC-AC90C1E94D418C55#p26",
+    "DOC-AC90C1E94D418C55#t10",
+    "DOC-AC90C1E94D418C55#t14",
+    "DOC-AC90C1E94D418C55#t22",
+    "DOC-AC90C1E94D418C55#t25",
+    "DOC-AC90C1E94D418C55#p64",
+    "DOC-AC90C1E94D418C55#t37",
+    "DOC-AC90C1E94D418C55#t38"
+  ],
+  "input_sha": "2a56239e1ffb1b150f3cc3a0717cf772818707ca952f9cbec74aa21f1996b1d1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-22T12:05:48+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenues): $476.8 million / 2.4%(변화율·증가) — 매출이 늘었다",
+      "note_ko": "매출이 늘었다",
+      "kind": "fact",
+      "quote": "Revenues of $476.8 million, an increase of 2.4%.",
+      "document_id": "DOC-AC90C1E94D418C55",
+      "block_id": "t1",
+      "metric": "Revenues",
+      "figures": [
+        "$476.8 million",
+        "2.4%"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA): $55.5 million / 22.8%(변화율·증가) — 조정 EBITDA가 증가했다",
+      "note_ko": "조정 EBITDA가 증가했다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA was $55.5 million, up 22.8%.",
+      "document_id": "DOC-AC90C1E94D418C55",
+      "block_id": "t3",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$55.5 million",
+        "22.8%"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 GAAP에 따른 재무 성과 측정치가 아니다",
+      "note_ko": "비 GAAP 재무 측정치는 GAAP에 따른 재무 성과 측정치가 아니다",
+      "kind": "fact",
+      "quote": "These non-GAAP financial measures are not measures of financial performance in accordance with GAAP and may exclude items that are significant in understanding and assessing the Company’s financial results.",
+      "document_id": "DOC-AC90C1E94D418C55",
+      "block_id": "p17",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 올라간 것이 이 발표와 관련이 있는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "순이익이 순손실에서 개선되었다",
+      "figures": [
+        "$4.3 million",
+        "$(4.3) million"
+      ],
+      "quote": "Net Income was $4.3 million improved from a Net Loss of $(4.3) million.",
+      "where": "DOC-AC90C1E94D418C55#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사는 회계연도 이익을 예상한다",
+      "figures": [
+        "$772 - $783"
+      ],
+      "quote": "ex-TAC Gross Profit* ; $184 - $190 ; $772 - $783",
+      "where": "DOC-AC90C1E94D418C55#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사는 회계연도 조정 EBITDA를 예상한다",
+      "figures": [
+        "$228 - $240"
+      ],
+      "quote": "Adjusted EBITDA* ; $51.5 - $56.5 ; $228 - $240",
+      "where": "DOC-AC90C1E94D418C55#t5"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 GAAP 순이익에 대한 가이던스를 제공할 수 없다",
+      "figures": [],
+      "quote": "Although we provide guidance for Adjusted EBITDA and Non-GAAP Net Income (Loss), we are not able to provide guidance for projected net income (loss), the most directly comparable GAAP measure.",
+      "where": "DOC-AC90C1E94D418C55#p11"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}
