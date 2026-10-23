@@ -1,0 +1,139 @@
+{
+  "context_id": "CTX-27C69EC51D6CF11E",
+  "candidate_id": "CAN-325B2A6C30755476",
+  "ticker": "VLO",
+  "issuer_cik": "0001035002",
+  "document_ids": [
+    "DOC-0973296346AEFC3A",
+    "DOC-9DA9F71500981FB2"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-0973296346AEFC3A#p5",
+    "DOC-0973296346AEFC3A#t1",
+    "DOC-0973296346AEFC3A#t3",
+    "DOC-0973296346AEFC3A#t7",
+    "DOC-0973296346AEFC3A#t9",
+    "DOC-0973296346AEFC3A#p167",
+    "DOC-0973296346AEFC3A#p170",
+    "DOC-0973296346AEFC3A#p190",
+    "DOC-9DA9F71500981FB2#t1",
+    "DOC-9DA9F71500981FB2#t9"
+  ],
+  "input_sha": "27c69ec51d6cf11e231cc0b8e2f3e3086618dde14cb23f90d3dede32397c60e2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-23T05:17:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net income attributable to Valero stockholders: $6.8 billion — 발레로 주주에게 귀속되는 순이익을 보고했다",
+      "note_ko": "발레로 주주에게 귀속되는 순이익을 보고했다",
+      "kind": "fact",
+      "quote": "Reported net income attributable to Valero stockholders of $6.8 billion, or $23.89 per share",
+      "document_id": "DOC-0973296346AEFC3A",
+      "block_id": "p5",
+      "metric": "net income attributable to Valero stockholders",
+      "figures": [
+        "$6.8 billion"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "희석 주당 이익이다",
+      "figures": [
+        "$23.89"
+      ],
+      "quote": "Earnings per common share – assuming dilution ; $23.89 ; $3.53 ; $40.29 ; $3.89",
+      "where": "DOC-0973296346AEFC3A#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "매출액이다",
+      "figures": [
+        "$46,098"
+      ],
+      "quote": "Revenues ; $46,098 ; $32,168 ; $122,955 ; $92,315",
+      "where": "DOC-0973296346AEFC3A#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "정유 부문의 영업 이익이다",
+      "figures": [
+        "$8,782"
+      ],
+      "quote": "Refining operating income ; $8,782 ; $1,610 ; $15,058 ; $2,346",
+      "where": "DOC-0973296346AEFC3A#t7"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "재생 디젤 부문의 영업 이익이다",
+      "figures": [
+        "$353"
+      ],
+      "quote": "Renewable Diesel operating income (loss) ; $353 ; $(28) ; $1,209 ; $(248)",
+      "where": "DOC-0973296346AEFC3A#t7"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "특정 LIFO 재고 계층의 청산으로 인한 이익이 포함되어 있다",
+      "figures": [
+        "$44 million"
+      ],
+      "quote": "Cost of materials and other for the nine months ended September 30, 2026 includes a benefit of $44 million resulting from the liquidation of certain LIFO inventory layers attributable to our Refining ",
+      "where": "DOC-0973296346AEFC3A#p167"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "베니시아 및 윌밍턴 정유소의 자산 손상 손실을 인식했다",
+      "figures": [
+        "$1.1 billion"
+      ],
+      "quote": "Therefore, we reduced the carrying values of the Benicia and Wilmington refineries to their estimated fair values and recognized a combined asset impairment loss of $1.1 billion in the nine months end",
+      "where": "DOC-0973296346AEFC3A#p170"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "조정된 정유 부문 영업 이익은 해당 부문의 핵심 영업 성과를 나타내지 않는 항목을 제외한 것이다",
+      "figures": [],
+      "quote": "Adjusted Refining operating income is defined as Refining segment operating income (loss) excluding the LIFO liquidation adjustment (see note (a)), employee retention and separation costs (see note (c",
+      "where": "DOC-0973296346AEFC3A#p190"
+    }
+  ],
+  "context_status": "draft_ready"
+}

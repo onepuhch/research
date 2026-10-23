@@ -7961,7 +7961,7 @@
     }
   },
   "0000883948-26-000077": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -7972,16 +7972,56 @@
       "url": "https://www.sec.gov/Archives/edgar/data/883948/000088394826000077/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/883948/000088394826000077/aub-ex99d2.htm",
       "published_at": "2026-10-20",
-      "raw_text": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948) EX-99.2 2026-10-20. • At September 30, 2026, total deposits were $31.0 billion, an increase of $497.3 million from the prior quarter due to increases in brokered and demand deposits, partially offset by a decrease in interest-bearing customer deposits. (2) For non-GAAP financial measures, see reconciliation to most directly comparable GAAP measures in “Appendix – Reconciliation of Non-GAAP Disclosures” LOANS ($ THOUSANDS) 3Q2026 2Q2026 QTD ANNUALIZED % CHANGE Commercial real estate - non-owner occupied $ 7,275,895 $ 7,303,555 (1.5%) Commercial real estate - owner occupied 4,356,099 4,308,292 4.4% Construction and land development 2,025,385 1,859,217 35.5% Multifamily real estate 2,382,541 2,429,355 (7.6%) Residential 1-4 Family - Commercial 984,149 1,008,438 (9.6%) Total Commercial Real Estate (CRE) 17,024,069 16,908,857 2.7% Commercial & Industrial 5,850,846 5,628,880 15.6% Other Commercial 1,865,561 1,649,952 51.8% Total Commercial & Industrial 7,716,407 7,278,832 23.9% Total Commercial Loans $ 24,740,476 $ 24,187,689 9.1% Residential 1-4 Family - Consumer 2,991,674 2,930,665 8.3% Residential 1-4 Family - Revolving 1,346,890 1,312,531 10.4% Auto(1) 110,418 131,477 (63.5%) Consumer 107,158 110,909 (13.4%) Total Consumer Loans $ 4,556,140 $ 4,485,582 6.2% Total Loans Held for Investment (LHFI) (net of unearned income) $ 29,296,616 $ 28,673,271 8.6% Average Loan Yield (FTE) 6.22% 6.23% DEPOSITS ($ THOUSANDS) 3Q2026 2Q2026 QTD ANNUALIZED % CHANGE Interest checking accounts $ 7,844,500 $ 7,812,504 1.6% Money market accounts 6,556,864 6,821,997 (15.4%) Savings accounts 2,723,123 2,567,073 24.1% Customer time deposits of more than $250,000 1,869,330 1,876,425 (1.5%) Customer time deposits of $250,000 or less 4,124,050 4,104,769 1.9% Time deposits 5,993,380 5,981,194 0.8% Total interest-bearing customer deposits 23,117,867 23,182,768 (1.1%) Brokered deposits 1,085,988 557,751 375.7% Total interest-bearing depos"
+      "raw_text": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948) EX-99.2 2026-10-20. • At September 30, 2026, total deposits were $31.0 billion, an increase of $497.3 million from the prior quarter due to increases in brokered and demand deposits, partially offset by a decrease in interest-bearing customer deposits. (2) For non-GAAP financial measures, see reconciliation to most directly comparable GAAP measures in “Appendix – Reconciliation of Non-GAAP Disclosures” LOANS ($ THOUSANDS) 3Q2026 2Q2026 QTD ANNUALIZED % CHANGE Commercial real estate - non-owner occupied $ 7,275,895 $ 7,303,555 (1.5%) Commercial real estate - owner occupied 4,356,099 4,308,292 4.4% Construction and land development 2,025,385 1,859,217 35.5% Multifamily real estate 2,382,541 2,429,355 (7.6%) Residential 1-4 Family - Commercial 984,149 1,008,438 (9.6%) Total Commercial Real Estate (CRE) 17,024,069 16,908,857 2.7% Commercial & Industrial 5,850,846 5,628,880 15.6% Other Commercial 1,865,561 1,649,952 51.8% Total Commercial & Industrial 7,716,407 7,278,832 23.9% Total Commercial Loans $ 24,740,476 $ 24,187,689 9.1% Residential 1-4 Family - Consumer 2,991,674 2,930,665 8.3% Residential 1-4 Family - Revolving 1,346,890 1,312,531 10.4% Auto(1) 110,418 131,477 (63.5%) Consumer 107,158 110,909 (13.4%) Total Consumer Loans $ 4,556,140 $ 4,485,582 6.2% Total Loans Held for Investment (LHFI) (net of unearned income) $ 29,296,616 $ 28,673,271 8.6% Average Loan Yield (FTE) 6.22% 6.23% DEPOSITS ($ THOUSANDS) 3Q2026 2Q2026 QTD ANNUALIZED % CHANGE Interest checking accounts $ 7,844,500 $ 7,812,504 1.6% Money market accounts 6,556,864 6,821,997 (15.4%) Savings accounts 2,723,123 2,567,073 24.1% Customer time deposits of more than $250,000 1,869,330 1,876,425 (1.5%) Customer time deposits of $250,000 or less 4,124,050 4,104,769 1.9% Time deposits 5,993,380 5,981,194 0.8% Total interest-bearing customer deposits 23,117,867 23,182,768 (1.1%) Brokered deposits 1,085,988 557,751 375.7% Total interest-bearing depos",
+      "_model_response": {
+        "evidence_quote": "At September 30, 2026, total deposits were $31.0 billion, an increase of $497.3 million from the prior quarter due to increases in brokered and demand deposits, partially offset by a decrease in interest-bearing customer deposits. (2) For non-GAAP financial measures, see reconciliation to most directly comparable GAAP measures in “Appendix – Reconciliation of Non-GAAP Disclosures” LOANS ($ THOUSANDS) 3Q2026 2Q2026 QTD ANNUALIZED % CHANGE Commercial real estate - non-owner occupied $ 7,275,895 $ 7,303,555 (1.5%) Commercial real estate - owner occupied 4,356,099 4,308,292 4.4% Construction and land development 2,025,385 1,859,217 35.5% Multifamily real estate 2,382,541 2,429,355 (7.6%) Residential 1-4 Family - Commercial 984,149 1,008,438 (9.6%) Total Commercial Real Estate (CRE) 17,024,069 16,908,857 2.7% Commercial & Industrial 5,850,846 5,628,880 15.6% Other Commercial 1,865,561 1,649,952 51.8% Total Commercial & Industrial 7,716,407 7,278,832 23.9% Total Commercial Loans $ 24,740,476 $ 24,187,689 9.1% Residential 1-4 Family - Consumer 2,991,674 2,930,665 8.3% Residential 1-4 Family - Revolving 1,346,890 1,312,531 10.4% Auto(1) 110,418 131,477 (63.5%) Consumer 107,158 110,909 (13.4%) Total Consumer Loans $ 4,556,140 $ 4,485,582 6.2% Total Loans Held for Investment (LHFI) (net of unearned income) $ 29,296,616 $ 28,673,271 8.6% Average Loan Yield (FTE) 6.22% 6.23% DEPOSITS ($ THOUSANDS) 3Q2026 2Q2026 QTD ANNUALIZED % CHANGE Interest checking accounts $ 7,844,500 $ 7,812,504 1.6% Money market accounts 6,556,864 6,821,997 (15.4%) Savings accounts 2,723,123 2,567,073 24.1% Customer time deposits of more than $250,000 1,869,330 1,876,425 (1.5%) Customer time deposits of $250,000 or less 4,124,050 4,104,769 1.9% Time deposits 5,993,380 5,981,194 0.8% Total interest-bearing customer deposits 23,117,867 23,182,768 (1.1%) Brokered deposits 1,085,988 557,751 375.7% Total interest-bearing depos",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948)",
+          "earnings_leverage": "Total Commercial Loans $ 24,740,476 $ 24,187,689 9.1%... Total Loans Held for Investment (LHFI) (net of unearned income) $ 29,296,616 $ 28,673,271 8.6%",
+          "supply_demand_tightness": "total deposits were $31.0 billion, an increase of $497.3 million from the prior quarter due to increases in brokered and demand deposits",
+          "structural_ai_demand": "",
+          "revision_momentum": "At September 30, 2026, total deposits were $31.0 billion, an increase of $497.3 million from the prior quarter",
+          "catalyst_visibility": "At September 30, 2026, total deposits were $31.0 billion, an increase of $497.3 million from the prior quarter"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Atlantic Union Bankshares Corp",
+        "theme": "금융",
+        "signal_type": "수주/백로그",
+        "what_happened": "Atlantic Union Bankshares Corp의 2026년 3분기 총 예금은 전 분기 대비 4억 9,730만 달러 증가했으며, 총 대출은 전 분기 대비 8.6% 증가했습니다.",
+        "why_it_matters": "은행의 핵심 사업 지표인 예금과 대출의 견조한 성장은 향후 수익성 개선과 기업 가치 상승으로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "다음 분기 예금 및 대출 성장률 지속 여부, 순이자마진(NIM) 변화 추이",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "QTD ANNUALIZED % CHANGE: 분기 대비 연환산 변화율, Brokered deposits: 중개 예금"
+      }
     },
     "content_hash": "1ffd531bd7407651f60a3753820a5e36f02ca7f1d5b407005c6a24b864d978a1",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-22T05:00:44+00:00",
-    "reason": "provider_overloaded",
-    "failure_class": "unserved",
-    "failure_day": "2026-10-22",
-    "failure_run": "39725432827-1"
+    "attempts": 2,
+    "updated_at": "2026-10-23T05:02:43+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true,
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-10-22",
+      "failure_run": "39725432827-1",
+      "day": "2026-10-23",
+      "run": "39903386847-1",
+      "by": "evidence check"
+    }
   },
   "0001590714-26-000069": {
     "status": "deferred",
@@ -7999,8 +8039,9 @@
     },
     "content_hash": "c9c16dfcb5163fb7fa3448e20d341d2ac9306900e3888c528bef370e0d88b7fb",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-23T05:02:47+00:00",
+    "reason": "deferred_budget"
   },
   "0001628280-26-066738": {
     "status": "deferred",
@@ -8134,5 +8175,376 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-22T05:00:05.929908+00:00"
+  },
+  "0000017843-26-000047": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000017843-26-000047",
+      "entity_id": "CIK:0000017843",
+      "source_role": "candidate",
+      "title": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000047/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000047/a1q27earningspresentatio.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22. 11 …And maintaining healthy liquidity and strong balance sheet …While executing against planned capital allocation priorities… • Repurchased $133.9 million of stock during current quarter; completed prior $400.0 million authorization and authorized new $1.0 billion share repurchase program • Funded consistent quarterly cash dividend • Brownfield capacity expansion project remains on schedule and on budget; expected to come online in early fiscal year 2028 • In recent first quarter, generated $52.8 million in cash from operating activities; negative $24.8 million in free cash flow* • Increasing earnings with focus on working capital management to drive anticipated fiscal year 2027 free cash results of $400 million to $430 million • Spent $77.7 million in capital expenditures in first quarter including brownfield capacity expansion as activity accelerates • Liquidity remains healthy at $658.6 million including $159.5 million of cash and $499.1 million of available borrowings under Credit Facility • Net Debt/EBITDA at 0.6x; remains at historic lows • No debt maturities until 2034 Capital Allocation: Repurchasing shares while investing in brownfield capacity expansion *Detailed schedule included in Non-GAAP Schedules in Appendix. Outlook: Strong profit growth, continued margin expansion and accelerating demand 13 Completed record first quarter, up 28% year-over-year, strong start to FY27 Volume, mix and price continue to drive expanding margins in SAO Demand continues to accelerate, especially in Aerospace and Defense end-use market, as supply chain confidence grows with build rates Pricing remains a tailwind for both LTA and non-LTA business Brownfield capacity expansion expected to contribute beginning in FY28 Returning cash to shareholders through dividend and $1.0 billion share repurchase program FY27 operating income outlook represents 21% to 25% increase over record FY26 Anticipate $400 million t"
+    },
+    "content_hash": "a0a19b3f8640ef28619287ef9bb70e68a8fdd806261f1d7d2e0ab376fe50e90e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0000887343-26-000184": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000887343-26-000184",
+      "entity_id": "CIK:0000887343",
+      "source_role": "candidate",
+      "title": "COLUMBIA BANKING SYSTEM, INC. (COLB) (CIK 0000887343) EX-99.2 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/887343/000088734326000184/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/887343/000088734326000184/colb2026q3earningspresen.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "COLUMBIA BANKING SYSTEM, INC. (COLB) (CIK 0000887343) EX-99.2 2026-10-22. ■ Treasury management and card-based fees increased 20% and 17%, respectively, for the nine months ended September 30, 2026, compared to the nine months ended September 30, 2025, due to the addition of customers from Pacific Premier and new customer acquisition, as we focus on balanced growth across new relationships. ■ Customer deposit growth and other sources of cash enabled us to reduce wholesale funding sources(1) by $1.5 billion during Q3 2026. Select Balance Sheet Items Three Months Ended Sequential Quarter Change ($ in millions) Q3 2026 Q2 2026 Q3 2025 Q3 2026 Commercial deposits $16,983 $15,984 $16,353 $999 Small business deposits 13,478 13,175 13,355 303 Consumer deposits 18,934 19,069 19,886 (135) Total customer deposits 49,395 48,228 49,594 1,167 Public deposits - relationship 1,767 1,731 1,560 36 Public deposits - wholesale 773 928 1,903 (155) Total public deposits 2,540 2,659 3,463 (119) Administrative deposits 183 191 249 (8) Brokered deposits 622 978 2,465 (356) Total deposits $52,740 $52,056 $55,771 $684 Term debt $3,300 $4,250 $2,300 ($950) Cash & cash equivalents $1,737 $1,769 $2,343 ($32) Available-for-sale securities $10,935 $11,131 $11,013 ($196) Loans and leases $46,915 $47,166 $48,462 ($251) Note: Table may not foot due to rounding. Customer deposit growth and other sources of cash enabled us to reduce wholesale funding sources(2) by $1.5 billion during Q3 2026.",
+      "_model_response": {
+        "evidence_quote": "Treasury management and card-based fees increased 20% and 17%, respectively, for the nine months ended September 30, 2026, compared to the nine months ended September 30, 2025, due to the addition of customers from Pacific Premier and new customer acquisition, as we focus on balanced growth across new relationships. Customer deposit growth and other sources of cash enabled us to reduce wholesale funding sources(1) by $1.5 billion during Q3 2026.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Treasury management and card-based fees increased 20% and 17%, respectively... Customer deposit growth and other sources of cash enabled us to reduce wholesale funding sources(1) by $1.5 billion during Q3 2026.",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "Treasury management and card-based fees increased 20% and 17%, respectively... Customer deposit growth and other sources of cash enabled us to reduce wholesale funding sources(1) by $1.5 billion during Q3 2026.",
+          "catalyst_visibility": "Treasury management and card-based fees increased 20% and 17%, respectively, for the nine months ended September 30, 2026... Customer deposit growth... during Q3 2026."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "COLB",
+        "theme": "지역은행",
+        "signal_type": "신규고객",
+        "what_happened": "콜럼비아 뱅킹 시스템은 2026년 3분기에 신규 고객 확보에 힘입어 재무 관리 및 카드 기반 수수료가 전년 동기 대비 각각 20%, 17% 증가했으며, 고객 예금 증가로 도매 자금 조달원을 15억 달러 줄였습니다.",
+        "why_it_matters": "신규 고객 유치와 예금 증가는 은행의 핵심 수익원 확대와 자금 조달 비용 절감으로 이어져 수익성 개선에 긍정적인 영향을 미칠 수 있습니다.",
+        "what_to_watch": "향후 분기별 고객 예금 성장률 및 순이자마진(NIM) 변화를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 3,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "도매 자금 조달원: 은행이 기관 투자자 등으로부터 대규모로 조달하는 자금으로, 일반적으로 개인 예금보다 비용이 높을 수 있습니다. 순이자마진(NIM): 은행의 핵심 수익성 지표로, 대출 이자 수익에서 예금 이자 비용을 뺀 금액을 운용 자산으로 나눈 비율입니다."
+      }
+    },
+    "content_hash": "c3a965a9b6b628c36675965d3e6be0e73b8d8f634e061dbf58cfd8cb7f232260",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-23T05:01:58+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001628280-26-066780": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-066780",
+      "entity_id": "CIK:0000936468",
+      "source_role": "candidate",
+      "title": "LOCKHEED MARTIN CORP (LMT) (CIK 0000936468) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026066780/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026066780/ex991q32026.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "LOCKHEED MARTIN CORP (LMT) (CIK 0000936468) EX-99.1 2026-10-22. EX-99.1 2 ex991q32026.htm EX-99.1 Document Exhibit 99.1 News Release Lockheed Martin Reports Third Quarter 2026 Financial Results • Sales increased 11% to $20.7 billion • Net earnings increased 14% to $1.8 billion, or $7.97 per share • Cash from operations of $3.4 billion and free cash flow of $3.0 billion • Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Updates 2026 financial outlook BETHESDA, Md., Oct. EX-99.1 2 ex991q32026.htm EX-99.1 Document Exhibit 99.1 News Release Lockheed Martin Reports Third Quarter 2026 Financial Results • Sales increased 11% to $20.7 billion • Net earnings increased 14% to $1.8 billion, or $7.97 per share • Cash from operations of $3.4 billion and free cash flow of $3.0 billion • Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Updates 2026 financial outlook BETHESDA, Md., Oct. 22, 2026 – Lockheed Martin Corporation [NYSE: LMT] today reported third quarter 2026 sales of $20.7 billion, compared to $18.6 billion in the third quarter of 2025. Net earnings in the third quarter of 2026 were $1.8 billion, or $7.97 per share, compared to $1.6 billion, or $6.95 per share. Cash from operations was $3.4 billion in the third quarter of 2026, compared to $3.7 billion in the third quarter of 2025. Free cash flow was $3.0 billion in the third quarter of 2026, compared to $3.3 billion in the third quarter of 2025. Backlog grew 27% since the second quarter of 2026, setting another new record at $292.0 billion. “Our strong third quarter performance underscores Lockheed Martin’s continuing leadership in the development and delivery of advanced and reliable defense technology solutions. Every day, our research, engineering and production teams are putting highly effective"
+    },
+    "content_hash": "034b0b5483f243c6fcb653dc396028cbce1b1c7864d195d8ebda0f00292d8d21",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0000049196-26-000084": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000049196-26-000084",
+      "entity_id": "CIK:0000049196",
+      "source_role": "candidate",
+      "title": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000084/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000084/hban20260930_8kex991.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-10-22. 5 Noninterest Income Noninterest Income Quarter Ended Change ($ in millions) 3Q26 2Q26 3Q25 LQ YOY Payments and cash management revenue $ 211 $ 204 $ 174 $ 7 3 % $ 37 21 % Wealth and asset management revenue 131 134 104 (3) (2) 27 26 Customer deposit and loan fees 124 128 102 (4) (3) 22 22 Capital markets and advisory fees 122 140 94 (18) (13) 28 30 Mortgage banking income 45 53 43 (8) (15) 2 5 Net gains (losses) on sales of securities — 2 — (2) NM — — Other noninterest income (1) 89 124 111 (35) (28) (22) (20) Total noninterest income $ 722 $ 785 $ 628 $ (63) (8) % $ 94 15 % Impact of Notable Items (included in other noninterest income): Gain on sale of a portion of corporate trust and custody business $ — $ — $ 24 $ — NM $ (24) NM Acquired equity security conversion adjustment (8) — — (8) NM (8) NM Total adjusted noninterest income (Non-GAAP) $ 730 $ 785 $ 604 $ (55) (7) % $ 126 21 % Additional information: Impact of mark-to-market and premiums from credit risk transfer transactions (included in other noninterest income) $ 11 $ 8 $ (2) $ 3 38 % $ 13 NM NM - Not Meaningful (1) In the third quarter of 2026, we reclassified insurance income and leasing revenue into other noninterest income. • Customer deposit and loan fees increased driven by increases in loan commitment fees and the volume of personal service charges ."
+    },
+    "content_hash": "f09dcfe649c9077e4d1edd8f15c1c7372364f8fdd62fd0ab77e1891ae3eef6e8",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0000017843-26-000049": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000017843-26-000049",
+      "entity_id": "CIK:0000017843",
+      "source_role": "candidate",
+      "title": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000049/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000049/a1stqtrfy2027results.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22. Further, in the strong demand environment, pricing continues to strengthen across our business.” “We maintain our recently communicated fiscal year 2027 operating income outlook of $850 million to $880 million and our fiscal year 2029 operating income target of $1.2 billion to $1.3 billion which reflects the accelerating demand environment, continued benefits of pricing actions and the expected contribution from our brownfield capacity expansion project.” “In addition, we are currently working on specific actions and projects to exceed our operating income targets for fiscal year 2027 and fiscal year 2029. EX-99.1 2 a1stqtrfy2027results.htm EX-99.1 Document Exhibit 99.1 CARPENTER TECHNOLOGY REPORTS FIRST QUARTER FISCAL YEAR 2027 RESULTS Delivered Record First Quarter Operating Income, Up 28 Percent Year-Over-Year Strong Results Reflect Productivity Improvements, Mix Optimization and Benefits from Pricing Actions Realized Adjusted Operating Margin in Specialty Alloys Operations Segment of 37.7 Percent Demand Accelerating in Commercial Aerospace Supply Chain, Resulting in Increased Bookings PHILADELPHIA, October 22, 2026 (GLOBE NEWSWIRE) — Carpenter Technology Corporation (NYSE: CRS) (the “Company”) today announced financial results for the fiscal first quarter ended September 30, 2026. For the quarter, the Company reported operating income of $196.4 million and earnings per diluted share of $3.25. First Quarter Fiscal Year 2027 Highlights • Delivered $196.4 million of operating income, up 28 percent year-over-year and down 5 percent sequentially • Sequential performance reflects productivity improvements, mix management and benefits from pricing actions, offset by planned downtime for preventive maintenance activities • Generated Specialty Alloys Operations (“SAO”) segment operating income of $216.3 million, up 27 percent year-over-year and down 6 percent sequentially • Delivered adjusted operating "
+    },
+    "content_hash": "4b9e72d2265b3e8b910e44e4e519cc219699756a49f8af863723d6ac94c36731",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0000007789-26-000257": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000007789-26-000257",
+      "entity_id": "CIK:0000007789",
+      "source_role": "candidate",
+      "title": "ASSOCIATED BANC-CORP (ASB, ASBA, ASB-PE, ASB-PF) (CIK 0000007789) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/7789/000000778926000257/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/7789/000000778926000257/asb09302026ex991.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "ASSOCIATED BANC-CORP (ASB, ASBA, ASB-PE, ASB-PF) (CIK 0000007789) EX-99.1 2026-10-22. “In the third quarter, we maintained our momentum with strong core customer deposit 1 growth, net interest margin expansion, fee income growth, and a strong bottom line--all of which gave us the confidence to execute $100 million in share repurchases during the quarter. 3Q 2025) • Period end core customer deposits 1 of $34.8 billion (+2% vs. • Core customer deposits 1 increased $760 million from the prior quarter and increased $6.3 billion from the same period last year to $35.2 billion. • Core customer deposits 1 increased $671 million from the prior quarter and increased $5.9 billion from the same period last year to $34.8 billion. We continue to expect 2026 period end total deposit growth of 17% to 19% and period end core customer deposit growth of 19% to 21% as compared to Associated's standalone results for the year ended December 31, 2025. 5 Associated Banc-Corp Loan and Deposit Composition (Dollars in thousands) Period end loan composition Sep 30, 2026 Jun 30, 2026 Seql Qtr % Change Mar 31, 2026 Dec 31, 2025 Sep 30, 2025 Comp Qtr % Change Commercial and industrial $ 13,804,140 $ 13,750,175 — % $ 12,339,597 $ 11,799,757 $ 11,567,651 19 % Commercial real estate—owner occupied 1,601,925 1,575,445 2 % 1,193,778 1,186,324 1,149,939 39 % Commercial and business lending 15,406,065 15,325,620 1 % 13,533,375 12,986,081 12,717,590 21 % Commercial real estate—investor 6,494,991 6,492,950 — % 5,266,584 5,246,030 5,369,441 21 % Real estate construction 2,601,571 2,546,186 2 % 2,117,479 1,994,642 1,958,766 33 % Commercial real estate lending 9,096,562 9,039,136 1 % 7,384,063 7,240,672 7,328,207 24 % Total commercial 24,502,627 24,364,756 1 % 20,917,438 20,226,753 20,045,797 22 % Residential mortgage 6,740,214 6,808,398 (1) % 6,727,734 6,793,957 6,858,285 (2) % Auto finance 4,093,215 4,044,416 1 % 3,136,334 3,106,498 3,041,644 35 % Home equity 848,507 826,343 3 % 706,075 713,271 698,112 22"
+    },
+    "content_hash": "cba1e293d7026aaeba4e9f0839c16e626baa54f09940f19e80f1ccac64e77a52",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001104659-26-117979": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-117979",
+      "entity_id": "CIK:0001984060",
+      "source_role": "candidate",
+      "title": "Atlas Energy Solutions Inc. (AESI) (CIK 0001984060) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1984060/000110465926117979/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1984060/000110465926117979/tm2628081d1_ex99-1.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "Atlas Energy Solutions Inc. (AESI) (CIK 0001984060) EX-99.1 2026-10-22. EX-99.1 2 tm2628081d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 Atlas Energy Solutions Announces $424 Million Senior Secured Bridge Facility Provided by Goldman Sachs and Barclays Austin, TX – October 22, 2026 – Atlas Energy Solutions Inc. (NYSE: AESI) (“Atlas” or “the Company”) today announced it has closed a $424 million committed senior secured bridge facility provided by Goldman Sachs and Barclays. Backed by the two cost reimbursement agreements (“CRAs”) announced previously on September 25, 2026, the facility will fund the purchase of power generation and balance-of-plant equipment for two significant data center projects with first power for both expected in late 2027. The facility is a $424 million delayed draw term loan. Atlas expects to draw on it as equipment payments come due and has drawn $171 million at closing. The loan has an initial maturity of 180 days, with an option to extend for an additional 184 days upon the consummation of energy supply agreements for the respective projects, lender consent and other conditions. It bears interest at a rate equal to the Adjusted Term SOFR Rate (or Adjusted Daily Simple SOFR) plus 2.50%, increasing by 0.50% six months after the date of the signing. Atlas has the ability to request incremental commitments of up to $286 million, subject to lender consent and other conditions. “Our customer’s conviction in pursuing these projects is exemplified by their willingness to backstop the purchase of this equipment and the related bridge facility,” said John Turner, President and Chief Executive Officer of Atlas. “This facility enables us to de-risk the supply chain by ordering long lead-time items well in advance of commissioning while we work towards final agreements with our customer and the other related counterparties. Most of the project spending comes after those are signed and construction has begun, and we’ll fund it with long-term financing backed"
+    },
+    "content_hash": "ff94c42ca4b84a84439aefa47bb81f8f6313e211bd6e777f74b0ee232ed721ce",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001104659-26-118027": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-118027",
+      "entity_id": "CIK:0000098677",
+      "source_role": "candidate",
+      "title": "TOOTSIE ROLL INDUSTRIES INC (TR, TROLB) (CIK 0000098677) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/98677/000110465926118027/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/98677/000110465926118027/tr-ex99d1.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "TOOTSIE ROLL INDUSTRIES INC (TR, TROLB) (CIK 0000098677) EX-99.1 2026-10-22. We are also continuing to make investments in plant manufacturing operations to meet new customer and consumer product demands, achieve product quality improvements, expand capacity in certain product lines, and increase operational efficiencies in order to provide genuine value to consumers.” ​ ​ ​ Safe Harbor Statement This release contains forward-looking statements that are based largely on the Company’s current expectations and are made pursuant to the safe harbor provision of the Private Securities Litigation Reform Act of 1995. EX-99.1 2 tr-ex99d1.htm EX-99.1 Exhibit 99.1 ​ ​ TOOTSIE ROLL INDUSTRIES, INC. ​ ​ 7401 South Cicero Avenue ​ Chicago, IL 60629 ​ Phone 773/838-3400 ​ Fax 773/838-3534 ​ PRESS RELEASE ​ ​ ​ ​ ​ STOCK TRADED: NYSE FOR IMMEDIATE RELEASE TICKER SYMBOL: TR Wednesday, October 21, 2026 ​ ​ ​ CHICAGO, ILLINOIS – October 21, 2026 - Ellen R. Gordon, Chairman, Tootsie Roll Industries, Inc. reported third quarter and nine months 2026 net sales and net earnings. ​ Third quarter 2026 net sales were $227,163,000 compared to $230,614,000 in third quarter 2025, a decrease of $3,451,000 or 1%. Third quarter 2026 net earnings were $23,216,000 compared to $35,659,000 in third quarter 2025, and net earnings per share were $0.31 and $0.48 in third quarter 2026 and 2025, respectively, a decrease of $0.17 per share or 35%. ​ Nine months 2026 net sales were $528,594,000 compared to $530,325,000 in nine months 2025, a decrease of $1,731,000. Nine months 2026 net earnings were $54,224,000 compared to $71,261,000 in nine months 2025, and net earnings per share were $0.72 and $0.95 in nine months 2026 and 2025, respectively, a decrease of $0.23 per share or 24%. ​ Mrs. Gordon said, “Third quarter and nine months 2026 were adversely impacted by the timing of sales, including seasonal Halloween sales, between third and fourth quarter 2026 when compared to the prior year’s corresponding qua"
+    },
+    "content_hash": "9a75ca3afc6296266de1980408dd4d002aa73fcdcfe288679d4c436b1ea42b42",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001437749-26-033175": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033175",
+      "entity_id": "CIK:0001787740",
+      "source_role": "candidate",
+      "title": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033175/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033175/ex_1029316.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-22. Valion is actively pursuing new customer relationships for Velocity, and converting these discussions into customer programs represents a potential near-term commercial opportunity to improve facility utilization, generate service revenue, and establish relationships that may support longer-term business growth. “We are actively pursuing new customers and evaluating opportunities to expand the CDMO’s reach. EX-99.1 2 ex_1029316.htm EXHIBIT 99.1 ex_1029316.htm Exhibit 99.1 Valion Bio ’ s New Leadership Unveils 30-Day Agenda to Accelerate Clinical Pipeline and Unlock Shareholder Value Interim CEO Dean Zikria ’ s initial review prioritizes Entolimod and pipeline advancement, commercialization of Velocity Bioworks, and strategic opportunities to maximize the value of the Company ’ s integrated capabilities SAN ANTONIO, TX / October 21, 2026 / ACCESS Newswire -- Valion Bio, Inc. (NASDAQ:VBIO) (“Valion” or the “Company”), a clinical-stage biopharmaceutical company developing biologics that activate innate immune pathways for cytoprotection and immune modulation, today shared the initial findings and priorities from Dean Zikria’s first 30 days as Interim Chief Executive Officer. Mr. Zikria’s strategic review has set a focused agenda built on three priorities: ● Advancing the development of Entolimod and other pipeline assets; ● Pursuing customer and revenue capabilities for Velocity Bioworks (“Velocity”), the Company’s wholly owned contract development and manufacturing organization (“CDMO”); and ● Evaluating strategic partnerships, co-investment structures, licensing deals, and/or other transactions for Velocity that could unlock additional value from the CDMO. \"Having served on Valion's Board of Directors for more than seven years, I have a deep understanding of the Company's science, assets, and people, and I believe those factors provide a meaningful foundation for future success,\" said Mr. Zikria. \"It is als"
+    },
+    "content_hash": "a419035cea47b0bc334aefdac624782bbf65f8fd1ae9185cc674aa7c60f9647b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001104659-26-118161": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-118161",
+      "entity_id": "CIK:0000743367",
+      "source_role": "candidate",
+      "title": "BAR HARBOR BANKSHARES (BHB) (CIK 0000743367) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/743367/000110465926118161/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/743367/000110465926118161/bhb-ex99d1.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "BAR HARBOR BANKSHARES (BHB) (CIK 0000743367) EX-99.1 2026-10-22. Our Retail teams opened more than 1,600 new customer accounts during the quarter, demonstrating this calling culture and the effectiveness of our execution-focused approach to banking. Growth in non-maturity deposits included $31.7 million in new customer deposits. EX-99.1 2 bhb-ex99d1.htm EX-99.1 Exhibit 99.1 Bar Harbor Bankshares Reports Third Quarter 2026 Results; Declares Dividend ​ BAR HARBOR, MAINE – October 22, 2026 - Bar Harbor Bankshares (NYSE American: BHB) (the “Company”) reported third quarter 2026 GAAP net income of $16.1 million, or $0.96 per diluted share, and core earnings (Non-GAAP) of $17.5 million, or $1.04 per diluted share, compared to GAAP net income of $15.2 million, or $0.91 per diluted share, and core earnings (Non-GAAP) of $15.4 million, or $0.92 per diluted share, in the second quarter of 2026. ​ THIRD QUARTER 2026 HIGHLIGHTS (all comparisons to second quarter 2026, unless otherwise noted) • Net interest margin of 3.77%, compared to 3.61% • 1.35% return on assets; 1.47% core return on assets (Non-GAAP) • 11.69% return on equity; 12.70% core return on equity (Non-GAAP) • 55.26% efficiency ratio (Non-GAAP), compared to 55.76% ​ Bar Harbor Bankshares’ President and Chief Executive Officer, Curtis C. Simard, stated, “We are pleased to announce another strong quarter of financial results. Our success reflects our commitment to performance metrics in all our core businesses, centered in exceptional service and targeted calling. Our Retail teams opened more than 1,600 new customer accounts during the quarter, demonstrating this calling culture and the effectiveness of our execution-focused approach to banking. Total deposits grew 9% on an annualized basis contributing to a lower overall cost of funds, reduced reliance on wholesale borrowings and increased profitability. Wealth management continues to be a significant contributor and meaningful part of our organization. This has neve",
+      "_model_response": {
+        "evidence_quote": "",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "unknown",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "본 공시는 분기 실적 발표로, 이미 발생한 과거 실적 지표(신규 고객 계좌, 예금 증가)를 보고하는 루틴 공시이다. 미래 실적에 대한 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 조기 발굴 신호에 해당하는 내용이 포함되어 있지 않다.",
+        "subject": "Bar Harbor Bankshares",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "본 공시는 분기 실적 발표로, 이미 발생한 과거 실적 지표(신규 고객 계좌, 예금 증가)를 보고하는 루틴 공시이다. 미래 실적에 대한 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 조기 발굴 신호에 해당하는 내용이 포함되어 있지 않다."
+    },
+    "content_hash": "91a12a72c38d98e15f9fd58f7880d36f720aebb0153a525ceefa078e58657ffd",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-23T05:02:22+00:00",
+    "reason": "본 공시는 분기 실적 발표로, 이미 발생한 과거 실적 지표(신규 고객 계좌, 예금 증가)를 보고하는 루틴 공시이다. 미래 실적에 대한 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 조기 발굴 신호에 해당하는 내용이 포함되어 있지 않다.",
+    "processed_day": "2026-10-23",
+    "processed_run": "39903386847-1"
+  },
+  "0001185185-26-004909": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001185185-26-004909",
+      "entity_id": "CIK:0002028027",
+      "source_role": "candidate",
+      "title": "Newbury Street II Acquisition Corp (NTWO, NTWOU, NTWOW) (CIK 0002028027) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/2028027/000118518526004909/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2028027/000118518526004909/ntwo2ex99-1.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "Newbury Street II Acquisition Corp (NTWO, NTWOU, NTWOW) (CIK 0002028027) EX-99.1 2026-10-22. The firm’s investment follows a number of recent milestones for FORT, including an expanded partnership with Agility Robotics, the announcement of FORT’s new Connectivity Aggregation software product, and new customer opportunities. EX-99.1 2 ntwo2ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 FORT Robotics Secures Approximately $20 Million in Additional Funding led by Tiger Global and Mark Cuban Companies Investors increase their commitments as FORT plans to become the first public company dedicated principally to physical AI safety PHILADELPHIA – October 22, 2026 – FORT Robotics, Inc., the safety platform developing the Trust Layer for Physical AI, today announced approximately $20 million in new commitments from existing investors, expanding the capital available to support FORT’s next phase of growth. Tiger Global is leading an approximately $10 million financing, with participation from Mark Cuban Companies, that is expected to close this week. Tiger Global has also committed an additional $10 million to the previously announced common equity PIPE (Private Investment in Public Equity) expected to close in connection with the closing of FORT’s proposed business combination with Newbury Street II Acquisition Corp (Nasdaq: NTWO). Together with previously announced PIPE commitments, today’s announcement brings the total committed capital to date in connection with FORT’s proposed business combination to more than $50 million. The additional investment is expected to help FORT further accelerate its growth by expanding its team and operating capacity to meet growing customer demand and pursue opportunities across the rapidly developing physical AI market. FORT intends to use the additional capital to support new and expanding customer opportunities across warehousing, defense, construction, and other markets adopting increasingly autonomous systems. FORT’s Trust Layer serves as founda"
+    },
+    "content_hash": "a5231fc620b8a4c8bf2e8353972594be62312008610ba4a5fb105585de6c6830",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001675644-26-000089": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001675644-26-000089",
+      "entity_id": "CIK:0001675644",
+      "source_role": "candidate",
+      "title": "FVCBankcorp, Inc. (FVCB) (CIK 0001675644) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1675644/000167564426000089/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1675644/000167564426000089/fvcb-20260930xexx991.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "FVCBankcorp, Inc. (FVCB) (CIK 0001675644) EX-99.1 2026-10-22. The decrease in core deposits for the quarter ended September 30, 2026 was primarily due to large customer deposit transactions that occurred at the end of the second quarter, and therefore, the decrease in core deposits at September 30, 2026 was expected. EX-99.1 2 fvcb-20260930xexx991.htm EX-99.1 Document Exhibit 99.1 PRESS RELEASE For further information, contact: David W. Pijor, Esq., Chairman and Chief Executive Officer Phone: (703) 436-3802 Email: dpijor@fvcbank.com Patricia A. Ferrick, President Phone: (703) 436-3822 Email: pferrick@fvcbank.com FOR IMMEDIATE RELEASE – October 22, 2026 FVCBankcorp, Inc. Announces Earnings; 19% Increase in Net Income Compared to Year Ago Quarter Fairfax, VA-FVCBankcorp, Inc. (NASDAQ: FVCB) (the “Company”) today reported net income of $6.6 million for the quarter ended September 30, 2026 compared to net income of $5.6 million for the quarter ended September 30, 2025, an increase of $1.0 million, or 19%. For the nine months ended September 30, 2026, net income increased $4.8 million, or 29%, to $21.2 million, compared to $16.4 million for the nine months ended September 30, 2025. Diluted earnings per share was $0.37 for the quarter ended September 30, 2026 compared to $0.31 for the quarter ended September 30, 2025, an increase of 20%. For the nine months ended September 30, 2026, diluted earnings per share was $1.17, an increase of 30%, compared to diluted earnings per share of $0.90 for the nine months ended September 30, 2025. Return on average assets for the quarter ended September 30, 2026 was 1.17%, an increase from 1.00% for the year ago quarter ended September 30, 2025. Return on average equity increased to 9.77% for the quarter ended September 30, 2026, compared to 9.05% for the year ago quarter ended September 30, 2025. For the nine months ended September 30, 2026, return on average assets was 1.27%, an increase from 0.98% for the nine months ended September 3"
+    },
+    "content_hash": "db1e0d3d15fbba057a4fd840a0561925890e060cb4f576afa45a4146f8960918",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001477932-26-006396": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001477932-26-006396",
+      "entity_id": "CIK:0001474167",
+      "source_role": "candidate",
+      "title": "Cosmos Health Inc. (COSM) (CIK 0001474167) EX-99.2 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474167/000147793226006396/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1474167/000147793226006396/cosm_ex992.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "Cosmos Health Inc. (COSM) (CIK 0001474167) EX-99.2 2026-10-22. When more than eight in ten new orders include a subscription, each new customer represents a potential recurring relationship rather than a single sale, and successive monthly cohorts can build on one another. EX-99.2 3 cosm_ex992.htm CHIEF EXECUTIVE OFFICERS LETTER cosm_ex992.htm EXHIBIT 99.2 Cosmos Health CEO Greg Siokas Issues Letter to Shareholders Highlighting Record 2026 Revenue, U.S. Subscription Growth and Global Expansion Key Highlights · Record revenue: preliminary nine-month 2026 revenue of approximately $54.3 million, up 19%, with every quarter of 2026 setting a record · 2026 outlook reaffirmed: full-year revenue expected to surpass $90 million, up approximately 38%, the largest single-year revenue increase in the Company’s history · Record fourth quarter expected: revenue of approximately $35.7 million or more, up approximately 81% from the fourth quarter of 2025 · Multiple engines of growth: pharmaceutical contract manufacturing and distribution, proprietary brands and U.S. e-commerce all expected to contribute · U.S. e-commerce scaling rapidly: 8,940 active U.S. subscriptions as of October 19, 2026, up 42% in five days, with approximately $15 million in revenue and $10.5 million in gross profit expected in the fourth quarter · Record CMO pipeline: more than 32.7 million units at Cana Laboratories, up sixfold since mid-2024 · Record distribution volumes: CosmoFarm serving more than 1,500 pharmacies, with revenue up approximately 4.3 times under Cosmos Health ownership · Global brand expansion: proprietary brands sold in more than 40 countries, with particular momentum in Europe and the Gulf · Diversified balance sheet: approximately $20 million in non-core assets, including real estate and digital assets, and total liabilities down 13.3% in the first half of 2026 · Share repurchases: more than 5.1 million shares repurchased for approximately $1.1 million · R&D in weight management: advanci"
+    },
+    "content_hash": "4414df3f1d43fe8c0299b9e17df138457e18450e8a2c84787450ac8f3ff63f6e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001171843-26-006766": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001171843-26-006766",
+      "entity_id": "CIK:0000854560",
+      "source_role": "candidate",
+      "title": "GREAT SOUTHERN BANCORP, INC. (GSBC) (CIK 0000854560) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/854560/000117184326006766/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/854560/000117184326006766/exh_991.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "GREAT SOUTHERN BANCORP, INC. (GSBC) (CIK 0000854560) EX-99.1 2026-10-22. The Company’s primary sources of funds are customer deposits, FHLBank advances, other borrowings, loan repayments, unpledged securities, proceeds from sales of loans and available-for-sale securities and funds provided from operations. This expense savings is expected to be partially offset by some customer deposit attrition over time related to the branch closures, resulting in additional interest expense on alternative funding sources along with reduced non-interest income generated from these deposit accounts. EX-99.1 2 exh_991.htm PRESS RELEASE EdgarFiling EXHIBIT 99.1 Great Southern Bancorp, Inc. Reports Preliminary Third Quarter Earnings of $1.27 Per Diluted Common Share Earnings Negatively Impacted in This Period by Non-Cash Hedge Accounting Adjustment Preliminary Financial Results and Business Update for the Quarter Ended September 30, 2026 SPRINGFIELD, Mo., Oct. 21, 2026 (GLOBE NEWSWIRE) -- Great Southern Bancorp, Inc. (the “Company”) (NASDAQ:GSBC), the holding company for Great Southern Bank (the “Bank”), today reported that preliminary earnings for the three months ended September 30, 2026, were $1.27 per diluted common share ($14.0 million net income) compared to $1.56 per diluted common share ($17.8 million net income) for the three months ended September 30, 2025. The 2026 third quarter results were negatively impacted by non-cash cash flow hedge accounting adjustments recorded during the period, which is discussed below and under “Net Interest Income” and “Non-Interest Income.” For the quarter ended September 30, 2026, annualized return on average common equity was 8.68%, annualized return on average assets was 0.99%, annualized net interest margin was 3.75% and the efficiency ratio was 67.57%, compared to 11.30%, 1.23%, 3.72% and 62.45%, respectively, for the quarter ended September 30, 2025. Excluding the non-cash cash flow hedge accounting adjustments referenced above, for the"
+    },
+    "content_hash": "7044d296c56d45582c09a331bacad88091a5e84475a555615f8e31647eef12fc",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001628280-26-066787": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-066787",
+      "entity_id": "CIK:0000715579",
+      "source_role": "candidate",
+      "title": "ACNB CORP (ACNB) (CIK 0000715579) EX-99.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/715579/000162828026066787/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/715579/000162828026066787/pressrelease2026-q3final.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "ACNB CORP (ACNB) (CIK 0000715579) EX-99.1 2026-10-22. September 2025 Noninterest-bearing demand deposits $ 612,620 $ 600,711 $ 581,697 $ 11,909 $ 30,923 Interest-bearing demand deposits 630,912 636,551 614,130 (5,639) 16,782 Money market 480,430 481,015 493,430 (585) (13,000) Savings 329,269 336,504 330,200 (7,235) (931) Total demand and savings 2,053,231 2,054,781 2,019,457 (1,550) 33,774 Time 455,732 480,895 446,439 (25,163) 9,293 Total deposits $ 2,508,963 $ 2,535,676 $ 2,465,896 $ (26,713) $ 43,067 September 30, 2026 compared to June 30, 2026 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts and a seasonal influx of municipal deposits • The decrease in time deposits was driven primarily by the pay down of $30.0 million of brokered deposits and partially offset by growth in retail time deposits September 30, 2026 compared to September 30, 2025 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts • The increase in interest-bearing demand deposits was driven primarily by growth in commercial and retail balances and accounts due to new customer relationships acquired ACNB Corporation Press Release/2026 Third Quarter Financial Results October 22, 2026 Page 6 of 14 • The decrease in money market balances was driven primarily by attrition of higher cost money market deposits from the Acquisition Borrowings Total borrowings were $331.4 million at September 30, 2026, an increase of $8.3 million and a decrease of $4.4 million compared to June 30, 2026 and September 30, 2025, respectively."
+    },
+    "content_hash": "a04704b9ddaaccb9c12a0d736f1437633c158c5955677efb66843018eb4e791b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001477932-26-006391": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001477932-26-006391",
+      "entity_id": "CIK:0001809750",
+      "source_role": "candidate",
+      "title": "Edible Garden AG Inc (EDBL, EDBLW) (CIK 0001809750) EX-10.1 2026-10-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1809750/000147793226006391/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1809750/000147793226006391/edbl_ex101.htm",
+      "published_at": "2026-10-22",
+      "raw_text": "Edible Garden AG Inc (EDBL, EDBLW) (CIK 0001809750) EX-10.1 2026-10-22. Any new customer acquisition by Buyer requiring incremental volumes beyond then-current forecasts shall require at least three (3) months’ advance written notice to Supplier prior to launch, to allow Supplier sufficient time to plan for the additional volume. EX-10.1 2 edbl_ex101.htm SUPPLY AGREEMENT edbl_ex101.htm EXHIBIT 10.1 PRODUCE SUPPLY AGREEMENT This Produce Supply Agreement (this “ Agreement ”) is entered into as of October 15, 2026 (the “ Effective Date ”), by and between: Caney Fork Farms, LLC , a Tennessee limited liability company, with a principal place of business at 7 Gibbs Circle, Carthage, TN 37030 (“ Supplier ” or “ Co-Packer ”), and Edible Garden AG Incorporated , a Delaware corporation, with a principal place of business at 283 County Road 519, Belvidere, NJ 07823 (“ Buyer ”). Supplier and Buyer may each be referred to individually as a “ Party ” and collectively as the “ Parties .” 1. RECITALS WHEREAS, Supplier grows, harvests, and/or packs fresh produce; and WHEREAS, Buyer desires to purchase such produce from Supplier for resale, distribution, and/or further processing; and WHEREAS, the Parties desire to set forth the terms and conditions under which Supplier will supply, and Buyer will purchase, such produce; NOW, THEREFORE, in consideration of the mutual covenants contained herein, the Parties agree as follows. 2. TERM 2.1 Initial Term. This Agreement shall commence on the Effective Date and continue for a period of TWO (2) YEARS (the “ Initial Term ”), unless earlier terminated as provided herein. 2.2 Renewal. This Agreement shall automatically renew for successive one (1) year periods (each, a “ Renewal Term ,” and together with the Initial Term, the “ Term ”) unless either Party provides the other with written notice of non-renewal at least sixty (60) days prior to the end of the then-current Term. 2.3 Year-Round Supply. This Agreement covers year-round supply of all "
+    },
+    "content_hash": "29360df323795d2016ed49aa727714dd9ddf6b1308755bd874f060c31a7a1c60",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-23T05:01:33.401538+00:00"
   }
 }

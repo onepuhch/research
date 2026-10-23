@@ -1,0 +1,314 @@
+{
+  "candidate_id": "CAN-5790099EDC6F3301",
+  "candidate_version": "CV-C1A3F55A2B364755",
+  "identity": {
+    "entity_id": "NASDAQ:SPCX",
+    "ticker": "SPCX",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Space Exploration Technologies Corp.",
+  "industry": "Aerospace & Defense",
+  "sector": "Industrials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "위성 기반 광대역 서비스와 재사용 로켓 설계, 제조, 발사 및 우주 발사 서비스를 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connectivity, and AI. The Space segment designs, manufactures, and launches reusable rockets to provide access to space. It also provides launch services for the deployment of payloads to intended orbits for commercial and government customers utilizing Falcon 9 and Falcon Heavy; and engages in the launch and development for the development of spacecraft and the provision of launch and mission services"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SPCX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPCX/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-23T05:16:29+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SPCX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPCX/history",
+      "published_at": null,
+      "observed_at": "2026-10-23T05:16:29+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SPCX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SPCX/profile",
+      "published_at": null,
+      "observed_at": "2026-10-23T05:16:29+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-BFAB16DB26870547",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-20",
+      "observed_at": "2026-10-23T05:17:16+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-5082FE59E92D0AA1",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-10-06T06:46:36+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-9B639B0FE568E1DC",
+    "input_sha": "9b639b0fe568e1dc1313fc0f4b28c7a3ea1490989b2510fd80f8d0374134efbf",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Connectivity] Connectivity revenues: $5.2 billion / 22%(변화율·증가) / 69%(변화율) — 소비자 증가에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+        "note_ko": "소비자 증가에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+        "kind": "fact",
+        "quote": "•Connectivity revenues were $5.2 billion, up 22% sequentially and 69% year-over-year, driven by an increase in consumer",
+        "document_id": "DOC-BFAB16DB26870547",
+        "block_id": "p50",
+        "metric": "Connectivity revenues",
+        "figures": [
+          "$5.2 billion",
+          "22%",
+          "69%"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Connectivity",
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "[SI] SI revenues: $7.6 billion / 195%(변화율·증가) / 830%(변화율) — 주로 신규 활성화에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+        "note_ko": "주로 신규 활성화에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+        "kind": "fact",
+        "quote": "•SI revenues were $7.6 billion, up 195% sequentially and 830% year-over-year, primarily driven by the activation of new",
+        "document_id": "DOC-BFAB16DB26870547",
+        "block_id": "p67",
+        "metric": "SI revenues",
+        "figures": [
+          "$7.6 billion",
+          "195%",
+          "830%"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "SI",
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "Adjusted EBITDA and Segment Adjusted EBITDA — 이 지표들은 고립적으로 또는 대체물로 간주되어서는 안 된다",
+        "note_ko": "이 지표들은 고립적으로 또는 대체물로 간주되어서는 안 된다",
+        "kind": "fact",
+        "quote": "Because of these limitations, Adjusted EBITDA and Segment Adjusted EBITDA should not be considered in isolation or as a",
+        "document_id": "DOC-BFAB16DB26870547",
+        "block_id": "p109",
+        "metric": "Adjusted EBITDA and Segment Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted EBITDA and Segment Adjusted EBITDA — 다른 회사들은 이 지표들을 다르게 계산하거나 전혀 계산하지 않을 수 있어 비교 측정치로서의 유용성이 제한된다",
+        "note_ko": "다른 회사들은 이 지표들을 다르게 계산하거나 전혀 계산하지 않을 수 있어 비교 측정치로서의 유용성이 제한된다",
+        "kind": "fact",
+        "quote": "Other companies in our industry may calculate Adjusted EBITDA and Segment Adjusted EBITDA differently than we do or may not calculate them at all, limiting their usefulness as comparative measures.",
+        "document_id": "DOC-5082FE59E92D0AA1",
+        "block_id": "p9",
+        "metric": "Adjusted EBITDA and Segment Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted EBITDA and Segment Adjusted EBITDA — 이 지표들은 순이익, 영업이익 또는 GAAP에 따라 계산된 다른 측정치의 대체물로 간주되어서는 안 된다",
+        "note_ko": "이 지표들은 순이익, 영업이익 또는 GAAP에 따라 계산된 다른 측정치의 대체물로 간주되어서는 안 된다",
+        "kind": "fact",
+        "quote": "Because of these limitations, Adjusted EBITDA and Segment Adjusted EBITDA should not be considered in isolation or as a substitute for net income (loss), income (loss) from operations, or any other measure calculated in accordance with GAAP, and should be considered together with our GAAP financial measures and the reconciliations to the corresponding most directly comparable GAAP financial measures set forth under “Reconciliation of Net Loss to Adjusted EBITDA” and elsewhere in this release.",
+        "document_id": "DOC-5082FE59E92D0AA1",
+        "block_id": "p9",
+        "metric": "Adjusted EBITDA and Segment Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-BFAB16DB26870547",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm",
+        "filed_at": "2026-10-20",
+        "observed_at": "2026-10-23T05:17:16+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-5082FE59E92D0AA1",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-10-06T06:46:36+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-23T05:17:33+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.58434,
+    "eps_30d": 1.86094,
+    "eps_90d": 0.65308,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 26,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 448.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

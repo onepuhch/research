@@ -1,0 +1,212 @@
+{
+  "candidate_id": "CAN-6776B8978D264E96",
+  "candidate_version": "CV-216CD8E435F6ADFA",
+  "identity": {
+    "entity_id": "NYSE:MTDR",
+    "ticker": "MTDR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Matador Resources Company",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Matador Resources Company, an independent energy company, engages in the acquisition, exploration, development, and production of oil and natural gas resources in the United States. It operates through two segments, Exploration and Production; and Midstream. The company primarily holds interests in the Wolfcamp and Bone Spring plays in the Delaware Basin in Southeast New Mexico and West Texas. It also operates the Haynesville shale and Cotton Valley plays in Northwest Louisiana. In addition, the company conducts midstream operations in support of its exploration, development, and production op"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MTDR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MTDR/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-23T05:07:44+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MTDR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MTDR/history",
+      "published_at": null,
+      "observed_at": "2026-10-23T05:07:44+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MTDR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MTDR/profile",
+      "published_at": null,
+      "observed_at": "2026-10-23T05:07:44+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-A3287F7BAEF15FD6",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1520006/000152000626000050/mtdr-20261001.htm",
+      "title": "SEC 8-K 8-K",
+      "published_at": null,
+      "filed_at": "2026-10-05",
+      "observed_at": "2026-10-16T04:56:26+00:00",
+      "fields": "8-K 8-K"
+    },
+    {
+      "id": "DOC-761DA2FAA228E75C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1520006/000152000626000036/a20260630mtdr8ker-ex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-16T04:56:26+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-0251AA0D040ECF18",
+    "input_sha": "0251aa0d040ecf18cf120e4c7a373d3973e17e4e5bd5ba14e30b9fe903f77059",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "oil production growth · third quarter of 2026: approximately 3%(변화율·증가) — 회사는 유가 생산량의 순차적 증가를 예상한다",
+        "note_ko": "회사는 유가 생산량의 순차적 증가를 예상한다",
+        "kind": "guidance",
+        "quote": "Matador anticipates sequential oil production growth of approximately 3% to a quarterly record of approximately 129,500 barrels per day in the third quarter of 2026, primarily as a result of the 13 Guss wells and the 30 to 33 net operated horizontal wells Matador expects to turn to sales in the Delaware Basin during the third quarter of 2026.",
+        "document_id": "DOC-761DA2FAA228E75C",
+        "block_id": "p78",
+        "metric": "oil production growth",
+        "figures": [
+          "approximately 3%"
+        ],
+        "period": "third quarter of 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금과 비교할 수 없다",
+        "note_ko": "조정 EBITDA는 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금과 비교할 수 없다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA should not be considered an alternative to, or more meaningful than, net income (loss) or net cash provided by operating activities as determined in accordance with GAAP or as an indicator of the Company’s operating performance or liquidity.",
+        "document_id": "DOC-761DA2FAA228E75C",
+        "block_id": "p126",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-A3287F7BAEF15FD6",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1520006/000152000626000050/mtdr-20261001.htm",
+        "filed_at": "2026-10-05",
+        "observed_at": "2026-10-16T04:56:26+00:00",
+        "form": "8-K",
+        "document_type": "8-K"
+      },
+      {
+        "document_id": "DOC-761DA2FAA228E75C",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1520006/000152000626000036/a20260630mtdr8ker-ex991.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-16T04:56:26+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-16T04:56:46+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 10.19291,
+    "eps_30d": 9.03716,
+    "eps_90d": 8.30956,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 19,
+    "up30": 5,
+    "down30": 2,
+    "pct_90": 22.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

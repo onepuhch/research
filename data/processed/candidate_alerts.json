@@ -1239,6 +1239,126 @@
       "payload_text": "<b>🆕 새 발굴 후보 · KOS Kosmos Energy Ltd.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n회사 설명 확인 중 (KOS)\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.23 → 지금 $0.47 (+101%) · 주가 같은 기간 +2.7%\n\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+51%)\n👍 주가는 같은 90일에 +3%로, 이익 예상 상향(+101%)보다 덜 움직임\n👎 최근 30일 분석가 4명 중 1명만 올림 — 한 곳의 수정일 수 있음\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-2365AA0167A432A4</code> · 추적 <code>/track CAN-2365AA0167A432A4</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "5f2d2892a021fc7ac956d76012d683dcf6730226ecdd691ea24119b48033f5ab",
       "message_id": 205
+    },
+    "CIK:0001825088|주택 건설|new_discovery": {
+      "channel": "news",
+      "event": "new_discovery",
+      "entity_id": "CIK:0001825088",
+      "thesis_key": "주택 건설",
+      "candidate_id": null,
+      "candidate_version": null,
+      "observation_id": null,
+      "signal_id": "SIG-0910",
+      "day": "2026-10-23",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39903386847-1",
+      "reserved_at": "2026-10-23T05:18:00+00:00",
+      "payload_text": "📡 새 발굴 신호 · 2026-10-23\n\n<b>🅱️ Dream Finders Homes, Inc. (DFH) · 6/12점</b>\nSIG-0910 · 검토 우선순위 B · 주택 건설\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Dream Finders Homes의 고객 예치금(미인도 주택 관련)이 2025년 9월 30일 1,430만 달러에서 2026년 6월 30일 2,130만 달러로 증가했습니다.\n· 왜 중요: 고객 예치금 증가는 향후 주택 판매 및 매출 인식이 증가할 가능성을 시사하며, 이는 회사의 실적 개선으로 이어질 수 있습니다.\n· 볼 것: 향후 분기별 주택 인도량 및 매출액 추이, 신규 수주 계약 규모\n· 용어: 고객 예치금(Customer deposits): 고객이 주택 구매 계약 후 인도 전에 미리 지불하는 금액으로, 향후 매출로 인식될 예정인 부채.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1825088/000162828026066548/ex993bzhunauditedinterimfi.htm\">SEC EDGAR</a> (2026-10-20)\n\n추적 <code>/track SIG-0910</code>",
+      "payload_sha256": "222f4faa4a7b2832f67b1845159d74da640cbeac43f440fdb4cb240ac542562e"
+    },
+    "NASDAQ:SPCX|eps-revision-review:v1|material_update|B:OB-F3A3612CE36AA85B>OB-35755E742AE3EB15": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NASDAQ:SPCX",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-5790099EDC6F3301",
+      "candidate_version": "CV-C1A3F55A2B364755",
+      "observation_id": "OB-C7D5C5FEB37DF06B",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-F3A3612CE36AA85B",
+          "observed_at": "2026-10-06T06:46:34+00:00",
+          "day": "2026-10-06",
+          "observation_id": "OB-F3A3612CE36AA85B",
+          "snapshot_sha256": "d6205768a29561230a1987823d30bdcb66dcc33c7c1bfe3dda91b11c74288667",
+          "eps_now": 1.94191,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-35755E742AE3EB15",
+          "baseline_id": "OB-35755E742AE3EB15",
+          "observed_at": "2026-10-22T05:14:57+00:00",
+          "day": "2026-10-22",
+          "snapshot_sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+          "eps_now": 3.18818,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-C7D5C5FEB37DF06B",
+          "baseline_id": "OB-C7D5C5FEB37DF06B",
+          "observed_at": "2026-10-23T05:17:13+00:00",
+          "day": "2026-10-23",
+          "snapshot_sha256": "076334ac625cf0c876894eb4e147f174b8d16a55324498eecb13f2bbc18d1d3b",
+          "eps_now": 3.58434,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 84.58,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-F3A3612CE36AA85B>OB-35755E742AE3EB15"
+        ]
+      },
+      "day": "2026-10-23",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39903386847-1",
+      "reserved_at": "2026-10-23T05:18:00+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · SPCX Space Exploration Technologies Corp.</b>\n기준: 2026-10-06 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $1.94 → 현재 $3.58 (+85%), 2026-10-22·2026-10-23 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-5790099EDC6F3301</code> · 추적 <code>/track CAN-5790099EDC6F3301</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "296198b455f7147e77d024994cdc783bbf54b15898b2948c36969b7880ad7fd0"
+    },
+    "NASDAQ:SMCI|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:SMCI",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-5FD7409FDFE8F5EA",
+      "candidate_version": "CV-12EF3B0D903F4E12",
+      "observation_id": "OB-CE6B85D4D6227197",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-10-23",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "39903386847-1",
+      "reserved_at": "2026-10-23T05:18:00+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · SMCI Super Micro Computer, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n모듈형 서버 및 스토리지 솔루션, 특히 AI 서버를 개발하고 판매하여 돈을 법니다.\n내년 이익 예상(EPS, 2028-06-30 회계연도 말) 90일 전 $3.86 → 지금 $5.59 (+45%) · 주가 같은 기간 +12.0%\n\n👍 최근 30일 분석가 17명 중 8명이 올림(내린 사람 없음)\n👍 주가는 같은 90일에 +12%로, 이익 예상 상향(+45%)보다 덜 움직임\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 10위로 들어옴\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-5FD7409FDFE8F5EA</code> · 추적 <code>/track CAN-5FD7409FDFE8F5EA</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "5276f554250f7b7c716b74f0740cee6654f74ef918083e43fdbe2d3730d4fdc1"
     }
   },
   "bootstrap": {

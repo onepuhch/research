@@ -1,0 +1,229 @@
+{
+  "context_id": "CTX-9B639B0FE568E1DC",
+  "candidate_id": "CAN-5790099EDC6F3301",
+  "ticker": "SPCX",
+  "issuer_cik": "0001181412",
+  "document_ids": [
+    "DOC-BFAB16DB26870547",
+    "DOC-5082FE59E92D0AA1"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-BFAB16DB26870547#p12",
+    "DOC-BFAB16DB26870547#p50",
+    "DOC-BFAB16DB26870547#t9",
+    "DOC-BFAB16DB26870547#p67",
+    "DOC-BFAB16DB26870547#p70",
+    "DOC-BFAB16DB26870547#p109",
+    "DOC-BFAB16DB26870547#p123",
+    "DOC-BFAB16DB26870547#t14",
+    "DOC-5082FE59E92D0AA1#p7",
+    "DOC-5082FE59E92D0AA1#p8",
+    "DOC-5082FE59E92D0AA1#p9"
+  ],
+  "input_sha": "9b639b0fe568e1dc1313fc0f4b28c7a3ea1490989b2510fd80f8d0374134efbf",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-23T05:17:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Connectivity] Connectivity revenues: $5.2 billion / 22%(변화율·증가) / 69%(변화율) — 소비자 증가에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+      "note_ko": "소비자 증가에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+      "kind": "fact",
+      "quote": "•Connectivity revenues were $5.2 billion, up 22% sequentially and 69% year-over-year, driven by an increase in consumer",
+      "document_id": "DOC-BFAB16DB26870547",
+      "block_id": "p50",
+      "metric": "Connectivity revenues",
+      "figures": [
+        "$5.2 billion",
+        "22%",
+        "69%"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Connectivity",
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[SI] SI revenues: $7.6 billion / 195%(변화율·증가) / 830%(변화율) — 주로 신규 활성화에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+      "note_ko": "주로 신규 활성화에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다",
+      "kind": "fact",
+      "quote": "•SI revenues were $7.6 billion, up 195% sequentially and 830% year-over-year, primarily driven by the activation of new",
+      "document_id": "DOC-BFAB16DB26870547",
+      "block_id": "p67",
+      "metric": "SI revenues",
+      "figures": [
+        "$7.6 billion",
+        "195%",
+        "830%"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "SI",
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Adjusted EBITDA and Segment Adjusted EBITDA — 이 지표들은 고립적으로 또는 대체물로 간주되어서는 안 된다",
+      "note_ko": "이 지표들은 고립적으로 또는 대체물로 간주되어서는 안 된다",
+      "kind": "fact",
+      "quote": "Because of these limitations, Adjusted EBITDA and Segment Adjusted EBITDA should not be considered in isolation or as a",
+      "document_id": "DOC-BFAB16DB26870547",
+      "block_id": "p109",
+      "metric": "Adjusted EBITDA and Segment Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted EBITDA and Segment Adjusted EBITDA — 다른 회사들은 이 지표들을 다르게 계산하거나 전혀 계산하지 않을 수 있어 비교 측정치로서의 유용성이 제한된다",
+      "note_ko": "다른 회사들은 이 지표들을 다르게 계산하거나 전혀 계산하지 않을 수 있어 비교 측정치로서의 유용성이 제한된다",
+      "kind": "fact",
+      "quote": "Other companies in our industry may calculate Adjusted EBITDA and Segment Adjusted EBITDA differently than we do or may not calculate them at all, limiting their usefulness as comparative measures.",
+      "document_id": "DOC-5082FE59E92D0AA1",
+      "block_id": "p9",
+      "metric": "Adjusted EBITDA and Segment Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted EBITDA and Segment Adjusted EBITDA — 이 지표들은 순이익, 영업이익 또는 GAAP에 따라 계산된 다른 측정치의 대체물로 간주되어서는 안 된다",
+      "note_ko": "이 지표들은 순이익, 영업이익 또는 GAAP에 따라 계산된 다른 측정치의 대체물로 간주되어서는 안 된다",
+      "kind": "fact",
+      "quote": "Because of these limitations, Adjusted EBITDA and Segment Adjusted EBITDA should not be considered in isolation or as a substitute for net income (loss), income (loss) from operations, or any other measure calculated in accordance with GAAP, and should be considered together with our GAAP financial measures and the reconciliations to the corresponding most directly comparable GAAP financial measures set forth under “Reconciliation of Net Loss to Adjusted EBITDA” and elsewhere in this release.",
+      "document_id": "DOC-5082FE59E92D0AA1",
+      "block_id": "p9",
+      "metric": "Adjusted EBITDA and Segment Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "클라우드 서비스에 힘입어 전년 대비 증가했다",
+      "figures": [
+        "$6.7 billion"
+      ],
+      "quote": "•Added $6.7 billion of incremental SI solutions and infrastructure revenue year-over-year, driven by cloud services",
+      "where": "DOC-BFAB16DB26870547#p12"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "해당 분기 동안의 수치이다",
+      "figures": [
+        "$5.0 billion"
+      ],
+      "quote": "acquisition for the quarter, and SI Adjusted EBITDA was $5.0 billion",
+      "where": "DOC-BFAB16DB26870547#p70"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "해당 기간의 수치이다",
+      "figures": [
+        "$8,809"
+      ],
+      "quote": "Adjusted EBITDA ; $8,809 ; $2,169 ; $13,474 ; $5,113",
+      "where": "DOC-BFAB16DB26870547#t14"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}
