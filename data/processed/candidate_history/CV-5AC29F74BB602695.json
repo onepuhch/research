@@ -1,0 +1,199 @@
+{
+  "candidate_id": "CAN-76DD3777C06E7825",
+  "candidate_version": "CV-5AC29F74BB602695",
+  "identity": {
+    "entity_id": "NASDAQ:MXL",
+    "ticker": "MXL",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "MaxLinear, Inc.",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "고속 통신 시스템에 사용되는 시스템 온 칩 솔루션을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "MaxLinear, Inc. provides communications systems-on-chip solutions in the United States, Asia, Europe, and internationally. Its products integrate various portions of a high-speed communication system, including radio frequency, high-performance analog, mixed-signal, digital signal processing, security engines, data compression and networking layers, and power management. Its products are used in various electronic devices, such as radio transceivers and modems for 4G/5G base-station and backhaul infrastructure; optical transceivers; wi-fi and wireline routers for home networking; broadband mod"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MXL analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MXL/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-24T04:53:03+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MXL daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MXL/history",
+      "published_at": null,
+      "observed_at": "2026-10-24T04:53:03+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MXL company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MXL/profile",
+      "published_at": null,
+      "observed_at": "2026-10-24T04:53:03+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-EF27AAF00B92A999",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1288469/000128846926000060/a09302026exhibit991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-22",
+      "observed_at": "2026-10-24T05:02:27+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-F813F66D26FAD789",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1288469/000128846926000050/a06302026exhibit991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-23",
+      "observed_at": "2026-10-24T05:02:27+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-7077C1114B291649",
+    "input_sha": "7077c1114b29164933b6b14bab59b020624e2bb5d41880d9ed95b97bcbb4977b",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "non-GAAP financial measures — 비일반회계기준 재무 측정치는 일반회계기준 재무 측정치와 비교하여 단독으로 고려되거나 대체물로 사용되어서는 안 된다",
+        "note_ko": "비일반회계기준 재무 측정치는 일반회계기준 재무 측정치와 비교하여 단독으로 고려되거나 대체물로 사용되어서는 안 된다",
+        "kind": "fact",
+        "quote": "Non-GAAP financial measures are not meant to be considered in isolation or as a substitute for the comparable GAAP financial measures.",
+        "document_id": "DOC-EF27AAF00B92A999",
+        "block_id": "p25",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP financial measures — 비일반회계기준 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사들이 제시하는 유사한 이름의 측정치와 비교될 가능성이 낮다",
+        "note_ko": "비일반회계기준 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사들이 제시하는 유사한 이름의 측정치와 비교될 가능성이 낮다",
+        "kind": "fact",
+        "quote": "Non-GAAP financial measures do not have any standardized meaning and are therefore unlikely to be comparable to similarly titled measures presented by other companies.",
+        "document_id": "DOC-EF27AAF00B92A999",
+        "block_id": "p25",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-EF27AAF00B92A999",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1288469/000128846926000060/a09302026exhibit991.htm",
+        "filed_at": "2026-10-22",
+        "observed_at": "2026-10-24T05:02:27+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-F813F66D26FAD789",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1288469/000128846926000050/a06302026exhibit991.htm",
+        "filed_at": "2026-07-23",
+        "observed_at": "2026-10-24T05:02:27+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-24T05:02:48+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.29941,
+    "eps_30d": 2.61305,
+    "eps_90d": 2.58305,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 11,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 66.4,
+    "steady": true,
+    "turnaround": false
+  }
+}

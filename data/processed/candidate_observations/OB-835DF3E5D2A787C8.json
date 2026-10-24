@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-835DF3E5D2A787C8",
+  "candidate_id": "CAN-FD88AA0D924CF1C8",
+  "candidate_version": "CV-302A9EDCCBCA8A26",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DHT",
+    "ticker": "DHT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-24T04:54:41+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261024T044805Z_40063605374-1.json.gz",
+    "sha256": "0e290b2071ae447c0571aa440889d77b4ef561fa32c9ab74fb556c2824ddec69",
+    "run_id": "40063605374-1",
+    "finished_at": "2026-10-24T05:02:25+00:00"
+  },
+  "eps": {
+    "eps_now": 2.50383,
+    "eps_30d": 2.4955,
+    "eps_90d": 1.80158,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 39.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.855,
+    "yield_change_30_pp": 0.034
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-26",
+    "price_start_date": "2026-07-24",
+    "price_end_expected": "2026-10-23",
+    "price_end_date": "2026-10-23",
+    "close_start": 18.450000762939453,
+    "close_end": 24.600000381469727,
+    "price_pct_90": 33.3,
+    "adj_return_pct_90": 42.2,
+    "pe_change_pct": -4.1
+  },
+  "display_rank": 28,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 19
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 3966395136,
+  "context_id": "CTX-D431900433962EEC",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-18T04:57:36+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:DHT",
+  "approval_version": null,
+  "rendered_at": "2026-10-24T05:03:00+00:00"
+}

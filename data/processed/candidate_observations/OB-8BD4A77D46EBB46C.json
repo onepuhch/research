@@ -1,0 +1,101 @@
+{
+  "observation_id": "OB-8BD4A77D46EBB46C",
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "candidate_version": "CV-D2A0F8A2A2D1CA09",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PARR",
+    "ticker": "PARR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-24T04:54:23+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261024T044805Z_40063605374-1.json.gz",
+    "sha256": "0e290b2071ae447c0571aa440889d77b4ef561fa32c9ab74fb556c2824ddec69",
+    "run_id": "40063605374-1",
+    "finished_at": "2026-10-24T05:02:25+00:00"
+  },
+  "eps": {
+    "eps_now": 16.3475,
+    "eps_30d": 13.83903,
+    "eps_90d": 11.34464,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 44.1,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 6.485,
+    "yield_change_30_pp": 3.251
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-26",
+    "price_start_date": "2026-07-24",
+    "price_end_expected": "2026-10-23",
+    "price_end_date": "2026-10-23",
+    "close_start": 77.38999938964844,
+    "close_end": 77.1500015258789,
+    "price_pct_90": -0.3,
+    "adj_return_pct_90": -0.3,
+    "pe_change_pct": -30.8
+  },
+  "display_rank": 10,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 7
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 3865186304,
+  "context_id": "CTX-B16E725406B87B63",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-24T05:02:27+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-B16E725406B87B63",
+    "generated_at": "2026-10-06T06:46:56+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 8,
+    "shown": [
+      "PBF",
+      "CVI",
+      "DK",
+      "PARR"
+    ],
+    "folded": [
+      "MPC",
+      "VLO",
+      "PSX",
+      "DINO"
+    ],
+    "outside": []
+  },
+  "entity_id": "NYSE:PARR",
+  "approval_version": null,
+  "rendered_at": "2026-10-24T05:03:00+00:00"
+}

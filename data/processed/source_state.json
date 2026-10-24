@@ -8024,7 +8024,7 @@
     }
   },
   "0001590714-26-000069": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8035,16 +8035,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1590714/000159071426000069/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1590714/000159071426000069/aearningsreleaseex99120269.htm",
       "published_at": "2026-10-21",
-      "raw_text": "Element Solutions Inc (ESI) (CIK 0001590714) EX-99.1 2026-10-21. This growth is the product of several years of focused investment in technology, customer engagement, capacity expansion and operational excellence, which have strengthened our competitive position in the fastest-growing and highest-value areas of the electronics ecosystem. EX-99.1 2 aearningsreleaseex99120269.htm EX-99.1 Document EXHIBIT 99.1 Element Solutions Inc Reports Record Results for Third Quarter 2026 • Net sales of $995 million, representing 52% growth on a reported basis and 13% organic growth from the third quarter of 2025 • Reported net income of $66 million, compared to $39 million in the same period last year • Adjusted EBITDA of $191 million, representing 29% constant currency growth • Third quarter 2026 Cash flows from operating activities of $159 million and free cash flow of $135 million • Increasing 2026 Adjusted EBITDA guidance to approximately $720 million Miami, Fla., October 21, 2026 -- Element Solutions Inc (NYSE:ESI) (“Element Solutions” or the “Company”), a global and diversified specialty chemicals technology company, today announced its financial results for the three and nine months ended September 30, 2026. Executive Commentary Chief Executive Officer Benjamin Gliklich commented, “Our team continued to execute exceptionally well and delivered another quarter of record results. We are translating the tailwinds in the Electronics market to profitable growth, and seizing the opportunities created by the pace of technological change to gain market share. Demand across AI infrastructure and other high-performance electronics applications drove broad-based double-digit organic growth in each of our Electronics verticals. This growth is the product of several years of focused investment in technology, customer engagement, capacity expansion and operational excellence, which have strengthened our competitive position in the fastest-growing and highest-value areas of the electroni"
+      "raw_text": "Element Solutions Inc (ESI) (CIK 0001590714) EX-99.1 2026-10-21. This growth is the product of several years of focused investment in technology, customer engagement, capacity expansion and operational excellence, which have strengthened our competitive position in the fastest-growing and highest-value areas of the electronics ecosystem. EX-99.1 2 aearningsreleaseex99120269.htm EX-99.1 Document EXHIBIT 99.1 Element Solutions Inc Reports Record Results for Third Quarter 2026 • Net sales of $995 million, representing 52% growth on a reported basis and 13% organic growth from the third quarter of 2025 • Reported net income of $66 million, compared to $39 million in the same period last year • Adjusted EBITDA of $191 million, representing 29% constant currency growth • Third quarter 2026 Cash flows from operating activities of $159 million and free cash flow of $135 million • Increasing 2026 Adjusted EBITDA guidance to approximately $720 million Miami, Fla., October 21, 2026 -- Element Solutions Inc (NYSE:ESI) (“Element Solutions” or the “Company”), a global and diversified specialty chemicals technology company, today announced its financial results for the three and nine months ended September 30, 2026. Executive Commentary Chief Executive Officer Benjamin Gliklich commented, “Our team continued to execute exceptionally well and delivered another quarter of record results. We are translating the tailwinds in the Electronics market to profitable growth, and seizing the opportunities created by the pace of technological change to gain market share. Demand across AI infrastructure and other high-performance electronics applications drove broad-based double-digit organic growth in each of our Electronics verticals. This growth is the product of several years of focused investment in technology, customer engagement, capacity expansion and operational excellence, which have strengthened our competitive position in the fastest-growing and highest-value areas of the electroni",
+      "_model_response": {
+        "evidence_quote": "Increasing 2026 Adjusted EBITDA guidance to approximately $720 million Miami, Fla., October 21, 2026 -- Element Solutions Inc (NYSE:ESI) (“Element Solutions” or the “Company”), a global and diversified specialty chemicals technology company, today announced its financial results for the three and nine months ended September 30, 2026. Executive Commentary Chief Executive Officer Benjamin Gliklich commented, “Our team continued to execute exceptionally well and delivered another quarter of record results. We are translating the tailwinds in the Electronics market to profitable growth, and seizing the opportunities created by the pace of technological change to gain market share. Demand across AI infrastructure and other high-performance electronics applications drove broad-based double-digit organic growth in each of our Electronics verticals.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "We are translating the tailwinds in the Electronics market to profitable growth",
+          "supply_demand_tightness": "Demand across AI infrastructure and other high-performance electronics applications drove broad-based double-digit organic growth",
+          "structural_ai_demand": "Demand across AI infrastructure and other high-performance electronics applications drove broad-based double-digit organic growth",
+          "revision_momentum": "Increasing 2026 Adjusted EBITDA guidance to approximately $720 million",
+          "catalyst_visibility": "Increasing 2026 Adjusted EBITDA guidance to approximately $720 million"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI 전자 부품 소재",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Element Solutions Inc",
+        "theme": "AI 인프라",
+        "signal_type": "가이던스상향",
+        "what_happened": "Element Solutions Inc가 2026년 조정 EBITDA 가이던스를 약 7억 2천만 달러로 상향 조정했습니다.",
+        "why_it_matters": "AI 인프라 및 고성능 전자 애플리케이션 수요 증가에 힘입어 회사의 수익성 있는 성장이 예상되며, 이는 시장 추정치 상향으로 이어질 수 있습니다.",
+        "what_to_watch": "다음 분기 실적 발표 시 추가적인 가이던스 상향 여부 및 AI 관련 매출 비중 변화.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "조정 EBITDA: 이자, 세금, 감가상각비, 무형자산상각비를 제외한 영업이익으로, 기업의 실제 현금 창출 능력을 보여주는 지표입니다."
+      }
     },
     "content_hash": "c9c16dfcb5163fb7fa3448e20d341d2ac9306900e3888c528bef370e0d88b7fb",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-23T05:02:47+00:00",
-    "reason": "deferred_budget"
+    "attempts": 2,
+    "updated_at": "2026-10-24T04:46:41+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001628280-26-066738": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8055,12 +8090,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
       "published_at": "2026-10-21",
-      "raw_text": "Tesla, Inc. (TSLA) (CIK 0001318605) EX-99.1 2026-10-21. Cash We will manage the business such that we ensure a strong balance sheet, maintaining sufficient liquidity to fund our product roadmap, long-term capacity expansion plans – including further vertical integration – and other expenses. EX-99.1 2 exhibit9914.htm EX-99.1 exhibit9914 Q3 2026 Update 1 Exhibit 99.1 Highlights 03 Financial Summary 04 Operational Summary 05 Manufacturing & Hardware 06 Supporting Infrastructure 07 SI & Other Services 08 Outlook 09 Photos & Charts 10 Key Metrics 23 Financial Statements 26 Additional Information 32 2 S U M M A R YH I G H L I G H T S (1) Refer to the Reconciliation of GAAP to Non–GAAP Financial Information slide (2) Free cash flow = operating cash flow less capex; (3) Includes cash, cash equivalents and short-term investments; (4)Active driver supervision required; does not make the vehicle autonomous; Note: all information herein refers to the current quarter unless otherwise noted. Profitability $0.7B GAAP operating income $0.8B GAAP net income $1.7B non-GAAP net income1 In Q3, we maintained strong momentum on many projects spanning Super Intelligence (SI), robotics and renewable energy that will be critical to building a future of Amazing Abundance. Strength in our core business also continued, and we achieved our second consecutive quarter of TTM revenue in excess of $100B. deliveries in North America – our most mature market – a nearly twenty percentage point sequential increase. We believe that FSD is driving demand in markets where it is available, and we continue to work with regulators to get it approved in other markets. We started providing Robotaxi rides using Cybercabs on September 3 in Austin. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth. We ended the quarter with the largest backlog for our passenger vehicles in four years. We rolled out the updated Tesla Semi that is produced on"
+      "raw_text": "Tesla, Inc. (TSLA) (CIK 0001318605) EX-99.1 2026-10-21. Cash We will manage the business such that we ensure a strong balance sheet, maintaining sufficient liquidity to fund our product roadmap, long-term capacity expansion plans – including further vertical integration – and other expenses. EX-99.1 2 exhibit9914.htm EX-99.1 exhibit9914 Q3 2026 Update 1 Exhibit 99.1 Highlights 03 Financial Summary 04 Operational Summary 05 Manufacturing & Hardware 06 Supporting Infrastructure 07 SI & Other Services 08 Outlook 09 Photos & Charts 10 Key Metrics 23 Financial Statements 26 Additional Information 32 2 S U M M A R YH I G H L I G H T S (1) Refer to the Reconciliation of GAAP to Non–GAAP Financial Information slide (2) Free cash flow = operating cash flow less capex; (3) Includes cash, cash equivalents and short-term investments; (4)Active driver supervision required; does not make the vehicle autonomous; Note: all information herein refers to the current quarter unless otherwise noted. Profitability $0.7B GAAP operating income $0.8B GAAP net income $1.7B non-GAAP net income1 In Q3, we maintained strong momentum on many projects spanning Super Intelligence (SI), robotics and renewable energy that will be critical to building a future of Amazing Abundance. Strength in our core business also continued, and we achieved our second consecutive quarter of TTM revenue in excess of $100B. deliveries in North America – our most mature market – a nearly twenty percentage point sequential increase. We believe that FSD is driving demand in markets where it is available, and we continue to work with regulators to get it approved in other markets. We started providing Robotaxi rides using Cybercabs on September 3 in Austin. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth. We ended the quarter with the largest backlog for our passenger vehicles in four years. We rolled out the updated Tesla Semi that is produced on",
+      "_model_response": {
+        "evidence_quote": "We believe that FSD is driving demand in markets where it is available, and we continue to work with regulators to get it approved in other markets. We started providing Robotaxi rides using Cybercabs on September 3 in Austin. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth. We ended the quarter with the largest backlog for our passenger vehicles in four years.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "We ended the quarter with the largest backlog for our passenger vehicles in four years. We started providing Robotaxi rides using Cybercabs on September 3 in Austin. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth.",
+          "supply_demand_tightness": "We ended the quarter with the largest backlog for our passenger vehicles in four years.",
+          "structural_ai_demand": "We believe that FSD is driving demand in markets where it is available... We started providing Robotaxi rides using Cybercabs on September 3 in Austin. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth.",
+          "revision_momentum": "We ended the quarter with the largest backlog for our passenger vehicles in four years. Cumulative unsupervised Robotaxi miles grew eightfold quarter over quarter, driven by sustained double-digit weekly growth.",
+          "catalyst_visibility": "We started providing Robotaxi rides using Cybercabs on September 3 in Austin... We ended the quarter with the largest backlog for our passenger vehicles in four years."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "TSLA",
+        "theme": "전기차, 자율주행",
+        "signal_type": "수주/백로그",
+        "what_happened": "테슬라가 4년 만에 최대 승용차 백로그를 기록했으며, 로보택시 서비스가 오스틴에서 시작되어 분기 대비 8배의 무인 로보택시 주행 거리를 달성했다.",
+        "why_it_matters": "이는 테슬라의 핵심 사업인 전기차 수요가 견조함을 보여주며, 신규 자율주행 로보택시 서비스가 빠르게 성장하며 미래 수익원으로서의 잠재력을 입증하고 있어 기업 가치 재평가 기회가 될 수 있다.",
+        "what_to_watch": "향후 분기별 승용차 백로그 추이 및 로보택시 서비스의 확장 지역과 이용률 변화.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 고객으로부터 주문을 받았으나 아직 인도되지 않은 물량 또는 서비스.\n로보택시 (Robotaxi): 운전자 없이 자율주행 기술로 승객을 운송하는 택시 서비스."
+      }
     },
     "content_hash": "32043addaeb5a3ed982546e5bdcde4a74501136d20712bb8a0c3c0b80848dc4a",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-24T04:47:00+00:00",
+    "signal_id": "SIG-0911",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-24",
+    "processed_run": "40063605374-1"
   },
   "0001493152-26-047930": {
     "status": "deferred",
@@ -8082,7 +8155,7 @@
     "updated_at": "2026-10-22T05:00:05.929908+00:00"
   },
   "0001552781-26-000524": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8093,15 +8166,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000524/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/932781/000155278126000524/e26429_ex99-1.htm",
       "published_at": "2026-10-21",
-      "raw_text": "FIRST COMMUNITY CORP /SC/ (FCCO) (CIK 0000932781) EX-99.1 2026-10-21. The average balance per customer deposit account as of September 30, 2026 was $33,893, with the average balance per consumer account of $17,657 and per non-consumer account of $72,690. EX-99.1 2 e26429_ex99-1.htm Exhibit 99.1 News Release For Release October 21, 2026 9:00 A.M. Contact: Michael C. Crapps, Chief Executive Officer and President D. Shawn Jordan, Executive Vice President & Chief Financial Officer Robin D. Brown, Executive Vice President & Chief Marketing Officer (803) 951-2265 First Community Corporation Announces Third Quarter Results and Cash Dividend LEXINGTON, S.C., October 21, 2026 –Today, First Community Corporation (Nasdaq: FCCO), the holding company for First Community Bank, announced earnings and discussed the results of operations and the company’s activities during the third quarter of 2026. Highlights for the third quarter of 2026 include: · Net income of $8.044 million during the third quarter of 2026, an increase of 54.9% year-over-year and 5.9% on a linked quarter basis. Net income excluding the after-tax effect of merger expenses 1 during the third quarter of 2026 of $8.123 million, an increase of 44.3% year-over-year and 1.8%, on a linked quarter basis. · Net income for the nine months ended September 30, 2026 of $21.137 million, a 47.0% increase over the same time period in 2025. Net income for the nine months ended September 30, 2026, excluding the after-tax effect of merger expenses 1 , of $22.857 million, an increase of 52.5% year-over-year. · Diluted EPS of $0.85 per common share during the third quarter of 2026, an increase of 26.9% year-over-year and 6.3% on a linked quarter basis. Diluted EPS for the third quarter of 2026, excluding the after-tax effect of merger expenses 1 of $0.86, an increase of 19.4% year-over-year and 2.4% on a linked quarter basis. · Diluted EPS of $2.24 per common share for the nine months ended September 30, 2026, an increase of 21.1% o"
+      "raw_text": "FIRST COMMUNITY CORP /SC/ (FCCO) (CIK 0000932781) EX-99.1 2026-10-21. The average balance per customer deposit account as of September 30, 2026 was $33,893, with the average balance per consumer account of $17,657 and per non-consumer account of $72,690. EX-99.1 2 e26429_ex99-1.htm Exhibit 99.1 News Release For Release October 21, 2026 9:00 A.M. Contact: Michael C. Crapps, Chief Executive Officer and President D. Shawn Jordan, Executive Vice President & Chief Financial Officer Robin D. Brown, Executive Vice President & Chief Marketing Officer (803) 951-2265 First Community Corporation Announces Third Quarter Results and Cash Dividend LEXINGTON, S.C., October 21, 2026 –Today, First Community Corporation (Nasdaq: FCCO), the holding company for First Community Bank, announced earnings and discussed the results of operations and the company’s activities during the third quarter of 2026. Highlights for the third quarter of 2026 include: · Net income of $8.044 million during the third quarter of 2026, an increase of 54.9% year-over-year and 5.9% on a linked quarter basis. Net income excluding the after-tax effect of merger expenses 1 during the third quarter of 2026 of $8.123 million, an increase of 44.3% year-over-year and 1.8%, on a linked quarter basis. · Net income for the nine months ended September 30, 2026 of $21.137 million, a 47.0% increase over the same time period in 2025. Net income for the nine months ended September 30, 2026, excluding the after-tax effect of merger expenses 1 , of $22.857 million, an increase of 52.5% year-over-year. · Diluted EPS of $0.85 per common share during the third quarter of 2026, an increase of 26.9% year-over-year and 6.3% on a linked quarter basis. Diluted EPS for the third quarter of 2026, excluding the after-tax effect of merger expenses 1 of $0.86, an increase of 19.4% year-over-year and 2.4% on a linked quarter basis. · Diluted EPS of $2.24 per common share for the nine months ended September 30, 2026, an increase of 21.1% o",
+      "_model_response": {
+        "evidence_quote": "First Community Corporation Announces Third Quarter Results and Cash Dividend LEXINGTON, S.C., October 21, 2026 –Today, First Community Corporation (Nasdaq: FCCO), the holding company for First Community Bank, announced earnings and discussed the results of operations and the company’s activities during the third quarter of 2026. Highlights for the third quarter of 2026 include: · Net income of $8.044 million during the third quarter of 2026, an increase of 54.9% year-over-year and 5.9% on a linked quarter basis. · Diluted EPS of $0.85 per common share during the third quarter of 2026, an increase of 26.9% year-over-year and 6.3% on a linked quarter basis.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "단일 분기 실적 발표는 루틴 공시이며, 미래 추정치 상향(EPS 리비전)이나 조기 발굴 신호로 보기 어렵습니다. 시장 소외나 리비전 연속성의 증거가 아닙니다.",
+        "subject": "FCCO",
+        "theme": "지역은행",
+        "signal_type": "공시(8-K)",
+        "what_happened": "First Community Corporation이 2026년 3분기 실적을 발표했으며, 순이익과 희석 EPS가 전년 대비 및 직전 분기 대비 증가했습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "단일 분기 실적 발표는 루틴 공시이며, 미래 추정치 상향(EPS 리비전)이나 조기 발굴 신호로 보기 어렵습니다. 시장 소외나 리비전 연속성의 증거가 아닙니다."
     },
     "content_hash": "87721ade1939fe3e22b31f6f0321e16b509cb11001d3f8f7597f980b80669126",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-24T04:47:15+00:00",
+    "reason": "단일 분기 실적 발표는 루틴 공시이며, 미래 추정치 상향(EPS 리비전)이나 조기 발굴 신호로 보기 어렵습니다. 시장 소외나 리비전 연속성의 증거가 아닙니다.",
+    "processed_day": "2026-10-24",
+    "processed_run": "40063605374-1"
   },
   "0001193125-26-427862": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8112,15 +8216,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1811414/000119312526427862/qs-ex99_1.htm",
       "published_at": "2026-10-21",
-      "raw_text": "QuantumScape Corp (QS) (CIK 0001811414) EX-99.1 2026-10-21. In addition, we have signed an agreement with a new customer to further advance automotive commercialization. EX-99.1 2 qs-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 1 Dear shareholders, We’re excited to provide an update on our progress over the past quarter. Eagle Line Update We inaugurated the Eagle Line pilot cell production line in February of this year, and it has already become the workhorse of our customer engagement, allowing an increased pace of customer sampling which is flowing into customer billings. Our progress on demonstrating scalable production has given us the confidence to take the next steps for production scale-up beyond the designed capacity of the Eagle Line. Today we announced a QS ecosystem partnership with Muehlbauer Group to provide cell assembly equipment for a planned 100 megawatt-hour (MWh) cell production line. This 100-MWh line will represent the first commercial-scale mass production of QS cells, with output aimed at meeting the rapidly emerging opportunities for our QSDC and QSAS business verticals. Engineering work on higher-throughput processes and equipment is already underway and start of production for this new line is targeted for 2028. Muehlbauer Group is a highly respected German provider of manufacturing and automation equipment. Working on site in San Jose, their engineers evaluated the Eagle Line pilot processes for scalability and readiness and developed design enhancements to bring the technology to mass production, beginning with this 100-MWh line and working toward gigawatt-hour scale. QS CEO and President Dr. Siva Sivaram (right) and Muehlbauer Group CEO Josef Markus Mühlbauer signing the QS ecosystem partnership in San Jose. AI Data Center – QSDC Update On October 8 we launched the QS PowerBlock for AI data centers in conjunction with the Open Compute Project (OCP) Global Summit in San Jose, California , a leading forum for AI data center solution providers. "
+      "raw_text": "QuantumScape Corp (QS) (CIK 0001811414) EX-99.1 2026-10-21. In addition, we have signed an agreement with a new customer to further advance automotive commercialization. EX-99.1 2 qs-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 1 Dear shareholders, We’re excited to provide an update on our progress over the past quarter. Eagle Line Update We inaugurated the Eagle Line pilot cell production line in February of this year, and it has already become the workhorse of our customer engagement, allowing an increased pace of customer sampling which is flowing into customer billings. Our progress on demonstrating scalable production has given us the confidence to take the next steps for production scale-up beyond the designed capacity of the Eagle Line. Today we announced a QS ecosystem partnership with Muehlbauer Group to provide cell assembly equipment for a planned 100 megawatt-hour (MWh) cell production line. This 100-MWh line will represent the first commercial-scale mass production of QS cells, with output aimed at meeting the rapidly emerging opportunities for our QSDC and QSAS business verticals. Engineering work on higher-throughput processes and equipment is already underway and start of production for this new line is targeted for 2028. Muehlbauer Group is a highly respected German provider of manufacturing and automation equipment. Working on site in San Jose, their engineers evaluated the Eagle Line pilot processes for scalability and readiness and developed design enhancements to bring the technology to mass production, beginning with this 100-MWh line and working toward gigawatt-hour scale. QS CEO and President Dr. Siva Sivaram (right) and Muehlbauer Group CEO Josef Markus Mühlbauer signing the QS ecosystem partnership in San Jose. AI Data Center – QSDC Update On October 8 we launched the QS PowerBlock for AI data centers in conjunction with the Open Compute Project (OCP) Global Summit in San Jose, California , a leading forum for AI data center solution providers. ",
+      "_model_response": {
+        "evidence_quote": "In addition, we have signed an agreement with a new customer to further advance automotive commercialization. Our progress on demonstrating scalable production has given us the confidence to take the next steps for production scale-up beyond the designed capacity of the Eagle Line. Today we announced a QS ecosystem partnership with Muehlbauer Group to provide cell assembly equipment for a planned 100 megawatt-hour (MWh) cell production line. This 100-MWh line will represent the first commercial-scale mass production of QS cells, with output aimed at meeting the rapidly emerging opportunities for our QSDC and QSAS business verticals. Engineering work on higher-throughput processes and equipment is already underway and start of production for this new line is targeted for 2028. On October 8 we launched the QS PowerBlock for AI data centers in conjunction with the Open Compute Project (OCP) Global Summit in San Jose, California , a leading forum for AI data center solution providers.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "QuantumScape Corp (QS)",
+          "earnings_leverage": "planned 100 megawatt-hour (MWh) cell production line. This 100-MWh line will represent the first commercial-scale mass production of QS cells",
+          "supply_demand_tightness": "take the next steps for production scale-up beyond the designed capacity of the Eagle Line. ... output aimed at meeting the rapidly emerging opportunities for our QSDC and QSAS business verticals.",
+          "structural_ai_demand": "launched the QS PowerBlock for AI data centers in conjunction with the Open Compute Project (OCP) Global Summit in San Jose, California , a leading forum for AI data center solution providers.",
+          "revision_momentum": "",
+          "catalyst_visibility": "signed an agreement with a new customer to further advance automotive commercialization."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "Solid-state battery adoption",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "QuantumScape Corp",
+        "theme": "Solid-state Batteries, AI Data Center",
+        "signal_type": "신규고객",
+        "what_happened": "퀀텀스케이프가 자동차 상용화를 위한 새로운 고객과 계약을 체결하고, 이에 발맞춰 뮬바우어 그룹과 100MWh 규모의 상업용 셀 생산 라인 구축 파트너십을 발표했다.",
+        "why_it_matters": "새로운 고객 확보는 퀀텀스케이프의 고체 배터리 기술이 시장에서 인정받고 있음을 증명하며, 대규모 생산 라인 계획은 향후 매출 성장과 시장 점유율 확대를 위한 구체적인 기반을 마련한다.",
+        "what_to_watch": "신규 고객사의 구체적인 정보 및 협력 규모, 그리고 100MWh 생산 라인의 건설 진행 상황 및 2028년 양산 목표 달성 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "Eagle Line: 퀀텀스케이프의 파일럿 셀 생산 라인. QSDC (QuantumScape Data Center): 퀀텀스케이프의 AI 데이터센터용 사업 부문."
+      }
     },
     "content_hash": "8313af7d42b1112365636a4424397e44f4d029a15cb34b6b69553106a7822457",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-24T04:47:46+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001628280-26-066610": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8131,12 +8271,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/717954/000162828026066610/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/717954/000162828026066610/unf-2026xq4xex99earningsre.htm",
       "published_at": "2026-10-21",
-      "raw_text": "UNIFIRST CORP (UNF) (CIK 0000717954) EX-99 2026-10-21. • New customer account acquisitions were solid during the quarter and customer retention rates continued to improve, building on the year-to-date progress that the Company has seen in these areas. EX-99 2 unf-2026xq4xex99earningsre.htm EX-99 Document Exhibit 99 Investor Relations Contact Shane O'Connor, Executive Vice President & CFO UniFirst Corporation 978-658-8888 shane_oconnor@unifirst.com UNIFIRST ANNOUNCES FINANCIAL RESULTS FOR THE FOURTH QUARTER AND FULL YEAR OF FISCAL 2026 Wilmington, MA – October 21, 2026 – UniFirst Corporation (NYSE: UNF) (the “Company,” “UniFirst” or “we”) today reported results for its fourth quarter and full year ended August 29, 2026, as compared to the corresponding periods in the prior fiscal year. Fourth Quarter 2026 Consolidated Financial Results • Consolidated revenues for the fourth quarter increased 5.0% to $645.0 million, driven primarily by organic growth in the core Uniform & Facility Service Solutions segment. • Operating income and Adjusted EBITDA were $41.7 million and $94.9 million, respectively, compared to $49.6 million and $88.1 million, respectively, in the fourth quarter of fiscal 2025. • Operating margin was 6.5% of revenues compared to 8.1% of revenues in the prior year period. • Adjusted EBITDA margin was 14.7% of revenues compared to 14.3% of revenues in the prior year period. • Net income was $34.7 million compared to $41.0 million in the prior year period and diluted earnings per share was $1.90 compared to $2.23 in the prior year period. • The quarterly tax rate was 19.8% compared to 20.2% in the prior year period. The Company’s financial results for the fourth quarter of fiscal 2026 included approximately $14.4 million of costs associated with the proposed merger with Cintas Corporation (“Cintas”), consisting primarily of legal, advisory and other professional service fees (“Transaction-related Costs”). In addition, the Company’s results for the fourth qu"
+      "raw_text": "UNIFIRST CORP (UNF) (CIK 0000717954) EX-99 2026-10-21. • New customer account acquisitions were solid during the quarter and customer retention rates continued to improve, building on the year-to-date progress that the Company has seen in these areas. EX-99 2 unf-2026xq4xex99earningsre.htm EX-99 Document Exhibit 99 Investor Relations Contact Shane O'Connor, Executive Vice President & CFO UniFirst Corporation 978-658-8888 shane_oconnor@unifirst.com UNIFIRST ANNOUNCES FINANCIAL RESULTS FOR THE FOURTH QUARTER AND FULL YEAR OF FISCAL 2026 Wilmington, MA – October 21, 2026 – UniFirst Corporation (NYSE: UNF) (the “Company,” “UniFirst” or “we”) today reported results for its fourth quarter and full year ended August 29, 2026, as compared to the corresponding periods in the prior fiscal year. Fourth Quarter 2026 Consolidated Financial Results • Consolidated revenues for the fourth quarter increased 5.0% to $645.0 million, driven primarily by organic growth in the core Uniform & Facility Service Solutions segment. • Operating income and Adjusted EBITDA were $41.7 million and $94.9 million, respectively, compared to $49.6 million and $88.1 million, respectively, in the fourth quarter of fiscal 2025. • Operating margin was 6.5% of revenues compared to 8.1% of revenues in the prior year period. • Adjusted EBITDA margin was 14.7% of revenues compared to 14.3% of revenues in the prior year period. • Net income was $34.7 million compared to $41.0 million in the prior year period and diluted earnings per share was $1.90 compared to $2.23 in the prior year period. • The quarterly tax rate was 19.8% compared to 20.2% in the prior year period. The Company’s financial results for the fourth quarter of fiscal 2026 included approximately $14.4 million of costs associated with the proposed merger with Cintas Corporation (“Cintas”), consisting primarily of legal, advisory and other professional service fees (“Transaction-related Costs”). In addition, the Company’s results for the fourth qu",
+      "_model_response": {
+        "evidence_quote": "New customer account acquisitions were solid during the quarter and customer retention rates continued to improve, building on the year-to-date progress that the Company has seen in these areas. ... Consolidated revenues for the fourth quarter increased 5.0% to $645.0 million, driven primarily by organic growth in the core Uniform & Facility Service Solutions segment.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "New customer account acquisitions were solid during the quarter and customer retention rates continued to improve"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "UNIFIRST CORP",
+        "theme": "미분류",
+        "signal_type": "신규고객",
+        "what_happened": "UniFirst는 4분기에 신규 고객 확보가 견고했고 고객 유지율이 개선되었으며, 핵심 사업 부문의 유기적 성장에 힘입어 매출이 5.0% 증가했습니다.",
+        "why_it_matters": "신규 고객 확보와 고객 유지율 개선은 안정적인 매출 성장과 시장 점유율 확대를 의미하며, 이는 장기적인 기업 가치 상승의 기반이 됩니다.",
+        "what_to_watch": "다음 분기 신규 고객 확보 추이 및 고객 유지율 변화; 핵심 사업 부문의 유기적 매출 성장률 지속 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 1,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "유기적 성장: 기업이 인수합병 없이 자체적인 영업 활동을 통해 매출이나 이익을 늘리는 것.\n고객 유지율: 특정 기간 동안 기존 고객을 유지하는 비율."
+      }
     },
     "content_hash": "8a721fff2d002efefc88e2a4b013f39163b91a9ce3c045d2871849102bca4c31",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-24T04:48:01+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000736772-26-000091": {
     "status": "deferred",
@@ -8546,5 +8722,24 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-23T05:01:33.401538+00:00"
+  },
+  "0001437749-26-033331": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033331",
+      "entity_id": "CIK:0000108385",
+      "source_role": "candidate",
+      "title": "WORLD ACCEPTANCE CORP (WRLD) (CIK 0000108385) EX-99.1 2026-10-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/108385/000143774926033331/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/108385/000143774926033331/ex_1030266.htm",
+      "published_at": "2026-10-23",
+      "raw_text": "WORLD ACCEPTANCE CORP (WRLD) (CIK 0000108385) EX-99.1 2026-10-23. During the most recent quarter, borrowing by existing customers increased, compared to the prior-year quarter, while borrowing by new customers declined. At the end of the prior fiscal year, we tightened our underwriting of new customers given the proportion of new customers already in the portfolio and increasing macroeconomic uncertainty. We have since loosened underwriting and expect to carefully increase new customer lending in the coming quarters. The following table includes the volume of gross loan origination balances, excluding tax advance loans, by customer type for the following comparative quarterly periods: Q2 FY 2027 Q2 FY 2026 Q2 FY 2025 New Customers $51,154,557 $62,445,847 $44,479,349 Former Customers $94,397,825 $104,794,933 $100,630,514 Refinance Customers $587,613,067 $562,635,073 $557,020,707 As of September 30, 2026, World Acceptance Corporation (the \"Company\" or \"we\") had 1,009 open branches. Advertising expense increased $0.8 million, or 36.7%, in the second quarter of fiscal 2027, compared to the second quarter of fiscal 2026 due to increased spending on new customer acquisition programs."
+    },
+    "content_hash": "bbd462b677594c2d25e42879e910e12867ec02213924210853db26906382186e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-24T04:46:26.991273+00:00"
   }
 }

@@ -1,0 +1,137 @@
+{
+  "context_id": "CTX-7077C1114B291649",
+  "candidate_id": "CAN-76DD3777C06E7825",
+  "ticker": "MXL",
+  "issuer_cik": "0001288469",
+  "document_ids": [
+    "DOC-EF27AAF00B92A999",
+    "DOC-F813F66D26FAD789"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-EF27AAF00B92A999#p14",
+    "DOC-EF27AAF00B92A999#p25",
+    "DOC-EF27AAF00B92A999#p26",
+    "DOC-EF27AAF00B92A999#t9",
+    "DOC-F813F66D26FAD789#p23",
+    "DOC-F813F66D26FAD789#t9"
+  ],
+  "input_sha": "7077c1114b29164933b6b14bab59b020624e2bb5d41880d9ed95b97bcbb4977b",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-24T05:02:48+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP financial measures — 비일반회계기준 재무 측정치는 일반회계기준 재무 측정치와 비교하여 단독으로 고려되거나 대체물로 사용되어서는 안 된다",
+      "note_ko": "비일반회계기준 재무 측정치는 일반회계기준 재무 측정치와 비교하여 단독으로 고려되거나 대체물로 사용되어서는 안 된다",
+      "kind": "fact",
+      "quote": "Non-GAAP financial measures are not meant to be considered in isolation or as a substitute for the comparable GAAP financial measures.",
+      "document_id": "DOC-EF27AAF00B92A999",
+      "block_id": "p25",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "non-GAAP financial measures — 비일반회계기준 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사들이 제시하는 유사한 이름의 측정치와 비교될 가능성이 낮다",
+      "note_ko": "비일반회계기준 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사들이 제시하는 유사한 이름의 측정치와 비교될 가능성이 낮다",
+      "kind": "fact",
+      "quote": "Non-GAAP financial measures do not have any standardized meaning and are therefore unlikely to be comparable to similarly titled measures presented by other companies.",
+      "document_id": "DOC-EF27AAF00B92A999",
+      "block_id": "p25",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익 또는 손실은 이 금액이다",
+      "figures": [
+        "$28,902"
+      ],
+      "quote": "Net income (loss) ; $28,902",
+      "where": "DOC-EF27AAF00B92A999#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동으로 인한 순현금은 이 금액이다",
+      "figures": [
+        "(13,590)"
+      ],
+      "quote": "Net cash provided by (used in) operating activities ; (13,590)",
+      "where": "DOC-EF27AAF00B92A999#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 투자 활동으로 인한 순현금은 이 금액이다",
+      "figures": [
+        "(9,648)"
+      ],
+      "quote": "Net cash used in investing activities ; (9,648)",
+      "where": "DOC-EF27AAF00B92A999#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 재무 활동으로 인한 순현금은 이 금액이다",
+      "figures": [
+        "39,906"
+      ],
+      "quote": "Net cash provided by (used in) financing activities ; 39,906",
+      "where": "DOC-EF27AAF00B92A999#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 현금, 현금 등가물 및 제한된 현금은 기간 말에 이 금액이다",
+      "figures": [
+        "$109,864"
+      ],
+      "quote": "Cash, cash equivalents and restricted cash at end of period ; $109,864",
+      "where": "DOC-EF27AAF00B92A999#t9"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사는 이러한 비일반회계기준 측정치가 일반회계기준 영업 실적과 관련된 모든 금액을 반영하지 않는다는 한계가 있다고 믿는다",
+      "figures": [],
+      "quote": "We believe that these non-GAAP measures have limitations in that they do not reflect all of the amounts associated with our GAAP results of operations.",
+      "where": "DOC-EF27AAF00B92A999#p25"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
