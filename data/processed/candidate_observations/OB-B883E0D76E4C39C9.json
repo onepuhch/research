@@ -1,0 +1,86 @@
+{
+  "observation_id": "OB-B883E0D76E4C39C9",
+  "candidate_id": "CAN-7F0690B785E31226",
+  "candidate_version": "CV-811AE67AEED34BCB",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:CLF",
+    "ticker": "CLF",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-25T04:59:11+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261025T045431Z_40163475107-1.json.gz",
+    "sha256": "752e495cc64118ed93ef811ac58db784e444d6de20b676199fd2a59d77598fc6",
+    "run_id": "40163475107-1",
+    "finished_at": "2026-10-25T05:08:38+00:00"
+  },
+  "eps": {
+    "eps_now": 1.45996,
+    "eps_30d": 0.73867,
+    "eps_90d": 0.35694,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 309.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 7.935,
+    "yield_change_30_pp": 5.189
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-27",
+    "price_start_date": "2026-07-27",
+    "price_end_expected": "2026-10-23",
+    "price_end_date": "2026-10-23",
+    "close_start": 12.25,
+    "close_end": 13.899999618530273,
+    "price_pct_90": 13.5,
+    "adj_return_pct_90": 13.5,
+    "pe_change_pct": -72.3
+  },
+  "display_rank": 4,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 2
+    },
+    {
+      "list": "A",
+      "rank": 5
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 7931130880,
+  "context_id": "CTX-F17BD01FE8D4E121",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-23T05:17:16+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:CLF",
+  "approval_version": null,
+  "rendered_at": "2026-10-25T05:09:16+00:00"
+}

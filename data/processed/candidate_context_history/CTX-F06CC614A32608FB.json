@@ -1,0 +1,185 @@
+{
+  "context_id": "CTX-F06CC614A32608FB",
+  "candidate_id": "CAN-486C908614BC89B1",
+  "ticker": "TTMI",
+  "issuer_cik": "0001116942",
+  "document_ids": [
+    "DOC-C01418619C8AE57A",
+    "DOC-C07023F0882F550C",
+    "DOC-97E3825F76888A73"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C01418619C8AE57A#p8",
+    "DOC-C07023F0882F550C#p7",
+    "DOC-C07023F0882F550C#t10",
+    "DOC-C07023F0882F550C#p15",
+    "DOC-C07023F0882F550C#p17",
+    "DOC-C07023F0882F550C#p18",
+    "DOC-C07023F0882F550C#p19",
+    "DOC-C07023F0882F550C#p20",
+    "DOC-C07023F0882F550C#t17",
+    "DOC-C07023F0882F550C#t19",
+    "DOC-C07023F0882F550C#t26",
+    "DOC-97E3825F76888A73#p18",
+    "DOC-97E3825F76888A73#t21"
+  ],
+  "input_sha": "f06cc614a32608fb3ec24316cb69169a04e0fa801a4579fbb8b2c1d4990189d4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-25T05:09:03+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(net sales) · 2027 full year: $6.5 billion to $6.75 billion — 회사는 이 수치를 예상한다",
+      "note_ko": "회사는 이 수치를 예상한다",
+      "kind": "guidance",
+      "quote": "In addition, we are initiating our preliminary 2027 full year forecast with expected net sales in the range of $6.5 billion to $6.75 billion and expected non-GAAP net income in the range of $8.10 to $8.90 per diluted share.",
+      "document_id": "DOC-C07023F0882F550C",
+      "block_id": "p19",
+      "metric": "net sales",
+      "figures": [
+        "$6.5 billion to $6.75 billion"
+      ],
+      "period": "2027 full year",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "non-GAAP net income · 2027 full year: $8.10 to $8.90 per diluted share — 회사는 이 수치를 예상한다",
+      "note_ko": "회사는 이 수치를 예상한다",
+      "kind": "guidance",
+      "quote": "In addition, we are initiating our preliminary 2027 full year forecast with expected net sales in the range of $6.5 billion to $6.75 billion and expected non-GAAP net income in the range of $8.10 to $8.90 per diluted share.",
+      "document_id": "DOC-C07023F0882F550C",
+      "block_id": "p19",
+      "metric": "non-GAAP net income",
+      "figures": [
+        "$8.10 to $8.90 per diluted share"
+      ],
+      "period": "2027 full year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "capacity — AI 붐으로 AI 하드웨어 공급망 내에서 용량에 대한 상당한 수요가 증가했다",
+      "note_ko": "AI 붐으로 AI 하드웨어 공급망 내에서 용량에 대한 상당한 수요가 증가했다",
+      "kind": "interpretation",
+      "quote": "The AI boom has increasingly placed significant demands for capacity within the AI hardware supply chain.",
+      "document_id": "DOC-C01418619C8AE57A",
+      "block_id": "p8",
+      "metric": "capacity",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "capacity — 수요의 급격한 증가로 여러 시설에서 용량을 빠르게 늘려야 한다",
+      "note_ko": "수요의 급격한 증가로 여러 시설에서 용량을 빠르게 늘려야 한다",
+      "kind": "interpretation",
+      "quote": "The rapid growth in demand requires us to make rapid capacity increases across several of our facilities.",
+      "document_id": "DOC-C01418619C8AE57A",
+      "block_id": "p8",
+      "metric": "capacity",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "조정 EBITDA 마진이 처음으로 이 수치를 초과했다",
+      "figures": [
+        "20.1%"
+      ],
+      "quote": "Our margin expansion efforts are producing results as evidenced by adjusted EBITDA margin exceeding 20% for the first time.",
+      "where": "DOC-C07023F0882F550C#p15"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 GAAP에 따라 계산되고 제시된 비교 가능한 측정치에 영향을 미칠 수 있는 특정 항목을 합리적인 확실성 없이 또는 불합리한 노력 없이 예측할 수 없다",
+      "figures": [],
+      "quote": "With respect to TTM’s outlook for non-GAAP net income per diluted share, we are unable to predict with reasonable certainty or without unreasonable effort certain items that may affect a comparable me",
+      "where": "DOC-C07023F0882F550C#p20"
+    },
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "예상되는 비 GAAP 희석 주당 순이익은 주로 구조 조정 조치, 손상 차손, 미실현 외환 환산을 포함하되 이에 국한되지 않는 비정상적인 이익 및 손실, 세금 조정의 미래 영향을 제외한다",
+      "figures": [],
+      "quote": "Our expected non-GAAP net income per diluted share excludes primarily the future impact of restructuring actions, impairment charges, unusual gains and losses including but not limited to unrealized f",
+      "where": "DOC-C07023F0882F550C#p20"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "이러한 조정 항목은 경영진의 통제 범위를 벗어나는 다양한 요인으로 인해 매우 가변적이며 예측하기 어렵고, GAAP에 따라 계산되고 제시된 미래 기간의 희석 주당 순이익에 중대한 영향을 미칠 수 있다",
+      "figures": [],
+      "quote": "These reconciling items are highly variable and difficult to predict due to various factors outside of management’s control and could have a material impact on our future period net income per diluted",
+      "where": "DOC-C07023F0882F550C#p20"
+    }
+  ],
+  "context_status": "draft_ready"
+}

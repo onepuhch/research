@@ -8315,7 +8315,7 @@
     "validation_rejected": true
   },
   "0000736772-26-000091": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8326,15 +8326,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/736772/000073677226000091/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/736772/000073677226000091/ccne10-21x2699x1.htm",
       "published_at": "2026-10-21",
-      "raw_text": "CNB FINANCIAL CORP/PA (CCNE, CCNEP) (CIK 0000736772) EX-99.1 2026-10-21. The $78.0 million in deposits classified as held for sale as of September 30, 2026 are associated with a planned sale of certain customer deposit accounts that are part of a broader strategic initiative to optimize the Corporation’s branch and market footprint following the ESSA acquisition. EX-99.1 2 ccne10-21x2699x1.htm EX-99.1 Document News Release Contact: Tito L. Lima Treasurer (814) 765-9621 FOR IMMEDIATE RELEASE CNB FINANCIAL CORPORATION REPORTS THIRD QUARTER 2026 RESULTS Clearfield, Pennsylvania – October 21, 2026 CNB Financial Corporation (“Corporation”) (NASDAQ: CCNE), the parent company of CNB Bank, today announced its earnings for the three and nine months ended September 30, 2026. Certain comparative financial information for the prior year's three and nine month periods ended September 30, 2025 has been recast to reflect the Corporation's adoption of Accounting Standards Update 2025-08, Financial Services - Credit Losses (Topic 326): Purchased Financial Assets . The recast primarily eliminates the recognition of Day 1 provision expense associated with acquired loans and records an allowance for credit losses as of the acquisition date. The adoption had no impact on the economics or cash flows of the acquired assets but affected the timing of credit loss expense recognition. This change is not the result of an error, correction, or restatement of previously issued financial statements, but rather, it enhances comparability among periods presented in accordance with applicable financial reporting guidance. Accordingly, certain comparative amounts presented herein differ from those previously reported for these prior year periods. Key Financial Trends • Earnings - Net income available to common shareholders (\"earnings\") was $27.0 million, or $0.91 per diluted share, for the three months ended September 30, 2026, compared to $27.2 million, or $0.91 per diluted share, for the three mon"
+      "raw_text": "CNB FINANCIAL CORP/PA (CCNE, CCNEP) (CIK 0000736772) EX-99.1 2026-10-21. The $78.0 million in deposits classified as held for sale as of September 30, 2026 are associated with a planned sale of certain customer deposit accounts that are part of a broader strategic initiative to optimize the Corporation’s branch and market footprint following the ESSA acquisition. EX-99.1 2 ccne10-21x2699x1.htm EX-99.1 Document News Release Contact: Tito L. Lima Treasurer (814) 765-9621 FOR IMMEDIATE RELEASE CNB FINANCIAL CORPORATION REPORTS THIRD QUARTER 2026 RESULTS Clearfield, Pennsylvania – October 21, 2026 CNB Financial Corporation (“Corporation”) (NASDAQ: CCNE), the parent company of CNB Bank, today announced its earnings for the three and nine months ended September 30, 2026. Certain comparative financial information for the prior year's three and nine month periods ended September 30, 2025 has been recast to reflect the Corporation's adoption of Accounting Standards Update 2025-08, Financial Services - Credit Losses (Topic 326): Purchased Financial Assets . The recast primarily eliminates the recognition of Day 1 provision expense associated with acquired loans and records an allowance for credit losses as of the acquisition date. The adoption had no impact on the economics or cash flows of the acquired assets but affected the timing of credit loss expense recognition. This change is not the result of an error, correction, or restatement of previously issued financial statements, but rather, it enhances comparability among periods presented in accordance with applicable financial reporting guidance. Accordingly, certain comparative amounts presented herein differ from those previously reported for these prior year periods. Key Financial Trends • Earnings - Net income available to common shareholders (\"earnings\") was $27.0 million, or $0.91 per diluted share, for the three months ended September 30, 2026, compared to $27.2 million, or $0.91 per diluted share, for the three mon",
+      "_model_response": {
+        "evidence_quote": "The $78.0 million in deposits classified as held for sale as of September 30, 2026 are associated with a planned sale of certain customer deposit accounts that are part of a broader strategic initiative to optimize the Corporation’s branch and market footprint following the ESSA acquisition. EX-99.1 Document News Release Contact: Tito L. Lima Treasurer (814) 765-9621 FOR IMMEDIATE RELEASE CNB FINANCIAL CORPORATION REPORTS THIRD QUARTER 2026 RESULTS Clearfield, Pennsylvania – October 21, 2026 CNB Financial Corporation (“Corporation”) (NASDAQ: CCNE), the parent company of CNB Bank, today announced its earnings for the three and nine months ended September 30, 2026. ... Key Financial Trends • Earnings - Net income available to common shareholders (\"earnings\") was $27.0 million, or $0.91 per diluted share, for the three months ended September 30, 2026, compared to $27.2 million, or $0.91 per diluted share, for the three mon",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "원문은 루틴 분기 실적 발표와 자산 매각 계획을 포함한 전략적 이니셔티브를 다루고 있습니다. 이는 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 투자 발굴 신호로 정의된 구체적인 조기 지표에 해당하지 않습니다.",
+        "subject": "CNB FINANCIAL CORP/PA",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "원문은 루틴 분기 실적 발표와 자산 매각 계획을 포함한 전략적 이니셔티브를 다루고 있습니다. 이는 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 투자 발굴 신호로 정의된 구체적인 조기 지표에 해당하지 않습니다."
     },
     "content_hash": "53ae96304688192f3702ac4b9d37ec9b6f8d06b171ca0b6ad60f15059a13a183",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-25T04:53:27+00:00",
+    "reason": "원문은 루틴 분기 실적 발표와 자산 매각 계획을 포함한 전략적 이니셔티브를 다루고 있습니다. 이는 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등 투자 발굴 신호로 정의된 구체적인 조기 지표에 해당하지 않습니다.",
+    "processed_day": "2026-10-25",
+    "processed_run": "40163475107-1"
   },
   "0001051470-26-000085": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8345,15 +8376,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1051470/000105147026000085/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1051470/000105147026000085/q32026earningsrelease.htm",
       "published_at": "2026-10-21",
-      "raw_text": "CROWN CASTLE INC. (CCI) (CIK 0001051470) EX-99.1 2026-10-21. tower business and the potential benefits therefrom, (4) benefits stemming from our capital allocation framework, (5) net income (loss) (including on a per share basis), (6) AFFO (including on a per share basis) and its components and growth, (7) Adjusted EBITDA and its components and growth, (8) Organic Contribution to Site Rental Billings (including as Adjusted for Impact of Sprint Cancellations and DISH Terminations) and its components and growth, (9) site rental revenues and its components and growth, (10) the impact of Sprint Cancellations, (11) our balance sheet, liquidity, leverage and credit ratings, (12) capital expenditures, including discretionary capital expenditures, (13) the impact of DISH Terminations, (14) operating efficiencies and the potential benefits therefrom, (15) potential land acquisitions under our towers, including activity levels with respect to ground lease buyouts, (16) modernizing our systems and processes, (17) acquisition of an outstanding residual economic interest and the potential impact thereof, (18) entry into new customer agreements and recent contractual term extensions, and the potential impacts thereof on our financial results, and (19) dividends, including dividend levels, rates and amounts."
+      "raw_text": "CROWN CASTLE INC. (CCI) (CIK 0001051470) EX-99.1 2026-10-21. tower business and the potential benefits therefrom, (4) benefits stemming from our capital allocation framework, (5) net income (loss) (including on a per share basis), (6) AFFO (including on a per share basis) and its components and growth, (7) Adjusted EBITDA and its components and growth, (8) Organic Contribution to Site Rental Billings (including as Adjusted for Impact of Sprint Cancellations and DISH Terminations) and its components and growth, (9) site rental revenues and its components and growth, (10) the impact of Sprint Cancellations, (11) our balance sheet, liquidity, leverage and credit ratings, (12) capital expenditures, including discretionary capital expenditures, (13) the impact of DISH Terminations, (14) operating efficiencies and the potential benefits therefrom, (15) potential land acquisitions under our towers, including activity levels with respect to ground lease buyouts, (16) modernizing our systems and processes, (17) acquisition of an outstanding residual economic interest and the potential impact thereof, (18) entry into new customer agreements and recent contractual term extensions, and the potential impacts thereof on our financial results, and (19) dividends, including dividend levels, rates and amounts.",
+      "_model_response": {
+        "evidence_quote": "(18) entry into new customer agreements and recent contractual term extensions, and the potential impacts thereof on our financial results",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "해당 항목은 새로운 고객 계약 체결 및 계약 기간 연장의 '잠재적 영향'에 대한 일반적인 언급으로, 구체적으로 확정된 계약이나 실적 변화를 나타내는 조기 지표가 아닙니다. 이는 루틴 공시의 일반적인 법률 문구에 해당하며, 투자 발굴 신호로 보기 어렵습니다.",
+        "subject": "CROWN CASTLE INC.",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "해당 항목은 새로운 고객 계약 체결 및 계약 기간 연장의 '잠재적 영향'에 대한 일반적인 언급으로, 구체적으로 확정된 계약이나 실적 변화를 나타내는 조기 지표가 아닙니다. 이는 루틴 공시의 일반적인 법률 문구에 해당하며, 투자 발굴 신호로 보기 어렵습니다."
     },
     "content_hash": "c59550cc7546deeb867bfb5006151fcc49c1c389060b99554245521c78133be7",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-25T04:53:38+00:00",
+    "reason": "해당 항목은 새로운 고객 계약 체결 및 계약 기간 연장의 '잠재적 영향'에 대한 일반적인 언급으로, 구체적으로 확정된 계약이나 실적 변화를 나타내는 조기 지표가 아닙니다. 이는 루틴 공시의 일반적인 법률 문구에 해당하며, 투자 발굴 신호로 보기 어렵습니다.",
+    "processed_day": "2026-10-25",
+    "processed_run": "40163475107-1"
   },
   "0000017843-26-000047": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8364,12 +8426,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000047/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000047/a1q27earningspresentatio.htm",
       "published_at": "2026-10-22",
-      "raw_text": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22. 11 …And maintaining healthy liquidity and strong balance sheet …While executing against planned capital allocation priorities… • Repurchased $133.9 million of stock during current quarter; completed prior $400.0 million authorization and authorized new $1.0 billion share repurchase program • Funded consistent quarterly cash dividend • Brownfield capacity expansion project remains on schedule and on budget; expected to come online in early fiscal year 2028 • In recent first quarter, generated $52.8 million in cash from operating activities; negative $24.8 million in free cash flow* • Increasing earnings with focus on working capital management to drive anticipated fiscal year 2027 free cash results of $400 million to $430 million • Spent $77.7 million in capital expenditures in first quarter including brownfield capacity expansion as activity accelerates • Liquidity remains healthy at $658.6 million including $159.5 million of cash and $499.1 million of available borrowings under Credit Facility • Net Debt/EBITDA at 0.6x; remains at historic lows • No debt maturities until 2034 Capital Allocation: Repurchasing shares while investing in brownfield capacity expansion *Detailed schedule included in Non-GAAP Schedules in Appendix. Outlook: Strong profit growth, continued margin expansion and accelerating demand 13 Completed record first quarter, up 28% year-over-year, strong start to FY27 Volume, mix and price continue to drive expanding margins in SAO Demand continues to accelerate, especially in Aerospace and Defense end-use market, as supply chain confidence grows with build rates Pricing remains a tailwind for both LTA and non-LTA business Brownfield capacity expansion expected to contribute beginning in FY28 Returning cash to shareholders through dividend and $1.0 billion share repurchase program FY27 operating income outlook represents 21% to 25% increase over record FY26 Anticipate $400 million t"
+      "raw_text": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22. 11 …And maintaining healthy liquidity and strong balance sheet …While executing against planned capital allocation priorities… • Repurchased $133.9 million of stock during current quarter; completed prior $400.0 million authorization and authorized new $1.0 billion share repurchase program • Funded consistent quarterly cash dividend • Brownfield capacity expansion project remains on schedule and on budget; expected to come online in early fiscal year 2028 • In recent first quarter, generated $52.8 million in cash from operating activities; negative $24.8 million in free cash flow* • Increasing earnings with focus on working capital management to drive anticipated fiscal year 2027 free cash results of $400 million to $430 million • Spent $77.7 million in capital expenditures in first quarter including brownfield capacity expansion as activity accelerates • Liquidity remains healthy at $658.6 million including $159.5 million of cash and $499.1 million of available borrowings under Credit Facility • Net Debt/EBITDA at 0.6x; remains at historic lows • No debt maturities until 2034 Capital Allocation: Repurchasing shares while investing in brownfield capacity expansion *Detailed schedule included in Non-GAAP Schedules in Appendix. Outlook: Strong profit growth, continued margin expansion and accelerating demand 13 Completed record first quarter, up 28% year-over-year, strong start to FY27 Volume, mix and price continue to drive expanding margins in SAO Demand continues to accelerate, especially in Aerospace and Defense end-use market, as supply chain confidence grows with build rates Pricing remains a tailwind for both LTA and non-LTA business Brownfield capacity expansion expected to contribute beginning in FY28 Returning cash to shareholders through dividend and $1.0 billion share repurchase program FY27 operating income outlook represents 21% to 25% increase over record FY26 Anticipate $400 million t",
+      "_model_response": {
+        "evidence_quote": "Demand continues to accelerate, especially in Aerospace and Defense end-use market, as supply chain confidence grows with build rates. Pricing remains a tailwind for both LTA and non-LTA business. Brownfield capacity expansion expected to contribute beginning in FY28. FY27 operating income outlook represents 21% to 25% increase over record FY26.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "CARPENTER TECHNOLOGY CORP (CRS)",
+          "earnings_leverage": "FY27 operating income outlook represents 21% to 25% increase over record FY26",
+          "supply_demand_tightness": "Demand continues to accelerate, especially in Aerospace and Defense end-use market, as supply chain confidence grows with build rates Pricing remains a tailwind for both LTA and non-LTA business",
+          "structural_ai_demand": "",
+          "revision_momentum": "FY27 operating income outlook represents 21% to 25% increase over record FY26",
+          "catalyst_visibility": "Brownfield capacity expansion project remains on schedule and on budget; expected to come online in early fiscal year 2028"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "항공우주 및 방위 특수 금속 부품",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CARPENTER TECHNOLOGY CORP",
+        "theme": "항공우주 및 방위, 특수 금속",
+        "signal_type": "가이던스상향",
+        "what_happened": "카펜터 테크놀로지(CRS)가 FY27 영업이익이 전년 대비 21~25% 증가할 것으로 전망하며, 항공우주 및 방위 산업의 수요 가속화와 FY28 가동 예정인 생산능력 증설 계획을 발표했습니다.",
+        "why_it_matters": "항공우주 및 방위 산업의 구조적 수요 증가와 가격 상승 환경 속에서, 동사의 생산능력 증설과 높은 영업이익 가이던스는 향후 실적 성장을 견인할 핵심 동력으로 작용하여 시장의 저평가를 해소할 수 있습니다.",
+        "what_to_watch": "FY27 분기별 실적 발표 시 영업이익 가이던스 달성 여부 및 FY28 생산능력 증설의 실제 기여도.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "Brownfield capacity expansion: 기존 시설을 활용하여 생산 능력을 확장하는 투자. LTA (Long-Term Agreement): 장기 공급 계약."
+      }
     },
     "content_hash": "a0a19b3f8640ef28619287ef9bb70e68a8fdd806261f1d7d2e0ab376fe50e90e",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-25T04:53:54+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000887343-26-000184": {
     "status": "rejected",
@@ -8427,7 +8525,7 @@
     "validation_rejected": true
   },
   "0001628280-26-066780": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8438,15 +8536,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026066780/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/936468/000162828026066780/ex991q32026.htm",
       "published_at": "2026-10-22",
-      "raw_text": "LOCKHEED MARTIN CORP (LMT) (CIK 0000936468) EX-99.1 2026-10-22. EX-99.1 2 ex991q32026.htm EX-99.1 Document Exhibit 99.1 News Release Lockheed Martin Reports Third Quarter 2026 Financial Results • Sales increased 11% to $20.7 billion • Net earnings increased 14% to $1.8 billion, or $7.97 per share • Cash from operations of $3.4 billion and free cash flow of $3.0 billion • Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Updates 2026 financial outlook BETHESDA, Md., Oct. EX-99.1 2 ex991q32026.htm EX-99.1 Document Exhibit 99.1 News Release Lockheed Martin Reports Third Quarter 2026 Financial Results • Sales increased 11% to $20.7 billion • Net earnings increased 14% to $1.8 billion, or $7.97 per share • Cash from operations of $3.4 billion and free cash flow of $3.0 billion • Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Updates 2026 financial outlook BETHESDA, Md., Oct. 22, 2026 – Lockheed Martin Corporation [NYSE: LMT] today reported third quarter 2026 sales of $20.7 billion, compared to $18.6 billion in the third quarter of 2025. Net earnings in the third quarter of 2026 were $1.8 billion, or $7.97 per share, compared to $1.6 billion, or $6.95 per share. Cash from operations was $3.4 billion in the third quarter of 2026, compared to $3.7 billion in the third quarter of 2025. Free cash flow was $3.0 billion in the third quarter of 2026, compared to $3.3 billion in the third quarter of 2025. Backlog grew 27% since the second quarter of 2026, setting another new record at $292.0 billion. “Our strong third quarter performance underscores Lockheed Martin’s continuing leadership in the development and delivery of advanced and reliable defense technology solutions. Every day, our research, engineering and production teams are putting highly effective"
+      "raw_text": "LOCKHEED MARTIN CORP (LMT) (CIK 0000936468) EX-99.1 2026-10-22. EX-99.1 2 ex991q32026.htm EX-99.1 Document Exhibit 99.1 News Release Lockheed Martin Reports Third Quarter 2026 Financial Results • Sales increased 11% to $20.7 billion • Net earnings increased 14% to $1.8 billion, or $7.97 per share • Cash from operations of $3.4 billion and free cash flow of $3.0 billion • Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Updates 2026 financial outlook BETHESDA, Md., Oct. EX-99.1 2 ex991q32026.htm EX-99.1 Document Exhibit 99.1 News Release Lockheed Martin Reports Third Quarter 2026 Financial Results • Sales increased 11% to $20.7 billion • Net earnings increased 14% to $1.8 billion, or $7.97 per share • Cash from operations of $3.4 billion and free cash flow of $3.0 billion • Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Updates 2026 financial outlook BETHESDA, Md., Oct. 22, 2026 – Lockheed Martin Corporation [NYSE: LMT] today reported third quarter 2026 sales of $20.7 billion, compared to $18.6 billion in the third quarter of 2025. Net earnings in the third quarter of 2026 were $1.8 billion, or $7.97 per share, compared to $1.6 billion, or $6.95 per share. Cash from operations was $3.4 billion in the third quarter of 2026, compared to $3.7 billion in the third quarter of 2025. Free cash flow was $3.0 billion in the third quarter of 2026, compared to $3.3 billion in the third quarter of 2025. Backlog grew 27% since the second quarter of 2026, setting another new record at $292.0 billion. “Our strong third quarter performance underscores Lockheed Martin’s continuing leadership in the development and delivery of advanced and reliable defense technology solutions. Every day, our research, engineering and production teams are putting highly effective",
+      "_model_response": {
+        "evidence_quote": "Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors • Backlog grew 27% since the second quarter of 2026, setting another new record at $292.0 billion.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Lockheed Martin Corporation [NYSE: LMT]",
+          "earnings_leverage": "Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award",
+          "supply_demand_tightness": "multi-year award to produce PAC-3 Missile Segment Enhancement (MSE) interceptors",
+          "structural_ai_demand": "",
+          "revision_momentum": "Updates 2026 financial outlook",
+          "catalyst_visibility": "Record backlog of $292.0 billion, including $52.5 billion associated with the multi-year award"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "LMT",
+        "theme": "방산",
+        "signal_type": "수주/백로그",
+        "what_happened": "록히드마틴이 2026년 3분기 실적 발표에서 PAC-3 MSE 요격 미사일 생산을 위한 525억 달러 규모의 다년 계약을 포함하여 2,920억 달러의 사상 최대 백로그를 기록했으며, 이는 2분기 대비 27% 증가한 수치입니다.",
+        "why_it_matters": "사상 최대 백로그와 대규모 다년 계약은 록히드마틴의 향후 매출 가시성과 방산 제품에 대한 견고한 수요를 나타내어 지속적인 수익 성장을 기대할 수 있습니다.",
+        "what_to_watch": "향후 백로그 성장률 및 PAC-3 MSE 계약의 매출 기여도와 마진 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "중기",
+        "glossary": "백로그 (Backlog): 고객으로부터 수주했으나 아직 인도되지 않은 계약 물량 또는 금액. PAC-3 MSE: 패트리어트 미사일의 최신 개량형으로, 요격 능력이 향상된 미사일."
+      }
     },
     "content_hash": "034b0b5483f243c6fcb653dc396028cbce1b1c7864d195d8ebda0f00292d8d21",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-25T04:54:10+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000049196-26-000084": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8457,12 +8591,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000084/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/49196/000004919626000084/hban20260930_8kex991.htm",
       "published_at": "2026-10-22",
-      "raw_text": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-10-22. 5 Noninterest Income Noninterest Income Quarter Ended Change ($ in millions) 3Q26 2Q26 3Q25 LQ YOY Payments and cash management revenue $ 211 $ 204 $ 174 $ 7 3 % $ 37 21 % Wealth and asset management revenue 131 134 104 (3) (2) 27 26 Customer deposit and loan fees 124 128 102 (4) (3) 22 22 Capital markets and advisory fees 122 140 94 (18) (13) 28 30 Mortgage banking income 45 53 43 (8) (15) 2 5 Net gains (losses) on sales of securities — 2 — (2) NM — — Other noninterest income (1) 89 124 111 (35) (28) (22) (20) Total noninterest income $ 722 $ 785 $ 628 $ (63) (8) % $ 94 15 % Impact of Notable Items (included in other noninterest income): Gain on sale of a portion of corporate trust and custody business $ — $ — $ 24 $ — NM $ (24) NM Acquired equity security conversion adjustment (8) — — (8) NM (8) NM Total adjusted noninterest income (Non-GAAP) $ 730 $ 785 $ 604 $ (55) (7) % $ 126 21 % Additional information: Impact of mark-to-market and premiums from credit risk transfer transactions (included in other noninterest income) $ 11 $ 8 $ (2) $ 3 38 % $ 13 NM NM - Not Meaningful (1) In the third quarter of 2026, we reclassified insurance income and leasing revenue into other noninterest income. • Customer deposit and loan fees increased driven by increases in loan commitment fees and the volume of personal service charges ."
+      "raw_text": "HUNTINGTON BANCSHARES INC /MD/ (HBAN, HBANL, HBANM, HBANP, HBANZ) (CIK 0000049196) EX-99.1 2026-10-22. 5 Noninterest Income Noninterest Income Quarter Ended Change ($ in millions) 3Q26 2Q26 3Q25 LQ YOY Payments and cash management revenue $ 211 $ 204 $ 174 $ 7 3 % $ 37 21 % Wealth and asset management revenue 131 134 104 (3) (2) 27 26 Customer deposit and loan fees 124 128 102 (4) (3) 22 22 Capital markets and advisory fees 122 140 94 (18) (13) 28 30 Mortgage banking income 45 53 43 (8) (15) 2 5 Net gains (losses) on sales of securities — 2 — (2) NM — — Other noninterest income (1) 89 124 111 (35) (28) (22) (20) Total noninterest income $ 722 $ 785 $ 628 $ (63) (8) % $ 94 15 % Impact of Notable Items (included in other noninterest income): Gain on sale of a portion of corporate trust and custody business $ — $ — $ 24 $ — NM $ (24) NM Acquired equity security conversion adjustment (8) — — (8) NM (8) NM Total adjusted noninterest income (Non-GAAP) $ 730 $ 785 $ 604 $ (55) (7) % $ 126 21 % Additional information: Impact of mark-to-market and premiums from credit risk transfer transactions (included in other noninterest income) $ 11 $ 8 $ (2) $ 3 38 % $ 13 NM NM - Not Meaningful (1) In the third quarter of 2026, we reclassified insurance income and leasing revenue into other noninterest income. • Customer deposit and loan fees increased driven by increases in loan commitment fees and the volume of personal service charges .",
+      "_model_response": {
+        "evidence_quote": "Noninterest Income Quarter Ended Change ($ in millions) 3Q26 2Q26 3Q25 LQ YOY Payments and cash management revenue $ 211 $ 204 $ 174 $ 7 3 % $ 37 21 % Wealth and asset management revenue 131 134 104 (3) (2) 27 26 Customer deposit and loan fees 124 128 102 (4) (3) 22 22 Capital markets and advisory fees 122 140 94 (18) (13) 28 30 Mortgage banking income 45 53 43 (8) (15) 2 5 Net gains (losses) on sales of securities — 2 — (2) NM — — Other noninterest income (1) 89 124 111 (35) (28) (22) (20) Total noninterest income $ 722 $ 785 $ 628 $ (63) (8) % $ 94 15 % ... Customer deposit and loan fees increased driven by increases in loan commitment fees and the volume of personal service charges .",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "은행의 과거 비이자이익 실적 보고로, 구체적인 미래 성장 지표(가이던스 상향, 신규 수주, CAPEX 등)를 포함하지 않는 루틴 공시입니다.",
+        "subject": "HUNTINGTON BANCSHARES INC",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "헌팅턴 뱅크쉐어즈가 2026년 3분기 비이자이익 실적을 발표했습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "은행의 과거 비이자이익 실적 보고로, 구체적인 미래 성장 지표(가이던스 상향, 신규 수주, CAPEX 등)를 포함하지 않는 루틴 공시입니다."
     },
     "content_hash": "f09dcfe649c9077e4d1edd8f15c1c7372364f8fdd62fd0ab77e1891ae3eef6e8",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-25T04:54:26+00:00",
+    "reason": "은행의 과거 비이자이익 실적 보고로, 구체적인 미래 성장 지표(가이던스 상향, 신규 수주, CAPEX 등)를 포함하지 않는 루틴 공시입니다.",
+    "processed_day": "2026-10-25",
+    "processed_run": "40163475107-1"
   },
   "0000017843-26-000049": {
     "status": "deferred",

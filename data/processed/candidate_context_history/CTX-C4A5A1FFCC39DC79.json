@@ -1,0 +1,234 @@
+{
+  "context_id": "CTX-C4A5A1FFCC39DC79",
+  "candidate_id": "CAN-1F6D82ED5782C3F5",
+  "ticker": "DEC",
+  "issuer_cik": "0001922446",
+  "document_ids": [
+    "DOC-0C2F6D5605F1F385"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-0C2F6D5605F1F385#p7",
+    "DOC-0C2F6D5605F1F385#p14",
+    "DOC-0C2F6D5605F1F385#p15",
+    "DOC-0C2F6D5605F1F385#p16",
+    "DOC-0C2F6D5605F1F385#p22",
+    "DOC-0C2F6D5605F1F385#p40",
+    "DOC-0C2F6D5605F1F385#p42",
+    "DOC-0C2F6D5605F1F385#p44",
+    "DOC-0C2F6D5605F1F385#p54",
+    "DOC-0C2F6D5605F1F385#t1",
+    "DOC-0C2F6D5605F1F385#p57",
+    "DOC-0C2F6D5605F1F385#p60",
+    "DOC-0C2F6D5605F1F385#p70",
+    "DOC-0C2F6D5605F1F385#p71",
+    "DOC-0C2F6D5605F1F385#t2",
+    "DOC-0C2F6D5605F1F385#p74",
+    "DOC-0C2F6D5605F1F385#t5",
+    "DOC-0C2F6D5605F1F385#p91",
+    "DOC-0C2F6D5605F1F385#p92",
+    "DOC-0C2F6D5605F1F385#t7",
+    "DOC-0C2F6D5605F1F385#p98",
+    "DOC-0C2F6D5605F1F385#p99",
+    "DOC-0C2F6D5605F1F385#p106",
+    "DOC-0C2F6D5605F1F385#p109",
+    "DOC-0C2F6D5605F1F385#p112"
+  ],
+  "input_sha": "c4a5a1ffcc39dc7994c097ca5705deb215f33a740d917e0869c4b9e351b621fc",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-25T05:09:03+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Total Commodity Revenue: $504M — 총 상품 매출액은 이 금액이다",
+      "note_ko": "총 상품 매출액은 이 금액이다",
+      "kind": "fact",
+      "quote": "•Total Commodity Revenue: $504M",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p14",
+      "metric": "Total Commodity Revenue",
+      "figures": [
+        "$504M"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "순이익(Net Income): $248M — 순이익은 이 금액이다",
+      "note_ko": "순이익은 이 금액이다",
+      "kind": "fact",
+      "quote": "•Net Income: $248M, inclusive of gain on non-cash unsettled derivatives",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p15",
+      "metric": "Net Income",
+      "figures": [
+        "$248M"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA): $240M — 조정 에비타는 이 금액이다",
+      "note_ko": "조정 에비타는 이 금액이다",
+      "kind": "fact",
+      "quote": "•Adjusted EBITDA(b): $240M",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p16",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$240M"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "순이익(Net Income): $248M — 순이익에는 비현금 미결제 파생상품 이익이 포함되어 있다",
+      "note_ko": "순이익에는 비현금 미결제 파생상품 이익이 포함되어 있다",
+      "kind": "fact",
+      "quote": "•Net Income: $248M, inclusive of gain on non-cash unsettled derivatives",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p15",
+      "metric": "Net Income",
+      "figures": [
+        "$248M"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 에비타는 영업 이익 또는 손실, 순이익 또는 손실, 또는 영업, 투자 및 재무 활동으로 인한 현금 흐름과 별개로 또는 대체물로 간주되어서는 안 된다",
+      "note_ko": "조정 에비타는 영업 이익 또는 손실, 순이익 또는 손실, 또는 영업, 투자 및 재무 활동으로 인한 현금 흐름과 별개로 또는 대체물로 간주되어서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA and pro forma adjusted EBITDA should not be considered in isolation or as a substitute for operating profit or loss, net income or loss, or cash flows provided by operating, investing and financing activities.",
+      "document_id": "DOC-0C2F6D5605F1F385",
+      "block_id": "p92",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "이 발표가 애널리스트의 내년 EPS 예상치 상향을 일으켰는가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "총 생산량은 이 범위가 될 것으로 예상된다",
+      "figures": [
+        "1,180 to 1,210"
+      ],
+      "quote": "2026 Guidance(1) | Total Production (Mmcfe/d) ; 1,180 to 1,210",
+      "where": "DOC-0C2F6D5605F1F385#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "조정 에비타는 이 범위가 될 것으로 예상된다",
+      "figures": [
+        "$960 to $1,010"
+      ],
+      "quote": "2026 Guidance(1) | Adj. EBITDA(b) (millions) ; $960 to $1,010",
+      "where": "DOC-0C2F6D5605F1F385#t2"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 에비타는 비일반회계기준 재무 측정치이며, 비교 가능한 일반회계기준 재무 측정치와 합리적인 노력 없이 조정할 수 없다",
+      "figures": [],
+      "quote": "Adjusted EBITDA and Adjusted Free Cash Flow are non-GAAP financial measures and have not been reconciled to the most comparable GAAP financial measures because it is not possible to do so without unre",
+      "where": "DOC-0C2F6D5605F1F385#p74"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}
