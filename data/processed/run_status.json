@@ -1,30 +1,30 @@
 {
   "eps": {
-    "checked_at": "2026-10-25T04:54:28+00:00",
+    "checked_at": "2026-10-26T04:58:54+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T04:54:28+00:00",
+    "last_success_at": "2026-10-26T04:58:54+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-10-25T04:53:19+00:00",
+    "checked_at": "2026-10-26T04:57:28+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T04:53:19+00:00",
+    "last_success_at": "2026-10-26T04:57:28+00:00",
     "item_count": 39,
     "errors": [],
-    "collected_at": "2026-10-25T04:53:19.142776+00:00"
+    "collected_at": "2026-10-26T04:57:28.517528+00:00"
   },
   "extract": {
-    "checked_at": "2026-10-25T04:54:26+00:00",
+    "checked_at": "2026-10-26T04:58:52+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T04:54:26+00:00",
-    "accepted": 0,
+    "last_success_at": "2026-10-26T04:58:52+00:00",
+    "accepted": 1,
     "deferred_budget": 0,
-    "rejected": 5,
+    "rejected": 4,
     "validation_rejected": 2,
-    "validation_rejected_total": 54,
+    "validation_rejected_total": 56,
     "failed": 0,
     "unserved_failed": 0,
     "overload_deferred": 0,
@@ -32,65 +32,65 @@
     "processed_today": 3,
     "open_errors": 0,
     "open_unserved": 0,
-    "pending": 16,
+    "pending": 11,
     "outcome": "ok",
-    "day": "2026-10-25",
-    "run_id": "40163475107-1",
+    "day": "2026-10-26",
+    "run_id": "40271638077-1",
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-10-25T20:58:38+00:00",
+    "checked_at": "2026-10-26T04:57:06+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T20:58:38+00:00",
+    "last_success_at": "2026-10-26T04:57:06+00:00",
     "processed": 0,
     "failed": 0
   },
   "telegram_delivery": {
-    "checked_at": "2026-10-25T05:09:24+00:00",
+    "checked_at": "2026-10-26T05:13:38+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:09:24+00:00",
-    "message_id": 213
+    "last_success_at": "2026-10-26T05:13:38+00:00",
+    "message_id": 216
   },
   "review_report": {
-    "checked_at": "2026-10-19T05:06:27+00:00",
+    "checked_at": "2026-10-26T05:13:38+00:00",
     "status": "success",
-    "last_success_at": "2026-10-19T05:06:27+00:00"
+    "last_success_at": "2026-10-26T05:13:38+00:00"
   },
   "notify": {
-    "checked_at": "2026-10-25T04:54:28+00:00",
+    "checked_at": "2026-10-26T04:58:55+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T04:54:28+00:00"
+    "last_success_at": "2026-10-26T04:58:55+00:00"
   },
   "prices": {
-    "checked_at": "2026-10-25T05:08:41+00:00",
+    "checked_at": "2026-10-26T05:13:19+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:08:41+00:00",
+    "last_success_at": "2026-10-26T05:13:19+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-10-25T05:09:26+00:00",
+    "checked_at": "2026-10-26T05:13:26+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:09:26+00:00",
+    "last_success_at": "2026-10-26T05:13:26+00:00",
     "targets": 4,
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-10-25T04:54:31+00:00",
+    "checked_at": "2026-10-26T04:58:56+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T04:54:31+00:00",
+    "last_success_at": "2026-10-26T04:58:56+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-10-25T05:08:40+00:00",
+    "checked_at": "2026-10-26T05:13:18+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:08:40+00:00",
-    "snapshot": "20261025T045431Z_40163475107-1.json.gz",
-    "candidates": 97,
+    "last_success_at": "2026-10-26T05:13:18+00:00",
+    "snapshot": "20261026T045857Z_40271638077-1.json.gz",
+    "candidates": 95,
     "alert": false,
     "stages": {
       "universe": {
@@ -102,17 +102,17 @@
         "success": 1
       },
       "quotes": {
-        "requested": 7635,
-        "success": 7635
+        "requested": 7634,
+        "success": 7634
       },
       "earnings": {
-        "requested": 3185,
-        "success": 2403,
-        "unavailable": 782
+        "requested": 3233,
+        "success": 2415,
+        "unavailable": 818
       },
       "profile": {
-        "requested": 97,
-        "success": 97
+        "requested": 95,
+        "success": 95
       },
       "price": {
         "requested": 30,
@@ -121,9 +121,9 @@
     }
   },
   "cards": {
-    "checked_at": "2026-10-25T05:09:19+00:00",
+    "checked_at": "2026-10-26T05:13:23+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:09:19+00:00",
+    "last_success_at": "2026-10-26T05:13:23+00:00",
     "translation": {
       "requested": 0,
       "translated": 0,
@@ -131,7 +131,7 @@
       "failed_calls": 0,
       "calls": 0
     },
-    "new_versions": 3,
+    "new_versions": 2,
     "new_observations": 39,
     "migrated_legacy": 0,
     "cards": 30,
@@ -139,36 +139,31 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-10-25T05:09:25+00:00",
+    "checked_at": "2026-10-26T05:13:25+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:09:25+00:00",
+    "last_success_at": "2026-10-26T05:13:25+00:00",
     "slots": 3,
     "bootstrap": false,
     "material_eligible": 1,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 2,
+    "sent": 0,
     "failed": 0,
     "uncertain": 0,
     "held_unconfirmed": [],
-    "released_unconfirmed": [
-      "NASDAQ:WDC|eps-revision-review:v1|new_discovery",
-      "NASDAQ:MXL|eps-revision-review:v1|new_discovery"
-    ],
+    "released_unconfirmed": [],
     "hold_not_compared": 0,
-    "reservation_persisted": true,
-    "receipts_persisted": true,
-    "selected": 2
+    "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-10-25T05:09:16+00:00",
+    "checked_at": "2026-10-26T05:13:20+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:09:16+00:00",
+    "last_success_at": "2026-10-26T05:13:20+00:00",
     "held": [],
-    "researched": 10,
+    "researched": 1,
     "statuses": {
-      "success": 10
+      "success": 1
     },
     "targets": 39,
     "current": {
@@ -223,19 +218,16 @@
       "CAN-BA5D4320F9188F9F",
       "CAN-D5F91D853BD4402E"
     ],
-    "alert_first": [
-      "CAN-76DD3777C06E7825",
-      "CAN-F4F37EDD5656F9BD"
-    ],
-    "http_attempts": 43,
+    "alert_first": [],
+    "http_attempts": 3,
     "coverage": {
       "success": 38,
       "no_relevant_document": 1
     },
     "drafts": {
-      "requests": 2,
-      "drafted": 1,
-      "insufficient_earnings_context": 1,
+      "requests": 0,
+      "drafted": 0,
+      "insufficient_earnings_context": 0,
       "no_supported_claims": 0,
       "deferred": 0,
       "failed": 0
@@ -250,9 +242,9 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-10-25T05:09:31+00:00",
+    "checked_at": "2026-10-26T05:13:30+00:00",
     "status": "success",
-    "last_success_at": "2026-10-25T05:09:31+00:00",
+    "last_success_at": "2026-10-26T05:13:30+00:00",
     "due": 3,
     "fresh": 3,
     "retry_waiting": 0,

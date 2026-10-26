@@ -251,13 +251,17 @@
     "2026-10-25": {
       "requests": 4,
       "retries": 0
+    },
+    "2026-10-26": {
+      "requests": 4,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 20,
-      "last_attempt_at": "2026-10-25T05:09:28.391017+00:00",
+      "attempts": 21,
+      "last_attempt_at": "2026-10-26T05:13:27.946225+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -944,8 +948,8 @@
       "reason": null
     },
     "MXL": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-25T05:09:28.391017+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-26T05:13:27.946225+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1104,8 +1108,8 @@
       "reason": null
     },
     "WDC": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-25T05:09:28.391017+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-26T05:13:27.946225+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1232,8 +1236,8 @@
       "reason": null
     },
     "SEI": {
-      "attempts": 5,
-      "last_attempt_at": "2026-10-25T05:09:28.391017+00:00",
+      "attempts": 6,
+      "last_attempt_at": "2026-10-26T05:13:27.946225+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,

@@ -1,0 +1,90 @@
+{
+  "observation_id": "OB-168C98CAC60BC3B7",
+  "candidate_id": "CAN-DC6D3F92ECFFD019",
+  "candidate_version": "CV-9F165A9D464505D0",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:AXTI",
+    "ticker": "AXTI",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-26T05:05:37+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261026T045857Z_40271638077-1.json.gz",
+    "sha256": "c9ed1e0d2cb35070aa633b310bbe6bdc9f8836a54e8235efd7f9296c9dd18bf8",
+    "run_id": "40271638077-1",
+    "finished_at": "2026-10-26T05:13:16+00:00"
+  },
+  "eps": {
+    "eps_now": 2.25,
+    "eps_30d": 2.226,
+    "eps_90d": 0.752,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 199.2,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.876,
+    "yield_change_30_pp": 0.046
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-28",
+    "price_start_date": "2026-07-28",
+    "price_end_expected": "2026-10-23",
+    "price_end_date": "2026-10-23",
+    "close_start": 42.7599983215332,
+    "close_end": 52.08000183105469,
+    "price_pct_90": 21.8,
+    "adj_return_pct_90": 21.8,
+    "pe_change_pct": -59.3
+  },
+  "display_rank": 6,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 3
+    },
+    {
+      "list": "A",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 3415053056,
+  "context_id": "CTX-08A8428683C12874",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-20T05:15:00+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-08A8428683C12874",
+    "generated_at": "2026-10-09T06:37:58+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:AXTI",
+  "approval_version": null,
+  "rendered_at": "2026-10-26T05:13:20+00:00"
+}

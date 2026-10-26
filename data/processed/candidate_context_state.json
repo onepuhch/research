@@ -2201,10 +2201,10 @@
         "name": "Space Exploration Technologies Corp.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
         "mapping_sha256": "d0cbfe38cc19bc798e3f8ca3071a186d7f5e8b4e329eb521694080fa13dd01a3",
-        "mapping_observed_at": "2026-10-24T04:48:06+00:00"
+        "mapping_observed_at": "2026-10-26T04:58:57+00:00"
       },
-      "attempted_at": "2026-10-24T05:02:27+00:00",
-      "eps_key": "2027-12-31|4.05484",
+      "attempted_at": "2026-10-26T05:13:19+00:00",
+      "eps_key": "2027-12-31|4.05325",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-BFAB16DB26870547",
@@ -2238,7 +2238,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-10-31T05:02:27+00:00",
+      "next_eligible_at": "2026-11-02T05:13:19+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-9B639B0FE568E1DC",
       "context_input_sha": "9b639b0fe568e1dc1313fc0f4b28c7a3ea1490989b2510fd80f8d0374134efbf"
@@ -3920,6 +3920,10 @@
       "companies": 10,
       "http_attempts": 43,
       "folded_companies": 5
+    },
+    "2026-10-26": {
+      "companies": 1,
+      "http_attempts": 3
     }
   },
   "documents_by_source": {

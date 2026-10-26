@@ -8630,7 +8630,7 @@
     "processed_run": "40163475107-1"
   },
   "0000017843-26-000049": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8641,15 +8641,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000049/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/17843/000001784326000049/a1stqtrfy2027results.htm",
       "published_at": "2026-10-22",
-      "raw_text": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22. Further, in the strong demand environment, pricing continues to strengthen across our business.” “We maintain our recently communicated fiscal year 2027 operating income outlook of $850 million to $880 million and our fiscal year 2029 operating income target of $1.2 billion to $1.3 billion which reflects the accelerating demand environment, continued benefits of pricing actions and the expected contribution from our brownfield capacity expansion project.” “In addition, we are currently working on specific actions and projects to exceed our operating income targets for fiscal year 2027 and fiscal year 2029. EX-99.1 2 a1stqtrfy2027results.htm EX-99.1 Document Exhibit 99.1 CARPENTER TECHNOLOGY REPORTS FIRST QUARTER FISCAL YEAR 2027 RESULTS Delivered Record First Quarter Operating Income, Up 28 Percent Year-Over-Year Strong Results Reflect Productivity Improvements, Mix Optimization and Benefits from Pricing Actions Realized Adjusted Operating Margin in Specialty Alloys Operations Segment of 37.7 Percent Demand Accelerating in Commercial Aerospace Supply Chain, Resulting in Increased Bookings PHILADELPHIA, October 22, 2026 (GLOBE NEWSWIRE) — Carpenter Technology Corporation (NYSE: CRS) (the “Company”) today announced financial results for the fiscal first quarter ended September 30, 2026. For the quarter, the Company reported operating income of $196.4 million and earnings per diluted share of $3.25. First Quarter Fiscal Year 2027 Highlights • Delivered $196.4 million of operating income, up 28 percent year-over-year and down 5 percent sequentially • Sequential performance reflects productivity improvements, mix management and benefits from pricing actions, offset by planned downtime for preventive maintenance activities • Generated Specialty Alloys Operations (“SAO”) segment operating income of $216.3 million, up 27 percent year-over-year and down 6 percent sequentially • Delivered adjusted operating "
+      "raw_text": "CARPENTER TECHNOLOGY CORP (CRS) (CIK 0000017843) EX-99.1 2026-10-22. Further, in the strong demand environment, pricing continues to strengthen across our business.” “We maintain our recently communicated fiscal year 2027 operating income outlook of $850 million to $880 million and our fiscal year 2029 operating income target of $1.2 billion to $1.3 billion which reflects the accelerating demand environment, continued benefits of pricing actions and the expected contribution from our brownfield capacity expansion project.” “In addition, we are currently working on specific actions and projects to exceed our operating income targets for fiscal year 2027 and fiscal year 2029. EX-99.1 2 a1stqtrfy2027results.htm EX-99.1 Document Exhibit 99.1 CARPENTER TECHNOLOGY REPORTS FIRST QUARTER FISCAL YEAR 2027 RESULTS Delivered Record First Quarter Operating Income, Up 28 Percent Year-Over-Year Strong Results Reflect Productivity Improvements, Mix Optimization and Benefits from Pricing Actions Realized Adjusted Operating Margin in Specialty Alloys Operations Segment of 37.7 Percent Demand Accelerating in Commercial Aerospace Supply Chain, Resulting in Increased Bookings PHILADELPHIA, October 22, 2026 (GLOBE NEWSWIRE) — Carpenter Technology Corporation (NYSE: CRS) (the “Company”) today announced financial results for the fiscal first quarter ended September 30, 2026. For the quarter, the Company reported operating income of $196.4 million and earnings per diluted share of $3.25. First Quarter Fiscal Year 2027 Highlights • Delivered $196.4 million of operating income, up 28 percent year-over-year and down 5 percent sequentially • Sequential performance reflects productivity improvements, mix management and benefits from pricing actions, offset by planned downtime for preventive maintenance activities • Generated Specialty Alloys Operations (“SAO”) segment operating income of $216.3 million, up 27 percent year-over-year and down 6 percent sequentially • Delivered adjusted operating ",
+      "_model_response": {
+        "evidence_quote": "Further, in the strong demand environment, pricing continues to strengthen across our business.” “We maintain our recently communicated fiscal year 2027 operating income outlook of $850 million to $880 million and our fiscal year 2029 operating income target of $1.2 billion to $1.3 billion which reflects the accelerating demand environment, continued benefits of pricing actions and the expected contribution from our brownfield capacity expansion project.” “In addition, we are currently working on specific actions and projects to exceed our operating income targets for fiscal year 2027 and fiscal year 2029. ... Demand Accelerating in Commercial Aerospace Supply Chain, Resulting in Increased Bookings",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Specialty Alloys Operations Segment",
+          "earnings_leverage": "Delivered Record First Quarter Operating Income, Up 28 Percent Year-Over-Year ... Adjusted Operating Margin in Specialty Alloys Operations Segment of 37.7 Percent",
+          "supply_demand_tightness": "strong demand environment, pricing continues to strengthen across our business.” “Demand Accelerating in Commercial Aerospace Supply Chain",
+          "structural_ai_demand": "",
+          "revision_momentum": "We maintain our recently communicated fiscal year 2027 operating income outlook ... and our fiscal year 2029 operating income target ... In addition, we are currently working on specific actions and projects to exceed our operating income targets for fiscal year 2027 and fiscal year 2029.",
+          "catalyst_visibility": "Demand Accelerating in Commercial Aerospace Supply Chain, Resulting in Increased Bookings"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "Commercial Aerospace Supply Chain",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CRS",
+        "theme": "상업용 항공우주, 특수 합금",
+        "signal_type": "수주/백로그",
+        "what_happened": "Carpenter Technology는 상업용 항공우주 공급망의 수요 가속화로 수주가 증가하고 가격이 지속적으로 강세를 보이며, 2027년 및 2029년 영업이익 목표를 초과 달성하기 위한 노력을 진행 중이라고 발표했습니다.",
+        "why_it_matters": "상업용 항공우주 시장의 강한 수요와 가격 상승은 동사의 실적 개선에 긍정적인 영향을 미치며, 이는 시장에 아직 충분히 반영되지 않은 성장 잠재력을 시사합니다.",
+        "what_to_watch": "향후 분기별 수주 잔고 변화 및 ASP 추이, 2027년 및 2029년 영업이익 가이던스 상향 여부",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "ASP: 평균 판매 가격, Bookings: 수주액 또는 수주량"
+      }
     },
     "content_hash": "4b9e72d2265b3e8b910e44e4e519cc219699756a49f8af863723d6ac94c36731",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-26T04:57:48+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000007789-26-000257": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8660,12 +8696,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/7789/000000778926000257/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/7789/000000778926000257/asb09302026ex991.htm",
       "published_at": "2026-10-22",
-      "raw_text": "ASSOCIATED BANC-CORP (ASB, ASBA, ASB-PE, ASB-PF) (CIK 0000007789) EX-99.1 2026-10-22. “In the third quarter, we maintained our momentum with strong core customer deposit 1 growth, net interest margin expansion, fee income growth, and a strong bottom line--all of which gave us the confidence to execute $100 million in share repurchases during the quarter. 3Q 2025) • Period end core customer deposits 1 of $34.8 billion (+2% vs. • Core customer deposits 1 increased $760 million from the prior quarter and increased $6.3 billion from the same period last year to $35.2 billion. • Core customer deposits 1 increased $671 million from the prior quarter and increased $5.9 billion from the same period last year to $34.8 billion. We continue to expect 2026 period end total deposit growth of 17% to 19% and period end core customer deposit growth of 19% to 21% as compared to Associated's standalone results for the year ended December 31, 2025. 5 Associated Banc-Corp Loan and Deposit Composition (Dollars in thousands) Period end loan composition Sep 30, 2026 Jun 30, 2026 Seql Qtr % Change Mar 31, 2026 Dec 31, 2025 Sep 30, 2025 Comp Qtr % Change Commercial and industrial $ 13,804,140 $ 13,750,175 — % $ 12,339,597 $ 11,799,757 $ 11,567,651 19 % Commercial real estate—owner occupied 1,601,925 1,575,445 2 % 1,193,778 1,186,324 1,149,939 39 % Commercial and business lending 15,406,065 15,325,620 1 % 13,533,375 12,986,081 12,717,590 21 % Commercial real estate—investor 6,494,991 6,492,950 — % 5,266,584 5,246,030 5,369,441 21 % Real estate construction 2,601,571 2,546,186 2 % 2,117,479 1,994,642 1,958,766 33 % Commercial real estate lending 9,096,562 9,039,136 1 % 7,384,063 7,240,672 7,328,207 24 % Total commercial 24,502,627 24,364,756 1 % 20,917,438 20,226,753 20,045,797 22 % Residential mortgage 6,740,214 6,808,398 (1) % 6,727,734 6,793,957 6,858,285 (2) % Auto finance 4,093,215 4,044,416 1 % 3,136,334 3,106,498 3,041,644 35 % Home equity 848,507 826,343 3 % 706,075 713,271 698,112 22"
+      "raw_text": "ASSOCIATED BANC-CORP (ASB, ASBA, ASB-PE, ASB-PF) (CIK 0000007789) EX-99.1 2026-10-22. “In the third quarter, we maintained our momentum with strong core customer deposit 1 growth, net interest margin expansion, fee income growth, and a strong bottom line--all of which gave us the confidence to execute $100 million in share repurchases during the quarter. 3Q 2025) • Period end core customer deposits 1 of $34.8 billion (+2% vs. • Core customer deposits 1 increased $760 million from the prior quarter and increased $6.3 billion from the same period last year to $35.2 billion. • Core customer deposits 1 increased $671 million from the prior quarter and increased $5.9 billion from the same period last year to $34.8 billion. We continue to expect 2026 period end total deposit growth of 17% to 19% and period end core customer deposit growth of 19% to 21% as compared to Associated's standalone results for the year ended December 31, 2025. 5 Associated Banc-Corp Loan and Deposit Composition (Dollars in thousands) Period end loan composition Sep 30, 2026 Jun 30, 2026 Seql Qtr % Change Mar 31, 2026 Dec 31, 2025 Sep 30, 2025 Comp Qtr % Change Commercial and industrial $ 13,804,140 $ 13,750,175 — % $ 12,339,597 $ 11,799,757 $ 11,567,651 19 % Commercial real estate—owner occupied 1,601,925 1,575,445 2 % 1,193,778 1,186,324 1,149,939 39 % Commercial and business lending 15,406,065 15,325,620 1 % 13,533,375 12,986,081 12,717,590 21 % Commercial real estate—investor 6,494,991 6,492,950 — % 5,266,584 5,246,030 5,369,441 21 % Real estate construction 2,601,571 2,546,186 2 % 2,117,479 1,994,642 1,958,766 33 % Commercial real estate lending 9,096,562 9,039,136 1 % 7,384,063 7,240,672 7,328,207 24 % Total commercial 24,502,627 24,364,756 1 % 20,917,438 20,226,753 20,045,797 22 % Residential mortgage 6,740,214 6,808,398 (1) % 6,727,734 6,793,957 6,858,285 (2) % Auto finance 4,093,215 4,044,416 1 % 3,136,334 3,106,498 3,041,644 35 % Home equity 848,507 826,343 3 % 706,075 713,271 698,112 22",
+      "_model_response": {
+        "evidence_quote": "We continue to expect 2026 period end total deposit growth of 17% to 19% and period end core customer deposit growth of 19% to 21% as compared to Associated's standalone results for the year ended December 31, 2025.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "We continue to expect 2026 period end total deposit growth of 17% to 19% and period end core customer deposit growth of 19% to 21%",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "We continue to expect 2026 period end total deposit growth of 17% to 19% and period end core customer deposit growth of 19% to 21%"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ASSOCIATED BANC-CORP",
+        "theme": "은행/금융",
+        "signal_type": "가이던스상향",
+        "what_happened": "Associated Banc-Corp가 2026년 말까지 총 예금 17~19%, 핵심 고객 예금 19~21% 성장을 예상한다고 발표했습니다.",
+        "why_it_matters": "은행의 견고한 예금 성장은 안정적인 자금 조달 기반과 대출 확대 가능성을 시사하며, 이는 순이자이익 증가로 이어져 수익성 개선에 긍정적입니다.",
+        "what_to_watch": "향후 분기별 예금 성장률 및 순이자마진(NIM) 추이, 대출 성장률",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 5,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "핵심 고객 예금 (Core Customer Deposits): 이자율 변동에 덜 민감하고 장기적인 관계를 가진 고객으로부터 유치한 안정적인 예금.\n순이자마진 (Net Interest Margin, NIM): 은행의 이자 수익 자산에서 발생하는 수익과 이자 비용 부채에 지불하는 비용의 차이를 나타내는 핵심 수익성 지표."
+      }
     },
     "content_hash": "cba1e293d7026aaeba4e9f0839c16e626baa54f09940f19e80f1ccac64e77a52",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-26T04:58:05+00:00",
+    "signal_id": "SIG-0912",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-26",
+    "processed_run": "40271638077-1"
   },
   "0001104659-26-117979": {
     "status": "deferred",
@@ -8687,7 +8761,7 @@
     "updated_at": "2026-10-23T05:01:33.401538+00:00"
   },
   "0001104659-26-118027": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8698,15 +8772,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/98677/000110465926118027/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/98677/000110465926118027/tr-ex99d1.htm",
       "published_at": "2026-10-22",
-      "raw_text": "TOOTSIE ROLL INDUSTRIES INC (TR, TROLB) (CIK 0000098677) EX-99.1 2026-10-22. We are also continuing to make investments in plant manufacturing operations to meet new customer and consumer product demands, achieve product quality improvements, expand capacity in certain product lines, and increase operational efficiencies in order to provide genuine value to consumers.” ​ ​ ​ Safe Harbor Statement This release contains forward-looking statements that are based largely on the Company’s current expectations and are made pursuant to the safe harbor provision of the Private Securities Litigation Reform Act of 1995. EX-99.1 2 tr-ex99d1.htm EX-99.1 Exhibit 99.1 ​ ​ TOOTSIE ROLL INDUSTRIES, INC. ​ ​ 7401 South Cicero Avenue ​ Chicago, IL 60629 ​ Phone 773/838-3400 ​ Fax 773/838-3534 ​ PRESS RELEASE ​ ​ ​ ​ ​ STOCK TRADED: NYSE FOR IMMEDIATE RELEASE TICKER SYMBOL: TR Wednesday, October 21, 2026 ​ ​ ​ CHICAGO, ILLINOIS – October 21, 2026 - Ellen R. Gordon, Chairman, Tootsie Roll Industries, Inc. reported third quarter and nine months 2026 net sales and net earnings. ​ Third quarter 2026 net sales were $227,163,000 compared to $230,614,000 in third quarter 2025, a decrease of $3,451,000 or 1%. Third quarter 2026 net earnings were $23,216,000 compared to $35,659,000 in third quarter 2025, and net earnings per share were $0.31 and $0.48 in third quarter 2026 and 2025, respectively, a decrease of $0.17 per share or 35%. ​ Nine months 2026 net sales were $528,594,000 compared to $530,325,000 in nine months 2025, a decrease of $1,731,000. Nine months 2026 net earnings were $54,224,000 compared to $71,261,000 in nine months 2025, and net earnings per share were $0.72 and $0.95 in nine months 2026 and 2025, respectively, a decrease of $0.23 per share or 24%. ​ Mrs. Gordon said, “Third quarter and nine months 2026 were adversely impacted by the timing of sales, including seasonal Halloween sales, between third and fourth quarter 2026 when compared to the prior year’s corresponding qua"
+      "raw_text": "TOOTSIE ROLL INDUSTRIES INC (TR, TROLB) (CIK 0000098677) EX-99.1 2026-10-22. We are also continuing to make investments in plant manufacturing operations to meet new customer and consumer product demands, achieve product quality improvements, expand capacity in certain product lines, and increase operational efficiencies in order to provide genuine value to consumers.” ​ ​ ​ Safe Harbor Statement This release contains forward-looking statements that are based largely on the Company’s current expectations and are made pursuant to the safe harbor provision of the Private Securities Litigation Reform Act of 1995. EX-99.1 2 tr-ex99d1.htm EX-99.1 Exhibit 99.1 ​ ​ TOOTSIE ROLL INDUSTRIES, INC. ​ ​ 7401 South Cicero Avenue ​ Chicago, IL 60629 ​ Phone 773/838-3400 ​ Fax 773/838-3534 ​ PRESS RELEASE ​ ​ ​ ​ ​ STOCK TRADED: NYSE FOR IMMEDIATE RELEASE TICKER SYMBOL: TR Wednesday, October 21, 2026 ​ ​ ​ CHICAGO, ILLINOIS – October 21, 2026 - Ellen R. Gordon, Chairman, Tootsie Roll Industries, Inc. reported third quarter and nine months 2026 net sales and net earnings. ​ Third quarter 2026 net sales were $227,163,000 compared to $230,614,000 in third quarter 2025, a decrease of $3,451,000 or 1%. Third quarter 2026 net earnings were $23,216,000 compared to $35,659,000 in third quarter 2025, and net earnings per share were $0.31 and $0.48 in third quarter 2026 and 2025, respectively, a decrease of $0.17 per share or 35%. ​ Nine months 2026 net sales were $528,594,000 compared to $530,325,000 in nine months 2025, a decrease of $1,731,000. Nine months 2026 net earnings were $54,224,000 compared to $71,261,000 in nine months 2025, and net earnings per share were $0.72 and $0.95 in nine months 2026 and 2025, respectively, a decrease of $0.23 per share or 24%. ​ Mrs. Gordon said, “Third quarter and nine months 2026 were adversely impacted by the timing of sales, including seasonal Halloween sales, between third and fourth quarter 2026 when compared to the prior year’s corresponding qua",
+      "_model_response": {
+        "evidence_quote": "We are also continuing to make investments in plant manufacturing operations to meet new customer and consumer product demands, achieve product quality improvements, expand capacity in certain product lines, and increase operational efficiencies in order to provide genuine value to consumers.” ​ ​ ​ Safe Harbor Statement This release contains forward-looking statements that are based largely on the Company’s current expectations and are made pursuant to the safe harbor provision of the Private Securities Litigation Reform Act of 1995. EX-99.1 2 tr-ex99d1.htm EX-99.1 Exhibit 99.1 ​ ​ TOOTSIE ROLL INDUSTRIES, INC. ​ ​ 7401 South Cicero Avenue ​ Chicago, IL 60629 ​ Phone 773/838-3400 ​ Fax 773/838-3534 ​ PRESS RELEASE ​ ​ ​ ​ ​ STOCK TRADED: NYSE FOR IMMEDIATE RELEASE TICKER SYMBOL: TR Wednesday, October 21, 2026 ​ ​ ​ CHICAGO, ILLINOIS – October 21, 2026 - Ellen R. Gordon, Chairman, Tootsie Roll Industries, Inc. reported third quarter and nine months 2026 net sales and net earnings. ​ Third quarter 2026 net sales were $227,163,000 compared to $230,614,000 in third quarter 2025, a decrease of $3,451,000 or 1%. Third quarter 2026 net earnings were $23,216,000 compared to $35,659,000 in third quarter 2025, and net earnings per share were $0.31 and $0.48 in third quarter 2026 and 2025, respectively, a decrease of $0.17 per share or 35%. ​ Nine months 2026 net sales were $528,594,000 compared to $530,325,000 in nine months 2025, a decrease of $1,731,000. Nine months 2026 net earnings were $54,224,000 compared to $71,261,000 in nine months 2025, and net earnings per share were $0.72 and $0.95 in nine months 2026 and 2025, respectively, a decrease of $0.23 per share or 24%.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "negative",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "해당 공시는 과거 실적 감소를 보고하는 내용이며, '지속적인 투자' 언급은 구체적인 신규 CAPEX 계획이나 확정된 계약이 아닌 일반적인 운영 및 마케팅 의지 표명으로, 투자 발굴을 위한 구체적인 조기 지표로 보기 어렵습니다.",
+        "subject": "TOOTSIE ROLL INDUSTRIES INC",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "Tootsie Roll Industries가 2026년 3분기 및 9개월 순매출과 순이익이 전년 대비 감소했다고 발표했습니다.",
+        "why_it_matters": "과거 실적 발표는 투자 발굴 신호로 보기 어려우며, 일반적인 투자 의지 표명은 구체적인 투자 기회로 해석하기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "해당 공시는 과거 실적 감소를 보고하는 내용이며, '지속적인 투자' 언급은 구체적인 신규 CAPEX 계획이나 확정된 계약이 아닌 일반적인 운영 및 마케팅 의지 표명으로, 투자 발굴을 위한 구체적인 조기 지표로 보기 어렵습니다."
     },
     "content_hash": "9a75ca3afc6296266de1980408dd4d002aa73fcdcfe288679d4c436b1ea42b42",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-26T04:58:22+00:00",
+    "reason": "해당 공시는 과거 실적 감소를 보고하는 내용이며, '지속적인 투자' 언급은 구체적인 신규 CAPEX 계획이나 확정된 계약이 아닌 일반적인 운영 및 마케팅 의지 표명으로, 투자 발굴을 위한 구체적인 조기 지표로 보기 어렵습니다.",
+    "processed_day": "2026-10-26",
+    "processed_run": "40271638077-1"
   },
   "0001437749-26-033175": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8717,12 +8822,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033175/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033175/ex_1029316.htm",
       "published_at": "2026-10-22",
-      "raw_text": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-22. Valion is actively pursuing new customer relationships for Velocity, and converting these discussions into customer programs represents a potential near-term commercial opportunity to improve facility utilization, generate service revenue, and establish relationships that may support longer-term business growth. “We are actively pursuing new customers and evaluating opportunities to expand the CDMO’s reach. EX-99.1 2 ex_1029316.htm EXHIBIT 99.1 ex_1029316.htm Exhibit 99.1 Valion Bio ’ s New Leadership Unveils 30-Day Agenda to Accelerate Clinical Pipeline and Unlock Shareholder Value Interim CEO Dean Zikria ’ s initial review prioritizes Entolimod and pipeline advancement, commercialization of Velocity Bioworks, and strategic opportunities to maximize the value of the Company ’ s integrated capabilities SAN ANTONIO, TX / October 21, 2026 / ACCESS Newswire -- Valion Bio, Inc. (NASDAQ:VBIO) (“Valion” or the “Company”), a clinical-stage biopharmaceutical company developing biologics that activate innate immune pathways for cytoprotection and immune modulation, today shared the initial findings and priorities from Dean Zikria’s first 30 days as Interim Chief Executive Officer. Mr. Zikria’s strategic review has set a focused agenda built on three priorities: ● Advancing the development of Entolimod and other pipeline assets; ● Pursuing customer and revenue capabilities for Velocity Bioworks (“Velocity”), the Company’s wholly owned contract development and manufacturing organization (“CDMO”); and ● Evaluating strategic partnerships, co-investment structures, licensing deals, and/or other transactions for Velocity that could unlock additional value from the CDMO. \"Having served on Valion's Board of Directors for more than seven years, I have a deep understanding of the Company's science, assets, and people, and I believe those factors provide a meaningful foundation for future success,\" said Mr. Zikria. \"It is als"
+      "raw_text": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-22. Valion is actively pursuing new customer relationships for Velocity, and converting these discussions into customer programs represents a potential near-term commercial opportunity to improve facility utilization, generate service revenue, and establish relationships that may support longer-term business growth. “We are actively pursuing new customers and evaluating opportunities to expand the CDMO’s reach. EX-99.1 2 ex_1029316.htm EXHIBIT 99.1 ex_1029316.htm Exhibit 99.1 Valion Bio ’ s New Leadership Unveils 30-Day Agenda to Accelerate Clinical Pipeline and Unlock Shareholder Value Interim CEO Dean Zikria ’ s initial review prioritizes Entolimod and pipeline advancement, commercialization of Velocity Bioworks, and strategic opportunities to maximize the value of the Company ’ s integrated capabilities SAN ANTONIO, TX / October 21, 2026 / ACCESS Newswire -- Valion Bio, Inc. (NASDAQ:VBIO) (“Valion” or the “Company”), a clinical-stage biopharmaceutical company developing biologics that activate innate immune pathways for cytoprotection and immune modulation, today shared the initial findings and priorities from Dean Zikria’s first 30 days as Interim Chief Executive Officer. Mr. Zikria’s strategic review has set a focused agenda built on three priorities: ● Advancing the development of Entolimod and other pipeline assets; ● Pursuing customer and revenue capabilities for Velocity Bioworks (“Velocity”), the Company’s wholly owned contract development and manufacturing organization (“CDMO”); and ● Evaluating strategic partnerships, co-investment structures, licensing deals, and/or other transactions for Velocity that could unlock additional value from the CDMO. \"Having served on Valion's Board of Directors for more than seven years, I have a deep understanding of the Company's science, assets, and people, and I believe those factors provide a meaningful foundation for future success,\" said Mr. Zikria. \"It is als",
+      "_model_response": {
+        "evidence_quote": "Valion is actively pursuing new customer relationships for Velocity, and converting these discussions into customer programs represents a potential near-term commercial opportunity to improve facility utilization, generate service revenue, and establish relationships that may support longer-term business growth. “We are actively pursuing new customers and evaluating opportunities to expand the CDMO’s reach.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "planned",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "새로운 고객 관계를 적극적으로 추구하고 있다는 일반적인 사업 개발 계획 및 의지 표명으로, 구체적인 수주 계약, 가이던스 상향 또는 확정된 실적 변화와 같은 조기 투자 신호로 보기 어렵습니다.",
+        "subject": "Valion Bio, Inc.",
+        "theme": "미분류",
+        "signal_type": "",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "새로운 고객 관계를 적극적으로 추구하고 있다는 일반적인 사업 개발 계획 및 의지 표명으로, 구체적인 수주 계약, 가이던스 상향 또는 확정된 실적 변화와 같은 조기 투자 신호로 보기 어렵습니다."
     },
     "content_hash": "a419035cea47b0bc334aefdac624782bbf65f8fd1ae9185cc674aa7c60f9647b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-26T04:58:35+00:00",
+    "reason": "새로운 고객 관계를 적극적으로 추구하고 있다는 일반적인 사업 개발 계획 및 의지 표명으로, 구체적인 수주 계약, 가이던스 상향 또는 확정된 실적 변화와 같은 조기 투자 신호로 보기 어렵습니다.",
+    "processed_day": "2026-10-26",
+    "processed_run": "40271638077-1"
   },
   "0001104659-26-118161": {
     "status": "rejected",
@@ -8775,7 +8918,7 @@
     "processed_run": "39903386847-1"
   },
   "0001185185-26-004909": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8786,12 +8929,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2028027/000118518526004909/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2028027/000118518526004909/ntwo2ex99-1.htm",
       "published_at": "2026-10-22",
-      "raw_text": "Newbury Street II Acquisition Corp (NTWO, NTWOU, NTWOW) (CIK 0002028027) EX-99.1 2026-10-22. The firm’s investment follows a number of recent milestones for FORT, including an expanded partnership with Agility Robotics, the announcement of FORT’s new Connectivity Aggregation software product, and new customer opportunities. EX-99.1 2 ntwo2ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 FORT Robotics Secures Approximately $20 Million in Additional Funding led by Tiger Global and Mark Cuban Companies Investors increase their commitments as FORT plans to become the first public company dedicated principally to physical AI safety PHILADELPHIA – October 22, 2026 – FORT Robotics, Inc., the safety platform developing the Trust Layer for Physical AI, today announced approximately $20 million in new commitments from existing investors, expanding the capital available to support FORT’s next phase of growth. Tiger Global is leading an approximately $10 million financing, with participation from Mark Cuban Companies, that is expected to close this week. Tiger Global has also committed an additional $10 million to the previously announced common equity PIPE (Private Investment in Public Equity) expected to close in connection with the closing of FORT’s proposed business combination with Newbury Street II Acquisition Corp (Nasdaq: NTWO). Together with previously announced PIPE commitments, today’s announcement brings the total committed capital to date in connection with FORT’s proposed business combination to more than $50 million. The additional investment is expected to help FORT further accelerate its growth by expanding its team and operating capacity to meet growing customer demand and pursue opportunities across the rapidly developing physical AI market. FORT intends to use the additional capital to support new and expanding customer opportunities across warehousing, defense, construction, and other markets adopting increasingly autonomous systems. FORT’s Trust Layer serves as founda"
+      "raw_text": "Newbury Street II Acquisition Corp (NTWO, NTWOU, NTWOW) (CIK 0002028027) EX-99.1 2026-10-22. The firm’s investment follows a number of recent milestones for FORT, including an expanded partnership with Agility Robotics, the announcement of FORT’s new Connectivity Aggregation software product, and new customer opportunities. EX-99.1 2 ntwo2ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 FORT Robotics Secures Approximately $20 Million in Additional Funding led by Tiger Global and Mark Cuban Companies Investors increase their commitments as FORT plans to become the first public company dedicated principally to physical AI safety PHILADELPHIA – October 22, 2026 – FORT Robotics, Inc., the safety platform developing the Trust Layer for Physical AI, today announced approximately $20 million in new commitments from existing investors, expanding the capital available to support FORT’s next phase of growth. Tiger Global is leading an approximately $10 million financing, with participation from Mark Cuban Companies, that is expected to close this week. Tiger Global has also committed an additional $10 million to the previously announced common equity PIPE (Private Investment in Public Equity) expected to close in connection with the closing of FORT’s proposed business combination with Newbury Street II Acquisition Corp (Nasdaq: NTWO). Together with previously announced PIPE commitments, today’s announcement brings the total committed capital to date in connection with FORT’s proposed business combination to more than $50 million. The additional investment is expected to help FORT further accelerate its growth by expanding its team and operating capacity to meet growing customer demand and pursue opportunities across the rapidly developing physical AI market. FORT intends to use the additional capital to support new and expanding customer opportunities across warehousing, defense, construction, and other markets adopting increasingly autonomous systems. FORT’s Trust Layer serves as founda",
+      "_model_response": {
+        "evidence_quote": "FORT Robotics, Inc., the safety platform developing the Trust Layer for Physical AI, today announced approximately $20 million in new commitments from existing investors, expanding the capital available to support FORT’s next phase of growth. ... The additional investment is expected to help FORT further accelerate its growth by expanding its team and operating capacity to meet growing customer demand and pursue opportunities across the rapidly developing physical AI market. FORT intends to use the additional capital to support new and expanding customer opportunities across warehousing, defense, construction, and other markets adopting increasingly autonomous systems.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "FORT plans to become the first public company dedicated principally to physical AI safety",
+          "earnings_leverage": "expanding its team and operating capacity to meet growing customer demand",
+          "supply_demand_tightness": "meet growing customer demand",
+          "structural_ai_demand": "rapidly developing physical AI market",
+          "revision_momentum": "",
+          "catalyst_visibility": "approximately $20 million in new commitments from existing investors, expanding the capital available to support FORT’s next phase of growth."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "Physical AI safety platform",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "FORT Robotics",
+        "theme": "Physical AI safety",
+        "signal_type": "CAPEX",
+        "what_happened": "FORT Robotics가 약 2천만 달러의 추가 자금을 확보하여 총 5천만 달러 이상의 자본을 확보했으며, 이는 팀 확장 및 운영 역량 증설을 통해 증가하는 고객 수요에 대응하기 위함이다.",
+        "why_it_matters": "이 자금 조달은 FORT Robotics가 물리적 AI 안전 시장의 성장하는 수요를 충족하기 위해 생산 능력을 확장하고 있음을 보여주며, 이는 향후 매출 증가로 이어질 수 있는 긍정적인 신호이다.",
+        "what_to_watch": "생산 능력 증설 완료 시점 및 규모, 신규 고객사 확보 및 수주 계약 발표",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "Physical AI: 물리적 세계에서 작동하는 로봇이나 자율 시스템에 적용되는 인공지능. Trust Layer: 물리적 AI 시스템의 안전과 신뢰성을 보장하는 기술 또는 플랫폼."
+      }
     },
     "content_hash": "a5231fc620b8a4c8bf2e8353972594be62312008610ba4a5fb105585de6c6830",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-26T04:58:52+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001675644-26-000089": {
     "status": "deferred",
