@@ -1,0 +1,96 @@
+{
+  "context_id": "CTX-EBF4A0F778281291",
+  "candidate_id": "CAN-FC7BBBC12A5093CF",
+  "ticker": "CRGY",
+  "issuer_cik": "0001866175",
+  "document_ids": [
+    "DOC-6994CC44D493B12A",
+    "DOC-95C482A2DC3DAF89"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-6994CC44D493B12A#t5",
+    "DOC-6994CC44D493B12A#p76",
+    "DOC-6994CC44D493B12A#p129",
+    "DOC-6994CC44D493B12A#p132",
+    "DOC-6994CC44D493B12A#p171",
+    "DOC-6994CC44D493B12A#p187",
+    "DOC-6994CC44D493B12A#t54",
+    "DOC-6994CC44D493B12A#p284",
+    "DOC-95C482A2DC3DAF89#p61",
+    "DOC-95C482A2DC3DAF89#p84"
+  ],
+  "input_sha": "ebf4a0f7782812910acbe1f4f61247207744236cbd3f3bdbfeab41b1c42ea097",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-27T05:31:06+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익은 손실을 기록했다",
+      "figures": [
+        "$(954,931)"
+      ],
+      "quote": "Net income (loss) ; $(954,931) ; $185,871",
+      "where": "DOC-6994CC44D493B12A#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익은 이익을 기록했다",
+      "figures": [
+        "$185,871"
+      ],
+      "quote": "Net income (loss) ; $(954,931) ; $185,871",
+      "where": "DOC-6994CC44D493B12A#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동 현금 흐름은 유입을 기록했다",
+      "figures": [
+        "889,878"
+      ],
+      "quote": "Net cash provided by (used in) operating activities ; 889,878 ; 743,156",
+      "where": "DOC-6994CC44D493B12A#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동 현금 흐름은 유입을 기록했다",
+      "figures": [
+        "743,156"
+      ],
+      "quote": "Net cash provided by (used in) operating activities ; 889,878 ; 743,156",
+      "where": "DOC-6994CC44D493B12A#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 손상 비용이 발생했다",
+      "figures": [
+        "1,005,242"
+      ],
+      "quote": "Impairment expense ; 1,005,242 ; —",
+      "where": "DOC-6994CC44D493B12A#t5"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 삼 년 연속 세전 손실을 기록하고 있으며, 이는 회사의 이연 법인세 자산에 대한 중요한 부정적 지표이다",
+      "figures": [],
+      "quote": "As a result of full cost ceiling impairments recorded during 2025, and the expectation of potential additional impairments in future periods, the Company is in a three-year pre-tax loss position and a",
+      "where": "DOC-6994CC44D493B12A#p187"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

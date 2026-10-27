@@ -1523,6 +1523,24 @@
             "provider-unspecified"
           ]
         }
+      },
+      "NYSE:VLO|eps-revision-review:v1": {
+        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+        "first": {
+          "observation_id": "OB-9FCC822D255573CB",
+          "baseline_id": "OB-9FCC822D255573CB",
+          "observed_at": "2026-10-27T05:30:44+00:00",
+          "day": "2026-10-27",
+          "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
+          "eps_now": 52.99214,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
       }
     },
     "rebases": {

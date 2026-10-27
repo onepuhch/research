@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-FF75812327FE3921",
+  "candidate_id": "CAN-5790099EDC6F3301",
+  "candidate_version": "CV-A711BDFE53C6F88A",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:SPCX",
+    "ticker": "SPCX",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-27T05:30:06+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261027T051637Z_40454163350-1.json.gz",
+    "sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
+    "run_id": "40454163350-1",
+    "finished_at": "2026-10-27T05:30:44+00:00"
+  },
+  "eps": {
+    "eps_now": 3.86555,
+    "eps_30d": 1.86094,
+    "eps_90d": 0.61702,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 33,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 526.5,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.211,
+    "yield_change_30_pp": 1.365
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-29",
+    "price_start_date": "2026-07-29",
+    "price_end_expected": "2026-10-26",
+    "price_end_date": "2026-10-26",
+    "close_start": 112.55000305175781,
+    "close_end": 146.89999389648438,
+    "price_pct_90": 30.5,
+    "adj_return_pct_90": 30.5,
+    "pe_change_pct": -79.2
+  },
+  "display_rank": 2,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 1
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 1995058184192,
+  "context_id": "CTX-9B639B0FE568E1DC",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-27T05:30:48+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:SPCX",
+  "approval_version": null,
+  "rendered_at": "2026-10-27T05:31:12+00:00"
+}

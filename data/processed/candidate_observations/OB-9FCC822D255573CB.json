@@ -1,0 +1,101 @@
+{
+  "observation_id": "OB-9FCC822D255573CB",
+  "candidate_id": "CAN-325B2A6C30755476",
+  "candidate_version": "CV-6F6F132A9FC243CC",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:VLO",
+    "ticker": "VLO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-27T05:17:29+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261027T051637Z_40454163350-1.json.gz",
+    "sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
+    "run_id": "40454163350-1",
+    "finished_at": "2026-10-27T05:30:44+00:00"
+  },
+  "eps": {
+    "eps_now": 52.99214,
+    "eps_30d": 37.10152,
+    "eps_90d": 25.11236,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 18,
+    "up30": 12,
+    "down30": 1,
+    "pct_90": 111.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 6.533,
+    "yield_change_30_pp": 3.724
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-29",
+    "price_start_date": "2026-07-29",
+    "price_end_expected": "2026-10-26",
+    "price_end_date": "2026-10-26",
+    "close_start": 301.32000732421875,
+    "close_end": 426.760009765625,
+    "price_pct_90": 41.6,
+    "adj_return_pct_90": 42.2,
+    "pe_change_pct": -32.9
+  },
+  "display_rank": 10,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 7
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 122875920384,
+  "context_id": "CTX-27C69EC51D6CF11E",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-27T05:30:48+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-27C69EC51D6CF11E",
+    "generated_at": "2026-10-23T05:17:33+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 8,
+    "shown": [
+      "VLO",
+      "PBF",
+      "CVI",
+      "DK"
+    ],
+    "folded": [
+      "MPC",
+      "PSX",
+      "DINO",
+      "PARR"
+    ],
+    "outside": []
+  },
+  "entity_id": "NYSE:VLO",
+  "approval_version": null,
+  "rendered_at": "2026-10-27T05:31:12+00:00"
+}

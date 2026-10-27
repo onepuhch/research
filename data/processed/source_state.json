@@ -8973,7 +8973,7 @@
     "validation_rejected": true
   },
   "0001675644-26-000089": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8984,15 +8984,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1675644/000167564426000089/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1675644/000167564426000089/fvcb-20260930xexx991.htm",
       "published_at": "2026-10-22",
-      "raw_text": "FVCBankcorp, Inc. (FVCB) (CIK 0001675644) EX-99.1 2026-10-22. The decrease in core deposits for the quarter ended September 30, 2026 was primarily due to large customer deposit transactions that occurred at the end of the second quarter, and therefore, the decrease in core deposits at September 30, 2026 was expected. EX-99.1 2 fvcb-20260930xexx991.htm EX-99.1 Document Exhibit 99.1 PRESS RELEASE For further information, contact: David W. Pijor, Esq., Chairman and Chief Executive Officer Phone: (703) 436-3802 Email: dpijor@fvcbank.com Patricia A. Ferrick, President Phone: (703) 436-3822 Email: pferrick@fvcbank.com FOR IMMEDIATE RELEASE – October 22, 2026 FVCBankcorp, Inc. Announces Earnings; 19% Increase in Net Income Compared to Year Ago Quarter Fairfax, VA-FVCBankcorp, Inc. (NASDAQ: FVCB) (the “Company”) today reported net income of $6.6 million for the quarter ended September 30, 2026 compared to net income of $5.6 million for the quarter ended September 30, 2025, an increase of $1.0 million, or 19%. For the nine months ended September 30, 2026, net income increased $4.8 million, or 29%, to $21.2 million, compared to $16.4 million for the nine months ended September 30, 2025. Diluted earnings per share was $0.37 for the quarter ended September 30, 2026 compared to $0.31 for the quarter ended September 30, 2025, an increase of 20%. For the nine months ended September 30, 2026, diluted earnings per share was $1.17, an increase of 30%, compared to diluted earnings per share of $0.90 for the nine months ended September 30, 2025. Return on average assets for the quarter ended September 30, 2026 was 1.17%, an increase from 1.00% for the year ago quarter ended September 30, 2025. Return on average equity increased to 9.77% for the quarter ended September 30, 2026, compared to 9.05% for the year ago quarter ended September 30, 2025. For the nine months ended September 30, 2026, return on average assets was 1.27%, an increase from 0.98% for the nine months ended September 3"
+      "raw_text": "FVCBankcorp, Inc. (FVCB) (CIK 0001675644) EX-99.1 2026-10-22. The decrease in core deposits for the quarter ended September 30, 2026 was primarily due to large customer deposit transactions that occurred at the end of the second quarter, and therefore, the decrease in core deposits at September 30, 2026 was expected. EX-99.1 2 fvcb-20260930xexx991.htm EX-99.1 Document Exhibit 99.1 PRESS RELEASE For further information, contact: David W. Pijor, Esq., Chairman and Chief Executive Officer Phone: (703) 436-3802 Email: dpijor@fvcbank.com Patricia A. Ferrick, President Phone: (703) 436-3822 Email: pferrick@fvcbank.com FOR IMMEDIATE RELEASE – October 22, 2026 FVCBankcorp, Inc. Announces Earnings; 19% Increase in Net Income Compared to Year Ago Quarter Fairfax, VA-FVCBankcorp, Inc. (NASDAQ: FVCB) (the “Company”) today reported net income of $6.6 million for the quarter ended September 30, 2026 compared to net income of $5.6 million for the quarter ended September 30, 2025, an increase of $1.0 million, or 19%. For the nine months ended September 30, 2026, net income increased $4.8 million, or 29%, to $21.2 million, compared to $16.4 million for the nine months ended September 30, 2025. Diluted earnings per share was $0.37 for the quarter ended September 30, 2026 compared to $0.31 for the quarter ended September 30, 2025, an increase of 20%. For the nine months ended September 30, 2026, diluted earnings per share was $1.17, an increase of 30%, compared to diluted earnings per share of $0.90 for the nine months ended September 30, 2025. Return on average assets for the quarter ended September 30, 2026 was 1.17%, an increase from 1.00% for the year ago quarter ended September 30, 2025. Return on average equity increased to 9.77% for the quarter ended September 30, 2026, compared to 9.05% for the year ago quarter ended September 30, 2025. For the nine months ended September 30, 2026, return on average assets was 1.27%, an increase from 0.98% for the nine months ended September 3",
+      "_model_response": {
+        "evidence_quote": "FVCBankcorp, Inc. Announces Earnings; 19% Increase in Net Income Compared to Year Ago Quarter Fairfax, VA-FVCBankcorp, Inc. (NASDAQ: FVCB) (the “Company”) today reported net income of $6.6 million for the quarter ended September 30, 2026 compared to net income of $5.6 million for the quarter ended September 30, 2025, an increase of $1.0 million, or 19%. For the nine months ended September 30, 2026, net income increased $4.8 million, or 29%, to $21.2 million, compared to $16.4 million for the nine months ended September 30, 2025. Diluted earnings per share was $0.37 for the quarter ended September 30, 2026 compared to $0.31 for the quarter ended September 30, 2025, an increase of 20%.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "실행된 실적을 보고하는 루틴 공시이며, EPS 리비전이나 구체적인 조기 지표가 아니다. 단일 공시는 시장 소외나 리비전 연속성의 증거가 될 수 없다.",
+        "subject": "FVCBankcorp, Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "FVCBankcorp, Inc.가 2026년 3분기 순이익이 전년 동기 대비 19% 증가한 660만 달러를 기록했으며, 희석 주당순이익은 20% 증가한 0.37달러를 기록했다고 발표했다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "실행된 실적을 보고하는 루틴 공시이며, EPS 리비전이나 구체적인 조기 지표가 아니다. 단일 공시는 시장 소외나 리비전 연속성의 증거가 될 수 없다."
     },
     "content_hash": "db1e0d3d15fbba057a4fd840a0561925890e060cb4f576afa45a4146f8960918",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-27T05:15:16+00:00",
+    "reason": "실행된 실적을 보고하는 루틴 공시이며, EPS 리비전이나 구체적인 조기 지표가 아니다. 단일 공시는 시장 소외나 리비전 연속성의 증거가 될 수 없다.",
+    "processed_day": "2026-10-27",
+    "processed_run": "40454163350-1"
   },
   "0001477932-26-006396": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9003,15 +9034,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1474167/000147793226006396/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1474167/000147793226006396/cosm_ex992.htm",
       "published_at": "2026-10-22",
-      "raw_text": "Cosmos Health Inc. (COSM) (CIK 0001474167) EX-99.2 2026-10-22. When more than eight in ten new orders include a subscription, each new customer represents a potential recurring relationship rather than a single sale, and successive monthly cohorts can build on one another. EX-99.2 3 cosm_ex992.htm CHIEF EXECUTIVE OFFICERS LETTER cosm_ex992.htm EXHIBIT 99.2 Cosmos Health CEO Greg Siokas Issues Letter to Shareholders Highlighting Record 2026 Revenue, U.S. Subscription Growth and Global Expansion Key Highlights · Record revenue: preliminary nine-month 2026 revenue of approximately $54.3 million, up 19%, with every quarter of 2026 setting a record · 2026 outlook reaffirmed: full-year revenue expected to surpass $90 million, up approximately 38%, the largest single-year revenue increase in the Company’s history · Record fourth quarter expected: revenue of approximately $35.7 million or more, up approximately 81% from the fourth quarter of 2025 · Multiple engines of growth: pharmaceutical contract manufacturing and distribution, proprietary brands and U.S. e-commerce all expected to contribute · U.S. e-commerce scaling rapidly: 8,940 active U.S. subscriptions as of October 19, 2026, up 42% in five days, with approximately $15 million in revenue and $10.5 million in gross profit expected in the fourth quarter · Record CMO pipeline: more than 32.7 million units at Cana Laboratories, up sixfold since mid-2024 · Record distribution volumes: CosmoFarm serving more than 1,500 pharmacies, with revenue up approximately 4.3 times under Cosmos Health ownership · Global brand expansion: proprietary brands sold in more than 40 countries, with particular momentum in Europe and the Gulf · Diversified balance sheet: approximately $20 million in non-core assets, including real estate and digital assets, and total liabilities down 13.3% in the first half of 2026 · Share repurchases: more than 5.1 million shares repurchased for approximately $1.1 million · R&D in weight management: advanci"
+      "raw_text": "Cosmos Health Inc. (COSM) (CIK 0001474167) EX-99.2 2026-10-22. When more than eight in ten new orders include a subscription, each new customer represents a potential recurring relationship rather than a single sale, and successive monthly cohorts can build on one another. EX-99.2 3 cosm_ex992.htm CHIEF EXECUTIVE OFFICERS LETTER cosm_ex992.htm EXHIBIT 99.2 Cosmos Health CEO Greg Siokas Issues Letter to Shareholders Highlighting Record 2026 Revenue, U.S. Subscription Growth and Global Expansion Key Highlights · Record revenue: preliminary nine-month 2026 revenue of approximately $54.3 million, up 19%, with every quarter of 2026 setting a record · 2026 outlook reaffirmed: full-year revenue expected to surpass $90 million, up approximately 38%, the largest single-year revenue increase in the Company’s history · Record fourth quarter expected: revenue of approximately $35.7 million or more, up approximately 81% from the fourth quarter of 2025 · Multiple engines of growth: pharmaceutical contract manufacturing and distribution, proprietary brands and U.S. e-commerce all expected to contribute · U.S. e-commerce scaling rapidly: 8,940 active U.S. subscriptions as of October 19, 2026, up 42% in five days, with approximately $15 million in revenue and $10.5 million in gross profit expected in the fourth quarter · Record CMO pipeline: more than 32.7 million units at Cana Laboratories, up sixfold since mid-2024 · Record distribution volumes: CosmoFarm serving more than 1,500 pharmacies, with revenue up approximately 4.3 times under Cosmos Health ownership · Global brand expansion: proprietary brands sold in more than 40 countries, with particular momentum in Europe and the Gulf · Diversified balance sheet: approximately $20 million in non-core assets, including real estate and digital assets, and total liabilities down 13.3% in the first half of 2026 · Share repurchases: more than 5.1 million shares repurchased for approximately $1.1 million · R&D in weight management: advanci",
+      "_model_response": {
+        "evidence_quote": "Cosmos Health CEO Greg Siokas Issues Letter to Shareholders Highlighting Record 2026 Revenue, U.S. Subscription Growth and Global Expansion Key Highlights · Record revenue: preliminary nine-month 2026 revenue of approximately $54.3 million, up 19%, with every quarter of 2026 setting a record · 2026 outlook reaffirmed: full-year revenue expected to surpass $90 million, up approximately 38%, the largest single-year revenue increase in the Company’s history · Record fourth quarter expected: revenue of approximately $35.7 million or more, up approximately 81% from the fourth quarter of 2025 · U.S. e-commerce scaling rapidly: 8,940 active U.S. subscriptions as of October 19, 2026, up 42% in five days, with approximately $15 million in revenue and $10.5 million in gross profit expected in the fourth quarter · Record CMO pipeline: more than 32.7 million units at Cana Laboratories, up sixfold since mid-2024",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Cosmos Health Inc. (COSM)",
+          "earnings_leverage": "U.S. e-commerce scaling rapidly: 8,940 active U.S. subscriptions as of October 19, 2026, up 42% in five days, with approximately $15 million in revenue and $10.5 million in gross profit expected in the fourth quarter",
+          "supply_demand_tightness": "Record CMO pipeline: more than 32.7 million units at Cana Laboratories, up sixfold since mid-2024",
+          "structural_ai_demand": "",
+          "revision_momentum": "2026 outlook reaffirmed: full-year revenue expected to surpass $90 million, up approximately 38%, the largest single-year revenue increase in the Company’s history",
+          "catalyst_visibility": "Record fourth quarter expected: revenue of approximately $35.7 million or more, up approximately 81% from the fourth quarter of 2025"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Cosmos Health Inc.",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "Cosmos Health가 2026년 9개월간 5,430만 달러의 매출을 기록하고, 연간 매출 9,000만 달러 돌파를 재확인했으며, CMO 파이프라인이 3,270만 유닛 이상으로 2024년 중반 대비 6배 증가했다고 발표했다.",
+        "why_it_matters": "회사의 핵심 사업인 의약품 위탁생산(CMO) 파이프라인이 크게 증가하고 전자상거래 구독 매출이 급성장하며 높은 수익성을 보여, 향후 실적 성장에 대한 강력한 레버리지 효과와 시장 추정치 상향 가능성을 시사한다.",
+        "what_to_watch": "2026년 4분기 실적 발표 및 2027년 연간 가이던스, CMO 파이프라인의 실제 수주 전환율 및 생산능력 증설 계획.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "CMO 파이프라인: 의약품 위탁생산(Contract Manufacturing Organization) 계약을 위한 잠재적 또는 확정된 물량; ASP: 평균 판매 단가(Average Selling Price)"
+      }
     },
     "content_hash": "4414df3f1d43fe8c0299b9e17df138457e18450e8a2c84787450ac8f3ff63f6e",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-27T05:15:38+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001171843-26-006766": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9022,15 +9089,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/854560/000117184326006766/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/854560/000117184326006766/exh_991.htm",
       "published_at": "2026-10-22",
-      "raw_text": "GREAT SOUTHERN BANCORP, INC. (GSBC) (CIK 0000854560) EX-99.1 2026-10-22. The Company’s primary sources of funds are customer deposits, FHLBank advances, other borrowings, loan repayments, unpledged securities, proceeds from sales of loans and available-for-sale securities and funds provided from operations. This expense savings is expected to be partially offset by some customer deposit attrition over time related to the branch closures, resulting in additional interest expense on alternative funding sources along with reduced non-interest income generated from these deposit accounts. EX-99.1 2 exh_991.htm PRESS RELEASE EdgarFiling EXHIBIT 99.1 Great Southern Bancorp, Inc. Reports Preliminary Third Quarter Earnings of $1.27 Per Diluted Common Share Earnings Negatively Impacted in This Period by Non-Cash Hedge Accounting Adjustment Preliminary Financial Results and Business Update for the Quarter Ended September 30, 2026 SPRINGFIELD, Mo., Oct. 21, 2026 (GLOBE NEWSWIRE) -- Great Southern Bancorp, Inc. (the “Company”) (NASDAQ:GSBC), the holding company for Great Southern Bank (the “Bank”), today reported that preliminary earnings for the three months ended September 30, 2026, were $1.27 per diluted common share ($14.0 million net income) compared to $1.56 per diluted common share ($17.8 million net income) for the three months ended September 30, 2025. The 2026 third quarter results were negatively impacted by non-cash cash flow hedge accounting adjustments recorded during the period, which is discussed below and under “Net Interest Income” and “Non-Interest Income.” For the quarter ended September 30, 2026, annualized return on average common equity was 8.68%, annualized return on average assets was 0.99%, annualized net interest margin was 3.75% and the efficiency ratio was 67.57%, compared to 11.30%, 1.23%, 3.72% and 62.45%, respectively, for the quarter ended September 30, 2025. Excluding the non-cash cash flow hedge accounting adjustments referenced above, for the"
+      "raw_text": "GREAT SOUTHERN BANCORP, INC. (GSBC) (CIK 0000854560) EX-99.1 2026-10-22. The Company’s primary sources of funds are customer deposits, FHLBank advances, other borrowings, loan repayments, unpledged securities, proceeds from sales of loans and available-for-sale securities and funds provided from operations. This expense savings is expected to be partially offset by some customer deposit attrition over time related to the branch closures, resulting in additional interest expense on alternative funding sources along with reduced non-interest income generated from these deposit accounts. EX-99.1 2 exh_991.htm PRESS RELEASE EdgarFiling EXHIBIT 99.1 Great Southern Bancorp, Inc. Reports Preliminary Third Quarter Earnings of $1.27 Per Diluted Common Share Earnings Negatively Impacted in This Period by Non-Cash Hedge Accounting Adjustment Preliminary Financial Results and Business Update for the Quarter Ended September 30, 2026 SPRINGFIELD, Mo., Oct. 21, 2026 (GLOBE NEWSWIRE) -- Great Southern Bancorp, Inc. (the “Company”) (NASDAQ:GSBC), the holding company for Great Southern Bank (the “Bank”), today reported that preliminary earnings for the three months ended September 30, 2026, were $1.27 per diluted common share ($14.0 million net income) compared to $1.56 per diluted common share ($17.8 million net income) for the three months ended September 30, 2025. The 2026 third quarter results were negatively impacted by non-cash cash flow hedge accounting adjustments recorded during the period, which is discussed below and under “Net Interest Income” and “Non-Interest Income.” For the quarter ended September 30, 2026, annualized return on average common equity was 8.68%, annualized return on average assets was 0.99%, annualized net interest margin was 3.75% and the efficiency ratio was 67.57%, compared to 11.30%, 1.23%, 3.72% and 62.45%, respectively, for the quarter ended September 30, 2025. Excluding the non-cash cash flow hedge accounting adjustments referenced above, for the",
+      "_model_response": {
+        "evidence_quote": "Great Southern Bancorp, Inc. Reports Preliminary Third Quarter Earnings of $1.27 Per Diluted Common Share Earnings Negatively Impacted in This Period by Non-Cash Hedge Accounting Adjustment Preliminary Financial Results and Business Update for the Quarter Ended September 30, 2026 SPRINGFIELD, Mo., Oct. 21, 2026 (GLOBE NEWSWIRE) -- Great Southern Bancorp, Inc. (the “Company”) (NASDAQ:GSBC), the holding company for Great Southern Bank (the “Bank”), today reported that preliminary earnings for the three months ended September 30, 2026, were $1.27 per diluted common share ($14.0 million net income) compared to $1.56 per diluted common share ($17.8 million net income) for the three months ended September 30, 2025. The 2026 third quarter results were negatively impacted by non-cash cash flow hedge accounting adjustments recorded during the period, which is discussed below and under “Net Interest Income” and “Non-Interest Income.”",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "negative",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "해당 항목은 회사의 구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, EPS 리비전 등)가 아닌, 이미 발생한 과거 실적에 대한 루틴 공시(예비 실적 발표)이므로 투자 발굴 신호로 볼 수 없습니다.",
+        "subject": "GREAT SOUTHERN BANCORP, INC.",
+        "theme": "미분류",
+        "signal_type": "",
+        "what_happened": "Great Southern Bancorp, Inc.가 2026년 3분기 희석 주당순이익이 1.27달러로 전년 동기 1.56달러 대비 감소했다고 발표했으며, 이는 비현금성 헤지 회계 조정의 부정적인 영향을 받았습니다.",
+        "why_it_matters": "이는 이미 발생한 과거 실적에 대한 루틴 공시이며, 미래 실적에 대한 구체적인 조기 지표나 추정치 상향 모멘텀을 나타내지 않으므로 투자 발굴 관점에서 중요한 신호로 보기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "해당 항목은 회사의 구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, EPS 리비전 등)가 아닌, 이미 발생한 과거 실적에 대한 루틴 공시(예비 실적 발표)이므로 투자 발굴 신호로 볼 수 없습니다."
     },
     "content_hash": "7044d296c56d45582c09a331bacad88091a5e84475a555615f8e31647eef12fc",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-27T05:15:54+00:00",
+    "reason": "해당 항목은 회사의 구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, EPS 리비전 등)가 아닌, 이미 발생한 과거 실적에 대한 루틴 공시(예비 실적 발표)이므로 투자 발굴 신호로 볼 수 없습니다.",
+    "processed_day": "2026-10-27",
+    "processed_run": "40454163350-1"
   },
   "0001628280-26-066787": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9041,15 +9139,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/715579/000162828026066787/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/715579/000162828026066787/pressrelease2026-q3final.htm",
       "published_at": "2026-10-22",
-      "raw_text": "ACNB CORP (ACNB) (CIK 0000715579) EX-99.1 2026-10-22. September 2025 Noninterest-bearing demand deposits $ 612,620 $ 600,711 $ 581,697 $ 11,909 $ 30,923 Interest-bearing demand deposits 630,912 636,551 614,130 (5,639) 16,782 Money market 480,430 481,015 493,430 (585) (13,000) Savings 329,269 336,504 330,200 (7,235) (931) Total demand and savings 2,053,231 2,054,781 2,019,457 (1,550) 33,774 Time 455,732 480,895 446,439 (25,163) 9,293 Total deposits $ 2,508,963 $ 2,535,676 $ 2,465,896 $ (26,713) $ 43,067 September 30, 2026 compared to June 30, 2026 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts and a seasonal influx of municipal deposits • The decrease in time deposits was driven primarily by the pay down of $30.0 million of brokered deposits and partially offset by growth in retail time deposits September 30, 2026 compared to September 30, 2025 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts • The increase in interest-bearing demand deposits was driven primarily by growth in commercial and retail balances and accounts due to new customer relationships acquired ACNB Corporation Press Release/2026 Third Quarter Financial Results October 22, 2026 Page 6 of 14 • The decrease in money market balances was driven primarily by attrition of higher cost money market deposits from the Acquisition Borrowings Total borrowings were $331.4 million at September 30, 2026, an increase of $8.3 million and a decrease of $4.4 million compared to June 30, 2026 and September 30, 2025, respectively."
+      "raw_text": "ACNB CORP (ACNB) (CIK 0000715579) EX-99.1 2026-10-22. September 2025 Noninterest-bearing demand deposits $ 612,620 $ 600,711 $ 581,697 $ 11,909 $ 30,923 Interest-bearing demand deposits 630,912 636,551 614,130 (5,639) 16,782 Money market 480,430 481,015 493,430 (585) (13,000) Savings 329,269 336,504 330,200 (7,235) (931) Total demand and savings 2,053,231 2,054,781 2,019,457 (1,550) 33,774 Time 455,732 480,895 446,439 (25,163) 9,293 Total deposits $ 2,508,963 $ 2,535,676 $ 2,465,896 $ (26,713) $ 43,067 September 30, 2026 compared to June 30, 2026 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts and a seasonal influx of municipal deposits • The decrease in time deposits was driven primarily by the pay down of $30.0 million of brokered deposits and partially offset by growth in retail time deposits September 30, 2026 compared to September 30, 2025 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts • The increase in interest-bearing demand deposits was driven primarily by growth in commercial and retail balances and accounts due to new customer relationships acquired ACNB Corporation Press Release/2026 Third Quarter Financial Results October 22, 2026 Page 6 of 14 • The decrease in money market balances was driven primarily by attrition of higher cost money market deposits from the Acquisition Borrowings Total borrowings were $331.4 million at September 30, 2026, an increase of $8.3 million and a decrease of $4.4 million compared to June 30, 2026 and September 30, 2025, respectively.",
+      "_model_response": {
+        "evidence_quote": "September 30, 2026 compared to September 30, 2025 • The increase in noninterest-bearing demand deposits was driven primarily by promotional incentives on commercial checking accounts • The increase in interest-bearing demand deposits was driven primarily by growth in commercial and retail balances and accounts due to new customer relationships acquired",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "해당 항목은 ACNB CORP의 정기 분기 실적 발표로, '새로운 고객 관계 확보'와 같은 긍정적인 운영 결과가 포함되어 있으나, 이는 루틴 공시의 일부인 실행된 실적이며, 규칙에서 정의하는 '가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, EPS 리비전'과 같은 구체적인 조기 발굴 신호에 해당하지 않습니다.",
+        "subject": "ACNB CORP",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "해당 항목은 ACNB CORP의 정기 분기 실적 발표로, '새로운 고객 관계 확보'와 같은 긍정적인 운영 결과가 포함되어 있으나, 이는 루틴 공시의 일부인 실행된 실적이며, 규칙에서 정의하는 '가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, EPS 리비전'과 같은 구체적인 조기 발굴 신호에 해당하지 않습니다."
     },
     "content_hash": "a04704b9ddaaccb9c12a0d736f1437633c158c5955677efb66843018eb4e791b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-27T05:16:12+00:00",
+    "reason": "해당 항목은 ACNB CORP의 정기 분기 실적 발표로, '새로운 고객 관계 확보'와 같은 긍정적인 운영 결과가 포함되어 있으나, 이는 루틴 공시의 일부인 실행된 실적이며, 규칙에서 정의하는 '가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, EPS 리비전'과 같은 구체적인 조기 발굴 신호에 해당하지 않습니다.",
+    "processed_day": "2026-10-27",
+    "processed_run": "40454163350-1"
   },
   "0001477932-26-006391": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9060,12 +9189,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1809750/000147793226006391/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1809750/000147793226006391/edbl_ex101.htm",
       "published_at": "2026-10-22",
-      "raw_text": "Edible Garden AG Inc (EDBL, EDBLW) (CIK 0001809750) EX-10.1 2026-10-22. Any new customer acquisition by Buyer requiring incremental volumes beyond then-current forecasts shall require at least three (3) months’ advance written notice to Supplier prior to launch, to allow Supplier sufficient time to plan for the additional volume. EX-10.1 2 edbl_ex101.htm SUPPLY AGREEMENT edbl_ex101.htm EXHIBIT 10.1 PRODUCE SUPPLY AGREEMENT This Produce Supply Agreement (this “ Agreement ”) is entered into as of October 15, 2026 (the “ Effective Date ”), by and between: Caney Fork Farms, LLC , a Tennessee limited liability company, with a principal place of business at 7 Gibbs Circle, Carthage, TN 37030 (“ Supplier ” or “ Co-Packer ”), and Edible Garden AG Incorporated , a Delaware corporation, with a principal place of business at 283 County Road 519, Belvidere, NJ 07823 (“ Buyer ”). Supplier and Buyer may each be referred to individually as a “ Party ” and collectively as the “ Parties .” 1. RECITALS WHEREAS, Supplier grows, harvests, and/or packs fresh produce; and WHEREAS, Buyer desires to purchase such produce from Supplier for resale, distribution, and/or further processing; and WHEREAS, the Parties desire to set forth the terms and conditions under which Supplier will supply, and Buyer will purchase, such produce; NOW, THEREFORE, in consideration of the mutual covenants contained herein, the Parties agree as follows. 2. TERM 2.1 Initial Term. This Agreement shall commence on the Effective Date and continue for a period of TWO (2) YEARS (the “ Initial Term ”), unless earlier terminated as provided herein. 2.2 Renewal. This Agreement shall automatically renew for successive one (1) year periods (each, a “ Renewal Term ,” and together with the Initial Term, the “ Term ”) unless either Party provides the other with written notice of non-renewal at least sixty (60) days prior to the end of the then-current Term. 2.3 Year-Round Supply. This Agreement covers year-round supply of all "
+      "raw_text": "Edible Garden AG Inc (EDBL, EDBLW) (CIK 0001809750) EX-10.1 2026-10-22. Any new customer acquisition by Buyer requiring incremental volumes beyond then-current forecasts shall require at least three (3) months’ advance written notice to Supplier prior to launch, to allow Supplier sufficient time to plan for the additional volume. EX-10.1 2 edbl_ex101.htm SUPPLY AGREEMENT edbl_ex101.htm EXHIBIT 10.1 PRODUCE SUPPLY AGREEMENT This Produce Supply Agreement (this “ Agreement ”) is entered into as of October 15, 2026 (the “ Effective Date ”), by and between: Caney Fork Farms, LLC , a Tennessee limited liability company, with a principal place of business at 7 Gibbs Circle, Carthage, TN 37030 (“ Supplier ” or “ Co-Packer ”), and Edible Garden AG Incorporated , a Delaware corporation, with a principal place of business at 283 County Road 519, Belvidere, NJ 07823 (“ Buyer ”). Supplier and Buyer may each be referred to individually as a “ Party ” and collectively as the “ Parties .” 1. RECITALS WHEREAS, Supplier grows, harvests, and/or packs fresh produce; and WHEREAS, Buyer desires to purchase such produce from Supplier for resale, distribution, and/or further processing; and WHEREAS, the Parties desire to set forth the terms and conditions under which Supplier will supply, and Buyer will purchase, such produce; NOW, THEREFORE, in consideration of the mutual covenants contained herein, the Parties agree as follows. 2. TERM 2.1 Initial Term. This Agreement shall commence on the Effective Date and continue for a period of TWO (2) YEARS (the “ Initial Term ”), unless earlier terminated as provided herein. 2.2 Renewal. This Agreement shall automatically renew for successive one (1) year periods (each, a “ Renewal Term ,” and together with the Initial Term, the “ Term ”) unless either Party provides the other with written notice of non-renewal at least sixty (60) days prior to the end of the then-current Term. 2.3 Year-Round Supply. This Agreement covers year-round supply of all ",
+      "_model_response": {
+        "evidence_quote": "This Produce Supply Agreement (this “ Agreement ”) is entered into as of October 15, 2026 (the “ Effective Date ”), by and between: Caney Fork Farms, LLC ... (“ Supplier ” or “ Co-Packer ”), and Edible Garden AG Incorporated ... (“ Buyer ”). Any new customer acquisition by Buyer requiring incremental volumes beyond then-current forecasts shall require at least three (3) months’ advance written notice to Supplier prior to launch, to allow Supplier sufficient time to plan for the additional volume.",
+        "axes_evidence": {},
+        "event_state": "contracted",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "루틴 공급 계약으로, 회사(EDBL)의 수요 증가나 실적 개선을 직접적으로 시사하는 구체적인 조기 지표가 아니다. 미래 잠재적 수요 증가에 대한 조항은 있으나, 이는 확정된 수주나 실적 변화가 아닌 계약 조건에 불과하다.",
+        "subject": "Edible Garden AG Inc",
+        "theme": "미분류",
+        "signal_type": "",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "루틴 공급 계약으로, 회사(EDBL)의 수요 증가나 실적 개선을 직접적으로 시사하는 구체적인 조기 지표가 아니다. 미래 잠재적 수요 증가에 대한 조항은 있으나, 이는 확정된 수주나 실적 변화가 아닌 계약 조건에 불과하다."
     },
     "content_hash": "29360df323795d2016ed49aa727714dd9ddf6b1308755bd874f060c31a7a1c60",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-23T05:01:33.401538+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-27T05:16:34+00:00",
+    "reason": "루틴 공급 계약으로, 회사(EDBL)의 수요 증가나 실적 개선을 직접적으로 시사하는 구체적인 조기 지표가 아니다. 미래 잠재적 수요 증가에 대한 조항은 있으나, 이는 확정된 수주나 실적 변화가 아닌 계약 조건에 불과하다.",
+    "processed_day": "2026-10-27",
+    "processed_run": "40454163350-1"
   },
   "0001437749-26-033331": {
     "status": "deferred",
@@ -9085,5 +9245,138 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-24T04:46:26.991273+00:00"
+  },
+  "0000813672-26-000116": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000813672-26-000116",
+      "entity_id": "CIK:0000813672",
+      "source_role": "candidate",
+      "title": "CADENCE DESIGN SYSTEMS INC (CDNS) (CIK 0000813672) EX-99.01 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/cdns10262026ex9901.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "CADENCE DESIGN SYSTEMS INC (CDNS) (CIK 0000813672) EX-99.01 2026-10-26. EX-99.01 2 cdns10262026ex9901.htm PRESS RELEASE Document Exhibit 99.01 Cadence Reports Third Quarter 2026 Financial Results Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40 Q3 Recurring Revenue Up 18% YoY, Record Backlog of $8.2 Billion SAN JOSE, Calif. With broad-based business momentum, expanding technology leadership and a record backlog, we are raising our 2026 revenue outlook to 21% year-over-year growth,” said Anirudh Devgan, president and chief executive officer. “With record backlog of $8.2 billion and continued strength in recurring revenue, we are poised to deliver a strong 2026.” CFO Commentary Commentary on the third quarter of 2026 financial results by John Wall, senior vice president and chief financial officer, is available at www.cadence.com/cadence/investor_relations."
+    },
+    "content_hash": "b490a5a9a64726a1dbc9caa74f7858f1ac878e1312e80f2422d8f58862826404",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0001437749-26-033460": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033460",
+      "entity_id": "CIK:0001787740",
+      "source_role": "candidate",
+      "title": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033460/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033460/ex_1030911.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-26. Alongside these discussions, Valion continues to operate the subsidiary and pursue new customer relationships. EX-99.1 2 ex_1030911.htm EXHIBIT 99.1 ex_1030911.htm Exhibit 99.1 Valion Bio Receives Unsolicited Acquisition Interest in Velocity Bioworks; Weighs Strategic Options Unsolicited Interest Reinforces Velocity's Strategic Value as Valion Bio Evaluates Opportunities to Advance Entolimod SAN ANTONIO, TX / October 26, 2026 / ACCESS Newswire -- Valion Bio, Inc. (NASDAQ: VBIO) (\"Valion\" or the \"Company\"), a clinical-stage biopharmaceutical company developing biologics that activate innate immune pathways for cytoprotection and immune modulation, today announced that it has received unsolicited acquisition inquiries from independent third parties concerning its wholly owned contract development and manufacturing organization (\"CDMO\"), Velocity Bioworks (\"Velocity\"). The Company has entered into preliminary discussions with these interested parties while continuing to evaluate a range of strategic options for Velocity. These discussions are consistent with the strategic priorities outlined in Valion's October 21, 2026 announcement, including advancing its lead biologic drug candidate, Entolimod, and other pipeline assets, building Velocity's commercial business, and evaluating strategic opportunities for the CDMO subsidiary. \"Our strategic review is focused on determining how best to maximize the potential of each asset,\" said Dean Zikria, Interim Chief Executive Officer of Valion. \"The unsolicited interest in Velocity provides an opportunity to evaluate a range of strategic options, including a possible sale. Our priority remains identifying the path that best supports our development objectives and delivers long-term value to shareholders.\" Velocity provides U.S.-based biologics development and manufacturing capabilities that support Valion's internal pipeline and are available to biotechnology companies "
+    },
+    "content_hash": "1a1ba5f5ef6e10ee4bd6fd812d3e9902be30f60c16c0795f2b2f288ba24bd47c",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0001030894-26-000049": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001030894-26-000049",
+      "entity_id": "CIK:0001030894",
+      "source_role": "candidate",
+      "title": "CELESTICA INC (CLS) (CIK 0001030894) EX-99.1 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1030894/000103089426000049/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1030894/000103089426000049/cls-20260930prcondensedfs.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "CELESTICA INC (CLS) (CIK 0001030894) EX-99.1 2026-10-26. Cautionary Note Regarding Forward-looking Statements This press release contains forward-looking statements, including, without limitation, those related to: strengthening demand environment of our businesses, customer forecasts, accelerating revenue growth, our anticipated financial and/or operational results, guidance and outlook, including statements under the headings “Q3 2026 Highlights”, \"Fourth Quarter of 2026 (Q4 2026) Guidance”, “2026 Annual Outlook Update”, “2027 Annual Outlook and Long-Term Demand Update” and “Intention to Launch a New Normal Course Issuer Bid (NCIB)”, and including statements with respect to timelines referenced therein, expected revenue growth in 2026, 2027, and 2028, anticipated multi-year growth, 2027 and 2028 customer demand forecasts, non-GAAP operating margin and non-GAAP adjusted EPS, anticipated operating leverage, anticipated capital expenditures, expected working capital investment, cash usage and free cash flow, the sufficiency of our liquidity, ROIC, our growth plans and anticipated capacity requirements for 2027 and 2028, the anticipated use of the net proceeds of our recent public offering, our intention to launch a new NCIB and its anticipated terms, developments related to new customer or program wins and pursuits (including in data center power infrastructure), timing of production ramps, anticipated economic conditions, industry and market trends and projections, underlying market growth rates, customer demand, prospects and opportunities, and strategic initiatives."
+    },
+    "content_hash": "5304c2c566ae3098cc48f7429c9c2f31e2a42a0a8658a74226aff99bcb928dce",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0000721994-26-000074": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000721994-26-000074",
+      "entity_id": "CIK:0000721994",
+      "source_role": "candidate",
+      "title": "LAKELAND FINANCIAL CORP (LKFN) (CIK 0000721994) EX-99.1 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/721994/000072199426000074/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/721994/000072199426000074/lkfn-20261026exhibit991.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "LAKELAND FINANCIAL CORP (LKFN) (CIK 0000721994) EX-99.1 2026-10-26. Innovation that focuses on artificial intelligence capabilities is also a priority as we prepare for the rollout of our 6 innovative, new customer relationship management program that will enhance relationship development and expansion, client communication, and allow for future revenue growth.\" Information regarding Lakeland Financial Corporation may be accessed on the home page of its subsidiary, Lake City Bank, at lakecitybank.com . EX-99.1 2 lkfn-20261026exhibit991.htm EX-99.1 Document Exhibit 99.1 NEWS FROM LAKELAND FINANCIAL CORPORATION FOR IMMEDIATE RELEASE Contact Lisa M. O’Neill Executive Vice President and Chief Financial Officer (574) 267-9125 lisa.oneill@lakecitybank.com Lakeland Financial Reports Record Third Quarter Performance with Loan Growth of 8%; Diluted Earnings per Share Increases by 11% Warsaw, Indiana (October 26, 2026) – Lakeland Financial Corporation (Nasdaq Global Select/LKFN), parent company of Lake City Bank, today reported record third quarter net income of $28.9 million for the three months ended September 30, 2026, which represents an increase of $2.5 million, or 9%, compared to net income of $26.4 million for the three months ended September 30, 2025. Diluted earnings per share of $1.14 for the third quarter of 2026 also represents a record for third quarter performance and increased $0.11, or 11%, compared to $1.03 for the third quarter of 2025. On a linked quarter basis, net income increased $417,000 from $28.4 million. Diluted earnings per share increased $0.01 from $1.13 on a linked quarter basis. The company further reported record performance year-to-date with net income of $83.8 million for the nine months ended September 30, 2026, versus $73.5 million for the corresponding period of 2025, an increase of $10.3 million, or 14%. Diluted earnings per share increased $0.46, or 16%, to $3.31 for the nine months ended September 30, 2026, versus $2.85 for the correspo"
+    },
+    "content_hash": "3ea60acebd481e971035f9bf842ca3817c26d488fcb89bda7d7cb16a86896b00",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0000950142-26-002834": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000950142-26-002834",
+      "entity_id": "CIK:0001792580",
+      "source_role": "candidate",
+      "title": "Ovintiv Inc. (OVV) (CIK 0001792580) EX-2.1 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1792580/000095014226002834/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1792580/000095014226002834/eh260846976_ex0201.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "Ovintiv Inc. (OVV) (CIK 0001792580) EX-2.1 2026-10-26. , a corporation existing under the laws of the Province of Alberta (\" Newco \") WHEREAS Parent, Purchaser and Logan wish to complete a transaction involving the acquisition by Purchaser of all the issued and outstanding Logan Shares in accordance with the terms set out herein; AND WHEREAS Newco is a wholly-owned subsidiary of Logan which will complete the Newco Transactions, and the Parties wish that, as part of the Arrangement and immediately prior to the acquisition of the Logan Shares by Purchaser, the Newco Shares and the Newco Transaction Warrants be distributed to the Logan Shareholders; AND WHEREAS Parent, Purchaser and Logan wish to carry out the transactions contemplated by this Agreement by way of a plan of arrangement of Logan under Section 193 of the ABCA; AND WHEREAS the Parent Board, the Purchaser Board and the Logan Board have each unanimously determined that it would be in the best interests of Parent, Purchaser and Logan, respectively, to enter into this Agreement and to complete the transactions contemplated herein; AND WHEREAS the Logan Board, acting upon the unanimous recommendation of the Special Committee and upon, among other things, the advice of its Financial Advisor and legal advisors, has unanimously determined: (i) that the Arrangement is fair to the Logan Shareholders; and (ii) to recommend that the Logan Shareholders vote in favour of the Logan Transaction Resolution, the Newco Financing Resolution, the Newco Option Plan Resolution and the Newco Share Award Plan Resolution, and that the holders of Logan Options, the holders of Logan RSAs and the holders of Logan Warrants vote in favour of the Logan Transaction Resolution; AND WHEREAS concurrently with the execution of this Agreement, Purchaser has entered into the Logan Support Agreements with the Supporting Logan Shareholders, pursuant to which, among other things, the Supporting Logan Shareholders have agreed, subject to the terms "
+    },
+    "content_hash": "38ff507f554968d39334bb69855a56b6d92888e9452dd060759305b6bbe7adfd",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0001493152-26-048581": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-048581",
+      "entity_id": "CIK:0001770501",
+      "source_role": "candidate",
+      "title": "Venu Holding Corp (VENU) (CIK 0001770501) EX-10.1 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1770501/000149315226048581/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1770501/000149315226048581/ex10-1.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "Venu Holding Corp (VENU) (CIK 0001770501) EX-10.1 2026-10-26. “ Material Additional Work Construction Schedule ” means a schedule of critical dates relating to the construction of the Material Additional Work (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the proceeding task or event), which schedule, shall include the dates for (a) ordering and delivery of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or system of the Improvements, (b) completion of the Material Additional Work Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of all necessary Governmental Authorizations), (c) issuance of all Governmental Authorizations prerequisite to commencement of the Material Additional Work, (d) commencement of the Material Additional Work and (e) Final Completion of the Material Additional Work. “ Project Construction Schedule ” means a schedule of critical dates relating to the Project Improvements Work and the Commencement of Operations (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the preceding task or event), which schedule shall include the estimated dates for (i) ordering and delivering of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or systems of the Project Improvements, (ii) completion of the Project Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of necessary building permits), (iii) issuance of all Governmental Authorizations and satisfaction of all Applicable Law prerequisite to commencement of the Project Improvements Work, (iv) commencement of any of Owner’s Remedial Work and all other Project Improvemen"
+    },
+    "content_hash": "bfe954d802302972175ff709a14da17bb764e136b249e4be2231fcb2a507de4a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0001683168-26-008094": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001683168-26-008094",
+      "entity_id": "CIK:0000790526",
+      "source_role": "candidate",
+      "title": "RadNet, Inc. (RDNT) (CIK 0000790526) EX-2.1 2026-10-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/790526/000168316826008094/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/790526/000168316826008094/radnet_ex0201.htm",
+      "published_at": "2026-10-26",
+      "raw_text": "RadNet, Inc. (RDNT) (CIK 0000790526) EX-2.1 2026-10-26. “ Restricted Cash ” means cash that is not freely available for use by the Company and its Subsidiaries immediately following the Closing due to a contractual or legal restriction on its withdrawal, transfer or use, including any cash held as a deposit, reserve, escrow, holdback, customer deposit or deferred revenue to the extent subject to such contractual or legal restriction, including with respect to the Leased Real Property. EX-2.1 2 radnet_ex0201.htm AGREEMENT AND PLAN OF MERGER, DATED AS OF OCTOBER 26, 2026 Exhibit 2.1 AGREEMENT AND PLAN OF MERGER by and among ONRAD, INC., RADNET MANAGEMENT, INC., RADNET, INC., RED ROVER MERGER SUB, LLC, JAVELIN MERGER SUB, INC., and, with respect to Articles II , VIII and IX , HOUSATONIC IV CF, L.P., solely in its capacity as Securityholder Representative Dated as of October 26, 2026 Table of Contents Page Article I The Mergers 1.1 The Mergers 2 1.2 Closing 2 1.3 Governing Documents of the First Surviving Corporation and the Second Surviving Company. 3 1.4 Directors and Officers of the First Surviving Corporation and the Second Surviving Company. 3 Article II Purchase Price; Effect on Shares 2.1 Effect of the Mergers on Capital Stock 4 2.2 Treatment of Company Options 5 2.3 Treatment of Company Preferred Stock and Company Warrants 6 2.4 Closing Deliverables 6 2.5 Delivery of Estimated Closing Statement 9 2.6 Purchase Price Adjustment 10 2.7 Earn-Out Payment 12 2.8 Exchange Agent and Exchange Procedures. 15 2.9 Escrow Agent; Escrow Amounts. 17 2.10 Withholding 18 i Article III Representations and Warranties of the Company 3.1 Incorporation, Good Standing and Qualification 18 3.2 Authority; Approval 19 3.3 Capital Structure 19 3.4 Subsidiaries; Managed Entities 20 3.5 Governmental Filings; No Conflicts 21 3.6 Company Financial Statements; Undisclosed Liabilities 21 3.7 Absence of Certain Changes 22 3.8 Litigation 23 3.9 Employee Benefits 23 3.10 Licenses; Compliance with "
+    },
+    "content_hash": "05a974320363faf3f32ca322644de5c60e441e527920f31e98b002ff6e7a6d07",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-27T05:15:06.551437+00:00"
   }
 }
