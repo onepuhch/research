@@ -1461,6 +1461,91 @@
       "payload_text": "<b>🆕 새 발굴 후보 · MXL MaxLinear, Inc.</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\n고속 통신 시스템에 사용되는 시스템 온 칩 솔루션을 제공하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $2.58 → 지금 $4.30 (+66%) · 주가 같은 기간 -2.2%\n\n👍 주가는 같은 90일에 -2%로, 이익 예상 상향(+66%)보다 덜 움직임\n👎 최근 30일 분석가 11명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 15위로 들어옴\n❓ 10/22 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-76DD3777C06E7825</code> · 추적 <code>/track CAN-76DD3777C06E7825</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "17b20e9b65cd1ec994d5a0606049390891d32d6d8b8d0e83a1cb352dc1600449",
       "message_id": 213
+    },
+    "NYSE:VLO|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-9FCC822D255573CB": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:VLO",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-325B2A6C30755476",
+      "candidate_version": "CV-E430BB5739541E58",
+      "observation_id": "OB-79934DD9B23A093F",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 38.04043,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-9FCC822D255573CB",
+          "baseline_id": "OB-9FCC822D255573CB",
+          "observed_at": "2026-10-27T05:30:44+00:00",
+          "day": "2026-10-27",
+          "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
+          "eps_now": 52.99214,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-79934DD9B23A093F",
+          "baseline_id": "OB-79934DD9B23A093F",
+          "observed_at": "2026-10-28T06:09:29+00:00",
+          "day": "2026-10-28",
+          "snapshot_sha256": "71115232e04387c9490dc5590f7ff4c9820539e0a067701c0231da2aac5ebf21",
+          "eps_now": 53.4779,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 40.58,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-9FCC822D255573CB"
+        ]
+      },
+      "day": "2026-10-28",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "40640520468-1",
+      "reserved_at": "2026-10-28T06:10:11+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · VLO Valero Energy Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $38.04 → 현재 $53.48 (+41%), 2026-10-27·2026-10-28 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-325B2A6C30755476</code> · 추적 <code>/track CAN-325B2A6C30755476</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "09b4d209681acf5356cf67954d37dab8cef9747e61f5d8b67ff6b4dfb0f8a808"
     }
   },
   "bootstrap": {

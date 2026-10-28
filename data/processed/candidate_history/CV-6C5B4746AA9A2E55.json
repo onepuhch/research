@@ -1,0 +1,329 @@
+{
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "candidate_version": "CV-6C5B4746AA9A2E55",
+  "identity": {
+    "entity_id": "NYSE:NBR",
+    "ticker": "NBR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Nabors Industries Ltd.",
+  "industry": "Oil & Gas Drilling",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "육상 및 해상 유정, 가스정 시추 및 관련 서비스를 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Nabors Industries Ltd. provides drilling and drilling-related services for land-based and offshore oil and natural gas wells in the United States and internationally. The company operates through four segments: U.S. Drilling, International Drilling, Drilling Solutions, and Rig Technologies. The company offers tubular running services, including casing and tubing running, and torque monitoring; managed pressure drilling services; and drilling-bit steering systems and rig instrumentation software. The company also offers drilling systems comprising ROCKit, a directional steering control system;"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "NBR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-28T06:05:12+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "NBR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/history",
+      "published_at": null,
+      "observed_at": "2026-10-28T06:05:12+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "NBR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NBR/profile",
+      "published_at": null,
+      "observed_at": "2026-10-28T06:05:12+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-54C9D7B032959614",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926119167/tm2628332d1_ex99-1.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-10-27",
+      "observed_at": "2026-10-28T06:09:33+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-9B80B26347EA4928",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+      "title": "SEC 8-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-07-28",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-1D2C45128E9C3B8B",
+    "input_sha": "1d2c45128e9c3b8b2ff02ecb0cbb866bb968d724549b0f2606784b2ec431d1be",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "[International Drilling] daily adjusted gross margin — 일일 조정 매출 총이익이 기록적인 수준을 달성했다",
+        "note_ko": "일일 조정 매출 총이익이 기록적인 수준을 달성했다",
+        "kind": "fact",
+        "quote": "International Drilling achieved a record daily adjusted gross margin.",
+        "document_id": "DOC-54C9D7B032959614",
+        "block_id": "p12",
+        "metric": "daily adjusted gross margin",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "segment",
+        "subject_name": "International Drilling",
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "price",
+          "capacity"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "[Drilling Solutions] 조정 EBITDA(adjusted EBITDA) · second quarter: $44 million / $40 million — 조정 EBITDA가 이전 분기보다 증가했다",
+        "note_ko": "조정 EBITDA가 이전 분기보다 증가했다",
+        "kind": "fact",
+        "quote": "Drilling Solutions adjusted EBITDA increased to $44 million from $40 million in the second quarter, driven primarily by growth on Nabors rigs in the Lower 48 and growth in international markets.",
+        "document_id": "DOC-54C9D7B032959614",
+        "block_id": "p19",
+        "metric": "adjusted EBITDA",
+        "figures": [
+          "$44 million",
+          "$40 million"
+        ],
+        "period": "second quarter",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "segment",
+        "subject_name": "Drilling Solutions",
+        "core": false,
+        "figure_roles": [
+          "level",
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "조정 EBITDA(adjusted EBITDA) · full-year 2026: $930 million — 연간 조정 EBITDA가 약 얼마에 이를 것으로 예상한다",
+        "note_ko": "연간 조정 EBITDA가 약 얼마에 이를 것으로 예상한다",
+        "kind": "guidance",
+        "quote": "We anticipate delivering full-year 2026 adjusted EBITDA of approximately $930 million, reaching the upper end of our prior guidance.",
+        "document_id": "DOC-54C9D7B032959614",
+        "block_id": "p24",
+        "metric": "adjusted EBITDA",
+        "figures": [
+          "$930 million"
+        ],
+        "period": "full-year 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "consolidated adjusted free cash flow · full-year: $100 to $110 million — 연간 연결 조정 잉여 현금 흐름이 얼마가 될 것으로 예상한다",
+        "note_ko": "연간 연결 조정 잉여 현금 흐름이 얼마가 될 것으로 예상한다",
+        "kind": "guidance",
+        "quote": "We now expect full-year consolidated adjusted free cash flow of $100 to $110 million, including approximately $20 million of cash consumption at SANAD.",
+        "document_id": "DOC-54C9D7B032959614",
+        "block_id": "p24",
+        "metric": "consolidated adjusted free cash flow",
+        "figures": [
+          "$100 to $110 million"
+        ],
+        "period": "full-year",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+        "note_ko": "조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+        "document_id": "DOC-54C9D7B032959614",
+        "block_id": "t27",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+        "note_ko": "조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+        "kind": "fact",
+        "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+        "document_id": "DOC-54C9D7B032959614",
+        "block_id": "t29",
+        "metric": "Adjusted operating income (loss)",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "International Drilling의 일일 조정 매출 총이익이 전년 동기 대비 얼마나 증가했는가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-54C9D7B032959614",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926119167/tm2628332d1_ex99-1.htm",
+        "filed_at": "2026-10-27",
+        "observed_at": "2026-10-28T06:09:33+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-9B80B26347EA4928",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926087564/tm2621313d2_ex99-1.htm",
+        "filed_at": "2026-07-28",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-28T06:09:49+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.00328,
+    "eps_30d": 3.60994,
+    "eps_90d": 1.57,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 155.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

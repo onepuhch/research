@@ -1,0 +1,233 @@
+{
+  "context_id": "CTX-1D2C45128E9C3B8B",
+  "candidate_id": "CAN-E460E34B1D8B66CE",
+  "ticker": "NBR",
+  "issuer_cik": "0001163739",
+  "document_ids": [
+    "DOC-54C9D7B032959614",
+    "DOC-9B80B26347EA4928"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-54C9D7B032959614#p12",
+    "DOC-54C9D7B032959614#p13",
+    "DOC-54C9D7B032959614#p19",
+    "DOC-54C9D7B032959614#p24",
+    "DOC-54C9D7B032959614#p27",
+    "DOC-54C9D7B032959614#p28",
+    "DOC-54C9D7B032959614#t11",
+    "DOC-54C9D7B032959614#p46",
+    "DOC-54C9D7B032959614#t27",
+    "DOC-54C9D7B032959614#t29",
+    "DOC-54C9D7B032959614#p78",
+    "DOC-9B80B26347EA4928#p12",
+    "DOC-9B80B26347EA4928#p26",
+    "DOC-9B80B26347EA4928#p45",
+    "DOC-9B80B26347EA4928#t19"
+  ],
+  "input_sha": "1d2c45128e9c3b8b2ff02ecb0cbb866bb968d724549b0f2606784b2ec431d1be",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-28T06:09:49+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[International Drilling] daily adjusted gross margin — 일일 조정 매출 총이익이 기록적인 수준을 달성했다",
+      "note_ko": "일일 조정 매출 총이익이 기록적인 수준을 달성했다",
+      "kind": "fact",
+      "quote": "International Drilling achieved a record daily adjusted gross margin.",
+      "document_id": "DOC-54C9D7B032959614",
+      "block_id": "p12",
+      "metric": "daily adjusted gross margin",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "segment",
+      "subject_name": "International Drilling",
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "price",
+        "capacity"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "[Drilling Solutions] 조정 EBITDA(adjusted EBITDA) · second quarter: $44 million / $40 million — 조정 EBITDA가 이전 분기보다 증가했다",
+      "note_ko": "조정 EBITDA가 이전 분기보다 증가했다",
+      "kind": "fact",
+      "quote": "Drilling Solutions adjusted EBITDA increased to $44 million from $40 million in the second quarter, driven primarily by growth on Nabors rigs in the Lower 48 and growth in international markets.",
+      "document_id": "DOC-54C9D7B032959614",
+      "block_id": "p19",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "$44 million",
+        "$40 million"
+      ],
+      "period": "second quarter",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "segment",
+      "subject_name": "Drilling Solutions",
+      "core": false,
+      "figure_roles": [
+        "level",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "volume"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(adjusted EBITDA) · full-year 2026: $930 million — 연간 조정 EBITDA가 약 얼마에 이를 것으로 예상한다",
+      "note_ko": "연간 조정 EBITDA가 약 얼마에 이를 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "We anticipate delivering full-year 2026 adjusted EBITDA of approximately $930 million, reaching the upper end of our prior guidance.",
+      "document_id": "DOC-54C9D7B032959614",
+      "block_id": "p24",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "$930 million"
+      ],
+      "period": "full-year 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "consolidated adjusted free cash flow · full-year: $100 to $110 million — 연간 연결 조정 잉여 현금 흐름이 얼마가 될 것으로 예상한다",
+      "note_ko": "연간 연결 조정 잉여 현금 흐름이 얼마가 될 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "We now expect full-year consolidated adjusted free cash flow of $100 to $110 million, including approximately $20 million of cash consumption at SANAD.",
+      "document_id": "DOC-54C9D7B032959614",
+      "block_id": "p24",
+      "metric": "consolidated adjusted free cash flow",
+      "figures": [
+        "$100 to $110 million"
+      ],
+      "period": "full-year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "note_ko": "조정 EBITDA는 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-54C9D7B032959614",
+      "block_id": "t27",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Adjusted operating income (loss) — 조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "note_ko": "조정 영업 이익 또는 손실은 GAAP에 따라 보고된 금액을 단독으로 사용하거나 대체해서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted operating income (loss) is a non-GAAP financial measure and should not be used in isolation or as a substitute for the amounts reported in accordance with GAAP.",
+      "document_id": "DOC-54C9D7B032959614",
+      "block_id": "t29",
+      "metric": "Adjusted operating income (loss)",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "International Drilling의 일일 조정 매출 총이익이 전년 동기 대비 얼마나 증가했는가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "리그 수가 예상대로 증가했다",
+      "figures": [],
+      "quote": "Our Lower 48 rig count grew as expected",
+      "where": "DOC-54C9D7B032959614#p13"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "미래 예측 세그먼트 조정 EBITDA, 세그먼트 매출 총이익 또는 조정 잉여 현금 흐름에 대한 조정은 의미 있는 GAAP 재무 측정치를 개발하는 데 필요한 항목의 양과 중요성을 현재로서는 불합리한 노력 없이 추정할 수 없으므로 제공하지 않는다",
+      "figures": [],
+      "quote": "We do not provide a forward-looking reconciliation of our outlook for Segment Adjusted EBITDA, Segment Gross Margin or Adjusted Free Cash Flow, as the amount and significance of items required to deve",
+      "where": "DOC-54C9D7B032959614#p46"
+    }
+  ],
+  "context_status": "draft_ready"
+}

@@ -1,0 +1,220 @@
+{
+  "candidate_id": "CAN-F4F37EDD5656F9BD",
+  "candidate_version": "CV-F28BC7A0AD10E2EE",
+  "identity": {
+    "entity_id": "NASDAQ:WDC",
+    "ticker": "WDC",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Western Digital Corporation",
+  "industry": "Computer Hardware",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "하드디스크 드라이브 기술 기반의 데이터 저장 장치 및 솔루션을 개발, 제조, 판매하여 돈을 법니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Western Digital Corporation engages in the development, manufacture, and sale of data storage devices and solutions based on hard disk drive (HDD) technology in the United States, Asia, Europe, the Middle East, and Africa. The company offers internal HDDs, data center drives, data center platforms, external drives, portable drives, NAS for home and office, and accessories. It sells its data storage devices and solutions through its computer sales personnel, dealers, distributors, retailers, and subsidiaries. The company has a collaboration with Open Quantum Design for the development of quantu"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "WDC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/WDC/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-28T05:56:07+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "WDC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/WDC/history",
+      "published_at": null,
+      "observed_at": "2026-10-28T05:56:07+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "WDC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/WDC/profile",
+      "published_at": null,
+      "observed_at": "2026-10-28T05:56:07+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-A18A954BDE027950",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026066882/a4ex991-pressreleaseq127.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-22",
+      "observed_at": "2026-10-24T05:02:27+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-8AB77169C952DFE3",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026053305/a4ex991-pressreleaseq426.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-24T05:02:27+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-6FF7B0B09C8D2671",
+    "input_sha": "6ff7b0b09c8d26719b83ffd230b4db117cfee7ae11cb5bb016d6830baac5750f",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "매출(revenue) · fiscal first quarter: 55%(변화율·증가) — 전년 같은 기간보다 증가했다",
+        "note_ko": "전년 같은 기간보다 증가했다",
+        "kind": "fact",
+        "quote": "In our fiscal first quarter, revenue grew 55% year over year, non-GAAP gross and operating margins expanded to 58.1% and 49.1%, respectively, resulting in a 161% year-over-year increase in non-GAAP EPS.",
+        "document_id": "DOC-A18A954BDE027950",
+        "block_id": "p12",
+        "metric": "revenue",
+        "figures": [
+          "55%"
+        ],
+        "period": "fiscal first quarter",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "volume",
+          "price"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "non-GAAP EPS · fiscal first quarter: 161%(변화율) — 전년 같은 기간보다 증가했다",
+        "note_ko": "전년 같은 기간보다 증가했다",
+        "kind": "fact",
+        "quote": "In our fiscal first quarter, revenue grew 55% year over year, non-GAAP gross and operating margins expanded to 58.1% and 49.1%, respectively, resulting in a 161% year-over-year increase in non-GAAP EPS.",
+        "document_id": "DOC-A18A954BDE027950",
+        "block_id": "p12",
+        "metric": "non-GAAP EPS",
+        "figures": [
+          "161%"
+        ],
+        "period": "fiscal first quarter",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-A18A954BDE027950",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026066882/a4ex991-pressreleaseq127.htm",
+        "filed_at": "2026-10-22",
+        "observed_at": "2026-10-24T05:02:27+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-8AB77169C952DFE3",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/106040/000162828026053305/a4ex991-pressreleaseq426.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-24T05:02:27+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-24T05:02:48+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 40.40484,
+    "eps_30d": 31.74953,
+    "eps_90d": 29.33886,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 23,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 37.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

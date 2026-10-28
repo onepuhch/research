@@ -1,0 +1,300 @@
+{
+  "candidate_id": "CAN-713C837ADADE8D8B",
+  "candidate_version": "CV-CA3BD3462E9667CF",
+  "identity": {
+    "entity_id": "NYSE:TRLV",
+    "ticker": "TRLV",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Trulieve Cannabis Corp.",
+  "industry": "Drug Manufacturers - Specialty & Generic",
+  "sector": "Healthcare",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "대마초 제품을 재배, 가공, 제조하여 소매점과 배달을 통해 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Trulieve Cannabis Corp. operates as a cannabis retailer in the United States. The company cultivates, processes, and manufactures cannabis products and distributes its products to its dispensaries, as well as through home delivery. It sells flowers, edibles, vapes, oral, topical, concentrates, and accessories under the Avenue, Cultivar Collection, Muse, Modern Flower, Alchemy, Momenta, Sweet Talk, Co2lors, and Roll One brands. The company operates dispensaries in Florida, Arizona, Georgia, Ohio, Maryland, West Virginia, Connecticut, and Pennsylvania. It operates cultivation and processing faci"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TRLV analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TRLV/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-28T06:03:35+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TRLV daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TRLV/history",
+      "published_at": null,
+      "observed_at": "2026-10-28T06:03:35+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TRLV company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TRLV/profile",
+      "published_at": null,
+      "observed_at": "2026-10-28T06:03:35+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-F17429F199F2C94B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-08-07",
+      "observed_at": "2026-10-01T06:22:35+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-77D39BFBAF4BFC68",
+    "input_sha": "77d39bfbaf4bfc6805c21aaa9762bb0d60381d8f2ad10031780c2d0ffdb13211",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(Revenue) · three months ended June 30, 2026: $271.0 million — 매출은 전년 같은 분기보다 줄었다",
+        "note_ko": "매출은 전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "Revenue for the three months ended June 30, 2026 was $271.0 million, a decrease of $31.1 million, from $302.1 million for the three months ended June 30, 2025.",
+        "document_id": "DOC-F17429F199F2C94B",
+        "block_id": "p284",
+        "metric": "Revenue",
+        "figures": [
+          "$271.0 million"
+        ],
+        "period": "three months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal",
+          "price"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Cost of goods sold · three months ended June 30, 2026: $108.7 million — 매출원가는 전년 같은 분기보다 줄었다",
+        "note_ko": "매출원가는 전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "Cost of goods sold for the three months ended June 30, 2026 was $108.7 million, a decrease of $10.5 million from $119.2 million for the three months ended June 30, 2025.",
+        "document_id": "DOC-F17429F199F2C94B",
+        "block_id": "p288",
+        "metric": "Cost of goods sold",
+        "figures": [
+          "$108.7 million"
+        ],
+        "period": "three months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Gross profit · three months ended June 30, 2026: $162.3 million — 매출총이익은 전년 같은 분기보다 줄었다",
+        "note_ko": "매출총이익은 전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "Gross profit for the three months ended June 30, 2026 was $162.3 million, a decrease of $20.6 million from $182.9 million for the three months ended June 30, 2025.",
+        "document_id": "DOC-F17429F199F2C94B",
+        "block_id": "p288",
+        "metric": "Gross profit",
+        "figures": [
+          "$162.3 million"
+        ],
+        "period": "three months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · three months ended June 30, 2026: $98.0 million — 조정 에비타는 전년 같은 분기보다 줄었다",
+        "note_ko": "조정 에비타는 전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA for the three months ended June 30, 2026 was $98.0 million, a decrease of $12.6 million from $110.6 million for the three months ended June 30, 2025, primarily driven by lower revenue primarily resulting from the Deconsolidation Transaction.",
+        "document_id": "DOC-F17429F199F2C94B",
+        "block_id": "p348",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$98.0 million"
+        ],
+        "period": "three months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Net cash provided by operating activities · six months ended June 30, 2026: $108.8 million — 영업활동으로 인한 순현금은 전년 같은 기간보다 줄었다",
+        "note_ko": "영업활동으로 인한 순현금은 전년 같은 기간보다 줄었다",
+        "kind": "fact",
+        "quote": "Net cash provided by operating activities was $108.8 million for the six months ended June 30, 2026, a decrease of $28.4 million compared to $137.2 million of net cash provided by operating activities for the six months ended June 30, 2025.",
+        "document_id": "DOC-F17429F199F2C94B",
+        "block_id": "p363",
+        "metric": "Net cash provided by operating activities",
+        "figures": [
+          "$108.8 million"
+        ],
+        "period": "six months ended June 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "하베스트의 연결 해제 거래가 회사의 재무 상태, 영업 실적 및 현금 흐름에 미치는 영향은 무엇인가?",
+      "회사의 매출총이익률에 영향을 미치는 제품 및 시장 구성, 재고 판매, 판촉 활동 및 유휴 생산 능력 비용의 구체적인 내용은 무엇인가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-F17429F199F2C94B",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm",
+        "filed_at": "2026-08-07",
+        "observed_at": "2026-10-01T06:22:35+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-13T07:07:35+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.56333,
+    "eps_30d": 0.55667,
+    "eps_90d": 0.23953,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 135.2,
+    "steady": true,
+    "turnaround": false
+  }
+}

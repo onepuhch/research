@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-732805EB2B0F56A2",
+  "candidate_id": "CAN-5FD7409FDFE8F5EA",
+  "candidate_version": "CV-12EF3B0D903F4E12",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:SMCI",
+    "ticker": "SMCI",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-28T05:57:57+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261028T055518Z_40640520468-1.json.gz",
+    "sha256": "71115232e04387c9490dc5590f7ff4c9820539e0a067701c0231da2aac5ebf21",
+    "run_id": "40640520468-1",
+    "finished_at": "2026-10-28T06:09:29+00:00"
+  },
+  "eps": {
+    "eps_now": 5.58768,
+    "eps_30d": 5.32592,
+    "eps_90d": 3.85795,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 17,
+    "up30": 8,
+    "down30": 0,
+    "pct_90": 44.8,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.929,
+    "yield_change_30_pp": 0.746
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-07-30",
+    "price_start_date": "2026-07-30",
+    "price_end_expected": "2026-10-27",
+    "price_end_date": "2026-10-27",
+    "close_start": 27.729999542236328,
+    "close_end": 35.09000015258789,
+    "price_pct_90": 26.5,
+    "adj_return_pct_90": 26.5,
+    "pe_change_pct": -12.6
+  },
+  "display_rank": 11,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 8
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 23052914688,
+  "context_id": "CTX-8251F8DCB456225D",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-22T05:15:00+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:SMCI",
+  "approval_version": null,
+  "rendered_at": "2026-10-28T06:10:02+00:00"
+}

@@ -9228,7 +9228,7 @@
     "processed_run": "40454163350-1"
   },
   "0001437749-26-033331": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9239,12 +9239,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/108385/000143774926033331/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/108385/000143774926033331/ex_1030266.htm",
       "published_at": "2026-10-23",
-      "raw_text": "WORLD ACCEPTANCE CORP (WRLD) (CIK 0000108385) EX-99.1 2026-10-23. During the most recent quarter, borrowing by existing customers increased, compared to the prior-year quarter, while borrowing by new customers declined. At the end of the prior fiscal year, we tightened our underwriting of new customers given the proportion of new customers already in the portfolio and increasing macroeconomic uncertainty. We have since loosened underwriting and expect to carefully increase new customer lending in the coming quarters. The following table includes the volume of gross loan origination balances, excluding tax advance loans, by customer type for the following comparative quarterly periods: Q2 FY 2027 Q2 FY 2026 Q2 FY 2025 New Customers $51,154,557 $62,445,847 $44,479,349 Former Customers $94,397,825 $104,794,933 $100,630,514 Refinance Customers $587,613,067 $562,635,073 $557,020,707 As of September 30, 2026, World Acceptance Corporation (the \"Company\" or \"we\") had 1,009 open branches. Advertising expense increased $0.8 million, or 36.7%, in the second quarter of fiscal 2027, compared to the second quarter of fiscal 2026 due to increased spending on new customer acquisition programs."
+      "raw_text": "WORLD ACCEPTANCE CORP (WRLD) (CIK 0000108385) EX-99.1 2026-10-23. During the most recent quarter, borrowing by existing customers increased, compared to the prior-year quarter, while borrowing by new customers declined. At the end of the prior fiscal year, we tightened our underwriting of new customers given the proportion of new customers already in the portfolio and increasing macroeconomic uncertainty. We have since loosened underwriting and expect to carefully increase new customer lending in the coming quarters. The following table includes the volume of gross loan origination balances, excluding tax advance loans, by customer type for the following comparative quarterly periods: Q2 FY 2027 Q2 FY 2026 Q2 FY 2025 New Customers $51,154,557 $62,445,847 $44,479,349 Former Customers $94,397,825 $104,794,933 $100,630,514 Refinance Customers $587,613,067 $562,635,073 $557,020,707 As of September 30, 2026, World Acceptance Corporation (the \"Company\" or \"we\") had 1,009 open branches. Advertising expense increased $0.8 million, or 36.7%, in the second quarter of fiscal 2027, compared to the second quarter of fiscal 2026 due to increased spending on new customer acquisition programs.",
+      "_model_response": {
+        "evidence_quote": "We have since loosened underwriting and expect to carefully increase new customer lending in the coming quarters. The following table includes the volume of gross loan origination balances, excluding tax advance loans, by customer type for the following comparative quarterly periods: Q2 FY 2027 Q2 FY 2026 Q2 FY 2025 New Customers $51,154,557 $62,445,847 $44,479,349 Former Customers $94,397,825 $104,794,933 $100,630,514 Refinance Customers $587,613,067 $562,635,073 $557,020,707 As of September 30, 2026, World Acceptance Corporation (the \"Company\" or \"we\") had 1,009 open branches. Advertising expense increased $0.8 million, or 36.7%, in the second quarter of fiscal 2027, compared to the second quarter of fiscal 2026 due to increased spending on new customer acquisition programs.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "We have since loosened underwriting and expect to carefully increase new customer lending in the coming quarters.",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "We have since loosened underwriting and expect to carefully increase new customer lending in the coming quarters. Advertising expense increased $0.8 million, or 36.7%, in the second quarter of fiscal 2027, compared to the second quarter of fiscal 2026 due to increased spending on new customer acquisition programs."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "WRLD",
+        "theme": "소비자 금융",
+        "signal_type": "신규고객",
+        "what_happened": "WORLD ACCEPTANCE CORP(WRLD)가 신규 고객 대출 심사를 완화하고 향후 신규 고객 대출을 늘릴 계획이며, 신규 고객 확보를 위한 광고 지출을 전년 동기 대비 36.7% 증액했다.",
+        "why_it_matters": "신규 고객 확보 노력과 대출 심사 완화는 향후 대출 성장과 수익성 개선으로 이어질 수 있는 긍정적인 신호이며, 시장의 성장 기대치를 상회할 가능성이 있다.",
+        "what_to_watch": "향후 분기별 신규 고객 대출 실행액 및 전체 대출 잔액 증가 추이, 그리고 대손충당금 변화를 주시해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "초기",
+        "glossary": "Underwriting: 대출 심사 (대출 신청자의 신용도와 상환 능력을 평가하여 대출 승인 여부 및 조건을 결정하는 과정), Loan Origination: 대출 실행 (대출 신청이 승인되어 실제로 자금이 고객에게 지급되는 과정)"
+      }
     },
     "content_hash": "bbd462b677594c2d25e42879e910e12867ec02213924210853db26906382186e",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-24T04:46:26.991273+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-28T05:55:13+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000813672-26-000116": {
     "status": "deferred",
@@ -9378,5 +9414,358 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-27T05:15:06.551437+00:00"
+  },
+  "0001628280-26-067394": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-067394",
+      "entity_id": "CIK:0002109150",
+      "source_role": "candidate",
+      "title": "INNIO N.V. (INIO) (CIK 0002109150) EX-99.2 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/2109150/000162828026067394/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2109150/000162828026067394/innioq32026earningsprese.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "INNIO N.V. (INIO) (CIK 0002109150) EX-99.2 2026-10-27. All statements other than statements of historical fact contained in this presentation, including statements regarding our future results of operations and financial position, industry dynamics, business strategy and plans, our objectives for future operations, our engines' long - term performance, industry expectations for gas prices, the expected growth and future performance of our Services segment, our capacity expansion, scale and future production capacity, and our expectations for our future revenue, leverage, demand, equipment margin, backlog, Adjusted EBITDA and Adjusted EBITDA Margin, are forward - looking statements . 2 LTM book - to- bill is defined as Equipment Order Intake divided by Equipment revenue for the last twelve months. Equipment Order Backlog and Equipment Order Intake are KPIs. Order Intake 1 Data Center ~2 4 % of Equip. Order Intake 1 ~9% of Equip. Order Intake 1 Power Solutions Compression Services Equipment Services 58% of revenue 38% of Adj. All rights reserved 8 Multi - year revenue visibility from record backlog feeds INNIO's high - margin Services flywheel A growing Installed Base is fu eling the Services business Fueled by myPla nt an d d ig it a l s o lu ti o n s Equipment revenues Long -te rm servic e M in or overh au l M a jo r o v e rh aul Equipment revenue fuels Services growth Equipment ServicesFlywheel Revenue Adj. Segment EBITDA Margin Equipment Order Intake 1 Equipment revenue Book - to - bill ratio Adj. Equipment EBITDA 3,4 ~44 GW Installed Base 1,2 $6.8bn LTM Q3’26 $ 3.9 bn FY25A $ 2.1bn LTM Q3’26 $ 1.4bn FY25A 3.3x LTM Q3’26 2.8x FY25A $1.5bn LTM Q3’26 $ 1.3bn FY25A ~30.8% LTM Q3’26 ~29.3% FY25A ~2.5x Note: 1 Equipment Order Intake, Equipment Order Backlog and Installed Base are KPIs. All rights reserved Diversified and expanding customer base of large projects Direct customer Energy - as - a- Service Providers Rental company Channel Partners Demand concentrated in on",
+      "_model_response": {
+        "evidence_quote": "All statements other than statements of historical fact contained in this presentation, including statements regarding our future results of operations and financial position, industry dynamics, business strategy and plans, our objectives for future operations, our engines' long - term performance, industry expectations for gas prices, the expected growth and future performance of our Services segment, our capacity expansion, scale and future production capacity, and our expectations for our future revenue, leverage, demand, equipment margin, backlog, Adjusted EBITDA and Adjusted EBITDA Margin, are forward - looking statements . 2 LTM book - to- bill is defined as Equipment Order Intake divided by Equipment revenue for the last twelve months. Equipment Order Backlog and Equipment Order Intake are KPIs. Order Intake 1 Data Center ~2 4 % of Equip. Order Intake 1 ~9% of Equip. Order Intake 1 Power Solutions Compression Services Equipment Services 58% of revenue 38% of Adj. All rights reserved 8 Multi - year revenue visibility from record backlog feeds INNIO's high - margin Services flywheel A growing Installed Base is fu eling the Services business Fueled by myPla nt an d d ig it a l s o lu ti o n s Equipment revenues Long -te rm servic e M in or overh au l M a jo r o v e rh aul Equipment revenue fuels Services growth Equipment ServicesFlywheel Revenue Adj. Segment EBITDA Margin Equipment Order Intake 1 Equipment revenue Book - to - bill ratio Adj. Equipment EBITDA 3,4 ~44 GW Installed Base 1,2 $6.8bn LTM Q3’26 $ 3.9 bn FY25A $ 2.1bn LTM Q3’26 $ 1.4bn FY25A 3.3x LTM Q3’26 2.8x FY25A $1.5bn LTM Q3’26 $ 1.3bn FY25A ~30.8% LTM Q3’26 ~29.3% FY25A ~2.5x Note: 1 Equipment Order Intake, Equipment Order Backlog and Installed Base are KPIs.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "INNIO N.V.는 산업용 엔진 및 전력 솔루션 기업으로, 'Diversified and expanding customer base of large projects'를 가지고 있으나, AI 순수 플레이어로 분류되기보다 산업재로 인식될 가능성이 있어 시장의 관심이 상대적으로 낮을 수 있다.",
+          "earnings_leverage": "Multi - year revenue visibility from record backlog feeds INNIO's high - margin Services flywheel",
+          "supply_demand_tightness": "'record backlog' (LTM Q3’26 $6.8bn)은 강력한 수요를 시사하며, 'our capacity expansion, scale and future production capacity' 언급은 공급 측면의 고려사항을 나타낸다.",
+          "structural_ai_demand": "Data Center ~24% of Equip. Order Intake",
+          "revision_momentum": "LTM Q3’26 $6.8bn의 'record backlog'은 향후 실적 추정치 상향의 강력한 근거가 되지만, 현재 단일 공시로 직접적인 추정치 상향 모멘텀이 확인된 것은 아니다.",
+          "catalyst_visibility": "Multi - year revenue visibility from record backlog feeds INNIO's high - margin Services flywheel"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "데이터센터 전력 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "INNIO N.V.",
+        "theme": "데이터센터 전력",
+        "signal_type": "수주/백로그",
+        "what_happened": "INNIO N.V.가 2026년 3분기 기준 LTM(지난 12개월) 장비 수주잔고가 68억 달러로 사상 최고치를 기록했으며, 이는 FY25A 39억 달러 대비 크게 증가했다.",
+        "why_it_matters": "사상 최고 수주잔고는 INNIO N.V.의 향후 수년간의 매출 가시성을 높이고 고마진 서비스 사업 성장을 견인하여 안정적인 실적과 수익성 개선을 기대하게 한다.",
+        "what_to_watch": "향후 분기별 신규 수주 추이 및 데이터센터향 수주 비중 변화, 수주잔고의 매출 전환율 및 서비스 부문 성장 기여도.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "LTM (Last Twelve Months): 지난 12개월간의 실적을 의미합니다. Book-to-bill ratio: 수주액을 매출액으로 나눈 비율로, 1보다 크면 수주가 매출보다 많아 향후 성장이 기대됨을 나타냅니다."
+      }
+    },
+    "content_hash": "828b8928c8432cee4fcad05fd484cbfa0203f64e04bd6520d40bb0c92141bf9b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-28T05:53:57+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001193125-26-432543": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-432543",
+      "entity_id": "CIK:0000007431",
+      "source_role": "candidate",
+      "title": "ARMSTRONG WORLD INDUSTRIES INC (AWI) (CIK 0000007431) EX-99.2 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/7431/000119312526432543/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/7431/000119312526432543/awi-ex99_2.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "ARMSTRONG WORLD INDUSTRIES INC (AWI) (CIK 0000007431) EX-99.2 2026-10-27. EBITDA margin* of 20.4% Pricing, backlog and continued strong order intake support fourth-quarter organic growth and improved profitability Q3 Architectural SpecialtiesKey Highlights Net Sales Growth VPY +22% Adj. EX-99.2 3 awi-ex99_2.htm EX-99.2 October 27, 2026 3rd Quarter 2026 Earnings Presentation Exhibit 99.2 Safe Harbor Statement Disclosures in this presentation contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995, including without limitation, those relating to future financial and operational results, market and broader economic conditions and guidance. Those statements provide our future expectations or forecasts and can be identified by our use of words such as “anticipate,” “estimate,” “expect,” “project,” “position,” “deliver,” “intend,” “plan,” “believe,” “outlook,” “target,” “predict,” “mitigate,” “may,” “will,” “would,” “could,” “should,” “seek,” and other words or phrases of similar meaning in connection with any discussion of future operating or financial performance. This includes annual guidance. Forward-looking statements, by their nature, address matters that are uncertain and involve risks because they relate to events and depend on circumstances that may or may not occur in the future. As a result, our actual results may differ materially from our expected results and from those expressed in our forward-looking statements. A more detailed discussion of the risks and uncertainties that could cause our actual results to differ materially from those projected, anticipated or implied is included in the “Risk Factors” and “Management’s Discussion and Analysis” sections of our reports on Form 10-K and Form 10-Q filed with the U.S. Securities and Exchange Commission (“SEC”), including our quarterly report for the quarterly period ended September 30, 2026, that the Company expects to file with the SEC today. Forward-lookin"
+    },
+    "content_hash": "613c0eef6396ea85e96c8f7e124690da6426c847d734eabcada5116f22e34360",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+  },
+  "0001437749-26-033667": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033667",
+      "entity_id": "CIK:0001012019",
+      "source_role": "candidate",
+      "title": "RUSH ENTERPRISES INC \\TX\\ (RUSHA, RUSHB) (CIK 0001012019) EX-99.1 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1012019/000143774926033667/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1012019/000143774926033667/ex_1032727.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "RUSH ENTERPRISES INC \\TX\\ (RUSHA, RUSHB) (CIK 0001012019) EX-99.1 2026-10-27. REPORTS THIRD QUARTER 2026 RESULTS, ANNOUNCES $0.14 PER SHARE DIVIDEND ● Revenues of $2.1 billion, net income of $78.0 million ● Earnings per diluted share of $0.65 ● Strong Class 8 deliveries during quarter; industry-wide order intake slowed while EPA finalizes regulations ● Absorption ratio 128.3% ● Board declares cash dividend of $0.14 per share of Class A and Class B common stock NEW BRAUNFELS, Texas, October 27, 2026 — Rush Enterprises, Inc. AND SUBSIDIARIES CONSOLIDATED BALANCE SHEETS (In Thousands, Except Shares and Per Share Amounts) (Unaudited) ​ ​ September 30, ​ ​ December 31, ​ ​ ​ 2026 ​ ​ 2025 ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ Assets ​ ​ ​ ​ ​ ​ ​ ​ Current assets: ​ ​ ​ ​ ​ ​ ​ ​ Cash, cash equivalents and restricted cash ​ $ 226,400 ​ ​ $ 212,645 ​ Accounts receivable, net ​ ​ 333,433 ​ ​ ​ 277,784 ​ Note receivable, affiliate ​ ​ 10,606 ​ ​ ​ 11,576 ​ Inventories, net ​ ​ 1,722,291 ​ ​ ​ 1,534,471 ​ Prepaid expenses and other ​ ​ 26,228 ​ ​ ​ 54,662 ​ Total current assets ​ ​ 2,318,958 ​ ​ ​ 2,091,138 ​ Property and equipment, net ​ ​ 1,694,934 ​ ​ ​ 1,694,738 ​ Operating lease right-of-use assets, net ​ ​ 127,026 ​ ​ ​ 124,130 ​ Goodwill, net ​ ​ 469,034 ​ ​ ​ 441,615 ​ Other assets, net ​ ​ 128,611 ​ ​ ​ 78,915 ​ Total assets ​ $ 4,738,563 ​ ​ $ 4,430,536 ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ Liabilities and shareholders ’ equity ​ ​ ​ ​ ​ ​ ​ ​ Current liabilities: ​ ​ ​ ​ ​ ​ ​ ​ Floor plan notes payable ​ $ 964,535 ​ ​ $ 917,955 ​ Current maturities of long-term debt ​ ​ 121 ​ ​ ​ 127 ​ Current maturities of finance lease obligations ​ ​ 29,209 ​ ​ ​ 34,519 ​ Current maturities of operating lease obligations ​ ​ 22,043 ​ ​ ​ 19,285 ​ Trade accounts payable ​ ​ 302,969 ​ ​ ​ 230,763 ​ Customer deposits ​ ​ 109,552 ​ ​ ​ 112,149 ​ Accrued expenses ​ ​ 177,340 ​ ​ ​ 177,292 ​ Total current liabilities ​ ​ 1,605,769 ​ ​ ​ 1,492,090 ​ Long-term debt, net of current maturities ​ ​ 269,705 ​ ​ ​ 274,798 ​ ",
+      "_model_response": {
+        "evidence_quote": "REPORTS THIRD QUARTER 2026 RESULTS, ANNOUNCES $0.14 PER SHARE DIVIDEND ● Revenues of $2.1 billion, net income of $78.0 million ● Earnings per diluted share of $0.65 ● Strong Class 8 deliveries during quarter; industry-wide order intake slowed while EPA finalizes regulations",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "본 문서는 정기 분기 실적 및 배당 발표에 대한 루틴 공시입니다. 'Strong Class 8 deliveries during quarter'는 이미 발생한 실적 지표이며, 'industry-wide order intake slowed'는 산업 전반의 부정적인 추세에 대한 언급으로, 회사의 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 계획, EPS 리비전 등)에 해당하지 않습니다.",
+        "subject": "RUSHA, RUSHB",
+        "theme": "미분류",
+        "signal_type": "",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "본 문서는 정기 분기 실적 및 배당 발표에 대한 루틴 공시입니다. 'Strong Class 8 deliveries during quarter'는 이미 발생한 실적 지표이며, 'industry-wide order intake slowed'는 산업 전반의 부정적인 추세에 대한 언급으로, 회사의 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 계획, EPS 리비전 등)에 해당하지 않습니다."
+    },
+    "content_hash": "32a7868a82eb67bcd5e527636d0450c468703f8ef673c900716523ea94e5c86f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-28T05:54:17+00:00",
+    "reason": "본 문서는 정기 분기 실적 및 배당 발표에 대한 루틴 공시입니다. 'Strong Class 8 deliveries during quarter'는 이미 발생한 실적 지표이며, 'industry-wide order intake slowed'는 산업 전반의 부정적인 추세에 대한 언급으로, 회사의 구체적인 조기 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 계획, EPS 리비전 등)에 해당하지 않습니다.",
+    "processed_day": "2026-10-28",
+    "processed_run": "40640520468-1"
+  },
+  "0001628280-26-067421": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-067421",
+      "entity_id": "CIK:0000048898",
+      "source_role": "candidate",
+      "title": "HUBBELL INC (HUBB) (CIK 0000048898) EX-99.1 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026067421/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/48898/000162828026067421/exhibit991_10272026.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "HUBBELL INC (HUBB) (CIK 0000048898) EX-99.1 2026-10-27. Bakker continued, “Third quarter results were highlighted by >20% organic growth in Electrical Solutions, led by strong datacenter markets and bolstered by content gains and capacity expansion investments. Orders and end market demand remained strong, driving continued backlog build in the quarter, and we remain focused on proactively investing in capacity expansion to serve our customers in high growth areas.” Mr. government, including adjustments to tax rates, deduction limitations, cross-border tax provisions, and administrative guidance; a major disruption in one or more of our manufacturing or distribution facilities or headquarters, including the impact of plant consolidations and relocations; changes in our relationships with, or the financial condition or performance of, key distributors and other customers, agents or business partners which could adversely affect our results of operations; impact of productivity improvements on lead times, quality and delivery of product; anticipated future contributions and assumptions including increases in interest rates and changes in plan assets with respect to pensions and other retirement benefits, as well as pension withdrawal liabilities; adjustments to product warranty accruals in response to claims incurred, historical experiences and known costs; unexpected costs or charges, certain of which might be outside of our control; changes in strategy due to economic conditions or other conditions outside of our control affecting anticipated future global product sourcing levels; ability to carry out future acquisitions and strategic investments in our core businesses as well as the acquisition related costs; the ability to successfully manage and integrate acquired businesses, such as the acquisitions of NSI Electrical Buyer, Inc.",
+      "_model_response": {
+        "evidence_quote": "Third quarter results were highlighted by >20% organic growth in Electrical Solutions, led by strong datacenter markets and bolstered by content gains and capacity expansion investments. Orders and end market demand remained strong, driving continued backlog build in the quarter, and we remain focused on proactively investing in capacity expansion to serve our customers in high growth areas.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Electrical Solutions, led by strong datacenter markets",
+          "earnings_leverage": ">20% organic growth in Electrical Solutions... bolstered by content gains and capacity expansion investments.",
+          "supply_demand_tightness": "Orders and end market demand remained strong, driving continued backlog build in the quarter, and we remain focused on proactively investing in capacity expansion to serve our customers in high growth areas.",
+          "structural_ai_demand": "led by strong datacenter markets",
+          "revision_momentum": "Third quarter results were highlighted by >20% organic growth... Orders and end market demand remained strong, driving continued backlog build",
+          "catalyst_visibility": "proactively investing in capacity expansion to serve our customers in high growth areas."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "데이터센터 전력 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "HUBB",
+        "theme": "데이터센터",
+        "signal_type": "CAPEX",
+        "what_happened": "Hubbell은 데이터센터 시장의 강한 수요와 수주 증가에 힘입어 전기 솔루션 부문에서 20% 이상의 유기적 성장을 기록했으며, 이에 대응하여 생산 능력 확장에 적극적으로 투자하고 있습니다.",
+        "why_it_matters": "Hubbell의 CAPEX 확대는 데이터센터 시장의 구조적 성장에 대한 직접적인 수혜를 의미하며, 이는 향후 실적 개선과 시장 점유율 확대로 이어질 수 있는 저평가된 기회입니다.",
+        "what_to_watch": "향후 CAPEX 투자 규모 및 진행 상황; 데이터센터 관련 수주 및 백로그 추이",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "CAPEX: 기업의 미래 이윤 창출을 위해 지출하는 자본적 지출; 백로그(Backlog): 아직 이행되지 않은 수주 잔고"
+      }
+    },
+    "content_hash": "f86f8f127aaee21194b0e9f4264e0b3b36e146075b271021db72123ca7786f40",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-28T05:54:35+00:00",
+    "signal_id": "SIG-0913",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-28",
+    "processed_run": "40640520468-1"
+  },
+  "0000833444-26-000101": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000833444-26-000101",
+      "entity_id": "CIK:0000833444",
+      "source_role": "candidate",
+      "title": "Johnson Controls International plc (JCI) (CIK 0000833444) EX-99.1 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/833444/000083344426000101/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/833444/000083344426000101/q4exh991xq4fy26earningsrel.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "Johnson Controls International plc (JCI) (CIK 0000833444) EX-99.1 2026-10-27. With record backlog and sustained customer demand, we enter fiscal 2027 with confidence in our ability to continue creating value for customers and shareholders.” FISCAL Q4 SEGMENT RESULTS The financial highlights presented in the tables below exclude discontinued operations and are in accordance with GAAP, unless otherwise indicated. EX-99.1 2 q4exh991xq4fy26earningsrel.htm EX-99.1 Document Exhibit 99.1 FOR IMMEDIATE RELEASE Johnson Controls Reports Q4 and FY26 Results; Initiates FY27 Guidance ______________________________________________________________________________________ ▪ Q4 sales increased 10% and organic sales increased 12%* ▪ Q4 GAAP EPS of $1.60; Q4 Adjusted EPS* of $1.66* ▪ Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year * This earnings release contains non-GAAP financial measures. Definitions and reconciliations of the non-GAAP financial measures can be found in the attached footnotes. Non-GAAP measures should be considered in addition to, and not as replacements for, the most comparable GAAP measures. _____________________________________________________________________________________ CORK, Ireland — October 27, 2026 — Johnson Controls International plc (NYSE: JCI), a global leader in thermal management, mission-critical building systems, energy efficiency, and decarbonization, is proud to announce fiscal fourth quarter 2026 GAAP earnings per share (“EPS”) of $1.60. Adjusted EPS was $1.66. Q4 sales increased 10% to $7.1 billion and organic sales increased 12%. For the quarter, GAAP net income from continuing operations attributable to JCI was $967 million and adjusted net income from continuing operations was $1.0 billion. Cash provided by operating activities was $1.3 billion. Free cash flow was $1.1 billion and adjusted free cash flow was $1.1 billion. “We finished fiscal 2026 with significant momentum, deliv"
+    },
+    "content_hash": "e8a687f82110de16e5a18c23cd137d0226560625dbf677f4ead36fc57000917d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+  },
+  "0001628280-26-067572": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-067572",
+      "entity_id": "CIK:0000730708",
+      "source_role": "candidate",
+      "title": "SEACOAST BANKING CORP OF FLORIDA (SBCF) (CIK 0000730708) EX-99.1 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/730708/000162828026067572/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/730708/000162828026067572/sbcf3qearningsrelease.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "SEACOAST BANKING CORP OF FLORIDA (SBCF) (CIK 0000730708) EX-99.1 2026-10-27. The Company benefits from a granular deposit franchise, with the top ten depositors representing approximately 2% of total customer deposits. • Consumer deposits represented 47% of overall customer deposit funding with an average consumer customer balance of $26 thousand. Commercial deposits represented 53% of overall customer deposit funding with an average business customer balance of $120 thousand. EX-99.1 2 sbcf3qearningsrelease.htm EX-99.1 SBCF 3Q Earnings Release SEACOAST REPORTS THIRD QUARTER 2026 RESULTS Continued Improvement Across Profitability Metrics Robust Organic Loan Growth with Sustained Pipeline Strength Continued Strong Capital and Liquidity Position STUART, Fla., October 27, 2026 /BUSINESS WIRE/ -- Seacoast Banking Corporation of Florida (\"Seacoast\" or the \"Company\") (NASDAQ: SBCF) today reported unaudited results of operations and other financial information for the third quarter of 2026. Third Quarter 2026 Highlights • Net income of $59.9 million, or $0.55 per share, increased 1% from the prior quarter and 64% from the prior year quarter. Adjusted net income 1 of $71.8 million, or $0.66 per share, increased 9% from the prior quarter and 59% from the prior year quarter. • Adjusted pre-tax pre-provision earnings 1 increased 5% from the prior quarter and 49% from the prior year quarter. • Net interest income grew 2% from the prior quarter and 37% from the prior year quarter. • The net interest margin was stable at 3.83% compared to the prior quarter and, excluding accretion on acquired loans, net interest margin expanded one basis point to 3.66%. • 13% annualized organic loan growth in the third quarter and 10% annualized growth year to date. • Average noninterest-bearing deposits grew 4% annualized from the prior quarter and noninterest-bearing demand deposits have grown 10% annualized year to date. • Continued share repurchases, with over 1.2 million shares of common sto"
+    },
+    "content_hash": "a7922ace22abac79c9438ad9431cc344c10fe4af4393d4e778f03c27e26010d0",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+  },
+  "0001193125-26-432724": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-432724",
+      "entity_id": "CIK:0000026058",
+      "source_role": "candidate",
+      "title": "CTS CORP (CTS) (CIK 0000026058) EX-99.2 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/26058/000119312526432724/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/26058/000119312526432724/cts-ex99_2.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "CTS CORP (CTS) (CIK 0000026058) EX-99.2 2026-10-27. Navy undersea warfare application End Markets Update 6 Industrial Sales up 7% YoY and 1% sequentially Strong bookings with Book-to-bill of 1.36 Multiple design wins across data centers, automation, connectivity, digitalization and energy efficiency New customer win in temperature sensing ($ Millions) Revenue 1 Refer to slide 2 for information on total booked business. Transportation Sales up 2% YoY and 1% sequentially $1.2b total booked business1 at end of Q3 2026 Continued momentum across eBrake technology, foot controls and sensing applications New customer win in seat-track position sensing ($ Millions) Revenue $2.88 2 $2.78 Notes: 1 Adjusted Diluted EPS is a non-GAAP financial measure. EX-99.2 3 cts-ex99_2.htm EX-99.2 CTS Corporation 3rd Quarter 2026 Earnings Call October 27, 2026 Cautionary Statement Regarding Forward-Looking Statements Readers are cautioned that the statements contained in this document regarding expectations of our performance or other matters that may affect our business, results of operations, or financial condition are, or may be deemed to be, “forward-looking statements” as defined by the “safe harbor” provisions in the Private Securities Litigation Reform Act of 1995. Such statements are made in reliance on the safe harbor provisions of Section 27A of the Securities Act of 1933 and Section 21E of the Securities Exchange Act of 1934. All statements, other than statements of historical fact, included or incorporated in this document, including statements regarding our strategy, financial position, guidance, funding for continued operations, cash reserves, liquidity, projected costs, plans, projects, awards and contracts, and objectives of management, among others, are forward-looking statements. Words such as “expect,” “anticipate,” “should,” “believe,” “hope,” “target,” “continued,” “project,” “plan,” “goals,” “opportunity,” “appeal,” “estimate,” “potential,” “predict,” “demonstrates,” “",
+      "_model_response": {
+        "evidence_quote": "Strong bookings with Book-to-bill of 1.36 Multiple design wins across data centers, automation, connectivity, digitalization and energy efficiency New customer win in temperature sensing ($ Millions) Revenue 1 Refer to slide 2 for information on total booked business. Transportation Sales up 2% YoY and 1% sequentially $1.2b total booked business1 at end of Q3 2026 Continued momentum across eBrake technology, foot controls and sensing applications New customer win in seat-track position sensing",
+        "axes_evidence": {
+          "underfollowed_pure_play": "CTS CORP (CTS)",
+          "earnings_leverage": "Strong bookings with Book-to-bill of 1.36",
+          "supply_demand_tightness": "Strong bookings with Book-to-bill of 1.36",
+          "structural_ai_demand": "Multiple design wins across data centers, automation, connectivity, digitalization and energy efficiency",
+          "revision_momentum": "Strong bookings with Book-to-bill of 1.36 Multiple design wins across data centers, automation, connectivity, digitalization and energy efficiency New customer win in temperature sensing... $1.2b total booked business1 at end of Q3 2026... New customer win in seat-track position sensing",
+          "catalyst_visibility": "Strong bookings with Book-to-bill of 1.36 Multiple design wins across data centers, automation, connectivity, digitalization and energy efficiency New customer win in temperature sensing... $1.2b total booked business1 at end of Q3 2026... New customer win in seat-track position sensing"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CTS",
+        "theme": "산업용 센서 및 전장 부품",
+        "signal_type": "수주/백로그",
+        "what_happened": "CTS Corp이 2026년 3분기에 1.36의 높은 수주잔고 비율(Book-to-bill)과 12억 달러의 총 수주잔고를 기록했으며, 데이터센터, 자동화, 전장 부품 등 다양한 분야에서 다수의 디자인윈과 신규 고객을 확보했습니다.",
+        "why_it_matters": "높은 수주잔고와 신규 고객 확보는 CTS의 제품에 대한 견조한 수요를 보여주며, 이는 향후 매출 성장과 시장 점유율 확대로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "다음 분기 실적 발표 시 수주잔고의 추가 증가 여부 및 신규 디자인윈의 매출 기여도.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 1,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "Book-to-bill: 수주잔고 비율 (신규 수주액을 매출액으로 나눈 값으로, 1보다 크면 수주가 매출보다 많아 향후 성장 기대)\nDesign win: 디자인윈 (부품 공급사가 고객사의 신제품 개발 단계에서 자사 부품이 채택되는 것)"
+      }
+    },
+    "content_hash": "03405f494b24c10d98ee1ec01858991dffa1b3366a3a74481970f5ffab9b2c7a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-28T05:54:55+00:00",
+    "signal_id": "SIG-0914",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-28",
+    "processed_run": "40640520468-1"
+  },
+  "0001104659-26-119167": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-119167",
+      "entity_id": "CIK:0001163739",
+      "source_role": "candidate",
+      "title": "NABORS INDUSTRIES LTD (NBR) (CIK 0001163739) EX-99.2 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926119167/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1163739/000110465926119167/tm2628332d1_ex99-2.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "NABORS INDUSTRIES LTD (NBR) (CIK 0001163739) EX-99.2 2026-10-27. Factors to consider when evaluating these forward-looking statements include, but are not limited to: • geopolitical events, pandemics, global and regional conflicts and other macro-events and their respective and collective impact on our operations as well as oil and gas markets and prices; • fluctuations and volatility in worldwide prices of and demand for oil and natural gas; • fluctuations in levels of oil and natural gas exploration and development activities; • fluctuations in the demand for our services; • competitive and technological changes and other developments in the oil and gas and oilfield services industries; • our ability to renew customer contracts in order to maintain competitiveness; • the existence of operating risks inherent in the oil and gas and oilfield services industries; • the possibility of the loss of one or a number of our large customers; • the amount and nature of our future capital expenditures and how we expect to fund our capital • expenditures; • the occurrence of cybersecurity incidents, attacks or other breaches to our information technology systems; • the impact of our long-term indebtedness and other financial commitments on our financial and operating • flexibility; • our access to, and the cost of, capital, including the impact of a downgrade in our credit rating, covenant restrictions, availability under our secured revolving credit facility, future issuances of debt or equity securities and the global interest rate environment; • our dependence on our operating subsidiaries and investments to meet our financial obligations; • our ability to retain skilled employees; • our ability to complete, and realize the expected benefits of, strategic transactions, such as our acquisition of Parker Drilling Company (“Parker”); • changes in tax laws and the possibility of changes in other laws and regulations; • the possibility of political or economic instability, civil"
+    },
+    "content_hash": "0d7a7888f654b7b78d03556e6ee6c7420df2211eca98f9a987f1813b7280021f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00",
+    "reason": "financing/loan language without a commercial demand event"
+  },
+  "0000883948-26-000079": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000883948-26-000079",
+      "entity_id": "CIK:0000883948",
+      "source_role": "candidate",
+      "title": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948) EX-99.1 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/883948/000088394826000079/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/883948/000088394826000079/aub-ex99d1.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948) EX-99.1 2026-10-27. Core deposits defined as total deposits less jumbo time deposits and brokered deposits Non-Interest Bearing 22% Interest Checking 25% Money Market 21% Retail Time 13% Jumbo Time 6% Brokered 4% Savings 9% DEPOSIT BASE CHARACTERISTICS DEPOSIT COMPOSITION AT SEPTEMBER 30, 2026 — $31.0 BILLION 90% core deposits1 47% transactional accounts 2.00% Q3 2026 cost of deposits 26 GRANULAR DEPOSIT BASE CUSTOMER DEPOSIT GRANULARITY PERIOD END UNINSURED & UNCOLLATERALIZED DEPOSIT AMOUNTS AND AS A PERCENTAGE OF TOTAL DEPOSITS ( $ M I LLI O N S ) 32% 31% 32% 33% 32% $9,802 $9,551 $9,608 $9,915 $9,785 Q3 2025 Q4 2025 Q1 2026 Q2 2026 Q3 2026 $22,000 $22,000 $21,000 $104,000 $120,000 $117,000 $2,100 $2,500 $2,400 $7,500 $8,100 $7,900 Q3 2025 Q2 2026 Q3 2026 Retail Avg. EX-99.1 2 aub-ex99d1.htm EX-99.1 Exhibit 99.1 Investor Presentation November - December 2026 2 FORWARD-LOOKING STATEMENTS This presentation and statements by our management may constitute “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements are statements that include, without limitation, statements regarding our strategic initiatives, priorities, plan and vision; statements regarding our strategic expansion into North Carolina, including our expectations regarding new branch openings; statements regarding our investments in strategic technology initiatives; statements regarding our business, financial and operating results, including our deposit base and funding; the impact of changes in economic conditions, the interest rate environment, economic, fiscal or trade policy and the potential related impacts on our business and loan demand; management’s beliefs regarding our liquidity, capital resources, asset quality, CRE loan portfolio and our customer relationships; statements regarding our strategy, statements that include other projections, predictions, expecta"
+    },
+    "content_hash": "f5627e8be9dfba66720f43d7eecc9d39102e08f088c25ab0f735a873a576ceb6",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+  },
+  "0001628280-26-067418": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-067418",
+      "entity_id": "CIK:0000031462",
+      "source_role": "candidate",
+      "title": "ECOLAB INC. (ECL) (CIK 0000031462) EX-99.2 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/31462/000162828026067418/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/31462/000162828026067418/ecl_ex99x2.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "ECOLAB INC. (ECL) (CIK 0000031462) EX-99.2 2026-10-27. ▪ Ecolab is growing with new customers due to its industry-leading water management solutions, digital intelligence, and global service expertise to optimize operating costs and reduce water and energy use. Q4: Expect continued strong growth, driven by new customer wins as we leverage One Ecolab and our investments in pest intelligence. EX-99.2 3 ecl_ex99x2.htm EX-99.2 ecl_ex99x2 11 Third Quarter 2026 Supplemental October 27, 2026 Cautionary statement Forward-Looking Information This communication contains forward looking statements as that term is defined in the Private Securities Litigation Reform Act of 1995. These forward-looking statements include, but are not limited to, statements regarding macroeconomic conditions and our financial and business performance and prospects, including sales, earnings, special (gains) and charges, raw material costs, margins, pricing, currency translation, productivity, investments, acquisitions and new business. These statements are based on the current expectations of management. There are a number of risks and uncertainties that could cause actual results to differ materially from the forward-looking statements included in this communication. In particular, the ultimate results of any restructuring initiative depend on a number of factors, including the development of final plans, the impact of local regulatory requirements regarding employee terminations, the time necessary to develop and implement the restructuring initiatives and the level of success achieved through such actions in improving competitiveness, efficiency and effectiveness. Additional risks and uncertainties are set forth under Item 1A of our most recent Form 10-K, and our other public filings with the Securities and Exchange Commission (“SEC”), and include the impact of economic factors such as the worldwide economy, interest rates, foreign currency risk, reduced sales and earnings in our international o"
+    },
+    "content_hash": "dd3c08846e267ec73e2f342aef83ba1648b5aff58cd0d87e04d519fb0dc91486",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+  },
+  "0001140361-26-040897": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001140361-26-040897",
+      "entity_id": "CIK:0000790359",
+      "source_role": "candidate",
+      "title": "NBT BANCORP INC (NBTB) (CIK 0000790359) EX-99.1 2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126040897/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126040897/ef20084356_ex99-1.htm",
+      "published_at": "2026-10-27",
+      "raw_text": "NBT BANCORP INC (NBTB) (CIK 0000790359) EX-99.1 2026-10-27. The increase from the prior quarter and the third quarter of 2025 was driven by higher activity-based fees, additional fees from new customer relationships and increased market values of assets under administration. EX-99.1 2 ef20084356_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 FOR IMMEDIATE RELEASE ATTENTION: FINANCIAL AND BUSINESS EDITORS Contact: Scott A. Kingsley, President and CEO Annette L. Burns, Executive Vice President and CFO NBT Bancorp Inc. 52 South Broad Street Norwich, NY 13815 607-337-6589 NBT BANCORP INC. ANNOUNCES RECORD THIRD QUARTER 2026 RESULTS AND DECLARES CASH DIVIDEND NORWICH, NY (October 27, 2026) – NBT Bancorp Inc. (“NBT” or the “Company”) (NASDAQ: NBTB) reported net income and diluted earnings per share for the three and nine months ended September 30, 2026. Net income for the third quarter of 2026 was $58.0 million, or $1.11 per diluted common share, compared to $54.5 million, or $1.03 per diluted common share, for the third quarter of 2025, and $53.0 million, or $1.02 per diluted common share, for the second quarter of 2026. Operating diluted earnings per share (1) , a non-GAAP measure, was $1.11 for the third quarter of 2026, compared to $1.05 for the third quarter of 2025 and $1.01 for the second quarter of 2026. CEO Comments “Our record third quarter results reflect the strength of our diversified business model and disciplined execution across the company,” said NBT President and CEO Scott Kingsley. “We delivered solid loan growth, grew net interest income and expanded our net interest margin, and continued to maintain strong capital levels. These results position us well to continue serving our customers and communities and creating long-term value for our shareholders.” Third Quarter 2026 Financial Highlights Net Income ◾ Net income was $58.0 million and diluted earnings per share was $1.11 ◾ Revenues grew 4.5% while expenses increased 3.3% from the previous quarter Net Interest"
+    },
+    "content_hash": "0e12b69ed4c5cb2c555e3276206084a45d4e816a84ce8aa0e35248cdddfa3950",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-28T05:53:38.067188+00:00"
   }
 }
