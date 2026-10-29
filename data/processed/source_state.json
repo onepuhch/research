@@ -9767,5 +9767,689 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-28T05:53:38.067188+00:00"
+  },
+  "0001828318-26-000063": {
+    "status": "retry",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001828318-26-000063",
+      "entity_id": "CIK:0001828318",
+      "source_role": "candidate",
+      "title": "Enovix Corp (ENVX) (CIK 0001828318) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828318/000182831826000063/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1828318/000182831826000063/envx8k-10282026ex991pr.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Enovix Corp (ENVX) (CIK 0001828318) EX-99.1 2026-10-28. Forward-looking statements in this press release include, but are not limited to, statements regarding: the expected timing and completion of the warrant distribution, including the Record Date and Distribution Date; the terms of the warrants, including the exercise price, the ability to exercise warrants using cash or 2028 Notes, the scheduled expiration date and the Early Expiration Price Condition; the expected listing of the warrants on Nasdaq and the existence of a trading market for the warrants; the number of warrants that may be exercised and the payment method holders may select; the amount of cash proceeds we may receive and the amount of debt we may retire as a result of warrant exercises, and the anticipated benefits to our balance sheet, interest obligations and liquidity; our intended use of any cash proceeds; the expected effect of the distribution on stockholders’ proportional ownership; the expected timing of our third Exhibit 99.1 quarter 2026 financial results and related conference call; our preliminary, unaudited third quarter 2026 revenue and customer pipeline; the announced drone battery purchase order, including the quantity and timing of deliveries and our expectation of follow-on orders; the conversion of pipeline opportunities into purchase orders; the timing and benefits of our planned capacity expansion in South Korea; and our plans to reduce our cost structure and improve profitability. Note Regarding Customer Pipeline and Design Wins We may refer in this press release and other communications to our “customer pipeline” and “design wins.” Our customer pipeline represents our estimate of the peak annual production value of identified design opportunities for products manufactured in South Korea. A “design win” refers to an opportunity that has been awarded to Enovix but has not yet entered production. Customer pipeline and design win amounts do not represent customer orders, backlog"
+    },
+    "content_hash": "e1af9ece20ff186b4834b3758e43b2810a5e0aafc624e235cb47ee88710de495",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-29T05:58:22+00:00",
+    "reason": "ValueError",
+    "http_status": null,
+    "next_retry_at": "2026-10-29T17:58:03.268404+00:00",
+    "failure_class": "error",
+    "failure_day": "2026-10-29",
+    "failure_run": "40826300195-1"
+  },
+  "0001437749-26-033685": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033685",
+      "entity_id": "CIK:0001474735",
+      "source_role": "candidate",
+      "title": "GENERAC HOLDINGS INC. (GNRC) (CIK 0001474735) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926033685/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1474735/000143774926033685/ex_1032565.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "GENERAC HOLDINGS INC. (GNRC) (CIK 0001474735) EX-99.1 2026-10-28. that included the execution of a long-term supply agreement for backup power generators for Amazon data centers. “Following the recently announced agreement with Amazon, along with other wins from both new and existing customers, our backlog for products to be sold to the data center market has now grown to approximately $4.5 billion, and we continue to execute on our previously announced capacity expansion plans that will allow us to capture this generational growth opportunity.” Jagdfeld continued, “Additionally, our Residential segment returned to strong year-over-year growth during the quarter as the mega-trends around lower power quality supported an impressive increase in shipments of home standby and portable generators relative to the prior year period.” 1 Additional Third Quarter 2026 Consolidated Highlights Gross profit margin was 39.9% as compared to 38.3% in the prior year third quarter.",
+      "_model_response": {
+        "evidence_quote": "that included the execution of a long-term supply agreement for backup power generators for Amazon data centers. “Following the recently announced agreement with Amazon, along with other wins from both new and existing customers, our backlog for products to be sold to the data center market has now grown to approximately $4.5 billion, and we continue to execute on our previously announced capacity expansion plans that will allow us to capture this generational growth opportunity.” Jagdfeld continued, “Additionally, our Residential segment returned to strong year-over-year growth during the quarter as the mega-trends around lower power quality supported an impressive increase in shipments of home standby and portable generators relative to the prior year period.”",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "our backlog for products to be sold to the data center market has now grown to approximately $4.5 billion, and we continue to execute on our previously announced capacity expansion plans",
+          "supply_demand_tightness": "generational growth opportunity” and “mega-trends around lower power quality supported an impressive increase in shipments",
+          "structural_ai_demand": "long-term supply agreement for backup power generators for Amazon data centers",
+          "revision_momentum": "our backlog for products to be sold to the data center market has now grown to approximately $4.5 billion",
+          "catalyst_visibility": "execution of a long-term supply agreement for backup power generators for Amazon data centers. ... backlog for products to be sold to the data center market has now grown to approximately $4.5 billion"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "data center power infrastructure",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "GNRC",
+        "theme": "데이터센터 전력 솔루션",
+        "signal_type": "수주/백로그",
+        "what_happened": "제너락이 아마존 데이터센터에 백업 발전기를 장기 공급하는 계약을 체결하고, 데이터센터 시장 백로그가 약 45억 달러로 증가했으며, 생산능력 증설을 지속하고 있습니다.",
+        "why_it_matters": "아마존이라는 대형 고객사 확보와 45억 달러 규모의 백로그는 제너락의 데이터센터 전력 솔루션 사업이 구조적인 AI 수요 증가에 힘입어 크게 성장할 잠재력이 있음을 보여줍니다.",
+        "what_to_watch": "향후 데이터센터 부문 매출 성장률 및 마진 변화, 그리고 생산능력 증설 계획의 진행 상황.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "백로그(Backlog): 계약은 되었으나 아직 인도되지 않은 주문 잔고. 향후 매출로 인식될 금액.\nCAPEX(Capital Expenditure): 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출."
+      }
+    },
+    "content_hash": "6612d79ec0b4dcdfe0de0c38d4d547e7f466740075227003b87a594c40c4996d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-29T05:58:39+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001437749-26-033798": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033798",
+      "entity_id": "CIK:0001001385",
+      "source_role": "candidate",
+      "title": "NWPX Infrastructure, Inc. (NWPX) (CIK 0001001385) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1001385/000143774926033798/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1001385/000143774926033798/ex_996700.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "NWPX Infrastructure, Inc. (NWPX) (CIK 0001001385) EX-99.1 2026-10-28. EX-99.1 2 ex_996700.htm EXHIBIT 99.1 ex_996700.htm Exhibit 99.1 NWPX Infrastructure Announces Third Quarter 2026 Financial Results • Record net sales of $179.4 million, up 18.7% year-over-year, and record gross profit of $38.2 million, up 18.8% year-over-year • Record Water Transmission Systems segment (“WTS”) net sales of $131.9 million, up 27.0% year-over-year, and record WTS gross profit of $27.3 million, up 23.4% year-over-year • Precast Infrastructure and Engineered Systems segment (“Precast”) net sales of $47.5 million, up 0.6% year-over-year, and Precast gross profit of $10.9 million, up 8.6% year-over-year • Net income of $18.2 million, or $ 1.86 per diluted share • WTS backlog 1 of $264 million ; record backlog including confirmed orders 2 of $435 million • Precast order book 3 of $67 million • Completed acquisition of Serpentix Conveyor, LLC (“Serpentix”) on September 2, 2026 VANCOUVER, Washington — October 28, 2026 —NWPX Infrastructure, Inc. Taken together, we believe our record backlog and attractive opportunities across our businesses position NWPX Infrastructure to conclude an exceptionally strong record year in 2026 and enter 2027 with significant momentum.” 1 Third Quarter 2026 Financial Results Consolidated • Net sales increased 18.7% to $179.4 million from $151.1 million in the third quarter of 2025 ."
+    },
+    "content_hash": "7b94ebfddb842c83f95c862f75da735b79dfe02bbe75a97ff51e232e6dd04569",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001680247-26-000122": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001680247-26-000122",
+      "entity_id": "CIK:0001680247",
+      "source_role": "candidate",
+      "title": "ProPetro Holding Corp. (PUMP) (CIK 0001680247) EX-99.3 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1680247/000168024726000122/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1680247/000168024726000122/exhibit993-3q26earningsc.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "ProPetro Holding Corp. (PUMP) (CIK 0001680247) EX-99.3 2026-10-28. While the costs of rebuilding completions capacity continue to weigh on margins, our fleet is now essentially sold out and positioned to recontract into a tighter, better-priced market in 2027. Projects of larger scale require significant lead time, and we expect certain costs, including personnel, site preparation and mobilization, to build ahead of these deployments before the corresponding revenue and earnings are realized. We are now essentially sold out of available frac capacity. Those fleets are effectively sold out industry-wide, and we expect that premium to hold regardless of how the conflict in the Middle East unfolds, as limited supply and global refining constraints keep diesel prices elevated for the foreseeable future. Our fleet is essentially sold out. EX-99.3 4 exhibit993-3q26earningsc.htm EX-99.3 exhibit993-3q26earningsc Operator Opening: Good day, and welcome to the ProPetro Holding Corp Third Quarter of 2026 Conference Call. Please note, this event is being recorded. I would now like to turn the call over to Matt Augustine, ProPetro’s Vice President of Finance and Investor Relations. Please go ahead. Matt Augustine - Vice President, Finance and Investor Relations: Thank you, and good morning. We appreciate your participation in today’s call. With me are Chief Executive Officer, Sam Sledge; Chief Financial Officer, Caleb Weatherl; President & Chief Operating Officer, Adam Munoz, and President of PROPWR®, Travis Simmering. This morning, we released our earnings results for the third quarter of 2026. Please note that any comments we make on today’s call regarding projections or our expectations for future events are forward-looking statements covered by the Private Securities Litigation Reform Act. Forward-looking statements are subject to several risks and uncertainties, many of which are beyond our control. These risks and uncertainties can cause actual results to differ materially",
+      "_model_response": {
+        "evidence_quote": "While the costs of rebuilding completions capacity continue to weigh on margins, our fleet is now essentially sold out and positioned to recontract into a tighter, better-priced market in 2027. Projects of larger scale require significant lead time, and we expect certain costs, including personnel, site preparation and mobilization, to build ahead of these deployments before the corresponding revenue and earnings are realized. We are now essentially sold out of available frac capacity. Those fleets are effectively sold out industry-wide, and we expect that premium to hold regardless of how the conflict in the Middle East unfolds, as limited supply and global refining constraints keep diesel prices elevated for the foreseeable future. Our fleet is essentially sold out.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Our fleet is essentially sold out. Those fleets are effectively sold out industry-wide",
+          "earnings_leverage": "positioned to recontract into a tighter, better-priced market in 2027",
+          "supply_demand_tightness": "our fleet is now essentially sold out and positioned to recontract into a tighter, better-priced market in 2027. ... We are now essentially sold out of available frac capacity. Those fleets are effectively sold out industry-wide, and we expect that premium to hold regardless of how the conflict in the Middle East unfolds, as limited supply and global refining constraints keep diesel prices elevated for the foreseeable future.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "positioned to recontract into a tighter, better-priced market in 2027"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "프랙 장비",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ProPetro Holding Corp. (PUMP)",
+        "theme": "유전 서비스",
+        "signal_type": "수주/백로그",
+        "what_happened": "ProPetro Holding Corp.의 프랙(frac) 장비 가동률이 사실상 완전 가동 상태이며, 2027년에는 더 타이트하고 가격이 좋은 시장에서 재계약할 수 있는 위치에 있다고 밝혔다.",
+        "why_it_matters": "회사의 핵심 장비가 완전 가동 상태이고 산업 전반의 공급 부족으로 가격 협상력이 높아져 향후 실적 개선의 잠재적 촉매가 될 수 있다.",
+        "what_to_watch": "2027년 재계약 시점의 ASP 변화 및 계약률, 그리고 프랙 장비의 추가적인 생산능력 증설 계획.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "프랙(Frac): 수압파쇄(Hydraulic Fracturing)의 줄임말로, 유정에서 원유나 천연가스를 추출하기 위해 고압의 유체를 주입하여 암석을 파쇄하는 기술.\nASP (Average Selling Price): 평균 판매 가격."
+      }
+    },
+    "content_hash": "197867d327a452f88a8cb512cbc9b517b899a3cdf3686dd0ba4577b71f2cf1b4",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-29T05:58:57+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001628280-26-067952": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-067952",
+      "entity_id": "CIK:0001699136",
+      "source_role": "candidate",
+      "title": "Cactus, Inc. (WHD) (CIK 0001699136) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1699136/000162828026067952/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1699136/000162828026067952/whd-20260930xexhibit991.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Cactus, Inc. (WHD) (CIK 0001699136) EX-99.1 2026-10-28. I am also pleased with our order intake in the third quarter as our backlog grew by more than $150 million, nearly doubling in our Spoolable Technologies segment. EX-99.1 2 whd-20260930xexhibit991.htm EX-99.1 Document Exhibit 99.1 Cactus Announces Third Quarter 2026 Results HOUSTON – October 28, 2026 – Cactus, Inc. (NYSE: WHD) (“Cactus” or the “Company”) today announced financial and operating results for the third quarter of 2026. Third Quarter Highlights • Revenue of $430.9 million and operating income of $94.0 million; • Net income of $74.1 million and diluted earnings per Class A share of $0.87; • Adjusted net income (1) of $78.0 million and diluted earnings per share, as adjusted (1) of $0.96; • Net income margin of 17.2% and adjusted net income margin (1) of 18.1%; • Adjusted EBITDA (2) and Adjusted EBITDA margin (2) of $132.0 million and 30.6%, respectively; • Cash and cash equivalents of $354.2 million, with no bank debt outstanding as of September 30, 2026; • In September 2026, the Board of Directors approved the construction of a new Spoolable Technologies manufacturing facility in the Middle East; and • In October 2026, the Board of Directors declared a quarterly cash dividend of $0.15 per Class A share. Financial Summary Three Months Ended September 30, June 30, September 30, 2026 2026 2025 (in thousands) Revenues $ 430,888 $ 449,528 $ 263,954 Operating income (3) $ 94,048 $ 83,582 $ 61,234 Operating income margin 21.8 % 18.6 % 23.2 % Net income $ 74,091 $ 61,380 $ 50,188 Net income margin 17.2 % 13.7 % 19.0 % Adjusted net income (1) $ 77,987 $ 75,113 $ 53,719 Adjusted net income margin (1) 18.1 % 16.7 % 20.4 % Adjusted EBITDA (2) $ 132,025 $ 132,780 $ 86,943 Adjusted EBITDA margin (2) 30.6 % 29.5 % 32.9 % (1) Adjusted net income, Adjusted net income margin and diluted earnings per share, as adjusted are non-GAAP financial measures. These figures assume Cactus, Inc. held all units in its operating s"
+    },
+    "content_hash": "fe71b805746720063ca24e001c9dc1595230cb62f064516b6ac06338813c7e7c",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000918541-26-000118": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000918541-26-000118",
+      "entity_id": "CIK:0000918541",
+      "source_role": "candidate",
+      "title": "NN INC (NNBR) (CIK 0000918541) EX-99.2 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/918541/000091854126000118/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/918541/000091854126000118/nnincq32026earningsprese.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "NN INC (NNBR) (CIK 0000918541) EX-99.2 2026-10-28. Pipeline Size $270M Pipeline data as of 10/9/26 11 Data Center and Electric Grid - Business Highlights ~$87M TTM Q3 Net Sales NN’s #2 Largest Market: Electric Grid and Data Center $48M New Awards New Product Line: Data Center AI chip cooling ~$100M Quoted Opportunities in Pipeline; Greater Amounts in Prospecting New Capacity: Adding Machines for AI Demand • Parts for AI data center racks, grid and site transformers, disconnects, breakers and smart meters • Grid edge power and in-rack cooling • Global prospecting with new and existing customers • Building global supply positions across multiple rack platforms • Leveraging NN’s fluid- management know-how • Multi-quarter ramp-ups underway, into Q1 2027 • 50+ new CNC machine centers in Wuxi to service Southeast Asia supply chains and global AI data center construction • Evaluating another NN plant in China to increase AI data center capacity Pipeline data as of 10/9/26 12 Data Center Specific Business Highlights ~$35M Q4 2026 EXIT ANNUAL REVENUE RUN RATE Up from ~$2M annually at beginning of 2025 INSTALLED MACHINE CAPACITY Expansion underway for liquid cooling parts Underway with continuous capacity expansion ~180 Objective ~19 Q3 2026 ~55 Q1 2027 ~$48M GLOBAL SALES PIPELINE Opportunities in China, Europe and N. America; TOP THREE SEGMENTS Growth supported by new products and new customers Power infrastructure Critical power-system components Rack components Components supporting rack architecture Liquid cooling systems Capacity expanding to support demand $100M LONG-TERM DATA CENTER BUSINESS GOAL Forward-Looking Management Objective; Not Estimated Revenue SHIPPING FROM FOUR PLANTS Pipeline Reach: China | North America | Europe Wuxi China Attleboro Massachusetts North Attleboro Massachusetts Kentwood Michigan BUSINESS IS GROWING SIGNIFICANT PIPELINE EXPANSION Pipeline data as of 10/9/26 13 NN Data Center Product Line Expanding and Ramping Up Precision-machined component",
+      "_model_response": {
+        "evidence_quote": "New Awards New Product Line: Data Center AI chip cooling ~$100M Quoted Opportunities in Pipeline; Greater Amounts in Prospecting New Capacity: Adding Machines for AI Demand • Parts for AI data center racks, grid and site transformers, disconnects, breakers and smart meters • Grid edge power and in-rack cooling • Global prospecting with new and existing customers • Building global supply positions across multiple rack platforms • Leveraging NN’s fluid- management know-how • Multi-quarter ramp-ups underway, into Q1 2027 • 50+ new CNC machine centers in Wuxi to service Southeast Asia supply chains and global AI data center construction • Evaluating another NN plant in China to increase AI data center capacity Pipeline data as of 10/9/26 12 Data Center Specific Business Highlights ~$35M Q4 2026 EXIT ANNUAL REVENUE RUN RATE Up from ~$2M annually at beginning of 2025 INSTALLED MACHINE CAPACITY Expansion underway for liquid cooling parts Underway with continuous capacity expansion",
+        "axes_evidence": {
+          "underfollowed_pure_play": "New Product Line: Data Center AI chip cooling",
+          "earnings_leverage": "$48M New Awards",
+          "supply_demand_tightness": "New Capacity: Adding Machines for AI Demand",
+          "structural_ai_demand": "Data Center AI chip cooling",
+          "revision_momentum": "~$35M Q4 2026 EXIT ANNUAL REVENUE RUN RATE Up from ~$2M annually at beginning of 2025",
+          "catalyst_visibility": "Multi-quarter ramp-ups underway, into Q1 2027"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI chip cooling",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "NN INC",
+        "theme": "AI 데이터센터 인프라",
+        "signal_type": "CAPEX",
+        "what_happened": "NN INC가 AI 데이터센터 및 액체 냉각 부품 수요 증가에 대응하기 위해 50개 이상의 CNC 기계 센터를 추가하고 생산 능력을 확장 중이며, 4,800만 달러 규모의 신규 수주를 확보했습니다.",
+        "why_it_matters": "AI 데이터센터의 폭발적인 성장은 액체 냉각 및 전력 인프라 부품의 수요를 급증시키고 있으며, NN INC는 이러한 핵심 병목 현상을 해결하는 순수 플레이어로서 초기 단계의 수혜를 입고 있습니다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 AI 데이터센터 관련 매출 성장률 및 수주잔고 변화; 추가적인 생산 능력 증설 계획 발표 및 실제 가동률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "CNC 기계 센터: 컴퓨터 수치 제어(Computer Numerical Control)를 통해 정밀 부품을 가공하는 기계; 액체 냉각: 데이터센터 서버의 열을 효율적으로 식히기 위해 액체를 사용하는 냉각 방식."
+      }
+    },
+    "content_hash": "67703c42941c53fd17584b7974c310a18ddd6bec23e5711ce168b53802392196",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-29T05:59:16+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0000785161-26-000236": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000785161-26-000236",
+      "entity_id": "CIK:0000785161",
+      "source_role": "candidate",
+      "title": "Encompass Health Corp (EHC) (CIK 0000785161) EX-99.2 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/785161/000078516126000236/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/785161/000078516126000236/ehcq32026earningsslides_.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Encompass Health Corp (EHC) (CIK 0000785161) EX-99.2 2026-10-28. 16 Multiple modalities for capacity expansion .................................................................................................................. Increase in cash tax payments primarily due to higher income, additional bonus depreciation and taxes paid in 2026 related to an underpayment from 2025 Encompass Health 13 Uses of free cash flow (as of October 28, 2026) ($ in millions) 9 Months 2026 Actuals 2025 Actuals 2026 Assumptions Growth Capacity expansions $441.0 $526.4 $675 to $725 Replacement IRFs 10.2 0.5 20 to 30 $451.2 $526.9 $695 to $755 Debt reduction Reduction (increase) in total debt(11) ($108.3) $7.0 TBD Shareholder distributions Dividends on common stock $57.9 $71.1 ~ $79 Common stock repurchases $203.7 $158.0 TBD Refer to pages 34-35 for end notes. Growth targets, fundamentals and value drivers Encompass Health 17 Multiple modalities for capacity expansion De novos • 300-500 beds per year Small format hospitals • 25-100 beds per year Ÿ 6-10 hospitals per year Ÿ Freestanding hospitals (inclusive of remote and satellite locations(13)) with greater than 30 beds Ÿ 4-8 acres of real estate Ÿ Two primary prototypes - one and two story - to best fit available real estate Ÿ Typically can accommodate future expansion Ÿ Addresses high occupancy levels at existing hospitals Ÿ Project size can vary depending on market demand, available land, CON requirements, etc. George, UT — 50 Fishers, IN — 50 Haslet, TX — 50 Flowood, MS — 50 Cookeville, TN ü — 40 Remote and satellite(13) Cleveland, TN 4Q26 40 — Conroe, TX (SFH) — 24 Other bed additions 145 to 190 150 to 200 Total capacity expansion* 534 to 579 514 to 564 Development activity 3Q 2026 Development activity highlights uDe novos opened # of beds JV Ÿ Norristown, PA 50 Beds added to existing hospitals 31 Remote and satellite announcement Ÿ Conroe, TX (SFH) 24 IRF development projects announced and underway** 17 SFH = Small Format Hospital "
+    },
+    "content_hash": "b5e6e411402597d58c2c645fb06f2ec714184f8f91332ee00aba0358f2a7a27f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001213900-26-113058": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-113058",
+      "entity_id": "CIK:0001051627",
+      "source_role": "candidate",
+      "title": "AXT INC (AXTI) (CIK 0001051627) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1051627/000121390026113058/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1051627/000121390026113058/ea030977401ex99-1.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "AXT INC (AXTI) (CIK 0001051627) EX-99.1 2026-10-28. “Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. EX-99.1 2 ea030977401ex99-1.htm PRESS RELEASE OF AXT, INC., DATED OCTOBER 28, 2026 (FURNISHED PURSUANT TO ITEM 7.01) Exhibit 99.1 FOR IMMEDIATE RELEASE Contacts: Gary Fischer Chief Financial Officer (510) 438-4700 Leslie Green Green Communications Consulting, LLC leslie@greencommunicationsllc.com AXT, Inc. Announces Up to RMB 3.67 Billion (Approximately US$545 Million) in Private Equity Financing for Subsidiary Tongmei FREMONT, Calif., Oct. 28, 2026 -- AXT, Inc. (NasdaqGS: AXTI), a leading manufacturer of compound semiconductor substrates, today announced that its majority-owned subsidiary, Beijing Tongmei Xtal Technology Co., Ltd. (“Tongmei”), has entered into definitive agreements for a private equity financing to fund further expansion of its manufacturing capacity for indium phosphide semiconductor substrates, expansion of its principal business operations, capital expenditures and general working capital. The financing agreements provide for a private equity investment in Tongmei by certain institutional investors of a minimum of RMB 1,912,350,000 (approximately US$285 million) and up to a maximum of RMB 3,668,639,053.25 (approximately US$545 million) (the “Maximum Amount”) in the ordinary shares of Tongmei. “This strategic financing represents a milestone for Tongmei, which is issuing its own shares to provide RMB directly into its operations,” said Morris Young, chief executive officer of AXT. “Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. Proceeds will also be used to increase capacity at our raw material companies in China. The lead investor, which is a leading Asia asset manager, has been instrumental in guiding companies through overseas listin"
+    },
+    "content_hash": "d13df99497452684e569c53a968c61b320bf100f0195fff6e600b8eed2086599",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001104659-26-119326": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-119326",
+      "entity_id": "CIK:0001385157",
+      "source_role": "candidate",
+      "title": "TE Connectivity plc (TEL) (CIK 0001385157) EX-99.2 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1385157/000110465926119326/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1385157/000110465926119326/tel-ex99d2.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "TE Connectivity plc (TEL) (CIK 0001385157) EX-99.2 2026-10-28. Q4 Results - Delivered an Increase of 12% in Sales and 21% in Adjusted EPS ▪ Sales of $5.3B, increased 12% reported and 13% on an organic basis Y/Y ▪ Orders of $6.1B, increased 29% Y/Y and 6% sequentially; book to bill of 1.14 ▪ Adjusted Operating Margins of 22%, expanded 100bps Y/Y; Adjusted EPS of $3.14, increased 21% Y/Y ▪ Free Cash Flow generation of ~$1.2B with ~$800M returned to shareholders Earnings Highlights 3 Organic Net Sales Growth (Decline), Adjusted Operating Margin, Adjusted EPS, Free Cash Flow, and Free Cash Flow Conversion are non-GAAP financial measures; see Appendix for descriptions and reconciliations Q1 FY27 Guidance ▪ Expect Sales of ~$5.35B, increasing 15% on a reported and organic basis Y/Y ▪ Expect Adjusted EPS of ~$3.30, increasing 21% Y/Y ▪ Strong orders and backlog expected to result in FY27 Y/Y organic sales growth consistent with FY26 FY26 - Achieved Full Year Records for Sales, Adjusted Operating Margins & EPS, and Free Cash Flow ▪ Sales of $19.9B, increased 15% reported and 12% on an organic basis Y/Y with broad growth across the portfolio ▪ Record orders of $22.2B supporting another year of strong double-digit growth in FY27 ▪ Adjusted EPS increased 24% Y/Y to $11.52; Adjusted Operating Margins of 22% expanded 120bps Y/Y ▪ Free Cash Flow of ~$3.4B with 100% conversion; ~$2.8B returned to shareholders and committed ~$1.6B for bolt-on acquisitions Reported FY25 Q4 FY26 Q3 FY26 Q4 Q4 Growth Y/Y Q/Q Industrial 2,254 2,933 3,322 47% 13% Transportation 2,428 2,760 2,733 13% (1)% Total TE 4,682 5,693 6,055 29% 6% Book to Bill 0.99 1.10 1.14 Segment Orders Summary ($ in millions) 4 ▪ Industrial segment orders in Q4 reflect double-digit growth across all businesses; DDN orders in FY26 increased ~70% ▪ Transportation segment orders reflect continued content outperformance in Auto and ICT, with end markets improving in commercial transportation Full year orders of $22.2B increased 2"
+    },
+    "content_hash": "6290e8b78cce3ec4f1eac2fa85e535f3e8ac03728e7abe71c0fe22ecea4f3874",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000700923-26-000051": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000700923-26-000051",
+      "entity_id": "CIK:0000700923",
+      "source_role": "candidate",
+      "title": "MYR GROUP INC. (MYRG) (CIK 0000700923) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/700923/000070092326000051/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/700923/000070092326000051/myrg-2026930x8kxexx991.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "MYR GROUP INC. (MYRG) (CIK 0000700923) EX-99.1 2026-10-28. Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. EX-99.1 2 myrg-2026930x8kxexx991.htm EX-99.1 Document Exhibit 99.1 MYR Group Inc. Announces Third-Quarter and First Nine-Months 2026 Results Board Approves New $100 Million Share Repurchase Program Thornton, Colo., October 28, 2026 – MYR Group Inc. (“MYR or the \"Company”) (NASDAQ: MYRG) , a holding company of leading specialty contractors serving the electric utility infrastructure, commercial and industrial construction markets in the United States and Canada, announced today its third-quarter and first nine-months 2026 financial results. Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. We delivered record quarterly revenues of $1.26 billion, net income of $60.0 million, and EBITDA of $110.0 million, supported by increased activity across both our T&D and C&I segments, including record quarterly C&I revenues. Through the first nine months of 2026, revenues reached $3.34 billion, reflecting healthy demand across our core markets and continued investment in critical electrical infrastructure. As we integrate Valley Electric and Comet Electric and expand our capabilities and geographic reach, we remain focused on disciplined execution, strengthening our "
+    },
+    "content_hash": "b0036eb5514954c2eae9fedc9f9cc38435131c1fad9dcb62fd9c9877b591f21d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001282637-26-000019": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001282637-26-000019",
+      "entity_id": "CIK:0001282637",
+      "source_role": "candidate",
+      "title": "NEWMARKET CORP (NEU) (CIK 0001282637) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1282637/000128263726000019/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1282637/000128263726000019/neu-20260930exx991earnings.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "NEWMARKET CORP (NEU) (CIK 0001282637) EX-99.1 2026-10-28. We continue to be pleased with the performance of our Specialty Materials segment and look forward to the capacity expansion projects for both ammonium perchlorate and high-purity hydrazine being completed by the end of 2026. EX-99.1 2 neu-20260930exx991earnings.htm EX-99.1 Document EXHIBIT 99.1 NewMarket Corporation Reports Third Quarter and First Nine Months 2026 Results • Third Quarter Net Income of $124 million and Earnings per Share of $13.50 • Nine Months Net Income of $376 million and Earnings per Share of $40.64 • Strong Cash Flow in the first Nine Months to fund stock repurchases, capital expenditures and dividends totaling almost $300 million Richmond, VA, October 28, 2026 – NewMarket Corporation (NYSE:NEU) Chairman and Chief Executive Officer, Thomas E. Gottwald, released the following earnings report of the Company’s operations for the third quarter and first nine months of 2026. Net income for the third quarter of 2026 was $124.1 million, or $13.50 per share, compared to net income of $100.3 million, or $10.67 per share, for the third quarter of 2025. For the first nine months of 2026, net income was $375.9 million, or $40.64 per share, compared to $337.5 million, or $35.78 per share, for the same period in 2025. Higher operating profit and a reduced effective tax rate were the primary drivers behind the rise in net income for both the third quarter and the first nine months of 2026 compared to the respective periods in 2025. Petroleum additives sales for the third quarter of 2026 were $651.0 million, compared to $649.1 million for the same period in 2025. Petroleum additives operating profit for the third quarter of 2026 was $130.9 million, compared to $131.3 million for the third quarter of 2025. Despite broader market softness in lubricant additives that resulted in an 8% decline in shipments, we successfully implemented surcharges to offset higher costs incurred due to the supply chain disrup"
+    },
+    "content_hash": "b167e2e5bd47db9000a141c0c420126e951c51334f59133e571e1f7c2dab1577",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001493152-26-048983": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-048983",
+      "entity_id": "CIK:0001868419",
+      "source_role": "candidate",
+      "title": "Cycurion, Inc. (CYCU, CYCUW) (CIK 0001868419) EX-99.3 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868419/000149315226048983/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1868419/000149315226048983/ex99-3.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Cycurion, Inc. (CYCU, CYCUW) (CIK 0001868419) EX-99.3 2026-10-28. The first half of 2026 includes $33,753 from the release of customer deposits and credit balances, a $15,000 vendor credit and a $6,541 gain on the sale of a vehicle to a member. 2026 includes $33,753 from the release of a customer deposit forgiven by the customer and other customer credit balances, the $15,000 vendor credit, $9,480 from closing out balances of terminated customers and a $3,030 adjustment of debt balances to lender statements. June 30, 2026 December 31, 2025 December 31, 2024 Cash $ 318,430 $ 478,981 $ 339,565 Total current assets 524,663 844,741 842,170 Total current liabilities 539,383 1,099,347 1,852,725 Working capital (deficit) (14,720 ) (254,606 ) (1,010,555 ) Working capital excluding deferred revenue and customer deposits 381,774 545,890 110,625 Total debt (incl. Current liabilities include deferred revenue that will be settled primarily through the delivery of services rather than cash; excluding deferred revenue and customer deposits, working capital was $381,774 and $545,890, respectively. Although net income was $255,339, deferred revenue decreased $338,725 as previously billed services were delivered while billings declined, accounts payable and accrued liabilities decreased $147,747, and we refunded $31,524 of a customer deposit. Customer deposits are recognized as income only when the customer releases them."
+    },
+    "content_hash": "6703049b67bf588c539d1895d5b377d279b4e50af015ad626a9f6bf132425761",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000912767-26-000060": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000912767-26-000060",
+      "entity_id": "CIK:0000912767",
+      "source_role": "candidate",
+      "title": "UFP INDUSTRIES INC (UFPI) (CIK 0000912767) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/912767/000091276726000060/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/912767/000091276726000060/ufpi-ex99d1.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "UFP INDUSTRIES INC (UFPI) (CIK 0000912767) EX-99.1 2026-10-28. RESULT: • Efficient capital allocation • High ROIC • Insiders and employees own more than 11% of shares outstanding* RESULT: • Robust pipeline of new products • New customers and markets • Higher EBITDA margins Teamwork, accountability, devotion to the customer and internal competition create a results-driven culture that drives personal and professional growth throughout the organization. Structure RESULT: Improved performance from • Greater alignment with customers • Quicker introduction of new, value-added products • Better, more rapid decision making *Form 5 and employee compensation plan reports 9 OBJECTIVES Above Market Organic Growth STRATEGIES • New Customers and Verticals • Dynamic Pricing • Capacity Expansion / Greenfield Investments • Automation / Robotics • Operational Technology • Supply Chain Optimization • Capacity Consolidations FINANCIAL GOALS Unit Sales Growth 7-10% CAGR Adjusted EBITDA Margin 12.5% ROIC on New Investments >15% Conservative Capital Structure ~1.5x EBITDA Operational Excellence Investments in Higher Margin Core Businesses Value-Added Sales Mix Improvements • New Products / Alternative Materials • Customer and Product Stratification • R&D / Innovation STRATEGIES FINANCIAL GOALS, OBJECTIVES AND STRATEGIES 2013 41% 59% 3% 31% 69% 7.2% 40% 60% 9.7% 32% 68% 8.9% 32% 68% 7.7% Value-added as a percent of sales VALUE-ADDED SALES Commodity Value-added 2011 2021 2025 Value-added products improve mix, raise adjusted EBITDA margins 10 2019 EBITDA Margin PalletOne and Spartanburg Forest Products acquisitions Q3 2026 TTM CONSTRUCTION RETAIL PACKAGING ALTERNATIVE MATERIALS MANUFACTURING GROWTH Investments in value-added adjacencies add to TAM 11 Wood Components BROADER MARKET OPPORTUNITIES | MARGIN ENHANCEMENT | INCREASED WALLET SHARE Core/Historical Current state/Future scaling growth via capex and M&A Pressure-Treated Lumber Wood Crates Light Gauge Metal Components Deckorators Surest",
+      "_model_response": {
+        "evidence_quote": "OBJECTIVES Above Market Organic Growth STRATEGIES • New Customers and Verticals • Dynamic Pricing • Capacity Expansion / Greenfield Investments • Automation / Robotics • Operational Technology • Supply Chain Optimization • Capacity Consolidations FINANCIAL GOALS Unit Sales Growth 7-10% CAGR Adjusted EBITDA Margin 12.5% ROIC on New Investments >15% Conservative Capital Structure ~1.5x EBITDA Operational Excellence Investments in Higher Margin Core Businesses Value-Added Sales Mix Improvements • New Products / Alternative Materials • Customer and Product Stratification • R&D / Innovation STRATEGIES FINANCIAL GOALS, OBJECTIVES AND STRATEGIES",
+        "axes_evidence": {
+          "underfollowed_pure_play": "원문에서 회사의 시장 소외 여부나 특정 산업에 대한 순수 노출도를 판단할 근거가 없습니다.",
+          "earnings_leverage": "회사는 'Adjusted EBITDA Margin 12.5%', 'ROIC on New Investments >15%', 'Investments in Higher Margin Core Businesses', 'Value-Added Sales Mix Improvements' 등을 재무 목표 및 전략으로 제시하여 수익성 개선 노력을 명시했습니다.",
+          "supply_demand_tightness": "원문에는 시장의 수급 상황에 대한 정보가 포함되어 있지 않습니다.",
+          "structural_ai_demand": "원문에서 AI 관련 수요나 기술에 대한 언급은 없습니다.",
+          "revision_momentum": "제시된 내용은 장기적인 재무 목표 및 전략이며, 현재 시장의 추정치 상향 모멘텀을 직접적으로 나타내지는 않습니다.",
+          "catalyst_visibility": "생산 능력 증설, 신규 고객 및 시장 확대, 신제품 개발 등 구체적인 성장 전략이 제시되었으나, 이러한 계획의 실행 시점이나 구체적인 프로젝트 진행 상황에 대한 가시성은 낮습니다."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "UFP INDUSTRIES INC",
+        "theme": "성장전략",
+        "signal_type": "CAPEX",
+        "what_happened": "UFP Industries는 시장을 상회하는 유기적 성장을 목표로 생산 능력 증설 및 신규 시장 진출 등 장기적인 성장 전략과 재무 목표를 발표했다.",
+        "why_it_matters": "회사의 구체적인 CAPEX 및 성장 전략은 미래 매출 증대와 수익성 개선을 위한 기반을 마련하며, 장기적인 기업 가치 상승의 잠재력을 시사한다.",
+        "what_to_watch": "향후 구체적인 CAPEX 투자 발표 및 진행 상황, 가치 부가 제품 판매 비중 변화.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 2,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 지출하는 자본적 지출. Greenfield Investments: 기존 시설이 없는 새로운 부지에 공장 등을 건설하는 투자."
+      }
+    },
+    "content_hash": "14dd2540a9475d6a03c03e087448f7255030c977c3360a9901196ca6dd7a6226",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-29T05:59:38+00:00",
+    "signal_id": "SIG-0915",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-29",
+    "processed_run": "40826300195-1"
+  },
+  "0001193125-26-436157": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-436157",
+      "entity_id": "CIK:0001015739",
+      "source_role": "candidate",
+      "title": "AWARE INC /MA/ (AWRE) (CIK 0001015739) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1015739/000119312526436157/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1015739/000119312526436157/awre-ex99_1.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "AWARE INC /MA/ (AWRE) (CIK 0001015739) EX-99.1 2026-10-28. • Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. While federal procurement cycles remain difficult to predict, converting our new federal government engagement into an active customer represents meaningful progress.” Aware also continued to expand its commercial business, including a new relationship with Adobe Acrobat Sign's distributor, delivering biometric security for customers using Adobe Acrobat Sign, with new customer activity in Latin America. EX-99.1 2 awre-ex99_1.htm EX-99.1 EX-99.1 EXHIBIT 99.1 Company Contact Delaney Gembis Aware, Inc. 781-687-0300 marketing@aware.com Investor Contact David Traverse Aware, Inc. 781-687-0300 IR@aware.com Aware Reports Third Quarter Financial Results BURLINGTON, MASS. – October 28, 2026 – Aware, Inc. (NASDAQ: AWRE), a global leader in biometric orchestration, today reported financial results for the third quarter ended September 30, 2026. Third Quarter 2026 Operational Highlights • Selected by a government agency customer to deploy Intelligent Liveness capabilities from the Awareness Platform, marking an important step forward for the platform’s use in high-assurance identity environments. • Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. • Realized the impact of cost-reduction actions implemented earlier in 2026, actions expected to generate approximately $4.0 million in annualized savings, contributing to a reduction in operating loss compared with the prior-year period. Management Commentary \"Third-quarter revenue was $4.4 million, compared with $5.1 million in the prior-year period and recurring revenue grew to approximately $4.0 million from approximately $3.6 million a year ago,” said Ajay Amlani, CEO and President of Aware.” While we made progress in several important areas, improving revenue consistency"
+    },
+    "content_hash": "a198f75cc0eaded1fb6bec8f1f054f540243a5307cf8727e60ddd6dca5d1bf87",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001193125-26-435175": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-435175",
+      "entity_id": "CIK:0001394056",
+      "source_role": "candidate",
+      "title": "ONE STOP SYSTEMS, INC. (OSS) (CIK 0001394056) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1394056/000119312526435175/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1394056/000119312526435175/oss-ex99_1.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "ONE STOP SYSTEMS, INC. (OSS) (CIK 0001394056) EX-99.1 2026-10-28. The 35.9% year-over-year increase in total revenue was driven by revenue generated from new customers in 2026 and from higher production volumes with certain existing customers. Key drivers of the revenue increase included initial deliveries to a new customer developing a network of autonomous energy nodes engineered to power compute payloads, higher production deliveries to a commercial aerospace customer for in-flight entertainment systems, and higher sales to a medical imaging OEM to support a breast cancer screening application. The 48.3% year-over-year increase in total revenue was driven by revenue generated from new customers in 2026 and from higher production volume with certain existing customers. Key drivers of the revenue increase included higher sales to support the P-8A Poseidon reconnaissance aircraft, higher sales to a medical imaging OEM to support a breast cancer screening application, higher sales for military applications onboard naval vessels and aircraft, initial deliveries to a new customer developing a network of autonomous energy nodes, and higher revenue from customer-funded development programs."
+    },
+    "content_hash": "ea6e7cecece7de9edc0b1441b8da4d4bb8fb9dc89046be0a8a16b427b2ea94dd",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000822818-26-000045": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000822818-26-000045",
+      "entity_id": "CIK:0000822818",
+      "source_role": "candidate",
+      "title": "CLEAN HARBORS INC (CLH) (CIK 0000822818) EX-99.2 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/822818/000082281826000045/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/822818/000082281826000045/executiveleadershipchange.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "CLEAN HARBORS INC (CLH) (CIK 0000822818) EX-99.2 2026-10-28. Such statements may include, but are not limited to, statements about the Company’s planned executive transition, future financial and operating results, plans, strategy, objectives and goals, strategic initiatives, cost management initiatives, pricing and productivity initiatives, contingent liabilities, interest expense, liquidity, business, economic and market conditions, trends, customer demand, expectations regarding new customer contracts, impacts of tariffs and new legislation, acquisitions, growth opportunities and investments, expectations, challenges and other statements that are not historical facts. EX-99.2 3 executiveleadershipchange.htm EX-99.2 Document EXHIBIT 99.2 Press Release Clean Harbors Announces Eric Gerstenberg as CEO; Mike Battles to Retire as Co-CEO and Director at Year-End NORWELL, Mass. – October 28, 2026 – Clean Harbors, Inc. (“Clean Harbors” or the “Company”) (NYSE: CLH), the leading provider of environmental and industrial services throughout North America, today announced that Eric Gerstenberg will serve as sole Chief Executive Officer effective January 1, 2027. Mike Battles has decided to retire as Co-Chief Executive Officer and a member of the Company’s Board of Directors on December 31, 2026, and will serve in a strategic advisory role to the Company in 2027. “Since appointing Eric and Mike as Co-CEOs in March 2023, Clean Harbors has experienced continued success, including delivering record top- and bottom-line results and more than tripling its stock price,” said Rob Willett, Chairman of the Board. “This next step for our leadership team is endorsed by both Co-CEOs and the Board. Eric has proven himself to be an exceptional leader. With over 35 years at the Company, his understanding of the business, operational insights and knowledge of the hazardous waste industry are unmatched. We are excited to turn over the reins of the Company to his capable hands to guide us throu"
+    },
+    "content_hash": "90b30306d538e6c48ff8c934edd2cada1a6cf59dc5edb5cbb862d834be86a84e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001437749-26-033702": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-033702",
+      "entity_id": "CIK:0000709337",
+      "source_role": "candidate",
+      "title": "FARMERS NATIONAL BANC CORP /OH/ (FMNB) (CIK 0000709337) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/709337/000143774926033702/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/709337/000143774926033702/ex_1032464.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "FARMERS NATIONAL BANC CORP /OH/ (FMNB) (CIK 0000709337) EX-99.1 2026-10-28. 30, End of Period Customer Deposit Balances 2026 2026 2026 2025 2025 Noninterest-bearing demand $1,415,970 $1,368,145 $1,334,021 $994,122 $994,604 Interest-bearing demand 1,625,103 1,626,459 1,698,780 1,377,520 1,443,422 Money market 1,434,215 1,397,397 1,395,660 795,631 761,788 Savings 495,992 560,710 576,089 408,743 410,165 Certificate of deposit 837,490 878,402 916,835 766,762 790,536 Total customer deposits $5,808,770 $5,831,113 $5,921,385 $4,342,778 $4,400,515 Memo: Public funds included in above numbers $976,373 $989,604 $1,056,571 $773,896 $867,253 For the Three Months Ended For the Nine Months Ended Sept. EX-99.1 2 ex_1032464.htm EXHIBIT 99.1 ex_1032464.htm Exhibit 99.1 October 28, 2026 Press Release Source: Farmers National Banc Corp. Kevin J. Helmick, President and CEO 20 South Broad Street, P.O. Box 555 Canfield, OH 44406 330.533.3341 Email: exec@farmersbankgroup.com FARMERS NATIONAL BANC CORP. REPORTS RESULTS FOR THIRD QUARTER OF 2026 ● 175 consecutive quarters of profitability ● EPS was $0.25 for the quarter, $0.47 excluding acquisition, core conversion and security restructure costs (non-GAAP) ● Outstanding loan growth of 1.6% for the quarter, or 6.6% annualized ● Completed a core system conversion to Jack Henry during the quarter ● Completed a $90.5 million security restructuring and recognized a $10.3 million loss ● Recognized $3.9 million of other income on the full payoff of a loan partially charged off by Middlefield Banc Corp. prior to the acquisition ● Net interest margin increased to 3.54% in the third quarter of 2026 from 3.44% in the second quarter of 2026 and 3.00% in the third quarter of 2025 ● Efficiency ratio was 68.0% in the third quarter of 2026, 50.2% excluding acquisition and core conversion costs (non-GAAP) CANFIELD, Ohio (October 28, 2026) – Farmers National Banc Corp. (“Farmers” or the “Company”) (NASDAQ: FMNB) today announced net income of $14.5 million, o"
+    },
+    "content_hash": "f3b807a3f115e167e51701c93b3eca3d025830cb488aeb608878ba5b440643ca",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001402829-26-000056": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001402829-26-000056",
+      "entity_id": "CIK:0001402829",
+      "source_role": "candidate",
+      "title": "Orion Group Holdings Inc (ORN) (CIK 0001402829) EX-99.2 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1402829/000140282926000056/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1402829/000140282926000056/orn-ex99d2.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Orion Group Holdings Inc (ORN) (CIK 0001402829) EX-99.2 2026-10-28. PRE-2022 2022-2026 2026+ LEGACY BUSINESS MODEL BUSINESS TRANSFORMATION SCALING FOR PROFITABLE GROWTH • Broader project pursuit strategy • Opportunity to strengthen operating discipline • More concentrated on smaller-scale projects • Instituted disciplined bidding and risk management • Improved project execution and profitability • Expanded capabilities and addressable markets • Positioned Orion to pursue larger, more complex $200M+ opportunities • Enhanced financial flexibility through a new long-term credit facility • Positioned in attractive infrastructure end markets • Complement organic growth through M&A • Modernized ERP and project management systems to enhance operating execution • Significant operating leverage as revenue scales • Focus on converting growth into higher EBITDA and cash flow • Targeting mid-teen adjusted EBITDA margin by 2030 • Growing demand across defense, ports and coastal resilience supports better project selection and pricing power • Continued application of disciplined bidding and risk management practices installed since 2022 • Scale from larger, more complex awards creates operating leverage as volume grows #3 ENR RANKING IN MARINE AND PORTS Source: ENR Magazine, September 2026 Design, salvage, demolition, towing and diving Underwater inspection, excavation, repair, and engineering • Targeting high-single digit adjusted EBITDA margin by 2030 • Growing AI and cloud investment fueling demand for data center infrastructure • Applying Marine’s disciplined bidding and risk management playbook • Shifting mix toward higher-margin data center and structural work • Targeting high-single digit adjusted EBITDA margin by 2030 • Growing AI and cloud investment fueling demand for data center infrastructure • Applying Marine’s disciplined bidding and risk management playbook • Shifting mix toward higher-margin data center and structural work #12 ENR RANKING IN SPECIALTY CONCRETE Sou"
+    },
+    "content_hash": "e2535031ac4d90b7c37512028226b2ab8e324c34de94a47a6558617287619b00",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001193125-26-436183": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-436183",
+      "entity_id": "CIK:0001481582",
+      "source_role": "candidate",
+      "title": "Ryerson Holding Corp (RYZ) (CIK 0001481582) EX-99.2 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1481582/000119312526436183/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1481582/000119312526436183/ryz-ex99_2.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Ryerson Holding Corp (RYZ) (CIK 0001481582) EX-99.2 2026-10-28. LIFO guidance Strongest same-store shipment volume in over 5 years More than doubled net income sequentially while improving expenses as a percentage of sales INTEGRATION ACHIEVMENTS Surpassed first-year synergy run-rate1 target ahead of schedule, reaching approximately $52M versus a $40M goal Exceeding commercial synergy expectations through shared inventory, coordinated processing and new customer solutions across the combined network POSITIONED FOR MORE Expect $14–$15M in Q4 synergies, or $56-60M on an annualized, run-rate basis Targeting year-end leverage below 3.0x as we expect TTM EBITDA to increase and seasonal working capital requirements to ease Expanded scale improves availability, reliability, and speed of service for customers Exceeded shipment, sales, and earnings guidance and eclipsed first-year annual run-rate synergy target ahead of schedule while generating market share gains, productivity gains, and higher book value per share alongside excellent net working capital management Q3 2026 Highlights 1. Our expanded network, processing capabilities and improving inventory visibility helped teams meet customer needs amid tight product availability and extended mill lead times."
+    },
+    "content_hash": "903ee17592d962d334bacdfa3d5e65d97c38206dfc63f6a50ef6b0f473dfb12b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000028823-26-000038": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000028823-26-000038",
+      "entity_id": "CIK:0000028823",
+      "source_role": "candidate",
+      "title": "DIEBOLD NIXDORF, Inc (DBD) (CIK 0000028823) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/28823/000002882326000038/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/28823/000002882326000038/ex-991q32026erlive.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "DIEBOLD NIXDORF, Inc (DBD) (CIK 0000028823) EX-99.1 2026-10-28. Our strategic priorities are translating into tangible progress, including new customer wins, expanding opportunities in North America Retail and continued improvements in our Services business. We remain focused on improving profitability and cash conversion while continuing to invest in the opportunities that position Diebold Nixdorf for sustainable growth and long-term shareholder value creation.” Key Third Quarter Business Highlights Banking : Broader automation opportunities • Signed contract for more than 500 DN Series® cash recyclers with one of the largest banks in North America, and achieved a large Branch Automation Solutions win in Latin America for 360 in-branch DN Series cash recyclers — providing tangible evidence of our branch automation strategy • Won a competitive deal for 1,450 ATMs and expanded the install base for a major customer in Asia Retail: Expansion in North America and European leadership position deliver 16% revenue growth YoY • New customer win with a North America regional grocer for ~1,200 point-of-sale lanes across 200 stores • Continued strong momentum in Europe, with a win to refresh 6,000 self-checkout units for a large grocery chain and a new services agreement valued at more than $25 million to support electronic shelf label technology for a U.K.-based multinational grocery and general merchandise retailer Page 1 Full-Year 2026 Financial Outlook Diebold Nixdorf has updated its full-year 2026 financial outlook."
+    },
+    "content_hash": "97484ee7c5128ff165035cd85b64fd3ac7984d0c6677587d161ca2a95c571474",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001193125-26-436158": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-436158",
+      "entity_id": "CIK:0000880117",
+      "source_role": "candidate",
+      "title": "SANFILIPPO JOHN B & SON INC (JBSS) (CIK 0000880117) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/880117/000119312526436158/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/880117/000119312526436158/jbss-ex99_1.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "SANFILIPPO JOHN B & SON INC (JBSS) (CIK 0000880117) EX-99.1 2026-10-28. Contract Manufacturing Distribution Channel +41.3% This sales volume increase was mainly driven by increased snack nut sales to a significant new customer that was added in the second quarter of the prior year. EX-99.1 2 jbss-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 John B. Sanfilippo & Son, Inc. Reports Fiscal 2027 First Quarter Results Company Reports First Quarter Diluted EPS of $1.11 per Share Elgin, IL, October 28, 2026 -- John B. Sanfilippo & Son, Inc. (NASDAQ: JBSS) (the “Company”) today announced financial results for its fiscal 2027 first quarter ended September 24, 2026. First Quarter Summary • Net sales decreased $10.5 million, or 3.5%, to $288.1 million • Sales volume remained flat at 90.5 million pounds. • Gross profit decreased 9.6% to $48.9 million • Diluted EPS decreased 30.2% to $1.11 per share CEO Commentary “I am honored to serve as Chief Executive Officer and build upon the strong foundation of our Company. We remain committed to profitable growth, operational excellence, disciplined capital allocation, and maintaining our financial strength, while continuing to deliver exceptional service to our customers. We delivered a solid start to fiscal 2027 in a difficult economic environment. Sales volume was unchanged from the prior year period end, marking our third consecutive quarter of stable or improving volume performance. While last year's exceptionally strong first quarter diluted EPS provided a difficult comparison, we improved diluted EPS by more than 50% compared to the fourth quarter of fiscal 2026, demonstrating meaningful improvement in profitability and positive momentum during the 2026 calendar year. Looking ahead, we remain focused on executing our strategic priorities and believe we are well positioned to build on this momentum throughout fiscal 2027,” stated Jasper B. Sanfilippo, Jr., Chief Executive Officer. First Quarter Results Net Sales Net sales for the first "
+    },
+    "content_hash": "33e33634be188cc6641cd543a4fd8a702d0f8c872feb1e6174250eff1037978f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000004904-26-000069": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000004904-26-000069",
+      "entity_id": "CIK:0000004904",
+      "source_role": "candidate",
+      "title": "AMERICAN ELECTRIC POWER CO INC (AEP) (CIK 0000004904) EX-99 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000069/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000069/a3q20268kpressreleaseex991.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "AMERICAN ELECTRIC POWER CO INC (AEP) (CIK 0000004904) EX-99 2026-10-28. Among the factors that could cause actual results to differ materially from those in the forward-looking statements are: changes in economic conditions, electric market demand and demographic patterns in AEP’s service territory; the economic impact of increased global conflicts and trade tensions, and the adoption or expansion of economic sanctions, tariffs, trade restrictions or changes in trade policy; inflationary or deflationary interest rate trends; new, modified, repealed or suspended federal, state or local legislation, regulations, policies or executive actions that alter the regulatory framework, delay or prevent approvals or permits, affect approved or planned investments, or prevent timely recovery of costs and investments; volatility and instability in financial markets precipitated by disruptive events, including fiscal and monetary policy or uncertainty in the banking industry, particularly developments affecting the availability or cost of capital to finance new capital projects and refinance existing debt; the availability and cost of funds to finance working capital and capital needs, particularly (a) if expected sources of capital such as proceeds from the sale of tax credits and anticipated securitizations do not materialize or do not materialize at the level anticipated, and (b) during periods when the time lag between incurring costs and recovery is long and the costs are material; changing demand for electricity, including large load contractual commitments; the risks and uncertainties associated with wildfires, including damages caused by wildfires, the extent of each Registrant’s liability in connection with wildfires, investigations and outcomes associated with legal proceedings, demands or similar actions, inability to recover wildfire costs through insurance or through rates and the impact on financial condition and the reputation of each Registrant; the impact of extr"
+    },
+    "content_hash": "b9b46a990cf5d0389df6f2ffee27a96bdd61bb8d4224c0674e0b30a5d95600cc",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001517175-26-000034": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001517175-26-000034",
+      "entity_id": "CIK:0001517175",
+      "source_role": "candidate",
+      "title": "Chefs' Warehouse, Inc. (CHEF) (CIK 0001517175) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1517175/000151717526000034/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1517175/000151717526000034/pressreleaseex99109252026.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Chefs' Warehouse, Inc. (CHEF) (CIK 0001517175) EX-99.1 2026-10-28. The risks and uncertainties which could impact these statements include, but are not limited to the following: our success depends to a significant extent upon general economic conditions, including disposable income levels and changes in consumer discretionary spending; the relatively low margins of our business, which are sensitive to inflationary and deflationary pressures and intense competition; changes in our credit profile and any effect they may have on our relationships with suppliers; the effects of rising costs for and/or decreases in supply of commodities, ingredients, packaging, other raw materials, distribution and labor; price reductions by our manufacturers of products that we sell which could cause the value of our inventory to decline or our customers to demand lower sales prices; fuel cost volatility and its impact on distribution, packaging and energy costs; our continued ability to promote our brand successfully, to anticipate and respond to new customer demands, and to develop new products and markets to compete effectively; our ability and the ability of our supply chain partners to continue to operate distribution centers and other work locations without material disruption, and to procure ingredients, packaging and other raw materials when needed despite disruptions in the supply chain or labor shortages; risks associated with the expansion of our business; our possible inability to identify new acquisitions or to integrate recent or future acquisitions, or our failure to realize anticipated revenue enhancements, cost savings or other synergies from recent or future acquisitions; other factors that affect the food industry generally, including: recalls if products become adulterated or misbranded, liability if product consumption causes injury, ingredient disclosure and labeling laws and regulations and the possibility that customers could lose confidence in the safety and qu"
+    },
+    "content_hash": "c72459944cd76554ef0de6090184b4b347c8f1cacbeeda92686bb0d78b70ebec",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000785786-26-000062": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000785786-26-000062",
+      "entity_id": "CIK:0000785786",
+      "source_role": "candidate",
+      "title": "PLEXUS CORP (PLXS) (CIK 0000785786) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/785786/000078578626000062/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/785786/000078578626000062/plxsf26q4earningsrelease-e.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "PLEXUS CORP (PLXS) (CIK 0000785786) EX-99.1 2026-10-28. Each market sector delivered strong performance and secured exciting new customer programs and relationships. These risks and uncertainties include the effects of tariffs, trade disputes, trade agreements and other trade protection measures; the effects of shortages, delays and price fluctuations in obtaining components as a result of economic cycles, capacity constraints, natural disasters or otherwise; the risk of customer delays, changes, cancellations or forecast inaccuracies in both ongoing and new programs; the particular risks relative to new or recent customers, programs or services, which risks include customer and other delays, start-up costs, potential inability to execute, the establishment of appropriate engagement terms, and the lack of a track record of order volume and timing; the risk that new program wins and/or customer demand may not result in the expected revenue or profitability; the lack of visibility of future orders, particularly in view of changing economic conditions; the economic performance of the industries, sectors and customers we serve; the effects of the volume of revenue from certain sectors or programs on our margins in particular periods; our ability to secure new customers, maintain our current customers and deliver product on a timely basis; the risks of concentration of work for certain customers; the effects of start-up costs of new programs and facilities or the costs associated with winding down programs or the closure or consolidation of facilities; possible unexpected costs and operating disruption in transitioning programs, including transitions between Company facilities; the risks associated with excess and obsolete inventory, including the risk that inventory purchased on behalf of our customers may not be consumed or otherwise paid for by the customer, resulting in an inventory write-off; the fact that customer orders may not lead to long-term relationships; our"
+    },
+    "content_hash": "7dae7198fe0db5e3f5b27ce06debf9d88a7ba9d7442958e2326d39854b53ffa4",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001104659-26-119345": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-119345",
+      "entity_id": "CIK:0002005951",
+      "source_role": "candidate",
+      "title": "Smurfit Westrock plc (SW) (CIK 0002005951) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/2005951/000110465926119345/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2005951/000110465926119345/tm2628367d1_ex99-1.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Smurfit Westrock plc (SW) (CIK 0002005951) EX-99.1 2026-10-28. We remain sold out in all containerboard grades, and most consumer grades, and our converting businesses in both business areas continue to improve. EX-99.1 2 tm2628367d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 www.smurfitwestrock.com Smurfit Westrock Reports Third Quarter 2026 Results October 28, 2026 – Smurfit Westrock plc (NYSE: SW) today announced the financial results for the third quarter ended September 30, 2026. Key Points: • Net Sales of $8,161 million • Net Income of $219 million, with a Net Income Margin of 2.7% • Adjusted EBITDA1 of $1,205 million, with an Adjusted EBITDA Margin1 of 14.8% • Net Cash Provided by Operating Activities of $874 million • Quarterly dividend of $0.4523 per ordinary share Smurfit Westrock plc’s performance for the three months ended September 30, 2026 and 2025 (in millions, except margins and per share data): Three months ended September 30, 2026 2025 Net Sales $ 8,161 $ 8,003 Net Income $ 219 $ 245 Net Income Margin 2.7 % 3.1 % Adjusted EBITDA 1 $ 1,205 $ 1,302 Adjusted EBITDA Margin 1 14.8 % 16.3 % Net Cash Provided by Operating Activities $ 874 $ 1,133 Basic EPS $ 0.42 $ 0.47 Adjusted Basic EPS 1 $ 0.45 $ 0.58 Tony Smurfit, President and CEO, commented: “Set against unprecedented cost inflation and somewhat weaker than anticipated converting volumes, our third quarter performance of Adjusted EBITDA 1 of $1,205 million with an Adjusted EBITDA Margin 1 of 14.8% represents a resilient performance. Across all our regions we continue to make good progress in implementing our owner operator model and developing our innovative packaging approach for our customers. We have also implemented significant pricing initiatives across most paper grades and we expect these should more than offset input costs as these increases are passed through. “Our North American business continues to make good progress. The region reported Adjusted EBITDA of $760 million and an Adjusted EBITDA m"
+    },
+    "content_hash": "5dcb10e35aa79bf767f752071dead988de738c08d4935cd1a23084d1bbf2dbfc",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001409970-26-000198": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001409970-26-000198",
+      "entity_id": "CIK:0001409970",
+      "source_role": "candidate",
+      "title": "Happen, Inc. (HAPN) (CIK 0001409970) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1409970/000140997026000198/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1409970/000140997026000198/q326exhibit991er.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Happen, Inc. (HAPN) (CIK 0001409970) EX-99.1 2026-10-28. AI and Operating Efficiency: The company has multiple AI initiatives underway across marketing, product, engineering, operations, customer experience, and compliance, with the goal of improving member experience, driving efficiency, facilitating new customer acquisition, and supporting margin expansion over time. EX-99.1 2 q326exhibit991er.htm EX-99.1 Document EXHIBIT 99.1 Happen, Inc. Reports Third Quarter 2026 Results Record $76.8 Million Pre-Tax Income, 15.0% ROE, and 15.8% ROTCE Grew Originations 26% Year-over-Year, Increased Diluted EPS 35% Year-over-Year to $0.50 Raising Diluted EPS and Narrowing Originations Annual Guidance Ranges SAN FRANCISCO – October 28, 2026 – Happen, Inc. (Nasdaq: HAPN), parent company of Happen Bank, a digital bank built for the Motivated Middle, today announced financial results for the third quarter ended September 30, 2026. “We had another great quarter, effectively navigating the dynamic rate environment to deliver record pre-tax income of $76.8 million and a return on tangible common equity of 15.8%, while growing originations 26% year-over-year to $3.3 billion ,” said Scott Sanborn, CEO, Happen, Inc. “Our new brand is taking root, our core business is performing well, we continue to outperform on credit, marketplace demand remains strong. We’re also effectively delivering against each of our growth initiatives, including starting to scale into the $500 billion home improvement market.” Third Quarter 2026 Results Highlights: • Delivered growth across lending businesses, resulting in a 26% increase in quarterly originations. • Added distribution partners in the home improvement business, with a strong pipeline of interest. • Continued multi-year credit outperformance versus competitor set, with ~40% lower delinquencies. • Crossed $10 billion in loans sold through proprietary structured certificates programs, reflecting robust marketplace demand. • AI-powered agent support too"
+    },
+    "content_hash": "eef19659f2fe1a8f65e183b4a49196439f3cd4c1843d5e4b519b9980aac6debd",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0001490906-26-000036": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001490906-26-000036",
+      "entity_id": "CIK:0001490906",
+      "source_role": "candidate",
+      "title": "Capitol Federal Financial, Inc. (CFFN) (CIK 0001490906) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1490906/000149090626000036/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1490906/000149090626000036/earningsrelease0926.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Capitol Federal Financial, Inc. (CFFN) (CIK 0001490906) EX-99.1 2026-10-28. Our experienced and well-connected commercial bankers and trust and wealth advisors continue to identify and on-board new customer groups. This team focuses on serving the deposit and cash management needs of commercial customers, growing this line of business through the acquisition of new customers located in our local market areas, and those we lend to outside these areas. Treasury management officers and business development officers often establish deposit relationships with new customers independent of a lending relationship. We invest in digital banking to better serve our existing customers and attract new customers. EX-99.1 2 earningsrelease0926.htm PRESS RELEASE ANNOUNCING EARNINGS Document NEWS RELEASE FOR IMMEDIATE RELEASE October 28, 2026 CAPITOL FEDERAL FINANCIAL, INC. ® REPORTS FOURTH QUARTER AND FISCAL YEAR 2026 RESULTS Topeka, KS - Capitol Federal Financial, Inc. ® (NASDAQ: CFFN) (the \"Company,\" \"we\" or \"our\"), the parent company of Capitol Federal Savings Bank (the \"Bank\"), announced preliminary results today for the quarter and fiscal year ended September 30, 2026. For best viewing results, please view this release in Portable Document Format (PDF) on our website, https://ir.capfed.com . Additionally, our quarterly investor presentation can also be found on our website at https://ir.capfed.com/events-and-presentations/default.aspx. The Company ended the current quarter with total assets of $9.67 billion and stockholders' equity of $1.01 billion and reported net income for the quarter of $22.4 million. For the fiscal year ended September 30, 2026, the Company reported net income of $86.4 million, up from $68.0 million for fiscal year 2025. This marks our ninth consecutive quarter of net interest income growth and net interest margin expansion. For the quarter, net interest income increased $1.3 million to $54.8 million, and net interest margin increased eight basis points t"
+    },
+    "content_hash": "93f152784152b6a06bac2676f003b0d80ec80468bbd8eced0307c0db3414b0e0",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+  },
+  "0000811830-26-000041": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000811830-26-000041",
+      "entity_id": "CIK:0000811830",
+      "source_role": "candidate",
+      "title": "Santander Holdings USA, Inc. (SNUS-PH, SNUS-PI) (CIK 0000811830) EX-99.1 2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/811830/000081183026000041/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/811830/000081183026000041/ex991wbsunauditedq22026fin.htm",
+      "published_at": "2026-10-28",
+      "raw_text": "Santander Holdings USA, Inc. (SNUS-PH, SNUS-PI) (CIK 0000811830) EX-99.1 2026-10-28. EX-99.1 2 ex991wbsunauditedq22026fin.htm EX-99.1 Document Exhibit 99.1 WEBSTER FINANCIAL CORPORATION AND SUBSIDIARIES CONDENSED CONSOLIDATED BALANCE SHEETS June 30, 2026 December 31, 2025 (In thousands, except par value and share data) (Unaudited) Assets: Cash and due from banks $ 375,357 $ 370,748 Interest-bearing deposits 2,347,070 2,078,777 Investment securities available-for-sale, at fair value (1) 10,600,328 10,009,500 Investment securities held-to-maturity, net of allowance for credit losses of $70 and $97 (2) 7,694,979 7,969,575 Loans held for sale (3) 13,189 14,886 Loans and leases 57,868,678 56,597,110 Allowance for credit losses on loans and leases (723,846) (719,411) Loans and leases, net 57,144,832 55,877,699 Federal Home Loan Bank and Federal Reserve Bank stock 388,374 356,411 Deferred tax assets, net 225,133 195,740 Premises and equipment, net 429,266 432,035 Goodwill 2,898,463 2,897,522 Other intangible assets, net 290,513 313,234 Cash surrender value of life insurance policies 1,300,458 1,271,457 Accrued interest receivable and other assets 2,240,677 2,286,079 Total assets $ 85,948,639 $ 84,073,663 Liabilities and Stockholders’ Equity: Deposits: Non-interest-bearing $ 9,999,855 $ 10,082,854 Interest-bearing 60,283,598 58,676,959 Total deposits 70,283,453 68,759,813 Securities sold under agreements to repurchase 73,395 596,738 Federal Home Loan Bank advances 3,661,246 2,980,718 Long-term debt 737,171 739,454 Accrued expenses and other liabilities 1,432,625 1,504,704 Total liabilities 76,187,890 74,581,427 Stockholders’ equity: Preferred stock, $0.01 par value: Authorized — 3,000,000 shares; Series F issued and outstanding — 6,000 shares 145,037 145,037 Series G issued and outstanding — 135,000 shares 138,942 138,942 Common stock, $0.01 par value: Authorized — 400,000,000 shares; Issued — 182,778,045 shares; Outstanding — 162,034,478 and 161,216,008 shares 1,828 1,828 "
+    },
+    "content_hash": "0ede7921bc716262c54fe0fb3ff7bf7c6638c73c979589c9ddb0be72d8da30d7",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-29T05:58:03.268404+00:00"
   }
 }

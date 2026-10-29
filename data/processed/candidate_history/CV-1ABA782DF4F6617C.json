@@ -1,0 +1,181 @@
+{
+  "candidate_id": "CAN-E95987D989EF1145",
+  "candidate_version": "CV-1ABA782DF4F6617C",
+  "identity": {
+    "entity_id": "NYSE:TNK",
+    "ticker": "TNK",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Teekay Tankers Ltd.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "유조선을 이용해 해상 운송 서비스, 유류 환적, 선박 관리 및 장비 대여로 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Teekay Tankers Ltd., together with its subsidiaries, provides marine transportation services to oil industries in Bermuda and internationally. The company operates in two segments: Tankers and Marine Servies. It offers voyage and time charter services; offshore ship-to-ship transfer of commodities primarily crude oil and refined oil products; and tanker commercial and technical management services. In addition, the company is involved in the vessels management, procurement, and equipment rental businesses. It serves energy and utility companies, oil traders, oil consumers and petroleum product"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TNK analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-29T06:06:39+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TNK daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/history",
+      "published_at": null,
+      "observed_at": "2026-10-29T06:06:39+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TNK company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/profile",
+      "published_at": null,
+      "observed_at": "2026-10-29T06:06:39+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-D9EC64103F5CF7D0",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000056/tnk6-kq1x261.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-07-31",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "6-K 6-K"
+    },
+    {
+      "id": "DOC-13D619F52008D76E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000054/tnkq2-26erdocument.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-07-29",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-16CBC0C0973271D7",
+    "input_sha": "16cbc0c0973271d72cfa12ee0721ca13c0a5d10fe1a15ad28cb9d993c0690950",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "순이익(net income) · second quarter of 2026 — 회사의 순이익은 전년 동기 대비 증가했습니다",
+        "note_ko": "회사의 순이익은 전년 동기 대비 증가했습니다",
+        "kind": "interpretation",
+        "quote": "GAAP net income and non-GAAP adjusted net income for the second quarter of 2026 increased compared to the same period of the prior year, primarily due to higher average spot tanker rates, the acquisitions of six vessels between the second quarter of 2025 and the end of the first quarter of 2026, as well as higher net results from the Australian operations, partially offset by the sales of ten vessels between the start of the second quarter of 2025 and the end of the second quarter of 2026.",
+        "document_id": "DOC-13D619F52008D76E",
+        "block_id": "p42",
+        "metric": "net income",
+        "figures": [],
+        "period": "second quarter of 2026",
+        "currency": null,
+        "gaap": "GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "price",
+          "acquisition_disposal"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "애널리스트의 EPS 예상치 상향이 이 발표와 직접적인 관련이 있는지 확인해야 합니다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-D9EC64103F5CF7D0",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000056/tnk6-kq1x261.htm",
+        "filed_at": "2026-07-31",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      },
+      {
+        "document_id": "DOC-13D619F52008D76E",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000054/tnkq2-26erdocument.htm",
+        "filed_at": "2026-07-29",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-28T06:09:49+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 13.84992,
+    "eps_30d": 10.89993,
+    "eps_90d": 8.942,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 54.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

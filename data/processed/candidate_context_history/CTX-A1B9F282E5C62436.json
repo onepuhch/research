@@ -1,0 +1,111 @@
+{
+  "context_id": "CTX-A1B9F282E5C62436",
+  "candidate_id": "CAN-11B1565B12AFE2F9",
+  "ticker": "DINO",
+  "issuer_cik": "0001915657",
+  "document_ids": [
+    "DOC-6EA52AE3808FADE4",
+    "DOC-0F62310DD65064FB"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-6EA52AE3808FADE4#p10",
+    "DOC-6EA52AE3808FADE4#p11",
+    "DOC-6EA52AE3808FADE4#p14",
+    "DOC-6EA52AE3808FADE4#p79",
+    "DOC-6EA52AE3808FADE4#t14",
+    "DOC-6EA52AE3808FADE4#t16",
+    "DOC-6EA52AE3808FADE4#p128",
+    "DOC-6EA52AE3808FADE4#t23",
+    "DOC-0F62310DD65064FB#p11",
+    "DOC-0F62310DD65064FB#p80",
+    "DOC-0F62310DD65064FB#t14",
+    "DOC-0F62310DD65064FB#p115",
+    "DOC-0F62310DD65064FB#t23"
+  ],
+  "input_sha": "a1b9f282e5c6243609a4c16bd9ff62253b96e9534ac23a3e022d9d27421efa33",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-29T06:14:15+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "정유 부문의 이자 및 법인세 차감 전 이익이 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$2,435 million"
+      ],
+      "quote": "Refining segment income before interest and income taxes was $2,435 million for the third quarter of 2026 compared to income of $476 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "정유 부문의 조정 에비타가 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$2,582 million"
+      ],
+      "quote": "The segment reported Adjusted EBITDA of $2,582 million for the third quarter of 2026 compared to $661 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "정유 부문의 조정 정제 마진이 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$54.22 per produced barrel sold"
+      ],
+      "quote": "Adjusted refinery gross margin was $54.22 per produced barrel sold, a 183% increase compared to $19.16 for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "재생에너지 부문의 이자 및 법인세 차감 전 이익이 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$123 million"
+      ],
+      "quote": "Renewables segment income before interest and income taxes was $123 million for the third quarter of 2026 compared to a loss of $55 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p11"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "재생에너지 부문의 조정 에비타가 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$109 million"
+      ],
+      "quote": "Excluding the Lower of cost or market inventory valuation adjustment benefit of $30 million, the segment reported Adjusted EBITDA of $109 million in the third quarter of 2026, compared to $(13) millio",
+      "where": "DOC-6EA52AE3808FADE4#p11"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "정유 부문의 원유 처리량이 전년 같은 분기보다 줄었다",
+      "figures": [
+        "614,060 barrels per day"
+      ],
+      "quote": "Crude charge averaged 614,060 barrels per day (“BPD”) for the third quarter of 2026 compared to 639,050 BPD for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p10"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "윤활유 및 특수 제품 부문의 이자 및 법인세 차감 전 이익이 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$38 million"
+      ],
+      "quote": "Lubricants & Specialties segment income before interest and income taxes was $38 million for the third quarter of 2026 compared to $52 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p14"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

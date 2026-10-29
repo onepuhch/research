@@ -1634,6 +1634,60 @@
             "provider-unspecified"
           ]
         }
+      },
+      "NYSE:MPC|eps-revision-review:v1": {
+        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+        "first": {
+          "observation_id": "OB-6578E7350D2A0D67",
+          "baseline_id": "OB-6578E7350D2A0D67",
+          "observed_at": "2026-10-29T06:13:54+00:00",
+          "day": "2026-10-29",
+          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
+          "eps_now": 60.30776,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:DHT|eps-revision-review:v1": {
+        "baseline_id": "OB-9B007EE68965810F",
+        "first": {
+          "observation_id": "OB-1E0B1DFF18529D3D",
+          "baseline_id": "OB-1E0B1DFF18529D3D",
+          "observed_at": "2026-10-29T06:13:54+00:00",
+          "day": "2026-10-29",
+          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
+          "eps_now": 3.2405,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:TNK|eps-revision-review:v1": {
+        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+        "first": {
+          "observation_id": "OB-AACAFD031E667476",
+          "baseline_id": "OB-AACAFD031E667476",
+          "observed_at": "2026-10-29T06:13:54+00:00",
+          "day": "2026-10-29",
+          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
+          "eps_now": 13.84992,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
       }
     },
     "rebases": {

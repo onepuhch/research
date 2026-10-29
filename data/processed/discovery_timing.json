@@ -39,7 +39,8 @@
     "20261025T045431Z_40163475107-1.json.gz",
     "20261026T045857Z_40271638077-1.json.gz",
     "20261027T051637Z_40454163350-1.json.gz",
-    "20261028T055518Z_40640520468-1.json.gz"
+    "20261028T055518Z_40640520468-1.json.gz",
+    "20261029T055942Z_40826300195-1.json.gz"
   ],
   "records": {
     "NASDAQ:NVDA|eps-revision-review:v1": {
@@ -47,7 +48,7 @@
       "ticker": "NVDA",
       "candidate_id": "CAN-58F5591A57D43E7E",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -77,8 +78,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 15.9146,
@@ -163,7 +164,7 @@
       "ticker": "DELL",
       "candidate_id": "CAN-361AFF9E8FAA657E",
       "mode": "retrospective",
-      "passes": 31,
+      "passes": 32,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -193,8 +194,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 28.20132,
@@ -221,7 +222,7 @@
       "ticker": "STX",
       "candidate_id": "CAN-831705A152AF62CA",
       "mode": "retrospective",
-      "passes": 29,
+      "passes": 30,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -251,16 +252,16 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
-          "eps_now": 57.43865,
+          "eps_now": 63.0486,
           "eps_30d": 55.3714,
-          "eps_90d": 45.88194,
+          "eps_90d": 54.71245,
           "up30": 2,
           "down30": 0,
-          "analysts": 20
+          "analysts": 21
         },
         "comparison_key": [
           "eps_next_fy_per_share",
@@ -279,7 +280,7 @@
       "ticker": "WDC",
       "candidate_id": "CAN-F4F37EDD5656F9BD",
       "mode": "retrospective",
-      "passes": 36,
+      "passes": 37,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -334,8 +335,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 40.40484,
@@ -383,7 +384,7 @@
       "ticker": "MPC",
       "candidate_id": "CAN-77F79A3B05ABB893",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -463,16 +464,16 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
-        "state": "folded",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "card",
         "eps": {
-          "eps_now": 58.43788,
-          "eps_30d": 43.51108,
-          "eps_90d": 29.1915,
+          "eps_now": 60.30776,
+          "eps_30d": 48.37614,
+          "eps_90d": 27.76904,
           "up30": 12,
           "down30": 2,
-          "analysts": 19
+          "analysts": 18
         },
         "comparison_key": [
           "eps_next_fy_per_share",
@@ -508,7 +509,7 @@
       "ticker": "VLO",
       "candidate_id": "CAN-325B2A6C30755476",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -588,11 +589,11 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
-        "state": "card",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "folded",
         "eps": {
-          "eps_now": 53.4779,
+          "eps_now": 53.61123,
           "eps_30d": 37.10152,
           "eps_90d": 25.11236,
           "up30": 12,
@@ -640,7 +641,7 @@
       "ticker": "BP",
       "candidate_id": "CAN-ECB2C73CA19DA4AB",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -695,8 +696,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 5.74284,
@@ -730,7 +731,7 @@
       "ticker": "PSX",
       "candidate_id": "CAN-3D30FF7D03231FE1",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -810,8 +811,8 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
           "eps_now": 30.35506,
@@ -899,7 +900,7 @@
       "ticker": "NUE",
       "candidate_id": "CAN-E4BD1817F8C3955C",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -929,16 +930,16 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
-          "eps_now": 20.95428,
-          "eps_30d": 19.93652,
-          "eps_90d": 17.40929,
+          "eps_now": 21.01599,
+          "eps_30d": 19.73824,
+          "eps_90d": 18.07947,
           "up30": 8,
           "down30": 1,
-          "analysts": 11
+          "analysts": 12
         },
         "comparison_key": [
           "eps_next_fy_per_share",
@@ -957,7 +958,7 @@
       "ticker": "CIEN",
       "candidate_id": "CAN-C8EF685F576A6586",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -987,12 +988,12 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 10.33093,
-          "eps_30d": 9.75956,
+          "eps_30d": 10.23522,
           "eps_90d": 8.00997,
           "up30": 7,
           "down30": 0,
@@ -1395,7 +1396,7 @@
       "ticker": "DINO",
       "candidate_id": "CAN-11B1565B12AFE2F9",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -1475,16 +1476,16 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
-          "eps_now": 14.9728,
+          "eps_now": 15.14012,
           "eps_30d": 11.82475,
-          "eps_90d": 8.00705,
+          "eps_90d": 8.61232,
           "up30": 11,
           "down30": 0,
-          "analysts": 15
+          "analysts": 16
         },
         "comparison_key": [
           "eps_next_fy_per_share",
@@ -1564,7 +1565,7 @@
       "ticker": "MKSI",
       "candidate_id": "CAN-8FF442F816C91110",
       "mode": "retrospective",
-      "passes": 27,
+      "passes": 28,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -1594,8 +1595,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 17.61513,
@@ -1622,7 +1623,7 @@
       "ticker": "LSCC",
       "candidate_id": "CAN-CB8ED5EF5D00BAE7",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -1652,8 +1653,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 3.29325,
@@ -1680,7 +1681,7 @@
       "ticker": "SMTC",
       "candidate_id": "CAN-782282A0C20A29F1",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -1735,13 +1736,13 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 6.67364,
-          "eps_30d": 5.83561,
-          "eps_90d": 3.90253,
+          "eps_30d": 5.8359,
+          "eps_90d": 3.92176,
           "up30": 1,
           "down30": 0,
           "analysts": 15
@@ -1935,7 +1936,7 @@
       "ticker": "ARW",
       "candidate_id": "CAN-756B52D198E73B65",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -1965,8 +1966,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 23.925,
@@ -1993,7 +1994,7 @@
       "ticker": "AEIS",
       "candidate_id": "CAN-2358E9B05781AF4C",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2023,8 +2024,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 15.53723,
@@ -2051,7 +2052,7 @@
       "ticker": "FRO",
       "candidate_id": "CAN-7506B6BECE695B39",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2106,8 +2107,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 6.25014,
@@ -2199,7 +2200,7 @@
       "ticker": "DAR",
       "candidate_id": "CAN-A1940C738F19050B",
       "mode": "retrospective",
-      "passes": 30,
+      "passes": 31,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2229,13 +2230,13 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 6.47126,
           "eps_30d": 6.32344,
-          "eps_90d": 5.27306,
+          "eps_90d": 5.50195,
           "up30": 3,
           "down30": 0,
           "analysts": 8
@@ -2257,7 +2258,7 @@
       "ticker": "OSCR",
       "candidate_id": "CAN-7D75F8332DBCEEFC",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2312,9 +2313,9 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
-        "state": "card",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "outside",
         "eps": {
           "eps_now": 2.22094,
           "eps_30d": 1.8819,
@@ -2405,7 +2406,7 @@
       "ticker": "LGN",
       "candidate_id": "CAN-B83F152ADCED90E7",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2435,8 +2436,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 2.4868,
@@ -2463,7 +2464,7 @@
       "ticker": "PBF",
       "candidate_id": "CAN-82719B27698E3C22",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2518,8 +2519,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 18.5575,
@@ -2570,7 +2571,7 @@
       "ticker": "MXL",
       "candidate_id": "CAN-76DD3777C06E7825",
       "mode": "retrospective",
-      "passes": 35,
+      "passes": 36,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2625,8 +2626,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 4.29941,
@@ -2660,7 +2661,7 @@
       "ticker": "CLF",
       "candidate_id": "CAN-7F0690B785E31226",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -2715,8 +2716,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 1.45996,
@@ -2966,7 +2967,7 @@
       "ticker": "CVI",
       "candidate_id": "CAN-F451582E2056444F",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3046,13 +3047,13 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 4.55204,
-          "eps_30d": 3.03029,
-          "eps_90d": 1.7425,
+          "eps_30d": 3.03066,
+          "eps_90d": 1.8025,
           "up30": 4,
           "down30": 0,
           "analysts": 6
@@ -3095,7 +3096,7 @@
       "ticker": "ACMR",
       "candidate_id": "CAN-4BB207943E26CF9D",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3125,8 +3126,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 2.9402,
@@ -3153,7 +3154,7 @@
       "ticker": "VSEC",
       "candidate_id": "CAN-C05377BEC03AE25C",
       "mode": "retrospective",
-      "passes": 36,
+      "passes": 37,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3208,8 +3209,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 8.26462,
@@ -3415,7 +3416,7 @@
       "ticker": "VIRT",
       "candidate_id": "CAN-7278DD36E2074D94",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3445,8 +3446,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 7.22748,
@@ -3531,7 +3532,7 @@
       "ticker": "DK",
       "candidate_id": "CAN-D577F2C38FBBCFF7",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3586,8 +3587,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 9.32114,
@@ -3765,7 +3766,7 @@
       "ticker": "FSLY",
       "candidate_id": "CAN-8ED72F330C1AE34D",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3820,8 +3821,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 0.64217,
@@ -3865,7 +3866,7 @@
       "ticker": "PARR",
       "candidate_id": "CAN-FDA6B7F62852042F",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -3945,8 +3946,8 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
           "eps_now": 16.63357,
@@ -4250,7 +4251,7 @@
       "ticker": "MNDY",
       "candidate_id": "CAN-BB03FF579D1E0258",
       "mode": "retrospective",
-      "passes": 36,
+      "passes": 37,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -4280,8 +4281,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 6.70017,
@@ -4308,7 +4309,7 @@
       "ticker": "DHT",
       "candidate_id": "CAN-FD88AA0D924CF1C8",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -4363,11 +4364,11 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
-          "eps_now": 2.81216,
+          "eps_now": 3.2405,
           "eps_30d": 2.1455,
           "eps_90d": 1.80658,
           "up30": 2,
@@ -4600,7 +4601,7 @@
       "ticker": "TNK",
       "candidate_id": "CAN-E95987D989EF1145",
       "mode": "retrospective",
-      "passes": 20,
+      "passes": 21,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -4655,11 +4656,11 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
-          "eps_now": 12.18492,
+          "eps_now": 13.84992,
           "eps_30d": 10.89993,
           "eps_90d": 8.942,
           "up30": 3,
@@ -4872,7 +4873,7 @@
       "ticker": "PENG",
       "candidate_id": "CAN-562A2116C7E477E1",
       "mode": "retrospective",
-      "passes": 32,
+      "passes": 33,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -4902,8 +4903,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 5.256,
@@ -4930,7 +4931,7 @@
       "ticker": "AVAH",
       "candidate_id": "CAN-5C33AE05F5A5A2EE",
       "mode": "retrospective",
-      "passes": 32,
+      "passes": 33,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -4960,8 +4961,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 0.90768,
@@ -5088,7 +5089,7 @@
       "ticker": "NMM",
       "candidate_id": "CAN-029DB18061B03227",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -5118,12 +5119,12 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 19.36667,
-          "eps_30d": 18.78,
+          "eps_30d": 18.7775,
           "eps_90d": 17.3325,
           "up30": 3,
           "down30": 1,
@@ -5204,7 +5205,7 @@
       "ticker": "TRLV",
       "candidate_id": "CAN-713C837ADADE8D8B",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -5259,8 +5260,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 0.56333,
@@ -5294,7 +5295,7 @@
       "ticker": "LPG",
       "candidate_id": "CAN-6AC97D7E0081C82D",
       "mode": "retrospective",
-      "passes": 9,
+      "passes": 10,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -5349,13 +5350,13 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20260930T054134Z_36674489444-1.json.gz",
-        "observed_at": "2026-09-30T05:55:55+00:00",
-        "state": "card",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "outside",
         "eps": {
-          "eps_now": 4.68,
-          "eps_30d": 4.2875,
-          "eps_90d": 3.01,
+          "eps_now": 4.91,
+          "eps_30d": 4.10667,
+          "eps_90d": 3.75667,
           "up30": 2,
           "down30": 1,
           "analysts": 4
@@ -5740,7 +5741,7 @@
       "ticker": "KOS",
       "candidate_id": "CAN-2365AA0167A432A4",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -5820,8 +5821,8 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 0.51,
@@ -6071,7 +6072,7 @@
       "ticker": "HBT",
       "candidate_id": "CAN-05E2927A1576DD64",
       "mode": "retrospective",
-      "passes": 36,
+      "passes": 37,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -6101,8 +6102,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 3.566,
@@ -6129,7 +6130,7 @@
       "ticker": "NBR",
       "candidate_id": "CAN-E460E34B1D8B66CE",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -6184,8 +6185,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 4.00328,
@@ -6445,7 +6446,7 @@
       "ticker": "GPRE",
       "candidate_id": "CAN-5289D6512C83E305",
       "mode": "retrospective",
-      "passes": 35,
+      "passes": 36,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -6475,8 +6476,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 1.68604,
@@ -6503,7 +6504,7 @@
       "ticker": "CBRL",
       "candidate_id": "CAN-DF76D3AD7ADC73CF",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -6558,8 +6559,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 2.19987,
@@ -6827,7 +6828,7 @@
       "ticker": "CODI",
       "candidate_id": "CAN-36582E27909720FE",
       "mode": "retrospective",
-      "passes": 26,
+      "passes": 27,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -6882,8 +6883,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 0.67,
@@ -7017,7 +7018,7 @@
       "ticker": "PUBM",
       "candidate_id": "CAN-C8B827862A3B86D5",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -7072,8 +7073,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 0.81333,
@@ -7103,7 +7104,7 @@
       "ticker": "TXO",
       "candidate_id": "CAN-0733D6B2B6A41784",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -7158,8 +7159,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 1.9625,
@@ -7671,7 +7672,7 @@
       "ticker": "PSBD",
       "candidate_id": "CAN-D0428C056E6C02C7",
       "mode": "retrospective",
-      "passes": 11,
+      "passes": 12,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -7701,8 +7702,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 1.5407,
@@ -7729,7 +7730,7 @@
       "ticker": "SPCX",
       "candidate_id": "CAN-5790099EDC6F3301",
       "mode": "retrospective",
-      "passes": 37,
+      "passes": 38,
       "first_pass": {
         "snapshot": "20260925T000839Z_36076125470-1.json.gz",
         "run_id": "36076125470-1",
@@ -7784,11 +7785,11 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
-          "eps_now": 3.86555,
+          "eps_now": 3.96737,
           "eps_30d": 1.86094,
           "eps_90d": 0.61702,
           "up30": 4,
@@ -8039,7 +8040,7 @@
       "ticker": "BLMN",
       "candidate_id": "CAN-B1458AB651684582",
       "mode": "retrospective",
-      "passes": 33,
+      "passes": 34,
       "first_pass": {
         "snapshot": "20260926T133740Z_36245680144-1.json.gz",
         "run_id": "36245680144-1",
@@ -8069,8 +8070,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 1.08872,
@@ -8097,7 +8098,7 @@
       "ticker": "SNX",
       "candidate_id": "CAN-F6345B9FE9259665",
       "mode": "retrospective",
-      "passes": 33,
+      "passes": 34,
       "first_pass": {
         "snapshot": "20260926T133740Z_36245680144-1.json.gz",
         "run_id": "36245680144-1",
@@ -8127,8 +8128,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 24.62611,
@@ -8155,7 +8156,7 @@
       "ticker": "TEAM",
       "candidate_id": "CAN-4E5151866E863998",
       "mode": "retrospective",
-      "passes": 31,
+      "passes": 32,
       "first_pass": {
         "snapshot": "20260927T052542Z_36297143973-1.json.gz",
         "run_id": "36297143973-1",
@@ -8210,8 +8211,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 2.1921,
@@ -8361,7 +8362,7 @@
       "ticker": "PRGS",
       "candidate_id": "CAN-CA0C8E92D2718B06",
       "mode": "retrospective",
-      "passes": 30,
+      "passes": 31,
       "first_pass": {
         "snapshot": "20260929T055354Z_36528079469-1.json.gz",
         "run_id": "36528079469-1",
@@ -8416,8 +8417,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 7.17732,
@@ -8451,7 +8452,7 @@
       "ticker": "MU",
       "candidate_id": "CAN-43EA86A18E5096A9",
       "mode": "retrospective",
-      "passes": 28,
+      "passes": 29,
       "first_pass": {
         "snapshot": "20261001T060811Z_36822997450-1.json.gz",
         "run_id": "36822997450-1",
@@ -8506,8 +8507,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 206.89381,
@@ -8541,7 +8542,7 @@
       "ticker": "EQNR",
       "candidate_id": "CAN-FE3575B3BB2443B0",
       "mode": "retrospective",
-      "passes": 28,
+      "passes": 29,
       "first_pass": {
         "snapshot": "20261001T060811Z_36822997450-1.json.gz",
         "run_id": "36822997450-1",
@@ -8571,8 +8572,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 4.755,
@@ -8599,7 +8600,7 @@
       "ticker": "HPE",
       "candidate_id": "CAN-E479D8E380F1FEEC",
       "mode": "retrospective",
-      "passes": 16,
+      "passes": 17,
       "first_pass": {
         "snapshot": "20261001T060811Z_36822997450-1.json.gz",
         "run_id": "36822997450-1",
@@ -8629,16 +8630,16 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
-          "eps_now": 4.70878,
-          "eps_30d": 4.59731,
-          "eps_90d": 4.0384,
+          "eps_now": 4.73345,
+          "eps_30d": 4.59744,
+          "eps_90d": 4.04667,
           "up30": 12,
           "down30": 0,
-          "analysts": 20
+          "analysts": 21
         },
         "comparison_key": [
           "eps_next_fy_per_share",
@@ -8831,7 +8832,7 @@
       "ticker": "E",
       "candidate_id": "CAN-C9D6597E9E0A060B",
       "mode": "retrospective",
-      "passes": 26,
+      "passes": 27,
       "first_pass": {
         "snapshot": "20261003T052857Z_37099766046-1.json.gz",
         "run_id": "37099766046-1",
@@ -8861,8 +8862,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 6.63099,
@@ -8947,7 +8948,7 @@
       "ticker": "SHEL",
       "candidate_id": "CAN-A3807662231405F7",
       "mode": "retrospective",
-      "passes": 25,
+      "passes": 26,
       "first_pass": {
         "snapshot": "20261004T060125Z_37181539693-1.json.gz",
         "run_id": "37181539693-1",
@@ -8977,8 +8978,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 10.95708,
@@ -9063,7 +9064,7 @@
       "ticker": "SEI",
       "candidate_id": "CAN-A00785AF9CF7E07A",
       "mode": "retrospective",
-      "passes": 25,
+      "passes": 26,
       "first_pass": {
         "snapshot": "20261004T060125Z_37181539693-1.json.gz",
         "run_id": "37181539693-1",
@@ -9118,8 +9119,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 3.66041,
@@ -9153,7 +9154,7 @@
       "ticker": "MTDR",
       "candidate_id": "CAN-6776B8978D264E96",
       "mode": "retrospective",
-      "passes": 19,
+      "passes": 20,
       "first_pass": {
         "snapshot": "20261004T060125Z_37181539693-1.json.gz",
         "run_id": "37181539693-1",
@@ -9208,16 +9209,16 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
-          "eps_now": 10.19238,
+          "eps_now": 10.19076,
           "eps_30d": 9.15848,
           "eps_90d": 8.75472,
           "up30": 5,
           "down30": 2,
-          "analysts": 19
+          "analysts": 20
         },
         "comparison_key": [
           "eps_next_fy_per_share",
@@ -9456,7 +9457,7 @@
       "ticker": "NOG",
       "candidate_id": "CAN-BA5D4320F9188F9F",
       "mode": "retrospective",
-      "passes": 24,
+      "passes": 25,
       "first_pass": {
         "snapshot": "20261005T055133Z_37269585919-1.json.gz",
         "run_id": "37269585919-1",
@@ -9536,13 +9537,13 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
-          "eps_now": 5.02875,
+          "eps_now": 5.20125,
           "eps_30d": 4.49714,
-          "eps_90d": 4.17143,
+          "eps_90d": 4.26571,
           "up30": 2,
           "down30": 1,
           "analysts": 8
@@ -9571,7 +9572,7 @@
       "ticker": "BSVN",
       "candidate_id": "CAN-525D7C0A5C2F1A2C",
       "mode": "retrospective",
-      "passes": 24,
+      "passes": 25,
       "first_pass": {
         "snapshot": "20261005T055133Z_37269585919-1.json.gz",
         "run_id": "37269585919-1",
@@ -9601,8 +9602,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 5.58667,
@@ -9629,7 +9630,7 @@
       "ticker": "TTE",
       "candidate_id": "CAN-8F39128A50F08FC0",
       "mode": "prospective",
-      "passes": 23,
+      "passes": 24,
       "first_pass": {
         "snapshot": "20261006T063159Z_37424027804-1.json.gz",
         "run_id": "37424027804-1",
@@ -9659,8 +9660,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 11.5731,
@@ -9745,7 +9746,7 @@
       "ticker": "TTMI",
       "candidate_id": "CAN-486C908614BC89B1",
       "mode": "prospective",
-      "passes": 23,
+      "passes": 24,
       "first_pass": {
         "snapshot": "20261006T063159Z_37424027804-1.json.gz",
         "run_id": "37424027804-1",
@@ -9800,8 +9801,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 8.336,
@@ -9914,7 +9915,7 @@
       "ticker": "CXW",
       "candidate_id": "CAN-8ACFB03514A3F294",
       "mode": "prospective",
-      "passes": 23,
+      "passes": 24,
       "first_pass": {
         "snapshot": "20261006T063159Z_37424027804-1.json.gz",
         "run_id": "37424027804-1",
@@ -9944,8 +9945,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 2.4175,
@@ -10088,7 +10089,7 @@
       "ticker": "JXN",
       "candidate_id": "CAN-02BF26B752677B69",
       "mode": "prospective",
-      "passes": 22,
+      "passes": 23,
       "first_pass": {
         "snapshot": "20261007T060957Z_37579928333-1.json.gz",
         "run_id": "37579928333-1",
@@ -10143,9 +10144,9 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
-        "state": "outside",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "card",
         "eps": {
           "eps_now": 31.63025,
           "eps_30d": 30.81125,
@@ -10192,7 +10193,7 @@
       "ticker": "CVX",
       "candidate_id": "CAN-4579D4E7472D7C18",
       "mode": "prospective",
-      "passes": 18,
+      "passes": 19,
       "first_pass": {
         "snapshot": "20261008T061554Z_37736585169-1.json.gz",
         "run_id": "37736585169-1",
@@ -10222,8 +10223,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 15.71607,
@@ -10250,7 +10251,7 @@
       "ticker": "AMG",
       "candidate_id": "CAN-15B86367F1FFECEE",
       "mode": "prospective",
-      "passes": 21,
+      "passes": 22,
       "first_pass": {
         "snapshot": "20261008T061554Z_37736585169-1.json.gz",
         "run_id": "37736585169-1",
@@ -10280,8 +10281,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 32.50333,
@@ -10366,7 +10367,7 @@
       "ticker": "CHRD",
       "candidate_id": "CAN-B50C69675A4DBCEA",
       "mode": "prospective",
-      "passes": 20,
+      "passes": 21,
       "first_pass": {
         "snapshot": "20261009T062316Z_37892786686-1.json.gz",
         "run_id": "37892786686-1",
@@ -10421,8 +10422,8 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
           "eps_now": 20.01615,
@@ -10463,7 +10464,7 @@
       "ticker": "INSW",
       "candidate_id": "CAN-71C24817F9DA0FA8",
       "mode": "prospective",
-      "passes": 10,
+      "passes": 11,
       "first_pass": {
         "snapshot": "20261010T060144Z_38029430169-1.json.gz",
         "run_id": "38029430169-1",
@@ -10518,11 +10519,11 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
-          "eps_now": 7.80209,
+          "eps_now": 8.9175,
           "eps_30d": 6.42167,
           "eps_90d": 6.22336,
           "up30": 1,
@@ -10567,7 +10568,7 @@
       "ticker": "APA",
       "candidate_id": "CAN-C8C51457744543C0",
       "mode": "prospective",
-      "passes": 16,
+      "passes": 17,
       "first_pass": {
         "snapshot": "20261013T065241Z_38359168209-1.json.gz",
         "run_id": "38359168209-1",
@@ -10597,8 +10598,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 5.37632,
@@ -10625,7 +10626,7 @@
       "ticker": "SM",
       "candidate_id": "CAN-93F2BA020F4C5D68",
       "mode": "prospective",
-      "passes": 16,
+      "passes": 17,
       "first_pass": {
         "snapshot": "20261013T065241Z_38359168209-1.json.gz",
         "run_id": "38359168209-1",
@@ -10680,8 +10681,8 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
           "eps_now": 8.51157,
@@ -10708,7 +10709,7 @@
       "ticker": "ICHR",
       "candidate_id": "CAN-8836B6B4B977FE7E",
       "mode": "prospective",
-      "passes": 16,
+      "passes": 17,
       "first_pass": {
         "snapshot": "20261013T065241Z_38359168209-1.json.gz",
         "run_id": "38359168209-1",
@@ -10738,8 +10739,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 3.28625,
@@ -10766,7 +10767,7 @@
       "ticker": "MAX",
       "candidate_id": "CAN-5692D186FDCB9176",
       "mode": "prospective",
-      "passes": 16,
+      "passes": 17,
       "first_pass": {
         "snapshot": "20261013T065241Z_38359168209-1.json.gz",
         "run_id": "38359168209-1",
@@ -10796,8 +10797,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 1.67929,
@@ -10824,7 +10825,7 @@
       "ticker": "PR",
       "candidate_id": "CAN-E9ADACC58920E9C1",
       "mode": "prospective",
-      "passes": 15,
+      "passes": 16,
       "first_pass": {
         "snapshot": "20261014T050334Z_38514422416-1.json.gz",
         "run_id": "38514422416-1",
@@ -10854,8 +10855,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 2.44787,
@@ -10882,7 +10883,7 @@
       "ticker": "GRNT",
       "candidate_id": "CAN-D5F91D853BD4402E",
       "mode": "prospective",
-      "passes": 15,
+      "passes": 16,
       "first_pass": {
         "snapshot": "20261014T050334Z_38514422416-1.json.gz",
         "run_id": "38514422416-1",
@@ -10962,8 +10963,8 @@
         }
       },
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "folded",
         "eps": {
           "eps_now": 0.885,
@@ -11055,7 +11056,7 @@
       "ticker": "OXY",
       "candidate_id": "CAN-57E15A574503AF04",
       "mode": "prospective",
-      "passes": 14,
+      "passes": 15,
       "first_pass": {
         "snapshot": "20261015T045150Z_38683526891-1.json.gz",
         "run_id": "38683526891-1",
@@ -11085,8 +11086,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 5.01525,
@@ -11171,7 +11172,7 @@
       "ticker": "ALAB",
       "candidate_id": "CAN-8C3BF50290A4D125",
       "mode": "prospective",
-      "passes": 14,
+      "passes": 15,
       "first_pass": {
         "snapshot": "20261015T045150Z_38683526891-1.json.gz",
         "run_id": "38683526891-1",
@@ -11226,8 +11227,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 6.408,
@@ -11261,7 +11262,7 @@
       "ticker": "MUR",
       "candidate_id": "CAN-26543AF6DD067D2A",
       "mode": "prospective",
-      "passes": 14,
+      "passes": 15,
       "first_pass": {
         "snapshot": "20261015T045150Z_38683526891-1.json.gz",
         "run_id": "38683526891-1",
@@ -11291,8 +11292,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 3.7991,
@@ -11319,7 +11320,7 @@
       "ticker": "CRGY",
       "candidate_id": "CAN-FC7BBBC12A5093CF",
       "mode": "prospective",
-      "passes": 14,
+      "passes": 15,
       "first_pass": {
         "snapshot": "20261015T045150Z_38683526891-1.json.gz",
         "run_id": "38683526891-1",
@@ -11374,8 +11375,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 2.8959,
@@ -11409,7 +11410,7 @@
       "ticker": "MEOH",
       "candidate_id": "CAN-E5730D76803BA930",
       "mode": "prospective",
-      "passes": 14,
+      "passes": 15,
       "first_pass": {
         "snapshot": "20261015T045150Z_38683526891-1.json.gz",
         "run_id": "38683526891-1",
@@ -11439,8 +11440,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 6.61002,
@@ -11525,7 +11526,7 @@
       "ticker": "FANG",
       "candidate_id": "CAN-2514CC1A597C04DB",
       "mode": "prospective",
-      "passes": 13,
+      "passes": 14,
       "first_pass": {
         "snapshot": "20261016T044212Z_38851792506-1.json.gz",
         "run_id": "38851792506-1",
@@ -11555,8 +11556,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 21.0199,
@@ -11583,7 +11584,7 @@
       "ticker": "EC",
       "candidate_id": "CAN-E554C0281EA08D29",
       "mode": "prospective",
-      "passes": 13,
+      "passes": 14,
       "first_pass": {
         "snapshot": "20261016T044212Z_38851792506-1.json.gz",
         "run_id": "38851792506-1",
@@ -11613,8 +11614,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 2.01478,
@@ -11699,7 +11700,7 @@
       "ticker": "DEC",
       "candidate_id": "CAN-1F6D82ED5782C3F5",
       "mode": "prospective",
-      "passes": 13,
+      "passes": 14,
       "first_pass": {
         "snapshot": "20261016T044212Z_38851792506-1.json.gz",
         "run_id": "38851792506-1",
@@ -11754,8 +11755,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 7.4002,
@@ -11803,7 +11804,7 @@
       "ticker": "COP",
       "candidate_id": "CAN-490C3AD0599D6C23",
       "mode": "prospective",
-      "passes": 12,
+      "passes": 13,
       "first_pass": {
         "snapshot": "20261017T043924Z_39003255215-1.json.gz",
         "run_id": "39003255215-1",
@@ -11833,8 +11834,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 10.78384,
@@ -11951,7 +11952,7 @@
       "ticker": "OVV",
       "candidate_id": "CAN-CF7F65F07F94CDC8",
       "mode": "prospective",
-      "passes": 12,
+      "passes": 13,
       "first_pass": {
         "snapshot": "20261017T043924Z_39003255215-1.json.gz",
         "run_id": "39003255215-1",
@@ -11981,11 +11982,11 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
-          "eps_now": 8.50405,
+          "eps_now": 8.51946,
           "eps_30d": 7.41157,
           "eps_90d": 7.30104,
           "up30": 9,
@@ -12009,7 +12010,7 @@
       "ticker": "AR",
       "candidate_id": "CAN-7ADEF77372F6A19A",
       "mode": "prospective",
-      "passes": 12,
+      "passes": 13,
       "first_pass": {
         "snapshot": "20261017T043924Z_39003255215-1.json.gz",
         "run_id": "39003255215-1",
@@ -12039,8 +12040,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 4.67707,
@@ -12067,7 +12068,7 @@
       "ticker": "LIFE",
       "candidate_id": "CAN-5724E428252A68BF",
       "mode": "prospective",
-      "passes": 12,
+      "passes": 13,
       "first_pass": {
         "snapshot": "20261017T043924Z_39003255215-1.json.gz",
         "run_id": "39003255215-1",
@@ -12097,8 +12098,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 2.63133,
@@ -12215,7 +12216,7 @@
       "ticker": "STLD",
       "candidate_id": "CAN-A8934A268509C8E0",
       "mode": "prospective",
-      "passes": 8,
+      "passes": 9,
       "first_pass": {
         "snapshot": "20261021T050029Z_39546929296-1.json.gz",
         "run_id": "39546929296-1",
@@ -12245,8 +12246,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 21.40959,
@@ -12273,7 +12274,7 @@
       "ticker": "VG",
       "candidate_id": "CAN-CE287F3D97C627F9",
       "mode": "prospective",
-      "passes": 8,
+      "passes": 9,
       "first_pass": {
         "snapshot": "20261021T050029Z_39546929296-1.json.gz",
         "run_id": "39546929296-1",
@@ -12303,8 +12304,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 1.23837,
@@ -12435,7 +12436,7 @@
       "ticker": "SMCI",
       "candidate_id": "CAN-5FD7409FDFE8F5EA",
       "mode": "prospective",
-      "passes": 7,
+      "passes": 8,
       "first_pass": {
         "snapshot": "20261022T050048Z_39725432827-1.json.gz",
         "run_id": "39725432827-1",
@@ -12490,8 +12491,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "card",
         "eps": {
           "eps_now": 5.58768,
@@ -12525,7 +12526,7 @@
       "ticker": "TBLA",
       "candidate_id": "CAN-B85C9F47594458D2",
       "mode": "prospective",
-      "passes": 7,
+      "passes": 8,
       "first_pass": {
         "snapshot": "20261022T050048Z_39725432827-1.json.gz",
         "run_id": "39725432827-1",
@@ -12580,8 +12581,8 @@
       },
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 0.32143,
@@ -12666,7 +12667,7 @@
       "ticker": "STNG",
       "candidate_id": "CAN-3BD5E965B73FD420",
       "mode": "prospective",
-      "passes": 2,
+      "passes": 3,
       "first_pass": {
         "snapshot": "20261027T051637Z_40454163350-1.json.gz",
         "run_id": "40454163350-1",
@@ -12696,8 +12697,8 @@
       "first_card": null,
       "first_folded": null,
       "last_pass": {
-        "snapshot": "20261028T055518Z_40640520468-1.json.gz",
-        "observed_at": "2026-10-28T06:09:29+00:00",
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
         "state": "outside",
         "eps": {
           "eps_now": 7.98794,
@@ -12718,7 +12719,65 @@
       "first_evidence": null,
       "first_alert": null,
       "bootstrap": null
+    },
+    "NASDAQ:CHYM|eps-revision-review:v1": {
+      "entity_id": "NASDAQ:CHYM",
+      "ticker": "CHYM",
+      "candidate_id": "CAN-237649EFEEDE4BF8",
+      "mode": "prospective",
+      "passes": 1,
+      "first_pass": {
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "run_id": "40826300195-1",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "outside",
+        "eps": {
+          "eps_now": 0.95098,
+          "eps_30d": 0.91562,
+          "eps_90d": 0.75251,
+          "up30": 11,
+          "down30": 1,
+          "analysts": 17
+        },
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "rule": {
+          "code_version": "a9db6e372607",
+          "top_n": 20,
+          "max_per_industry": 3
+        }
+      },
+      "first_card": null,
+      "first_folded": null,
+      "last_pass": {
+        "snapshot": "20261029T055942Z_40826300195-1.json.gz",
+        "observed_at": "2026-10-29T06:13:54+00:00",
+        "state": "outside",
+        "eps": {
+          "eps_now": 0.95098,
+          "eps_30d": 0.91562,
+          "eps_90d": 0.75251,
+          "up30": 11,
+          "down30": 1,
+          "analysts": 17
+        },
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ]
+      },
+      "first_evidence": null,
+      "first_alert": null,
+      "bootstrap": null
     }
   },
-  "updated_at": "2026-10-28T06:10:33+00:00"
+  "updated_at": "2026-10-29T06:14:47+00:00"
 }

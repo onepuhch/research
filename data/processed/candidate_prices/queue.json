@@ -170,7 +170,8 @@
     "SMCI",
     "TBLA",
     "FPS",
-    "STNG"
+    "STNG",
+    "CHYM"
   ],
   "days": {
     "2026-10-06": {
@@ -264,13 +265,17 @@
     "2026-10-28": {
       "requests": 20,
       "retries": 0
+    },
+    "2026-10-29": {
+      "requests": 20,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 23,
-      "last_attempt_at": "2026-10-28T06:10:19.764812+00:00",
+      "attempts": 24,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -581,48 +586,48 @@
       "reason": null
     },
     "TXO": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "UCTT": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "URGN": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "VLO": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "VSEC": {
-      "attempts": 3,
-      "last_attempt_at": "2026-10-10T06:17:10.107827+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "TEAM": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -645,104 +650,104 @@
       "reason": null
     },
     "ACMR": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "ADAM": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "AEIS": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "AGM": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "AMTB": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "ARW": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "ARXS": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "AVAH": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "BFH": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-08T06:31:15.634002+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "CECO": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "CIEN": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "CLS": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "CNC": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-09T06:41:59.242765+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-10-29T06:14:34.114604+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
