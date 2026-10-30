@@ -1633,12 +1633,20 @@
         ]
       },
       "day": "2026-10-30",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-30T06:15:00+00:00",
+          "status": "sent",
+          "message_id": 218,
+          "error": null
+        }
+      ],
       "reserved_by": "41011340799-1",
       "reserved_at": "2026-10-30T06:14:57+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DEC Diversified Energy Company</b>\n기준: 2026-10-16 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $5.84 → 현재 $7.40 (+27%), 2026-10-17·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-1F6D82ED5782C3F5</code> · 추적 <code>/track CAN-1F6D82ED5782C3F5</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "204a1a403be527fc989e7643b4c900c35e197fbb949161b88bee2c7ddad34e74"
+      "payload_sha256": "204a1a403be527fc989e7643b4c900c35e197fbb949161b88bee2c7ddad34e74",
+      "message_id": 218
     },
     "NYSE:MPC|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-6578E7350D2A0D67": {
       "channel": "screen",
@@ -1718,12 +1726,20 @@
         ]
       },
       "day": "2026-10-30",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-30T06:15:01+00:00",
+          "status": "sent",
+          "message_id": 219,
+          "error": null
+        }
+      ],
       "reserved_by": "41011340799-1",
       "reserved_at": "2026-10-30T06:14:57+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · MPC Marathon Petroleum Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $47.13 → 현재 $60.31 (+28%), 2026-10-29·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-77F79A3B05ABB893</code> · 추적 <code>/track CAN-77F79A3B05ABB893</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "5bb689072f34b73b628d84c7ba577938b4fd56de7062f5b0eb96f4b3a093e755"
+      "payload_sha256": "5bb689072f34b73b628d84c7ba577938b4fd56de7062f5b0eb96f4b3a093e755",
+      "message_id": 219
     },
     "NYSE:DHT|eps-revision-review:v1|material_update|B:OB-9B007EE68965810F>OB-1E0B1DFF18529D3D": {
       "channel": "screen",
@@ -1803,12 +1819,20 @@
         ]
       },
       "day": "2026-10-30",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-10-30T06:15:01+00:00",
+          "status": "sent",
+          "message_id": 220,
+          "error": null
+        }
+      ],
       "reserved_by": "41011340799-1",
       "reserved_at": "2026-10-30T06:14:57+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DHT DHT Holdings, Inc.</b>\n기준: 2026-10-10 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $2.50 → 현재 $3.24 (+29%), 2026-10-29·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-FD88AA0D924CF1C8</code> · 추적 <code>/track CAN-FD88AA0D924CF1C8</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "7a7e67791d7a41db2f52d92d9ae49f013089c22bf5f7d569a80666911444d6c0"
+      "payload_sha256": "7a7e67791d7a41db2f52d92d9ae49f013089c22bf5f7d569a80666911444d6c0",
+      "message_id": 220
     }
   },
   "bootstrap": {
