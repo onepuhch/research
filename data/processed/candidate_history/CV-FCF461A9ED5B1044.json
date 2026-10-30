@@ -1,0 +1,189 @@
+{
+  "candidate_id": "CAN-FFBE91764685770A",
+  "candidate_version": "CV-FCF461A9ED5B1044",
+  "identity": {
+    "entity_id": "NASDAQ:SIMO",
+    "ticker": "SIMO",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Silicon Motion Technology Corporation",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "솔리드 스테이트 저장 장치용 낸드 플래시 컨트롤러를 설계, 개발, 판매합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Silicon Motion Technology Corporation, together with its subsidiaries, designs, develops, and markets NAND flash controllers for solid-state storage devices and related devices in China, Japan, Singapore, Taiwan, Korea, the United States, and internationally. It offers controllers for computing-grade solid state drives (SSDs), which are used in PCs and other client devices; enterprise-grade SSDs used in enterprise and hyperscale data centers; eMMC and UFS mobile embedded storage for use in smartphones and IoT devices; flash memory cards and flash drives for use in expandable storage; and speci"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SIMO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SIMO/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-30T06:05:21+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SIMO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SIMO/history",
+      "published_at": null,
+      "observed_at": "2026-10-30T06:05:21+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SIMO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SIMO/profile",
+      "published_at": null,
+      "observed_at": "2026-10-30T06:05:21+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-FF864E3DA3A2BAE7",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-29",
+      "observed_at": "2026-10-30T06:14:31+00:00",
+      "fields": "6-K EX-99.1"
+    },
+    {
+      "id": "DOC-4E74FFCB29A83B9C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-16",
+      "observed_at": "2026-10-30T06:14:31+00:00",
+      "fields": "6-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-D482A5139B04E686",
+    "input_sha": "d482a5139b04e6860fe618962c540f3fcc815c9b7200b444c69ea729807d5b87",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "eMMC+UFS controller sales · 3Q of 2026: 35% to 40%(변화율·증가) — eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다",
+        "note_ko": "eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다",
+        "kind": "fact",
+        "quote": "eMMC+UFS controller sales: 3Q of 2026 decreased 10% to 15% Q/Q and increased 35% to 40% Y/Y",
+        "document_id": "DOC-FF864E3DA3A2BAE7",
+        "block_id": "t4",
+        "metric": "eMMC+UFS controller sales",
+        "figures": [
+          "35% to 40%"
+        ],
+        "period": "3Q of 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "volume",
+          "price"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-FF864E3DA3A2BAE7",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm",
+        "filed_at": "2026-10-29",
+        "observed_at": "2026-10-30T06:14:31+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-4E74FFCB29A83B9C",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm",
+        "filed_at": "2026-10-16",
+        "observed_at": "2026-10-30T06:14:31+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-30T13:11:16+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 16.28347,
+    "eps_30d": 15.87274,
+    "eps_90d": 10.21763,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 8,
+    "down30": 0,
+    "pct_90": 59.4,
+    "steady": true,
+    "turnaround": false
+  }
+}

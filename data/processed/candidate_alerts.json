@@ -1878,24 +1878,6 @@
   "material": {
     "version": "material-update-v3",
     "pending": {
-      "NYSE:DEC|eps-revision-review:v1": {
-        "baseline_id": "OB-AF3B4B531E72E215",
-        "first": {
-          "observation_id": "OB-5A02A31E23A59A85",
-          "baseline_id": "OB-5A02A31E23A59A85",
-          "observed_at": "2026-10-17T04:53:32+00:00",
-          "day": "2026-10-17",
-          "snapshot_sha256": "9168a55df2eaa160e878e0670e92e3a85cf5ed3b76ef1821071964f9c8b56d58",
-          "eps_now": 7.4002,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
       "NYSE:VLO|eps-revision-review:v1": {
         "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
         "first": {
@@ -1905,42 +1887,6 @@
           "day": "2026-10-27",
           "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
           "eps_now": 52.99214,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NYSE:MPC|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-6578E7350D2A0D67",
-          "baseline_id": "OB-6578E7350D2A0D67",
-          "observed_at": "2026-10-29T06:13:54+00:00",
-          "day": "2026-10-29",
-          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
-          "eps_now": 60.30776,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NYSE:DHT|eps-revision-review:v1": {
-        "baseline_id": "OB-9B007EE68965810F",
-        "first": {
-          "observation_id": "OB-1E0B1DFF18529D3D",
-          "baseline_id": "OB-1E0B1DFF18529D3D",
-          "observed_at": "2026-10-29T06:13:54+00:00",
-          "day": "2026-10-29",
-          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
-          "eps_now": 3.2405,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",

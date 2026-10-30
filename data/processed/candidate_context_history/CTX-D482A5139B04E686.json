@@ -1,0 +1,150 @@
+{
+  "context_id": "CTX-D482A5139B04E686",
+  "candidate_id": "CAN-FFBE91764685770A",
+  "ticker": "SIMO",
+  "issuer_cik": "0001329394",
+  "document_ids": [
+    "DOC-FF864E3DA3A2BAE7",
+    "DOC-4E74FFCB29A83B9C"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-FF864E3DA3A2BAE7#t4",
+    "DOC-FF864E3DA3A2BAE7#t6",
+    "DOC-FF864E3DA3A2BAE7#p7",
+    "DOC-FF864E3DA3A2BAE7#p8",
+    "DOC-FF864E3DA3A2BAE7#p12",
+    "DOC-FF864E3DA3A2BAE7#t8",
+    "DOC-FF864E3DA3A2BAE7#p19",
+    "DOC-FF864E3DA3A2BAE7#p20",
+    "DOC-FF864E3DA3A2BAE7#p21",
+    "DOC-FF864E3DA3A2BAE7#p22",
+    "DOC-FF864E3DA3A2BAE7#t10",
+    "DOC-FF864E3DA3A2BAE7#t11",
+    "DOC-FF864E3DA3A2BAE7#p25",
+    "DOC-FF864E3DA3A2BAE7#p35",
+    "DOC-FF864E3DA3A2BAE7#p36",
+    "DOC-FF864E3DA3A2BAE7#p39",
+    "DOC-FF864E3DA3A2BAE7#t20",
+    "DOC-4E74FFCB29A83B9C#p7",
+    "DOC-4E74FFCB29A83B9C#p8"
+  ],
+  "input_sha": "d482a5139b04e6860fe618962c540f3fcc815c9b7200b444c69ea729807d5b87",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-30T13:11:16+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "eMMC+UFS controller sales · 3Q of 2026: 35% to 40%(변화율·증가) — eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다",
+      "note_ko": "eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다",
+      "kind": "fact",
+      "quote": "eMMC+UFS controller sales: 3Q of 2026 decreased 10% to 15% Q/Q and increased 35% to 40% Y/Y",
+      "document_id": "DOC-FF864E3DA3A2BAE7",
+      "block_id": "t4",
+      "metric": "eMMC+UFS controller sales",
+      "figures": [
+        "35% to 40%"
+      ],
+      "period": "3Q of 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "volume",
+        "price"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "순매출이 전 분기보다 늘었다",
+      "figures": [
+        "$560.2 million"
+      ],
+      "quote": "For the third quarter of 2026, net sales (GAAP) increased sequentially to $560.2 million from $451.0 million in the second quarter of 2026.",
+      "where": "DOC-FF864E3DA3A2BAE7#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "희석 주당 순이익이 전 분기보다 늘었다",
+      "figures": [
+        "$4.35"
+      ],
+      "quote": "For the third quarter of 2026, net income (non-GAAP) increased sequentially to $149.2 million, or $4.35 per diluted ADS (non-GAAP), from net income (non-GAAP) of $83.1 million, or $2.43 per diluted AD",
+      "where": "DOC-FF864E3DA3A2BAE7#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "경영진은 매출이 전 분기 대비 늘어날 것으로 예상한다",
+      "figures": [
+        "$588 to $616"
+      ],
+      "quote": "Revenue ; $588 to $616 +5% to 10% Q/Q +111% to 121% Y/Y",
+      "where": "DOC-FF864E3DA3A2BAE7#t10"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_without_forward_wording",
+      "note_ko": "회사는 전년 대비 매출이 늘어날 것으로 예상한다",
+      "figures": [
+        "more than 100%"
+      ],
+      "quote": "Based on results to date and current visibility, we believe we are on track to deliver record annual revenue in 2026, representing more than 100% growth over the prior year, with our enterprise and AI",
+      "where": "DOC-FF864E3DA3A2BAE7#p21"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_from_another_period",
+      "note_ko": "순이익과 희석 주당 순이익이 전 분기보다 줄었다",
+      "figures": [
+        "$65.3 million",
+        "$1.91"
+      ],
+      "quote": "Net income (GAAP) decreased sequentially to $65.3 million, or $1.91 per diluted American depositary share (“ADS”) (GAAP), from net income (GAAP) of $136.1 million, or $3.99 per diluted ADS (GAAP), in ",
+      "where": "DOC-FF864E3DA3A2BAE7#p7"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_role_mixed",
+      "note_ko": "eMMC+UFS 컨트롤러 매출이 전 분기 대비 줄었다",
+      "figures": [
+        "10% to 15%"
+      ],
+      "quote": "eMMC+UFS controller sales: 3Q of 2026 decreased 10% to 15% Q/Q and increased 35% to 40% Y/Y",
+      "where": "DOC-FF864E3DA3A2BAE7#t4"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "비일반회계기준 재무 측정치는 일반회계기준에 따른 회사의 영업 실적과 관련된 모든 금액을 반영하지 않으므로 한계가 있다",
+      "figures": [],
+      "quote": "These non-GAAP measures are not in accordance with or an alternative to GAAP and may be different from similarly titled non-GAAP measures used by other companies. We believe that these non-GAAP measur",
+      "where": "DOC-FF864E3DA3A2BAE7#p35"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

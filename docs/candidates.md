@@ -176,11 +176,11 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-30 이후) 몫 57%. 근거 문장 원문 최신 제출 2026-07-30(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
-- [실적] Adjusted fully-converted net income · second quarter 2026: $753.1 million — 회사의 조정된 완전 전환 순이익은 해당 기간 이 금액을 기록했다 — “Adjusted fully-converted net income for the second quarter 2026, excluding special items, was $753.1 million, or $6.22 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $118.5 million or $(1.03) per share, for the second quarter 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm), 제출 2026-07-30, 기간 second quarter 2026)
-- [실적] net income attributable to PBF Energy Inc. · second quarter 2026: $906.4 million — 회사의 순이익은 해당 기간 이 금액을 기록했다 — “The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm), 제출 2026-07-30, 기간 second quarter 2026)
-- [실적] net income attributable to PBF Energy Inc. · second quarter 2026: $7.54 per share — 회사의 주당 순이익은 해당 기간 이 금액을 기록했다 — “The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm), 제출 2026-07-30, 기간 second quarter 2026)
-- 자동 정리 문장 5개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-30 이후) 몫 57%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
+- [실적] Adjusted fully-converted net income · third quarter 2026: $1,568.6 million — 특별 항목을 제외한 조정 순이익이 전년 같은 분기보다 늘었다 — “Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
+- [실적] Adjusted fully-converted net income · third quarter 2026: $12.78 per share — 특별 항목을 제외한 조정 주당 순이익이 전년 같은 분기보다 늘었다 — “Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
+- [실적] net income attributable to PBF Energy Inc. · third quarter 2026: $1,529.3 million — 회사의 순이익이 전년 같은 분기보다 늘었다 — “The company reported third quarter 2026 net income of $1,543.3 million and net income attributable to PBF Energy Inc. of $1,529.3 million or $12.54 per share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
+- 자동 정리 문장 4개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
 
 **사람이 확인한 사업 근거**
 
@@ -190,7 +190,7 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- [반대 근거·한계] 순이익에 미친 영향(net income) · second quarter 2026: $159.8 million(세후 순증가 효과) / $1.32 per share(주당 증가 효과) — 특별 항목이 순이익을 이 금액만큼 증가시켰다 — “Non-cash special items included in the second quarter 2026 results, which increased net income by a net, after-tax benefit of $159.8 million, or $1.32 per share, primarily consisted of gains on insurance recoveries associated with the February 1, 2025 fire at the Martinez refinery (the "Martinez refinery fire"), partially offset by expenses associated with the Martinez refinery fire, costs related to PBF's Refinery Business Improvement initiative ("RBI"), and loss on extinguishment of debt related to the redemption of the 6.00% senior unsecured notes due 2028.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm), 제출 2026-07-30, 기간 second quarter 2026)
+- [반대 근거·한계] 순이익에 미친 영향(net income) · third quarter 2026: $28.9 million(세후 순감소 효과) / $0.24 per share(주당 감소 효과) — 특별 항목으로 인해 순이익이 감소했다 — “Non-cash special items included in the third quarter 2026 results, which decreased net income by a net, after-tax charge of $28.9 million, or $0.24 per share, primarily consisted of a loss on extinguishment of debt related to the redemption of the 2030 7.875% Senior Notes and the write-off of a portion of unamortized deferred financing costs in connection with refinancing activities, as well as costs related to PBF's Refinery Business Improvement initiative ("RBI").” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
 - EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
@@ -202,8 +202,8 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 - [PBF analyst estimates (EPS trend)](https://finance.yahoo.com/quote/PBF/analysis) (관측 2026-10-30)
 - [PBF daily closes](https://finance.yahoo.com/quote/PBF/history) (관측 2026-10-30)
 - [PBF company profile](https://finance.yahoo.com/quote/PBF/profile) (관측 2026-10-30)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm) (제출 2026-10-29)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm) (제출 2026-07-30)
-- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000030/pbf-20260630.htm) (제출 2026-07-30)
 
 텔레그램: `/track CAN-82719B27698E3C22`
 
@@ -1304,7 +1304,7 @@ CAN-FFBE91764685770A · Semiconductors · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (SIMO)
+솔리드 스테이트 저장 장치용 낸드 플래시 컨트롤러를 설계, 개발, 판매합니다.
 <small>원문(영문): Silicon Motion Technology Corporation, together with its subsidiaries, designs, develops, and markets NAND flash controllers for solid-state storage devices and related devices in China, Japan, Singapore, Taiwan, Korea, the United States, and internationally. It offers controllers for computing-grade solid state drives (SSDs), which are used in PCs and other client devices; enterprise-grade SSDs used in enterprise and hyperscale data centers; eMMC and UFS mobile embedded storage for use in smartphones and IoT devices; flash memory cards and flash drives for use in expandable storage; and speci</small>
 
 **후보가 된 이유**
@@ -1320,8 +1320,8 @@ CAN-FFBE91764685770A · Semiconductors · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-30 이후) 몫 7%. 채택된 근거 문장의 원문 없음
-아직 공식 발표 원문을 연결하지 않았습니다.
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-09-30 이후) 몫 7%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
+- [실적] eMMC+UFS controller sales · 3Q of 2026: 35% to 40%(변화율·증가) — eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다 — “eMMC+UFS controller sales: 3Q of 2026 decreased 10% to 15% Q/Q and increased 35% to 40% Y/Y” ([SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm), 제출 2026-10-29, 기간 3Q of 2026)
 
 **사람이 확인한 사업 근거**
 
@@ -1331,6 +1331,7 @@ CAN-FFBE91764685770A · Semiconductors · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -1341,6 +1342,8 @@ CAN-FFBE91764685770A · Semiconductors · 미추적
 - [SIMO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SIMO/analysis) (관측 2026-10-30)
 - [SIMO daily closes](https://finance.yahoo.com/quote/SIMO/history) (관측 2026-10-30)
 - [SIMO company profile](https://finance.yahoo.com/quote/SIMO/profile) (관측 2026-10-30)
+- [SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm) (제출 2026-10-29)
+- [SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm) (제출 2026-10-16)
 
 텔레그램: `/track CAN-FFBE91764685770A`
 

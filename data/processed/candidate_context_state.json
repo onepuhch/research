@@ -320,9 +320,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-11-06T06:14:31+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-69BE3717B7E64332",
-      "context_input_sha": "69be3717b7e6433219f87e367f56299b1f83c319e93241cbfd664048840b63e1",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-3A4708BFA094E0A3",
+      "context_input_sha": "3a4708bfa094e0a321a147e13bdeeb4f6d64535046df4139423e64736697b819",
       "quality": "complete",
       "failures": 0,
       "draft_error": "TimeoutError",
@@ -363,8 +363,7 @@
             "guidance_prior_unverified"
           ]
         }
-      ],
-      "draft_next_at": "2026-10-30T06:30:27+00:00"
+      ]
     },
     "CAN-DC6D3F92ECFFD019": {
       "status": "success",
@@ -1424,9 +1423,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-11-06T06:14:31+00:00",
-      "draft_status": "provider_overloaded",
-      "context_id": "CTX-3BBE7656667CA9D0",
-      "context_input_sha": "3bbe7656667ca9d079790829487e1c97806e7c6ce4577db9b71201adda9fbf1e",
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-0E54F861A8D5F143",
+      "context_input_sha": "0e54f861a8d5f143c12e09a6b01f893d6a7ad8f8c538d084a748fb21003fc92f",
       "update_checks": [
         {
           "document_id": "DOC-23671C7EDB4EC913",
@@ -1444,8 +1443,7 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ],
-      "draft_next_at": "2026-10-30T06:30:27+00:00"
+      ]
     },
     "CAN-4BD491C8D3F1EC4F": {
       "status": "success",
@@ -3849,8 +3847,9 @@
         }
       ],
       "next_eligible_at": "2026-11-06T06:14:31+00:00",
-      "draft_status": "provider_overloaded",
-      "draft_next_at": "2026-10-30T06:30:27+00:00"
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-D482A5139B04E686",
+      "context_input_sha": "d482a5139b04e6860fe618962c540f3fcc815c9b7200b444c69ea729807d5b87"
     }
   },
   "days": {

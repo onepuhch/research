@@ -1,0 +1,219 @@
+{
+  "context_id": "CTX-3A4708BFA094E0A3",
+  "candidate_id": "CAN-82719B27698E3C22",
+  "ticker": "PBF",
+  "issuer_cik": "0001534504",
+  "document_ids": [
+    "DOC-33EBD5592D96025E",
+    "DOC-9FC60A7023735EC9"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-33EBD5592D96025E#p8",
+    "DOC-33EBD5592D96025E#p15",
+    "DOC-33EBD5592D96025E#p20",
+    "DOC-33EBD5592D96025E#t2",
+    "DOC-33EBD5592D96025E#t13",
+    "DOC-9FC60A7023735EC9#p5",
+    "DOC-9FC60A7023735EC9#p10"
+  ],
+  "input_sha": "3a4708bfa094e0a321a147e13bdeeb4f6d64535046df4139423e64736697b819",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-30T13:11:16+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net income attributable to PBF Energy Inc. · third quarter 2026: $1,529.3 million — 회사의 순이익이 전년 같은 분기보다 늘었다",
+      "note_ko": "회사의 순이익이 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "The company reported third quarter 2026 net income of $1,543.3 million and net income attributable to PBF Energy Inc. of $1,529.3 million or $12.54 per share.",
+      "document_id": "DOC-33EBD5592D96025E",
+      "block_id": "p8",
+      "metric": "net income attributable to PBF Energy Inc.",
+      "figures": [
+        "$1,529.3 million"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "net income attributable to PBF Energy Inc. · third quarter 2026: $12.54 per share — 회사의 주당 순이익이 전년 같은 분기보다 늘었다",
+      "note_ko": "회사의 주당 순이익이 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "The company reported third quarter 2026 net income of $1,543.3 million and net income attributable to PBF Energy Inc. of $1,529.3 million or $12.54 per share.",
+      "document_id": "DOC-33EBD5592D96025E",
+      "block_id": "p8",
+      "metric": "net income attributable to PBF Energy Inc.",
+      "figures": [
+        "$12.54 per share"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Adjusted fully-converted net income · third quarter 2026: $1,568.6 million — 특별 항목을 제외한 조정 순이익이 전년 같은 분기보다 늘었다",
+      "note_ko": "특별 항목을 제외한 조정 순이익이 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.",
+      "document_id": "DOC-33EBD5592D96025E",
+      "block_id": "p8",
+      "metric": "Adjusted fully-converted net income",
+      "figures": [
+        "$1,568.6 million"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Adjusted fully-converted net income · third quarter 2026: $12.78 per share — 특별 항목을 제외한 조정 주당 순이익이 전년 같은 분기보다 늘었다",
+      "note_ko": "특별 항목을 제외한 조정 주당 순이익이 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.",
+      "document_id": "DOC-33EBD5592D96025E",
+      "block_id": "p8",
+      "metric": "Adjusted fully-converted net income",
+      "figures": [
+        "$12.78 per share"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "순이익에 미친 영향(net income) · third quarter 2026: $28.9 million(세후 순감소 효과) / $0.24 per share(주당 감소 효과) — 특별 항목으로 인해 순이익이 감소했다",
+      "note_ko": "특별 항목으로 인해 순이익이 감소했다",
+      "kind": "fact",
+      "quote": "Non-cash special items included in the third quarter 2026 results, which decreased net income by a net, after-tax charge of $28.9 million, or $0.24 per share, primarily consisted of a loss on extinguishment of debt related to the redemption of the 2030 7.875% Senior Notes and the write-off of a portion of unamortized deferred financing costs in connection with refinancing activities, as well as costs related to PBF's Refinery Business Improvement initiative (\"RBI\").",
+      "document_id": "DOC-33EBD5592D96025E",
+      "block_id": "p8",
+      "metric": "net income",
+      "figures": [
+        "$28.9 million",
+        "$0.24 per share"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "effect_on_metric",
+        "effect_on_metric"
+      ],
+      "figure_readings": [
+        {
+          "role": "effect_on_metric",
+          "unit": "amount",
+          "direction": "down",
+          "after_tax": true,
+          "net": true
+        },
+        {
+          "role": "effect_on_metric",
+          "unit": "amount",
+          "direction": "down",
+          "after_tax": true,
+          "net": true,
+          "per_share": true
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 매출이 전년 같은 기간보다 늘었다",
+      "figures": [
+        "$12,132.8"
+      ],
+      "quote": "Revenues ; $12,132.8 ; $7,651.1 ; $31,715.4 ; $22,192.8",
+      "where": "DOC-33EBD5592D96025E#t2"
+    }
+  ],
+  "context_status": "draft_ready"
+}

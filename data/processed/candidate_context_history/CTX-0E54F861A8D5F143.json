@@ -1,0 +1,89 @@
+{
+  "context_id": "CTX-0E54F861A8D5F143",
+  "candidate_id": "CAN-3D30FF7D03231FE1",
+  "ticker": "PSX",
+  "issuer_cik": "0001534701",
+  "document_ids": [
+    "DOC-23671C7EDB4EC913",
+    "DOC-D9C0CECC172F9418"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-23671C7EDB4EC913#p24",
+    "DOC-23671C7EDB4EC913#p25",
+    "DOC-23671C7EDB4EC913#p27",
+    "DOC-23671C7EDB4EC913#p28",
+    "DOC-23671C7EDB4EC913#t5",
+    "DOC-23671C7EDB4EC913#t6",
+    "DOC-D9C0CECC172F9418#p28",
+    "DOC-D9C0CECC172F9418#t5",
+    "DOC-D9C0CECC172F9418#t6",
+    "DOC-D9C0CECC172F9418#t7",
+    "DOC-D9C0CECC172F9418#t8"
+  ],
+  "input_sha": "0e54f861a8d5f143c12e09a6b01f893d6a7ad8f8c538d084a748fb21003fc92f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-30T13:11:16+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "가스 운송 마진 감소로 전 분기보다 세전 이익이 줄었다",
+      "figures": [
+        "$702"
+      ],
+      "quote": "Midstream pre-tax income decreased compared with the second quarter mainly due to lower margins associated with gas transportation.",
+      "where": "DOC-23671C7EDB4EC913#p24"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "폴리에틸렌 마진 감소로 전 분기보다 세전 이익이 줄었으나, 폴리에틸렌 물량 증가와 비용 감소로 일부 상쇄되었다",
+      "figures": [
+        "$311"
+      ],
+      "quote": "Chemicals pre-tax income decreased compared with the second quarter mainly due to lower polyethylene margins, partially offset by higher polyethylene volumes and lower costs.",
+      "where": "DOC-23671C7EDB4EC913#p25"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "주로 가격 상승 환경으로 인한 글로벌 마케팅 연료 마진 감소로 전 분기보다 조정 세전 이익이 줄었다",
+      "figures": [
+        "$245"
+      ],
+      "quote": "Marketing and Specialties adjusted pre-tax income decreased compared with the second quarter mainly due to lower global marketing fuel margins, primarily driven by a rising price environment.",
+      "where": "DOC-23671C7EDB4EC913#p27"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "재고 영향을 포함한 마진 감소와 비용 증가로 전 분기보다 세전 이익이 줄었다",
+      "figures": [
+        "$191"
+      ],
+      "quote": "Renewable Fuels pre-tax income decreased compared with the second quarter mainly due to lower margins, including inventory impacts, as well as higher costs.",
+      "where": "DOC-23671C7EDB4EC913#p28"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "순이자 비용과 직원 관련 비용 감소로 전 분기보다 세전 손실이 줄었다",
+      "figures": [
+        "$(407)"
+      ],
+      "quote": "Corporate and Other pre-tax loss decreased compared with the first quarter primarily due to lower net interest expense and employee-related costs.",
+      "where": "DOC-D9C0CECC172F9418#p28"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

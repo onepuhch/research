@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T06:14:53+00:00",
+  "generated_at": "2026-10-30T13:11:36+00:00",
   "generator_version": "cards-v10",
   "thesis_key": "eps-revision-review:v1",
   "stale": [],
@@ -739,22 +739,22 @@
       },
       "thesis_key": "eps-revision-review:v1",
       "context": {
-        "context_id": "CTX-69BE3717B7E64332",
-        "input_sha": "69be3717b7e6433219f87e367f56299b1f83c319e93241cbfd664048840b63e1",
+        "context_id": "CTX-3A4708BFA094E0A3",
+        "input_sha": "3a4708bfa094e0a321a147e13bdeeb4f6d64535046df4139423e64736697b819",
         "context_status": "draft_ready",
         "claims": [
           {
-            "text_ko": "net income attributable to PBF Energy Inc. · second quarter 2026: $906.4 million — 회사의 순이익은 해당 기간 이 금액을 기록했다",
-            "note_ko": "회사의 순이익은 해당 기간 이 금액을 기록했다",
+            "text_ko": "net income attributable to PBF Energy Inc. · third quarter 2026: $1,529.3 million — 회사의 순이익이 전년 같은 분기보다 늘었다",
+            "note_ko": "회사의 순이익이 전년 같은 분기보다 늘었다",
             "kind": "fact",
-            "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
-            "document_id": "DOC-9FC60A7023735EC9",
-            "block_id": "p10",
+            "quote": "The company reported third quarter 2026 net income of $1,543.3 million and net income attributable to PBF Energy Inc. of $1,529.3 million or $12.54 per share.",
+            "document_id": "DOC-33EBD5592D96025E",
+            "block_id": "p8",
             "metric": "net income attributable to PBF Energy Inc.",
             "figures": [
-              "$906.4 million"
+              "$1,529.3 million"
             ],
-            "period": "second quarter 2026",
+            "period": "third quarter 2026",
             "currency": "USD",
             "gaap": "unknown",
             "subject": "issuer",
@@ -776,17 +776,17 @@
             "direction": "positive"
           },
           {
-            "text_ko": "net income attributable to PBF Energy Inc. · second quarter 2026: $7.54 per share — 회사의 주당 순이익은 해당 기간 이 금액을 기록했다",
-            "note_ko": "회사의 주당 순이익은 해당 기간 이 금액을 기록했다",
+            "text_ko": "net income attributable to PBF Energy Inc. · third quarter 2026: $12.54 per share — 회사의 주당 순이익이 전년 같은 분기보다 늘었다",
+            "note_ko": "회사의 주당 순이익이 전년 같은 분기보다 늘었다",
             "kind": "fact",
-            "quote": "The company reported second quarter 2026 net income of $915.0 million and net income attributable to PBF Energy Inc. of $906.4 million or $7.54 per share.",
-            "document_id": "DOC-9FC60A7023735EC9",
-            "block_id": "p10",
+            "quote": "The company reported third quarter 2026 net income of $1,543.3 million and net income attributable to PBF Energy Inc. of $1,529.3 million or $12.54 per share.",
+            "document_id": "DOC-33EBD5592D96025E",
+            "block_id": "p8",
             "metric": "net income attributable to PBF Energy Inc.",
             "figures": [
-              "$7.54 per share"
+              "$12.54 per share"
             ],
-            "period": "second quarter 2026",
+            "period": "third quarter 2026",
             "currency": "USD",
             "gaap": "unknown",
             "subject": "issuer",
@@ -808,81 +808,49 @@
             "direction": "positive"
           },
           {
-            "text_ko": "net loss attributable to PBF Energy Inc. · second quarter 2025: $5.2 million — 회사의 순손실은 해당 기간 이 금액을 기록했다",
-            "note_ko": "회사의 순손실은 해당 기간 이 금액을 기록했다",
+            "text_ko": "Adjusted fully-converted net income · third quarter 2026: $1,568.6 million — 특별 항목을 제외한 조정 순이익이 전년 같은 분기보다 늘었다",
+            "note_ko": "특별 항목을 제외한 조정 순이익이 전년 같은 분기보다 늘었다",
             "kind": "fact",
-            "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
-            "document_id": "DOC-9FC60A7023735EC9",
-            "block_id": "p10",
-            "metric": "net loss attributable to PBF Energy Inc.",
-            "figures": [
-              "$5.2 million"
-            ],
-            "period": "second quarter 2025",
-            "currency": "USD",
-            "gaap": "unknown",
-            "subject": "issuer",
-            "subject_name": null,
-            "core": true,
-            "figure_roles": [
-              "level"
-            ],
-            "figure_readings": [
-              {
-                "role": "level",
-                "unit": "amount",
-                "direction": null
-              }
-            ],
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "negative"
-          },
-          {
-            "text_ko": "net loss attributable to PBF Energy Inc. · second quarter 2025: $(0.05) per share — 회사의 주당 순손실은 해당 기간 이 금액을 기록했다",
-            "note_ko": "회사의 주당 순손실은 해당 기간 이 금액을 기록했다",
-            "kind": "fact",
-            "quote": "This compares to net loss of $5.4 million and net loss attributable to PBF Energy Inc. of $5.2 million or $(0.05) per share for the second quarter 2025.",
-            "document_id": "DOC-9FC60A7023735EC9",
-            "block_id": "p10",
-            "metric": "net loss attributable to PBF Energy Inc.",
-            "figures": [
-              "$(0.05) per share"
-            ],
-            "period": "second quarter 2025",
-            "currency": "USD",
-            "gaap": "unknown",
-            "subject": "issuer",
-            "subject_name": null,
-            "core": true,
-            "figure_roles": [
-              "level"
-            ],
-            "figure_readings": [
-              {
-                "role": "level",
-                "unit": "amount",
-                "direction": null
-              }
-            ],
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "negative"
-          },
-          {
-            "text_ko": "Adjusted fully-converted net income · second quarter 2026: $753.1 million — 회사의 조정된 완전 전환 순이익은 해당 기간 이 금액을 기록했다",
-            "note_ko": "회사의 조정된 완전 전환 순이익은 해당 기간 이 금액을 기록했다",
-            "kind": "fact",
-            "quote": "Adjusted fully-converted net income for the second quarter 2026, excluding special items, was $753.1 million, or $6.22 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $118.5 million or $(1.03) per share, for the second quarter 2025.",
-            "document_id": "DOC-9FC60A7023735EC9",
-            "block_id": "p10",
+            "quote": "Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.",
+            "document_id": "DOC-33EBD5592D96025E",
+            "block_id": "p8",
             "metric": "Adjusted fully-converted net income",
             "figures": [
-              "$753.1 million"
+              "$1,568.6 million"
             ],
-            "period": "second quarter 2026",
+            "period": "third quarter 2026",
+            "currency": "USD",
+            "gaap": "non-GAAP",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "figure_roles": [
+              "level"
+            ],
+            "figure_readings": [
+              {
+                "role": "level",
+                "unit": "amount",
+                "direction": null
+              }
+            ],
+            "drivers": [
+              "unknown"
+            ],
+            "direction": "positive"
+          },
+          {
+            "text_ko": "Adjusted fully-converted net income · third quarter 2026: $12.78 per share — 특별 항목을 제외한 조정 주당 순이익이 전년 같은 분기보다 늘었다",
+            "note_ko": "특별 항목을 제외한 조정 주당 순이익이 전년 같은 분기보다 늘었다",
+            "kind": "fact",
+            "quote": "Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.",
+            "document_id": "DOC-33EBD5592D96025E",
+            "block_id": "p8",
+            "metric": "Adjusted fully-converted net income",
+            "figures": [
+              "$12.78 per share"
+            ],
+            "period": "third quarter 2026",
             "currency": "USD",
             "gaap": "non-GAAP",
             "subject": "issuer",
@@ -906,18 +874,18 @@
         ],
         "limitations": [
           {
-            "text_ko": "순이익에 미친 영향(net income) · second quarter 2026: $159.8 million(세후 순증가 효과) / $1.32 per share(주당 증가 효과) — 특별 항목이 순이익을 이 금액만큼 증가시켰다",
-            "note_ko": "특별 항목이 순이익을 이 금액만큼 증가시켰다",
+            "text_ko": "순이익에 미친 영향(net income) · third quarter 2026: $28.9 million(세후 순감소 효과) / $0.24 per share(주당 감소 효과) — 특별 항목으로 인해 순이익이 감소했다",
+            "note_ko": "특별 항목으로 인해 순이익이 감소했다",
             "kind": "fact",
-            "quote": "Non-cash special items included in the second quarter 2026 results, which increased net income by a net, after-tax benefit of $159.8 million, or $1.32 per share, primarily consisted of gains on insurance recoveries associated with the February 1, 2025 fire at the Martinez refinery (the \"Martinez refinery fire\"), partially offset by expenses associated with the Martinez refinery fire, costs related to PBF's Refinery Business Improvement initiative (\"RBI\"), and loss on extinguishment of debt related to the redemption of the 6.00% senior unsecured notes due 2028.",
-            "document_id": "DOC-9FC60A7023735EC9",
-            "block_id": "p10",
+            "quote": "Non-cash special items included in the third quarter 2026 results, which decreased net income by a net, after-tax charge of $28.9 million, or $0.24 per share, primarily consisted of a loss on extinguishment of debt related to the redemption of the 2030 7.875% Senior Notes and the write-off of a portion of unamortized deferred financing costs in connection with refinancing activities, as well as costs related to PBF's Refinery Business Improvement initiative (\"RBI\").",
+            "document_id": "DOC-33EBD5592D96025E",
+            "block_id": "p8",
             "metric": "net income",
             "figures": [
-              "$159.8 million",
-              "$1.32 per share"
+              "$28.9 million",
+              "$0.24 per share"
             ],
-            "period": "second quarter 2026",
+            "period": "third quarter 2026",
             "currency": "USD",
             "gaap": "unknown",
             "subject": "issuer",
@@ -931,14 +899,14 @@
               {
                 "role": "effect_on_metric",
                 "unit": "amount",
-                "direction": "up",
+                "direction": "down",
                 "after_tax": true,
                 "net": true
               },
               {
                 "role": "effect_on_metric",
                 "unit": "amount",
-                "direction": "up",
+                "direction": "down",
                 "after_tax": true,
                 "net": true,
                 "per_share": true
@@ -956,6 +924,15 @@
         "source_coverage": "partial",
         "documents": [
           {
+            "document_id": "DOC-33EBD5592D96025E",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm",
+            "filed_at": "2026-10-29",
+            "observed_at": "2026-10-30T06:14:31+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          },
+          {
             "document_id": "DOC-9FC60A7023735EC9",
             "title": "EX-99.1",
             "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
@@ -963,21 +940,12 @@
             "observed_at": "2026-09-26T13:52:04+00:00",
             "form": "8-K",
             "document_type": "EX-99.1"
-          },
-          {
-            "document_id": "DOC-DF8157DE720BEF5F",
-            "title": "10-Q",
-            "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000030/pbf-20260630.htm",
-            "filed_at": "2026-07-30",
-            "observed_at": "2026-10-03T05:43:20+00:00",
-            "form": "10-Q",
-            "document_type": "10-Q"
           }
         ],
         "source_parser_version": "context-check-v11",
         "display_validator_version": "context-check-v11",
         "validation_scope": "as_generated",
-        "generated_at": "2026-10-15T05:06:33+00:00"
+        "generated_at": "2026-10-30T13:11:16+00:00"
       },
       "context_hold": null,
       "name": "PBF Energy Inc.",
@@ -1068,6 +1036,16 @@
           "fields": "assetProfile industry, sector, business summary"
         },
         {
+          "id": "DOC-33EBD5592D96025E",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-10-29",
+          "observed_at": "2026-10-30T06:14:31+00:00",
+          "fields": "8-K EX-99.1"
+        },
+        {
           "id": "DOC-9FC60A7023735EC9",
           "provider": "SEC EDGAR",
           "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm",
@@ -1076,22 +1054,12 @@
           "filed_at": "2026-07-30",
           "observed_at": "2026-09-26T13:52:04+00:00",
           "fields": "8-K EX-99.1"
-        },
-        {
-          "id": "DOC-DF8157DE720BEF5F",
-          "provider": "SEC EDGAR",
-          "url": "https://www.sec.gov/Archives/edgar/data/1534504/000153450426000030/pbf-20260630.htm",
-          "title": "SEC 10-Q 10-Q",
-          "published_at": null,
-          "filed_at": "2026-07-30",
-          "observed_at": "2026-10-03T05:43:20+00:00",
-          "fields": "10-Q 10-Q"
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-13EC92C8D888B2F0",
+      "candidate_version": "CV-FAC805B5D2EDBB1A",
       "classification": "found",
-      "observation_id": "OB-5E87C7970CA1B9FA",
+      "observation_id": "OB-DF7277C5EF3D93BA",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -1155,12 +1123,12 @@
       "source_attempt_at": "2026-10-30T06:14:31+00:00",
       "source_status": "success",
       "last_valid_context": {
-        "context_id": "CTX-69BE3717B7E64332",
-        "generated_at": "2026-10-15T05:06:33+00:00",
+        "context_id": "CTX-3A4708BFA094E0A3",
+        "generated_at": "2026-10-30T13:11:16+00:00",
         "eps_target_period": "2027-12-31"
       },
       "research_note": null,
-      "context_id": "CTX-69BE3717B7E64332",
+      "context_id": "CTX-3A4708BFA094E0A3",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261030T060017Z_41011340799-1.json.gz",
         "sha256": "81289440d40ca0541d06b8c969016cf52f7e04282c6576bcb02e3c47a14c1458",
@@ -7268,7 +7236,75 @@
         "verified": true
       },
       "thesis_key": "eps-revision-review:v1",
-      "context": null,
+      "context": {
+        "context_id": "CTX-D482A5139B04E686",
+        "input_sha": "d482a5139b04e6860fe618962c540f3fcc815c9b7200b444c69ea729807d5b87",
+        "context_status": "insufficient_earnings_context",
+        "claims": [
+          {
+            "text_ko": "eMMC+UFS controller sales · 3Q of 2026: 35% to 40%(변화율·증가) — eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다",
+            "note_ko": "eMMC+UFS 컨트롤러 매출이 전년 동기 대비 늘었다",
+            "kind": "fact",
+            "quote": "eMMC+UFS controller sales: 3Q of 2026 decreased 10% to 15% Q/Q and increased 35% to 40% Y/Y",
+            "document_id": "DOC-FF864E3DA3A2BAE7",
+            "block_id": "t4",
+            "metric": "eMMC+UFS controller sales",
+            "figures": [
+              "35% to 40%"
+            ],
+            "period": "3Q of 2026",
+            "currency": null,
+            "gaap": "unknown",
+            "subject": "issuer",
+            "subject_name": null,
+            "core": false,
+            "figure_roles": [
+              "delta"
+            ],
+            "figure_readings": [
+              {
+                "role": "delta",
+                "unit": "pct",
+                "direction": "up"
+              }
+            ],
+            "drivers": [
+              "volume",
+              "price"
+            ],
+            "direction": "positive"
+          }
+        ],
+        "limitations": [],
+        "next_check": [],
+        "link": "unconfirmed",
+        "link_note": null,
+        "source_coverage": "partial",
+        "documents": [
+          {
+            "document_id": "DOC-FF864E3DA3A2BAE7",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm",
+            "filed_at": "2026-10-29",
+            "observed_at": "2026-10-30T06:14:31+00:00",
+            "form": "6-K",
+            "document_type": "EX-99.1"
+          },
+          {
+            "document_id": "DOC-4E74FFCB29A83B9C",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm",
+            "filed_at": "2026-10-16",
+            "observed_at": "2026-10-30T06:14:31+00:00",
+            "form": "6-K",
+            "document_type": "EX-99.1"
+          }
+        ],
+        "source_parser_version": "context-check-v11",
+        "display_validator_version": "context-check-v11",
+        "validation_scope": "as_generated",
+        "generated_at": "2026-10-30T13:11:16+00:00"
+      },
       "context_hold": null,
       "name": "Silicon Motion Technology Corporation",
       "industry": "Semiconductors",
@@ -7299,12 +7335,13 @@
       "base_classification": "found",
       "explanations": {
         "company_description_ko": {
-          "text": null,
+          "text": "솔리드 스테이트 저장 장치용 낸드 플래시 컨트롤러를 설계, 개발, 판매합니다.",
           "kind": "fact",
           "source_ids": [
             "yahoo-profile"
           ],
-          "status": "pending",
+          "status": "translated",
+          "model": "gemini-2.5-flash",
           "source_text": "Silicon Motion Technology Corporation, together with its subsidiaries, designs, develops, and markets NAND flash controllers for solid-state storage devices and related devices in China, Japan, Singapore, Taiwan, Korea, the United States, and internationally. It offers controllers for computing-grade solid state drives (SSDs), which are used in PCs and other client devices; enterprise-grade SSDs used in enterprise and hyperscale data centers; eMMC and UFS mobile embedded storage for use in smartphones and IoT devices; flash memory cards and flash drives for use in expandable storage; and speci"
         },
         "earnings_path": {
@@ -7355,12 +7392,32 @@
           "published_at": null,
           "observed_at": "2026-10-30T06:05:21+00:00",
           "fields": "assetProfile industry, sector, business summary"
+        },
+        {
+          "id": "DOC-FF864E3DA3A2BAE7",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm",
+          "title": "SEC 6-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-10-29",
+          "observed_at": "2026-10-30T06:14:31+00:00",
+          "fields": "6-K EX-99.1"
+        },
+        {
+          "id": "DOC-4E74FFCB29A83B9C",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm",
+          "title": "SEC 6-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-10-16",
+          "observed_at": "2026-10-30T06:14:31+00:00",
+          "fields": "6-K EX-99.1"
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-B66114F1D79C35B4",
+      "candidate_version": "CV-FCF461A9ED5B1044",
       "classification": "found",
-      "observation_id": "OB-19EB777188E0D832",
+      "observation_id": "OB-9212662658321F49",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -7411,7 +7468,7 @@
       "source_status": "success",
       "last_valid_context": null,
       "research_note": null,
-      "context_id": null,
+      "context_id": "CTX-D482A5139B04E686",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261030T060017Z_41011340799-1.json.gz",
         "sha256": "81289440d40ca0541d06b8c969016cf52f7e04282c6576bcb02e3c47a14c1458",
@@ -9435,71 +9492,25 @@
       },
       "thesis_key": "eps-revision-review:v1",
       "context": {
-        "context_id": "CTX-3BBE7656667CA9D0",
-        "input_sha": "3bbe7656667ca9d079790829487e1c97806e7c6ce4577db9b71201adda9fbf1e",
-        "context_status": "insufficient_earnings_context",
-        "claims": [
-          {
-            "text_ko": "total debt: $20.6 billion — 총 부채가 감소했다",
-            "note_ko": "총 부채가 감소했다",
-            "kind": "fact",
-            "quote": "Decreased total debt by $6.6 billion to $20.6 billion; net debt reduced to $16.5 billion",
-            "document_id": "DOC-D9C0CECC172F9418",
-            "block_id": "p5",
-            "metric": "total debt",
-            "figures": [
-              "$20.6 billion"
-            ],
-            "period": "unknown",
-            "currency": "USD",
-            "gaap": "unknown",
-            "subject": "issuer",
-            "subject_name": null,
-            "core": false,
-            "figure_roles": [
-              "level"
-            ],
-            "figure_readings": [
-              {
-                "role": "level",
-                "unit": "amount",
-                "direction": null
-              }
-            ],
-            "drivers": [
-              "unknown"
-            ],
-            "direction": "negative"
-          },
-          {
-            "text_ko": "[Corporate and Other] pre-tax loss — 법인 및 기타 부문의 세전 손실이 전 분기 대비 감소했다",
-            "note_ko": "법인 및 기타 부문의 세전 손실이 전 분기 대비 감소했다",
-            "kind": "fact",
-            "quote": "•Corporate and Other pre-tax loss decreased compared with the first quarter primarily due to lower net interest expense and employee-related costs.",
-            "document_id": "DOC-D9C0CECC172F9418",
-            "block_id": "p28",
-            "metric": "pre-tax loss",
-            "figures": [],
-            "period": "unknown",
-            "currency": null,
-            "gaap": "unknown",
-            "subject": "segment",
-            "subject_name": "Corporate and Other",
-            "core": false,
-            "figure_roles": [],
-            "figure_readings": [],
-            "drivers": [
-              "margin_cost"
-            ],
-            "direction": "positive"
-          }
-        ],
+        "context_id": "CTX-0E54F861A8D5F143",
+        "input_sha": "0e54f861a8d5f143c12e09a6b01f893d6a7ad8f8c538d084a748fb21003fc92f",
+        "context_status": "no_supported_claims",
+        "claims": [],
         "limitations": [],
         "next_check": [],
         "link": "unconfirmed",
         "link_note": null,
         "source_coverage": "partial",
         "documents": [
+          {
+            "document_id": "DOC-23671C7EDB4EC913",
+            "title": "EX-99.1",
+            "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000035/psx-2026930_ex991.htm",
+            "filed_at": "2026-10-28",
+            "observed_at": "2026-10-30T06:14:31+00:00",
+            "form": "8-K",
+            "document_type": "EX-99.1"
+          },
           {
             "document_id": "DOC-D9C0CECC172F9418",
             "title": "EX-99.1",
@@ -9513,7 +9524,7 @@
         "source_parser_version": "context-check-v11",
         "display_validator_version": "context-check-v11",
         "validation_scope": "as_generated",
-        "generated_at": "2026-10-15T05:06:33+00:00"
+        "generated_at": "2026-10-30T13:11:16+00:00"
       },
       "context_hold": null,
       "name": "Phillips 66",
@@ -9606,6 +9617,16 @@
           "fields": "assetProfile industry, sector, business summary"
         },
         {
+          "id": "DOC-23671C7EDB4EC913",
+          "provider": "SEC EDGAR",
+          "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000035/psx-2026930_ex991.htm",
+          "title": "SEC 8-K EX-99.1",
+          "published_at": null,
+          "filed_at": "2026-10-28",
+          "observed_at": "2026-10-30T06:14:31+00:00",
+          "fields": "8-K EX-99.1"
+        },
+        {
           "id": "DOC-D9C0CECC172F9418",
           "provider": "SEC EDGAR",
           "url": "https://www.sec.gov/Archives/edgar/data/1534701/000153470126000030/psx-2026630_ex991.htm",
@@ -9617,9 +9638,9 @@
         }
       ],
       "generator_version": "cards-v10",
-      "candidate_version": "CV-09ACFAAA2BE6F475",
+      "candidate_version": "CV-9BEF7C7AD6D0BE42",
       "classification": "needs_evidence",
-      "observation_id": "OB-16056BAE7A0DF4F9",
+      "observation_id": "OB-69C6817473E283B9",
       "approval": null,
       "review_note": null,
       "evidence_problems": [
@@ -9675,7 +9696,7 @@
       "source_status": "success",
       "last_valid_context": null,
       "research_note": null,
-      "context_id": "CTX-3BBE7656667CA9D0",
+      "context_id": "CTX-0E54F861A8D5F143",
       "source_snapshot": {
         "path": "data/processed/revision_screen/20261030T060017Z_41011340799-1.json.gz",
         "sha256": "81289440d40ca0541d06b8c969016cf52f7e04282c6576bcb02e3c47a14c1458",
@@ -10891,8 +10912,8 @@
       "ticker": "PSX",
       "first_seen_at": "2026-09-25T12:12:26+00:00",
       "last_seen_at": "2026-10-30T06:01:13+00:00",
-      "latest_observation": "OB-16056BAE7A0DF4F9",
-      "latest_version": "CV-09ACFAAA2BE6F475",
+      "latest_observation": "OB-69C6817473E283B9",
+      "latest_version": "CV-9BEF7C7AD6D0BE42",
       "timeline": [
         {
           "version": "CV-ADDD3AC39407ADD4",
@@ -11011,6 +11032,11 @@
         },
         {
           "version": "CV-09ACFAAA2BE6F475",
+          "from": "2026-10-30T06:01:13+00:00",
+          "to": "2026-10-30T06:01:13+00:00"
+        },
+        {
+          "version": "CV-9BEF7C7AD6D0BE42",
           "from": "2026-10-30T06:01:13+00:00",
           "to": "2026-10-30T06:01:13+00:00"
         }
@@ -11561,8 +11587,8 @@
       "ticker": "PBF",
       "first_seen_at": "2026-09-25T12:15:57+00:00",
       "last_seen_at": "2026-10-30T06:04:34+00:00",
-      "latest_observation": "OB-5E87C7970CA1B9FA",
-      "latest_version": "CV-13EC92C8D888B2F0",
+      "latest_observation": "OB-DF7277C5EF3D93BA",
+      "latest_version": "CV-FAC805B5D2EDBB1A",
       "timeline": [
         {
           "version": "CV-455DA67895538E91",
@@ -11657,6 +11683,11 @@
         {
           "version": "CV-13EC92C8D888B2F0",
           "from": "2026-10-23T05:07:00+00:00",
+          "to": "2026-10-30T06:04:34+00:00"
+        },
+        {
+          "version": "CV-FAC805B5D2EDBB1A",
+          "from": "2026-10-30T06:04:34+00:00",
           "to": "2026-10-30T06:04:34+00:00"
         }
       ]
@@ -14156,11 +14187,16 @@
       "ticker": "SIMO",
       "first_seen_at": "2026-10-30T06:05:21+00:00",
       "last_seen_at": "2026-10-30T06:05:21+00:00",
-      "latest_observation": "OB-19EB777188E0D832",
-      "latest_version": "CV-B66114F1D79C35B4",
+      "latest_observation": "OB-9212662658321F49",
+      "latest_version": "CV-FCF461A9ED5B1044",
       "timeline": [
         {
           "version": "CV-B66114F1D79C35B4",
+          "from": "2026-10-30T06:05:21+00:00",
+          "to": "2026-10-30T06:05:21+00:00"
+        },
+        {
+          "version": "CV-FCF461A9ED5B1044",
           "from": "2026-10-30T06:05:21+00:00",
           "to": "2026-10-30T06:05:21+00:00"
         }
