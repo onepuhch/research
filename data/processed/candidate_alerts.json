@@ -1554,6 +1554,261 @@
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · VLO Valero Energy Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $38.04 → 현재 $53.48 (+41%), 2026-10-27·2026-10-28 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-325B2A6C30755476</code> · 추적 <code>/track CAN-325B2A6C30755476</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
       "payload_sha256": "09b4d209681acf5356cf67954d37dab8cef9747e61f5d8b67ff6b4dfb0f8a808",
       "message_id": 217
+    },
+    "NYSE:DEC|eps-revision-review:v1|material_update|B:OB-AF3B4B531E72E215>OB-5A02A31E23A59A85": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:DEC",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-1F6D82ED5782C3F5",
+      "candidate_version": "CV-E4C39DA9753F5D22",
+      "observation_id": "OB-EC146B499096DCFF",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-AF3B4B531E72E215",
+          "observed_at": "2026-10-16T04:56:24+00:00",
+          "day": "2026-10-16",
+          "observation_id": "OB-AF3B4B531E72E215",
+          "snapshot_sha256": "22bf1f505844cecdaccf0a959d3dce4059551e63ad64f8598ef31bd954bca161",
+          "eps_now": 5.83525,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-5A02A31E23A59A85",
+          "baseline_id": "OB-5A02A31E23A59A85",
+          "observed_at": "2026-10-17T04:53:32+00:00",
+          "day": "2026-10-17",
+          "snapshot_sha256": "9168a55df2eaa160e878e0670e92e3a85cf5ed3b76ef1821071964f9c8b56d58",
+          "eps_now": 7.4002,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-EC146B499096DCFF",
+          "baseline_id": "OB-EC146B499096DCFF",
+          "observed_at": "2026-10-30T06:14:28+00:00",
+          "day": "2026-10-30",
+          "snapshot_sha256": "81289440d40ca0541d06b8c969016cf52f7e04282c6576bcb02e3c47a14c1458",
+          "eps_now": 7.4002,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 26.82,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-AF3B4B531E72E215>OB-5A02A31E23A59A85"
+        ]
+      },
+      "day": "2026-10-30",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41011340799-1",
+      "reserved_at": "2026-10-30T06:14:57+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DEC Diversified Energy Company</b>\n기준: 2026-10-16 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $5.84 → 현재 $7.40 (+27%), 2026-10-17·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-1F6D82ED5782C3F5</code> · 추적 <code>/track CAN-1F6D82ED5782C3F5</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "204a1a403be527fc989e7643b4c900c35e197fbb949161b88bee2c7ddad34e74"
+    },
+    "NYSE:MPC|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-6578E7350D2A0D67": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:MPC",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-77F79A3B05ABB893",
+      "candidate_version": "CV-122EB7DD5EEEE83C",
+      "observation_id": "OB-77F88F0AE88F5541",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 47.13423,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-6578E7350D2A0D67",
+          "baseline_id": "OB-6578E7350D2A0D67",
+          "observed_at": "2026-10-29T06:13:54+00:00",
+          "day": "2026-10-29",
+          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
+          "eps_now": 60.30776,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-77F88F0AE88F5541",
+          "baseline_id": "OB-77F88F0AE88F5541",
+          "observed_at": "2026-10-30T06:14:28+00:00",
+          "day": "2026-10-30",
+          "snapshot_sha256": "81289440d40ca0541d06b8c969016cf52f7e04282c6576bcb02e3c47a14c1458",
+          "eps_now": 60.30776,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 27.95,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-6578E7350D2A0D67"
+        ]
+      },
+      "day": "2026-10-30",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41011340799-1",
+      "reserved_at": "2026-10-30T06:14:57+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · MPC Marathon Petroleum Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $47.13 → 현재 $60.31 (+28%), 2026-10-29·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-77F79A3B05ABB893</code> · 추적 <code>/track CAN-77F79A3B05ABB893</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "5bb689072f34b73b628d84c7ba577938b4fd56de7062f5b0eb96f4b3a093e755"
+    },
+    "NYSE:DHT|eps-revision-review:v1|material_update|B:OB-9B007EE68965810F>OB-1E0B1DFF18529D3D": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:DHT",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-FD88AA0D924CF1C8",
+      "candidate_version": "CV-0A0C22E178D460EB",
+      "observation_id": "OB-69280C1E269F853E",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-9B007EE68965810F",
+          "observed_at": "2026-10-10T06:16:03+00:00",
+          "day": "2026-10-10",
+          "observation_id": "OB-9B007EE68965810F",
+          "snapshot_sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
+          "eps_now": 2.50383,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-1E0B1DFF18529D3D",
+          "baseline_id": "OB-1E0B1DFF18529D3D",
+          "observed_at": "2026-10-29T06:13:54+00:00",
+          "day": "2026-10-29",
+          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
+          "eps_now": 3.2405,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-69280C1E269F853E",
+          "baseline_id": "OB-69280C1E269F853E",
+          "observed_at": "2026-10-30T06:14:28+00:00",
+          "day": "2026-10-30",
+          "snapshot_sha256": "81289440d40ca0541d06b8c969016cf52f7e04282c6576bcb02e3c47a14c1458",
+          "eps_now": 3.2405,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 29.42,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-9B007EE68965810F>OB-1E0B1DFF18529D3D"
+        ]
+      },
+      "day": "2026-10-30",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41011340799-1",
+      "reserved_at": "2026-10-30T06:14:57+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DHT DHT Holdings, Inc.</b>\n기준: 2026-10-10 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $2.50 → 현재 $3.24 (+29%), 2026-10-29·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-FD88AA0D924CF1C8</code> · 추적 <code>/track CAN-FD88AA0D924CF1C8</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "7a7e67791d7a41db2f52d92d9ae49f013089c22bf5f7d569a80666911444d6c0"
     }
   },
   "bootstrap": {

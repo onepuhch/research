@@ -302,25 +302,25 @@
         "exchange": "NYSE",
         "name": "PBF Energy Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "c4c73cd3ccd0ef974d9f70462abb7d1ec84b3102d7f95e1e1cdb6497fb71e408",
-        "mapping_observed_at": "2026-10-23T05:02:53+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-23T05:17:16+00:00",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
       "eps_key": "2027-12-31|18.5575",
       "eps_target_period": "2027-12-31",
       "document_ids": [
-        "DOC-9FC60A7023735EC9",
-        "DOC-DF8157DE720BEF5F"
+        "DOC-33EBD5592D96025E",
+        "DOC-9FC60A7023735EC9"
       ],
       "examined": [
         "DOC-42A036DA1507C4B0",
         "DOC-7235E4C9914E09E9",
-        "DOC-9FC60A7023735EC9",
-        "DOC-DF8157DE720BEF5F"
+        "DOC-33EBD5592D96025E",
+        "DOC-9FC60A7023735EC9"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-30T05:17:16+00:00",
-      "draft_status": "draft_ready",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-69BE3717B7E64332",
       "context_input_sha": "69be3717b7e6433219f87e367f56299b1f83c319e93241cbfd664048840b63e1",
       "quality": "complete",
@@ -346,6 +346,14 @@
           "alert_reasons": []
         },
         {
+          "document_id": "DOC-33EBD5592D96025E",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
           "document_id": "DOC-9FC60A7023735EC9",
           "eligible": true,
           "search_eligible": true,
@@ -354,16 +362,9 @@
           "alert_reasons": [
             "guidance_prior_unverified"
           ]
-        },
-        {
-          "document_id": "DOC-DF8157DE720BEF5F",
-          "eligible": false,
-          "search_eligible": false,
-          "alert_eligible": false,
-          "reason": "update-check-v5:no_event_sentence",
-          "alert_reasons": []
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-30T06:30:27+00:00"
     },
     "CAN-DC6D3F92ECFFD019": {
       "status": "success",
@@ -912,8 +913,8 @@
         "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
         "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-29T06:13:58+00:00",
-      "eps_key": "2027-12-31|15.14012",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
+      "eps_key": "2027-12-31|15.73653",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-6EA52AE3808FADE4",
@@ -926,7 +927,7 @@
         "DOC-0F62310DD65064FB"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-05T06:13:58+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-A1B9F282E5C62436",
       "context_input_sha": "a1b9f282e5c6243609a4c16bd9ff62253b96e9534ac23a3e022d9d27421efa33",
@@ -1366,10 +1367,10 @@
         "exchange": "Nasdaq",
         "name": "Fastly, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "c4c73cd3ccd0ef974d9f70462abb7d1ec84b3102d7f95e1e1cdb6497fb71e408",
-        "mapping_observed_at": "2026-10-23T05:02:53+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-23T05:17:16+00:00",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
       "eps_key": "2027-12-31|0.64217",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -1381,7 +1382,7 @@
         "DOC-756AB63F072FAB95"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-30T05:17:16+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-2DEE051118868259",
       "context_input_sha": "2dee05111886825925afaeb79135b2fd463b7799b731c8f73c7d86484e36bff4",
@@ -1405,26 +1406,36 @@
         "exchange": "NYSE",
         "name": "Phillips 66",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-27T05:30:48+00:00",
-      "eps_key": "2027-12-31|30.35506",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
+      "eps_key": "2027-12-31|30.35216",
       "eps_target_period": "2027-12-31",
       "document_ids": [
+        "DOC-23671C7EDB4EC913",
         "DOC-D9C0CECC172F9418"
       ],
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-23671C7EDB4EC913",
         "DOC-D9C0CECC172F9418"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-03T05:30:48+00:00",
-      "draft_status": "insufficient_earnings_context",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
+      "draft_status": "provider_overloaded",
       "context_id": "CTX-3BBE7656667CA9D0",
       "context_input_sha": "3bbe7656667ca9d079790829487e1c97806e7c6ce4577db9b71201adda9fbf1e",
       "update_checks": [
+        {
+          "document_id": "DOC-23671C7EDB4EC913",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p17",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-D9C0CECC172F9418",
           "eligible": false,
@@ -1433,7 +1444,8 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ]
+      ],
+      "draft_next_at": "2026-10-30T06:30:27+00:00"
     },
     "CAN-4BD491C8D3F1EC4F": {
       "status": "success",
@@ -1740,10 +1752,10 @@
         "exchange": "NYSE",
         "name": "Cleveland-Cliffs Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "c4c73cd3ccd0ef974d9f70462abb7d1ec84b3102d7f95e1e1cdb6497fb71e408",
-        "mapping_observed_at": "2026-10-23T05:02:53+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-23T05:17:16+00:00",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
       "eps_key": "2027-12-31|1.45996",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -1757,7 +1769,7 @@
         "DOC-067BE90E51AC5E3F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-30T05:17:16+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-F17BD01FE8D4E121",
       "context_input_sha": "f17bd01fe8d4e1211120ede0f16d3ba9c0dde10501097d0b09948601c301a2ca",
@@ -1861,11 +1873,11 @@
         "exchange": "Nasdaq",
         "name": "Micron Technology, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "d0cbfe38cc19bc798e3f8ca3071a186d7f5e8b4e329eb521694080fa13dd01a3",
-        "mapping_observed_at": "2026-10-24T04:48:06+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-24T05:02:27+00:00",
-      "eps_key": "2028-08-31|206.89381",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
+      "eps_key": "2028-08-31|207.80438",
       "eps_target_period": "2028-08-31",
       "document_ids": [
         "DOC-39C08ABD9C77B7B0"
@@ -1876,7 +1888,7 @@
         "DOC-39C08ABD9C77B7B0"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-31T05:02:27+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "insufficient_earnings_context",
       "update_checks": [
         {
@@ -3097,11 +3109,11 @@
         "exchange": "NYSE",
         "name": "Crescent Energy Company",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-27T05:30:48+00:00",
-      "eps_key": "2027-12-31|2.91389",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
+      "eps_key": "2027-12-31|2.90282",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-6994CC44D493B12A",
@@ -3117,11 +3129,10 @@
         "DOC-14BD33CD4FDE8ABB",
         "DOC-7DAB1B88C679C2A6",
         "DOC-6994CC44D493B12A",
-        "DOC-95C482A2DC3DAF89"
+        "DOC-95C482A2DC3DAF89",
+        "DOC-0D8A9D00CB07E896"
       ],
-      "notes": [
-        "document budget reached before every results filing was read"
-      ],
+      "notes": [],
       "update_checks": [
         {
           "document_id": "DOC-188B845617356A09",
@@ -3186,9 +3197,17 @@
           "alert_eligible": false,
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-0D8A9D00CB07E896",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-03T05:30:48+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-EBF4A0F778281291",
       "context_input_sha": "ebf4a0f7782812910acbe1f4f61247207744236cbd3f3bdbfeab41b1c42ea097"
@@ -3497,10 +3516,10 @@
         "exchange": "Nasdaq",
         "name": "Super Micro Computer, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "6c29e2e3db973d4479875164603c2434f81ad22e14c9f1694999aca9cca246cb",
-        "mapping_observed_at": "2026-10-20T05:00:39+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-22T05:15:00+00:00",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
       "eps_key": "2028-06-30|5.58768",
       "eps_target_period": "2028-06-30",
       "document_ids": [
@@ -3546,7 +3565,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-10-29T05:15:00+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-8251F8DCB456225D",
       "context_input_sha": "8251f8dcb456225d01ed7d7c23f680804d9ae48c07e8e7286812396aa333e15a"
@@ -3560,10 +3579,10 @@
         "exchange": "NYSE",
         "name": "Solaris Energy Infrastructure, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "6c29e2e3db973d4479875164603c2434f81ad22e14c9f1694999aca9cca246cb",
-        "mapping_observed_at": "2026-10-20T05:00:39+00:00"
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
       },
-      "attempted_at": "2026-10-22T05:15:00+00:00",
+      "attempted_at": "2026-10-30T06:14:31+00:00",
       "eps_key": "2027-12-31|3.66041",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -3572,31 +3591,22 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-1CB90F84F847358D",
         "DOC-869E387F89E37701",
-        "DOC-F2C210C0A26D6A6A",
-        "DOC-DC9A9D7FDA1EA3EE",
-        "DOC-9F12CD597F4DF1FD"
+        "DOC-DC9A9D7FDA1EA3EE"
       ],
       "notes": [],
       "update_checks": [
         {
+          "document_id": "DOC-1CB90F84F847358D",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
           "document_id": "DOC-869E387F89E37701",
-          "eligible": false,
-          "search_eligible": false,
-          "alert_eligible": false,
-          "reason": "update-check-v5:no_event_sentence",
-          "alert_reasons": []
-        },
-        {
-          "document_id": "DOC-F2C210C0A26D6A6A",
-          "eligible": false,
-          "search_eligible": false,
-          "alert_eligible": false,
-          "reason": "update-check-v5:no_event_sentence",
-          "alert_reasons": []
-        },
-        {
-          "document_id": "DOC-9F12CD597F4DF1FD",
           "eligible": false,
           "search_eligible": false,
           "alert_eligible": false,
@@ -3614,7 +3624,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-10-29T05:15:00+00:00",
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-8CA40658C455052B",
       "context_input_sha": "8ca40658c455052bbc25ce580188dbc7bc941a683974075df3f01786d283c444"
@@ -3773,6 +3783,74 @@
       "draft_status": "no_supported_claims",
       "context_id": "CTX-7077C1114B291649",
       "context_input_sha": "7077c1114b29164933b6b14bab59b020624e2bb5d41880d9ed95b97bcbb4977b"
+    },
+    "CAN-FFBE91764685770A": {
+      "status": "success",
+      "ticker": "SIMO",
+      "issuer": {
+        "cik": "0001329394",
+        "ticker": "SIMO",
+        "exchange": "Nasdaq",
+        "name": "Silicon Motion Technology Corporation",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
+        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
+      },
+      "attempted_at": "2026-10-30T06:14:31+00:00",
+      "eps_key": "2027-12-31|16.28347",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-FF864E3DA3A2BAE7",
+        "DOC-4E74FFCB29A83B9C"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-FF864E3DA3A2BAE7",
+        "DOC-4E74FFCB29A83B9C",
+        "DOC-F33F409C42E8B584",
+        "DOC-EE34C114F1F2E15B"
+      ],
+      "notes": [
+        "document budget reached before every results filing was read"
+      ],
+      "update_checks": [
+        {
+          "document_id": "DOC-FF864E3DA3A2BAE7",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-4E74FFCB29A83B9C",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-F33F409C42E8B584",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-EE34C114F1F2E15B",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-11-06T06:14:31+00:00",
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-10-30T06:30:27+00:00"
     }
   },
   "days": {
@@ -3933,6 +4011,11 @@
     "2026-10-29": {
       "companies": 10,
       "http_attempts": 33,
+      "folded_companies": 2
+    },
+    "2026-10-30": {
+      "companies": 10,
+      "http_attempts": 44,
       "folded_companies": 2
     }
   },
@@ -4138,6 +4221,14 @@
     "0001866175-26-000112|https://www.sec.gov/Archives/edgar/data/1866175/000186617526000112/exhibit991q22026earningsre.htm": "DOC-95C482A2DC3DAF89",
     "0001104659-26-118614|https://www.sec.gov/Archives/edgar/data/1181412/000110465926118614/tm2628247d1_8k.htm": "DOC-9FA66051B434DEDE",
     "0001104659-26-119167|https://www.sec.gov/Archives/edgar/data/1163739/000110465926119167/tm2628332d1_ex99-1.htm": "DOC-54C9D7B032959614",
-    "0001915657-26-000071|https://www.sec.gov/Archives/edgar/data/1915657/000191565726000071/dinoex99109-30x2026.htm": "DOC-6EA52AE3808FADE4"
+    "0001915657-26-000071|https://www.sec.gov/Archives/edgar/data/1915657/000191565726000071/dinoex99109-30x2026.htm": "DOC-6EA52AE3808FADE4",
+    "0001193125-26-436478|https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm": "DOC-FF864E3DA3A2BAE7",
+    "0001193125-26-424083|https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm": "DOC-4E74FFCB29A83B9C",
+    "0001193125-26-417926|https://www.sec.gov/Archives/edgar/data/1329394/000119312526417926/d140905dex991.htm": "DOC-F33F409C42E8B584",
+    "0001193125-26-417926|https://www.sec.gov/Archives/edgar/data/1329394/000119312526417926/d140905d6k.htm": "DOC-EE34C114F1F2E15B",
+    "0001534504-26-000039|https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm": "DOC-33EBD5592D96025E",
+    "0001866175-26-000103|https://www.sec.gov/Archives/edgar/data/1866175/000186617526000103/crgy-20260708.htm": "DOC-0D8A9D00CB07E896",
+    "0001193125-26-437755|https://www.sec.gov/Archives/edgar/data/1697500/000119312526437755/d157948d8k.htm": "DOC-1CB90F84F847358D",
+    "0001534701-26-000035|https://www.sec.gov/Archives/edgar/data/1534701/000153470126000035/psx-2026930_ex991.htm": "DOC-23671C7EDB4EC913"
   }
 }
