@@ -10531,7 +10531,7 @@
     "updated_at": "2026-10-29T05:58:03.268404+00:00"
   },
   "0000202058-26-000084": {
-    "status": "retry",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10542,18 +10542,58 @@
       "url": "https://www.sec.gov/Archives/edgar/data/202058/000020205826000084/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/202058/000020205826000084/exhibit991q3cy26earnings.htm",
       "published_at": "2026-10-29",
-      "raw_text": "L3HARRIS TECHNOLOGIES, INC. /DE/ (LHX) (CIK 0000202058) EX-99.1 2026-10-29. EX-99.1 2 exhibit991q3cy26earnings.htm EX-99.1 Document Exhibit 99.1 L3Harris Delivers Record Backlog and Strong Third-Quarter Results Broad-based growth with robust earnings and cash flow; increases full-year guidance • Orders of $19.3 billion drove record backlog of $53.2 billion; book-to-bill of 3.2x • Revenue of $6.1 billion, up 7%, and up 9% on an organic 1 basis • Operating income margin of 13.0%, up 200 bps vs. Examples include, but are not limited to: planned investments and capacity expansion; our pipeline and backlog expansion; 2026 guidance; the impact of recent and expected contract awards; the 2028 financial framework; the impact of the global security environment; projections of other financial items; and assumptions underlying any of the foregoing. EX-99.1 2 exhibit991q3cy26earnings.htm EX-99.1 Document Exhibit 99.1 L3Harris Delivers Record Backlog and Strong Third-Quarter Results Broad-based growth with robust earnings and cash flow; increases full-year guidance • Orders of $19.3 billion drove record backlog of $53.2 billion; book-to-bill of 3.2x • Revenue of $6.1 billion, up 7%, and up 9% on an organic 1 basis • Operating income margin of 13.0%, up 200 bps vs. prior year; segment operating margin 2 of 15.9% • Diluted EPS of $3.28, up 33% year-over-year • Operating cash flow of $1.4 billion; free cash flow 3 of $1.3 billion, up 195% compared to prior year • Guidance Update: Increases bottom end of the revenue guidance range to $23.5 billion to $23.7 billion (prev. $23.2 billion to $23.7 billion), increases GAAP EPS range to $12.25 to $12.35 (prev. $11.80 to $12.00) MELBOURNE, Fla., October 29, 2026 — L3Harris Technologies (NYSE: LHX) reported its third quarter 2026 results. “ Our team’s exceptional execution delivered solid financial performance in the third quarter. We grew backlog to record levels, underscoring the consistently strong demand for our mission-critical capabil"
+      "raw_text": "L3HARRIS TECHNOLOGIES, INC. /DE/ (LHX) (CIK 0000202058) EX-99.1 2026-10-29. EX-99.1 2 exhibit991q3cy26earnings.htm EX-99.1 Document Exhibit 99.1 L3Harris Delivers Record Backlog and Strong Third-Quarter Results Broad-based growth with robust earnings and cash flow; increases full-year guidance • Orders of $19.3 billion drove record backlog of $53.2 billion; book-to-bill of 3.2x • Revenue of $6.1 billion, up 7%, and up 9% on an organic 1 basis • Operating income margin of 13.0%, up 200 bps vs. Examples include, but are not limited to: planned investments and capacity expansion; our pipeline and backlog expansion; 2026 guidance; the impact of recent and expected contract awards; the 2028 financial framework; the impact of the global security environment; projections of other financial items; and assumptions underlying any of the foregoing. EX-99.1 2 exhibit991q3cy26earnings.htm EX-99.1 Document Exhibit 99.1 L3Harris Delivers Record Backlog and Strong Third-Quarter Results Broad-based growth with robust earnings and cash flow; increases full-year guidance • Orders of $19.3 billion drove record backlog of $53.2 billion; book-to-bill of 3.2x • Revenue of $6.1 billion, up 7%, and up 9% on an organic 1 basis • Operating income margin of 13.0%, up 200 bps vs. prior year; segment operating margin 2 of 15.9% • Diluted EPS of $3.28, up 33% year-over-year • Operating cash flow of $1.4 billion; free cash flow 3 of $1.3 billion, up 195% compared to prior year • Guidance Update: Increases bottom end of the revenue guidance range to $23.5 billion to $23.7 billion (prev. $23.2 billion to $23.7 billion), increases GAAP EPS range to $12.25 to $12.35 (prev. $11.80 to $12.00) MELBOURNE, Fla., October 29, 2026 — L3Harris Technologies (NYSE: LHX) reported its third quarter 2026 results. “ Our team’s exceptional execution delivered solid financial performance in the third quarter. We grew backlog to record levels, underscoring the consistently strong demand for our mission-critical capabil",
+      "_model_response": {
+        "evidence_quote": "L3Harris Delivers Record Backlog and Strong Third-Quarter Results Broad-based growth with robust earnings and cash flow; increases full-year guidance • Orders of $19.3 billion drove record backlog of $53.2 billion; book-to-bill of 3.2x • Revenue of $6.1 billion, up 7%, and up 9% on an organic 1 basis • Operating income margin of 13.0%, up 200 bps vs. prior year; segment operating margin 2 of 15.9% • Diluted EPS of $3.28, up 33% year-over-year • Operating cash flow of $1.4 billion; free cash flow 3 of $1.3 billion, up 195% compared to prior year • Guidance Update: Increases bottom end of the revenue guidance range to $23.5 billion to $23.7 billion (prev. $23.2 billion to $23.7 billion), increases GAAP EPS range to $12.25 to $12.35 (prev. $11.80 to $12.00)",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Diluted EPS of $3.28, up 33% year-over-year • Guidance Update: ... increases GAAP EPS range to $12.25 to $12.35 (prev. $11.80 to $12.00)",
+          "supply_demand_tightness": "Orders of $19.3 billion drove record backlog of $53.2 billion; book-to-bill of 3.2x",
+          "structural_ai_demand": "",
+          "revision_momentum": "increases full-year guidance • Guidance Update: Increases bottom end of the revenue guidance range to $23.5 billion to $23.7 billion (prev. $23.2 billion to $23.7 billion), increases GAAP EPS range to $12.25 to $12.35 (prev. $11.80 to $12.00)",
+          "catalyst_visibility": "L3Harris Delivers Record Backlog and Strong Third-Quarter Results... increases full-year guidance"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "L3Harris Technologies",
+        "theme": "방위산업",
+        "signal_type": "가이던스상향",
+        "what_happened": "L3Harris Technologies가 기록적인 532억 달러의 수주잔고를 달성하고, 2026년 연간 매출 가이던스를 235억~237억 달러로, GAAP EPS 가이던스를 12.25~12.35달러로 상향 조정했습니다.",
+        "why_it_matters": "기록적인 수주잔고는 강력한 수요를 반영하며, 상향된 매출 및 EPS 가이던스는 회사의 성장 잠재력과 수익성 개선에 대한 긍정적인 전망을 제시하여 투자 매력이 높아집니다.",
+        "what_to_watch": "향후 분기별 수주 추이 및 가이던스 추가 상향 여부; 방위산업 지출 확대에 따른 추가 수주 기회.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "수주잔고 (Backlog): 고객으로부터 주문을 받았으나 아직 인도되지 않아 미래 매출로 인식될 금액. Book-to-bill ratio: 특정 기간 동안 수주액을 매출액으로 나눈 비율로, 1보다 크면 수주가 매출보다 많아 미래 성장이 기대됨을 의미."
+      }
     },
     "content_hash": "2a19c5f199128107c855fe03e2018454f040c97142a1cac859795d3d0a03801b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-30T06:00:10+00:00",
-    "reason": "provider_overloaded",
+    "attempts": 2,
+    "updated_at": "2026-10-31T05:55:36+00:00",
+    "reason": "evidence_grounding_failed",
     "http_status": 503,
     "next_retry_at": "2026-10-30T06:30:27+00:00",
-    "failure_class": "unserved",
-    "failure_day": "2026-10-30",
-    "failure_run": "41011340799-1"
+    "validation_rejected": true,
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-10-30",
+      "failure_run": "41011340799-1",
+      "day": "2026-10-31",
+      "run": "41174406581-1",
+      "by": "evidence check"
+    }
   },
   "0001654954-26-009199": {
     "status": "deferred",
@@ -10841,7 +10881,7 @@
     "updated_at": "2026-10-30T05:59:08.730264+00:00"
   },
   "0001213900-26-113562": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10852,16 +10892,56 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1996192/000121390026113562/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1996192/000121390026113562/ea030999901ex99-1.htm",
       "published_at": "2026-10-29",
-      "raw_text": "Quanome Technologies, Inc. (QNME) (CIK 0001996192) EX-99.1 2026-10-29. Our focus now is delivery, deploying the infrastructure, satisfying the remaining conditions and preparing to begin service for our new customer.” Quanome focuses on opportunities across four strategic pillars: Quantum and AI Systems; Quantum Life Sciences – Molecular Discovery; Advanced Nuclear; and Quantum-Safe Cybersecurity. Forward-Looking Statements This release contains forward-looking statements, including statements regarding the application and use of customer prepayments; the purchase, delivery and deployment of GPU server units; the satisfaction of procurement and service-start conditions; the anticipated commencement of services under XDT’s customer agreement; the expected term, fees and commercial benefits of the initial order; the development and expansion of XDT; and anticipated customer and revenue opportunities."
+      "raw_text": "Quanome Technologies, Inc. (QNME) (CIK 0001996192) EX-99.1 2026-10-29. Our focus now is delivery, deploying the infrastructure, satisfying the remaining conditions and preparing to begin service for our new customer.” Quanome focuses on opportunities across four strategic pillars: Quantum and AI Systems; Quantum Life Sciences – Molecular Discovery; Advanced Nuclear; and Quantum-Safe Cybersecurity. Forward-Looking Statements This release contains forward-looking statements, including statements regarding the application and use of customer prepayments; the purchase, delivery and deployment of GPU server units; the satisfaction of procurement and service-start conditions; the anticipated commencement of services under XDT’s customer agreement; the expected term, fees and commercial benefits of the initial order; the development and expansion of XDT; and anticipated customer and revenue opportunities.",
+      "_model_response": {
+        "evidence_quote": "Our focus now is delivery, deploying the infrastructure, satisfying the remaining conditions and preparing to begin service for our new customer.” ... This release contains forward-looking statements, including statements regarding the application and use of customer prepayments; the purchase, delivery and deployment of GPU server units; the satisfaction of procurement and service-start conditions; the anticipated commencement of services under XDT’s customer agreement; the expected term, fees and commercial benefits of the initial order; the development and expansion of XDT; and anticipated customer and revenue opportunities.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Quanome Technologies, Inc. (QNME) ... Quanome focuses on opportunities across four strategic pillars: Quantum and AI Systems; Quantum Life Sciences – Molecular Discovery; Advanced Nuclear; and Quantum-Safe Cybersecurity.",
+          "earnings_leverage": "anticipated commencement of services under XDT’s customer agreement; the expected term, fees and commercial benefits of the initial order; the development and expansion of XDT; and anticipated customer and revenue opportunities.",
+          "supply_demand_tightness": "purchase, delivery and deployment of GPU server units",
+          "structural_ai_demand": "Quantum and AI Systems; ... purchase, delivery and deployment of GPU server units",
+          "revision_momentum": "",
+          "catalyst_visibility": "preparing to begin service for our new customer.” ... anticipated commencement of services under XDT’s customer agreement; the expected term, fees and commercial benefits of the initial order"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Quanome Technologies",
+        "theme": "AI 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "Quanome Technologies가 신규 고객과의 계약을 통해 GPU 서버 유닛 구매 및 배포를 포함한 초기 주문을 확보하고 서비스 개시를 준비 중이다.",
+        "why_it_matters": "신규 고객 확보와 GPU 서버 유닛 관련 초기 주문은 Quanome Technologies의 AI 및 양자 컴퓨팅 사업 확장을 가속화하고 미래 매출 성장의 기반을 마련할 수 있는 긍정적인 신호이다.",
+        "what_to_watch": "신규 고객의 구체적인 정보 및 추가 수주 여부, GPU 서버 유닛 배포 및 서비스 개시 일정.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "GPU 서버 유닛: 그래픽 처리 장치(GPU)를 탑재하여 인공지능 연산에 특화된 고성능 서버 장비."
+      }
     },
     "content_hash": "6c35973b77d646db0465ef2b26269910a8fbc32b0a0235cd0f3e62f554c67376",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-10-30T06:00:14+00:00",
-    "reason": "provider_overloaded",
-    "failure_class": "unserved",
-    "failure_day": "2026-10-30",
-    "failure_run": "41011340799-1"
+    "attempts": 2,
+    "updated_at": "2026-10-31T05:55:55+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true,
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-10-30",
+      "failure_run": "41011340799-1",
+      "day": "2026-10-31",
+      "run": "41174406581-1",
+      "by": "evidence check"
+    }
   },
   "0001008886-26-000226": {
     "status": "deferred",
@@ -10959,7 +11039,7 @@
     "updated_at": "2026-10-30T05:59:08.730264+00:00"
   },
   "0001447669-26-000106": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10970,12 +11050,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1447669/000144766926000106/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1447669/000144766926000106/twloq326ex991.htm",
       "published_at": "2026-10-29",
-      "raw_text": "TWILIO INC (TWLO) (CIK 0001447669) EX-99.1 2026-10-29. As such, when we identify a significant customer organization (defined as a single customer organization generating more than 1% of revenue in a quarterly reporting period) that has created a new customer account, this new account is tied to, and revenue from this new account is included with, the original customer account for the purposes of calculating this metric. Condensed Consolidated Balance Sheets (In thousands) (Unaudited) As of September 30, As of December 31, 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,061,531 $ 682,335 Short-term marketable securities 1,829,940 1,788,007 Accounts receivable, net 755,015 636,736 Prepaid expenses and other current assets 338,971 469,650 Total current assets 3,985,457 3,576,728 Property and equipment, net 183,870 176,963 Operating right-of-use assets 25,740 39,031 Equity method investment 225,180 301,642 Intangible assets, net 105,301 142,065 Goodwill 5,291,893 5,291,787 Other long-term assets 230,008 222,648 Deferred tax asset 1,059,490 20,026 Total assets $ 11,106,939 $ 9,770,890 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities: Accounts payable $ 61,624 $ 85,089 Accrued expenses and other current liabilities 646,245 608,119 Deferred revenue and customer deposits 157,046 158,677 Operating lease liability, current 26,583 35,123 Total current liabilities 891,498 887,008 Operating lease liability, noncurrent 36,811 54,162 Long-term debt, net 993,606 992,287 Other long-term liabilities 14,431 15,887 Total liabilities 1,936,346 1,949,344 Commitments and contingencies Stockholders’ equity: Preferred stock — — Common stock 155 152 Additional paid-in capital 16,657,626 16,148,190 Accumulated other comprehensive (loss) income (16,520) 15,668 Accumulated deficit (7,470,668) (8,342,464) Total stockholders’ equity 9,170,593 7,821,546 Total liabilities and stockholders’ equity $ 11,106,939 $ 9,770,890 7 TWILIO INC. Condensed Consolidated Statements of Cas"
+      "raw_text": "TWILIO INC (TWLO) (CIK 0001447669) EX-99.1 2026-10-29. As such, when we identify a significant customer organization (defined as a single customer organization generating more than 1% of revenue in a quarterly reporting period) that has created a new customer account, this new account is tied to, and revenue from this new account is included with, the original customer account for the purposes of calculating this metric. Condensed Consolidated Balance Sheets (In thousands) (Unaudited) As of September 30, As of December 31, 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,061,531 $ 682,335 Short-term marketable securities 1,829,940 1,788,007 Accounts receivable, net 755,015 636,736 Prepaid expenses and other current assets 338,971 469,650 Total current assets 3,985,457 3,576,728 Property and equipment, net 183,870 176,963 Operating right-of-use assets 25,740 39,031 Equity method investment 225,180 301,642 Intangible assets, net 105,301 142,065 Goodwill 5,291,893 5,291,787 Other long-term assets 230,008 222,648 Deferred tax asset 1,059,490 20,026 Total assets $ 11,106,939 $ 9,770,890 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities: Accounts payable $ 61,624 $ 85,089 Accrued expenses and other current liabilities 646,245 608,119 Deferred revenue and customer deposits 157,046 158,677 Operating lease liability, current 26,583 35,123 Total current liabilities 891,498 887,008 Operating lease liability, noncurrent 36,811 54,162 Long-term debt, net 993,606 992,287 Other long-term liabilities 14,431 15,887 Total liabilities 1,936,346 1,949,344 Commitments and contingencies Stockholders’ equity: Preferred stock — — Common stock 155 152 Additional paid-in capital 16,657,626 16,148,190 Accumulated other comprehensive (loss) income (16,520) 15,668 Accumulated deficit (7,470,668) (8,342,464) Total stockholders’ equity 9,170,593 7,821,546 Total liabilities and stockholders’ equity $ 11,106,939 $ 9,770,890 7 TWILIO INC. Condensed Consolidated Statements of Cas",
+      "_model_response": {
+        "evidence_quote": "As such, when we identify a significant customer organization (defined as a single customer organization generating more than 1% of revenue in a quarterly reporting period) that has created a new customer account, this new account is tied to, and revenue from this new account is included with, the original customer account for the purposes of calculating this metric. Condensed Consolidated Balance Sheets (In thousands) (Unaudited) As of September 30, As of December 31, 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,061,531 $ 682,335 Short-term marketable securities 1,829,940 1,788,007 Accounts receivable, net 755,015 636,736 Prepaid expenses and other current assets 338,971 469,650 Total current assets 3,985,457 3,576,728 Property and equipment, net 183,870 176,963 Operating right-of-use assets 25,740 39,031 Equity method investment 225,180 301,642 Intangible assets, net 105,301 142,065 Goodwill 5,291,893 5,291,787 Other long-term assets 230,008 222,648 Deferred tax asset 1,059,490 20,026 Total assets $ 11,106,939 $ 9,770,890 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities: Accounts payable $ 61,624 $ 85,089 Accrued expenses and other current liabilities 646,245 608,119 Deferred revenue and customer deposits 157,046 158,677 Operating lease liability, current 26,583 35,123 Total current liabilities 891,498 887,008 Operating lease liability, noncurrent 36,811 54,162 Long-term debt, net 993,606 992,287 Other long-term liabilities 14,431 15,887 Total liabilities 1,936,346 1,949,344 Commitments and contingencies Stockholders’ equity: Preferred stock — — Common stock 155 152 Additional paid-in capital 16,657,626 16,148,190 Accumulated other comprehensive (loss) income (16,520) 15,668 Accumulated deficit (7,470,668) (8,342,464) Total stockholders’ equity 9,170,593 7,821,546 Total liabilities and stockholders’ equity $ 11,106,939 $ 9,770,890 7 TWILIO INC. Condensed Consolidated Statements of Cas",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "제공된 문서는 회사의 대차대조표와 고객 지표 산정 방식에 대한 정의를 포함하며, 이는 가이던스 상향, 신규 수주, 생산능력 증설 등 구체적인 조기 투자 발굴 신호에 해당하지 않는 루틴 공시 및 재무 정보입니다.",
+        "subject": "TWLO",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "트윌리오(TWLO)의 대차대조표와 주요 고객 정의 방식이 공시되었습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "제공된 문서는 회사의 대차대조표와 고객 지표 산정 방식에 대한 정의를 포함하며, 이는 가이던스 상향, 신규 수주, 생산능력 증설 등 구체적인 조기 투자 발굴 신호에 해당하지 않는 루틴 공시 및 재무 정보입니다."
     },
     "content_hash": "bb0b1ae25f23474f0d7d0da7b0a364403f2c15c7cae965d1615a6a4454b9ba29",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "attempts": 1,
+    "updated_at": "2026-10-31T05:56:17+00:00",
+    "reason": "제공된 문서는 회사의 대차대조표와 고객 지표 산정 방식에 대한 정의를 포함하며, 이는 가이던스 상향, 신규 수주, 생산능력 증설 등 구체적인 조기 투자 발굴 신호에 해당하지 않는 루틴 공시 및 재무 정보입니다.",
+    "processed_day": "2026-10-31",
+    "processed_run": "41174406581-1"
   },
   "0000014930-26-000130": {
     "status": "deferred",
@@ -11033,5 +11144,214 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-10-30T05:59:08.730264+00:00"
+  },
+  "0001437749-26-034218": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-034218",
+      "entity_id": "CIK:0000310354",
+      "source_role": "candidate",
+      "title": "STANDEX INTERNATIONAL CORP/DE/ (SXI) (CIK 0000310354) EX-99 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/310354/000143774926034218/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/310354/000143774926034218/ex_1034342.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "STANDEX INTERNATIONAL CORP/DE/ (SXI) (CIK 0000310354) EX-99 2026-10-30. EX-99 2 ex_1034342.htm EXHIBIT 99 ex_1034342.htm Exhibit 99 NEWS RELEASE STANDEX INTERNATIONAL CORPORATION █ SALEM, NH 03079 █ TEL (603) 893-9701 █ WEB www.standex.com STANDEX REPORTS FISCAL FIRST QUARTER 2027 FINANCIAL RESULTS ● Record Sales of $232.6 Million, Up 12.4% YOY Organically; Electronics Up 29.5% YOY Organically ● New Product Sales Grew 56% and Sales into Fast Growth Markets Grew 25% ● Record Order Intake of ~$273 Million; Book to Bill of 1.17 ● Record GAAP and Adjusted Gross Margin of 44.4%, Up 240 bps YOY on Adj. The increase over fiscal year 2026 is primarily due to capacity expansion within Standex Electronics Grid. EX-99 2 ex_1034342.htm EXHIBIT 99 ex_1034342.htm Exhibit 99 NEWS RELEASE STANDEX INTERNATIONAL CORPORATION █ SALEM, NH 03079 █ TEL (603) 893-9701 █ WEB www.standex.com STANDEX REPORTS FISCAL FIRST QUARTER 2027 FINANCIAL RESULTS ● Record Sales of $232.6 Million, Up 12.4% YOY Organically; Electronics Up 29.5% YOY Organically ● New Product Sales Grew 56% and Sales into Fast Growth Markets Grew 25% ● Record Order Intake of ~$273 Million; Book to Bill of 1.17 ● Record GAAP and Adjusted Gross Margin of 44.4%, Up 240 bps YOY on Adj. Basis ● GAAP Operating Margin of 17.4%; Adjusted Operating Margin of 20.2%, Up 110 bps YOY ● Raising FY27 Outlook; Organic Sales to Increase >$100 Million and Adjusted Earnings per Share to Grow High Teens ● Announced New $100 Million Share Repurchase Authorization Supported by Strong Balance Sheet and Liquidity Position SALEM, NH – October 29, 2026 – Standex International Corporation (NYSE: SXI) today reported financial results for the first quarter of fiscal year 2027 ended September 30, 2026. Summary Financial Results - Total ($M except EPS and Dividends) 1Q27 1Q26 4Q26 Y/Y Q/Q Net Sales $ 232.6 $ 217.4 $ 228.3 7.0 % 1.9 % Operating Income – GAAP $ 40.4 $ 29.6 $ 37.5 36.4 % 7.6 % Operating Income – Adjusted $ 47.0 $ 41.6 $ 45.4 13.1 % 3.6 % Ope",
+      "_model_response": {
+        "evidence_quote": "STANDEX REPORTS FISCAL FIRST QUARTER 2027 FINANCIAL RESULTS ● Record Sales of $232.6 Million, Up 12.4% YOY Organically; Electronics Up 29.5% YOY Organically ● New Product Sales Grew 56% and Sales into Fast Growth Markets Grew 25% ● Record Order Intake of ~$273 Million; Book to Bill of 1.17 ● Record GAAP and Adjusted Gross Margin of 44.4%, Up 240 bps YOY on Adj. Basis ● GAAP Operating Margin of 17.4%; Adjusted Operating Margin of 20.2%, Up 110 bps YOY ● Raising FY27 Outlook; Organic Sales to Increase >$100 Million and Adjusted Earnings per Share to Grow High Teens",
+        "axes_evidence": {
+          "underfollowed_pure_play": "STANDEX INTERNATIONAL CORPORATION (NYSE: SXI)",
+          "earnings_leverage": "Record GAAP and Adjusted Gross Margin of 44.4%, Up 240 bps YOY on Adj. Basis ● GAAP Operating Margin of 17.4%; Adjusted Operating Margin of 20.2%, Up 110 bps YOY",
+          "supply_demand_tightness": "Record Order Intake of ~$273 Million; Book to Bill of 1.17",
+          "structural_ai_demand": "",
+          "revision_momentum": "Raising FY27 Outlook; Organic Sales to Increase >$100 Million and Adjusted Earnings per Share to Grow High Teens",
+          "catalyst_visibility": "STANDEX REPORTS FISCAL FIRST QUARTER 2027 FINANCIAL RESULTS ... Raising FY27 Outlook"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "SXI",
+        "theme": "전자부품",
+        "signal_type": "가이던스상향",
+        "what_happened": "Standex International이 2027 회계연도 1분기 실적 발표에서 기록적인 수주액과 1.17의 수주잔고비율을 달성했으며, 2027 회계연도 가이던스를 상향 조정하여 유기적 매출 1억 달러 이상 증가 및 조정 EPS가 높은 10%대 성장을 예상했다.",
+        "why_it_matters": "기록적인 수주와 상향된 가이던스는 Standex International의 전자 부문 성장 모멘텀이 강화되고 있음을 보여주며, 이는 향후 실적 추정치 상향과 주가 재평가로 이어질 수 있는 긍정적인 신호이다.",
+        "what_to_watch": "향후 분기별 수주 추이 및 전자 부문 매출 성장률, 애널리스트들의 FY2027 EPS 추정치 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "Book to Bill (수주잔고비율): 특정 기간 동안 신규 수주액을 매출액으로 나눈 비율로, 1보다 크면 수주가 매출보다 많아 향후 성장 가능성이 높음을 의미한다. Organic Sales (유기적 매출): 인수합병 등 외부 요인 없이 기존 사업에서 발생한 매출 성장."
+      }
+    },
+    "content_hash": "6b697ca8e8f8a3c139b2da19234138377f337520a0f53fa19e264dfce4db2345",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-31T05:56:38+00:00",
+    "signal_id": "SIG-0917",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-31",
+    "processed_run": "41174406581-1"
+  },
+  "0000097216-26-000144": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000097216-26-000144",
+      "entity_id": "CIK:0000097216",
+      "source_role": "candidate",
+      "title": "TEREX CORP (TEX) (CIK 0000097216) EX-99.1 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/97216/000009721626000144/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/97216/000009721626000144/aexh99_120261028q3prepared.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "TEREX CORP (TEX) (CIK 0000097216) EX-99.1 2026-10-30. To further shorten lead times and reduce backlog, we are expanding capacity in a measured way, with the first units from the newly expanded Brandon facility expected to ship in the fourth quarter. In ES, increasing bookings and the Utilities capacity expansion create a path to better shipments, margins and cash generation. EX-99.1 2 aexh99_120261028q3prepared.htm EX-99.1 PREPARED REMARKS Document Third Quarter 2026 Earnings Release Conference Call October 28, 2026 Drew Konop – Terex Corporation – Vice President, Investor Relations Good morning and welcome to the Terex Corporation (“Terex” or “Company”) third quarter 2026 earnings conference call. A copy of the press release and presentation slides is posted on our Investor Relations website at investors.terex.com. In addition, the replay and slide presentation will be available on our website. We are joined today by Simon Meester, President and Chief Executive Officer, and Jennifer Kong, Senior Vice President and Chief Financial Officer. Their prepared remarks will be followed by question and answer. Please turn to slide 2 of the presentation, which reflects our safe harbor statement. Today’s conference call contains forward-looking statements, which are subject to risks that could cause actual results to be materially different from those expressed or implied. These risks are described in greater detail in the earnings materials and in reports filed with the Securities and Exchange Commission. On this call, we will be discussing non-GAAP financial information, including adjusted figures that we believe are useful in evaluating the Company’s operating performance. Reconciliations for these non-GAAP measures can be found in the conference call materials. Please turn to slide 3 and I’ll hand it over to Simon. Simon A. Meester – Terex Corporation – President and Chief Executive Officer Thanks, Drew. Good morning and thank you for joining us. Today I’ll cover our thi",
+      "_model_response": {
+        "evidence_quote": "To further shorten lead times and reduce backlog, we are expanding capacity in a measured way, with the first units from the newly expanded Brandon facility expected to ship in the fourth quarter. In ES, increasing bookings and the Utilities capacity expansion create a path to better shipments, margins and cash generation.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "In ES, increasing bookings and the Utilities capacity expansion create a path to better shipments, margins and cash generation.",
+          "supply_demand_tightness": "To further shorten lead times and reduce backlog, we are expanding capacity",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "first units from the newly expanded Brandon facility expected to ship in the fourth quarter."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "TEREX CORP",
+        "theme": "미분류",
+        "signal_type": "CAPEX",
+        "what_happened": "TEREX CORP는 리드타임 단축 및 백로그 감소를 위해 브랜든 시설의 생산 능력을 확장 중이며, 4분기에 첫 출하가 예상되고 ES 부문에서 수주 증가와 유틸리티 생산 능력 확장이 출하, 마진, 현금 흐름 개선으로 이어질 것으로 전망했다.",
+        "why_it_matters": "생산 능력 증설은 시장의 강한 수요에 대응하여 향후 매출 증가와 수익성 개선을 이끌 수 있으며, 이는 기업 가치 상승의 중요한 기반이 된다.",
+        "what_to_watch": "브랜든 시설의 실제 출하량 및 ES 부문의 수주 추이, 생산 능력 증설에 따른 마진율 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그: 고객으로부터 주문을 받았으나 아직 처리하지 못한 미처리 주문량. 리드타임: 주문 접수부터 제품 인도까지 걸리는 총 시간."
+      }
+    },
+    "content_hash": "3da4876dd572a4886f2f705cd701cca5106bab9a9f71c094f38fbefa48f17801",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-10-31T05:56:53+00:00",
+    "signal_id": "SIG-0918",
+    "reason": "grounded extraction",
+    "processed_day": "2026-10-31",
+    "processed_run": "41174406581-1"
+  },
+  "0000071829-26-000061": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000071829-26-000061",
+      "entity_id": "CIK:0000071829",
+      "source_role": "candidate",
+      "title": "NPK International Inc. (NPKI) (CIK 0000071829) EX-99.1 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/71829/000007182926000061/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/71829/000007182926000061/npkq32026investorpresent.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "NPK International Inc. (NPKI) (CIK 0000071829) EX-99.1 2026-10-30. These risk factors include, but are not limited to, risks related to our ability to generate organic growth; economic and market conditions that may impact our customers’ future spending; customer concentration; the effective management of our fleet, including our ability to properly manufacture, safeguard, and maintain our fleet; international operations; manufacturing capacity expansion projects; operating hazards present in our and our customers’ industries and substantial liability claims; our contracts that can be terminated or downsized by our customers without penalty; our product offering and market expansion; our ability to attract, retain, and develop qualified leaders, key employees, and skilled personnel; expanding our services in the utilities sector, which may require unionized labor; the price and availability of raw materials; inflation; capital investments and business acquisitions; market competition; technological developments and intellectual property; severe weather, natural disasters, and seasonality; public health crises, epidemics, and pandemics; our cost and continued availability of borrowed funds, including noncompliance with debt covenants; environmental laws and regulations; legal compliance; the inherent limitations of insurance coverage; income taxes; cybersecurity incidents or business system disruptions; complications with the design or implementation of our updated enterprise resource planning system; activist stockholders that may attempt to effect changes at our Company or acquire control over our Company; share repurchases; and our amended and restated bylaws, which could limit our stockholders’ ability to obtain what such stockholders believe to be a favorable judicial forum for disputes with us or our directors, officers or other employees."
+    },
+    "content_hash": "c2b6285827f01454d786f7cf2c03c5376205b1eaabcd6890d5a2605037e00775",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+  },
+  "0001193125-26-440031": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-440031",
+      "entity_id": "CIK:0000880117",
+      "source_role": "candidate",
+      "title": "SANFILIPPO JOHN B & SON INC (JBSS) (CIK 0000880117) 8-K/A 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/880117/000119312526440031/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/880117/000119312526440031/jbss-20261028.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "SANFILIPPO JOHN B & SON INC (JBSS) (CIK 0000880117) 8-K/A 2026-10-30. The Form 8-K Release inadvertently contained a reference on page 2 under the heading “Contract Manufacturing Distribution Channel” to “a significant new customer that was added in the second quarter of the prior year” rather than “an existing customer” as contained in the Original Release and to “granola sales volume opportunity” rather than “granola sales opportunity” as contained in the Original Release. 8-K/A true 0000880117 SANFILIPPO JOHN B & SON INC 0000880117 2026-10-28 2026-10-28 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K/A (Amendment No. 1) CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): October 30, 2026 ( October 28, 2026 ) JOHN B. SANFILIPPO & SON, INC. (Exact name of Registrant as Specified in Its Charter) Delaware 0-19681 36-2419677 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 1703 N. RANDALL ROAD Elgin , Illinois 60123-7820 (Address of Principal Executive Offices) (Zip Code) Registrant’s Telephone Number, Including Area Code: (847) 289-1800 Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, $.01 par value per share JBSS The Nasdaq Stock Market LLC Ind"
+    },
+    "content_hash": "9e5c31a6fe687728236ecf03f348c1354601a22af2e292082e8374db60d3aa35",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+  },
+  "0001104659-26-120674": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-120674",
+      "entity_id": "CIK:0001056943",
+      "source_role": "candidate",
+      "title": "PEOPLES FINANCIAL SERVICES CORP. (PFIS) (CIK 0001056943) EX-99.1 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1056943/000110465926120674/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1056943/000110465926120674/pfis-ex99d1.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "PEOPLES FINANCIAL SERVICES CORP. (PFIS) (CIK 0001056943) EX-99.1 2026-10-30. Important factors that could cause the Company’s actual results to differ materially from those in the forward-looking statements include, but are not limited to: changes in interest rates, including their effect on the Company’s investment values; impairment charges relating to the Company’s investment portfolio; credit risks in connection with the Company’s lending activities; the Company’s exposure to commercial and industrial, construction, commercial real estate, and equipment finance loans; the Company’s ability to maintain an adequate allowance for credit losses; access to liquidity; the strength of the Company’s customer deposit levels; unrealized losses; reliance on the Company’s subsidiaries; accounting procedures, policies and requirements; changes in the value of goodwill; the Company’s ability to attract and retain key personnel; the strength of the Company’s disclosure controls and procedures and internal controls over financial reporting; potential for errors, omissions or fraud; environmental liabilities; reliance on third-party vendors and service providers; the Company’s ability to compete effectively in the Company’s industry and within the Company’s market area, including with respect to competition from financial technology companies and non-bank entities; the development and use of artificial intelligence (“AI”) in business processes, services, and products, including emerging focus among regulators and other officials related to risks in connection with the development and use of AI; the Company’s ability to prevent, detect and respond to cybersecurity threats and incidents; a failure of information technology, whether due to a breach, cybersecurity incident, or ability to keep pace with growth and developments; the Company’s ability to comply with privacy and data protection requirements; changes in U.S."
+    },
+    "content_hash": "6d7900c478c00fc9c6bf6e4ad9fe295d0793c75d53ac68ae36bb2a5797bdfed6",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+  },
+  "0001286043-26-000055": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001286043-26-000055",
+      "entity_id": "CIK:0001286043",
+      "source_role": "candidate",
+      "title": "KITE REALTY GROUP TRUST (KRG) (CIK 0001286043), Kite Realty Group, L.P. (CIK 0001636315) EX-99.1 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1286043/000128604326000055/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1286043/000128604326000055/krginvestorupdate3q26.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "KITE REALTY GROUP TRUST (KRG) (CIK 0001286043), Kite Realty Group, L.P. (CIK 0001636315) EX-99.1 2026-10-30. • In its rating action, Fitch stated, “The upgrade reflects KRG’s sustained operational outperformance, execution of its large-scale capital recycling program under Project Elevate and further optimization of its capital structure.” Fitch also noted, “Favorable open- air retail supply-demand dynamics have strengthened pricing power, enabling rapid backfilling of legacy bankrupt tenant space.” Q3 2026 INVESTOR UPDATE 13 Well-Staggered Maturity Ladder $25 $4 $6 $3 $250 $100 $100 $400 $350 $645 $350 $250 $300 $35 $10 $193 $67 2.16% 4.60% 4.79% 4.62% 4.93% 4.16% 5.36% 4.60% -0.061 -0.041 -0.021 -0.001 0.019 0.039 0.059 0.079 $- $200 $400 $600 $800 $1,000 2026 2027 2028 2029 2030 2031 2032 2033 2034 2035+ Debt Maturity Profile as of September 30, 2026 Mortgage Debt Unsecured Debt Unsecured Term Loans Line of Credit JV Debt Wtd."
+    },
+    "content_hash": "6cdb7c587ad28f1d6ebee908ed84c13a848bdb5866961f07a7bb35596f607916",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+  },
+  "0001109357-26-000092": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001109357-26-000092",
+      "entity_id": "CIK:0001109357",
+      "source_role": "candidate",
+      "title": "EXELON CORP (EXC) (CIK 0001109357), BALTIMORE GAS & ELECTRIC CO (CIK 0000009466), COMMONWEALTH EDISON Co (CIK 0000022606), PEPCO HOLDINGS LLC (CIK 0001135971), PECO ENERGY CO (CIK 0000078100), POTOMAC ELECTRIC POWER CO (CIK 0000079732), ATLANTIC CITY ELECTRIC CO (CIK 0000008192), DELMARVA POWER & LIGHT CO /DE/ (CIK 0000027879) EX-99.2 2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000092/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000092/exc-20261030ex992.htm",
+      "published_at": "2026-10-30",
+      "raw_text": "EXELON CORP (EXC) (CIK 0001109357), BALTIMORE GAS & ELECTRIC CO (CIK 0000009466), COMMONWEALTH EDISON Co (CIK 0000022606), PEPCO HOLDINGS LLC (CIK 0001135971), PECO ENERGY CO (CIK 0000078100), POTOMAC ELECTRIC POWER CO (CIK 0000079732), ATLANTIC CITY ELECTRIC CO (CIK 0000008192), DELMARVA POWER & LIGHT CO /DE/ (CIK 0000027879) EX-99.2 2026-10-30. 2022-2025 2026E-2029E ~13.5% ~14% Credit Ratings / Outlook(3) 12%(2) 13%(2) Moody’s CFO (pre-WC) / Debt*(1) 2022-2025 2026E-2029E ~13.0% ~14% S&P FFO / Debt*(1) Stable Platform with a Credit Supportive Value Proposition ▪ Exelon’s scale, jurisdictional diversification, operational excellence, and effective recovery mechanisms contribute to a unique credit-supportive value proposition ▪ Credit metric outlook supports ~200 bps above Moody’s and ~100 bps above S&P’s downgrade thresholds(2) Balanced Approach to Funding Capital ▪ Executed 100% of 2026 debt financing needs, mitigating exposure to interest rate volatility for this year(5) ▪ Pre-issuance hedging strategy further reduces future interest rate volatility ▪ ~$41.7B four-year capital expenditure plan being funded in a balanced manner ‒ ~40% of incremental capital funded with equity, resulting in $3.4B of equity through 2029 (implying ~$850M issuance annually); average annual equity issuances represent less than 2% of market capitalization ‒ Priced ~37% of equity needs through 2029 via ATM forward contracts Capitalize on Growth Opportunities Focus on Customer Affordability and Value 9 2026 Business Priorities and Commitments ❖ Prioritize employee safety and engagement ❖ Deploy ~$10B of capex for the benefit of customers ❖ Maintain industry-leading operational excellence ❖ Focus on cost management and innovation ❖ Capture growth opportunities and new customer solutions ❖ Advocate for equitable and balanced energy future ❖ Earn consolidated operating ROE* of 9-10% ❖ Achieve constructive rate case outcomes for customers and shareholders ❖ Deliver Operating EPS* guidance of "
+    },
+    "content_hash": "fc3621b5cd52e0753af9482d8806506c25c369a94841a959e7c1e862a2ac1a22",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-10-31T05:55:21.530731+00:00"
   }
 }

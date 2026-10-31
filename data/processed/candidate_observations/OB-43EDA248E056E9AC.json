@@ -1,0 +1,90 @@
+{
+  "observation_id": "OB-43EDA248E056E9AC",
+  "candidate_id": "CAN-486C908614BC89B1",
+  "candidate_version": "CV-7A539A55F94562A7",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:TTMI",
+    "ticker": "TTMI",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-31T06:01:24+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261031T055659Z_41174406581-1.json.gz",
+    "sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
+    "run_id": "41174406581-1",
+    "finished_at": "2026-10-31T06:11:09+00:00"
+  },
+  "eps": {
+    "eps_now": 8.336,
+    "eps_30d": 6.8925,
+    "eps_90d": 5.4,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 54.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.54,
+    "yield_change_30_pp": 1.74
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-02",
+    "price_start_date": "2026-07-31",
+    "price_end_expected": "2026-10-30",
+    "price_end_date": "2026-10-30",
+    "close_start": 115.44000244140625,
+    "close_end": 82.94000244140625,
+    "price_pct_90": -28.2,
+    "adj_return_pct_90": -28.2,
+    "pe_change_pct": -53.5
+  },
+  "display_rank": 20,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 14
+    },
+    {
+      "list": "B",
+      "rank": 20
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 8739846144,
+  "context_id": "CTX-F06CC614A32608FB",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-25T05:08:41+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-F06CC614A32608FB",
+    "generated_at": "2026-10-25T05:09:03+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:TTMI",
+  "approval_version": null,
+  "rendered_at": "2026-10-31T06:12:10+00:00"
+}

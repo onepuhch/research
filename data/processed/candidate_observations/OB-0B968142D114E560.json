@@ -1,0 +1,110 @@
+{
+  "observation_id": "OB-0B968142D114E560",
+  "candidate_id": "CAN-D5F91D853BD4402E",
+  "candidate_version": "CV-748CAFB7E39AB00E",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:GRNT",
+    "ticker": "GRNT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-31T06:08:01+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261031T055659Z_41174406581-1.json.gz",
+    "sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
+    "run_id": "41174406581-1",
+    "finished_at": "2026-10-31T06:11:09+00:00"
+  },
+  "eps": {
+    "eps_now": 1.00333,
+    "eps_30d": 0.7925,
+    "eps_90d": 0.64,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 56.8,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 6.341,
+    "yield_change_30_pp": 3.679
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-02",
+    "price_start_date": "2026-07-31",
+    "price_end_expected": "2026-10-30",
+    "price_end_date": "2026-10-30",
+    "close_start": 4.75,
+    "close_end": 5.730000019073486,
+    "price_pct_90": 20.6,
+    "adj_return_pct_90": 23.3,
+    "pe_change_pct": -23.1
+  },
+  "display_rank": 12,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 8
+    },
+    {
+      "list": "B",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 755788352,
+  "context_id": "CTX-7737BF8336FDD7E0",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-31T06:11:13+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 15,
+    "shown": [
+      "KOS",
+      "TXO",
+      "GRNT"
+    ],
+    "folded": [
+      "SM",
+      "CHRD",
+      "CRGY",
+      "NOG"
+    ],
+    "outside": [
+      "COP",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "MTDR",
+      "MUR"
+    ]
+  },
+  "entity_id": "NYSE:GRNT",
+  "approval_version": null,
+  "rendered_at": "2026-10-31T06:12:10+00:00"
+}

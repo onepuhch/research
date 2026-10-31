@@ -1,0 +1,178 @@
+{
+  "candidate_id": "CAN-7F0690B785E31226",
+  "candidate_version": "CV-4A20C1CBA0C3D420",
+  "identity": {
+    "entity_id": "NYSE:CLF",
+    "ticker": "CLF",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Cleveland-Cliffs Inc.",
+  "industry": "Steel",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "다양한 철강 제품과 철광석, 석탄 등 비철강 제품을 생산 및 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Cleveland-Cliffs Inc. operates as a steel producer in the United States and Canada. It offers hot-rolled, cold-rolled, and coated products, such as aluminized, electrogalvanized, and galvalume products, as well as galvanneal and hot-dipped galvanized products; stainless and electrical products, including GOES, NOES, and auto chrome; plate products; and slab and other steel products. The company also provides non- steelmaking products comprising stamped components, tool and die, and tubing; and scrap, iron ore, HBI, coal, and coke products. It also provides tubular components, including carbon"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CLF analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLF/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:01:34+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CLF daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLF/history",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:01:34+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CLF company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLF/profile",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:01:34+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-FB738D337778C4F4",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000112/clf-202609308xkex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-19",
+      "observed_at": "2026-10-21T05:14:51+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-067BE90E51AC5E3F",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-23",
+      "observed_at": "2026-10-01T06:22:35+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-F17BD01FE8D4E121",
+    "input_sha": "f17bd01fe8d4e1211120ede0f16d3ba9c0dde10501097d0b09948601c301a2ca",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Stelco] EBITDA — 스텔코의 에비타 기여는 더욱 증가할 것이다",
+        "note_ko": "스텔코의 에비타 기여는 더욱 증가할 것이다",
+        "kind": "guidance",
+        "quote": "In the meantime, as we concentrate on hot rolled products that actually have a market, total production tonnage at Stelco will be maintained, Stelco’s contribution to Cliffs’ EBITDA will further increase, and approximately 2,000 Canadian jobs are preserved.”",
+        "document_id": "DOC-FB738D337778C4F4",
+        "block_id": "p20",
+        "metric": "EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "subsidiary",
+        "subject_name": "Stelco",
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "mix"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-FB738D337778C4F4",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000112/clf-202609308xkex991.htm",
+        "filed_at": "2026-10-19",
+        "observed_at": "2026-10-21T05:14:51+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-067BE90E51AC5E3F",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm",
+        "filed_at": "2026-07-23",
+        "observed_at": "2026-10-01T06:22:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-21T05:15:14+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.76,
+    "eps_30d": 0.77259,
+    "eps_90d": 0.58802,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 199.3,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "candidate_id": "CAN-3BD5E965B73FD420",
+  "candidate_version": "CV-216F8B27AA22EE71",
+  "identity": {
+    "entity_id": "NYSE:STNG",
+    "ticker": "STNG",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Scorpio Tankers Inc.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Scorpio Tankers Inc., together with its subsidiaries, engages in the seaborne transportation of crude oil and refined petroleum products worldwide. As of March 19, 2026, its fleet consisted of 90 wholly owned tankers, including 34 LR2, 42MR, and 14 Handymax. Scorpio Tankers Inc. was incorporated in 2009 and is headquartered in Monaco."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "STNG analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/STNG/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:03:17+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "STNG daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/STNG/history",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:03:17+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "STNG company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/STNG/profile",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:03:17+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-18DF4A9BB9BBC23C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026067899/q32026earnings-exhibit991.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-28",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K EX-99.1"
+    },
+    {
+      "id": "DOC-5E31D8ADC03214CC",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026066288/stngexhibit991-10192026.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-19",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-33F204845CF6ABC0",
+    "input_sha": "33f204845cf6abc0eb8d508713002820a4eb47a3b8ab2b3cd14815d3c0b5fbed",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "adjusted net income · For the three months ended September 30, 2026: $127.4 million — 회사의 조정 순이익이다",
+        "note_ko": "회사의 조정 순이익이다",
+        "kind": "fact",
+        "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which excludes from net income (i) a $152.6 million gain on sales of vessels and (ii) a $55.6 million fair value loss on financial liabilities measured at fair value.",
+        "document_id": "DOC-18DF4A9BB9BBC23C",
+        "block_id": "p8",
+        "metric": "adjusted net income",
+        "figures": [
+          "$127.4 million"
+        ],
+        "period": "For the three months ended September 30, 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "adjusted net income · For the nine months ended September 30, 2026: $521.9 million — 회사의 조정 순이익이다",
+        "note_ko": "회사의 조정 순이익이다",
+        "kind": "fact",
+        "quote": "For the nine months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $521.9 million, or $11.30 basic and $10.14 diluted earnings per share, which excludes from net income (i) a $372.6 million gain on sales of vessels, (ii) a $20.7 million write-off of deferred financing fees and debt extinguishment costs (which includes $12.8 million for the make-whole premium on the redemption of the Company’s Senior Unsecured Notes Due 2030), (iii) a $41.8 million fair value loss on financial liabilities measured at fair value, and (iv) $4.0 million of transaction costs related to the second quarter issuances of the Company's Convertible Senior Notes due 2031 (the \"Convertible Notes) (described below).",
+        "document_id": "DOC-18DF4A9BB9BBC23C",
+        "block_id": "p13",
+        "metric": "adjusted net income",
+        "figures": [
+          "$521.9 million"
+        ],
+        "period": "For the nine months ended September 30, 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-18DF4A9BB9BBC23C",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026067899/q32026earnings-exhibit991.htm",
+        "filed_at": "2026-10-28",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-5E31D8ADC03214CC",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026066288/stngexhibit991-10192026.htm",
+        "filed_at": "2026-10-19",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-31T06:11:41+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 8.98996,
+    "eps_30d": 5.73299,
+    "eps_90d": 5.94038,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 51.3,
+    "steady": false,
+    "turnaround": false
+  }
+}

@@ -1833,6 +1833,127 @@
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DHT DHT Holdings, Inc.</b>\n기준: 2026-10-10 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $2.50 → 현재 $3.24 (+29%), 2026-10-29·2026-10-30 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-FD88AA0D924CF1C8</code> · 추적 <code>/track CAN-FD88AA0D924CF1C8</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
       "payload_sha256": "7a7e67791d7a41db2f52d92d9ae49f013089c22bf5f7d569a80666911444d6c0",
       "message_id": 220
+    },
+    "NYSE:TNK|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-AACAFD031E667476": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:TNK",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-E95987D989EF1145",
+      "candidate_version": "CV-1ABA782DF4F6617C",
+      "observation_id": "OB-0E56209F5B5FAE7F",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 10.89793,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-AACAFD031E667476",
+          "baseline_id": "OB-AACAFD031E667476",
+          "observed_at": "2026-10-29T06:13:54+00:00",
+          "day": "2026-10-29",
+          "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
+          "eps_now": 13.84992,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-0E56209F5B5FAE7F",
+          "baseline_id": "OB-0E56209F5B5FAE7F",
+          "observed_at": "2026-10-31T06:11:09+00:00",
+          "day": "2026-10-31",
+          "snapshot_sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
+          "eps_now": 13.84992,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 27.09,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-AACAFD031E667476"
+        ]
+      },
+      "day": "2026-10-31",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41174406581-1",
+      "reserved_at": "2026-10-31T06:12:20+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · TNK Teekay Tankers Ltd.</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $10.90 → 현재 $13.85 (+27%), 2026-10-29·2026-10-31 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-E95987D989EF1145</code> · 추적 <code>/track CAN-E95987D989EF1145</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "4a82091c730cf042efc113aa54548fc5827b562ab84ce52e4c13072a08e7512c"
+    },
+    "NYSE:GKOS|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:GKOS",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-3968C0864F9CF991",
+      "candidate_version": "CV-FC52CB8EDBE659D3",
+      "observation_id": "OB-258D5B1793632C7B",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-10-31",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41174406581-1",
+      "reserved_at": "2026-10-31T06:12:20+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · GKOS Glaukos Corporation</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n녹내장 등 안과 질환 치료를 위한 의료기기 및 의약품을 개발하고 판매하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.50 → 지금 $1.21 (+141%) · 주가 같은 기간 +42.5%\n\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+59%)\n👍 주가는 같은 90일에 +42%로, 이익 예상 상향(+141%)보다 덜 움직임\n👎 최근 30일 분석가 12명 중 3명만 올림 — 일부 분석가의 상향\n❓ 10/28 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-3968C0864F9CF991</code> · 추적 <code>/track CAN-3968C0864F9CF991</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "09ea831ef36cc234ffe1720b04775df1cb1b24e8ff5707fc9130a532bbe5ab12"
+    },
+    "NYSE:EQNR|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:EQNR",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-FE3575B3BB2443B0",
+      "candidate_version": "CV-00E5FAD0AFBAFA22",
+      "observation_id": "OB-2025CFECB7AD2B2A",
+      "signal_id": null,
+      "verdict": "consider",
+      "day": "2026-10-31",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41174406581-1",
+      "reserved_at": "2026-10-31T06:12:20+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · EQNR Equinor ASA</b>\n<b>🟢 시스템 판단: 추적 고려</b>\n석유 및 가스 자원 탐사, 개발, 생산, 판매와 재생에너지 사업을 통해 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $3.55 → 지금 $5.00 (+41%) · 주가 같은 기간 +18.6%\n\n👍 최근 30일 분석가 6명 중 4명이 올림(내린 사람 없음)\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+5%)\n👍 주가는 같은 90일에 +19%로, 이익 예상 상향(+41%)보다 덜 움직임\n❓ 10/28 회사 공식 발표(SEC 6-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-FE3575B3BB2443B0</code> · 추적 <code>/track CAN-FE3575B3BB2443B0</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "d53ffba2d7edf0414cf3e4f2d1fbc950045b173bf28ffd6d03769984028a9039"
     }
   },
   "bootstrap": {
@@ -1905,6 +2026,24 @@
           "day": "2026-10-29",
           "snapshot_sha256": "c3f7cef52c9622d5ba3c946e4f55ff775b0837c9eacd232e16d10d85217ecf54",
           "eps_now": 13.84992,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:CLF|eps-revision-review:v1": {
+        "baseline_id": "OB-2CEF37F43B26B978",
+        "first": {
+          "observation_id": "OB-145301BB03840593",
+          "baseline_id": "OB-145301BB03840593",
+          "observed_at": "2026-10-31T06:11:09+00:00",
+          "day": "2026-10-31",
+          "snapshot_sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
+          "eps_now": 1.76,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",

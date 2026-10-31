@@ -1,0 +1,251 @@
+{
+  "candidate_id": "CAN-5FD7409FDFE8F5EA",
+  "candidate_version": "CV-172364559C682AE9",
+  "identity": {
+    "entity_id": "NASDAQ:SMCI",
+    "ticker": "SMCI",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Super Micro Computer, Inc.",
+  "industry": "Computer Hardware",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "모듈형 서버 및 스토리지 솔루션, 특히 AI 서버를 개발하고 판매하여 돈을 법니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and internationally. The company offers liquid and air-cooled AI servers for training and inferencing with integrated graphics processing units (GPUs) or PCIe based architectures; SuperBlade, MicroBlade, FlexTwin, GrandTwin, and BigTwin blade and multi-node systems; SuperStorage systems; Hyper, CloudDC, and WIO and rackmount systems; embedded (5G/IoT/Edge) systems; and MicroCloud server systems. It also p"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SMCI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMCI/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:59:38+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SMCI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMCI/history",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:59:38+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SMCI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SMCI/profile",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:59:38+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-1A7AC5499B6FC87E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-20",
+      "observed_at": "2026-10-22T05:15:00+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-CB4C6F73439A9792",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-11",
+      "observed_at": "2026-10-22T05:15:00+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-24427DC769C94DB0",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/fq42026businessupdate.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-21",
+      "observed_at": "2026-10-22T05:15:00+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-8251F8DCB456225D",
+    "input_sha": "8251f8dcb456225d01ed7d7c23f680804d9ae48c07e8e7286812396aa333e15a",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(Revenues) · first quarter of fiscal year 2027: $18.5 billion to $19.5 billion — 회사의 매출 예상치이다",
+        "note_ko": "회사의 매출 예상치이다",
+        "kind": "guidance",
+        "quote": "Revenues for the first quarter of fiscal year 2027 are estimated to be in the range of $18.5 billion to $19.5 billion versus guidance of $14.5 billion to $15.5 billion, primarily due to increased demand for AI platforms.",
+        "document_id": "DOC-1A7AC5499B6FC87E",
+        "block_id": "p5",
+        "metric": "Revenues",
+        "figures": [
+          "$18.5 billion to $19.5 billion"
+        ],
+        "period": "first quarter of fiscal year 2027",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "volume"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "financial results · quarter and fiscal year ended June 30, 2026 — 제시된 재무 결과는 예비 추정치이며, 실제 결과는 크게 다를 수 있다",
+        "note_ko": "제시된 재무 결과는 예비 추정치이며, 실제 결과는 크게 다를 수 있다",
+        "kind": "fact",
+        "quote": "The financial results presented reflect the Company's preliminary estimated unaudited financial results, based upon information available to the Company as of the date of this press release. The Company has provided preliminary estimates of financial results primarily because its financial closing procedures for the quarter and fiscal year ended June 30, 2026 are not yet complete. The data are not a comprehensive statement of the Company's results for such periods, and the actual results may differ materially from these preliminary estimated data.",
+        "document_id": "DOC-CB4C6F73439A9792",
+        "block_id": "p30",
+        "metric": "financial results",
+        "figures": [],
+        "period": "quarter and fiscal year ended June 30, 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 작성되지 않으며, 일반회계기준 재무 데이터의 대체용이 아니다",
+        "note_ko": "비일반회계기준 지표는 일반회계기준에 따라 작성되지 않으며, 일반회계기준 재무 데이터의 대체용이 아니다",
+        "kind": "fact",
+        "quote": "These non-GAAP measures are not prepared in accordance with GAAP or intended to be a replacement for GAAP financial data; and therefore, should be reviewed together with the GAAP measures and are not intended to serve as a substitute for results under GAAP, and may be different from non-GAAP measures used by other companies.",
+        "document_id": "DOC-CB4C6F73439A9792",
+        "block_id": "p61",
+        "metric": "non-GAAP measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-1A7AC5499B6FC87E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm",
+        "filed_at": "2026-10-20",
+        "observed_at": "2026-10-22T05:15:00+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-CB4C6F73439A9792",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm",
+        "filed_at": "2026-08-11",
+        "observed_at": "2026-10-22T05:15:00+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-24427DC769C94DB0",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/fq42026businessupdate.htm",
+        "filed_at": "2026-07-21",
+        "observed_at": "2026-10-22T05:15:00+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-22T12:05:48+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.67886,
+    "eps_30d": 5.32592,
+    "eps_90d": 3.85795,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 17,
+    "up30": 8,
+    "down30": 0,
+    "pct_90": 47.2,
+    "steady": true,
+    "turnaround": false
+  }
+}

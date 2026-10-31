@@ -1,0 +1,274 @@
+{
+  "candidate_id": "CAN-3968C0864F9CF991",
+  "candidate_version": "CV-FC52CB8EDBE659D3",
+  "identity": {
+    "entity_id": "NYSE:GKOS",
+    "ticker": "GKOS",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Glaukos Corporation",
+  "industry": "Medical Devices",
+  "sector": "Healthcare",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "녹내장 등 안과 질환 치료를 위한 의료기기 및 의약품을 개발하고 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Glaukos Corporation, an ophthalmic pharmaceutical and medical technology company, develops therapies for the treatment of glaucoma, corneal disorders, and retinal diseases in the United States and internationally. It offers iStent and iStent inject W micro-bypass stents designed to treat mild-to-moderate open-angle glaucoma through the restoration of the natural physiologic outflow pathways for aqueous humor. The company also provides iStent infinite indicated for use in the treatment of patients with glaucoma uncontrolled by prior medical and surgical therapy; and iDose TR, an intracameral pr"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "GKOS analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GKOS/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:00:57+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "GKOS daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GKOS/history",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:00:57+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "GKOS company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GKOS/profile",
+      "published_at": null,
+      "observed_at": "2026-10-31T06:00:57+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-F24541E925C9A104",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1192448/000119312526436147/gkos-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-28",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-22313405B95B0EE4",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1192448/000119312526323729/gkos-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-29",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-28F68EF8D3A0E449",
+    "input_sha": "28f68ef8d3a0e449cf8223613f6dbe47717d56601b796ac774e746d14a15abef",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(net sales) · Q3 2026: $211.0 million — 회사의 순매출이 전년 같은 기간보다 늘었다",
+        "note_ko": "회사의 순매출이 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "Record net sales of $211.0 million in Q3 2026 increased 58% year-over-year on a reported and constant currency basis.",
+        "document_id": "DOC-F24541E925C9A104",
+        "block_id": "p11",
+        "metric": "net sales",
+        "figures": [
+          "$211.0 million"
+        ],
+        "period": "Q3 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "[U.S. Glaucoma] 매출(net sales) · Q3 2026: $118.6 million — 미국 녹내장 부문의 순매출이 전년 같은 기간보다 늘었다",
+        "note_ko": "미국 녹내장 부문의 순매출이 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "U.S. Glaucoma record net sales of $118.6 million in Q3 2026 increased 47% year-over-year.",
+        "document_id": "DOC-F24541E925C9A104",
+        "block_id": "p13",
+        "metric": "net sales",
+        "figures": [
+          "$118.6 million"
+        ],
+        "period": "Q3 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "U.S. Glaucoma",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "[Corneal Health] 매출(net sales) · Q3 2026: $59.0 million — 각막 건강 부문의 순매출이 전년 같은 기간보다 늘었다",
+        "note_ko": "각막 건강 부문의 순매출이 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "Corneal Health record net sales of $59.0 million in Q3 2026 increased 154% year-over-year.",
+        "document_id": "DOC-F24541E925C9A104",
+        "block_id": "p15",
+        "metric": "net sales",
+        "figures": [
+          "$59.0 million"
+        ],
+        "period": "Q3 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Corneal Health",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "diluted weighted-average shares · Year-to-date Q3 2026 — 비일반회계기준 희석 가중평균 주식수는 재무부 주식법에 따라 미결제 스톡옵션, 미확정 제한부 주식 단위, 성과 기반 주식 보상, 직원 주식 구매 프로그램 옵션 주식의 희석 효과를 반영한다",
+        "note_ko": "비일반회계기준 희석 가중평균 주식수는 재무부 주식법에 따라 미결제 스톡옵션, 미확정 제한부 주식 단위, 성과 기반 주식 보상, 직원 주식 구매 프로그램 옵션 주식의 희석 효과를 반영한다",
+        "kind": "fact",
+        "quote": "Year-to-date Q3 2026 non-GAAP diluted weighted-average shares reflect the dilution effect from outstanding stock options, unvested restricted stock units, performance-based equity awards, and employee stock purchase program option shares under the treasury stock method.",
+        "document_id": "DOC-F24541E925C9A104",
+        "block_id": "p126",
+        "metric": "diluted weighted-average shares",
+        "figures": [],
+        "period": "Year-to-date Q3 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-F24541E925C9A104",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1192448/000119312526436147/gkos-ex99_1.htm",
+        "filed_at": "2026-10-28",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-22313405B95B0EE4",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1192448/000119312526323729/gkos-ex99_1.htm",
+        "filed_at": "2026-07-29",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-31T06:11:41+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.21165,
+    "eps_30d": 0.50587,
+    "eps_90d": 0.50195,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 12,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 141.4,
+    "steady": true,
+    "turnaround": false
+  }
+}

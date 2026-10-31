@@ -1,0 +1,102 @@
+{
+  "observation_id": "OB-1EC77F92D12A5BB3",
+  "candidate_id": "CAN-7506B6BECE695B39",
+  "candidate_version": "CV-49770F11DDE99446",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:FRO",
+    "ticker": "FRO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-10-31T06:00:41+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261031T055659Z_41174406581-1.json.gz",
+    "sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
+    "run_id": "41174406581-1",
+    "finished_at": "2026-10-31T06:11:09+00:00"
+  },
+  "eps": {
+    "eps_now": 6.25014,
+    "eps_30d": 4.57414,
+    "eps_90d": 3.71458,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 68.3,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.456,
+    "yield_change_30_pp": 2.946
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-02",
+    "price_start_date": "2026-07-31",
+    "price_end_expected": "2026-10-30",
+    "price_end_date": "2026-10-30",
+    "close_start": 39.369998931884766,
+    "close_end": 56.900001525878906,
+    "price_pct_90": 44.5,
+    "adj_return_pct_90": 54.3,
+    "pe_change_pct": -14.1
+  },
+  "display_rank": 19,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 13
+    },
+    {
+      "list": "B",
+      "rank": 13
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 12667243520,
+  "context_id": "CTX-FC7419062DE56F28",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-10-28T06:09:33+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Midstream",
+    "count": 7,
+    "shown": [
+      "FRO",
+      "DHT",
+      "TNK"
+    ],
+    "folded": [
+      "STNG"
+    ],
+    "outside": [
+      "VG",
+      "INSW",
+      "LPG"
+    ]
+  },
+  "entity_id": "NYSE:FRO",
+  "approval_version": null,
+  "rendered_at": "2026-10-31T06:12:10+00:00"
+}

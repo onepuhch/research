@@ -1,0 +1,168 @@
+{
+  "context_id": "CTX-33F204845CF6ABC0",
+  "candidate_id": "CAN-3BD5E965B73FD420",
+  "ticker": "STNG",
+  "issuer_cik": "0001483934",
+  "document_ids": [
+    "DOC-18DF4A9BB9BBC23C",
+    "DOC-5E31D8ADC03214CC"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-18DF4A9BB9BBC23C#p8",
+    "DOC-18DF4A9BB9BBC23C#p10",
+    "DOC-18DF4A9BB9BBC23C#p13",
+    "DOC-18DF4A9BB9BBC23C#p15",
+    "DOC-18DF4A9BB9BBC23C#p19",
+    "DOC-18DF4A9BB9BBC23C#t2",
+    "DOC-18DF4A9BB9BBC23C#p21",
+    "DOC-18DF4A9BB9BBC23C#t12",
+    "DOC-18DF4A9BB9BBC23C#p123",
+    "DOC-18DF4A9BB9BBC23C#p132",
+    "DOC-18DF4A9BB9BBC23C#p133",
+    "DOC-5E31D8ADC03214CC#p23",
+    "DOC-5E31D8ADC03214CC#p24"
+  ],
+  "input_sha": "33f204845cf6abc0eb8d508713002820a4eb47a3b8ab2b3cd14815d3c0b5fbed",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-31T06:11:41+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "adjusted net income · For the three months ended September 30, 2026: $127.4 million — 회사의 조정 순이익이다",
+      "note_ko": "회사의 조정 순이익이다",
+      "kind": "fact",
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which excludes from net income (i) a $152.6 million gain on sales of vessels and (ii) a $55.6 million fair value loss on financial liabilities measured at fair value.",
+      "document_id": "DOC-18DF4A9BB9BBC23C",
+      "block_id": "p8",
+      "metric": "adjusted net income",
+      "figures": [
+        "$127.4 million"
+      ],
+      "period": "For the three months ended September 30, 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "adjusted net income · For the nine months ended September 30, 2026: $521.9 million — 회사의 조정 순이익이다",
+      "note_ko": "회사의 조정 순이익이다",
+      "kind": "fact",
+      "quote": "For the nine months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $521.9 million, or $11.30 basic and $10.14 diluted earnings per share, which excludes from net income (i) a $372.6 million gain on sales of vessels, (ii) a $20.7 million write-off of deferred financing fees and debt extinguishment costs (which includes $12.8 million for the make-whole premium on the redemption of the Company’s Senior Unsecured Notes Due 2030), (iii) a $41.8 million fair value loss on financial liabilities measured at fair value, and (iv) $4.0 million of transaction costs related to the second quarter issuances of the Company's Convertible Senior Notes due 2031 (the \"Convertible Notes) (described below).",
+      "document_id": "DOC-18DF4A9BB9BBC23C",
+      "block_id": "p13",
+      "metric": "adjusted net income",
+      "figures": [
+        "$521.9 million"
+      ],
+      "period": "For the nine months ended September 30, 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사의 희석 주당 순이익이다",
+      "figures": [
+        "$2.49"
+      ],
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which e",
+      "where": "DOC-18DF4A9BB9BBC23C#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사의 희석 주당 순이익이다",
+      "figures": [
+        "$10.14"
+      ],
+      "quote": "For the nine months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $521.9 million, or $11.30 basic and $10.14 diluted earnings per share, which ",
+      "where": "DOC-18DF4A9BB9BBC23C#p13"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "LR2 선박의 평균 일일 용선료 수익이다",
+      "figures": [
+        "$181,000"
+      ],
+      "quote": "LR2 ; $181,000 ; 1,025 ; 44% ; $32,150 ; 1,025 ; $— ; — ; —%",
+      "where": "DOC-18DF4A9BB9BBC23C#t2"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "조정 순이익은 선박 매각 이익과 금융 부채의 공정 가치 손실을 제외한다",
+      "figures": [
+        "$152.6 million",
+        "$55.6 million"
+      ],
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which e",
+      "where": "DOC-18DF4A9BB9BBC23C#p8"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "조정 순이익은 선박 매각 이익, 이연 금융 수수료 및 부채 소멸 비용 상각, 금융 부채의 공정 가치 손실, 그리고 전환사채 발행 관련 거래 비용을 제외한다",
+      "figures": [
+        "$372.6 million",
+        "$20.7 million",
+        "$41.8 million",
+        "$4.0 million"
+      ],
+      "quote": "For the nine months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $521.9 million, or $11.30 basic and $10.14 diluted earnings per share, which ",
+      "where": "DOC-18DF4A9BB9BBC23C#p13"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "미래 예측 진술은 예측하기 어렵거나 불가능한 중대한 불확실성과 우발 상황에 따라 달라질 수 있다",
+      "figures": [],
+      "quote": "Although management believes that these assumptions were reasonable when made, because these assumptions are inherently subject to significant uncertainties and contingencies which are difficult or im",
+      "where": "DOC-18DF4A9BB9BBC23C#p132"
+    }
+  ],
+  "context_status": "draft_ready"
+}

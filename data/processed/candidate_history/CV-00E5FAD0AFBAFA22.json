@@ -1,0 +1,296 @@
+{
+  "candidate_id": "CAN-FE3575B3BB2443B0",
+  "candidate_version": "CV-00E5FAD0AFBAFA22",
+  "identity": {
+    "entity_id": "NYSE:EQNR",
+    "ticker": "EQNR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Equinor ASA",
+  "industry": "Oil & Gas Integrated",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "석유 및 가스 자원 탐사, 개발, 생산, 판매와 재생에너지 사업을 통해 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Equinor ASA operates as an energy company in Norway and internationally. It operates through Exploration & Production Norway; Exploration & Production International; Exploration & Production USA; Marketing, Midstream & Processing; and Renewables segments. The company engages in the discovery and appraisal of new resources, as well as commercial development and operation of the oil and gas portfolios; oil and gas field development, well deliveries, and sourcing; research, technology development, specialist advisory services, digitalization, IT, improvement, innovation, and ventures and future b"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "EQNR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/EQNR/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:57:52+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "EQNR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/EQNR/history",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:57:52+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "EQNR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/EQNR/profile",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:57:52+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-578B9F070746066F",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1140625/000114062526000027/equinorfinancialstatements.htm",
+      "title": "SEC 6-K 6-K — EQUINOR THIRD QUARTER 2026 REPORT",
+      "published_at": null,
+      "filed_at": "2026-10-28",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-75A5DA2DC35BD08A",
+    "input_sha": "75a5da2dc35bd08a7899ad9f010a0c8d3656e5beb4232fff0d1619fce7a88cc9",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "Adjusted operating income* · third quarter of 2026: USD 12.35 billion — 회사의 조정 영업 이익이다",
+        "note_ko": "회사의 조정 영업 이익이다",
+        "kind": "fact",
+        "quote": "Equinor delivered an adjusted operating income* of USD 12.35 billion in the third quarter of 2026.",
+        "document_id": "DOC-578B9F070746066F",
+        "block_id": "p29",
+        "metric": "Adjusted operating income*",
+        "figures": [
+          "USD 12.35 billion"
+        ],
+        "period": "third quarter of 2026",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "net operating income · third quarter of 2026: USD 11.95 billion — 회사의 순 영업 이익이다",
+        "note_ko": "회사의 순 영업 이익이다",
+        "kind": "fact",
+        "quote": "Equinor reported a net operating income of USD 11.95 billion and a",
+        "document_id": "DOC-578B9F070746066F",
+        "block_id": "p29",
+        "metric": "net operating income",
+        "figures": [
+          "USD 11.95 billion"
+        ],
+        "period": "third quarter of 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "순이익(net income): USD 2.54 billion — 회사의 순이익이다",
+        "note_ko": "회사의 순이익이다",
+        "kind": "fact",
+        "quote": "net income of USD 2.54 billion.",
+        "document_id": "DOC-578B9F070746066F",
+        "block_id": "p30",
+        "metric": "net income",
+        "figures": [
+          "USD 2.54 billion"
+        ],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Adjusted net income*: USD 2.86 billion — 회사의 조정 순이익이다",
+        "note_ko": "회사의 조정 순이익이다",
+        "kind": "fact",
+        "quote": "Adjusted net income* was USD 2.86 billion, leading to adjusted earnings per share* of USD 1.20.",
+        "document_id": "DOC-578B9F070746066F",
+        "block_id": "p30",
+        "metric": "Adjusted net income*",
+        "figures": [
+          "USD 2.86 billion"
+        ],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "adjusted earnings per share*: USD 1.20 — 회사의 조정 주당 순이익이다",
+        "note_ko": "회사의 조정 주당 순이익이다",
+        "kind": "fact",
+        "quote": "Adjusted net income* was USD 2.86 billion, leading to adjusted earnings per share* of USD 1.20.",
+        "document_id": "DOC-578B9F070746066F",
+        "block_id": "p30",
+        "metric": "adjusted earnings per share*",
+        "figures": [
+          "USD 1.20"
+        ],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-578B9F070746066F",
+        "title": "EQUINOR THIRD QUARTER 2026 REPORT",
+        "url": "https://www.sec.gov/Archives/edgar/data/1140625/000114062526000027/equinorfinancialstatements.htm",
+        "filed_at": "2026-10-28",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-31T06:11:41+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.99526,
+    "eps_30d": 4.16095,
+    "eps_90d": 3.54915,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 40.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

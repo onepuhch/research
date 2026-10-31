@@ -1,0 +1,88 @@
+{
+  "context_id": "CTX-CA7A0D04A4E5F58D",
+  "candidate_id": "CAN-ECB2C73CA19DA4AB",
+  "ticker": "BP",
+  "issuer_cik": "0000313807",
+  "document_ids": [
+    "DOC-71C9BD5AAA8C553F",
+    "DOC-7DDE3B2E82DC2C5E",
+    "DOC-2AB79E941098A6C5"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-71C9BD5AAA8C553F#p122",
+    "DOC-71C9BD5AAA8C553F#p126",
+    "DOC-71C9BD5AAA8C553F#p128",
+    "DOC-71C9BD5AAA8C553F#p224",
+    "DOC-71C9BD5AAA8C553F#p268",
+    "DOC-71C9BD5AAA8C553F#p417",
+    "DOC-71C9BD5AAA8C553F#p442",
+    "DOC-7DDE3B2E82DC2C5E#p77",
+    "DOC-7DDE3B2E82DC2C5E#p78",
+    "DOC-7DDE3B2E82DC2C5E#p195",
+    "DOC-7DDE3B2E82DC2C5E#p352",
+    "DOC-2AB79E941098A6C5#p39",
+    "DOC-2AB79E941098A6C5#t4"
+  ],
+  "input_sha": "ca7a0d04a4e5f58de9e09b1d270b2a2d19d6daf704b6bc254947654fed0b82fe",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-10-31T06:11:41+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "구조적 비용 절감에 힘입어 현금 흐름이 계속 증가할 것으로 예상된다",
+      "figures": [],
+      "quote": "In its customers business, bp expects to make continued progress growing cash flows, supported by lower underlying operating expenditure* driven by structural cost reductions*.",
+      "where": "DOC-71C9BD5AAA8C553F#p126"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "구조적 비용 절감에 힘입어 영업 비용이 감소할 것으로 예상된다",
+      "figures": [],
+      "quote": "In its customers business, bp expects to make continued progress growing cash flows, supported by lower underlying operating expenditure* driven by structural cost reductions*.",
+      "where": "DOC-71C9BD5AAA8C553F#p126"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "겔젠키르헨 매각 완료와 계획된 정비 활동 감소를 반영하여 처리량이 예상된다",
+      "figures": [
+        "1,390 to 1,400mb/d"
+      ],
+      "quote": "In products, bp expects throughput of 1,390 to 1,400mb/d, reflecting the completion of the Gelsenkirchen divestment and a significantly lower level of planned turnaround activity.",
+      "where": "DOC-71C9BD5AAA8C553F#p128"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "브렌트유 가격 추정치가 배럴당 칠십 달러에서 팔십칠 달러로 상향 조정되었다",
+      "figures": [
+        "$87/bbl"
+      ],
+      "quote": "The group has updated its estimate of Brent oil prices to $87/bbl (previously $70/bbl) and Henry Hub gas prices to $3.18/mmBtu (previously $3.80/mmBtu) in real 2024 terms on an average basis for the f",
+      "where": "DOC-71C9BD5AAA8C553F#p268"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "헨리 허브 가스 가격 추정치가 백만 BTU당 삼 달러 팔십 센트에서 삼 달러 십팔 센트로 하향 조정되었다",
+      "figures": [
+        "$3.18/mmBtu"
+      ],
+      "quote": "The group has updated its estimate of Brent oil prices to $87/bbl (previously $70/bbl) and Henry Hub gas prices to $3.18/mmBtu (previously $3.80/mmBtu) in real 2024 terms on an average basis for the f",
+      "where": "DOC-71C9BD5AAA8C553F#p268"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

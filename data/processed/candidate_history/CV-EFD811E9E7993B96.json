@@ -1,0 +1,173 @@
+{
+  "candidate_id": "CAN-ECB2C73CA19DA4AB",
+  "candidate_version": "CV-EFD811E9E7993B96",
+  "identity": {
+    "entity_id": "NYSE:BP",
+    "ticker": "BP",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "BP p.l.c.",
+  "industry": "Oil & Gas Integrated",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "석유, 가스, 재생에너지 사업을 하며 연료, 윤활유, 충전 서비스 등을 제공합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "BP p.l.c., an integrated energy company, engages in the oil and gas business worldwide. The company operates through Gas & Low Carbon Energy, Oil Production & Operations, and Customers & Products segments. It engages in the production of natural gas, marketing, and trading activities, as well as solar, wind, and hydrogen businesses. The company also offers aviation fuel products and services, such as jet fuel; aviation gasoline; UL91 aviation fuel; and sustainable aviation fuel. In addition, it engages in the convenience and retail fuel; EV charging; Castrol lubricants and fluids; B2B; midstre"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "BP analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BP/analysis",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:57:48+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "BP daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BP/history",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:57:48+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "BP company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BP/profile",
+      "published_at": null,
+      "observed_at": "2026-10-31T05:57:48+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-71C9BD5AAA8C553F",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/313807/000165495426009265/a0767b.htm",
+      "title": "SEC 6-K 6-K — 3Q26 BP PLC PART 1 OF 1",
+      "published_at": null,
+      "filed_at": "2026-10-30",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K 6-K"
+    },
+    {
+      "id": "DOC-7DDE3B2E82DC2C5E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/313807/000031380726000018/a30092026bp6kq3.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-10-30",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K 6-K"
+    },
+    {
+      "id": "DOC-2AB79E941098A6C5",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/313807/000165495426008895/a6390y.htm",
+      "title": "SEC 6-K 6-K — 3Q26 BP TRADING STATEMENT PART 1 OF 1",
+      "published_at": null,
+      "filed_at": "2026-10-13",
+      "observed_at": "2026-10-21T05:14:51+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-CA7A0D04A4E5F58D",
+    "input_sha": "ca7a0d04a4e5f58de9e09b1d270b2a2d19d6daf704b6bc254947654fed0b82fe",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-71C9BD5AAA8C553F",
+        "title": "3Q26 BP PLC PART 1 OF 1",
+        "url": "https://www.sec.gov/Archives/edgar/data/313807/000165495426009265/a0767b.htm",
+        "filed_at": "2026-10-30",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      },
+      {
+        "document_id": "DOC-7DDE3B2E82DC2C5E",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/313807/000031380726000018/a30092026bp6kq3.htm",
+        "filed_at": "2026-10-30",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      },
+      {
+        "document_id": "DOC-2AB79E941098A6C5",
+        "title": "3Q26 BP TRADING STATEMENT PART 1 OF 1",
+        "url": "https://www.sec.gov/Archives/edgar/data/313807/000165495426008895/a6390y.htm",
+        "filed_at": "2026-10-13",
+        "observed_at": "2026-10-21T05:14:51+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-10-31T06:11:41+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.73725,
+    "eps_30d": 5.16554,
+    "eps_90d": 3.98232,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 16,
+    "up30": 8,
+    "down30": 0,
+    "pct_90": 44.1,
+    "steady": false,
+    "turnaround": false
+  }
+}
