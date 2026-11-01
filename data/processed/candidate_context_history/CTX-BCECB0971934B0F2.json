@@ -1,0 +1,152 @@
+{
+  "context_id": "CTX-BCECB0971934B0F2",
+  "candidate_id": "CAN-486C908614BC89B1",
+  "ticker": "TTMI",
+  "issuer_cik": "0001116942",
+  "document_ids": [
+    "DOC-C07023F0882F550C",
+    "DOC-97E3825F76888A73"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C07023F0882F550C#t10",
+    "DOC-C07023F0882F550C#p15",
+    "DOC-C07023F0882F550C#p17",
+    "DOC-C07023F0882F550C#p18",
+    "DOC-C07023F0882F550C#p19",
+    "DOC-C07023F0882F550C#p20",
+    "DOC-C07023F0882F550C#t17",
+    "DOC-C07023F0882F550C#t19",
+    "DOC-C07023F0882F550C#t23",
+    "DOC-C07023F0882F550C#t24",
+    "DOC-C07023F0882F550C#t26",
+    "DOC-97E3825F76888A73#p18",
+    "DOC-97E3825F76888A73#t21"
+  ],
+  "input_sha": "bcecb0971934b0f24a146d621cca627d13164845da501316d38dd746093db04d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-01T06:37:27+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(net sales) · 2027 full year: $6.5 billion to $6.75 billion — 회사는 내년 순매출을 예상한다",
+      "note_ko": "회사는 내년 순매출을 예상한다",
+      "kind": "guidance",
+      "quote": "In addition, we are initiating our preliminary 2027 full year forecast with expected net sales in the range of $6.5 billion to $6.75 billion and expected non-GAAP net income in the range of $8.10 to $8.90 per diluted share.",
+      "document_id": "DOC-C07023F0882F550C",
+      "block_id": "p19",
+      "metric": "net sales",
+      "figures": [
+        "$6.5 billion to $6.75 billion"
+      ],
+      "period": "2027 full year",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "non-GAAP net income · 2027 full year: $8.10 to $8.90 per diluted share — 회사는 내년 비일반회계기준 희석 주당 순이익을 예상한다",
+      "note_ko": "회사는 내년 비일반회계기준 희석 주당 순이익을 예상한다",
+      "kind": "guidance",
+      "quote": "In addition, we are initiating our preliminary 2027 full year forecast with expected net sales in the range of $6.5 billion to $6.75 billion and expected non-GAAP net income in the range of $8.10 to $8.90 per diluted share.",
+      "document_id": "DOC-C07023F0882F550C",
+      "block_id": "p19",
+      "metric": "non-GAAP net income",
+      "figures": [
+        "$8.10 to $8.90 per diluted share"
+      ],
+      "period": "2027 full year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "해당 분기 순매출을 기록했다",
+      "figures": [
+        "$1,203,855"
+      ],
+      "quote": "Net sales ; $1,203,855 ; $752,736 ; $3,053,885 ; $2,132,025",
+      "where": "DOC-C07023F0882F550C#t17"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "해당 분기 순이익을 기록했다",
+      "figures": [
+        "$84,803"
+      ],
+      "quote": "Net income ; $84,803 ; $53,055 ; $217,838 ; $126,763",
+      "where": "DOC-C07023F0882F550C#t17"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "해당 분기 희석 주당 순이익을 기록했다",
+      "figures": [
+        "0.79"
+      ],
+      "quote": "Diluted ; 0.79 ; 0.50 ; 2.03 ; 1.21",
+      "where": "DOC-C07023F0882F550C#t17"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 비일반회계기준 희석 주당 순이익 전망치와 가장 직접적으로 비교 가능한 일반회계기준 지표 간의 조정을 합리적인 노력 없이 예측할 수 없다",
+      "figures": [],
+      "quote": "With respect to TTM’s outlook for non-GAAP net income per diluted share, we are unable to predict with reasonable certainty or without unreasonable effort certain items that may affect a comparable me",
+      "where": "DOC-C07023F0882F550C#p20"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "비일반회계기준 희석 주당 순이익에서 제외되는 항목들은 경영진의 통제 범위를 벗어나는 다양한 요인으로 인해 매우 가변적이며 예측하기 어렵다",
+      "figures": [],
+      "quote": "These reconciling items are highly variable and difficult to predict due to various factors outside of management’s control and could have a material impact on our future period net income per diluted",
+      "where": "DOC-C07023F0882F550C#p20"
+    }
+  ],
+  "context_status": "draft_ready"
+}

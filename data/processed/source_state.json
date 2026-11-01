@@ -9283,7 +9283,7 @@
     "validation_rejected": true
   },
   "0000813672-26-000116": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9294,15 +9294,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/cdns10262026ex9901.htm",
       "published_at": "2026-10-26",
-      "raw_text": "CADENCE DESIGN SYSTEMS INC (CDNS) (CIK 0000813672) EX-99.01 2026-10-26. EX-99.01 2 cdns10262026ex9901.htm PRESS RELEASE Document Exhibit 99.01 Cadence Reports Third Quarter 2026 Financial Results Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40 Q3 Recurring Revenue Up 18% YoY, Record Backlog of $8.2 Billion SAN JOSE, Calif. With broad-based business momentum, expanding technology leadership and a record backlog, we are raising our 2026 revenue outlook to 21% year-over-year growth,” said Anirudh Devgan, president and chief executive officer. “With record backlog of $8.2 billion and continued strength in recurring revenue, we are poised to deliver a strong 2026.” CFO Commentary Commentary on the third quarter of 2026 financial results by John Wall, senior vice president and chief financial officer, is available at www.cadence.com/cadence/investor_relations."
+      "raw_text": "CADENCE DESIGN SYSTEMS INC (CDNS) (CIK 0000813672) EX-99.01 2026-10-26. EX-99.01 2 cdns10262026ex9901.htm PRESS RELEASE Document Exhibit 99.01 Cadence Reports Third Quarter 2026 Financial Results Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40 Q3 Recurring Revenue Up 18% YoY, Record Backlog of $8.2 Billion SAN JOSE, Calif. With broad-based business momentum, expanding technology leadership and a record backlog, we are raising our 2026 revenue outlook to 21% year-over-year growth,” said Anirudh Devgan, president and chief executive officer. “With record backlog of $8.2 billion and continued strength in recurring revenue, we are poised to deliver a strong 2026.” CFO Commentary Commentary on the third quarter of 2026 financial results by John Wall, senior vice president and chief financial officer, is available at www.cadence.com/cadence/investor_relations.",
+      "_model_response": {
+        "evidence_quote": "Cadence Reports Third Quarter 2026 Financial Results Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40 Q3 Recurring Revenue Up 18% YoY, Record Backlog of $8.2 Billion SAN JOSE, Calif. With broad-based business momentum, expanding technology leadership and a record backlog, we are raising our 2026 revenue outlook to 21% year-over-year growth,” said Anirudh Devgan, president and chief executive officer. “With record backlog of $8.2 billion and continued strength in recurring revenue, we are poised to deliver a strong 2026.”",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40",
+          "supply_demand_tightness": "Record Backlog of $8.2 Billion",
+          "structural_ai_demand": "broad-based business momentum, expanding technology leadership",
+          "revision_momentum": "Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40",
+          "catalyst_visibility": "Raising 2026 Revenue Growth Outlook to 21% and Non-GAAP EPS to $8.40 Q3 Recurring Revenue Up 18% YoY, Record Backlog of $8.2 Billion"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "EDA",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CDNS",
+        "theme": "EDA / AI",
+        "signal_type": "가이던스상향",
+        "what_happened": "Cadence Design Systems가 2026년 3분기 실적 발표에서 2026년 매출 성장률 전망치를 21%로, 비GAAP EPS를 8.40달러로 상향 조정하고, 82억 달러의 사상 최대 백로그를 기록했다고 발표했습니다.",
+        "why_it_matters": "가이던스 상향과 사상 최대 백로그는 AI 및 고성능 컴퓨팅 수요 증가에 따른 EDA 솔루션의 강력한 수요를 반영하며, 이는 Cadence의 실적 성장 가속화와 시장 점유율 확대로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "향후 분기별 매출 및 EPS 가이던스 추가 상향 여부; AI 관련 디자인 윈 및 신규 고객 확보 추이",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "중기",
+        "glossary": "비GAAP EPS: 일반적으로 인정되는 회계 원칙(GAAP)을 따르지 않고 특정 항목(예: 일회성 비용)을 제외하여 산출한 주당 순이익으로, 기업의 핵심 사업 성과를 더 잘 보여준다고 여겨집니다. 백로그: 고객으로부터 수주했지만 아직 인도되지 않은 주문의 총액을 의미하며, 미래 매출의 잠재적 지표입니다."
+      }
     },
     "content_hash": "b490a5a9a64726a1dbc9caa74f7858f1ac878e1312e80f2422d8f58862826404",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-01T06:21:28+00:00",
+    "signal_id": "SIG-0919",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-01",
+    "processed_run": "41280399923-1"
   },
   "0001437749-26-033460": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9313,15 +9351,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033460/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1787740/000143774926033460/ex_1030911.htm",
       "published_at": "2026-10-26",
-      "raw_text": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-26. Alongside these discussions, Valion continues to operate the subsidiary and pursue new customer relationships. EX-99.1 2 ex_1030911.htm EXHIBIT 99.1 ex_1030911.htm Exhibit 99.1 Valion Bio Receives Unsolicited Acquisition Interest in Velocity Bioworks; Weighs Strategic Options Unsolicited Interest Reinforces Velocity's Strategic Value as Valion Bio Evaluates Opportunities to Advance Entolimod SAN ANTONIO, TX / October 26, 2026 / ACCESS Newswire -- Valion Bio, Inc. (NASDAQ: VBIO) (\"Valion\" or the \"Company\"), a clinical-stage biopharmaceutical company developing biologics that activate innate immune pathways for cytoprotection and immune modulation, today announced that it has received unsolicited acquisition inquiries from independent third parties concerning its wholly owned contract development and manufacturing organization (\"CDMO\"), Velocity Bioworks (\"Velocity\"). The Company has entered into preliminary discussions with these interested parties while continuing to evaluate a range of strategic options for Velocity. These discussions are consistent with the strategic priorities outlined in Valion's October 21, 2026 announcement, including advancing its lead biologic drug candidate, Entolimod, and other pipeline assets, building Velocity's commercial business, and evaluating strategic opportunities for the CDMO subsidiary. \"Our strategic review is focused on determining how best to maximize the potential of each asset,\" said Dean Zikria, Interim Chief Executive Officer of Valion. \"The unsolicited interest in Velocity provides an opportunity to evaluate a range of strategic options, including a possible sale. Our priority remains identifying the path that best supports our development objectives and delivers long-term value to shareholders.\" Velocity provides U.S.-based biologics development and manufacturing capabilities that support Valion's internal pipeline and are available to biotechnology companies "
+      "raw_text": "Valion Bio, Inc. (VBIO) (CIK 0001787740) EX-99.1 2026-10-26. Alongside these discussions, Valion continues to operate the subsidiary and pursue new customer relationships. EX-99.1 2 ex_1030911.htm EXHIBIT 99.1 ex_1030911.htm Exhibit 99.1 Valion Bio Receives Unsolicited Acquisition Interest in Velocity Bioworks; Weighs Strategic Options Unsolicited Interest Reinforces Velocity's Strategic Value as Valion Bio Evaluates Opportunities to Advance Entolimod SAN ANTONIO, TX / October 26, 2026 / ACCESS Newswire -- Valion Bio, Inc. (NASDAQ: VBIO) (\"Valion\" or the \"Company\"), a clinical-stage biopharmaceutical company developing biologics that activate innate immune pathways for cytoprotection and immune modulation, today announced that it has received unsolicited acquisition inquiries from independent third parties concerning its wholly owned contract development and manufacturing organization (\"CDMO\"), Velocity Bioworks (\"Velocity\"). The Company has entered into preliminary discussions with these interested parties while continuing to evaluate a range of strategic options for Velocity. These discussions are consistent with the strategic priorities outlined in Valion's October 21, 2026 announcement, including advancing its lead biologic drug candidate, Entolimod, and other pipeline assets, building Velocity's commercial business, and evaluating strategic opportunities for the CDMO subsidiary. \"Our strategic review is focused on determining how best to maximize the potential of each asset,\" said Dean Zikria, Interim Chief Executive Officer of Valion. \"The unsolicited interest in Velocity provides an opportunity to evaluate a range of strategic options, including a possible sale. Our priority remains identifying the path that best supports our development objectives and delivers long-term value to shareholders.\" Velocity provides U.S.-based biologics development and manufacturing capabilities that support Valion's internal pipeline and are available to biotechnology companies ",
+      "_model_response": {
+        "evidence_quote": "Valion Bio, Inc. (NASDAQ: VBIO) (\"Valion\" or the \"Company\"), a clinical-stage biopharmaceutical company... today announced that it has received unsolicited acquisition inquiries from independent third parties concerning its wholly owned contract development and manufacturing organization (\"CDMO\"), Velocity Bioworks (\"Velocity\"). The Company has entered into preliminary discussions with these interested parties while continuing to evaluate a range of strategic options for Velocity. ... \"The unsolicited interest in Velocity provides an opportunity to evaluate a range of strategic options, including a possible sale. Our priority remains identifying the path that best supports our development objectives and delivers long-term value to shareholders.\"",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "planned",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "이 항목은 자회사에 대한 비요청 인수 제안을 받고 전략적 옵션을 검토 중이라는 기업의 발표입니다. 이는 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등과 같은 구체적인 운영상의 조기 지표가 아닌, 잠재적인 기업 전략 변화에 대한 계획 발표이므로 투자 발굴 신호로 분류하지 않습니다.",
+        "subject": "Valion Bio",
+        "theme": "M&A",
+        "signal_type": "기타",
+        "what_happened": "Valion Bio가 자회사 Velocity Bioworks에 대한 비요청 인수 제안을 받아 전략적 옵션을 검토 중이라고 발표했습니다.",
+        "why_it_matters": "자회사 매각 가능성 등 전략적 검토는 기업 가치 재평가 기회가 될 수 있으나, 아직 확정된 바는 없습니다.",
+        "what_to_watch": "전략적 검토 결과 및 구체적인 매각 또는 파트너십 발표 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "CDMO: Contract Development and Manufacturing Organization (계약 개발 및 제조 조직)"
+      },
+      "_reject_reason": "이 항목은 자회사에 대한 비요청 인수 제안을 받고 전략적 옵션을 검토 중이라는 기업의 발표입니다. 이는 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등과 같은 구체적인 운영상의 조기 지표가 아닌, 잠재적인 기업 전략 변화에 대한 계획 발표이므로 투자 발굴 신호로 분류하지 않습니다."
     },
     "content_hash": "1a1ba5f5ef6e10ee4bd6fd812d3e9902be30f60c16c0795f2b2f288ba24bd47c",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-01T06:21:44+00:00",
+    "reason": "이 항목은 자회사에 대한 비요청 인수 제안을 받고 전략적 옵션을 검토 중이라는 기업의 발표입니다. 이는 가이던스 상향, 수주/백로그 변화, 생산능력 증설, EPS 리비전 등과 같은 구체적인 운영상의 조기 지표가 아닌, 잠재적인 기업 전략 변화에 대한 계획 발표이므로 투자 발굴 신호로 분류하지 않습니다.",
+    "processed_day": "2026-11-01",
+    "processed_run": "41280399923-1"
   },
   "0001030894-26-000049": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9332,15 +9408,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1030894/000103089426000049/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1030894/000103089426000049/cls-20260930prcondensedfs.htm",
       "published_at": "2026-10-26",
-      "raw_text": "CELESTICA INC (CLS) (CIK 0001030894) EX-99.1 2026-10-26. Cautionary Note Regarding Forward-looking Statements This press release contains forward-looking statements, including, without limitation, those related to: strengthening demand environment of our businesses, customer forecasts, accelerating revenue growth, our anticipated financial and/or operational results, guidance and outlook, including statements under the headings “Q3 2026 Highlights”, \"Fourth Quarter of 2026 (Q4 2026) Guidance”, “2026 Annual Outlook Update”, “2027 Annual Outlook and Long-Term Demand Update” and “Intention to Launch a New Normal Course Issuer Bid (NCIB)”, and including statements with respect to timelines referenced therein, expected revenue growth in 2026, 2027, and 2028, anticipated multi-year growth, 2027 and 2028 customer demand forecasts, non-GAAP operating margin and non-GAAP adjusted EPS, anticipated operating leverage, anticipated capital expenditures, expected working capital investment, cash usage and free cash flow, the sufficiency of our liquidity, ROIC, our growth plans and anticipated capacity requirements for 2027 and 2028, the anticipated use of the net proceeds of our recent public offering, our intention to launch a new NCIB and its anticipated terms, developments related to new customer or program wins and pursuits (including in data center power infrastructure), timing of production ramps, anticipated economic conditions, industry and market trends and projections, underlying market growth rates, customer demand, prospects and opportunities, and strategic initiatives."
+      "raw_text": "CELESTICA INC (CLS) (CIK 0001030894) EX-99.1 2026-10-26. Cautionary Note Regarding Forward-looking Statements This press release contains forward-looking statements, including, without limitation, those related to: strengthening demand environment of our businesses, customer forecasts, accelerating revenue growth, our anticipated financial and/or operational results, guidance and outlook, including statements under the headings “Q3 2026 Highlights”, \"Fourth Quarter of 2026 (Q4 2026) Guidance”, “2026 Annual Outlook Update”, “2027 Annual Outlook and Long-Term Demand Update” and “Intention to Launch a New Normal Course Issuer Bid (NCIB)”, and including statements with respect to timelines referenced therein, expected revenue growth in 2026, 2027, and 2028, anticipated multi-year growth, 2027 and 2028 customer demand forecasts, non-GAAP operating margin and non-GAAP adjusted EPS, anticipated operating leverage, anticipated capital expenditures, expected working capital investment, cash usage and free cash flow, the sufficiency of our liquidity, ROIC, our growth plans and anticipated capacity requirements for 2027 and 2028, the anticipated use of the net proceeds of our recent public offering, our intention to launch a new NCIB and its anticipated terms, developments related to new customer or program wins and pursuits (including in data center power infrastructure), timing of production ramps, anticipated economic conditions, industry and market trends and projections, underlying market growth rates, customer demand, prospects and opportunities, and strategic initiatives.",
+      "_model_response": {
+        "evidence_quote": "This press release contains forward-looking statements, including, without limitation, those related to: strengthening demand environment of our businesses, customer forecasts, accelerating revenue growth, our anticipated financial and/or operational results, guidance and outlook, including statements under the headings “Q3 2026 Highlights”, \"Fourth Quarter of 2026 (Q4 2026) Guidance”, “2026 Annual Outlook Update”, “2027 Annual Outlook and Long-Term Demand Update” and “Intention to Launch a New Normal Course Issuer Bid (NCIB)”, and including statements with respect to timelines referenced therein, expected revenue growth in 2026, 2027, and 2028, anticipated multi-year growth, 2027 and 2028 customer demand forecasts, non-GAAP operating margin and non-GAAP adjusted EPS, anticipated operating leverage, anticipated capital expenditures, expected working capital investment, cash usage and free cash flow, the sufficiency of our liquidity, ROIC, our growth plans and anticipated capacity requirements for 2027 and 2028, the anticipated use of the net proceeds of our recent public offering, our intention to launch a new NCIB and its anticipated terms, developments related to new customer or program wins and pursuits (including in data center power infrastructure), timing of production ramps, anticipated economic conditions, industry and market trends and projections, underlying market growth rates, customer demand, prospects and opportunities, and strategic initiatives.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "developments related to new customer or program wins and pursuits (including in data center power infrastructure)",
+          "earnings_leverage": "anticipated operating leverage",
+          "supply_demand_tightness": "strengthening demand environment of our businesses, customer forecasts",
+          "structural_ai_demand": "developments related to new customer or program wins and pursuits (including in data center power infrastructure)",
+          "revision_momentum": "2026 Annual Outlook Update”, “2027 Annual Outlook and Long-Term Demand Update”, \"expected revenue growth in 2026, 2027, and 2028, anticipated multi-year growth, 2027 and 2028 customer demand forecasts, non-GAAP operating margin and non-GAAP adjusted EPS\"",
+          "catalyst_visibility": "expected revenue growth in 2026, 2027, and 2028, anticipated multi-year growth, 2027 and 2028 customer demand forecasts"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "데이터센터 전력 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CELESTICA INC (CLS)",
+        "theme": "AI 인프라",
+        "signal_type": "가이던스상향",
+        "what_happened": "셀레스티카(CELESTICA INC)가 2026년부터 2028년까지의 다년간 전망을 업데이트하며, 수요 환경 강화와 데이터센터 전력 인프라 부문의 신규 고객 확보에 힘입어 매출 성장 가속화, EPS 개선 및 생산능력 증설 계획을 발표했습니다.",
+        "why_it_matters": "이는 회사의 사업 궤적에 긍정적인 변화를 시사하며, 특히 AI 및 데이터센터 관련 수요 증가가 미래 수익 성장을 견인하고 시장 재평가로 이어질 잠재력이 있음을 보여줍니다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 매출 성장 및 EPS 개선이 가이던스에 부합하는지, 그리고 데이터센터 전력 인프라 부문의 구체적인 신규 고객 확보 및 생산량 증대 발표가 있는지 확인할 것입니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "NCIB (Normal Course Issuer Bid): 자사주 매입 프로그램; ROIC (Return on Invested Capital): 투입 자본 수익률"
+      }
     },
     "content_hash": "5304c2c566ae3098cc48f7429c9c2f31e2a42a0a8658a74226aff99bcb928dce",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-01T06:22:03+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000721994-26-000074": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9351,12 +9463,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/721994/000072199426000074/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/721994/000072199426000074/lkfn-20261026exhibit991.htm",
       "published_at": "2026-10-26",
-      "raw_text": "LAKELAND FINANCIAL CORP (LKFN) (CIK 0000721994) EX-99.1 2026-10-26. Innovation that focuses on artificial intelligence capabilities is also a priority as we prepare for the rollout of our 6 innovative, new customer relationship management program that will enhance relationship development and expansion, client communication, and allow for future revenue growth.\" Information regarding Lakeland Financial Corporation may be accessed on the home page of its subsidiary, Lake City Bank, at lakecitybank.com . EX-99.1 2 lkfn-20261026exhibit991.htm EX-99.1 Document Exhibit 99.1 NEWS FROM LAKELAND FINANCIAL CORPORATION FOR IMMEDIATE RELEASE Contact Lisa M. O’Neill Executive Vice President and Chief Financial Officer (574) 267-9125 lisa.oneill@lakecitybank.com Lakeland Financial Reports Record Third Quarter Performance with Loan Growth of 8%; Diluted Earnings per Share Increases by 11% Warsaw, Indiana (October 26, 2026) – Lakeland Financial Corporation (Nasdaq Global Select/LKFN), parent company of Lake City Bank, today reported record third quarter net income of $28.9 million for the three months ended September 30, 2026, which represents an increase of $2.5 million, or 9%, compared to net income of $26.4 million for the three months ended September 30, 2025. Diluted earnings per share of $1.14 for the third quarter of 2026 also represents a record for third quarter performance and increased $0.11, or 11%, compared to $1.03 for the third quarter of 2025. On a linked quarter basis, net income increased $417,000 from $28.4 million. Diluted earnings per share increased $0.01 from $1.13 on a linked quarter basis. The company further reported record performance year-to-date with net income of $83.8 million for the nine months ended September 30, 2026, versus $73.5 million for the corresponding period of 2025, an increase of $10.3 million, or 14%. Diluted earnings per share increased $0.46, or 16%, to $3.31 for the nine months ended September 30, 2026, versus $2.85 for the correspo"
+      "raw_text": "LAKELAND FINANCIAL CORP (LKFN) (CIK 0000721994) EX-99.1 2026-10-26. Innovation that focuses on artificial intelligence capabilities is also a priority as we prepare for the rollout of our 6 innovative, new customer relationship management program that will enhance relationship development and expansion, client communication, and allow for future revenue growth.\" Information regarding Lakeland Financial Corporation may be accessed on the home page of its subsidiary, Lake City Bank, at lakecitybank.com . EX-99.1 2 lkfn-20261026exhibit991.htm EX-99.1 Document Exhibit 99.1 NEWS FROM LAKELAND FINANCIAL CORPORATION FOR IMMEDIATE RELEASE Contact Lisa M. O’Neill Executive Vice President and Chief Financial Officer (574) 267-9125 lisa.oneill@lakecitybank.com Lakeland Financial Reports Record Third Quarter Performance with Loan Growth of 8%; Diluted Earnings per Share Increases by 11% Warsaw, Indiana (October 26, 2026) – Lakeland Financial Corporation (Nasdaq Global Select/LKFN), parent company of Lake City Bank, today reported record third quarter net income of $28.9 million for the three months ended September 30, 2026, which represents an increase of $2.5 million, or 9%, compared to net income of $26.4 million for the three months ended September 30, 2025. Diluted earnings per share of $1.14 for the third quarter of 2026 also represents a record for third quarter performance and increased $0.11, or 11%, compared to $1.03 for the third quarter of 2025. On a linked quarter basis, net income increased $417,000 from $28.4 million. Diluted earnings per share increased $0.01 from $1.13 on a linked quarter basis. The company further reported record performance year-to-date with net income of $83.8 million for the nine months ended September 30, 2026, versus $73.5 million for the corresponding period of 2025, an increase of $10.3 million, or 14%. Diluted earnings per share increased $0.46, or 16%, to $3.31 for the nine months ended September 30, 2026, versus $2.85 for the correspo",
+      "_model_response": {
+        "evidence_quote": "Lakeland Financial Reports Record Third Quarter Performance with Loan Growth of 8%; Diluted Earnings per Share Increases by 11% Warsaw, Indiana (October 26, 2026) – Lakeland Financial Corporation (Nasdaq Global Select/LKFN), parent company of Lake City Bank, today reported record third quarter net income of $28.9 million for the three months ended September 30, 2026, which represents an increase of $2.5 million, or 9%, compared to net income of $26.4 million for the three months ended September 30, 2025. Diluted earnings per share of $1.14 for the third quarter of 2026 also represents a record for third quarter performance and increased $0.11, or 11%, compared to $1.03 for the third quarter of 2025.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "루틴 실적 공시로, 과거 실적을 보고하는 내용이며, 가이던스 상향, 수주 변화, EPS 추정치 상향 등 구체적인 조기 투자 발굴 신호에 해당하지 않습니다.",
+        "subject": "LKFN",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "Lakeland Financial Corporation이 2026년 3분기 및 연간 누계 실적에서 사상 최고 순이익과 희석 주당순이익을 기록했다고 발표했습니다.",
+        "why_it_matters": "해당 공시는 과거 실적 보고이며, 미래 투자 가치를 판단할 조기 신호로 보기 어렵습니다.",
+        "what_to_watch": "해당 없음",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "루틴 실적 공시로, 과거 실적을 보고하는 내용이며, 가이던스 상향, 수주 변화, EPS 추정치 상향 등 구체적인 조기 투자 발굴 신호에 해당하지 않습니다."
     },
     "content_hash": "3ea60acebd481e971035f9bf842ca3817c26d488fcb89bda7d7cb16a86896b00",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-01T06:22:20+00:00",
+    "reason": "루틴 실적 공시로, 과거 실적을 보고하는 내용이며, 가이던스 상향, 수주 변화, EPS 추정치 상향 등 구체적인 조기 투자 발굴 신호에 해당하지 않습니다.",
+    "processed_day": "2026-11-01",
+    "processed_run": "41280399923-1"
   },
   "0000950142-26-002834": {
     "status": "deferred",
@@ -9378,7 +9521,7 @@
     "updated_at": "2026-10-27T05:15:06.551437+00:00"
   },
   "0001493152-26-048581": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9389,12 +9532,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1770501/000149315226048581/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1770501/000149315226048581/ex10-1.htm",
       "published_at": "2026-10-26",
-      "raw_text": "Venu Holding Corp (VENU) (CIK 0001770501) EX-10.1 2026-10-26. “ Material Additional Work Construction Schedule ” means a schedule of critical dates relating to the construction of the Material Additional Work (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the proceeding task or event), which schedule, shall include the dates for (a) ordering and delivery of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or system of the Improvements, (b) completion of the Material Additional Work Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of all necessary Governmental Authorizations), (c) issuance of all Governmental Authorizations prerequisite to commencement of the Material Additional Work, (d) commencement of the Material Additional Work and (e) Final Completion of the Material Additional Work. “ Project Construction Schedule ” means a schedule of critical dates relating to the Project Improvements Work and the Commencement of Operations (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the preceding task or event), which schedule shall include the estimated dates for (i) ordering and delivering of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or systems of the Project Improvements, (ii) completion of the Project Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of necessary building permits), (iii) issuance of all Governmental Authorizations and satisfaction of all Applicable Law prerequisite to commencement of the Project Improvements Work, (iv) commencement of any of Owner’s Remedial Work and all other Project Improvemen"
+      "raw_text": "Venu Holding Corp (VENU) (CIK 0001770501) EX-10.1 2026-10-26. “ Material Additional Work Construction Schedule ” means a schedule of critical dates relating to the construction of the Material Additional Work (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the proceeding task or event), which schedule, shall include the dates for (a) ordering and delivery of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or system of the Improvements, (b) completion of the Material Additional Work Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of all necessary Governmental Authorizations), (c) issuance of all Governmental Authorizations prerequisite to commencement of the Material Additional Work, (d) commencement of the Material Additional Work and (e) Final Completion of the Material Additional Work. “ Project Construction Schedule ” means a schedule of critical dates relating to the Project Improvements Work and the Commencement of Operations (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the preceding task or event), which schedule shall include the estimated dates for (i) ordering and delivering of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or systems of the Project Improvements, (ii) completion of the Project Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of necessary building permits), (iii) issuance of all Governmental Authorizations and satisfaction of all Applicable Law prerequisite to commencement of the Project Improvements Work, (iv) commencement of any of Owner’s Remedial Work and all other Project Improvemen",
+      "_model_response": {
+        "evidence_quote": "“ Material Additional Work Construction Schedule ” means a schedule of critical dates relating to the construction of the Material Additional Work (which dates may be described or set forth as intervals of time from or after the completion or occurrence of the proceeding task or event), which schedule, shall include the dates for (a) ordering and delivery of critical delivery items, such as construction components or items requiring long lead time for purchase or manufacture, or items which by their nature affect the basic structure or system of the Improvements, (b) completion of the Material Additional Work Plans in detail sufficient for satisfaction of all Applicable Law (including issuance of all necessary Governmental Authorizations), (c) issuance of all Governmental Authorizations prerequisite to commencement of the Material Additional Work, (d) commencement of the Material Additional Work and (e) Final Completion of the Material Additional Work.",
+        "axes_evidence": {},
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "제공된 텍스트는 Venu Holding Corp의 법률 문서(EX-10.1) 내에서 'Material Additional Work Construction Schedule' 및 'Project Construction Schedule'과 같은 건설 프로젝트 일정 관련 용어를 정의하고 있습니다. 이는 특정 신규 프로젝트의 착수, CAPEX 증설, 수주 증가 등 구체적인 조기 투자 신호를 알리는 것이 아니라, 향후 발생할 수 있는 프로젝트에 대한 일정 관리 방식을 설명하는 정의에 불과합니다. 따라서 식별 가능한 회사의 구체적인 조기 지표로 볼 수 없습니다.",
+        "subject": "Venu Holding Corp",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "Venu Holding Corp의 법률 문서에서 건설 프로젝트 일정에 대한 용어가 정의되었습니다.",
+        "why_it_matters": "특정 투자 신호가 아니므로 현재 투자 관점에서 중요하지 않습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "제공된 텍스트는 Venu Holding Corp의 법률 문서(EX-10.1) 내에서 'Material Additional Work Construction Schedule' 및 'Project Construction Schedule'과 같은 건설 프로젝트 일정 관련 용어를 정의하고 있습니다. 이는 특정 신규 프로젝트의 착수, CAPEX 증설, 수주 증가 등 구체적인 조기 투자 신호를 알리는 것이 아니라, 향후 발생할 수 있는 프로젝트에 대한 일정 관리 방식을 설명하는 정의에 불과합니다. 따라서 식별 가능한 회사의 구체적인 조기 지표로 볼 수 없습니다."
     },
     "content_hash": "bfe954d802302972175ff709a14da17bb764e136b249e4be2231fcb2a507de4a",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-01T06:22:37+00:00",
+    "reason": "제공된 텍스트는 Venu Holding Corp의 법률 문서(EX-10.1) 내에서 'Material Additional Work Construction Schedule' 및 'Project Construction Schedule'과 같은 건설 프로젝트 일정 관련 용어를 정의하고 있습니다. 이는 특정 신규 프로젝트의 착수, CAPEX 증설, 수주 증가 등 구체적인 조기 투자 신호를 알리는 것이 아니라, 향후 발생할 수 있는 프로젝트에 대한 일정 관리 방식을 설명하는 정의에 불과합니다. 따라서 식별 가능한 회사의 구체적인 조기 지표로 볼 수 없습니다.",
+    "processed_day": "2026-11-01",
+    "processed_run": "41280399923-1"
   },
   "0001683168-26-008094": {
     "status": "deferred",
