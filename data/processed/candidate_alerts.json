@@ -1990,12 +1990,20 @@
       "signal_id": null,
       "verdict": "consider",
       "day": "2026-11-01",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-01T06:37:56+00:00",
+          "status": "sent",
+          "message_id": 224,
+          "error": null
+        }
+      ],
       "reserved_by": "41280399923-1",
       "reserved_at": "2026-11-01T06:37:53+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · TBLA Taboola.com Ltd.</b>\n<b>🟢 시스템 판단: 추적 고려</b>\nAI 기반 플랫폼으로 웹사이트에 기사 콘텐츠와 광고를 추천하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.23 → 지금 $0.33 (+41%) · 주가 같은 기간 -33.2%\n\n👍 최근 30일 분석가 6명 중 3명이 올림\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+2%)\n👍 주가는 같은 90일에 -33%로, 이익 예상 상향(+41%)보다 덜 움직임\n👎 같은 30일에 내린 분석가도 1명\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-B85C9F47594458D2</code> · 추적 <code>/track CAN-B85C9F47594458D2</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "d530bbc952b2020fb8a741aaff4db30cd1a4042ed81791bacbd2e85095fa262f"
+      "payload_sha256": "d530bbc952b2020fb8a741aaff4db30cd1a4042ed81791bacbd2e85095fa262f",
+      "message_id": 224
     },
     "CIK:0000813672|eda / ai|new_discovery": {
       "channel": "news",
@@ -2007,12 +2015,20 @@
       "observation_id": null,
       "signal_id": "SIG-0919",
       "day": "2026-11-01",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-01T06:37:57+00:00",
+          "status": "sent",
+          "message_id": 225,
+          "error": null
+        }
+      ],
       "reserved_by": "41280399923-1",
       "reserved_at": "2026-11-01T06:37:53+00:00",
       "payload_text": "📡 새 발굴 신호 · 2026-11-01\n\n<b>🅱️ CDNS · 8/12점</b>\nSIG-0919 · 검토 우선순위 B · EDA / AI\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Cadence Design Systems가 2026년 3분기 실적 발표에서 2026년 매출 성장률 전망치를 21%로, 비GAAP EPS를 8.40달러로 상향 조정하고, 82억 달러의 사상 최대 백로그를 기록했다고 발표했습니다.\n· 왜 중요: 가이던스 상향과 사상 최대 백로그는 AI 및 고성능 컴퓨팅 수요 증가에 따른 EDA 솔루션의 강력한 수요를 반영하며, 이는 Cadence의 실적 성장 가속화와 시장 점유율 확대로 이어질 수 있는 긍정적인 신호입니다.\n· 볼 것: 향후 분기별 매출 및 EPS 가이던스 추가 상향 여부; AI 관련 디자인 윈 및 신규 고객 확보 추이\n· 용어: 비GAAP EPS: 일반적으로 인정되는 회계 원칙(GAAP)을 따르지 않고 특정 항목(예: 일회성 비용)을 제외하여 산출한 주당 순이익으로, 기업의 핵심 사업 성과를 더 잘 보여준다고 여겨집니다. 백로그: 고객으로부터 수주했지만 아직 인도되지 않은 주문의 총액을 의미하며, 미래 매출의 잠재적 지표입니다.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/cdns10262026ex9901.htm\">SEC EDGAR</a> (2026-10-26)\n\n추적 <code>/track SIG-0919</code>",
-      "payload_sha256": "102acb3873a25d67814206fd649efacde3801b1e9eac51903c04a0968384efc9"
+      "payload_sha256": "102acb3873a25d67814206fd649efacde3801b1e9eac51903c04a0968384efc9",
+      "message_id": 225
     }
   },
   "bootstrap": {
