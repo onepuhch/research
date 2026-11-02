@@ -2029,6 +2029,24 @@
       "payload_text": "📡 새 발굴 신호 · 2026-11-01\n\n<b>🅱️ CDNS · 8/12점</b>\nSIG-0919 · 검토 우선순위 B · EDA / AI\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Cadence Design Systems가 2026년 3분기 실적 발표에서 2026년 매출 성장률 전망치를 21%로, 비GAAP EPS를 8.40달러로 상향 조정하고, 82억 달러의 사상 최대 백로그를 기록했다고 발표했습니다.\n· 왜 중요: 가이던스 상향과 사상 최대 백로그는 AI 및 고성능 컴퓨팅 수요 증가에 따른 EDA 솔루션의 강력한 수요를 반영하며, 이는 Cadence의 실적 성장 가속화와 시장 점유율 확대로 이어질 수 있는 긍정적인 신호입니다.\n· 볼 것: 향후 분기별 매출 및 EPS 가이던스 추가 상향 여부; AI 관련 디자인 윈 및 신규 고객 확보 추이\n· 용어: 비GAAP EPS: 일반적으로 인정되는 회계 원칙(GAAP)을 따르지 않고 특정 항목(예: 일회성 비용)을 제외하여 산출한 주당 순이익으로, 기업의 핵심 사업 성과를 더 잘 보여준다고 여겨집니다. 백로그: 고객으로부터 수주했지만 아직 인도되지 않은 주문의 총액을 의미하며, 미래 매출의 잠재적 지표입니다.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/813672/000081367226000116/cdns10262026ex9901.htm\">SEC EDGAR</a> (2026-10-26)\n\n추적 <code>/track SIG-0919</code>",
       "payload_sha256": "102acb3873a25d67814206fd649efacde3801b1e9eac51903c04a0968384efc9",
       "message_id": 225
+    },
+    "NASDAQ:SNDK|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:SNDK",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-C8A9B1B7A57CB556",
+      "candidate_version": "CV-986FCDA6146AD11B",
+      "observation_id": "OB-C8A1A6CC197530E2",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-11-02",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41399371107-1",
+      "reserved_at": "2026-11-02T06:38:32+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · SNDK Sandisk Corporation</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n낸드 플래시 기술을 활용한 데이터 저장 장치와 솔루션을 개발, 제조, 판매하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2028-06-30 회계연도 말) 90일 전 $255.63 → 지금 $288.23 (+13%) · 주가 같은 기간 -19.4%\n\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+4%)\n👍 주가는 같은 90일에 -19%로, 이익 예상 상향(+13%)보다 덜 움직임\n👎 최근 30일 분석가 20명 중 1명만 올림 — 한 곳의 수정일 수 있음\n❓ 10/29 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-C8A9B1B7A57CB556</code> · 추적 <code>/track CAN-C8A9B1B7A57CB556</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "8c07d3ca70fddd867db333e4734ef539e31bed54bff244f94ee6c2a9ad1ba99c"
     }
   },
   "bootstrap": {

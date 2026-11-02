@@ -9571,7 +9571,7 @@
     "processed_run": "41280399923-1"
   },
   "0001683168-26-008094": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9582,12 +9582,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/790526/000168316826008094/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/790526/000168316826008094/radnet_ex0201.htm",
       "published_at": "2026-10-26",
-      "raw_text": "RadNet, Inc. (RDNT) (CIK 0000790526) EX-2.1 2026-10-26. “ Restricted Cash ” means cash that is not freely available for use by the Company and its Subsidiaries immediately following the Closing due to a contractual or legal restriction on its withdrawal, transfer or use, including any cash held as a deposit, reserve, escrow, holdback, customer deposit or deferred revenue to the extent subject to such contractual or legal restriction, including with respect to the Leased Real Property. EX-2.1 2 radnet_ex0201.htm AGREEMENT AND PLAN OF MERGER, DATED AS OF OCTOBER 26, 2026 Exhibit 2.1 AGREEMENT AND PLAN OF MERGER by and among ONRAD, INC., RADNET MANAGEMENT, INC., RADNET, INC., RED ROVER MERGER SUB, LLC, JAVELIN MERGER SUB, INC., and, with respect to Articles II , VIII and IX , HOUSATONIC IV CF, L.P., solely in its capacity as Securityholder Representative Dated as of October 26, 2026 Table of Contents Page Article I The Mergers 1.1 The Mergers 2 1.2 Closing 2 1.3 Governing Documents of the First Surviving Corporation and the Second Surviving Company. 3 1.4 Directors and Officers of the First Surviving Corporation and the Second Surviving Company. 3 Article II Purchase Price; Effect on Shares 2.1 Effect of the Mergers on Capital Stock 4 2.2 Treatment of Company Options 5 2.3 Treatment of Company Preferred Stock and Company Warrants 6 2.4 Closing Deliverables 6 2.5 Delivery of Estimated Closing Statement 9 2.6 Purchase Price Adjustment 10 2.7 Earn-Out Payment 12 2.8 Exchange Agent and Exchange Procedures. 15 2.9 Escrow Agent; Escrow Amounts. 17 2.10 Withholding 18 i Article III Representations and Warranties of the Company 3.1 Incorporation, Good Standing and Qualification 18 3.2 Authority; Approval 19 3.3 Capital Structure 19 3.4 Subsidiaries; Managed Entities 20 3.5 Governmental Filings; No Conflicts 21 3.6 Company Financial Statements; Undisclosed Liabilities 21 3.7 Absence of Certain Changes 22 3.8 Litigation 23 3.9 Employee Benefits 23 3.10 Licenses; Compliance with "
+      "raw_text": "RadNet, Inc. (RDNT) (CIK 0000790526) EX-2.1 2026-10-26. “ Restricted Cash ” means cash that is not freely available for use by the Company and its Subsidiaries immediately following the Closing due to a contractual or legal restriction on its withdrawal, transfer or use, including any cash held as a deposit, reserve, escrow, holdback, customer deposit or deferred revenue to the extent subject to such contractual or legal restriction, including with respect to the Leased Real Property. EX-2.1 2 radnet_ex0201.htm AGREEMENT AND PLAN OF MERGER, DATED AS OF OCTOBER 26, 2026 Exhibit 2.1 AGREEMENT AND PLAN OF MERGER by and among ONRAD, INC., RADNET MANAGEMENT, INC., RADNET, INC., RED ROVER MERGER SUB, LLC, JAVELIN MERGER SUB, INC., and, with respect to Articles II , VIII and IX , HOUSATONIC IV CF, L.P., solely in its capacity as Securityholder Representative Dated as of October 26, 2026 Table of Contents Page Article I The Mergers 1.1 The Mergers 2 1.2 Closing 2 1.3 Governing Documents of the First Surviving Corporation and the Second Surviving Company. 3 1.4 Directors and Officers of the First Surviving Corporation and the Second Surviving Company. 3 Article II Purchase Price; Effect on Shares 2.1 Effect of the Mergers on Capital Stock 4 2.2 Treatment of Company Options 5 2.3 Treatment of Company Preferred Stock and Company Warrants 6 2.4 Closing Deliverables 6 2.5 Delivery of Estimated Closing Statement 9 2.6 Purchase Price Adjustment 10 2.7 Earn-Out Payment 12 2.8 Exchange Agent and Exchange Procedures. 15 2.9 Escrow Agent; Escrow Amounts. 17 2.10 Withholding 18 i Article III Representations and Warranties of the Company 3.1 Incorporation, Good Standing and Qualification 18 3.2 Authority; Approval 19 3.3 Capital Structure 19 3.4 Subsidiaries; Managed Entities 20 3.5 Governmental Filings; No Conflicts 21 3.6 Company Financial Statements; Undisclosed Liabilities 21 3.7 Absence of Certain Changes 22 3.8 Litigation 23 3.9 Employee Benefits 23 3.10 Licenses; Compliance with ",
+      "_model_response": {
+        "evidence_quote": "AGREEMENT AND PLAN OF MERGER, DATED AS OF OCTOBER 26, 2026 Exhibit 2.1 AGREEMENT AND PLAN OF MERGER by and among ONRAD, INC., RADNET MANAGEMENT, INC., RADNET, INC., RED ROVER MERGER SUB, LLC, JAVELIN MERGER SUB, INC., and, with respect to Articles II , VIII and IX , HOUSATONIC IV CF, L.P., solely in its capacity as Securityholder Representative Dated as of October 26, 2026",
+        "axes_evidence": {},
+        "event_state": "contracted",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "합병 계약은 회사의 구체적인 조기 운영 지표(예: 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등)에 해당하지 않는 기업의 확정된 계약 행위입니다.",
+        "subject": "RDNT",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "합병 계약은 회사의 구체적인 조기 운영 지표(예: 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등)에 해당하지 않는 기업의 확정된 계약 행위입니다."
     },
     "content_hash": "05a974320363faf3f32ca322644de5c60e441e527920f31e98b002ff6e7a6d07",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-02T06:22:33+00:00",
+    "reason": "합병 계약은 회사의 구체적인 조기 운영 지표(예: 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등)에 해당하지 않는 기업의 확정된 계약 행위입니다.",
+    "processed_day": "2026-11-02",
+    "processed_run": "41399371107-1"
   },
   "0001628280-26-067394": {
     "status": "rejected",
@@ -9645,7 +9676,7 @@
     "validation_rejected": true
   },
   "0001193125-26-432543": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9656,12 +9687,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/7431/000119312526432543/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/7431/000119312526432543/awi-ex99_2.htm",
       "published_at": "2026-10-27",
-      "raw_text": "ARMSTRONG WORLD INDUSTRIES INC (AWI) (CIK 0000007431) EX-99.2 2026-10-27. EBITDA margin* of 20.4% Pricing, backlog and continued strong order intake support fourth-quarter organic growth and improved profitability Q3 Architectural SpecialtiesKey Highlights Net Sales Growth VPY +22% Adj. EX-99.2 3 awi-ex99_2.htm EX-99.2 October 27, 2026 3rd Quarter 2026 Earnings Presentation Exhibit 99.2 Safe Harbor Statement Disclosures in this presentation contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995, including without limitation, those relating to future financial and operational results, market and broader economic conditions and guidance. Those statements provide our future expectations or forecasts and can be identified by our use of words such as “anticipate,” “estimate,” “expect,” “project,” “position,” “deliver,” “intend,” “plan,” “believe,” “outlook,” “target,” “predict,” “mitigate,” “may,” “will,” “would,” “could,” “should,” “seek,” and other words or phrases of similar meaning in connection with any discussion of future operating or financial performance. This includes annual guidance. Forward-looking statements, by their nature, address matters that are uncertain and involve risks because they relate to events and depend on circumstances that may or may not occur in the future. As a result, our actual results may differ materially from our expected results and from those expressed in our forward-looking statements. A more detailed discussion of the risks and uncertainties that could cause our actual results to differ materially from those projected, anticipated or implied is included in the “Risk Factors” and “Management’s Discussion and Analysis” sections of our reports on Form 10-K and Form 10-Q filed with the U.S. Securities and Exchange Commission (“SEC”), including our quarterly report for the quarterly period ended September 30, 2026, that the Company expects to file with the SEC today. Forward-lookin"
+      "raw_text": "ARMSTRONG WORLD INDUSTRIES INC (AWI) (CIK 0000007431) EX-99.2 2026-10-27. EBITDA margin* of 20.4% Pricing, backlog and continued strong order intake support fourth-quarter organic growth and improved profitability Q3 Architectural SpecialtiesKey Highlights Net Sales Growth VPY +22% Adj. EX-99.2 3 awi-ex99_2.htm EX-99.2 October 27, 2026 3rd Quarter 2026 Earnings Presentation Exhibit 99.2 Safe Harbor Statement Disclosures in this presentation contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995, including without limitation, those relating to future financial and operational results, market and broader economic conditions and guidance. Those statements provide our future expectations or forecasts and can be identified by our use of words such as “anticipate,” “estimate,” “expect,” “project,” “position,” “deliver,” “intend,” “plan,” “believe,” “outlook,” “target,” “predict,” “mitigate,” “may,” “will,” “would,” “could,” “should,” “seek,” and other words or phrases of similar meaning in connection with any discussion of future operating or financial performance. This includes annual guidance. Forward-looking statements, by their nature, address matters that are uncertain and involve risks because they relate to events and depend on circumstances that may or may not occur in the future. As a result, our actual results may differ materially from our expected results and from those expressed in our forward-looking statements. A more detailed discussion of the risks and uncertainties that could cause our actual results to differ materially from those projected, anticipated or implied is included in the “Risk Factors” and “Management’s Discussion and Analysis” sections of our reports on Form 10-K and Form 10-Q filed with the U.S. Securities and Exchange Commission (“SEC”), including our quarterly report for the quarterly period ended September 30, 2026, that the Company expects to file with the SEC today. Forward-lookin",
+      "_model_response": {
+        "evidence_quote": "Pricing, backlog and continued strong order intake support fourth-quarter organic growth and improved profitability",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "improved profitability",
+          "supply_demand_tightness": "Pricing, backlog and continued strong order intake",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "support fourth-quarter organic growth"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ARMSTRONG WORLD INDUSTRIES INC",
+        "theme": "건축자재",
+        "signal_type": "수주/백로그",
+        "what_happened": "Armstrong World Industries가 긍정적인 가격 책정, 견고한 백로그, 지속적인 강력한 주문 유입으로 4분기 유기적 성장과 수익성 개선을 예상한다고 밝혔다.",
+        "why_it_matters": "이는 건축자재 수요가 견조하며, 회사가 가격 결정력을 바탕으로 향후 실적 개선을 이룰 수 있음을 시사하는 조기 지표이다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 4분기 유기적 성장률 및 수익성 지표를 확인해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "초기",
+        "glossary": "백로그: 기업이 수주했지만 아직 완료하지 못한 주문 잔고."
+      }
     },
     "content_hash": "613c0eef6396ea85e96c8f7e124690da6426c847d734eabcada5116f22e34360",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-02T06:22:50+00:00",
+    "signal_id": "SIG-0920",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-02",
+    "processed_run": "41399371107-1"
   },
   "0001437749-26-033667": {
     "status": "rejected",
@@ -9771,7 +9840,7 @@
     "processed_run": "40640520468-1"
   },
   "0000833444-26-000101": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9782,15 +9851,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/833444/000083344426000101/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/833444/000083344426000101/q4exh991xq4fy26earningsrel.htm",
       "published_at": "2026-10-27",
-      "raw_text": "Johnson Controls International plc (JCI) (CIK 0000833444) EX-99.1 2026-10-27. With record backlog and sustained customer demand, we enter fiscal 2027 with confidence in our ability to continue creating value for customers and shareholders.” FISCAL Q4 SEGMENT RESULTS The financial highlights presented in the tables below exclude discontinued operations and are in accordance with GAAP, unless otherwise indicated. EX-99.1 2 q4exh991xq4fy26earningsrel.htm EX-99.1 Document Exhibit 99.1 FOR IMMEDIATE RELEASE Johnson Controls Reports Q4 and FY26 Results; Initiates FY27 Guidance ______________________________________________________________________________________ ▪ Q4 sales increased 10% and organic sales increased 12%* ▪ Q4 GAAP EPS of $1.60; Q4 Adjusted EPS* of $1.66* ▪ Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year * This earnings release contains non-GAAP financial measures. Definitions and reconciliations of the non-GAAP financial measures can be found in the attached footnotes. Non-GAAP measures should be considered in addition to, and not as replacements for, the most comparable GAAP measures. _____________________________________________________________________________________ CORK, Ireland — October 27, 2026 — Johnson Controls International plc (NYSE: JCI), a global leader in thermal management, mission-critical building systems, energy efficiency, and decarbonization, is proud to announce fiscal fourth quarter 2026 GAAP earnings per share (“EPS”) of $1.60. Adjusted EPS was $1.66. Q4 sales increased 10% to $7.1 billion and organic sales increased 12%. For the quarter, GAAP net income from continuing operations attributable to JCI was $967 million and adjusted net income from continuing operations was $1.0 billion. Cash provided by operating activities was $1.3 billion. Free cash flow was $1.1 billion and adjusted free cash flow was $1.1 billion. “We finished fiscal 2026 with significant momentum, deliv"
+      "raw_text": "Johnson Controls International plc (JCI) (CIK 0000833444) EX-99.1 2026-10-27. With record backlog and sustained customer demand, we enter fiscal 2027 with confidence in our ability to continue creating value for customers and shareholders.” FISCAL Q4 SEGMENT RESULTS The financial highlights presented in the tables below exclude discontinued operations and are in accordance with GAAP, unless otherwise indicated. EX-99.1 2 q4exh991xq4fy26earningsrel.htm EX-99.1 Document Exhibit 99.1 FOR IMMEDIATE RELEASE Johnson Controls Reports Q4 and FY26 Results; Initiates FY27 Guidance ______________________________________________________________________________________ ▪ Q4 sales increased 10% and organic sales increased 12%* ▪ Q4 GAAP EPS of $1.60; Q4 Adjusted EPS* of $1.66* ▪ Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year * This earnings release contains non-GAAP financial measures. Definitions and reconciliations of the non-GAAP financial measures can be found in the attached footnotes. Non-GAAP measures should be considered in addition to, and not as replacements for, the most comparable GAAP measures. _____________________________________________________________________________________ CORK, Ireland — October 27, 2026 — Johnson Controls International plc (NYSE: JCI), a global leader in thermal management, mission-critical building systems, energy efficiency, and decarbonization, is proud to announce fiscal fourth quarter 2026 GAAP earnings per share (“EPS”) of $1.60. Adjusted EPS was $1.66. Q4 sales increased 10% to $7.1 billion and organic sales increased 12%. For the quarter, GAAP net income from continuing operations attributable to JCI was $967 million and adjusted net income from continuing operations was $1.0 billion. Cash provided by operating activities was $1.3 billion. Free cash flow was $1.1 billion and adjusted free cash flow was $1.1 billion. “We finished fiscal 2026 with significant momentum, deliv",
+      "_model_response": {
+        "evidence_quote": "With record backlog and sustained customer demand, we enter fiscal 2027 with confidence in our ability to continue creating value for customers and shareholders.” [...] ▪ Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Johnson Controls International plc (NYSE: JCI), a global leader in thermal management, mission-critical building systems, energy efficiency, and decarbonization",
+          "earnings_leverage": "Q4 sales increased 10% and organic sales increased 12%* ▪ Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year",
+          "supply_demand_tightness": "With record backlog and sustained customer demand",
+          "structural_ai_demand": "",
+          "revision_momentum": "Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year",
+          "catalyst_visibility": "Q4 orders +44% organically year-over-year ▪ Backlog of $23.0 billion increased 43% organically year-over-year"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Johnson Controls International plc (JCI)",
+        "theme": "스마트 빌딩, 에너지 효율, 탈탄소화",
+        "signal_type": "수주/백로그",
+        "what_happened": "Johnson Controls International plc(JCI)의 2026년 4분기 주문이 전년 대비 44% 증가했고, 백로그는 230억 달러로 43% 증가하며 사상 최고치를 기록했다.",
+        "why_it_matters": "사상 최고치 주문 및 백로그 증가는 JCI의 향후 매출 성장과 수익성 개선에 대한 강력한 신호이며, 이는 시장의 긍정적인 재평가로 이어질 수 있다.",
+        "what_to_watch": "향후 분기별 매출 성장률 및 신규 수주 추이, 그리고 FY27 가이던스 상향 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 5,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그(Backlog): 기업이 수주했으나 아직 매출로 인식되지 않은 미완료 계약 잔액. 유기적 성장(Organic Growth): 인수합병 없이 자체적인 영업 활동으로 달성한 성장."
+      }
     },
     "content_hash": "e8a687f82110de16e5a18c23cd137d0226560625dbf677f4ead36fc57000917d",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-02T06:23:05+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001628280-26-067572": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9801,12 +9906,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/730708/000162828026067572/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/730708/000162828026067572/sbcf3qearningsrelease.htm",
       "published_at": "2026-10-27",
-      "raw_text": "SEACOAST BANKING CORP OF FLORIDA (SBCF) (CIK 0000730708) EX-99.1 2026-10-27. The Company benefits from a granular deposit franchise, with the top ten depositors representing approximately 2% of total customer deposits. • Consumer deposits represented 47% of overall customer deposit funding with an average consumer customer balance of $26 thousand. Commercial deposits represented 53% of overall customer deposit funding with an average business customer balance of $120 thousand. EX-99.1 2 sbcf3qearningsrelease.htm EX-99.1 SBCF 3Q Earnings Release SEACOAST REPORTS THIRD QUARTER 2026 RESULTS Continued Improvement Across Profitability Metrics Robust Organic Loan Growth with Sustained Pipeline Strength Continued Strong Capital and Liquidity Position STUART, Fla., October 27, 2026 /BUSINESS WIRE/ -- Seacoast Banking Corporation of Florida (\"Seacoast\" or the \"Company\") (NASDAQ: SBCF) today reported unaudited results of operations and other financial information for the third quarter of 2026. Third Quarter 2026 Highlights • Net income of $59.9 million, or $0.55 per share, increased 1% from the prior quarter and 64% from the prior year quarter. Adjusted net income 1 of $71.8 million, or $0.66 per share, increased 9% from the prior quarter and 59% from the prior year quarter. • Adjusted pre-tax pre-provision earnings 1 increased 5% from the prior quarter and 49% from the prior year quarter. • Net interest income grew 2% from the prior quarter and 37% from the prior year quarter. • The net interest margin was stable at 3.83% compared to the prior quarter and, excluding accretion on acquired loans, net interest margin expanded one basis point to 3.66%. • 13% annualized organic loan growth in the third quarter and 10% annualized growth year to date. • Average noninterest-bearing deposits grew 4% annualized from the prior quarter and noninterest-bearing demand deposits have grown 10% annualized year to date. • Continued share repurchases, with over 1.2 million shares of common sto"
+      "raw_text": "SEACOAST BANKING CORP OF FLORIDA (SBCF) (CIK 0000730708) EX-99.1 2026-10-27. The Company benefits from a granular deposit franchise, with the top ten depositors representing approximately 2% of total customer deposits. • Consumer deposits represented 47% of overall customer deposit funding with an average consumer customer balance of $26 thousand. Commercial deposits represented 53% of overall customer deposit funding with an average business customer balance of $120 thousand. EX-99.1 2 sbcf3qearningsrelease.htm EX-99.1 SBCF 3Q Earnings Release SEACOAST REPORTS THIRD QUARTER 2026 RESULTS Continued Improvement Across Profitability Metrics Robust Organic Loan Growth with Sustained Pipeline Strength Continued Strong Capital and Liquidity Position STUART, Fla., October 27, 2026 /BUSINESS WIRE/ -- Seacoast Banking Corporation of Florida (\"Seacoast\" or the \"Company\") (NASDAQ: SBCF) today reported unaudited results of operations and other financial information for the third quarter of 2026. Third Quarter 2026 Highlights • Net income of $59.9 million, or $0.55 per share, increased 1% from the prior quarter and 64% from the prior year quarter. Adjusted net income 1 of $71.8 million, or $0.66 per share, increased 9% from the prior quarter and 59% from the prior year quarter. • Adjusted pre-tax pre-provision earnings 1 increased 5% from the prior quarter and 49% from the prior year quarter. • Net interest income grew 2% from the prior quarter and 37% from the prior year quarter. • The net interest margin was stable at 3.83% compared to the prior quarter and, excluding accretion on acquired loans, net interest margin expanded one basis point to 3.66%. • 13% annualized organic loan growth in the third quarter and 10% annualized growth year to date. • Average noninterest-bearing deposits grew 4% annualized from the prior quarter and noninterest-bearing demand deposits have grown 10% annualized year to date. • Continued share repurchases, with over 1.2 million shares of common sto",
+      "_model_response": {
+        "evidence_quote": "SEACOAST REPORTS THIRD QUARTER 2026 RESULTS Continued Improvement Across Profitability Metrics Robust Organic Loan Growth with Sustained Pipeline Strength Continued Strong Capital and Liquidity Position STUART, Fla., October 27, 2026 /BUSINESS WIRE/ -- Seacoast Banking Corporation of Florida (\"Seacoast\" or the \"Company\") (NASDAQ: SBCF) today reported unaudited results of operations and other financial information for the third quarter of 2026. Third Quarter 2026 Highlights • Net income of $59.9 million, or $0.55 per share, increased 1% from the prior quarter and 64% from the prior year quarter. Adjusted net income 1 of $71.8 million, or $0.66 per share, increased 9% from the prior quarter and 59% from the prior year quarter. • Adjusted pre-tax pre-provision earnings 1 increased 5% from the prior quarter and 49% from the prior year quarter. • Net interest income grew 2% from the prior quarter and 37% from the prior year quarter. • The net interest margin was stable at 3.83% compared to the prior quarter and, excluding accretion on acquired loans, net interest margin expanded one basis point to 3.66%. • 13% annualized organic loan growth in the third quarter and 10% annualized growth year to date. • Average noninterest-bearing deposits grew 4% annualized from the prior quarter and noninterest-bearing demand deposits have grown 10% annualized year to date.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "루틴 실적 공시이며, 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등 조기 투자 발굴 신호로 볼 수 있는 구체적인 미래 지표 변화가 없습니다. 'Sustained Pipeline Strength'는 일반적인 긍정적 전망으로 구체적인 신호로 보기 어렵습니다.",
+        "subject": "SBCF",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "Seacoast Banking Corporation of Florida가 2026년 3분기 실적을 발표하며 순이익, 순이자이익, 유기적 대출 성장 등 주요 재무 지표의 개선을 보고했습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "루틴 실적 공시이며, 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등 조기 투자 발굴 신호로 볼 수 있는 구체적인 미래 지표 변화가 없습니다. 'Sustained Pipeline Strength'는 일반적인 긍정적 전망으로 구체적인 신호로 보기 어렵습니다."
     },
     "content_hash": "a7922ace22abac79c9438ad9431cc344c10fe4af4393d4e778f03c27e26010d0",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-02T06:23:23+00:00",
+    "reason": "루틴 실적 공시이며, 구체적인 가이던스 상향, 수주/백로그 변화, 생산능력 증설 등 조기 투자 발굴 신호로 볼 수 있는 구체적인 미래 지표 변화가 없습니다. 'Sustained Pipeline Strength'는 일반적인 긍정적 전망으로 구체적인 신호로 보기 어렵습니다.",
+    "processed_day": "2026-11-02",
+    "processed_run": "41399371107-1"
   },
   "0001193125-26-432724": {
     "status": "accepted",
@@ -9886,7 +10022,7 @@
     "reason": "financing/loan language without a commercial demand event"
   },
   "0000883948-26-000079": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9897,12 +10033,43 @@
       "url": "https://www.sec.gov/Archives/edgar/data/883948/000088394826000079/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/883948/000088394826000079/aub-ex99d1.htm",
       "published_at": "2026-10-27",
-      "raw_text": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948) EX-99.1 2026-10-27. Core deposits defined as total deposits less jumbo time deposits and brokered deposits Non-Interest Bearing 22% Interest Checking 25% Money Market 21% Retail Time 13% Jumbo Time 6% Brokered 4% Savings 9% DEPOSIT BASE CHARACTERISTICS DEPOSIT COMPOSITION AT SEPTEMBER 30, 2026 — $31.0 BILLION 90% core deposits1 47% transactional accounts 2.00% Q3 2026 cost of deposits 26 GRANULAR DEPOSIT BASE CUSTOMER DEPOSIT GRANULARITY PERIOD END UNINSURED & UNCOLLATERALIZED DEPOSIT AMOUNTS AND AS A PERCENTAGE OF TOTAL DEPOSITS ( $ M I LLI O N S ) 32% 31% 32% 33% 32% $9,802 $9,551 $9,608 $9,915 $9,785 Q3 2025 Q4 2025 Q1 2026 Q2 2026 Q3 2026 $22,000 $22,000 $21,000 $104,000 $120,000 $117,000 $2,100 $2,500 $2,400 $7,500 $8,100 $7,900 Q3 2025 Q2 2026 Q3 2026 Retail Avg. EX-99.1 2 aub-ex99d1.htm EX-99.1 Exhibit 99.1 Investor Presentation November - December 2026 2 FORWARD-LOOKING STATEMENTS This presentation and statements by our management may constitute “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements are statements that include, without limitation, statements regarding our strategic initiatives, priorities, plan and vision; statements regarding our strategic expansion into North Carolina, including our expectations regarding new branch openings; statements regarding our investments in strategic technology initiatives; statements regarding our business, financial and operating results, including our deposit base and funding; the impact of changes in economic conditions, the interest rate environment, economic, fiscal or trade policy and the potential related impacts on our business and loan demand; management’s beliefs regarding our liquidity, capital resources, asset quality, CRE loan portfolio and our customer relationships; statements regarding our strategy, statements that include other projections, predictions, expecta"
+      "raw_text": "Atlantic Union Bankshares Corp (AUB, AUB-PA) (CIK 0000883948) EX-99.1 2026-10-27. Core deposits defined as total deposits less jumbo time deposits and brokered deposits Non-Interest Bearing 22% Interest Checking 25% Money Market 21% Retail Time 13% Jumbo Time 6% Brokered 4% Savings 9% DEPOSIT BASE CHARACTERISTICS DEPOSIT COMPOSITION AT SEPTEMBER 30, 2026 — $31.0 BILLION 90% core deposits1 47% transactional accounts 2.00% Q3 2026 cost of deposits 26 GRANULAR DEPOSIT BASE CUSTOMER DEPOSIT GRANULARITY PERIOD END UNINSURED & UNCOLLATERALIZED DEPOSIT AMOUNTS AND AS A PERCENTAGE OF TOTAL DEPOSITS ( $ M I LLI O N S ) 32% 31% 32% 33% 32% $9,802 $9,551 $9,608 $9,915 $9,785 Q3 2025 Q4 2025 Q1 2026 Q2 2026 Q3 2026 $22,000 $22,000 $21,000 $104,000 $120,000 $117,000 $2,100 $2,500 $2,400 $7,500 $8,100 $7,900 Q3 2025 Q2 2026 Q3 2026 Retail Avg. EX-99.1 2 aub-ex99d1.htm EX-99.1 Exhibit 99.1 Investor Presentation November - December 2026 2 FORWARD-LOOKING STATEMENTS This presentation and statements by our management may constitute “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements are statements that include, without limitation, statements regarding our strategic initiatives, priorities, plan and vision; statements regarding our strategic expansion into North Carolina, including our expectations regarding new branch openings; statements regarding our investments in strategic technology initiatives; statements regarding our business, financial and operating results, including our deposit base and funding; the impact of changes in economic conditions, the interest rate environment, economic, fiscal or trade policy and the potential related impacts on our business and loan demand; management’s beliefs regarding our liquidity, capital resources, asset quality, CRE loan portfolio and our customer relationships; statements regarding our strategy, statements that include other projections, predictions, expecta",
+      "_model_response": {
+        "evidence_quote": "DEPOSIT BASE CHARACTERISTICS DEPOSIT COMPOSITION AT SEPTEMBER 30, 2026 — $31.0 BILLION 90% core deposits1 47% transactional accounts 2.00% Q3 2026 cost of deposits 26 GRANULAR DEPOSIT BASE CUSTOMER DEPOSIT GRANULARITY PERIOD END UNINSURED & UNCOLLATERALIZED DEPOSIT AMOUNTS AND AS A PERCENTAGE OF TOTAL DEPOSITS ( $ M I LLI O N S ) 32% 31% 32% 33% 32% $9,802 $9,551 $9,608 $9,915 $9,785 Q3 2025 Q4 2025 Q1 2026 Q2 2026 Q3 2026 $22,000 $22,000 $21,000 $104,000 $120,000 $117,000 $2,100 $2,500 $2,400 $7,500 $8,100 $7,900 Q3 2025 Q2 2026 Q3 2026 Retail Avg. EX-99.1 2 aub-ex99d1.htm EX-99.1 Exhibit 99.1 Investor Presentation November - December 2026 2 FORWARD-LOOKING STATEMENTS This presentation and statements by our management may constitute “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements are statements that include, without limitation, statements regarding our strategic initiatives, priorities, plan and vision; statements regarding our strategic expansion into North Carolina, including our expectations regarding new branch openings; statements regarding our investments in strategic technology initiatives; statements regarding our business, financial and operating results, including our deposit base and funding; the impact of changes in economic conditions, the interest rate environment, economic, fiscal or trade policy and the potential related impacts on our business and loan demand; management’s beliefs regarding our liquidity, capital resources, asset quality, CRE loan portfolio and our customer relationships; statements regarding our strategy, statements that include other projections, predictions, expecta",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "제공된 텍스트는 2026년 3분기 예금 구성 및 비용과 같은 일상적인 재무 실적 보고와 노스캐롤라이나 확장 및 기술 투자와 같은 일반적인 전략적 계획에 대한 미래 전망을 포함합니다. 이는 가이던스 상향, 신규 수주, 구체적인 CAPEX 증설 등 식별 가능한 회사의 구체적인 조기 투자 발굴 신호로 보기 어렵습니다.",
+        "subject": "Atlantic Union Bankshares Corp",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "Atlantic Union Bankshares Corp이 2026년 3분기 예금 구성 및 비용을 포함한 예금 기반 특성을 발표했으며, 노스캐롤라이나 확장 및 전략적 기술 투자 계획을 언급했습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "제공된 텍스트는 2026년 3분기 예금 구성 및 비용과 같은 일상적인 재무 실적 보고와 노스캐롤라이나 확장 및 기술 투자와 같은 일반적인 전략적 계획에 대한 미래 전망을 포함합니다. 이는 가이던스 상향, 신규 수주, 구체적인 CAPEX 증설 등 식별 가능한 회사의 구체적인 조기 투자 발굴 신호로 보기 어렵습니다."
     },
     "content_hash": "f5627e8be9dfba66720f43d7eecc9d39102e08f088c25ab0f735a873a576ceb6",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-28T05:53:38.067188+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-02T06:23:42+00:00",
+    "reason": "제공된 텍스트는 2026년 3분기 예금 구성 및 비용과 같은 일상적인 재무 실적 보고와 노스캐롤라이나 확장 및 기술 투자와 같은 일반적인 전략적 계획에 대한 미래 전망을 포함합니다. 이는 가이던스 상향, 신규 수주, 구체적인 CAPEX 증설 등 식별 가능한 회사의 구체적인 조기 투자 발굴 신호로 보기 어렵습니다.",
+    "processed_day": "2026-11-02",
+    "processed_run": "41399371107-1"
   },
   "0001628280-26-067418": {
     "status": "deferred",

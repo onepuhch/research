@@ -1,0 +1,169 @@
+{
+  "context_id": "CTX-9B96A00FAA7AFE9F",
+  "candidate_id": "CAN-C8A9B1B7A57CB556",
+  "ticker": "SNDK",
+  "issuer_cik": "0002023554",
+  "document_ids": [
+    "DOC-7C0BE2C62C28887E",
+    "DOC-428F3B65C763671E"
+  ],
+  "eps_target_period": "2028-06-30",
+  "source_blocks": [
+    "DOC-7C0BE2C62C28887E#p9",
+    "DOC-7C0BE2C62C28887E#p23",
+    "DOC-7C0BE2C62C28887E#t7",
+    "DOC-7C0BE2C62C28887E#p57",
+    "DOC-7C0BE2C62C28887E#p62",
+    "DOC-428F3B65C763671E#t9",
+    "DOC-428F3B65C763671E#p59"
+  ],
+  "input_sha": "9b96a00faa7afe9f1f6d1768644bcea54cd160501a5f891f9f8e2f715af8321c",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-02T06:38:15+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(revenue) · second quarter 2027: $12.2 billion to $12.6 billion — 회사의 예상 매출액이다",
+      "note_ko": "회사의 예상 매출액이다",
+      "kind": "guidance",
+      "quote": "Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share on a pre-split basis in the range of $55.00 to $57.001.",
+      "document_id": "DOC-7C0BE2C62C28887E",
+      "block_id": "p9",
+      "metric": "revenue",
+      "figures": [
+        "$12.2 billion to $12.6 billion"
+      ],
+      "period": "second quarter 2027",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Non-GAAP diluted net income per share · second quarter 2027: $55.00 to $57.001 — 회사의 예상 희석 주당 순이익이다",
+      "note_ko": "회사의 예상 희석 주당 순이익이다",
+      "kind": "guidance",
+      "quote": "Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share on a pre-split basis in the range of $55.00 to $57.001.",
+      "document_id": "DOC-7C0BE2C62C28887E",
+      "block_id": "p9",
+      "metric": "Non-GAAP diluted net income per share",
+      "figures": [
+        "$55.00 to $57.001"
+      ],
+      "period": "second quarter 2027",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 작성된 지표와 다르거나 대체될 수 있으며, 다른 회사에서 사용하는 유사한 명칭의 비일반회계기준 지표와 다를 수 있다",
+      "note_ko": "비일반회계기준 지표는 일반회계기준에 따라 작성된 지표와 다르거나 대체될 수 있으며, 다른 회사에서 사용하는 유사한 명칭의 비일반회계기준 지표와 다를 수 있다",
+      "kind": "fact",
+      "quote": "These Non-GAAP measures are not in accordance with, or alternatives for measures prepared in accordance with GAAP and may be different from similarly titled Non-GAAP measures used by other companies.",
+      "document_id": "DOC-7C0BE2C62C28887E",
+      "block_id": "p57",
+      "metric": "Non-GAAP measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동 현금 흐름이다",
+      "figures": [
+        "6,363"
+      ],
+      "quote": "Net cash provided by operating activities ; 6,363 ; 488",
+      "where": "DOC-7C0BE2C62C28887E#t7"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동 현금 흐름이다",
+      "figures": [
+        "7,126"
+      ],
+      "quote": "Net cash provided by operating activities ; 7,126 ; 94 ; 11,671 ; 84",
+      "where": "DOC-428F3B65C763671E#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 자사주 매입이다",
+      "figures": [
+        "(5,000)"
+      ],
+      "quote": "Repurchases of common stock ; (5,000) ; —",
+      "where": "DOC-7C0BE2C62C28887E#t7"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "비일반회계기준 세금 비용은 비일반회계기준 세전 이익 또는 손실을 기반으로 결정된다. 이는 일반회계기준 세금 비용과 다를 수 있다",
+      "figures": [],
+      "quote": "Non-GAAP tax expense is determined based on a Non-GAAP pre-tax income or loss. Our estimated Non-GAAP tax expense may differ from our GAAP tax expense (i) due to differences in the tax treatment of it",
+      "where": "DOC-7C0BE2C62C28887E#p23"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "비일반회계기준 지표는 일반회계기준 결과에 대한 대체물로 간주되거나 우월하게 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "These measures should be considered in addition to results prepared in accordance with GAAP, but should not be considered a substitute for, or superior to, GAAP results.",
+      "where": "DOC-7C0BE2C62C28887E#p57"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

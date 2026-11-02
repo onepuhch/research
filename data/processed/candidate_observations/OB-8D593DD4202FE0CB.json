@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-8D593DD4202FE0CB",
+  "candidate_id": "CAN-3968C0864F9CF991",
+  "candidate_version": "CV-C42E7C4F8AB83CBA",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:GKOS",
+    "ticker": "GKOS",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-02T06:27:05+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261102T062345Z_41399371107-1.json.gz",
+    "sha256": "53766f11af128d7754e9361b7e50c0672225cd1c265f81f5b52b0394b2acbda2",
+    "run_id": "41399371107-1",
+    "finished_at": "2026-11-02T06:37:55+00:00"
+  },
+  "eps": {
+    "eps_now": 1.40004,
+    "eps_30d": 0.50587,
+    "eps_90d": 0.50195,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 13,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 178.9,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 0.378,
+    "yield_change_30_pp": 0.376
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-04",
+    "price_start_date": "2026-08-04",
+    "price_end_expected": "2026-10-30",
+    "price_end_date": "2026-10-30",
+    "close_start": 170.52999877929688,
+    "close_end": 237.60000610351562,
+    "price_pct_90": 39.3,
+    "adj_return_pct_90": 39.3,
+    "pe_change_pct": -50.0
+  },
+  "display_rank": 7,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 4
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 14065177600,
+  "context_id": "CTX-28F68EF8D3A0E449",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-01T06:37:05+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:GKOS",
+  "approval_version": null,
+  "rendered_at": "2026-11-02T06:38:23+00:00"
+}
