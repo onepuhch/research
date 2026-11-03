@@ -1,0 +1,103 @@
+{
+  "observation_id": "OB-CDE45CBCAB8AB0AF",
+  "candidate_id": "CAN-1F6D82ED5782C3F5",
+  "candidate_version": "CV-6F9BE7D500D87DFB",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DEC",
+    "ticker": "DEC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-03T07:10:04+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261103T065939Z_41593080532-1.json.gz",
+    "sha256": "c837294e9354823c526c0565b1f675af295f4c2a4599afae73b440d94d6734b1",
+    "run_id": "41593080532-1",
+    "finished_at": "2026-11-03T07:13:50+00:00"
+  },
+  "eps": {
+    "eps_now": 7.3982,
+    "eps_30d": 3.19,
+    "eps_90d": 2.41625,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 206.2,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 36.259,
+    "yield_change_30_pp": 30.627
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-05",
+    "price_start_date": "2026-08-05",
+    "price_end_expected": "2026-11-02",
+    "price_end_date": "2026-11-02",
+    "close_start": 13.09000015258789,
+    "close_end": 13.739999771118164,
+    "price_pct_90": 5.0,
+    "adj_return_pct_90": 7.0,
+    "pe_change_pct": -65.7
+  },
+  "display_rank": 1,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 1
+    },
+    {
+      "list": "B",
+      "rank": 2
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 948571328,
+  "context_id": "CTX-C4A5A1FFCC39DC79",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-03T07:13:53+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Integrated",
+    "count": 8,
+    "shown": [
+      "BP",
+      "DEC",
+      "PBR-A"
+    ],
+    "folded": [
+      "EQNR"
+    ],
+    "outside": [
+      "CVX",
+      "SHEL",
+      "TTE",
+      "EC"
+    ]
+  },
+  "entity_id": "NYSE:DEC",
+  "approval_version": null,
+  "rendered_at": "2026-11-03T07:14:21+00:00"
+}

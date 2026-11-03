@@ -1,0 +1,242 @@
+{
+  "candidate_id": "CAN-C8A9B1B7A57CB556",
+  "candidate_version": "CV-06102EFFAE1C4B98",
+  "identity": {
+    "entity_id": "NASDAQ:SNDK",
+    "ticker": "SNDK",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Sandisk Corporation",
+  "industry": "Computer Hardware",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "낸드 플래시 기술을 활용한 데이터 저장 장치와 솔루션을 개발, 제조, 판매하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The company provides solid state drives for desktop and notebook PCs, gaming consoles, and set top boxes; and flash-based embedded storage products for mobile phones, tablets, notebook PCs and other portable and wearable devices, automotive applications, Internet of Things, industrial, and connected home applications, as well as removable cards, universal serial bus drives, and wafers and components. It"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SNDK analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SNDK/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-03T07:00:17+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SNDK daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SNDK/history",
+      "published_at": null,
+      "observed_at": "2026-11-03T07:00:17+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SNDK company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SNDK/profile",
+      "published_at": null,
+      "observed_at": "2026-11-03T07:00:17+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-7C0BE2C62C28887E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndkq1-27ex991xpressrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-29",
+      "observed_at": "2026-11-02T06:37:57+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-428F3B65C763671E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-11-02T06:37:57+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-9B96A00FAA7AFE9F",
+    "input_sha": "9b96a00faa7afe9f1f6d1768644bcea54cd160501a5f891f9f8e2f715af8321c",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(revenue) · second quarter 2027: $12.2 billion to $12.6 billion — 회사의 예상 매출액이다",
+        "note_ko": "회사의 예상 매출액이다",
+        "kind": "guidance",
+        "quote": "Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share on a pre-split basis in the range of $55.00 to $57.001.",
+        "document_id": "DOC-7C0BE2C62C28887E",
+        "block_id": "p9",
+        "metric": "revenue",
+        "figures": [
+          "$12.2 billion to $12.6 billion"
+        ],
+        "period": "second quarter 2027",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Non-GAAP diluted net income per share · second quarter 2027: $55.00 to $57.001 — 회사의 예상 희석 주당 순이익이다",
+        "note_ko": "회사의 예상 희석 주당 순이익이다",
+        "kind": "guidance",
+        "quote": "Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share on a pre-split basis in the range of $55.00 to $57.001.",
+        "document_id": "DOC-7C0BE2C62C28887E",
+        "block_id": "p9",
+        "metric": "Non-GAAP diluted net income per share",
+        "figures": [
+          "$55.00 to $57.001"
+        ],
+        "period": "second quarter 2027",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "Non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 작성된 지표와 다르거나 대체될 수 있으며, 다른 회사에서 사용하는 유사한 명칭의 비일반회계기준 지표와 다를 수 있다",
+        "note_ko": "비일반회계기준 지표는 일반회계기준에 따라 작성된 지표와 다르거나 대체될 수 있으며, 다른 회사에서 사용하는 유사한 명칭의 비일반회계기준 지표와 다를 수 있다",
+        "kind": "fact",
+        "quote": "These Non-GAAP measures are not in accordance with, or alternatives for measures prepared in accordance with GAAP and may be different from similarly titled Non-GAAP measures used by other companies.",
+        "document_id": "DOC-7C0BE2C62C28887E",
+        "block_id": "p57",
+        "metric": "Non-GAAP measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-7C0BE2C62C28887E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndkq1-27ex991xpressrelease.htm",
+        "filed_at": "2026-10-29",
+        "observed_at": "2026-11-02T06:37:57+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-428F3B65C763671E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-11-02T06:37:57+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-02T06:38:15+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 287.25845,
+    "eps_30d": 263.48553,
+    "eps_90d": 255.6271,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 20,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 12.4,
+    "steady": false,
+    "turnaround": false
+  }
+}

@@ -1,58 +1,58 @@
-# EPS 상향 발굴 후보 카드 (2026-11-02)
+# EPS 상향 발굴 후보 카드 (2026-11-03)
 
 매일 전 종목 스크린에서 내년 EPS 예상이 꾸준히 오른 회사를 골라 카드로 정리합니다. '발굴 후보'는 숫자 조건만 통과한 상태이고, '추적 추천'은 사람이 원문 근거를 확인·승인한 경우에만 붙습니다. 매수 추천·목표가·상승 확률이 아닙니다.
 
-관측 2026-11-02T06:37:55+00:00 · 조회 2,414/3,196종목 · 스크린 통과 98개 · 카드 28개 · 원자료 `data/processed/revision_screen/20261102T062345Z_41399371107-1.json.gz`
+관측 2026-11-03T07:13:50+00:00 · 조회 2,413/3,191종목 · 스크린 통과 103개 · 카드 28개 · 원자료 `data/processed/revision_screen/20261103T065939Z_41593080532-1.json.gz`
 
 |순서|종목|분류|업종|내년 EPS 예상 90일|주가 90일|추적|후보 ID|
 |---|---|---|---|---|---|---|---|
-|1|DEC|발굴 후보|Oil & Gas Integrated|+175%|+8%|미추적|`CAN-1F6D82ED5782C3F5`|
-|2|SPCX|발굴 후보|Aerospace & Defense|+608%|+8%|미추적|`CAN-5790099EDC6F3301`|
-|3|PBF|발굴 후보|Oil & Gas Refining & Marketing|+107%|+18%|미추적|`CAN-82719B27698E3C22`|
-|4|CLF|발굴 후보|Steel|+199%|+16%|미추적|`CAN-7F0690B785E31226`|
-|5|KOS|발굴 후보|Oil & Gas E&P|+122%|+18%|미추적|`CAN-2365AA0167A432A4`|
-|6|DK|발굴 후보|Oil & Gas Refining & Marketing|+190%|+11%|미추적|`CAN-D577F2C38FBBCFF7`|
-|7|GKOS|발굴 후보|Medical Devices|+179%|+39%|미추적|`CAN-3968C0864F9CF991`|
-|8|MPC|발굴 후보|Oil & Gas Refining & Marketing|+117%|+42%|미추적|`CAN-77F79A3B05ABB893`|
-|9|CVI|발굴 후보|Oil & Gas Refining & Marketing|+152%|+75%|미추적|`CAN-F451582E2056444F`|
-|10|TXO|발굴 후보|Oil & Gas E&P|+102%|+8%|미추적|`CAN-0733D6B2B6A41784`|
-|11|CODI|발굴 후보|Conglomerates|+139%|+0%|미추적|`CAN-36582E27909720FE`|
-|12|GRNT|발굴 후보|Oil & Gas E&P|+57%|+20%|미추적|`CAN-D5F91D853BD4402E`|
-|13|DHT|발굴 후보|Oil & Gas Midstream|+79%|+38%|미추적|`CAN-FD88AA0D924CF1C8`|
-|14|SMCI|발굴 후보|Computer Hardware|+47%|+4%|미추적|`CAN-5FD7409FDFE8F5EA`|
-|15|MU|발굴 후보|Semiconductors|+28%|-1%|미추적|`CAN-43EA86A18E5096A9`|
-|16|TEAM|발굴 후보|Software - Application|+79%|+74%|미추적|`CAN-4E5151866E863998`|
-|17|TNK|발굴 후보|Oil & Gas Midstream|+55%|+31%|미추적|`CAN-E95987D989EF1145`|
-|18|SMTC|발굴 후보|Semiconductors|+70%|-1%|미추적|`CAN-782282A0C20A29F1`|
-|19|FRO|발굴 후보|Oil & Gas Midstream|+68%|+46%|미추적|`CAN-7506B6BECE695B39`|
-|20|BP|발굴 후보|Oil & Gas Integrated|+45%|+19%|미추적|`CAN-ECB2C73CA19DA4AB`|
-|21|MXL|발굴 후보|Semiconductors|+66%|-7%|미추적|`CAN-76DD3777C06E7825`|
-|22|TTMI|발굴 후보|Electronic Components|+54%|-38%|미추적|`CAN-486C908614BC89B1`|
-|23|FSLY|발굴 후보|Software - Application|+62%|-7%|미추적|`CAN-8ED72F330C1AE34D`|
-|24|SEI|발굴 후보|Oil & Gas Equipment & Services|+57%|+22%|미추적|`CAN-A00785AF9CF7E07A`|
-|25|TRLV|발굴 후보|Drug Manufacturers - Specialty & Generic|+135%|+16%|미추적|`CAN-713C837ADADE8D8B`|
-|26|WDC|발굴 후보|Computer Hardware|+38%|-33%|미추적|`CAN-F4F37EDD5656F9BD`|
-|27|EQNR|발굴 후보|Oil & Gas Integrated|+40%|+24%|미추적|`CAN-FE3575B3BB2443B0`|
-|28|SNDK|발굴 후보|Computer Hardware|+13%|-19%|미추적|`CAN-C8A9B1B7A57CB556`|
+|1|DEC|발굴 후보|Oil & Gas Integrated|+206%|+5%|미추적|`CAN-1F6D82ED5782C3F5`|
+|2|SPCX|발굴 후보|Aerospace & Defense|+608%|+26%|미추적|`CAN-5790099EDC6F3301`|
+|3|PBF|발굴 후보|Oil & Gas Refining & Marketing|+107%|+23%|미추적|`CAN-82719B27698E3C22`|
+|4|DK|발굴 후보|Oil & Gas Refining & Marketing|+190%|+18%|미추적|`CAN-D577F2C38FBBCFF7`|
+|5|CLF|발굴 후보|Steel|+189%|+13%|미추적|`CAN-7F0690B785E31226`|
+|6|MPC|발굴 후보|Oil & Gas Refining & Marketing|+117%|+44%|미추적|`CAN-77F79A3B05ABB893`|
+|7|GKOS|발굴 후보|Medical Devices|+179%|+40%|미추적|`CAN-3968C0864F9CF991`|
+|8|TXO|발굴 후보|Oil & Gas E&P|+102%|+0%|미추적|`CAN-0733D6B2B6A41784`|
+|9|CVI|발굴 후보|Oil & Gas Refining & Marketing|+152%|+79%|미추적|`CAN-F451582E2056444F`|
+|10|GRNT|발굴 후보|Oil & Gas E&P|+57%|+13%|미추적|`CAN-D5F91D853BD4402E`|
+|11|CODI|발굴 후보|Conglomerates|+139%|+8%|미추적|`CAN-36582E27909720FE`|
+|12|DHT|발굴 후보|Oil & Gas Midstream|+79%|+34%|미추적|`CAN-FD88AA0D924CF1C8`|
+|13|SMCI|발굴 후보|Computer Hardware|+47%|+0%|미추적|`CAN-5FD7409FDFE8F5EA`|
+|14|TNK|발굴 후보|Oil & Gas Midstream|+58%|+28%|미추적|`CAN-E95987D989EF1145`|
+|15|MU|발굴 후보|Semiconductors|+24%|-7%|미추적|`CAN-43EA86A18E5096A9`|
+|16|TEAM|발굴 후보|Software - Application|+79%|+65%|미추적|`CAN-4E5151866E863998`|
+|17|FRO|발굴 후보|Oil & Gas Midstream|+68%|+37%|미추적|`CAN-7506B6BECE695B39`|
+|18|SMTC|발굴 후보|Semiconductors|+70%|+1%|미추적|`CAN-782282A0C20A29F1`|
+|19|PBR-A|발굴 후보|Oil & Gas Integrated|+25%|+15%|미추적|`CAN-B42E091E8BC42B9F`|
+|20|CRGY|발굴 후보|Oil & Gas E&P|+28%|+23%|미추적|`CAN-FC7BBBC12A5093CF`|
+|21|MXL|발굴 후보|Semiconductors|+66%|-9%|미추적|`CAN-76DD3777C06E7825`|
+|22|TTMI|발굴 후보|Electronic Components|+54%|-42%|미추적|`CAN-486C908614BC89B1`|
+|23|FSLY|발굴 후보|Software - Application|+62%|-21%|미추적|`CAN-8ED72F330C1AE34D`|
+|24|BP|발굴 후보|Oil & Gas Integrated|+45%|+16%|미추적|`CAN-ECB2C73CA19DA4AB`|
+|25|SEI|발굴 후보|Oil & Gas Equipment & Services|+57%|+18%|미추적|`CAN-A00785AF9CF7E07A`|
+|26|WDC|발굴 후보|Computer Hardware|+38%|-35%|미추적|`CAN-F4F37EDD5656F9BD`|
+|27|SIMO|발굴 후보|Semiconductors|+36%|-24%|미추적|`CAN-FFBE91764685770A`|
+|28|SNDK|발굴 후보|Computer Hardware|+12%|-20%|미추적|`CAN-C8A9B1B7A57CB556`|
 
 ## 같은 업종 동반 상향 (묶음)
 
 한 업종이 함께 상향되면 목록마다 상위 몇 곳만 개별 카드로 두고 나머지는 여기 묶어 둡니다. 같은 업종이라는 사실만 뜻하며, 공통 원인은 확인하지 않았습니다.
 
-- **Oil & Gas E&P** 15곳 — 개별 카드 3곳: KOS, TXO, GRNT · 업종 제한으로 접힘 4곳: SM, CHRD, CRGY, NOG · 일반 순위 밖 8곳: COP, OXY, FANG, PR, OVV, APA, MTDR, MUR
-- **Oil & Gas Integrated** 9곳 — 개별 카드 3곳: BP, EQNR, DEC · 업종 제한으로 접힘 1곳: PBR-A · 일반 순위 밖 5곳: CVX, SHEL, TTE, E, EC
+- **Oil & Gas E&P** 16곳 — 개별 카드 3곳: CRGY, TXO, GRNT · 업종 제한으로 접힘 4곳: SM, CHRD, NOG, KOS · 일반 순위 밖 9곳: COP, OXY, FANG, PR, OVV, APA, AR, MTDR, MUR
+- **Oil & Gas Integrated** 8곳 — 개별 카드 3곳: BP, DEC, PBR-A · 업종 제한으로 접힘 1곳: EQNR · 일반 순위 밖 4곳: CVX, SHEL, TTE, EC
 - **Oil & Gas Refining & Marketing** 8곳 — 개별 카드 4곳: MPC, PBF, CVI, DK · 업종 제한으로 접힘 4곳: VLO, PSX, DINO, PARR · 일반 순위 밖 0곳
-- **Oil & Gas Midstream** 7곳 — 개별 카드 3곳: FRO, DHT, TNK · 업종 제한으로 접힘 1곳: STNG · 일반 순위 밖 3곳: VG, INSW, LPG
+- **Oil & Gas Midstream** 6곳 — 개별 카드 3곳: FRO, DHT, TNK · 업종 제한으로 접힘 1곳: STNG · 일반 순위 밖 2곳: VG, INSW
 
 ### 업종 제한으로 접힌 기업 (최신 스크린 요약, 알림 없음)
 
 - SM SM Energy Company · Oil & Gas E&P · 내년 EPS 예상 +16% · 미추적 · 근거 상태 source_linked · `/candidate CAN-93F2BA020F4C5D68`
 - CHRD Chord Energy Corporation · Oil & Gas E&P · 내년 EPS 예상 +36% · 미추적 · 근거 상태 draft_ready · `/candidate CAN-B50C69675A4DBCEA`
-- CRGY Crescent Energy Company · Oil & Gas E&P · 내년 EPS 예상 +28% · 미추적 · 근거 상태 source_linked · `/candidate CAN-FC7BBBC12A5093CF`
 - NOG Northern Oil and Gas, Inc. · Oil & Gas E&P · 내년 EPS 예상 +22% · 미추적 · 근거 상태 source_linked · `/candidate CAN-BA5D4320F9188F9F`
-- PBR-A Petróleo Brasileiro S.A. - Petrobras · Oil & Gas Integrated · 내년 EPS 예상 +16% · 미추적 · 근거 상태 queued · `/candidate CAN-B42E091E8BC42B9F`
-- VLO Valero Energy Corporation · Oil & Gas Refining & Marketing · 내년 EPS 예상 +96% · 미추적 · 근거 상태 source_linked · `/candidate CAN-325B2A6C30755476`
-- PSX Phillips 66 · Oil & Gas Refining & Marketing · 내년 EPS 예상 +62% · 미추적 · 근거 상태 source_linked · `/candidate CAN-3D30FF7D03231FE1`
+- KOS Kosmos Energy Ltd. · Oil & Gas E&P · 내년 EPS 예상 +33% · 미추적 · 근거 상태 draft_ready · `/candidate CAN-2365AA0167A432A4`
+- EQNR Equinor ASA · Oil & Gas Integrated · 내년 EPS 예상 +40% · 미추적 · 근거 상태 draft_ready · `/candidate CAN-FE3575B3BB2443B0`
+- VLO Valero Energy Corporation · Oil & Gas Refining & Marketing · 내년 EPS 예상 +93% · 미추적 · 근거 상태 source_linked · `/candidate CAN-325B2A6C30755476`
+- PSX Phillips 66 · Oil & Gas Refining & Marketing · 내년 EPS 예상 +65% · 미추적 · 근거 상태 source_linked · `/candidate CAN-3D30FF7D03231FE1`
 - DINO HF Sinclair Corporation · Oil & Gas Refining & Marketing · 내년 EPS 예상 +93% · 미추적 · 근거 상태 source_linked · `/candidate CAN-11B1565B12AFE2F9`
 - PARR Par Pacific Holdings, Inc. · Oil & Gas Refining & Marketing · 내년 EPS 예상 +47% · 미추적 · 근거 상태 draft_ready · `/candidate CAN-FDA6B7F62852042F`
 - STNG Scorpio Tankers Inc. · Oil & Gas Midstream · 내년 EPS 예상 +51% · 미추적 · 근거 상태 draft_ready · `/candidate CAN-3BD5E965B73FD420`
@@ -67,19 +67,19 @@ CAN-1F6D82ED5782C3F5 · Oil & Gas Integrated · 미추적
 
 **후보가 된 이유**
 
-- A 1위: 이익수익률 변화 +32.64%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- B 5위: 내년 EPS 예상 90일 변화 +175% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- 최근 30일 추정 상향 2 / 하향 0, 분석가 5명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas Integrated 9곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(PBR-A), 일반 순위 밖 5곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- A 1위: 이익수익률 변화 +36.26%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 2위: 내년 EPS 예상 90일 변화 +206% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- 최근 30일 추정 상향 2 / 하향 0, 분석가 5명
+- 같은 업종 동반 상향: Oil & Gas Integrated 8곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(EQNR), 일반 순위 밖 4곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:34 UTC)**
+**숫자 (관측 2026-11-03 07:10 UTC)**
 
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $2.69 → 30일 전 $3.58 → 현재 $7.40 (+175%)
-- 주가 2026-08-04 → 2026-10-30: +7.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -61% (저평가 입증 아님)
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $2.42 → 30일 전 $3.19 → 현재 $7.40 (+206%)
+- 주가 2026-08-05 → 2026-11-02: +5.0% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -66% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 81%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 84%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
 - [실적 · 기간 미확인] 순이익(Net Income): $248M — 순이익은 이 금액이다 — “•Net Income: $248M, inclusive of gain on non-cash unsettled derivatives” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1922446/000192244626000070/a2q26earningspr.htm), 제출 2026-08-05, 기간 unknown)
 - [실적 · 기간 미확인] Total Commodity Revenue: $504M — 총 상품 매출액은 이 금액이다 — “•Total Commodity Revenue: $504M” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1922446/000192244626000070/a2q26earningspr.htm), 제출 2026-08-05, 기간 unknown)
 - [실적 · 기간 미확인] 조정 EBITDA(Adjusted EBITDA): $240M — 조정 에비타는 이 금액이다 — “•Adjusted EBITDA(b): $240M” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1922446/000192244626000070/a2q26earningspr.htm), 제출 2026-08-05, 기간 unknown)
@@ -102,9 +102,9 @@ CAN-1F6D82ED5782C3F5 · Oil & Gas Integrated · 미추적
 
 **출처**
 
-- [DEC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DEC/analysis) (관측 2026-11-02)
-- [DEC daily closes](https://finance.yahoo.com/quote/DEC/history) (관측 2026-11-02)
-- [DEC company profile](https://finance.yahoo.com/quote/DEC/profile) (관측 2026-11-02)
+- [DEC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DEC/analysis) (관측 2026-11-03)
+- [DEC daily closes](https://finance.yahoo.com/quote/DEC/history) (관측 2026-11-03)
+- [DEC company profile](https://finance.yahoo.com/quote/DEC/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1922446/000192244626000070/a2q26earningspr.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-1F6D82ED5782C3F5`
@@ -122,14 +122,14 @@ CAN-5790099EDC6F3301 · Aerospace & Defense · 미추적
 - B 1위: 내년 EPS 예상 90일 변화 +608% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 4 / 하향 0, 분석가 33명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:37 UTC)**
+**숫자 (관측 2026-11-03 07:13 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.57 → 30일 전 $1.86 → 현재 $4.03 (+608%)
-- 주가 2026-08-04 → 2026-10-30: +7.5% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -85% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +26.0% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -82% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 63%. 근거 문장 원문 최신 제출 2026-10-20(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 63%. 근거 문장 원문 최신 제출 2026-10-20(최근 30일 시작 이후)
 - [실적 · 기간 미확인] [Connectivity] Connectivity revenues: $5.2 billion / 22%(변화율·증가) / 69%(변화율) — 소비자 증가에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다 — “•Connectivity revenues were $5.2 billion, up 22% sequentially and 69% year-over-year, driven by an increase in consumer” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm), 제출 2026-10-20, 기간 unknown)
 - [실적 · 기간 미확인] [SI] SI revenues: $7.6 billion / 195%(변화율·증가) / 830%(변화율) — 주로 신규 활성화에 힘입어 직전 분기 대비 증가했고 전년 대비 증가했다 — “•SI revenues were $7.6 billion, up 195% sequentially and 830% year-over-year, primarily driven by the activation of new” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm), 제출 2026-10-20, 기간 unknown)
 
@@ -151,9 +151,9 @@ CAN-5790099EDC6F3301 · Aerospace & Defense · 미추적
 
 **출처**
 
-- [SPCX analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SPCX/analysis) (관측 2026-11-02)
-- [SPCX daily closes](https://finance.yahoo.com/quote/SPCX/history) (관측 2026-11-02)
-- [SPCX company profile](https://finance.yahoo.com/quote/SPCX/profile) (관측 2026-11-02)
+- [SPCX analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SPCX/analysis) (관측 2026-11-03)
+- [SPCX daily closes](https://finance.yahoo.com/quote/SPCX/history) (관측 2026-11-03)
+- [SPCX company profile](https://finance.yahoo.com/quote/SPCX/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm) (제출 2026-10-20)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm) (제출 2026-08-04)
 
@@ -169,18 +169,18 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 
 **후보가 된 이유**
 
-- A 2위: 이익수익률 변화 +12.29%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- A 2위: 이익수익률 변화 +12.77%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - 최근 30일 추정 상향 3 / 하향 1, 분석가 4명, 30일·90일 모두 상향
 - 같은 업종 동반 상향: Oil & Gas Refining & Marketing 8곳이 함께 조건 통과 — 개별 카드 4곳, 업종 제한으로 접힘 4곳(VLO, PSX, DINO, PARR), 일반 순위 밖 0곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:28 UTC)**
+**숫자 (관측 2026-11-03 07:04 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $8.97 → 30일 전 $12.38 → 현재 $18.56 (+107%)
-- 주가 2026-08-04 → 2026-10-30: +18.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -43% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +22.7% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -41% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 64%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 64%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
 - [실적] Adjusted fully-converted net income · third quarter 2026: $1,568.6 million — 특별 항목을 제외한 조정 순이익이 전년 같은 분기보다 늘었다 — “Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
 - [실적] Adjusted fully-converted net income · third quarter 2026: $12.78 per share — 특별 항목을 제외한 조정 주당 순이익이 전년 같은 분기보다 늘었다 — “Adjusted fully-converted net income for the third quarter 2026, excluding special items, was $1,568.6 million, or $12.78 per share on a fully-exchanged, fully-diluted basis, as described below, compared to adjusted fully-converted net loss, excluding special items, of $60.3 million or $(0.52) per share, for the third quarter 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
 - [실적] net income attributable to PBF Energy Inc. · third quarter 2026: $1,529.3 million — 회사의 순이익이 전년 같은 분기보다 늘었다 — “The company reported third quarter 2026 net income of $1,543.3 million and net income attributable to PBF Energy Inc. of $1,529.3 million or $12.54 per share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm), 제출 2026-10-29, 기간 third quarter 2026)
@@ -203,112 +203,13 @@ CAN-82719B27698E3C22 · Oil & Gas Refining & Marketing · 미추적
 
 **출처**
 
-- [PBF analyst estimates (EPS trend)](https://finance.yahoo.com/quote/PBF/analysis) (관측 2026-11-02)
-- [PBF daily closes](https://finance.yahoo.com/quote/PBF/history) (관측 2026-11-02)
-- [PBF company profile](https://finance.yahoo.com/quote/PBF/profile) (관측 2026-11-02)
+- [PBF analyst estimates (EPS trend)](https://finance.yahoo.com/quote/PBF/analysis) (관측 2026-11-03)
+- [PBF daily closes](https://finance.yahoo.com/quote/PBF/history) (관측 2026-11-03)
+- [PBF company profile](https://finance.yahoo.com/quote/PBF/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000039/a991pressreleaseq3-26.htm) (제출 2026-10-29)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1534504/000153450426000029/a991pressreleaseq2-26.htm) (제출 2026-07-30)
 
 텔레그램: `/track CAN-82719B27698E3C22`
-
-### 발굴 후보 · CLF Cleveland-Cliffs Inc.
-CAN-7F0690B785E31226 · Steel · 미추적
-
-**무엇으로 돈을 버나**
-
-다양한 철강 제품과 철광석, 석탄 등 비철강 제품을 생산 및 판매하여 수익을 얻습니다.
-<small>원문(영문): Cleveland-Cliffs Inc. operates as a steel producer in the United States and Canada. It offers hot-rolled, cold-rolled, and coated products, such as aluminized, electrogalvanized, and galvalume products, as well as galvanneal and hot-dipped galvanized products; stainless and electrical products, including GOES, NOES, and auto chrome; plate products; and slab and other steel products. The company also provides non- steelmaking products comprising stamped components, tool and die, and tubing; and scrap, iron ore, HBI, coal, and coke products. It also provides tubular components, including carbon</small>
-
-**후보가 된 이유**
-
-- B 2위: 내년 EPS 예상 90일 변화 +199% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- A 5위: 이익수익률 변화 +8.22%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 1 / 하향 0, 분석가 6명, 30일·90일 모두 상향
-
-**숫자 (관측 2026-11-02 06:28 UTC)**
-
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.59 → 30일 전 $0.77 → 현재 $1.76 (+199%)
-- 주가 2026-08-04 → 2026-10-30: +15.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -61% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 84%. 근거 문장 원문 최신 제출 2026-10-19(최근 30일 시작 이후)
-- [회사 전망 · 기간 미확인] [Stelco] EBITDA — 스텔코의 에비타 기여는 더욱 증가할 것이다 — “In the meantime, as we concentrate on hot rolled products that actually have a market, total production tonnage at Stelco will be maintained, Stelco’s contribution to Cliffs’ EBITDA will further increase, and approximately 2,000 Canadian jobs are preserved.”” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/764065/000076406526000112/clf-202609308xkex991.htm), 제출 2026-10-19, 기간 unknown)
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 최근 30일 상향 수정 1건(분석가 6명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
-
-**출처**
-
-- [CLF analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CLF/analysis) (관측 2026-11-02)
-- [CLF daily closes](https://finance.yahoo.com/quote/CLF/history) (관측 2026-11-02)
-- [CLF company profile](https://finance.yahoo.com/quote/CLF/profile) (관측 2026-11-02)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/764065/000076406526000112/clf-202609308xkex991.htm) (제출 2026-10-19)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm) (제출 2026-07-23)
-
-텔레그램: `/track CAN-7F0690B785E31226`
-
-### 발굴 후보 · KOS Kosmos Energy Ltd.
-CAN-2365AA0167A432A4 · Oil & Gas E&P · 미추적
-
-**무엇으로 돈을 버나**
-
-심해 유전 및 가스전의 탐사, 개발, 생산을 통해 석유와 천연가스를 판매하여 돈을 법니다.
-<small>원문(영문): Kosmos Energy Ltd., a deepwater exploration and production company, engages in the exploration, development, and production of oil and natural gas properties. It has oil and gas production projects in offshore Ghana, Equatorial Guinea, Mauritania, Senegal, and the Gulf of America. The company was founded in 2003 and is headquartered in Dallas, Texas.</small>
-
-**후보가 된 이유**
-
-- A 3위: 이익수익률 변화 +9.82%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 1 / 하향 0, 분석가 4명
-- 같은 업종 동반 상향: Oil & Gas E&P 15곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 4곳(SM, CHRD, CRGY, NOG), 일반 순위 밖 8곳. 업종 공통 요인일 수 있음(원인은 미확인)
-
-**숫자 (관측 2026-11-02 06:32 UTC)**
-
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.23 → 30일 전 $0.32 → 현재 $0.51 (+122%)
-- 주가 2026-08-04 → 2026-10-30: +17.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -47% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 67%. 근거 문장 원문 최신 제출 2026-08-03(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
-- [실적] adjusted net income · second quarter of 2026: $68 million — 회사가 조정한 순이익을 기록했다 — “When adjusted for certain items that impact the comparability of results, the Company generated an adjusted net income(1) of $68 million, or $0.11 per diluted share for the second quarter of 2026.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1509991/000150999126000046/kos_ex99x1-q2x2026.htm), 제출 2026-08-03, 기간 second quarter of 2026)
-- [실적] 순이익(net income) · second quarter of 2026: $185 million — 회사가 순이익을 기록했다 — “For the quarter, the Company generated net income of $185 million, or $0.31 per diluted share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1509991/000150999126000046/kos_ex99x1-q2x2026.htm), 제출 2026-08-03, 기간 second quarter of 2026)
-- [회사 전망] gross LNG cargos · Full year: 32-36 — 연간 총 액화천연가스 화물선 인도량에 대한 전망은 변동이 없다 — “Full year guidance of 32-36 gross LNG cargos remains unchanged.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1509991/000150999126000046/kos_ex99x1-q2x2026.htm), 제출 2026-08-03, 기간 Full year)
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 최근 30일 상향 수정 1건(분석가 4명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다 (자동 제안)
-
-**출처**
-
-- [KOS analyst estimates (EPS trend)](https://finance.yahoo.com/quote/KOS/analysis) (관측 2026-11-02)
-- [KOS daily closes](https://finance.yahoo.com/quote/KOS/history) (관측 2026-11-02)
-- [KOS company profile](https://finance.yahoo.com/quote/KOS/profile) (관측 2026-11-02)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1509991/000150999126000046/kos_ex99x1-q2x2026.htm) (제출 2026-08-03)
-
-텔레그램: `/track CAN-2365AA0167A432A4`
 
 ### 발굴 후보 · DK Delek US Holdings, Inc.
 CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
@@ -320,19 +221,19 @@ CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
 
 **후보가 된 이유**
 
+- A 3위: 이익수익률 변화 +8.71%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - B 3위: 내년 EPS 예상 90일 변화 +190% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- A 4위: 이익수익률 변화 +8.31%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - 최근 30일 추정 상향 4 / 하향 0, 분석가 11명, 30일·90일 모두 상향
 - 같은 업종 동반 상향: Oil & Gas Refining & Marketing 8곳이 함께 조건 통과 — 개별 카드 4곳, 업종 제한으로 접힘 4곳(VLO, PSX, DINO, PARR), 일반 순위 밖 0곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:30 UTC)**
+**숫자 (관측 2026-11-03 07:06 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.21 → 30일 전 $7.85 → 현재 $9.32 (+190%)
-- 주가 2026-08-04 → 2026-10-30: +11.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -62% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +17.5% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -60% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 24%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 24%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -352,12 +253,110 @@ CAN-D577F2C38FBBCFF7 · Oil & Gas Refining & Marketing · 미추적
 
 **출처**
 
-- [DK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DK/analysis) (관측 2026-11-02)
-- [DK daily closes](https://finance.yahoo.com/quote/DK/history) (관측 2026-11-02)
-- [DK company profile](https://finance.yahoo.com/quote/DK/profile) (관측 2026-11-02)
+- [DK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DK/analysis) (관측 2026-11-03)
+- [DK daily closes](https://finance.yahoo.com/quote/DK/history) (관측 2026-11-03)
+- [DK company profile](https://finance.yahoo.com/quote/DK/profile) (관측 2026-11-03)
 - [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1694426/000162828026053106/dk-20260630.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-D577F2C38FBBCFF7`
+
+### 발굴 후보 · CLF Cleveland-Cliffs Inc.
+CAN-7F0690B785E31226 · Steel · 미추적
+
+**무엇으로 돈을 버나**
+
+다양한 철강 제품과 철광석, 석탄 등 비철강 제품을 생산 및 판매하여 수익을 얻습니다.
+<small>원문(영문): Cleveland-Cliffs Inc. operates as a steel producer in the United States and Canada. It offers hot-rolled, cold-rolled, and coated products, such as aluminized, electrogalvanized, and galvalume products, as well as galvanneal and hot-dipped galvanized products; stainless and electrical products, including GOES, NOES, and auto chrome; plate products; and slab and other steel products. The company also provides non- steelmaking products comprising stamped components, tool and die, and tubing; and scrap, iron ore, HBI, coal, and coke products. It also provides tubular components, including carbon</small>
+
+**후보가 된 이유**
+
+- A 4위: 이익수익률 변화 +7.81%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 4위: 내년 EPS 예상 90일 변화 +189% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- 최근 30일 추정 상향 1 / 하향 0, 분석가 7명, 30일·90일 모두 상향
+
+**숫자 (관측 2026-11-03 07:04 UTC)**
+
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.59 → 30일 전 $0.86 → 현재 $1.71 (+189%)
+- 주가 2026-08-05 → 2026-11-02: +12.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -61% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 76%. 근거 문장 원문 최신 제출 2026-10-19(최근 30일 시작 이후)
+- [회사 전망 · 기간 미확인] [Stelco] EBITDA — 스텔코의 에비타 기여는 더욱 증가할 것이다 — “In the meantime, as we concentrate on hot rolled products that actually have a market, total production tonnage at Stelco will be maintained, Stelco’s contribution to Cliffs’ EBITDA will further increase, and approximately 2,000 Canadian jobs are preserved.”” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/764065/000076406526000112/clf-202609308xkex991.htm), 제출 2026-10-19, 기간 unknown)
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 최근 30일 상향 수정 1건(분석가 7명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+
+**출처**
+
+- [CLF analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CLF/analysis) (관측 2026-11-03)
+- [CLF daily closes](https://finance.yahoo.com/quote/CLF/history) (관측 2026-11-03)
+- [CLF company profile](https://finance.yahoo.com/quote/CLF/profile) (관측 2026-11-03)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/764065/000076406526000112/clf-202609308xkex991.htm) (제출 2026-10-19)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/764065/000076406526000097/clf-202606308xkex991.htm) (제출 2026-07-23)
+
+텔레그램: `/track CAN-7F0690B785E31226`
+
+### 발굴 후보 · MPC Marathon Petroleum Corporation
+CAN-77F79A3B05ABB893 · Oil & Gas Refining & Marketing · 미추적
+
+**무엇으로 돈을 버나**
+
+원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.
+<small>원문(영문): Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp</small>
+
+**후보가 된 이유**
+
+- A 5위: 이익수익률 변화 +7.56%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 8위: 내년 EPS 예상 90일 변화 +117% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- 최근 30일 추정 상향 12 / 하향 2, 분석가 18명, 30일·90일 모두 상향
+- 같은 업종 동반 상향: Oil & Gas Refining & Marketing 8곳이 함께 조건 통과 — 개별 카드 4곳, 업종 제한으로 접힘 4곳(VLO, PSX, DINO, PARR), 일반 순위 밖 0곳. 업종 공통 요인일 수 있음(원인은 미확인)
+
+**숫자 (관측 2026-11-03 07:00 UTC)**
+
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $27.77 → 30일 전 $48.38 → 현재 $60.31 (+117%)
+- 주가 2026-08-05 → 2026-11-02: +44.5% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -33% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 37%. 채택된 근거 문장의 원문 없음 · 최근 조사 문서 2026-08-04(채택 근거 없음)
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+
+**출처**
+
+- [MPC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/MPC/analysis) (관측 2026-11-03)
+- [MPC daily closes](https://finance.yahoo.com/quote/MPC/history) (관측 2026-11-03)
+- [MPC company profile](https://finance.yahoo.com/quote/MPC/profile) (관측 2026-11-03)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm) (제출 2026-08-04)
+- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1510295/000151029526000061/mpc-20260630.htm) (제출 2026-08-04)
+
+텔레그램: `/track CAN-77F79A3B05ABB893`
 
 ### 발굴 후보 · GKOS Glaukos Corporation
 CAN-3968C0864F9CF991 · Medical Devices · 미추적
@@ -369,17 +368,17 @@ CAN-3968C0864F9CF991 · Medical Devices · 미추적
 
 **후보가 된 이유**
 
-- B 4위: 내년 EPS 예상 90일 변화 +179% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- B 5위: 내년 EPS 예상 90일 변화 +179% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 3 / 하향 0, 분석가 13명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:27 UTC)**
+**숫자 (관측 2026-11-03 07:03 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.50 → 30일 전 $0.51 → 현재 $1.40 (+179%)
-- 주가 2026-08-04 → 2026-10-30: +39.3% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -50% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +39.6% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -50% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 100%. 근거 문장 원문 최신 제출 2026-10-28(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 100%. 근거 문장 원문 최신 제출 2026-10-28(최근 30일 시작 이후)
 - [실적] 매출(net sales) · Q3 2026: $211.0 million — 회사의 순매출이 전년 같은 기간보다 늘었다 — “Record net sales of $211.0 million in Q3 2026 increased 58% year-over-year on a reported and constant currency basis.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1192448/000119312526436147/gkos-ex99_1.htm), 제출 2026-10-28, 기간 Q3 2026)
 - [실적] [U.S. Glaucoma] 매출(net sales) · Q3 2026: $118.6 million — 미국 녹내장 부문의 순매출이 전년 같은 기간보다 늘었다 — “U.S. Glaucoma record net sales of $118.6 million in Q3 2026 increased 47% year-over-year.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1192448/000119312526436147/gkos-ex99_1.htm), 제출 2026-10-28, 기간 Q3 2026)
 - [실적] [Corneal Health] 매출(net sales) · Q3 2026: $59.0 million — 각막 건강 부문의 순매출이 전년 같은 기간보다 늘었다 — “Corneal Health record net sales of $59.0 million in Q3 2026 increased 154% year-over-year.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1192448/000119312526436147/gkos-ex99_1.htm), 제출 2026-10-28, 기간 Q3 2026)
@@ -401,37 +400,37 @@ CAN-3968C0864F9CF991 · Medical Devices · 미추적
 
 **출처**
 
-- [GKOS analyst estimates (EPS trend)](https://finance.yahoo.com/quote/GKOS/analysis) (관측 2026-11-02)
-- [GKOS daily closes](https://finance.yahoo.com/quote/GKOS/history) (관측 2026-11-02)
-- [GKOS company profile](https://finance.yahoo.com/quote/GKOS/profile) (관측 2026-11-02)
+- [GKOS analyst estimates (EPS trend)](https://finance.yahoo.com/quote/GKOS/analysis) (관측 2026-11-03)
+- [GKOS daily closes](https://finance.yahoo.com/quote/GKOS/history) (관측 2026-11-03)
+- [GKOS company profile](https://finance.yahoo.com/quote/GKOS/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1192448/000119312526436147/gkos-ex99_1.htm) (제출 2026-10-28)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1192448/000119312526323729/gkos-ex99_1.htm) (제출 2026-07-29)
 
 텔레그램: `/track CAN-3968C0864F9CF991`
 
-### 발굴 후보 · MPC Marathon Petroleum Corporation
-CAN-77F79A3B05ABB893 · Oil & Gas Refining & Marketing · 미추적
+### 발굴 후보 · TXO TXO Partners, L.P.
+CAN-0733D6B2B6A41784 · Oil & Gas E&P · 미추적
 
 **무엇으로 돈을 버나**
 
-원유를 정제하고 석유 제품 및 에탄올을 구매하여 판매하며, 운송 및 저장 서비스를 제공합니다.
-<small>원문(영문): Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transp</small>
+원유, 천연가스 및 천연가스액 매장량을 인수, 개발, 최적화, 채굴합니다.
+<small>원문(영문): TXO Partners, L.P., an oil and natural gas company, focuses on the acquisition, development, optimization, and exploitation of conventional oil, natural gas, and natural gas liquid reserves in North America. Its acreage positions are concentrated in the Permian Basin of West Texas and New Mexico; the San Juan Basin of New Mexico and Colorado; and the Williston Basin of Montana and North Dakota. TXO Partners, L.P. was formerly known as TXO Energy Partners, L.P. and changed its name to TXO Partners, L.P. in May 2023. The company was incorporated in 2012 and is based in Fort Worth, Texas.</small>
 
 **후보가 된 이유**
 
-- A 6위: 이익수익률 변화 +7.32%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- B 8위: 내년 EPS 예상 90일 변화 +117% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- 최근 30일 추정 상향 12 / 하향 2, 분석가 18명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas Refining & Marketing 8곳이 함께 조건 통과 — 개별 카드 4곳, 업종 제한으로 접힘 4곳(VLO, PSX, DINO, PARR), 일반 순위 밖 0곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- A 6위: 이익수익률 변화 +7.29%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 9위: 내년 EPS 예상 90일 변화 +102% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- 최근 30일 추정 상향 1 / 하향 0, 분석가 4명, 30일·90일 모두 상향
+- 같은 업종 동반 상향: Oil & Gas E&P 16곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 4곳(SM, CHRD, NOG, KOS), 일반 순위 밖 9곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:24 UTC)**
+**숫자 (관측 2026-11-03 07:10 UTC)**
 
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $27.77 → 30일 전 $48.38 → 현재 $60.31 (+117%)
-- 주가 2026-08-04 → 2026-10-30: +42.3% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -34% (저평가 입증 아님)
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.97 → 30일 전 $1.31 → 현재 $1.96 (+102%)
+- 주가 2026-08-05 → 2026-11-02: +0.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -50% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 37%. 채택된 근거 문장의 원문 없음 · 최근 조사 문서 2026-08-04(채택 근거 없음)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 66%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-08-04(채택 근거 없음)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -440,23 +439,23 @@ CAN-77F79A3B05ABB893 · Oil & Gas Refining & Marketing · 미추적
 
 **미확인 · 반증**
 
+- 최근 30일 상향 수정 1건(분석가 4명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
 - EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+- Cross Timbers Energy의 매각이 TXO Partners의 순이익에 미치는 영향은 무엇인가? (자동 제안)
 
 **출처**
 
-- [MPC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/MPC/analysis) (관측 2026-11-02)
-- [MPC daily closes](https://finance.yahoo.com/quote/MPC/history) (관측 2026-11-02)
-- [MPC company profile](https://finance.yahoo.com/quote/MPC/profile) (관측 2026-11-02)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1510295/000151029526000060/mpcq22026earningsrelease.htm) (제출 2026-08-04)
-- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1510295/000151029526000061/mpc-20260630.htm) (제출 2026-08-04)
+- [TXO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TXO/analysis) (관측 2026-11-03)
+- [TXO daily closes](https://finance.yahoo.com/quote/TXO/history) (관측 2026-11-03)
+- [TXO company profile](https://finance.yahoo.com/quote/TXO/profile) (관측 2026-11-03)
+- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1559432/000155943226000014/txo-20260630.htm) (제출 2026-08-04)
 
-텔레그램: `/track CAN-77F79A3B05ABB893`
+텔레그램: `/track CAN-0733D6B2B6A41784`
 
 ### 발굴 후보 · CVI CVR Energy, Inc.
 CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
@@ -472,14 +471,14 @@ CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
 - 최근 30일 추정 상향 4 / 하향 0, 분석가 6명, 30일·90일 모두 상향
 - 같은 업종 동반 상향: Oil & Gas Refining & Marketing 8곳이 함께 조건 통과 — 개별 카드 4곳, 업종 제한으로 접힘 4곳(VLO, PSX, DINO, PARR), 일반 순위 밖 0곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:29 UTC)**
+**숫자 (관측 2026-11-03 07:05 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $1.80 → 30일 전 $3.03 → 현재 $4.55 (+152%)
-- 주가 2026-08-04 → 2026-10-30: +75.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -31% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +79.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -29% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 55%. 근거 문장 원문 최신 제출 2026-07-29(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 55%. 근거 문장 원문 최신 제출 2026-07-29(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
 - [실적] net loss attributable to CVR Energy stockholders · Second quarter 2026: $3 million — 회사의 순손실이다 — “Second quarter 2026 net loss attributable to CVR Energy stockholders of $3 million” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm), 제출 2026-07-29, 기간 Second quarter 2026)
 - [실적] 조정 EBITDA(Adjusted EBITDA) · Second quarter 2026: $209 million — 회사의 조정 에비타이다 — “Adjusted EBITDA of $209 million” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm), 제출 2026-07-29, 기간 Second quarter 2026)
 
@@ -501,110 +500,12 @@ CAN-F451582E2056444F · Oil & Gas Refining & Marketing · 미추적
 
 **출처**
 
-- [CVI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CVI/analysis) (관측 2026-11-02)
-- [CVI daily closes](https://finance.yahoo.com/quote/CVI/history) (관측 2026-11-02)
-- [CVI company profile](https://finance.yahoo.com/quote/CVI/profile) (관측 2026-11-02)
+- [CVI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CVI/analysis) (관측 2026-11-03)
+- [CVI daily closes](https://finance.yahoo.com/quote/CVI/history) (관측 2026-11-03)
+- [CVI company profile](https://finance.yahoo.com/quote/CVI/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm) (제출 2026-07-29)
 
 텔레그램: `/track CAN-F451582E2056444F`
-
-### 발굴 후보 · TXO TXO Partners, L.P.
-CAN-0733D6B2B6A41784 · Oil & Gas E&P · 미추적
-
-**무엇으로 돈을 버나**
-
-원유, 천연가스 및 천연가스액 매장량을 인수, 개발, 최적화, 채굴합니다.
-<small>원문(영문): TXO Partners, L.P., an oil and natural gas company, focuses on the acquisition, development, optimization, and exploitation of conventional oil, natural gas, and natural gas liquid reserves in North America. Its acreage positions are concentrated in the Permian Basin of West Texas and New Mexico; the San Juan Basin of New Mexico and Colorado; and the Williston Basin of Montana and North Dakota. TXO Partners, L.P. was formerly known as TXO Energy Partners, L.P. and changed its name to TXO Partners, L.P. in May 2023. The company was incorporated in 2012 and is based in Fort Worth, Texas.</small>
-
-**후보가 된 이유**
-
-- A 7위: 이익수익률 변화 +7.07%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- B 9위: 내년 EPS 예상 90일 변화 +102% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- 최근 30일 추정 상향 1 / 하향 0, 분석가 4명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas E&P 15곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 4곳(SM, CHRD, CRGY, NOG), 일반 순위 밖 8곳. 업종 공통 요인일 수 있음(원인은 미확인)
-
-**숫자 (관측 2026-11-02 06:34 UTC)**
-
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.97 → 30일 전 $1.31 → 현재 $1.96 (+102%)
-- 주가 2026-08-04 → 2026-10-30: +8.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -47% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 66%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-08-04(채택 근거 없음)
-원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 최근 30일 상향 수정 1건(분석가 4명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- Cross Timbers Energy의 매각이 TXO Partners의 순이익에 미치는 영향은 무엇인가? (자동 제안)
-
-**출처**
-
-- [TXO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TXO/analysis) (관측 2026-11-02)
-- [TXO daily closes](https://finance.yahoo.com/quote/TXO/history) (관측 2026-11-02)
-- [TXO company profile](https://finance.yahoo.com/quote/TXO/profile) (관측 2026-11-02)
-- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1559432/000155943226000014/txo-20260630.htm) (제출 2026-08-04)
-
-텔레그램: `/track CAN-0733D6B2B6A41784`
-
-### 발굴 후보 · CODI Compass Diversified
-CAN-36582E27909720FE · Conglomerates · 미추적
-
-**무엇으로 돈을 버나**
-
-산업 및 브랜드 소비재 기업에 투자하고 인수합병, 기업 재편 등을 통해 수익을 얻는 사모펀드입니다.
-<small>원문(영문): Compass Diversified is a private equity firm specializing in add on acquisitions, buyouts, industry consolidation, recapitalization, late stage, and middle market investments. It seeks to invest in leading industrial or branded consumer companies, textiles, Apparel and Luxury goods, trading companies and distributors, manufacturing, distribution, consumer discretionary, commercial services and supplies, consumer products, capital good, Leisure Product, consumer service, consumer staples, household durables, business services sector, infrastructure healthcare, safety & security, electronic comp</small>
-
-**후보가 된 이유**
-
-- B 7위: 내년 EPS 예상 90일 변화 +139% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- A 16위: 이익수익률 변화 +3.50%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 4 / 하향 1, 분석가 6명, 30일·90일 모두 상향
-
-**숫자 (관측 2026-11-02 06:34 UTC)**
-
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.28 → 30일 전 $0.64 → 현재 $0.67 (+139%)
-- 주가 2026-08-04 → 2026-10-30: +0.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -58% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 7%. 근거 문장 원문 최신 제출 2026-08-10(최근 30일 시작 이전)
-- [회사 전망 · 기간 미확인] outlook — 회사의 전망은 이전 가이던스에 비해 브랜드 소비재 사업에 대한 기대치가 높아지고 산업재 사업에 대한 기대치가 낮아진 것을 반영한다 — “CODI’s outlook reflects higher expectations for the Branded Consumer businesses and lower expectations for the Industrial businesses relative to prior guidance.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm), 제출 2026-08-10, 기간 unknown)
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- 구체적인 일회성·반대 근거는 아직 확보하지 못했습니다.
-- [일반 면책(보조)] 조정 EBITDA(Adjusted EBITDA) — 조정 이자, 세금, 감가상각비 및 상각 전 이익은 사업 수익 창출에 사용되는 특정 자본 자산의 주기적인 비용, 손상과 관련된 비현금성 비용 및 특정 현금성 비용을 반영하지 않는다는 한계가 있다 — “When compared to Net Income (Loss) and Income (Loss) from Continuing Operations, Adjusted Earnings (Loss) and Adjusted EBITDA, respectively, are each limited in that they do not reflect the periodic costs of certain capital assets used in generating revenues of our businesses, non-cash charges associated with impairments and certain cash charges.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm), 제출 2026-08-10, 기간 unknown)
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 브랜드 소비재 사업에 대한 기대치 상승과 산업재 사업에 대한 기대치 하락의 구체적인 원인은 무엇일까? (자동 제안)
-
-**출처**
-
-- [CODI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CODI/analysis) (관측 2026-11-02)
-- [CODI daily closes](https://finance.yahoo.com/quote/CODI/history) (관측 2026-11-02)
-- [CODI company profile](https://finance.yahoo.com/quote/CODI/profile) (관측 2026-11-02)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm) (제출 2026-08-10)
-
-텔레그램: `/track CAN-36582E27909720FE`
 
 ### 발굴 후보 · GRNT Granite Ridge Resources, Inc.
 CAN-D5F91D853BD4402E · Oil & Gas E&P · 미추적
@@ -616,19 +517,19 @@ CAN-D5F91D853BD4402E · Oil & Gas E&P · 미추적
 
 **후보가 된 이유**
 
-- A 8위: 이익수익률 변화 +6.34%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- B 17위: 내년 EPS 예상 90일 변화 +57% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- A 7위: 이익수익률 변화 +6.93%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 18위: 내년 EPS 예상 90일 변화 +57% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 1 / 하향 0, 분석가 3명
-- 같은 업종 동반 상향: Oil & Gas E&P 15곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 4곳(SM, CHRD, CRGY, NOG), 일반 순위 밖 8곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- 같은 업종 동반 상향: Oil & Gas E&P 16곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 4곳(SM, CHRD, NOG, KOS), 일반 순위 밖 9곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:34 UTC)**
+**숫자 (관측 2026-11-03 07:10 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.64 → 30일 전 $0.79 → 현재 $1.00 (+57%)
-- 주가 2026-08-04 → 2026-10-30: +20.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -23% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +13.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -28% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 58%. 근거 문장 원문 최신 제출 2026-08-06(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 58%. 근거 문장 원문 최신 제출 2026-08-06(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
 - [실적] Oil and natural gas sales · second quarter of 2026: $149.3 million — 회사의 원유 및 천연가스 판매액이다 — “Oil and natural gas sales for the second quarter of 2026 were $149.3 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm), 제출 2026-08-06, 기간 second quarter of 2026)
 - [실적 · 기간 미확인] Adjusted Net Income: $11.1 million — 회사의 조정 순이익이다 — “Adjusted Net Income (non-GAAP) totaled $11.1 million, or $0.09 Adjusted Earnings Per Diluted Share (non-GAAP).” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm), 제출 2026-08-06, 기간 unknown)
 - [실적 · 기간 미확인] Adjusted EBITDAX: $79.6 million — 회사의 조정 EBITDAX이다 — “Generated $79.6 million of Adjusted EBITDAX (non-GAAP).” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm), 제출 2026-08-06, 기간 unknown)
@@ -650,12 +551,61 @@ CAN-D5F91D853BD4402E · Oil & Gas E&P · 미추적
 
 **출처**
 
-- [GRNT analyst estimates (EPS trend)](https://finance.yahoo.com/quote/GRNT/analysis) (관측 2026-11-02)
-- [GRNT daily closes](https://finance.yahoo.com/quote/GRNT/history) (관측 2026-11-02)
-- [GRNT company profile](https://finance.yahoo.com/quote/GRNT/profile) (관측 2026-11-02)
+- [GRNT analyst estimates (EPS trend)](https://finance.yahoo.com/quote/GRNT/analysis) (관측 2026-11-03)
+- [GRNT daily closes](https://finance.yahoo.com/quote/GRNT/history) (관측 2026-11-03)
+- [GRNT company profile](https://finance.yahoo.com/quote/GRNT/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm) (제출 2026-08-06)
 
 텔레그램: `/track CAN-D5F91D853BD4402E`
+
+### 발굴 후보 · CODI Compass Diversified
+CAN-36582E27909720FE · Conglomerates · 미추적
+
+**무엇으로 돈을 버나**
+
+산업 및 브랜드 소비재 기업에 투자하고 인수합병, 기업 재편 등을 통해 수익을 얻는 사모펀드입니다.
+<small>원문(영문): Compass Diversified is a private equity firm specializing in add on acquisitions, buyouts, industry consolidation, recapitalization, late stage, and middle market investments. It seeks to invest in leading industrial or branded consumer companies, textiles, Apparel and Luxury goods, trading companies and distributors, manufacturing, distribution, consumer discretionary, commercial services and supplies, consumer products, capital good, Leisure Product, consumer service, consumer staples, household durables, business services sector, infrastructure healthcare, safety & security, electronic comp</small>
+
+**후보가 된 이유**
+
+- B 7위: 내년 EPS 예상 90일 변화 +139% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- A 17위: 이익수익률 변화 +3.34%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- 최근 30일 추정 상향 4 / 하향 1, 분석가 6명, 30일·90일 모두 상향
+
+**숫자 (관측 2026-11-03 07:10 UTC)**
+
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.28 → 30일 전 $0.64 → 현재 $0.67 (+139%)
+- 주가 2026-08-05 → 2026-11-02: +7.6% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -55% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 7%. 근거 문장 원문 최신 제출 2026-08-10(최근 30일 시작 이전)
+- [회사 전망 · 기간 미확인] outlook — 회사의 전망은 이전 가이던스에 비해 브랜드 소비재 사업에 대한 기대치가 높아지고 산업재 사업에 대한 기대치가 낮아진 것을 반영한다 — “CODI’s outlook reflects higher expectations for the Branded Consumer businesses and lower expectations for the Industrial businesses relative to prior guidance.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm), 제출 2026-08-10, 기간 unknown)
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- 구체적인 일회성·반대 근거는 아직 확보하지 못했습니다.
+- [일반 면책(보조)] 조정 EBITDA(Adjusted EBITDA) — 조정 이자, 세금, 감가상각비 및 상각 전 이익은 사업 수익 창출에 사용되는 특정 자본 자산의 주기적인 비용, 손상과 관련된 비현금성 비용 및 특정 현금성 비용을 반영하지 않는다는 한계가 있다 — “When compared to Net Income (Loss) and Income (Loss) from Continuing Operations, Adjusted Earnings (Loss) and Adjusted EBITDA, respectively, are each limited in that they do not reflect the periodic costs of certain capital assets used in generating revenues of our businesses, non-cash charges associated with impairments and certain cash charges.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm), 제출 2026-08-10, 기간 unknown)
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 브랜드 소비재 사업에 대한 기대치 상승과 산업재 사업에 대한 기대치 하락의 구체적인 원인은 무엇일까? (자동 제안)
+
+**출처**
+
+- [CODI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CODI/analysis) (관측 2026-11-03)
+- [CODI daily closes](https://finance.yahoo.com/quote/CODI/history) (관측 2026-11-03)
+- [CODI company profile](https://finance.yahoo.com/quote/CODI/profile) (관측 2026-11-03)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm) (제출 2026-08-10)
+
+텔레그램: `/track CAN-36582E27909720FE`
 
 ### 발굴 후보 · DHT DHT Holdings, Inc.
 CAN-FD88AA0D924CF1C8 · Oil & Gas Midstream · 미추적
@@ -667,19 +617,19 @@ CAN-FD88AA0D924CF1C8 · Oil & Gas Midstream · 미추적
 
 **후보가 된 이유**
 
-- A 9위: 이익수익률 변화 +5.73%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- A 8위: 이익수익률 변화 +6.01%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - B 10위: 내년 EPS 예상 90일 변화 +79% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 2 / 하향 0, 분석가 6명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas Midstream 7곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(STNG), 일반 순위 밖 3곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- 같은 업종 동반 상향: Oil & Gas Midstream 6곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(STNG), 일반 순위 밖 2곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:30 UTC)**
+**숫자 (관측 2026-11-03 07:06 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $1.81 → 30일 전 $2.15 → 현재 $3.24 (+79%)
-- 주가 2026-08-04 → 2026-10-30: +37.9% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -23% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +33.5% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -26% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 76%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-08-05(채택 근거 없음)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 76%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-08-05(채택 근거 없음)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -698,9 +648,9 @@ CAN-FD88AA0D924CF1C8 · Oil & Gas Midstream · 미추적
 
 **출처**
 
-- [DHT analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DHT/analysis) (관측 2026-11-02)
-- [DHT daily closes](https://finance.yahoo.com/quote/DHT/history) (관측 2026-11-02)
-- [DHT company profile](https://finance.yahoo.com/quote/DHT/profile) (관측 2026-11-02)
+- [DHT analyst estimates (EPS trend)](https://finance.yahoo.com/quote/DHT/analysis) (관측 2026-11-03)
+- [DHT daily closes](https://finance.yahoo.com/quote/DHT/history) (관측 2026-11-03)
+- [DHT company profile](https://finance.yahoo.com/quote/DHT/profile) (관측 2026-11-03)
 - [SEC 6-K EX-99.1 — PRESS RELEASE](https://www.sec.gov/Archives/edgar/data/1331284/000095015726000847/ex99-1.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-FD88AA0D924CF1C8`
@@ -715,18 +665,18 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 **후보가 된 이유**
 
-- A 10위: 이익수익률 변화 +5.53%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- A 9위: 이익수익률 변화 +5.98%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - B 20위: 내년 EPS 예상 90일 변화 +47% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 8 / 하향 0, 분석가 17명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:26 UTC)**
+**숫자 (관측 2026-11-03 07:02 UTC)**
 
 - 내년 EPS 예상 (2028-06-30 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.86 → 30일 전 $5.33 → 현재 $5.68 (+47%)
-- 주가 2026-08-04 → 2026-10-30: +4.0% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -29% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +0.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -32% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 19%. 근거 문장 원문 최신 제출 2026-10-20(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 19%. 근거 문장 원문 최신 제출 2026-10-20(최근 30일 시작 이후)
 - [회사 전망] 매출(Revenues) · first quarter of fiscal year 2027: $18.5 billion to $19.5 billion — 회사의 매출 예상치이다 — “Revenues for the first quarter of fiscal year 2027 are estimated to be in the range of $18.5 billion to $19.5 billion versus guidance of $14.5 billion to $15.5 billion, primarily due to increased demand for AI platforms.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm), 제출 2026-10-20, 기간 first quarter of fiscal year 2027)
 
 **사람이 확인한 사업 근거**
@@ -747,111 +697,14 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 **출처**
 
-- [SMCI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SMCI/analysis) (관측 2026-11-02)
-- [SMCI daily closes](https://finance.yahoo.com/quote/SMCI/history) (관측 2026-11-02)
-- [SMCI company profile](https://finance.yahoo.com/quote/SMCI/profile) (관측 2026-11-02)
+- [SMCI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SMCI/analysis) (관측 2026-11-03)
+- [SMCI daily closes](https://finance.yahoo.com/quote/SMCI/history) (관측 2026-11-03)
+- [SMCI company profile](https://finance.yahoo.com/quote/SMCI/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm) (제출 2026-10-20)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm) (제출 2026-08-11)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/fq42026businessupdate.htm) (제출 2026-07-21)
 
 텔레그램: `/track CAN-5FD7409FDFE8F5EA`
-
-### 발굴 후보 · MU Micron Technology, Inc.
-CAN-43EA86A18E5096A9 · Semiconductors · 미추적
-
-**무엇으로 돈을 버나**
-
-반도체 메모리 및 저장 제품(DRAM, NAND 등)을 제공하여 돈을 번다.
-<small>원문(영문): Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internationally. It operates through Cloud Memory Business Unit, Core Data Center Business Unit, Mobile and Client Business Unit, and Automotive and Embedded Business Unit segments. The company provides dynamic random access memory (DRAM) products, including High-Bandwidth Memory, doublie data rate, low-power DRAM, and graphics DRAM products; NAND products comprising solid state drives, managed NAND, and mul</small>
-
-**후보가 된 이유**
-
-- A 11위: 이익수익률 변화 +5.07%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 19 / 하향 1, 분석가 36명, 30일·90일 모두 상향
-
-**숫자 (관측 2026-11-02 06:24 UTC)**
-
-- 내년 EPS 예상 (2028-08-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $162.94 → 30일 전 $180.94 → 현재 $207.76 (+28%)
-- 주가 2026-08-04 → 2026-10-30: -0.9% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -22% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 60%. 근거 문장 원문 최신 제출 2026-09-30(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
-- [실적 · 기간 미확인] Non-GAAP net income: $38.40 billion — 회사의 조정 순이익이다 — “Non-GAAP net income of $38.40 billion, or $33.42 per diluted share” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm), 제출 2026-09-30, 기간 unknown)
-- [실적 · 기간 미확인] GAAP net income: $37.70 billion — 회사의 순이익이다 — “GAAP net income of $37.70 billion, or $32.87 per diluted share” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm), 제출 2026-09-30, 기간 unknown)
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
-
-**출처**
-
-- [MU analyst estimates (EPS trend)](https://finance.yahoo.com/quote/MU/analysis) (관측 2026-11-02)
-- [MU daily closes](https://finance.yahoo.com/quote/MU/history) (관측 2026-11-02)
-- [MU company profile](https://finance.yahoo.com/quote/MU/profile) (관측 2026-11-02)
-- [SEC 8-K EX-99.1 — EX-99.1 EARNINGS RELEASE](https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm) (제출 2026-09-30)
-
-텔레그램: `/track CAN-43EA86A18E5096A9`
-
-### 발굴 후보 · TEAM Atlassian Corporation
-CAN-4E5151866E863998 · Software - Application · 미추적
-
-**무엇으로 돈을 버나**
-
-조직의 생산성을 높이는 협업 소프트웨어와 클라우드 기반 앱을 제공합니다.
-<small>원문(영문): Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at scale worldwide. The company's product portfolio includes Jira, Confluence, Loom, Jira Service Management, Rovo, Bitbucket, Compass, Jira Product Discovery, Focus, Talent, Trello, and Guard. It also offers Collections, a curated sets of apps and agents built on the Atlassian cloud platform and designed to solve cross-functional customer workflows, including teamwork, service, strategy, software, and product collections. The company was fo</small>
-
-**후보가 된 이유**
-
-- B 11위: 내년 EPS 예상 90일 변화 +79% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- 최근 30일 추정 상향 1 / 하향 0, 분석가 8명, 30일·90일 모두 상향
-
-**숫자 (관측 2026-11-02 06:25 UTC)**
-
-- 내년 EPS 예상 (2028-06-30 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $1.22 → 30일 전 $2.19 → 현재 $2.19 (+79%)
-- 주가 2026-08-04 → 2026-10-30: +73.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -3% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 1%. 근거 문장 원문 최신 제출 2026-08-06(최근 30일 시작 이전)
-- [실적] 매출(Revenue) · fourth quarter of fiscal year 2026: $1,766 million / 28%(변화율·증가) — 총 매출은 전년 같은 분기보다 늘었다 — “Total revenue was $1,766 million for the fourth quarter of fiscal year 2026, up 28% from $1,384 million for the fourth quarter of fiscal year 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm), 제출 2026-08-06, 기간 fourth quarter of fiscal year 2026)
-- [실적] 매출(Revenue) · fiscal year 2026: $6,572 million / 26%(변화율·증가) — 총 매출은 전년보다 늘었다 — “Total revenue was $6,572 million for fiscal year 2026, up 26% from $5,215 million for fiscal year 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm), 제출 2026-08-06, 기간 fiscal year 2026)
-- [회사 전망 · 기간 미확인] Total revenue: $1,705 million to $1,715 million — 총 매출은 특정 범위에 있을 것으로 예상된다 — “•Total revenue is expected to be in the range of $1,705 million to $1,715 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm), 제출 2026-08-06, 기간 unknown)
-- 자동 정리 문장 4개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 최근 30일 상향 수정 1건(분석가 8명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다. (자동 제안)
-
-**출처**
-
-- [TEAM analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TEAM/analysis) (관측 2026-11-02)
-- [TEAM daily closes](https://finance.yahoo.com/quote/TEAM/history) (관측 2026-11-02)
-- [TEAM company profile](https://finance.yahoo.com/quote/TEAM/profile) (관측 2026-11-02)
-- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm) (제출 2026-08-06)
-
-텔레그램: `/track CAN-4E5151866E863998`
 
 ### 발굴 후보 · TNK Teekay Tankers Ltd.
 CAN-E95987D989EF1145 · Oil & Gas Midstream · 미추적
@@ -863,19 +716,19 @@ CAN-E95987D989EF1145 · Oil & Gas Midstream · 미추적
 
 **후보가 된 이유**
 
-- A 12위: 이익수익률 변화 +4.87%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- B 18위: 내년 EPS 예상 90일 변화 +55% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- A 10위: 이익수익률 변화 +5.58%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 16위: 내년 EPS 예상 90일 변화 +58% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 3 / 하향 1, 분석가 4명
-- 같은 업종 동반 상향: Oil & Gas Midstream 7곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(STNG), 일반 순위 밖 3곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- 같은 업종 동반 상향: Oil & Gas Midstream 6곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(STNG), 일반 순위 밖 2곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:30 UTC)**
+**숫자 (관측 2026-11-03 07:06 UTC)**
 
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $8.94 → 30일 전 $10.90 → 현재 $13.85 (+55%)
-- 주가 2026-08-04 → 2026-10-30: +31.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -15% (저평가 입증 아님)
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $9.12 → 30일 전 $10.90 → 현재 $14.45 (+58%)
+- 주가 2026-08-05 → 2026-11-02: +28.3% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -19% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 60%. 근거 문장 원문 최신 제출 2026-07-29(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-07-31(채택 근거 없음)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 67%. 근거 문장 원문 최신 제출 2026-07-29(최근 30일 시작 이전) — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-07-31(채택 근거 없음)
 아직 공식 발표 원문을 연결하지 않았습니다.
 
 **이익으로 이어질 수 있는 경로 (해석)**
@@ -898,13 +751,158 @@ CAN-E95987D989EF1145 · Oil & Gas Midstream · 미추적
 
 **출처**
 
-- [TNK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TNK/analysis) (관측 2026-11-02)
-- [TNK daily closes](https://finance.yahoo.com/quote/TNK/history) (관측 2026-11-02)
-- [TNK company profile](https://finance.yahoo.com/quote/TNK/profile) (관측 2026-11-02)
+- [TNK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TNK/analysis) (관측 2026-11-03)
+- [TNK daily closes](https://finance.yahoo.com/quote/TNK/history) (관측 2026-11-03)
+- [TNK company profile](https://finance.yahoo.com/quote/TNK/profile) (관측 2026-11-03)
 - [SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/1419945/000141994526000056/tnk6-kq1x261.htm) (제출 2026-07-31)
 - [SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/1419945/000141994526000054/tnkq2-26erdocument.htm) (제출 2026-07-29)
 
 텔레그램: `/track CAN-E95987D989EF1145`
+
+### 발굴 후보 · MU Micron Technology, Inc.
+CAN-43EA86A18E5096A9 · Semiconductors · 미추적
+
+**무엇으로 돈을 버나**
+
+반도체 메모리 및 저장 제품(DRAM, NAND 등)을 제공하여 돈을 번다.
+<small>원문(영문): Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internationally. It operates through Cloud Memory Business Unit, Core Data Center Business Unit, Mobile and Client Business Unit, and Automotive and Embedded Business Unit segments. The company provides dynamic random access memory (DRAM) products, including High-Bandwidth Memory, doublie data rate, low-power DRAM, and graphics DRAM products; NAND products comprising solid state drives, managed NAND, and mul</small>
+
+**후보가 된 이유**
+
+- A 11위: 이익수익률 변화 +4.90%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- 최근 30일 추정 상향 19 / 하향 1, 분석가 36명, 30일·90일 모두 상향
+
+**숫자 (관측 2026-11-03 07:00 UTC)**
+
+- 내년 EPS 예상 (2028-08-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $166.89 → 30일 전 $206.68 → 현재 $207.76 (+24%)
+- 주가 2026-08-05 → 2026-11-02: -6.7% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -25% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 3%. 근거 문장 원문 최신 제출 2026-09-30(최근 30일 시작 이전)
+- [실적 · 기간 미확인] Non-GAAP net income: $38.40 billion — 회사의 조정 순이익이다 — “Non-GAAP net income of $38.40 billion, or $33.42 per diluted share” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm), 제출 2026-09-30, 기간 unknown)
+- [실적 · 기간 미확인] GAAP net income: $37.70 billion — 회사의 순이익이다 — “GAAP net income of $37.70 billion, or $32.87 per diluted share” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm), 제출 2026-09-30, 기간 unknown)
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+
+**출처**
+
+- [MU analyst estimates (EPS trend)](https://finance.yahoo.com/quote/MU/analysis) (관측 2026-11-03)
+- [MU daily closes](https://finance.yahoo.com/quote/MU/history) (관측 2026-11-03)
+- [MU company profile](https://finance.yahoo.com/quote/MU/profile) (관측 2026-11-03)
+- [SEC 8-K EX-99.1 — EX-99.1 EARNINGS RELEASE](https://www.sec.gov/Archives/edgar/data/723125/000072312526000018/a2026q4ex991-pressrelease.htm) (제출 2026-09-30)
+
+텔레그램: `/track CAN-43EA86A18E5096A9`
+
+### 발굴 후보 · TEAM Atlassian Corporation
+CAN-4E5151866E863998 · Software - Application · 미추적
+
+**무엇으로 돈을 버나**
+
+조직의 생산성을 높이는 협업 소프트웨어와 클라우드 기반 앱을 제공합니다.
+<small>원문(영문): Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at scale worldwide. The company's product portfolio includes Jira, Confluence, Loom, Jira Service Management, Rovo, Bitbucket, Compass, Jira Product Discovery, Focus, Talent, Trello, and Guard. It also offers Collections, a curated sets of apps and agents built on the Atlassian cloud platform and designed to solve cross-functional customer workflows, including teamwork, service, strategy, software, and product collections. The company was fo</small>
+
+**후보가 된 이유**
+
+- B 11위: 내년 EPS 예상 90일 변화 +79% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- 최근 30일 추정 상향 1 / 하향 0, 분석가 8명, 30일·90일 모두 상향
+
+**숫자 (관측 2026-11-03 07:01 UTC)**
+
+- 내년 EPS 예상 (2028-06-30 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $1.22 → 30일 전 $2.19 → 현재 $2.19 (+79%)
+- 주가 2026-08-05 → 2026-11-02: +65.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -8% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 1%. 근거 문장 원문 최신 제출 2026-08-06(최근 30일 시작 이전)
+- [실적] 매출(Revenue) · fourth quarter of fiscal year 2026: $1,766 million / 28%(변화율·증가) — 총 매출은 전년 같은 분기보다 늘었다 — “Total revenue was $1,766 million for the fourth quarter of fiscal year 2026, up 28% from $1,384 million for the fourth quarter of fiscal year 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm), 제출 2026-08-06, 기간 fourth quarter of fiscal year 2026)
+- [실적] 매출(Revenue) · fiscal year 2026: $6,572 million / 26%(변화율·증가) — 총 매출은 전년보다 늘었다 — “Total revenue was $6,572 million for fiscal year 2026, up 26% from $5,215 million for fiscal year 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm), 제출 2026-08-06, 기간 fiscal year 2026)
+- [회사 전망 · 기간 미확인] Total revenue: $1,705 million to $1,715 million — 총 매출은 특정 범위에 있을 것으로 예상된다 — “•Total revenue is expected to be in the range of $1,705 million to $1,715 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm), 제출 2026-08-06, 기간 unknown)
+- 자동 정리 문장 4개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 최근 30일 상향 수정 1건(분석가 8명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다. (자동 제안)
+
+**출처**
+
+- [TEAM analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TEAM/analysis) (관측 2026-11-03)
+- [TEAM daily closes](https://finance.yahoo.com/quote/TEAM/history) (관측 2026-11-03)
+- [TEAM company profile](https://finance.yahoo.com/quote/TEAM/profile) (관측 2026-11-03)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/ex991q4fy26.htm) (제출 2026-08-06)
+
+텔레그램: `/track CAN-4E5151866E863998`
+
+### 발굴 후보 · FRO Frontline plc
+CAN-7506B6BECE695B39 · Oil & Gas Midstream · 미추적
+
+**무엇으로 돈을 버나**
+
+유조선과 석유제품 운반선을 소유, 운영하며 용선, 매매를 통해 돈을 번다.
+<small>원문(영문): Frontline plc, a shipping company, engages in the ownership and operation of oil and product tankers worldwide. The company owns and operates oil and product tankers, such as very large crude carriers (VLCCs), Suezmax tankers, and LR2/Aframax tankers. As of December 31, 2025, it operated a fleet of 80 vessels, including 41 VLCCs, 21 Suezmax tankers, and 18 LR2/Aframax tankers. The company is also involved in the charter, purchase, and sale of vessels. Frontline plc was founded in 1985 and is based in Limassol, Cyprus.</small>
+
+**후보가 된 이유**
+
+- A 12위: 이익수익률 변화 +4.85%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- B 13위: 내년 EPS 예상 90일 변화 +68% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- 최근 30일 추정 상향 4 / 하향 1, 분석가 5명, 30일·90일 모두 상향
+- 같은 업종 동반 상향: Oil & Gas Midstream 6곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(STNG), 일반 순위 밖 2곳. 업종 공통 요인일 수 있음(원인은 미확인)
+
+**숫자 (관측 2026-11-03 07:03 UTC)**
+
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.71 → 30일 전 $4.57 → 현재 $6.24 (+68%)
+- 주가 2026-08-05 → 2026-11-02: +37.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -18% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 66%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-09-16(채택 근거 없음)
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+
+**출처**
+
+- [FRO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/FRO/analysis) (관측 2026-11-03)
+- [FRO daily closes](https://finance.yahoo.com/quote/FRO/history) (관측 2026-11-03)
+- [FRO company profile](https://finance.yahoo.com/quote/FRO/profile) (관측 2026-11-03)
+- [SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/913290/000162828026062234/fro-20260630.htm) (제출 2026-09-16)
+
+텔레그램: `/track CAN-7506B6BECE695B39`
 
 ### 발굴 후보 · SMTC Semtech Corporation
 CAN-782282A0C20A29F1 · Semiconductors · 미추적
@@ -919,14 +917,14 @@ CAN-782282A0C20A29F1 · Semiconductors · 미추적
 - B 12위: 내년 EPS 예상 90일 변화 +70% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 1 / 하향 0, 분석가 15명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:27 UTC)**
+**숫자 (관측 2026-11-03 07:03 UTC)**
 
 - 내년 EPS 예상 (2028-01-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.92 → 30일 전 $5.84 → 현재 $6.67 (+70%)
-- 주가 2026-08-04 → 2026-10-30: -1.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -42% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +0.9% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -41% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 30%. 근거 문장 원문 최신 제출 2026-08-25(최근 30일 시작 이전)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 30%. 근거 문장 원문 최신 제출 2026-08-25(최근 30일 시작 이전)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -948,36 +946,80 @@ CAN-782282A0C20A29F1 · Semiconductors · 미추적
 
 **출처**
 
-- [SMTC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SMTC/analysis) (관측 2026-11-02)
-- [SMTC daily closes](https://finance.yahoo.com/quote/SMTC/history) (관측 2026-11-02)
-- [SMTC company profile](https://finance.yahoo.com/quote/SMTC/profile) (관측 2026-11-02)
+- [SMTC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SMTC/analysis) (관측 2026-11-03)
+- [SMTC daily closes](https://finance.yahoo.com/quote/SMTC/history) (관측 2026-11-03)
+- [SMTC company profile](https://finance.yahoo.com/quote/SMTC/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/88941/000008894126000028/smtc-07262026x8k991.htm) (제출 2026-08-25)
 
 텔레그램: `/track CAN-782282A0C20A29F1`
 
-### 발굴 후보 · FRO Frontline plc
-CAN-7506B6BECE695B39 · Oil & Gas Midstream · 미추적
+### 발굴 후보 · PBR-A Petróleo Brasileiro S.A. - Petrobras
+CAN-B42E091E8BC42B9F · Oil & Gas Integrated · 미추적
 
 **무엇으로 돈을 버나**
 
-유조선과 석유제품 운반선을 소유, 운영하며 용선, 매매를 통해 돈을 번다.
-<small>원문(영문): Frontline plc, a shipping company, engages in the ownership and operation of oil and product tankers worldwide. The company owns and operates oil and product tankers, such as very large crude carriers (VLCCs), Suezmax tankers, and LR2/Aframax tankers. As of December 31, 2025, it operated a fleet of 80 vessels, including 41 VLCCs, 21 Suezmax tankers, and 18 LR2/Aframax tankers. The company is also involved in the charter, purchase, and sale of vessels. Frontline plc was founded in 1985 and is based in Limassol, Cyprus.</small>
+페트로브라스는 석유와 천연가스를 탐사, 생산, 정제, 운송 및 판매하여 돈을 법니다.
+<small>원문(영문): Petróleo Brasileiro S.A. - Petrobras explores, produces, and sells oil and gas in Brazil, China, the United States, the Americas, Asia, Europe, Singapore, and internationally. It operates through three segments: Exploration and Production; Refining, Transportation & Marketing; and Gas & Low Carbon Energies. The Exploration and Production segment explores, develops, and produces crude oil, natural gas liquids, and natural gas primarily for supplies to the domestic refineries. Its Refining, Transportation and Marketing segment engages in the refining, logistics, transport, acquisition, and expor</small>
 
 **후보가 된 이유**
 
-- A 13위: 이익수익률 변화 +4.46%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- B 13위: 내년 EPS 예상 90일 변화 +68% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
-- 최근 30일 추정 상향 4 / 하향 1, 분석가 5명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas Midstream 7곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(STNG), 일반 순위 밖 3곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- A 13위: 이익수익률 변화 +4.76%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- 최근 30일 추정 상향 2 / 하향 1, 분석가 5명, 30일·90일 모두 상향
+- 같은 업종 동반 상향: Oil & Gas Integrated 8곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(EQNR), 일반 순위 밖 4곳. 업종 공통 요인일 수 있음(원인은 미확인)
 
-**숫자 (관측 2026-11-02 06:27 UTC)**
+**숫자 (관측 2026-11-03 07:13 UTC)**
 
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.71 → 30일 전 $4.57 → 현재 $6.25 (+68%)
-- 주가 2026-08-04 → 2026-10-30: +46.0% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -13% (저평가 입증 아님)
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.52 → 30일 전 $3.87 → 현재 $4.41 (+25%)
+- 주가 2026-08-05 → 2026-11-02: +15.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -8% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 66%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-09-16(채택 근거 없음)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 61%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
+최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+
+**다음 확인**
+
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+
+**출처**
+
+- [PBR-A analyst estimates (EPS trend)](https://finance.yahoo.com/quote/PBR-A/analysis) (관측 2026-11-03)
+- [PBR-A daily closes](https://finance.yahoo.com/quote/PBR-A/history) (관측 2026-11-03)
+- [PBR-A company profile](https://finance.yahoo.com/quote/PBR-A/profile) (관측 2026-11-03)
+
+텔레그램: `/track CAN-B42E091E8BC42B9F`
+
+### 발굴 후보 · CRGY Crescent Energy Company
+CAN-FC7BBBC12A5093CF · Oil & Gas E&P · 미추적
+
+**무엇으로 돈을 버나**
+
+크레센트 에너지는 원유, 천연가스, 천연가스액을 탐사 및 생산하고 광물 지분을 소유하여 수익을 얻습니다.
+<small>원문(영문): Crescent Energy Company engages in the exploration and production of crude oil, natural gas, and natural gas liquids in the United States. The company's activities focused in Eagle Ford, Permian, and Uinta Basins. It owns minerals and royalty interests across the U.S. oil and natural gas basins. Crescent Energy Company was founded in 2011 and is headquartered in Houston, Texas.</small>
+
+**후보가 된 이유**
+
+- A 14위: 이익수익률 변화 +4.76%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- 최근 30일 추정 상향 7 / 하향 0, 분석가 13명
+- 같은 업종 동반 상향: Oil & Gas E&P 16곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 4곳(SM, CHRD, NOG, KOS), 일반 순위 밖 9곳. 업종 공통 요인일 수 있음(원인은 미확인)
+
+**숫자 (관측 2026-11-03 07:05 UTC)**
+
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $2.26 → 30일 전 $2.37 → 현재 $2.90 (+28%)
+- 주가 2026-08-05 → 2026-11-02: +22.7% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -4% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 83%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음 · 최근 조사 문서 2026-10-08(채택 근거 없음)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -996,61 +1038,13 @@ CAN-7506B6BECE695B39 · Oil & Gas Midstream · 미추적
 
 **출처**
 
-- [FRO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/FRO/analysis) (관측 2026-11-02)
-- [FRO daily closes](https://finance.yahoo.com/quote/FRO/history) (관측 2026-11-02)
-- [FRO company profile](https://finance.yahoo.com/quote/FRO/profile) (관측 2026-11-02)
-- [SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/913290/000162828026062234/fro-20260630.htm) (제출 2026-09-16)
+- [CRGY analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CRGY/analysis) (관측 2026-11-03)
+- [CRGY daily closes](https://finance.yahoo.com/quote/CRGY/history) (관측 2026-11-03)
+- [CRGY company profile](https://finance.yahoo.com/quote/CRGY/profile) (관측 2026-11-03)
+- [SEC 8-K EX-99.3](https://www.sec.gov/Archives/edgar/data/1866175/000162828026065385/exhibit993-8xkoctober2026.htm) (제출 2026-10-08)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1866175/000186617526000112/exhibit991q22026earningsre.htm) (제출 2026-08-03)
 
-텔레그램: `/track CAN-7506B6BECE695B39`
-
-### 발굴 후보 · BP BP p.l.c.
-CAN-ECB2C73CA19DA4AB · Oil & Gas Integrated · 미추적
-
-**무엇으로 돈을 버나**
-
-석유, 가스, 재생에너지 사업을 하며 연료, 윤활유, 충전 서비스 등을 제공합니다.
-<small>원문(영문): BP p.l.c., an integrated energy company, engages in the oil and gas business worldwide. The company operates through Gas & Low Carbon Energy, Oil Production & Operations, and Customers & Products segments. It engages in the production of natural gas, marketing, and trading activities, as well as solar, wind, and hydrogen businesses. The company also offers aviation fuel products and services, such as jet fuel; aviation gasoline; UL91 aviation fuel; and sustainable aviation fuel. In addition, it engages in the convenience and retail fuel; EV charging; Castrol lubricants and fluids; B2B; midstre</small>
-
-**후보가 된 이유**
-
-- A 14위: 이익수익률 변화 +3.54%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 8 / 하향 0, 분석가 16명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas Integrated 9곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(PBR-A), 일반 순위 밖 5곳. 업종 공통 요인일 수 있음(원인은 미확인)
-
-**숫자 (관측 2026-11-02 06:24 UTC)**
-
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.98 → 30일 전 $5.19 → 현재 $5.77 (+45%)
-- 주가 2026-08-04 → 2026-10-30: +18.7% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -18% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 33%. 채택된 근거 문장의 원문 없음 · 최근 조사 문서 2026-10-30(채택 근거 없음)
-원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
-
-**출처**
-
-- [BP analyst estimates (EPS trend)](https://finance.yahoo.com/quote/BP/analysis) (관측 2026-11-02)
-- [BP daily closes](https://finance.yahoo.com/quote/BP/history) (관측 2026-11-02)
-- [BP company profile](https://finance.yahoo.com/quote/BP/profile) (관측 2026-11-02)
-- [SEC 6-K 6-K — 3Q26 BP PLC PART 1 OF 1](https://www.sec.gov/Archives/edgar/data/313807/000165495426009265/a0767b.htm) (제출 2026-10-30)
-- [SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/313807/000031380726000018/a30092026bp6kq3.htm) (제출 2026-10-30)
-- [SEC 6-K 6-K — 3Q26 BP TRADING STATEMENT PART 1 OF 1](https://www.sec.gov/Archives/edgar/data/313807/000165495426008895/a6390y.htm) (제출 2026-10-13)
-
-텔레그램: `/track CAN-ECB2C73CA19DA4AB`
+텔레그램: `/track CAN-FC7BBBC12A5093CF`
 
 ### 발굴 후보 · MXL MaxLinear, Inc.
 CAN-76DD3777C06E7825 · Semiconductors · 미추적
@@ -1065,14 +1059,14 @@ CAN-76DD3777C06E7825 · Semiconductors · 미추적
 - B 14위: 내년 EPS 예상 90일 변화 +66% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 1 / 하향 0, 분석가 11명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:28 UTC)**
+**숫자 (관측 2026-11-03 07:04 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $2.58 → 30일 전 $2.61 → 현재 $4.30 (+66%)
-- 주가 2026-08-04 → 2026-10-30: -7.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -44% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: -9.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -45% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 98%. 근거 문장 원문 최신 제출 2026-10-22(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 98%. 근거 문장 원문 최신 제출 2026-10-22(최근 30일 시작 이후)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -1095,9 +1089,9 @@ CAN-76DD3777C06E7825 · Semiconductors · 미추적
 
 **출처**
 
-- [MXL analyst estimates (EPS trend)](https://finance.yahoo.com/quote/MXL/analysis) (관측 2026-11-02)
-- [MXL daily closes](https://finance.yahoo.com/quote/MXL/history) (관측 2026-11-02)
-- [MXL company profile](https://finance.yahoo.com/quote/MXL/profile) (관측 2026-11-02)
+- [MXL analyst estimates (EPS trend)](https://finance.yahoo.com/quote/MXL/analysis) (관측 2026-11-03)
+- [MXL daily closes](https://finance.yahoo.com/quote/MXL/history) (관측 2026-11-03)
+- [MXL company profile](https://finance.yahoo.com/quote/MXL/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1288469/000128846926000060/a09302026exhibit991.htm) (제출 2026-10-22)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1288469/000128846926000050/a06302026exhibit991.htm) (제출 2026-07-23)
 
@@ -1113,18 +1107,18 @@ TTM 테크놀로지스는 임무 시스템, 무선 주파수 부품, 인쇄 회�
 
 **후보가 된 이유**
 
-- A 15위: 이익수익률 변화 +3.54%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- A 15위: 이익수익률 변화 +3.83%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - B 19위: 내년 EPS 예상 90일 변화 +54% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 4 / 하향 0, 분석가 5명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:28 UTC)**
+**숫자 (관측 2026-11-03 07:03 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $5.40 → 30일 전 $6.89 → 현재 $8.34 (+54%)
-- 주가 2026-08-04 → 2026-10-30: -37.5% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -60% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: -41.7% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -62% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 49%. 근거 문장 원문 최신 제출 2026-10-22(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 49%. 근거 문장 원문 최신 제출 2026-10-22(최근 30일 시작 이후)
 - [회사 전망] non-GAAP net income · 2027 full year: $8.10 to $8.90 per diluted share — 회사는 내년 비일반회계기준 희석 주당 순이익을 예상한다 — “In addition, we are initiating our preliminary 2027 full year forecast with expected net sales in the range of $6.5 billion to $6.75 billion and expected non-GAAP net income in the range of $8.10 to $8.90 per diluted share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1116942/000119312526428263/d282109dex991.htm), 제출 2026-10-22, 기간 2027 full year)
 - [회사 전망] 매출(net sales) · 2027 full year: $6.5 billion to $6.75 billion — 회사는 내년 순매출을 예상한다 — “In addition, we are initiating our preliminary 2027 full year forecast with expected net sales in the range of $6.5 billion to $6.75 billion and expected non-GAAP net income in the range of $8.10 to $8.90 per diluted share.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1116942/000119312526428263/d282109dex991.htm), 제출 2026-10-22, 기간 2027 full year)
 
@@ -1144,9 +1138,9 @@ TTM 테크놀로지스는 임무 시스템, 무선 주파수 부품, 인쇄 회�
 
 **출처**
 
-- [TTMI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TTMI/analysis) (관측 2026-11-02)
-- [TTMI daily closes](https://finance.yahoo.com/quote/TTMI/history) (관측 2026-11-02)
-- [TTMI company profile](https://finance.yahoo.com/quote/TTMI/profile) (관측 2026-11-02)
+- [TTMI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TTMI/analysis) (관측 2026-11-03)
+- [TTMI daily closes](https://finance.yahoo.com/quote/TTMI/history) (관측 2026-11-03)
+- [TTMI company profile](https://finance.yahoo.com/quote/TTMI/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1116942/000119312526428263/d282109dex991.htm) (제출 2026-10-22)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1116942/000119312526336163/d132953dex991.htm) (제출 2026-08-06)
 
@@ -1165,14 +1159,14 @@ CAN-8ED72F330C1AE34D · Software - Application · 미추적
 - B 15위: 내년 EPS 예상 90일 변화 +62% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 7 / 하향 0, 분석가 12명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:30 UTC)**
+**숫자 (관측 2026-11-03 07:06 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.40 → 30일 전 $0.58 → 현재 $0.64 (+62%)
-- 주가 2026-08-04 → 2026-10-30: -7.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -43% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: -20.9% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -51% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 24%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 24%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
 - [회사 전망] outlook · full-year — 회사는 연간 전망을 상향 조정할 자신감을 얻었다 — “Our platform strategy is driving business momentum, giving us the confidence to raise our full-year outlook.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm), 제출 2026-08-05, 기간 full-year)
 - [실적] 매출(revenue) · second quarter: $183.3 million / 23%(변화율·증가) — 회사의 이분기 매출이 전년 같은 기간보다 늘었다 — “Record second quarter revenue of $183.3 million grew 23% year-over-year” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm), 제출 2026-08-05, 기간 second quarter)
 
@@ -1194,12 +1188,61 @@ CAN-8ED72F330C1AE34D · Software - Application · 미추적
 
 **출처**
 
-- [FSLY analyst estimates (EPS trend)](https://finance.yahoo.com/quote/FSLY/analysis) (관측 2026-11-02)
-- [FSLY daily closes](https://finance.yahoo.com/quote/FSLY/history) (관측 2026-11-02)
-- [FSLY company profile](https://finance.yahoo.com/quote/FSLY/profile) (관측 2026-11-02)
+- [FSLY analyst estimates (EPS trend)](https://finance.yahoo.com/quote/FSLY/analysis) (관측 2026-11-03)
+- [FSLY daily closes](https://finance.yahoo.com/quote/FSLY/history) (관측 2026-11-03)
+- [FSLY company profile](https://finance.yahoo.com/quote/FSLY/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-8ED72F330C1AE34D`
+
+### 발굴 후보 · BP BP p.l.c.
+CAN-ECB2C73CA19DA4AB · Oil & Gas Integrated · 미추적
+
+**무엇으로 돈을 버나**
+
+석유, 가스, 재생에너지 사업을 하며 연료, 윤활유, 충전 서비스 등을 제공합니다.
+<small>원문(영문): BP p.l.c., an integrated energy company, engages in the oil and gas business worldwide. The company operates through Gas & Low Carbon Energy, Oil Production & Operations, and Customers & Products segments. It engages in the production of natural gas, marketing, and trading activities, as well as solar, wind, and hydrogen businesses. The company also offers aviation fuel products and services, such as jet fuel; aviation gasoline; UL91 aviation fuel; and sustainable aviation fuel. In addition, it engages in the convenience and retail fuel; EV charging; Castrol lubricants and fluids; B2B; midstre</small>
+
+**후보가 된 이유**
+
+- A 16위: 이익수익률 변화 +3.77%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- 최근 30일 추정 상향 8 / 하향 0, 분석가 16명, 30일·90일 모두 상향
+- 같은 업종 동반 상향: Oil & Gas Integrated 8곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(EQNR), 일반 순위 밖 4곳. 업종 공통 요인일 수 있음(원인은 미확인)
+
+**숫자 (관측 2026-11-03 07:00 UTC)**
+
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.98 → 30일 전 $5.20 → 현재 $5.79 (+45%)
+- 주가 2026-08-05 → 2026-11-02: +16.2% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -20% (저평가 입증 아님)
+
+**공식 발표에서 확인한 변화 (자동 정리·미검토)**
+
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 32%. 채택된 근거 문장의 원문 없음 · 최근 조사 문서 2026-10-30(채택 근거 없음)
+원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
+
+**사람이 확인한 사업 근거**
+
+아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
+
+**미확인 · 반증**
+
+- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
+- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+
+**다음 확인**
+
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
+
+**출처**
+
+- [BP analyst estimates (EPS trend)](https://finance.yahoo.com/quote/BP/analysis) (관측 2026-11-03)
+- [BP daily closes](https://finance.yahoo.com/quote/BP/history) (관측 2026-11-03)
+- [BP company profile](https://finance.yahoo.com/quote/BP/profile) (관측 2026-11-03)
+- [SEC 6-K 6-K — 3Q26 BP PLC PART 1 OF 1](https://www.sec.gov/Archives/edgar/data/313807/000165495426009265/a0767b.htm) (제출 2026-10-30)
+- [SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/313807/000031380726000018/a30092026bp6kq3.htm) (제출 2026-10-30)
+- [SEC 6-K 6-K — 3Q26 BP TRADING STATEMENT PART 1 OF 1](https://www.sec.gov/Archives/edgar/data/313807/000165495426008895/a6390y.htm) (제출 2026-10-13)
+
+텔레그램: `/track CAN-ECB2C73CA19DA4AB`
 
 ### 발굴 후보 · SEI Solaris Energy Infrastructure, Inc.
 CAN-A00785AF9CF7E07A · Oil & Gas Equipment & Services · 미추적
@@ -1211,17 +1254,17 @@ CAN-A00785AF9CF7E07A · Oil & Gas Equipment & Services · 미추적
 
 **후보가 된 이유**
 
-- B 16위: 내년 EPS 예상 90일 변화 +57% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
+- B 17위: 내년 EPS 예상 90일 변화 +57% (기준 +25% 이상, 90일 전 EPS $0.25 이상)
 - 최근 30일 추정 상향 3 / 하향 0, 분석가 9명
 
-**숫자 (관측 2026-11-02 06:28 UTC)**
+**숫자 (관측 2026-11-03 07:04 UTC)**
 
 - 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $2.33 → 30일 전 $3.62 → 현재 $3.66 (+57%)
-- 주가 2026-08-04 → 2026-10-30: +22.1% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -22% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: +17.7% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -25% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 3%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 3%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
 - [회사 전망] 조정 EBITDA(Adjusted EBITDA) · third quarter 2026: $90-105 million — 가이던스가 상향 조정되었다 — “Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 third quarter 2026)
 - [회사 전망] 조정 EBITDA(Adjusted EBITDA) · fourth quarter 2026: $100-120 million — 가이던스가 설정되었다 — “Raising third quarter 2026 Adjusted EBITDA guidance to $90-105 million from $80-95 million and establishing fourth quarter 2026 Adjusted EBITDA guidance at $100-120 million.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 fourth quarter 2026)
 - [실적] capacity earning revenue · Second quarter 2026: approximately 950 MW — 직전 분기보다 늘었다 — “Activity – Second quarter 2026 averaged approximately 950 MW of capacity earning revenue, which was up 4% compared to approximately 910 MW in first quarter 2026.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm), 제출 2026-08-05, 기간 Second quarter 2026)
@@ -1244,62 +1287,12 @@ CAN-A00785AF9CF7E07A · Oil & Gas Equipment & Services · 미추적
 
 **출처**
 
-- [SEI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SEI/analysis) (관측 2026-11-02)
-- [SEI daily closes](https://finance.yahoo.com/quote/SEI/history) (관측 2026-11-02)
-- [SEI company profile](https://finance.yahoo.com/quote/SEI/profile) (관측 2026-11-02)
+- [SEI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SEI/analysis) (관측 2026-11-03)
+- [SEI daily closes](https://finance.yahoo.com/quote/SEI/history) (관측 2026-11-03)
+- [SEI company profile](https://finance.yahoo.com/quote/SEI/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1697500/000162828026053383/sei-ex99x6302026.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-A00785AF9CF7E07A`
-
-### 발굴 후보 · TRLV Trulieve Cannabis Corp.
-CAN-713C837ADADE8D8B · Drug Manufacturers - Specialty & Generic · 미추적
-
-**무엇으로 돈을 버나**
-
-대마초 제품을 재배, 가공, 제조하여 소매점과 배달을 통해 판매하여 수익을 얻습니다.
-<small>원문(영문): Trulieve Cannabis Corp. operates as a cannabis retailer in the United States. The company cultivates, processes, and manufactures cannabis products and distributes its products to its dispensaries, as well as through home delivery. It sells flowers, edibles, vapes, oral, topical, concentrates, and accessories under the Avenue, Cultivar Collection, Muse, Modern Flower, Alchemy, Momenta, Sweet Talk, Co2lors, and Roll One brands. The company operates dispensaries in Florida, Arizona, Georgia, Ohio, Maryland, West Virginia, Connecticut, and Pennsylvania. It operates cultivation and processing faci</small>
-
-**후보가 된 이유**
-
-- A 17위: 이익수익률 변화 +3.15%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 1 / 하향 0, 분석가 3명, 30일·90일 모두 상향
-
-**숫자 (관측 2026-11-02 06:32 UTC)**
-
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $0.24 → 30일 전 $0.56 → 현재 $0.56 (+135%)
-- 주가 2026-08-04 → 2026-10-30: +15.6% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -51% (저평가 입증 아님)
-
-**공식 발표에서 확인한 변화 (자동 정리·미검토)**
-
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 2%. 근거 문장 원문 최신 제출 2026-08-07(최근 30일 시작 이전)
-- [실적] 매출(Revenue) · three months ended June 30, 2026: $271.0 million — 매출은 전년 같은 분기보다 줄었다 — “Revenue for the three months ended June 30, 2026 was $271.0 million, a decrease of $31.1 million, from $302.1 million for the three months ended June 30, 2025.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm), 제출 2026-08-07, 기간 three months ended June 30, 2026)
-- [실적] Cost of goods sold · three months ended June 30, 2026: $108.7 million — 매출원가는 전년 같은 분기보다 줄었다 — “Cost of goods sold for the three months ended June 30, 2026 was $108.7 million, a decrease of $10.5 million from $119.2 million for the three months ended June 30, 2025.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm), 제출 2026-08-07, 기간 three months ended June 30, 2026)
-- [실적] Gross profit · three months ended June 30, 2026: $162.3 million — 매출총이익은 전년 같은 분기보다 줄었다 — “Gross profit for the three months ended June 30, 2026 was $162.3 million, a decrease of $20.6 million from $182.9 million for the three months ended June 30, 2025.” ([SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm), 제출 2026-08-07, 기간 three months ended June 30, 2026)
-- 자동 정리 문장 5개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
-
-**사람이 확인한 사업 근거**
-
-아직 없음. EPS 예상 상향이 왜 생겼는지 원문으로 확인하지 않았습니다.
-
-**미확인 · 반증**
-
-- 최근 30일 상향 수정 1건(분석가 3명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
-- 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
-- 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
-
-**다음 확인**
-
-- 하베스트의 연결 해제 거래가 회사의 재무 상태, 영업 실적 및 현금 흐름에 미치는 영향은 무엇인가? (자동 제안)
-
-**출처**
-
-- [TRLV analyst estimates (EPS trend)](https://finance.yahoo.com/quote/TRLV/analysis) (관측 2026-11-02)
-- [TRLV daily closes](https://finance.yahoo.com/quote/TRLV/history) (관측 2026-11-02)
-- [TRLV company profile](https://finance.yahoo.com/quote/TRLV/profile) (관측 2026-11-02)
-- [SEC 10-Q 10-Q](https://www.sec.gov/Archives/edgar/data/1754195/000175419526000069/tcnnf-20260630.htm) (제출 2026-08-07)
-
-텔레그램: `/track CAN-713C837ADADE8D8B`
 
 ### 발굴 후보 · WDC Western Digital Corporation
 CAN-F4F37EDD5656F9BD · Computer Hardware · 미추적
@@ -1311,17 +1304,17 @@ CAN-F4F37EDD5656F9BD · Computer Hardware · 미추적
 
 **후보가 된 이유**
 
-- A 18위: 이익수익률 변화 +3.02%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- A 18위: 이익수익률 변화 +3.27%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - 최근 30일 추정 상향 2 / 하향 1, 분석가 23명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:24 UTC)**
+**숫자 (관측 2026-11-03 07:00 UTC)**
 
 - 내년 EPS 예상 (2028-06-30 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $29.34 → 30일 전 $31.75 → 현재 $40.40 (+38%)
-- 주가 2026-08-04 → 2026-10-30: -33.3% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -52% (저평가 입증 아님)
+- 주가 2026-08-05 → 2026-11-02: -34.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -53% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 78%. 근거 문장 원문 최신 제출 2026-10-22(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 78%. 근거 문장 원문 최신 제출 2026-10-22(최근 30일 시작 이후)
 - [실적] non-GAAP EPS · fiscal first quarter: 161%(변화율) — 전년 같은 기간보다 증가했다 — “In our fiscal first quarter, revenue grew 55% year over year, non-GAAP gross and operating margins expanded to 58.1% and 49.1%, respectively, resulting in a 161% year-over-year increase in non-GAAP EPS.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/106040/000162828026066882/a4ex991-pressreleaseq127.htm), 제출 2026-10-22, 기간 fiscal first quarter)
 - [실적] 매출(revenue) · fiscal first quarter: 55%(변화율·증가) — 전년 같은 기간보다 증가했다 — “In our fiscal first quarter, revenue grew 55% year over year, non-GAAP gross and operating margins expanded to 58.1% and 49.1%, respectively, resulting in a 161% year-over-year increase in non-GAAP EPS.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/106040/000162828026066882/a4ex991-pressreleaseq127.htm), 제출 2026-10-22, 기간 fiscal first quarter)
 
@@ -1341,40 +1334,36 @@ CAN-F4F37EDD5656F9BD · Computer Hardware · 미추적
 
 **출처**
 
-- [WDC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/WDC/analysis) (관측 2026-11-02)
-- [WDC daily closes](https://finance.yahoo.com/quote/WDC/history) (관측 2026-11-02)
-- [WDC company profile](https://finance.yahoo.com/quote/WDC/profile) (관측 2026-11-02)
+- [WDC analyst estimates (EPS trend)](https://finance.yahoo.com/quote/WDC/analysis) (관측 2026-11-03)
+- [WDC daily closes](https://finance.yahoo.com/quote/WDC/history) (관측 2026-11-03)
+- [WDC company profile](https://finance.yahoo.com/quote/WDC/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/106040/000162828026066882/a4ex991-pressreleaseq127.htm) (제출 2026-10-22)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/106040/000162828026053305/a4ex991-pressreleaseq426.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-F4F37EDD5656F9BD`
 
-### 발굴 후보 · EQNR Equinor ASA
-CAN-FE3575B3BB2443B0 · Oil & Gas Integrated · 미추적
+### 발굴 후보 · SIMO Silicon Motion Technology Corporation
+CAN-FFBE91764685770A · Semiconductors · 미추적
 
 **무엇으로 돈을 버나**
 
-석유 및 가스 자원 탐사, 개발, 생산, 판매와 재생에너지 사업을 통해 수익을 창출합니다.
-<small>원문(영문): Equinor ASA operates as an energy company in Norway and internationally. It operates through Exploration & Production Norway; Exploration & Production International; Exploration & Production USA; Marketing, Midstream & Processing; and Renewables segments. The company engages in the discovery and appraisal of new resources, as well as commercial development and operation of the oil and gas portfolios; oil and gas field development, well deliveries, and sourcing; research, technology development, specialist advisory services, digitalization, IT, improvement, innovation, and ventures and future b</small>
+솔리드 스테이트 저장 장치용 낸드 플래시 컨트롤러를 설계, 개발, 판매합니다.
+<small>원문(영문): Silicon Motion Technology Corporation, together with its subsidiaries, designs, develops, and markets NAND flash controllers for solid-state storage devices and related devices in China, Japan, Singapore, Taiwan, Korea, the United States, and internationally. It offers controllers for computing-grade solid state drives (SSDs), which are used in PCs and other client devices; enterprise-grade SSDs used in enterprise and hyperscale data centers; eMMC and UFS mobile embedded storage for use in smartphones and IoT devices; flash memory cards and flash drives for use in expandable storage; and speci</small>
 
 **후보가 된 이유**
 
-- A 19위: 이익수익률 변화 +2.91%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
-- 최근 30일 추정 상향 4 / 하향 0, 분석가 6명, 30일·90일 모두 상향
-- 같은 업종 동반 상향: Oil & Gas Integrated 9곳이 함께 조건 통과 — 개별 카드 3곳, 업종 제한으로 접힘 1곳(PBR-A), 일반 순위 밖 5곳. 업종 공통 요인일 수 있음(원인은 미확인)
+- A 19위: 이익수익률 변화 +3.02%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- 최근 30일 추정 상향 8 / 하향 0, 분석가 10명, 30일·90일 모두 상향
 
-**숫자 (관측 2026-11-02 06:24 UTC)**
+**숫자 (관측 2026-11-03 07:04 UTC)**
 
-- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $3.55 → 30일 전 $4.46 → 현재 $4.97 (+40%)
-- 주가 2026-08-04 → 2026-10-30: +24.5% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -11% (저평가 입증 아님)
+- 내년 EPS 예상 (2027-12-31 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $15.87 → 30일 전 $15.87 → 현재 $21.55 (+36%)
+- 주가 2026-08-05 → 2026-11-02: -23.8% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -44% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 36%. 근거 문장 원문 최신 제출 2026-10-28(최근 30일 시작 이후)
-- [실적] Adjusted operating income* · third quarter of 2026: USD 12.35 billion — 회사의 조정 영업 이익이다 — “Equinor delivered an adjusted operating income* of USD 12.35 billion in the third quarter of 2026.” ([SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/1140625/000114062526000027/equinorfinancialstatements.htm), 제출 2026-10-28, 기간 third quarter of 2026)
-- [실적] net operating income · third quarter of 2026: USD 11.95 billion — 회사의 순 영업 이익이다 — “Equinor reported a net operating income of USD 11.95 billion and a” ([SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/1140625/000114062526000027/equinorfinancialstatements.htm), 제출 2026-10-28, 기간 third quarter of 2026)
-- [실적 · 기간 미확인] Adjusted net income*: USD 2.86 billion — 회사의 조정 순이익이다 — “Adjusted net income* was USD 2.86 billion, leading to adjusted earnings per share* of USD 1.20.” ([SEC 6-K 6-K](https://www.sec.gov/Archives/edgar/data/1140625/000114062526000027/equinorfinancialstatements.htm), 제출 2026-10-28, 기간 unknown)
-- 자동 정리 문장 5개 중 3개 표시(현재 기간·이익 지표 우선). 나머지는 원문 검토에서 확인
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 100%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
+- [실적] Convertible Senior Notes · August 13, 2026: $1,150,000,000 — 전환사채 발행을 완료했다 — “On August 13, 2026, the Company completed the issuance of $1,150,000,000 aggregate principal amount of 0.00% Convertible Senior Notes due 2031 (the “Convertible Notes”), including the exercise in full of the initial purchasers’ option to purchase an additional $150,000,000 aggregate principal amount.” ([SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm), 제출 2026-10-29, 기간 August 13, 2026)
 
 **사람이 확인한 사업 근거**
 
@@ -1392,12 +1381,14 @@ CAN-FE3575B3BB2443B0 · Oil & Gas Integrated · 미추적
 
 **출처**
 
-- [EQNR analyst estimates (EPS trend)](https://finance.yahoo.com/quote/EQNR/analysis) (관측 2026-11-02)
-- [EQNR daily closes](https://finance.yahoo.com/quote/EQNR/history) (관측 2026-11-02)
-- [EQNR company profile](https://finance.yahoo.com/quote/EQNR/profile) (관측 2026-11-02)
-- [SEC 6-K 6-K — EQUINOR THIRD QUARTER 2026 REPORT](https://www.sec.gov/Archives/edgar/data/1140625/000114062526000027/equinorfinancialstatements.htm) (제출 2026-10-28)
+- [SIMO analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SIMO/analysis) (관측 2026-11-03)
+- [SIMO daily closes](https://finance.yahoo.com/quote/SIMO/history) (관측 2026-11-03)
+- [SIMO company profile](https://finance.yahoo.com/quote/SIMO/profile) (관측 2026-11-03)
+- [SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526436478/d135156dex991.htm) (제출 2026-10-29)
+- [SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526424083/d413725dex991.htm) (제출 2026-10-16)
+- [SEC 6-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1329394/000119312526349730/d149638dex991.htm) (제출 2026-08-14)
 
-텔레그램: `/track CAN-FE3575B3BB2443B0`
+텔레그램: `/track CAN-FFBE91764685770A`
 
 ### 발굴 후보 · SNDK Sandisk Corporation
 CAN-C8A9B1B7A57CB556 · Computer Hardware · 미추적
@@ -1409,17 +1400,17 @@ CAN-C8A9B1B7A57CB556 · Computer Hardware · 미추적
 
 **후보가 된 이유**
 
-- A 20위: 이익수익률 변화 +2.83%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
+- A 20위: 이익수익률 변화 +2.94%p (내년 EPS 예상 증가분 ÷ 현재 주가, 기준 1.0%p 이상)
 - 최근 30일 추정 상향 1 / 하향 0, 분석가 20명
 
-**숫자 (관측 2026-11-02 06:24 UTC)**
+**숫자 (관측 2026-11-03 07:00 UTC)**
 
-- 내년 EPS 예상 (2028-06-30 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $255.63 → 30일 전 $263.49 → 현재 $288.23 (+13%)
-- 주가 2026-08-04 → 2026-10-30: -19.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -28% (저평가 입증 아님)
+- 내년 EPS 예상 (2028-06-30 회계연도 말, USD, Yahoo Finance earningsTrend (+1y), 회계기준 미표시): 90일 전 $255.63 → 30일 전 $263.49 → 현재 $287.26 (+12%)
+- 주가 2026-08-05 → 2026-11-02: -20.4% (분할 조정 종가, 배당 미조정) · 같은 기간 PER 참고 변화 -29% (저평가 입증 아님)
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-03 이후) 몫 76%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-04 이후) 몫 75%. 근거 문장 원문 최신 제출 2026-10-29(최근 30일 시작 이후)
 - [회사 전망] Non-GAAP diluted net income per share · second quarter 2027: $55.00 to $57.001 — 회사의 예상 희석 주당 순이익이다 — “Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share on a pre-split basis in the range of $55.00 to $57.001.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndkq1-27ex991xpressrelease.htm), 제출 2026-10-29, 기간 second quarter 2027)
 - [회사 전망] 매출(revenue) · second quarter 2027: $12.2 billion to $12.6 billion — 회사의 예상 매출액이다 — “Expect second quarter 2027 revenue to be in the range of $12.2 billion to $12.6 billion, with expected Non-GAAP diluted net income per share on a pre-split basis in the range of $55.00 to $57.001.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndkq1-27ex991xpressrelease.htm), 제출 2026-10-29, 기간 second quarter 2027)
 
@@ -1441,9 +1432,9 @@ CAN-C8A9B1B7A57CB556 · Computer Hardware · 미추적
 
 **출처**
 
-- [SNDK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SNDK/analysis) (관측 2026-11-02)
-- [SNDK daily closes](https://finance.yahoo.com/quote/SNDK/history) (관측 2026-11-02)
-- [SNDK company profile](https://finance.yahoo.com/quote/SNDK/profile) (관측 2026-11-02)
+- [SNDK analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SNDK/analysis) (관측 2026-11-03)
+- [SNDK daily closes](https://finance.yahoo.com/quote/SNDK/history) (관측 2026-11-03)
+- [SNDK company profile](https://finance.yahoo.com/quote/SNDK/profile) (관측 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2023554/000162828026068243/sndkq1-27ex991xpressrelease.htm) (제출 2026-10-29)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm) (제출 2026-08-05)
 
@@ -1453,11 +1444,11 @@ CAN-C8A9B1B7A57CB556 · Computer Hardware · 미추적
 
 |종목|후보 ID|마지막 관측(KST)|이유(최신 관측 기준)|
 |---|---|---|---|
+|TRLV|`CAN-713C837ADADE8D8B`|2026-11-02|스크린 조건은 통과했지만 A·B 상위 목록 밖|
 |TBLA|`CAN-B85C9F47594458D2`|2026-11-01|스크린 조건은 통과했지만 A·B 상위 목록 밖|
 |PUBM|`CAN-C8B827862A3B86D5`|2026-10-31|최신 관측에서 스크린 조건 미충족|
 |JXN|`CAN-02BF26B752677B69`|2026-10-31|스크린 조건은 통과했지만 A·B 상위 목록 밖|
 |NBR|`CAN-E460E34B1D8B66CE`|2026-10-30|스크린 조건은 통과했지만 A·B 상위 목록 밖|
-|SIMO|`CAN-FFBE91764685770A`|2026-10-30|스크린 조건은 통과했지만 A·B 상위 목록 밖|
 |CBRL|`CAN-DF76D3AD7ADC73CF`|2026-10-29|스크린 조건은 통과했지만 A·B 상위 목록 밖|
 |INDV|`CAN-14DF13D991DA6490`|2026-10-28|최신 관측에서 스크린 조건 미충족|
 |OSCR|`CAN-7D75F8332DBCEEFC`|2026-10-28|스크린 조건은 통과했지만 A·B 상위 목록 밖|
