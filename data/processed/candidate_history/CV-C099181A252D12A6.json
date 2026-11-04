@@ -1,0 +1,195 @@
+{
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "candidate_version": "CV-C099181A252D12A6",
+  "identity": {
+    "entity_id": "NYSE:TXO",
+    "ticker": "TXO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "TXO Partners, L.P.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유, 천연가스 및 천연가스액 매장량을 인수, 개발, 최적화, 채굴합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "TXO Partners, L.P., an oil and natural gas company, focuses on the acquisition, development, optimization, and exploitation of conventional oil, natural gas, and natural gas liquid reserves in North America. Its acreage positions are concentrated in the Permian Basin of West Texas and New Mexico; the San Juan Basin of New Mexico and Colorado; and the Williston Basin of Montana and North Dakota. TXO Partners, L.P. was formerly known as TXO Energy Partners, L.P. and changed its name to TXO Partners, L.P. in May 2023. The company was incorporated in 2012 and is based in Fort Worth, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TXO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TXO/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-04T06:52:06+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TXO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TXO/history",
+      "published_at": null,
+      "observed_at": "2026-11-04T06:52:06+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TXO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TXO/profile",
+      "published_at": null,
+      "observed_at": "2026-11-04T06:52:06+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-98272792DA0BEC82",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1559432/000155943226000021/txo-20260930.htm",
+      "title": "SEC 10-Q 10-Q",
+      "published_at": null,
+      "filed_at": "2026-11-03",
+      "observed_at": "2026-11-04T06:55:17+00:00",
+      "fields": "10-Q 10-Q"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-20C7AF53A4C5DD60",
+    "input_sha": "20c7af53a4c5dd607a478b02fce53bd76a7848cefa9a08081e7cc477c79ce363",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[joint venture] net income (loss) · three months ended September 30, 2026: $1.0 million — 합작 투자의 순이익이다",
+        "note_ko": "합작 투자의 순이익이다",
+        "kind": "fact",
+        "quote": "The net income (loss) related to the joint venture properties, net to TXO Partners, was income of $1.0 million for the three months ended September 30, 2026",
+        "document_id": "DOC-98272792DA0BEC82",
+        "block_id": "p75",
+        "metric": "net income (loss)",
+        "figures": [
+          "$1.0 million"
+        ],
+        "period": "three months ended September 30, 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "subsidiary",
+        "subject_name": "joint venture",
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "Cash available for distribution — 배당 가능한 현금은 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금 흐름의 척도가 아니다",
+        "note_ko": "배당 가능한 현금은 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금 흐름의 척도가 아니다",
+        "kind": "fact",
+        "quote": "Cash available for distribution is not a measure of net income or net cash flow provided by or used in operating activities as determined by GAAP.",
+        "document_id": "DOC-98272792DA0BEC82",
+        "block_id": "p303",
+        "metric": "Cash available for distribution",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "회사의 영업활동 현금흐름이 전년 동기 대비 증가했는가?",
+      "회사의 배당금이 전년 동기 대비 감소했는가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-98272792DA0BEC82",
+        "title": "10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1559432/000155943226000021/txo-20260930.htm",
+        "filed_at": "2026-11-03",
+        "observed_at": "2026-11-04T06:55:17+00:00",
+        "form": "10-Q",
+        "document_type": "10-Q"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-04T06:55:45+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.9625,
+    "eps_30d": 1.30667,
+    "eps_90d": 0.97,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 102.3,
+    "steady": true,
+    "turnaround": false
+  }
+}

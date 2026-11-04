@@ -2106,6 +2106,58 @@
       "payload_text": "📡 새 발굴 신호 · 2026-11-03\n\n<b>🅱️ FLNC · 6/12점</b>\nSIG-0921 · 검토 우선순위 B · Energy Storage\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Fluence Energy가 2026년 3분기 실적 발표에서 64억 달러의 사상 최대 수주잔고를 기록했다고 밝혔다.\n· 왜 중요: 사상 최대 수주잔고는 Fluence의 에너지 저장 솔루션에 대한 강력한 수요를 보여주며, 재생에너지 부문에서 미래 매출 성장과 시장 선도 가능성을 시사한다.\n· 볼 것: 향후 수주 추이 및 수주잔고의 매출 전환율\n· 용어: Backlog (수주잔고): 고객과 계약이 체결되었으나 아직 매출로 인식되지 않은 미이행 주문 금액. Energy Density (에너지 밀도): 단위 부피 또는 질량당 저장할 수 있는 에너지의 양.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1868941/000110465926120941/tm2628729d1_ex99-2.htm\">SEC EDGAR</a> (2026-11-02)\n\n추적 <code>/track SIG-0921</code>",
       "payload_sha256": "d206c18fa0a5d57d910908c2150492cb76d299c74e4a7cf9e05923b7bcc19216",
       "message_id": 231
+    },
+    "CIK:0001821769|ai infrastructure|new_discovery": {
+      "channel": "news",
+      "event": "new_discovery",
+      "entity_id": "CIK:0001821769",
+      "thesis_key": "ai infrastructure",
+      "candidate_id": null,
+      "candidate_version": null,
+      "observation_id": null,
+      "signal_id": "SIG-0924",
+      "day": "2026-11-04",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41786819708-1",
+      "reserved_at": "2026-11-04T06:56:21+00:00",
+      "payload_text": "📡 새 발굴 신호 · 2026-11-04\n\n<b>🅱️ NVTS · 8/12점</b>\nSIG-0924 · 검토 우선순위 B · AI Infrastructure\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Navitas Semiconductor가 AI 데이터센터 및 그리드/에너지 인프라 시장에 힘입어 기록적인 백로그를 달성했으며, 4분기에도 두 자릿수 성장을 예상하고 있다.\n· 왜 중요: AI 인프라 시장으로의 성공적인 진출과 기록적인 수주잔고는 Navitas의 고성장 동력을 확보하고 있으며, 모바일 시장 철수에도 불구하고 전체 매출 성장을 견인할 핵심적인 투자 포인트이다.\n· 볼 것: AI 인프라 시장 매출 비중 변화 및 2027년 이후 성장 가이던스.\n· 용어: 백로그(Backlog): 고객으로부터 주문을 받았으나 아직 인도되지 않은 물량 또는 금액.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1821769/000162828026069489/exhibit991-navitassemicond.htm\">SEC EDGAR</a> (2026-11-03)\n\n추적 <code>/track SIG-0924</code>",
+      "payload_sha256": "1f006edf53961564c574694edece8c787c647010695c2d4ef19b7682f12e9537"
+    },
+    "NYSE:STNG|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:STNG",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-3BD5E965B73FD420",
+      "candidate_version": "CV-DB521EB7D5A58138",
+      "observation_id": "OB-D33F120795E5525F",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-11-04",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41786819708-1",
+      "reserved_at": "2026-11-04T06:56:21+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · STNG Scorpio Tankers Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n원유와 정제 석유 제품을 해상으로 운송하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $5.80 → 지금 $9.20 (+59%) · 주가 같은 기간 +14.3%\n\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+2%)\n👍 주가는 같은 90일에 +14%로, 이익 예상 상향(+59%)보다 덜 움직임\n👎 최근 30일 분석가 9명 중 2명만 올림 — 일부 분석가의 상향\n❓ 10/28 회사 공식 발표(SEC 6-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-3BD5E965B73FD420</code> · 추적 <code>/track CAN-3BD5E965B73FD420</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "a5ce9a18a4baa596c88ac087f12a1984f14e68a1cee69c3289d03c4e19f3c02f"
+    },
+    "CIK:0001001385|인프라|new_discovery": {
+      "channel": "news",
+      "event": "new_discovery",
+      "entity_id": "CIK:0001001385",
+      "thesis_key": "인프라",
+      "candidate_id": null,
+      "candidate_version": null,
+      "observation_id": null,
+      "signal_id": "SIG-0926",
+      "day": "2026-11-04",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41786819708-1",
+      "reserved_at": "2026-11-04T06:56:21+00:00",
+      "payload_text": "📡 새 발굴 신호 · 2026-11-04\n\n<b>🅱️ NWPX · 6/12점</b>\nSIG-0926 · 검토 우선순위 B · 인프라\n근거: realized · 변화 방향: positive\n\n· 무슨 일: NWPX Infrastructure가 2026년 3분기 실적 발표에서 WTS(Water Transmission Systems) 부문에서 4억 3천 5백만 달러의 사상 최대 백로그를 포함한 총 백로그를 기록했다고 발표했습니다.\n· 왜 중요: 사상 최대 백로그는 향후 매출 성장에 대한 가시성을 높이고, 특히 수자원 인프라 부문의 견조한 수요를 반영하여 회사의 실적 레버리지를 기대하게 합니다.\n· 볼 것: 2027년 가이던스 및 수주잔고 추이, WTS 부문의 신규 프로젝트 수주 현황.\n· 용어: 백로그(Backlog): 기업이 계약했지만 아직 수행하지 않은 주문 또는 프로젝트의 총액. WTS(Water Transmission Systems): 수자원 전송 시스템.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1001385/000143774926033798/ex_996700.htm\">SEC EDGAR</a> (2026-10-28)\n\n추적 <code>/track SIG-0926</code>",
+      "payload_sha256": "3e7fb267de17c1b9d7590ad5f17cd82aeb52ec0f1a2fec22df7d6457945db8f9"
     }
   },
   "bootstrap": {
@@ -2178,6 +2230,24 @@
           "day": "2026-10-31",
           "snapshot_sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
           "eps_now": 1.76,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:DINO|eps-revision-review:v1": {
+        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+        "first": {
+          "observation_id": "OB-90897C1DDCAA163B",
+          "baseline_id": "OB-90897C1DDCAA163B",
+          "observed_at": "2026-11-04T06:55:14+00:00",
+          "day": "2026-11-04",
+          "snapshot_sha256": "482627adcad77b1dd42686fcbf9baeb3b524a7d618157687b11cea9300a162b8",
+          "eps_now": 17.8997,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",

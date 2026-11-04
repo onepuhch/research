@@ -1,48 +1,48 @@
 {
   "eps": {
-    "checked_at": "2026-11-03T06:59:37+00:00",
+    "checked_at": "2026-11-04T06:41:02+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T06:59:37+00:00",
+    "last_success_at": "2026-11-04T06:41:02+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-11-03T06:58:10+00:00",
+    "checked_at": "2026-11-04T06:39:21+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T06:58:10+00:00",
-    "item_count": 82,
+    "last_success_at": "2026-11-04T06:39:21+00:00",
+    "item_count": 89,
     "errors": [],
-    "collected_at": "2026-11-03T06:58:10.361526+00:00"
+    "collected_at": "2026-11-04T06:39:21.966188+00:00"
   },
   "extract": {
-    "checked_at": "2026-11-03T06:59:36+00:00",
+    "checked_at": "2026-11-04T06:41:01+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T06:59:36+00:00",
-    "accepted": 3,
+    "last_success_at": "2026-11-04T06:41:01+00:00",
+    "accepted": 4,
     "deferred_budget": 0,
-    "rejected": 2,
-    "validation_rejected": 2,
-    "validation_rejected_total": 69,
+    "rejected": 1,
+    "validation_rejected": 1,
+    "validation_rejected_total": 70,
     "failed": 0,
     "unserved_failed": 0,
     "overload_deferred": 0,
-    "expired": 1,
-    "processed_today": 3,
+    "expired": 0,
+    "processed_today": 4,
     "open_errors": 0,
     "open_unserved": 0,
-    "pending": 61,
+    "pending": 72,
     "outcome": "ok",
-    "day": "2026-11-03",
-    "run_id": "41593080532-1",
+    "day": "2026-11-04",
+    "run_id": "41786819708-1",
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-11-03T19:38:26+00:00",
+    "checked_at": "2026-11-04T06:38:25+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T19:38:26+00:00",
+    "last_success_at": "2026-11-04T06:38:25+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -58,14 +58,14 @@
     "last_success_at": "2026-11-02T06:38:56+00:00"
   },
   "notify": {
-    "checked_at": "2026-11-03T06:59:38+00:00",
+    "checked_at": "2026-11-04T06:41:03+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T06:59:38+00:00"
+    "last_success_at": "2026-11-04T06:41:03+00:00"
   },
   "prices": {
-    "checked_at": "2026-11-03T07:13:53+00:00",
+    "checked_at": "2026-11-04T06:55:17+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T07:13:53+00:00",
+    "last_success_at": "2026-11-04T06:55:17+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
@@ -78,19 +78,19 @@
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-11-03T06:59:39+00:00",
+    "checked_at": "2026-11-04T06:41:04+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T06:59:39+00:00",
+    "last_success_at": "2026-11-04T06:41:04+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-11-03T07:13:52+00:00",
+    "checked_at": "2026-11-04T06:55:16+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T07:13:52+00:00",
-    "snapshot": "20261103T065939Z_41593080532-1.json.gz",
-    "candidates": 103,
+    "last_success_at": "2026-11-04T06:55:16+00:00",
+    "snapshot": "20261104T064105Z_41786819708-1.json.gz",
+    "candidates": 97,
     "alert": false,
     "stages": {
       "universe": {
@@ -102,39 +102,39 @@
         "success": 1
       },
       "quotes": {
-        "requested": 7628,
-        "success": 7628
+        "requested": 7625,
+        "success": 7625
       },
       "earnings": {
-        "requested": 3191,
-        "success": 2413,
-        "unavailable": 778
+        "requested": 3190,
+        "success": 2405,
+        "unavailable": 785
       },
       "profile": {
-        "requested": 103,
-        "success": 103
+        "requested": 97,
+        "success": 97
       },
       "price": {
-        "requested": 28,
-        "success": 28
+        "requested": 30,
+        "success": 30
       }
     }
   },
   "cards": {
-    "checked_at": "2026-11-03T07:14:23+00:00",
+    "checked_at": "2026-11-04T06:56:15+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T07:14:23+00:00",
+    "last_success_at": "2026-11-04T06:56:15+00:00",
     "translation": {
-      "requested": 0,
-      "translated": 0,
+      "requested": 1,
+      "translated": 1,
       "rejected": 0,
       "failed_calls": 0,
-      "calls": 0
+      "calls": 1
     },
-    "new_versions": 15,
-    "new_observations": 38,
+    "new_versions": 20,
+    "new_observations": 37,
     "migrated_legacy": 0,
-    "cards": 28,
+    "cards": 30,
     "unidentified": 0,
     "stale": []
   },
@@ -159,60 +159,56 @@
     "selected": 2
   },
   "candidate_context": {
-    "checked_at": "2026-11-03T07:14:21+00:00",
+    "checked_at": "2026-11-04T06:56:08+00:00",
     "status": "success",
-    "last_success_at": "2026-11-03T07:14:21+00:00",
+    "last_success_at": "2026-11-04T06:56:08+00:00",
     "held": [],
     "researched": 10,
     "statuses": {
       "success": 10
     },
-    "targets": 38,
+    "targets": 37,
     "current": {
       "CAN-1F6D82ED5782C3F5": "2027-12-31",
       "CAN-5790099EDC6F3301": "2027-12-31",
       "CAN-82719B27698E3C22": "2027-12-31",
       "CAN-D577F2C38FBBCFF7": "2027-12-31",
       "CAN-7F0690B785E31226": "2027-12-31",
-      "CAN-77F79A3B05ABB893": "2027-12-31",
+      "CAN-11B1565B12AFE2F9": "2027-12-31",
       "CAN-3968C0864F9CF991": "2027-12-31",
       "CAN-0733D6B2B6A41784": "2027-12-31",
       "CAN-F451582E2056444F": "2027-12-31",
       "CAN-D5F91D853BD4402E": "2027-12-31",
       "CAN-36582E27909720FE": "2027-12-31",
       "CAN-FD88AA0D924CF1C8": "2027-12-31",
+      "CAN-77F79A3B05ABB893": "2027-12-31",
       "CAN-5FD7409FDFE8F5EA": "2028-06-30",
-      "CAN-E95987D989EF1145": "2027-12-31",
-      "CAN-43EA86A18E5096A9": "2028-08-31",
-      "CAN-4E5151866E863998": "2028-06-30",
-      "CAN-7506B6BECE695B39": "2027-12-31",
-      "CAN-782282A0C20A29F1": "2028-01-31",
       "CAN-B42E091E8BC42B9F": "2027-12-31",
       "CAN-FC7BBBC12A5093CF": "2027-12-31",
+      "CAN-4E5151866E863998": "2028-06-30",
+      "CAN-E95987D989EF1145": "2027-12-31",
+      "CAN-782282A0C20A29F1": "2028-01-31",
+      "CAN-7506B6BECE695B39": "2027-12-31",
+      "CAN-43EA86A18E5096A9": "2028-08-31",
       "CAN-76DD3777C06E7825": "2027-12-31",
-      "CAN-486C908614BC89B1": "2027-12-31",
-      "CAN-8ED72F330C1AE34D": "2027-12-31",
       "CAN-ECB2C73CA19DA4AB": "2027-12-31",
-      "CAN-A00785AF9CF7E07A": "2027-12-31",
+      "CAN-8ED72F330C1AE34D": "2027-12-31",
+      "CAN-486C908614BC89B1": "2027-12-31",
+      "CAN-3BD5E965B73FD420": "2027-12-31",
       "CAN-F4F37EDD5656F9BD": "2028-06-30",
       "CAN-FFBE91764685770A": "2027-12-31",
       "CAN-C8A9B1B7A57CB556": "2028-06-30",
+      "CAN-C05377BEC03AE25C": "2027-12-31",
       "CAN-93F2BA020F4C5D68": "2027-12-31",
       "CAN-B50C69675A4DBCEA": "2027-12-31",
       "CAN-BA5D4320F9188F9F": "2027-12-31",
-      "CAN-2365AA0167A432A4": "2027-12-31",
       "CAN-FE3575B3BB2443B0": "2027-12-31",
       "CAN-325B2A6C30755476": "2027-12-31",
       "CAN-3D30FF7D03231FE1": "2027-12-31",
-      "CAN-11B1565B12AFE2F9": "2027-12-31",
-      "CAN-FDA6B7F62852042F": "2027-12-31",
-      "CAN-3BD5E965B73FD420": "2027-12-31"
+      "CAN-FDA6B7F62852042F": "2027-12-31"
     },
     "folded": [
-      "CAN-11B1565B12AFE2F9",
-      "CAN-2365AA0167A432A4",
       "CAN-325B2A6C30755476",
-      "CAN-3BD5E965B73FD420",
       "CAN-3D30FF7D03231FE1",
       "CAN-93F2BA020F4C5D68",
       "CAN-B50C69675A4DBCEA",
@@ -221,18 +217,18 @@
       "CAN-FE3575B3BB2443B0"
     ],
     "alert_first": [
-      "CAN-FFBE91764685770A"
+      "CAN-3BD5E965B73FD420"
     ],
-    "http_attempts": 42,
+    "http_attempts": 54,
     "coverage": {
-      "success": 37,
+      "success": 36,
       "no_relevant_document": 1
     },
     "drafts": {
-      "requests": 1,
+      "requests": 4,
       "drafted": 1,
-      "insufficient_earnings_context": 0,
-      "no_supported_claims": 0,
+      "insufficient_earnings_context": 1,
+      "no_supported_claims": 2,
       "deferred": 0,
       "failed": 0
     }

@@ -1,0 +1,213 @@
+{
+  "context_id": "CTX-25614AF312747642",
+  "candidate_id": "CAN-F451582E2056444F",
+  "ticker": "CVI",
+  "issuer_cik": "0001376139",
+  "document_ids": [
+    "DOC-F914F8CCEEB838A9",
+    "DOC-10DCC661422C1107"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-F914F8CCEEB838A9#t1",
+    "DOC-F914F8CCEEB838A9#t2",
+    "DOC-F914F8CCEEB838A9#t3",
+    "DOC-F914F8CCEEB838A9#p5",
+    "DOC-F914F8CCEEB838A9#p6",
+    "DOC-F914F8CCEEB838A9#t6",
+    "DOC-F914F8CCEEB838A9#t7",
+    "DOC-F914F8CCEEB838A9#p12",
+    "DOC-F914F8CCEEB838A9#p25",
+    "DOC-F914F8CCEEB838A9#p37",
+    "DOC-F914F8CCEEB838A9#p38",
+    "DOC-F914F8CCEEB838A9#p39",
+    "DOC-F914F8CCEEB838A9#p43",
+    "DOC-F914F8CCEEB838A9#p46",
+    "DOC-F914F8CCEEB838A9#p52",
+    "DOC-F914F8CCEEB838A9#t9",
+    "DOC-F914F8CCEEB838A9#t12",
+    "DOC-F914F8CCEEB838A9#t21",
+    "DOC-F914F8CCEEB838A9#p72",
+    "DOC-F914F8CCEEB838A9#t31",
+    "DOC-F914F8CCEEB838A9#p76",
+    "DOC-F914F8CCEEB838A9#p77",
+    "DOC-F914F8CCEEB838A9#p80",
+    "DOC-F914F8CCEEB838A9#p83",
+    "DOC-10DCC661422C1107#p10",
+    "DOC-10DCC661422C1107#t2",
+    "DOC-10DCC661422C1107#p16",
+    "DOC-10DCC661422C1107#p49",
+    "DOC-10DCC661422C1107#p83",
+    "DOC-10DCC661422C1107#p90"
+  ],
+  "input_sha": "25614af31274764254829eb1ce0861ffc4d38ce8a9946d3ac53e2b97502b8cd7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-04T06:55:45+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net income attributable to CVR Energy stockholders · Third quarter 2026: $570 million — 회사의 순이익이다",
+      "note_ko": "회사의 순이익이다",
+      "kind": "fact",
+      "quote": "Third quarter 2026 net income attributable to CVR Energy stockholders of $570 million",
+      "document_id": "DOC-F914F8CCEEB838A9",
+      "block_id": "t2",
+      "metric": "net income attributable to CVR Energy stockholders",
+      "figures": [
+        "$570 million"
+      ],
+      "period": "Third quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Third quarter 2026: $582 million — 회사의 조정 EBITDA이다",
+      "note_ko": "회사의 조정 EBITDA이다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA of $582 million",
+      "document_id": "DOC-F914F8CCEEB838A9",
+      "block_id": "t2",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$582 million"
+      ],
+      "period": "Third quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "net income attributable to CVR Energy stockholders · third quarter 2026: $570 million — 회사의 순이익은 전년 같은 기간보다 늘었다",
+      "note_ko": "회사의 순이익은 전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "CVR Energy, Inc. (“CVR Energy” or the “Company”) (NYSE: CVI) today announced its third quarter 2026 results including a net income attributable to CVR Energy stockholders of $570 million, or $5.67 per diluted share, and an adjusted earnings per diluted share of $4.00, compared to net income attributable to CVR Energy stockholders of $374 million, or $3.72 per diluted share, and an adjusted earnings per diluted share of 40 cents for the third quarter of 2025.",
+      "document_id": "DOC-F914F8CCEEB838A9",
+      "block_id": "p5",
+      "metric": "net income attributable to CVR Energy stockholders",
+      "figures": [
+        "$570 million"
+      ],
+      "period": "third quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter of 2026: $582 million — 회사의 조정 EBITDA는 전년 같은 기간보다 늘었다",
+      "note_ko": "회사의 조정 EBITDA는 전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA for the third quarter of 2026 was $582 million compared to $180 million for the third quarter of 2025.",
+      "document_id": "DOC-F914F8CCEEB838A9",
+      "block_id": "p5",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$582 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_period",
+      "note_ko": "EPA의 결정으로 대차대조표에서 부채가 제거되었다",
+      "figures": [
+        "$253 million"
+      ],
+      "quote": "$253 million liability removed from balance sheet due to the EPA’s August 2026 decision granting a full waiver for Wynnewood Refining Company, LLC (“WRC”) for the 2025 compliance period",
+      "where": "DOC-F914F8CCEEB838A9#t3"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "조정 EBITDA는 GAAP 재무 측정치의 대체물로 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "Non-GAAP measures have important limitations as analytical tools, because they exclude some, but not all, items that affect net earnings and operating income. These measures should not be considered s",
+      "where": "DOC-F914F8CCEEB838A9#p46"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "조정 EBITDA는 GAAP 재무 측정치의 대체물로 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "Non-GAAP measures have important limitations as analytical tools, because they exclude some, but not all, items that affect net earnings and operating income. These measures should not be considered s",
+      "where": "DOC-10DCC661422C1107#p49"
+    }
+  ],
+  "context_status": "draft_ready"
+}

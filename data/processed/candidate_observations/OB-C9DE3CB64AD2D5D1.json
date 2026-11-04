@@ -1,0 +1,104 @@
+{
+  "observation_id": "OB-C9DE3CB64AD2D5D1",
+  "candidate_id": "CAN-93F2BA020F4C5D68",
+  "candidate_version": "CV-C8F90B735541F228",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:SM",
+    "ticker": "SM",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-04T06:45:14+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261104T064105Z_41786819708-1.json.gz",
+    "sha256": "482627adcad77b1dd42686fcbf9baeb3b524a7d618157687b11cea9300a162b8",
+    "run_id": "41786819708-1",
+    "finished_at": "2026-11-04T06:55:14+00:00"
+  },
+  "eps": {
+    "eps_now": 8.51157,
+    "eps_30d": 7.69006,
+    "eps_90d": 7.33659,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 12,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 16.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.204,
+    "yield_change_30_pp": 2.24
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 8722108416,
+  "context_id": "CTX-4140CC27ABC54280",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-02T06:37:57+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 16,
+    "shown": [
+      "CRGY",
+      "TXO",
+      "GRNT"
+    ],
+    "folded": [
+      "SM",
+      "CHRD",
+      "NOG"
+    ],
+    "outside": [
+      "COP",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "AR",
+      "MTDR",
+      "MUR",
+      "KOS"
+    ]
+  },
+  "entity_id": "NYSE:SM",
+  "approval_version": null,
+  "rendered_at": "2026-11-04T06:56:08+00:00"
+}

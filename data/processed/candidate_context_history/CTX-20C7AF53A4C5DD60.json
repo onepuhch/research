@@ -1,0 +1,151 @@
+{
+  "context_id": "CTX-20C7AF53A4C5DD60",
+  "candidate_id": "CAN-0733D6B2B6A41784",
+  "ticker": "TXO",
+  "issuer_cik": "0001559432",
+  "document_ids": [
+    "DOC-98272792DA0BEC82"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-98272792DA0BEC82#t9",
+    "DOC-98272792DA0BEC82#p67",
+    "DOC-98272792DA0BEC82#p75",
+    "DOC-98272792DA0BEC82#p89",
+    "DOC-98272792DA0BEC82#p143",
+    "DOC-98272792DA0BEC82#p146",
+    "DOC-98272792DA0BEC82#p280",
+    "DOC-98272792DA0BEC82#p300",
+    "DOC-98272792DA0BEC82#p303"
+  ],
+  "input_sha": "20c7af53a4c5dd607a478b02fce53bd76a7848cefa9a08081e7cc477c79ce363",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-04T06:55:45+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[joint venture] net income (loss) · three months ended September 30, 2026: $1.0 million — 합작 투자의 순이익이다",
+      "note_ko": "합작 투자의 순이익이다",
+      "kind": "fact",
+      "quote": "The net income (loss) related to the joint venture properties, net to TXO Partners, was income of $1.0 million for the three months ended September 30, 2026",
+      "document_id": "DOC-98272792DA0BEC82",
+      "block_id": "p75",
+      "metric": "net income (loss)",
+      "figures": [
+        "$1.0 million"
+      ],
+      "period": "three months ended September 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "subsidiary",
+      "subject_name": "joint venture",
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "Cash available for distribution — 배당 가능한 현금은 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금 흐름의 척도가 아니다",
+      "note_ko": "배당 가능한 현금은 GAAP에 따라 결정된 순이익 또는 영업 활동으로 인한 순현금 흐름의 척도가 아니다",
+      "kind": "fact",
+      "quote": "Cash available for distribution is not a measure of net income or net cash flow provided by or used in operating activities as determined by GAAP.",
+      "document_id": "DOC-98272792DA0BEC82",
+      "block_id": "p303",
+      "metric": "Cash available for distribution",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "회사의 영업활동 현금흐름이 전년 동기 대비 증가했는가?",
+    "회사의 배당금이 전년 동기 대비 감소했는가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순손실이다",
+      "figures": [
+        "$(45,653)"
+      ],
+      "quote": "Net (loss) income ; $(45,653)",
+      "where": "DOC-98272792DA0BEC82#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업활동 현금흐름이다",
+      "figures": [
+        "116,173"
+      ],
+      "quote": "Cash Provided by Operating Activities ; 116,173",
+      "where": "DOC-98272792DA0BEC82#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 배당금이다",
+      "figures": [
+        "(58,755)"
+      ],
+      "quote": "Distributions ; (58,755)",
+      "where": "DOC-98272792DA0BEC82#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "석유 선물 및 매도 베이시스 스왑 계약의 순결제가 석유 매출을 감소시켰다",
+      "figures": [
+        "$59.2 million"
+      ],
+      "quote": "Net settlements on oil futures and sell basis swap contracts decreased oil revenues by $59.2 million in the nine months ended September 30, 2026",
+      "where": "DOC-98272792DA0BEC82#p143"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 예측 가능한 미래에 비용 구조에 대한 인플레이션 압력을 경험할 것으로 예상한다",
+      "figures": [],
+      "quote": "Nevertheless, we expect for the foreseeable future to experience inflationary pressure on our cost structure.",
+      "where": "DOC-98272792DA0BEC82#p280"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 이러한 비용 증가가 단기적으로 역전될 것으로 예상하지 않는다",
+      "figures": [],
+      "quote": "We do not expect these cost increases to reverse in the short term.",
+      "where": "DOC-98272792DA0BEC82#p280"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

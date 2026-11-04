@@ -183,29 +183,47 @@
         "exchange": "NYSE",
         "name": "Delek US Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-28T06:09:33+00:00",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
       "eps_key": "2027-12-31|9.32114",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-80DB053BD25896A0"
       ],
       "examined": [
+        "DOC-48AC4C06B69286C4",
+        "DOC-715A07BE562628EF",
         "DOC-FA8A26E78512BA94",
         "DOC-77D6AE80EAB3B680",
         "DOC-8C1023DB31E461B2",
         "DOC-80DB053BD25896A0"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-04T06:09:33+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-B8DFC6207093AAB5",
       "context_input_sha": "b8dfc6207093aab545cc58f460fcd8e6fbe69c6cacbcbaf64870a0ae7bcd5d8b",
       "quality": "complete",
       "failures": 0,
       "update_checks": [
+        {
+          "document_id": "DOC-48AC4C06B69286C4",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-715A07BE562628EF",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-FA8A26E78512BA94",
           "eligible": false,
@@ -630,10 +648,10 @@
         "exchange": "NYSE",
         "name": "Par Pacific Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-27T05:30:48+00:00",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
       "eps_key": "2027-12-31|16.63357",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -647,7 +665,7 @@
         "DOC-45EC7F1F3C20E448"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-03T05:30:48+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-B16E725406B87B63",
       "context_input_sha": "b16e725406b87b6379f19ce47501a0e83259e4135bdeb929c4031daad8577768",
@@ -785,11 +803,11 @@
         "exchange": "NYSE",
         "name": "Valero Energy Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "67da093c67735ef6dd1182a5ab95040559c99456a8724b740196b7cd00e75f77",
-        "mapping_observed_at": "2026-11-02T06:23:45+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-11-03T07:13:53+00:00",
-      "eps_key": "2027-12-31|53.55512",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
+      "eps_key": "2027-12-31|53.49457",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-8A354EB4350A298C",
@@ -806,7 +824,7 @@
         "DOC-9DA9F71500981FB2"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-10T07:13:53+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-3DDE78FB9580E315",
       "context_input_sha": "3dde78fb9580e31548bd04ca6da9f964025d30889d01557031ebc6305477eb97",
@@ -919,11 +937,11 @@
         "exchange": "NYSE",
         "name": "HF Sinclair Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
-        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-11-01T06:37:05+00:00",
-      "eps_key": "2027-12-31|17.32345",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
+      "eps_key": "2027-12-31|17.8997",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-655F8C9B28D85298",
@@ -938,7 +956,7 @@
         "DOC-0F62310DD65064FB"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-08T06:37:05+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-DD9CC1A221943D80",
       "context_input_sha": "dd9cc1a221943d802049204b9c93194425ad800259f36582f2ef1ea61ecbfda1",
@@ -1427,11 +1445,11 @@
         "exchange": "NYSE",
         "name": "Phillips 66",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "67da093c67735ef6dd1182a5ab95040559c99456a8724b740196b7cd00e75f77",
-        "mapping_observed_at": "2026-11-02T06:23:45+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-11-03T07:13:53+00:00",
-      "eps_key": "2027-12-31|31.26387",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
+      "eps_key": "2027-12-31|31.39683",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-23671C7EDB4EC913",
@@ -1444,7 +1462,7 @@
         "DOC-D9C0CECC172F9418"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-10T07:13:53+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-0E54F861A8D5F143",
       "context_input_sha": "0e54f861a8d5f143c12e09a6b01f893d6a7ad8f8c538d084a748fb21003fc92f",
@@ -1684,28 +1702,55 @@
         "exchange": "NYSE",
         "name": "TXO Partners, L.P.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-28T06:09:33+00:00",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
       "eps_key": "2027-12-31|1.9625",
       "eps_target_period": "2027-12-31",
       "document_ids": [
-        "DOC-439BA8AE037B9273"
+        "DOC-98272792DA0BEC82"
       ],
       "quality": "complete",
       "failures": 0,
       "examined": [
-        "DOC-439BA8AE037B9273"
+        "DOC-2AF3BB1AA7FD79F6",
+        "DOC-FBE465FE1A8D62BE",
+        "DOC-98272792DA0BEC82",
+        "DOC-777F04F156DE4CE7"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-04T06:09:33+00:00",
-      "draft_status": "no_supported_claims",
-      "context_id": "CTX-72174EE1E8789D42",
-      "context_input_sha": "72174ee1e8789d42d4c05e58dccedbcbeba6b089715c33e3201b11c14777f964",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-20C7AF53A4C5DD60",
+      "context_input_sha": "20c7af53a4c5dd607a478b02fce53bd76a7848cefa9a08081e7cc477c79ce363",
       "update_checks": [
         {
-          "document_id": "DOC-439BA8AE037B9273",
+          "document_id": "DOC-2AF3BB1AA7FD79F6",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-FBE465FE1A8D62BE",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-777F04F156DE4CE7",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-98272792DA0BEC82",
           "eligible": true,
           "search_eligible": true,
           "alert_eligible": true,
@@ -1932,29 +1977,66 @@
         "exchange": "NYSE",
         "name": "CVR Energy, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-28T06:09:33+00:00",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
       "eps_key": "2027-12-31|4.55204",
       "eps_target_period": "2027-12-31",
       "document_ids": [
+        "DOC-F914F8CCEEB838A9",
         "DOC-10DCC661422C1107"
       ],
       "quality": "complete",
       "failures": 0,
       "examined": [
-        "DOC-10DCC661422C1107"
+        "DOC-D1DC6662A60C3067",
+        "DOC-9CDD6DAD4E3AC512",
+        "DOC-F914F8CCEEB838A9",
+        "DOC-10DCC661422C1107",
+        "DOC-FDB3CA90E64ABA3F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-04T06:09:33+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "draft_ready",
       "draft_error": "TimeoutError",
       "draft_failure": "failed",
       "draft_http_status": null,
-      "context_id": "CTX-B31EF21C734B1D73",
-      "context_input_sha": "b31ef21c734b1d73c587a96b277e7926465dfcba105fa0c2ff68087182410038",
+      "context_id": "CTX-25614AF312747642",
+      "context_input_sha": "25614af31274764254829eb1ce0861ffc4d38ce8a9946d3ac53e2b97502b8cd7",
       "update_checks": [
+        {
+          "document_id": "DOC-D1DC6662A60C3067",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-9CDD6DAD4E3AC512",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-FDB3CA90E64ABA3F",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-F914F8CCEEB838A9",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-10DCC661422C1107",
           "eligible": false,
@@ -2166,10 +2248,10 @@
         "exchange": "Nasdaq",
         "name": "VSE Corporation",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "f5a8b5c09137999ca3815f91df8b97a3602f24d0818255001e38bc77aae9c472",
-        "mapping_observed_at": "2026-10-27T05:16:38+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-27T05:30:48+00:00",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
       "eps_key": "2027-12-31|8.26462",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -2191,7 +2273,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-03T05:30:48+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-A745AD1259E26C4D",
       "context_input_sha": "a745ad1259e26c4de75d41e011bf480de5053d3041f2a872c1999dbe0d7353ee"
@@ -3151,13 +3233,14 @@
         "exchange": "NYSE",
         "name": "Crescent Energy Company",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
-        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-30T06:14:31+00:00",
-      "eps_key": "2027-12-31|2.90282",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
+      "eps_key": "2027-12-31|3.01976",
       "eps_target_period": "2027-12-31",
       "document_ids": [
+        "DOC-8248216B02ABA81A",
         "DOC-6994CC44D493B12A",
         "DOC-95C482A2DC3DAF89"
       ],
@@ -3167,6 +3250,7 @@
         "DOC-188B845617356A09",
         "DOC-5BD74A83A74E2BA8",
         "DOC-E7859F8E4E9E7030",
+        "DOC-8248216B02ABA81A",
         "DOC-E85890660884DB84",
         "DOC-14BD33CD4FDE8ABB",
         "DOC-7DAB1B88C679C2A6",
@@ -3198,6 +3282,14 @@
           "search_eligible": false,
           "alert_eligible": false,
           "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-8248216B02ABA81A",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p24",
           "alert_reasons": []
         },
         {
@@ -3249,10 +3341,10 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-06T06:14:31+00:00",
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
       "draft_status": "no_supported_claims",
-      "context_id": "CTX-EBF4A0F778281291",
-      "context_input_sha": "ebf4a0f7782812910acbe1f4f61247207744236cbd3f3bdbfeab41b1c42ea097"
+      "context_id": "CTX-D4408A5E23436C66",
+      "context_input_sha": "d4408a5e23436c66a789808b9572feb020e690efe647ab7204808960561912c8"
     },
     "CAN-486C908614BC89B1": {
       "status": "success",
@@ -4073,15 +4165,16 @@
         "exchange": "NYSE",
         "name": "Scorpio Tankers Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "76b92fbacfc1a5a8715a32bb5f923df4c79a8062b615735542081ddff6977b46",
-        "mapping_observed_at": "2026-10-29T05:59:43+00:00"
+        "mapping_sha256": "f4a4b46839d1a38065d14ed64c8544a6be245bfd2d855e1bb301addceb4488d8",
+        "mapping_observed_at": "2026-11-04T06:41:05+00:00"
       },
-      "attempted_at": "2026-10-31T06:11:13+00:00",
-      "eps_key": "2027-12-31|8.98996",
+      "attempted_at": "2026-11-04T06:55:17+00:00",
+      "eps_key": "2027-12-31|9.2033",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-18DF4A9BB9BBC23C",
-        "DOC-5E31D8ADC03214CC"
+        "DOC-5E31D8ADC03214CC",
+        "DOC-B3416D8D9E85BDCF"
       ],
       "quality": "complete",
       "failures": 0,
@@ -4089,11 +4182,11 @@
         "DOC-18DF4A9BB9BBC23C",
         "DOC-5E31D8ADC03214CC",
         "DOC-A6AEB77245BE2F73",
-        "DOC-871505526641D1CD"
+        "DOC-871505526641D1CD",
+        "DOC-2AD7B162E5E349BB",
+        "DOC-B3416D8D9E85BDCF"
       ],
-      "notes": [
-        "document budget reached before every results filing was read"
-      ],
+      "notes": [],
       "update_checks": [
         {
           "document_id": "DOC-18DF4A9BB9BBC23C",
@@ -4126,12 +4219,28 @@
           "alert_eligible": false,
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-2AD7B162E5E349BB",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-B3416D8D9E85BDCF",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-07T06:11:13+00:00",
-      "draft_status": "draft_ready",
-      "context_id": "CTX-33F204845CF6ABC0",
-      "context_input_sha": "33f204845cf6abc0eb8d508713002820a4eb47a3b8ab2b3cd14815d3c0b5fbed"
+      "next_eligible_at": "2026-11-11T06:55:17+00:00",
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-9C47C1E217B4FDDF",
+      "context_input_sha": "9c47c1e217b4fddf9b069370578be6dbd45904ad8559ebcbef51ac3a692e6c66"
     },
     "CAN-C8A9B1B7A57CB556": {
       "status": "success",
@@ -4367,6 +4476,11 @@
       "companies": 10,
       "http_attempts": 42,
       "folded_companies": 2
+    },
+    "2026-11-04": {
+      "companies": 10,
+      "http_attempts": 54,
+      "folded_companies": 3
     }
   },
   "documents_by_source": {
@@ -4611,6 +4725,19 @@
     "0001193125-26-349730|https://www.sec.gov/Archives/edgar/data/1329394/000119312526349730/d149638dex991.htm": "DOC-1440D60C69A1D6AD",
     "0001654954-26-009343|https://www.sec.gov/Archives/edgar/data/313807/000165495426009343/a4317b.htm": "DOC-A6052B9F2FFE3927",
     "0001654954-26-009335|https://www.sec.gov/Archives/edgar/data/313807/000165495426009335/a02november2026.htm": "DOC-33525C55847AF50F",
-    "0001140361-26-041575|https://www.sec.gov/Archives/edgar/data/1922446/000114036126041575/ef20084650_8k.htm": "DOC-90D477F71DBF53F9"
+    "0001140361-26-041575|https://www.sec.gov/Archives/edgar/data/1922446/000114036126041575/ef20084650_8k.htm": "DOC-90D477F71DBF53F9",
+    "0001628280-26-063997|https://www.sec.gov/Archives/edgar/data/1483934/000162828026063997/stng6k-09302026.htm": "DOC-2AD7B162E5E349BB",
+    "0001628280-26-060459|https://www.sec.gov/Archives/edgar/data/1483934/000162828026060459/stngexhibit991-09032026.htm": "DOC-B3416D8D9E85BDCF",
+    "0001628280-26-068279|https://www.sec.gov/Archives/edgar/data/1694426/000162828026068279/dkdividendpressrelease3q26.htm": "DOC-48AC4C06B69286C4",
+    "0001628280-26-068279|https://www.sec.gov/Archives/edgar/data/1694426/000162828026068279/dk-20261029.htm": "DOC-715A07BE562628EF",
+    "0001559432-26-000019|https://www.sec.gov/Archives/edgar/data/1559432/000155943226000019/txo-ex99_1.htm": "DOC-2AF3BB1AA7FD79F6",
+    "0001559432-26-000019|https://www.sec.gov/Archives/edgar/data/1559432/000155943226000019/txo-ex99_2.htm": "DOC-FBE465FE1A8D62BE",
+    "0001559432-26-000021|https://www.sec.gov/Archives/edgar/data/1559432/000155943226000021/txo-20260930.htm": "DOC-98272792DA0BEC82",
+    "0001559432-26-000019|https://www.sec.gov/Archives/edgar/data/1559432/000155943226000019/txo-20261103.htm": "DOC-777F04F156DE4CE7",
+    "0001193125-26-444445|https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex991.htm": "DOC-D1DC6662A60C3067",
+    "0001193125-26-444445|https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex992.htm": "DOC-9CDD6DAD4E3AC512",
+    "0001193125-26-444434|https://www.sec.gov/Archives/edgar/data/1376139/000119312526444434/d897437dex991.htm": "DOC-F914F8CCEEB838A9",
+    "0001193125-26-444445|https://www.sec.gov/Archives/edgar/data/1376139/000119312526444445/d399885dex993.htm": "DOC-FDB3CA90E64ABA3F",
+    "0001866175-26-000148|https://www.sec.gov/Archives/edgar/data/1866175/000186617526000148/exhibit991q32026earningsre.htm": "DOC-8248216B02ABA81A"
   }
 }

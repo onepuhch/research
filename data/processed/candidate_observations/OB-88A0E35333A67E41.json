@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-88A0E35333A67E41",
+  "candidate_id": "CAN-C8A9B1B7A57CB556",
+  "candidate_version": "CV-06102EFFAE1C4B98",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:SNDK",
+    "ticker": "SNDK",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-04T06:41:46+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261104T064105Z_41786819708-1.json.gz",
+    "sha256": "482627adcad77b1dd42686fcbf9baeb3b524a7d618157687b11cea9300a162b8",
+    "run_id": "41786819708-1",
+    "finished_at": "2026-11-04T06:55:14+00:00"
+  },
+  "eps": {
+    "eps_now": 287.25845,
+    "eps_30d": 263.48553,
+    "eps_90d": 255.6271,
+    "eps_target_period": "2028-06-30",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 20,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 12.4,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 2.808,
+    "yield_change_30_pp": 2.11
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-06",
+    "price_start_date": "2026-08-06",
+    "price_end_expected": "2026-11-03",
+    "price_end_date": "2026-11-03",
+    "close_start": 1258.5799560546875,
+    "close_end": 1126.52001953125,
+    "price_pct_90": -10.5,
+    "adj_return_pct_90": -10.5,
+    "pe_change_pct": -20.3
+  },
+  "display_rank": 29,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 20
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 160291815424,
+  "context_id": "CTX-9B96A00FAA7AFE9F",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-03T07:13:53+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:SNDK",
+  "approval_version": null,
+  "rendered_at": "2026-11-04T06:56:08+00:00"
+}

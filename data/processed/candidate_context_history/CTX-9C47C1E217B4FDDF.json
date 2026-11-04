@@ -1,0 +1,99 @@
+{
+  "context_id": "CTX-9C47C1E217B4FDDF",
+  "candidate_id": "CAN-3BD5E965B73FD420",
+  "ticker": "STNG",
+  "issuer_cik": "0001483934",
+  "document_ids": [
+    "DOC-18DF4A9BB9BBC23C",
+    "DOC-5E31D8ADC03214CC",
+    "DOC-B3416D8D9E85BDCF"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-18DF4A9BB9BBC23C#p8",
+    "DOC-18DF4A9BB9BBC23C#t12",
+    "DOC-18DF4A9BB9BBC23C#p123",
+    "DOC-18DF4A9BB9BBC23C#p132",
+    "DOC-18DF4A9BB9BBC23C#p133",
+    "DOC-5E31D8ADC03214CC#p23",
+    "DOC-5E31D8ADC03214CC#p24",
+    "DOC-B3416D8D9E85BDCF#p22",
+    "DOC-B3416D8D9E85BDCF#p23"
+  ],
+  "input_sha": "9c47c1e217b4fddf9b069370578be6dbd45904ad8559ebcbef51ac3a692e6c66",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-04T06:55:45+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사의 조정 순이익은 해당 기간 동안 발생했다",
+      "figures": [
+        "$127.4 million"
+      ],
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which e",
+      "where": "DOC-18DF4A9BB9BBC23C#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사의 기본 주당 순이익은 해당 기간 동안 발생했다",
+      "figures": [
+        "$2.79"
+      ],
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which e",
+      "where": "DOC-18DF4A9BB9BBC23C#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사의 희석 주당 순이익은 해당 기간 동안 발생했다",
+      "figures": [
+        "$2.49"
+      ],
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which e",
+      "where": "DOC-18DF4A9BB9BBC23C#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익은 해당 기간 동안 발생했다",
+      "figures": [
+        "$828,116"
+      ],
+      "quote": "Net income ; $828,116 ; $216,174",
+      "where": "DOC-18DF4A9BB9BBC23C#t12"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 영업 활동으로 인한 순 현금 유입은 해당 기간 동안 발생했다",
+      "figures": [
+        "668,523"
+      ],
+      "quote": "Net cash inflow from operating activities ; 668,523 ; 326,451",
+      "where": "DOC-18DF4A9BB9BBC23C#t12"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "조정 순이익은 선박 매각 이익과 금융 부채의 공정 가치 손실을 제외한다",
+      "figures": [
+        "$152.6 million",
+        "$55.6 million"
+      ],
+      "quote": "For the three months ended September 30, 2026, the Company had adjusted net income (see Non-IFRS Measures section below) of $127.4 million, or $2.79 basic and $2.49 diluted earnings per share, which e",
+      "where": "DOC-18DF4A9BB9BBC23C#p8"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

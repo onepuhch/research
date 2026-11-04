@@ -1,0 +1,173 @@
+{
+  "candidate_id": "CAN-3BD5E965B73FD420",
+  "candidate_version": "CV-DB521EB7D5A58138",
+  "identity": {
+    "entity_id": "NYSE:STNG",
+    "ticker": "STNG",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Scorpio Tankers Inc.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유와 정제 석유 제품을 해상으로 운송하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Scorpio Tankers Inc., together with its subsidiaries, engages in the seaborne transportation of crude oil and refined petroleum products worldwide. As of March 19, 2026, its fleet consisted of 90 wholly owned tankers, including 34 LR2, 42MR, and 14 Handymax. Scorpio Tankers Inc. was incorporated in 2009 and is headquartered in Monaco."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "STNG analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/STNG/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-04T06:47:06+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "STNG daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/STNG/history",
+      "published_at": null,
+      "observed_at": "2026-11-04T06:47:06+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "STNG company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/STNG/profile",
+      "published_at": null,
+      "observed_at": "2026-11-04T06:47:06+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-18DF4A9BB9BBC23C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026067899/q32026earnings-exhibit991.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-28",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K EX-99.1"
+    },
+    {
+      "id": "DOC-5E31D8ADC03214CC",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026066288/stngexhibit991-10192026.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-19",
+      "observed_at": "2026-10-31T06:11:13+00:00",
+      "fields": "6-K EX-99.1"
+    },
+    {
+      "id": "DOC-B3416D8D9E85BDCF",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026060459/stngexhibit991-09032026.htm",
+      "title": "SEC 6-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-09-03",
+      "observed_at": "2026-11-04T06:55:17+00:00",
+      "fields": "6-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-9C47C1E217B4FDDF",
+    "input_sha": "9c47c1e217b4fddf9b069370578be6dbd45904ad8559ebcbef51ac3a692e6c66",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-18DF4A9BB9BBC23C",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026067899/q32026earnings-exhibit991.htm",
+        "filed_at": "2026-10-28",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-5E31D8ADC03214CC",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026066288/stngexhibit991-10192026.htm",
+        "filed_at": "2026-10-19",
+        "observed_at": "2026-10-31T06:11:13+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-B3416D8D9E85BDCF",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1483934/000162828026060459/stngexhibit991-09032026.htm",
+        "filed_at": "2026-09-03",
+        "observed_at": "2026-11-04T06:55:17+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-04T06:55:45+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 9.2033,
+    "eps_30d": 5.73294,
+    "eps_90d": 5.79699,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 58.8,
+    "steady": false,
+    "turnaround": false
+  }
+}
