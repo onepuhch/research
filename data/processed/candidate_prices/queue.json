@@ -297,13 +297,17 @@
     "2026-11-03": {
       "requests": 20,
       "retries": 0
+    },
+    "2026-11-04": {
+      "requests": 6,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 29,
-      "last_attempt_at": "2026-11-03T07:14:34.178176+00:00",
+      "attempts": 30,
+      "last_attempt_at": "2026-11-04T06:56:29.889197+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1662,8 +1666,8 @@
       "reason": null
     },
     "STNG": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-02T06:38:40.150080+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-04T06:56:29.889197+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1686,8 +1690,8 @@
       "reason": null
     },
     "SIMO": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-03T07:14:34.178176+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-04T06:56:29.889197+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1718,16 +1722,24 @@
       "reason": null
     },
     "CBRS": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-03T07:14:34.178176+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-04T06:56:29.889197+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "REGN": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-04T06:56:29.889197+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SWKS": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-03T07:14:34.178176+00:00",
+      "last_attempt_at": "2026-11-04T06:56:29.889197+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
