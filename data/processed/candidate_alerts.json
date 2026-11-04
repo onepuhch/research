@@ -2117,12 +2117,20 @@
       "observation_id": null,
       "signal_id": "SIG-0924",
       "day": "2026-11-04",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-04T06:56:24+00:00",
+          "status": "sent",
+          "message_id": 232,
+          "error": null
+        }
+      ],
       "reserved_by": "41786819708-1",
       "reserved_at": "2026-11-04T06:56:21+00:00",
       "payload_text": "📡 새 발굴 신호 · 2026-11-04\n\n<b>🅱️ NVTS · 8/12점</b>\nSIG-0924 · 검토 우선순위 B · AI Infrastructure\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Navitas Semiconductor가 AI 데이터센터 및 그리드/에너지 인프라 시장에 힘입어 기록적인 백로그를 달성했으며, 4분기에도 두 자릿수 성장을 예상하고 있다.\n· 왜 중요: AI 인프라 시장으로의 성공적인 진출과 기록적인 수주잔고는 Navitas의 고성장 동력을 확보하고 있으며, 모바일 시장 철수에도 불구하고 전체 매출 성장을 견인할 핵심적인 투자 포인트이다.\n· 볼 것: AI 인프라 시장 매출 비중 변화 및 2027년 이후 성장 가이던스.\n· 용어: 백로그(Backlog): 고객으로부터 주문을 받았으나 아직 인도되지 않은 물량 또는 금액.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1821769/000162828026069489/exhibit991-navitassemicond.htm\">SEC EDGAR</a> (2026-11-03)\n\n추적 <code>/track SIG-0924</code>",
-      "payload_sha256": "1f006edf53961564c574694edece8c787c647010695c2d4ef19b7682f12e9537"
+      "payload_sha256": "1f006edf53961564c574694edece8c787c647010695c2d4ef19b7682f12e9537",
+      "message_id": 232
     },
     "NYSE:STNG|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -2135,12 +2143,20 @@
       "signal_id": null,
       "verdict": "watch",
       "day": "2026-11-04",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-04T06:56:24+00:00",
+          "status": "sent",
+          "message_id": 233,
+          "error": null
+        }
+      ],
       "reserved_by": "41786819708-1",
       "reserved_at": "2026-11-04T06:56:21+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · STNG Scorpio Tankers Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n원유와 정제 석유 제품을 해상으로 운송하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $5.80 → 지금 $9.20 (+59%) · 주가 같은 기간 +14.3%\n\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+2%)\n👍 주가는 같은 90일에 +14%로, 이익 예상 상향(+59%)보다 덜 움직임\n👎 최근 30일 분석가 9명 중 2명만 올림 — 일부 분석가의 상향\n❓ 10/28 회사 공식 발표(SEC 6-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-3BD5E965B73FD420</code> · 추적 <code>/track CAN-3BD5E965B73FD420</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "a5ce9a18a4baa596c88ac087f12a1984f14e68a1cee69c3289d03c4e19f3c02f"
+      "payload_sha256": "a5ce9a18a4baa596c88ac087f12a1984f14e68a1cee69c3289d03c4e19f3c02f",
+      "message_id": 233
     },
     "CIK:0001001385|인프라|new_discovery": {
       "channel": "news",
@@ -2152,12 +2168,20 @@
       "observation_id": null,
       "signal_id": "SIG-0926",
       "day": "2026-11-04",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-04T06:56:25+00:00",
+          "status": "sent",
+          "message_id": 234,
+          "error": null
+        }
+      ],
       "reserved_by": "41786819708-1",
       "reserved_at": "2026-11-04T06:56:21+00:00",
       "payload_text": "📡 새 발굴 신호 · 2026-11-04\n\n<b>🅱️ NWPX · 6/12점</b>\nSIG-0926 · 검토 우선순위 B · 인프라\n근거: realized · 변화 방향: positive\n\n· 무슨 일: NWPX Infrastructure가 2026년 3분기 실적 발표에서 WTS(Water Transmission Systems) 부문에서 4억 3천 5백만 달러의 사상 최대 백로그를 포함한 총 백로그를 기록했다고 발표했습니다.\n· 왜 중요: 사상 최대 백로그는 향후 매출 성장에 대한 가시성을 높이고, 특히 수자원 인프라 부문의 견조한 수요를 반영하여 회사의 실적 레버리지를 기대하게 합니다.\n· 볼 것: 2027년 가이던스 및 수주잔고 추이, WTS 부문의 신규 프로젝트 수주 현황.\n· 용어: 백로그(Backlog): 기업이 계약했지만 아직 수행하지 않은 주문 또는 프로젝트의 총액. WTS(Water Transmission Systems): 수자원 전송 시스템.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1001385/000143774926033798/ex_996700.htm\">SEC EDGAR</a> (2026-10-28)\n\n추적 <code>/track SIG-0926</code>",
-      "payload_sha256": "3e7fb267de17c1b9d7590ad5f17cd82aeb52ec0f1a2fec22df7d6457945db8f9"
+      "payload_sha256": "3e7fb267de17c1b9d7590ad5f17cd82aeb52ec0f1a2fec22df7d6457945db8f9",
+      "message_id": 234
     }
   },
   "bootstrap": {
