@@ -2182,6 +2182,193 @@
       "payload_text": "📡 새 발굴 신호 · 2026-11-04\n\n<b>🅱️ NWPX · 6/12점</b>\nSIG-0926 · 검토 우선순위 B · 인프라\n근거: realized · 변화 방향: positive\n\n· 무슨 일: NWPX Infrastructure가 2026년 3분기 실적 발표에서 WTS(Water Transmission Systems) 부문에서 4억 3천 5백만 달러의 사상 최대 백로그를 포함한 총 백로그를 기록했다고 발표했습니다.\n· 왜 중요: 사상 최대 백로그는 향후 매출 성장에 대한 가시성을 높이고, 특히 수자원 인프라 부문의 견조한 수요를 반영하여 회사의 실적 레버리지를 기대하게 합니다.\n· 볼 것: 2027년 가이던스 및 수주잔고 추이, WTS 부문의 신규 프로젝트 수주 현황.\n· 용어: 백로그(Backlog): 기업이 계약했지만 아직 수행하지 않은 주문 또는 프로젝트의 총액. WTS(Water Transmission Systems): 수자원 전송 시스템.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1001385/000143774926033798/ex_996700.htm\">SEC EDGAR</a> (2026-10-28)\n\n추적 <code>/track SIG-0926</code>",
       "payload_sha256": "3e7fb267de17c1b9d7590ad5f17cd82aeb52ec0f1a2fec22df7d6457945db8f9",
       "message_id": 234
+    },
+    "NYSE:CLF|eps-revision-review:v1|material_update|B:OB-2CEF37F43B26B978>OB-145301BB03840593": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:CLF",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-7F0690B785E31226",
+      "candidate_version": "CV-760962B7CB8DAF37",
+      "observation_id": "OB-D2B357B5AE4ED678",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "observation_id": "OB-2CEF37F43B26B978",
+          "baseline_id": "OB-2CEF37F43B26B978",
+          "observed_at": "2026-10-22T05:14:57+00:00",
+          "day": "2026-10-22",
+          "snapshot_sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+          "eps_now": 1.33512,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ],
+          "source": "material_update"
+        },
+        "first": {
+          "observation_id": "OB-145301BB03840593",
+          "baseline_id": "OB-145301BB03840593",
+          "observed_at": "2026-10-31T06:11:09+00:00",
+          "day": "2026-10-31",
+          "snapshot_sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
+          "eps_now": 1.76,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-D2B357B5AE4ED678",
+          "baseline_id": "OB-D2B357B5AE4ED678",
+          "observed_at": "2026-11-05T07:15:06+00:00",
+          "day": "2026-11-05",
+          "snapshot_sha256": "8b46467f9e6d9244f2d4249787d502eaa671105386c37ddfe1fd95148d9ebccd",
+          "eps_now": 1.70571,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 27.76,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-2CEF37F43B26B978>OB-145301BB03840593"
+        ]
+      },
+      "day": "2026-11-05",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41983914309-1",
+      "reserved_at": "2026-11-05T07:15:44+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CLF Cleveland-Cliffs Inc.</b>\n기준: 2026-10-22 이전 재검토 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $1.34 → 현재 $1.71 (+28%), 2026-10-31·2026-11-05 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-7F0690B785E31226</code> · 추적 <code>/track CAN-7F0690B785E31226</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "83fc8e91a3fb66757d52d9a66c2aecba8c22ac00a838edf12aeef3df370a12ff"
+    },
+    "CIK:0001699136|유전 서비스|new_discovery": {
+      "channel": "news",
+      "event": "new_discovery",
+      "entity_id": "CIK:0001699136",
+      "thesis_key": "유전 서비스",
+      "candidate_id": null,
+      "candidate_version": null,
+      "observation_id": null,
+      "signal_id": "SIG-0927",
+      "day": "2026-11-05",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41983914309-1",
+      "reserved_at": "2026-11-05T07:15:44+00:00",
+      "payload_text": "📡 새 발굴 신호 · 2026-11-05\n\n<b>🅱️ Cactus, Inc. (WHD) · 6/12점</b>\nSIG-0927 · 검토 우선순위 B · 유전 서비스\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Cactus, Inc.의 3분기 수주액이 1억 5천만 달러 이상 증가하여 Spoolable Technologies 부문의 백로그가 거의 두 배로 늘었으며, 중동에 새로운 Spoolable Technologies 제조 시설 건설이 승인되었습니다.\n· 왜 중요: 백로그 증가는 향후 매출 성장을 의미하며, 특히 Spoolable Technologies 부문의 급격한 성장은 해당 기술에 대한 수요 증가와 시장 점유율 확대를 시사합니다. 신규 시설 건설은 이러한 수요에 대응하기 위한 생산 능력 확대로, 장기적인 성장 동력을 확보하는 중요한 투자입니다.\n· 볼 것: 향후 분기별 Spoolable Technologies 부문 매출 성장률; 신규 중동 시설의 건설 진행 상황 및 가동 시점\n· 용어: 백로그 (Backlog): 고객으로부터 수주했으나 아직 매출로 인식되지 않은 미처리 주문 잔고. Spoolable Technologies: 유전 및 가스전에서 사용되는 유연한 파이프 및 관련 기술.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1699136/000162828026067952/whd-20260930xexhibit991.htm\">SEC EDGAR</a> (2026-10-28)\n\n추적 <code>/track SIG-0927</code>",
+      "payload_sha256": "63b91aa124d32203ed8f17952760a98737c368877b232a1666c1eabacc1541c1"
+    },
+    "NYSE:DINO|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-90897C1DDCAA163B": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:DINO",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-11B1565B12AFE2F9",
+      "candidate_version": "CV-F79F7FB73724F0A5",
+      "observation_id": "OB-701A661CAC26C8EE",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 11.82475,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-90897C1DDCAA163B",
+          "baseline_id": "OB-90897C1DDCAA163B",
+          "observed_at": "2026-11-04T06:55:14+00:00",
+          "day": "2026-11-04",
+          "snapshot_sha256": "482627adcad77b1dd42686fcbf9baeb3b524a7d618157687b11cea9300a162b8",
+          "eps_now": 17.8997,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-701A661CAC26C8EE",
+          "baseline_id": "OB-701A661CAC26C8EE",
+          "observed_at": "2026-11-05T07:15:06+00:00",
+          "day": "2026-11-05",
+          "snapshot_sha256": "8b46467f9e6d9244f2d4249787d502eaa671105386c37ddfe1fd95148d9ebccd",
+          "eps_now": 17.8997,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 51.37,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-90897C1DDCAA163B"
+        ]
+      },
+      "day": "2026-11-05",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "41983914309-1",
+      "reserved_at": "2026-11-05T07:15:44+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DINO HF Sinclair Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $11.82 → 현재 $17.90 (+51%), 2026-11-04·2026-11-05 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-11B1565B12AFE2F9</code> · 추적 <code>/track CAN-11B1565B12AFE2F9</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "6ea2db91b17a60d31ffbdfbc72d9db9826153b62e7ad414f484536ca9cc2aa08"
     }
   },
   "bootstrap": {
@@ -2376,6 +2563,33 @@
         "up30": 1,
         "down30": 0
       }
+    },
+    "NASDAQ:VSNT|eps-revision-review:v1|new_discovery": {
+      "entity_id": "NASDAQ:VSNT",
+      "candidate_id": "CAN-AE98D1267BE90662",
+      "ticker": "VSNT",
+      "day": "2026-11-05",
+      "status": "held",
+      "reason": "provider_silent_jump",
+      "threshold": 0.1,
+      "threshold_status": "provisional",
+      "baseline": {
+        "snapshot": "20261104T064105Z_41786819708-1.json.gz",
+        "eps_now": 7.04292,
+        "eps_target_period": "2027-12-31",
+        "analysts": 4,
+        "up30": 1,
+        "down30": 0
+      },
+      "current": {
+        "snapshot": "20261105T070051Z_41983914309-1.json.gz",
+        "eps_now": 8.2459,
+        "eps_target_period": "2027-12-31",
+        "analysts": 4,
+        "up30": 1,
+        "down30": 0
+      },
+      "history": []
     }
   }
 }

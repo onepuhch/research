@@ -1,0 +1,99 @@
+{
+  "candidate_id": "CAN-AE98D1267BE90662",
+  "candidate_version": "CV-A567B71C2A670DB1",
+  "identity": {
+    "entity_id": "NASDAQ:VSNT",
+    "ticker": "VSNT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Versant Media Group, Inc.",
+  "industry": "Entertainment",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Versant Media Group, Inc. engages in the media and entertainment business in the United States. The company produces, licenses, and acquires content that is distributed through various outlets, including networks and digital platforms. It delivers news, sports and entertainment content through its portfolio of brands, which includes MS NOW, CNBC, USA Network, Golf Channel, GolfNow, Rotten Tomatoes, SportsEngine, E!, SYFY, Oxygen True Crime, Fandango, and Free TV Networks. The company serves political news and opinion, business news and personal finance, golf and athletics participation, and sp"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "VSNT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSNT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:07:01+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "VSNT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSNT/history",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:07:01+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "VSNT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSNT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:07:01+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 8.2459,
+    "eps_30d": 7.26042,
+    "eps_90d": 6.68902,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 23.3,
+    "steady": false,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "candidate_id": "CAN-F451582E2056444F",
+  "candidate_version": "CV-1A159216205EB875",
+  "identity": {
+    "entity_id": "NYSE:CVI",
+    "ticker": "CVI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "CVR Energy, Inc.",
+  "industry": "Oil & Gas Refining & Marketing",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "재생 연료, 석유 정제 및 판매, 질소 비료 제조 사업을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "CVR Energy, Inc., together with its subsidiaries, engages in renewable fuels and petroleum refining and marketing, and nitrogen fertilizer manufacturing activities in the United States. It operates through three segments: Petroleum, Renewables, and Nitrogen Fertilizer. The Petroleum segment refines and markets transportation fuels, such as gasoline, diesel, jet fuel, and distillates; and includes crude gathering and logistics activities that support refinery operations. This segment also owns and operates a coking, medium-sour crude oil refinery in Kansas; and a crude oil refinery in Oklahoma."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CVI analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CVI/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:06:50+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CVI daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CVI/history",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:06:50+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CVI company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CVI/profile",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:06:50+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-F914F8CCEEB838A9",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1376139/000119312526444434/d897437dex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-03",
+      "observed_at": "2026-11-04T06:55:17+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-10DCC661422C1107",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-29",
+      "observed_at": "2026-10-03T05:43:20+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-25614AF312747642",
+    "input_sha": "25614af31274764254829eb1ce0861ffc4d38ce8a9946d3ac53e2b97502b8cd7",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "net income attributable to CVR Energy stockholders · Third quarter 2026: $570 million — 회사의 순이익이다",
+        "note_ko": "회사의 순이익이다",
+        "kind": "fact",
+        "quote": "Third quarter 2026 net income attributable to CVR Energy stockholders of $570 million",
+        "document_id": "DOC-F914F8CCEEB838A9",
+        "block_id": "t2",
+        "metric": "net income attributable to CVR Energy stockholders",
+        "figures": [
+          "$570 million"
+        ],
+        "period": "Third quarter 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · Third quarter 2026: $582 million — 회사의 조정 EBITDA이다",
+        "note_ko": "회사의 조정 EBITDA이다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA of $582 million",
+        "document_id": "DOC-F914F8CCEEB838A9",
+        "block_id": "t2",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$582 million"
+        ],
+        "period": "Third quarter 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "net income attributable to CVR Energy stockholders · third quarter 2026: $570 million — 회사의 순이익은 전년 같은 기간보다 늘었다",
+        "note_ko": "회사의 순이익은 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "CVR Energy, Inc. (“CVR Energy” or the “Company”) (NYSE: CVI) today announced its third quarter 2026 results including a net income attributable to CVR Energy stockholders of $570 million, or $5.67 per diluted share, and an adjusted earnings per diluted share of $4.00, compared to net income attributable to CVR Energy stockholders of $374 million, or $3.72 per diluted share, and an adjusted earnings per diluted share of 40 cents for the third quarter of 2025.",
+        "document_id": "DOC-F914F8CCEEB838A9",
+        "block_id": "p5",
+        "metric": "net income attributable to CVR Energy stockholders",
+        "figures": [
+          "$570 million"
+        ],
+        "period": "third quarter 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter of 2026: $582 million — 회사의 조정 EBITDA는 전년 같은 기간보다 늘었다",
+        "note_ko": "회사의 조정 EBITDA는 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA for the third quarter of 2026 was $582 million compared to $180 million for the third quarter of 2025.",
+        "document_id": "DOC-F914F8CCEEB838A9",
+        "block_id": "p5",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$582 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-F914F8CCEEB838A9",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1376139/000119312526444434/d897437dex991.htm",
+        "filed_at": "2026-11-03",
+        "observed_at": "2026-11-04T06:55:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-10DCC661422C1107",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1376139/000137613926000038/exhibit991-cviq22026earnin.htm",
+        "filed_at": "2026-07-29",
+        "observed_at": "2026-10-03T05:43:20+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-04T06:55:45+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.55204,
+    "eps_30d": 3.50959,
+    "eps_90d": 1.9125,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 138.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

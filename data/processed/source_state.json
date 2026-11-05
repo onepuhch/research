@@ -8138,7 +8138,7 @@
     "processed_run": "40063605374-1"
   },
   "0001493152-26-047930": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -8154,7 +8154,8 @@
     "content_hash": "7f7e306fec48df47bdf6b781b59a6b8ba22d383f72f403595081b2843ff3e6f8",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-22T05:00:05.929908+00:00"
+    "updated_at": "2026-11-05T06:59:14.022693+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001552781-26-000524": {
     "status": "rejected",
@@ -12596,5 +12597,721 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-04T06:39:22.189100+00:00"
+  },
+  "0001104659-26-122704": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-122704",
+      "entity_id": "CIK:0000924822",
+      "source_role": "candidate",
+      "title": "MILLER INDUSTRIES INC /TN/ (MLR) (CIK 0000924822) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/924822/000110465926122704/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/924822/000110465926122704/mlr-ex99d1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "MILLER INDUSTRIES INC /TN/ (MLR) (CIK 0000924822) EX-99.1 2026-11-04. Q3 2025 · Revenue: $212.2 million, an 18.8% increase from $178.7 million · Gross Profit: $29.8 million, a 17.6% increase from $25.3 million · Gross Margin: 14.0%, a decrease of approximately 20 basis points from 14.2% · SG&A Expenses: $22.0 million, a 3.5% increase from $21.2 million · Net Income: $6.1 million, a 97.2% increase from $3.1 million · Diluted EPS: $0.53 per share, an increase of 96.3% from $0.27 per diluted share ​ Third Quarter Business Highlights · Delivered solid year-over-year revenue growth as the Company maintained production in line with steady order intake in a dynamic environment. · Heavy-duty capacity expansion at Ooltewah remains on schedule, with initial building construction underway. “We’ve seen no slowdown in customer demand, and our order intake remains consistent. In addition to our ongoing capacity expansion in Ooltewah, we recently hosted more than 1,000 global distributors and customers in Chattanooga to showcase the Century M65. ​ Ooltewah, TN Manufacturing Capacity Expansion To support future growth, European demand, and defense production commitments, Miller Industries previously announced the addition of a new 200,000+ sq ft facility at its Ooltewah headquarters site, at a cost of approximately $100 million. Together, the addition of Omars, the expansion of Jige’s heavy ‑ duty integration facility, and production enhancements at the Company’s Boniface facility will help ensure production stability, improved lead times, and a fully integrated global supply strategy. Forward-looking statements can be identified by the use of words such as “may”, “will”, “should”, “could”, “continue”, “future”, “potential”, “believe”, “project”, “plan”, “intend”, “seek”, “estimate”, “predict”, “expect”, “anticipate” and similar expressions, or the negative of such terms, or other comparable terminology and include, without limitation: any statements relating to our 2026 guidance a",
+      "_model_response": {
+        "evidence_quote": "Heavy-duty capacity expansion at Ooltewah remains on schedule, with initial building construction underway. “We’ve seen no slowdown in customer demand, and our order intake remains consistent. In addition to our ongoing capacity expansion in Ooltewah, we recently hosted more than 1,000 global distributors and customers in Chattanooga to showcase the Century M65. ​ Ooltewah, TN Manufacturing Capacity Expansion To support future growth, European demand, and defense production commitments, Miller Industries previously announced the addition of a new 200,000+ sq ft facility at its Ooltewah headquarters site, at a cost of approximately $100 million. Together, the addition of Omars, the expansion of Jige’s heavy ‑ duty integration facility, and production enhancements at the Company’s Boniface facility will help ensure production stability, improved lead times, and a fully integrated global supply strategy.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "MILLER INDUSTRIES INC /TN/ (MLR)",
+          "earnings_leverage": "To support future growth, European demand, and defense production commitments, Miller Industries previously announced the addition of a new 200,000+ sq ft facility at its Ooltewah headquarters site, at a cost of approximately $100 million.",
+          "supply_demand_tightness": "We’ve seen no slowdown in customer demand, and our order intake remains consistent. In addition to our ongoing capacity expansion in Ooltewah, we recently hosted more than 1,000 global distributors and customers in Chattanooga to showcase the Century M65.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Heavy-duty capacity expansion at Ooltewah remains on schedule, with initial building construction underway."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "Heavy-duty vehicle manufacturing capacity",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MLR",
+        "theme": "Industrial Manufacturing",
+        "signal_type": "CAPEX",
+        "what_happened": "Miller Industries가 Ooltewah 본사에 1억 달러 규모의 20만 평방피트 이상 신규 시설 증설을 계획대로 진행 중이며, 초기 건설이 시작되었습니다.",
+        "why_it_matters": "이 증설은 견고한 고객 수요와 유럽 및 국방 부문 성장에 대응하기 위한 것으로, 향후 매출 성장과 시장 점유율 확대를 위한 기반을 마련합니다.",
+        "what_to_watch": "신규 시설 완공 시점 및 가동률 변화, 증설된 생산 능력에 따른 매출 및 이익 증가 추이.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "CAPEX (Capital Expenditure): 기업이 미래의 이윤을 창출하기 위해 토지, 건물, 기계 등 고정 자산을 구매하거나 개선하는 데 지출하는 비용. Ooltewah: 미국 테네시주에 위치한 Miller Industries의 본사 및 제조 시설이 있는 지역."
+      }
+    },
+    "content_hash": "7267bb20624d9247696e241cc8c7433933f643bdc38d4ebbaf8c6fc2fcdff079",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-05T06:59:26+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001628280-26-070106": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070106",
+      "entity_id": "CIK:0002021880",
+      "source_role": "candidate",
+      "title": "HMH Holding Inc (HMH) (CIK 0002021880) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/2021880/000162828026070106/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2021880/000162828026070106/q32026exhibit991.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "HMH Holding Inc (HMH) (CIK 0002021880) EX-99.1 2026-11-04. Product revenue decreased 69% year-over-year and 19% sequentially, reflecting both a lower order intake and backlog of equipment orders and delays in the Middle East due to the ongoing conflict in the region. The year-over-year and sequential decreases reflect the pace of order intake and regional mix. Order Intake, Adjusted EBITDA, Adjusted EBITDA Margin and Free Cash Flow Orders for the quarter were $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026. Product order intake was $16 million, flat year-over-year and decreased 27% sequentially. Service order intake was $115 million, up 16% year-over-year and down 3% sequentially. Spare parts order intake was $60 million, up 7% year-over-year and down 8% sequentially. EX-99.1 2 q32026exhibit991.htm EX-99.1 Document Exhibit 99.1 HMH Holding Inc. Announces Third Quarter 2026 Results HOUSTON, November 4, 2026 – HMH Holding Inc. (“HMH” or the “Company”) (NASDAQ: HMH) today announced financial and operational results for the third quarter of 2026. Third Quarter Highlights • Revenue of $171.1 million, down 21% compared to the third quarter of 2025 and substantially flat compared to the second quarter of 2026. • Net income attributable to HMH of $5.0 million, compared to net income of $16.2 million in the third quarter of 2025 and net income of $5.0 million in the second quarter of 2026. • Orders of $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026, resulting in book-to-bill of 1.12x. • Adjusted EBITDA of $38.2 million, down 3% compared to the third quarter of 2025 and up 13% compared to the second quarter of 2026. • Completed acquisition of Deepwater Riser Services for $14.5 million. Financial Summary HMH reported revenue for the third quarter of 2026 of $171.1 million, down 21% compared to the third quarter of 2025 and substantially flat compared to t"
+    },
+    "content_hash": "714a033fc64da9fc2c5de1ad8e020b1da05f1cc5e31e2704701e53946554580a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0002046386-26-000060": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0002046386-26-000060",
+      "entity_id": "CIK:0002046386",
+      "source_role": "candidate",
+      "title": "Medline Inc. (MDLN) (CIK 0002046386) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/2046386/000204638626000060/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2046386/000204638626000060/ex9913q26pressrelease.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Medline Inc. (MDLN) (CIK 0002046386) EX-99.1 2026-11-04. “Our commercial execution remains strong, including continued progress toward our annual total new customer signings 4 goal. We are advancing key strategic priorities, including capacity expansion and new technology across our distribution network and progress with our global quality initiatives. This was primarily driven by existing customer growth and implementation of new customer signings from 2025 and includes an $11 million increase related to an adjustment of customer repayment amounts. This was primarily driven by implementation of new customer signings from 2025 and existing customer growth. (4) Total new customer signings refers to the estimated annual contract value of all new contracts entered into by new customers or by existing customers who are expanding their relationship with Medline, excluding renewals and extensions.",
+      "_model_response": {
+        "evidence_quote": "Our commercial execution remains strong, including continued progress toward our annual total new customer signings 4 goal. We are advancing key strategic priorities, including capacity expansion and new technology across our distribution network and progress with our global quality initiatives. This was primarily driven by existing customer growth and implementation of new customer signings from 2025 and includes an $11 million increase related to an adjustment of customer repayment amounts. (4) Total new customer signings refers to the estimated annual contract value of all new contracts entered into by new customers or by existing customers who are expanding their relationship with Medline, excluding renewals and extensions.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "This was primarily driven by existing customer growth and implementation of new customer signings from 2025.",
+          "supply_demand_tightness": "Our commercial execution remains strong, including continued progress toward our annual total new customer signings 4 goal. This was primarily driven by existing customer growth and implementation of new customer signings from 2025.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Our commercial execution remains strong, including continued progress toward our annual total new customer signings 4 goal. We are advancing key strategic priorities, including capacity expansion and new technology across our distribution network and progress with our global quality initiatives. This was primarily driven by existing customer growth and implementation of new customer signings from 2025."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MDLN",
+        "theme": "의료기기 유통",
+        "signal_type": "수주/백로그",
+        "what_happened": "Medline Inc.가 2025년 신규 고객 계약 이행과 기존 고객 성장에 힘입어 상업적 성과가 강세를 보였으며, 유통망 전반의 생산 능력 확장과 신기술 도입을 포함한 주요 전략적 우선순위를 추진 중입니다.",
+        "why_it_matters": "Medline Inc.의 신규 및 기존 고객 확보와 생산 능력 확장은 향후 매출 성장과 시장 점유율 확대를 시사하며, 이는 현재 시장 추정치에 충분히 반영되지 않은 잠재적 성장 동력으로 작용할 수 있습니다.",
+        "what_to_watch": "향후 분기별 신규 고객 계약 규모 및 기존 고객 성장률, 생산 능력 확장 완료 시점 및 가동률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "초기후반",
+        "glossary": "Total new customer signings: 신규 고객 또는 기존 고객의 관계 확장을 통해 체결된 모든 신규 계약의 연간 예상 계약 가치 (갱신 및 연장 제외). Capacity expansion: 생산 또는 서비스 제공 능력을 늘리기 위한 투자 및 활동."
+      }
+    },
+    "content_hash": "8b32d58fe8c540053746f2b1e2b08dfdd8732a4cd37cdb0c74e94ca40e33efa2",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-05T06:59:47+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001104657-26-000049": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104657-26-000049",
+      "entity_id": "CIK:0001104657",
+      "source_role": "candidate",
+      "title": "MATERION Corp (MTRN) (CIK 0001104657) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1104657/000110465726000049/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1104657/000110465726000049/q32026pressrelease.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "MATERION Corp (MTRN) (CIK 0001104657) EX-99.1 2026-11-04. We expect a meaningful step up in sales supported by record backlog and robust demand across our end markets. OUTLOOK Our strong year-to-date performance, record backlog and continued order rate momentum have further reinforced our confidence in delivering record results for 2026. EX-99.1 2 q32026pressrelease.htm EX-99.1 Document MATERION CORPORATION REPORTS RECORD THIRD-QUARTER 2026 FINANCIAL RESULTS AND RAISES FULL-YEAR OUTLOOK MAYFIELD HEIGHTS, Ohio – Materion Corporation (NYSE: MTRN) today reported record third-quarter 2026 financial results and raised its full-year outlook. Financial Summary • Net sales were $567.3 million versus $444.8 million in the prior year period; value-added sales 1 were $313.7 million versus $263.9 million in the prior year period • Net income of $38.3 million, or $1.81 per share, diluted, versus $25.4 million, or $1.22 per share, in the prior year period; adjusted earnings of $1.93 per share versus $1.41 in the prior year period • Operating profit of $50.4 million versus $34.9 million in the prior year period; adjusted EBITDA 2 of $70.7 million, or 22.5% of value-added sales, versus $55.5 million, or 21.0%, in the prior year period • Strong free cash flow 3 generation of ~$46 million, with 120% conversion • Raising full-year adjusted earnings per share outlook to $7.10 – $7.40, an increase of 33% year-over-year at the midpoint Business Highlights • Delivered: ◦ Record quarterly value-added sales and earnings ◦ Highest quarterly semiconductor sales in company history ◦ Double-digit year-over-year sales and earnings growth in each segment ◦ Fourth consecutive quarter of year-over-year adjusted EBITDA margin expansion • Incoming orders and backlog reached all-time high, up ~25% and ~35% year-over-year respectively • Making significant progress towards mid-term adjusted EBITDA margin target of 23% “Our third quarter results demonstrate the power of our advanced materials portfolio a"
+    },
+    "content_hash": "6d3200dba90aa431d88b1ff5c4fb8d8e987c4a1132fd46c7d92a3d5bb622eeb8",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0000077543-26-000218": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000077543-26-000218",
+      "entity_id": "CIK:0000077543",
+      "source_role": "candidate",
+      "title": "TUTOR PERINI CORP (TPC) (CIK 0000077543) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/77543/000007754326000218/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/77543/000007754326000218/tpc20261104ex991.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "TUTOR PERINI CORP (TPC) (CIK 0000077543) EX-99.1 2026-11-04. EX-99.1 2 tpc20261104ex991.htm EX-99.1 Document News Release Tutor Perini Reports Record Third Quarter 2026 Financial Results; Raises 2026 Adjusted EPS Guidance • Record operating cash flow of $330.9 million and $665.1 million for the third quarter and first nine months of 2026, up 14% and 16% Y/Y, respectively • Record Q3 2026 revenue of $1.7 billion, up 22% Y/Y • Record Q3 2026 income from construction operations of $125.4 million, up 213% Y/Y reflecting continued strong operating performance and contributions from higher-margin projects • Q3 2026 diluted earnings per share (\"EPS\") of $0.39, up 457% Y/Y • Q3 2026 adjusted EPS of $1.83, up 59% Y/Y • High-quality, near-record backlog of $20.4 billion • Raising 2026 adjusted EPS guidance to $5.90 to $6.10 (up from $5.15 to $5.45) • Tutor Perini anticipates continued strong revenue and adjusted EPS growth in 2027 due to clear visibility provided by long-duration backlog LOS ANGELES – (BUSINESS WIRE) – November 4, 2026 – Tutor Perini Corporation (the \"Company\") (NYSE: TPC), a leading civil, building and specialty construction company, today reported strong financial results for the third quarter of 2026 (see attached tables). Our results demonstrated the continued momentum in our business, as well as the significant earnings and cash flow potential embedded in our near-record backlog."
+    },
+    "content_hash": "277b5932a3768fc396ed7703bc42205e81773b84a26d50dacf3e82fcf7c4b825",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0000103730-26-000079": {
+    "status": "retry",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000103730-26-000079",
+      "entity_id": "CIK:0000103730",
+      "source_role": "candidate",
+      "title": "VISHAY INTERTECHNOLOGY INC (VSH) (CIK 0000103730) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/103730/000010373026000079/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/103730/000010373026000079/exhibit99-1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "VISHAY INTERTECHNOLOGY INC (VSH) (CIK 0000103730) EX-99.1 2026-11-04. “We remain intensely focused on execution under Vishay 3.0, delivering on our promise to our customers to be a reliable supplier with incremental capacity and maintain competitive lead times.” 4Q 2026 Outlook For the fourth quarter of 2026, management expects revenues in the range of $990 million +/- $15 million and a gross profit margin in the range of 26.0% +/- 50 basis points. Statements contained herein that relate to the Company's future performance, including forecasted revenues and margins, capacity expansion, multi-year customer demand, stockholder returns, and the performance of the economy in general, are forward-looking statements within the safe harbor provisions of Private Securities Litigation Reform Act of 1995. EX-99.1 2 exhibit99-1.htm EXHIBIT 99.1 Exhibit 99.1 Vishay Intertechnology Reports Third Quarter 2026 Results Malvern, PA, November 4, 2026 – Vishay Intertechnology, Inc., (NYSE: VSH), one of the world's largest manufacturers of discrete semiconductors and passive electronic components, today announced results for the fiscal third quarter ended October 3, 2026. Highlights 3Q 2026 revenues of $978.9 million 3Q 2026 gross margin was 25.5% 3Q 2026 operating margin was 9.4% 3Q 2026 diluted EPS of $0.37 3Q 2026 book-to-bill of 1.29 with book-to-bill of 1.28 for semiconductors and 1.31 for passive components Backlog at quarter end was 6.6 months “Q3 revenue of $979 million marked the highest quarterly revenue ever in Vishay’s history and exceeded the top end of our guidance. With revenue growth of 24% over last year, we lifted our gross profit margin to 25.5%, 600 basis points higher. This significant gross margin improvement flowed through to earnings which surged to $0.37 per share. All technologies delivered strong results, demonstrating the value of Vishay as a hybrid supplier of discrete semiconductors and passive components,” said Joel Smejkal, president and CEO. “We remain "
+    },
+    "content_hash": "518b1fb8a761e08f5591607ee22049b78f2fd243f64a7ee07e0779531dd7b0df",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-05T07:00:29+00:00",
+    "reason": "provider_overloaded",
+    "http_status": 503,
+    "next_retry_at": "2026-11-05T07:29:14.022693+00:00",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-05",
+    "failure_run": "41983914309-1"
+  },
+  "0000068505-26-000041": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000068505-26-000041",
+      "entity_id": "CIK:0000068505",
+      "source_role": "candidate",
+      "title": "Motorola Solutions, Inc. (MSI) (CIK 0000068505) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/68505/000006850526000041/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/68505/000006850526000041/msiq32026pressrelease.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Motorola Solutions, Inc. (MSI) (CIK 0000068505) EX-99.1 2026-11-04. • Backlog - The company ended the quarter with record backlog of $16.6 billion, up 14% or $2.1 billion from the year-ago quarter driven by record Q3 orders in all three technologies. EX-99.1 2 msiq32026pressrelease.htm EX-99.1 Document Exhibit 99.1 Motorola Solutions Reports Third-Quarter 2026 Financial Results Company raises full-year revenue and earnings outlook again and increases full-year cash flow expectations • Sales of $3.4 billion, up 12% versus a year ago ◦ Products and Systems Integration sales up 12% ◦ Software and Services sales up 13% • GAAP earnings per share (\"EPS\") of $3.06 • Non-GAAP EPS* of $4.69 • Record ending backlog of $16.6 billion, up 14% versus a year ago, driven by record Q3 orders • Acquired D-Fend Solutions (\"D-Fend\"), an industry leader in counter-drone technology • Announced $2 billion increase to the share repurchase authorization CHICAGO – November 4, 2026 – Motorola Solutions, Inc. (NYSE: MSI) today reported its earnings results for the third quarter of 2026. “Q3 was another outstanding quarter, with double-digit revenue growth across both segments and all three technologies,” said Greg Brown, chairman and CEO, Motorola Solutions. “We continue to see exceptionally strong demand across our safety and security solutions, driving record Q3 orders and an all-time record ending backlog. As a result, we’re raising our revenue and earnings outlook again and increasing our cash flow expectations for the full year.” KEY FINANCIAL RESULTS (presented in millions, except per share data and percentages) Q3 2026 Q3 2025 % Change Sales $3,376 $3,009 12 % GAAP Operating Earnings $777 $770 1 % % of Sales 23.0 % 25.6 % EPS $3.06 $3.33 (8) % Non-GAAP * Operating Earnings $1,096 $918 19 % % of Sales 32.5 % 30.5 % EPS $4.69 $4.06 16 % Products and Systems Integration Segment Sales $2,118 $1,897 12 % GAAP Operating Earnings $446 $458 (3) % % of Sales 21.1 % 24.1 % Non-GAAP * Operating Ea"
+    },
+    "content_hash": "5df76730c36eef8d108837112b999d2e467c62f0886e8d86bf14a081f5a9663b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001819810-26-000139": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001819810-26-000139",
+      "entity_id": "CIK:0001819810",
+      "source_role": "candidate",
+      "title": "Redwire Corp (RDW) (CIK 0001819810) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/exhibit991redwire09302026e.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Redwire Corp (RDW) (CIK 0001819810) EX-99.1 2026-11-04. “Redwire continued to see durable demand across our space and defense tech portfolio during the third quarter as evidenced by our record Backlog 1 of $619.7 million, a nearly 75% increase year-over-year, and Book-to-Bill 1 increasing to 1.73,” stated Peter Cannito, Chairman, Chief Executive Officer, and President of Redwire. EX-99.1 2 exhibit991redwire09302026e.htm EX-99.1 Document Exhibit 99.1 1000 Riverside Avenue, Suite 600 Investor Relations Contact: Jacksonville, FL 32204 USA investorrelations@rdw.com Redwire Corporation Reports Third Quarter 2026 Financial Results, Expands Backlog, Achieves Record Gross Margins JACKSONVILLE, Fla. / November 4, 2026 Redwire Corporation (NYSE:RDW, “Redwire” or the “Company”), a global leader in space and defense technology solutions, today announced results for its third quarter ended September 30, 2026. “Redwire continued to see durable demand across our space and defense tech portfolio during the third quarter as evidenced by our record Backlog 1 of $619.7 million, a nearly 75% increase year-over-year, and Book-to-Bill 1 increasing to 1.73,” stated Peter Cannito, Chairman, Chief Executive Officer, and President of Redwire. “Although revenue timing continues to be uneven, with another quarter of record gross margins expanding from 16.3% to 32.3% year-over-year, the quality of our revenue is improving as we deliver mission-critical products and solutions across multiple domains.” Third Quarter 2026 Highlights • Awarded a $20 million contract from the Defense Advanced Research Projects Agency (“DARPA”) to complete additional testing and experimentation on a scaled version of Redwire’s SabreSat spacecraft for a precursor flight test in very low-Earth orbit (“VLEO”). • Received follow-on contract from Axiom Space to develop and deliver two Roll-Out Solar Array (“ROSA”) wings for Axiom Space’s second space station module. • Subsequent to the end of the third quarter of 2026, Re"
+    },
+    "content_hash": "3ba00f8afd3edf9716f2ed3835f87b757aab35af5525c27e53411d337f590412",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001193125-26-446156": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-446156",
+      "entity_id": "CIK:0000918646",
+      "source_role": "candidate",
+      "title": "EAGLE MATERIALS INC (EXP) (CIK 0000918646) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/918646/000119312526446156/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/918646/000119312526446156/d135289dex991.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "EAGLE MATERIALS INC (EXP) (CIK 0000918646) EX-99.1 2026-11-04. The principal risks and uncertainties that may affect the Company’s actual performance include the following: the cyclical and seasonal nature of the Company’s businesses; fluctuations in public infrastructure expenditures; the effects of adverse weather conditions on infrastructure and other construction projects as well as our facilities and operations; the fact that our products are commodities and that prices for our products are subject to material fluctuation due to market conditions and other factors beyond our control; the availability of and fluctuations in the cost of raw materials; changes in the costs of energy, including, without limitation, natural gas, coal and oil (including diesel), and the nature of our obligations to counterparties under energy supply contracts, such as those related to market conditions (for example, spot market prices), governmental orders and other matters; changes in the cost and availability of transportation; unexpected operational difficulties, including unexpected maintenance costs, equipment downtime and interruption of production; material nonpayment or non-performance by any of our key customers; consolidation of our customers; interruptions in our supply chain; difficulties or obstacles encountered in executing capacity expansion or improvement projects, including the inability to execute or complete such projects on time and within budget or to realize expected efficiency gains or costs savings from such projects; difficulties and delays in the development of new business lines; governmental regulation and changes in governmental and public policy (including, without limitation, climate change and other environmental regulation); changes in trade policy, including tariffs and the effects of any increases in tariffs on our business, including increases in cost of inputs used in our facility expansion and modernization projects; possible losses or other adve"
+    },
+    "content_hash": "a892f3e72d11b91bc222d2daea91fb333a2191e00125b2dd70209f4d81920d2a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001193125-26-447287": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-447287",
+      "entity_id": "CIK:0002064947",
+      "source_role": "candidate",
+      "title": "WaterBridge Infrastructure LLC (WBI) (CIK 0002064947) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/2064947/000119312526447287/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2064947/000119312526447287/wbi-ex99_1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "WaterBridge Infrastructure LLC (WBI) (CIK 0002064947) EX-99.1 2026-11-04. drilling and completions in the near term; our ability to enter into favorable contracts with our customers, including the prices we are able to charge and the margins we are able to realize; commodity price volatility and trends related to changes in commodity prices, and our customers’ ability to successfully navigate through such volatility; the availability of additional pore space for future capacity expansion; the level of competition from other water management companies; changes in the prices charged to our customers and availability of services necessary for our customers to conduct their businesses, as a result of scarcity, government regulations or other factors; our and our customers’ ability to obtain necessary supplies, raw materials and other critical components on a timely basis, or at all, including any 5 impacts presented by imposed or potential tariffs, shortages, price increases and any reactions thereto in international trade; any planned or future expansion projects by us or our customers; our ability to continue the payment of dividends; the development of advances or changes in energy technologies or practices; our ability to successfully implement our growth plans, including through organic growth projects, future acquisitions or otherwise; the potential deterioration of our customers’ financial condition and their ability to access capital to fund their development programs; our and our customers’ ability to obtain government approvals or acquire or maintain necessary permits, including those related to the development and operation of produced water handling facilities; operational disruptions and liability related thereto associated with our customers, including those due to environmental hazards, fires, explosions, chemical mishandling or other industrial accidents; our customers' liquidity and ability to access the capital markets on favorable terms, or at all, wh"
+    },
+    "content_hash": "1e93d8f632b8acf4f6139b76cca0613164584e66788388113a530172b0b3dfa2",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0000945394-26-000060": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000945394-26-000060",
+      "entity_id": "CIK:0000945394",
+      "source_role": "candidate",
+      "title": "Service Properties Trust (SVC) (CIK 0000945394) EX-99.3 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/945394/000094539426000060/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/945394/000094539426000060/svc_093026xexhibitx993.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Service Properties Trust (SVC) (CIK 0000945394) EX-99.3 2026-11-04. These forward-looking statements include, among others, statements regarding: potential margin, RevPAR, CAD, cash flow and EBITDA growth; the Board’s assessment of the potential value of SVC’s retained hotel portfolio, including hypothetical enterprise values based on targeted EBITDA and assumed valuation multiples; SVC’s strategic transformation to a predominantly service-focused retail net lease REIT; the potential benefits from SVC’s capital recycling, liquidity, leasing, acquisition and asset management initiatives, asset sales, revenue mix, labor and operating efficiency, operating leverage, secured financings and unencumbered properties; the durability of SVC’s cash flows and its ability to generate free cash flow; SVC’s expectations regarding CapEx; SVC’s execution of additional hotel dispositions, including the expected timing thereof; the completion and timing of hotel renovations, redevelopments and reopenings, and the anticipated benefits therefrom, including enhanced guest experiencing, pricing power and market share gains; the potential benefits of SVC’s hotel portfolio mix, locations, event calendar, and customer demand trends; the competitive advantages of SVC’s travel center properties; the potential benefits of SVC’s master trust and other secured financing structures, the focus of the executive leadership of Sonesta International Hotels Corporation and its subsidiaries, or Sonesta; SVC’s ability to enhance liquidity, refinance or extend its secured revolving credit facility and other debt, address upcoming debt maturities, accelerate deleveraging and unlock long-term value; SVC’s expected benefits from the second half of 2026 through 2028 demand drivers; and SVC's full year 2026 guidance and projections and related assumptions, including with respect to displacement as a result of hotel renovations. Defensively Positioned Service-Focused Retail Net Lease Portfolio (1) Full Service "
+    },
+    "content_hash": "e06bd6bb24113ed0635860543978c37b3090dbfc1e140f786ad48fd7b8ad71f8",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00",
+    "reason": "financing/loan language without a commercial demand event"
+  },
+  "0001628280-26-070187": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070187",
+      "entity_id": "CIK:0000884219",
+      "source_role": "candidate",
+      "title": "Pursuit Attractions & Hospitality, Inc. (PRSU) (CIK 0000884219) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/884219/000162828026070187/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/884219/000162828026070187/prsu-20260930xexx991.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Pursuit Attractions & Hospitality, Inc. (PRSU) (CIK 0000884219) EX-99.1 2026-11-04. • Banff Jasper Lake Cruise Capacity Expansion (Banff and Jasper National Parks) – Addition of a new 56-passenger boat at Maligne Lake with redeployment of existing 38-passenger boat to Lake Minnewanka to meet demand at these popular attractions in Jasper and Banff by 2028. EX-99.1 2 prsu-20260930xexx991.htm EX-99.1 Document NEWS FOR IMMEDIATE RELEASE Exhibit 99.1 PURSUIT REPORTS RECORD THIRD QUARTER 2026 RESULTS AND REAFFIRMS FULL YEAR ADJUSTED EBITDA GUIDANCE MIDPOINT DENVER, November 4, 2026 -- Pursuit Attractions and Hospitality, Inc. (“Pursuit”) (NYSE: PRSU) today reported record third quarter 2026 results and reaffirmed the midpoint of its prior full year 2026 Adjusted EBITDA guidance range. “Our record third quarter results reflect exceptional execution from our team during a dynamic peak season,” said David Barry, Pursuit president and chief executive officer. “With our strong results and continued demand for unforgettable experiences in iconic destinations, we are on track to deliver full year growth in line with our prior guidance range, and we remain well positioned to advance our growth pipeline and create long-term shareholder value.” Key Highlights • Delivered record third quarter results, supported by Pursuit’s relentless focus on extraordinary guest experiences, disciplined revenue and cost management and investments to scale the business • Reaffirmed $133 million midpoint guidance for full year 2026 Adjusted EBITDA, representing 14% year-over-year growth, while narrowing the range to $130 million to $136 million • Enhanced balance sheet strength and strategic focus with sale of non-core Flyover business on July 31, 2026 for approximately $75 million • Acquired Eagle Wing Tours sightseeing attraction on Vancouver Island on July 14, 2026 for approximately $16 million and advanced transformational organic growth projects across the portfolio in support of Vision 2030 gro"
+    },
+    "content_hash": "de889be9f426663dade3d951503b879569172f4277b1721bbb9f44615056df93",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001193125-26-447196": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-447196",
+      "entity_id": "CIK:0001527753",
+      "source_role": "candidate",
+      "title": "Personalis, Inc. (PSNL) (CIK 0001527753) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1527753/000119312526447196/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1527753/000119312526447196/psnl-ex99_1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Personalis, Inc. (PSNL) (CIK 0001527753) EX-99.1 2026-11-04. ● Demonstrated the value of ultrasensitive ctDNA for predicting early immunotherapy response: A study conducted with The University of California, San Diego (UCSD) for 55 patients across 8 metastatic cancer types showed that an ultrasensitive assay may provide resolution in cases of heterogeneous response to stratify patients with radiographically stable disease into distinct risk groups, and dynamic ctDNA monitoring during immunotherapy provides lead time for identifying patients at high risk of progression. EX-99.1 2 psnl-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Personalis Reports Third Quarter Results Reports Q3 clinical test volume of 13,157, clinical revenue of $4.4 million and overall revenue of $25.6 million FREMONT, Calif. – November 4, 2026 – Personalis, Inc. (Nasdaq: PSNL), a leader in advanced genomics for precision oncology, today reported financial and operational results for the third quarter ended September 30, 2026. Recent Strategic and Operational Highlights ● Launched NeXT Personal ® Real-Time Variant Tracker™: Commercially launched optional Real-Time Variant Tracker supplemental results in the NeXT Personal molecular residual disease (MRD) test report, which identify clinically relevant resistance and therapeutically targetable variants over time, during NeXT Personal testing. ● Reported pre-interim results from prospective Triple Negative Breast Cancer (TNBC) B-STRONGER-1 study: Personalis’ study is a multi-site, prospective study evaluating ctDNA dynamics in stage I-III TNBC patients receiving neoadjuvant therapy (NAT). Results showed high sensitivity, achieving a 96% ctDNA detection rate at baseline with 83.3% of positive detections at T1 in the ultrasensitive range below 100 PPM. Also, the results showed an 82% ctDNA clearance rate following two cycles of NAT. ● Demonstrated the value of ultrasensitive ctDNA for predicting early immunotherapy response: A study conducted with The Unive"
+    },
+    "content_hash": "4144acc987f1d5548966028183b598226d3e6d45548305604ffc7a731f38f711",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001001250-26-000066": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001001250-26-000066",
+      "entity_id": "CIK:0001001250",
+      "source_role": "candidate",
+      "title": "ESTEE LAUDER COMPANIES INC (EL) (CIK 0001001250) EX-99.4 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000066/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000066/a994thenextchinaisstillc.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "ESTEE LAUDER COMPANIES INC (EL) (CIK 0001001250) EX-99.4 2026-11-04. EX-99.4 5 a994thenextchinaisstillc.htm EX-99.4 a994thenextchinaisstillc Joy Fan PRESIDENT & CEO, CHINA CHINA: A BLUEPRINT FOR CONSUMER- CENTRIC GROWTH Exhibit 99.4 THE NEXT CHINA IS STILL CHINA ELC CHINA IS POSITIONED TO WIN IN CHINA CHINA REMAINS A KEY MARKET FOR PRESTIGE BEAUTY, WITH MEANINGFUL GROWTH OPPORTUNITIES Source: 1. Euromonitor, Fixed 2025 ex. rates; Beauty Market = Skincare, Color Cosmetics, Fragrance and Hair Care; Prestige represent the premium segments of these categories; CY30 represents Company forecasts; Per Capita Prestige Spend = Prestige Market Size/Female population aged 15-64 y.o. 2. Financial Report. Top 5 Local Groups: Proya, Chicmax, MGP, Giant Biogene, Botanee. LARGE AND GROWING Prestige Market Size1 China’s prestige beauty market has tripled over the past 10 years, with sizeable growth still ahead CY15 CY25 CY30 $8B $27B 3X CAGR: 4%-6% $32-$36B ONGOING PREMIUMIZATION Prestige’s share in beauty expanded significantly over the past decade, fueled by sustained consumer trade-up Beauty Market Size1 CY15 CY25 Prestige Mass $33B $58B 76% 54% 24% 46% China’s per-capita prestige beauty spend remains far below the U.S., signaling clear headroom for continued premiumization Per Capita Prestige Spend1 (CY25) CHINA $56 US $440 8X After rapid expansion, leading C-Beauty players are now seeing growth normalize Growth of Top 5 Local Beauty Groups2 (YoY%) CY23 CY24 CY25 CY26 1H +37.0% +30.8% +9.1% +2.1% Source: 1. Penetration in female consumers, Kantar CY25 PRESTIGE BEAUTY INDUSTRY GROWTH +7.6% FY26 vs. FY25 FY25 Q3 Q4 FY26 Q1 Q2 Q3 Q4 FY27 Q1 Prestige Beauty Industry Growth YoY 0.2% 3.2% 12.5% 10.4% 8.1% 9.3% 6.3% 6.7% ELC China Retail Sales Growth YoY 6.5% 8.1% 7.8% 3.2% 7.6%7.2% CHINA’S PRESTIGE BEAUTY MARKET EXPERIENCED SEQUENTIAL RECOVERY SINCE FY25 Q3 SUSTAINED RECOVERY IN PRESTIGE BEAUTY Based on Beauté Research Data CATEGORY OPPORTUNITIES Significant growth opportunity in unde"
+    },
+    "content_hash": "6dc98c4a4b1de5c0b9482575121141d737e4804c55c6524a12baf31d4b708f20",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001104659-26-122368": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-122368",
+      "entity_id": "CIK:0001167419",
+      "source_role": "candidate",
+      "title": "Riot Platforms, Inc. (RIOT) (CIK 0001167419) EX-99.2 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122368/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122368/riot-ex99d2.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Riot Platforms, Inc. (RIOT) (CIK 0001167419) EX-99.2 2026-11-04. Corsicana Lease Signed with a Frontier AI Lab Frontier AI Lab Deployment at Rockdale on Track Advancing AMD Deployment and Monetization Strong Financial Position Riot has Secured $38 Billion of Contracted Data Center Revenue in 2026 5 BUSINESS UPDATE D A T A C E N T E R S S E C T I O N 2 : 6 Lease provides for Riot to deliver land, powered pads, and power delivery infrastructure, Frontier A I Lab p rocures, installs and op erates m od ular com p ute d ep loym ent 15-year powered land lease with Frontier AI Lab Customer-driven modular deployment Full monetization of Corsicana Corsicana site Capital-efficient funding structure structure • Projected $6M per MW in total capex, capex, consisting of reimbursements to reimbursements to tenant and site work work 1,2 • 400 MW phase 1 estimated to fully fully deliver by September 2027 • Reduced reliance on external suppliers suppliers and long lead time equipment equipment procurement • Significant reduction in development, development, delivery, and operational operational risk • $1.8B of average annualized NOI over the term • Deployment on contiguous core 332-acre parcel • Single tenant execution over entire site enables a streamlined, efficient deployment • Riot funds site work and power infrastructure, and reimbursements to tenant of $4M per IT MW for module costs after each phase is delivered and rent commences • Reim b ursem ents to Tenant exp ected to fund ed with non-recourse p roject d eb t; if financing on com p arab le m arket term s is unavailab le, fund ed throug h rent cred its • Riot’s cash contribution funded from existing liquidity, no equity issuance is currently anticipated 1."
+    },
+    "content_hash": "ff88bbd714fa087c7957d6cbcfee8dbf78207a6d6a3e9ade9040b203b6d75a3e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001493152-26-049992": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-049992",
+      "entity_id": "CIK:0001993400",
+      "source_role": "candidate",
+      "title": "Fatpipe Inc/UT (FATN) (CIK 0001993400) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1993400/000149315226049992/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1993400/000149315226049992/ex99-1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Fatpipe Inc/UT (FATN) (CIK 0001993400) EX-99.1 2026-11-04. Q2 Highlights ● Q2 2027 revenue was $4.83M, representing 22% growth compared to $3.96M in Q2 2026 ● Q2 2027 net income was $1.2M compared to -$0.04M in Q2 2026 ● Diluted net income per share was $0.09, compared to $0.00 in Q2 2026 ● Adjusted EBITDA for Q2 2027 was $1.2 million, representing an Adjusted EBITDA margin of approximately 24.1%, compared to $0.7 million in Q2 2026 Financial Performance Revenue growth during the quarter was driven by increased recurring billings, customer renewals, and new customer wins. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 FatPipe, Inc. (FATN) Reports Q2 FY2027 Results: 22% Y-o-Y Q2 Revenue Growth and 24.1% Adjusted EBITDA Margin SALT LAKE CITY, UT / PRNewswire / November 4, 2026 FatPipe, Inc. (NASDAQ: FATN) (“FatPipe” or the “Company”), a pioneer and multiple patents holder in enterprise-class, application-aware, secure software-defined wide area network (“SD-WAN”) and single-stack cybersecurity solutions, today announced its second quarter fiscal year 2027 results for the period ended September 30, 2026. Q2 Highlights ● Q2 2027 revenue was $4.83M, representing 22% growth compared to $3.96M in Q2 2026 ● Q2 2027 net income was $1.2M compared to -$0.04M in Q2 2026 ● Diluted net income per share was $0.09, compared to $0.00 in Q2 2026 ● Adjusted EBITDA for Q2 2027 was $1.2 million, representing an Adjusted EBITDA margin of approximately 24.1%, compared to $0.7 million in Q2 2026 Financial Performance Revenue growth during the quarter was driven by increased recurring billings, customer renewals, and new customer wins. FatPipe continued to see strong demand from customers seeking secure, high-performance alternatives to legacy networking and security vendors. Management Commentary “We are pleased with our continued revenue growth and profitability this quarter, reflecting the strength of our business model and continued execution across the organization,” said Dr. Ragula Bhaskar"
+    },
+    "content_hash": "e6e5de52eaf932b59826307a99f109d1d5fbae145022a39ab2883920a2c5167b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001104659-26-122371": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-122371",
+      "entity_id": "CIK:0002089283",
+      "source_role": "candidate",
+      "title": "Eagle Nuclear Energy Corp. (NUCL, NUCLW) (CIK 0002089283) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/2089283/000110465926122371/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2089283/000110465926122371/tm2628748d1_ex99-1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Eagle Nuclear Energy Corp. (NUCL, NUCLW) (CIK 0002089283) EX-99.1 2026-11-04. EX-99.1 3 tm2628748d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 Eagle Nuclear Energy Signs Binding LOI to Acquire Noble Plains Uranium Proposed Acquisition Strategically Expands Eagle’s Domestic Uranium Resource Portfolio RENO, NV – November 4, 2026 – Eagle Nuclear Energy Corp. (“Eagle” or the “Company”) (NASDAQ: NUCL), a next-generation nuclear energy company, today announced that it has signed a binding Letter of Intent (LOI) to acquire 100% of Noble Plains Uranium Corp. (TSX-V: NOBL, OTCQB: NBLXF, FSE: INE0) (“Noble Plains”) in an all-stock transaction, subject to the negotiation and execution of a definitive agreement and customary closing conditions. Noble Plains is a U.S.-focused uranium exploration and development company advancing two In-Situ Recovery (ISR)-amenable projects strategically located within two of the country’s most prolific uranium districts in Wyoming. ISR provides the most capital-efficient and environmentally responsible method of uranium extraction, while also offering faster development times and lower capital intensity than conventional mining. Noble Plains’ ISR portfolio combines brownfield projects covering ~5,965 acres of demonstrated ISR geology in close proximity to established operators. Noble Plains has an option to acquire an 80% interest in its flagship Duck Creek project located in the uranium-rich Powder River basin of Wyoming that hosts a U₃O₈ resource, reported on a 100% basis, containing 5.32M lbs in the Indicated category and an additional 1.04M lbs in the Inferred category, as reported by Noble Plains under the Canadian National Instrument 43-101 (“NI 43-101”) regulatory standards (see “Cautionary Note to U.S. Investors Regarding Mineral Resource Estimates” below). Eagle’s technical team believes this current resource estimate represents a relatively small portion of the total resource potential at Duck Creek, as it covers only 2.5 miles of a total 5."
+    },
+    "content_hash": "e54c0368e5b8b8ffee451703c6559f860f9f1cff6c7ac7ac679253aa68dce0f0",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001628280-26-070209": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070209",
+      "entity_id": "CIK:0000717423",
+      "source_role": "candidate",
+      "title": "MURPHY OIL CORP (MUR) (CIK 0000717423) EX-99.2 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/717423/000162828026070209/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/717423/000162828026070209/mur-2026q3xex992.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "MURPHY OIL CORP (MUR) (CIK 0000717423) EX-99.2 2026-11-04. It adds oil-weighted production through a facility we own, begins generating cash flow without the cost and lead time of a new platform, and reinforces the strategic value of our Pioneer FPSO (Floating Production, Storage and Offloading) vessel acquisition in 2025. EX-99.2 3 mur-2026q3xex992.htm EX-99.2 Document EXHIBIT 99.2 Quarterly Stockholder Update by Murphy Oil Corporation This letter serves as a supplement to our earnings release for the third quarter of 2026. Please see the information regarding forward-looking statements and non-GAAP financial information 1 included at the end of this letter. Unless otherwise noted, the financial and operating highlights and metrics discussed in this letter exclude noncontrolling interest (NCI) 2 . HOUSTON, Texas, November 4, 2026 Murphy Oil Corporation Stockholders, In the third quarter of 2026, Murphy delivered strong results across our portfolio while expanding our long-term resource potential. We advanced our appraisal program at Bubale offshore Côte d'Ivoire, made a new oil discovery at Lac Da Trang (White Camel) North in Vietnam, achieved first oil at Lac Da Vang (Golden Camel), and brought the Chinook #8 development well online in the Gulf of America — all in a single quarter. Production also exceeded the high end of guidance, reflecting the continued strength of our base business and the consistent execution by our teams. Individually, any one of these milestones would have defined a strong quarter, but together they represent one of the clearest demonstrations of Murphy's strategy: Explore, Develop, Deliver. In this letter, I will detail what each of these achievements means for Murphy and the path ahead. EXPLORATION AND APPRAISAL UPDATE Our exploration and appraisal program continued to expand Murphy’s offshore opportunity set during the quarter. In Côte d'Ivoire, the Bubale West-1X well confirmed oil approximately eight miles west and 1,100 feet downdip f"
+    },
+    "content_hash": "3a2e32e98a7db6577a5be72d732ecb797e736ddac75fb86ef5d4daa5c826459c",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001628280-26-070210": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070210",
+      "entity_id": "CIK:0001056903",
+      "source_role": "candidate",
+      "title": "AMERICAN STATES WATER CO (AWR) (CIK 0001056903) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1056903/000162828026070210/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1056903/000162828026070210/exhibit991pressrelease2026.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "AMERICAN STATES WATER CO (AWR) (CIK 0001056903) EX-99.1 2026-11-04. Reported and adjusted net earnings were positively impacted from, among other factors, the implementation of new customer rate increases approved by the California Public Utilities Commission (CPUC) at our regulated utilities. The increase in reported and adjusted net earnings was primarily generated from higher earnings at the water and electric utility segments resulting from, among other factors, the implementation of new customer rate increases approved by the CPUC. EX-99.1 2 exhibit991pressrelease2026.htm EX-99.1 Document Exhibit 99.1 American States Water Company Announces Third Quarter 2026 Results • Third quarter 2026 reported EPS of $1.06 is consistent with EPS reported during the third quarter 2025, or a $0.05 per share increase on an adjusted basis ◦ Third quarter 2026 reported results reflect a $0.05 per share period-over-period unfavorable variance in retirement plan asset returns driven by market volatility • An 11.0% increase ($0.29 per share) in year-to-date (YTD) 2026 reported EPS compared to the same period in 2025, or a 12.6% increase ($0.32 per share) on an adjusted basis ◦ YTD 2026 reported results reflect a period-over-period unfavorable variance of $0.03 per share resulting from retirement plan asset returns • AWR’s regulated utilities are on target to invest $185 to $220 million in capital infrastructure in 2026 • AWR’s contracted services business is expected to contribute $0.63 to $0.67 per share for full year 2026 ◦ YTD 2026, the contracted services business has been awarded approximately $31 million in additional new construction projects, which are expected to be completed through 2029 • An 8.2% increase in the quarterly dividend during 2026 ◦ Quarterly dividend rate has grown at a CAGR of 8.4% over the last five years San Dimas, California, November 4, 2026…. American States Water Company (NYSE:AWR) today reported basic and fully diluted earnings per share of $1.06 for "
+    },
+    "content_hash": "d198818ad8415eab830c55ab6e909ca2dab2203d23eececbb702572af20fbc06",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001628280-26-070119": {
+    "status": "retry",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070119",
+      "entity_id": "CIK:0001865107",
+      "source_role": "candidate",
+      "title": "A.K.A. BRANDS HOLDING CORP. (AKA) (CIK 0001865107) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1865107/000162828026070119/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1865107/000162828026070119/exhibit991-q32026earningsr.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "A.K.A. BRANDS HOLDING CORP. (AKA) (CIK 0001865107) EX-99.1 2026-11-04. These risks and uncertainties include, without limitation: the effects of economic downturns and unstable market conditions on consumer demand and our business; our ability in the future to continue to comply with the New York Stock Exchange's (“NYSE”) listing standards and maintain the listing of our common stock on the NYSE; risks related to doing business in China, including the imposition of tariffs and duties on goods imported from China; our ability to anticipate rapidly-changing consumer preferences in the apparel, footwear and accessories industries; our ability to execute our strategic initiatives, including transitioning Culture Kings to a data-driven, short lead time merchandising cycle; our ability to acquire new customers, retain existing customers or maintain average order value levels; the effectiveness of our marketing and our level of customer traffic; merchandise return rates; our ability to manage our inventory effectively; our success in identifying brands to acquire, integrate and manage on our platform; our ability to expand into new markets, including our entry into the United Kingdom through Princess Polly's U.K."
+    },
+    "content_hash": "8645f0864fd7378240755c49c9aa802eb1c0fc6280f233fbe95fcf40490cfd62",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-05T07:00:42+00:00",
+    "reason": "provider_overloaded",
+    "http_status": 503,
+    "next_retry_at": "2026-11-05T07:31:01+00:00",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-05",
+    "failure_run": "41983914309-1"
+  },
+  "0001193125-26-447222": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-447222",
+      "entity_id": "CIK:0001789029",
+      "source_role": "candidate",
+      "title": "Aeva Technologies, Inc. (AEVA) (CIK 0001789029) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1789029/000119312526447222/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1789029/000119312526447222/aeva-ex99_1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Aeva Technologies, Inc. (AEVA) (CIK 0001789029) EX-99.1 2026-11-04. Many factors could cause actual future events to differ materially from the forward-looking statements in this press release, including, but not limited to: (i) the fact that Aeva is an early stage company with a history of operating losses and may never achieve profitability, (ii) Aeva’s limited operating history, (iii) Aeva’s ability to implement business plans, forecasts, and other expectations and to identify and realize additional opportunities, (iv) the timing of any orders for the Company’s solutions, which will not be under our control, (v) the risk that automotive OEMs or manufacturers in other industries may not pursue or adopt the platform as currently anticipated, if at all, (vi) the risk that markets will not accept products of automotive OEMs or of manufacturers in other industries that use our technologies, (vii) the risk that additional markets will not be receptive to Aeva’s technology, (viii) the risk that new customer contracts will not result in commercial scale shipments, (ix) supply chain and manufacturing issues, (x) unforeseen errors or defects, (xi) market acceptance of LiDAR technology for the automotive, data center and other markets, (xii) general economic conditions, including tariffs, and other material risks and other important factors that could affect our financial results."
+    },
+    "content_hash": "a0bb887cf52ec6d34fe864058f08e48cbdfa1747e2fc716d409d3c69b960aa3b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001628280-26-070244": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070244",
+      "entity_id": "CIK:0000730708",
+      "source_role": "candidate",
+      "title": "SEACOAST BANKING CORP OF FLORIDA (SBCF) (CIK 0000730708) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/730708/000162828026070244/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/730708/000162828026070244/sbcf3q2026investorpresen.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "SEACOAST BANKING CORP OF FLORIDA (SBCF) (CIK 0000730708) EX-99.1 2026-11-04. $12,498 Deposits End-of-Period ($ in millions) $13,090 $16,256 $16,638 $16,792 $16,580 4.25% 3.75% 3.75% 3.75% 4.00% 1.81% 1.67% 1.54% 1.53% 1.60% Total Deposits Fed Funds Upper Limit Cost of Deposits 3Q'25 4Q'25 1Q'26 2Q'26 3Q'26 24THIRD QUARTER 2026 INVESTOR PRESENTATION Deposits End-of-Period ($ in millions) $13,090 $16,256 $16,638 $16,792 $16,580 Transaction Accounts Savings Money Market Brokered Time Deposits 3Q'25 4Q'25 1Q'26 2Q'26 3Q'26 Granular, Diverse and Relationship-Focused Customer Funding Base The Company benefits from a granular deposit franchise, with the top ten depositors representing approximately 2% of total customer deposits. Consumer and business deposits represent 47% and 53% of total customer deposits, respectively, with an average balance per account of $26 thousand and $120 thousand."
+    },
+    "content_hash": "55532b68f3e51d32155f012c985cf4ab9ca962f413116d7efa14917e83287723",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001281761-26-000066": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001281761-26-000066",
+      "entity_id": "CIK:0001281761",
+      "source_role": "candidate",
+      "title": "REGIONS FINANCIAL CORP (RF, RF-PC, RF-PE, RF-PF) (CIK 0001281761) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1281761/000128176126000066/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1281761/000128176126000066/a4q26investormeetingmate.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "REGIONS FINANCIAL CORP (RF, RF-PC, RF-PE, RF-PF) (CIK 0001281761) EX-99.1 2026-11-04. 3Q26 Ascentium Capital Home Improvement Financing 3Q Average Balances $2.7B $4.6B 3Q Portfolio Yield 8.4% 7.8% 3Q Going-on Yield 7.9% 8.8% 3Q NCOs 1.74% 1.54% Ascentium Capital(1) Origination Growth • Since acquisition, Ascentium Capital has grown by 42%(3) • 75% of branches are actively offering Ascentium solutions • Contributing to strategic growth are transactions originated through cross- marketing relationships with Commercial Banking, Branch Small Business, and Home Improvement Finance • 46% of new business is booked within the footprint providing opportunities to drive new customer acquisition, deepen relationships, and grow deposit balances Credit • Instilled risk based pricing • NCOs remain range bound and are 39 bps lower than 2025 Production • 3Q26 production is up 6% over 3Q25 46 All Other Commercial 3.4% Investor Real Estate 15.0% Financial Services 13.7% CRE Unsecured, including REITs 10.9% Govt. Key Portfolio Metrics(1) Balances $1,020 % of Total Loans 1.0% NPL $43 NPL / Loans 4.2% Charge-offs $33 Charge-offs / Loans 4.0% ACL $83 ACL / Loans 8.2% • The Trucking market continues to be driven by carrier exits, driver shortages, and regulatory pressures, resulting in higher spot rates and improving carrier profitability • Trucking capacity remains constrained following an extended period of carrier exits and regulatory pressures, supporting elevated freight rates and increased pricing power for carriers • While the freight cycle has improved and spot-market fundamentals remain strong, the industry is still vulnerable to economic uncertainty and potential freight-demand slowdowns • New originations in the sector continue to be curtailed and those that are being considered are typically secured or targeted towards larger companies • Trucking balances have declined 20% year-over-year, and asset quality has continued to improve Ongoing Portfolio Surveillance 51 QoQ Highligh"
+    },
+    "content_hash": "fc61d93291a919040161888348b7e0588f07c20fac7360518cb5bdb29d5c90e5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-05T07:00:46+00:00",
+    "reason": "provider_overloaded",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-05",
+    "failure_run": "41983914309-1"
+  },
+  "0001145197-26-000190": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001145197-26-000190",
+      "entity_id": "CIK:0001145197",
+      "source_role": "candidate",
+      "title": "INSULET CORP (PODD) (CIK 0001145197) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1145197/000114519726000190/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1145197/000114519726000190/podd2026-09x30ex991.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "INSULET CORP (PODD) (CIK 0001145197) EX-99.1 2026-11-04. sales force expansion and executing Type 2 action plan by improving onboarding and customer support, enhancing sampling, and aligning sales force compensation with new customer start and retention goals • Completed full U.S. EX-99.1 2 podd2026-09x30ex991.htm EX-99.1 Document Exhibit 99.1 Insulet Reports Third Quarter 2026 Results Third Quarter Revenue of $842 million, Increase of 19.2% (19.6% in Constant Currency 1 ) ACTON, Mass. - November 4, 2026 - Insulet Corporation (NASDAQ: PODD) (Insulet or the Company), the global leader in tubeless insulin pump technology with its Omnipod ® brand of products, today announced its financial results for the three months ended September 30, 2026. Third Quarter Financial Highlights: • Revenue of $842.0 million, up 19.2%, or 19.6% in constant currency, slightly above the high end of the Company’s guidance range of 17.5% - 19.5% at constant currency rates ◦ Total Omnipod revenue of $836.6 million, rose 19.7%, or 20.0% in constant currency ▪ U.S. Omnipod revenue of $570.4 million, increased 14.7% ▪ International Omnipod revenue of $266.2 million, increased 31.7%, or 33.0% in constant currency ◦ Drug Delivery revenue of $5.5 million • Operating income of $189.8 million, or 22.5% of revenue, up 590 basis points over prior year • Adjusted operating income 1 of $185.2 million, or 22.0% of revenue, up 490 basis points compared to prior year • Net income of $141.1 million, or $2.03 per diluted share, compared to $87.6 million, or $1.24 per diluted share, in the prior year • Adjusted net income 1 of $138.0 million, increased 57.2% compared to $87.8 million in the prior year • Adjusted earnings 1 of $1.99 per diluted share, increased 59.9%, compared to $1.24 per diluted share, in the prior year Recent Strategic Highlights: • Advanced commercial objectives, completing U.S. sales force expansion and executing Type 2 action plan by improving onboarding and customer support, enhancing sam"
+    },
+    "content_hash": "ad6342f862ccdb8c3ee680b27a532cbebda2edb6c627d4b300fa2eac2656c264",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001193125-26-447459": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-447459",
+      "entity_id": "CIK:0001177702",
+      "source_role": "candidate",
+      "title": "SAIA INC (SAIA) (CIK 0001177702) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526447459/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1177702/000119312526447459/saia-ex99_1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "SAIA INC (SAIA) (CIK 0001177702) EX-99.1 2026-11-04. As our network continues to mature and density builds, we are better positioned to create more solutions for existing customers, attract new customers and further improve network efficiency. Our broader network is improving our ability to support existing customers, attract new customers and compete nationally. I know you've got, obviously, with capacity expansion you're going to add costs and add capacity, but if you look at a kind of like-for-like basis, what does inflation look like in terms of, I guess you got probably some wage inflation, some group health, that type of thing, but maybe some incentive comp that's stepping up as well? EX-99.1 2 saia-ex99_1.htm EX-99.1 EX-99.1 Saia Inc. – Saia – Earnings Conference Call Transcript – 10/29/2026 10:00 AM ET Company Participants Bill Kain - Senior Director of Investor Relations Matt Batteh - Executive Vice President & Chief Financial Officer Fritz Holzgrefe – President & Chief Executive Officer Conference Call Participants Scott Group - Wolfe Research Jordan Alliger - Goldman Sachs Stephanie Moore - Jefferies Chris Wetherbee - Wells Fargo Ken Hoexter - Bank of America Richa Harnain - Deutsche Bank Tom Wadewitz - UBS Brian Ossenbeck - JP Morgan David Vernon - Bernstein Eric Morgan - Barclays Bascome Majors - Stephens Ravi Shanker - Morgan Stanley Ari Rosa - Citigroup Operator Good morning and welcome to the Saia, Inc. Third Quarter 2026 Earnings Conference call. [Operator Instructions] I would now like to turn the conference over to Bill Kain, Senior Director of Investor Relations. Please go ahead. Bill Kain Thank you, Gary. Good morning, everyone. Welcome to Saia's Third Quarter 2026 Conference call. With me for today's call is Saia's President and Chief Executive Officer, Fritz Holzgrefe and Saia's Executive Vice President and Chief Financial Officer, Matt Batteh. Before we begin, you should know that during this call, we may make some forward-looking statements "
+    },
+    "content_hash": "2896ca7b31d1c4af67e2e79447293e71cbf6beac6b431291a1c23a7dc1e14864",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001193125-26-446154": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-446154",
+      "entity_id": "CIK:0001828161",
+      "source_role": "candidate",
+      "title": "FTC Solar, Inc. (FTCI) (CIK 0001828161) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828161/000119312526446154/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1828161/000119312526446154/ftci-ex99_1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "FTC Solar, Inc. (FTCI) (CIK 0001828161) EX-99.1 2026-11-04. EX-99.1 2 ftci-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 FTC Solar Announces Third Quarter 2026 Financial Results Third Quarter Highlights and Recent Developments • Third quarter revenue up 25% q/q; profitability metrics within, or better than, target ranges • Significant new project wins across multiple geographies with several new customers, including Tata Power Solar and Evren, platform backed by Brookfield • Targeting 46% revenue growth in fourth quarter at mid-point • Expect continued strong growth and Adjusted EBITDA profitability in 2027 on strength of pipeline AUSTIN, Texas — November 4, 2026– FTC Solar, Inc. from a new customer; • The company is working with Linxon and private equity firm Energy Transition Capital to advance a portfolio of solar projects across multiple locations in Puerto Rico."
+    },
+    "content_hash": "813ee5d018ac1badf525c1356b3bd457af467860eb652d468fc76ddec91c2d8e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001835830-26-000045": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001835830-26-000045",
+      "entity_id": "CIK:0001835830",
+      "source_role": "candidate",
+      "title": "Klaviyo, Inc. (KVYO) (CIK 0001835830) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835830/000183583026000045/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1835830/000183583026000045/confidentialfiscalq32026ea.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Klaviyo, Inc. (KVYO) (CIK 0001835830) EX-99.1 2026-11-04. 1 ● Grew customers to more than 211,000, with new customer wins and expansions with Frasers Group, Malbon Golf, and Voluspa. Current Period ARR includes any expansion, price increases, and customer subscriptions that are deactivated and subsequently reactivated during the applicable twelve-month period and reflects contraction or attrition over the last twelve months from this customer cohort, but excludes any ARR from new customers in the current period. These risks include, among others, the following: our ability to achieve future growth and sustain our growth rate; our ability to successfully execute our business and growth strategy, such as the success of our investment in our key growth initiatives and our ability to recognize effective areas for growth; our ability to successfully integrate with third-party platforms; our relationships with third parties, such as our marketing agency and technology partners; unfavorable conditions in our industry; our ability to attract new customers, including mid-market and enterprise customers, retain revenue from existing customers and increase sales from both new and existing customers; our ability to leverage artificial intelligence and machine learning in our products; our ability to sustain strong international growth; the success of our marketing and sales strategies; costs and expenses associated with being a public company; the impact of macroeconomic factors, including tariffs; as well as other risks and uncertainties set forth under the caption “Risk Factors” and elsewhere in our Quarterly Report on Form 10-Q for the quarter ended September 30, 2026, as filed with the Securities and Exchange Commission (the “SEC”), and the other filings and reports we make with the SEC from time to time, which may be obtained on our Investor Relations website at https://investors.klaviyo.com and on the SEC website at www.sec.gov."
+    },
+    "content_hash": "94e18cda97c0074aa9d6324dfcf58b30c894c32d0fc749f2511cebf277653da5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001104659-26-122659": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-122659",
+      "entity_id": "CIK:0001806837",
+      "source_role": "candidate",
+      "title": "Vertex, Inc. (VERX) (CIK 0001806837) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1806837/000110465926122659/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1806837/000110465926122659/verx-ex99d1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Vertex, Inc. (VERX) (CIK 0001806837) EX-99.1 2026-11-04. Factors which may cause actual results to differ materially from current expectations include, but are not limited to: our ability to maintain and grow revenue from existing customers and new customers, and expand their usage of our solutions; our ability to maintain and expand our strategic relationships with third parties; our ability to adapt to technological change and successfully introduce new solutions or provide updates to existing solutions; risks related to failures in information technology or infrastructure; risks related to our reliance on government infrastructure to support our e-invoicing services; challenges in using and managing use of Artificial Intelligence in our business; incorrect or improper implementation, integration or use of our solutions; failure to attract and retain qualified technical and tax-content personnel; competitive pressures from other tax software and service providers and challenges of convincing businesses using native enterprise resource planning functions to switch to our software; our ability to accurately forecast our revenue and other future results of operations based on recent success; our ability to offer specific software deployment methods based on changes to customers’ and partners’ software systems; our ability to continue making significant investments in software development and equipment; our ability to sustain and expand revenues, maintain profitability, and to effectively manage our anticipated growth; our ability to successfully diversify our solutions by developing or introducing new solutions or acquiring and integrating additional businesses, products, services, or content; our ability to successfully integrate acquired businesses and to realize the anticipated benefits of such acquisitions; risks related to the fluctuations in our results of operations; risks related to our expanding international operations; our exposure to liability from errors"
+    },
+    "content_hash": "9e15c28089bd0cff267991091c31cc5c917bc29e3cd9fceb8eac9f3acdc1a56a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001641614-26-000145": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001641614-26-000145",
+      "entity_id": "CIK:0001641614",
+      "source_role": "candidate",
+      "title": "CPI Card Group Inc. (PMTS) (CIK 0001641614) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1641614/000164161426000145/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1641614/000164161426000145/pmts-20260930xex991.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "CPI Card Group Inc. (PMTS) (CIK 0001641614) EX-99.1 2026-11-04. • CPI is nearing completion of the integration of Arroweye, and continues to outperform the Company’s original investment case and is generating strong commercial momentum by securing more than 30 new customer wins since the acquisition in May 2025, including a top 15 issuer that was not previously a CPI customer. These risks and uncertainties include, but are not limited to: (i) risks relating to our business and industry, such as a deterioration in general economic conditions, including due to inflationary conditions, resulting in reduced consumer confidence and business spending, and a decline in consumer credit worthiness impacting demand for our products; the unpredictability of our operating results, including an inability to anticipate changes in customer inventory management practices and its impact on our business; our failure to retain our existing key customers or identify and attract new customers; the highly competitive, saturated and consolidated nature of our marketplace; our inability to develop, introduce and commercialize new products and related services, including due to our inability to undertake research and development activities; new and developing technologies that make our existing technology solutions and products obsolete or less relevant or our failure to introduce new products and related services in a timely manner or at all; system security risks, data protection breaches and cyber-attacks; the usage, or lack thereof, of artificial intelligence technologies; disruptions, delays or other failures in our supply chain, including as a result of inflationary pressures, single-source suppliers, failure or inability of suppliers to comply with our code of conduct or contractual requirements, trade restrictions, tariffs, foreign conflicts or political unrest in countries in which our suppliers operate, and our inability to pass related costs on to our customers or difficulty meet"
+    },
+    "content_hash": "7f658c286d66b4e2482dde1a2fc4498307a4111ee270e8a77499dee5f427d3d1",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001611647-26-000026": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001611647-26-000026",
+      "entity_id": "CIK:0001611647",
+      "source_role": "candidate",
+      "title": "Freshpet, Inc. (FRPT) (CIK 0001611647) EX-99.3 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1611647/000161164726000026/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1611647/000161164726000026/frpt-20260930xexx993.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Freshpet, Inc. (FRPT) (CIK 0001611647) EX-99.3 2026-11-04. So we’ve undertaken some work to look at those parts of the portfolio that we believe that we have pricing power and opportunities to move forward on. EX-99.3 4 frpt-20260930xexx993.htm EX-99.3 frpt-20260930xexx993 Exhibit 99.3 Freshpet Q3 2026 Earnings Call November 4, 2026 8 a.m. ET Company Participants • Billy Cyr, Chief Executive Officer • John O’Connor, Chief Financial Officer • Nicki Baty, President & Chief Operating Officer • Rachel Ulsh, Vice President, Investor Relations & Corporate Communications Other Participants • Edward Lewis, Analyst, Rothschild & Co Redburn • Eric Serotta, Analyst, Morgan Stanley • Jacob Henry, Analyst, TD Cowen • Jon Andersen, Analyst, William Blair & Co. • Michael Lavery, Analyst, Piper Sandler • Peter Benedict, Analyst, Robert W. Baird & Co. • Rupesh Parikh, Analyst, Oppenheimer & Co. • Thomas Palmer, Analyst, JP Morgan • Todd Brooks, Analyst, StoneX • Yasmine Deswandhy, Analyst, Bank of America Presentation Operator Good morning, and welcome to Freshpet’s Third Quarter Earnings Conference Call. All participants will be in listen-only mode. (Operator Instructions). After today’s presentation, there will be an opportunity to ask questions. (Operator Instructions) Please note, this event is being recorded. I would now like to turn the conference over to Rachel Ulsh, Vice President, Investor Relations. Please go ahead. Rachel Ulsh Good morning, and welcome to Freshpet’s third quarter 2026 earnings call and webcast. On today’s call are Billy Cyr, Chief Executive Officer and John O’Connor, Chief Financial Officer. Nicki Baty, President and Chief Operating Officer, will also be available for Q&A. Before we begin, please remember that during the course of this call, management may make forward- looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These include statements related to the size of the category and our TAM, our strategy and ex"
+    },
+    "content_hash": "2ca64902ddc168edb84163559aeec05c020efbd8a09b74755630f7e77963947e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001051470-26-000091": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001051470-26-000091",
+      "entity_id": "CIK:0001051470",
+      "source_role": "candidate",
+      "title": "CROWN CASTLE INC. (CCI) (CIK 0001051470) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1051470/000105147026000091/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1051470/000105147026000091/q32026earningsrelease8-ka.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "CROWN CASTLE INC. (CCI) (CIK 0001051470) EX-99.1 2026-11-04. tower business and the potential benefits therefrom, (4) benefits stemming from our capital allocation framework, (5) net income (loss) (including on a per share basis), (6) AFFO (including on a per share basis) and its components and growth, (7) Adjusted EBITDA and its components and growth, (8) Organic Contribution to Site Rental Billings (including as Adjusted for Impact of Sprint Cancellations and DISH Terminations) and its components and growth, (9) site rental revenues and its components and growth, (10) the impact of Sprint Cancellations, (11) our balance sheet, liquidity, leverage and credit ratings, (12) capital expenditures, including discretionary capital expenditures, (13) the impact of DISH Terminations, (14) operating efficiencies and the potential benefits therefrom, (15) potential land acquisitions under our towers, including activity levels with respect to ground lease buyouts, (16) modernizing our systems and processes, (17) acquisition of an outstanding residual economic interest and the potential impact thereof, (18) entry into new customer agreements and recent contractual term extensions, and the potential impacts thereof on our financial results, and (19) dividends, including dividend levels, rates and amounts."
+    },
+    "content_hash": "a866329a2ee40eaee6b9bd46ebeb47ee563605a2894fb58c991e21d6df890e28",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001140361-26-041888": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001140361-26-041888",
+      "entity_id": "CIK:0000006955",
+      "source_role": "candidate",
+      "title": "ENERPAC TOOL GROUP CORP (EPAC) (CIK 0000006955) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/6955/000114036126041888/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/6955/000114036126041888/ef20084875_ex99-1.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "ENERPAC TOOL GROUP CORP (EPAC) (CIK 0000006955) EX-99.1 2026-11-04. Mission-critical, engineered solutions known for quality, durability, reliability, and safety supporting pricing power Often a relatively low portion of customer’s overall project budget, where customers value safety, reliability, and quality above all Differentiated technical and application expertise driving commercial reliance and share of wallet Mission-critical applications expertise enables share capture through specification work Strength of brands with global scale, channel reach / distribution network, and breadth of portfolio enabling consistent market capture One-stop shop for customers Proven operating system (PEP) and commercial engine (ECX) paired with disciplined capital allocation underpinning consistent value creation Enerpac business system tools are key enablers to supporting top-quartile returns for shareholders WHY THIS IS SUSTAINABLE 23 Introducing our next-genGrowth Strategy 24 A Sharpened Long-term Profitable Growth Strategy to become an industrial compounder GROW in Attractive End Markets with Commercial Excellence Lifecycle Valuevia Service DIFFERENTIATE through Product-First, Application-LedInnovation EXPAND through Operational Excellence Initiatives, including Inventory Management andService Expansion ENABLED BY POWERING ENERPAC PERFORMANCE (PEP) ANDDISCIPLINED CAPITAL ALLOCATION TO EXPAND MARGINS 25 Propel in action ECX = Enerpac Commercial Excellence. commercial resources Direct engagements with large asset owners, EPCs, and contractors Strong momentum in hydraulic gantries and e-Mover solutions through go-to-market model – recent wins: ~$5M with leading modular design and manufacturing company ~$1.5M with leading U.S.engineering contractor ~$825K with heavy equipment rental provider Drive Distributor-Led Excellence Deepen relationships and exclusivity with national accounts, while enhancing support in specific regions 1 Enhance Go-to-Market Build application-based sale"
+    },
+    "content_hash": "4595015c8319a45aadfe7cc90a52d1d1d4cbc4c9564fc32dfe45a9e658d4185f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+  },
+  "0001712184-26-000159": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001712184-26-000159",
+      "entity_id": "CIK:0001712184",
+      "source_role": "candidate",
+      "title": "Liberty Latin America Ltd. (LILA, LILAB, LILAK, LILAP) (CIK 0001712184) EX-99.1 2026-11-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1712184/000171218426000159/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1712184/000171218426000159/ex991toform_llaq32026earni.htm",
+      "published_at": "2026-11-04",
+      "raw_text": "Liberty Latin America Ltd. (LILA, LILAB, LILAK, LILAP) (CIK 0001712184) EX-99.1 2026-11-04. NPV – Represents the $250 million estimated pre-tax cash flow savings which we expect to generate over the life of the contract Property and Equipment Addition Categories • Customer Premises Equipment: Includes capitalizable equipment and labor, materials and other costs directly associated with the installation of such CPE; • New Build & Upgrade: Includes capitalizable costs of network equipment, materials, labor and other costs directly associated with entering a new service area and upgrading our existing network; • Capacity: Includes capitalizable costs for network capacity required for growth and services expansions from both existing and new customers. Relates to areas such as network improvement, property and facilities, technical sites, information technology systems and fleet; and • Product & Enablers: Discretionary capitalizable costs that include investments (i) required to support, maintain, launch or innovate in new customer products, and (ii) in infrastructure, which drive operational efficiency over the long term."
+    },
+    "content_hash": "30997da82918c07a2f6efdf68a7d49a7a3462bd4894da94052f28577141a3dba",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-05T06:59:14.022693+00:00"
   }
 }
