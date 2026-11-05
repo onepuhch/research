@@ -2261,12 +2261,20 @@
         ]
       },
       "day": "2026-11-05",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-05T07:15:47+00:00",
+          "status": "sent",
+          "message_id": 235,
+          "error": null
+        }
+      ],
       "reserved_by": "41983914309-1",
       "reserved_at": "2026-11-05T07:15:44+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CLF Cleveland-Cliffs Inc.</b>\n기준: 2026-10-22 이전 재검토 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $1.34 → 현재 $1.71 (+28%), 2026-10-31·2026-11-05 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-7F0690B785E31226</code> · 추적 <code>/track CAN-7F0690B785E31226</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "83fc8e91a3fb66757d52d9a66c2aecba8c22ac00a838edf12aeef3df370a12ff"
+      "payload_sha256": "83fc8e91a3fb66757d52d9a66c2aecba8c22ac00a838edf12aeef3df370a12ff",
+      "message_id": 235
     },
     "CIK:0001699136|유전 서비스|new_discovery": {
       "channel": "news",
@@ -2278,12 +2286,20 @@
       "observation_id": null,
       "signal_id": "SIG-0927",
       "day": "2026-11-05",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-05T07:15:47+00:00",
+          "status": "sent",
+          "message_id": 236,
+          "error": null
+        }
+      ],
       "reserved_by": "41983914309-1",
       "reserved_at": "2026-11-05T07:15:44+00:00",
       "payload_text": "📡 새 발굴 신호 · 2026-11-05\n\n<b>🅱️ Cactus, Inc. (WHD) · 6/12점</b>\nSIG-0927 · 검토 우선순위 B · 유전 서비스\n근거: realized · 변화 방향: positive\n\n· 무슨 일: Cactus, Inc.의 3분기 수주액이 1억 5천만 달러 이상 증가하여 Spoolable Technologies 부문의 백로그가 거의 두 배로 늘었으며, 중동에 새로운 Spoolable Technologies 제조 시설 건설이 승인되었습니다.\n· 왜 중요: 백로그 증가는 향후 매출 성장을 의미하며, 특히 Spoolable Technologies 부문의 급격한 성장은 해당 기술에 대한 수요 증가와 시장 점유율 확대를 시사합니다. 신규 시설 건설은 이러한 수요에 대응하기 위한 생산 능력 확대로, 장기적인 성장 동력을 확보하는 중요한 투자입니다.\n· 볼 것: 향후 분기별 Spoolable Technologies 부문 매출 성장률; 신규 중동 시설의 건설 진행 상황 및 가동 시점\n· 용어: 백로그 (Backlog): 고객으로부터 수주했으나 아직 매출로 인식되지 않은 미처리 주문 잔고. Spoolable Technologies: 유전 및 가스전에서 사용되는 유연한 파이프 및 관련 기술.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1699136/000162828026067952/whd-20260930xexhibit991.htm\">SEC EDGAR</a> (2026-10-28)\n\n추적 <code>/track SIG-0927</code>",
-      "payload_sha256": "63b91aa124d32203ed8f17952760a98737c368877b232a1666c1eabacc1541c1"
+      "payload_sha256": "63b91aa124d32203ed8f17952760a98737c368877b232a1666c1eabacc1541c1",
+      "message_id": 236
     },
     "NYSE:DINO|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-90897C1DDCAA163B": {
       "channel": "screen",
@@ -2363,12 +2379,20 @@
         ]
       },
       "day": "2026-11-05",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-05T07:15:48+00:00",
+          "status": "sent",
+          "message_id": 237,
+          "error": null
+        }
+      ],
       "reserved_by": "41983914309-1",
       "reserved_at": "2026-11-05T07:15:44+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DINO HF Sinclair Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $11.82 → 현재 $17.90 (+51%), 2026-11-04·2026-11-05 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-11B1565B12AFE2F9</code> · 추적 <code>/track CAN-11B1565B12AFE2F9</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "6ea2db91b17a60d31ffbdfbc72d9db9826153b62e7ad414f484536ca9cc2aa08"
+      "payload_sha256": "6ea2db91b17a60d31ffbdfbc72d9db9826153b62e7ad414f484536ca9cc2aa08",
+      "message_id": 237
     }
   },
   "bootstrap": {
