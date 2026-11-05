@@ -18588,7 +18588,7 @@
             "views": "not_run"
           },
           "started_at": "2026-11-05T06:58:16+00:00",
-          "finished_at": null,
+          "finished_at": "2026-11-05T07:16:10+00:00",
           "code_version": "4a07733574d9",
           "policy_hash": "171cefb46b8c"
         }
@@ -18840,42 +18840,151 @@
           ]
         },
         "alerts": {
-          "execution_status": "started",
+          "execution_status": "success",
           "planned_by": "41983914309-1",
           "planned_at": "2026-11-05T06:58:16+00:00",
           "plan_reason": "not_run",
           "run_id": "41983914309-1",
           "started_at": "2026-11-05T07:15:40+00:00",
-          "finished_at": null,
-          "exit_code": null,
+          "finished_at": "2026-11-05T07:15:49+00:00",
+          "exit_code": 0,
           "quality_status": "unknown",
           "inputs": {
             "extract": "41983914309-1@2026-11-05T07:00:46+00:00"
-          }
+          },
+          "revision": "41983914309-1@2026-11-05T07:15:49+00:00",
+          "last_success_at": "2026-11-05T07:15:49+00:00",
+          "attempts": [
+            {
+              "run_id": "41983914309-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-11-05T07:15:40+00:00",
+              "finished_at": "2026-11-05T07:15:49+00:00",
+              "exit_code": 0,
+              "revision": "41983914309-1@2026-11-05T07:15:49+00:00",
+              "blocked_reason": null
+            }
+          ]
         },
         "baseline": {
-          "execution_status": "pending",
+          "execution_status": "success",
           "planned_by": "41983914309-1",
           "planned_at": "2026-11-05T06:58:16+00:00",
-          "plan_reason": "not_run"
+          "plan_reason": "not_run",
+          "run_id": "41983914309-1",
+          "started_at": "2026-11-05T07:15:49+00:00",
+          "finished_at": "2026-11-05T07:15:49+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "@cases": "5c4fa9eb6cdfa324"
+          },
+          "revision": "41983914309-1@2026-11-05T07:15:49+00:00",
+          "last_success_at": "2026-11-05T07:15:49+00:00",
+          "attempts": [
+            {
+              "run_id": "41983914309-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-11-05T07:15:49+00:00",
+              "finished_at": "2026-11-05T07:15:49+00:00",
+              "exit_code": 0,
+              "revision": "41983914309-1@2026-11-05T07:15:49+00:00",
+              "blocked_reason": null
+            }
+          ]
         },
         "returns": {
-          "execution_status": "pending",
+          "execution_status": "success",
           "planned_by": "41983914309-1",
           "planned_at": "2026-11-05T06:58:16+00:00",
-          "plan_reason": "not_run"
+          "plan_reason": "not_run",
+          "run_id": "41983914309-1",
+          "started_at": "2026-11-05T07:15:49+00:00",
+          "finished_at": "2026-11-05T07:15:50+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "baseline": "41983914309-1@2026-11-05T07:15:49+00:00"
+          },
+          "revision": "41983914309-1@2026-11-05T07:15:50+00:00",
+          "last_success_at": "2026-11-05T07:15:50+00:00",
+          "attempts": [
+            {
+              "run_id": "41983914309-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-11-05T07:15:49+00:00",
+              "finished_at": "2026-11-05T07:15:50+00:00",
+              "exit_code": 0,
+              "revision": "41983914309-1@2026-11-05T07:15:50+00:00",
+              "blocked_reason": null
+            }
+          ]
         },
         "candidate_prices": {
-          "execution_status": "pending",
+          "execution_status": "success",
           "planned_by": "41983914309-1",
           "planned_at": "2026-11-05T06:58:16+00:00",
-          "plan_reason": "not_run"
+          "plan_reason": "not_run",
+          "run_id": "41983914309-1",
+          "started_at": "2026-11-05T07:15:50+00:00",
+          "finished_at": "2026-11-05T07:16:06+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "revision": "41983914309-1@2026-11-05T07:16:06+00:00",
+          "last_success_at": "2026-11-05T07:16:06+00:00",
+          "attempts": [
+            {
+              "run_id": "41983914309-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-11-05T07:15:50+00:00",
+              "finished_at": "2026-11-05T07:16:06+00:00",
+              "exit_code": 0,
+              "revision": "41983914309-1@2026-11-05T07:16:06+00:00",
+              "blocked_reason": null
+            }
+          ]
         },
         "views": {
-          "execution_status": "pending",
+          "execution_status": "success",
           "planned_by": "41983914309-1",
           "planned_at": "2026-11-05T06:58:16+00:00",
-          "plan_reason": "not_run"
+          "plan_reason": "not_run",
+          "run_id": "41983914309-1",
+          "started_at": "2026-11-05T07:16:06+00:00",
+          "finished_at": "2026-11-05T07:16:09+00:00",
+          "exit_code": 0,
+          "quality_status": "unknown",
+          "inputs": {
+            "extract": "41983914309-1@2026-11-05T07:00:46+00:00",
+            "eps": "41983914309-1@2026-11-05T07:00:48+00:00",
+            "quarterly": "41983914309-1@2026-11-05T07:00:51+00:00",
+            "screen": "41983914309-1@2026-11-05T07:15:08+00:00",
+            "prices": "41983914309-1@2026-11-05T07:15:09+00:00",
+            "cards": "41983914309-1@2026-11-05T07:15:40+00:00",
+            "alerts": "41983914309-1@2026-11-05T07:15:49+00:00",
+            "baseline": "41983914309-1@2026-11-05T07:15:49+00:00",
+            "returns": "41983914309-1@2026-11-05T07:15:50+00:00",
+            "candidate_prices": "41983914309-1@2026-11-05T07:16:06+00:00"
+          },
+          "version": "views-v4",
+          "revision": "41983914309-1@2026-11-05T07:16:09+00:00",
+          "last_success_at": "2026-11-05T07:16:09+00:00",
+          "attempts": [
+            {
+              "run_id": "41983914309-1",
+              "execution_status": "success",
+              "quality_status": "unknown",
+              "started_at": "2026-11-05T07:16:06+00:00",
+              "finished_at": "2026-11-05T07:16:09+00:00",
+              "exit_code": 0,
+              "revision": "41983914309-1@2026-11-05T07:16:09+00:00",
+              "blocked_reason": null
+            }
+          ]
         }
       }
     }

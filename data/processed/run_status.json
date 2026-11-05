@@ -71,9 +71,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-11-04T06:56:27+00:00",
+    "checked_at": "2026-11-05T07:15:50+00:00",
     "status": "success",
-    "last_success_at": "2026-11-04T06:56:27+00:00",
+    "last_success_at": "2026-11-05T07:15:50+00:00",
     "targets": 4,
     "failures": []
   },
@@ -140,19 +140,21 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-11-04T06:56:26+00:00",
+    "checked_at": "2026-11-05T07:15:49+00:00",
     "status": "success",
-    "last_success_at": "2026-11-04T06:56:26+00:00",
+    "last_success_at": "2026-11-05T07:15:49+00:00",
     "slots": 3,
     "bootstrap": false,
-    "material_eligible": 1,
+    "material_eligible": 2,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
     "sent": 3,
     "failed": 0,
     "uncertain": 0,
-    "held_unconfirmed": [],
+    "held_unconfirmed": [
+      "NASDAQ:VSNT|eps-revision-review:v1|new_discovery"
+    ],
     "released_unconfirmed": [],
     "hold_not_compared": 0,
     "reservation_persisted": true,
@@ -244,20 +246,20 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-11-04T06:56:33+00:00",
-    "status": "success",
+    "checked_at": "2026-11-05T07:16:06+00:00",
+    "status": "degraded",
     "last_success_at": "2026-11-04T06:56:33+00:00",
-    "due": 5,
-    "fresh": 5,
+    "due": 26,
+    "fresh": 26,
     "retry_waiting": 0,
     "retry_ready": 0,
     "retries": 0,
-    "requests": 6,
-    "collected": 5,
-    "failures": 0,
-    "stopped": null,
+    "requests": 20,
+    "collected": 18,
+    "failures": 1,
+    "stopped": "daily_requests",
     "retry_share_left": 5,
-    "day_requests": 6,
+    "day_requests": 20,
     "day_retries": 0
   }
 }
