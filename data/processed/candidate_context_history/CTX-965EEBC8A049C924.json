@@ -1,0 +1,71 @@
+{
+  "context_id": "CTX-965EEBC8A049C924",
+  "candidate_id": "CAN-E87900AEFDDE7B07",
+  "ticker": "SPT",
+  "issuer_cik": "0001517375",
+  "document_ids": [
+    "DOC-ED1518425CDCE248",
+    "DOC-450C06FD810BE835"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-ED1518425CDCE248#p7",
+    "DOC-ED1518425CDCE248#p17",
+    "DOC-450C06FD810BE835#p7"
+  ],
+  "input_sha": "965eebc8a049c924c01287e59af3ceac045fc6bf06661f541537f6a2553a9ffa",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-05T12:05:55+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사의 비일반회계기준 매출총이익은 해당 기간에 이 금액이었다",
+      "figures": [
+        "$97,796"
+      ],
+      "quote": "Non-GAAP gross profit $ 97,796",
+      "where": "DOC-ED1518425CDCE248#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사의 비일반회계기준 매출총이익은 전년 같은 기간에 이 금액이었다",
+      "figures": [
+        "$91,421"
+      ],
+      "quote": "Non-GAAP gross profit $ 91,421",
+      "where": "DOC-ED1518425CDCE248#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사의 비일반회계기준 영업이익은 해당 기간에 이 금액이었다",
+      "figures": [
+        "$(6,914)"
+      ],
+      "quote": "Loss from operations $ (6,914)",
+      "where": "DOC-ED1518425CDCE248#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사의 비일반회계기준 영업이익은 전년 같은 기간에 이 금액이었다",
+      "figures": [
+        "$(9,111)"
+      ],
+      "quote": "Loss from operations $ (9,111)",
+      "where": "DOC-ED1518425CDCE248#p17"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

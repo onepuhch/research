@@ -1,0 +1,226 @@
+{
+  "candidate_id": "CAN-AE98D1267BE90662",
+  "candidate_version": "CV-C08F5F388A00DE90",
+  "identity": {
+    "entity_id": "NASDAQ:VSNT",
+    "ticker": "VSNT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Versant Media Group, Inc.",
+  "industry": "Entertainment",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "미디어 콘텐츠를 제작, 확보하여 다양한 채널로 유통하며 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Versant Media Group, Inc. engages in the media and entertainment business in the United States. The company produces, licenses, and acquires content that is distributed through various outlets, including networks and digital platforms. It delivers news, sports and entertainment content through its portfolio of brands, which includes MS NOW, CNBC, USA Network, Golf Channel, GolfNow, Rotten Tomatoes, SportsEngine, E!, SYFY, Oxygen True Crime, Fandango, and Free TV Networks. The company serves political news and opinion, business news and personal finance, golf and athletics participation, and sp"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "VSNT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSNT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:07:01+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "VSNT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSNT/history",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:07:01+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "VSNT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VSNT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-05T07:07:01+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-4E89C69065076FF4",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2067876/000206787626000050/versantmediagroupincex991q.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-03",
+      "observed_at": "2026-11-05T07:15:09+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-6557E5CF01020342",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2067876/000206787626000038/versantmediagroupincex991q.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-11-05T07:15:09+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-15E69A314E5C2F6D",
+    "input_sha": "15e69a314e5c2f6d1222c195e23bb2234e881d57e96c260a3f7d288298fc2e5e",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "[Platforms] Platforms revenue · third quarter: 10%(변화율·증가) — 플랫폼 매출이 늘었다",
+        "note_ko": "플랫폼 매출이 늘었다",
+        "kind": "fact",
+        "quote": "Platforms: Platforms revenue grew 10% in the third quarter, or 17% excluding the impacts of the SportsEngine divestiture and Full Swing acquisition.",
+        "document_id": "DOC-4E89C69065076FF4",
+        "block_id": "p19",
+        "metric": "Platforms revenue",
+        "figures": [
+          "10%"
+        ],
+        "period": "third quarter",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "segment",
+        "subject_name": "Platforms",
+        "core": false,
+        "figure_roles": [
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Total Revenue: $1,594 million / 4.2%(변화율·감소) — 총 매출이 전년 같은 기간보다 줄었다",
+        "note_ko": "총 매출이 전년 같은 기간보다 줄었다",
+        "kind": "fact",
+        "quote": "Total Revenue was $1,594 million, representing a decline of 4.2% compared to the same period in 2025.",
+        "document_id": "DOC-4E89C69065076FF4",
+        "block_id": "p24",
+        "metric": "Total Revenue",
+        "figures": [
+          "$1,594 million",
+          "4.2%"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "down"
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-4E89C69065076FF4",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2067876/000206787626000050/versantmediagroupincex991q.htm",
+        "filed_at": "2026-11-03",
+        "observed_at": "2026-11-05T07:15:09+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-6557E5CF01020342",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2067876/000206787626000038/versantmediagroupincex991q.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-11-05T07:15:09+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-05T12:05:55+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 8.2459,
+    "eps_30d": 7.26042,
+    "eps_90d": 6.68902,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 23.3,
+    "steady": false,
+    "turnaround": false
+  }
+}

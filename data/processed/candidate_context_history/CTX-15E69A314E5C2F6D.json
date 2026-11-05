@@ -1,0 +1,180 @@
+{
+  "context_id": "CTX-15E69A314E5C2F6D",
+  "candidate_id": "CAN-AE98D1267BE90662",
+  "ticker": "VSNT",
+  "issuer_cik": "0002067876",
+  "document_ids": [
+    "DOC-4E89C69065076FF4",
+    "DOC-6557E5CF01020342"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-4E89C69065076FF4#p4",
+    "DOC-4E89C69065076FF4#p19",
+    "DOC-4E89C69065076FF4#p22",
+    "DOC-4E89C69065076FF4#p24",
+    "DOC-4E89C69065076FF4#p25",
+    "DOC-4E89C69065076FF4#p26",
+    "DOC-4E89C69065076FF4#p28",
+    "DOC-4E89C69065076FF4#p29",
+    "DOC-4E89C69065076FF4#p30",
+    "DOC-4E89C69065076FF4#p32",
+    "DOC-4E89C69065076FF4#p56",
+    "DOC-4E89C69065076FF4#p58",
+    "DOC-4E89C69065076FF4#p59",
+    "DOC-4E89C69065076FF4#p61",
+    "DOC-6557E5CF01020342#p25",
+    "DOC-6557E5CF01020342#p26",
+    "DOC-6557E5CF01020342#p27",
+    "DOC-6557E5CF01020342#p29",
+    "DOC-6557E5CF01020342#p57",
+    "DOC-6557E5CF01020342#p60"
+  ],
+  "input_sha": "15e69a314e5c2f6d1222c195e23bb2234e881d57e96c260a3f7d288298fc2e5e",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-05T12:05:55+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "[Platforms] Platforms revenue · third quarter: 10%(변화율·증가) — 플랫폼 매출이 늘었다",
+      "note_ko": "플랫폼 매출이 늘었다",
+      "kind": "fact",
+      "quote": "Platforms: Platforms revenue grew 10% in the third quarter, or 17% excluding the impacts of the SportsEngine divestiture and Full Swing acquisition.",
+      "document_id": "DOC-4E89C69065076FF4",
+      "block_id": "p19",
+      "metric": "Platforms revenue",
+      "figures": [
+        "10%"
+      ],
+      "period": "third quarter",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "segment",
+      "subject_name": "Platforms",
+      "core": false,
+      "figure_roles": [
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Total Revenue: $1,594 million / 4.2%(변화율·감소) — 총 매출이 전년 같은 기간보다 줄었다",
+      "note_ko": "총 매출이 전년 같은 기간보다 줄었다",
+      "kind": "fact",
+      "quote": "Total Revenue was $1,594 million, representing a decline of 4.2% compared to the same period in 2025.",
+      "document_id": "DOC-4E89C69065076FF4",
+      "block_id": "p24",
+      "metric": "Total Revenue",
+      "figures": [
+        "$1,594 million",
+        "4.2%"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "down"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "총 매출이다",
+      "figures": [
+        "$1.59 Billion"
+      ],
+      "quote": "•Revenue of $1.59 Billion",
+      "where": "DOC-4E89C69065076FF4#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "선형 유통 매출이 2025년 같은 기간보다 줄었다",
+      "figures": [
+        "5.8%"
+      ],
+      "quote": "•Linear Distribution revenue declined 5.8% in the third quarter of 2026 as compared to the same period in 2025, primarily due to subscriber declines, which were partially offset by contractual rate in",
+      "where": "DOC-4E89C69065076FF4#p25"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "순이익이 전년 동기 대비 줄었다",
+      "figures": [
+        "$47 million",
+        "$33 million"
+      ],
+      "quote": "Net income attributable to Versant was $47 million, a decrease of $33 million compared to the prior year quarter, primarily due to lower revenue and public company costs and interest expense following",
+      "where": "DOC-4E89C69065076FF4#p29"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "플랫폼 매출(SportsEngine 및 Full Swing 제외)과 총 매출(SportsEngine 및 Full Swing 제외)은 비교 목적으로만 포함된 비일반회계기준 재무 측정치이다",
+      "figures": [
+        "$35 million",
+        "$36 million",
+        "$23 million",
+        "$24 million"
+      ],
+      "quote": "Platforms (excluding SportsEngine and Full Swing) and Total revenue (excluding SportsEngine and Full Swing) are non-GAAP financial measures and have been included for comparative purposes only. For th",
+      "where": "DOC-4E89C69065076FF4#p22"
+    },
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "2026년 전체 연도 전망에 대한 조정 EBITDA와 가장 가까운 GAAP 측정치 간의 조정은 합리적인 노력 없이는 제공될 수 없다",
+      "figures": [],
+      "quote": "A reconciliation for full-year 2026 outlook cannot be provided without unreasonable efforts because of the inherent difficulty in forecasting certain amounts that are necessary for such reconciliation",
+      "where": "DOC-4E89C69065076FF4#p56"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "독립 조정 EBITDA는 정보 제공 목적으로만 제시되며, 제시된 기간 동안 독립 회사로 운영되었을 경우의 실제 운영 결과나 향후 기간의 재무 성과를 나타내지 않는다",
+      "figures": [],
+      "quote": "Standalone Adjusted EBITDA is presented for informational purposes only and does not purport to represent what our results of operations actually would have been had we operated as a standalone compan",
+      "where": "DOC-4E89C69065076FF4#p59"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

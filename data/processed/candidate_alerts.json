@@ -2455,42 +2455,6 @@
             "provider-unspecified"
           ]
         }
-      },
-      "NYSE:CLF|eps-revision-review:v1": {
-        "baseline_id": "OB-2CEF37F43B26B978",
-        "first": {
-          "observation_id": "OB-145301BB03840593",
-          "baseline_id": "OB-145301BB03840593",
-          "observed_at": "2026-10-31T06:11:09+00:00",
-          "day": "2026-10-31",
-          "snapshot_sha256": "4ac08757fb1d734dd445bb7a01f65ff35793b4245d4cdc4f5a6de8b71d35cce4",
-          "eps_now": 1.76,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NYSE:DINO|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-90897C1DDCAA163B",
-          "baseline_id": "OB-90897C1DDCAA163B",
-          "observed_at": "2026-11-04T06:55:14+00:00",
-          "day": "2026-11-04",
-          "snapshot_sha256": "482627adcad77b1dd42686fcbf9baeb3b524a7d618157687b11cea9300a162b8",
-          "eps_now": 17.8997,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
       }
     },
     "rebases": {

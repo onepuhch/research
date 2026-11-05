@@ -1,0 +1,126 @@
+{
+  "context_id": "CTX-EFF299115BC51A89",
+  "candidate_id": "CAN-5FD7409FDFE8F5EA",
+  "ticker": "SMCI",
+  "issuer_cik": "0001375365",
+  "document_ids": [
+    "DOC-02C797FFF9CA747D",
+    "DOC-1A7AC5499B6FC87E",
+    "DOC-CB4C6F73439A9792",
+    "DOC-24427DC769C94DB0"
+  ],
+  "eps_target_period": "2028-06-30",
+  "source_blocks": [
+    "DOC-02C797FFF9CA747D#p7",
+    "DOC-02C797FFF9CA747D#p8",
+    "DOC-02C797FFF9CA747D#p9",
+    "DOC-02C797FFF9CA747D#p10",
+    "DOC-02C797FFF9CA747D#p11",
+    "DOC-02C797FFF9CA747D#p14",
+    "DOC-02C797FFF9CA747D#p17",
+    "DOC-02C797FFF9CA747D#p18",
+    "DOC-02C797FFF9CA747D#p19",
+    "DOC-02C797FFF9CA747D#t4",
+    "DOC-02C797FFF9CA747D#p57",
+    "DOC-02C797FFF9CA747D#p60",
+    "DOC-1A7AC5499B6FC87E#p5",
+    "DOC-1A7AC5499B6FC87E#p6",
+    "DOC-CB4C6F73439A9792#p20",
+    "DOC-CB4C6F73439A9792#p21",
+    "DOC-CB4C6F73439A9792#p22",
+    "DOC-CB4C6F73439A9792#t4",
+    "DOC-CB4C6F73439A9792#p61",
+    "DOC-CB4C6F73439A9792#p64",
+    "DOC-24427DC769C94DB0#p5",
+    "DOC-24427DC769C94DB0#p6",
+    "DOC-24427DC769C94DB0#p7"
+  ],
+  "input_sha": "eff299115bc51a89f570f4b9aece14fa723b08525201e494d469aadc5cbed2c7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-05T12:05:55+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(net sales) · second quarter of fiscal year 2027 ending December 31, 2026: $19.5 billion and $21.5 billion — 회사는 다음 분기 순매출을 예상 범위로 전망했다",
+      "note_ko": "회사는 다음 분기 순매출을 예상 범위로 전망했다",
+      "kind": "guidance",
+      "quote": "The Company expects net sales in the range of $19.5 billion and $21.5 billion for the second quarter of fiscal year 2027 ending December 31, 2026, GAAP net income per diluted share of $1.59 to $1.83 and non-GAAP net income per diluted share of $1.66 to $1.90.",
+      "document_id": "DOC-02C797FFF9CA747D",
+      "block_id": "p18",
+      "metric": "net sales",
+      "figures": [
+        "$19.5 billion and $21.5 billion"
+      ],
+      "period": "second quarter of fiscal year 2027 ending December 31, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사의 순매출은 기록적인 수준을 달성했다",
+      "figures": [
+        "$19.9 billion"
+      ],
+      "quote": "“Supermicro’s transformation into a Total AI and IT Datacenter Solution provider continues to accelerate, delivering record revenue of $19.9 billion for the first quarter fiscal 2027,” said Charles Li",
+      "where": "DOC-02C797FFF9CA747D#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순매출은 이전 분기보다 증가했다",
+      "figures": [
+        "$19.9 billion"
+      ],
+      "quote": "•Net sales of $19.9 billion versus $11.1 billion in Q4'26 and $5.0 billion in Q1'26.",
+      "where": "DOC-02C797FFF9CA747D#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순이익은 이전 분기보다 증가했다",
+      "figures": [
+        "$1,594 million"
+      ],
+      "quote": "•Net income of $1,594 million versus $1,178 million in Q4'26 and $168 million in Q1'26.",
+      "where": "DOC-02C797FFF9CA747D#p9"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 희석 주당 순이익은 이전 분기보다 증가했다",
+      "figures": [
+        "$1.75"
+      ],
+      "quote": "•Diluted net income per common share of $1.75 versus $1.62 in Q4'26 and $0.26 in Q1'26.",
+      "where": "DOC-02C797FFF9CA747D#p10"
+    }
+  ],
+  "context_status": "draft_ready"
+}

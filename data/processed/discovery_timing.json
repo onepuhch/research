@@ -12691,7 +12691,21 @@
           "provider-unspecified"
         ]
       },
-      "first_evidence": null,
+      "first_evidence": {
+        "context_id": "CTX-EFF299115BC51A89",
+        "generated_at": "2026-11-05T12:05:55+00:00",
+        "validator": "context-check-v11",
+        "claims": 1,
+        "documents": [
+          {
+            "document_id": "DOC-02C797FFF9CA747D",
+            "form": "8-K",
+            "filed_at": "2026-11-03",
+            "observed_at": "2026-11-05T07:15:09+00:00",
+            "url": "https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm"
+          }
+        ]
+      },
       "first_alert": {
         "at": "2026-10-23T05:18:04+00:00",
         "status": "sent",
@@ -13953,5 +13967,5 @@
       "bootstrap": null
     }
   },
-  "updated_at": "2026-11-05T07:16:06+00:00"
+  "updated_at": "2026-11-05T12:06:51+00:00"
 }

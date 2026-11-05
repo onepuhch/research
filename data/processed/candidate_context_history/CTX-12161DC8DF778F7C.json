@@ -1,0 +1,113 @@
+{
+  "context_id": "CTX-12161DC8DF778F7C",
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "ticker": "MPC",
+  "issuer_cik": "0001510295",
+  "document_ids": [
+    "DOC-BD1A0A4B889B9EAE",
+    "DOC-683FD7B3F9B87824"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-BD1A0A4B889B9EAE#p5",
+    "DOC-BD1A0A4B889B9EAE#p10",
+    "DOC-BD1A0A4B889B9EAE#p19",
+    "DOC-BD1A0A4B889B9EAE#p23",
+    "DOC-BD1A0A4B889B9EAE#p25",
+    "DOC-BD1A0A4B889B9EAE#p35",
+    "DOC-BD1A0A4B889B9EAE#t2",
+    "DOC-BD1A0A4B889B9EAE#t3",
+    "DOC-BD1A0A4B889B9EAE#p67",
+    "DOC-BD1A0A4B889B9EAE#p101",
+    "DOC-BD1A0A4B889B9EAE#t15",
+    "DOC-BD1A0A4B889B9EAE#p105",
+    "DOC-BD1A0A4B889B9EAE#p107",
+    "DOC-BD1A0A4B889B9EAE#t16",
+    "DOC-BD1A0A4B889B9EAE#p115",
+    "DOC-BD1A0A4B889B9EAE#p117",
+    "DOC-BD1A0A4B889B9EAE#p122",
+    "DOC-683FD7B3F9B87824#p18",
+    "DOC-683FD7B3F9B87824#p19",
+    "DOC-683FD7B3F9B87824#p21",
+    "DOC-683FD7B3F9B87824#p23",
+    "DOC-683FD7B3F9B87824#t2",
+    "DOC-683FD7B3F9B87824#p34",
+    "DOC-683FD7B3F9B87824#p64",
+    "DOC-683FD7B3F9B87824#p98",
+    "DOC-683FD7B3F9B87824#p101",
+    "DOC-683FD7B3F9B87824#p108"
+  ],
+  "input_sha": "12161dc8df778f7c800622b079e5e4b730d9ddfff29e29324778367a238c1a7a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-05T12:05:55+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "회사의 조정된 희석 주당 순이익은 해당 기간에 기록되었다",
+      "figures": [
+        "$26.93"
+      ],
+      "quote": "Adjusted diluted income per share ; $26.93 ; $3.01 ; $45.64 ; $6.67",
+      "where": "DOC-BD1A0A4B889B9EAE#DOC-BD1A0A4B889B9EAE#t15"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "회사의 조정된 순이익은 해당 분기에 기록되었다",
+      "figures": [
+        "$7.5 billion"
+      ],
+      "quote": "Third-quarter net income attributable to MPC of $7.4 billion, or $26.59 per diluted share, adjusted net income of $7.5 billion, or $26.93 per diluted share",
+      "where": "DOC-BD1A0A4B889B9EAE#DOC-BD1A0A4B889B9EAE#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "정유 및 마케팅 부문의 조정된 EBITDA는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$9.9 billion"
+      ],
+      "quote": "Segment adjusted EBITDA was $9.9 billion in the third quarter of 2026, versus $1.8 billion for the third quarter of 2025.",
+      "where": "DOC-BD1A0A4B889B9EAE#DOC-BD1A0A4B889B9EAE#p19"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "정유 및 마케팅 부문의 배럴당 조정된 EBITDA는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$34.15 per barrel"
+      ],
+      "quote": "R&M segment adjusted EBITDA was $34.15 per barrel for the third quarter of 2026, versus $6.37 per barrel for the third quarter of 2025.",
+      "where": "DOC-BD1A0A4B889B9EAE#DOC-BD1A0A4B889B9EAE#p19"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "해당 부문의 조정된 EBITDA는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$1.9 billion"
+      ],
+      "quote": "Segment adjusted EBITDA was $1.9 billion in the third quarter of 2026, versus $1.7 billion for the third quarter of 2025.",
+      "where": "DOC-BD1A0A4B889B9EAE#DOC-BD1A0A4B889B9EAE#p23"
+    },
+    {
+      "what": "limitation",
+      "reason": "unknown_block",
+      "note_ko": "조정된 순이익은 핵심 영업 성과를 나타내지 않는다고 회사가 판단한 항목들을 제외한다",
+      "figures": [],
+      "quote": "Adjusted net income attributable to MPC is defined as net income attributable to MPC excluding the items in the table below, along with their related income tax effect. We have excluded these items be",
+      "where": "DOC-BD1A0A4B889B9EAE#DOC-BD1A0A4B889B9EAE#p101"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

@@ -476,8 +476,9 @@ CAN-36582E27909720FE · Conglomerates · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 7%. 근거 문장 원문 최신 제출 2026-08-10(최근 30일 시작 이전)
-- [회사 전망 · 기간 미확인] outlook — 회사의 전망은 이전 가이던스에 비해 브랜드 소비재 사업에 대한 기대치가 높아지고 산업재 사업에 대한 기대치가 낮아진 것을 반영한다 — “CODI’s outlook reflects higher expectations for the Branded Consumer businesses and lower expectations for the Industrial businesses relative to prior guidance.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm), 제출 2026-08-10, 기간 unknown)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 7%. 근거 문장 원문 최신 제출 2026-11-04(최근 30일 시작 이후)
+- [회사 전망 · 기간 미확인] outlook — 회사의 전망은 이전 가이던스 대비 브랜드 소비재 사업에 대한 기대치는 높아지고 산업재 사업에 대한 기대치는 낮아진 것을 반영한다 — “CODI’s outlook reflects higher expectations for the Branded Consumer businesses and lower expectations for the Industrial businesses relative to prior guidance.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000072/exhibit991earningsreleaseq.htm), 제출 2026-11-04, 기간 unknown)
+- [실적 · 기간 미확인] Net revenues: $422.9 million / 10.5%(변화율·감소) — 순매출은 전년 대비 감소했다 — “•Net revenues: $422.9 million, down 10.5%” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000072/exhibit991earningsreleaseq.htm), 제출 2026-11-04, 기간 unknown)
 
 **사람이 확인한 사업 근거**
 
@@ -488,18 +489,19 @@ CAN-36582E27909720FE · Conglomerates · 미추적
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
 - 구체적인 일회성·반대 근거는 아직 확보하지 못했습니다.
-- [일반 면책(보조)] 조정 EBITDA(Adjusted EBITDA) — 조정 이자, 세금, 감가상각비 및 상각 전 이익은 사업 수익 창출에 사용되는 특정 자본 자산의 주기적인 비용, 손상과 관련된 비현금성 비용 및 특정 현금성 비용을 반영하지 않는다는 한계가 있다 — “When compared to Net Income (Loss) and Income (Loss) from Continuing Operations, Adjusted Earnings (Loss) and Adjusted EBITDA, respectively, are each limited in that they do not reflect the periodic costs of certain capital assets used in generating revenues of our businesses, non-cash charges associated with impairments and certain cash charges.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm), 제출 2026-08-10, 기간 unknown)
+- [일반 면책(보조)] 조정 EBITDA(Adjusted EBITDA) — 조정 에비타는 수익 창출에 사용되는 특정 자본 자산의 주기적 비용, 손상과 관련된 비현금성 비용 및 특정 현금성 비용을 반영하지 않는다는 한계가 있다 — “When compared to Net Income (Loss) from Continuing Operations, Adjusted EBITDA is limited in that it does not reflect the periodic costs of certain capital assets used in generating revenues of our businesses, non-cash charges associated with impairments and certain cash charges.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000072/exhibit991earningsreleaseq.htm), 제출 2026-11-04, 기간 unknown)
 - EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
-- 브랜드 소비재 사업에 대한 기대치 상승과 산업재 사업에 대한 기대치 하락의 구체적인 원인은 무엇일까? (자동 제안)
+- 브랜드 소비재 사업에 대한 기대치가 높아진 구체적인 이유와 산업재 사업에 대한 기대치가 낮아진 구체적인 이유를 확인해야 한다 (자동 제안)
 
 **출처**
 
 - [CODI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/CODI/analysis) (관측 2026-11-05)
 - [CODI daily closes](https://finance.yahoo.com/quote/CODI/history) (관측 2026-11-05)
 - [CODI company profile](https://finance.yahoo.com/quote/CODI/profile) (관측 2026-11-05)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000072/exhibit991earningsreleaseq.htm) (제출 2026-11-04)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1345122/000134512626000062/exhibit991earningsreleaseq.htm) (제출 2026-08-10)
 
 텔레그램: `/track CAN-36582E27909720FE`
@@ -625,8 +627,8 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 25%. 근거 문장 원문 최신 제출 2026-10-20(최근 30일 시작 이후)
-- [회사 전망] 매출(Revenues) · first quarter of fiscal year 2027: $18.5 billion to $19.5 billion — 회사의 매출 예상치이다 — “Revenues for the first quarter of fiscal year 2027 are estimated to be in the range of $18.5 billion to $19.5 billion versus guidance of $14.5 billion to $15.5 billion, primarily due to increased demand for AI platforms.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm), 제출 2026-10-20, 기간 first quarter of fiscal year 2027)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 25%. 근거 문장 원문 최신 제출 2026-11-03(최근 30일 시작 이후)
+- [회사 전망] 매출(net sales) · second quarter of fiscal year 2027 ending December 31, 2026: $19.5 billion and $21.5 billion — 회사는 다음 분기 순매출을 예상 범위로 전망했다 — “The Company expects net sales in the range of $19.5 billion and $21.5 billion for the second quarter of fiscal year 2027 ending December 31, 2026, GAAP net income per diluted share of $1.59 to $1.83 and non-GAAP net income per diluted share of $1.66 to $1.90.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm), 제출 2026-11-03, 기간 second quarter of fiscal year 2027 ending December 31, 2026)
 
 **사람이 확인한 사업 근거**
 
@@ -636,8 +638,6 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- [반대 근거·한계] financial results · quarter and fiscal year ended June 30, 2026 — 제시된 재무 결과는 예비 추정치이며, 실제 결과는 크게 다를 수 있다 — “The financial results presented reflect the Company's preliminary estimated unaudited financial results, based upon information available to the Company as of the date of this press release. The Company has provided preliminary estimates of financial results primarily because its financial closing procedures for the quarter and fiscal year ended June 30, 2026 are not yet complete. The data are not a comprehensive statement of the Company's results for such periods, and the actual results may differ materially from these preliminary estimated data.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm), 제출 2026-08-11, 기간 quarter and fiscal year ended June 30, 2026)
-- [일반 면책(보조)] non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 작성되지 않으며, 일반회계기준 재무 데이터의 대체용이 아니다 — “These non-GAAP measures are not prepared in accordance with GAAP or intended to be a replacement for GAAP financial data; and therefore, should be reviewed together with the GAAP measures and are not intended to serve as a substitute for results under GAAP, and may be different from non-GAAP measures used by other companies.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm), 제출 2026-08-11, 기간 unknown)
 - EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
@@ -649,6 +649,7 @@ CAN-5FD7409FDFE8F5EA · Computer Hardware · 미추적
 - [SMCI analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SMCI/analysis) (관측 2026-11-05)
 - [SMCI daily closes](https://finance.yahoo.com/quote/SMCI/history) (관측 2026-11-05)
 - [SMCI company profile](https://finance.yahoo.com/quote/SMCI/profile) (관측 2026-11-05)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000026/exhibit991_20260930.htm) (제출 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000025/smcifirstquarterfy2027busi.htm) (제출 2026-10-20)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000021/exhibit991_20260630.htm) (제출 2026-08-11)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1375365/000137536526000019/fq42026businessupdate.htm) (제출 2026-07-21)
@@ -1096,7 +1097,7 @@ CAN-AE98D1267BE90662 · Entertainment · 미추적
 
 **무엇으로 돈을 버나**
 
-회사 설명 확인 중 (VSNT)
+미디어 콘텐츠를 제작, 확보하여 다양한 채널로 유통하며 수익을 얻습니다.
 <small>원문(영문): Versant Media Group, Inc. engages in the media and entertainment business in the United States. The company produces, licenses, and acquires content that is distributed through various outlets, including networks and digital platforms. It delivers news, sports and entertainment content through its portfolio of brands, which includes MS NOW, CNBC, USA Network, Golf Channel, GolfNow, Rotten Tomatoes, SportsEngine, E!, SYFY, Oxygen True Crime, Fandango, and Free TV Networks. The company serves political news and opinion, business news and personal finance, golf and athletics participation, and sp</small>
 
 **후보가 된 이유**
@@ -1111,8 +1112,9 @@ CAN-AE98D1267BE90662 · Entertainment · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 63%. 채택된 근거 문장의 원문 없음 — 최근 상향의 원인을 이 원문이 설명하지 못할 수 있음
-아직 공식 발표 원문을 연결하지 않았습니다.
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 63%. 근거 문장 원문 최신 제출 2026-11-03(최근 30일 시작 이후)
+- [실적] [Platforms] Platforms revenue · third quarter: 10%(변화율·증가) — 플랫폼 매출이 늘었다 — “Platforms: Platforms revenue grew 10% in the third quarter, or 17% excluding the impacts of the SportsEngine divestiture and Full Swing acquisition.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2067876/000206787626000050/versantmediagroupincex991q.htm), 제출 2026-11-03, 기간 third quarter)
+- [실적 · 기간 미확인] Total Revenue: $1,594 million / 4.2%(변화율·감소) — 총 매출이 전년 같은 기간보다 줄었다 — “Total Revenue was $1,594 million, representing a decline of 4.2% compared to the same period in 2025.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2067876/000206787626000050/versantmediagroupincex991q.htm), 제출 2026-11-03, 기간 unknown)
 
 **사람이 확인한 사업 근거**
 
@@ -1123,6 +1125,7 @@ CAN-AE98D1267BE90662 · Entertainment · 미추적
 - 최근 30일 상향 수정 1건(분석가 4명): 평균 변화가 한 곳의 수정에서 나왔을 수 있음 — 다른 분석가 추정이 따라오는지 확인
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
+- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
 
 **다음 확인**
 
@@ -1133,6 +1136,8 @@ CAN-AE98D1267BE90662 · Entertainment · 미추적
 - [VSNT analyst estimates (EPS trend)](https://finance.yahoo.com/quote/VSNT/analysis) (관측 2026-11-05)
 - [VSNT daily closes](https://finance.yahoo.com/quote/VSNT/history) (관측 2026-11-05)
 - [VSNT company profile](https://finance.yahoo.com/quote/VSNT/profile) (관측 2026-11-05)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2067876/000206787626000050/versantmediagroupincex991q.htm) (제출 2026-11-03)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/2067876/000206787626000038/versantmediagroupincex991q.htm) (제출 2026-08-06)
 
 텔레그램: `/track CAN-AE98D1267BE90662`
 
@@ -1399,7 +1404,7 @@ CAN-E87900AEFDDE7B07 · Software - Application · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 3%. 채택된 근거 문장의 원문 없음 · 최근 조사 문서 2026-08-06(채택 근거 없음)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-06 이후) 몫 3%. 채택된 근거 문장의 원문 없음 · 최근 조사 문서 2026-11-03(채택 근거 없음)
 원문은 확보했지만 근거가 붙은 문장을 만들지 못했습니다. 원문을 직접 확인해야 합니다.
 
 **사람이 확인한 사업 근거**
@@ -1414,13 +1419,14 @@ CAN-E87900AEFDDE7B07 · Software - Application · 미추적
 
 **다음 확인**
 
-- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다. (자동 제안)
+- 최근 실적 발표·가이던스 원문에서 이익 증가 원인과 지속 기간 확인
 
 **출처**
 
 - [SPT analyst estimates (EPS trend)](https://finance.yahoo.com/quote/SPT/analysis) (관측 2026-11-05)
 - [SPT daily closes](https://finance.yahoo.com/quote/SPT/history) (관측 2026-11-05)
 - [SPT company profile](https://finance.yahoo.com/quote/SPT/profile) (관측 2026-11-05)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517375/000151737526000067/a3q26earningsrelease2.htm) (제출 2026-11-03)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517375/000151737526000056/a2q26earningsrelease.htm) (제출 2026-08-06)
 
 텔레그램: `/track CAN-E87900AEFDDE7B07`
@@ -1505,6 +1511,6 @@ CAN-C05377BEC03AE25C · Aerospace & Defense · 미추적
 |CORT|`CAN-700B10D9B75B0040`|2026-10-14|최신 관측에서 스크린 조건 미충족|
 |TX|`CAN-D386F57F584A20DC`|2026-10-12|최신 관측에서 EPS 자료 없음 또는 조회 대상 제외|
 |PSTL|`CAN-E5554136472B2202`|2026-10-12|최신 관측에서 EPS 자료 없음 또는 조회 대상 제외|
-|DAN|`CAN-0584EAE068460D91`|2026-10-12|최신 관측에서 스크린 조건 미충족|
+|UCTT|`CAN-4BD491C8D3F1EC4F`|2026-10-12|최신 관측에서 스크린 조건 미충족|
 
 화면(필터·상세 카드): `reports/generated/candidates.html`. 새 후보의 과거 그래프는 만들지 않으며, 추적을 시작한 뒤부터 관측이 쌓입니다.
