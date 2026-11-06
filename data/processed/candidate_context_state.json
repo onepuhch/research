@@ -1461,9 +1461,9 @@
       ],
       "notes": [],
       "next_eligible_at": "2026-11-13T07:14:36+00:00",
-      "draft_status": "failed",
-      "context_id": "CTX-2DEE051118868259",
-      "context_input_sha": "2dee05111886825925afaeb79135b2fd463b7799b731c8f73c7d86484e36bff4",
+      "draft_status": "insufficient_earnings_context",
+      "context_id": "CTX-71A768EF68163C5F",
+      "context_input_sha": "71a768ef68163c5fa6282d4fe0e9f1447f726c5a88f15e96c3e0aad3112ede5e",
       "update_checks": [
         {
           "document_id": "DOC-E9C245FA866F00D3",
@@ -1500,8 +1500,7 @@
       ],
       "draft_error": "HTTPError",
       "draft_http_status": 503,
-      "draft_failure": "provider_overloaded",
-      "draft_next_at": "2026-11-06T07:44:59+00:00"
+      "draft_failure": "provider_overloaded"
     },
     "CAN-3D30FF7D03231FE1": {
       "status": "success",

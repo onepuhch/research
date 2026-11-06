@@ -1161,9 +1161,10 @@ CAN-8ED72F330C1AE34D · Software - Application · 미추적
 
 **공식 발표에서 확인한 변화 (자동 정리·미검토)**
 
-- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-07 이후) 몫 24%. 근거 문장 원문 최신 제출 2026-08-05(최근 30일 시작 이전)
-- [회사 전망] outlook · full-year — 회사는 연간 전망을 상향 조정할 자신감을 얻었다 — “Our platform strategy is driving business momentum, giving us the confidence to raise our full-year outlook.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm), 제출 2026-08-05, 기간 full-year)
-- [실적] 매출(revenue) · second quarter: $183.3 million / 23%(변화율·증가) — 회사의 이분기 매출이 전년 같은 기간보다 늘었다 — “Record second quarter revenue of $183.3 million grew 23% year-over-year” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm), 제출 2026-08-05, 기간 second quarter)
+- 상향 시기: 제공처 30일·90일 값 기준 순변화 중 최근 30일(2026-10-07 이후) 몫 24%. 근거 문장 원문 최신 제출 2026-11-04(최근 30일 시작 이후)
+- [실적] 매출(revenue) · third quarter: $190.2 million / 20%(변화율·증가) — 매출이 전년 동기 대비 늘었다 — “Record third quarter revenue of $190.2 million grew 20% year-over-year” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm), 제출 2026-11-04, 기간 third quarter)
+- [실적] 매출총이익률(gross margin) · Third quarter: 63.3% — 총 마진이 기록적인 수준과 일치한다 — “Third quarter gross margin of 63.3% and non-GAAP gross margin of 65.8% match record levels” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm), 제출 2026-11-04, 기간 Third quarter)
+- [실적] non-GAAP gross margin · Third quarter: 65.8% — 비일반회계기준 총 마진이 기록적인 수준과 일치한다 — “Third quarter gross margin of 63.3% and non-GAAP gross margin of 65.8% match record levels” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm), 제출 2026-11-04, 기간 Third quarter)
 
 **사람이 확인한 사업 근거**
 
@@ -1173,19 +1174,18 @@ CAN-8ED72F330C1AE34D · Software - Application · 미추적
 
 - 스크린 조건 기준 반증: 다음 관측에서 내년 EPS 예상이 30일 전보다 낮아지거나 30일 하향 수가 상향 수 이상이면 후보 조건이 깨집니다.
 - 시장이 이 상향을 반영하지 않았는지는 확인되지 않았습니다. PER 변화는 참고 지표입니다.
-- 구체적인 일회성·반대 근거는 아직 확보하지 못했습니다.
-- [일반 면책(보조)] non-GAAP measures — 비일반회계기준 지표는 일반회계기준에 따라 결정된 영업 실적의 모든 금액을 반영하지 않으며, 다른 회사에서 사용하는 비일반회계기준 재무 지표와 다를 수 있다 — “These non-GAAP measures have limitations in that they do not reflect all of the amounts associated with our results of operations as determined in accordance with GAAP. In addition, these non-GAAP financial measures may be different from the non-GAAP financial measures used by other companies.” ([SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm), 제출 2026-08-05, 기간 unknown)
-- EPS 예상 상향과 이 발표의 연결: 확인되지 않음(인과 미확인)
+- EPS 예상 상향과 같은 시기의 회사 발표(인과 미확인)
 
 **다음 확인**
 
-- 회사의 연간 전망 상향 조정이 구체적으로 어떤 수치에 영향을 미쳤는지 확인해야 한다 (자동 제안)
+- 애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다. (자동 제안)
 
 **출처**
 
 - [FSLY analyst estimates (EPS trend)](https://finance.yahoo.com/quote/FSLY/analysis) (관측 2026-11-06)
 - [FSLY daily closes](https://finance.yahoo.com/quote/FSLY/history) (관측 2026-11-06)
 - [FSLY company profile](https://finance.yahoo.com/quote/FSLY/profile) (관측 2026-11-06)
+- [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm) (제출 2026-11-04)
 - [SEC 8-K EX-99.1](https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm) (제출 2026-08-05)
 
 텔레그램: `/track CAN-8ED72F330C1AE34D`

@@ -1,0 +1,260 @@
+{
+  "candidate_id": "CAN-8ED72F330C1AE34D",
+  "candidate_version": "CV-5C1968698CBB5013",
+  "identity": {
+    "entity_id": "NASDAQ:FSLY",
+    "ticker": "FSLY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Fastly, Inc.",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "고객 애플리케이션 처리, 제공, 보안을 위한 엣지 클라우드 플랫폼 및 네트워크 서비스를 운영합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Fastly, Inc. operates an edge cloud platform for processing, serving, and securing its customer's applications in the United States, the Asia Pacific, Europe, and internationally. The edge cloud is a category of Infrastructure as a Service that enables developers to build, secure, and deliver digital experiences at the edge of the internet. The company offers network services to speed up and optimize the delivery of web and application traffic; content delivery network, such as dynamic site acceleration, origin shield, instant purge, surrogate keys, programmatic control, content compression, r"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "FSLY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FSLY/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-06T07:07:30+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "FSLY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FSLY/history",
+      "published_at": null,
+      "observed_at": "2026-11-06T07:07:30+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "FSLY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/FSLY/profile",
+      "published_at": null,
+      "observed_at": "2026-11-06T07:07:30+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-AAFE208A6E9CE763",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-04",
+      "observed_at": "2026-11-06T07:14:36+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-756AB63F072FAB95",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-09-28T05:47:17+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-71A768EF68163C5F",
+    "input_sha": "71a768ef68163c5fa6282d4fe0e9f1447f726c5a88f15e96c3e0aad3112ede5e",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "매출(revenue) · third quarter: $190.2 million / 20%(변화율·증가) — 매출이 전년 동기 대비 늘었다",
+        "note_ko": "매출이 전년 동기 대비 늘었다",
+        "kind": "fact",
+        "quote": "Record third quarter revenue of $190.2 million grew 20% year-over-year",
+        "document_id": "DOC-AAFE208A6E9CE763",
+        "block_id": "p5",
+        "metric": "revenue",
+        "figures": [
+          "$190.2 million",
+          "20%"
+        ],
+        "period": "third quarter",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "매출총이익률(gross margin) · Third quarter: 63.3% — 총 마진이 기록적인 수준과 일치한다",
+        "note_ko": "총 마진이 기록적인 수준과 일치한다",
+        "kind": "fact",
+        "quote": "Third quarter gross margin of 63.3% and non-GAAP gross margin of 65.8% match record levels",
+        "document_id": "DOC-AAFE208A6E9CE763",
+        "block_id": "p6",
+        "metric": "gross margin",
+        "figures": [
+          "63.3%"
+        ],
+        "period": "Third quarter",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP gross margin · Third quarter: 65.8% — 비일반회계기준 총 마진이 기록적인 수준과 일치한다",
+        "note_ko": "비일반회계기준 총 마진이 기록적인 수준과 일치한다",
+        "kind": "fact",
+        "quote": "Third quarter gross margin of 63.3% and non-GAAP gross margin of 65.8% match record levels",
+        "document_id": "DOC-AAFE208A6E9CE763",
+        "block_id": "p6",
+        "metric": "non-GAAP gross margin",
+        "figures": [
+          "65.8%"
+        ],
+        "period": "Third quarter",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "pct",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-AAFE208A6E9CE763",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm",
+        "filed_at": "2026-11-04",
+        "observed_at": "2026-11-06T07:14:36+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-756AB63F072FAB95",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1517413/000151741326000212/ex991-fslypressrelease63026.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-09-28T05:47:17+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-06T10:27:48+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.64217,
+    "eps_30d": 0.58384,
+    "eps_90d": 0.39583,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 12,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 62.2,
+    "steady": true,
+    "turnaround": false
+  }
+}

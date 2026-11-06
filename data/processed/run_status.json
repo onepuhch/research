@@ -40,9 +40,9 @@
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-11-06T07:15:56+00:00",
+    "checked_at": "2026-11-06T10:27:48+00:00",
     "status": "success",
-    "last_success_at": "2026-11-06T07:15:56+00:00",
+    "last_success_at": "2026-11-06T10:27:48+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -121,9 +121,9 @@
     }
   },
   "cards": {
-    "checked_at": "2026-11-06T07:14:52+00:00",
+    "checked_at": "2026-11-06T10:27:58+00:00",
     "status": "success",
-    "last_success_at": "2026-11-06T07:14:52+00:00",
+    "last_success_at": "2026-11-06T10:27:58+00:00",
     "translation": {
       "requested": 0,
       "translated": 0,
@@ -131,45 +131,40 @@
       "failed_calls": 0,
       "calls": 0
     },
-    "new_versions": 7,
-    "new_observations": 36,
+    "new_versions": 1,
+    "new_observations": 1,
     "migrated_legacy": 0,
     "cards": 28,
     "unidentified": 0,
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-11-06T07:15:02+00:00",
+    "checked_at": "2026-11-06T10:28:03+00:00",
     "status": "success",
-    "last_success_at": "2026-11-06T07:15:02+00:00",
-    "slots": 3,
+    "last_success_at": "2026-11-06T10:28:03+00:00",
+    "slots": 2,
     "bootstrap": false,
     "material_eligible": 0,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
-    "sent": 1,
+    "sent": 0,
     "failed": 0,
     "uncertain": 0,
     "held_unconfirmed": [],
-    "released_unconfirmed": [
-      "NASDAQ:VSNT|eps-revision-review:v1|new_discovery"
-    ],
+    "released_unconfirmed": [],
     "hold_not_compared": 0,
-    "reservation_persisted": true,
-    "receipts_persisted": true,
-    "selected": 1
+    "selected": 0
   },
   "candidate_context": {
-    "checked_at": "2026-11-06T07:14:48+00:00",
-    "status": "degraded",
-    "last_success_at": "2026-11-05T12:06:34+00:00",
+    "checked_at": "2026-11-06T10:27:54+00:00",
+    "status": "success",
+    "last_success_at": "2026-11-06T10:27:54+00:00",
     "held": [],
-    "researched": 4,
-    "statuses": {
-      "success": 4
-    },
+    "researched": 0,
+    "statuses": {},
     "targets": 36,
+    "drafts_only": true,
     "current": {
       "CAN-1F6D82ED5782C3F5": "2027-12-31",
       "CAN-5790099EDC6F3301": "2027-12-31",
@@ -218,21 +213,14 @@
       "CAN-BA5D4320F9188F9F",
       "CAN-FDA6B7F62852042F"
     ],
-    "alert_first": [
-      "CAN-AE98D1267BE90662"
-    ],
-    "http_attempts": 22,
-    "coverage": {
-      "success": 35,
-      "no_relevant_document": 1
-    },
+    "alert_first": [],
     "drafts": {
       "requests": 1,
       "drafted": 0,
-      "insufficient_earnings_context": 0,
+      "insufficient_earnings_context": 1,
       "no_supported_claims": 0,
       "deferred": 0,
-      "failed": 1
+      "failed": 0
     }
   },
   "context_verification": {
