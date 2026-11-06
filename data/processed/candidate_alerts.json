@@ -2393,6 +2393,24 @@
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DINO HF Sinclair Corporation</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $11.82 → 현재 $17.90 (+51%), 2026-11-04·2026-11-05 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-11B1565B12AFE2F9</code> · 추적 <code>/track CAN-11B1565B12AFE2F9</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
       "payload_sha256": "6ea2db91b17a60d31ffbdfbc72d9db9826153b62e7ad414f484536ca9cc2aa08",
       "message_id": 237
+    },
+    "NASDAQ:VSNT|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:VSNT",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-AE98D1267BE90662",
+      "candidate_version": "CV-C08F5F388A00DE90",
+      "observation_id": "OB-A0DCD8C4C92333FF",
+      "signal_id": null,
+      "verdict": "low",
+      "day": "2026-11-06",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "42177705259-1",
+      "reserved_at": "2026-11-06T07:14:58+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · VSNT Versant Media Group, Inc.</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\n미디어 콘텐츠를 제작, 확보하여 다양한 채널로 유통하며 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $6.69 → 지금 $8.25 (+23%) · 주가 같은 기간 -12.1%\n\n👍 주가는 같은 90일에 -12%로, 이익 예상 상향(+23%)보다 덜 움직임\n👎 최근 30일 분석가 4명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 16위로 들어옴\n❓ 11/3 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-AE98D1267BE90662</code> · 추적 <code>/track CAN-AE98D1267BE90662</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "73bacc7c258e6a6d2ccf97669791b76f2af1569d26961f34bcc854259f579058"
     }
   },
   "bootstrap": {
@@ -2557,7 +2575,7 @@
       "candidate_id": "CAN-AE98D1267BE90662",
       "ticker": "VSNT",
       "day": "2026-11-05",
-      "status": "held",
+      "status": "released",
       "reason": "provider_silent_jump",
       "threshold": 0.1,
       "threshold_status": "provisional",
@@ -2577,7 +2595,16 @@
         "up30": 1,
         "down30": 0
       },
-      "history": []
+      "history": [],
+      "released_day": "2026-11-06",
+      "released": {
+        "snapshot": "20261106T070026Z_42177705259-1.json.gz",
+        "eps_now": 8.2459,
+        "eps_target_period": "2027-12-31",
+        "analysts": 4,
+        "up30": 1,
+        "down30": 0
+      }
     }
   }
 }
