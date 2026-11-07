@@ -1161,8 +1161,8 @@
         "mapping_sha256": "224330f2c44f5d173395e427dbac3c6981acdb1f57e3658832d315c3e96f6522",
         "mapping_observed_at": "2026-11-05T07:00:51+00:00"
       },
-      "attempted_at": "2026-11-05T07:15:09+00:00",
-      "eps_key": "2027-12-31|1.5518",
+      "attempted_at": "2026-11-07T01:17:27+00:00",
+      "eps_key": "2027-12-31|1.6288",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-ED1518425CDCE248",
@@ -1176,7 +1176,7 @@
         "DOC-73E8D5E3097AE999"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-12T07:15:09+00:00",
+      "next_eligible_at": "2026-11-14T01:17:27+00:00",
       "draft_status": "no_supported_claims",
       "draft_error": "HTTPError",
       "context_id": "CTX-965EEBC8A049C924",
@@ -1560,26 +1560,36 @@
         "exchange": "Nasdaq",
         "name": "Ultra Clean Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "33b3998934205f0ce54c874470a41689ea5aaaba7d04c909f20976eb3e551ba4",
-        "mapping_observed_at": "2026-10-10T06:01:44+00:00"
+        "mapping_sha256": "224330f2c44f5d173395e427dbac3c6981acdb1f57e3658832d315c3e96f6522",
+        "mapping_observed_at": "2026-11-05T07:00:51+00:00"
       },
-      "attempted_at": "2026-10-11T00:33:11+00:00",
-      "eps_key": "2027-12-31|6.39117",
+      "attempted_at": "2026-11-07T01:17:27+00:00",
+      "eps_key": "2027-12-31|6.48763",
       "eps_target_period": "2027-12-31",
       "document_ids": [
+        "DOC-D650047A810D2331",
         "DOC-A19880431D2CB470"
       ],
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-D650047A810D2331",
         "DOC-A19880431D2CB470"
       ],
       "notes": [],
-      "next_eligible_at": "2026-10-18T00:33:11+00:00",
-      "draft_status": "deferred_budget",
-      "context_id": "CTX-00C1D48A4294E166",
-      "context_input_sha": "00c1d48a4294e166aa620537119f58e10455b8560c941b08c3ec3af1f5e63893",
+      "next_eligible_at": "2026-11-14T01:17:27+00:00",
+      "draft_status": "no_supported_claims",
+      "context_id": "CTX-E49D76BCB3ADF0B0",
+      "context_input_sha": "e49d76bcb3adf0b02320e3a3c03f7f998afbdbfa3d750502084e04a156c7e321",
       "update_checks": [
+        {
+          "document_id": "DOC-D650047A810D2331",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-A19880431D2CB470",
           "eligible": false,
@@ -1588,8 +1598,7 @@
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
         }
-      ],
-      "draft_next_at": "2026-10-10T06:31:42+00:00"
+      ]
     },
     "CAN-0584EAE068460D91": {
       "status": "success",
@@ -3302,8 +3311,8 @@
         "mapping_sha256": "224330f2c44f5d173395e427dbac3c6981acdb1f57e3658832d315c3e96f6522",
         "mapping_observed_at": "2026-11-05T07:00:51+00:00"
       },
-      "attempted_at": "2026-11-05T07:15:09+00:00",
-      "eps_key": "2027-12-31|3.00333",
+      "attempted_at": "2026-11-07T01:17:27+00:00",
+      "eps_key": "2027-12-31|3.08307",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-8248216B02ABA81A",
@@ -3321,8 +3330,7 @@
         "DOC-14BD33CD4FDE8ABB",
         "DOC-7DAB1B88C679C2A6",
         "DOC-6994CC44D493B12A",
-        "DOC-95C482A2DC3DAF89",
-        "DOC-0D8A9D00CB07E896"
+        "DOC-95C482A2DC3DAF89"
       ],
       "notes": [],
       "update_checks": [
@@ -3397,17 +3405,9 @@
           "alert_eligible": false,
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
-        },
-        {
-          "document_id": "DOC-0D8A9D00CB07E896",
-          "eligible": false,
-          "search_eligible": false,
-          "alert_eligible": false,
-          "reason": "update-check-v5:no_event_sentence",
-          "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-12T07:15:09+00:00",
+      "next_eligible_at": "2026-11-14T01:17:27+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-D4408A5E23436C66",
       "context_input_sha": "d4408a5e23436c66a789808b9572feb020e690efe647ab7204808960561912c8"
@@ -3737,8 +3737,8 @@
         "mapping_sha256": "224330f2c44f5d173395e427dbac3c6981acdb1f57e3658832d315c3e96f6522",
         "mapping_observed_at": "2026-11-05T07:00:51+00:00"
       },
-      "attempted_at": "2026-11-05T07:15:09+00:00",
-      "eps_key": "2028-06-30|5.82198",
+      "attempted_at": "2026-11-07T01:17:27+00:00",
+      "eps_key": "2028-06-30|6.03928",
       "eps_target_period": "2028-06-30",
       "document_ids": [
         "DOC-02C797FFF9CA747D",
@@ -3793,7 +3793,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-11-12T07:15:09+00:00",
+      "next_eligible_at": "2026-11-14T01:17:27+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-EFF299115BC51A89",
       "context_input_sha": "eff299115bc51a89f570f4b9aece14fa723b08525201e494d469aadc5cbed2c7"
@@ -4429,6 +4429,69 @@
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-15E69A314E5C2F6D",
       "context_input_sha": "15e69a314e5c2f6d1222c195e23bb2234e881d57e96c260a3f7d288298fc2e5e"
+    },
+    "CAN-A56C76447137EBC2": {
+      "status": "no_relevant_document",
+      "ticker": "SKHY",
+      "issuer": {
+        "cik": "0002120882",
+        "ticker": "SKHY",
+        "exchange": "Nasdaq",
+        "name": "SK hynix Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "224330f2c44f5d173395e427dbac3c6981acdb1f57e3658832d315c3e96f6522",
+        "mapping_observed_at": "2026-11-05T07:00:51+00:00"
+      },
+      "attempted_at": "2026-11-07T01:17:27+00:00",
+      "eps_key": "2027-12-31|42.29906",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [],
+      "quality": "unknown",
+      "failures": 0,
+      "examined": [
+        "DOC-08ABB0AF5FB2B6D4",
+        "DOC-0880937610D1D0F4",
+        "DOC-DF9551C8F56FAC85",
+        "DOC-3D2ED547153155B1"
+      ],
+      "notes": [
+        "document budget reached before every results filing was read"
+      ],
+      "update_checks": [
+        {
+          "document_id": "DOC-08ABB0AF5FB2B6D4",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-0880937610D1D0F4",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-DF9551C8F56FAC85",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-3D2ED547153155B1",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-11-14T01:17:27+00:00"
     }
   },
   "days": {
@@ -4630,6 +4693,10 @@
       "companies": 4,
       "http_attempts": 22,
       "folded_companies": 2
+    },
+    "2026-11-07": {
+      "companies": 5,
+      "http_attempts": 28
     }
   },
   "documents_by_source": {
@@ -4899,6 +4966,11 @@
     "0001486159-26-000046|https://www.sec.gov/Archives/edgar/data/1486159/000148615926000046/chrd-q32026earningsrelease.htm": "DOC-404CEDBB488F070B",
     "0001517413-26-000343|https://www.sec.gov/Archives/edgar/data/1517413/000151741326000343/ex991-pressreleasedatednov.htm": "DOC-E9C245FA866F00D3",
     "0001517413-26-000343|https://www.sec.gov/Archives/edgar/data/1517413/000151741326000343/fsly-20261030.htm": "DOC-C87E0EFC1499C855",
-    "0001517413-26-000342|https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm": "DOC-AAFE208A6E9CE763"
+    "0001517413-26-000342|https://www.sec.gov/Archives/edgar/data/1517413/000151741326000342/ex991-fslypressrelease93026.htm": "DOC-AAFE208A6E9CE763",
+    "0001193125-26-436872|https://www.sec.gov/Archives/edgar/data/2120882/000119312526436872/d183583d6k.htm": "DOC-08ABB0AF5FB2B6D4",
+    "0001193125-26-435019|https://www.sec.gov/Archives/edgar/data/2120882/000119312526435019/d165312d6k.htm": "DOC-0880937610D1D0F4",
+    "0001193125-26-435015|https://www.sec.gov/Archives/edgar/data/2120882/000119312526435015/d236994d6k.htm": "DOC-DF9551C8F56FAC85",
+    "0001193125-26-435008|https://www.sec.gov/Archives/edgar/data/2120882/000119312526435008/d236990d6k.htm": "DOC-3D2ED547153155B1",
+    "0001628280-26-067578|https://www.sec.gov/Archives/edgar/data/1275014/000162828026067578/q32026pressrelease.htm": "DOC-D650047A810D2331"
   }
 }

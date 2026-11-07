@@ -1,0 +1,104 @@
+{
+  "context_id": "CTX-E49D76BCB3ADF0B0",
+  "candidate_id": "CAN-4BD491C8D3F1EC4F",
+  "ticker": "UCTT",
+  "issuer_cik": "0001275014",
+  "document_ids": [
+    "DOC-D650047A810D2331",
+    "DOC-A19880431D2CB470"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-D650047A810D2331#p7",
+    "DOC-D650047A810D2331#p8",
+    "DOC-D650047A810D2331#p15",
+    "DOC-D650047A810D2331#p16",
+    "DOC-D650047A810D2331#p23",
+    "DOC-D650047A810D2331#p24",
+    "DOC-D650047A810D2331#t2",
+    "DOC-D650047A810D2331#t4",
+    "DOC-D650047A810D2331#t6",
+    "DOC-D650047A810D2331#t7",
+    "DOC-D650047A810D2331#t10",
+    "DOC-A19880431D2CB470#p6",
+    "DOC-A19880431D2CB470#p12",
+    "DOC-A19880431D2CB470#p19",
+    "DOC-A19880431D2CB470#p20",
+    "DOC-A19880431D2CB470#t10"
+  ],
+  "input_sha": "e49d76bcb3adf0b02320e3a3c03f7f998afbdbfa3d750502084e04a156c7e321",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-07T01:17:41+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 매출이 기록적인 수준을 달성했다",
+      "figures": [
+        "$759 million"
+      ],
+      "quote": "Record revenue of $759 million, up 18% compared to Q2 2026 and up 49% compared to Q3 2025.",
+      "where": "DOC-D650047A810D2331#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 매출이 전 분기 대비 증가했다",
+      "figures": [
+        "up 18%"
+      ],
+      "quote": "Record revenue of $759 million, up 18% compared to Q2 2026 and up 49% compared to Q3 2025.",
+      "where": "DOC-D650047A810D2331#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 매출이 전년 동기 대비 증가했다",
+      "figures": [
+        "up 49%"
+      ],
+      "quote": "Record revenue of $759 million, up 18% compared to Q2 2026 and up 49% compared to Q3 2025.",
+      "where": "DOC-D650047A810D2331#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 매출이 특정 범위에 있을 것으로 예상한다",
+      "figures": [
+        "$800 million to $860 million"
+      ],
+      "quote": "The Company expects revenue in the range of $800 million to $860 million.",
+      "where": "DOC-D650047A810D2331#p16"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 주당 순이익이 특정 범위에 있을 것으로 예상한다",
+      "figures": [
+        "$1.02 and $1.26"
+      ],
+      "quote": "The Company expects GAAP diluted net income per share to be between $1.02 and $1.26, and non-GAAP diluted net income per share to be between $1.11 and $1.35.",
+      "where": "DOC-D650047A810D2331#p16"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회사는 다음 분기 비일반회계기준 주당 순이익에 대한 조정 내역을 제공할 수 없다",
+      "figures": [],
+      "quote": "A reconciliation of our guidance for non-GAAP net income per diluted share for the subsequent quarter is not available due to fluctuations in the geographic mix of our earnings from quarter to quarter",
+      "where": "DOC-D650047A810D2331#p24"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

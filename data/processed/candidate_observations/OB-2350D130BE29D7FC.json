@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-2350D130BE29D7FC",
+  "candidate_id": "CAN-E87900AEFDDE7B07",
+  "candidate_version": "CV-94896C8AEC97796A",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:SPT",
+    "ticker": "SPT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-07T01:14:28+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261107T010314Z_42321498938-1.json.gz",
+    "sha256": "376814262b3cba596b15d0310b94886c42e10fed9a0d6455756b0614fc7ccecd",
+    "run_id": "42321498938-1",
+    "finished_at": "2026-11-07T01:17:23+00:00"
+  },
+  "eps": {
+    "eps_now": 1.6288,
+    "eps_30d": 1.5398,
+    "eps_90d": 1.1854,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 9,
+    "down30": 0,
+    "pct_90": 37.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.009,
+    "yield_change_30_pp": 0.805
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-09",
+    "price_start_date": "2026-08-07",
+    "price_end_expected": "2026-11-06",
+    "price_end_date": "2026-11-05",
+    "close_start": 10.34000015258789,
+    "close_end": 10.8100004196167,
+    "price_pct_90": 4.5,
+    "adj_return_pct_90": 4.5,
+    "pe_change_pct": -23.9
+  },
+  "display_rank": 28,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 20
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 650766720,
+  "context_id": "CTX-965EEBC8A049C924",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-07T01:17:27+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:SPT",
+  "approval_version": null,
+  "rendered_at": "2026-11-07T01:17:47+00:00"
+}

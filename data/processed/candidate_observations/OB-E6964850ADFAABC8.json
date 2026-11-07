@@ -1,0 +1,101 @@
+{
+  "observation_id": "OB-E6964850ADFAABC8",
+  "candidate_id": "CAN-FD88AA0D924CF1C8",
+  "candidate_version": "CV-D4DFB96990F70971",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DHT",
+    "ticker": "DHT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-07T01:09:52+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261107T010314Z_42321498938-1.json.gz",
+    "sha256": "376814262b3cba596b15d0310b94886c42e10fed9a0d6455756b0614fc7ccecd",
+    "run_id": "42321498938-1",
+    "finished_at": "2026-11-07T01:17:23+00:00"
+  },
+  "eps": {
+    "eps_now": 3.2405,
+    "eps_30d": 2.1455,
+    "eps_90d": 1.80658,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 79.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 6.934,
+    "yield_change_30_pp": 5.295
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-09",
+    "price_start_date": "2026-08-07",
+    "price_end_expected": "2026-11-06",
+    "price_end_date": "2026-11-05",
+    "close_start": 18.760000228881836,
+    "close_end": 20.479999542236328,
+    "price_pct_90": 9.2,
+    "adj_return_pct_90": 16.4,
+    "pe_change_pct": -39.1
+  },
+  "display_rank": 13,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 9
+    },
+    {
+      "list": "B",
+      "rank": 10
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 3334351616,
+  "context_id": "CTX-D431900433962EEC",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-05T07:15:09+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Midstream",
+    "count": 6,
+    "shown": [
+      "FRO",
+      "DHT",
+      "TNK"
+    ],
+    "folded": [
+      "STNG"
+    ],
+    "outside": [
+      "VG",
+      "INSW"
+    ]
+  },
+  "entity_id": "NYSE:DHT",
+  "approval_version": null,
+  "rendered_at": "2026-11-07T01:17:47+00:00"
+}
