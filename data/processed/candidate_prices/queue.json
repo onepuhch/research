@@ -190,7 +190,12 @@
     "HLIT",
     "HRI",
     "LRCX",
-    "SCSC"
+    "SCSC",
+    "BKV",
+    "PBR",
+    "SKHY",
+    "XOM",
+    "ZYME"
   ],
   "days": {
     "2026-10-06": {
@@ -320,13 +325,17 @@
     "2026-11-06": {
       "requests": 20,
       "retries": 0
+    },
+    "2026-11-07": {
+      "requests": 15,
+      "retries": 1
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 32,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "attempts": 33,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -477,11 +486,11 @@
       "reason": null
     },
     "INDV": {
-      "attempts": 3,
-      "last_attempt_at": "2026-11-05T07:15:52.760019+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "failed",
-      "failures": 1,
-      "next_eligible_at": "2026-11-06T07:15:52.760019+00:00",
+      "failures": 2,
+      "next_eligible_at": "2026-11-10T01:18:08.408100+00:00",
       "reason": "ValueError"
     },
     "IPI": {
@@ -1397,16 +1406,16 @@
       "reason": null
     },
     "JXN": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "SNDK": {
-      "attempts": 3,
-      "last_attempt_at": "2026-11-03T07:14:34.178176+00:00",
+      "attempts": 4,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1805,32 +1814,88 @@
       "reason": null
     },
     "VSNT": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "AII": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "HLIT": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "HRI": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "LRCX": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SCSC": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "BKV": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "PBR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SKHY": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "XOM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "ZYME": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
