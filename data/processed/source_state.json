@@ -10532,7 +10532,7 @@
     "validation_rejected": true
   },
   "0000785161-26-000236": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10543,12 +10543,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/785161/000078516126000236/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/785161/000078516126000236/ehcq32026earningsslides_.htm",
       "published_at": "2026-10-28",
-      "raw_text": "Encompass Health Corp (EHC) (CIK 0000785161) EX-99.2 2026-10-28. 16 Multiple modalities for capacity expansion .................................................................................................................. Increase in cash tax payments primarily due to higher income, additional bonus depreciation and taxes paid in 2026 related to an underpayment from 2025 Encompass Health 13 Uses of free cash flow (as of October 28, 2026) ($ in millions) 9 Months 2026 Actuals 2025 Actuals 2026 Assumptions Growth Capacity expansions $441.0 $526.4 $675 to $725 Replacement IRFs 10.2 0.5 20 to 30 $451.2 $526.9 $695 to $755 Debt reduction Reduction (increase) in total debt(11) ($108.3) $7.0 TBD Shareholder distributions Dividends on common stock $57.9 $71.1 ~ $79 Common stock repurchases $203.7 $158.0 TBD Refer to pages 34-35 for end notes. Growth targets, fundamentals and value drivers Encompass Health 17 Multiple modalities for capacity expansion De novos • 300-500 beds per year Small format hospitals • 25-100 beds per year Ÿ 6-10 hospitals per year Ÿ Freestanding hospitals (inclusive of remote and satellite locations(13)) with greater than 30 beds Ÿ 4-8 acres of real estate Ÿ Two primary prototypes - one and two story - to best fit available real estate Ÿ Typically can accommodate future expansion Ÿ Addresses high occupancy levels at existing hospitals Ÿ Project size can vary depending on market demand, available land, CON requirements, etc. George, UT — 50 Fishers, IN — 50 Haslet, TX — 50 Flowood, MS — 50 Cookeville, TN ü — 40 Remote and satellite(13) Cleveland, TN 4Q26 40 — Conroe, TX (SFH) — 24 Other bed additions 145 to 190 150 to 200 Total capacity expansion* 534 to 579 514 to 564 Development activity 3Q 2026 Development activity highlights uDe novos opened # of beds JV Ÿ Norristown, PA 50 Beds added to existing hospitals 31 Remote and satellite announcement Ÿ Conroe, TX (SFH) 24 IRF development projects announced and underway** 17 SFH = Small Format Hospital "
+      "raw_text": "Encompass Health Corp (EHC) (CIK 0000785161) EX-99.2 2026-10-28. 16 Multiple modalities for capacity expansion .................................................................................................................. Increase in cash tax payments primarily due to higher income, additional bonus depreciation and taxes paid in 2026 related to an underpayment from 2025 Encompass Health 13 Uses of free cash flow (as of October 28, 2026) ($ in millions) 9 Months 2026 Actuals 2025 Actuals 2026 Assumptions Growth Capacity expansions $441.0 $526.4 $675 to $725 Replacement IRFs 10.2 0.5 20 to 30 $451.2 $526.9 $695 to $755 Debt reduction Reduction (increase) in total debt(11) ($108.3) $7.0 TBD Shareholder distributions Dividends on common stock $57.9 $71.1 ~ $79 Common stock repurchases $203.7 $158.0 TBD Refer to pages 34-35 for end notes. Growth targets, fundamentals and value drivers Encompass Health 17 Multiple modalities for capacity expansion De novos • 300-500 beds per year Small format hospitals • 25-100 beds per year Ÿ 6-10 hospitals per year Ÿ Freestanding hospitals (inclusive of remote and satellite locations(13)) with greater than 30 beds Ÿ 4-8 acres of real estate Ÿ Two primary prototypes - one and two story - to best fit available real estate Ÿ Typically can accommodate future expansion Ÿ Addresses high occupancy levels at existing hospitals Ÿ Project size can vary depending on market demand, available land, CON requirements, etc. George, UT — 50 Fishers, IN — 50 Haslet, TX — 50 Flowood, MS — 50 Cookeville, TN ü — 40 Remote and satellite(13) Cleveland, TN 4Q26 40 — Conroe, TX (SFH) — 24 Other bed additions 145 to 190 150 to 200 Total capacity expansion* 534 to 579 514 to 564 Development activity 3Q 2026 Development activity highlights uDe novos opened # of beds JV Ÿ Norristown, PA 50 Beds added to existing hospitals 31 Remote and satellite announcement Ÿ Conroe, TX (SFH) 24 IRF development projects announced and underway** 17 SFH = Small Format Hospital ",
+      "_model_response": {
+        "evidence_quote": "Growth Capacity expansions $441.0 $526.4 $675 to $725 Replacement IRFs 10.2 0.5 20 to 30 $451.2 $526.9 $695 to $755 Debt reduction Reduction (increase) in total debt(11) ($108.3) $7.0 TBD Shareholder distributions Dividends on common stock $57.9 $71.1 ~ $79 Common stock repurchases $203.7 $158.0 TBD Refer to pages 34-35 for end notes. Growth targets, fundamentals and value drivers Encompass Health 17 Multiple modalities for capacity expansion De novos • 300-500 beds per year Small format hospitals • 25-100 beds per year Ÿ 6-10 hospitals per year Ÿ Freestanding hospitals (inclusive of remote and satellite locations(13)) with greater than 30 beds Ÿ 4-8 acres of real estate Ÿ Two primary prototypes - one and two story - to best fit available real estate Ÿ Typically can accommodate future expansion Ÿ Addresses high occupancy levels at existing hospitals",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Growth Capacity expansions $441.0 $526.4 $675 to $725",
+          "supply_demand_tightness": "Addresses high occupancy levels at existing hospitals",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "De novos • 300-500 beds per year Small format hospitals • 25-100 beds per year Ÿ 6-10 hospitals per year"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Encompass Health Corp",
+        "theme": "헬스케어",
+        "signal_type": "CAPEX",
+        "what_happened": "Encompass Health Corp는 2026년 자본 지출(CAPEX)을 6.75억~7.25억 달러로 예상하며, 이는 2025년 대비 크게 증가한 수치로 신규 병원 개설 및 기존 병원 병상 추가를 통해 생산 능력을 확장할 계획입니다.",
+        "why_it_matters": "회사의 공격적인 CAPEX 증가는 재활 병원 서비스에 대한 견조한 수요를 반영하며, 이는 향후 매출 및 시장 점유율 확대로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "향후 분기별 CAPEX 집행 현황 및 신규 병원 개설 일정, 그리고 병상 가동률 변화를 주시해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "CAPEX: Capital Expenditure의 약자로, 기업이 미래의 이윤을 창출하기 위해 투자하는 유형 자산(건물, 장비 등)에 대한 지출을 의미합니다. IRF: Inpatient Rehabilitation Facility의 약자로, 입원 환자에게 집중적인 재활 치료를 제공하는 시설을 말합니다."
+      }
     },
     "content_hash": "b5e6e411402597d58c2c645fb06f2ec714184f8f91332ee00aba0358f2a7a27f",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-08T06:17:45+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001213900-26-113058": {
     "status": "deferred",
@@ -13592,7 +13628,7 @@
     "updated_at": "2026-11-06T06:58:43.414225+00:00"
   },
   "0001683168-26-008351": {
-    "status": "retry",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13603,18 +13639,60 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826008351/aaoi_ex9901.htm",
       "published_at": "2026-11-05",
-      "raw_text": "APPLIED OPTOELECTRONICS, INC. (AAOI) (CIK 0001158114) EX-99.1 2026-11-05. We expect our 2027 capacity expansion plan in the US to take longer to complete due to longer than expected time to obtain necessary electrical power among other construction related issues. We remain focused on executing on our capacity expansion plans and believe we are well positioned to support the next phase of AI datacenter deployment.” Third Quarter 2026 Financial Summary · GAAP revenue was $269.9 million, compared with $118.6 million in the third quarter of 2025 and $191.9 million in the second quarter of 2026. These risks and uncertainties include but are not limited to: reduction in the size or quantity of customer orders; change in demand for the company's products due to industry conditions; changes in manufacturing operations; volatility in manufacturing costs; delays in shipments of products; disruptions in the supply chain; change in the rate of design wins or the rate of customer acceptance of new products; the company's reliance on a small number of customers for a substantial portion of its revenues; potential pricing pressure; a decline in demand for our customers' products or their rate of deployment of their products; general conditions in the internet datacenter, cable television (CATV) broadband, telecom, or fiber-to-the-home (FTTH) markets; changes in the world economy (particularly in the United States and China); changes in the regulation and taxation of international trade, including the imposition of tariffs; changes in currency exchange rates; the negative effects of seasonality; and other risks and uncertainties described more fully in the company's documents filed with or furnished to the Securities and Exchange Commission, including our Annual Report on Form 10-K for the year ended December 31, 2025 and our Quarterly report on Form 10-Q for the quarter ended September 30, 2026."
+      "raw_text": "APPLIED OPTOELECTRONICS, INC. (AAOI) (CIK 0001158114) EX-99.1 2026-11-05. We expect our 2027 capacity expansion plan in the US to take longer to complete due to longer than expected time to obtain necessary electrical power among other construction related issues. We remain focused on executing on our capacity expansion plans and believe we are well positioned to support the next phase of AI datacenter deployment.” Third Quarter 2026 Financial Summary · GAAP revenue was $269.9 million, compared with $118.6 million in the third quarter of 2025 and $191.9 million in the second quarter of 2026. These risks and uncertainties include but are not limited to: reduction in the size or quantity of customer orders; change in demand for the company's products due to industry conditions; changes in manufacturing operations; volatility in manufacturing costs; delays in shipments of products; disruptions in the supply chain; change in the rate of design wins or the rate of customer acceptance of new products; the company's reliance on a small number of customers for a substantial portion of its revenues; potential pricing pressure; a decline in demand for our customers' products or their rate of deployment of their products; general conditions in the internet datacenter, cable television (CATV) broadband, telecom, or fiber-to-the-home (FTTH) markets; changes in the world economy (particularly in the United States and China); changes in the regulation and taxation of international trade, including the imposition of tariffs; changes in currency exchange rates; the negative effects of seasonality; and other risks and uncertainties described more fully in the company's documents filed with or furnished to the Securities and Exchange Commission, including our Annual Report on Form 10-K for the year ended December 31, 2025 and our Quarterly report on Form 10-Q for the quarter ended September 30, 2026.",
+      "_model_response": {
+        "evidence_quote": "We expect our 2027 capacity expansion plan in the US to take longer to complete due to longer than expected time to obtain necessary electrical power among other construction related issues. We remain focused on executing on our capacity expansion plans and believe we are well positioned to support the next phase of AI datacenter deployment.”",
+        "axes_evidence": {
+          "underfollowed_pure_play": "APPLIED OPTOELECTRONICS, INC. (AAOI)",
+          "earnings_leverage": "We expect our 2027 capacity expansion plan in the US to take longer to complete",
+          "supply_demand_tightness": "We remain focused on executing on our capacity expansion plans and believe we are well positioned to support the next phase of AI datacenter deployment.”",
+          "structural_ai_demand": "support the next phase of AI datacenter deployment",
+          "revision_momentum": "take longer to complete due to longer than expected time to obtain necessary electrical power",
+          "catalyst_visibility": "take longer to complete"
+        },
+        "event_state": "planned",
+        "signal_direction": "negative",
+        "bottleneck_id": "AI Datacenter Components",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AAOI",
+        "theme": "AI Datacenter",
+        "signal_type": "CAPEX",
+        "what_happened": "APPLIED OPTOELECTRONICS, INC. (AAOI)는 2027년 미국 생산능력 증설 계획이 전력 확보 지연 등 건설 관련 문제로 인해 완료에 더 오랜 시간이 걸릴 것이라고 발표했다.",
+        "why_it_matters": "AI 데이터센터 수요 증가에 대응하기 위한 생산능력 증설 계획이 지연되면서, 단기적으로 공급 병목 현상이 발생하거나 회사의 성장 기회 실현이 늦어질 수 있다.",
+        "what_to_watch": "생산능력 증설 계획의 새로운 완료 시점 및 고객사의 공급망 관련 코멘트.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "CAPEX (Capital Expenditure): 기업이 미래의 이윤을 창출하기 위해 토지, 건물, 기계 등 고정 자산을 구매하거나 개선하는 데 지출하는 비용.\nAI 데이터센터 (AI Datacenter): 인공지능(AI) 워크로드 처리에 최적화된 컴퓨팅 인프라를 갖춘 데이터센터."
+      }
     },
     "content_hash": "2ad577338452ccd8076e6d3129477ff0f35a9ef58333ca4aa1e6d392ef51d650",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-11-07T01:02:05+00:00",
-    "reason": "TimeoutError",
+    "attempts": 2,
+    "updated_at": "2026-11-08T06:16:17+00:00",
+    "reason": "grounded extraction",
     "http_status": null,
     "next_retry_at": "2026-11-07T13:00:43.614053+00:00",
-    "failure_class": "unserved",
-    "failure_day": "2026-11-07",
-    "failure_run": "42321498938-1"
+    "signal_id": "SIG-0932",
+    "processed_day": "2026-11-08",
+    "processed_run": "42453944270-1",
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-11-07",
+      "failure_run": "42321498938-1",
+      "day": "2026-11-08",
+      "run": "42453944270-1",
+      "by": "model answer"
+    }
   },
   "0001493152-26-050050": {
     "status": "deferred",
@@ -13902,7 +13980,7 @@
     "updated_at": "2026-11-06T06:58:43.414225+00:00"
   },
   "0001493152-26-050267": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13913,13 +13991,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1615063/000149315226050267/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1615063/000149315226050267/ex99-1.htm",
       "published_at": "2026-11-05",
-      "raw_text": "Inspired Entertainment, Inc. (INSE) (CIK 0001615063) EX-99.1 2026-11-05. New customers, markets, distribution channels, product formats and partnerships give us multiple avenues to grow. Private Securities Litigation Reform Act of 1995, including, but not limited to, statements regarding our ability to bring certain of our products to customers in the various markets in which we operate and execute on our strategic plan, statements regarding expectations with respect to potential new customers and statements regarding our anticipated financial performance. AND SUBSIDIARIES CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (in millions) (Unaudited) Nine Months Ended September 30, 2026 2025 Cash flows from operating activities: Net loss $ (0.4 ) $ (9.8 ) Adjustments to reconcile net loss to net cash provided by operating activities: Depreciation and amortization 37.3 32.3 Amortization of finance lease right of use asset 4.2 6.8 Amortization of operating lease right of use asset 1.5 3.2 Impairment loss on property and equipment classified as held-for-sale — 5.9 Stock-based compensation expense 4.3 4.6 Amortization of deferred financing fees relating to senior debt 3.1 2.3 Deferred tax 0.3 (2.8 ) Changes in assets and liabilities: Accounts receivable 2.5 24.3 Inventory (7.4 ) (0.9 ) Prepaid expenses and other assets 13.4 (20.1 ) Corporate tax and other current taxes payable (7.7 ) (7.6 ) Accounts payable and accrued expenses 1.2 15.9 Deferred revenue and customer prepayment (5.1 ) 2.6 Operating lease liabilities (1.8 ) (2.9 ) Pension contributions (0.4 ) (0.9 ) Other long-term liabilities 0.7 (2.1 ) Net cash provided by operating activities 45.7 50.8 Cash flows from investing activities: Purchases of property and equipment (6.2 ) (24.6 ) Purchases of capital software and internally developed costs (9.1 ) (7.6 ) Contract cost expense (9.7 ) (10.0 ) Net cash used in investing activities (25.0 ) (42.2 ) Cash flows from financing activities: Proceeds from long-term debt 5.8 3"
+      "raw_text": "Inspired Entertainment, Inc. (INSE) (CIK 0001615063) EX-99.1 2026-11-05. New customers, markets, distribution channels, product formats and partnerships give us multiple avenues to grow. Private Securities Litigation Reform Act of 1995, including, but not limited to, statements regarding our ability to bring certain of our products to customers in the various markets in which we operate and execute on our strategic plan, statements regarding expectations with respect to potential new customers and statements regarding our anticipated financial performance. AND SUBSIDIARIES CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (in millions) (Unaudited) Nine Months Ended September 30, 2026 2025 Cash flows from operating activities: Net loss $ (0.4 ) $ (9.8 ) Adjustments to reconcile net loss to net cash provided by operating activities: Depreciation and amortization 37.3 32.3 Amortization of finance lease right of use asset 4.2 6.8 Amortization of operating lease right of use asset 1.5 3.2 Impairment loss on property and equipment classified as held-for-sale — 5.9 Stock-based compensation expense 4.3 4.6 Amortization of deferred financing fees relating to senior debt 3.1 2.3 Deferred tax 0.3 (2.8 ) Changes in assets and liabilities: Accounts receivable 2.5 24.3 Inventory (7.4 ) (0.9 ) Prepaid expenses and other assets 13.4 (20.1 ) Corporate tax and other current taxes payable (7.7 ) (7.6 ) Accounts payable and accrued expenses 1.2 15.9 Deferred revenue and customer prepayment (5.1 ) 2.6 Operating lease liabilities (1.8 ) (2.9 ) Pension contributions (0.4 ) (0.9 ) Other long-term liabilities 0.7 (2.1 ) Net cash provided by operating activities 45.7 50.8 Cash flows from investing activities: Purchases of property and equipment (6.2 ) (24.6 ) Purchases of capital software and internally developed costs (9.1 ) (7.6 ) Contract cost expense (9.7 ) (10.0 ) Net cash used in investing activities (25.0 ) (42.2 ) Cash flows from financing activities: Proceeds from long-term debt 5.8 3",
+      "_model_response": {
+        "evidence_quote": "New customers, markets, distribution channels, product formats and partnerships give us multiple avenues to grow. Private Securities Litigation Reform Act of 1995, including, but not limited to, statements regarding our ability to bring certain of our products to customers in the various markets in which we operate and execute on our strategic plan, statements regarding expectations with respect to potential new customers and statements regarding our anticipated financial performance.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "제공된 텍스트는 Inspired Entertainment의 일반적인 성장 전략에 대한 진술과 현금 흐름표와 같은 실현된 재무 데이터를 포함하고 있습니다. 이는 가이던스 상향, 구체적인 수주/백로그 변화, 생산능력 증설, 디자인윈 등 규칙에서 정의한 식별 가능한 회사의 구체적인 조기 발굴 신호에 해당하지 않습니다. 특히, '잠재적 신규 고객에 대한 기대'와 같은 문구는 법적 고지사항의 일부이며 구체적인 근거가 없는 일반적인 진술입니다. 현금 흐름표의 데이터는 실현된 결과이며, 미래 성장에 대한 조기 긍정적 지표로 해석하기 어렵습니다.",
+        "subject": "Inspired Entertainment, Inc.",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "Inspired Entertainment가 일반적인 성장 전략과 현금 흐름표를 포함한 EX-99.1 문서를 SEC에 제출했습니다.",
+        "why_it_matters": "제출된 내용은 회사의 일반적인 사업 방향과 과거 재무 실적을 보여주지만, 구체적인 투자 발굴 신호로 보기 어렵습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "제공된 텍스트는 Inspired Entertainment의 일반적인 성장 전략에 대한 진술과 현금 흐름표와 같은 실현된 재무 데이터를 포함하고 있습니다. 이는 가이던스 상향, 구체적인 수주/백로그 변화, 생산능력 증설, 디자인윈 등 규칙에서 정의한 식별 가능한 회사의 구체적인 조기 발굴 신호에 해당하지 않습니다. 특히, '잠재적 신규 고객에 대한 기대'와 같은 문구는 법적 고지사항의 일부이며 구체적인 근거가 없는 일반적인 진술입니다. 현금 흐름표의 데이터는 실현된 결과이며, 미래 성장에 대한 조기 긍정적 지표로 해석하기 어렵습니다."
     },
     "content_hash": "64ba76879a78ec4b649112440e85717419fb0c438fa6ec76dad241519b6600d0",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-11-07T01:03:09+00:00",
-    "reason": "deferred_budget"
+    "attempts": 2,
+    "updated_at": "2026-11-08T06:16:36+00:00",
+    "reason": "제공된 텍스트는 Inspired Entertainment의 일반적인 성장 전략에 대한 진술과 현금 흐름표와 같은 실현된 재무 데이터를 포함하고 있습니다. 이는 가이던스 상향, 구체적인 수주/백로그 변화, 생산능력 증설, 디자인윈 등 규칙에서 정의한 식별 가능한 회사의 구체적인 조기 발굴 신호에 해당하지 않습니다. 특히, '잠재적 신규 고객에 대한 기대'와 같은 문구는 법적 고지사항의 일부이며 구체적인 근거가 없는 일반적인 진술입니다. 현금 흐름표의 데이터는 실현된 결과이며, 미래 성장에 대한 조기 긍정적 지표로 해석하기 어렵습니다.",
+    "processed_day": "2026-11-08",
+    "processed_run": "42453944270-1"
   },
   "0001193125-26-450100": {
     "status": "deferred",
@@ -14169,7 +14284,7 @@
     "updated_at": "2026-11-06T06:58:43.414225+00:00"
   },
   "0001853145-26-000044": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -14180,12 +14295,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1853145/000185314526000044/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1853145/000185314526000044/evcmq326earningsrelease.htm",
       "published_at": "2026-11-05",
-      "raw_text": "EverCommerce Inc. (EVCM) (CIK 0001853145) EX-99.1 2026-11-05. Our updated outlook reflects where we exited the quarter, and it includes targeted investment in paid media for our PLG businesses to drive new customer acquisition. Condensed Consolidated Balance Sheets (in thousands, except per share and share amounts) (unaudited) September 30, December 31, 2026 2025 Assets Current assets: Cash and cash equivalents $ 139,007 $ 129,730 Accounts receivable, net of allowance for expected credit losses of $3.3 million and $3.6 million at September 30, 2026 and December 31, 2025, respectively 35,517 37,046 Contract assets 14,097 11,612 Prepaid expenses and other current assets 34,936 34,391 Total current assets 223,557 212,779 Property and equipment, net 5,533 5,744 Capitalized software, net 70,633 58,968 Other non-current assets 40,387 36,261 Intangible assets, net 131,214 164,240 Goodwill 892,527 893,802 Total assets 1,363,851 1,371,794 Liabilities and Stockholders’ Equity Current liabilities: Accounts payable $ 11,845 $ 5,125 Accrued expenses and other 50,897 55,836 Deferred revenue 21,951 21,670 Customer deposits 14,604 12,519 Current maturities of long-term debt 5,500 5,500 Total current liabilities 104,797 100,650 Long-term debt, net of current maturities and deferred financing costs 514,220 517,891 Other non-current liabilities 29,954 36,380 Total liabilities 648,971 654,921 Stockholders’ equity: Preferred stock, $0.00001 par value, 50,000,000 shares authorized and no shares issued or outstanding as of September 30, 2026 and December 31, 2025 — — Common stock, $0.00001 par value, 2,000,000,000 shares authorized and 175,675,182 and 178,111,971 shares issued and outstanding at September 30, 2026 and December 31, 2025, respectively 2 2 Accumulated other comprehensive loss (14,275) (12,686) Additional paid-in capital 1,349,726 1,373,022 Accumulated deficit (620,573) (643,465) Total stockholders’ equity 714,880 716,873 Total liabilities and stockholders’ equity $ 1,363,851"
+      "raw_text": "EverCommerce Inc. (EVCM) (CIK 0001853145) EX-99.1 2026-11-05. Our updated outlook reflects where we exited the quarter, and it includes targeted investment in paid media for our PLG businesses to drive new customer acquisition. Condensed Consolidated Balance Sheets (in thousands, except per share and share amounts) (unaudited) September 30, December 31, 2026 2025 Assets Current assets: Cash and cash equivalents $ 139,007 $ 129,730 Accounts receivable, net of allowance for expected credit losses of $3.3 million and $3.6 million at September 30, 2026 and December 31, 2025, respectively 35,517 37,046 Contract assets 14,097 11,612 Prepaid expenses and other current assets 34,936 34,391 Total current assets 223,557 212,779 Property and equipment, net 5,533 5,744 Capitalized software, net 70,633 58,968 Other non-current assets 40,387 36,261 Intangible assets, net 131,214 164,240 Goodwill 892,527 893,802 Total assets 1,363,851 1,371,794 Liabilities and Stockholders’ Equity Current liabilities: Accounts payable $ 11,845 $ 5,125 Accrued expenses and other 50,897 55,836 Deferred revenue 21,951 21,670 Customer deposits 14,604 12,519 Current maturities of long-term debt 5,500 5,500 Total current liabilities 104,797 100,650 Long-term debt, net of current maturities and deferred financing costs 514,220 517,891 Other non-current liabilities 29,954 36,380 Total liabilities 648,971 654,921 Stockholders’ equity: Preferred stock, $0.00001 par value, 50,000,000 shares authorized and no shares issued or outstanding as of September 30, 2026 and December 31, 2025 — — Common stock, $0.00001 par value, 2,000,000,000 shares authorized and 175,675,182 and 178,111,971 shares issued and outstanding at September 30, 2026 and December 31, 2025, respectively 2 2 Accumulated other comprehensive loss (14,275) (12,686) Additional paid-in capital 1,349,726 1,373,022 Accumulated deficit (620,573) (643,465) Total stockholders’ equity 714,880 716,873 Total liabilities and stockholders’ equity $ 1,363,851",
+      "_model_response": {
+        "evidence_quote": "Condensed Consolidated Balance Sheets (in thousands, except per share and share amounts) (unaudited) September 30, December 31, 2026 2025 Assets Current assets: Cash and cash equivalents $ 139,007 $ 129,730 Accounts receivable, net of allowance for expected credit losses of $3.3 million and $3.6 million at September 30, 2026 and December 31, 2025, respectively 35,517 37,046 Contract assets 14,097 11,612 Prepaid expenses and other current assets 34,936 34,391 Total current assets 223,557 212,779 Property and equipment, net 5,533 5,744 Capitalized software, net 70,633 58,968 Other non-current assets 40,387 36,261 Intangible assets, net 131,214 164,240 Goodwill 892,527 893,802 Total assets 1,363,851 1,371,794",
+        "axes_evidence": {
+          "underfollowed_pure_play": "EverCommerce Inc. (EVCM)은 특정 산업군에 소프트웨어 및 결제 솔루션을 제공하는 기업으로, 해당 분야에 대한 순수 노출도를 가집니다.",
+          "earnings_leverage": "자본화된 소프트웨어 증가는 장기적으로 운영 효율성 개선 및 신규 서비스 확장을 통해 수익성 개선에 기여할 수 있습니다.",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "자본화된 소프트웨어 투자는 미래 성장을 위한 기반을 다지는 것이지만, 실제 매출 및 이익으로 이어지는 시점과 규모는 추가 확인이 필요합니다."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "EverCommerce Inc.",
+        "theme": "미분류",
+        "signal_type": "CAPEX",
+        "what_happened": "EverCommerce Inc.의 2026년 9월 30일 기준 대차대조표에서 자본화된 소프트웨어 순액이 70,633천 달러로 전년 동기 58,968천 달러 대비 증가했습니다.",
+        "why_it_matters": "이는 회사가 미래 성장을 위한 제품 개발 및 기술 인프라에 지속적으로 투자하고 있음을 보여주며, 이는 장기적인 경쟁력 강화와 신규 서비스 출시 가능성을 시사합니다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 신규 제품/서비스 출시 여부와 관련 매출 성장률을 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 3,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "자본화된 소프트웨어: 기업이 자체적으로 개발하거나 외부에서 구매하여 사용하는 소프트웨어 중, 미래 경제적 효익이 기대되어 자산으로 처리되는 비용입니다."
+      }
     },
     "content_hash": "0b88212a95279c090805931d19572dbcfd827afe454cc6297a6802c732ae7531",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-06T06:58:43.414225+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-08T06:16:59+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001020569-26-000081": {
     "status": "deferred",
@@ -14321,7 +14472,7 @@
     "updated_at": "2026-11-06T06:58:43.414225+00:00"
   },
   "0001036262-26-000061": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -14332,12 +14483,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1036262/000103626226000061/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1036262/000103626226000061/intt-20261106xexx991.htm",
       "published_at": "2026-11-06",
-      "raw_text": "INTEST CORP (INTT) (CIK 0001036262) EX-99.1 2026-11-06. “Orders 2 reached a record $49.4 million in the quarter, well ahead of revenue and lifting backlog to $59.7 million, as lead times for test equipment lengthened and customers placed orders earlier,” continued Mr. Rogoff concluded, “We expect much of our third-quarter semiconductor order intake to convert to revenue in the first half of 2027, giving us greater revenue visibility into next year. Hurry Chief Financial Officer and Treasurer Alliance Advisors IR Tel: (856) 505-8999 INTTIR@allianceadvisors.com Tel: (212) 838-3777 – FINANCIAL TABLES FOLLOW – -MORE- InTest Reports Third Quarter 2026 Page 6 of 12 November 6, 2026 InTest Corporation Consolidated Statements of Operations (Unaudited) Three Months Ended Nine Months Ended September 30, September 30, (In thousands, except share and per share data) 2026 2025 2026 2025 Revenue $ 35,069 $ 26,236 $ 104,268 $ 81,003 Cost of revenue 18,348 15,244 58,591 46,982 Gross profit 16,721 10,992 45,677 34,021 Operating expenses: Selling expense 4,485 3,765 13,202 12,141 Engineering and product development expense 2,541 2,335 7,630 7,028 General and administrative expense 6,369 5,128 18,701 16,704 Amortization of acquired intangible assets 548 841 2,025 2,504 Restructuring costs 51 116 825 645 Total operating expenses 13,994 12,185 42,383 39,022 Operating income (loss) 2,727 (1,193) 3,294 (5,001) Interest expense (116) (95) (259) (366) Other income 55 61 107 768 Earnings (loss) before income tax expense (benefit) 2,666 (1,227) 3,142 (4,599) Income tax expense (benefit) 810 (289) 629 (829) Net earnings (loss) $ 1,856 $ (938) $ 2,513 $ (3,770) Earnings (loss) per common share: Basic $ 0.15 $ (0.08) $ 0.20 $ (0.31) Diluted $ 0.15 $ (0.08) $ 0.20 $ (0.31) Weighted average common shares outstanding: Basic 12,477,978 12,208,586 12,348,882 12,201,087 Diluted 12,611,568 12,208,586 12,538,378 12,201,087 -MORE- InTest Reports Third Quarter 2026 Page 7 of 12 November 6, 2026 InTest Cor"
+      "raw_text": "INTEST CORP (INTT) (CIK 0001036262) EX-99.1 2026-11-06. “Orders 2 reached a record $49.4 million in the quarter, well ahead of revenue and lifting backlog to $59.7 million, as lead times for test equipment lengthened and customers placed orders earlier,” continued Mr. Rogoff concluded, “We expect much of our third-quarter semiconductor order intake to convert to revenue in the first half of 2027, giving us greater revenue visibility into next year. Hurry Chief Financial Officer and Treasurer Alliance Advisors IR Tel: (856) 505-8999 INTTIR@allianceadvisors.com Tel: (212) 838-3777 – FINANCIAL TABLES FOLLOW – -MORE- InTest Reports Third Quarter 2026 Page 6 of 12 November 6, 2026 InTest Corporation Consolidated Statements of Operations (Unaudited) Three Months Ended Nine Months Ended September 30, September 30, (In thousands, except share and per share data) 2026 2025 2026 2025 Revenue $ 35,069 $ 26,236 $ 104,268 $ 81,003 Cost of revenue 18,348 15,244 58,591 46,982 Gross profit 16,721 10,992 45,677 34,021 Operating expenses: Selling expense 4,485 3,765 13,202 12,141 Engineering and product development expense 2,541 2,335 7,630 7,028 General and administrative expense 6,369 5,128 18,701 16,704 Amortization of acquired intangible assets 548 841 2,025 2,504 Restructuring costs 51 116 825 645 Total operating expenses 13,994 12,185 42,383 39,022 Operating income (loss) 2,727 (1,193) 3,294 (5,001) Interest expense (116) (95) (259) (366) Other income 55 61 107 768 Earnings (loss) before income tax expense (benefit) 2,666 (1,227) 3,142 (4,599) Income tax expense (benefit) 810 (289) 629 (829) Net earnings (loss) $ 1,856 $ (938) $ 2,513 $ (3,770) Earnings (loss) per common share: Basic $ 0.15 $ (0.08) $ 0.20 $ (0.31) Diluted $ 0.15 $ (0.08) $ 0.20 $ (0.31) Weighted average common shares outstanding: Basic 12,477,978 12,208,586 12,348,882 12,201,087 Diluted 12,611,568 12,208,586 12,538,378 12,201,087 -MORE- InTest Reports Third Quarter 2026 Page 7 of 12 November 6, 2026 InTest Cor",
+      "_model_response": {
+        "evidence_quote": "Orders 2 reached a record $49.4 million in the quarter, well ahead of revenue and lifting backlog to $59.7 million, as lead times for test equipment lengthened and customers placed orders earlier,” continued Mr. Rogoff concluded, “We expect much of our third-quarter semiconductor order intake to convert to revenue in the first half of 2027, giving us greater revenue visibility into next year.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Orders 2 reached a record $49.4 million in the quarter, well ahead of revenue and lifting backlog to $59.7 million... We expect much of our third-quarter semiconductor order intake to convert to revenue in the first half of 2027, giving us greater revenue visibility into next year.",
+          "supply_demand_tightness": "as lead times for test equipment lengthened and customers placed orders earlier",
+          "structural_ai_demand": "semiconductor order intake",
+          "revision_momentum": "",
+          "catalyst_visibility": "We expect much of our third-quarter semiconductor order intake to convert to revenue in the first half of 2027, giving us greater revenue visibility into next year."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "반도체 테스트 장비",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "INTT",
+        "theme": "반도체 테스트 장비",
+        "signal_type": "수주/백로그",
+        "what_happened": "INTEST CORP의 3분기 수주액이 4,940만 달러로 사상 최고치를 기록했으며, 백로그는 5,970만 달러로 증가했고, 반도체 테스트 장비의 리드타임이 길어지면서 고객들이 조기에 주문을 넣었다.",
+        "why_it_matters": "반도체 테스트 장비 수요 증가로 인한 수주 및 백로그 증가는 향후 매출 성장을 견인할 강력한 지표이며, 리드타임 증가는 시장의 공급 부족 상황을 시사하여 INTEST CORP의 실적 레버리지를 높일 수 있다.",
+        "what_to_watch": "향후 분기별 수주액 및 백로그 추이, 반도체 테스트 장비 시장의 전반적인 CAPEX 동향.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 1,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "백로그: 기업이 수주했지만 아직 매출로 인식되지 않은 미처리 주문 잔고. 리드타임: 주문부터 제품 인도까지 걸리는 시간."
+      }
     },
     "content_hash": "b29387595d47ad12a5c63b6b8e8ee49c6f9f620870b917299730e6ee0e2a8f30",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-07T01:00:43.614053+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-08T06:17:19+00:00",
+    "signal_id": "SIG-0933",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-08",
+    "processed_run": "42453944270-1"
   },
   "0001173514-26-000251": {
     "status": "deferred",

@@ -1,0 +1,88 @@
+{
+  "context_id": "CTX-71662439605E9CC8",
+  "candidate_id": "CAN-D577F2C38FBBCFF7",
+  "ticker": "DK",
+  "issuer_cik": "0001694426",
+  "document_ids": [
+    "DOC-B5B07707C8068BEA"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-B5B07707C8068BEA#p7",
+    "DOC-B5B07707C8068BEA#p52",
+    "DOC-B5B07707C8068BEA#t17",
+    "DOC-B5B07707C8068BEA#t20",
+    "DOC-B5B07707C8068BEA#t23",
+    "DOC-B5B07707C8068BEA#t26",
+    "DOC-B5B07707C8068BEA#t27",
+    "DOC-B5B07707C8068BEA#t29",
+    "DOC-B5B07707C8068BEA#t30"
+  ],
+  "input_sha": "71662439605e9cc88c18cf8a740f2a70a3761004150538a6d31953d83a6f7b0f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-08T06:32:30+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "Delek Logistics의 연간 조정 EBITDA 가이던스 상향의 구체적인 원인은 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "자회사 Delek Logistics의 조정 EBITDA는 해당 기간 이 금액을 기록했다",
+      "figures": [
+        "$142.9 million"
+      ],
+      "quote": "Delek Logistics (\"DKL\") reported adjusted EBITDA of $142.9 million.",
+      "where": "DOC-B5B07707C8068BEA#DOC-B5B07707C8068BEA#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "자회사 Delek Logistics의 연간 조정 EBITDA 가이던스가 이 금액으로 상향 조정되었다",
+      "figures": [
+        "$530-560 million"
+      ],
+      "quote": "Increased annual adjusted EBITDA guidance to $530-560 million",
+      "where": "DOC-B5B07707C8068BEA#DOC-B5B07707C8068BEA#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "회사의 보고된 순이익은 해당 기간 이 금액을 기록했다",
+      "figures": [
+        "$1,133.8"
+      ],
+      "quote": "Reported net income (loss) attributable to Delek US ; $1,133.8 ; $178.0 ; $1,102.0 ; $(101.1)",
+      "where": "DOC-B5B07707C8068BEA#DOC-B5B07707C8068BEA#t17"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "회사의 조정 순이익은 해당 기간 이 금액을 기록했다",
+      "figures": [
+        "$843.0"
+      ],
+      "quote": "Adjusted net income (loss) ; $843.0 ; $434.2 ; $1,191.6 ; $256.7",
+      "where": "DOC-B5B07707C8068BEA#DOC-B5B07707C8068BEA#t17"
+    },
+    {
+      "what": "claim",
+      "reason": "unknown_block",
+      "note_ko": "회사의 조정 EBITDA는 해당 기간 이 금액을 기록했다",
+      "figures": [
+        "$1,280.4"
+      ],
+      "quote": "Adjusted EBITDA ; $1,280.4 ; $766.7 ; $2,130.8 ; $978.2",
+      "where": "DOC-B5B07707C8068BEA#DOC-B5B07707C8068BEA#t23"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

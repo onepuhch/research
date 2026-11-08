@@ -1,0 +1,96 @@
+{
+  "context_id": "CTX-6F9E172EB85AB98A",
+  "candidate_id": "CAN-A50AB5F42D3329E4",
+  "ticker": "PTEN",
+  "issuer_cik": "0000889900",
+  "document_ids": [
+    "DOC-5218B406CD2FB9B3",
+    "DOC-9E65492E89F6BF65"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-5218B406CD2FB9B3#p12",
+    "DOC-5218B406CD2FB9B3#p29",
+    "DOC-5218B406CD2FB9B3#p32",
+    "DOC-5218B406CD2FB9B3#t3",
+    "DOC-5218B406CD2FB9B3#t5",
+    "DOC-5218B406CD2FB9B3#p70",
+    "DOC-5218B406CD2FB9B3#p76",
+    "DOC-9E65492E89F6BF65#p21",
+    "DOC-9E65492E89F6BF65#p25",
+    "DOC-9E65492E89F6BF65#p28",
+    "DOC-9E65492E89F6BF65#p31",
+    "DOC-9E65492E89F6BF65#t3",
+    "DOC-9E65492E89F6BF65#t5",
+    "DOC-9E65492E89F6BF65#p70",
+    "DOC-9E65492E89F6BF65#p76",
+    "DOC-9E65492E89F6BF65#p81"
+  ],
+  "input_sha": "6f9e172eb85ab98aa70200977223b369e0e53945762ce24485782cabf0a5b9bd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-08T06:32:30+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "사우디아라비아의 시추 활동 감소가 지정학적 불안정 때문인지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "조정 에비타는 이천이십육년 삼분기에 이백육십사백만 달러를 기록했다",
+      "figures": [
+        "$264 million"
+      ],
+      "quote": "Third Quarter 2026 Adjusted EBITDA(1) of $264 million",
+      "where": "DOC-5218B406CD2FB9B3#p12"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_role_mixed",
+      "note_ko": "시추 제품 부문의 조정 매출 총이익은 다음 분기에 오에서 십 퍼센트 감소할 것으로 예상된다",
+      "figures": [
+        "5-10%"
+      ],
+      "quote": "In Drilling Products, we expect fourth quarter adjusted gross profit to decline 5-10%, sequentially, primarily reflecting the expectation for lower drilling activity in Saudi Arabia due to ongoing geo",
+      "where": "DOC-5218B406CD2FB9B3#p32"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "이천이십육년 구월 삼십일로 마감된 구개월 동안 순이익은 마이너스 만오천백십오 달러를 기록했다",
+      "figures": [
+        "$(15,115)"
+      ],
+      "quote": "Net income (loss) ; $(15,115) ; $(83,857)",
+      "where": "DOC-5218B406CD2FB9B3#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "이천이십육년 구월 삼십일로 마감된 구개월 동안 영업 활동으로 인한 현금 흐름은 사십이만팔백칠십육 달러를 기록했다",
+      "figures": [
+        "420,876"
+      ],
+      "quote": "Net cash provided by operating activities ; 420,876 ; 563,693",
+      "where": "DOC-5218B406CD2FB9B3#t3"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "이천이십육년 구월 삼십일로 마감된 삼개월 동안 총 매출은 백삼십사만 이천이백삼십사 달러를 기록했다",
+      "figures": [
+        "$1,342,234"
+      ],
+      "quote": "Total revenues ; $1,342,234 ; $1,227,967 ; $1,175,954 ; $3,687,532 ; $3,675,811",
+      "where": "DOC-5218B406CD2FB9B3#t5"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

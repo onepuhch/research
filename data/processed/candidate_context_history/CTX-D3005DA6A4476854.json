@@ -1,0 +1,158 @@
+{
+  "context_id": "CTX-D3005DA6A4476854",
+  "candidate_id": "CAN-A7167939B6E22B83",
+  "ticker": "REPX",
+  "issuer_cik": "0001001614",
+  "document_ids": [
+    "DOC-AEFFB5573B9F07FA",
+    "DOC-C32FAD6F68689C16"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-AEFFB5573B9F07FA#p10",
+    "DOC-AEFFB5573B9F07FA#p17",
+    "DOC-AEFFB5573B9F07FA#p29",
+    "DOC-AEFFB5573B9F07FA#p62",
+    "DOC-AEFFB5573B9F07FA#p85",
+    "DOC-AEFFB5573B9F07FA#t7",
+    "DOC-C32FAD6F68689C16#p12",
+    "DOC-C32FAD6F68689C16#p34",
+    "DOC-C32FAD6F68689C16#p71"
+  ],
+  "input_sha": "d3005da6a447685405e45bda5c92e82ce0f7bf9e06571a14a74890b7b213124f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-08T06:32:30+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Production growth — 생산량 증가를 이끌었다",
+      "note_ko": "생산량 증가를 이끌었다",
+      "kind": "fact",
+      "quote": "Production growth was driven by new development well volumes from capital invested in prior quarters, as well as the return to production of select New Mexico wells following disruptions during the second quarter.",
+      "document_id": "DOC-AEFFB5573B9F07FA",
+      "block_id": "p17",
+      "metric": "Production growth",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "volume",
+        "capacity"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Core operating costs — 핵심 영업 비용이 단위당 개선되어 마진 개선에 기여했다",
+      "note_ko": "핵심 영업 비용이 단위당 개선되어 마진 개선에 기여했다",
+      "kind": "fact",
+      "quote": "Core operating costs also improved on a per unit basis, contributing to stronger margins.",
+      "document_id": "DOC-AEFFB5573B9F07FA",
+      "block_id": "p17",
+      "metric": "Core operating costs",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "actual future results — 실제 미래 결과가 달라질 수 있는 요인들이 있다",
+      "note_ko": "실제 미래 결과가 달라질 수 있는 요인들이 있다",
+      "kind": "fact",
+      "quote": "Among the factors that could cause actual future results to differ materially are the risks and uncertainties the Company is exposed to.",
+      "document_id": "DOC-AEFFB5573B9F07FA",
+      "block_id": "p85",
+      "metric": "actual future results",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "actual future results — 실제 미래 결과가 달라질 수 있는 요인들이 있다",
+      "note_ko": "실제 미래 결과가 달라질 수 있는 요인들이 있다",
+      "kind": "fact",
+      "quote": "Among the factors that could cause actual future results to differ materially are the risks and uncertainties the Company is exposed to.",
+      "document_id": "DOC-C32FAD6F68689C16",
+      "block_id": "p71",
+      "metric": "actual future results",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "부채가 줄었다",
+      "figures": [
+        "$245 million"
+      ],
+      "quote": "Reduced debt by 10% quarter-over-quarter (-35% year-over-year) to $245 million",
+      "where": "DOC-AEFFB5573B9F07FA#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "천연가스 및 NGL 실현이 매출에 긍정적인 영향을 미쳤다",
+      "figures": [
+        "$22 million"
+      ],
+      "quote": "Stronger natural gas and NGL realizations resulted in a $22 million positive swing in revenue compared to the second quarter, when we experienced negative revenue on those products.",
+      "where": "DOC-AEFFB5573B9F07FA#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "석유 및 천연가스 순매출액이다",
+      "figures": [
+        "$201,203"
+      ],
+      "quote": "Oil and natural gas sales, net ; $201,203 ; $106,852 ; $480,934 ; $294,703",
+      "where": "DOC-AEFFB5573B9F07FA#t7"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

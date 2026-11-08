@@ -1,48 +1,48 @@
 {
   "eps": {
-    "checked_at": "2026-11-07T01:03:11+00:00",
+    "checked_at": "2026-11-08T06:17:47+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:03:11+00:00",
+    "last_success_at": "2026-11-08T06:17:47+00:00",
     "targets": 3,
     "observations": 6,
     "failures": [],
     "provider": "yahoo"
   },
   "collect": {
-    "checked_at": "2026-11-07T01:00:43+00:00",
+    "checked_at": "2026-11-08T06:16:04+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:00:43+00:00",
+    "last_success_at": "2026-11-08T06:16:04+00:00",
     "item_count": 96,
     "errors": [],
-    "collected_at": "2026-11-07T01:00:43.376930+00:00"
+    "collected_at": "2026-11-08T06:16:04.577544+00:00"
   },
   "extract": {
-    "checked_at": "2026-11-07T01:03:10+00:00",
-    "status": "partial",
-    "last_success_at": "2026-11-06T07:00:22+00:00",
+    "checked_at": "2026-11-08T06:17:45+00:00",
+    "status": "success",
+    "last_success_at": "2026-11-08T06:17:45+00:00",
     "accepted": 2,
-    "deferred_budget": 1,
-    "rejected": 0,
-    "validation_rejected": 0,
-    "validation_rejected_total": 73,
-    "failed": 1,
-    "unserved_failed": 1,
+    "deferred_budget": 0,
+    "rejected": 3,
+    "validation_rejected": 2,
+    "validation_rejected_total": 75,
+    "failed": 0,
+    "unserved_failed": 0,
     "overload_deferred": 0,
     "expired": 0,
-    "processed_today": 2,
+    "processed_today": 3,
     "open_errors": 0,
-    "open_unserved": 1,
-    "pending": 142,
-    "outcome": "partial",
-    "day": "2026-11-07",
-    "run_id": "42321498938-1",
+    "open_unserved": 0,
+    "pending": 137,
+    "outcome": "ok",
+    "day": "2026-11-08",
+    "run_id": "42453944270-1",
     "model": "gemini-2.5-flash",
     "prompt_version": "research-v2-20260906"
   },
   "commands": {
-    "checked_at": "2026-11-07T22:00:04+00:00",
+    "checked_at": "2026-11-08T06:15:10+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T22:00:04+00:00",
+    "last_success_at": "2026-11-08T06:15:10+00:00",
     "processed": 0,
     "failed": 0
   },
@@ -58,14 +58,14 @@
     "last_success_at": "2026-11-02T06:38:56+00:00"
   },
   "notify": {
-    "checked_at": "2026-11-07T01:03:12+00:00",
+    "checked_at": "2026-11-08T06:17:47+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:03:12+00:00"
+    "last_success_at": "2026-11-08T06:17:47+00:00"
   },
   "prices": {
-    "checked_at": "2026-11-07T01:17:27+00:00",
+    "checked_at": "2026-11-08T06:32:04+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:17:27+00:00",
+    "last_success_at": "2026-11-08T06:32:04+00:00",
     "targets": 3,
     "observations": 3,
     "failures": []
@@ -78,19 +78,19 @@
     "failures": []
   },
   "quarterly": {
-    "checked_at": "2026-11-07T01:03:14+00:00",
+    "checked_at": "2026-11-08T06:17:49+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:03:14+00:00",
+    "last_success_at": "2026-11-08T06:17:49+00:00",
     "targets": 3,
     "observations": 12,
     "failures": []
   },
   "revision_screen": {
-    "checked_at": "2026-11-07T01:17:26+00:00",
+    "checked_at": "2026-11-08T06:32:03+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:17:26+00:00",
-    "snapshot": "20261107T010314Z_42321498938-1.json.gz",
-    "candidates": 111,
+    "last_success_at": "2026-11-08T06:32:03+00:00",
+    "snapshot": "20261108T061749Z_42453944270-1.json.gz",
+    "candidates": 116,
     "alert": false,
     "stages": {
       "universe": {
@@ -102,17 +102,17 @@
         "success": 1
       },
       "quotes": {
-        "requested": 7626,
-        "success": 7626
+        "requested": 7625,
+        "success": 7625
       },
       "earnings": {
-        "requested": 3182,
-        "success": 2393,
-        "unavailable": 789
+        "requested": 3184,
+        "success": 2391,
+        "unavailable": 793
       },
       "profile": {
-        "requested": 111,
-        "success": 111
+        "requested": 116,
+        "success": 116
       },
       "price": {
         "requested": 28,
@@ -121,17 +121,17 @@
     }
   },
   "cards": {
-    "checked_at": "2026-11-07T01:17:53+00:00",
+    "checked_at": "2026-11-08T06:33:13+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:17:53+00:00",
+    "last_success_at": "2026-11-08T06:33:13+00:00",
     "translation": {
-      "requested": 1,
-      "translated": 1,
+      "requested": 3,
+      "translated": 3,
       "rejected": 0,
       "failed_calls": 0,
       "calls": 1
     },
-    "new_versions": 12,
+    "new_versions": 21,
     "new_observations": 35,
     "migrated_legacy": 0,
     "cards": 28,
@@ -159,47 +159,46 @@
     "selected": 1
   },
   "candidate_context": {
-    "checked_at": "2026-11-07T01:17:47+00:00",
+    "checked_at": "2026-11-08T06:33:06+00:00",
     "status": "success",
-    "last_success_at": "2026-11-07T01:17:47+00:00",
+    "last_success_at": "2026-11-08T06:33:06+00:00",
     "held": [],
-    "researched": 5,
+    "researched": 10,
     "statuses": {
-      "no_relevant_document": 1,
-      "success": 4
+      "success": 10
     },
     "targets": 35,
     "current": {
       "CAN-1F6D82ED5782C3F5": "2027-12-31",
       "CAN-5790099EDC6F3301": "2027-12-31",
       "CAN-82719B27698E3C22": "2027-12-31",
-      "CAN-7F0690B785E31226": "2027-12-31",
       "CAN-D577F2C38FBBCFF7": "2027-12-31",
-      "CAN-11B1565B12AFE2F9": "2027-12-31",
-      "CAN-3968C0864F9CF991": "2027-12-31",
+      "CAN-7F0690B785E31226": "2027-12-31",
       "CAN-5FD7409FDFE8F5EA": "2028-06-30",
-      "CAN-36582E27909720FE": "2027-12-31",
-      "CAN-0733D6B2B6A41784": "2027-12-31",
+      "CAN-3968C0864F9CF991": "2027-12-31",
+      "CAN-11B1565B12AFE2F9": "2027-12-31",
       "CAN-F451582E2056444F": "2027-12-31",
       "CAN-FC7BBBC12A5093CF": "2027-12-31",
+      "CAN-0733D6B2B6A41784": "2027-12-31",
       "CAN-FD88AA0D924CF1C8": "2027-12-31",
-      "CAN-D5F91D853BD4402E": "2027-12-31",
+      "CAN-A50AB5F42D3329E4": "2027-12-31",
       "CAN-A56C76447137EBC2": "2027-12-31",
-      "CAN-4E5151866E863998": "2028-06-30",
-      "CAN-E95987D989EF1145": "2027-12-31",
+      "CAN-C4FE27DDC21163EF": "2027-12-31",
+      "CAN-D5F91D853BD4402E": "2027-12-31",
       "CAN-782282A0C20A29F1": "2028-01-31",
-      "CAN-4BD491C8D3F1EC4F": "2027-12-31",
+      "CAN-E95987D989EF1145": "2027-12-31",
       "CAN-7506B6BECE695B39": "2027-12-31",
-      "CAN-43EA86A18E5096A9": "2028-08-31",
+      "CAN-4BD491C8D3F1EC4F": "2027-12-31",
       "CAN-76DD3777C06E7825": "2027-12-31",
-      "CAN-B85C9F47594458D2": "2027-12-31",
-      "CAN-8ED72F330C1AE34D": "2027-12-31",
+      "CAN-43EA86A18E5096A9": "2028-08-31",
       "CAN-AE98D1267BE90662": "2027-12-31",
       "CAN-486C908614BC89B1": "2027-12-31",
-      "CAN-F4F37EDD5656F9BD": "2028-06-30",
       "CAN-E87900AEFDDE7B07": "2027-12-31",
+      "CAN-C16091C7B772F113": "2027-12-31",
+      "CAN-F4F37EDD5656F9BD": "2028-06-30",
+      "CAN-C05377BEC03AE25C": "2027-12-31",
       "CAN-B50C69675A4DBCEA": "2027-12-31",
-      "CAN-BA5D4320F9188F9F": "2027-12-31",
+      "CAN-A7167939B6E22B83": "2027-12-31",
       "CAN-77F79A3B05ABB893": "2027-12-31",
       "CAN-325B2A6C30755476": "2027-12-31",
       "CAN-3D30FF7D03231FE1": "2027-12-31",
@@ -211,23 +210,25 @@
       "CAN-3BD5E965B73FD420",
       "CAN-3D30FF7D03231FE1",
       "CAN-77F79A3B05ABB893",
+      "CAN-A7167939B6E22B83",
       "CAN-B50C69675A4DBCEA",
-      "CAN-BA5D4320F9188F9F",
       "CAN-FDA6B7F62852042F"
     ],
     "alert_first": [
-      "CAN-A56C76447137EBC2"
+      "CAN-A50AB5F42D3329E4",
+      "CAN-C16091C7B772F113",
+      "CAN-C4FE27DDC21163EF"
     ],
-    "http_attempts": 28,
+    "http_attempts": 52,
     "coverage": {
       "success": 34,
       "no_relevant_document": 1
     },
     "drafts": {
-      "requests": 1,
-      "drafted": 0,
-      "insufficient_earnings_context": 0,
-      "no_supported_claims": 1,
+      "requests": 6,
+      "drafted": 2,
+      "insufficient_earnings_context": 1,
+      "no_supported_claims": 3,
       "deferred": 0,
       "failed": 0
     }

@@ -1,0 +1,156 @@
+{
+  "candidate_id": "CAN-A50AB5F42D3329E4",
+  "candidate_version": "CV-0EA973472DECBD1E",
+  "identity": {
+    "entity_id": "NASDAQ:PTEN",
+    "ticker": "PTEN",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Patterson-UTI Energy, Inc.",
+  "industry": "Oil & Gas Drilling",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "석유 및 천연가스 탐사 및 생산 회사에 시추 및 완결 서비스를 제공하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Patterson-UTI Energy, Inc., through its subsidiaries, provides drilling and completion services to oil and natural gas exploration and production companies in the United States, Canada, Colombia, and internationally. It operates through three segments: Drilling Services, Completion Services, and Drilling Products. The Contract Drilling Services segment engages in the provision of contract and directional drilling, and measurement-while-drilling (MWD) services in onshore oil and natural gas basins; supply and rental of downhole performance motors, such as Mpact drilling motors, and Mpower MWD s"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "PTEN analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PTEN/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-08T06:24:21+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "PTEN daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PTEN/history",
+      "published_at": null,
+      "observed_at": "2026-11-08T06:24:21+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "PTEN company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/PTEN/profile",
+      "published_at": null,
+      "observed_at": "2026-11-08T06:24:21+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-5218B406CD2FB9B3",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/889900/000088990026000070/a2026q3earningsreleaseex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-29",
+      "observed_at": "2026-11-08T06:32:04+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-9E65492E89F6BF65",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/889900/000088990026000050/a2026q2earningsreleaseex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-11-08T06:32:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-6F9E172EB85AB98A",
+    "input_sha": "6f9e172eb85ab98aa70200977223b369e0e53945762ce24485782cabf0a5b9bd",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "사우디아라비아의 시추 활동 감소가 지정학적 불안정 때문인지 확인해야 한다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-5218B406CD2FB9B3",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/889900/000088990026000070/a2026q3earningsreleaseex991.htm",
+        "filed_at": "2026-10-29",
+        "observed_at": "2026-11-08T06:32:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-9E65492E89F6BF65",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/889900/000088990026000050/a2026q2earningsreleaseex991.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-11-08T06:32:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-08T06:32:30+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.47134,
+    "eps_30d": 0.31995,
+    "eps_90d": 0.25522,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 6,
+    "down30": 0,
+    "pct_90": 84.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "context_id": "CTX-3021F8A1A4D5E912",
+  "candidate_id": "CAN-C4FE27DDC21163EF",
+  "ticker": "AMC",
+  "issuer_cik": "0001411579",
+  "document_ids": [
+    "DOC-B40F68E8AF283D7B",
+    "DOC-68C9EC5A9D912EDA"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-B40F68E8AF283D7B#p6",
+    "DOC-B40F68E8AF283D7B#p16",
+    "DOC-B40F68E8AF283D7B#t24",
+    "DOC-B40F68E8AF283D7B#t30",
+    "DOC-B40F68E8AF283D7B#p93",
+    "DOC-B40F68E8AF283D7B#t31",
+    "DOC-B40F68E8AF283D7B#t38",
+    "DOC-68C9EC5A9D912EDA#p19",
+    "DOC-68C9EC5A9D912EDA#t26",
+    "DOC-68C9EC5A9D912EDA#p94"
+  ],
+  "input_sha": "3021f8a1a4d5e912e1668b10aa09bda99a106abda797aa1cbd7146a77e2bfc16",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-08T06:32:30+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Q3: 183.7%(변화율·증가) — 전년 같은 분기보다 늘었다",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "Our Q3 Adjusted EBITDA grew by 183.7%, nearly triple the result of last year’s third quarter, while our Adjusted EBITDA margin reached a record of 20.3%, more than double the 9.4% recorded in last year’s third quarter.",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "p16",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "183.7%"
+      ],
+      "period": "Q3",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "잉여현금흐름(Free Cash Flow) · Q3: $109.3 million — 전년 같은 기간보다 개선되었다",
+      "note_ko": "전년 같은 기간보다 개선되었다",
+      "kind": "fact",
+      "quote": "Q3 Free Cash Flow was $109.3 million, an improvement of more than $190 million year over year, bringing year-to-date Free Cash Flow to $124.7 million.",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "p16",
+      "metric": "Free Cash Flow",
+      "figures": [
+        "$109.3 million"
+      ],
+      "period": "Q3",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "잉여현금흐름(Free Cash Flow) · full year 2026 — 연간 현금 흐름이 양수가 될 것으로 예상한다",
+      "note_ko": "연간 현금 흐름이 양수가 될 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "This gives us confidence to expect that AMC will achieve the much-welcomed milestone of positive annual Free Cash Flow for the full year 2026.",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "p16",
+      "metric": "Free Cash Flow",
+      "figures": [],
+      "period": "full year 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP 재무 측정 기준이 아니며, 다른 회사가 보고한 유사한 명칭의 측정 기준과 비교할 수 없을 수 있다",
+      "note_ko": "조정 EBITDA는 GAAP 재무 측정 기준이 아니며, 다른 회사가 보고한 유사한 명칭의 측정 기준과 비교할 수 없을 수 있다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-U.S. GAAP financial measure commonly used in our industry and should not be construed as an alternative to net earnings (loss) as an indicator of operating performance (as determined in accordance with U.S. GAAP). Adjusted EBITDA may not be comparable to similarly titled measures reported by other companies.",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "t30",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 올라간 것이 이 발표와 관련이 있는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "figures": [
+        "31.6%"
+      ],
+      "quote": "Accordingly, our Q3 revenues increased by 31.6% compared to the third quarter of last year.",
+      "where": "DOC-B40F68E8AF283D7B#p16"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "전년 같은 분기보다 늘었다",
+      "figures": [
+        "20.3%"
+      ],
+      "quote": "Our Q3 Adjusted EBITDA grew by 183.7%, nearly triple the result of last year’s third quarter, while our Adjusted EBITDA margin reached a record of 20.3%, more than double the 9.4% recorded in last yea",
+      "where": "DOC-B40F68E8AF283D7B#p16"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "조정 EBITDA는 자본 지출, 미래 자본 지출 요구 사항 또는 계약상 약정을 반영하지 않는다",
+      "figures": [],
+      "quote": "does not reflect our capital expenditures, future requirements for capital expenditures or contractual commitments;",
+      "where": "DOC-B40F68E8AF283D7B#t31"
+    },
+    {
+      "what": "limitation",
+      "reason": "quote_not_in_block",
+      "note_ko": "회사는 2026년 1분기에 조정 EBITDA 정의를 변경하여 순 정기 연금 비용을 조정했다. 비교 기간 정보는 현재 정의에 맞게 재작성되었다",
+      "figures": [],
+      "quote": "During the first quarter of 2026, we changed our definition of Adjusted EBITDA to adjust for net periodic pension cost. All comparative period information for Adjusted EBITDA has been re-cast to confo",
+      "where": "DOC-B40F68E8AF283D7B#p93"
+    }
+  ],
+  "context_status": "draft_ready"
+}

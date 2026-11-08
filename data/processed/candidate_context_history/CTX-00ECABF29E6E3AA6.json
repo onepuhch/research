@@ -1,0 +1,151 @@
+{
+  "context_id": "CTX-00ECABF29E6E3AA6",
+  "candidate_id": "CAN-C16091C7B772F113",
+  "ticker": "ZYME",
+  "issuer_cik": "0001937653",
+  "document_ids": [
+    "DOC-028CBA5E20C8D9EE"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-028CBA5E20C8D9EE#p6",
+    "DOC-028CBA5E20C8D9EE#p10",
+    "DOC-028CBA5E20C8D9EE#p11",
+    "DOC-028CBA5E20C8D9EE#p12",
+    "DOC-028CBA5E20C8D9EE#p18",
+    "DOC-028CBA5E20C8D9EE#p20",
+    "DOC-028CBA5E20C8D9EE#p23",
+    "DOC-028CBA5E20C8D9EE#p24",
+    "DOC-028CBA5E20C8D9EE#p26",
+    "DOC-028CBA5E20C8D9EE#p27",
+    "DOC-028CBA5E20C8D9EE#p29",
+    "DOC-028CBA5E20C8D9EE#p32",
+    "DOC-028CBA5E20C8D9EE#p33",
+    "DOC-028CBA5E20C8D9EE#p34",
+    "DOC-028CBA5E20C8D9EE#p35",
+    "DOC-028CBA5E20C8D9EE#p36",
+    "DOC-028CBA5E20C8D9EE#p37",
+    "DOC-028CBA5E20C8D9EE#p45",
+    "DOC-028CBA5E20C8D9EE#p48",
+    "DOC-028CBA5E20C8D9EE#p49",
+    "DOC-028CBA5E20C8D9EE#p50",
+    "DOC-028CBA5E20C8D9EE#p51",
+    "DOC-028CBA5E20C8D9EE#p52",
+    "DOC-028CBA5E20C8D9EE#p53",
+    "DOC-028CBA5E20C8D9EE#t1",
+    "DOC-028CBA5E20C8D9EE#p71"
+  ],
+  "input_sha": "00ecabf29e6e3aa6ba4219cb2d1d62d26fe59c71905f8b9628ce7e606be707b5",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-08T06:32:30+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "royalty revenue · three months ended June 30, 2026: $1.8 million — 재즈 파마슈티컬즈와 비원 메디슨즈로부터의 로열티 매출은 주로 재즈의 지헤라 순제품 판매에 의해 발생했다",
+      "note_ko": "재즈 파마슈티컬즈와 비원 메디슨즈로부터의 로열티 매출은 주로 재즈의 지헤라 순제품 판매에 의해 발생했다",
+      "kind": "fact",
+      "quote": "Our royalty revenue from Jazz Pharmaceuticals (Jazz) and BeOne Medicines was $1.8 million in the three months ended June 30, 2026, driven primarily by net product sales of Ziihera® by Jazz in the United States.",
+      "document_id": "DOC-028CBA5E20C8D9EE",
+      "block_id": "p24",
+      "metric": "royalty revenue",
+      "figures": [
+        "$1.8 million"
+      ],
+      "period": "three months ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "Theravance Biopharma 인수가 Zymeworks의 내년 EPS 예상치 상향에 영향을 미쳤는지 확인",
+    "Zymeworks가 Theravance Biopharma 인수에 대한 업데이트된 재무 전망을 제공했는지 확인"
+  ],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "총 매출은 이천이십오년 같은 기간의 사천팔백칠십만 달러와 비교하여 이천이십육년 이분기에 사백육십만 달러였다",
+      "figures": [
+        "$4.6 million"
+      ],
+      "quote": "Revenue – Total revenue was $4.6 million in 2Q-2026, compared to $48.7 million for the same period in 2025.",
+      "where": "DOC-028CBA5E20C8D9EE#p48"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "연구 개발 비용은 이천이십오년 같은 기간의 삼천사백사십만 달러와 비교하여 이천이십육년 이분기에 이천칠백사십만 달러였다",
+      "figures": [
+        "$27.4 million"
+      ],
+      "quote": "Research and Development (R&D) Expenses – R&D expenses were $27.4 million in 2Q-2026, compared to $34.4 million for the same period in 2025, primarily reflecting reduced spending on later‑stage and di",
+      "where": "DOC-028CBA5E20C8D9EE#p49"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "일반 및 관리 비용은 이천이십오년 같은 기간의 천오백만 달러와 비교하여 이천이십육년 이분기에 천구백삼십만 달러였다",
+      "figures": [
+        "$19.3 million"
+      ],
+      "quote": "General and Administrative (G&A) Expenses – G&A expenses were $19.3 million in 2Q-2026, compared to $15.0 million for the same period in 2025.",
+      "where": "DOC-028CBA5E20C8D9EE#p50"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "순손실은 이천이십오년 같은 기간의 이백삼십만 달러 순이익과 비교하여 이천이십육년 이분기에 사천오백만 달러였다",
+      "figures": [
+        "$45.0 million"
+      ],
+      "quote": "Net Loss – Net loss was $45.0 million in 2Q-2026, compared to a net income of $2.3 million for the same period in 2025.",
+      "where": "DOC-028CBA5E20C8D9EE#p52"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "매출 감소는 주로 이천이십육년에 인식된 중요한 비반복적 협력 매출의 부재와 재즈로부터의 개발 지원 및 의약품 공급 매출의 지속적인 감소에 기인했다",
+      "figures": [
+        "$4.6 million",
+        "$48.7 million"
+      ],
+      "quote": "The decrease was driven mainly by absence of significant non-recurring collaboration revenue recognized in 2026, as well as continued declines in development support and drug supply revenue from Jazz.",
+      "where": "DOC-028CBA5E20C8D9EE#p48"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "이천이십육년의 변화는 주로 이천이십오년 이분기에 발생한 비반복적 임상 마일스톤과 이천이십육년 삼월에 체결된 로열티 담보 어음 금융 약정과 관련된 이자 비용으로 인한 매출 감소 때문이었다",
+      "figures": [
+        "$45.0 million",
+        "$2.3 million"
+      ],
+      "quote": "The change in 2026 was primarily due to a decrease in revenue, driven by the non-recurring clinical milestones earned in 2Q-2025 and interest expense related to the royalty-backed note financing arran",
+      "where": "DOC-028CBA5E20C8D9EE#p52"
+    }
+  ],
+  "context_status": "draft_ready"
+}
