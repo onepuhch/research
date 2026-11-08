@@ -195,7 +195,15 @@
     "PBR",
     "SKHY",
     "XOM",
-    "ZYME"
+    "ZYME",
+    "AMC",
+    "BUR",
+    "COHR",
+    "COHU",
+    "CQP",
+    "GEO",
+    "KNSA",
+    "LASR"
   ],
   "days": {
     "2026-10-06": {
@@ -329,13 +337,17 @@
     "2026-11-07": {
       "requests": 15,
       "retries": 1
+    },
+    "2026-11-08": {
+      "requests": 15,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 33,
-      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "attempts": 34,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1350,8 +1362,8 @@
       "reason": null
     },
     "PTEN": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-05T07:15:52.760019+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1862,40 +1874,104 @@
       "reason": null
     },
     "BKV": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "PBR": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "SKHY": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "XOM": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "ZYME": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "AMC": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-07T01:18:08.408100+00:00",
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "BUR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "COHR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "COHU": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "CQP": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "GEO": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "KNSA": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "LASR": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-08T06:33:24.453140+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
