@@ -2523,6 +2523,91 @@
       "payload_text": "<b>🆕 새 발굴 후보 · ZYME Zymeworks Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n암, 염증, 자가면역 질환 치료를 위한 생물학적 치료제를 개발하여 돈을 번다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.83 → 지금 $1.21 (+47%) · 주가 같은 기간 +22.6%\n\n👍 최근 30일 분석가 9명 중 3명이 올림\n👍 주가는 같은 90일에 +23%로, 이익 예상 상향(+47%)보다 덜 움직임\n👎 같은 30일에 내린 분석가도 1명\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 19위로 들어옴\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-C16091C7B772F113</code> · 추적 <code>/track CAN-C16091C7B772F113</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "82e18af1c41512777f8562bd4d2700d50e9974040ec7a2e5cbb61f2909d7a1d2",
       "message_id": 242
+    },
+    "NYSE:DK|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-F55691ADDCAA2922": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:DK",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-D577F2C38FBBCFF7",
+      "candidate_version": "CV-22CAC32CFBD5E2B9",
+      "observation_id": "OB-13F23299D7C4FF89",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 7.85407,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-F55691ADDCAA2922",
+          "baseline_id": "OB-F55691ADDCAA2922",
+          "observed_at": "2026-11-08T06:32:01+00:00",
+          "day": "2026-11-08",
+          "snapshot_sha256": "9ed94b8948726d635725fa554e82d6289171fdca13cd4d3d3d64bfad4e5c1882",
+          "eps_now": 10.37946,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-13F23299D7C4FF89",
+          "baseline_id": "OB-13F23299D7C4FF89",
+          "observed_at": "2026-11-09T07:05:15+00:00",
+          "day": "2026-11-09",
+          "snapshot_sha256": "342bc23639e402ac5c94832b8882cb4afba7bf03655e9bcec88db0ae585efb31",
+          "eps_now": 10.37946,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 32.15,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-F55691ADDCAA2922"
+        ]
+      },
+      "day": "2026-11-09",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "42575275461-1",
+      "reserved_at": "2026-11-09T07:06:15+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · DK Delek US Holdings, Inc.</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $7.85 → 현재 $10.38 (+32%), 2026-11-08·2026-11-09 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-D577F2C38FBBCFF7</code> · 추적 <code>/track CAN-D577F2C38FBBCFF7</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "06ce85c5faa51701e55abeb82f678c53eacc0c3357027c9b928c16ac155a8cfb"
     }
   },
   "bootstrap": {
@@ -2595,6 +2680,24 @@
           "day": "2026-11-08",
           "snapshot_sha256": "9ed94b8948726d635725fa554e82d6289171fdca13cd4d3d3d64bfad4e5c1882",
           "eps_now": 10.37946,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:CODI|eps-revision-review:v1": {
+        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+        "first": {
+          "observation_id": "OB-15FC2365D25F10F6",
+          "baseline_id": "OB-15FC2365D25F10F6",
+          "observed_at": "2026-11-09T07:05:15+00:00",
+          "day": "2026-11-09",
+          "snapshot_sha256": "342bc23639e402ac5c94832b8882cb4afba7bf03655e9bcec88db0ae585efb31",
+          "eps_now": 0.97667,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",
@@ -2735,6 +2838,33 @@
         "up30": 1,
         "down30": 0
       }
+    },
+    "NYSE:NMM|eps-revision-review:v1|new_discovery": {
+      "entity_id": "NYSE:NMM",
+      "candidate_id": "CAN-029DB18061B03227",
+      "ticker": "NMM",
+      "day": "2026-11-09",
+      "status": "held",
+      "reason": "provider_silent_jump",
+      "threshold": 0.1,
+      "threshold_status": "provisional",
+      "baseline": {
+        "snapshot": "20261108T061749Z_42453944270-1.json.gz",
+        "eps_now": 19.36667,
+        "eps_target_period": "2027-12-31",
+        "analysts": 3,
+        "up30": 3,
+        "down30": 1
+      },
+      "current": {
+        "snapshot": "20261109T065052Z_42575275461-1.json.gz",
+        "eps_now": 21.48333,
+        "eps_target_period": "2027-12-31",
+        "analysts": 3,
+        "up30": 3,
+        "down30": 1
+      },
+      "history": []
     }
   }
 }

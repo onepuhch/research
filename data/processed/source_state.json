@@ -10587,7 +10587,7 @@
     "validation_rejected": true
   },
   "0001213900-26-113058": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10598,12 +10598,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1051627/000121390026113058/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1051627/000121390026113058/ea030977401ex99-1.htm",
       "published_at": "2026-10-28",
-      "raw_text": "AXT INC (AXTI) (CIK 0001051627) EX-99.1 2026-10-28. “Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. EX-99.1 2 ea030977401ex99-1.htm PRESS RELEASE OF AXT, INC., DATED OCTOBER 28, 2026 (FURNISHED PURSUANT TO ITEM 7.01) Exhibit 99.1 FOR IMMEDIATE RELEASE Contacts: Gary Fischer Chief Financial Officer (510) 438-4700 Leslie Green Green Communications Consulting, LLC leslie@greencommunicationsllc.com AXT, Inc. Announces Up to RMB 3.67 Billion (Approximately US$545 Million) in Private Equity Financing for Subsidiary Tongmei FREMONT, Calif., Oct. 28, 2026 -- AXT, Inc. (NasdaqGS: AXTI), a leading manufacturer of compound semiconductor substrates, today announced that its majority-owned subsidiary, Beijing Tongmei Xtal Technology Co., Ltd. (“Tongmei”), has entered into definitive agreements for a private equity financing to fund further expansion of its manufacturing capacity for indium phosphide semiconductor substrates, expansion of its principal business operations, capital expenditures and general working capital. The financing agreements provide for a private equity investment in Tongmei by certain institutional investors of a minimum of RMB 1,912,350,000 (approximately US$285 million) and up to a maximum of RMB 3,668,639,053.25 (approximately US$545 million) (the “Maximum Amount”) in the ordinary shares of Tongmei. “This strategic financing represents a milestone for Tongmei, which is issuing its own shares to provide RMB directly into its operations,” said Morris Young, chief executive officer of AXT. “Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. Proceeds will also be used to increase capacity at our raw material companies in China. The lead investor, which is a leading Asia asset manager, has been instrumental in guiding companies through overseas listin"
+      "raw_text": "AXT INC (AXTI) (CIK 0001051627) EX-99.1 2026-10-28. “Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. EX-99.1 2 ea030977401ex99-1.htm PRESS RELEASE OF AXT, INC., DATED OCTOBER 28, 2026 (FURNISHED PURSUANT TO ITEM 7.01) Exhibit 99.1 FOR IMMEDIATE RELEASE Contacts: Gary Fischer Chief Financial Officer (510) 438-4700 Leslie Green Green Communications Consulting, LLC leslie@greencommunicationsllc.com AXT, Inc. Announces Up to RMB 3.67 Billion (Approximately US$545 Million) in Private Equity Financing for Subsidiary Tongmei FREMONT, Calif., Oct. 28, 2026 -- AXT, Inc. (NasdaqGS: AXTI), a leading manufacturer of compound semiconductor substrates, today announced that its majority-owned subsidiary, Beijing Tongmei Xtal Technology Co., Ltd. (“Tongmei”), has entered into definitive agreements for a private equity financing to fund further expansion of its manufacturing capacity for indium phosphide semiconductor substrates, expansion of its principal business operations, capital expenditures and general working capital. The financing agreements provide for a private equity investment in Tongmei by certain institutional investors of a minimum of RMB 1,912,350,000 (approximately US$285 million) and up to a maximum of RMB 3,668,639,053.25 (approximately US$545 million) (the “Maximum Amount”) in the ordinary shares of Tongmei. “This strategic financing represents a milestone for Tongmei, which is issuing its own shares to provide RMB directly into its operations,” said Morris Young, chief executive officer of AXT. “Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. Proceeds will also be used to increase capacity at our raw material companies in China. The lead investor, which is a leading Asia asset manager, has been instrumental in guiding companies through overseas listin",
+      "_model_response": {
+        "evidence_quote": "Funds raised by Tongmei will be used to advance capacity expansion for indium phosphide wafers at a time when demand for these wafers is outpacing supply. ... AXT, Inc. (NasdaqGS: AXTI), a leading manufacturer of compound semiconductor substrates, today announced that its majority-owned subsidiary, Beijing Tongmei Xtal Technology Co., Ltd. (“Tongmei”), has entered into definitive agreements for a private equity financing to fund further expansion of its manufacturing capacity for indium phosphide semiconductor substrates, expansion of its principal business operations, capital expenditures and general working capital. The financing agreements provide for a private equity investment in Tongmei by certain institutional investors of a minimum of RMB 1,912,350,000 (approximately US$285 million) and up to a maximum of RMB 3,668,639,053.25 (approximately US$545 million) (the “Maximum Amount”) in the ordinary shares of Tongmei.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "AXT, Inc. (NasdaqGS: AXTI), a leading manufacturer of compound semiconductor substrates",
+          "earnings_leverage": "to fund further expansion of its manufacturing capacity for indium phosphide semiconductor substrates, expansion of its principal business operations, capital expenditures",
+          "supply_demand_tightness": "demand for these wafers is outpacing supply",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "entered into definitive agreements for a private equity financing to fund further expansion of its manufacturing capacity for indium phosphide semiconductor substrates"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "인듐인 웨이퍼",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AXT Inc. (AXTI)",
+        "theme": "화합물 반도체 기판, 인듐인 웨이퍼",
+        "signal_type": "CAPEX",
+        "what_happened": "AXT Inc.의 자회사 Tongmei가 인듐인 반도체 기판 제조 능력 확장을 위해 최대 5.45억 달러 규모의 사모 펀딩 계약을 체결했습니다.",
+        "why_it_matters": "인듐인 웨이퍼 수요가 공급을 초과하는 상황에서 AXT Inc.의 자회사 Tongmei가 생산 능력 확장을 위한 대규모 자금을 확보하여 향후 실적 성장의 기반을 마련하고 시장 점유율을 확대할 수 있습니다. 이는 고속 통신 및 AI 인프라 수요 증가와도 연결됩니다.",
+        "what_to_watch": "Tongmei의 인듐인 웨이퍼 생산 능력 증설 진행 상황 및 실제 가동률; 인듐인 웨이퍼의 ASP 변화 추이.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "인듐인 웨이퍼: 고속 통신 및 광전자 장치에 사용되는 화합물 반도체 기판. CAPEX: 기업의 미래 이윤 창출을 위해 지출하는 자본적 지출."
+      }
     },
     "content_hash": "d13df99497452684e569c53a968c61b320bf100f0195fff6e600b8eed2086599",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-09T06:49:41+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001104659-26-119326": {
     "status": "deferred",
@@ -10625,7 +10661,7 @@
     "updated_at": "2026-10-29T05:58:03.268404+00:00"
   },
   "0000700923-26-000051": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10636,15 +10672,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/700923/000070092326000051/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/700923/000070092326000051/myrg-2026930x8kxexx991.htm",
       "published_at": "2026-10-28",
-      "raw_text": "MYR GROUP INC. (MYRG) (CIK 0000700923) EX-99.1 2026-10-28. Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. EX-99.1 2 myrg-2026930x8kxexx991.htm EX-99.1 Document Exhibit 99.1 MYR Group Inc. Announces Third-Quarter and First Nine-Months 2026 Results Board Approves New $100 Million Share Repurchase Program Thornton, Colo., October 28, 2026 – MYR Group Inc. (“MYR or the \"Company”) (NASDAQ: MYRG) , a holding company of leading specialty contractors serving the electric utility infrastructure, commercial and industrial construction markets in the United States and Canada, announced today its third-quarter and first nine-months 2026 financial results. Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. We delivered record quarterly revenues of $1.26 billion, net income of $60.0 million, and EBITDA of $110.0 million, supported by increased activity across both our T&D and C&I segments, including record quarterly C&I revenues. Through the first nine months of 2026, revenues reached $3.34 billion, reflecting healthy demand across our core markets and continued investment in critical electrical infrastructure. As we integrate Valley Electric and Comet Electric and expand our capabilities and geographic reach, we remain focused on disciplined execution, strengthening our "
+      "raw_text": "MYR GROUP INC. (MYRG) (CIK 0000700923) EX-99.1 2026-10-28. Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. EX-99.1 2 myrg-2026930x8kxexx991.htm EX-99.1 Document Exhibit 99.1 MYR Group Inc. Announces Third-Quarter and First Nine-Months 2026 Results Board Approves New $100 Million Share Repurchase Program Thornton, Colo., October 28, 2026 – MYR Group Inc. (“MYR or the \"Company”) (NASDAQ: MYRG) , a holding company of leading specialty contractors serving the electric utility infrastructure, commercial and industrial construction markets in the United States and Canada, announced today its third-quarter and first nine-months 2026 financial results. Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. We delivered record quarterly revenues of $1.26 billion, net income of $60.0 million, and EBITDA of $110.0 million, supported by increased activity across both our T&D and C&I segments, including record quarterly C&I revenues. Through the first nine months of 2026, revenues reached $3.34 billion, reflecting healthy demand across our core markets and continued investment in critical electrical infrastructure. As we integrate Valley Electric and Comet Electric and expand our capabilities and geographic reach, we remain focused on disciplined execution, strengthening our ",
+      "_model_response": {
+        "evidence_quote": "Highlights for Third Quarter 2026 • Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million • Record backlog of $3.68 billion Management Comments Rick Swartz, MYR’s President and CEO, said, “Our strong third-quarter results demonstrate the momentum across our business and the strength of our execution. We delivered record quarterly revenues of $1.26 billion, net income of $60.0 million, and EBITDA of $110.0 million, supported by increased activity across both our T&D and C&I segments, including record quarterly C&I revenues. Through the first nine months of 2026, revenues reached $3.34 billion, reflecting healthy demand across our core markets and continued investment in critical electrical infrastructure.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Record quarterly revenues of $1.26 billion • Record quarterly net income of $60.0 million, or $3.82 per diluted share • Record quarterly EBITDA of $110.0 million",
+          "supply_demand_tightness": "healthy demand across our core markets and continued investment in critical electrical infrastructure.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Record backlog of $3.68 billion"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MYRG",
+        "theme": "전력 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "MYR Group이 2026년 3분기에 사상 최대 분기 매출 12.6억 달러, 순이익 6천만 달러, EBITDA 1.1억 달러를 기록했으며, 36.8억 달러의 사상 최대 백로그를 달성했습니다.",
+        "why_it_matters": "사상 최대 백로그는 향후 매출 성장을 견인할 강력한 수요를 보여주며, 이는 회사의 장기적인 실적 개선과 전력 인프라 시장에서의 경쟁력 강화를 시사합니다.",
+        "what_to_watch": "향후 분기별 수주 잔고 추이와 신규 프로젝트 수주 현황을 확인하여 성장 모멘텀 지속 여부를 판단해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 기업이 수주했지만 아직 완료하지 않은 계약 물량 또는 주문 잔고를 의미하며, 향후 매출로 인식될 잠재적 수익을 나타냅니다. EBITDA: 이자, 세금, 감가상각비 및 무형자산상각비 차감 전 이익으로, 기업의 실제 현금 창출 능력을 보여주는 지표입니다."
+      }
     },
     "content_hash": "b0036eb5514954c2eae9fedc9f9cc38435131c1fad9dcb62fd9c9877b591f21d",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-09T06:49:58+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001282637-26-000019": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10655,15 +10727,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1282637/000128263726000019/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1282637/000128263726000019/neu-20260930exx991earnings.htm",
       "published_at": "2026-10-28",
-      "raw_text": "NEWMARKET CORP (NEU) (CIK 0001282637) EX-99.1 2026-10-28. We continue to be pleased with the performance of our Specialty Materials segment and look forward to the capacity expansion projects for both ammonium perchlorate and high-purity hydrazine being completed by the end of 2026. EX-99.1 2 neu-20260930exx991earnings.htm EX-99.1 Document EXHIBIT 99.1 NewMarket Corporation Reports Third Quarter and First Nine Months 2026 Results • Third Quarter Net Income of $124 million and Earnings per Share of $13.50 • Nine Months Net Income of $376 million and Earnings per Share of $40.64 • Strong Cash Flow in the first Nine Months to fund stock repurchases, capital expenditures and dividends totaling almost $300 million Richmond, VA, October 28, 2026 – NewMarket Corporation (NYSE:NEU) Chairman and Chief Executive Officer, Thomas E. Gottwald, released the following earnings report of the Company’s operations for the third quarter and first nine months of 2026. Net income for the third quarter of 2026 was $124.1 million, or $13.50 per share, compared to net income of $100.3 million, or $10.67 per share, for the third quarter of 2025. For the first nine months of 2026, net income was $375.9 million, or $40.64 per share, compared to $337.5 million, or $35.78 per share, for the same period in 2025. Higher operating profit and a reduced effective tax rate were the primary drivers behind the rise in net income for both the third quarter and the first nine months of 2026 compared to the respective periods in 2025. Petroleum additives sales for the third quarter of 2026 were $651.0 million, compared to $649.1 million for the same period in 2025. Petroleum additives operating profit for the third quarter of 2026 was $130.9 million, compared to $131.3 million for the third quarter of 2025. Despite broader market softness in lubricant additives that resulted in an 8% decline in shipments, we successfully implemented surcharges to offset higher costs incurred due to the supply chain disrup"
+      "raw_text": "NEWMARKET CORP (NEU) (CIK 0001282637) EX-99.1 2026-10-28. We continue to be pleased with the performance of our Specialty Materials segment and look forward to the capacity expansion projects for both ammonium perchlorate and high-purity hydrazine being completed by the end of 2026. EX-99.1 2 neu-20260930exx991earnings.htm EX-99.1 Document EXHIBIT 99.1 NewMarket Corporation Reports Third Quarter and First Nine Months 2026 Results • Third Quarter Net Income of $124 million and Earnings per Share of $13.50 • Nine Months Net Income of $376 million and Earnings per Share of $40.64 • Strong Cash Flow in the first Nine Months to fund stock repurchases, capital expenditures and dividends totaling almost $300 million Richmond, VA, October 28, 2026 – NewMarket Corporation (NYSE:NEU) Chairman and Chief Executive Officer, Thomas E. Gottwald, released the following earnings report of the Company’s operations for the third quarter and first nine months of 2026. Net income for the third quarter of 2026 was $124.1 million, or $13.50 per share, compared to net income of $100.3 million, or $10.67 per share, for the third quarter of 2025. For the first nine months of 2026, net income was $375.9 million, or $40.64 per share, compared to $337.5 million, or $35.78 per share, for the same period in 2025. Higher operating profit and a reduced effective tax rate were the primary drivers behind the rise in net income for both the third quarter and the first nine months of 2026 compared to the respective periods in 2025. Petroleum additives sales for the third quarter of 2026 were $651.0 million, compared to $649.1 million for the same period in 2025. Petroleum additives operating profit for the third quarter of 2026 was $130.9 million, compared to $131.3 million for the third quarter of 2025. Despite broader market softness in lubricant additives that resulted in an 8% decline in shipments, we successfully implemented surcharges to offset higher costs incurred due to the supply chain disrup",
+      "_model_response": {
+        "evidence_quote": "We continue to be pleased with the performance of our Specialty Materials segment and look forward to the capacity expansion projects for both ammonium perchlorate and high-purity hydrazine being completed by the end of 2026.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "We continue to be pleased with the performance of our Specialty Materials segment",
+          "earnings_leverage": "capacity expansion projects for both ammonium perchlorate and high-purity hydrazine being completed by the end of 2026",
+          "supply_demand_tightness": "capacity expansion projects for both ammonium perchlorate and high-purity hydrazine",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "being completed by the end of 2026"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "ammonium perchlorate, high-purity hydrazine",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "NEU",
+        "theme": "화학소재",
+        "signal_type": "CAPEX",
+        "what_happened": "NewMarket Corporation이 Specialty Materials 부문의 암모늄 퍼클로레이트 및 고순도 하이드라진 생산 능력 증설 프로젝트가 2026년 말까지 완료될 예정이라고 밝혔다.",
+        "why_it_matters": "이는 특정 화학 물질에 대한 수요 증가를 시사하며, 해당 제품의 공급 병목 현상 완화 및 미래 매출 성장에 기여할 수 있어 회사 가치 상승의 잠재적 요인이다.",
+        "what_to_watch": "2026년 말까지의 CAPEX 집행 현황 및 Specialty Materials 부문의 향후 매출 성장률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "암모늄 퍼클로레이트: 로켓 추진제 등에 사용되는 산화제. 고순도 하이드라진: 연료전지, 의약품 중간체 등에 사용되는 화학물질."
+      }
     },
     "content_hash": "b167e2e5bd47db9000a141c0c420126e951c51334f59133e571e1f7c2dab1577",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-09T06:50:16+00:00",
+    "signal_id": "SIG-0934",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-09",
+    "processed_run": "42575275461-1"
   },
   "0001493152-26-048983": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10674,12 +10784,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1868419/000149315226048983/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1868419/000149315226048983/ex99-3.htm",
       "published_at": "2026-10-28",
-      "raw_text": "Cycurion, Inc. (CYCU, CYCUW) (CIK 0001868419) EX-99.3 2026-10-28. The first half of 2026 includes $33,753 from the release of customer deposits and credit balances, a $15,000 vendor credit and a $6,541 gain on the sale of a vehicle to a member. 2026 includes $33,753 from the release of a customer deposit forgiven by the customer and other customer credit balances, the $15,000 vendor credit, $9,480 from closing out balances of terminated customers and a $3,030 adjustment of debt balances to lender statements. June 30, 2026 December 31, 2025 December 31, 2024 Cash $ 318,430 $ 478,981 $ 339,565 Total current assets 524,663 844,741 842,170 Total current liabilities 539,383 1,099,347 1,852,725 Working capital (deficit) (14,720 ) (254,606 ) (1,010,555 ) Working capital excluding deferred revenue and customer deposits 381,774 545,890 110,625 Total debt (incl. Current liabilities include deferred revenue that will be settled primarily through the delivery of services rather than cash; excluding deferred revenue and customer deposits, working capital was $381,774 and $545,890, respectively. Although net income was $255,339, deferred revenue decreased $338,725 as previously billed services were delivered while billings declined, accounts payable and accrued liabilities decreased $147,747, and we refunded $31,524 of a customer deposit. Customer deposits are recognized as income only when the customer releases them."
+      "raw_text": "Cycurion, Inc. (CYCU, CYCUW) (CIK 0001868419) EX-99.3 2026-10-28. The first half of 2026 includes $33,753 from the release of customer deposits and credit balances, a $15,000 vendor credit and a $6,541 gain on the sale of a vehicle to a member. 2026 includes $33,753 from the release of a customer deposit forgiven by the customer and other customer credit balances, the $15,000 vendor credit, $9,480 from closing out balances of terminated customers and a $3,030 adjustment of debt balances to lender statements. June 30, 2026 December 31, 2025 December 31, 2024 Cash $ 318,430 $ 478,981 $ 339,565 Total current assets 524,663 844,741 842,170 Total current liabilities 539,383 1,099,347 1,852,725 Working capital (deficit) (14,720 ) (254,606 ) (1,010,555 ) Working capital excluding deferred revenue and customer deposits 381,774 545,890 110,625 Total debt (incl. Current liabilities include deferred revenue that will be settled primarily through the delivery of services rather than cash; excluding deferred revenue and customer deposits, working capital was $381,774 and $545,890, respectively. Although net income was $255,339, deferred revenue decreased $338,725 as previously billed services were delivered while billings declined, accounts payable and accrued liabilities decreased $147,747, and we refunded $31,524 of a customer deposit. Customer deposits are recognized as income only when the customer releases them.",
+      "_model_response": {
+        "evidence_quote": "The first half of 2026 includes $33,753 from the release of customer deposits and credit balances, a $15,000 vendor credit and a $6,541 gain on the sale of a vehicle to a member. 2026 includes $33,753 from the release of a customer deposit forgiven by the customer and other customer credit balances, the $15,000 vendor credit, $9,480 from closing out balances of terminated customers and a $3,030 adjustment of debt balances to lender statements. ... Although net income was $255,339, deferred revenue decreased $338,725 as previously billed services were delivered while billings declined, accounts payable and accrued liabilities decreased $147,747, and we refunded $31,524 of a customer deposit.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, ASP/가격 변화, 리드타임 변화, EPS 리비전, 구체적인 고객 코멘트 등)가 없으며, 루틴 공시의 재무 상태 업데이트에 가깝습니다. 특히 'billings declined'와 'refunded $31,524 of a customer deposit' 등 부정적인 내용도 포함되어 있습니다.",
+        "subject": "Cycurion, Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "Cycurion, Inc.의 2026년 상반기 재무 현황이 공개되었으며, 고객 예치금 해제, 벤더 크레딧, 차량 판매 이익 등이 포함되었으나, 청구액 감소 및 고객 예치금 환불도 발생했습니다.",
+        "why_it_matters": "이 공시는 회사의 재무 상태를 업데이트하는 루틴 정보이며, 투자 발굴을 위한 구체적인 조기 성장 신호나 긍정적인 사업 모멘텀을 보여주지 않습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "제외",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, ASP/가격 변화, 리드타임 변화, EPS 리비전, 구체적인 고객 코멘트 등)가 없으며, 루틴 공시의 재무 상태 업데이트에 가깝습니다. 특히 'billings declined'와 'refunded $31,524 of a customer deposit' 등 부정적인 내용도 포함되어 있습니다."
     },
     "content_hash": "6703049b67bf588c539d1895d5b377d279b4e50af015ad626a9f6bf132425761",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-09T06:50:32+00:00",
+    "reason": "구체적인 조기 지표(가이던스 상향, 수주/백로그 변화, 디자인윈, 생산능력 증설, ASP/가격 변화, 리드타임 변화, EPS 리비전, 구체적인 고객 코멘트 등)가 없으며, 루틴 공시의 재무 상태 업데이트에 가깝습니다. 특히 'billings declined'와 'refunded $31,524 of a customer deposit' 등 부정적인 내용도 포함되어 있습니다.",
+    "processed_day": "2026-11-09",
+    "processed_run": "42575275461-1"
   },
   "0000912767-26-000060": {
     "status": "accepted",
@@ -10739,7 +10887,7 @@
     "processed_run": "40826300195-1"
   },
   "0001193125-26-436157": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10750,12 +10898,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1015739/000119312526436157/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1015739/000119312526436157/awre-ex99_1.htm",
       "published_at": "2026-10-28",
-      "raw_text": "AWARE INC /MA/ (AWRE) (CIK 0001015739) EX-99.1 2026-10-28. • Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. While federal procurement cycles remain difficult to predict, converting our new federal government engagement into an active customer represents meaningful progress.” Aware also continued to expand its commercial business, including a new relationship with Adobe Acrobat Sign's distributor, delivering biometric security for customers using Adobe Acrobat Sign, with new customer activity in Latin America. EX-99.1 2 awre-ex99_1.htm EX-99.1 EX-99.1 EXHIBIT 99.1 Company Contact Delaney Gembis Aware, Inc. 781-687-0300 marketing@aware.com Investor Contact David Traverse Aware, Inc. 781-687-0300 IR@aware.com Aware Reports Third Quarter Financial Results BURLINGTON, MASS. – October 28, 2026 – Aware, Inc. (NASDAQ: AWRE), a global leader in biometric orchestration, today reported financial results for the third quarter ended September 30, 2026. Third Quarter 2026 Operational Highlights • Selected by a government agency customer to deploy Intelligent Liveness capabilities from the Awareness Platform, marking an important step forward for the platform’s use in high-assurance identity environments. • Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. • Realized the impact of cost-reduction actions implemented earlier in 2026, actions expected to generate approximately $4.0 million in annualized savings, contributing to a reduction in operating loss compared with the prior-year period. Management Commentary \"Third-quarter revenue was $4.4 million, compared with $5.1 million in the prior-year period and recurring revenue grew to approximately $4.0 million from approximately $3.6 million a year ago,” said Ajay Amlani, CEO and President of Aware.” While we made progress in several important areas, improving revenue consistency"
+      "raw_text": "AWARE INC /MA/ (AWRE) (CIK 0001015739) EX-99.1 2026-10-28. • Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. While federal procurement cycles remain difficult to predict, converting our new federal government engagement into an active customer represents meaningful progress.” Aware also continued to expand its commercial business, including a new relationship with Adobe Acrobat Sign's distributor, delivering biometric security for customers using Adobe Acrobat Sign, with new customer activity in Latin America. EX-99.1 2 awre-ex99_1.htm EX-99.1 EX-99.1 EXHIBIT 99.1 Company Contact Delaney Gembis Aware, Inc. 781-687-0300 marketing@aware.com Investor Contact David Traverse Aware, Inc. 781-687-0300 IR@aware.com Aware Reports Third Quarter Financial Results BURLINGTON, MASS. – October 28, 2026 – Aware, Inc. (NASDAQ: AWRE), a global leader in biometric orchestration, today reported financial results for the third quarter ended September 30, 2026. Third Quarter 2026 Operational Highlights • Selected by a government agency customer to deploy Intelligent Liveness capabilities from the Awareness Platform, marking an important step forward for the platform’s use in high-assurance identity environments. • Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. • Realized the impact of cost-reduction actions implemented earlier in 2026, actions expected to generate approximately $4.0 million in annualized savings, contributing to a reduction in operating loss compared with the prior-year period. Management Commentary \"Third-quarter revenue was $4.4 million, compared with $5.1 million in the prior-year period and recurring revenue grew to approximately $4.0 million from approximately $3.6 million a year ago,” said Ajay Amlani, CEO and President of Aware.” While we made progress in several important areas, improving revenue consistency",
+      "_model_response": {
+        "evidence_quote": "Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. ... Selected by a government agency customer to deploy Intelligent Liveness capabilities from the Awareness Platform, marking an important step forward for the platform’s use in high-assurance identity environments.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Aware, Inc. (NASDAQ: AWRE), a global leader in biometric orchestration",
+          "earnings_leverage": "deploy Intelligent Liveness capabilities from the Awareness Platform",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "Intelligent Liveness capabilities",
+          "revision_momentum": "",
+          "catalyst_visibility": "Established a new commercial relationship with Adobe Acrobat Sign's distributor, with new customer activity in Latin America. ... Selected by a government agency customer to deploy Intelligent Liveness capabilities"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AWRE",
+        "theme": "생체인식 보안",
+        "signal_type": "신규고객",
+        "what_happened": "Aware Inc.가 어도비 아크로뱃 사인 유통업체와 새로운 상업적 관계를 맺고 라틴 아메리카에서 신규 고객 활동을 시작했으며, 정부 기관 고객에게 지능형 라이브니스 기능을 배포하기로 선정되었습니다.",
+        "why_it_matters": "새로운 고객 확보와 정부 기관의 채택은 Aware Inc.의 생체인식 보안 솔루션에 대한 수요 증가와 시장 확장을 보여주며, 이는 향후 매출 성장으로 이어질 수 있는 긍정적인 투자 신호입니다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 신규 고객 관련 매출 기여도 및 정부 계약 진행 상황, 라틴 아메리카 지역의 추가적인 고객 확보 및 파트너십 확장 여부를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 1,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "생체인식 오케스트레이션: 다양한 생체인식 기술과 시스템을 통합하고 관리하여 효율적이고 안전한 신원 확인 프로세스를 제공하는 기술. 지능형 라이브니스 기능: 사용자가 실제 사람인지, 위조된 이미지나 영상이 아닌지 지능적으로 판별하는 기술."
+      }
     },
     "content_hash": "a198f75cc0eaded1fb6bec8f1f054f540243a5307cf8727e60ddd6dca5d1bf87",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-09T06:50:47+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001193125-26-435175": {
     "status": "deferred",

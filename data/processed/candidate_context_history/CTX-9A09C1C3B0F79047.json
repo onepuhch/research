@@ -1,0 +1,158 @@
+{
+  "context_id": "CTX-9A09C1C3B0F79047",
+  "candidate_id": "CAN-029DB18061B03227",
+  "ticker": "NMM",
+  "issuer_cik": "0001415921",
+  "document_ids": [
+    "DOC-3093B3C66BDDC302"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3093B3C66BDDC302#p30",
+    "DOC-3093B3C66BDDC302#p37",
+    "DOC-3093B3C66BDDC302#p39",
+    "DOC-3093B3C66BDDC302#p106",
+    "DOC-3093B3C66BDDC302#p117",
+    "DOC-3093B3C66BDDC302#p121",
+    "DOC-3093B3C66BDDC302#p130",
+    "DOC-3093B3C66BDDC302#p135",
+    "DOC-3093B3C66BDDC302#p145",
+    "DOC-3093B3C66BDDC302#p157",
+    "DOC-3093B3C66BDDC302#p159",
+    "DOC-3093B3C66BDDC302#p163",
+    "DOC-3093B3C66BDDC302#p173",
+    "DOC-3093B3C66BDDC302#t22"
+  ],
+  "input_sha": "9a09c1c3b0f790479fd85262833f0d4f11715989bfa3e3944813a7bf5c117b2f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-09T07:05:44+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Time charter and voyage expenses · three month period ended June 30, 2026: $45.6 million — 시간 용선 및 항해 비용이 해당 기간에 발생했다",
+      "note_ko": "시간 용선 및 항해 비용이 해당 기간에 발생했다",
+      "kind": "fact",
+      "quote": "Time charter and voyage expenses for the three month period ended June 30, 2026 increased by $14.4 million to $45.6 million, as compared to $31.2 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p117",
+      "metric": "Time charter and voyage expenses",
+      "figures": [
+        "$45.6 million"
+      ],
+      "period": "three month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Depreciation and amortization · three month period ended June 30, 2026: $83.0 million — 감가상각비 및 상각비가 해당 기간에 발생했다",
+      "note_ko": "감가상각비 및 상각비가 해당 기간에 발생했다",
+      "kind": "fact",
+      "quote": "Depreciation and amortization amounted to $83.0 million for the three month period ended June 30, 2026, as compared to $80.8 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p121",
+      "metric": "Depreciation and amortization",
+      "figures": [
+        "$83.0 million"
+      ],
+      "period": "three month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · three month period ended June 30, 2026: $242.2 million — 조정 EBITDA가 해당 기간에 발생했다",
+      "note_ko": "조정 EBITDA가 해당 기간에 발생했다",
+      "kind": "fact",
+      "quote": "Excluding this item, Adjusted EBITDA increased by $69.6 million to $242.2 million for the three month period ended June 30, 2026, as compared to $172.6 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p173",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$242.2 million"
+      ],
+      "period": "three month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "순이익이 해당 기간에 발생했다",
+      "figures": [
+        "$274,263"
+      ],
+      "quote": "Net income ; $274,263 ; $111,674",
+      "where": "DOC-3093B3C66BDDC302#t22"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "영업 활동으로 인한 순 현금 유입이 해당 기간에 발생했다",
+      "figures": [
+        "313,289"
+      ],
+      "quote": "Net cash provided by operating activities ; 313,289 ; 278,180",
+      "where": "DOC-3093B3C66BDDC302#t22"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}
