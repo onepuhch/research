@@ -1,0 +1,172 @@
+{
+  "context_id": "CTX-AB445E5C0D0154D9",
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "ticker": "TALO",
+  "issuer_cik": "0001724965",
+  "document_ids": [
+    "DOC-0E5F36EE519C51AC",
+    "DOC-70283ADC988D0C81"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-0E5F36EE519C51AC#p8",
+    "DOC-0E5F36EE519C51AC#p20",
+    "DOC-0E5F36EE519C51AC#p35",
+    "DOC-0E5F36EE519C51AC#p51",
+    "DOC-0E5F36EE519C51AC#p54",
+    "DOC-0E5F36EE519C51AC#p82",
+    "DOC-0E5F36EE519C51AC#p89",
+    "DOC-0E5F36EE519C51AC#p105",
+    "DOC-0E5F36EE519C51AC#t20",
+    "DOC-0E5F36EE519C51AC#t22",
+    "DOC-0E5F36EE519C51AC#p146",
+    "DOC-0E5F36EE519C51AC#p151",
+    "DOC-0E5F36EE519C51AC#p189",
+    "DOC-70283ADC988D0C81#p29",
+    "DOC-70283ADC988D0C81#p56",
+    "DOC-70283ADC988D0C81#p94",
+    "DOC-70283ADC988D0C81#t24"
+  ],
+  "input_sha": "ab445e5c0d0154d9f9a33b121289e3119b0d42bdff449487e877c102139adad0",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-10T07:45:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA): $406.1 million — 조정 EBITDA를 창출했다",
+      "note_ko": "조정 EBITDA를 창출했다",
+      "kind": "fact",
+      "quote": "Generated Adjusted EBITDA(1)(2) of $406.1 million.",
+      "document_id": "DOC-0E5F36EE519C51AC",
+      "block_id": "p20",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$406.1 million"
+      ],
+      "period": "unknown",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "production guidance · full-year 2026: 69 MBo/d / 93.5 MBoe/d — 연간 생산량 가이던스 중간값을 상향 조정했다",
+      "note_ko": "연간 생산량 가이던스 중간값을 상향 조정했다",
+      "kind": "guidance",
+      "quote": "Increased midpoint of full-year 2026 production guidance to 69 MBo/d and 93.5 MBoe/d, inclusive of the completed Gulf of America acquisition, non-core shelf divestment and impact from Hurricane Isaias in early October.",
+      "document_id": "DOC-0E5F36EE519C51AC",
+      "block_id": "p35",
+      "metric": "production guidance",
+      "figures": [
+        "69 MBo/d",
+        "93.5 MBoe/d"
+      ],
+      "period": "full-year 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal",
+        "one_off"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "gross production · first quarter of 2027: 20–30 MBoe/d — 모뉴먼트 유정의 첫 석유 생산이 예상되며 총 생산량은 이 범위에 도달할 것으로 예상된다",
+      "note_ko": "모뉴먼트 유정의 첫 석유 생산이 예상되며 총 생산량은 이 범위에 도달할 것으로 예상된다",
+      "kind": "guidance",
+      "quote": "First oil is now expected in the first quarter of 2027, with gross production expected to reach 20–30 MBoe/d.",
+      "document_id": "DOC-0E5F36EE519C51AC",
+      "block_id": "p54",
+      "metric": "gross production",
+      "figures": [
+        "20–30 MBoe/d"
+      ],
+      "period": "first quarter of 2027",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "석유 및 총 석유 환산 생산량이 가이던스를 초과했다",
+      "figures": [
+        "68.5 thousand barrels of oil per day",
+        "91.5 thousand barrels of oil equivalent "
+      ],
+      "quote": "Production of 68.5 thousand barrels of oil per day (“MBo/d”) and 91.5 thousand barrels of oil equivalent per day (“MBoe/d”) exceeded guidance, driven by strong base business performance, no storm down",
+      "where": "DOC-0E5F36EE519C51AC#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "탈로스는 연간 생산량 가이던스를 상향 조정했으며, 이제 생산량이 이 범위에 이를 것으로 예상한다",
+      "figures": [
+        "68 to 70 MBo/d",
+        "92.5 to 94.5 MBoe/d"
+      ],
+      "quote": "Talos has increased its full-year 2026 production guidance and now expects production to range from 68 to 70 MBo/d and 92.5 to 94.5 MBoe/d.",
+      "where": "DOC-0E5F36EE519C51AC#p89"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

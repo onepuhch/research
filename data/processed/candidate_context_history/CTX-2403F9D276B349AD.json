@@ -1,0 +1,136 @@
+{
+  "context_id": "CTX-2403F9D276B349AD",
+  "candidate_id": "CAN-BA5D4320F9188F9F",
+  "ticker": "NOG",
+  "issuer_cik": "0001104485",
+  "document_ids": [
+    "DOC-33A6EB1B35AB1AE2",
+    "DOC-4D7368E4EF4C9A00"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-33A6EB1B35AB1AE2#p5",
+    "DOC-33A6EB1B35AB1AE2#p33",
+    "DOC-33A6EB1B35AB1AE2#p53",
+    "DOC-33A6EB1B35AB1AE2#p99",
+    "DOC-33A6EB1B35AB1AE2#p100",
+    "DOC-33A6EB1B35AB1AE2#t14",
+    "DOC-33A6EB1B35AB1AE2#t15",
+    "DOC-4D7368E4EF4C9A00#p18",
+    "DOC-4D7368E4EF4C9A00#p28",
+    "DOC-4D7368E4EF4C9A00#p30",
+    "DOC-4D7368E4EF4C9A00#p95",
+    "DOC-4D7368E4EF4C9A00#t14"
+  ],
+  "input_sha": "2403f9d276b349ad429b7f869c8b1140526e5b2839d5f9a73f1289a7a3916e0a",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-10T07:45:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Lease operating costs · third quarter of 2026: $143.5 million — 임차 운영 비용이 특정 분기에 발생했다",
+      "note_ko": "임차 운영 비용이 특정 분기에 발생했다",
+      "kind": "fact",
+      "quote": "Lease operating costs were $143.5 million in the third quarter of 2026, or $9.98 per Boe, 2% higher on a per unit basis compared to the third quarter of 2025, driven in part by higher processing costs.",
+      "document_id": "DOC-33A6EB1B35AB1AE2",
+      "block_id": "p33",
+      "metric": "Lease operating costs",
+      "figures": [
+        "$143.5 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Production taxes · third quarter of 2026: $48.3 million — 생산세가 특정 분기에 발생했다",
+      "note_ko": "생산세가 특정 분기에 발생했다",
+      "kind": "fact",
+      "quote": "Production taxes were $48.3 million in the third quarter of 2026, compared to $28.7 million in the third quarter of 2025 due to higher revenues derived by higher oil prices as well as record gas volumes.",
+      "document_id": "DOC-33A6EB1B35AB1AE2",
+      "block_id": "p33",
+      "metric": "Production taxes",
+      "figures": [
+        "$48.3 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "price",
+        "volume"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "회사가 생산량 전망을 상향 조정했다",
+      "figures": [
+        "2026"
+      ],
+      "quote": "Raises 2026 Production Guidance",
+      "where": "DOC-33A6EB1B35AB1AE2#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "일반 관리비가 특정 분기에 발생했다",
+      "figures": [
+        "$18.0 million"
+      ],
+      "quote": "Third quarter general and administrative (“G&A”) costs totaled $18.0 million or $1.25 per Boe, as compared to $1.17 per Boe in the third quarter of 2025.",
+      "where": "DOC-33A6EB1B35AB1AE2#p33"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "조정 순이익이 특정 기간에 발생했다",
+      "figures": [
+        "$142,206"
+      ],
+      "quote": "Adjusted Net Income (non-GAAP) ; $142,206 ; $101,766",
+      "where": "DOC-33A6EB1B35AB1AE2#t14"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

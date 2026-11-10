@@ -9506,7 +9506,7 @@
     "processed_run": "41280399923-1"
   },
   "0000950142-26-002834": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -9522,7 +9522,8 @@
     "content_hash": "38ff507f554968d39334bb69855a56b6d92888e9452dd060759305b6bbe7adfd",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-27T05:15:06.551437+00:00"
+    "updated_at": "2026-11-10T07:28:44.152360+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001493152-26-048581": {
     "status": "rejected",
@@ -10957,8 +10958,9 @@
     },
     "content_hash": "ea6e7cecece7de9edc0b1441b8da4d4bb8fb9dc89046be0a8a16b427b2ea94dd",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-10T07:30:47+00:00",
+    "reason": "deferred_budget"
   },
   "0000822818-26-000045": {
     "status": "deferred",
@@ -14844,5 +14846,416 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-07T01:00:43.614053+00:00"
+  },
+  "0001819994-26-000073": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001819994-26-000073",
+      "entity_id": "CIK:0001819994",
+      "source_role": "candidate",
+      "title": "Rocket Lab Corp (RKLB) (CIK 0001819994) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000073/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000073/rklb-11092026ex991.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Rocket Lab Corp (RKLB) (CIK 0001819994) EX-99.1 2026-11-09. We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. EX-99.1 2 rklb-11092026ex991.htm EX-99.1 Document MEDIA RELEASE Exhibit 99.1 Rocket Lab Announces Third Quarter 2026 Financial Results: Posts Record Revenue, $1.2 Billion or 52% Sequential Quarterly Backlog Growth, Positive GAAP Operating Cash Flow, and Guides to Record Revenue and Gross Margin Expansion in Q4 2026 Long Beach, California. November 9, 2026 – Rocket Lab Corporation (Nasdaq: RKLB), a global leader in launch services and space systems, today shared the financial results for fiscal third quarter ended September 30, 2026. Rocket Lab founder and CEO, Sir Peter Beck, says: “Q3 2026 was a defining quarter for Rocket Lab. We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. Nearly $1 billion of that backlog comes from new launch contracts, signed in Q3 2026 alone, as well as $470 million signed for Space Systems. Our end-to-end space strategy is delivering exactly as designed: the world's most critical and ambitious missions increasingly rely on Rocket Lab for launch, spacecraft, and components, sometimes all on a single mission, and every part of our business is growing as a result.” Highlights for the Third Quarter 2026, plus business updates since September 30, 2026. • Record quarterly revenue of $268 million, a 73% increase year-on-year. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. • Positive GAAP operating cash flow of $7.2M. • Approximately $1 billion in new launch contracts signed across Electron, HASTE, and Neutron, bringing Rocket Lab’s total launch backlog to 117 launches: a new record. • Secured over $515M in Neutron launch contracts from con"
+    },
+    "content_hash": "e07cb8526329d25f7c50acf9a56d9b552214330ad487ec08446227db069c4aed",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001193125-26-453633": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-453633",
+      "entity_id": "CIK:0001320854",
+      "source_role": "candidate",
+      "title": "FreightCar America, Inc. (RAIL) (CIK 0001320854) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1320854/000119312526453633/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1320854/000119312526453633/rail-ex99_1.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "FreightCar America, Inc. (RAIL) (CIK 0001320854) EX-99.1 2026-11-09. “We continued to make progress on our commercial priorities, with order intake through the first nine months exceeding our total for all of 2025 and backlog value up 28% year over year. Condensed Consolidated Balance Sheets (In thousands, except for share data) (Unaudited) September 30, 2026 December 31, 2025 Assets Current assets Cash, cash equivalents and restricted cash equivalents $ 86,759 $ 64,295 Accounts receivable, net 19,055 12,443 VAT receivable 6,007 6,097 Inventories, net 80,408 68,295 Prepaid expenses and other current assets 11,671 8,875 Total current assets 203,900 160,005 Property, plant and equipment, net 27,117 30,969 Right of use asset lease 38,913 40,281 Intangibles, net 5,035 4,877 Deferred income taxes 53,200 52,970 Other long-term assets 823 947 Total assets $ 328,988 $ 290,049 Liabilities and Stockholders’ Equity (Deficit) Current liabilities Accounts and contractual payables $ 108,709 $ 55,671 Accrued payroll and other employee costs 5,715 9,110 Accrued warranty 957 2,050 Customer deposits 15,658 — Deferred revenue — 539 Current portion of long-term debt 2,875 9,728 Lease liability, current 1,945 1,888 Other current liabilities 6,003 6,611 Total current liabilities 141,862 85,597 Long-term debt, net of current portion 97,538 97,514 Warrant liability 9,306 168,529 Accrued pension costs 877 1,256 Lease liability, long-term 41,775 43,233 Other long-term liabilities 1,301 1,333 Total liabilities 292,659 397,462 Stockholders’ equity (deficit) Common stock 358 221 Additional paid-in capital 205,364 72,557 Accumulated other comprehensive income 1,568 2,324 Accumulated deficit (170,961 ) (182,515 ) Total stockholders’ equity (deficit) 36,329 (107,413 ) Total liabilities and stockholders’ equity (deficit) $ 328,988 $ 290,049 FreightCar America, Inc. Condensed Consolidated Statements of Cash Flows (In thousands) (Unaudited) Nine Months Ended September 30, 2026 2025 Cash flows from op",
+      "_model_response": {
+        "evidence_quote": "“We continued to make progress on our commercial priorities, with order intake through the first nine months exceeding our total for all of 2025 and backlog value up 28% year over year.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "FreightCar America, Inc. (RAIL)",
+          "earnings_leverage": "order intake through the first nine months exceeding our total for all of 2025 and backlog value up 28% year over year.",
+          "supply_demand_tightness": "order intake through the first nine months exceeding our total for all of 2025 and backlog value up 28% year over year.",
+          "structural_ai_demand": "",
+          "revision_momentum": "order intake through the first nine months exceeding our total for all of 2025 and backlog value up 28% year over year.",
+          "catalyst_visibility": "order intake through the first nine months exceeding our total for all of 2025 and backlog value up 28% year over year."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "FreightCar America, Inc. (RAIL)",
+        "theme": "철도 운송 장비",
+        "signal_type": "수주/백로그",
+        "what_happened": "FreightCar America가 2026년 9월까지의 수주량이 2025년 전체 수주량을 초과했으며, 백로그 가치가 전년 대비 28% 증가했다고 발표했습니다.",
+        "why_it_matters": "수주량 증가와 백로그 확대는 향후 매출 성장 가능성을 높이며, 이는 회사의 실적 개선으로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "향후 분기별 수주 추이 및 백로그 잔고 변화; 실제 매출액 및 이익률에 미치는 영향.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 고객으로부터 수주했지만 아직 인도되지 않은 주문 잔고.\n수주량 (Order Intake): 특정 기간 동안 고객으로부터 새로 받은 주문의 총량."
+      }
+    },
+    "content_hash": "f40d0eb010ef08851ac01a30303630a348e201b17834703fc50e41445da145a9",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-10T07:28:57+00:00",
+    "signal_id": "SIG-0935",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-10",
+    "processed_run": "42775409704-1"
+  },
+  "0001567094-26-000020": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001567094-26-000020",
+      "entity_id": "CIK:0001567094",
+      "source_role": "candidate",
+      "title": "CNH Industrial N.V. (CNH) (CIK 0001567094) EX-99.2 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000020/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000020/cnh_q32026final.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "CNH Industrial N.V. (CNH) (CIK 0001567094) EX-99.2 2026-11-09. Diluted EPS1 $0.55 $0.41 - $0.46 $0.44 - $0.48 18 Q3 2026 results | November 9, 2026 CONSTRUCTION TRANSACTION OVERVIEW 18 Transaction Structure • CNH to sell 70% interest in CNH’s Construction Equipment business; forms new joint venture (\"CE JV\") • Transaction values CNH’s Construction Equipment business at an enterprise value of $1 billion • Kobelco to own 70% of CE JV; CNH to retain 30% equity ownership in CE JV • Each party subject to three-year lockup CNH Consideration • CNH expects to receive $700 million in cash consideration for its 70% of the business, subject to adjustments for net debt, working capital, and other customary items • CNH intends to use cash proceeds, net of tax, to reduce debt and strengthen balance sheet Continued Collaboration • CNH Agriculture dealers will have continued access to a full suite of competitive construction equipment machines supplied by CE JV • CNH Capital will continue to support CE JV customers and dealers with a full range of retail financing, leases, rental programs, and insurance products • To support a smooth business transition for dealers, customers, and employees, CNH will continue to collaborate closely with CE JV Expected Close • Expected to close by the end of 2027, subject to regulatory approvals and other customary closing conditions 19 Q3 2026 results | November 9, 2026 2026 PRIORITIES & OUTLOOK Tracking macroeconomic factors impacting ag industry cycle North America order intake pace modestly positive for MY27 vs MY261 Ag dealer inventories2 expected to further reduce in Q4 Margin improvements from quality, sourcing, and operational efficiency Focus on manufacturing and supply base readiness Ongoing multi-brand dealership consolidation in all geographies (1) MY = model year (2) As independent businesses, dealers control their own inventory 20 APPENDIX Q3 2026 results | November 9, 202621 UPCOMING EVENTS Q4 2026 earnings call: Tuesday, February 16,"
+    },
+    "content_hash": "59da231f8b4338bb9b4a0ca63c62700a6343633000711b7b7307441186f97274",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001628280-26-072188": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-072188",
+      "entity_id": "CIK:0000709283",
+      "source_role": "candidate",
+      "title": "QUANTUM CORP /DE/ (QMCO) (CIK 0000709283) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/709283/000162828026072188/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/709283/000162828026072188/fy27q2ex991pressrelease.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "QUANTUM CORP /DE/ (QMCO) (CIK 0000709283) EX-99.1 2026-11-09. We ended the quarter with a record backlog of nearly $100 million, and we also secured one of the most significant purchase orders in the Company’s history — a major hyperscale deployment of our Scalar i7 Raptor following a multi-year evaluation in which reliability, density, and infrastructure efficiency were key differentiators. EX-99.1 2 fy27q2ex991pressrelease.htm EX-99.1 Document Quantum Reports Fiscal Second Quarter 2027 Financial Results CENTENNIAL, Colo. — Nov. 9, 2026 — Quantum Corporation (Nasdaq: QMCO) (\"Quantum\" or the \"Company\"), today announced financial results for its fiscal second quarter of 2027 ended September 30, 2026. Fiscal Second Quarter 2027 Financial Summary • Revenue increased sequentially and 42.9% year-over-year to $89.6 million, with strong customer demand also contributing to record order backlog • Gross margin expanded to 41.0%, increasing 170 basis points sequentially and 340 basis points year-over-year • GAAP operating expenses were $29.9 million; non-GAAP adjusted operating expenses were $26.9 million • GAAP net loss was $44.8 million, or ($1.14) per share, which included a $51.6 million non-cash adjustment from the change in fair value of warrant liabilities • Non-GAAP adjusted net income increased to $9.8 million, or $0.25 per share • Non-GAAP adjusted EBITDA was $11.1 million “This quarter marked our fourth consecutive quarter of sequential revenue growth and our second quarter of non-GAAP profitability. These results underscore the meaningful progress we have made over the past year in strengthening execution, improving our financial position, and positioning Quantum for sustainable growth,” commented Hugues Meyrath, Chief Executive Officer of Quantum. “Revenue grew 42.9% year-over-year and 11% sequentially to more than $89.6 million, driven by strong demand across our secondary storage portfolio. We ended the quarter with a record backlog of nearly $100 million, and "
+    },
+    "content_hash": "0f30a12c19025e6e4c0ed03198e366cc0c88ce3b89d44686d4017964b2ee4bab",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001829126-26-012120": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001829126-26-012120",
+      "entity_id": "CIK:0002109869",
+      "source_role": "candidate",
+      "title": "Exascale Labs Holdings Inc. (XLAB, XLABW) (CIK 0002109869) EX-10.6 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/2109869/000182912626012120/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2109869/000182912626012120/exascalelabs_ex10-6.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Exascale Labs Holdings Inc. (XLAB, XLABW) (CIK 0002109869) EX-10.6 2026-11-09. 5.2 Lead time: for each Release, the Supplier shall have the Equipment ready for shipment in the agreed configuration within four to six (4–6) weeks after receipt of the Down Payment for that Release, and shall ship within five (5) business days after receipt of the full price for that Release, unless the Parties agree in writing to postpone shipment, in which case the Equipment is stored under the Storage Agreement between the Parties. (or the end user designated by the Buyer for a Release); site as stated in Part 3; quantity 64 units; independent registration ☐ Confirmed ☐ Amended: ____________ 3 Supplier’s and NVIDIA’s compliance review of the Buyer completed and approved, date stated below ☐ Confirmed ☐ Amended: ____________ 4 PSA executed by the Supplier and attached to this acknowledgment ☐ Confirmed ☐ Amended: ____________ 5 Proforma invoice to be issued for each Release: DAP (Incoterms 2020) Deployment Place, stating the price validity date, without the “ETA market price” note ☐ Confirmed ☐ Amended: ____________ 6 Price: US$565,000.00 per unit, tax excluded, firm and fixed for all Releases issued during the Release Period (Clause 2) ☐ Confirmed ☐ Amended: ____________ 7 Payment per Release: 20% by telegraphic transfer within 5 business days after the Release Confirmation; 80% within 5 business days after the notice of readiness and before shipment (Clause 3) ☐ Confirmed ☐ Amended: ____________ 8 Bank account as in PSA Appendix A / proforma invoice, unchanged; email verification by the Buyer before payment accepted (Clause 3.3) ☐ Confirmed ☐ Amended: ____________ 9 Lead time per Release: ready for shipment within 4–6 weeks after the Down Payment; shipment within 5 business days after full payment unless postponed under the Storage Agreement (Clause 5.2) ☐ Confirmed ☐ Amended: ____________ 10 Configuration per Part 4; CPU and memory substitution only as stated in Part 4 ☐ Confirmed "
+    },
+    "content_hash": "8f46b15d5c59fcc1eef3a12c9e45f9a15fcec95fc143df5604fc85f6dff88e7b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0002105398-26-000007": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0002105398-26-000007",
+      "entity_id": "CIK:0002105398",
+      "source_role": "candidate",
+      "title": "Csquare, Inc. (CSQR) (CIK 0002105398) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/2105398/000210539826000007/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2105398/000210539826000007/csqr-ex99_1.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Csquare, Inc. (CSQR) (CIK 0002105398) EX-99.1 2026-11-09. Contracted utilization reached 108%, demonstrating demand that exceeds current sellable capacity and is supported by the Company's development pipeline and planned capacity expansions. prior quarter to increase sellable power to 397 MW as part of the Company’s ongoing focus to invest in attractive, high return capacity expansion projects. EX-99.1 2 csqr-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Csquare Reports Third Quarter 2026 Results and Business Highlights • Delivered 25.6% year-over-year revenue growth to $302.3 million , reflecting sustained demand and continued customer deployments across Csquare's enterprise infrastructure platform. • Achieved record bookings of $66.1 million , marking Csquare's 14th consecutive quarter of sequential bookings growth across enterprise, network, cloud and higher-density deployments. • Entered Q4 with approximately $114 million of contracted annualized revenue backlog , including approximately $104 million expected to commence over the next twelve months. • Continued to expand capacity to meet contracted demand , commissioning approximately 12 MW during Q3 and ending the quarter with 428 MW contracted against 397 MW of sellable capacity. • Maintained strong customer retention , with quarterly net revenue churn of 1.9% and continued strength in advance customer commitments. • Continued disciplined capital deployment , investing $149 million in growth at an average build multiple of approximately 4x and approximately $16 million in recurring capital expenditures. • Reported net loss of $88.1 million , primarily reflecting $58.6 million of IPO-related transaction and compensation costs, as well as higher year-over-year interest expense. Net margin for the quarter was (29.2%). • Adjusted EBITDA increased 44.3% to $132.1 million , with Adjusted EBITDA margin expanding to 47.8% from 40.5%. • Strengthened the balance sheet following the July IPO , using proceeds to repay approxim"
+    },
+    "content_hash": "5019eebce61a1065437356128c869cb06b65a88ffddffb8eaf8880cb6af39b80",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001868275-26-000116": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001868275-26-000116",
+      "entity_id": "CIK:0001868275",
+      "source_role": "candidate",
+      "title": "Constellation Energy Corp (CEG) (CIK 0001868275), CONSTELLATION ENERGY GENERATION LLC (CIK 0001168165) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000116/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000116/ceg-20261109991.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Constellation Energy Corp (CEG) (CIK 0001868275), CONSTELLATION ENERGY GENERATION LLC (CIK 0001168165) EX-99.1 2026-11-09. The agreement will enable more than $3 billion in infrastructure investment in our Calvert Cliffs Clean Energy Center, including facility improvements and a 190 MW capacity expansion expected to come online between 2030 and 2032, while supporting the facility's continued operation and future relicensing. EX-99.1 2 ceg-20261109991.htm EX-99.1 Document Exhibit 99.1 News Release Contact: Linsey Wisniewski Corporate Communications 667-218-7700 Tim Flottemesch Investor Relations 833-447-2783 CONSTELLATION REPORTS THIRD QUARTER 2026 RESULTS Earnings Release Highlights • GAAP Net Income of $5.19 per share and Adjusted (non-GAAP) Operating Earnings of $5.06 per share for the third quarter of 2026 • Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share • Agreed to Acquire Rhode Island State Energy Center • Entered into long-term agreement supporting Calvert Cliffs Clean Energy Center investment and expansion • Entered into long-term collaboration with Google supporting new nuclear capacity • Signed a new 20-year, 270-megawatt agreement for energy, capacity, and nuclear attributes through our Peak+, an integrated customer solution that combines new capacity to support peak demand growth with energy products tailored to customer needs • Signed a conditional DOE loan commitment for up to $5 billion supporting nuclear uprates Baltimore (Nov 9, 2026) — Constellation Energy Corporation (Nasdaq: CEG) today reported its financial results for the third quarter of 2026. “This past quarter Constellation announced agreements that are helping meet one of the nation’s greatest challenges – powering a growing economy while protecting existing customers. These agreements add more than 1,000 megawatts of new, emissions-free generation to the grid and help ensure the continued operations of existing cle"
+    },
+    "content_hash": "234e3793d6a77cc46cbb0896bb5756943ba81a145c474856e5c41ffa8535ba3e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001193125-26-452618": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-452618",
+      "entity_id": "CIK:0001584549",
+      "source_role": "candidate",
+      "title": "Village Farms International, Inc. (VFF) (CIK 0001584549) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1584549/000119312526452618/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1584549/000119312526452618/vff-ex99_1.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Village Farms International, Inc. (VFF) (CIK 0001584549) EX-99.1 2026-11-09. • The Company’s capacity expansion project at its Delta 2 greenhouse in British Columbia remains on track to be completed during Q1 of 2027. EX-99.1 2 vff-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Village Farms International Reports Q3 2026 Results Driven by Record Cannabis Revenues • Consolidated Net Sales Increased to $67 Million with Record Cannabis Sales of $55 Million • Net Income of $10 Million or $0.08 Per Share; Operating Cash Flow of $9.5 Million • Adjusted EBITDA from Continuing Operations of $18.2 Million or 27% of Sales • International Exports Increased 75% YoY to $20.8 Million in Line with Previous Quarter Record • Company Closes Q3 with $80 Million in Cash and Net Cash Position of $41 Million • Company Begins Mobilizing Efforts to Activate Texas Production Assets; Enhances Canadian Optionality by Exercising Rights to Convert 16 Acres of Delta 1 to Cannabis VANCOUVER, British Columbia, November 9, 2026 – Village Farms International, Inc. (“Village Farms” or the “Company”) (NASDAQ: VFF) today reported financial results for its third quarter ended September 30, 2026. All figures are in U.S. dollars unless otherwise indicated. Management Commentary President and Chief Executive Officer Michael DeGiglio commented, “Our third quarter results were driven by record cannabis revenues of $55 million and approximately 43% of cannabis sales from some of the world’s most attractive and fastest growing international markets. We also delivered our sixth consecutive quarter of positive net income and EPS, clearly demonstrating the strength of our sustainably profitable and expanding global cannabis enterprise.” “In Canada, we continue to maintain our top five market share position with continued share gains in convenience product categories and a brand portfolio that remains in the top 10 of all major product categories nationally. International export sales grew 75% year-over-year, in line wit"
+    },
+    "content_hash": "049fcdfad8eae9582919c924a026948ebc2c1dce64c983197addcece28516307",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001683168-26-008440": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001683168-26-008440",
+      "entity_id": "CIK:0001496443",
+      "source_role": "candidate",
+      "title": "Paysign, Inc. (PAYS) (CIK 0001496443) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1496443/000168316826008440/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1496443/000168316826008440/paysign_ex9901.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Paysign, Inc. (PAYS) (CIK 0001496443) EX-99.1 2026-11-09. Cost of revenues increased 15.2% to $10.88 million due to related costs associated with the growth in the businesses including network and related costs, call center support costs, a new customer service contact center that went live in November 2025 and higher employee costs. 2 Balance Sheet at September 30, 2026 The company’s unrestricted and restricted cash balances increased by a combined $71.35 million from December 31, 2025, largely related to the improvement in our operating results, growth of existing customer programs and the launch of new customer programs. EX-99.1 2 paysign_ex9901.htm PRESS RELEASE Exhibit 99.1 Earnings Release Paysign Reports Record Third Quarter 2026 Revenue of $30.8 Million, Up 43%; Operating Margin More Than Triples to 23.8% Patient Affordability Growth Drives Revenue and Margin Expansion Raises Full Year 2026 Gross Margin, Net Income, GAAP EPS and Adjusted EBITDA Guidance Balance Sheet Supports Continued Investment and Growth Initiatives HENDERSON, Nev. – November 9, 2026 – (Business Wire) – Paysign, Inc. (NASDAQ: PAYS), a provider of patient affordability offerings, donor compensation solutions, engagement and management platforms and integrated payment processing for the life sciences industries, today announced financial results for the third quarter 2026. Third Quarter 2026 Financial Highlights · Revenues of $30.80 million in Q3’26, up 42.6% from Q3’25 · Pharma revenue increased 109.8% to $16.62 million in Q3’26 versus Q3’25; added 62 net patient affordability programs during the past 12 months, exiting the quarter with 167 active programs · Plasma revenue increased 7.5% to $13.83 million in Q3’26 versus Q3’25; total net plasma center count decreased by 33 during the past 12 months, exiting the quarter with 562 centers · Gross profit margin was 64.7% in Q3’26 compared to 56.3% in Q3’25; operating margin increased to 23.8% in Q3’26, up from 7.3% in Q3’25 · GAAP net income o"
+    },
+    "content_hash": "606e262a7db34520811b99962ffe1469d7a21d36e9316e934dfe6bfa05fabd05",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001437749-26-035901": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-035901",
+      "entity_id": "CIK:0001337298",
+      "source_role": "candidate",
+      "title": "FutureFuel Corp. (FF) (CIK 0001337298) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1337298/000143774926035901/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1337298/000143774926035901/ex_1010021.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "FutureFuel Corp. (FF) (CIK 0001337298) EX-99.1 2026-11-09. Performance Chemical revenue was $3.6 million, up 223% from $1.1 million a year ago, primarily due to higher volumes from a new customer that began production in the fourth quarter of 2025 and higher glycerin sales. Following recent capacity expansions and de-bottlenecking activities, the Company anticipates fourth quarter Chemicals segment level capacity utilization above prior-year levels. In the first nine months of 2026, approximately 74% of the $2.7 million in discretionary capital expenditures were customer-funded investments related to capacity expansions and new customer programs. EX-99.1 2 ex_1010021.htm EXHIBIT 99.1 ex_1010021.htm Exhibit 99.1 FUTUREFUEL ANNOUNCES THIRD QUARTER 2026 RESULTS BATESVILLE, Ark., November 9, 2026 – FutureFuel Corp . (NYSE: FF) (“FutureFuel” or the “Company”), a manufacturer of custom and performance chemicals and biofuels, today announced financial results for the third quarter and nine months ended September 30, 2026 . THIRD QUARTER 2026 RESULTS (As compared to third quarter 2025) ● Total Revenues of $104.7 million, increase of $82.0 million ● GAAP Net Loss of ($8.4) million, or ($0.19) per diluted share, increase of $0.8 million and $0.02 per share ● Adjusted EBITDA of ($4.9) million (1) , increase of $0.4 million ● Anticipate positive Adjusted EBITDA in the fourth quarter and in the full-year 2026 (2) (1) A non-GAAP financial measure. See “Non-GAAP Financial Measures” for a description of the measure and a reconciliation to the applicable GAAP measure. (2) A non-GAAP financial measure. No reconciliation for full-year 2026 Adjusted EBITDA is included herein because we are unable to quantify certain amounts that would be required to be included in such reconciliation without unreasonable efforts due to the high variability and difficulty to predict certain items excluded from Adjusted EBITDA. MANAGEMENT COMMENTARY “Third quarter results reflected strong biodiesel deman",
+      "_model_response": {
+        "evidence_quote": "Performance Chemical revenue was $3.6 million, up 223% from $1.1 million a year ago, primarily due to higher volumes from a new customer that began production in the fourth quarter of 2025 and higher glycerin sales. Following recent capacity expansions and de-bottlenecking activities, the Company anticipates fourth quarter Chemicals segment level capacity utilization above prior-year levels. In the first nine months of 2026, approximately 74% of the $2.7 million in discretionary capital expenditures were customer-funded investments related to capacity expansions and new customer programs.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Performance Chemical revenue was $3.6 million, up 223% from $1.1 million a year ago, primarily due to higher volumes from a new customer... Company anticipates fourth quarter Chemicals segment level capacity utilization above prior-year levels.",
+          "supply_demand_tightness": "In the first nine months of 2026, approximately 74% of the $2.7 million in discretionary capital expenditures were customer-funded investments related to capacity expansions and new customer programs.",
+          "structural_ai_demand": "",
+          "revision_momentum": "Anticipate positive Adjusted EBITDA in the fourth quarter and in the full-year 2026",
+          "catalyst_visibility": "higher volumes from a new customer that began production in the fourth quarter of 2025 and higher glycerin sales. Following recent capacity expansions and de-bottlenecking activities, the Company anticipates fourth quarter Chemicals segment level capacity utilization above prior-year levels."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "FutureFuel Corp. (FF)",
+        "theme": "특수화학",
+        "signal_type": "CAPEX",
+        "what_happened": "FutureFuel Corp.의 특수화학 부문 매출이 신규 고객 확보와 고객 자금 지원 CAPEX에 힘입어 크게 증가했으며, 4분기 가동률 상승을 예상한다.",
+        "why_it_matters": "신규 고객 확보와 고객이 직접 투자한 CAPEX는 동사의 제품에 대한 강력한 수요와 미래 성장 잠재력을 보여주며, 이는 시장에 아직 충분히 반영되지 않았을 수 있는 긍정적인 신호이다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 신규 고객 관련 매출 기여도 및 CAPEX 투자 효과, 화학 부문의 가동률 및 추가적인 CAPEX 계획.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "CAPEX (Capital Expenditures): 기업이 미래의 이윤을 창출하기 위해 토지, 건물, 기계 등 고정 자산을 취득하거나 개선하는 데 지출하는 비용.\n디보틀네킹 (De-bottlenecking): 생산 공정에서 병목 현상을 제거하여 생산 효율성과 용량을 증가시키는 활동."
+      }
+    },
+    "content_hash": "37723af63fad0b5150f5feb5c17938b6c93d1b159131cf5ce07461c662d75afa",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-10T07:29:19+00:00",
+    "signal_id": "SIG-0936",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-10",
+    "processed_run": "42775409704-1"
+  },
+  "0001630805-26-000080": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001630805-26-000080",
+      "entity_id": "CIK:0001630805",
+      "source_role": "candidate",
+      "title": "Babcock & Wilcox Enterprises, Inc. (BW, BW-PA) (CIK 0001630805) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1630805/000163080526000080/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1630805/000163080526000080/e-2026q3earningsrelease.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Babcock & Wilcox Enterprises, Inc. (BW, BW-PA) (CIK 0001630805) EX-99.1 2026-11-09. EX-99.1 2 e-2026q3earningsrelease.htm EX-99.1 Document Exhibit 99.1 News Release Babcock & Wilcox Enterprises Reports Third Quarter 2026 Results • Revenue in the third quarter of $291 million, a 109% increase compared to the same period of 2025 • Net Income was $94 million in the third quarter, including revaluation of warrants • Earnings per share of $0.61, compared to earnings per share of $0.30 in the third quarter of 2025 • Adjusted EBITDA in the third quarter of just under $18 million, an 88% increase compared to the same period of 2025 • Bookings of $228 million in the third quarter, a 112% increase compared to the same period of 2025 • Backlog of $2.5 billion in the third quarter, a 571% increase compared to the same period of 2025 • Total global pipeline exceeds $16 billion including 6 gigawatts of new incremental power for utilities, industrials and data centers • Repurchased $38 million in shares during the quarter • Completed the full redemption of $62 million of outstanding 6.5% bonds due in December 2026 • Issued full year 2027 Adjusted EBITDA target range of $125 million to $140 million Q3 2026 Financial Highlights and Outlook – Revenue of $290.8 million, compared to revenue of $139.2 million in the third quarter of 2025 – Net income of $93.9 million, compared to net income of $35.1 million in the third quarter of 2025 – Adjusted Net Income, which excludes non-cash warrant and other stock valuations, was $4.8 million in the third quarter – Earnings per share of $0.61, compared to earnings per share of $0.30 in the third quarter of 2025 – Adjusted EBITDA of $17.7 million, compared to adjusted EBITDA of $9.4 million in the third quarter of 2025 – Company reiterates full year 2026 Adjusted EBITDA target range of $80.0 million to $105.0 million (AKRON, Ohio – November 9, 2026) – Babcock & Wilcox Enterprises, Inc. (\"B&W\", \"Babcock & Wilcox\" or the \"Company\") (NYSE: BW) annou"
+    },
+    "content_hash": "872e3a142868117a7259a2e8edcedfe7d2d73eb282737dc877b6e85516e84c13",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001493152-26-050810": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-050810",
+      "entity_id": "CIK:0001812727",
+      "source_role": "candidate",
+      "title": "Reliance Global Group, Inc. (EZRA) (CIK 0001812727) 8-K 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1812727/000149315226050810/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1812727/000149315226050810/form8-k.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Reliance Global Group, Inc. (EZRA) (CIK 0001812727) 8-K 2026-11-09. On the Closing Date, Buyer and, solely with respect to the stock grants described below, the Company entered into a 12-month consulting agreement with the Founder (the “Consulting Agreement”), under which he will provide transition and business development services as an independent contractor for $250,000 in cash fees during the term of the agreement, payable in monthly installments, plus a bonus of 5% of the gross profit Buyer receives during the 12 months following its entry into an agreement with a new customer, supplier or other counterparty he introduces. false 0001812727 0001812727 2026-11-03 2026-11-03 iso4217:USD xbrli:shares iso4217:USD xbrli:shares UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): November 3, 2026 RELIANCE GLOBAL GROUP, INC. (Exact Name of Registrant as Specified in Its Charter) Florida 001-40020 46-3390293 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 300 Blvd. of the Americas , Suite 105 Lakewood , New Jersey 08701 (Address of Principal Executive Offices) (Zip Code) (732) 380-4600 (Registrant’s Telephone Number, Including Area Code) N/A (Former Name or Former Address, if Changed Since Last Report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) S"
+    },
+    "content_hash": "59e99002fe4fa35b855685f3887a8249662daf8ba3f701f5298737a2bd3f36ed",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001437749-26-035705": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-035705",
+      "entity_id": "CIK:0001173489",
+      "source_role": "candidate",
+      "title": "CEVA INC (CEVA) (CIK 0001173489) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926035705/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926035705/ex_1040721.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "CEVA INC (CEVA) (CIK 0001173489) EX-99.1 2026-11-09. Six were for AI technologies, including one with a new customer targeting AI infrastructure, and Edge AI agreements targeting consumer, automotive and industrial markets. EX-99.1 2 ex_1040721.htm EXHIBIT 99.1 ex_1040721.htm Exhibit 99.1 Ceva, Inc. Announces Third Quarter 2026 Financial Results 18% sequential royalty revenue growth and record AI licensing revenues, with multi-year smartphone modem ramp ahead ROCKVILLE, MD., November 9, 2026 – Ceva, Inc. (NASDAQ: CEVA), the leading licensor of silicon and software IP for the Smart Edge, today announced its financial results for the third quarter ended September 30, 2026. Third Quarter Highlights: * ● Total revenues of $29.1 million, up 2% YoY. ● Licensing and related revenues of $16.3 million, up 2% YoY. ● Record AI licensing revenues, accounting for more than 35% of total licensing and related revenues. ● Royalty revenues of $12.7 million, up 3% YoY and 18% sequentially. ● 623 million Ceva-powered devices shipped by customers, matching all-time quarterly record, including record cellular IoT and Wi-Fi 6 shipments. *Unless otherwise stated, all comparisons are to the third quarter 2025. Amir Panush, Chief Executive Officer of Ceva, commented, “We continued to grow our business in the third quarter, with 18% sequential royalty revenue growth and Ceva-powered device shipments matching our all-time quarterly record. In licensing, we achieved our highest-ever AI licensing revenues and expanded our relationships with three of our highest-volume connectivity customers, building a broader base of potential future royalty-generating products. “The continued ramp of internally developed modems at a major U.S. customer is creating a multi-year smartphone royalty growth opportunity through 2027 and beyond. We are also extending our AI business into infrastructure applications and moving closer to initial NPU royalties. Together, we believe these developments reinforce the long"
+    },
+    "content_hash": "664883b336c9ce61a36972887666e48f02994ef17da739c1907a4a3634c7d7f0",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001628280-26-072172": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-072172",
+      "entity_id": "CIK:0001818331",
+      "source_role": "candidate",
+      "title": "GeneDx Holdings Corp. (WGS) (CIK 0001818331) EX-99.2 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1818331/000162828026072172/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1818331/000162828026072172/exhibit992q32026earnings.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "GeneDx Holdings Corp. (WGS) (CIK 0001818331) EX-99.2 2026-11-09. Claims data provided by Definitive Healthcare Foundational Market 26 Pediatric specialists continue to drive high growth Significant share: Over 30% of pediatric neurologists now order from us with continued growth ahead Strong awareness: Greatest brand recognition of any genetics lab - over 80% of pediatric specialists know GeneDx Expanding our footprint: Continuing to add new call points and indications to serve the over 10,000 rare diseases Increased ordering and new customer activation driving expansion 1. EX-99.2 3 exhibit992q32026earnings.htm EX-99.2 exhibit992q32026earnings GeneDx Nasdaq: WGS Q3 2026 Earnings Presentation November 2026 Exhibit 99.2 2 Forward-Looking Statements This presentation contains “forward-looking statements” within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended, and the U.S. Private Securities Litigation Reform Act of 1995, including statements regarding our future performance and our market opportunity, including expectations for full year and fourth quarter 2026 revenue, exome and genome revenue and test volumes, adjusted gross margin and adjusted net income. These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions. Forward-looking statements are predictions, projections and other statements about future events that are based on current expectations and assumptions and, as a result, are subject to risks and uncertainties. Many factors could cause actual future events to differ materially from the forward-looking statements in this presentation, including but not limited to: (i) our ability to implement business plans, goals and forecasts, and identify and realize additional opportunities, (ii) the risk of dow"
+    },
+    "content_hash": "8d09ffed37d131e0ab989a9bdabc0a8338df3887ca638890ec50fcf952d8ec0a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001140361-26-042613": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001140361-26-042613",
+      "entity_id": "CIK:0000918251",
+      "source_role": "candidate",
+      "title": "MOTORCAR PARTS OF AMERICA INC (MPAA) (CIK 0000918251) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/918251/000114036126042613/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/918251/000114036126042613/ef20084732_ex99-1.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "MOTORCAR PARTS OF AMERICA INC (MPAA) (CIK 0000918251) EX-99.1 2026-11-09. Management Commentary “Although our second-quarter results reflect delayed customer orders and some industry softness, we remain confident in the underlying aftermarket and in the substantial opportunities we are creating through new customer awards, geographic expansion and improved operating competitiveness,” said Selwyn Joffe, chairman, president and chief executive officer. “We have secured approximately $60 million in annualized new business awards from existing and new customers. He added that the company’s rotating electrical diagnostic testing equipment business continues to expand with existing and new customers, including new international markets. EX-99.1 2 ef20084732_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 NEWS RELEASE CONTACT: Gary S. Maier Vice President, Corporate Communications & IR (310) 972-5124 MOTORCAR PARTS OF AMERICA REPORTS FISCAL 2027 SECOND QUARTER RESULTS Approximately $60 Million in Annualized New Business Awarded; Shipments Beginning with Further Launches Expected This Fiscal Year LOS ANGELES, CA – November 9, 2026 – Motorcar Parts of America, Inc. (Nasdaq: MPAA) today reported financial results for its fiscal 2027 second quarter ended September 30, 2026. Results reflect delayed customer orders and launches of new business awards, requiring revised guidance for the fiscal year. The company expects increased sales for the second half of the current fiscal year compared with the same period a year ago. Positive Drivers ● Approximately $60 Million in New Annualized Customer Business Awards Received; All Awards are Expected to Start Shipping by Fiscal Year End ● Expects to Secure Approximately $25 Million of Additional New Annualized Customer Business Awards by Fiscal Year End ● North American Expansion, Centric Parts Brand Relaunch and Rotating Electrical Diagnostics Support Incremental Longer-Term Growth Opportunities Three-Month Results Net sales for the fiscal second q"
+    },
+    "content_hash": "de6def18b93a2c75a7876f6700da301eaf28fe4f3357b3433cb40e3df9645f99",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+  },
+  "0001437749-26-035892": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-035892",
+      "entity_id": "CIK:0000065312",
+      "source_role": "candidate",
+      "title": "EVI INDUSTRIES, INC. (EVI) (CIK 0000065312) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/65312/000143774926035892/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/65312/000143774926035892/ex_1017435.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "EVI INDUSTRIES, INC. (EVI) (CIK 0000065312) EX-99.1 2026-11-09. Better service can win new customers and keeps existing ones coming back. As those capabilities are adopted across a growing enterprise, management expects them to support further productivity gains, new customer relationships and repeat business. Condensed Consolidated Balance Sheets (in thousands, except per share data) Unaudited 9/30/2026 6/30/2026 Assets Current assets Cash $ 8,263 $ 6,774 Accounts receivable, net 62,481 56,797 Inventories, net 70,265 66,271 Vendor deposits 1,407 1,267 Contract assets 970 632 Other current assets 10,396 9,258 Total current assets 153,782 140,999 Equipment and improvements, net 23,323 20,099 Operating lease right of use assets 16,968 10,685 Intangible assets, net 43,170 28,859 Goodwill 113,580 93,934 Other assets 9,672 9,919 Total assets $ 360,495 $ 304,495 Liabilities and Shareholders’ Equity Current liabilities Accounts payable and accrued expenses $ 54,010 $ 47,577 Accrued employee expenses 15,753 14,511 Customer deposits 23,394 20,094 Contract liabilities 155 — Current portion of operating lease liabilities 5,120 3,899 Total current liabilities 98,432 86,081 Deferred tax liabilities, net 8,950 9,081 Long-term operating lease liabilities 13,454 8,190 Long-term debt 85,000 51,000 Total liabilities 205,836 154,352 Shareholders' equity Preferred stock, $1.00 par value — — Common stock, $.025 par value 331 329 Additional paid-in capital 118,022 116,690 Treasury stock (7,364 ) (6,699 ) Retained earnings 43,670 39,823 Total shareholders' equity 154,659 150,143 Total liabilities and shareholders' equity $ 360,495 $ 304,495 EVI Industries, Inc. Condensed Consolidated Statements of Cash Flows (in thousands) (unaudited) For the three months ended 9/30/2026 9/30/2025 Operating activities: Net income $ 3,847 $ 1,847 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 2,353 1,949 Provision for expected credit losses 2",
+      "_model_response": {
+        "evidence_quote": "Condensed Consolidated Balance Sheets (in thousands, except per share data) Unaudited 9/30/2026 6/30/2026 Assets Current assets Cash $ 8,263 $ 6,774 Accounts receivable, net 62,481 56,797 Inventories, net 70,265 66,271 Vendor deposits 1,407 1,267 Contract assets 970 632 Other current assets 10,396 9,258 Total current assets 153,782 140,999 Equipment and improvements, net 23,323 20,099 Operating lease right of use assets 16,968 10,685 Intangible assets, net 43,170 28,859 Goodwill 113,580 93,934 Other assets 9,672 9,919 Total assets $ 360,495 $ 304,495 Liabilities and Shareholders’ Equity Current liabilities Accounts payable and accrued expenses $ 54,010 $ 47,577 Accrued employee expenses 15,753 14,511 Customer deposits 23,394 20,094 Contract liabilities 155 — Current portion of operating lease liabilities 5,120 3,899 Total current liabilities 98,432 86,081 Deferred tax liabilities, net 8,950 9,081 Long-term operating lease liabilities 13,454 8,190 Long-term debt 85,000 51,000 Total liabilities 205,836 154,352 Shareholders' equity Preferred stock, $1.00 par value — — Common stock, $.025 par value 331 329 Additional paid-in capital 118,022 116,690 Treasury stock (7,364 ) (6,699 ) Retained earnings 43,670 39,823 Total shareholders' equity 154,659 150,143 Total liabilities and shareholders' equity $ 360,495 $ 304,495 EVI Industries, Inc. Condensed Consolidated Statements of Cash Flows (in thousands) (unaudited) For the three months ended 9/30/2026 9/30/2025 Operating activities: Net income $ 3,847 $ 1,847 Adjustments to reconcile net income to net cash provided by operating activities: Depreciation and amortization 2,353 1,949 Provision for expected credit losses 2",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "본 공시는 회사의 정기 재무제표(대차대조표, 현금흐름표)를 포함하는 루틴 공시이며, 구체적인 가이던스 상향, 수주/백로그 변화, CAPEX 증설 계획 등 투자 발굴 신호로 볼 수 있는 조기 지표를 포함하지 않습니다. 서두의 경영진 코멘트 또한 일반적인 사업 목표 진술로 구체적인 근거가 부족합니다.",
+        "subject": "EVI INDUSTRIES, INC. (EVI)",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "본 공시는 회사의 정기 재무제표(대차대조표, 현금흐름표)를 포함하는 루틴 공시이며, 구체적인 가이던스 상향, 수주/백로그 변화, CAPEX 증설 계획 등 투자 발굴 신호로 볼 수 있는 조기 지표를 포함하지 않습니다. 서두의 경영진 코멘트 또한 일반적인 사업 목표 진술로 구체적인 근거가 부족합니다."
+    },
+    "content_hash": "0daff7a066ed54e23d9a2d8d13390d96a7c3981fb28ae2b82c4699746d7ce12a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-10T07:30:26+00:00",
+    "reason": "본 공시는 회사의 정기 재무제표(대차대조표, 현금흐름표)를 포함하는 루틴 공시이며, 구체적인 가이던스 상향, 수주/백로그 변화, CAPEX 증설 계획 등 투자 발굴 신호로 볼 수 있는 조기 지표를 포함하지 않습니다. 서두의 경영진 코멘트 또한 일반적인 사업 목표 진술로 구체적인 근거가 부족합니다.",
+    "processed_day": "2026-11-10",
+    "processed_run": "42775409704-1"
   }
 }

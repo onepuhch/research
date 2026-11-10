@@ -1,0 +1,110 @@
+{
+  "observation_id": "OB-7E47A208EB51BB73",
+  "candidate_id": "CAN-B50C69675A4DBCEA",
+  "candidate_version": "CV-C46589D5945744A9",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:CHRD",
+    "ticker": "CHRD",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-10T07:35:35+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261110T073052Z_42775409704-1.json.gz",
+    "sha256": "8073bae089df912d5bf4195bcafb01c8eeefd97f3b80fb1621ea0929ce193d35",
+    "run_id": "42775409704-1",
+    "finished_at": "2026-11-10T07:45:08+00:00"
+  },
+  "eps": {
+    "eps_now": 20.23438,
+    "eps_30d": 16.46197,
+    "eps_90d": 14.27326,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 17,
+    "up30": 14,
+    "down30": 2,
+    "pct_90": 41.8,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 4.336,
+    "yield_change_30_pp": 2.744
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 7312157184,
+  "context_id": "CTX-6536853ADCF9EE21",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-05T07:15:09+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-6536853ADCF9EE21",
+    "generated_at": "2026-11-05T12:05:55+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 18,
+    "shown": [
+      "CRGY",
+      "TALO",
+      "TXO",
+      "GRNT"
+    ],
+    "folded": [
+      "CHRD",
+      "NOG",
+      "REPX"
+    ],
+    "outside": [
+      "COP",
+      "EOG",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "SM",
+      "MTDR",
+      "MUR",
+      "BKV"
+    ]
+  },
+  "entity_id": "NASDAQ:CHRD",
+  "approval_version": null,
+  "rendered_at": "2026-11-10T07:46:05+00:00"
+}

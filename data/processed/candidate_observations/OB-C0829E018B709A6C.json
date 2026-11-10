@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-C0829E018B709A6C",
+  "candidate_id": "CAN-029DB18061B03227",
+  "candidate_version": "CV-6691F63782D3DF5B",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:NMM",
+    "ticker": "NMM",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-10T07:38:42+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261110T073052Z_42775409704-1.json.gz",
+    "sha256": "8073bae089df912d5bf4195bcafb01c8eeefd97f3b80fb1621ea0929ce193d35",
+    "run_id": "42775409704-1",
+    "finished_at": "2026-11-10T07:45:08+00:00"
+  },
+  "eps": {
+    "eps_now": 21.48333,
+    "eps_30d": 18.7775,
+    "eps_90d": 17.3325,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 23.9,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.895,
+    "yield_change_30_pp": 3.191
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-12",
+    "price_start_date": "2026-08-12",
+    "price_end_expected": "2026-11-09",
+    "price_end_date": "2026-11-09",
+    "close_start": 79.62999725341797,
+    "close_end": 84.80000305175781,
+    "price_pct_90": 6.5,
+    "adj_return_pct_90": 6.6,
+    "pe_change_pct": -14.1
+  },
+  "display_rank": 24,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 2452908288,
+  "context_id": "CTX-9A09C1C3B0F79047",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-09T07:05:20+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:NMM",
+  "approval_version": null,
+  "rendered_at": "2026-11-10T07:46:05+00:00"
+}

@@ -1,0 +1,223 @@
+{
+  "candidate_id": "CAN-BA5D4320F9188F9F",
+  "candidate_version": "CV-57E923330B53FF78",
+  "identity": {
+    "entity_id": "NYSE:NOG",
+    "ticker": "NOG",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Northern Oil and Gas, Inc.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유 및 천연가스 자산의 취득, 탐사, 개발, 생산을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Northern Oil and Gas, Inc., an independent energy company, engages in the acquisition, exploration, exploitation, development, and production of crude oil and natural gas properties in the United States. Northern Oil and Gas, Inc. was founded in 2006 and is headquartered in Minnetonka, Minnesota."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "NOG analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NOG/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-10T07:38:45+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "NOG daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NOG/history",
+      "published_at": null,
+      "observed_at": "2026-11-10T07:38:45+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "NOG company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/NOG/profile",
+      "published_at": null,
+      "observed_at": "2026-11-10T07:38:45+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-33A6EB1B35AB1AE2",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1104485/000110448526000047/exhibit991-2026qx3earnings.htm",
+      "title": "SEC 8-K EX-99.1 — EX-99.1 - PRESS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-11-05",
+      "observed_at": "2026-11-10T07:45:12+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-4D7368E4EF4C9A00",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1104485/000110448526000030/exhibit991-2026qx2earnings.htm",
+      "title": "SEC 8-K EX-99.1 — EX-99.1 - PRESS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-10-13T07:07:13+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-2403F9D276B349AD",
+    "input_sha": "2403f9d276b349ad429b7f869c8b1140526e5b2839d5f9a73f1289a7a3916e0a",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Lease operating costs · third quarter of 2026: $143.5 million — 임차 운영 비용이 특정 분기에 발생했다",
+        "note_ko": "임차 운영 비용이 특정 분기에 발생했다",
+        "kind": "fact",
+        "quote": "Lease operating costs were $143.5 million in the third quarter of 2026, or $9.98 per Boe, 2% higher on a per unit basis compared to the third quarter of 2025, driven in part by higher processing costs.",
+        "document_id": "DOC-33A6EB1B35AB1AE2",
+        "block_id": "p33",
+        "metric": "Lease operating costs",
+        "figures": [
+          "$143.5 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "margin_cost"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Production taxes · third quarter of 2026: $48.3 million — 생산세가 특정 분기에 발생했다",
+        "note_ko": "생산세가 특정 분기에 발생했다",
+        "kind": "fact",
+        "quote": "Production taxes were $48.3 million in the third quarter of 2026, compared to $28.7 million in the third quarter of 2025 due to higher revenues derived by higher oil prices as well as record gas volumes.",
+        "document_id": "DOC-33A6EB1B35AB1AE2",
+        "block_id": "p33",
+        "metric": "Production taxes",
+        "figures": [
+          "$48.3 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "price",
+          "volume"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-33A6EB1B35AB1AE2",
+        "title": "EX-99.1 - PRESS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1104485/000110448526000047/exhibit991-2026qx3earnings.htm",
+        "filed_at": "2026-11-05",
+        "observed_at": "2026-11-10T07:45:12+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-4D7368E4EF4C9A00",
+        "title": "EX-99.1 - PRESS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1104485/000110448526000030/exhibit991-2026qx2earnings.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-10-13T07:07:13+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-10T07:45:33+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 5.20125,
+    "eps_30d": 4.55429,
+    "eps_90d": 4.22571,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 7,
+    "down30": 0,
+    "pct_90": 23.1,
+    "steady": true,
+    "turnaround": false
+  }
+}

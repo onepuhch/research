@@ -1,0 +1,103 @@
+{
+  "context_id": "CTX-984C36F202855E19",
+  "candidate_id": "CAN-FDA6B7F62852042F",
+  "ticker": "PARR",
+  "issuer_cik": "0000821483",
+  "document_ids": [
+    "DOC-66B9123CDAD3604B",
+    "DOC-45EC7F1F3C20E448"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-66B9123CDAD3604B#p8",
+    "DOC-66B9123CDAD3604B#p10",
+    "DOC-66B9123CDAD3604B#p38",
+    "DOC-66B9123CDAD3604B#p49",
+    "DOC-66B9123CDAD3604B#p87",
+    "DOC-66B9123CDAD3604B#t8",
+    "DOC-66B9123CDAD3604B#p97",
+    "DOC-66B9123CDAD3604B#t13",
+    "DOC-66B9123CDAD3604B#t17",
+    "DOC-45EC7F1F3C20E448#p21",
+    "DOC-45EC7F1F3C20E448#p77",
+    "DOC-45EC7F1F3C20E448#t7",
+    "DOC-45EC7F1F3C20E448#p87",
+    "DOC-45EC7F1F3C20E448#t12",
+    "DOC-45EC7F1F3C20E448#t16"
+  ],
+  "input_sha": "984c36f202855e19661f5b1ad2dadfb92c5ce3c36f63bab6b7b022789df8f80d",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-10T07:45:33+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "Laramie Energy 지분 매각이 연말까지 완료될 것으로 예상되는지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "조정 에비타는 이 금액이다",
+      "figures": [
+        "$646.0 million"
+      ],
+      "quote": "•Adjusted EBITDA of $646.0 million",
+      "where": "DOC-66B9123CDAD3604B#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "Laramie Energy 지분 매각으로 이 금액의 현금 수익이 예상된다",
+      "figures": [
+        "approximately $120 million"
+      ],
+      "quote": "Divestment of 46% equity interest in Laramie Energy expected to close by year end for near term cash proceeds of approximately $120 million",
+      "where": "DOC-66B9123CDAD3604B#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "물류 부문의 조정 에비타는 이 금액이다",
+      "figures": [
+        "$30.7 million"
+      ],
+      "quote": "Logistics segment Adjusted EBITDA was $30.7 million in the third quarter of 2026, compared to $37.3 million in the third quarter of 2025.",
+      "where": "DOC-66B9123CDAD3604B#p38"
+    },
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "회사는 조정 순이익에서 이 금액의 이익을 기록했다",
+      "figures": [
+        "$187.2 million"
+      ],
+      "quote": "As a result of these actions, the Company recorded a gain of $187.2 million in Adjusted Net Income and $222.0 million in Adjusted EBITDA during the third quarter of 2026.",
+      "where": "DOC-66B9123CDAD3604B#p49"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사는 조정 에비타에서 이 금액의 이익을 기록했다",
+      "figures": [
+        "$222.0 million"
+      ],
+      "quote": "As a result of these actions, the Company recorded a gain of $187.2 million in Adjusted Net Income and $222.0 million in Adjusted EBITDA during the third quarter of 2026.",
+      "where": "DOC-66B9123CDAD3604B#p49"
+    },
+    {
+      "what": "limitation",
+      "reason": "subject_not_in_quote",
+      "note_ko": "하와이 정기 보수로 인해 물류 활용도가 감소하여 물류 부문 실적에 영향을 미쳤다",
+      "figures": [],
+      "quote": "Third quarter 2026 Logistics segment results were impacted by reduced logistics utilization due to the Hawaii turnaround.",
+      "where": "DOC-66B9123CDAD3604B#p38"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

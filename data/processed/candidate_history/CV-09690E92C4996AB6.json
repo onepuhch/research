@@ -1,0 +1,314 @@
+{
+  "candidate_id": "CAN-D5F91D853BD4402E",
+  "candidate_version": "CV-09690E92C4996AB6",
+  "identity": {
+    "entity_id": "NYSE:GRNT",
+    "ticker": "GRNT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Granite Ridge Resources, Inc.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "에너지 회사로서 자산을 소유하고 운영하여 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Granite Ridge Resources, Inc. operates as an energy company. It owns assets in six prolific unconventional basins across the United States. The company is based in Dallas, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "GRNT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GRNT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-10T07:42:29+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "GRNT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GRNT/history",
+      "published_at": null,
+      "observed_at": "2026-11-10T07:42:29+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "GRNT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GRNT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-10T07:42:29+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-48E3742B9359E108",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1928446/000192844626000064/grnt-20261105xexx991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-05",
+      "observed_at": "2026-11-09T07:05:20+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-DCCE60A559029170",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-10-16T04:56:26+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-F7CA59B8B1769D46",
+    "input_sha": "f7ca59b8b1769d46e0284868c2b4e2c908e923bf4aab528dc67262b4263af3d9",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Oil and natural gas sales · third quarter of 2026: $177.2 million — 원유 및 천연가스 매출은 특정 금액이었다",
+        "note_ko": "원유 및 천연가스 매출은 특정 금액이었다",
+        "kind": "fact",
+        "quote": "Oil and natural gas sales for the third quarter of 2026 were $177.2 million.",
+        "document_id": "DOC-48E3742B9359E108",
+        "block_id": "p21",
+        "metric": "Oil and natural gas sales",
+        "figures": [
+          "$177.2 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "순손실(Net loss) · third quarter of 2026: $10.1 million / $0.08 net loss per share — 순손실은 특정 금액이었고 주당 순손실은 특정 금액이었다",
+        "note_ko": "순손실은 특정 금액이었고 주당 순손실은 특정 금액이었다",
+        "kind": "fact",
+        "quote": "Net loss was $10.1 million, or $0.08 net loss per share.",
+        "document_id": "DOC-48E3742B9359E108",
+        "block_id": "p21",
+        "metric": "Net loss",
+        "figures": [
+          "$10.1 million",
+          "$0.08 net loss per share"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Adjusted Net Income · third quarter of 2026: $22.6 million / $0.17 per diluted share — 비현금성 및 특별 항목을 제외한 조정 순이익은 특정 금액이었고 희석 주당 이익은 특정 금액이었다",
+        "note_ko": "비현금성 및 특별 항목을 제외한 조정 순이익은 특정 금액이었고 희석 주당 이익은 특정 금액이었다",
+        "kind": "fact",
+        "quote": "Excluding non-cash and special items, Adjusted Net Income (non-GAAP) was $22.6 million, or $0.17 per diluted share.",
+        "document_id": "DOC-48E3742B9359E108",
+        "block_id": "p21",
+        "metric": "Adjusted Net Income",
+        "figures": [
+          "$22.6 million",
+          "$0.17 per diluted share"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Lease operating expenses · third quarter of 2026: $30.1 million / $9.43 per Boe / 17%(변화율·증가) — 임대 운영 비용은 특정 금액이었고 배럴당 특정 금액이었으며 전년 같은 분기보다 단위당 특정 비율 증가했다",
+        "note_ko": "임대 운영 비용은 특정 금액이었고 배럴당 특정 금액이었으며 전년 같은 분기보다 단위당 특정 비율 증가했다",
+        "kind": "fact",
+        "quote": "Lease operating expenses were $30.1 million in the third quarter of 2026, or $9.43 per Boe, a 17% increase on a per unit basis compared to the third quarter of 2025 as a result of increased saltwater disposal costs due to higher water cuts and flowback operations, and related surface equipment rentals and contract labor.",
+        "document_id": "DOC-48E3742B9359E108",
+        "block_id": "p29",
+        "metric": "Lease operating expenses",
+        "figures": [
+          "$30.1 million",
+          "$9.43 per Boe",
+          "17%"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "level",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "margin_cost"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "현재 유가 수준에서 조정된 잉여 현금 흐름이 배당금을 충당하고 사업을 성장시킬 수 있을 것인가?"
+    ],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-48E3742B9359E108",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1928446/000192844626000064/grnt-20261105xexx991.htm",
+        "filed_at": "2026-11-05",
+        "observed_at": "2026-11-09T07:05:20+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-DCCE60A559029170",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1928446/000192844626000049/grnt-20260806xexx991.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-10-16T04:56:26+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-09T07:05:44+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.99667,
+    "eps_30d": 0.77333,
+    "eps_90d": 0.634,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 57.2,
+    "steady": false,
+    "turnaround": false
+  }
+}
