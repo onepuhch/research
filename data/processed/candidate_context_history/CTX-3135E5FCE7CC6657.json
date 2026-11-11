@@ -1,0 +1,186 @@
+{
+  "context_id": "CTX-3135E5FCE7CC6657",
+  "candidate_id": "CAN-FD88AA0D924CF1C8",
+  "ticker": "DHT",
+  "issuer_cik": "0001331284",
+  "document_ids": [
+    "DOC-6025009415B50708",
+    "DOC-3D866BF98EA62F30"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-6025009415B50708#t3",
+    "DOC-6025009415B50708#p13",
+    "DOC-6025009415B50708#p15",
+    "DOC-6025009415B50708#p26",
+    "DOC-6025009415B50708#p34",
+    "DOC-6025009415B50708#p35",
+    "DOC-6025009415B50708#p45",
+    "DOC-6025009415B50708#p54",
+    "DOC-6025009415B50708#p55",
+    "DOC-6025009415B50708#t24",
+    "DOC-6025009415B50708#p117",
+    "DOC-6025009415B50708#p168",
+    "DOC-3D866BF98EA62F30#p14",
+    "DOC-3D866BF98EA62F30#p26",
+    "DOC-3D866BF98EA62F30#p33",
+    "DOC-3D866BF98EA62F30#p43",
+    "DOC-3D866BF98EA62F30#p50",
+    "DOC-3D866BF98EA62F30#p51",
+    "DOC-3D866BF98EA62F30#t51"
+  ],
+  "input_sha": "3135e5fce7cc6657073df35f860df1a0b17119fdfcf9b471f343c8d10115f1ea",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-11T06:58:01+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter of 2026: $269.5 million — 조정 에비타를 기록했다",
+      "note_ko": "조정 에비타를 기록했다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA for the third quarter of 2026 was $269.5 million.",
+      "document_id": "DOC-6025009415B50708",
+      "block_id": "t3",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$269.5 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Net profit · third quarter of 2026: $270.9 million — 순이익을 기록했다",
+      "note_ko": "순이익을 기록했다",
+      "kind": "fact",
+      "quote": "Net profit for the quarter was $270.9 million, equating to $1.68 per basic share.",
+      "document_id": "DOC-6025009415B50708",
+      "block_id": "t3",
+      "metric": "Net profit",
+      "figures": [
+        "$270.9 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "Other revenues · third quarter of 2026: $0.3 million — 기타 수익은 전년 같은 분기보다 줄었다",
+      "note_ko": "기타 수익은 전년 같은 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "Other revenues for the third quarter of 2026 were $0.3 million compared to $0.2 million in the third quarter of 2025 and relate to technical management services provided.",
+      "document_id": "DOC-6025009415B50708",
+      "block_id": "p26",
+      "metric": "Other revenues",
+      "figures": [
+        "$0.3 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "net profit · third quarter of 2026: $270.9 million — 순이익은 전년 같은 분기보다 늘었다",
+      "note_ko": "순이익은 전년 같은 분기보다 늘었다",
+      "kind": "fact",
+      "quote": "As a result of the foregoing, the Company had a net profit in the third quarter of 2026 of $270.9 million, or earnings of $1.68 per basic share and $1.68 per diluted share, compared to a net profit in the third quarter of 2025 of $44.8 million, or earnings of $0.28 per basic share and $0.28 per diluted share.",
+      "document_id": "DOC-6025009415B50708",
+      "block_id": "p34",
+      "metric": "net profit",
+      "figures": [
+        "$270.9 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "조정 후 경상 순이익을 기록했다",
+      "figures": [
+        "$234.5 million"
+      ],
+      "quote": "After adjusting for the $34.2 million gain on sale of DHT Bauhinia and the non-cash fair value gain related to interest rate derivatives of $2.2 million, the Company had ordinary net income for the qu",
+      "where": "DOC-6025009415B50708#t3"
+    }
+  ],
+  "context_status": "draft_ready"
+}

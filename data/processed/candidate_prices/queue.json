@@ -209,7 +209,10 @@
     "PTLO",
     "VCEL",
     "NSIT",
-    "PK"
+    "PK",
+    "ITRG",
+    "SANM",
+    "VIAV"
   ],
   "days": {
     "2026-10-06": {
@@ -355,13 +358,17 @@
     "2026-11-10": {
       "requests": 20,
       "retries": 1
+    },
+    "2026-11-11": {
+      "requests": 15,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 36,
-      "last_attempt_at": "2026-11-10T07:46:20.750782+00:00",
+      "attempts": 37,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1056,8 +1063,8 @@
       "reason": null
     },
     "NMM": {
-      "attempts": 4,
-      "last_attempt_at": "2026-11-10T07:46:20.750782+00:00",
+      "attempts": 5,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1960,56 +1967,104 @@
       "reason": null
     },
     "CQP": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "GEO": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "KNSA": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "LASR": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "ECG": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "OPRT": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "PTLO": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "VCEL": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-09T07:06:25.806016+00:00",
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "NSIT": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "PK": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "ITRG": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "SANM": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "VIAV": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
