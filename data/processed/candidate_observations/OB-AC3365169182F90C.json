@@ -1,0 +1,106 @@
+{
+  "observation_id": "OB-AC3365169182F90C",
+  "candidate_id": "CAN-82719B27698E3C22",
+  "candidate_version": "CV-E75459EA613308BB",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:PBF",
+    "ticker": "PBF",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-12T07:29:13+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261112T072442Z_43174666589-1.json.gz",
+    "sha256": "8ad094ed0798fe653f16c99c28157d1f4cd9abf0149c0261773c64d261f562dd",
+    "run_id": "43174666589-1",
+    "finished_at": "2026-11-12T07:38:57+00:00"
+  },
+  "eps": {
+    "eps_now": 19.425,
+    "eps_30d": 17.655,
+    "eps_90d": 9.1875,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 111.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 14.682,
+    "yield_change_30_pp": 2.538
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-14",
+    "price_start_date": "2026-08-14",
+    "price_end_expected": "2026-11-11",
+    "price_end_date": "2026-11-11",
+    "close_start": 71.8499984741211,
+    "close_end": 69.7300033569336,
+    "price_pct_90": -3.0,
+    "adj_return_pct_90": -3.0,
+    "pe_change_pct": -54.1
+  },
+  "display_rank": 3,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 2
+    },
+    {
+      "list": "B",
+      "rank": 7
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 8265574912,
+  "context_id": "CTX-3A4708BFA094E0A3",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-08T06:32:04+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-3A4708BFA094E0A3",
+    "generated_at": "2026-10-30T13:11:16+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 8,
+    "shown": [
+      "DINO",
+      "PBF",
+      "DK"
+    ],
+    "folded": [
+      "MPC",
+      "VLO",
+      "PSX",
+      "CVI",
+      "PARR"
+    ],
+    "outside": []
+  },
+  "entity_id": "NYSE:PBF",
+  "approval_version": null,
+  "rendered_at": "2026-11-12T07:39:33+00:00"
+}

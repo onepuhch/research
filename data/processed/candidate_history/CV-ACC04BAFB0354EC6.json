@@ -1,0 +1,212 @@
+{
+  "candidate_id": "CAN-B50C69675A4DBCEA",
+  "candidate_version": "CV-ACC04BAFB0354EC6",
+  "identity": {
+    "entity_id": "NASDAQ:CHRD",
+    "ticker": "CHRD",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Chord Energy Corporation",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Chord Energy Corporation operates as an independent exploration and production company in the United States. The company engages in the acquisition, exploration, development and production of crude oil, natural gas, and natural gas liquids in the Williston Basin. It sells its products to refiners, marketers, and other purchasers that have access to pipeline and rail facilities. The company was formerly known as Oasis Petroleum Inc. and changed its name to Chord Energy Corporation in July 2022. Chord Energy Corporation was founded in 2007 and is headquartered in Houston, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CHRD analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CHRD/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:29:27+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CHRD daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CHRD/history",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:29:27+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CHRD company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CHRD/profile",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:29:27+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-404CEDBB488F070B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1486159/000148615926000046/chrd-q32026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-04",
+      "observed_at": "2026-11-05T07:15:09+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-3CD440C398BEADA6",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1486159/000148615926000029/chrd-q22026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-20T05:15:00+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-6536853ADCF9EE21",
+    "input_sha": "6536853adcf9ee2133893521bdddf960eaa38f382ab7b2f2b051b07c712e49f8",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · 2026: $3.4B — 회사는 이 수치를 창출할 것으로 예상한다",
+        "note_ko": "회사는 이 수치를 창출할 것으로 예상한다",
+        "kind": "guidance",
+        "quote": "In 2026, Chord expects to generate approximately $3.4B of Adjusted EBITDA and $1.6B of Adjusted Free Cash Flow, including the impact of derivatives ($90/Bbl WTI and $3.00/MMBtu Henry Hub for 4Q26).",
+        "document_id": "DOC-404CEDBB488F070B",
+        "block_id": "p45",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$3.4B"
+        ],
+        "period": "2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Cash GPT — 회사는 마케팅 최적화와 Marcellus 사업부 매각의 영향을 반영하여 이 수치에 대한 가이던스를 낮추고 있다",
+        "note_ko": "회사는 마케팅 최적화와 Marcellus 사업부 매각의 영향을 반영하여 이 수치에 대한 가이던스를 낮추고 있다",
+        "kind": "guidance",
+        "quote": "Lowering Cash GPT guidance reflecting the impact of marketing optimization discussed above and the Marcellus divestiture;",
+        "document_id": "DOC-404CEDBB488F070B",
+        "block_id": "p55",
+        "metric": "Cash GPT",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "margin_cost",
+          "acquisition_disposal"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-404CEDBB488F070B",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1486159/000148615926000046/chrd-q32026earningsrelease.htm",
+        "filed_at": "2026-11-04",
+        "observed_at": "2026-11-05T07:15:09+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-3CD440C398BEADA6",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1486159/000148615926000029/chrd-q22026earningsrelease.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-20T05:15:00+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-05T12:05:55+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 20.89835,
+    "eps_30d": 16.69572,
+    "eps_90d": 13.9853,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 17,
+    "up30": 14,
+    "down30": 2,
+    "pct_90": 49.4,
+    "steady": true,
+    "turnaround": false
+  }
+}

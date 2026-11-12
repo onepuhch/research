@@ -1,0 +1,156 @@
+{
+  "candidate_id": "CAN-2623D25A1D98BE0B",
+  "candidate_version": "CV-59373F54473D3B6E",
+  "identity": {
+    "entity_id": "NYSE:U",
+    "ticker": "U",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Unity Software Inc.",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "게임 및 인터랙티브 경험 개발, 배포, 성장을 돕는 플랫폼과 도구를 제공하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong Kong, Taiwan, Europe, the Middle East, Africa, the Asia Pacific, Canada, and Latin America. The company's platform offers artificial intelligence solutions that support developers through the entire development lifecycle, which includes prototyping, live service operation, user acquisition, and monetization. It also provides Create Solutions, a set of tools and services used to build, ship, and ru"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "U analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/U/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:27:14+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "U daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/U/history",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:27:14+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "U company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/U/profile",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:27:14+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-51719FA211BE6D1E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1810806/000181080626000053/a2026q3ex-991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-05",
+      "observed_at": "2026-11-12T07:39:01+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-BEE98BAECBE98942",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1810806/000181080626000041/a2026q2ex-991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-11-12T07:39:01+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-A89D27A892F55A9D",
+    "input_sha": "a89d27a892f55a9d26911920cc21518ccc9c8c7af42359e81dc65cdca6f279b4",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "Adjusted EPS에 대한 구체적인 수치가 있는가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-51719FA211BE6D1E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1810806/000181080626000053/a2026q3ex-991.htm",
+        "filed_at": "2026-11-05",
+        "observed_at": "2026-11-12T07:39:01+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-BEE98BAECBE98942",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1810806/000181080626000041/a2026q2ex-991.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-11-12T07:39:01+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-12T07:39:21+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.59263,
+    "eps_30d": 1.74095,
+    "eps_90d": 1.71887,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 16,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 50.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

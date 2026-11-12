@@ -1,0 +1,103 @@
+{
+  "context_id": "CTX-A89D27A892F55A9D",
+  "candidate_id": "CAN-2623D25A1D98BE0B",
+  "ticker": "U",
+  "issuer_cik": "0001810806",
+  "document_ids": [
+    "DOC-51719FA211BE6D1E",
+    "DOC-BEE98BAECBE98942"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-51719FA211BE6D1E#p8",
+    "DOC-51719FA211BE6D1E#p9",
+    "DOC-51719FA211BE6D1E#p15",
+    "DOC-51719FA211BE6D1E#p28",
+    "DOC-51719FA211BE6D1E#p30",
+    "DOC-51719FA211BE6D1E#p31",
+    "DOC-51719FA211BE6D1E#p40",
+    "DOC-51719FA211BE6D1E#t9",
+    "DOC-51719FA211BE6D1E#p48",
+    "DOC-51719FA211BE6D1E#p50",
+    "DOC-51719FA211BE6D1E#p51",
+    "DOC-51719FA211BE6D1E#p52",
+    "DOC-BEE98BAECBE98942#p8",
+    "DOC-BEE98BAECBE98942#p31",
+    "DOC-BEE98BAECBE98942#p32",
+    "DOC-BEE98BAECBE98942#t9",
+    "DOC-BEE98BAECBE98942#p50",
+    "DOC-BEE98BAECBE98942#p52"
+  ],
+  "input_sha": "a89d27a892f55a9d26911920cc21518ccc9c8c7af42359e81dc65cdca6f279b4",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-12T07:39:21+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "Adjusted EPS에 대한 구체적인 수치가 있는가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "figures": [
+        "$457 million",
+        "44%"
+      ],
+      "quote": "Grow Solutions revenue was $457 million, up 44% year-over-year.",
+      "where": "DOC-51719FA211BE6D1E#p30"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 기간보다 늘었다",
+      "figures": [
+        "$165 million",
+        "8%"
+      ],
+      "quote": "Create Solutions revenue was $165 million, up 8% year-over-year.",
+      "where": "DOC-51719FA211BE6D1E#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "전년 같은 분기보다 늘었고 마진율도 개선되었다",
+      "figures": [
+        "$257 million",
+        "41%",
+        "$109 million",
+        "23%"
+      ],
+      "quote": "Adjusted EBITDA for the quarter was $257 million, with a margin of 41%, compared to $109 million in the third quarter of 2025, with a margin of 23%.",
+      "where": "DOC-51719FA211BE6D1E#p40"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "영업 활동으로 인한 현금 유입이 있었다",
+      "figures": [
+        "223,961"
+      ],
+      "quote": "Net cash provided by operating activities ; 223,961",
+      "where": "DOC-51719FA211BE6D1E#t9"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "영업 활동으로 인한 현금 유입이 있었다",
+      "figures": [
+        "500,869"
+      ],
+      "quote": "Net cash provided by operating activities ; 500,869",
+      "where": "DOC-51719FA211BE6D1E#t9"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

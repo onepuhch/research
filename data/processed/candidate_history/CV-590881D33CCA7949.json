@@ -1,0 +1,245 @@
+{
+  "candidate_id": "CAN-A7167939B6E22B83",
+  "candidate_version": "CV-590881D33CCA7949",
+  "identity": {
+    "entity_id": "NYSE:REPX",
+    "ticker": "REPX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Riley Exploration Permian, Inc.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "텍사스와 뉴멕시코에서 석유, 천연가스 및 천연가스액을 탐사, 개발, 생산하여 돈을 법니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Riley Exploration Permian, Inc., an independent oil and natural gas company, engages in the acquisition, exploration, development, and production of oil, natural gas, and natural gas liquids in Texas and New Mexico. Its acreage is primarily located on contiguous blocks in Yoakum County, Texas; and oil and natural gas properties in the Yeso trend of the Permian Basin in Eddy County, New Mexico. The company is headquartered in Oklahoma City, Oklahoma."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "REPX analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/REPX/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:35:14+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "REPX daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/REPX/history",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:35:14+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "REPX company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/REPX/profile",
+      "published_at": null,
+      "observed_at": "2026-11-12T07:35:14+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-AEFFB5573B9F07FA",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1001614/000100161426000061/q32026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-04",
+      "observed_at": "2026-11-08T06:32:04+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-C32FAD6F68689C16",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1001614/000100161426000049/q22026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-11-08T06:32:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-D3005DA6A4476854",
+    "input_sha": "d3005da6a447685405e45bda5c92e82ce0f7bf9e06571a14a74890b7b213124f",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "Production growth — 생산량 증가를 이끌었다",
+        "note_ko": "생산량 증가를 이끌었다",
+        "kind": "fact",
+        "quote": "Production growth was driven by new development well volumes from capital invested in prior quarters, as well as the return to production of select New Mexico wells following disruptions during the second quarter.",
+        "document_id": "DOC-AEFFB5573B9F07FA",
+        "block_id": "p17",
+        "metric": "Production growth",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "volume",
+          "capacity"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Core operating costs — 핵심 영업 비용이 단위당 개선되어 마진 개선에 기여했다",
+        "note_ko": "핵심 영업 비용이 단위당 개선되어 마진 개선에 기여했다",
+        "kind": "fact",
+        "quote": "Core operating costs also improved on a per unit basis, contributing to stronger margins.",
+        "document_id": "DOC-AEFFB5573B9F07FA",
+        "block_id": "p17",
+        "metric": "Core operating costs",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "margin_cost"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "actual future results — 실제 미래 결과가 달라질 수 있는 요인들이 있다",
+        "note_ko": "실제 미래 결과가 달라질 수 있는 요인들이 있다",
+        "kind": "fact",
+        "quote": "Among the factors that could cause actual future results to differ materially are the risks and uncertainties the Company is exposed to.",
+        "document_id": "DOC-AEFFB5573B9F07FA",
+        "block_id": "p85",
+        "metric": "actual future results",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "actual future results — 실제 미래 결과가 달라질 수 있는 요인들이 있다",
+        "note_ko": "실제 미래 결과가 달라질 수 있는 요인들이 있다",
+        "kind": "fact",
+        "quote": "Among the factors that could cause actual future results to differ materially are the risks and uncertainties the Company is exposed to.",
+        "document_id": "DOC-C32FAD6F68689C16",
+        "block_id": "p71",
+        "metric": "actual future results",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-AEFFB5573B9F07FA",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1001614/000100161426000061/q32026earningsrelease.htm",
+        "filed_at": "2026-11-04",
+        "observed_at": "2026-11-08T06:32:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-C32FAD6F68689C16",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1001614/000100161426000049/q22026earningsrelease.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-11-08T06:32:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-08T06:32:30+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 11.94,
+    "eps_30d": 8.142,
+    "eps_90d": 7.894,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 51.3,
+    "steady": true,
+    "turnaround": false
+  }
+}

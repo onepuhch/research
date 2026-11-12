@@ -10643,7 +10643,7 @@
     "validation_rejected": true
   },
   "0001104659-26-119326": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10659,7 +10659,8 @@
     "content_hash": "6290e8b78cce3ec4f1eac2fa85e535f3e8ac03728e7abe71c0fe22ecea4f3874",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000700923-26-000051": {
     "status": "rejected",
@@ -10943,7 +10944,7 @@
     "validation_rejected": true
   },
   "0001193125-26-435175": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10959,11 +10960,11 @@
     "content_hash": "ea6e7cecece7de9edc0b1441b8da4d4bb8fb9dc89046be0a8a16b427b2ea94dd",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-11-10T07:30:47+00:00",
-    "reason": "deferred_budget"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "expired_unprocessed"
   },
   "0000822818-26-000045": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10979,10 +10980,11 @@
     "content_hash": "90b30306d538e6c48ff8c934edd2cada1a6cf59dc5edb5cbb862d834be86a84e",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001437749-26-033702": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -10998,10 +11000,11 @@
     "content_hash": "f3b807a3f115e167e51701c93b3eca3d025830cb488aeb608878ba5b440643ca",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001402829-26-000056": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11017,7 +11020,8 @@
     "content_hash": "e2535031ac4d90b7c37512028226b2ab8e324c34de94a47a6558617287619b00",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-436183": {
     "status": "accepted",
@@ -11077,7 +11081,7 @@
     "processed_run": "41011340799-1"
   },
   "0000028823-26-000038": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11093,10 +11097,11 @@
     "content_hash": "97484ee7c5128ff165035cd85b64fd3ac7984d0c6677587d161ca2a95c571474",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-436158": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11112,10 +11117,11 @@
     "content_hash": "33e33634be188cc6641cd543a4fd8a702d0f8c872feb1e6174250eff1037978f",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000004904-26-000069": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11131,10 +11137,11 @@
     "content_hash": "b9b46a990cf5d0389df6f2ffee27a96bdd61bb8d4224c0674e0b30a5d95600cc",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001517175-26-000034": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11150,10 +11157,11 @@
     "content_hash": "c72459944cd76554ef0de6090184b4b347c8f1cacbeeda92686bb0d78b70ebec",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000785786-26-000062": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11169,10 +11177,11 @@
     "content_hash": "7dae7198fe0db5e3f5b27ce06debf9d88a7ba9d7442958e2326d39854b53ffa4",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-119345": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11188,10 +11197,11 @@
     "content_hash": "5dcb10e35aa79bf767f752071dead988de738c08d4935cd1a23084d1bbf2dbfc",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001409970-26-000198": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11207,10 +11217,11 @@
     "content_hash": "eef19659f2fe1a8f65e183b4a49196439f3cd4c1843d5e4b519b9980aac6debd",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001490906-26-000036": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11226,10 +11237,11 @@
     "content_hash": "93f152784152b6a06bac2676f003b0d80ec80468bbd8eced0307c0db3414b0e0",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000811830-26-000041": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11245,7 +11257,8 @@
     "content_hash": "0ede7921bc716262c54fe0fb3ff7bf7c6638c73c979589c9ddb0be72d8da30d7",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-29T05:58:03.268404+00:00"
+    "updated_at": "2026-11-12T07:23:01.993166+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000202058-26-000084": {
     "status": "rejected",
@@ -11313,7 +11326,7 @@
     }
   },
   "0001654954-26-009199": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11324,15 +11337,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1707925/000165495426009199/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1707925/000165495426009199/lin_ex991.htm",
       "published_at": "2026-10-29",
-      "raw_text": "LINDE PLC (LIN) (CIK 0001707925) EX-99.1 2026-10-29. Order intake for the quarter was $499 million and third-party sale of equipment backlog was $2.9 billion. EX-99.1 2 lin_ex991.htm PRESS RELEASE lin_ex991.htm EXHIBIT 99.1 Linde Reports Third-Quarter 2026 Results Third-Quarter Highlights ➢ Sales $9.4 billion, up 9% YoY, underlying sales up 5% ➢ Operating profit $2.2 billion, adjusted operating profit $2.8 billion, up 8% ➢ Operating profit margin 22.9%; adjusted operating profit margin 29.4% ➢ EPS $3.66, down 11%; adjusted EPS $4.59, up 9% YoY ➢ Third-quarter operating cash flow of $3.2 billion, up 8% YoY ➢ Full-year 2026 adjusted EPS guidance of $17.82 - $17.92 representing 8% to 9% growth ➢ Project backlog $11 billion Woking, UK, October 29, 2026 – Linde plc (Nasdaq: LIN) today reported third-quarter 2026 net income of $1,692 million and diluted earnings per share of $3.66, down 12% and 11%, respectively. Excluding Linde AG purchase accounting impacts and cost reduction program and other charges, adjusted net income was $2,122 million, up 7% versus prior year. Adjusted diluted earnings per share was $4.59, 9% above prior year. Linde’s sales for the third quarter were $9,404 million, up 9% versus prior year including 1% favorable currency impact. Compared to prior year, underlying sales increased 5% from 3% price attainment and 2% volumes primarily in the electronics, chemicals & energy, and manufacturing end markets. Third-quarter operating profit was $2,150 million. Adjusted operating profit of $2,763 million was up 8% versus prior year resulting in an adjusted operating profit margin of 29.4%. Operating margin was 30 basis points lower than the previous year but flat when excluding the effects of cost pass-through. Third-quarter operating cash flow of $3,169 million increased 8% versus prior year. After capital expenditures of $1,392 million, free cash flow was $1,777 million. During the quarter, the company returned $1,685 million to shareholders through divide"
+      "raw_text": "LINDE PLC (LIN) (CIK 0001707925) EX-99.1 2026-10-29. Order intake for the quarter was $499 million and third-party sale of equipment backlog was $2.9 billion. EX-99.1 2 lin_ex991.htm PRESS RELEASE lin_ex991.htm EXHIBIT 99.1 Linde Reports Third-Quarter 2026 Results Third-Quarter Highlights ➢ Sales $9.4 billion, up 9% YoY, underlying sales up 5% ➢ Operating profit $2.2 billion, adjusted operating profit $2.8 billion, up 8% ➢ Operating profit margin 22.9%; adjusted operating profit margin 29.4% ➢ EPS $3.66, down 11%; adjusted EPS $4.59, up 9% YoY ➢ Third-quarter operating cash flow of $3.2 billion, up 8% YoY ➢ Full-year 2026 adjusted EPS guidance of $17.82 - $17.92 representing 8% to 9% growth ➢ Project backlog $11 billion Woking, UK, October 29, 2026 – Linde plc (Nasdaq: LIN) today reported third-quarter 2026 net income of $1,692 million and diluted earnings per share of $3.66, down 12% and 11%, respectively. Excluding Linde AG purchase accounting impacts and cost reduction program and other charges, adjusted net income was $2,122 million, up 7% versus prior year. Adjusted diluted earnings per share was $4.59, 9% above prior year. Linde’s sales for the third quarter were $9,404 million, up 9% versus prior year including 1% favorable currency impact. Compared to prior year, underlying sales increased 5% from 3% price attainment and 2% volumes primarily in the electronics, chemicals & energy, and manufacturing end markets. Third-quarter operating profit was $2,150 million. Adjusted operating profit of $2,763 million was up 8% versus prior year resulting in an adjusted operating profit margin of 29.4%. Operating margin was 30 basis points lower than the previous year but flat when excluding the effects of cost pass-through. Third-quarter operating cash flow of $3,169 million increased 8% versus prior year. After capital expenditures of $1,392 million, free cash flow was $1,777 million. During the quarter, the company returned $1,685 million to shareholders through divide",
+      "_model_response": {
+        "evidence_quote": "Order intake for the quarter was $499 million and third-party sale of equipment backlog was $2.9 billion. EX-99.1 2 lin_ex991.htm PRESS RELEASE lin_ex991.htm EXHIBIT 99.1 Linde Reports Third-Quarter 2026 Results Third-Quarter Highlights ➢ Sales $9.4 billion, up 9% YoY, underlying sales up 5% ➢ Operating profit $2.2 billion, adjusted operating profit $2.8 billion, up 8% ➢ Operating profit margin 22.9%; adjusted operating profit margin 29.4% ➢ EPS $3.66, down 11%; adjusted EPS $4.59, up 9% YoY ➢ Third-quarter operating cash flow of $3.2 billion, up 8% YoY ➢ Full-year 2026 adjusted EPS guidance of $17.82 - $17.92 representing 8% to 9% growth ➢ Project backlog $11 billion Woking, UK, October 29, 2026 – Linde plc (Nasdaq: LIN) today reported third-quarter 2026 net income of $1,692 million and diluted earnings per share of $3.66, down 12% and 11%, respectively. Excluding Linde AG purchase accounting impacts and cost reduction program and other charges, adjusted net income was $2,122 million, up 7% versus prior year. Adjusted diluted earnings per share was $4.59, 9% above prior year. Linde’s sales for the third quarter were $9,404 million, up 9% versus prior year including 1% favorable currency impact. Compared to prior year, underlying sales increased 5% from 3% price attainment and 2% volumes primarily in the electronics, chemicals & energy, and manufacturing end markets.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "adjusted EPS $4.59, up 9% YoY ➢ Full-year 2026 adjusted EPS guidance of $17.82 - $17.92 representing 8% to 9% growth",
+          "supply_demand_tightness": "Order intake for the quarter was $499 million and third-party sale of equipment backlog was $2.9 billion. ... Project backlog $11 billion",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Project backlog $11 billion"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "산업용 가스",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "LINDE PLC",
+        "theme": "산업용 가스",
+        "signal_type": "수주/백로그",
+        "what_happened": "린데(Linde)가 3분기 실적 발표에서 4.99억 달러의 신규 수주와 29억 달러의 3자 장비 판매 백로그, 그리고 총 110억 달러의 프로젝트 백로그를 보고했습니다.",
+        "why_it_matters": "높은 백로그는 향후 안정적인 매출 성장을 기대하게 하며, 특히 산업용 가스 공급은 다양한 산업의 필수 요소이므로 경기 변동에도 비교적 견고한 수요를 가질 수 있습니다.",
+        "what_to_watch": "향후 분기별 신규 수주 및 백로그 추이, 전자, 화학 등 주요 최종 시장의 수요 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 5,
+        "tier": "B",
+        "stage": "중기",
+        "glossary": "백로그 (Backlog): 기업이 수주했으나 아직 매출로 인식되지 않은 계약 잔액으로, 향후 매출로 전환될 예정인 금액을 의미합니다.\n가이던스 (Guidance): 기업이 투자자들에게 제시하는 미래 실적(매출, 이익 등)에 대한 예상치입니다."
+      }
     },
     "content_hash": "648f4b3e19f1098f9971a628d2c99073c78f3c42d7079395e6ccae39c59d92fd",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-12T07:23:45+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000929008-26-000029": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11343,15 +11392,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/929008/000092900826000029/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/929008/000092900826000029/wcc-3q2026slides.htm",
       "published_at": "2026-10-29",
-      "raw_text": "WESCO INTERNATIONAL INC (WCC) (CIK 0000929008) EX-99.2 2026-10-29. • Third quarter sales were a record at $7.2B, with reported and organic sales growth of 17% – Accelerating momentum across all three business units, with Q3 sales up 8% sequentially – Strong growth across all three business units, with CSS organic sales up 21%, EES up 18%, and UBS up 7% – Total company data center sales were up ~55% • Backlog increased ~80% to a record level, with CSS, EES, and UBS each achieving record backlog levels again in Q3 Record third quarter sales and backlog, up 17% and ~80%, respectively, reflecting diversified secular growth drivers across the portfolio. Q3 Results $ Millions Q3 2026 Q3 2025 YOY Sales $2,933 $2,411 22% Adjusted EBITDA $313 $221 42% % of Sales Q3 2026 Q3 2025 bps fav / (unfav) Gross Profit 21.8% 21.2% 60 bps SG&A 11.2% 12.1% 90 bps Adjusted EBITDA 10.7% 9.1% 160 bps © 2026 Wesco International Third Quarter Drivers Record backlog up ~140% YOY, driven by strong growth in data center projects Record profitability on strong margin expansion to 10.7% adjusted EBITDA • Adjusted EBITDA increased 42%, and adjusted EBITDA margin expanded 160 bps to 10.7%, driven by gross margin expansion and improved operating cost leverage Organic sales up 21% (volume +20%, price +1%), reported sales up 22% • Wesco Data Center Solutions (WDCS) sales increased ~40%, with growth driven primarily by hyperscale and MTDC customers • Enterprise Network Infrastructure (ENI) up MSD, driven by service provider activity and continued investment in network infrastructure • Security up HSD, driven by continued share gains and growth in global accounts See appendix for non-GAAP definitions and reconciliations. Record sales and profitability driven by accelerating momentum across end markets Electrical and Electronic Solutions (EES) 8© 2026 Wesco International Q3 Results $ Millions Q3 2026 Q3 2025 YOY Sales $2,772 $2,360 18% Adjusted EBITDA $259 $198 31% % of Sales Q3 2026 Q3 2025 bps fav / (un"
+      "raw_text": "WESCO INTERNATIONAL INC (WCC) (CIK 0000929008) EX-99.2 2026-10-29. • Third quarter sales were a record at $7.2B, with reported and organic sales growth of 17% – Accelerating momentum across all three business units, with Q3 sales up 8% sequentially – Strong growth across all three business units, with CSS organic sales up 21%, EES up 18%, and UBS up 7% – Total company data center sales were up ~55% • Backlog increased ~80% to a record level, with CSS, EES, and UBS each achieving record backlog levels again in Q3 Record third quarter sales and backlog, up 17% and ~80%, respectively, reflecting diversified secular growth drivers across the portfolio. Q3 Results $ Millions Q3 2026 Q3 2025 YOY Sales $2,933 $2,411 22% Adjusted EBITDA $313 $221 42% % of Sales Q3 2026 Q3 2025 bps fav / (unfav) Gross Profit 21.8% 21.2% 60 bps SG&A 11.2% 12.1% 90 bps Adjusted EBITDA 10.7% 9.1% 160 bps © 2026 Wesco International Third Quarter Drivers Record backlog up ~140% YOY, driven by strong growth in data center projects Record profitability on strong margin expansion to 10.7% adjusted EBITDA • Adjusted EBITDA increased 42%, and adjusted EBITDA margin expanded 160 bps to 10.7%, driven by gross margin expansion and improved operating cost leverage Organic sales up 21% (volume +20%, price +1%), reported sales up 22% • Wesco Data Center Solutions (WDCS) sales increased ~40%, with growth driven primarily by hyperscale and MTDC customers • Enterprise Network Infrastructure (ENI) up MSD, driven by service provider activity and continued investment in network infrastructure • Security up HSD, driven by continued share gains and growth in global accounts See appendix for non-GAAP definitions and reconciliations. Record sales and profitability driven by accelerating momentum across end markets Electrical and Electronic Solutions (EES) 8© 2026 Wesco International Q3 Results $ Millions Q3 2026 Q3 2025 YOY Sales $2,772 $2,360 18% Adjusted EBITDA $259 $198 31% % of Sales Q3 2026 Q3 2025 bps fav / (un",
+      "_model_response": {
+        "evidence_quote": "Third quarter sales were a record at $7.2B, with reported and organic sales growth of 17% – Accelerating momentum across all three business units, with Q3 sales up 8% sequentially – Strong growth across all three business units, with CSS organic sales up 21%, EES up 18%, and UBS up 7% – Total company data center sales were up ~55% • Backlog increased ~80% to a record level, with CSS, EES, and UBS each achieving record backlog levels again in Q3 Record third quarter sales and backlog, up 17% and ~80%, respectively, reflecting diversified secular growth drivers across the portfolio.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "WESCO INTERNATIONAL INC는 대형 상장사로, 특정 니치 시장의 순수 플레이어라기보다는 다양한 사업부를 가진 기업입니다. 하지만 데이터센터와 같은 성장 동력에 대한 노출은 긍정적입니다.",
+          "earnings_leverage": "Adjusted EBITDA margin expanded 160 bps to 10.7%, driven by gross margin expansion and improved operating cost leverage. 이는 매출 증가가 이익으로 이어지는 레버리지가 강함을 보여줍니다.",
+          "supply_demand_tightness": "Backlog increased ~80% to a record level, with CSS, EES, and UBS each achieving record backlog levels again in Q3. Record backlog up ~140% YOY, driven by strong growth in data center projects. 이는 강력한 수요와 타이트한 공급 상황을 시사합니다.",
+          "structural_ai_demand": "Total company data center sales were up ~55%. Wesco Data Center Solutions (WDCS) sales increased ~40%, with growth driven primarily by hyperscale and MTDC customers. 이는 AI 관련 데이터센터 인프라 수요 증가와 직접적인 연관이 있습니다.",
+          "revision_momentum": "Third quarter sales were a record at $7.2B, with reported and organic sales growth of 17%. Backlog increased ~80% to a record level. 이러한 강력한 실적은 향후 애널리스트 추정치 상향의 촉매가 될 것입니다.",
+          "catalyst_visibility": "Record third quarter sales and backlog, up 17% and ~80%, respectively. 특히 사상 최대 백로그는 향후 실적에 대한 매우 명확하고 가시적인 촉매입니다."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "데이터센터 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "WESCO INTERNATIONAL INC",
+        "theme": "데이터센터",
+        "signal_type": "수주/백로그",
+        "what_happened": "WESCO INTERNATIONAL INC가 3분기 사상 최대 매출 72억 달러를 기록하고, 백로그가 전년 대비 80% 증가하여 사상 최고치를 달성했습니다.",
+        "why_it_matters": "사상 최대 백로그는 향후 매출 성장을 강력히 시사하며, 특히 데이터센터 및 하이퍼스케일 고객 수요 증가는 WESCO의 구조적 성장을 견인할 잠재력이 있습니다.",
+        "what_to_watch": "다음 분기 백로그 성장률 및 데이터센터 관련 매출 비중 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 고객으로부터 주문을 받았으나 아직 인도되지 않은 미처리 주문 잔고. 하이퍼스케일 (Hyperscale): 대규모 데이터센터를 운영하는 기업으로, 방대한 컴퓨팅 자원을 제공함."
+      }
     },
     "content_hash": "9bd3de6eddc9c1b14182af669fe60494bf75d88f80cb1a7806f525c8b52cb61b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-12T07:24:08+00:00",
+    "signal_id": "SIG-0940",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-12",
+    "processed_run": "43174666589-1"
   },
   "0001058290-26-000039": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11362,12 +11449,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1058290/000105829026000039/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1058290/000105829026000039/exhibit9919302026.htm",
       "published_at": "2026-10-29",
-      "raw_text": "COGNIZANT TECHNOLOGY SOLUTIONS CORP (CTSH) (CIK 0001058290) EX-99.1 2026-10-29. Odyssey is working to launch its OdysseyONE platform, intended to support order intake, execution, visibility and lifecycle management across its network. Odyssey set out to consolidate its order intake and full shipment lifecycle onto that platform. EX-99.1 2 exhibit9919302026.htm EX-99.1 Document Exhibit 99.1 Cognizant Reports Third Quarter 2026 Results 12% year-over-year revenue growth in Financial Services; strong EPS growth, adjusted operating margin expansion, and free cash flow generation • Revenue of $5.7 billion increased 4.6% year-over-year or 4.8% in constant currency 1 • Operating margin of 15.4% decreased 60 basis points year-over-year; Adjusted Operating Margin 1 of 16.3% increased 30 basis points year-over-year • GAAP EPS 2 of $1.39 increased 148% year-over-year; Adjusted EPS 1 of $1.49 increased 7.2% year-over-year • Trailing 12-month bookings of $28.7 billion increased 4% year-over-year • 2026 constant currency revenue growth guidance is revised to 4.0% to 4.4% year-over-year growth • 2026 Adjusted Operating Margin guidance is now approximately 16.1%, year-over-year expansion of 30 basis points • 2026 Adjusted Diluted EPS guidance revised to $5.72 to $5.79, year-over-year growth of 8% to 10% TEANECK, N.J., October 29, 2026 - Cognizant (Nasdaq: CTSH), a leading AI builder and technology services provider, today announced its third quarter 2026 financial results. “We delivered third-quarter revenue above the midpoint of our guidance range, including another quarter of double-digit growth in Financial Services and our seventh consecutive quarter of year-over-year adjusted operating margin expansion,” said Ravi Kumar S, Chief Executive Officer. “The AI market is moving from capability to value realization, requiring enterprises to reimagine how work gets done, build AI into the fabric of the enterprise and create new sources of value. We are making that transition alongside "
+      "raw_text": "COGNIZANT TECHNOLOGY SOLUTIONS CORP (CTSH) (CIK 0001058290) EX-99.1 2026-10-29. Odyssey is working to launch its OdysseyONE platform, intended to support order intake, execution, visibility and lifecycle management across its network. Odyssey set out to consolidate its order intake and full shipment lifecycle onto that platform. EX-99.1 2 exhibit9919302026.htm EX-99.1 Document Exhibit 99.1 Cognizant Reports Third Quarter 2026 Results 12% year-over-year revenue growth in Financial Services; strong EPS growth, adjusted operating margin expansion, and free cash flow generation • Revenue of $5.7 billion increased 4.6% year-over-year or 4.8% in constant currency 1 • Operating margin of 15.4% decreased 60 basis points year-over-year; Adjusted Operating Margin 1 of 16.3% increased 30 basis points year-over-year • GAAP EPS 2 of $1.39 increased 148% year-over-year; Adjusted EPS 1 of $1.49 increased 7.2% year-over-year • Trailing 12-month bookings of $28.7 billion increased 4% year-over-year • 2026 constant currency revenue growth guidance is revised to 4.0% to 4.4% year-over-year growth • 2026 Adjusted Operating Margin guidance is now approximately 16.1%, year-over-year expansion of 30 basis points • 2026 Adjusted Diluted EPS guidance revised to $5.72 to $5.79, year-over-year growth of 8% to 10% TEANECK, N.J., October 29, 2026 - Cognizant (Nasdaq: CTSH), a leading AI builder and technology services provider, today announced its third quarter 2026 financial results. “We delivered third-quarter revenue above the midpoint of our guidance range, including another quarter of double-digit growth in Financial Services and our seventh consecutive quarter of year-over-year adjusted operating margin expansion,” said Ravi Kumar S, Chief Executive Officer. “The AI market is moving from capability to value realization, requiring enterprises to reimagine how work gets done, build AI into the fabric of the enterprise and create new sources of value. We are making that transition alongside ",
+      "_model_response": {
+        "evidence_quote": "2026 constant currency revenue growth guidance is revised to 4.0% to 4.4% year-over-year growth • 2026 Adjusted Operating Margin guidance is now approximately 16.1%, year-over-year expansion of 30 basis points • 2026 Adjusted Diluted EPS guidance revised to $5.72 to $5.79, year-over-year growth of 8% to 10%",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "2026 Adjusted Diluted EPS guidance revised to $5.72 to $5.79, year-over-year growth of 8% to 10%",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "Cognizant (Nasdaq: CTSH), a leading AI builder and technology services provider",
+          "revision_momentum": "",
+          "catalyst_visibility": "2026 constant currency revenue growth guidance is revised to 4.0% to 4.4% year-over-year growth • 2026 Adjusted Operating Margin guidance is now approximately 16.1%, year-over-year expansion of 30 basis points • 2026 Adjusted Diluted EPS guidance revised to $5.72 to $5.79, year-over-year growth of 8% to 10%"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CTSH",
+        "theme": "IT 서비스",
+        "signal_type": "EPS상향",
+        "what_happened": "Cognizant가 2026년 조정 희석 EPS 가이던스를 주당 5.72달러에서 5.79달러로 상향 조정했습니다.",
+        "why_it_matters": "이는 회사의 수익성 개선과 미래 성장 전망에 대한 경영진의 자신감을 보여주며, 시장의 긍정적인 재평가를 이끌 수 있습니다.",
+        "what_to_watch": "향후 분기별 실적 발표 시 실제 EPS 달성 여부 및 추가적인 가이던스 상향 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 1,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "EPS (주당순이익): 기업이 벌어들인 순이익을 발행 주식수로 나눈 값으로, 기업의 수익성을 나타내는 지표."
+      }
     },
     "content_hash": "9659a025fe4f291c8506a40839d7479aedc320b5c3c9dcd9aa06fc4d04b1a177",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-12T07:24:34+00:00",
+    "signal_id": "SIG-0941",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-12",
+    "processed_run": "43174666589-1"
   },
   "0001104659-26-120184": {
     "status": "deferred",
@@ -11385,8 +11510,9 @@
     },
     "content_hash": "d378ce6e73438e166b5286bd8c04cad024b6e23a0c073a641ee048df9499eaef",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-12T07:24:38+00:00",
+    "reason": "deferred_budget"
   },
   "0001193125-26-436963": {
     "status": "deferred",
@@ -15862,5 +15988,250 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-11T06:41:27.864026+00:00"
+  },
+  "0001213900-26-118026": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-118026",
+      "entity_id": "CIK:0001355839",
+      "source_role": "candidate",
+      "title": "INTELLIGENT PROTECTION MANAGEMENT CORP. (IPM) (CIK 0001355839) EX-99.1 2026-11-10",
+      "url": "https://www.sec.gov/Archives/edgar/data/1355839/000121390026118026/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1355839/000121390026118026/ea031096101ex99-1.htm",
+      "published_at": "2026-11-10",
+      "raw_text": "INTELLIGENT PROTECTION MANAGEMENT CORP. (IPM) (CIK 0001355839) EX-99.1 2026-11-10. This increase was primarily driven by increased procurement revenue related to customer investments in infrastructure, as well as increased professional services and managed information technology revenue, attributed to both new customers and the expansion of services sold to existing customers, partially offset by a decrease in subscription revenue. We partially offset this decline in revenue through growth in recurring revenue from customers who are not related parties, including the addition of new customer relationships and service contracts during the period. The increase was primarily driven by increased procurement revenue related to sale of AI-related equipment to customers, as well as increased managed information technology revenue, attributed to both new customers as well as the expansion of services sold to existing customers, partially offset by decreases in professional services revenue and subscription revenue. The following factors, among others, could cause actual results to differ materially from those set forth in the forward-looking statements: the Company’s ability to consummate the AdTech acquisition in a timely manner or at all; the possibility of security vulnerabilities, cyber-attacks and network disruptions, including breaches of data security and privacy leaks, data loss, and business interruptions; the Company’s ability to operate its secure private cloud through its data centers; the intense competition in the industry in which the Company operates and its ability to effectively compete with existing competitors and new market entrants; the impact of supply constraints, including those related to components of the Company’s procurement services; the Company’s ability to consummate favorable acquisitions and effectively integrate any companies or businesses that the Company acquires; the impact of adverse economic and market conditions, including those rela"
+    },
+    "content_hash": "8eff37e61379097de919c0df8deaf02f055406034040630e9f6891df99fd4a55",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001368458-26-000018": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001368458-26-000018",
+      "entity_id": "CIK:0001368458",
+      "source_role": "candidate",
+      "title": "Sally Beauty Holdings, Inc. (SBH) (CIK 0001368458) EX-99.1 2026-11-10",
+      "url": "https://www.sec.gov/Archives/edgar/data/1368458/000136845826000018/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1368458/000136845826000018/exhibit991.htm",
+      "published_at": "2026-11-10",
+      "raw_text": "Sally Beauty Holdings, Inc. (SBH) (CIK 0001368458) EX-99.1 2026-11-10. “Throughout the year, we strengthened our business through disciplined execution, new customer growth, digital and omnichannel expansion, product innovation, and continued advancement of our long-term growth agenda. EX-99.1 2 exhibit991.htm EX-99.1 exhibit991 Contact: Jeff Harkins Investor Relations 940-297-4131 jharkins@sallybeauty.com Sally Beauty Holdings Reports Fourth Quarter and Full Year 2026 Results; Delivers Sales, Operating Earnings and Double-Digit EPS Growth in the Fourth Quarter  Q4 Consolidated Net Sales Increased 0.6%; Consolidated Comparable Sales Grew 0.9%  Q4 GAAP Diluted EPS Increased 22%; Adjusted Diluted EPS Increased 13%  Full Year GAAP Diluted EPS Increased 7%; Adjusted Diluted EPS Increased 9%  Full Year Cash Flow from Operations of $323 Million Deployed to Invest for Growth, Strengthen Balance Sheet and Return Value to Shareholders  Company Provides Fiscal 2027 Guidance In line with Financial Algorithm PLANO, Texas, November 10, 2026 – Sally Beauty Holdings, Inc. (NYSE: SBH) (the “Company”), the leader in professional hair color, today announced financial results for its fourth quarter and full year ended September 30, 2026. The Company will hold a conference call today at 7:30 a.m. Central Time to discuss these results and its business. “We finished fiscal 2026 with positive momentum, delivering fourth quarter sales, operating earnings and double-digit adjusted EPS growth,” said Denise Paulonis, president and chief executive officer. “Throughout the year, we strengthened our business through disciplined execution, new customer growth, digital and omnichannel expansion, product innovation, and continued advancement of our long-term growth agenda. We generated $323 million of cash from operations, strengthened our balance sheet, and returned significant capital to shareholders while continuing to invest in our future. As we enter fiscal 2027, we are focused on scaling"
+    },
+    "content_hash": "6c164d01d7e9dca07b30eeaf2767156749b07e843d41b83a2a0deffc324afc1f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001104659-26-124138": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-124138",
+      "entity_id": "CIK:0001712189",
+      "source_role": "candidate",
+      "title": "Target Hospitality Corp. (TH) (CIK 0001712189) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1712189/000110465926124138/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1712189/000110465926124138/th-ex99d1.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "Target Hospitality Corp. (TH) (CIK 0001712189) EX-99.1 2026-11-09. Adjusted EBITDA reflects the following additional adjustments to EBITDA to exclude certain non-cash items and expense or income items that management believes are not indicative of the Company’s ongoing operating performance: ​ ● Other expense, net: Other expense, net includes miscellaneous cash receipts, gains and losses on disposals of specialty rental assets, property, plant, and equipment and leased assets, community pre-opening costs incurred during ramp-up periods for new customer contracts, and other immaterial expenses and non-cash items. Condensed Consolidated Balance Sheet Data ($ in thousands) (unaudited) ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ September 30, ​ December 31, ​ ​ 2026 ​ 2025 Assets ​ ​ ​ ​ ​ ​ Cash and cash equivalents ​ $ 3,367 ​ $ 8,348 Accounts receivable, less allowance for credit losses ​ ​ 85,274 ​ ​ 56,200 Other current assets ​ ​ 9,395 ​ ​ 8,790 Total current assets ​ ​ 98,036 ​ ​ 73,338 ​ ​ ​ ​ ​ ​ ​ Specialty rental assets, net ​ ​ 630,952 ​ ​ 332,406 Goodwill and other intangibles, net ​ ​ 70,540 ​ ​ 80,370 Other non-current assets ​ ​ 120,450 ​ ​ 44,091 Total assets ​ $ 919,978 ​ $ 530,205 ​ ​ ​ ​ ​ ​ ​ Liabilities ​ ​ ​ ​ ​ ​ Accounts payable ​ $ 120,092 ​ $ 44,393 Deferred revenue and customer deposits ​ ​ 60,277 ​ ​ 9,282 Other current liabilities ​ ​ 39,020 ​ ​ 30,368 Total current liabilities ​ ​ 219,389 ​ ​ 84,043 ​ ​ ​ ​ ​ ​ ​ Long-term debt ​ ​ 223,000 ​ ​ — Other non-current liabilities ​ ​ 145,147 ​ ​ 57,102 Total liabilities ​ ​ 587,536 ​ ​ 141,145 ​ ​ ​ ​ ​ ​ ​ Stockholders' equity ​ ​ ​ ​ ​ ​ Common stock and other stockholders' equity ​ ​ 68,715 ​ ​ 93,998 Accumulated earnings ​ ​ 264,097 ​ ​ 295,259 Total stockholders' equity attributable to Target Hospitality Corp.",
+      "_model_response": {
+        "evidence_quote": "community pre-opening costs incurred during ramp-up periods for new customer contracts, and other immaterial expenses and non-cash items. Condensed Consolidated Balance Sheet Data ($ in thousands) (unaudited) September 30, December 31, 2026 2025 Liabilities Accounts payable $ 120,092 $ 44,393 Deferred revenue and customer deposits $ 60,277 $ 9,282 Other current liabilities $ 39,020 $ 30,368",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Specialty rental assets, net $ 630,952 $ 332,406",
+          "earnings_leverage": "Deferred revenue and customer deposits $ 60,277 $ 9,282",
+          "supply_demand_tightness": "community pre-opening costs incurred during ramp-up periods for new customer contracts",
+          "structural_ai_demand": "",
+          "revision_momentum": "Deferred revenue and customer deposits $ 60,277 $ 9,282",
+          "catalyst_visibility": "community pre-opening costs incurred during ramp-up periods for new customer contracts"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Target Hospitality Corp. (TH)",
+        "theme": "산업용 숙박 및 임대 서비스",
+        "signal_type": "수주/백로그",
+        "what_happened": "Target Hospitality Corp.의 2026년 9월 30일 기준 대차대조표에서 이연수익 및 고객 예치금이 전년 대비 크게 증가했으며, 이는 신규 고객 계약에 따른 준비 비용 발생과 함께 나타났다.",
+        "why_it_matters": "이연수익 증가는 향후 매출로 인식될 계약된 서비스가 늘어났음을 의미하며, 이는 회사의 성장 잠재력과 미래 실적에 대한 긍정적인 신호로 해석될 수 있다.",
+        "what_to_watch": "다음 분기 실적 발표 시 신규 계약의 구체적인 내용과 이연수익의 매출 전환율을 확인해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "이연수익: 고객에게 미리 받았지만 아직 서비스나 제품을 제공하지 않아 매출로 인식되지 않은 금액. CAPEX: 기업이 미래의 이윤을 창출하기 위해 토지, 건물, 기계 등 고정 자산을 구매하거나 개선하는 데 지출하는 비용."
+      }
+    },
+    "content_hash": "cfc0010280cfe41bfeed4503c71f7a3d31cf2fb564de908f9de0fe161ead6064",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-12T07:23:20+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001193125-26-449969": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-449969",
+      "entity_id": "CIK:0001720116",
+      "source_role": "candidate",
+      "title": "Red Violet, Inc. (RDVT) (CIK 0001720116) EX-99.2 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1720116/000119312526449969/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1720116/000119312526449969/rdvt-ex99_2.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "Red Violet, Inc. (RDVT) (CIK 0001720116) EX-99.2 2026-11-05. We are seeing that need translate into new customer relationships and continued increasing utilization across our existing base. EX-99.2 3 rdvt-ex99_2.htm EX-99.2 EX-99.2 EXHIBIT 99.2 Red Violet, Inc. (NASDAQ: RDVT) Third Quarter 2026 Earnings Results Conference Call Company Participants: Camilo Ramirez, Senior Vice President, Finance and Investor Relations Derek Dubner, Chairman and Chief Executive Officer Dan MacLachlan, Chief Financial Officer Operator: Good day ladies and gentlemen, and welcome to red violet’s third quarter 2026 earnings conference call. At this time, all participants are in a listen only mode. Later we will conduct a question and answer session and instructions will follow at that time. As a reminder this call is being recorded. I would now like to introduce your host for today’s conference Camilo Ramirez, Senior Vice President, Finance and Investor Relations. Please go ahead. Camilo Ramirez: Good afternoon and welcome. Thank you for joining us today to discuss our third quarter 2026 financial results. With me today is Derek Dubner, our Chairman and Chief Executive Officer, and Dan MacLachlan, our Chief Financial Officer. Our call today will begin with comments from Derek and Dan, followed by a question and answer session. I would like to remind you that this call is being webcast live and recorded. A replay of the event will be available following the call on our website. To access the webcast, please visit our Investors page on our website www.redviolet.com. Before we begin, I would like to advise listeners that certain information discussed by management during this conference call are forward-looking statements covered under the Safe Harbor Provisions of the Private Securities Litigation Reform Act of 1995. Actual results could differ materially from those stated or implied by our forward-looking statements due to risks and uncertainties associated with the company’s business. The"
+    },
+    "content_hash": "b34528b79c15bd464328386c64c9f15ec077c2fc16c1aa7428de09e1646eb510",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001821159-26-000032": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001821159-26-000032",
+      "entity_id": "CIK:0001821159",
+      "source_role": "candidate",
+      "title": "EVgo Inc. (EVGO) (CIK 0001821159) EX-99.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1821159/000182115926000032/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1821159/000182115926000032/exhibit991evgoearningsrele.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "EVgo Inc. (EVGO) (CIK 0001821159) EX-99.1 2026-11-09. • Customer Accounts: Added over 95,000 new customer accounts in the third quarter, with over 1.9 million total customer accounts at the end of the quarter. EX-99.1 2 exhibit991evgoearningsrele.htm EX-99.1 Document Exhibit 99.1 EVgo Inc. Reports Third Quarter 2026 Results Total Q3 Charging Network Revenues Increased 29% Year-Over-Year • Charging ne twork revenue totaled $72 million in the third quarter, an increase of 29% year-over-year, representing the 19 th consecutive quarter of double-digit year-over-year charging revenue growth. • Network throughput reached 103 gigawatt-hours (“GWh”) in the third quarter, an increase of 8% year-over-year. • Ended the third quarter with 5,530 stalls in operation, an increase of 20% year-over-year. LOS ANGELES – November 9, 2026 — EVgo Inc. (Nasdaq: EVGO) (“EVgo” or the “Company”), one of the nation’s largest providers of public fast charging infrastructure for electric vehicles (EVs), announced results for the third quarter ended September 30, 2026. Management will host a webcast today at 9 a.m. ET / 6 a.m. PT to discuss EVgo’s results and other business highlights. “This quarter we continued to expand EVgo's fast charging network and advance our path to sustainable profitability,\" said Badar Khan, CEO of EVgo. “In the third quarter, charging network revenue was up 29% year-over-year and our customer base surpassed a record 1.9 million accounts. This growth was the result of our multi-year efforts to strategically scale NACS across our network, add EVgo Superchargers, innovate to build the next-generation 750kW charging architecture, and expand partnerships with leading site hosts. At the same time, we are taking a disciplined approach to capital allocation by prioritizing higher-return sites, improving network utilization and implementing cost efficiencies. \"EVgo has built a business model and a sustainable advantage that’s hard to replicate, one that benefits from a number "
+    },
+    "content_hash": "b4febb47ed73d9473ba1d9efb64ec7bf4f6cc6e053ab9c3e22d1949b690a9486",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001193125-26-449893": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-449893",
+      "entity_id": "CIK:0001632970",
+      "source_role": "candidate",
+      "title": "American Healthcare REIT, Inc. (AHR) (CIK 0001632970) EX-99.1 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1632970/000119312526449893/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1632970/000119312526449893/ahr-ex99_1.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "American Healthcare REIT, Inc. (AHR) (CIK 0001632970) EX-99.1 2026-11-05. Same-Store NOI growth in the third quarter of 2026, compared to the same period in 2025, was led by the Company’s operating portfolio, comprised of its ISHC and SHOP segments, through strong pricing power driven by rate growth and effective expense control by its operating partners. EX-99.1 2 ahr-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 r Press Release Irvine, CA – November 5, 2026 Contact: Alan Peterson Email: investorrelations@ahcreit.com American Healthcare REIT Announces Third Quarter 2026 Results; Increases Full Year 2026 Guidance American Healthcare REIT, Inc. (NYSE: AHR) (the “Company,” “we,” “our,” “us,” “management,” or \"AHR\") is announcing today its third quarter 2026 results and increasing full year 2026 guidance. Key Highlights (all figures reported for the three months ended September 30, 2026 and percentage changes are compared to the same period in 2025 unless otherwise noted) • GAAP net income attributable to controlling interest of $31.2 million, or $0.14 per diluted share. • Normalized Funds From Operations attributable to controlling interest (“NFFO”) of $0.58 per diluted share. • Achieved total portfolio Same-Store Net Operating Income (“Same-Store NOI”) growth of 13.8%. • Achieved Same-Store NOI growth of 28.2% and 15.7% in its senior housing operating properties (“SHOP”) and integrated senior health campuses (“ISHC”) segments, respectively. • Acquired approximately $1.69 billion of new investments within its SHOP segment. Since the beginning of 2026, the Company has completed approximately $2.07 billion in new investments. • Increased total portfolio Same-Store NOI growth guidance to 12.0% to 14.0% and NFFO per diluted share guidance to $2.23 to $2.26 for the year ending December 31, 2026. • Completed a follow-on common equity offering in August 2026, entering into forward sale agreements relating to 15,237,500 shares of common stock for approximately $819.0 million in gro"
+    },
+    "content_hash": "e8e9c1038c4440330e310742b302f0b82042836759c1827c600705ec69675ff5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001628280-26-070598": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070598",
+      "entity_id": "CIK:0001597033",
+      "source_role": "candidate",
+      "title": "Sabre Corp (SABR) (CIK 0001597033) EX-99.1 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1597033/000162828026070598/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1597033/000162828026070598/q32026earningsrelease.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "Sabre Corp (SABR) (CIK 0001597033) EX-99.1 2026-11-05. (c) Amortization of capitalized implementation costs represents amortization of upfront costs to implement new customer contracts under our SaaS and hosted revenue model. EX-99.1 2 q32026earningsrelease.htm EX-99.1 Document Sabre reports third quarter 2026 results Raises full year 2026 Pro Forma Adjusted EBITDA and Free Cash Flow guidance Business Highlights: • Delivered third quarter revenue growth of 3% in line with guidance, and exceeded third quarter Pro Forma Adjusted EBITDA guidance, reflecting continued execution of growth strategies and effective cost management • Reaffirmed 2026 full-year guidance for low-to-mid-single-digit growth in both revenue and air marketplace bookings • Increased full-year 2026 Pro Forma Adjusted EBITDA and Free Cash Flow guidance for the second consecutive quarter • Completed successful debt refinancing, at a lower interest rate, extending certain maturities to 2032, with no large maturities until the third quarter of 2029 • Generated 14% hotel-related revenue growth in the third quarter of 2026, reflecting continued momentum in Sabre's lodging and media business • Secured Kenya Airways as a new Airline Technology customer, who selected Sabre to modernize its core reservations and retailing platform and advanced offer-and-order based retailing Third Quarter 2026 Financial Results: • Third quarter revenue of $738 million, up 3% from Q3'25 • Operating income of $109 million, up 17% from Q3'25 • Net loss attributable to common stockholders of $25 million • Adjusted EBITDA (1) of $164 million, up 16% from Q3'25 • Normalized Adjusted EBITDA (1) of $170 million, up 13% from Q3'25; fifth consecutive quarter of double-digit Normalized Adjusted EBITDA growth • Ended quarter with cash balance of $688 million, $78 million of which is restricted for debt payments in Q4'26, associated with our third quarter refinancings 1 SOUTHLAKE, Texas – November 5, 2026 – Sabre Corporation (\"Sabre\" or t"
+    },
+    "content_hash": "b1e77c912e60fd6904d7bd8b096fb604524ef762367553e4d15efe67c6f3e8cb",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001628280-26-070679": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070679",
+      "entity_id": "CIK:0001956439",
+      "source_role": "candidate",
+      "title": "Enhanced Group Inc. (ENHA) (CIK 0001956439) EX-99.2 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1956439/000162828026070679/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1956439/000162828026070679/enhaequitydeck-11526v15x.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "Enhanced Group Inc. (ENHA) (CIK 0001956439) EX-99.2 2026-11-05. We already have a big percentage of our bookings in for next year…” Michael Rapino, CEO of Live Nation - 07/30/2026 “Premium live content and experiences are heating up in an increasingly AI-⁠driven world …Live events built on scarcity, marketable IP and durable repricing power win out.” Ari Emanuel, CEO of TKO Group - 10/08/2026 “Research shows that people want to meet in person, at events...” Spencer Rascoff, CEO of Tinder owner Match Group – 10/20/2026 Sports and Live Entertainment: Poised to Be Among the Largest Beneficiaries of AIKey takeaway Strictly confidential All rights reserved | Enhanced 2026 Live Entertainment Market07 WITHIN THE EXPERIENCE ECONOMY, LIVE IS THE MOST RESILIENT GROWTH CATEGORY, AND FANS ARE PAYING UP FOR IT A ~$110B global market growing ~7%⁽¹⁾ a year, with pricing power and Gen Z demand still accelerating ~$110B Global live events spend, 2025E 7.3%(1) Avg."
+    },
+    "content_hash": "a3b018475c36deaecd66a8db68e5742ae9adaa4059afa6a095c9d82479c624c5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001628280-26-070619": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070619",
+      "entity_id": "CIK:0001037038",
+      "source_role": "candidate",
+      "title": "RALPH LAUREN CORP (RL) (CIK 0001037038) EX-99.1 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070619/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070619/rl-20260926ex991xpressrele.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "RALPH LAUREN CORP (RL) (CIK 0001037038) EX-99.1 2026-11-05. We remain confident in the strength of our brand, our teams and our diversified engines of growth through this fiscal year and beyond.\" Key Achievements in Second Quarter Fiscal 2027 We delivered the following highlights across our strategic priorities in the second quarter of Fiscal 2027: • Elevat e and Energize Our Lifestyle Brand ◦ Drove continued momentum in new customer acquisition and loyalty with 1.7 million new consumers in our direct-to-consumer businesses, increases in brand awareness, consideration, and net promoter score and over 72 million social media followers, a mid-single digit increase to last year 1 ◦ Engaged consumers through powerful, authentic connections and brand activations, notably: our iconic sponsorships across the world of sports including Wimbledon, the U.S. or foreign tax laws and regulations, accounting rules, or the mix and level of earnings by jurisdiction in future periods that are not currently known or anticipated; our ability to recruit and retain qualified employees to operate our retail stores, distribution centers, and various corporate functions; our ability to successfully implement our long-term growth strategy; our ability to continue to expand and grow our business internationally and the impact of related changes in our customer, channel, and geographic sales mix as a result, as well as our ability to accelerate growth in certain product categories; our ability to open new retail stores and concession shops, as well as enhance and expand our digital footprint and capabilities, all in an effort to expand our direct-to-consumer presence; our ability to respond to constantly changing fashion and retail trends and consumer demands in a timely manner, develop products that resonate with our existing customers and attract new customers, and execute marketing and advertising programs that appeal to consumers; our ability to competitively price our products and create "
+    },
+    "content_hash": "42beecf2b6965645ac4ecd6fcb93c0e372185ba27bf191f12450b2f86a718f82",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001032208-26-000051": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001032208-26-000051",
+      "entity_id": "CIK:0001032208",
+      "source_role": "candidate",
+      "title": "SEMPRA (SRE, SREA) (CIK 0001032208), SAN DIEGO GAS & ELECTRIC CO (CIK 0000086521), SOUTHERN CALIFORNIA GAS CO (CIK 0000092108) EX-99.1 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000051/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000051/ex99_1x20260930xearningsta.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "SEMPRA (SRE, SREA) (CIK 0001032208), SAN DIEGO GAS & ELECTRIC CO (CIK 0000086521), SOUTHERN CALIFORNIA GAS CO (CIK 0000092108) EX-99.1 2026-11-05. SoCalGas also launched a new customer information system designed to improve service, expand digital capabilities and support evolving customer and regulatory needs. EX-99.1 2 ex99_1x20260930xearningsta.htm EX-99.1 Document Exhibit 99.1 NEWS RELEASE Media Contact: Patrick Reynolds Sempra (877) 340-8875 media@sempra.com Financial Contact: Eric Llamas Sempra (877) 736-7727 investor@sempra.com Sempra Reports Strong Third-Quarter 2026 Results • Advancing 2026 Value Creation Initiatives • Updating 2026 GAAP EPS guidance range • Guiding to high-end of 2026 adjusted EPS guidance range • Announcing expected 20% increase to Oncor’s base capital plan SAN DIEGO, Nov. 5, 2026 — Sempra (NYSE: SRE) today reported third-quarter 2026 earnings, prepared in accordance with Generally Accepted Accounting Principles (GAAP), of $877 million or $1.34 per diluted share, compared to third-quarter 2025 GAAP earnings of $77 million or $0.12 per diluted share. On an adjusted basis, third-quarter 2026 earnings were $917 million or $1.40 per diluted share, compared to $728 million or $1.11 per diluted share in 2025. “Our year-to-date results reflect disciplined execution across the company and continued progress on our 2026 value creation initiatives,” said Jeffrey W. Martin, chairman and CEO of Sempra. “As a next step, we look forward to completing the planned sale of an equity stake in Sempra Infrastructure Partners, with a view toward supporting strong growth in our Texas and California utilities and strengthening our financial position.” Sempra’s GAAP earnings for the first nine months of 2026 were $2.710 billion, or $4.13 per diluted share, compared with GAAP earnings of $1.444 billion, or $2.21 per diluted share, in the first nine months of 2025. Adjusted earnings for the first nine months of 2026 were $2.670 billion, or $4.07 per diluted share,"
+    },
+    "content_hash": "80909ef03ce2b21cde42b23d3f1d500348af5d07673d6e2e770a543cbfcea543",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001628280-26-070516": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-070516",
+      "entity_id": "CIK:0001455863",
+      "source_role": "candidate",
+      "title": "AMERICOLD REALTY TRUST (COLD) (CIK 0001455863) EX-99.3 2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1455863/000162828026070516/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1455863/000162828026070516/cold-investordeckq326.htm",
+      "published_at": "2026-11-05",
+      "raw_text": "AMERICOLD REALTY TRUST (COLD) (CIK 0001455863) EX-99.3 2026-11-05. Create Value from Real Estate Ability to Leverage Strong Market Presence Globally Production Advantaged Forward Distribution Retail Distribution Port Facilities Americold Advantages • Continued growth in retail and QSR • Expand adjacent categories, such as pet food, pharmacy, floral • Growth with strategic partnerships to enhance cold storage supply chain through rail and ports • Existing customers in Asia Pacific are growing and requesting additional development support • Continued growth in European occupancy based on new customer wins and expansion into new categories • Expansive global network of high-quality, strategically located warehouses • Deep relationships with top customers spanning decades • Best in class Americold Operating System fully integrated • Technology advantages in North America and Asia Pacific through Project Orion, with Europe implementation in Q426 Growth Strategy 19 Actively Optimizing Our Portfolio to Improve Productivity and Returns 20 Progress to Date Total Sites Idled or Exited27 Total Pallet Positions Idled or Exited540k Total Proceeds to Date Exiting underperforming assets and reallocating capital toward higher-return opportunities Strengthening network productivity through improved utilization of existing capacity Initiated a comprehensive review of all active development projects and associated assumptions ~$100M Several Hundred Million of Potential Proceeds Identified from Additional Asset Sales Reducing industry capacity by removing select facilities from the cold storage market Potential proceeds represent preliminary management estimates and are subject to market conditions, diligence, transaction execution and approval processes."
+    },
+    "content_hash": "fa1435724b9811ab5407a05f02fa0421c9ffc5f576a5b97c76a956149577df35",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-12T07:23:01.993166+00:00"
   }
 }

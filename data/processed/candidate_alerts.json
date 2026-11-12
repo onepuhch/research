@@ -2642,6 +2642,24 @@
       "payload_text": "<b>🆕 새 발굴 후보 · NMM Navios Maritime Partners L.P.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n건화물선과 유조선을 소유 및 운영하며, 다양한 화물의 해상 운송 서비스를 제공하고 선박을 대여하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $17.33 → 지금 $21.48 (+24%) · 주가 같은 기간 +6.5%\n\n👍 최근 30일 분석가 3명 중 3명이 올림\n👍 주가는 같은 90일에 +6%로, 이익 예상 상향(+24%)보다 덜 움직임\n👎 같은 30일에 내린 분석가도 1명\n👎 이 회사를 보는 분석가가 3명뿐이라 예상치가 몇 명의 수정에 크게 흔들림\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 18위로 들어옴\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-029DB18061B03227</code> · 추적 <code>/track CAN-029DB18061B03227</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "aefface1dcfcc29ba59ae08c7298f9c5386c146d507d56cd327b231ff6a0ddf4",
       "message_id": 247
+    },
+    "NYSE:U|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:U",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-2623D25A1D98BE0B",
+      "candidate_version": "CV-59373F54473D3B6E",
+      "observation_id": "OB-DF7D467111F4D144",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-11-12",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "43174666589-1",
+      "reserved_at": "2026-11-12T07:39:47+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · U Unity Software Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n게임 및 인터랙티브 경험 개발, 배포, 성장을 돕는 플랫폼과 도구를 제공하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $1.72 → 지금 $2.59 (+51%) · 주가 같은 기간 +7.4%\n\n👍 주가는 같은 90일에 +7%로, 이익 예상 상향(+51%)보다 덜 움직임\n👎 최근 30일 분석가 16명 중 1명만 올림 — 한 곳의 수정일 수 있음\n❓ 11/5 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-2623D25A1D98BE0B</code> · 추적 <code>/track CAN-2623D25A1D98BE0B</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "033c82efbcb2895d8cc2f220aac02a74f06ab710331bcc699677fafd4c94a459"
     }
   },
   "bootstrap": {
@@ -2921,6 +2939,33 @@
         "up30": 3,
         "down30": 1
       }
+    },
+    "NYSE:REPX|eps-revision-review:v1|new_discovery": {
+      "entity_id": "NYSE:REPX",
+      "candidate_id": "CAN-A7167939B6E22B83",
+      "ticker": "REPX",
+      "day": "2026-11-12",
+      "status": "held",
+      "reason": "provider_silent_jump",
+      "threshold": 0.1,
+      "threshold_status": "provisional",
+      "baseline": {
+        "snapshot": "20261111T064311Z_42974035239-1.json.gz",
+        "eps_now": 10.134,
+        "eps_target_period": "2027-12-31",
+        "analysts": 5,
+        "up30": 2,
+        "down30": 0
+      },
+      "current": {
+        "snapshot": "20261112T072442Z_43174666589-1.json.gz",
+        "eps_now": 11.94,
+        "eps_target_period": "2027-12-31",
+        "analysts": 5,
+        "up30": 2,
+        "down30": 0
+      },
+      "history": []
     }
   }
 }

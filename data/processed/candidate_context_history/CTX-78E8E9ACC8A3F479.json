@@ -1,0 +1,121 @@
+{
+  "context_id": "CTX-78E8E9ACC8A3F479",
+  "candidate_id": "CAN-8D0129B58E252637",
+  "ticker": "CMRC",
+  "issuer_cik": "0001626450",
+  "document_ids": [
+    "DOC-A1E1A301F88E4533",
+    "DOC-50AD202C6ED96DDA"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A1E1A301F88E4533#p28",
+    "DOC-A1E1A301F88E4533#p30",
+    "DOC-A1E1A301F88E4533#p49",
+    "DOC-A1E1A301F88E4533#p96",
+    "DOC-A1E1A301F88E4533#p97",
+    "DOC-A1E1A301F88E4533#p110",
+    "DOC-A1E1A301F88E4533#p115",
+    "DOC-A1E1A301F88E4533#p116",
+    "DOC-A1E1A301F88E4533#p117",
+    "DOC-A1E1A301F88E4533#p122",
+    "DOC-A1E1A301F88E4533#p124",
+    "DOC-A1E1A301F88E4533#t2",
+    "DOC-A1E1A301F88E4533#t4",
+    "DOC-A1E1A301F88E4533#t7",
+    "DOC-50AD202C6ED96DDA#p125",
+    "DOC-50AD202C6ED96DDA#t4"
+  ],
+  "input_sha": "78e8e9acc8a3f479ef8c1b4ac2b9b03db017cf0719656ce42bf12559823d6886",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-12T07:39:21+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "회사의 전략적 운영 계획에 대한 자세한 내용은 무엇인가?",
+    "주식 기반 보상 비용, 구조조정 비용 및 기타 제외 항목이 GAAP 결과에 어떤 영향을 미칠 수 있는가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 감소했다",
+      "figures": [
+        "3%"
+      ],
+      "quote": "Revenue in the United States declined by 3% compared to the three months ended September 30, 2025.",
+      "where": "DOC-A1E1A301F88E4533#p28"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 증가했다",
+      "figures": [
+        "7%"
+      ],
+      "quote": "Revenue in EMEA grew by 7% and revenue in APAC declined by 9% compared to the three months ended September 30, 2025.",
+      "where": "DOC-A1E1A301F88E4533#p30"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전년 같은 분기보다 감소했다",
+      "figures": [
+        "9%"
+      ],
+      "quote": "Revenue in EMEA grew by 7% and revenue in APAC declined by 9% compared to the three months ended September 30, 2025.",
+      "where": "DOC-A1E1A301F88E4533#p30"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "전략적 운영 계획에 따라 목표를 제시했다",
+      "figures": [
+        "at least 20%"
+      ],
+      "quote": "In addition, we have provided a target of full-year Non-GAAP operating margin of at least 20% beginning in 2027 and estimated annualized Non-GAAP operating cost reductions of $60 million to $80 millio",
+      "where": "DOC-A1E1A301F88E4533#p97"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_role_mixed",
+      "note_ko": "전략적 운영 계획에 따라 추정치를 제시했다",
+      "figures": [
+        "$60 million to $80 million"
+      ],
+      "quote": "In addition, we have provided a target of full-year Non-GAAP operating margin of at least 20% beginning in 2027 and estimated annualized Non-GAAP operating cost reductions of $60 million to $80 millio",
+      "where": "DOC-A1E1A301F88E4533#p97"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 GAAP 영업 이익(손실)에 대한 가이던스를 제공하지 않으며, 예측된 비GAAP 영업 이익과 비교 가능한 GAAP 측정치 간의 조정을 합리적인 노력 없이 제공할 수 없다",
+      "figures": [],
+      "quote": "We do not provide guidance for GAAP income (loss) from operations, the most directly comparable GAAP measure to Non-GAAP operating income, and similarly cannot provide a reconciliation between our for",
+      "where": "DOC-A1E1A301F88E4533#p96"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 영업 활동으로 인한 현금 흐름에 대한 가이던스를 제공하지 않는다",
+      "figures": [],
+      "quote": "We also do not provide guidance on Cash Flows from Operating Activities.",
+      "where": "DOC-A1E1A301F88E4533#p96"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "미래 예측 비GAAP 측정치와 가장 직접적으로 비교 가능한 GAAP 측정치 간의 조정은 주식 기반 보상 비용, 구조조정 비용 및 기타 제외 항목의 시기와 금액을 예측하기 어렵기 때문에 합리적인 노력 없이는 제공할 수 없다",
+      "figures": [],
+      "quote": "A reconciliation of these forward-looking Non-GAAP measures to the most directly comparable GAAP measures is not available without unreasonable efforts due to the inherent difficulty of forecasting th",
+      "where": "DOC-A1E1A301F88E4533#p97"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
