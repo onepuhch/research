@@ -212,7 +212,9 @@
     "PK",
     "ITRG",
     "SANM",
-    "VIAV"
+    "VIAV",
+    "LNG",
+    "TLS"
   ],
   "days": {
     "2026-10-06": {
@@ -362,13 +364,17 @@
     "2026-11-11": {
       "requests": 15,
       "retries": 0
+    },
+    "2026-11-12": {
+      "requests": 14,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 37,
-      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "attempts": 38,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -727,8 +733,8 @@
       "reason": null
     },
     "PRGS": {
-      "attempts": 5,
-      "last_attempt_at": "2026-11-05T07:15:52.760019+00:00",
+      "attempts": 6,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -871,8 +877,8 @@
       "reason": null
     },
     "DHT": {
-      "attempts": 6,
-      "last_attempt_at": "2026-10-30T06:15:06.108174+00:00",
+      "attempts": 7,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -887,8 +893,8 @@
       "reason": null
     },
     "FRO": {
-      "attempts": 6,
-      "last_attempt_at": "2026-10-30T06:15:06.108174+00:00",
+      "attempts": 7,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1127,16 +1133,16 @@
       "reason": null
     },
     "PSTL": {
-      "attempts": 4,
-      "last_attempt_at": "2026-11-01T06:38:02.635394+00:00",
+      "attempts": 5,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "SABR": {
-      "attempts": 4,
-      "last_attempt_at": "2026-11-01T06:38:02.635394+00:00",
+      "attempts": 5,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1191,8 +1197,8 @@
       "reason": null
     },
     "U": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-01T06:38:02.635394+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1487,8 +1493,8 @@
       "reason": null
     },
     "INSW": {
-      "attempts": 1,
-      "last_attempt_at": "2026-10-14T05:19:15.008659+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1839,8 +1845,8 @@
       "reason": null
     },
     "REPX": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -2047,24 +2053,40 @@
       "reason": null
     },
     "ITRG": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "SANM": {
-      "attempts": 1,
-      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "attempts": 2,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "VIAV": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "LNG": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-11T06:58:25.718649+00:00",
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "TLS": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-12T07:39:58.986931+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
