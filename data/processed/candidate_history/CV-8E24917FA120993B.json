@@ -1,0 +1,239 @@
+{
+  "candidate_id": "CAN-E95987D989EF1145",
+  "candidate_version": "CV-8E24917FA120993B",
+  "identity": {
+    "entity_id": "NYSE:TNK",
+    "ticker": "TNK",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Teekay Tankers Ltd.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "유조선을 이용해 해상 운송 서비스, 유류 환적, 선박 관리 및 장비 대여로 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Teekay Tankers Ltd., together with its subsidiaries, provides marine transportation services to oil industries in Bermuda and internationally. The company operates in two segments: Tankers and Marine Servies. It offers voyage and time charter services; offshore ship-to-ship transfer of commodities primarily crude oil and refined oil products; and tanker commercial and technical management services. In addition, the company is involved in the vessels management, procurement, and equipment rental businesses. It serves energy and utility companies, oil traders, oil consumers and petroleum product"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TNK analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:04:42+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TNK daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/history",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:04:42+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TNK company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TNK/profile",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:04:42+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-C5B686636BD8B53E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000070/tnkq3-26erdocument.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-11-12",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "6-K 6-K"
+    },
+    {
+      "id": "DOC-D9EC64103F5CF7D0",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000056/tnk6-kq1x261.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-07-31",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "6-K 6-K"
+    },
+    {
+      "id": "DOC-13D619F52008D76E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000054/tnkq2-26erdocument.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-07-29",
+      "observed_at": "2026-09-27T05:40:06+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-89958764989F54CE",
+    "input_sha": "89958764989f54ce05c93ac3ac556c202d2e4dd936636b5af60bdfa2df1273a0",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "GAAP net income · third quarter of 2026: $22.9 million — 선박 매각으로 인한 이익을 포함했다",
+        "note_ko": "선박 매각으로 인한 이익을 포함했다",
+        "kind": "fact",
+        "quote": "In addition, GAAP net income for the third quarter of 2026 included a $22.9 million gain from the sale of one vessel, compared to a $32.3 million gain from the sale of one vessel in the second quarter of 2026.",
+        "document_id": "DOC-C5B686636BD8B53E",
+        "block_id": "p41",
+        "metric": "GAAP net income",
+        "figures": [
+          "$22.9 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "one_off"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "GAAP net income · second quarter of 2026: $32.3 million — 선박 매각으로 인한 이익을 포함했다",
+        "note_ko": "선박 매각으로 인한 이익을 포함했다",
+        "kind": "fact",
+        "quote": "In addition, GAAP net income for the second quarter of 2026 included a $32.3 million gain from the sale of one vessel, compared to a $13.9 million gain from the sales of two vessels in the second quarter of 2025.",
+        "document_id": "DOC-13D619F52008D76E",
+        "block_id": "p42",
+        "metric": "GAAP net income",
+        "figures": [
+          "$32.3 million"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "one_off"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-C5B686636BD8B53E",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000070/tnkq3-26erdocument.htm",
+        "filed_at": "2026-11-12",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      },
+      {
+        "document_id": "DOC-D9EC64103F5CF7D0",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000056/tnk6-kq1x261.htm",
+        "filed_at": "2026-07-31",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      },
+      {
+        "document_id": "DOC-13D619F52008D76E",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1419945/000141994526000054/tnkq2-26erdocument.htm",
+        "filed_at": "2026-07-29",
+        "observed_at": "2026-09-27T05:40:06+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-13T07:12:03+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 15.28958,
+    "eps_30d": 10.17492,
+    "eps_90d": 9.11993,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 67.7,
+    "steady": false,
+    "turnaround": false
+  }
+}

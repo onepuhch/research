@@ -1,0 +1,139 @@
+{
+  "context_id": "CTX-EBDE5FCDDA913E0D",
+  "candidate_id": "CAN-5289D6512C83E305",
+  "ticker": "GPRE",
+  "issuer_cik": "0001309402",
+  "document_ids": [
+    "DOC-A37E8C02A43174C1",
+    "DOC-45C22F4E4BF965B1",
+    "DOC-548849E6178CD12E"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-A37E8C02A43174C1#p29",
+    "DOC-A37E8C02A43174C1#p30",
+    "DOC-A37E8C02A43174C1#t5",
+    "DOC-45C22F4E4BF965B1#p9",
+    "DOC-45C22F4E4BF965B1#p16",
+    "DOC-45C22F4E4BF965B1#p17",
+    "DOC-45C22F4E4BF965B1#p32",
+    "DOC-45C22F4E4BF965B1#t6",
+    "DOC-548849E6178CD12E#p12",
+    "DOC-548849E6178CD12E#p16",
+    "DOC-548849E6178CD12E#p17",
+    "DOC-548849E6178CD12E#p32",
+    "DOC-548849E6178CD12E#p44",
+    "DOC-548849E6178CD12E#t6",
+    "DOC-548849E6178CD12E#t7"
+  ],
+  "input_sha": "ebde5fcdda913e0d1463efafc90e932766d5c183a2e4ae734b89657233c22cea",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-13T07:12:03+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "adjusted EBITDA contribution from 45Z tax credit value net of discounts and other costs · 2026 full-year: $230 million to $250 million — 세금 공제 가치에서 할인 및 기타 비용을 제외한 조정 EBITDA 기여도에 대한 연간 전망치를 업데이트했다",
+      "note_ko": "세금 공제 가치에서 할인 및 기타 비용을 제외한 조정 EBITDA 기여도에 대한 연간 전망치를 업데이트했다",
+      "kind": "guidance",
+      "quote": "Updated 2026 full-year guidance to $230 million to $250 million of adjusted EBITDA contribution from 45Z tax credit value net of discounts and other costs",
+      "document_id": "DOC-45C22F4E4BF965B1",
+      "block_id": "p9",
+      "metric": "adjusted EBITDA contribution from 45Z tax credit value net of discounts and other costs",
+      "figures": [
+        "$230 million to $250 million"
+      ],
+      "period": "2026 full-year",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "tax"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "순이익이 전년 동기 대비 증가했다",
+      "figures": [
+        "$85,572"
+      ],
+      "quote": "Net income increased $74.6 million and adjusted EBITDA increased $65.4 million for the three months ended September 30, 2026 compared with the same period last year primarily due to an increase of $42",
+      "where": "DOC-45C22F4E4BF965B1#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "조정 EBITDA가 전년 동기 대비 증가했다",
+      "figures": [
+        "$65.4 million"
+      ],
+      "quote": "Net income increased $74.6 million and adjusted EBITDA increased $65.4 million for the three months ended September 30, 2026 compared with the same period last year primarily due to an increase of $42",
+      "where": "DOC-45C22F4E4BF965B1#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "그린 플레인즈에 귀속되는 순이익이 전년 동기 대비 증가했다",
+      "figures": [
+        "$67,149"
+      ],
+      "quote": "Net income attributable to Green Plains increased $139.4 million and adjusted EBITDA increased $76.9 million for the three months ended June 30, 2026 compared with the same period in 2025 primarily du",
+      "where": "DOC-548849E6178CD12E#p17"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "조정 EBITDA가 전년 동기 대비 증가했다",
+      "figures": [
+        "$76.9 million"
+      ],
+      "quote": "Net income attributable to Green Plains increased $139.4 million and adjusted EBITDA increased $76.9 million for the three months ended June 30, 2026 compared with the same period in 2025 primarily du",
+      "where": "DOC-548849E6178CD12E#p17"
+    },
+    {
+      "what": "limitation",
+      "reason": "delta_presented_as_level",
+      "note_ko": "통합 매출이 전년 동기 대비 감소했다",
+      "figures": [
+        "$12.5 million"
+      ],
+      "quote": "Consolidated revenues decreased $12.5 million for the three months ended September 30, 2026, compared with the same period in 2025, primarily due to lower revenues within our ethanol production segmen",
+      "where": "DOC-45C22F4E4BF965B1#p16"
+    },
+    {
+      "what": "limitation",
+      "reason": "delta_presented_as_level",
+      "note_ko": "통합 매출이 전년 동기 대비 감소했다",
+      "figures": [
+        "$106.6 million"
+      ],
+      "quote": "Consolidated revenues decreased $106.6 million for the three months ended June 30, 2026, compared with the same period in 2025, primarily due to lower revenues within our ethanol production segment as",
+      "where": "DOC-548849E6178CD12E#p16"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

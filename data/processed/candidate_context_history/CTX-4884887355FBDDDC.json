@@ -1,0 +1,129 @@
+{
+  "context_id": "CTX-4884887355FBDDDC",
+  "candidate_id": "CAN-CE287F3D97C627F9",
+  "ticker": "VG",
+  "issuer_cik": "0002007855",
+  "document_ids": [
+    "DOC-9D358007A5F6D498",
+    "DOC-A18D1EE0E7601BB6",
+    "DOC-59DB1DBD3682F139",
+    "DOC-F93D2B6EA7B8588C"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-9D358007A5F6D498#p1",
+    "DOC-9D358007A5F6D498#p4",
+    "DOC-9D358007A5F6D498#p5",
+    "DOC-9D358007A5F6D498#p7",
+    "DOC-9D358007A5F6D498#p8",
+    "DOC-9D358007A5F6D498#p15",
+    "DOC-9D358007A5F6D498#p16",
+    "DOC-9D358007A5F6D498#p19",
+    "DOC-A18D1EE0E7601BB6#p23",
+    "DOC-59DB1DBD3682F139#p6",
+    "DOC-59DB1DBD3682F139#p20",
+    "DOC-59DB1DBD3682F139#p36",
+    "DOC-59DB1DBD3682F139#p40",
+    "DOC-59DB1DBD3682F139#p43",
+    "DOC-59DB1DBD3682F139#p44",
+    "DOC-59DB1DBD3682F139#p50",
+    "DOC-59DB1DBD3682F139#p51",
+    "DOC-59DB1DBD3682F139#p91",
+    "DOC-59DB1DBD3682F139#p92",
+    "DOC-F93D2B6EA7B8588C#p31",
+    "DOC-F93D2B6EA7B8588C#p32",
+    "DOC-F93D2B6EA7B8588C#p36",
+    "DOC-F93D2B6EA7B8588C#p37"
+  ],
+  "input_sha": "4884887355fbdddcba2a707b6a331c8cfdb705aad2480461b0cef1f96e5daa96",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-13T07:12:03+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "회사의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "회사는 조정 EBITDA 가이던스를 상향했다",
+      "figures": [
+        "$10.0 - $10.3 billion"
+      ],
+      "quote": "Increased Consolidated Adjusted EBITDA guidance to $10.0 - $10.3 billion1, up from $8.7 - $9.1 billion, which assumes a weighted average liquefaction fee of $21.00/MMBtu - $22.00/MMBtu for our remaini",
+      "where": "DOC-59DB1DBD3682F139#p20"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "순이익이 전년 같은 기간보다 늘었다",
+      "figures": [
+        "approximately $2.1 billion"
+      ],
+      "quote": "Net income1 and Consolidated Adjusted EBITDA2 increased approximately $2.1 billion and $1.1 billion, respectively, for the three months ended September 30, 2026 as compared to the same period in 2025.",
+      "where": "DOC-59DB1DBD3682F139#p43"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "조정 EBITDA가 전년 같은 기간보다 늘었다",
+      "figures": [
+        "approximately $1.1 billion"
+      ],
+      "quote": "Net income1 and Consolidated Adjusted EBITDA2 increased approximately $2.1 billion and $1.1 billion, respectively, for the three months ended September 30, 2026 as compared to the same period in 2025.",
+      "where": "DOC-59DB1DBD3682F139#p43"
+    },
+    {
+      "what": "claim",
+      "reason": "delta_presented_as_level",
+      "note_ko": "순이익이 전년 같은 기간보다 늘었다",
+      "figures": [
+        "approximately $3.2 billion"
+      ],
+      "quote": "Net income1 and Consolidated Adjusted EBITDA2 increased approximately $3.2 billion and $2.2 billion, respectively, for the nine months ended September 30, 2026, as compared to the same period in 2025.",
+      "where": "DOC-59DB1DBD3682F139#p44"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "조정 EBITDA가 전년 같은 기간보다 늘었다",
+      "figures": [
+        "approximately $2.2 billion"
+      ],
+      "quote": "Net income1 and Consolidated Adjusted EBITDA2 increased approximately $3.2 billion and $2.2 billion, respectively, for the nine months ended September 30, 2026, as compared to the same period in 2025.",
+      "where": "DOC-59DB1DBD3682F139#p44"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_in_source",
+      "note_ko": "회사는 조정 EBITDA와 가장 직접적으로 비교 가능한 GAAP 재무 측정치인 보통주 귀속 순이익 간의 조정을 제공하지 않는다",
+      "figures": [],
+      "quote": "We do not provide a reconciliation of forward-looking amounts of Consolidated Adjusted EBITDA to net income attributable to common stockholders, the most directly comparable financial measure prepared",
+      "where": "DOC-59DB1DBD3682F139#p36"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 EBITDA 계산에 사용되는 많은 조정 및 제외 사항은 실제 사건에 따라 크게 달라질 수 있다",
+      "figures": [],
+      "quote": "Many of the adjustments and exclusions used to calculate the projected Consolidated Adjusted EBITDA may vary significantly based on actual events, so we are not able to forecast on a GAAP basis with r",
+      "where": "DOC-59DB1DBD3682F139#p36"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 EBITDA는 분석 도구로서 중대한 한계가 있으며 GAAP에 따라 계산된 성과, 재무 결과 및 영업 현금 흐름 측정치를 보완하는 것으로 간주되어야 하며 대체물로 간주되어서는 안 된다",
+      "figures": [],
+      "quote": "Consolidated Adjusted EBITDA has material limitations as an analytical tool and should be viewed as a supplement to and not a substitute for measures of performance, financial results and cash flow fr",
+      "where": "DOC-59DB1DBD3682F139#p92"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

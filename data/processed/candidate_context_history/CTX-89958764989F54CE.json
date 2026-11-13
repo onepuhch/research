@@ -1,0 +1,140 @@
+{
+  "context_id": "CTX-89958764989F54CE",
+  "candidate_id": "CAN-E95987D989EF1145",
+  "ticker": "TNK",
+  "issuer_cik": "0001419945",
+  "document_ids": [
+    "DOC-C5B686636BD8B53E",
+    "DOC-D9EC64103F5CF7D0",
+    "DOC-13D619F52008D76E"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C5B686636BD8B53E#p41",
+    "DOC-C5B686636BD8B53E#p43",
+    "DOC-C5B686636BD8B53E#p49",
+    "DOC-C5B686636BD8B53E#p103",
+    "DOC-C5B686636BD8B53E#p104",
+    "DOC-C5B686636BD8B53E#p115",
+    "DOC-D9EC64103F5CF7D0#t6",
+    "DOC-D9EC64103F5CF7D0#p73",
+    "DOC-D9EC64103F5CF7D0#p105",
+    "DOC-D9EC64103F5CF7D0#p107",
+    "DOC-D9EC64103F5CF7D0#p109",
+    "DOC-D9EC64103F5CF7D0#p197",
+    "DOC-D9EC64103F5CF7D0#p287",
+    "DOC-D9EC64103F5CF7D0#p422",
+    "DOC-13D619F52008D76E#p42",
+    "DOC-13D619F52008D76E#t23"
+  ],
+  "input_sha": "89958764989f54ce05c93ac3ac556c202d2e4dd936636b5af60bdfa2df1273a0",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-13T07:12:03+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "GAAP net income · third quarter of 2026: $22.9 million — 선박 매각으로 인한 이익을 포함했다",
+      "note_ko": "선박 매각으로 인한 이익을 포함했다",
+      "kind": "fact",
+      "quote": "In addition, GAAP net income for the third quarter of 2026 included a $22.9 million gain from the sale of one vessel, compared to a $32.3 million gain from the sale of one vessel in the second quarter of 2026.",
+      "document_id": "DOC-C5B686636BD8B53E",
+      "block_id": "p41",
+      "metric": "GAAP net income",
+      "figures": [
+        "$22.9 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "one_off"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "GAAP net income · second quarter of 2026: $32.3 million — 선박 매각으로 인한 이익을 포함했다",
+      "note_ko": "선박 매각으로 인한 이익을 포함했다",
+      "kind": "fact",
+      "quote": "In addition, GAAP net income for the second quarter of 2026 included a $32.3 million gain from the sale of one vessel, compared to a $13.9 million gain from the sales of two vessels in the second quarter of 2025.",
+      "document_id": "DOC-13D619F52008D76E",
+      "block_id": "p42",
+      "metric": "GAAP net income",
+      "figures": [
+        "$32.3 million"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "one_off"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "순이익이다",
+      "figures": [
+        "379,464"
+      ],
+      "quote": "Net income ; 379,464 ; 138,646",
+      "where": "DOC-D9EC64103F5CF7D0#t6"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "순영업현금흐름이다",
+      "figures": [
+        "364,303"
+      ],
+      "quote": "Net operating cash flow ; 364,303 ; 130,065",
+      "where": "DOC-D9EC64103F5CF7D0#t6"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "선박 매각으로 인한 수익이다",
+      "figures": [
+        "125,316"
+      ],
+      "quote": "Proceeds from sale of vessels (note 12) ; 125,316 ; 184,085",
+      "where": "DOC-D9EC64103F5CF7D0#t6"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

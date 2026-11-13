@@ -1,0 +1,209 @@
+{
+  "candidate_id": "CAN-5289D6512C83E305",
+  "candidate_version": "CV-9FEA0EEEF526288F",
+  "identity": {
+    "entity_id": "NASDAQ:GPRE",
+    "ticker": "GPRE",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Green Plains Inc.",
+  "industry": "Chemicals",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "저탄소 연료인 에탄올과 증류 곡물, 옥수수유를 생산, 운송하고 곡물 및 다양한 상품을 매매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Green Plains Inc. produces low-carbon fuels in the United States and internationally. It operates in two segments, Ethanol Production, and Agribusiness and Energy Services. The company produces, stores, and transports ethanol, distiller grains, and ultra-high protein and renewable corn oil. It is also involved in the grain procurement and commodity marketing businesses; and marketing ethanol for a third-party producer, as well as buys and sells ethanol, distiller grains, renewable corn oil, grain, natural gas, and other commodities in various markets. In addition, the company provides grain dr"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "GPRE analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GPRE/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:07:44+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "GPRE daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GPRE/history",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:07:44+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "GPRE company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/GPRE/profile",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:07:44+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-A37E8C02A43174C1",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1309402/000162828026068462/gpre-20261029.htm",
+      "title": "SEC 8-K 8-K",
+      "published_at": null,
+      "filed_at": "2026-10-30",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K 8-K"
+    },
+    {
+      "id": "DOC-45C22F4E4BF965B1",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1309402/000162828026071049/gpreq32026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-05",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-548849E6178CD12E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1309402/000162828026053808/gpreq22026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-EBDE5FCDDA913E0D",
+    "input_sha": "ebde5fcdda913e0d1463efafc90e932766d5c183a2e4ae734b89657233c22cea",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "adjusted EBITDA contribution from 45Z tax credit value net of discounts and other costs · 2026 full-year: $230 million to $250 million — 세금 공제 가치에서 할인 및 기타 비용을 제외한 조정 EBITDA 기여도에 대한 연간 전망치를 업데이트했다",
+        "note_ko": "세금 공제 가치에서 할인 및 기타 비용을 제외한 조정 EBITDA 기여도에 대한 연간 전망치를 업데이트했다",
+        "kind": "guidance",
+        "quote": "Updated 2026 full-year guidance to $230 million to $250 million of adjusted EBITDA contribution from 45Z tax credit value net of discounts and other costs",
+        "document_id": "DOC-45C22F4E4BF965B1",
+        "block_id": "p9",
+        "metric": "adjusted EBITDA contribution from 45Z tax credit value net of discounts and other costs",
+        "figures": [
+          "$230 million to $250 million"
+        ],
+        "period": "2026 full-year",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "tax"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-A37E8C02A43174C1",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1309402/000162828026068462/gpre-20261029.htm",
+        "filed_at": "2026-10-30",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "8-K"
+      },
+      {
+        "document_id": "DOC-45C22F4E4BF965B1",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1309402/000162828026071049/gpreq32026earningsrelease.htm",
+        "filed_at": "2026-11-05",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-548849E6178CD12E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1309402/000162828026053808/gpreq22026earningsrelease.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-13T07:12:03+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.46,
+    "eps_30d": 1.70483,
+    "eps_90d": 1.5625,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 57.4,
+    "steady": false,
+    "turnaround": false
+  }
+}

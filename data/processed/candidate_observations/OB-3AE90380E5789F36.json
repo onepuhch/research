@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-3AE90380E5789F36",
+  "candidate_id": "CAN-782282A0C20A29F1",
+  "candidate_version": "CV-03F99708906FF721",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:SMTC",
+    "ticker": "SMTC",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-13T07:01:07+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261113T065711Z_43381924530-1.json.gz",
+    "sha256": "ef8ff48f647445dab38ddf236478cc1aff31be76db2dd0882ea8dd28bc57b669",
+    "run_id": "43381924530-1",
+    "finished_at": "2026-11-13T07:11:31+00:00"
+  },
+  "eps": {
+    "eps_now": 6.67364,
+    "eps_30d": 5.85723,
+    "eps_90d": 3.94535,
+    "eps_target_period": "2028-01-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 14,
+    "down30": 0,
+    "pct_90": 69.2,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 2.284,
+    "yield_change_30_pp": 0.684
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-15",
+    "price_start_date": "2026-08-14",
+    "price_end_expected": "2026-11-12",
+    "price_end_date": "2026-11-12",
+    "close_start": 140.35000610351562,
+    "close_end": 119.44000244140625,
+    "price_pct_90": -14.9,
+    "adj_return_pct_90": -14.9,
+    "pe_change_pct": -49.7
+  },
+  "display_rank": 16,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 12
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 11146812416,
+  "context_id": "CTX-B96A8E5C4F15DC86",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-09T07:05:20+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:SMTC",
+  "approval_version": null,
+  "rendered_at": "2026-11-13T07:12:32+00:00"
+}

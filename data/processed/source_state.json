@@ -11495,7 +11495,7 @@
     "processed_run": "43174666589-1"
   },
   "0001104659-26-120184": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11511,11 +11511,11 @@
     "content_hash": "d378ce6e73438e166b5286bd8c04cad024b6e23a0c073a641ee048df9499eaef",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-11-12T07:24:38+00:00",
-    "reason": "deferred_budget"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "expired_unprocessed"
   },
   "0001193125-26-436963": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11531,10 +11531,11 @@
     "content_hash": "2f9e60bd88a48b9627af9ff35db4d1ee3bd3734e0afde16ba0181bef243e6a5d",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001783180-26-000035": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11550,10 +11551,11 @@
     "content_hash": "2b425bfae17549205f285b0dc86b8e2af70075b899b07d9e2e826a80beac60cb",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-120212": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11569,10 +11571,11 @@
     "content_hash": "c3af0578b09d138dd386e2bd7925cf8b160a71cd637e6bc77d91e123f396d23c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001628280-26-068202": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11588,10 +11591,11 @@
     "content_hash": "1b09083755bc50a1011147e51b763c39bd9c4ab56efd13f0fe86a31a3ed7d755",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000071829-26-000056": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11607,10 +11611,11 @@
     "content_hash": "f3405ef7c38e6924f0591e0d6c01f2f9eb6c08607ae9ecdba5e4c9bd6d8ffd6c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000088205-26-000060": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11626,10 +11631,11 @@
     "content_hash": "5a515091b48340dc6cef0d0810348754e01824e60160f953c75c739070b67d8e",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001474098-26-000074": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11645,10 +11651,11 @@
     "content_hash": "417a07b8cd700de9a83d850bf1e7deb8a6530fc3f41446407c76899ce7326105",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000105770-26-000118": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11664,10 +11671,11 @@
     "content_hash": "c846401ed7a524bbd8d8d5e5534d8b5bc85965f2b39b81ed9cae80d4211d0eed",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001437749-26-033875": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11683,10 +11691,11 @@
     "content_hash": "c3d79b9e32d09ab6f42021494185cd9628a31bb7d011a5f8831f2c6f0838cfc7",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000018230-26-000052": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11702,10 +11711,11 @@
     "content_hash": "ee2925ecd4c9a376ac3b281e12a7337477c0c4eb7fd13ee506f942578d88889f",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001874178-26-000065": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11721,7 +11731,8 @@
     "content_hash": "054d88b0da8542a7bfb2d1741118bac70ae6bd974449126e956d8f5561fd94ac",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001213900-26-113562": {
     "status": "rejected",
@@ -11787,7 +11798,7 @@
     }
   },
   "0001008886-26-000226": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11803,10 +11814,11 @@
     "content_hash": "202d895071c367fdfdf0de2f61766fcaf035ce07be3a09276dc367ac6e9fec29",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001501585-26-000054": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11822,10 +11834,11 @@
     "content_hash": "a3aa4c1a3747dbbce815a97cf95a26543f967b3ef6ba005b309c081bc956ade9",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-436941": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11841,10 +11854,11 @@
     "content_hash": "ca4975843473c8df7b594743b3f79e585846acf190638f9f2ddb60beffcd9b2e",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001968915-26-000152": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11860,10 +11874,11 @@
     "content_hash": "19227a87458e3202525de195a8234a4597d9cb33f3eaf09e90dd1ae0ab7b3100",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000039263-26-000053": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11879,7 +11894,8 @@
     "content_hash": "b13196dd1c136bbbdb53a1cf11c8fee2597183b313cde100dd4438b3a0f16f0f",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001447669-26-000106": {
     "status": "rejected",
@@ -11932,7 +11948,7 @@
     "processed_run": "41174406581-1"
   },
   "0000014930-26-000130": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11948,10 +11964,11 @@
     "content_hash": "61373fd9d342b52aa4d9576c84a9a32ab2fcc1475cef52311b9c4beeb6f46340",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000908937-26-000027": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11967,10 +11984,11 @@
     "content_hash": "4cdf291ad9f21f0eba14d26767de9980ccdfa134abb022b118be239ee6394920",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000102212-26-000041": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -11986,7 +12004,8 @@
     "content_hash": "ce18b65cbfb7d71566cd7458f2dcdf8d7a4f4620f3f3b6f18ff7fe07d6556357",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-30T05:59:08.730264+00:00"
+    "updated_at": "2026-11-13T06:55:35.099965+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001437749-26-034218": {
     "status": "accepted",
@@ -16233,5 +16252,733 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-12T07:23:01.993166+00:00"
+  },
+  "0001193125-26-458676": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-458676",
+      "entity_id": "CIK:0000029002",
+      "source_role": "candidate",
+      "title": "DIODES INC /DEL/ (DIOD) (CIK 0000029002) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/29002/000119312526458676/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/29002/000119312526458676/diod-ex99_1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "DIODES INC /DEL/ (DIOD) (CIK 0000029002) EX-99.1 2026-11-12. Underpinning this growth is the benefit of the targeted investments that we've made in capacity expansion over the past year coming online. The increase in inventory helps to support our customers and expected growth, as well as our longer wafer manufacturing lead times. Our third quarter result and the expectations for the continuous growth into the fourth quarter reflects our focus on key customer partnerships as well as market share gains combined with our strong operational performance, capacity expansion activities and the success of our hybrid manufacturing strategy. During the quarter, we saw continuous design win momentum across ADAS, telematics, infotainment and digital cockpit applications. We also saw strong traction across lighting, body electronics and safety applications supported by new production ramp and design wins for LED drivers, smart power devices, current monitors, protection products. Our PCI Express timing portfolio is a huge traction with several recent design wins with major AI cloud and server customers. And then just kind of thinking about the lead times and the inventories, can you talk a little bit about the pricing environment that you just mentioned? But also, how are your lead times trending? So, in general, lead time is still extended, right. This is actually driven by some of the aggressive www.callstreet.com initiatives that we put together, including capacity expansion, product mix improvements and stuff like that. Given the decline that's been well advertised in PCs and notebooks into Q4, is it fair to assume that there is fungibility and you can reallocate quickly via distribution to other end markets, which presumably will be higher margin and that helps mix, but also to reduce maybe lead times in some areas that are www.callstreet.com very constrained?",
+      "_model_response": {
+        "evidence_quote": "Underpinning this growth is the benefit of the targeted investments that we've made in capacity expansion over the past year coming online. The increase in inventory helps to support our customers and expected growth, as well as our longer wafer manufacturing lead times. Our third quarter result and the expectations for the continuous growth into the fourth quarter reflects our focus on key customer partnerships as well as market share gains combined with our strong operational performance, capacity expansion activities and the success of our hybrid manufacturing strategy. During the quarter, we saw continuous design win momentum across ADAS, telematics, infotainment and digital cockpit applications. We also saw strong traction across lighting, body electronics and safety applications supported by new production ramp and design wins for LED drivers, smart power devices, current monitors, protection products. Our PCI Express timing portfolio is a huge traction with several recent design wins with major AI cloud and server customers. And then just kind of thinking about the lead times and the inventories, can you talk a little bit about the pricing environment that you just mentioned? But also, how are your lead times trending? So, in general, lead time is still extended, right.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "DIODES INC /DEL/ (DIOD) ... Our PCI Express timing portfolio is a huge traction with several recent design wins with major AI cloud and server customers.",
+          "earnings_leverage": "Underpinning this growth is the benefit of the targeted investments that we've made in capacity expansion over the past year coming online. ... new production ramp and design wins for LED drivers, smart power devices, current monitors, protection products.",
+          "supply_demand_tightness": "So, in general, lead time is still extended, right.",
+          "structural_ai_demand": "Our PCI Express timing portfolio is a huge traction with several recent design wins with major AI cloud and server customers.",
+          "revision_momentum": "During the quarter, we saw continuous design win momentum across ADAS, telematics, infotainment and digital cockpit applications.",
+          "catalyst_visibility": "capacity expansion over the past year coming online. ... several recent design wins with major AI cloud and server customers."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "Automotive & AI Server Semiconductors",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "DIOD",
+        "theme": "AI Cloud & Automotive Semiconductors",
+        "signal_type": "수주/백로그",
+        "what_happened": "DIOD가 지난 1년간의 생산능력 증설이 가동되고 있으며, ADAS, 인포테인먼트, LED 드라이버 등 다양한 분야에서 지속적인 디자인윈 모멘텀을 보이고 특히 주요 AI 클라우드 및 서버 고객사로부터 PCI Express 타이밍 포트폴리오의 디자인윈을 확보했고, 리드타임이 여전히 연장되어 있다고 밝혔다.",
+        "why_it_matters": "DIOD의 생산능력 증설과 AI 클라우드 및 자동차 분야의 주요 고객사 디자인윈은 향후 실적 성장을 견인할 강력한 수요 증가와 시장 점유율 확대를 의미하며, 이는 시장에 아직 충분히 반영되지 않은 긍정적인 투자 기회일 수 있다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 AI 클라우드 및 자동차 부문 매출 성장률; 생산능력 증설에 따른 가동률 및 수익성 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "디자인윈(Design Win): 반도체 기업이 고객사의 신제품에 자사 부품이 채택되도록 하는 것. 향후 대량 수주로 이어지는 초기 단계.\nPCI Express 타이밍 포트폴리오: 고속 데이터 전송 표준인 PCI Express 시스템에서 데이터 동기화를 위한 클럭 신호를 제공하는 반도체 제품군."
+      }
+    },
+    "content_hash": "efab2917241a03b80c1c8868cacd6313f6772cd432b95ca104a6cd35934f4fc3",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-13T06:55:50+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001828318-26-000069": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001828318-26-000069",
+      "entity_id": "CIK:0001828318",
+      "source_role": "candidate",
+      "title": "Enovix Corp (ENVX) (CIK 0001828318) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828318/000182831826000069/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1828318/000182831826000069/enovixq32026financialres.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Enovix Corp (ENVX) (CIK 0001828318) EX-99.1 2026-11-12. Our drone, defense and industrial pipeline (identified prospects through design wins) grew 18% to approximately $216 million, up from $183 million in the prior quarter with drones accounting for $150 million of that. Our growing backlog and pipeline, coupled with our Korean capacity expansion, support our new outlook. Forward-looking statements in this press release include, but are not limited to, statements regarding: our Q4’26 guidance, our fiscal year 2026 revenue estimate, our fiscal year 2027 guidance and our future operating results, financial position and growth opportunities; the drone battery purchase orders described in this release, including the quantity and timing of deliveries and our expectation of follow-on orders; our backlog for 2027 delivery and its conversion into revenue; the growth of our drone, defense and industrial pipeline and its conversion into design wins, purchase orders, shipments and revenue at acceptable margins; the timing, cost and benefits of our capacity expansion in South Korea and any further investments in South Korea capacity; the expected timing of completion of our smart eyewear customer order, the effectiveness of the corrective actions we have taken in response to the manufacturing process excursion, the sampling of AI-2 and our ability to obtain additional smart eyewear orders; our smartphone strategy, including our decision not to proceed with system-level field testing of AI-1 with our lead smartphone customer, our reduced AI-1 development spending, the concentration of our silicon-anode development on small cells, the potential application of future energy-density gains to large-format smartphone cells, the timing of any revised smartphone timeline and our ability to re-engage in smartphone qualification; the expected savings, costs and timing of our restructuring plan, including the rebalancing of our resources toward our South Korea operations and the narrowin",
+      "_model_response": {
+        "evidence_quote": "Our drone, defense and industrial pipeline (identified prospects through design wins) grew 18% to approximately $216 million, up from $183 million in the prior quarter with drones accounting for $150 million of that. Our growing backlog and pipeline, coupled with our Korean capacity expansion, support our new outlook.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "the concentration of our silicon-anode development on small cells",
+          "earnings_leverage": "Our growing backlog and pipeline, coupled with our Korean capacity expansion, support our new outlook.",
+          "supply_demand_tightness": "Our drone, defense and industrial pipeline (identified prospects through design wins) grew 18% to approximately $216 million, up from $183 million in the prior quarter",
+          "structural_ai_demand": "the sampling of AI-2 and our ability to obtain additional smart eyewear orders",
+          "revision_momentum": "Our growing backlog and pipeline, coupled with our Korean capacity expansion, support our new outlook. Forward-looking statements in this press release include, but are not limited to, statements regarding: our Q4’26 guidance, our fiscal year 2026 revenue estimate, our fiscal year 2027 guidance",
+          "catalyst_visibility": "Our drone, defense and industrial pipeline (identified prospects through design wins) grew 18% to approximately $216 million, up from $183 million in the prior quarter with drones accounting for $150 million of that. Our growing backlog and pipeline, coupled with our Korean capacity expansion, support our new outlook."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "Advanced Battery Technology",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ENVX",
+        "theme": "Advanced Batteries",
+        "signal_type": "수주/백로그",
+        "what_happened": "Enovix의 드론, 방위, 산업 부문 파이프라인(디자인 윈 포함)이 전 분기 대비 18% 성장하여 약 2억 1,600만 달러를 기록했으며, 한국 생산 능력 증설이 새로운 전망을 뒷받침합니다.",
+        "why_it_matters": "파이프라인 성장은 미래 매출 증가의 조기 지표이며, 특히 드론, 방위, 산업 분야의 고성능 배터리 수요 증가에 Enovix가 핵심 공급자로 자리매김하고 있음을 시사합니다. 한국 생산 능력 증설은 이러한 수요에 대응하기 위한 선제적 투자로, 향후 실적 개선에 긍정적인 영향을 미칠 수 있습니다.",
+        "what_to_watch": "향후 분기별 파이프라인 및 수주액 추이; 한국 생산 능력 증설의 구체적인 진행 상황 및 가동 시점",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "디자인 윈 (Design Win): 고객사가 제품 개발 단계에서 특정 부품 또는 솔루션을 자사 제품에 채택하기로 결정하는 것. 파이프라인 (Pipeline): 잠재 고객 또는 프로젝트의 목록으로, 미래 매출로 이어질 가능성이 있는 기회들을 의미."
+      }
+    },
+    "content_hash": "d9ce958ac92362abf9a9162ebda92eb1659e809863c6b9abccd00af2115eec20",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-13T06:56:29+00:00",
+    "signal_id": "SIG-0942",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-13",
+    "processed_run": "43381924530-1"
+  },
+  "0001437749-26-036411": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-036411",
+      "entity_id": "CIK:0001507957",
+      "source_role": "candidate",
+      "title": "Ideal Power Inc. (IPWR) (CIK 0001507957) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1507957/000143774926036411/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1507957/000143774926036411/ex_1043661.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Ideal Power Inc. (IPWR) (CIK 0001507957) EX-99.1 2026-11-12. hyperscaler, continued advancing our EV opportunity with Stellantis, and progressed new customer engagements across AI data centers and energy infrastructure.” Somo continued, “Reflecting on my first year as CEO, we are materially better positioned to advance customer opportunities through the sales funnel and into production orders. We have assembled an experienced semiconductor leadership and engineering team, expanded our sales funnel to approximately $450 million, released new RDKs, signed a long-term supply agreement with a high-volume, automotive-qualified power semiconductor foundry, and strengthened our balance sheet. EX-99.1 2 ex_1043661.htm EXHIBIT 99.1 ex_1043661.htm Exhibit 99.1 Ideal Power Reports Third Quarter 2026 Financial Results AUSTIN, TX – November 12, 2026 -- Ideal Power Inc. (Nasdaq: IPWR) (“Ideal Power,” the “Company,” “we,” “us” or “our”), developer and provider of its innovative and widely patented B-TRAN® bidirectional semiconductor power switch, reports results for its third quarter ended September 30, 2026. “Customer engagements expanded as the transition to higher-voltage DC architectures is accelerating demand for solid-state circuit protection,” said David Somo, President and Chief Executive Officer of Ideal Power. “Since the start of the third quarter, we demonstrated an intelligent circuit breaker prototype in collaboration with Power Integrations, commenced shipment of our new B-TRAN® reference design kits (“RDKs”), advanced our initiative with an industry partner for a funded joint engineering study and modeling project to provide a simulation platform for a U.S. hyperscaler, continued advancing our EV opportunity with Stellantis, and progressed new customer engagements across AI data centers and energy infrastructure.” Somo continued, “Reflecting on my first year as CEO, we are materially better positioned to advance customer opportunities through the sales funnel and in",
+      "_model_response": {
+        "evidence_quote": "Customer engagements expanded as the transition to higher-voltage DC architectures is accelerating demand for solid-state circuit protection,” said David Somo, President and Chief Executive Officer of Ideal Power. “Since the start of the third quarter, we demonstrated an intelligent circuit breaker prototype in collaboration with Power Integrations, commenced shipment of our new B-TRAN® reference design kits (“RDKs”), advanced our initiative with an industry partner for a funded joint engineering study and modeling project to provide a simulation platform for a U.S. hyperscaler, continued advancing our EV opportunity with Stellantis, and progressed new customer engagements across AI data centers and energy infrastructure.” Somo continued, “Reflecting on my first year as CEO, we are materially better positioned to advance customer opportunities through the sales funnel and into production orders. We have assembled an experienced semiconductor leadership and engineering team, expanded our sales funnel to approximately $450 million, released new RDKs, signed a long-term supply agreement with a high-volume, automotive-qualified power semiconductor foundry, and strengthened our balance sheet.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Ideal Power Inc. (Nasdaq: IPWR) ... developer and provider of its innovative and widely patented B-TRAN® bidirectional semiconductor power switch",
+          "earnings_leverage": "expanded our sales funnel to approximately $450 million, released new RDKs, signed a long-term supply agreement with a high-volume, automotive-qualified power semiconductor foundry",
+          "supply_demand_tightness": "Customer engagements expanded as the transition to higher-voltage DC architectures is accelerating demand for solid-state circuit protection",
+          "structural_ai_demand": "progressed new customer engagements across AI data centers and energy infrastructure.” ... “to provide a simulation platform for a U.S. hyperscaler",
+          "revision_momentum": "",
+          "catalyst_visibility": "commenced shipment of our new B-TRAN® reference design kits (“RDKs”), advanced our initiative with an industry partner for a funded joint engineering study and modeling project to provide a simulation platform for a U.S. hyperscaler, continued advancing our EV opportunity with Stellantis, and progressed new customer engagements across AI data centers and energy infrastructure.” ... “expanded our sales funnel to approximately $450 million"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "Power Semiconductors",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Ideal Power Inc.",
+        "theme": "EV, AI, Energy Infrastructure",
+        "signal_type": "신규고객",
+        "what_happened": "Ideal Power가 B-TRAN® RDK 출하를 시작하고, Stellantis와의 EV 기회를 진전시키며, 미국 하이퍼스케일러 및 AI 데이터센터 고객과의 신규 계약을 추진하고, 영업 파이프라인을 4.5억 달러로 확장했습니다.",
+        "why_it_matters": "Ideal Power의 혁신적인 양방향 전력 반도체 기술이 EV, AI 데이터센터, 에너지 인프라 등 고성장 시장에서 구체적인 고객 확보 및 매출 확대로 이어질 잠재력을 보여주며, 이는 향후 실적 개선의 중요한 촉매가 될 수 있습니다.",
+        "what_to_watch": "향후 B-TRAN®의 디자인 윈 발표 및 실제 생산 주문 전환 여부; Stellantis 및 하이퍼스케일러 프로젝트의 구체적인 진행 상황 및 매출 기여도",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "B-TRAN®: Ideal Power의 특허받은 양방향 전력 반도체 스위치 기술; RDK (Reference Design Kit): 제품 개발을 위한 참조 설계 키트"
+      }
+    },
+    "content_hash": "4a89f638f7d0b10c818d24ec6b0780f8d30bbad40899987882f0bfbb7bde0774",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-13T06:56:49+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001171843-26-007367": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001171843-26-007367",
+      "entity_id": "CIK:0002048519",
+      "source_role": "candidate",
+      "title": "Aebi Schmidt Holding AG (AEBI) (CIK 0002048519) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2048519/000117184326007367/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2048519/000117184326007367/exh_991.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Aebi Schmidt Holding AG (AEBI) (CIK 0002048519) EX-99.1 2026-11-12. EX-99.1 2 exh_991.htm PRESS RELEASE EdgarFiling EXHIBIT 99.1 Aebi Schmidt Group reports continued growth in Net Sales and Profitability in a challenging market environment, updates full-year 2026 outlook Q3 2026 Order Intake of $528m, up 2.0% vs Q3 2025 and Order Backlog of $1.3b, expanding 16.4% vs Q3 2025 on the back of good demand particularly in Airport, Municipal and for Walk-In Van solutions Net Sales of $493m in Q3 2026, up 4.6% vs Q3 2025, supported by very strong performance in Walk-In Vans Gross Margin of 19.2% in Q3 2026, down 80bps vs Q3 2025 due to ongoing high inflationary pressure Adjusted EBITDA 1 of $44.2m in Q3 2026, up 4.9% vs Q3 2025, representing an unchanged 9.0% of Net Sales, overcoming gross margin performance with accelerated synergy realization and cost management Net Income substantially improved to $10.8m in Q3 2026, up $9.6m vs Q3 2025 Aebi Schmidt Group updates full-year 2026 guidance 2 to Net Sales of $1.95b to $2.00b, Adjusted EBITDA 1 of $170m to $180m and leverage at year-end of <2.5x Recently announced planned acquisition of O.J. “We responded quickly by accelerating synergy realization and cost measures to deliver strong profitability, while advancing the transformation of the combined organization at a remarkable pace through an expanded leadership structure and an optimized operational footprint.” Third Quarter 2026 Financial Results Order Intake in Q3 2026 increased 2.0% vs Q3 2025, driven by North America despite softness in select end markets and weaker demand from China and the Middle East driven by geopolitical conflicts Order Backlog, as of September 30, 2026, grew 16.4% to $1.3b vs September 30, 2025, driven by continued strength in Airport and Municipal and a growing Walk-in-Van backlog, extending into 2027 Net Sales of $493m, a solid 4.6% increase vs Q3 2025 North America Net Sales with strong organic growth of 7.9% vs Q3 2025, reflecting improvements i"
+    },
+    "content_hash": "1fbf9e32b52cb08b5f3a8325608254651eeea96686b604e2408e717c314b4c53",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001493152-26-051408": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-051408",
+      "entity_id": "CIK:0001518461",
+      "source_role": "candidate",
+      "title": "AmpliTech Group, Inc. (AMPG, AMPGZ) (CIK 0001518461) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1518461/000149315226051408/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1518461/000149315226051408/ex99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "AmpliTech Group, Inc. (AMPG, AMPGZ) (CIK 0001518461) EX-99.1 2026-11-12. ● Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million. Maqbool continued, “We are encouraged by the customer activity we have announced since quarter-end, including our largest single purchase order to date and a record backlog exceeding $52 million as of October 21. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 AmpliTech Group Reports Q3 2026 Revenue of $6.58 Million, Up 8.0% Year-over-Year, and 41.1% Nine-Month Gross Profit Growth Q3 Gross Margin Expands Sequentially to 34.2%; Previously Announced Backlog Surpassed $52 Million in October HAUPPAUGE, N.Y., November 12, 2026; AmpliTech Group, Inc. (Nasdaq: AMPG, AMPGZ) (the “Company” or “AmpliTech”), a designer, developer and manufacturer of advanced radio frequency (RF) microwave components, 5G communications systems, semiconductor solutions and quantum-computing low-noise amplifiers (LNAs), today announced unaudited financial results for the three - and nine-months quarter ended September 30, 2026. Third Quarter 2026 Highlights ● Revenue increased 8.0% year-over-year to $6.58 million, compared with $6.09 million in the third quarter of 2025. ● Spectrum Semiconductor Materials distribution revenue increased 36.4% year-over-year to $2.89 million, reflecting higher distribution-channel sales volumes and continued business expansion. ● Gross margin increased sequentially to 34.2% from 27.9% in Q2 2026, an improvement of approximately 6.3 percentage points. Quarterly gross profit was $2.25 million. ● Net loss narrowed sequentially to $1.89 million, or $0.07 per basic and diluted share, from approximately $3.09 million in Q2 2026. ● For the first nine months of 2026, gross profit increased 41.1% year-over-year to $7.07 million, while gross margin expanded to 35.3% from 24.2% in the prior-year period. ● The Company previously announced receipt of more than $17 "
+    },
+    "content_hash": "f4a640ab8432a0a65210b7c975e69ca020949d27cb2621512a1ac9a2c46309bb",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001213900-26-118327": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-118327",
+      "entity_id": "CIK:0001992243",
+      "source_role": "candidate",
+      "title": "T1 Energy Inc. (TE) (CIK 0001992243) EX-99.2 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1992243/000121390026118327/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1992243/000121390026118327/ea031199401ex99-2.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "T1 Energy Inc. (TE) (CIK 0001992243) EX-99.2 2026-11-12. cell capacity expansion of 3.1GW+ to serve unmet customer demand 5GW U.S. $211MM in Q3 2025 ▪ T1 announced 1.6GW of contracts in October for 2027 – 2028 deliveries with customers, including Avantus, for modules using a blend of imported and domestically produced solar cells ▪ T1 now has more than 3.5GW of its 2027 manufacturing capacity under contract ▪ Direct customer interest and negotiations exceed 2027 G1_Dallas capacity, awaiting clarity on Section 232 onshoring program before signing additional contracts Q4 2026 – 2027 Outlook ▪ T1 expects full-year 2026 G1 module production of 4.0 – 4.2GW ▪ Preliminary plan to produce 5.3GW at G1_Dallas in 2027 based on existing contract coverage and inbound customer demand 1 Includes $190MM net sales from G1 and $7MM net sales from T1 NRI 10 Q3 2026 Earnings Call T1 Financial Summary T1 is preparing to service new contracts at G1 while funding construction of G2 T1 BALANCE SHEET SUMMARY 1,056 MW Q3 2026 Module Production T1 built 326 MW of inventory in Q3 to accommodate new customer contracts 8.5% Q3 2026 Gross Margin Q3 margins include higher facilities -related costs driven by increased inventory production ($16.4) MM Q3 Adjusted EBITDA Reflects higher facilities - related costs and higher SG&A expenses Building offtake contract coverage and capital formation in focus ▪ Q3 2026 net loss impacted by inventory build of 326 MW to satisfy customer contracts and higher SG&A expense of $71.2MM related to external legal and transaction fees and growth in technical and operational head count for G2_Austin ▪ Net loss from continuing operations of $34.7MM included $29.5MM of Depreciation & Amortization expense ▪ T1 expects to achieve full -year 2026 G1_Dallas module production of 4.0 - 4.2GW and is preliminarily planning to produce 5.3GW in 2027 based on indications of customer demand ▪ T1 is in negotiations with certain institutional investors under exclusivity (with certain ",
+      "_model_response": {
+        "evidence_quote": "cell capacity expansion of 3.1GW+ to serve unmet customer demand 5GW U.S. $211MM in Q3 2025 ▪ T1 announced 1.6GW of contracts in October for 2027 – 2028 deliveries with customers, including Avantus, for modules using a blend of imported and domestically produced solar cells ▪ T1 now has more than 3.5GW of its 2027 manufacturing capacity under contract ▪ Direct customer interest and negotiations exceed 2027 G1_Dallas capacity, awaiting clarity on Section 232 onshoring program before signing additional contracts Q4 2026 – 2027 Outlook ▪ T1 expects full-year 2026 G1 module production of 4.0 – 4.2GW ▪ Preliminary plan to produce 5.3GW at G1_Dallas in 2027 based on existing contract coverage and inbound customer demand",
+        "axes_evidence": {
+          "underfollowed_pure_play": "T1 Energy Inc. (TE)",
+          "earnings_leverage": "T1 announced 1.6GW of contracts in October for 2027 – 2028 deliveries... T1 now has more than 3.5GW of its 2027 manufacturing capacity under contract... Preliminary plan to produce 5.3GW at G1_Dallas in 2027",
+          "supply_demand_tightness": "cell capacity expansion of 3.1GW+ to serve unmet customer demand 5GW U.S... Direct customer interest and negotiations exceed 2027 G1_Dallas capacity",
+          "structural_ai_demand": "",
+          "revision_momentum": "T1 announced 1.6GW of contracts in October for 2027 – 2028 deliveries with customers, including Avantus",
+          "catalyst_visibility": "1.6GW of contracts in October for 2027 – 2028 deliveries... Preliminary plan to produce 5.3GW at G1_Dallas in 2027"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "태양광 셀/모듈 생산",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "T1 Energy Inc. (TE)",
+        "theme": "태양광 에너지",
+        "signal_type": "수주/백로그",
+        "what_happened": "T1 Energy는 2027-2028년 인도분 1.6GW를 포함해 총 3.5GW 이상의 2027년 생산능력에 대한 계약을 확보했으며, 미충족 고객 수요를 충족하기 위해 3.1GW+의 셀 생산능력 확장을 계획하고 있습니다.",
+        "why_it_matters": "회사의 생산능력 확충과 대규모 수주 확보는 태양광 모듈에 대한 강력한 수요를 반영하며, 이는 향후 실적 성장과 시장 점유율 확대로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "향후 추가 수주 계약 체결 여부 및 G1_Dallas 공장의 2027년 5.3GW 생산 계획 달성 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "GW (기가와트): 전력 또는 생산능력의 단위로, 10억 와트를 의미합니다. 백로그 (Backlog): 아직 이행되지 않은 수주 잔고를 의미합니다."
+      }
+    },
+    "content_hash": "8bb5b4637b921c2068b76b6ab1b7c57b4231fab02d8eb09b399a7e5588d73581",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-13T06:57:08+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001628280-26-073041": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073041",
+      "entity_id": "CIK:0001289308",
+      "source_role": "candidate",
+      "title": "EnerSys (ENS) (CIK 0001289308) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1289308/000162828026073041/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1289308/000162828026073041/ex991_earningsx2qfy27.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "EnerSys (ENS) (CIK 0001289308) EX-99.1 2026-11-12. All statements addressing operating performance, events, or developments that EnerSys expects or anticipates will occur in the future, including statements relating to sales growth, earnings or earnings per share growth, order intake, backlog, payment of future cash dividends, commodity prices, execution of its stock buyback program, judicial or regulatory proceedings, ability to identify and realize benefits in connection with acquisition and disposition opportunities, EnerSys’ pending acquisition of Ultralife, including the anticipated timing of completion and the anticipated benefits of the pending acquisition, and EnerSys’ strategy, plans, objectives, expectations (financial or otherwise) and intentions with respect to its future financial results, growth potential and anticipated product portfolio in connection with the pending acquisition, and market share, as well as statements expressing optimism or pessimism about future operating results or benefits from its cash dividend, its stock buyback programs, application of Section 45X of the Internal Revenue Code, funding, development and construction of the Company's gigafactory in Greenville, South Carolina, adverse developments with respect to the economic conditions in the U.S."
+    },
+    "content_hash": "0ec49afdd20d8f0acb907f5ba06bd4d9f1d7a10f34ddbfc46fec45febb1ad7ee",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001628280-26-073106": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073106",
+      "entity_id": "CIK:0001844452",
+      "source_role": "candidate",
+      "title": "Intuitive Machines, Inc. (LUNR) (CIK 0001844452) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1844452/000162828026073106/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1844452/000162828026073106/lunr-20260930xexx991.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Intuitive Machines, Inc. (LUNR) (CIK 0001844452) EX-99.1 2026-11-12. These results are an important proof point in our transformation from a company that advanced the state of lunar exploration into a next-generation space prime developing and integrating the technology, infrastructure and services that enable customers to achieve their differentiated missions across space.” Highlights • Awarded as a vendor for NASA’s $10 billion (+$5 billion option) IDIQ contract in Q4 for its next-generation Commercial Lunar Payload Services 2 (CLPS 2) contract designed to support more capable cargo missions at greater frequency, advancing Artemis and Moon Base infrastructure requirements, including transportation, mobility, power, habitats, and logistics • Booked $450 million of new awards and Goonhilly acquired backlog driven primarily by Accelerated Missile Defense Tranche 3 (\"AMDT3\") constellation, NASA's Jet Propulsion Laboratory EAGLE-VSWIR, and Hartford, two IM 300™ series platforms for a National Security Space application • Contracted with NASA's Jet Propulsion Laboratory (JPL) for FALCON-RADAR in Q4, which is part of the Fleet for the Atmospheric Linking Commercial Observations with NASA, an Earth observation mission that will study clouds and convection from space • Accelerated plans for Near Space Network cislunar constellation, Altus-2 through Altus-5 to deploy together in 2028 on a NASA provided launch vehicle • Closed Goonhilly Earth Station and COMSAT acquisition to expand our space‑to‑ground data services network configured to support missions across LEO, MEO, GEO, cislunar, and deep space environments Financial Highlights • Achieved record quarterly revenue of $269 million driven by execution across satellite production, lunar delivery, lunar data services, and ground communication networks • Converted record revenue to record gross margin of $69 million or 26% driven by increased contribution from our satellite production business, higher volume, and net favorab"
+    },
+    "content_hash": "4f283619e69b9ae5b75d841f4c8f497f6ca579eefb08c8411ae35f37f6f036ac",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001140361-26-043093": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001140361-26-043093",
+      "entity_id": "CIK:0002011514",
+      "source_role": "candidate",
+      "title": "Anteris Technologies Global Corp. (AVR) (CIK 0002011514) EX-99.2 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2011514/000114036126043093/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2011514/000114036126043093/ef20085361_ex99-2.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Anteris Technologies Global Corp. (AVR) (CIK 0002011514) EX-99.2 2026-11-12. The PARADIGM Trial recruitment is advancing along with capacity expansion in line with our clinical and commercial plan. EX-99.2 3 ef20085361_ex99-2.htm EXHIBIT 99.2 Exhibit 99.2 Anteris Technologies Announces Results for the Third Quarter of 2026 MINNEAPOLIS, United States and BRISBANE, Australia November 11, 2026 (AEDT): Anteris Technologies Global Corp. (“Anteris” or the “Company”) (NASDAQ: AVR, ASX: AVR), a global healthcare company committed to designing, developing, and commercializing cutting-edge medical devices to restore healthy heart function, today reported financial results for the quarter ended September 30, 2026, and provided a corporate update. Q3 2026 Highlights • Continued execution of the PARADIGM Trial, with enrollment progressing across active sites in the U.S., Canada, Denmark, the Netherlands and France. Subsequent to quarter-end, the trial received regulatory clearance from Germany’s Federal Institute for Drugs and Medical Devices (BfArM) and advanced in Australia following HREC approval and TGA authorization under the Clinical Trial Notification pathway. • Assumed occupancy of the Northcross facility in Minnesota, providing additional capacity to scale production of the DurAVR ® THVs and ComASUR ® Delivery System, in preparation for commercialization. • Appointed Brent Moen as Chief Financial Officer, effective September 11, to support the Company’s financial and governance priorities as it advances the DurAVR THV toward commercialization. “Q3 saw continued progress on multiple fronts. The PARADIGM Trial recruitment is advancing along with capacity expansion in line with our clinical and commercial plan. The Company also brought in some key hires to strengthen our operating model and future capabilities,” said Wayne Paterson, Vice Chairman and Chief Executive Officer of Anteris. Business & Operations During the quarter, the Company continued to execute the global pi"
+    },
+    "content_hash": "884fa518c783c2e9a359e3a12db2393f5f32cd67d644692c9dd0fed60f320345",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001104659-26-125825": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-125825",
+      "entity_id": "CIK:0002107018",
+      "source_role": "candidate",
+      "title": "DPC Holdings PLC (DPC) (CIK 0002107018) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2107018/000110465926125825/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2107018/000110465926125825/tm2629268d1_ex99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "DPC Holdings PLC (DPC) (CIK 0002107018) EX-99.1 2026-11-12. Capital expenditure is expected to increase through 2027 and 2028, with additional investments in capacity expansions to accommodate increased customer demand and delivery of three strategic IGT customer partnership agreements across both Germany and the United Kingdom. Capital expenditure increased versus the prior year, due to capacity expansion investments to support market growth and our two Aerospace Customer Strategic Partnerships including initial equipment deposits for our greenfield superalloy facility in Alabama. Forward-looking statements include, but are not limited to, statements about: the projected and/or anticipated future financial performance of the Company and our specific businesses, including as delineated in our forward-looking guidance (including, without limitation revenue, revenue growth rates and drivers, capital expenditures, metal pricing; earnings per share, EBITDA, adjusted EBITDA, adjusted EBITDA margin, adjusted earnings per share, and free cash flow); our market opportunity and the potential growth of the market; our strategy, outcomes, and growth prospects; trends in our industry and end markets; the competitive environment in which we operate; potential new products and product innovation; our expectations regarding future events, growth, growth drivers, expansion or performance, including demand for our products and third-party relationships; historical results that may suggest trends for our business; expectations of retaining and/or attracting new customers; expectations of beliefs regarding future events; and assumptions underlying any of the items mentioned herein. 9 Some of the factors that could cause actual results to differ materially from those expressed or implied by the forward-looking statements include: our failure to manage our growth effectively and our ability to achieve and maintain profitability and create long-term value; our ability to grow revenue and"
+    },
+    "content_hash": "10d58e105e964291dbc80adc51967c9e6bedb38f419a9bc1186c068c57476579",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001213900-26-119000": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-119000",
+      "entity_id": "CIK:0001828805",
+      "source_role": "candidate",
+      "title": "Aeluma, Inc. (ALMU) (CIK 0001828805) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1828805/000121390026119000/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1828805/000121390026119000/ea031196101ex99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Aeluma, Inc. (ALMU) (CIK 0001828805) EX-99.1 2026-11-12. DATED NOVEMBER 12, 2026 Exhibit 99.1 Aeluma Announces First Quarter Fiscal 2027 Financial Results Continued Progress in Technology Readiness for AI Datacom Market Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing GOLETA, CA – November 12, 2026 – Aeluma, Inc. EX-99.1 2 ea031196101ex99-1.htm PRESS RELEASE OF AELUMA, INC. DATED NOVEMBER 12, 2026 Exhibit 99.1 Aeluma Announces First Quarter Fiscal 2027 Financial Results Continued Progress in Technology Readiness for AI Datacom Market Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing GOLETA, CA – November 12, 2026 – Aeluma, Inc. (NASDAQ: ALMU) (“Aeluma” or the “Company”), a semiconductor company specializing in high-performance, scalable technologies for AI, mobile and consumer, defense and aerospace, and quantum, today reported financial results for its first quarter of fiscal 2027 ended September 30, 2026. Fiscal First Quarter 2027 and Subsequent Highlights ● Increased Technology Readiness: Advanced development of high-speed photodetectors and quantum dot lasers leveraging capabilities at Aeluma and supply chain partners such as Sumitomo Chemical Advanced Technologies. ● Manufacturing Expansion : Finalized a purchase agreement with Aixtron for a new 200 mm capable MOCVD system to expand manufacturing capacity and accelerate development for non-indium-phosphide photonics. ● Customer Engagements: Expanded customer discussions in Datacom and other markets regarding product opportunities and non-recurring engineering investments. Several initiatives involve potentially high-volume demand to support the 2028 through 2032 AI infrastructure buildout. ● CHIPS Funding: Continued diligence and definitive agreement negotiations with the U.S. Department of Commerce CHIPS R&D Office for up to $30 million in proposed funding for development and commercialization"
+    },
+    "content_hash": "a4eada535e629435d7d98ae0ac7b3a3b3a89b360df1b3c3c0e262b118f49a5b5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001104659-26-126237": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-126237",
+      "entity_id": "CIK:0000101538",
+      "source_role": "candidate",
+      "title": "UNITED STATES ANTIMONY CORP (UAMY) (CIK 0000101538) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/101538/000110465926126237/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/101538/000110465926126237/tm2629635d1_ex99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "UNITED STATES ANTIMONY CORP (UAMY) (CIK 0000101538) EX-99.1 2026-11-12. The Company’s exclusive long-term supply agreement with the supplier, and its exclusive license to the supplier’s antimony processing technology for use in North America and Australia, will remain in place. EX-99.1 2 tm2629635d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 United States Antimony Corporation Reports Third Quarter and Nine Months Ended September 30, 2026 Financial and Operating Results Third Quarter 2026 Revenues Increased 16% to $10.1 Million Antimony pounds sold up 68% in the quarter Gross Profit Margin Expands to 42% from 23% Gross Profit up 113% to $4.3 Million Projected 2026 Antimony Sales of 1.68–1.81 Million Pounds; Up ~24%; October Antimony Sales of ~310,000 Pounds; Highest Ever Monthly Volumes Maintained Significant Liquidity Equal to Year-end 2025 of ~ $90 Million Including Marketable Securities \"The Critical Minerals and ZEO Company\" ~ Antimony, Gold, Tungsten, and Zeolite ~ DALLAS, TX / ACCESS Newswire / November 12, 2026 / United States Antimony Corporation (\"USAC,\" \"US Antimony Corporation,\" or the \"Company\") (NYSE: UAMY) (NYSE Texas: UAMY) , a leading producer and processor of antimony, zeolite, and other critical minerals, and the only fully integrated antimony company in the world outside of China and Russia, today reported its financial and operating results for the third quarter and nine months ended September 30, 2026. Third Quarter 2026 Highlights · Revenue Growth: Generated revenue of $10.1 million in the third quarter of 2026, an increase of approximately 16% from $8.7 million in the third quarter of 2025 . · Improved Gross Profit: Gross profit increased 113% to $4.3 million in the third quarter of 2026 from $2.0 million in the third quarter of 2025, while gross margin improved to approximately 42% from 23%. · Net Loss: Reported a net loss of $9.5 million for the quarter, which included $2.1 million of non-cash stock-based compensation expense, $0.8 million of depre"
+    },
+    "content_hash": "a4bbbc595495fad404a5f91834b100e77f44ba2811e8acc74b97ee19348df55d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001628280-26-073382": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073382",
+      "entity_id": "CIK:0002141406",
+      "source_role": "candidate",
+      "title": "Accelevation Holdings Corp. (ACCV) (CIK 0002141406) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026073382/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026073382/a3q2026earningsrelease.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Accelevation Holdings Corp. (ACCV) (CIK 0002141406) EX-99.1 2026-11-12. Forward-looking statements include all statements that are not historical facts, including our guidance, the conversion of our backlog into revenue, demand in our end markets and for our products, increases in market share, our capabilities to satisfy demand, continued investment in our business, including capacity expansion and our modular and power product offerings, the diversification of our customer base and expansion of our addressable market, our estimated and projected costs, expenditures, cash flows, growth rates and margin improvements, our future leverage, the expected benefits from the entry into the new facilities, our plans and objectives for future operations and the execution of our growth strategy and long-term strategic priorities. EX-99.1 2 a3q2026earningsrelease.htm EX-99.1 3Q 2026 Earnings Release 1 FOR IMMEDIATE RELEASE Accelevation Holdings Corp. Reports Strong Third Quarter 2026 with Revenue Growth of 66% , Bookings Growth of over 350%, and Robust Cash Generation November 12, 2026 Third Quarter 2026 Business Highlights • Revenue grew 65.9% year over year to $202.2 million . • Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. • Book-to-bill ratio of 3.8x. • Net income was $3.2 million , a decline of $10.5 million ; net income margin was 1.6% . • Adjusted net income* was $20.9 million , a decline of 7.0% . • Adjusted EBITDA* increased by $8.9 million to $37.7 million ; Adjusted EBITDA margin* was 18.7% . • Operating cash flow increased to $62.5 million from an outflow of $0.6 million in the prior year. • Subsequent to quarter end, the Company entered into a new $650 million senior secured credit agreement with significant pricing improvement. Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth"
+    },
+    "content_hash": "885efafca8499b97a002d7c17750153610288ec6c3d64eb6dd411162f652b29d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001213900-26-118353": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-118353",
+      "entity_id": "CIK:0001843162",
+      "source_role": "candidate",
+      "title": "Chicago Atlantic BDC, Inc. (LIEN) (CIK 0001843162) EX-99.2 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1843162/000121390026118353/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1843162/000121390026118353/ea031189601ex99-2.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Chicago Atlantic BDC, Inc. (LIEN) (CIK 0001843162) EX-99.2 2026-11-12. 5 Investment Highlights A DIFFERENTIATED BDC Strong credit metrics Substantial capacity to scale, with debt-to equity-of only 0.3x versus the public BDC industry average of 1.3x12 The first public BDC primarily focused on the cannabis industry All debt investments are senior secured 65% of the debt portfolio is protected from further interest rate declines and 84% of the debt portfolio is positively impacted from an increase in interest rates Part of a leading cannabis focused investment platform FOCUS ON UNDERSERVED SECTORS Focus on highly complex and highly regulated industries often overlooked by other capital providers Direct lending to the cannabis industry and the lower middle-market, secured by a diverse collateral base Investing in underserved market niches creates pricing power, enhances downside protections, and creates a durable competitive moat SEEKING TO DELIVER A DIVERSIFIED SOURCE OF CREDIT ALPHA Uncorrelated, idiosyncratic credit opportunity in cannabis and the lower middle-market Limited exposure to sponsor-backed, middle-market transactions, a crowded space where BDCs and private credit funds tend to focus Investing where few capital providers with requisite expertise are present See end notes in Appendix. Offers a Significant Premium to Public BDCs and Traditional Leveraged Finance Chicago Atlantic BDC (Nasdaq: LIEN) generated a 15.5% weighted average portfolio yield on debt investments: Investing in market niches underserved by traditional lenders drives pricing power, enables downside protections and a durable competitive moat Attractive risk-adjusted returns driven by disciplined underwriting and focus on senior secured loans. FOCUS ON BEST-IN-CLASS OPERATORS WITH PROVEN EXPERTISE Operators in limited-license states with pricing power, operators in hyper-competitive states with protective moats, and market-leading brands."
+    },
+    "content_hash": "b6f02434b811705af372c8f6984e965a9a9e768e0ec09e3307378c76f4b5572d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001357615-26-000205": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001357615-26-000205",
+      "entity_id": "CIK:0001357615",
+      "source_role": "candidate",
+      "title": "KBR, INC. (KBR) (CIK 0001357615) EX-99.2 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1357615/000135761526000205/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1357615/000135761526000205/exhibit99-211112026.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "KBR, INC. (KBR) (CIK 0001357615) EX-99.2 2026-11-12. EBITDA1 margin 2027E-2029E; includes recurring JV adjusted EBITDA6 12%+ Free cash flow conversion7 2027E-2029E 85%+ Our medium-term financial targets Financial Framework | Early Access | Customer Platforms | Scalable Execution • Excludes future capital deployment • Excludes megaprojects with more than $1B of KBR scope • Includes recurring unconsolidated JV EBITDA6 Key assumptions KBR Purifier Ammonia Technology, Egypt 20 How KBR plans to deliver 10%+ organic growth 2026 KBR Investor DayFinancial Framework | Early Access | Customer Platforms | Scalable Execution 2026E 2029E ~$2.90B ~$3.85B 10%+ CAGR5 Go where growth is Win new customers and establish local platforms in priority geographies Grow share of customer spend Expand across services, assets and the full investment lifecycle Backlog and bookings assumptions ~80% of $4.2B backlog converts to revenue by 2029E ~1.1–1.2x BTB10 assuming 24- to 30-month conversion Figures reflect approximate midpoints. • Scalable capacity from India 1 2 3 • Common engineering standards and controls • Outcome: One of the two fastest greenfield LNG projects ever delivered (FID to first LNG in 30 months) Success Story: Plaquemines LNG One operating model 16,000+ people across 30 countries Global expertise, local accountability Global and local offices 47 We capture, connect and scale expertise across projects Capture and codify proven knowledge Make knowledge accessible Apply across more projects Digital tools and AI help teams apply knowledge efficiently; engineers retain professional judgment TECHNICAL EXPERTISE CONNECTED SYSTEMS PROFESSIONAL JUDGMENT Established engineering designs, operating experience and technical methods Knowledge libraries make proven designs and methods accessible to project teams Financial Framework | Early Access | Customer Platforms | Scalable Execution 2026 KBR Investor Day We turn proven knowledge into a repeatable advantage across projects 48 FPSOs: Sc"
+    },
+    "content_hash": "24076c49ed589fe9bc0e9fc45434c0ed042e43aa491950ef46f51c2b6cc60035",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001628280-26-072942": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-072942",
+      "entity_id": "CIK:0002110117",
+      "source_role": "candidate",
+      "title": "ITG, Inc./DE/ (ITG) (CIK 0002110117) EX-99.2 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2110117/000162828026072942/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2110117/000162828026072942/a3q26commentary.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "ITG, Inc./DE/ (ITG) (CIK 0002110117) EX-99.2 2026-11-12. of $6.1 million • Adjusted EBITDA 1 increased 64% year-over-year to $64.5 million • Free Cash Flow 1 of $62.8 million versus $26.2 million in Q3 2025 • NTM Backlog 2 of $1,539 million as of September 30, 2026, compared to $1,209 million as of September 30, 2025 and $1,517 million as of June 30, 2026, supporting strong revenue visibility • Strong new order activity, including broadband fiber deployment awards with multiple new customers • Record levels in the quarter for Revenue, Adjusted EBITDA and NTM Backlog FINANCIAL HIGHLIGHTS (in millions, except for margins) Q3 2026 Q3 2025 YoY % YTD 2026 YTD 2025 YoY % Consolidated Revenue $461.5 $309.2 49.3% $1,200.1 $827.0 45.1% Engineering & Maintenance $256.5 $192.8 33.1% $713.3 $496.7 43.6% Infrastructure Deployment $205.0 $116.4 76.1% $486.8 $330.3 47.4% Net Income $0.5 $0.8 (36.2)% $(10.8) $14.0 NM Net Income (Loss) Attributable to ITG, Inc. Our ability to support customers across the full infrastructure lifecycle provides multiple avenues for growth within existing relationships as well as with new customers. Growth was supported by increased activity across recurring maintenance programs and infrastructure deployment projects, including expansion with existing customers, new customer wins and new program activity. Growth was supported by higher activity with existing customers across reoccurring fulfillment, maintenance, engineering and network-support programs, as well as new customer wins, program expansions and contributions from acquisitions completed over the last year. New awards included a substantial customer commitment from a new customer as well as incremental commitments from other new and existing customers."
+    },
+    "content_hash": "7aaed8fb3768ae04d5db4946629f4874f8f022f3fc6d5bdff8ee52311ca65a52",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001628280-26-073387": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073387",
+      "entity_id": "CIK:0001756390",
+      "source_role": "candidate",
+      "title": "Ascend Wellness Holdings, Inc. (AAWH) (CIK 0001756390) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1756390/000162828026073387/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1756390/000162828026073387/awhq32026pressrelease.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Ascend Wellness Holdings, Inc. (AAWH) (CIK 0001756390) EX-99.1 2026-11-12. • Drove new customer growth and deepened engagement across the Company’s network: ◦ New customer traffic increased 19% sequentially across retail footprint; ◦ Loyalty members accounted for more than 86% of transactions during the quarter, and approximately 32% of new customers enrolled in Ascend’s loyalty program; and ◦ Pay by bank adoption (Ascend Pay) reached 11.4% of transactions in Q3 2026. EX-99.1 2 awhq32026pressrelease.htm EX-99.1 Document Exhibit 99.1 AWH Reports Third Quarter 2026 Financial Results Net revenue grew 4.2% year-over-year and 3.1% sequentially to $130.0 million in Q3 2026 Generated Adjusted EBITDA 1 of $31.1 million and Adjusted EBITDA Margin 1 of 23.9%, as revenue growth drove operating leverage Ended Q3 with 56 stores and has since exceeded year-end target of 60, with 61 locations now open 2 Positive cash flow from operations of $5.4 million, after the $19.1 million semi-annual interest payment NEW YORK, November 12, 2026 – Ascend Wellness Holdings, Inc. (“AWH,” “Ascend,” or the “Company”) (CSE: AAWH-U.CN) (OTCQX:AAWH), a multi-state, vertically integrated cannabis operator and consumer packaged goods company, today reported its financial results for the quarter ended September 30, 2026 (“Q3 2026”). Financial results are reported in accordance with U.S. generally accepted accounting principles (“GAAP”), and all currency is in U.S. dollars. Q3 2026 Financial Highlights • Net revenue was $130.0 million compared to $126.1 million in the second quarter of 2026 (“Q2 2026”), an increase of 3.1% sequentially and 4.2% year-over-year. ◦ Retail revenue was $97.8 million compared to $92.7 million in Q2 2026, an increase of 5.5% sequentially, and represented 75.2% of total net revenue, up from 73.5%. ◦ Wholesale revenue was $32.2 million compared to $33.4 million in Q2 2026. • Adjusted Gross Profit Margin 1 of 48.4% of revenue compared to 46.2% in Q2 2026. • Adjusted EBITDA 1 was "
+    },
+    "content_hash": "7a40cf7084763c2480590199b408bd7fdc3a01959e778a0fc3c060fac585f86c",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001193125-26-458336": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-458336",
+      "entity_id": "CIK:0000028385",
+      "source_role": "candidate",
+      "title": "DTE Electric Co (CIK 0000028385), DTE Electric Securitization Funding III LLC (CIK 0002151176) EX-10.4 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/28385/000119312526458336/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/28385/000119312526458336/d918199dex104.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "DTE Electric Co (CIK 0000028385), DTE Electric Securitization Funding III LLC (CIK 0002151176) EX-10.4 2026-11-12. In the event that (x) the Company hereafter causes any property (“ New Customer Property ”) consisting of the right to impose specified charges on Customers to be created and sold and pledged by the buyer thereof for the benefit of holders of securitization bonds pursuant to any financing order of the Michigan Public Service Commission, and the Company acts as servicer for the bonds issued pursuant to such financing order, or (y) the Company enters into any receivables program in which the Company participates as a seller or as a servicer or sub-servicer of receivables, then, in either such event, upon the written request of the Company, the other parties hereto agree that this Agreement may be amended and restated (i) to add as parties hereto the relevant issuer of such additional bonds, the indenture trustee therefor, and the servicer of such New Customer Property and/or the relevant lenders or purchasers and servicers under such additional receivables program, as the case may be, and (ii) to reflect the rights and obligations of the parties with respect to such receivables purchases as set forth in the form of Intercreditor Agreement attached as Exhibit D to the Initial Indenture and (iii) to reflect the rights and obligations of the parties with respect to any such New Customer Property on terms substantially similar to the rights and obligations of the Initial Bond Issuer, the Additional Bond Issuer, the Third Bond Issuer, the Initial Bond Trustee, the Additional Bond Trustee, the Third Bond Trustee, the Initial Property Servicer, the Additional Property Servicer and the Third Property Servicer hereunder; provided that no such amendment shall be effective unless (x) evidenced by a written instrument signed by the parties hereto and such additional parties and (y) the Initial Bonds Rating Agency Condition, the Additional Bonds Rating Agency Conditio"
+    },
+    "content_hash": "8ddfc1d3402ea727ace10765741194205be86c523ac5d43d4c24533695534275",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0000929638-26-004266": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000929638-26-004266",
+      "entity_id": "CIK:0001851961",
+      "source_role": "candidate",
+      "title": "GCT Semiconductor Holding, Inc. (GCTS, GCTS-WT) (CIK 0001851961) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1851961/000092963826004266/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1851961/000092963826004266/exhibit99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "GCT Semiconductor Holding, Inc. (GCTS, GCTS-WT) (CIK 0001851961) EX-99.1 2026-11-12. That included adding a new customer in terrestrial services providing GNSS replacement with precise Z-axis positioning, which accounted for the majority of our 5G shipments in the quarter as it began proof-of-concept testing. EX-99.1 2 exhibit99-1.htm PRESS RELEASE, DATED NOVEMBER 12, 2026. Exhibit 99.1 GCT Semiconductor Holding, Inc. Provides Business Update and Reports Third Quarter 2026 Financial Results Year-to-Date 5G Chipset Shipments Exceeded 11,300 Units SAN JOSE, CA – November 12, 2026 – GCT Semiconductor Holding, Inc. (“GCT” or the “Company”) (NYSE: GCTS), a leading designer and supplier of 5G semiconductors powering the AI data pipeline with wireless connectivity, today provided an update on business developments and reported financial results for the third quarter ended September 30, 2026. Expanding 5G Applications and Advancing Customer Programs • Shipped more than 3,200 5G chipsets in Q3, bringing year-to-date shipments to over 11,300 units, reflecting continued progress across GCT’s customer programs and the expanding range of applications for its 5G chipsets. • Expanded GCT’s total addressable market (TAM) to include a terrestrial-based location service with a new potential 5G customer, a leader in next-generation geolocation solutions to augment or replace GNSS (GPS), which received the majority of GCT’s Q3 5G chipset shipments for proof-of-concept testing of precise 3D location capabilities indoors, in urban canyons and in jammed environments. • Continued progress on our program with one of the world’s largest satellite communications providers as it develops next-generation user equipment for high-bandwidth, high-speed communications across satellite and terrestrial networks using GCT’s 5G chipset. • Advanced ongoing terrestrial 5G development and integration work with a leading global telecom equipment supplier, delivering additional 5G chipsets during the third "
+    },
+    "content_hash": "ad101093b69ac1d23377dc26bc2a204981b4183cc5d1671b4e740d372605dc2b",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001628280-26-073432": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073432",
+      "entity_id": "CIK:0001864943",
+      "source_role": "candidate",
+      "title": "FGI Industries Ltd. (FGI, FGIWW) (CIK 0001864943) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1864943/000162828026073432/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1864943/000162828026073432/fgi-202611xex99x1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "FGI Industries Ltd. (FGI, FGIWW) (CIK 0001864943) EX-99.1 2026-11-12. We believe the best use of our capital continues to be internal investment to attract new customers, expand existing relationships, develop new products and manufacturing capabilities, and expand into new jurisdictions.” 1 Adjusted operating income (loss) and adjusted net income (loss) are non-GAAP financial measures. These forward-looking statements include, among others, statements regarding FGI’s guidance, the Company’s growth strategies, outlook and potential acquisition activity, the tariff environment, the macroeconomic instability and its associated impact on the national and global economy and the residential repair and remodel market, the Company’s planned product launches and new customer partnerships and the effect of supply chain disruptions and freight costs. EX-99.1 2 fgi-202611xex99x1.htm EX-99.1 Document EXHIBIT 99.1 FGI INDUSTRIES ANNOUNCES THIRD QUARTER 2026 RESULTS EAST HANOVER, N.J., November 12, 2026 – FGI Industries Ltd. (Nasdaq: FGI) (“FGI” or the “Company”), a leading global supplier of kitchen and bath products, today announced results for the third quarter 2026. THIRD QUARTER 2026 HIGHLIGHTS (As compared to the third quarter of 2025) ▪ Total revenue of $31.7 million, -11.6% y/y ▪ Gross profit of $8.7 million , -8.0% y/y ▪ Gross margin of 27.6% , +110 bps y/y ▪ Operating loss of $0.5 million and net loss attributable to shareholders of $0.9 million ▪ Adjusted operating loss of $0.5 million 1 ▪ Adjusted net loss of $0.7 million MANAGEMENT COMMENTARY Dave Bruce, CEO of FGI, stated, “FGI reported total revenue of $31.7 million in the quarter, representing a year-over-year decline of 11.6% . The quarter reflected a challenging market environment, with continued softness in housing and remodeling activity, reduced customer purchasing and delayed projects weighing on demand across several product categories. Despite these headwinds, gross profit was $8.7 million , and gross marg"
+    },
+    "content_hash": "9ccfaa9284d6ac54eecb8d8a7a5a083c24aa14a8f47fb5849e851a87721e606f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001193125-26-458738": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-458738",
+      "entity_id": "CIK:0002077709",
+      "source_role": "candidate",
+      "title": "Rank One Computing Corp (ROC) (CIK 0002077709) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2077709/000119312526458738/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2077709/000119312526458738/roc-ex99_1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Rank One Computing Corp (ROC) (CIK 0002077709) EX-99.1 2026-11-12. During the third quarter of 2026, ROC's product revenue performance reflected continued commercial adoption and expansion across its Vision AI portfolio: • ROC SDK revenue was $2.6 million, a YoY increase of 52% from $1.7 million, reflecting new customer contracts and expanded commercial adoption. EX-99.1 2 roc-ex99_1.htm 99.1 EX-99.1 Exhibit 99.1 ROC Delivers Record Quarterly Revenue of $8.0 Million in the Third-Quarter 2026, Up 50% YoY; Achieves Quarterly Profitability Product revenue grew 24% to $5.7 million, driven by strong software licensing performance; gross margin reached 90% for the second consecutive quarter Measurable results validate ROC’s core growth drivers; ROC ABIS grew 654% YoY to $2.2M and ROC SDK grew 52% YoY to $2.6M Secured transformational federal beachhead contracts for ROC ABIS and ROC Evidence, including a $64.3 million Department of Justice digital evidence contract award, the largest in Company history DENVER, Nov. 12, 2026 (GLOBE NEWSWIRE) -- Rank One Computing Corporation d/b/a ROC (Nasdaq: ROC) (“ROC” or the “Company”), a U.S. leader in Vision AI, building unified biometric, video analytics, and digital evidence solutions, today announced financial results for the third quarter ended September 30, 2026. “The third quarter marked a transformational period for ROC, highlighted by record revenue, a profitable quarter, and significant execution against the strategic objectives we established at our IPO,” said B. Scott Swann, ROC’s Chief Executive Officer. “We delivered record third-quarter revenue of $8.0 million, increasing 50% year over year and 57% sequentially, and our software licensing revenue drove a second consecutive quarter of 90% gross margin. Our strong results were driven by meaningful federal traction for ROC ABIS and expanded activity under an existing government R&D program, demonstrating the strategic investments we have made to execute our growth strategy "
+    },
+    "content_hash": "5859fe52cf90dba5909b34bbef400ee81ed81bc1f927fa036fd1e508e3fc6bbe",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001171843-26-007370": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001171843-26-007370",
+      "entity_id": "CIK:0001120370",
+      "source_role": "candidate",
+      "title": "BROADWIND, INC. (BWEN) (CIK 0001120370) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120370/000117184326007370/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1120370/000117184326007370/exh_991.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "BROADWIND, INC. (BWEN) (CIK 0001120370) EX-99.1 2026-11-12. Our forward-looking statements may include or relate to our beliefs, expectations, plans and/or assumptions with respect to the following: (i) the impact of our acquisition of MCM Acquisition Company, Inc., and our ability to integrate MCM’s operations into our business efficiently, (ii) our expectations and beliefs with respect to our financial guidance as set forth in our press releases from time to time, (iii) the impact of global health concerns on the economies and financial markets and the demand for our products; (iv) state, local and federal regulatory frameworks affecting the industries in which we compete, including the wind energy industry, and the related phase out, extension, continuation or renewal of federal tax incentives and grants, including the advanced manufacturing tax credits, and state renewable portfolio standards as well as new or continuing tariffs on steel or other products imported into the United States; (v) our customer relationships and our substantial dependency on a few significant customers and our efforts to diversify our customer base and sector focus and leverage relationships across business units; (vi) our ability to operate our business efficiently, comply with our debt obligations, manage capital expenditures and costs effectively, and generate cash flow; (vii) the economic and operational stability of our significant customers and suppliers, including their respective supply chains, and the ability to source alternative suppliers as necessary; (viii) our ability to continue to grow our business organically and through acquisitions; (ix) the production, sales, collections, customer deposits and revenues generated by new customer orders and our ability to realize the resulting cash flows; (x) information technology failures, network disruptions, cybersecurity attacks or breaches in data security; (xi) the sufficiency of our liquidity and alternate sources of funding, "
+    },
+    "content_hash": "8e984143f7e3f677509c10d64a28f8e595df69c31c34fd7b07eb03dccd642810",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001213900-26-118457": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-118457",
+      "entity_id": "CIK:0001830081",
+      "source_role": "candidate",
+      "title": "RUM Group Inc. (RUM, RUMBW) (CIK 0001830081) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026118457/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1830081/000121390026118457/ea031161801ex99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "RUM Group Inc. (RUM, RUMBW) (CIK 0001830081) EX-99.1 2026-11-12. Our 22,000-GPU estate is nearly sold out at 85% utilization. EX-99.1 2 ea031161801ex99-1.htm PRESS RELEASE OF RUM GROUP INC. DATED NOVEMBER 11, 2026 Exhibit 99.1 RUM Group Inc. Reports Record Third Quarter 2026 Results ~ Third Quarter Revenue of $96.6 Million, Up 290% YoY ~ ~ First Profitable Quarter in the Company’s History on an Adjusted EBITDA Basis ~ ~ 22,000 GPUs at Utilization of Approximately 85% ~ LONGBOAT KEY, Fla., November 11, 2026 (GLOBE NEWSWIRE) – RUM Group Inc. (Nasdaq: RUM) (“RUM Group” or the “Company”), an AI infrastructure and video company on a mission to unlock the power of human imagination, today announced financial results for the fiscal quarter ended September 30, 2026. Q3 2026 Key Highlights and Key Items ● Record quarterly revenue of $96.6 million, up 139% QoQ and 290% YoY, and 3.8% above the top end of our guidance. ● Quake AI contributed $68.2 million, or more than 70% of total revenue, in its first full quarter. ● The first profitable quarter in the Company’s history on an Adjusted EBITDA basis. ● Quake AI continues to deliver strong performance and demand for its existing fleet of approximately 22,000 NVIDIA GPUs, with utilization of approximately 85% for the quarter. ● Acquired an additional 8.26 million shares of Northern Data AG (“Northern Data”), increasing ownership from 85.2% to approximately 98%. ● Commenced squeeze-out proceedings under the German Stock Corporation Act, expecting to reach 100% ownership of Northern Data in early 2027. ● Due to market conditions, a certain portion of our previously disclosed 250MW of unmonetized capacity targeted for 2027 may be pushed out beyond 2027. ● Announced a long-term distribution and content partnership with WWE to become the new home of the weekly premium program WWE Main Event. ● In the third quarter, began a cost reset in video, tied to a refocused strategy. Expecting to start seeing related savings through 2027. Manage"
+    },
+    "content_hash": "ce755965609e7e18ba4127d3b1ca74f7d793c3be9b1b89685ac72e856f6bd446",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001628280-26-073390": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073390",
+      "entity_id": "CIK:0001705843",
+      "source_role": "candidate",
+      "title": "Cibus, Inc. (CBUS) (CIK 0001705843) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1705843/000162828026073390/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1705843/000162828026073390/cbus-20260930xpr.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Cibus, Inc. (CBUS) (CIK 0001705843) EX-99.1 2026-11-12. and LATAM while discussions with potential new customers are continuing, including in Brazil and India. EX-99.1 2 cbus-20260930xpr.htm EX-99.1 Document Cibus Reports Third Quarter Financial Results and Provides Business Update Rice herbicide-tolerance traits performed well in Latin American field trials and are now being tested by customer Interoc in its own varieties Initiated the manufacturing process for initial two biofragrance products; biofragrance program represents an estimated $100 million peak annual revenue opportunity with eight products currently identified for potential commercialization Year-to-date cash used in operating activities down approximately 19% year-over-year; continues to anticipate exiting 2026 at approximately $35 million annualized net cash usage run rate SAN DIEGO, November 12 , 20 26 – Cibus, Inc. (Nasdaq: CBUS) (the \"Company\"), a technology company that uses biology to produce sustainable ingredients and helps farmers grow more food with fewer inputs, today announced its financial results for the quarter ended September 30, 2026, and provided a business update. Management will host a conference call and webcast today at 4:30 p.m. ET. Management Commentary Craig Wichner, Chief Executive Officer of Cibus, commented, \"Three months ago I described three ways our platform creates value: platform programs that generate revenue today, royalties as our traits reach acres, and partnerships that deepen over time. Each of these moved closer this quarter. We received requests from our customer for larger quantities of two biofragrance products to advance their product development. Our Rice traits performed well in Latin American field trials and are now being tested where it counts, in our customer Interoc ' s own varieties in its own fields. Further, a second partner-funded crop program, Mustard in India, began work in the quarter.\" Third Quarter and Recent Business Update The following su"
+    },
+    "content_hash": "c66fe5d231b8e7ac7e10b077f7b621e608f39222677d6422d7ec3a6405440def",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001213900-26-118924": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-118924",
+      "entity_id": "CIK:0002023676",
+      "source_role": "candidate",
+      "title": "Launch Two Acquisition Corp. (LPBB, LPBBU, LPBBW) (CIK 0002023676) EX-99.1 2026-11-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/2023676/000121390026118924/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2023676/000121390026118924/ea031178601ex99-1.htm",
+      "published_at": "2026-11-12",
+      "raw_text": "Launch Two Acquisition Corp. (LPBB, LPBBU, LPBBW) (CIK 0002023676) EX-99.1 2026-11-12. This could include long lead time testing and analyses, which may require redesign or use of alternative suppliers if testing results are unsatisfactory. EX-99.1 2 ea031178601ex99-1.htm INVESTOR PRESENTATION, DATED NOVEMBER 2026 Exhibit 99.1 Investor Presentation November 2026 Disclaimer 2 Disclaimer This presentation and any oral statements regarding the subject matter of this presentation (this \"Presentation\") is being furnished solely for the purpose of assisting the parties to whom it is addressed in making their independent evaluation with respect to a proposed business combination (the \"Business Combination\") among Launch Two Acquisition Corp. (\"Launch Two\"), NuCube Energy, Inc. (\"NuCube\"), and Tesseract Merger Sub Inc., a Delaware corporation and a direct wholly owned subsidiary of SPAC (\"Merger Sub\" and together with Launch Two and NuCube, the \"Parties\"). The provisions of this Presentation shall not be taken as any form of commitment on the part of the Parties with respect to the consummation of the Business Combination or any other transaction, and each of NuCube and Launch Two reserve the right to terminate the Business Combination Agreement in accordance with its terms. No Representations or Warranties No representations or warranties, express or implied are given in, or in respect of, the accuracy or completeness of the information contained in this Presentation or any other information (whether written or oral) that has been or will be provided to you. In particular, no representation or warranty of Launch Two, NuCube, or their respective representatives is given as to the achievement or reasonableness of future projections, management targets, estimates, prospects or returns, if any. To the fullest extent permitted by law, neither NuCube, Launch Two, nor any of their respective subsidiaries, equity holders, affiliates, representatives, partners, directors, officers,"
+    },
+    "content_hash": "4581bedd644eaf5b165d1d8c802f938a15909f23fa26ee8e74acdb69dc7b8074",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001091667-26-000072": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001091667-26-000072",
+      "entity_id": "CIK:0001091667",
+      "source_role": "candidate",
+      "title": "CHARTER COMMUNICATIONS, INC. /MO/ (CHTR, CHTRP) (CIK 0001091667), CCO HOLDINGS CAPITAL CORP (CIK 0001271834), CCO HOLDINGS LLC (CIK 0001271833) EX-99.1 2026-11-06",
+      "url": "https://www.sec.gov/Archives/edgar/data/1091667/000109166726000072/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1091667/000109166726000072/chtrex991earningsrelease93.htm",
+      "published_at": "2026-11-06",
+      "raw_text": "CHARTER COMMUNICATIONS, INC. /MO/ (CHTR, CHTRP) (CIK 0001091667), CCO HOLDINGS CAPITAL CORP (CIK 0001271834), CCO HOLDINGS LLC (CIK 0001271833) EX-99.1 2026-11-06. This new operating model is focused on accelerating new customer connects as well as improving retention and customer satisfaction with improved execution of its service delivery. (q) Scalable infrastructure includes costs, not related to customer premise equipment or our network, to secure growth of new customers or provide service enhancements (e.g., headend equipment). EX-99.1 2 chtrex991earningsrelease93.htm EX-99.1 Document Charter Announces Third Quarter 2026 Results and Launches New Operating Model New operating model designed to return Charter to growth and transform organization for speed and efficiency. Will strengthen core Internet offerings and leverage differentiated mobile and video products to drive customer growth and maximize revenue per passing. Announces new $2 billion in annualized expense savings plan, in addition to the over $1 billion in planned Cox Transactions synergies. STAMFORD, Connecticut - November 6, 2026 - Charter Communications, Inc. (along with its subsidiaries, the “Company” or “Charter”) today reported financial and operating results for the three and nine months ended September 30, 2026, and announced a new operating model designed to return the Company to growth, unlock the full potential of its expanded scale following its acquisition of Cox Communications and capitalize on the market growth in demand for data. \"With the combination of Charter and Cox, we have the scale and network capabilities to connect more Americans than ever before,\" said Chris Winfrey, President and CEO of Charter. \"We are America’s Internet Company ® and our purpose is Connecting Gigabit America . Today, we are announcing decisive steps to unlock our full potential.\" Winfrey continued, \"We are fundamentally rethinking how we operate and compete, with a renewed focus on delivering the best prod"
+    },
+    "content_hash": "d9631c53bd726b8b1ae68a7b74c3b6bc6cce314473ddf3e350f53d85224144a2",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001013871-26-000022": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001013871-26-000022",
+      "entity_id": "CIK:0001013871",
+      "source_role": "candidate",
+      "title": "NRG ENERGY, INC. (NRG) (CIK 0001013871) EX-99 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000022/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1013871/000101387126000022/nrgq32026ex991.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "NRG ENERGY, INC. (NRG) (CIK 0001013871) EX-99 2026-11-09. The increase for both the quarter and the first nine months of 2026 is attributable to higher new customer adds and an increase in monthly recurring service margin per customer. EX-99 2 nrgq32026ex991.htm EX-99 Document Exhibit 99.1 NRG Energy Reports Third Quarter 2026 Results, Reaffirms 2026 Financial Guidance, and Initiates 2027 Guidance • Delivered strong third quarter financial and operational results; reaffirming 2026 guidance ranges • Announcing $4 billion agreement to sell select generation assets; supports increased share repurchases and debt reduction • Initiating 2027 guidance; reaffirming long-term targets • Previously announced 1.2 GW Bring Your Own Power (BYOP) data center project remains on track • Nationally recognized for responsible operations and community impact with the Good Neighbor and Top Water Plant awards HOUSTON — November 9, 2026 —NRG Energy, Inc. (NYSE: NRG) today announced financial results for the third quarter ending September 30, 2026, and reports GAAP Net Income of $561 million, GAAP Earnings per Share (EPS) — basic of $2.59, and GAAP Cash Provided by Operating Activities of $1,097 million. The Company's non-GAAP metrics are Adjusted Net Income of $983 million, Adjusted EPS of $4.68, Adjusted EBITDA of $2,013 million, and Free Cash Flow before Growth Investments (FCFbG) of $1,242 million for the third quarter of 2026. “Our 17,000 employees delivered strong third quarter results that reflect the depth of NRG, with our eight million customers and a substantial generation business that produce steady earnings and cash flows,” said Robert Gaudette, President & CEO. “Today’s announcement is about returning more to our shareholders and supporting future growth investments. We remain focused on execution and deliberate about how we allocate capital in pursuit of long-term value.” Consolidated Financial Results Table 1: Three Months Ended Nine Months Ended (In millions, except per sh"
+    },
+    "content_hash": "a23c098f1f71ce7f84aaf30738d7d8a1a02c15f6a60d2fe0cb1e8e71bb2a8a06",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001193125-26-454094": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-454094",
+      "entity_id": "CIK:0001333274",
+      "source_role": "candidate",
+      "title": "MERCER INTERNATIONAL INC. (MERC) (CIK 0001333274) EX-99.1 2026-11-10",
+      "url": "https://www.sec.gov/Archives/edgar/data/1333274/000119312526454094/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1333274/000119312526454094/d112556dex991.htm",
+      "published_at": "2026-11-10",
+      "raw_text": "MERCER INTERNATIONAL INC. (MERC) (CIK 0001333274) EX-99.1 2026-11-10. Challenges Facing the Company ’ s Business Although the Company remains a leading global forest products producer, the Debtors are confronting acute financial challenges due to a confluence of factors, including among others: (i) an unsustainable capital structure driven by funding to support capacity expansion initiatives, (ii) significant near-term debt maturities, which would be challenging to refinance or extend absent the Restructuring, (iii) ongoing geopolitical developments, including evolving global trade and tariff dynamics, (iv) sluggish global economic growth, and (v) financial challenges, driven by substantial margin compression driven by rising input costs and adverse market conditions, including lower market prices for pulp. Capacity Expansion Initiatives and Increased Debt Financing In recent years, the Company has made substantial investments to increase its production capacity and broaden its product offerings. (g) Risks Associated with Retaining or Attracting Customers The Company’s future revenues depend in significant part on its ability to maintain relationships with existing customers and attract new customers across the Pulp and Solid Wood Segments. Accounts Payable & Accrued Expenses: Primarily includes: (i) trade payables to suppliers, (ii) accrued expenses, including payroll-related accruals and wastewater fees, and (iii) other current liabilities, such as accrued interest, income taxes payable, customer deposits, and the current portion of lease liabilities.",
+      "_model_response": {
+        "evidence_quote": "Challenges Facing the Company ’ s Business Although the Company remains a leading global forest products producer, the Debtors are confronting acute financial challenges due to a confluence of factors, including among others: (i) an unsustainable capital structure driven by funding to support capacity expansion initiatives, (ii) significant near-term debt maturities, which would be challenging to refinance or extend absent the Restructuring, (iii) ongoing geopolitical developments, including evolving global trade and tariff dynamics, (iv) sluggish global economic growth, and (v) financial challenges, driven by substantial margin compression driven by rising input costs and adverse market conditions, including lower market prices for pulp. Capacity Expansion Initiatives and Increased Debt Financing In recent years, the Company has made substantial investments to increase its production capacity and broaden its product offerings.",
+        "axes_evidence": {},
+        "event_state": "realized",
+        "signal_direction": "negative",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "해당 문서는 회사의 심각한 재정적 어려움과 과거의 생산 능력 증설이 부채 증가의 원인이 되었음을 설명하고 있습니다. 이는 투자 발굴을 위한 구체적이고 긍정적인 조기 지표가 아니며, 오히려 부정적인 현황 보고에 해당합니다.",
+        "subject": "MERCER INTERNATIONAL INC.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "Mercer International Inc.는 지속 불가능한 자본 구조, 단기 부채 만기, 지정학적 발전, 경기 둔화, 투입 비용 상승 및 펄프 가격 하락으로 인한 마진 압박 등 심각한 재정적 어려움에 직면해 있다고 공시했습니다.",
+        "why_it_matters": "회사의 과거 생산 능력 증설 투자가 현재의 재정적 어려움과 부채 증가의 원인으로 지목되어, 기업의 재무 건전성에 대한 우려가 커지고 있습니다.",
+        "what_to_watch": "향후 부채 구조조정 계획 및 재무 개선 노력의 구체적인 진행 상황을 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": "자본 구조: 기업의 자산 조달을 위한 부채와 자기자본의 구성 비율."
+      },
+      "_reject_reason": "해당 문서는 회사의 심각한 재정적 어려움과 과거의 생산 능력 증설이 부채 증가의 원인이 되었음을 설명하고 있습니다. 이는 투자 발굴을 위한 구체적이고 긍정적인 조기 지표가 아니며, 오히려 부정적인 현황 보고에 해당합니다."
+    },
+    "content_hash": "767c6abacc0849239d4e006d9cffdbfd95d0f5d7bf0fbdb605337a92f256b880",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-13T06:56:09+00:00",
+    "reason": "해당 문서는 회사의 심각한 재정적 어려움과 과거의 생산 능력 증설이 부채 증가의 원인이 되었음을 설명하고 있습니다. 이는 투자 발굴을 위한 구체적이고 긍정적인 조기 지표가 아니며, 오히려 부정적인 현황 보고에 해당합니다.",
+    "processed_day": "2026-11-13",
+    "processed_run": "43381924530-1"
+  },
+  "0001628280-26-071942": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-071942",
+      "entity_id": "CIK:0000791963",
+      "source_role": "candidate",
+      "title": "OPPENHEIMER HOLDINGS INC (OPY) (CIK 0000791963) EX-10.1 2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/791963/000162828026071942/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/791963/000162828026071942/rxr-oppenheimerx32oldsli.htm",
+      "published_at": "2026-11-09",
+      "raw_text": "OPPENHEIMER HOLDINGS INC (OPY) (CIK 0000791963) EX-10.1 2026-11-09. Please contact your Axis representative for more information including pricing and lead time. EX-10.1 2 rxr-oppenheimerx32oldsli.htm EX-10.1 rxr-oppenheimerx32oldsli Execution Version 78613303.18 RXR 32 OLD SLIP OWNER LLC, Landlord TO VINER FINANCE INC., Tenant Lease Dated as of November __, 2026 5 Certain information herein has been redacted. Execution Version 78613303.18 TABLE OF CONTENTS Page ARTICLE 1 BASIC LEASE TERMS; DEMISE; USE .............................................................1 1.01 Basic Lease Terms. ..........................................................................................................1 1.02 Lease of Premises ...........................................................................................................6 1.03 Use ...................................................................................................................................6 ARTICLE 2 RENT ........................................................................................................................8 2.01 Fixed Rent .......................................................................................................................8 2.02 Tax Payments .................................................................................................................8 2.03 Operating Payments ....................................................................................................12 2.04 Tax and Operating Provisions ....................................................................................21 2.05 Electric Charges ...........................................................................................................22 2.06 Carbon Emissions ........................................................................................................22 2.07 Manner of Payment ...................................................................................."
+    },
+    "content_hash": "b048d1d29c39de0accce6e86df3e3730ecd8ec02e7984ac58ecfe0df9aaf27cd",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-13T06:55:35.099965+00:00"
   }
 }

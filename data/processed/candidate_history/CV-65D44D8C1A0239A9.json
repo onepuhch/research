@@ -1,0 +1,284 @@
+{
+  "candidate_id": "CAN-FD88AA0D924CF1C8",
+  "candidate_version": "CV-65D44D8C1A0239A9",
+  "identity": {
+    "entity_id": "NYSE:DHT",
+    "ticker": "DHT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "DHT Holdings, Inc.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "원유 운반선을 소유, 운영하고 기술 관리 서비스를 제공하여 수익을 창출한다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "DHT Holdings, Inc., through its subsidiaries, owns and operates crude oil tankers primarily in Monaco, Singapore, Norway, and India. The company also offers technical management services. As of December 15, 2025, it had a fleet of 22 very large crude carriers. The company was incorporated in 2005 and is headquartered in Hamilton, Bermuda."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "DHT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DHT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:04:21+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "DHT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DHT/history",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:04:21+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "DHT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/DHT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-13T07:04:21+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-6025009415B50708",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1331284/000114036126042813/ef20080524_ex99-1.htm",
+      "title": "SEC 6-K EX-99.1 — EXHIBIT 99.1",
+      "published_at": null,
+      "filed_at": "2026-11-09",
+      "observed_at": "2026-11-11T06:57:37+00:00",
+      "fields": "6-K EX-99.1"
+    },
+    {
+      "id": "DOC-3D866BF98EA62F30",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1331284/000095015726000847/ex99-1.htm",
+      "title": "SEC 6-K EX-99.1 — PRESS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-08-05",
+      "observed_at": "2026-10-10T06:16:06+00:00",
+      "fields": "6-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-3135E5FCE7CC6657",
+    "input_sha": "3135e5fce7cc6657073df35f860df1a0b17119fdfcf9b471f343c8d10115f1ea",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · third quarter of 2026: $269.5 million — 조정 에비타를 기록했다",
+        "note_ko": "조정 에비타를 기록했다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA for the third quarter of 2026 was $269.5 million.",
+        "document_id": "DOC-6025009415B50708",
+        "block_id": "t3",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$269.5 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Net profit · third quarter of 2026: $270.9 million — 순이익을 기록했다",
+        "note_ko": "순이익을 기록했다",
+        "kind": "fact",
+        "quote": "Net profit for the quarter was $270.9 million, equating to $1.68 per basic share.",
+        "document_id": "DOC-6025009415B50708",
+        "block_id": "t3",
+        "metric": "Net profit",
+        "figures": [
+          "$270.9 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "Other revenues · third quarter of 2026: $0.3 million — 기타 수익은 전년 같은 분기보다 줄었다",
+        "note_ko": "기타 수익은 전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "Other revenues for the third quarter of 2026 were $0.3 million compared to $0.2 million in the third quarter of 2025 and relate to technical management services provided.",
+        "document_id": "DOC-6025009415B50708",
+        "block_id": "p26",
+        "metric": "Other revenues",
+        "figures": [
+          "$0.3 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "capacity"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "net profit · third quarter of 2026: $270.9 million — 순이익은 전년 같은 분기보다 늘었다",
+        "note_ko": "순이익은 전년 같은 분기보다 늘었다",
+        "kind": "fact",
+        "quote": "As a result of the foregoing, the Company had a net profit in the third quarter of 2026 of $270.9 million, or earnings of $1.68 per basic share and $1.68 per diluted share, compared to a net profit in the third quarter of 2025 of $44.8 million, or earnings of $0.28 per basic share and $0.28 per diluted share.",
+        "document_id": "DOC-6025009415B50708",
+        "block_id": "p34",
+        "metric": "net profit",
+        "figures": [
+          "$270.9 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-6025009415B50708",
+        "title": "EXHIBIT 99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1331284/000114036126042813/ef20080524_ex99-1.htm",
+        "filed_at": "2026-11-09",
+        "observed_at": "2026-11-11T06:57:37+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-3D866BF98EA62F30",
+        "title": "PRESS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1331284/000095015726000847/ex99-1.htm",
+        "filed_at": "2026-08-05",
+        "observed_at": "2026-10-10T06:16:06+00:00",
+        "form": "6-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-11T06:58:01+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.20982,
+    "eps_30d": 2.50333,
+    "eps_90d": 1.8655,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 72.1,
+    "steady": false,
+    "turnaround": false
+  }
+}

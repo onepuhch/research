@@ -1,0 +1,257 @@
+{
+  "context_id": "CTX-7CF998B754968F70",
+  "candidate_id": "CAN-53CAB32910212188",
+  "ticker": "MSTR",
+  "issuer_cik": "0001050446",
+  "document_ids": [
+    "DOC-C5325D1208A3B12A",
+    "DOC-1BBF829888895A2D"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C5325D1208A3B12A#p29",
+    "DOC-C5325D1208A3B12A#p30",
+    "DOC-C5325D1208A3B12A#p32",
+    "DOC-C5325D1208A3B12A#p57",
+    "DOC-C5325D1208A3B12A#p94",
+    "DOC-C5325D1208A3B12A#p97",
+    "DOC-C5325D1208A3B12A#p98",
+    "DOC-C5325D1208A3B12A#t3",
+    "DOC-1BBF829888895A2D#p30",
+    "DOC-1BBF829888895A2D#p31",
+    "DOC-1BBF829888895A2D#p44",
+    "DOC-1BBF829888895A2D#p78",
+    "DOC-1BBF829888895A2D#p91",
+    "DOC-1BBF829888895A2D#p93"
+  ],
+  "input_sha": "7cf998b754968f70f566713c3bf713364242eb06bf46cbbb04491504dbf68a30",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-13T07:12:03+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "영업이익(Operating Income) · third quarter of 2026: $20.91 billion — 회사의 디지털 자산 이익을 포함한 영업 이익이다",
+      "note_ko": "회사의 디지털 자산 이익을 포함한 영업 이익이다",
+      "kind": "fact",
+      "quote": "Operating income for the third quarter of 2026 was $20.91 billion, compared to $3.89 billion of operating income for the third quarter of 2025. Operating income for the third quarter of 2026 includes a gain on the Company’s digital assets of $20.91 billion, compared to a gain on the Company’s digital assets of $3.89 billion for the third quarter of 2025.",
+      "document_id": "DOC-C5325D1208A3B12A",
+      "block_id": "p29",
+      "metric": "Operating Income",
+      "figures": [
+        "$20.91 billion"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "one_off"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "diluted earnings per common share · third quarter of 2026: $44.75 — 주당 순이익이다",
+      "note_ko": "주당 순이익이다",
+      "kind": "fact",
+      "quote": "For the third quarter of 2026, the Company reported a net income of $19.53 billion, or diluted earnings per common share of $44.75, as compared to a net income of $2.79 billion, or diluted earnings per common share of $8.42, for the third quarter of 2025.",
+      "document_id": "DOC-C5325D1208A3B12A",
+      "block_id": "p30",
+      "metric": "diluted earnings per common share",
+      "figures": [
+        "$44.75"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Total revenues · third quarter of 2026: $125.4 million — 전년 같은 분기보다 줄었다",
+      "note_ko": "전년 같은 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "Total revenues for the third quarter of 2026 were $125.4 million, compared to total revenues of $128.7 million for the third quarter of 2025, a 3% decrease year-over-year.",
+      "document_id": "DOC-C5325D1208A3B12A",
+      "block_id": "p32",
+      "metric": "Total revenues",
+      "figures": [
+        "$125.4 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Operating loss · second quarter of 2026: $8.33 billion — 회사의 디지털 자산 미실현 손실을 포함한 영업 손실이다",
+      "note_ko": "회사의 디지털 자산 미실현 손실을 포함한 영업 손실이다",
+      "kind": "fact",
+      "quote": "Operating loss for the second quarter of 2026 was $8.33 billion, compared to $14.03 billion operating income for the second quarter of 2025. Operating loss for the second quarter of 2026 includes an unrealized loss on the Company’s digital assets of $8.32 billion, compared to an unrealized gain on the Company’s digital assets of $14.05 billion for the second quarter of 2025.",
+      "document_id": "DOC-1BBF829888895A2D",
+      "block_id": "p30",
+      "metric": "Operating loss",
+      "figures": [
+        "$8.33 billion"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "one_off"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "순손실(Net loss) · second quarter of 2026: $8.22 billion — 순손실이다",
+      "note_ko": "순손실이다",
+      "kind": "fact",
+      "quote": "For the second quarter of 2026, the Company reported a net loss of $8.22 billion, or a net loss of $24.45 per common share on a diluted basis, as compared to a net income of $10.02 billion, or a net income of $32.60 per common share on a diluted basis, for the second quarter of 2025.",
+      "document_id": "DOC-1BBF829888895A2D",
+      "block_id": "p31",
+      "metric": "Net loss",
+      "figures": [
+        "$8.22 billion"
+      ],
+      "period": "second quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "영업이익(Operating income) · third quarter of 2026: $20.91 billion — 디지털 자산의 이익이 포함되어 있다",
+      "note_ko": "디지털 자산의 이익이 포함되어 있다",
+      "kind": "fact",
+      "quote": "Operating income for the third quarter of 2026 includes a gain on the Company’s digital assets of $20.91 billion, compared to a gain on the Company’s digital assets of $3.89 billion for the third quarter of 2025.",
+      "document_id": "DOC-C5325D1208A3B12A",
+      "block_id": "p29",
+      "metric": "Operating income",
+      "figures": [
+        "$20.91 billion"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "디지털 자산 이익이 영업 이익에 미치는 영향은 무엇인가?",
+    "디지털 자산 미실현 손실이 영업 손실에 미치는 영향은 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "디지털 자산의 미실현 손실이 포함되어 있다",
+      "figures": [
+        "$8.33 billion"
+      ],
+      "quote": "Operating loss for the second quarter of 2026 includes an unrealized loss on the Company’s digital assets of $8.32 billion, compared to an unrealized gain on the Company’s digital assets of $14.05 bil",
+      "where": "DOC-1BBF829888895A2D#p30"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "회계 기준 업데이트로 인해 비트코인 공정 가치 변동에 따른 손익이 순이익에 반영될 수 있다",
+      "figures": [],
+      "quote": "ASU 2023-08 requires the Company to measure its bitcoin at fair value in its statement of financial position as of the end of a reported period, and to recognize gains and losses from changes in the f",
+      "where": "DOC-C5325D1208A3B12A#p94"
+    }
+  ],
+  "context_status": "draft_ready"
+}
