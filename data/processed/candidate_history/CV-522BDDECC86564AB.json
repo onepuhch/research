@@ -1,0 +1,195 @@
+{
+  "candidate_id": "CAN-CE287F3D97C627F9",
+  "candidate_version": "CV-522BDDECC86564AB",
+  "identity": {
+    "entity_id": "NYSE:VG",
+    "ticker": "VG",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Venture Global, Inc.",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "액화천연가스(LNG) 생산 시설을 운영하고 LNG를 판매 및 운송하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Venture Global, Inc., a liquefied natural gas (LNG) company, engages in the ownership, development, construction, and operation of LNG production facilities and associated infrastructure in the United States, Germany, France, Netherlands, the United Kingdom, and internationally.The company is involved in LNG production, natural gas transportation, and regasification operations, as well as LNG sales and shipping business through LNG tankers. Its LNG projects include Calcasieu, Plaquemines, and CP2 projects. The company was founded in 2013 and is headquartered in Arlington, Virginia. Venture Glo"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "VG analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VG/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:44:03+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "VG daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VG/history",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:44:03+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "VG company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/VG/profile",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:44:03+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-9D358007A5F6D498",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000081/frameagreementpressrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-15",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-A18D1EE0E7601BB6",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000072/vg-20261007.htm",
+      "title": "SEC 8-K 8-K",
+      "published_at": null,
+      "filed_at": "2026-10-08",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K 8-K"
+    },
+    {
+      "id": "DOC-59DB1DBD3682F139",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000091/vgincq32026earningsrelease.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-10",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-F93D2B6EA7B8588C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000069/vg-20261007.htm",
+      "title": "SEC 8-K 8-K",
+      "published_at": null,
+      "filed_at": "2026-10-07",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K 8-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-4884887355FBDDDC",
+    "input_sha": "4884887355fbdddcba2a707b6a331c8cfdb705aad2480461b0cef1f96e5daa96",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "회사의 내년 EPS 예상치가 최근 올라 검토 대상이 됐는데, 이 발표가 그 상향을 일으켰는지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-9D358007A5F6D498",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000081/frameagreementpressrelease.htm",
+        "filed_at": "2026-10-15",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-A18D1EE0E7601BB6",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000072/vg-20261007.htm",
+        "filed_at": "2026-10-08",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "8-K"
+      },
+      {
+        "document_id": "DOC-59DB1DBD3682F139",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000091/vgincq32026earningsrelease.htm",
+        "filed_at": "2026-11-10",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-F93D2B6EA7B8588C",
+        "title": "8-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2007855/000200785526000069/vg-20261007.htm",
+        "filed_at": "2026-10-07",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "8-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-13T07:12:03+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.58746,
+    "eps_30d": 1.07393,
+    "eps_90d": 0.95738,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 3,
+    "down30": 1,
+    "pct_90": 65.8,
+    "steady": true,
+    "turnaround": false
+  }
+}

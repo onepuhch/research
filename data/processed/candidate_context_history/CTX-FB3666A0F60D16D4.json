@@ -1,0 +1,126 @@
+{
+  "context_id": "CTX-FB3666A0F60D16D4",
+  "candidate_id": "CAN-A56C76447137EBC2",
+  "ticker": "SKHY",
+  "issuer_cik": "0002120882",
+  "document_ids": [
+    "DOC-D26BDD532757061D"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-D26BDD532757061D#t1",
+    "DOC-D26BDD532757061D#t6"
+  ],
+  "input_sha": "fb3666a0f60d16d41b516b8ddd2ddca81f738160c222c5fe4964543d8312d41f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-14T06:56:41+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "preliminary results — 이 보고서에 명시된 예비 결과는 한국에서 채택된 국제회계기준에 따라 연결 기준으로 작성되었다",
+      "note_ko": "이 보고서에 명시된 예비 결과는 한국에서 채택된 국제회계기준에 따라 연결 기준으로 작성되었다",
+      "kind": "fact",
+      "quote": "The preliminary results set forth in this report have been prepared on a consolidated basis in accordance with International Financial Reporting Standards as adopted in Korea.",
+      "document_id": "DOC-D26BDD532757061D",
+      "block_id": "t6",
+      "metric": "preliminary results",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "provisional figures — 이 결과는 외부 감사인의 감사가 아직 완료되지 않은 잠정 수치이므로 변경될 수 있다",
+      "note_ko": "이 결과는 외부 감사인의 감사가 아직 완료되지 않은 잠정 수치이므로 변경될 수 있다",
+      "kind": "fact",
+      "quote": "As these results are provisional figures for which the audit by the Company’s external auditor has not yet been completed, they may be subject to change.",
+      "document_id": "DOC-D26BDD532757061D",
+      "block_id": "t6",
+      "metric": "provisional figures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "외부 감사인의 감사가 완료된 후 최종 수치가 어떻게 변경될지 확인해야 한다"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "해당 분기 매출은 이전 분기보다 늘었다",
+      "figures": [
+        "104,615,483"
+      ],
+      "quote": "Revenue ; Quarterly ResultsYear-to-date (“YTD”)(3)Results ; 104,615,483236,510,516 ; 79,318,746N.A. ; * ; 31.9N.A. ; * ; 24,448,92964,320,022 ; 327.9267.7",
+      "where": "DOC-D26BDD532757061D#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "해당 분기 영업 이익은 이전 분기보다 늘었다",
+      "figures": [
+        "83,333,818"
+      ],
+      "quote": "Operating Profit ; Quarterly ResultsYTD(3) Results ; 83,333,818181,486,709 ; 60,542,608N.A ; * ; 37.6N.A ; * ; 11,383,39028,036,745 ; 632.1547.3",
+      "where": "DOC-D26BDD532757061D#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "해당 분기 계속 영업 이익은 이전 분기보다 줄었다",
+      "figures": [
+        "50,708,500"
+      ],
+      "quote": "Profit from Continuing OperationsBefore Income Tax ; Quarterly ResultsYTD(3) Results ; 50,708,500225,033,713 ; 122,708,355N.A. ; * ; (58.7 N.A. ; ) * ; 14,790,42832,812,240 ; 242.8585.8",
+      "where": "DOC-D26BDD532757061D#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "해당 분기 순이익은 이전 분기보다 줄었다",
+      "figures": [
+        "39,775,593"
+      ],
+      "quote": "Profit (Loss) for the Period ; Quarterly ResultsYTD(3) Results ; 39,775,593174,044,095 ; 93,922,593N.A. ; * ; (57.7 N.A. ; ) * ; 12,597,53827,701,949 ; 215.7528.3",
+      "where": "DOC-D26BDD532757061D#t1"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_cut_from_source",
+      "note_ko": "해당 분기 지배 지분 순이익은 이전 분기보다 줄었다",
+      "figures": [
+        "39,534,392"
+      ],
+      "quote": "Attributable To: Controlling Interests ; Quarterly ResultsYTD(3) Results ; 39,534,392173,684,804 ; 93,820,236N.A. ; * ; (57.9 N.A. ; ) * ; 12,595,19527,699,504 ; 213.9527.0",
+      "where": "DOC-D26BDD532757061D#t1"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

@@ -1,0 +1,259 @@
+{
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "candidate_version": "CV-002C086DDC59F747",
+  "identity": {
+    "entity_id": "NYSE:TALO",
+    "ticker": "TALO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Talos Energy Inc.",
+  "industry": "Oil & Gas E&P",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "석유 및 가스 탐사, 생산, 탄소 포집 및 저장 사업을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Talos Energy Inc., through its subsidiaries, engages in the exploration and production of oil and gas in the United States and Mexico. The company operates through two segments: Upstream, and Carbon Capture and Sequestration. It also engages in the exploration and production of natural gas liquid. Talos Energy Inc. was founded in 2011 and is headquartered in Houston, Texas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "TALO analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TALO/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:49:41+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "TALO daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TALO/history",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:49:41+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "TALO company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/TALO/profile",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:49:41+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-0E5F36EE519C51AC",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526445597/talo-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-03",
+      "observed_at": "2026-11-10T07:45:12+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-70283ADC988D0C81",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-09-26T13:52:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-AB445E5C0D0154D9",
+    "input_sha": "ab445e5c0d0154d9f9a33b121289e3119b0d42bdff449487e877c102139adad0",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA): $406.1 million — 조정 EBITDA를 창출했다",
+        "note_ko": "조정 EBITDA를 창출했다",
+        "kind": "fact",
+        "quote": "Generated Adjusted EBITDA(1)(2) of $406.1 million.",
+        "document_id": "DOC-0E5F36EE519C51AC",
+        "block_id": "p20",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$406.1 million"
+        ],
+        "period": "unknown",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "production guidance · full-year 2026: 69 MBo/d / 93.5 MBoe/d — 연간 생산량 가이던스 중간값을 상향 조정했다",
+        "note_ko": "연간 생산량 가이던스 중간값을 상향 조정했다",
+        "kind": "guidance",
+        "quote": "Increased midpoint of full-year 2026 production guidance to 69 MBo/d and 93.5 MBoe/d, inclusive of the completed Gulf of America acquisition, non-core shelf divestment and impact from Hurricane Isaias in early October.",
+        "document_id": "DOC-0E5F36EE519C51AC",
+        "block_id": "p35",
+        "metric": "production guidance",
+        "figures": [
+          "69 MBo/d",
+          "93.5 MBoe/d"
+        ],
+        "period": "full-year 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "acquisition_disposal",
+          "one_off"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "gross production · first quarter of 2027: 20–30 MBoe/d — 모뉴먼트 유정의 첫 석유 생산이 예상되며 총 생산량은 이 범위에 도달할 것으로 예상된다",
+        "note_ko": "모뉴먼트 유정의 첫 석유 생산이 예상되며 총 생산량은 이 범위에 도달할 것으로 예상된다",
+        "kind": "guidance",
+        "quote": "First oil is now expected in the first quarter of 2027, with gross production expected to reach 20–30 MBoe/d.",
+        "document_id": "DOC-0E5F36EE519C51AC",
+        "block_id": "p54",
+        "metric": "gross production",
+        "figures": [
+          "20–30 MBoe/d"
+        ],
+        "period": "first quarter of 2027",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "capacity"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-0E5F36EE519C51AC",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526445597/talo-ex99_1.htm",
+        "filed_at": "2026-11-03",
+        "observed_at": "2026-11-10T07:45:12+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-70283ADC988D0C81",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1724965/000119312526333122/talo-ex99_1.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-09-26T13:52:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-10T07:45:33+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.85049,
+    "eps_30d": 1.66344,
+    "eps_90d": 1.20844,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 4,
+    "down30": 3,
+    "pct_90": 53.1,
+    "steady": false,
+    "turnaround": false
+  }
+}

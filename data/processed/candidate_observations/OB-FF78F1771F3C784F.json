@@ -1,0 +1,108 @@
+{
+  "observation_id": "OB-FF78F1771F3C784F",
+  "candidate_id": "CAN-ABBBE42278126D28",
+  "candidate_version": "CV-002C086DDC59F747",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:TALO",
+    "ticker": "TALO",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-14T06:49:41+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261114T064158Z_43567384363-1.json.gz",
+    "sha256": "743d3e9c74781b0695764626cc8750231e8cab96b46571f5446eef210123a8d8",
+    "run_id": "43567384363-1",
+    "finished_at": "2026-11-14T06:56:15+00:00"
+  },
+  "eps": {
+    "eps_now": 1.85049,
+    "eps_30d": 1.66344,
+    "eps_90d": 1.20844,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 4,
+    "down30": 3,
+    "pct_90": 53.1,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 3.949,
+    "yield_change_30_pp": 1.15
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-16",
+    "price_start_date": "2026-08-14",
+    "price_end_expected": "2026-11-13",
+    "price_end_date": "2026-11-13",
+    "close_start": 15.770000457763672,
+    "close_end": 16.260000228881836,
+    "price_pct_90": 3.1,
+    "adj_return_pct_90": 3.1,
+    "pe_change_pct": -32.7
+  },
+  "display_rank": 27,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 20
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 2695773696,
+  "context_id": "CTX-AB445E5C0D0154D9",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-14T06:56:19+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 18,
+    "shown": [
+      "CRGY",
+      "TALO",
+      "REPX",
+      "TXO"
+    ],
+    "folded": [
+      "CHRD",
+      "GRNT"
+    ],
+    "outside": [
+      "COP",
+      "EOG",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "SM",
+      "MTDR",
+      "MUR",
+      "NOG",
+      "BKV"
+    ]
+  },
+  "entity_id": "NYSE:TALO",
+  "approval_version": null,
+  "rendered_at": "2026-11-14T06:56:54+00:00"
+}

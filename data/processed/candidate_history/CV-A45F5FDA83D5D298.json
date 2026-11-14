@@ -1,0 +1,352 @@
+{
+  "candidate_id": "CAN-53CAB32910212188",
+  "candidate_version": "CV-A45F5FDA83D5D298",
+  "identity": {
+    "entity_id": "NASDAQ:MSTR",
+    "ticker": "MSTR",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Strategy Inc",
+  "industry": "Software - Application",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "비트코인을 보유하고 관련 증권을 제공하며, AI 기반 기업 분석 소프트웨어를 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Strategy Inc, together with its subsidiaries, operates as a bitcoin treasury company in the United States, Europe, the Middle East, Africa, and internationally. It offers investors varying degrees of economic exposure to Bitcoin by offering a range of securities, including equity and fixed income instruments. The company also provides AI-powered enterprise analytics software, including Strategy One, which provides non-technical users with the ability to directly access novel and actionable insights for decision-making. In addition, the company provides Strategy Mosaic, a universal intelligence"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MSTR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MSTR/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:43:37+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MSTR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MSTR/history",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:43:37+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MSTR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MSTR/profile",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:43:37+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-C5325D1208A3B12A",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000047/mstr-20261029x8kxex9912.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-29",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-1BBF829888895A2D",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1050446/000162828026051027/mstr-20260730x8kxex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-07-30",
+      "observed_at": "2026-11-13T07:11:35+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-7CF998B754968F70",
+    "input_sha": "7cf998b754968f70f566713c3bf713364242eb06bf46cbbb04491504dbf68a30",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "영업이익(Operating Income) · third quarter of 2026: $20.91 billion — 회사의 디지털 자산 이익을 포함한 영업 이익이다",
+        "note_ko": "회사의 디지털 자산 이익을 포함한 영업 이익이다",
+        "kind": "fact",
+        "quote": "Operating income for the third quarter of 2026 was $20.91 billion, compared to $3.89 billion of operating income for the third quarter of 2025. Operating income for the third quarter of 2026 includes a gain on the Company’s digital assets of $20.91 billion, compared to a gain on the Company’s digital assets of $3.89 billion for the third quarter of 2025.",
+        "document_id": "DOC-C5325D1208A3B12A",
+        "block_id": "p29",
+        "metric": "Operating Income",
+        "figures": [
+          "$20.91 billion"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "one_off"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "diluted earnings per common share · third quarter of 2026: $44.75 — 주당 순이익이다",
+        "note_ko": "주당 순이익이다",
+        "kind": "fact",
+        "quote": "For the third quarter of 2026, the Company reported a net income of $19.53 billion, or diluted earnings per common share of $44.75, as compared to a net income of $2.79 billion, or diluted earnings per common share of $8.42, for the third quarter of 2025.",
+        "document_id": "DOC-C5325D1208A3B12A",
+        "block_id": "p30",
+        "metric": "diluted earnings per common share",
+        "figures": [
+          "$44.75"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Total revenues · third quarter of 2026: $125.4 million — 전년 같은 분기보다 줄었다",
+        "note_ko": "전년 같은 분기보다 줄었다",
+        "kind": "fact",
+        "quote": "Total revenues for the third quarter of 2026 were $125.4 million, compared to total revenues of $128.7 million for the third quarter of 2025, a 3% decrease year-over-year.",
+        "document_id": "DOC-C5325D1208A3B12A",
+        "block_id": "p32",
+        "metric": "Total revenues",
+        "figures": [
+          "$125.4 million"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "Operating loss · second quarter of 2026: $8.33 billion — 회사의 디지털 자산 미실현 손실을 포함한 영업 손실이다",
+        "note_ko": "회사의 디지털 자산 미실현 손실을 포함한 영업 손실이다",
+        "kind": "fact",
+        "quote": "Operating loss for the second quarter of 2026 was $8.33 billion, compared to $14.03 billion operating income for the second quarter of 2025. Operating loss for the second quarter of 2026 includes an unrealized loss on the Company’s digital assets of $8.32 billion, compared to an unrealized gain on the Company’s digital assets of $14.05 billion for the second quarter of 2025.",
+        "document_id": "DOC-1BBF829888895A2D",
+        "block_id": "p30",
+        "metric": "Operating loss",
+        "figures": [
+          "$8.33 billion"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "one_off"
+        ],
+        "direction": "negative"
+      },
+      {
+        "text_ko": "순손실(Net loss) · second quarter of 2026: $8.22 billion — 순손실이다",
+        "note_ko": "순손실이다",
+        "kind": "fact",
+        "quote": "For the second quarter of 2026, the Company reported a net loss of $8.22 billion, or a net loss of $24.45 per common share on a diluted basis, as compared to a net income of $10.02 billion, or a net income of $32.60 per common share on a diluted basis, for the second quarter of 2025.",
+        "document_id": "DOC-1BBF829888895A2D",
+        "block_id": "p31",
+        "metric": "Net loss",
+        "figures": [
+          "$8.22 billion"
+        ],
+        "period": "second quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "negative"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "영업이익(Operating income) · third quarter of 2026: $20.91 billion — 디지털 자산의 이익이 포함되어 있다",
+        "note_ko": "디지털 자산의 이익이 포함되어 있다",
+        "kind": "fact",
+        "quote": "Operating income for the third quarter of 2026 includes a gain on the Company’s digital assets of $20.91 billion, compared to a gain on the Company’s digital assets of $3.89 billion for the third quarter of 2025.",
+        "document_id": "DOC-C5325D1208A3B12A",
+        "block_id": "p29",
+        "metric": "Operating income",
+        "figures": [
+          "$20.91 billion"
+        ],
+        "period": "third quarter of 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "디지털 자산 이익이 영업 이익에 미치는 영향은 무엇인가?",
+      "디지털 자산 미실현 손실이 영업 손실에 미치는 영향은 무엇인가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-C5325D1208A3B12A",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000047/mstr-20261029x8kxex9912.htm",
+        "filed_at": "2026-10-29",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-1BBF829888895A2D",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1050446/000162828026051027/mstr-20260730x8kxex991.htm",
+        "filed_at": "2026-07-30",
+        "observed_at": "2026-11-13T07:11:35+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-13T07:12:03+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 21.34548,
+    "eps_30d": 13.17459,
+    "eps_90d": 5.19914,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 3,
+    "down30": 2,
+    "pct_90": 310.6,
+    "steady": false,
+    "turnaround": false
+  }
+}

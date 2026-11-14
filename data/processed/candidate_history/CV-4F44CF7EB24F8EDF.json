@@ -1,0 +1,182 @@
+{
+  "candidate_id": "CAN-A56C76447137EBC2",
+  "candidate_version": "CV-4F44CF7EB24F8EDF",
+  "identity": {
+    "entity_id": "NASDAQ:SKHY",
+    "ticker": "SKHY",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "SK hynix Inc.",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "반도체 장치(DRAM, 낸드 플래시 등)를 제조 및 판매하고, 비메모리 반도체 파운드리 사업을 통해 돈을 법니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "SK hynix Inc. through its subsidiaries, engages in research, develops, manufactures, distributes, and sells semiconductor devices in Korea, China, rest of Asia, the United States, Europe, and internationally. It offers DRAM, such as server memory, graphics memory, mobile memory, PC memory, consumer memory; NAND flash memory; SSD; and MCP products. It also engages in foundry business, produces non-memory semiconductors. The company serves its products for server, networking, mobile, personal computer, consumer, and automotive applications. The company was formerly known as Hynix Semiconductor I"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "SKHY analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SKHY/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:42:19+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "SKHY daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SKHY/history",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:42:19+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "SKHY company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/SKHY/profile",
+      "published_at": null,
+      "observed_at": "2026-11-14T06:42:19+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-D26BDD532757061D",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526434994/d162547d6k.htm",
+      "title": "SEC 6-K 6-K — FORM 6-K",
+      "published_at": null,
+      "filed_at": "2026-10-28",
+      "observed_at": "2026-11-14T06:56:19+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-FB3666A0F60D16D4",
+    "input_sha": "fb3666a0f60d16d41b516b8ddd2ddca81f738160c222c5fe4964543d8312d41f",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [
+      {
+        "text_ko": "preliminary results — 이 보고서에 명시된 예비 결과는 한국에서 채택된 국제회계기준에 따라 연결 기준으로 작성되었다",
+        "note_ko": "이 보고서에 명시된 예비 결과는 한국에서 채택된 국제회계기준에 따라 연결 기준으로 작성되었다",
+        "kind": "fact",
+        "quote": "The preliminary results set forth in this report have been prepared on a consolidated basis in accordance with International Financial Reporting Standards as adopted in Korea.",
+        "document_id": "DOC-D26BDD532757061D",
+        "block_id": "t6",
+        "metric": "preliminary results",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "provisional figures — 이 결과는 외부 감사인의 감사가 아직 완료되지 않은 잠정 수치이므로 변경될 수 있다",
+        "note_ko": "이 결과는 외부 감사인의 감사가 아직 완료되지 않은 잠정 수치이므로 변경될 수 있다",
+        "kind": "fact",
+        "quote": "As these results are provisional figures for which the audit by the Company’s external auditor has not yet been completed, they may be subject to change.",
+        "document_id": "DOC-D26BDD532757061D",
+        "block_id": "t6",
+        "metric": "provisional figures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "외부 감사인의 감사가 완료된 후 최종 수치가 어떻게 변경될지 확인해야 한다"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "complete",
+    "documents": [
+      {
+        "document_id": "DOC-D26BDD532757061D",
+        "title": "FORM 6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526434994/d162547d6k.htm",
+        "filed_at": "2026-10-28",
+        "observed_at": "2026-11-14T06:56:19+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-14T06:56:41+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 41.34846,
+    "eps_30d": 34.68538,
+    "eps_90d": 32.23519,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 3,
+    "down30": 0,
+    "pct_90": 28.3,
+    "steady": false,
+    "turnaround": false
+  }
+}

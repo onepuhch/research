@@ -1,0 +1,190 @@
+{
+  "context_id": "CTX-1BC244D06D51129B",
+  "candidate_id": "CAN-1CA530B11452E8C2",
+  "ticker": "SATL",
+  "issuer_cik": "0001874315",
+  "document_ids": [
+    "DOC-C503BC3B5509CC38",
+    "DOC-31C5FD685DAAE979"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C503BC3B5509CC38#p5",
+    "DOC-C503BC3B5509CC38#p15",
+    "DOC-C503BC3B5509CC38#p16",
+    "DOC-C503BC3B5509CC38#p17",
+    "DOC-C503BC3B5509CC38#t2",
+    "DOC-C503BC3B5509CC38#t5",
+    "DOC-C503BC3B5509CC38#t11",
+    "DOC-C503BC3B5509CC38#p20",
+    "DOC-C503BC3B5509CC38#p21",
+    "DOC-C503BC3B5509CC38#p22",
+    "DOC-C503BC3B5509CC38#p24",
+    "DOC-C503BC3B5509CC38#p34",
+    "DOC-C503BC3B5509CC38#t17",
+    "DOC-31C5FD685DAAE979#p12",
+    "DOC-31C5FD685DAAE979#t1"
+  ],
+  "input_sha": "1bc244d06d51129b52d56343c6808362987dea526a8ac03f6659f0cffa6683cf",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-14T06:56:41+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · Third Quarter: $16.0 million — 회사의 매출이 기록적인 수준을 달성했다",
+      "note_ko": "회사의 매출이 기록적인 수준을 달성했다",
+      "kind": "fact",
+      "quote": "Record Third Quarter Revenue of $16.0 Million, Up 342% Year-over-Year, with a Second Consecutive Quarter of Positive Adjusted EBITDA",
+      "document_id": "DOC-C503BC3B5509CC38",
+      "block_id": "p5",
+      "metric": "Revenue",
+      "figures": [
+        "$16.0 million"
+      ],
+      "period": "Third Quarter",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Third Quarter: positive $1.2 million — 회사의 조정 EBITDA가 흑자를 기록했다",
+      "note_ko": "회사의 조정 EBITDA가 흑자를 기록했다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA improved to positive $1.2 million from a loss of $4.9 million, marking our second consecutive quarter of positive Adjusted EBITDA.",
+      "document_id": "DOC-C503BC3B5509CC38",
+      "block_id": "p16",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "positive $1.2 million"
+      ],
+      "period": "Third Quarter",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "revenue from Merlin-based services · second half of 2027 — 회사는 멀린 기반 서비스에서 초기 매출이 발생할 것으로 예상한다",
+      "note_ko": "회사는 멀린 기반 서비스에서 초기 매출이 발생할 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "We plan to launch additional Merlin satellites in the first half of 2027, with operational service and initial revenue from Merlin-based services expected to begin in the second half of 2027.",
+      "document_id": "DOC-C503BC3B5509CC38",
+      "block_id": "p15",
+      "metric": "revenue from Merlin-based services",
+      "figures": [],
+      "period": "second half of 2027",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "capacity"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "GAAP net income · Third quarter: $28.3 million / $30.0 million — 회사의 GAAP 순이익에는 금융 상품의 공정 가치 변동으로 인한 비현금성 이익이 포함되어 있으며, 이는 회사의 근본적인 영업 성과를 나타내지 않는다",
+      "note_ko": "회사의 GAAP 순이익에는 금융 상품의 공정 가치 변동으로 인한 비현금성 이익이 포함되어 있으며, 이는 회사의 근본적인 영업 성과를 나타내지 않는다",
+      "kind": "fact",
+      "quote": "Third quarter GAAP net income of $28.3 million included a $30.0 million non-cash gain from changes in the fair value of financial instruments. This gain is not indicative of underlying operating performance.",
+      "document_id": "DOC-C503BC3B5509CC38",
+      "block_id": "p16",
+      "metric": "GAAP net income",
+      "figures": [
+        "$28.3 million",
+        "$30.0 million"
+      ],
+      "period": "Third quarter",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "회사의 영업 손실이 감소했다",
+      "figures": [
+        "$2.3 million"
+      ],
+      "quote": "Operating loss narrowed by $5.8 million, or 72%, to $2.3 million, while Adjusted EBITDA improved to positive $1.2 million from a loss of $4.9 million, marking our second consecutive quarter of positiv",
+      "where": "DOC-C503BC3B5509CC38#p16"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_a_period",
+      "note_ko": "회사의 현금 및 현금 등가물이 이 금액으로 마감했다",
+      "figures": [
+        "$106.5 million"
+      ],
+      "quote": "We ended September with $106.5 million in cash and cash equivalents and $66.9 million in total remaining performance obligations, reflecting contracts in place at September 30.",
+      "where": "DOC-C503BC3B5509CC38#p17"
+    }
+  ],
+  "context_status": "draft_ready"
+}

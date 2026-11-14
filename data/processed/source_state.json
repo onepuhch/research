@@ -12122,7 +12122,7 @@
     "processed_run": "41174406581-1"
   },
   "0000071829-26-000061": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12138,10 +12138,11 @@
     "content_hash": "c2b6285827f01454d786f7cf2c03c5376205b1eaabcd6890d5a2605037e00775",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+    "updated_at": "2026-11-14T06:40:30.638637+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-440031": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12157,10 +12158,11 @@
     "content_hash": "9e5c31a6fe687728236ecf03f348c1354601a22af2e292082e8374db60d3aa35",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+    "updated_at": "2026-11-14T06:40:30.638637+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-120674": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12176,10 +12178,11 @@
     "content_hash": "6d7900c478c00fc9c6bf6e4ad9fe295d0793c75d53ac68ae36bb2a5797bdfed6",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+    "updated_at": "2026-11-14T06:40:30.638637+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001286043-26-000055": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12195,10 +12198,11 @@
     "content_hash": "6cdb7c587ad28f1d6ebee908ed84c13a848bdb5866961f07a7bb35596f607916",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+    "updated_at": "2026-11-14T06:40:30.638637+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001109357-26-000092": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12214,7 +12218,8 @@
     "content_hash": "fc3621b5cd52e0753af9482d8806506c25c369a94841a959e7c1e862a2ac1a22",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-10-31T05:55:21.530731+00:00"
+    "updated_at": "2026-11-14T06:40:30.638637+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-120941": {
     "status": "accepted",
@@ -12329,7 +12334,7 @@
     "validation_rejected": true
   },
   "0001628280-26-068886": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12340,12 +12345,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1788060/000162828026068886/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1788060/000162828026068886/q32026-earningsreleasexex9.htm",
       "published_at": "2026-11-02",
-      "raw_text": "Voyager Technologies, Inc./TX (VOYG) (CIK 0001788060) EX-99.1 2026-11-02. Financial Performance Highlights • Record backlog of $742 million , i ncreasing 293% year-over-year and 121% sequentially, including $347 million added due to the Astrobotic acquisition • Record quarterly revenue of $89 million , increasing 124% year-over-year • Record quarterly booki ngs of $116 million, increasing 135% year-over-year, resulting in a 1.3x Book-to-Bill ratio • Strong financial position with $815.7 million in total liquidity at quarter-end, including $553.6 million in cash and cash equivalents Business Highlights • Announced Anduril strategic partnership to deliver advanced defense technologies • Awarded multi-million dollar contract for agentic AI spectrum operations platform • Secured $298 million NASA award through Astrobotic, expanding lunar backlog • Completed Griffin-1 acceptance testing, advancing preparations for late-2026 launch • Awarded multiple biopharmaceutical research mission management contracts to the International Space Station, reflecting growing commercial demand • NASA released Commercial LEO Destination Phase 2 RFP, marking the next major milestone in the program • Appointed General B. Space Force (Ret.), as Chairman of Voyager’s Board of Advisors to provide strategic counsel across the Company’s space and defense efforts “Voyager delivered another exceptional quarter, achieving record revenue, record bookings and record backlog, driven by accelerating demand for our technologies and exceptional execution,” said Dylan Taylor, Chairman and CEO of Voyager Technologies. “Our record backlog provides meaningful multi-year revenue visibility and raising our full-year guidance reflects this momentum.” “Voyager has emerged as a differentiated technology platform at the convergence of defense, national security and space, investing ahead of demand to scale the capabilities and capacity our customers need,” continued Taylor. The increased outlook reflects strong thi"
+      "raw_text": "Voyager Technologies, Inc./TX (VOYG) (CIK 0001788060) EX-99.1 2026-11-02. Financial Performance Highlights • Record backlog of $742 million , i ncreasing 293% year-over-year and 121% sequentially, including $347 million added due to the Astrobotic acquisition • Record quarterly revenue of $89 million , increasing 124% year-over-year • Record quarterly booki ngs of $116 million, increasing 135% year-over-year, resulting in a 1.3x Book-to-Bill ratio • Strong financial position with $815.7 million in total liquidity at quarter-end, including $553.6 million in cash and cash equivalents Business Highlights • Announced Anduril strategic partnership to deliver advanced defense technologies • Awarded multi-million dollar contract for agentic AI spectrum operations platform • Secured $298 million NASA award through Astrobotic, expanding lunar backlog • Completed Griffin-1 acceptance testing, advancing preparations for late-2026 launch • Awarded multiple biopharmaceutical research mission management contracts to the International Space Station, reflecting growing commercial demand • NASA released Commercial LEO Destination Phase 2 RFP, marking the next major milestone in the program • Appointed General B. Space Force (Ret.), as Chairman of Voyager’s Board of Advisors to provide strategic counsel across the Company’s space and defense efforts “Voyager delivered another exceptional quarter, achieving record revenue, record bookings and record backlog, driven by accelerating demand for our technologies and exceptional execution,” said Dylan Taylor, Chairman and CEO of Voyager Technologies. “Our record backlog provides meaningful multi-year revenue visibility and raising our full-year guidance reflects this momentum.” “Voyager has emerged as a differentiated technology platform at the convergence of defense, national security and space, investing ahead of demand to scale the capabilities and capacity our customers need,” continued Taylor. The increased outlook reflects strong thi",
+      "_model_response": {
+        "evidence_quote": "Record backlog of $742 million , i ncreasing 293% year-over-year and 121% sequentially, including $347 million added due to the Astrobotic acquisition • Record quarterly revenue of $89 million , increasing 124% year-over-year • Record quarterly booki ngs of $116 million, increasing 135% year-over-year, resulting in a 1.3x Book-to-Bill ratio ... “Our record backlog provides meaningful multi-year revenue visibility and raising our full-year guidance reflects this momentum.”",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Voyager has emerged as a differentiated technology platform at the convergence of defense, national security and space",
+          "earnings_leverage": "Record quarterly revenue of $89 million, increasing 124% year-over-year • Record quarterly bookings of $116 million, increasing 135% year-over-year",
+          "supply_demand_tightness": "accelerating demand for our technologies and exceptional execution",
+          "structural_ai_demand": "Awarded multi-million dollar contract for agentic AI spectrum operations platform",
+          "revision_momentum": "raising our full-year guidance reflects this momentum.",
+          "catalyst_visibility": "Our record backlog provides meaningful multi-year revenue visibility"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "VOYG",
+        "theme": "국방, 우주, AI",
+        "signal_type": "가이던스상향",
+        "what_happened": "Voyager Technologies가 기록적인 매출, 예약, 백로그를 달성하고 Astrobotic 인수를 통해 NASA 수주를 확보하며 연간 가이던스를 상향 조정했습니다.",
+        "why_it_matters": "회사의 기술에 대한 수요 가속화와 성공적인 실행이 입증되어, 국방, 국가 안보 및 우주 분야에서 차별화된 기술 플랫폼으로서의 성장 잠재력이 시장에 반영될 수 있습니다.",
+        "what_to_watch": "향후 분기별 수주 및 백로그 증가 추이; NASA 및 국방 분야 신규 계약 확보 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 12,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "Book-to-Bill ratio: 수주액을 매출액으로 나눈 비율로, 1보다 크면 수주가 매출보다 빠르게 증가함을 의미합니다. Agentic AI: 스스로 목표를 설정하고 계획을 수립하여 실행하는 자율적인 인공지능 시스템."
+      }
     },
     "content_hash": "9f5acf778a91bd14052520bfc9650eb9d85d9b7f4ba0bfb07dc49ae04eec067d",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-03T06:58:10.510984+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-14T06:41:34+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000897077-26-000108": {
     "status": "accepted",
@@ -12405,7 +12446,7 @@
     "processed_run": "41593080532-1"
   },
   "0001069202-26-000102": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12416,12 +12457,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1069202/000106920226000102/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1069202/000106920226000102/ex99111226pressrelease.htm",
       "published_at": "2026-11-02",
-      "raw_text": "LENNOX INTERNATIONAL INC (LII) (CIK 0001069202) EX-99.1 2026-11-02. His record of commercial execution, operational leadership, and disciplined capacity expansion positions him well to continue accelerating growth and expanding margins across Building Climate Solutions.” Dethlefsen joined Lennox in 2024 with more than 20 years of leadership experience in industrial manufacturing, strategy, and business operations. EX-99.1 3 ex99111226pressrelease.htm EX-99.1 Document Exhibit 99.1 Lennox Announces Building Climate Solutions Leadership Transition Joe Nassab to transition to Strategic Advisor role, Geoff Dethlefsen named Executive Vice President and President, Building Climate Solutions DALLAS, Nov. 2, 2026 /PRNewswire/ -- Lennox (NYSE: LII), a leader in energy-efficient building and home comfort solutions, today announced that Joe Nassab, Executive Vice President and President of Building Climate Solutions, will transition from his role at the end of 2026 and continue with Lennox as a strategic advisor. Geoff Dethlefsen, currently Vice President and General Manager of Lennox Commercial HVAC, will assume leadership of Building Climate Solutions effective January 1, 2027. “Joe has made a lasting impact on Lennox through his leadership, industry expertise, and unwavering commitment to our customers and employees,” said Alok Maskara, Chief Executive Officer of Lennox. “I am delighted that Lennox will continue to benefit from Joe’s leadership and deep industry experience. In his new capacity, Joe will focus on supporting the Building Climate Solutions segment and coaching and developing our general managers and the next generation of leaders.” Nassab joined Lennox in 2010 as Vice President and General Manager of Allied Air. In 2022, he was named to lead the North American Commercial Heating and Cooling segment, which was later renamed Building Climate Solutions. During his tenure, Nassab helped transform Building Climate Solutions into a broader commercial equipment and se"
+      "raw_text": "LENNOX INTERNATIONAL INC (LII) (CIK 0001069202) EX-99.1 2026-11-02. His record of commercial execution, operational leadership, and disciplined capacity expansion positions him well to continue accelerating growth and expanding margins across Building Climate Solutions.” Dethlefsen joined Lennox in 2024 with more than 20 years of leadership experience in industrial manufacturing, strategy, and business operations. EX-99.1 3 ex99111226pressrelease.htm EX-99.1 Document Exhibit 99.1 Lennox Announces Building Climate Solutions Leadership Transition Joe Nassab to transition to Strategic Advisor role, Geoff Dethlefsen named Executive Vice President and President, Building Climate Solutions DALLAS, Nov. 2, 2026 /PRNewswire/ -- Lennox (NYSE: LII), a leader in energy-efficient building and home comfort solutions, today announced that Joe Nassab, Executive Vice President and President of Building Climate Solutions, will transition from his role at the end of 2026 and continue with Lennox as a strategic advisor. Geoff Dethlefsen, currently Vice President and General Manager of Lennox Commercial HVAC, will assume leadership of Building Climate Solutions effective January 1, 2027. “Joe has made a lasting impact on Lennox through his leadership, industry expertise, and unwavering commitment to our customers and employees,” said Alok Maskara, Chief Executive Officer of Lennox. “I am delighted that Lennox will continue to benefit from Joe’s leadership and deep industry experience. In his new capacity, Joe will focus on supporting the Building Climate Solutions segment and coaching and developing our general managers and the next generation of leaders.” Nassab joined Lennox in 2010 as Vice President and General Manager of Allied Air. In 2022, he was named to lead the North American Commercial Heating and Cooling segment, which was later renamed Building Climate Solutions. During his tenure, Nassab helped transform Building Climate Solutions into a broader commercial equipment and se",
+      "_model_response": {
+        "evidence_quote": "His record of commercial execution, operational leadership, and disciplined capacity expansion positions him well to continue accelerating growth and expanding margins across Building Climate Solutions.” Dethlefsen joined Lennox in 2024 with more than 20 years of leadership experience in industrial manufacturing, strategy, and business operations. ... Lennox (NYSE: LII), a leader in energy-efficient building and home comfort solutions, today announced that Joe Nassab, Executive Vice President and President of Building Climate Solutions, will transition from his role at the end of 2026 and continue with Lennox as a strategic advisor. Geoff Dethlefsen, currently Vice President and General Manager of Lennox Commercial HVAC, will assume leadership of Building Climate Solutions effective January 1, 2027.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "accelerating growth and expanding margins across Building Climate Solutions",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Geoff Dethlefsen named Executive Vice President and President, Building Climate Solutions ... effective January 1, 2027."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "LII",
+        "theme": "HVAC/에너지 효율",
+        "signal_type": "기타",
+        "what_happened": "Lennox International이 Building Climate Solutions 사업부의 신임 사장으로 Geoff Dethlefsen을 임명하며, 그의 상업적 실행력과 운영 리더십을 통해 해당 사업부의 성장 가속화 및 마진 확대를 기대한다고 밝혔다.",
+        "why_it_matters": "새로운 리더의 역량과 과거 실적을 바탕으로 핵심 사업부의 성장과 수익성 개선이 기대되며, 이는 회사 전체의 가치 상승으로 이어질 수 있는 초기 신호이다.",
+        "what_to_watch": "신임 사장 부임 후 Building Climate Solutions 사업부의 분기별 매출 성장률 및 영업이익률 변화; 회사의 연간 가이던스 상향 조정 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 2,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "상업적 실행력: 시장에서 제품이나 서비스를 성공적으로 판매하고 수익을 창출하는 능력. 마진 확대: 매출액 대비 이익률이 증가하는 것."
+      }
     },
     "content_hash": "9c2a47119c4fce4987f3c30977cc7f885c932ebc35c62f57afc7f2650365a990",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-03T06:58:10.510984+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-14T06:41:55+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001437749-26-034452": {
     "status": "deferred",
@@ -16571,7 +16648,7 @@
     "updated_at": "2026-11-13T06:55:35.099965+00:00"
   },
   "0001104659-26-125825": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16582,12 +16659,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2107018/000110465926125825/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2107018/000110465926125825/tm2629268d1_ex99-1.htm",
       "published_at": "2026-11-12",
-      "raw_text": "DPC Holdings PLC (DPC) (CIK 0002107018) EX-99.1 2026-11-12. Capital expenditure is expected to increase through 2027 and 2028, with additional investments in capacity expansions to accommodate increased customer demand and delivery of three strategic IGT customer partnership agreements across both Germany and the United Kingdom. Capital expenditure increased versus the prior year, due to capacity expansion investments to support market growth and our two Aerospace Customer Strategic Partnerships including initial equipment deposits for our greenfield superalloy facility in Alabama. Forward-looking statements include, but are not limited to, statements about: the projected and/or anticipated future financial performance of the Company and our specific businesses, including as delineated in our forward-looking guidance (including, without limitation revenue, revenue growth rates and drivers, capital expenditures, metal pricing; earnings per share, EBITDA, adjusted EBITDA, adjusted EBITDA margin, adjusted earnings per share, and free cash flow); our market opportunity and the potential growth of the market; our strategy, outcomes, and growth prospects; trends in our industry and end markets; the competitive environment in which we operate; potential new products and product innovation; our expectations regarding future events, growth, growth drivers, expansion or performance, including demand for our products and third-party relationships; historical results that may suggest trends for our business; expectations of retaining and/or attracting new customers; expectations of beliefs regarding future events; and assumptions underlying any of the items mentioned herein. 9 Some of the factors that could cause actual results to differ materially from those expressed or implied by the forward-looking statements include: our failure to manage our growth effectively and our ability to achieve and maintain profitability and create long-term value; our ability to grow revenue and"
+      "raw_text": "DPC Holdings PLC (DPC) (CIK 0002107018) EX-99.1 2026-11-12. Capital expenditure is expected to increase through 2027 and 2028, with additional investments in capacity expansions to accommodate increased customer demand and delivery of three strategic IGT customer partnership agreements across both Germany and the United Kingdom. Capital expenditure increased versus the prior year, due to capacity expansion investments to support market growth and our two Aerospace Customer Strategic Partnerships including initial equipment deposits for our greenfield superalloy facility in Alabama. Forward-looking statements include, but are not limited to, statements about: the projected and/or anticipated future financial performance of the Company and our specific businesses, including as delineated in our forward-looking guidance (including, without limitation revenue, revenue growth rates and drivers, capital expenditures, metal pricing; earnings per share, EBITDA, adjusted EBITDA, adjusted EBITDA margin, adjusted earnings per share, and free cash flow); our market opportunity and the potential growth of the market; our strategy, outcomes, and growth prospects; trends in our industry and end markets; the competitive environment in which we operate; potential new products and product innovation; our expectations regarding future events, growth, growth drivers, expansion or performance, including demand for our products and third-party relationships; historical results that may suggest trends for our business; expectations of retaining and/or attracting new customers; expectations of beliefs regarding future events; and assumptions underlying any of the items mentioned herein. 9 Some of the factors that could cause actual results to differ materially from those expressed or implied by the forward-looking statements include: our failure to manage our growth effectively and our ability to achieve and maintain profitability and create long-term value; our ability to grow revenue and",
+      "_model_response": {
+        "evidence_quote": "Capital expenditure is expected to increase through 2027 and 2028, with additional investments in capacity expansions to accommodate increased customer demand and delivery of three strategic IGT customer partnership agreements across both Germany and the United Kingdom. Capital expenditure increased versus the prior year, due to capacity expansion investments to support market growth and our two Aerospace Customer Strategic Partnerships including initial equipment deposits for our greenfield superalloy facility in Alabama.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "DPC Holdings PLC (DPC) (CIK 0002107018)",
+          "earnings_leverage": "additional investments in capacity expansions to accommodate increased customer demand",
+          "supply_demand_tightness": "accommodate increased customer demand and delivery of three strategic IGT customer partnership agreements",
+          "structural_ai_demand": "",
+          "revision_momentum": "Capital expenditure is expected to increase through 2027 and 2028",
+          "catalyst_visibility": "delivery of three strategic IGT customer partnership agreements across both Germany and the United Kingdom. ... initial equipment deposits for our greenfield superalloy facility in Alabama."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "superalloy manufacturing",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "DPC Holdings PLC",
+        "theme": "초합금 생산능력 증설",
+        "signal_type": "CAPEX",
+        "what_happened": "DPC Holdings PLC는 증가하는 고객 수요와 전략적 고객 파트너십에 대응하기 위해 2027년과 2028년까지 자본 지출을 늘리고 생산 능력을 확장할 계획이며, 이미 작년에 생산 능력 확장 투자를 늘리고 그린필드 초합금 시설에 초기 장비 보증금을 지불했다.",
+        "why_it_matters": "자본 지출 증가와 생산 능력 확장은 DPC가 핵심 산업(IGT, 항공우주)의 구조적 수요 증가에 직접적으로 대응하며, 이는 향후 매출 및 이익 성장의 강력한 기반이 될 수 있음을 시사한다.",
+        "what_to_watch": "향후 분기별 CAPEX 집행 현황 및 생산 능력 증설 완료 시점; IGT 및 항공우주 고객사로부터의 추가 수주 공시 또는 가이던스 변화",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "CAPEX: Capital Expenditure (자본 지출); Greenfield facility: 신규 부지에 건설되는 시설"
+      }
     },
     "content_hash": "10d58e105e964291dbc80adc51967c9e6bedb38f419a9bc1186c068c57476579",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-14T06:40:43+00:00",
+    "signal_id": "SIG-0943",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-14",
+    "processed_run": "43567384363-1"
   },
   "0001213900-26-119000": {
     "status": "deferred",
@@ -16799,7 +16914,7 @@
     "updated_at": "2026-11-13T06:55:35.099965+00:00"
   },
   "0001171843-26-007370": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16810,12 +16925,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1120370/000117184326007370/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1120370/000117184326007370/exh_991.htm",
       "published_at": "2026-11-12",
-      "raw_text": "BROADWIND, INC. (BWEN) (CIK 0001120370) EX-99.1 2026-11-12. Our forward-looking statements may include or relate to our beliefs, expectations, plans and/or assumptions with respect to the following: (i) the impact of our acquisition of MCM Acquisition Company, Inc., and our ability to integrate MCM’s operations into our business efficiently, (ii) our expectations and beliefs with respect to our financial guidance as set forth in our press releases from time to time, (iii) the impact of global health concerns on the economies and financial markets and the demand for our products; (iv) state, local and federal regulatory frameworks affecting the industries in which we compete, including the wind energy industry, and the related phase out, extension, continuation or renewal of federal tax incentives and grants, including the advanced manufacturing tax credits, and state renewable portfolio standards as well as new or continuing tariffs on steel or other products imported into the United States; (v) our customer relationships and our substantial dependency on a few significant customers and our efforts to diversify our customer base and sector focus and leverage relationships across business units; (vi) our ability to operate our business efficiently, comply with our debt obligations, manage capital expenditures and costs effectively, and generate cash flow; (vii) the economic and operational stability of our significant customers and suppliers, including their respective supply chains, and the ability to source alternative suppliers as necessary; (viii) our ability to continue to grow our business organically and through acquisitions; (ix) the production, sales, collections, customer deposits and revenues generated by new customer orders and our ability to realize the resulting cash flows; (x) information technology failures, network disruptions, cybersecurity attacks or breaches in data security; (xi) the sufficiency of our liquidity and alternate sources of funding, "
+      "raw_text": "BROADWIND, INC. (BWEN) (CIK 0001120370) EX-99.1 2026-11-12. Our forward-looking statements may include or relate to our beliefs, expectations, plans and/or assumptions with respect to the following: (i) the impact of our acquisition of MCM Acquisition Company, Inc., and our ability to integrate MCM’s operations into our business efficiently, (ii) our expectations and beliefs with respect to our financial guidance as set forth in our press releases from time to time, (iii) the impact of global health concerns on the economies and financial markets and the demand for our products; (iv) state, local and federal regulatory frameworks affecting the industries in which we compete, including the wind energy industry, and the related phase out, extension, continuation or renewal of federal tax incentives and grants, including the advanced manufacturing tax credits, and state renewable portfolio standards as well as new or continuing tariffs on steel or other products imported into the United States; (v) our customer relationships and our substantial dependency on a few significant customers and our efforts to diversify our customer base and sector focus and leverage relationships across business units; (vi) our ability to operate our business efficiently, comply with our debt obligations, manage capital expenditures and costs effectively, and generate cash flow; (vii) the economic and operational stability of our significant customers and suppliers, including their respective supply chains, and the ability to source alternative suppliers as necessary; (viii) our ability to continue to grow our business organically and through acquisitions; (ix) the production, sales, collections, customer deposits and revenues generated by new customer orders and our ability to realize the resulting cash flows; (x) information technology failures, network disruptions, cybersecurity attacks or breaches in data security; (xi) the sufficiency of our liquidity and alternate sources of funding, ",
+      "_model_response": {
+        "evidence_quote": "Our forward-looking statements may include or relate to our beliefs, expectations, plans and/or assumptions with respect to the following: (i) the impact of our acquisition of MCM Acquisition Company, Inc., and our ability to integrate MCM’s operations into our business efficiently, (ii) our expectations and beliefs with respect to our financial guidance as set forth in our press releases from time to time, (iii) the impact of global health concerns on the economies and financial markets and the demand for our products; (iv) state, local and federal regulatory frameworks affecting the industries in which we compete, including the wind energy industry, and the related phase out, extension, continuation or renewal of federal tax incentives and grants, including the advanced manufacturing tax credits, and state renewable portfolio standards as well as new or continuing tariffs on steel or other products imported into the United States; (v) our customer relationships and our substantial dependency on a few significant customers and our efforts to diversify our customer base and sector focus and leverage relationships across business units; (vi) our ability to operate our business efficiently, comply with our debt obligations, manage capital expenditures and costs effectively, and generate cash flow; (vii) the economic and operational stability of our significant customers and suppliers, including their respective supply chains, and the ability to source alternative suppliers as necessary; (viii) our ability to continue to grow our business organically and through acquisitions; (ix) the production, sales, collections, customer deposits and revenues generated by new customer orders and our ability to realize the resulting cash flows; (x) information technology failures, network disruptions, cybersecurity attacks or breaches in data security; (xi) the sufficiency of our liquidity and alternate sources of funding,",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "원문은 회사의 미래 전망, 위험 요소 및 일반적인 사업 운영 능력에 대한 포괄적인 진술이며, 구체적인 가이던스 상향, 신규 수주, 생산능력 증설, EPS 리비전 등 식별 가능한 조기 투자 발굴 신호를 포함하고 있지 않습니다. '신규 고객 주문' 언급은 일반적인 사업 활동의 일환으로, 구체적인 계약 체결이나 수주액 변화를 나타내는 신호가 아닙니다.",
+        "subject": "BROADWIND, INC.",
+        "theme": "미분류",
+        "signal_type": "기타",
+        "what_happened": "BROADWIND, INC.가 미래 사업 전망 및 위험 요소에 대한 일반적인 진술을 공시했습니다.",
+        "why_it_matters": "구체적인 투자 신호가 아니므로 현재 투자 관점에서 중요하지 않습니다.",
+        "what_to_watch": "해당 공시 내용이 구체적인 사업 성과로 이어지는지 추가적인 공시를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "원문은 회사의 미래 전망, 위험 요소 및 일반적인 사업 운영 능력에 대한 포괄적인 진술이며, 구체적인 가이던스 상향, 신규 수주, 생산능력 증설, EPS 리비전 등 식별 가능한 조기 투자 발굴 신호를 포함하고 있지 않습니다. '신규 고객 주문' 언급은 일반적인 사업 활동의 일환으로, 구체적인 계약 체결이나 수주액 변화를 나타내는 신호가 아닙니다."
     },
     "content_hash": "8e984143f7e3f677509c10d64a28f8e595df69c31c34fd7b07eb03dccd642810",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-14T06:41:01+00:00",
+    "reason": "원문은 회사의 미래 전망, 위험 요소 및 일반적인 사업 운영 능력에 대한 포괄적인 진술이며, 구체적인 가이던스 상향, 신규 수주, 생산능력 증설, EPS 리비전 등 식별 가능한 조기 투자 발굴 신호를 포함하고 있지 않습니다. '신규 고객 주문' 언급은 일반적인 사업 활동의 일환으로, 구체적인 계약 체결이나 수주액 변화를 나타내는 신호가 아닙니다.",
+    "processed_day": "2026-11-14",
+    "processed_run": "43567384363-1"
   },
   "0001213900-26-118457": {
     "status": "deferred",
@@ -16980,5 +17133,176 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-13T06:55:35.099965+00:00"
+  },
+  "0001193125-26-460685": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-460685",
+      "entity_id": "CIK:0002096300",
+      "source_role": "candidate",
+      "title": "AEVEX Corp. (AVEX) (CIK 0002096300) EX-99.2 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/2096300/000119312526460685/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2096300/000119312526460685/d733112dex992.htm",
+      "published_at": "2026-11-13",
+      "raw_text": "AEVEX Corp. (AVEX) (CIK 0002096300) EX-99.2 2026-11-13. This is being driven by our expanded multi-domain portfolio through cross-selling and new customer access, innovating ahead of the need, and our ability to produce at scale on timelines that work for our customers. How would you expect that to impact new order intake and the conversion into funded backlog, and ultimately, revenue? EX-99.2 3 d733112dex992.htm EX-99.2 EX-99.2 Exhibit 99.2 11 -Nov -2026 AEVEX Corp. (AVEX ) Q3 2026 Earnings Call CORPORATE PARTICIPANTS Farand Pawlak VP, Investor Relations & Treasurer, AEVEX Corp. Brian Raduenz Founder & Executive Chairman, AEVEX Corp. Charles Roger Wells Chief Executive Officer & Director, AEVEX Corp. Todd A. Booth Chief Financial Officer, AEVEX Corp. OTHER PARTICIPANTS Sheila Kahyaoglu Analyst, Jefferies LLC Seth M. Seifman Analyst, JPMorgan Securities LLC Ronald J. Epstein Analyst, BofA Securities, Inc. Ken Herbert Analyst, RBC Capital Markets LLC Bryce Sandberg Analyst, William Blair & Co. LLC Clarke Jeffries Analyst, Piper Sandler & Co. Austin R. Bohlig Analyst, Needham & Co. LLC MANAGEMENT DISCUSSION SECTION Operator : Good afternoon and welcome to the AEVEX Third Quarter 2026 Earnings Call. At this time, all participants are in a listen-only mode. After the speakers’ prepared remarks, there will be a question-and-answer session. I would now like to turn the call over to Farand Pawlak, VP of Investor Relations and Treasurer. Farand, please go ahead. Farand Pawlak Investor Relations Contact, AEVEX Corp. Thank you for joining AEVEX’s third quarter 2026 earnings conference call. Joining me on the call are Brian Raduenz, Executive Chairman; Roger Wells, Chief Executive Officer; and Todd Booth, Chief Financial Officer. Before we begin, please note that this call contains forward-looking statements, including the integration of BlackSea Technologies and its expected financial impact, timing of contract awards, the expected conversion of awarded contracts and unfunded",
+      "_model_response": {
+        "evidence_quote": "This is being driven by our expanded multi-domain portfolio through cross-selling and new customer access, innovating ahead of the need, and our ability to produce at scale on timelines that work for our customers. How would you expect that to impact new order intake and the conversion into funded backlog, and ultimately, revenue?",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "How would you expect that to impact new order intake and the conversion into funded backlog, and ultimately, revenue?",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "How would you expect that to impact new order intake and the conversion into funded backlog, and ultimately, revenue?"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AEVEX Corp.",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "AEVEX Corp.이 확장된 포트폴리오, 신규 고객 확보, 대규모 생산 능력을 통해 신규 수주 및 백로그 전환에 긍정적인 영향을 기대하고 있습니다.",
+        "why_it_matters": "회사의 전략적 역량 강화가 미래 수주 증가와 매출 성장을 견인할 잠재력이 있어 투자 매력이 높아질 수 있습니다.",
+        "what_to_watch": "신규 수주액 및 수주잔고(백로그) 변화, 신규 고객 확보 현황",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 2,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "백로그(Backlog): 기업이 수주했지만 아직 완료하지 않은 계약 물량 또는 미처리 주문."
+      }
+    },
+    "content_hash": "b9f8564955eee77f2bab6b82b88769380591fad3b1b35805847ff953f1e6f0de",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-14T06:41:17+00:00",
+    "signal_id": "SIG-0944",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-14",
+    "processed_run": "43567384363-1"
+  },
+  "0001437749-26-036629": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-036629",
+      "entity_id": "CIK:0000811641",
+      "source_role": "candidate",
+      "title": "IMMUCELL CORP /DE/ (ICCC) (CIK 0000811641) EX-99.1 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/811641/000143774926036629/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/811641/000143774926036629/ex_1044599.htm",
+      "published_at": "2026-11-13",
+      "raw_text": "IMMUCELL CORP /DE/ (ICCC) (CIK 0000811641) EX-99.1 2026-11-13. We are investing in capacity expansion and colostrum sourcing capabilities for future demand, and those efforts are projected to be completed on time and within budget.” “We have negotiated a new, larger $3 million line of credit with our bank, which we expect to sign during the fourth quarter of 2026,” continued Mr. EX-99.1 2 ex_1044599.htm EXHIBIT 99.1 ex_1044599.htm Exhibit 99.1 ImmuCell ImmuCell Announces Unaudited Financial Results for the Quarter Ended September 30, 2026 For Immediate Release PORTLAND, Maine – October 12, 2026 – ImmuCell Corporation (Nasdaq: ICCC) (“ImmuCell” or the “Company”), an animal health biologics company that develops, manufactures and markets products to improve calf health and productivity, today announced preliminary, unaudited sales results for the third quarter of 2026. Management’s Discussion: “Today we are reporting net income of $953,000 for the third quarter of 2026, a $1.1 million increase compared to the third quarter of 2025,” commented Timothy C. Fiori, Chief Financial Officer of ImmuCell. “Revenue grew 46.0% to $8.0 million in the third quarter of 2026 compared to the third quarter of 2025, a comparison aided in part by the absence of distributor restocking headwinds that had adversely affected the third quarter sales in 2025. Gross margin was 44.2% in the third quarter of 2026, which is 130 basis points higher than the third quarter of 2025 and reflects higher pricing and manufacturing execution partially offset by the previously discussed shift of certain product development expenses to costs of goods sold.” “We are pleased with our third quarter revenue and with distributor out-the-door volume growth of 18% over 2025,” commented Bobbi Jo Brockmann, Senior Vice President of Sales & Marketing. “Growth remained broad-based across our sales territories and product lines, supported by an increase in sales activity and continued progress in customer acquisition. "
+    },
+    "content_hash": "ec854996c5f4b5c2363c78f0f56f37509f08056ec5aef7fd1ac79098de650ee1",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+  },
+  "0001437749-26-036667": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001437749-26-036667",
+      "entity_id": "CIK:0001019034",
+      "source_role": "candidate",
+      "title": "BIO KEY INTERNATIONAL INC (BKYI) (CIK 0001019034) EX-99.1 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1019034/000143774926036667/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1019034/000143774926036667/ex_1044771.htm",
+      "published_at": "2026-11-13",
+      "raw_text": "BIO KEY INTERNATIONAL INC (BKYI) (CIK 0001019034) EX-99.1 2026-11-13. BIO-key’s blended gross margin has increased for five consecutive quarters, from 73% in Q2’25 to 90% in Q3’26, reflecting both new customer deployments and its expanding base of annual recurring software license fees. Recent Progress ● Middle East: BIO-key added three new government customers in October, bringing to eight the number of new Middle East region customers in the past seven months: – Middle East government security agency customer – Middle East government contract for passwordless, biometric IAM solutions – New customer within a Middle East government’s national security ecosystem – Partnership with Al Majlis Group to expand identity security across the Arabian Gulf ● Portugal: Integration of BIO-key’s IAM and biometric authentication solutions into the cybersecurity portfolio of Cipher, a Prosegur company , starting in Portugal – with plans to explore extending the offering to other Cipher markets, including Spain, the U.S. $917,951 in Q3’25, reflecting several new customer deployments, and represented 86% of total revenues vs. $363,642 in Q3’25, as new customer orders in Q3’26 were primarily software-only, while Q3’25 reflected a large hardware deployment by a long-term customer and expanded hardware deployments by several existing customers."
+    },
+    "content_hash": "c144fa7c7a740dd78aafbeefb4607b654b8da0adf734a4595b5662d3d8136ca4",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+  },
+  "0001279569-26-001068": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001279569-26-001068",
+      "entity_id": "CIK:0001463000",
+      "source_role": "candidate",
+      "title": "Grown Rogue International Inc. (GRUSF) (CIK 0001463000) EX-99.1 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1463000/000127956926001068/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1463000/000127956926001068/ex991.htm",
+      "published_at": "2026-11-13",
+      "raw_text": "Grown Rogue International Inc. (GRUSF) (CIK 0001463000) EX-99.1 2026-11-13. It also assumes continued capacity expansion in Illinois and Minnesota. EX-99.1 2 ex991.htm NEWS RELEASE DATED NOVEMBER 12, 2026 Exhibit 99.1 Grown Rogue Reports Third Quarter 2026 Results Steady Execution Across Existing and New Markets; 2026 and 2027 Guidance and Growth Targets Maintained MEDFORD, Ore., Nov. 12, 2026 /CNW/ - Grown Rogue International Inc. (\"Grown Rogue,\" \"we,\" \"us,\" \"our,\" or the \"Company\") (CSE: GRIN) (OTC: GRUSF), a flower-forward cannabis company combining craft values with disciplined execution, today reported its unaudited financial results for the three and nine months ended September 30, 2026. Results are presented in U.S. dollars and in accordance with U.S. generally accepted accounting principles (\"GAAP\"). Comparative periods have been recast, where applicable, in accordance with GAAP. Obie Strickler, Chief Executive Officer, said: \"For us, it always comes back to the people buying what we make. They're spending their hard-earned money and trusting us to deliver products worth coming back for. We take that responsibility seriously, and as we grow, so does our commitment to getting it consistently right. I'm incredibly proud of how our team has maintained that focus while bringing several new markets online simultaneously. We've welcomed talented new people who are working alongside our existing team, bringing fresh perspectives to our deep operational experience. This combination gives me tremendous confidence in our ability to execute on our ambitious growth plans.\" Highlights • Revenue: Revenue of $11.0 million for the third quarter of 2026, compared with $8.5 million in the third quarter of 2025, an increase of 29% (25% excluding the Michigan wholesale excise tax reported as revenue). Growth was driven by revenue increases of 44% in New Jersey, 21% in Oregon and 19% in Michigan (5% excluding the excise tax). • Adjusted EBITDA: Adjusted EBITDA (non-GAAP) of $2.6"
+    },
+    "content_hash": "9e11633b3a9fa2e06c2d5551758e5fc6bacefdc88131a3dc7c05d7ace5e5d87e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+  },
+  "0001493152-26-051832": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-051832",
+      "entity_id": "CIK:0001360565",
+      "source_role": "candidate",
+      "title": "Where Food Comes From, Inc. (WFCF) (CIK 0001360565) EX-99.2 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1360565/000149315226051832/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1360565/000149315226051832/ex99-2.htm",
+      "published_at": "2026-11-13",
+      "raw_text": "Where Food Comes From, Inc. (WFCF) (CIK 0001360565) EX-99.2 2026-11-13. We now cover more than 1,500 organic operations, an increase of 94 new customers through the first nine months of 2026. New customer wins this year include fledgling organic food makers and more than 30 established operations that transferred to us from other certification bodies. EX-99.2 3 ex99-2.htm EX-99.2 Exhibit 99.2 Where Food Comes From, Inc. 2026 Third Quarter Conference Call Call date: Thursday November 12, 2026 Call time: 10:00 a.m. Mountain Time Jay Pfeiffer – Investor Relations Good morning and welcome to the Where Food Comes From 2026 third quarter earnings call. Joining me on the call today are CEO John Saunders, President and Chief Strategy Officer Leann Saunders, and CFO Dannette Henning. During this call we’ll make forward-looking statements based on current expectations, estimates and projections that are subject to risk. Statements about financial performance, growth strategy, customers, business opportunities, market acceptance of our products and services, and potential acquisitions are forward looking statements. Listeners should not place undue reliance on these statements as there are many factors that could cause actual results to differ materially from our forward-looking statements. We encourage you to review our publicly filed documents as well as our news releases and website for more information. I’ll now turn the call over to John Saunders. John Hello and thank you for joining the call today. This morning, we were pleased to report strong financial results in our news release issued before the market opened. Total revenue in the third quarter increased 4% to $7.3 million. That increase included 6% growth in our core verification and certification segment, which is benefitting from strong demand for multiple services across our solutions portfolio. As highlighted in our press release, we are seeing resurgent demand in our beef-related business despite continued pres"
+    },
+    "content_hash": "0148ccf184cb04572e0aedab52aa88a7bf4c949ba1e890332aa1133d8b0c9674",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+  },
+  "0001628280-26-073578": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-073578",
+      "entity_id": "CIK:0000031791",
+      "source_role": "candidate",
+      "title": "REVVITY, INC. (RVTY) (CIK 0000031791) EX-99.2 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/31791/000162828026073578/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/31791/000162828026073578/investorday2026presentat.htm",
+      "published_at": "2026-11-13",
+      "raw_text": "REVVITY, INC. (RVTY) (CIK 0000031791) EX-99.2 2026-11-13. 82 Signals is poised to grow through customer-centric innovations and solutions Expansion with existing customers 500bps 300bps 300bps New customer wins Growth drivers 10-12% APV LRP New offerings Robust innovation, scaled and entrenched platform driving sustainable long-term growth in new and existing markets Digital system of record connecting scientific workflows from idea to creation Key messages ©2026 Revvity, Inc. EX-99.2 3 investorday2026presentat.htm EX-99.2 investorday2026presentat ©2026 Revvity, Inc.©2026 Revvity, Inc. All rights reserved. Powering scientific intelligence Transforming insight into impact INVESTOR DAY 2026 | November 13 Welcome and Opening Remarks Steve Willoughby Senior VP, Investor Relations, ESG, Risk ©2026 Revvity, Inc. ©2026 Revvity, Inc. Safe Harbor 3 This presentation contains \"forward-looking\" statements within the meaning of the Private Securities Litigation Reform Act of 1995, including but not limited to statements relating to estimates and projections of future earnings per share, cash flow and revenue growth and other financial results, developments relating to our customers and end-markets, plans concerning business development opportunities, and acquisitions or divestitures. Words such as \"believes,\" \"intends,\" \"anticipates,\" \"plans,\" \"expects,\" \"projects,\" \"forecasts,\" \"will\" and similar expressions, and references to guidance, are intended to identify forward-looking statements. Such statements are based on management's current assumptions and expectations, and no assurances can be given that our assumptions or expectations will prove to be correct. A number of important risk factors could cause actual results to differ materially from the results described, implied or projected in any forward- looking statements. A detailed description of these risk factors can be found under the caption \"Risk Factors\" in our most recent quarterly report on Form 10-Q and in our othe"
+    },
+    "content_hash": "230ef2b00e2e3b25a6c89e505eafbf0913ebbe7c722766cad05890c306f652b6",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+  },
+  "0001213900-26-119240": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-119240",
+      "entity_id": "CIK:0001866226",
+      "source_role": "candidate",
+      "title": "Evolution Metals & Technologies Corp. (EMAT) (CIK 0001866226) EX-99.1 2026-11-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1866226/000121390026119240/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1866226/000121390026119240/ea031214601ex99-1.pdf",
+      "published_at": "2026-11-13",
+      "raw_text": "Evolution Metals & Technologies Corp. (EMAT) (CIK 0001866226) EX-99.1 2026-11-13. %PDF-1.6 %���� 2386 0 obj < > endobj 2407 0 obj < >/Filter/FlateDecode/ID[ ]/Index[2386 36]/Info 2385 0 R/Length 106/Prev 4128802/Root 2387 0 R/Size 2422/Type/XRef/W[1 3 1]>>stream h�bbd`\u0010``b`�m\u0006� � ��\u0013D��\u0003�,sA$�!0�.� \u0007�1\u0001�̞`�\u001bL~\u0004��\u0007�f`]n`�5��I\u0005��[��mI\u0004�\u0002�@���j\u0006&F\u0006·`q\u0006F*��\u0019~n�\u0002\u0010`\u0000\u0018@\u0011W endstream endobj startxref 0 %%EOF 2421 0 obj < >stream h��X{pT�\u0019?�޻�d7�\u0005\u0012ؐ%� < � 5�\u0000 �xe�n\u0012�\u0010a7I\u0011�J6a+0,�Jl�Ґ�b\u001aR�\u0012_a�H�Q\u0004\u0015M�qn\u0013��dJ\u0006�PKæ㘠��`U\u0002ezι�ݠ�t��3�9� < ��}���}���\u0001\u0000�\u00000~�\u0003@�\u0000�@�7\u000epx�\u0003Fă���H����9\u0000� ���W�2=nx\u0007] fH�q��j~�\u0019�X < �x/�:2��?��v��\u0019���ٰ5ltdD�$�*Z\u0006��Q�`H O-���-� �6��S�`�!\u0002>�����O �\u000e��%w��90�1�5v���s�L&Y* \u001a6�Xd�~� �B��_p ?���M�nf\u0003Ǡ\u0007C�[a ?7 .@��� �TZ찥�G���d\u0001��d��\u000f���� ���(O�\u0006�\u000e���\u0006~�Y�\u000exB�~1��pndr\u001b�\u001b��L�\u0007 ?0\u001bxt�c���&\u0010�4#�%�r��\u0019MZEbne�\u0000�\"� � �b5>\u0004��v\u0004o`OҮ�f��O�\u0004N����] \u0018Mn�.���䖡�\\� p7o�Ç��jZ\u0006����4|52)7�\u0007� �|��Wz���sf\u0002?�M� 8\u0017�����P �\u0007���7 ��;��y��P�3�\u001b�=� ?\u0003ǭ\u0019�.�zu�ü\u001b^��]r����U����my �G�aC\u0000\\�^�:�ce�1f6_t��\u0014�����~��8f��d �j�%0���c���:�ހ� �������/�?�^ ���@�q��\b^��\u0004���T��\u0016�p�\u0017���~n��l,� ���eG ��[h���\"=b�\\����%�\u0003��g|ōA���nX+���_�o�\u00196�#�l����ȼ2C.��g��E��1\u0005�+�4\u001a\u0016��:2��\u0013|�16�I�-ޫ_��}6����+Ӧ��|�������V����αM�Y���髹Y� K�\u00060\u0014 ��8�Ş�\u0005�\u0002ǔ\u001b�J��\u0012�{L p\u0016� ��\u0011� ��3�� < \u0010�+jrm�\u0011��D�/����\u0002�9x�yc���m���\u0000�,\"��[t�� ��N\u001b�]\u0002Gl�#�J� Kz ���}�l�7۴ �\u0005,�Y~ �E�-4�\u0006b�u%c��،��ߗ���mh�\u000f\u0019�_�G��ԏٯ�Fk�O��h�ݲ ��3��-|�~�� \u0007j�-\u0019�=���} �q,� < \u0015��V�f,o�! }Qi �\u0013��B�|��/�\u0004� 5�&��u�&���\u0005�>f\u0016������7�����aUY�g�5�9b��\"�i\u0018�K��c�����e\u0011| Ϳn, �!8m�~,谎��^�W��(�\u0019�\u001aѭ\u0005�����\u0010�^�� c \u0016��]�5�6\u0017�G\u0017�\u0019&���t3{�\u000fHcv�� �� �;\u000e���-\u0006�\u0006'Ę-��6SNX���� �vJ��2:�Yiz\u0007 \u0005ӗ\u001aw��\u000fN���G�;���DǤ\u0019�\u001a�ő� < 3\u0003��-y � �zH�;�d�f�q�~�+AK��\\v;�����GGQ��\u000e� �%�E �R�\u0003\u0013 /7;�jܿ� ��\u0017\\��\u0019����'������vy�܁Ɩ��:��[�*z��y^�G\u0010J;\u0005�S(\u0011D��N(n.�imYW\\�� �W��5�^������\u0006W�PS_��RQ�u��\u001bj������#�B~��8����\u0013�y~��zO��Dl.��6Vx]^�|]��\u001b�h�k��+�^����_��x���^?F��X.\bNA�qy]x(\bn < �ǭ�SC �=�\u001b��9�����\u0017 �C�\b�vUա���8p����>��9��۲pyg�h�H�h�\u0003\u0004P{S������X�\u000ek9i�ǈ� \u0014���I3�\u0002lh�[�k�](�Kɥ=LӮޖ�+x۠b��(�.A\u0001EU�S\u001boz� :�쁉����1� ��vOR��T�y�"
+    },
+    "content_hash": "2bc9029727ca43d31093c521505106d93e0daffd681b2a7940e6650eaf17ad12",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-14T06:40:30.638637+00:00"
   }
 }
