@@ -71,9 +71,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-11-13T07:12:50+00:00",
+    "checked_at": "2026-11-14T06:57:11+00:00",
     "status": "success",
-    "last_success_at": "2026-11-13T07:12:50+00:00",
+    "last_success_at": "2026-11-14T06:57:11+00:00",
     "targets": 4,
     "failures": []
   },
@@ -139,23 +139,21 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-11-13T07:12:50+00:00",
+    "checked_at": "2026-11-14T06:57:10+00:00",
     "status": "success",
-    "last_success_at": "2026-11-13T07:12:50+00:00",
+    "last_success_at": "2026-11-14T06:57:10+00:00",
     "slots": 3,
     "bootstrap": false,
-    "material_eligible": 0,
+    "material_eligible": 1,
     "legacy_unknown_entity": 0,
     "retry_pending": 0,
     "quarantined": 0,
     "sent": 3,
     "failed": 0,
     "uncertain": 0,
-    "held_unconfirmed": [
-      "NASDAQ:GPRE|eps-revision-review:v1|new_discovery"
-    ],
+    "held_unconfirmed": [],
     "released_unconfirmed": [
-      "NYSE:REPX|eps-revision-review:v1|new_discovery"
+      "NASDAQ:GPRE|eps-revision-review:v1|new_discovery"
     ],
     "hold_not_compared": 0,
     "reservation_persisted": true,
@@ -248,9 +246,9 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-11-13T07:13:04+00:00",
+    "checked_at": "2026-11-14T06:57:25+00:00",
     "status": "success",
-    "last_success_at": "2026-11-13T07:13:04+00:00",
+    "last_success_at": "2026-11-14T06:57:25+00:00",
     "due": 19,
     "fresh": 18,
     "retry_waiting": 1,
