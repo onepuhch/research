@@ -2757,12 +2757,20 @@
       "signal_id": null,
       "verdict": "watch",
       "day": "2026-11-14",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-14T06:57:07+00:00",
+          "status": "sent",
+          "message_id": 252,
+          "error": null
+        }
+      ],
       "reserved_by": "43567384363-1",
       "reserved_at": "2026-11-14T06:57:04+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · GPRE Green Plains Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n저탄소 연료인 에탄올과 증류 곡물, 옥수수유를 생산, 운송하고 곡물 및 다양한 상품을 매매하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $1.56 → 지금 $2.46 (+57%) · 주가 같은 기간 -14.6%\n\n👍 주가는 같은 90일에 -15%로, 이익 예상 상향(+57%)보다 덜 움직임\n👎 최근 30일 분석가 3명 중 2명만 올림 — 일부 분석가의 상향\n👎 같은 30일에 내린 분석가도 1명\n👎 이 회사를 보는 분석가가 3명뿐이라 예상치가 몇 명의 수정에 크게 흔들림\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 12위, 17위로 들어옴\n❓ 11/5 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-5289D6512C83E305</code> · 추적 <code>/track CAN-5289D6512C83E305</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "b760a25496bb5b30b77c048d7a51c3ee1bf3041c856182ee5baa21d4fdfd122a"
+      "payload_sha256": "b760a25496bb5b30b77c048d7a51c3ee1bf3041c856182ee5baa21d4fdfd122a",
+      "message_id": 252
     },
     "NASDAQ:SATL|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -2775,12 +2783,20 @@
       "signal_id": null,
       "verdict": "consider",
       "day": "2026-11-14",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-14T06:57:08+00:00",
+          "status": "sent",
+          "message_id": 253,
+          "error": null
+        }
+      ],
       "reserved_by": "43567384363-1",
       "reserved_at": "2026-11-14T06:57:04+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · SATL Satellogic Inc.</b>\n<b>🟢 시스템 판단: 추적 고려</b>\n위성 시스템을 설계, 제조, 운영하고 지리공간 데이터 및 위성 관련 서비스를 제공하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 -$0.03 → 지금 $0.15 (적자→흑자) · 주가 같은 기간 -43.1%\n\n👍 최근 30일 분석가 4명 중 3명이 올림(내린 사람 없음)\n❓ 11/10 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-1CA530B11452E8C2</code> · 추적 <code>/track CAN-1CA530B11452E8C2</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "31af7bbb2c1edb9949b095937e49a1d4463a63fe4ba0307d9427ca956d756f02"
+      "payload_sha256": "31af7bbb2c1edb9949b095937e49a1d4463a63fe4ba0307d9427ca956d756f02",
+      "message_id": 253
     },
     "NYSE:VG|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -2793,12 +2809,20 @@
       "signal_id": null,
       "verdict": "watch",
       "day": "2026-11-14",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-14T06:57:09+00:00",
+          "status": "sent",
+          "message_id": 254,
+          "error": null
+        }
+      ],
       "reserved_by": "43567384363-1",
       "reserved_at": "2026-11-14T06:57:04+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · VG Venture Global, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n액화천연가스(LNG) 생산 시설을 운영하고 LNG를 판매 및 운송하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.96 → 지금 $1.59 (+66%) · 주가 같은 기간 -6.1%\n\n👍 최근 30일 분석가 9명 중 3명이 올림\n👍 주가는 같은 90일에 -6%로, 이익 예상 상향(+66%)보다 덜 움직임\n👎 같은 30일에 내린 분석가도 1명\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 15위, 18위로 들어옴\n❓ 11/10 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-CE287F3D97C627F9</code> · 추적 <code>/track CAN-CE287F3D97C627F9</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "ede48a6216a73e9b7e3fc37860eca924f2bcc3eb12d0ea8b9f7c7e371aec9b30"
+      "payload_sha256": "ede48a6216a73e9b7e3fc37860eca924f2bcc3eb12d0ea8b9f7c7e371aec9b30",
+      "message_id": 254
     }
   },
   "bootstrap": {
