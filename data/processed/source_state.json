@@ -12501,7 +12501,7 @@
     "validation_rejected": true
   },
   "0001437749-26-034452": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12512,12 +12512,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/855658/000143774926034452/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/855658/000143774926034452/ex_1012509.htm",
       "published_at": "2026-11-02",
-      "raw_text": "LATTICE SEMICONDUCTOR CORP (LSCC) (CIK 0000855658) EX-99.1 2026-11-02. Strong bookings, backlog and design wins support our fourth-quarter revenue outlook of approximately $335 million and reinforce our confidence in growth into 2027 and beyond. Such forward-looking statements include, but are not limited to, statements relating to our revenue, EPS growth, and free cash flow and related drivers; future financial performance; market share; profitable growth; shareholder value, our plans to reduce debt and expand free cash flow; our business outlook and guidance for the fourth quarter of 2026, including expected revenue, non-GAAP gross margin, non-GAAP total operating expenses, non-GAAP income tax rate and non-GAAP net income per share; expected year-over-year revenue growth rates, including expected growth in our Industrial and Embedded and Compute and Communications end markets; expected growth in revenue from new products and its anticipated contribution as a percentage of FPGA revenue; the expected benefits, performance, availability and customer adoption of the products, solutions, collaborations and partnerships described in this press release; the expected benefits, performance, availability and customer adoption of our products and solutions, and the continued participation, cooperation and performance of customers, partners and other third parties involved in the collaborations and initiatives described herein; our expectations related to market recovery and growth including AI and data center-related growth; statements about operating leverage and margin expansion; statements about design win momentum, backlog strength, and our companion chip opportunity; our product and technology leadership, including in small and mid-range FPGAs; our expectations regarding the acquisition of AMI, including expected benefits, integration, and expected accretive impact on non-GAAP gross margin, adjusted EBITDA, free cash flow, and EPS; the statements under the headings “Thi"
+      "raw_text": "LATTICE SEMICONDUCTOR CORP (LSCC) (CIK 0000855658) EX-99.1 2026-11-02. Strong bookings, backlog and design wins support our fourth-quarter revenue outlook of approximately $335 million and reinforce our confidence in growth into 2027 and beyond. Such forward-looking statements include, but are not limited to, statements relating to our revenue, EPS growth, and free cash flow and related drivers; future financial performance; market share; profitable growth; shareholder value, our plans to reduce debt and expand free cash flow; our business outlook and guidance for the fourth quarter of 2026, including expected revenue, non-GAAP gross margin, non-GAAP total operating expenses, non-GAAP income tax rate and non-GAAP net income per share; expected year-over-year revenue growth rates, including expected growth in our Industrial and Embedded and Compute and Communications end markets; expected growth in revenue from new products and its anticipated contribution as a percentage of FPGA revenue; the expected benefits, performance, availability and customer adoption of the products, solutions, collaborations and partnerships described in this press release; the expected benefits, performance, availability and customer adoption of our products and solutions, and the continued participation, cooperation and performance of customers, partners and other third parties involved in the collaborations and initiatives described herein; our expectations related to market recovery and growth including AI and data center-related growth; statements about operating leverage and margin expansion; statements about design win momentum, backlog strength, and our companion chip opportunity; our product and technology leadership, including in small and mid-range FPGAs; our expectations regarding the acquisition of AMI, including expected benefits, integration, and expected accretive impact on non-GAAP gross margin, adjusted EBITDA, free cash flow, and EPS; the statements under the headings “Thi",
+      "_model_response": {
+        "evidence_quote": "Strong bookings, backlog and design wins support our fourth-quarter revenue outlook of approximately $335 million and reinforce our confidence in growth into 2027 and beyond. Such forward-looking statements include, but are not limited to, statements relating to our revenue, EPS growth, and free cash flow and related drivers; future financial performance; ... our business outlook and guidance for the fourth quarter of 2026, including expected revenue, non-GAAP gross margin, non-GAAP total operating expenses, non-GAAP income tax rate and non-GAAP net income per share; expected year-over-year revenue growth rates, including expected growth in our Industrial and Embedded and Compute and Communications end markets; ... our expectations related to market recovery and growth including AI and data center-related growth; statements about operating leverage and margin expansion; statements about design win momentum, backlog strength, and our companion chip opportunity; our product and technology leadership, including in small and mid-range FPGAs;",
+        "axes_evidence": {
+          "underfollowed_pure_play": "our product and technology leadership, including in small and mid-range FPGAs;",
+          "earnings_leverage": "statements about operating leverage and margin expansion;",
+          "supply_demand_tightness": "Strong bookings, backlog and design wins",
+          "structural_ai_demand": "our expectations related to market recovery and growth including AI and data center-related growth;",
+          "revision_momentum": "reinforce our confidence in growth into 2027 and beyond.",
+          "catalyst_visibility": "our fourth-quarter revenue outlook of approximately $335 million and reinforce our confidence in growth into 2027 and beyond."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "LSCC",
+        "theme": "AI, 데이터센터, FPGA",
+        "signal_type": "수주/백로그",
+        "what_happened": "Lattice Semiconductor가 강력한 수주, 백로그, 디자인윈을 바탕으로 4분기 매출 전망치 약 3억 3,500만 달러를 제시하고 2027년 이후 성장에도 자신감을 표명했다.",
+        "why_it_matters": "강력한 수주와 디자인윈은 미래 매출 성장의 선행 지표이며, 특히 AI 및 데이터센터 관련 성장이 언급되어 구조적 수요 증가에 따른 수혜가 기대된다.",
+        "what_to_watch": "향후 분기별 실제 매출 및 EPS 성장률; AI 및 데이터센터 관련 신규 디자인윈 및 수주 규모",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "FPGA: Field-Programmable Gate Array (현장 프로그래머블 게이트 어레이); 디자인윈: 고객사가 자사 제품에 특정 부품을 채택하기로 결정하는 것"
+      }
     },
     "content_hash": "f2bf2350a1f5d0f918e59855ebf5eb9cd7fcd2fe8ebed85e121066bb500ff4f8",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-03T06:58:10.510984+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-15T01:43:28+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001493152-26-049569": {
     "status": "deferred",
@@ -12539,7 +12575,7 @@
     "updated_at": "2026-11-03T06:58:10.510984+00:00"
   },
   "0001213900-26-114672": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12550,15 +12586,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2051985/000121390026114672/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2051985/000121390026114672/ea031040801ex99-2.htm",
       "published_at": "2026-11-02",
-      "raw_text": "Iron Horse Acquisition II Corp. (IRHO, IRHOR, IRHOU) (CIK 0002051985) EX-99.2 2026-11-02. Other performance figures in this presentation and fault prediction lead times, are illustrative. ELECTRA AI detects faults, and prediction ahead of failure is possible only in a limited number of cases; \"up to 3 months\" reflects the maximum lead time observed in a limited internal retrospective analysis, and typical lead times are shorter. ELECTRA AI's Products: EVE-Ai Software & Embedded Solutions AI-driven Battery Intelligence Across Scalable and Mission-critical Systems 1.6 Billion Battery Data Points Processed 4 Million+ Lines of Code 10,000+ Model Parameters Tracked 20 Patents Issued & Pending Software and Cloud Solution Embedded Solution Battery Fleet Analytics • Monitor & optimize battery assets using AI-driven analytics & automation across large-scale & mission-critical deployments • Predict degradation, failures, and performance risk to enable proactive maintenance • Provide insight into increasing battery life to drive more revenue for energy infrastructure use cases 360 Adaptive Controls • Software embedded into battery management system (BMS) for real-time, self-optimizing battery performance • Edge intelligence enables real-time decision making by interpreting signals from sensors, microcontrollers, & actuators in high-reliability, resource-constrained environments Business Model • Subscription or per KWh pricing • Expected 75%+ contribution margins • SaaS-based recurring model • Per-unit pricing • Expected 70%+ contribution margins • Subscription (SaaS) Business Model 14 Case Studies Results Across Mobility, Energy, and Infrastructure EV-Fleet Managers Optimization & Cost Reduction BESS Operators Optimization & Revenue Uplift Automotive OEMs Precision & Performance Validation Embedded EVE-Ai into Tesla Cybertruck to validate real-world performance, efficiency & battery utilization Deployed EVE-Ai to improve uptime, extend asset life, & increase lifetime revenue I"
+      "raw_text": "Iron Horse Acquisition II Corp. (IRHO, IRHOR, IRHOU) (CIK 0002051985) EX-99.2 2026-11-02. Other performance figures in this presentation and fault prediction lead times, are illustrative. ELECTRA AI detects faults, and prediction ahead of failure is possible only in a limited number of cases; \"up to 3 months\" reflects the maximum lead time observed in a limited internal retrospective analysis, and typical lead times are shorter. ELECTRA AI's Products: EVE-Ai Software & Embedded Solutions AI-driven Battery Intelligence Across Scalable and Mission-critical Systems 1.6 Billion Battery Data Points Processed 4 Million+ Lines of Code 10,000+ Model Parameters Tracked 20 Patents Issued & Pending Software and Cloud Solution Embedded Solution Battery Fleet Analytics • Monitor & optimize battery assets using AI-driven analytics & automation across large-scale & mission-critical deployments • Predict degradation, failures, and performance risk to enable proactive maintenance • Provide insight into increasing battery life to drive more revenue for energy infrastructure use cases 360 Adaptive Controls • Software embedded into battery management system (BMS) for real-time, self-optimizing battery performance • Edge intelligence enables real-time decision making by interpreting signals from sensors, microcontrollers, & actuators in high-reliability, resource-constrained environments Business Model • Subscription or per KWh pricing • Expected 75%+ contribution margins • SaaS-based recurring model • Per-unit pricing • Expected 70%+ contribution margins • Subscription (SaaS) Business Model 14 Case Studies Results Across Mobility, Energy, and Infrastructure EV-Fleet Managers Optimization & Cost Reduction BESS Operators Optimization & Revenue Uplift Automotive OEMs Precision & Performance Validation Embedded EVE-Ai into Tesla Cybertruck to validate real-world performance, efficiency & battery utilization Deployed EVE-Ai to improve uptime, extend asset life, & increase lifetime revenue I",
+      "_model_response": {
+        "evidence_quote": "Embedded EVE-Ai into Tesla Cybertruck to validate real-world performance, efficiency & battery utilization Deployed EVE-Ai to improve uptime, extend asset life, & increase lifetime revenue I",
+        "axes_evidence": {
+          "underfollowed_pure_play": "ELECTRA AI's Products: EVE-Ai Software & Embedded Solutions AI-driven Battery Intelligence Across Scalable and Mission-critical Systems",
+          "earnings_leverage": "Expected 75%+ contribution margins • SaaS-based recurring model • Per-unit pricing • Expected 70%+ contribution margins",
+          "supply_demand_tightness": "Monitor & optimize battery assets using AI-driven analytics & automation across large-scale & mission-critical deployments • Predict degradation, failures, and performance risk to enable proactive maintenance • Provide insight into increasing battery life to drive more revenue for energy infrastructure use cases",
+          "structural_ai_demand": "AI-driven Battery Intelligence Across Scalable and Mission-critical Systems",
+          "revision_momentum": "",
+          "catalyst_visibility": "Embedded EVE-Ai into Tesla Cybertruck to validate real-world performance, efficiency & battery utilization"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "EV Battery Optimization",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ELECTRA AI",
+        "theme": "AI 기반 배터리 관리",
+        "signal_type": "신규고객",
+        "what_happened": "ELECTRA AI의 EVE-Ai 소프트웨어가 테슬라 사이버트럭에 탑재되어 실제 성능 및 효율성 검증에 사용되었으며, BESS 운영에도 배포되었다.",
+        "why_it_matters": "세계적인 전기차 제조사인 테슬라의 신규 차량에 AI 기반 배터리 관리 솔루션이 채택된 것은 ELECTRA AI 기술의 우수성과 시장 잠재력을 입증하며, 향후 대규모 상업적 채택으로 이어질 수 있는 중요한 초기 지표이다.",
+        "what_to_watch": "테슬라 사이버트럭의 EVE-Ai 검증 결과 및 추가적인 상업적 계약 여부, 다른 주요 고객사 확보 현황.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "BESS: Battery Energy Storage System (배터리 에너지 저장 시스템), BMS: Battery Management System (배터리 관리 시스템)"
+      }
     },
     "content_hash": "633871b116cf2a4e16d906ae12c1674ef5ec15457cb41438571314b0446c5b15",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-03T06:58:10.510984+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-15T01:43:46+00:00",
+    "signal_id": "SIG-0945",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-15",
+    "processed_run": "43664266354-1"
   },
   "0001104659-26-120892": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12569,12 +12643,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/874716/000110465926120892/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/874716/000110465926120892/tm2628647d1_ex99-1.htm",
       "published_at": "2026-11-02",
-      "raw_text": "IDEXX LABORATORIES INC /DE (IDXX) (CIK 0000874716) EX-99.1 2026-11-02. ▪ IDEXX VetLab ™ consumables revenues grew 14% reported and 15% organic, supported by net new customer growth, including 11% expansion of the IDEXX global premium instrument installed base, utilization expansion with benefits from recent product launches and net price gains. ▪ Reference laboratory diagnostic and consulting services generated 10% reported and organic revenue growth, driven by testing volume growth, net new customer gains, and price realization. EX-99.1 2 tm2628647d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 IDEXX Laboratories Announces Third Quarter Results ▪ Achieves third quarter revenue growth of 10% as reported and organic and CAG Diagnostics recurring revenue growth of 11% as reported and organic. ▪ Double-digit organic revenue growth was led by strong volume expansion, including benefits from IDEXX's innovations and excellent commercial execution. ▪ Places over 1,900 IDEXX inVue Dx ™ analyzers during the quarter, driving installed base to nearly 11,000 instruments. ▪ Delivers EPS of $4.01, an increase of 18% as reported and 22% on a comparable basis, with operating margin up 100 basis points as reported and 60 basis points on a comparable basis. ▪ Increases 2026 revenue guidance to $4,741 million - $4,767 million, up $32 million at midpoint, reflecting strong CAG Diagnostics recurring revenue performance. ▪ Outlook for 2026 reported revenue growth raised to 10.1% - 10.8%, and CAG Diagnostics recurring revenue reported growth raised to 11.0% - 11.7%, with projected 2026 organic revenue growth of 9.3% - 10.0% and CAG Diagnostics recurring revenue organic growth of 10.3% - 11.0%. ▪ Raises 2026 EPS outlook to $14.96 - $15.16, reflecting a $0.25 increase compared to prior guidance midpoint, led by a raised revenue outlook while supporting acquisition impacts. WESTBROOK, Maine, November 2, 2026 — IDEXX Laboratories, Inc. (Nasdaq: IDXX), a global leader in pet healthcare innovation, tod"
+      "raw_text": "IDEXX LABORATORIES INC /DE (IDXX) (CIK 0000874716) EX-99.1 2026-11-02. ▪ IDEXX VetLab ™ consumables revenues grew 14% reported and 15% organic, supported by net new customer growth, including 11% expansion of the IDEXX global premium instrument installed base, utilization expansion with benefits from recent product launches and net price gains. ▪ Reference laboratory diagnostic and consulting services generated 10% reported and organic revenue growth, driven by testing volume growth, net new customer gains, and price realization. EX-99.1 2 tm2628647d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 IDEXX Laboratories Announces Third Quarter Results ▪ Achieves third quarter revenue growth of 10% as reported and organic and CAG Diagnostics recurring revenue growth of 11% as reported and organic. ▪ Double-digit organic revenue growth was led by strong volume expansion, including benefits from IDEXX's innovations and excellent commercial execution. ▪ Places over 1,900 IDEXX inVue Dx ™ analyzers during the quarter, driving installed base to nearly 11,000 instruments. ▪ Delivers EPS of $4.01, an increase of 18% as reported and 22% on a comparable basis, with operating margin up 100 basis points as reported and 60 basis points on a comparable basis. ▪ Increases 2026 revenue guidance to $4,741 million - $4,767 million, up $32 million at midpoint, reflecting strong CAG Diagnostics recurring revenue performance. ▪ Outlook for 2026 reported revenue growth raised to 10.1% - 10.8%, and CAG Diagnostics recurring revenue reported growth raised to 11.0% - 11.7%, with projected 2026 organic revenue growth of 9.3% - 10.0% and CAG Diagnostics recurring revenue organic growth of 10.3% - 11.0%. ▪ Raises 2026 EPS outlook to $14.96 - $15.16, reflecting a $0.25 increase compared to prior guidance midpoint, led by a raised revenue outlook while supporting acquisition impacts. WESTBROOK, Maine, November 2, 2026 — IDEXX Laboratories, Inc. (Nasdaq: IDXX), a global leader in pet healthcare innovation, tod",
+      "_model_response": {
+        "evidence_quote": "Increases 2026 revenue guidance to $4,741 million - $4,767 million, up $32 million at midpoint, reflecting strong CAG Diagnostics recurring revenue performance. ▪ Outlook for 2026 reported revenue growth raised to 10.1% - 10.8%, and CAG Diagnostics recurring revenue reported growth raised to 11.0% - 11.7%, with projected 2026 organic revenue growth of 9.3% - 10.0% and CAG Diagnostics recurring revenue organic growth of 10.3% - 11.0%. ▪ Raises 2026 EPS outlook to $14.96 - $15.16, reflecting a $0.25 increase compared to prior guidance midpoint, led by a raised revenue outlook while supporting acquisition impacts.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Delivers EPS of $4.01, an increase of 18% as reported and 22% on a comparable basis, with operating margin up 100 basis points as reported and 60 basis points on a comparable basis.",
+          "supply_demand_tightness": "net new customer growth, including 11% expansion of the IDEXX global premium instrument installed base, utilization expansion with benefits from recent product launches and net price gains. ... Places over 1,900 IDEXX inVue Dx ™ analyzers during the quarter, driving installed base to nearly 11,000 instruments.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Increases 2026 revenue guidance to $4,741 million - $4,767 million, up $32 million at midpoint... Raises 2026 EPS outlook to $14.96 - $15.16, reflecting a $0.25 increase compared to prior guidance midpoint"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "IDXX",
+        "theme": "반려동물 헬스케어",
+        "signal_type": "가이던스상향",
+        "what_happened": "IDEXX Laboratories가 2026년 매출 및 EPS 가이던스를 상향 조정했다.",
+        "why_it_matters": "회사의 핵심 사업인 진단 서비스 및 소모품의 견조한 성과와 신규 고객 확보, 설치 기반 확장에 힘입어 향후 실적 전망이 긍정적으로 개선되고 있음을 시사한다.",
+        "what_to_watch": "향후 분기별 실적 발표에서 실제 매출 및 EPS 성장률이 상향된 가이던스를 충족하는지, 그리고 신규 고객 및 설치 기반 확장 추세가 지속되는지 확인해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "EPS: 주당순이익, 가이던스: 기업이 제시하는 미래 실적 전망치"
+      }
     },
     "content_hash": "4cc45634c15a8f2a3f64d4dad02b282ea6dd8c7782fe404cf846b695d7347d74",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-03T06:58:10.510984+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-15T01:44:04+00:00",
+    "signal_id": "SIG-0946",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-15",
+    "processed_run": "43664266354-1"
   },
   "0001193125-26-443647": {
     "status": "rejected",
@@ -12711,7 +12823,7 @@
     "processed_run": "41786819708-1"
   },
   "0000928054-26-000099": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12722,12 +12834,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/928054/000092805426000099/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/928054/000092805426000099/ex991-q32026.htm",
       "published_at": "2026-11-03",
-      "raw_text": "FLOTEK INDUSTRIES INC/CN/ (FTK) (CIK 0000928054) EX-99.1 2026-11-03. Related party Chemistry revenue increased 87% from the year-ago quarter, marking the first time since the inception of the Company's long-term supply agreement with ProFrac Services LLC that quarterly revenues exceeded $50 million. Revenue related to the minimum purchase requirements (the “Minimum Purchase Requirements”) under the long-term supply agreement totaled $0.9 million and $8.7 million, during the third quarters of 2026 and 2025, respectively. These statements include, without limitation, statements regarding the Company's financial guidance and outlook, including anticipated revenues and Adjusted EBITDA; the amount, timing and funding of the Company’s Data Analytics capital investment plan and the expected benefits thereof; anticipated revenues under the Company’s long-term contracts, including the long-term supply agreement with ProFrac Services, LLC and the Minimum Purchase Requirements thereunder; the total term of such contracts and the likelihood of their extension, renewal or early termination; the timing of the scaling and deployment of equipment; the total power capacity and operating performance of equipment once deployed; the Company’s ability to perform under and satisfy the terms and conditions of its contracts; the expansion of the Company’s technologies into new markets and applications, including behind-the-meter power generation and other industrial and infrastructure applications; and the expected growth of the Company’s international operations."
+      "raw_text": "FLOTEK INDUSTRIES INC/CN/ (FTK) (CIK 0000928054) EX-99.1 2026-11-03. Related party Chemistry revenue increased 87% from the year-ago quarter, marking the first time since the inception of the Company's long-term supply agreement with ProFrac Services LLC that quarterly revenues exceeded $50 million. Revenue related to the minimum purchase requirements (the “Minimum Purchase Requirements”) under the long-term supply agreement totaled $0.9 million and $8.7 million, during the third quarters of 2026 and 2025, respectively. These statements include, without limitation, statements regarding the Company's financial guidance and outlook, including anticipated revenues and Adjusted EBITDA; the amount, timing and funding of the Company’s Data Analytics capital investment plan and the expected benefits thereof; anticipated revenues under the Company’s long-term contracts, including the long-term supply agreement with ProFrac Services, LLC and the Minimum Purchase Requirements thereunder; the total term of such contracts and the likelihood of their extension, renewal or early termination; the timing of the scaling and deployment of equipment; the total power capacity and operating performance of equipment once deployed; the Company’s ability to perform under and satisfy the terms and conditions of its contracts; the expansion of the Company’s technologies into new markets and applications, including behind-the-meter power generation and other industrial and infrastructure applications; and the expected growth of the Company’s international operations.",
+      "_model_response": {
+        "evidence_quote": "Related party Chemistry revenue increased 87% from the year-ago quarter, marking the first time since the inception of the Company's long-term supply agreement with ProFrac Services LLC that quarterly revenues exceeded $50 million.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "FLOTEK INDUSTRIES INC/CN/ (FTK)",
+          "earnings_leverage": "Related party Chemistry revenue increased 87% from the year-ago quarter, marking the first time since the inception of the Company's long-term supply agreement with ProFrac Services LLC that quarterly revenues exceeded $50 million.",
+          "supply_demand_tightness": "long-term supply agreement with ProFrac Services LLC that quarterly revenues exceeded $50 million.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "marking the first time since the inception of the Company's long-term supply agreement with ProFrac Services LLC that quarterly revenues exceeded $50 million."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "화학 서비스",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "FTK",
+        "theme": "에너지 서비스",
+        "signal_type": "수주/백로그",
+        "what_happened": "FLOTEK INDUSTRIES의 특수관계자 화학 사업 매출이 전년 동기 대비 87% 증가하여, ProFrac Services LLC와의 장기 공급 계약 체결 이후 처음으로 분기 매출 5천만 달러를 초과 달성했습니다.",
+        "why_it_matters": "이것은 핵심 고객사와의 장기 계약 이행이 순조롭게 진행되며 매출 성장을 견인하고 있음을 보여주는 강력한 증거로, 향후 실적 개선과 시장 재평가 가능성을 시사합니다.",
+        "what_to_watch": "ProFrac Services LLC와의 장기 공급 계약 관련 향후 분기별 매출 추이 및 마진율 변화, 전체 매출에서 ProFrac 관련 매출이 차지하는 비중 변화.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "Minimum Purchase Requirements: 최소 구매 요구량, Related party Chemistry revenue: 특수관계자 화학 사업 매출"
+      }
     },
     "content_hash": "5dc136244b791f305ab9526db679767486e567c20dc9c77c3d0c37f2c703f924",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-15T01:44:21+00:00",
+    "signal_id": "SIG-0947",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-15",
+    "processed_run": "43664266354-1"
   },
   "0001193125-26-444439": {
     "status": "deferred",
@@ -12745,8 +12895,9 @@
     },
     "content_hash": "cfbf31e07d1ef27b496029ad7834bd310ece48592577548fa25646dec78b92fa",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-15T01:44:25+00:00",
+    "reason": "deferred_budget"
   },
   "0000004127-26-000052": {
     "status": "deferred",

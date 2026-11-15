@@ -1,0 +1,107 @@
+{
+  "context_id": "CTX-F4861DAB40FCF9DA",
+  "candidate_id": "CAN-719D0BAE3BE38043",
+  "ticker": "BUR",
+  "issuer_cik": "0001714174",
+  "document_ids": [
+    "DOC-C25B0B0751065F4E",
+    "DOC-8743BCD8C18E024C"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-C25B0B0751065F4E#p7",
+    "DOC-8743BCD8C18E024C#p11",
+    "DOC-8743BCD8C18E024C#p12",
+    "DOC-8743BCD8C18E024C#p17",
+    "DOC-8743BCD8C18E024C#p21",
+    "DOC-8743BCD8C18E024C#p32",
+    "DOC-8743BCD8C18E024C#p35",
+    "DOC-8743BCD8C18E024C#p36"
+  ],
+  "input_sha": "f4861dab40fcf9da8c66137aea50cc3e26ff43068b705d9e3bdeac9464634914",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-15T01:59:01+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [
+    "회사의 총 매출이 시장 할인율의 비현금성 증가가 없었다면 이백만 달러를 훨씬 넘었을 것이라는 주장의 근거는 무엇인가?",
+    "회사의 주요 금융 부문이 광업 중재에서 이억 달러를 받을 자격이 있다는 주장의 근거는 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 총 매출은 시장 할인율의 비현금성 증가가 없었다면 이백만 달러를 훨씬 넘었을 것이다",
+      "figures": [
+        "$135 million"
+      ],
+      "quote": "Total revenues of $135 million would have been well over $200 million1 if not for the non-cash increase in market discount rates.",
+      "where": "DOC-C25B0B0751065F4E#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 백만 달러의 부채를 줄였다",
+      "figures": [
+        "$100 million"
+      ],
+      "quote": "We also achieved $100 million of de-leveraging and retired our nearest-term debt maturity.",
+      "where": "DOC-C25B0B0751065F4E#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사는 분기 말에 오억 달러 이상의 현금을 보유했다",
+      "figures": [
+        "more than a half-billion dollars"
+      ],
+      "quote": "We closed the quarter with more than a half-billion dollars of cash on hand.",
+      "where": "DOC-C25B0B0751065F4E#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 주요 금융 부문은 광업 중재에서 육억 달러 이상의 유리한 판결로 이억 달러를 받을 자격이 있다",
+      "figures": [
+        "around $200 million"
+      ],
+      "quote": "Favorable $600+ million ruling in mining arbitration • Burford’s Principal Finance segment would be entitled to around $200 million if award against Cameroon paid in full",
+      "where": "DOC-8743BCD8C18E024C#p11"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사의 그룹 전체 포트폴리오는 오십칠억 달러로 동종 최대 규모이다",
+      "figures": [
+        "$5.7 billion"
+      ],
+      "quote": "$5.7 billion group-wide portfolio is the largest of its kind",
+      "where": "DOC-8743BCD8C18E024C#p17"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "이 데이터는 미래 결과에 대한 예측이 아니며, 법률 금융 자산의 내재된 변동성과 예측 불가능성으로 인해 예측이 불가능하고 내부 모델의 예측력이 제한된다",
+      "figures": [
+        "$5.2 billion"
+      ],
+      "quote": "Our last modeled realizations1 disclosure at year-end 2025 anticipated $5.2 billion in future realizations from the existing portfolio (excluding YPF-related assets) • We believe the current portfolio",
+      "where": "DOC-8743BCD8C18E024C#p12"
+    },
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "소송 및 중재 사건은 최종 해결까지 결과가 불확실하며, 궁극적인 회수 시기나 금액에 대한 보장은 없다",
+      "figures": [],
+      "quote": "Selected portfolio developments in July 2026 9 NOTE: These cases remain subject to significant litigation and collection risks, including potential appeals, annulments, set-aside or other post-judgmen",
+      "where": "DOC-8743BCD8C18E024C#p11"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

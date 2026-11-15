@@ -1,0 +1,157 @@
+{
+  "candidate_id": "CAN-719D0BAE3BE38043",
+  "candidate_version": "CV-A41DD2731BDECA14",
+  "identity": {
+    "entity_id": "NYSE:BUR",
+    "ticker": "BUR",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Burford Capital Limited",
+  "industry": "Asset Management",
+  "sector": "Financial Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "법률 분쟁에 필요한 자금을 제공하고 관련 서비스를 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Burford Capital Limited provides legal finance products and services worldwide. The company operates in two segments, Principal Finance, and Asset Management and Other Services. The Principal Finance segment provides capital against the underlying value of high-value single or multiple litigation and arbitration matters at any stage of the process from before filing to after a final judgment has been entered; and to a law firm that has agreed to take a case on a contingent fee or alternative fee basis, as well as directly to the client. This segment also offers legal risk management and advers"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "BUR analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BUR/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-15T01:55:39+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "BUR daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BUR/history",
+      "published_at": null,
+      "observed_at": "2026-11-15T01:55:39+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "BUR company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BUR/profile",
+      "published_at": null,
+      "observed_at": "2026-11-15T01:55:39+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-C25B0B0751065F4E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1714174/000171417426000111/bur-20261104xex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-04",
+      "observed_at": "2026-11-15T01:58:40+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-8743BCD8C18E024C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1714174/000171417426000096/bur-20260806xex992.htm",
+      "title": "SEC 8-K EX-99.2",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-11-15T01:58:40+00:00",
+      "fields": "8-K EX-99.2"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-F4861DAB40FCF9DA",
+    "input_sha": "f4861dab40fcf9da8c66137aea50cc3e26ff43068b705d9e3bdeac9464634914",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "회사의 총 매출이 시장 할인율의 비현금성 증가가 없었다면 이백만 달러를 훨씬 넘었을 것이라는 주장의 근거는 무엇인가?",
+      "회사의 주요 금융 부문이 광업 중재에서 이억 달러를 받을 자격이 있다는 주장의 근거는 무엇인가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-C25B0B0751065F4E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1714174/000171417426000111/bur-20261104xex991.htm",
+        "filed_at": "2026-11-04",
+        "observed_at": "2026-11-15T01:58:40+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-8743BCD8C18E024C",
+        "title": "EX-99.2",
+        "url": "https://www.sec.gov/Archives/edgar/data/1714174/000171417426000096/bur-20260806xex992.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-11-15T01:58:40+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.2"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-15T01:59:01+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.69003,
+    "eps_30d": 0.53337,
+    "eps_90d": 0.53878,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 28.1,
+    "steady": false,
+    "turnaround": false
+  }
+}

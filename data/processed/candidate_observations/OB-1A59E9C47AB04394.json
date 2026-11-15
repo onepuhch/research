@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-1A59E9C47AB04394",
+  "candidate_id": "CAN-2623D25A1D98BE0B",
+  "candidate_version": "CV-9EF68D5BFFB56131",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:U",
+    "ticker": "U",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-15T01:47:08+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261115T014429Z_43664266354-1.json.gz",
+    "sha256": "5ec9ef3e51026d2082ed6bf2ef175bff08cf91ebdb26061f0ad2314557b3d8d2",
+    "run_id": "43664266354-1",
+    "finished_at": "2026-11-15T01:58:36+00:00"
+  },
+  "eps": {
+    "eps_now": 2.64575,
+    "eps_30d": 1.74095,
+    "eps_90d": 1.71887,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 16,
+    "up30": 9,
+    "down30": 0,
+    "pct_90": 53.9,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 1.755,
+    "yield_change_30_pp": 1.713
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-17",
+    "price_start_date": "2026-08-17",
+    "price_end_expected": "2026-11-13",
+    "price_end_date": "2026-11-13",
+    "close_start": 45.45000076293945,
+    "close_end": 52.810001373291016,
+    "price_pct_90": 16.2,
+    "adj_return_pct_90": 16.2,
+    "pe_change_pct": -24.5
+  },
+  "display_rank": 23,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 17
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 23438594048,
+  "context_id": "CTX-A89D27A892F55A9D",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-14T06:56:19+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:U",
+  "approval_version": null,
+  "rendered_at": "2026-11-15T01:59:18+00:00"
+}

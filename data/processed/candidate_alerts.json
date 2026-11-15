@@ -2823,6 +2823,24 @@
       "payload_text": "<b>🆕 새 발굴 후보 · VG Venture Global, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n액화천연가스(LNG) 생산 시설을 운영하고 LNG를 판매 및 운송하여 수익을 창출합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.96 → 지금 $1.59 (+66%) · 주가 같은 기간 -6.1%\n\n👍 최근 30일 분석가 9명 중 3명이 올림\n👍 주가는 같은 90일에 -6%로, 이익 예상 상향(+66%)보다 덜 움직임\n👎 같은 30일에 내린 분석가도 1명\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 15위, 18위로 들어옴\n❓ 11/10 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-CE287F3D97C627F9</code> · 추적 <code>/track CAN-CE287F3D97C627F9</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "ede48a6216a73e9b7e3fc37860eca924f2bcc3eb12d0ea8b9f7c7e371aec9b30",
       "message_id": 254
+    },
+    "NASDAQ:CHRD|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NASDAQ:CHRD",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-B50C69675A4DBCEA",
+      "candidate_version": "CV-7B4CAC70750E1A1B",
+      "observation_id": "OB-2890FA6D19ABD21C",
+      "signal_id": null,
+      "verdict": "watch",
+      "day": "2026-11-15",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "43664266354-1",
+      "reserved_at": "2026-11-15T01:59:27+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · CHRD Chord Energy Corporation</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n원유, 천연가스, 천연가스액을 탐사, 개발, 생산하여 판매합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $13.96 → 지금 $21.07 (+51%) · 주가 같은 기간 +4.9%\n\n👍 최근 30일 분석가 17명 중 15명이 올림\n👍 주가는 같은 90일에 +5%로, 이익 예상 상향(+51%)보다 덜 움직임\n👎 같은 30일에 내린 분석가도 1명\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 19위로 들어옴\n❓ 11/4 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-B50C69675A4DBCEA</code> · 추적 <code>/track CAN-B50C69675A4DBCEA</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "bc5ba57c63c933cdf8b8e1c76c9bdaf3c92d3baeb984c44f87b315ab2b6a22f8"
     }
   },
   "bootstrap": {
@@ -2877,42 +2895,6 @@
           "day": "2026-10-27",
           "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
           "eps_now": 52.99214,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NYSE:DK|eps-revision-review:v1": {
-        "baseline_id": "OB-13F23299D7C4FF89",
-        "first": {
-          "observation_id": "OB-20798238B288AD1B",
-          "baseline_id": "OB-20798238B288AD1B",
-          "observed_at": "2026-11-13T07:11:31+00:00",
-          "day": "2026-11-13",
-          "snapshot_sha256": "ef8ff48f647445dab38ddf236478cc1aff31be76db2dd0882ea8dd28bc57b669",
-          "eps_now": 13.62647,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NASDAQ:BLTE|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-8620E8BBA13D54E6",
-          "baseline_id": "OB-8620E8BBA13D54E6",
-          "observed_at": "2026-11-14T06:56:15+00:00",
-          "day": "2026-11-14",
-          "snapshot_sha256": "743d3e9c74781b0695764626cc8750231e8cab96b46571f5446eef210123a8d8",
-          "eps_now": 3.375,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",
@@ -2990,6 +2972,54 @@
         },
         "pct": 17.6,
         "observation_id": "OB-CF1DFF8849523D93"
+      },
+      {
+        "entity": "NYSE:DK|eps-revision-review:v1",
+        "reason": "condition_lapsed",
+        "at": "2026-11-15T01:59:26+00:00",
+        "pending": {
+          "baseline_id": "OB-13F23299D7C4FF89",
+          "first": {
+            "observation_id": "OB-20798238B288AD1B",
+            "baseline_id": "OB-20798238B288AD1B",
+            "observed_at": "2026-11-13T07:11:31+00:00",
+            "day": "2026-11-13",
+            "snapshot_sha256": "ef8ff48f647445dab38ddf236478cc1aff31be76db2dd0882ea8dd28bc57b669",
+            "eps_now": 13.62647,
+            "comparison_key": [
+              "eps_next_fy_per_share",
+              "2027-12-31",
+              "Yahoo Finance earningsTrend (+1y)",
+              "USD",
+              "provider-unspecified"
+            ]
+          }
+        },
+        "pct": 17.55,
+        "observation_id": "OB-3FEDC6134033D7EC"
+      },
+      {
+        "entity": "NASDAQ:BLTE|eps-revision-review:v1",
+        "reason": "not_in_current_screen",
+        "at": "2026-11-15T01:59:27+00:00",
+        "pending": {
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "first": {
+            "observation_id": "OB-8620E8BBA13D54E6",
+            "baseline_id": "OB-8620E8BBA13D54E6",
+            "observed_at": "2026-11-14T06:56:15+00:00",
+            "day": "2026-11-14",
+            "snapshot_sha256": "743d3e9c74781b0695764626cc8750231e8cab96b46571f5446eef210123a8d8",
+            "eps_now": 3.375,
+            "comparison_key": [
+              "eps_next_fy_per_share",
+              "2027-12-31",
+              "Yahoo Finance earningsTrend (+1y)",
+              "USD",
+              "provider-unspecified"
+            ]
+          }
+        }
       }
     ],
     "previous_version": "material-update-v1"
@@ -3210,6 +3240,33 @@
         "up30": 2,
         "down30": 1
       }
+    },
+    "NYSE:BUR|eps-revision-review:v1|new_discovery": {
+      "entity_id": "NYSE:BUR",
+      "candidate_id": "CAN-719D0BAE3BE38043",
+      "ticker": "BUR",
+      "day": "2026-11-15",
+      "status": "held",
+      "reason": "provider_silent_jump",
+      "threshold": 0.1,
+      "threshold_status": "provisional",
+      "baseline": {
+        "snapshot": "20261114T064158Z_43567384363-1.json.gz",
+        "eps_now": 0.6067,
+        "eps_target_period": "2027-12-31",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0
+      },
+      "current": {
+        "snapshot": "20261115T014429Z_43664266354-1.json.gz",
+        "eps_now": 0.69003,
+        "eps_target_period": "2027-12-31",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0
+      },
+      "history": []
     }
   }
 }
