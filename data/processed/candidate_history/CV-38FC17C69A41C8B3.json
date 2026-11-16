@@ -1,0 +1,100 @@
+{
+  "candidate_id": "CAN-04067A837420C872",
+  "candidate_version": "CV-38FC17C69A41C8B3",
+  "identity": {
+    "entity_id": "NASDAQ:CLMT",
+    "ticker": "CLMT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Calumet, Inc.",
+  "industry": "Specialty Chemicals",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Calumet, Inc. manufactures, formulates, and markets a slate of specialty branded products and renewable fuels in North America and internationally. It operates through Specialty Products and Solutions; Performance Brands; and Montana/Renewables segments. The Specialty Products and Solutions segment manufactures and markets various solvents, waxes, customized lubricating oils, white oils, petrolatums, gels, esters, and other products. The Montana/Renewables segment processes geographically advantaged renewable feedstocks into renewable diesel, aviation fuel, and renewable naphtha. This segment"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CLMT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLMT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-16T06:53:47+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CLMT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLMT/history",
+      "published_at": null,
+      "observed_at": "2026-11-16T06:53:47+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CLMT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLMT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-16T06:53:47+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.17203,
+    "eps_30d": 2.15203,
+    "eps_90d": 1.398,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 126.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

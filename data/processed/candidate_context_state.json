@@ -3288,11 +3288,11 @@
         "exchange": "NYSE",
         "name": "Crescent Energy Company",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "98d357e2c5b2fb5bfdb085f3d6a9010036e43a2306e63563061b1997d1e8224e",
-        "mapping_observed_at": "2026-11-11T06:43:11+00:00"
+        "mapping_sha256": "d5232e162521cf623dcf7c607355e930adce5a6a885b48c3ae06a0441ff27314",
+        "mapping_observed_at": "2026-11-14T06:41:58+00:00"
       },
-      "attempted_at": "2026-11-11T06:57:37+00:00",
-      "eps_key": "2027-12-31|3.18188",
+      "attempted_at": "2026-11-16T07:00:52+00:00",
+      "eps_key": "2027-12-31|3.17922",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-8248216B02ABA81A",
@@ -3387,7 +3387,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-18T06:57:37+00:00",
+      "next_eligible_at": "2026-11-23T07:00:52+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-D4408A5E23436C66",
       "context_input_sha": "d4408a5e23436c66a789808b9572feb020e690efe647ab7204808960561912c8"
@@ -3489,8 +3489,8 @@
         "mapping_sha256": "d5232e162521cf623dcf7c607355e930adce5a6a885b48c3ae06a0441ff27314",
         "mapping_observed_at": "2026-11-14T06:41:58+00:00"
       },
-      "attempted_at": "2026-11-14T06:56:19+00:00",
-      "eps_key": "2027-12-31|21.07483",
+      "attempted_at": "2026-11-16T07:00:52+00:00",
+      "eps_key": "2027-12-31|21.24894",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-404CEDBB488F070B",
@@ -3541,7 +3541,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-21T06:56:19+00:00",
+      "next_eligible_at": "2026-11-23T07:00:52+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-6536853ADCF9EE21",
       "context_input_sha": "6536853adcf9ee2133893521bdddf960eaa38f382ab7b2f2b051b07c712e49f8"
@@ -4567,10 +4567,10 @@
         "exchange": "NYSE",
         "name": "AMC Entertainment Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "e1469df6a5e24ec90676d0bbd0059f857167207722b4e9952852b8f0806a9472",
-        "mapping_observed_at": "2026-11-08T06:17:49+00:00"
+        "mapping_sha256": "d5232e162521cf623dcf7c607355e930adce5a6a885b48c3ae06a0441ff27314",
+        "mapping_observed_at": "2026-11-14T06:41:58+00:00"
       },
-      "attempted_at": "2026-11-08T06:32:04+00:00",
+      "attempted_at": "2026-11-16T07:00:52+00:00",
       "eps_key": "2027-12-31|0.08333",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -4585,9 +4585,7 @@
         "DOC-B40F68E8AF283D7B",
         "DOC-68C9EC5A9D912EDA"
       ],
-      "notes": [
-        "document budget reached before every results filing was read"
-      ],
+      "notes": [],
       "update_checks": [
         {
           "document_id": "DOC-778C3DD2B701ACDB",
@@ -4622,7 +4620,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-15T06:32:04+00:00",
+      "next_eligible_at": "2026-11-23T07:00:52+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-3021F8A1A4D5E912",
       "context_input_sha": "3021f8a1a4d5e912e1668b10aa09bda99a106abda797aa1cbd7146a77e2bfc16"
@@ -5079,8 +5077,8 @@
         "mapping_sha256": "d5232e162521cf623dcf7c607355e930adce5a6a885b48c3ae06a0441ff27314",
         "mapping_observed_at": "2026-11-14T06:41:58+00:00"
       },
-      "attempted_at": "2026-11-14T06:56:19+00:00",
-      "eps_key": "2027-12-31|0.1475",
+      "attempted_at": "2026-11-16T07:00:52+00:00",
+      "eps_key": "2027-12-31|0.155",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-C503BC3B5509CC38",
@@ -5113,7 +5111,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-21T06:56:19+00:00",
+      "next_eligible_at": "2026-11-23T07:00:52+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-1BC244D06D51129B",
       "context_input_sha": "1bc244d06d51129b52d56343c6808362987dea526a8ac03f6659f0cffa6683cf"
@@ -5175,6 +5173,57 @@
       "draft_status": "no_supported_claims",
       "context_id": "CTX-F4861DAB40FCF9DA",
       "context_input_sha": "f4861dab40fcf9da8c66137aea50cc3e26ff43068b705d9e3bdeac9464634914"
+    },
+    "CAN-04067A837420C872": {
+      "status": "success",
+      "ticker": "CLMT",
+      "issuer": {
+        "cik": "0002013745",
+        "ticker": "CLMT",
+        "exchange": "Nasdaq",
+        "name": "Calumet, Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "d5232e162521cf623dcf7c607355e930adce5a6a885b48c3ae06a0441ff27314",
+        "mapping_observed_at": "2026-11-14T06:41:58+00:00"
+      },
+      "attempted_at": "2026-11-16T07:00:52+00:00",
+      "eps_key": "2027-12-31|3.17203",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-41B17B41C7E769AE",
+        "DOC-3454B86BC88DEAAC"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-41B17B41C7E769AE",
+        "DOC-3454B86BC88DEAAC"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-41B17B41C7E769AE",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-3454B86BC88DEAAC",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        }
+      ],
+      "next_eligible_at": "2026-11-23T07:00:52+00:00",
+      "draft_status": "failed",
+      "draft_error": "HTTPError",
+      "draft_http_status": 503,
+      "draft_failure": "provider_overloaded",
+      "draft_next_at": "2026-11-16T07:31:03+00:00"
     }
   },
   "days": {
@@ -5420,6 +5469,10 @@
       "companies": 9,
       "http_attempts": 41,
       "folded_companies": 2
+    },
+    "2026-11-16": {
+      "companies": 5,
+      "http_attempts": 22
     }
   },
   "documents_by_source": {
@@ -5755,6 +5808,8 @@
     "0001714174-26-000111|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000111/bur-20261104xex991.htm": "DOC-C25B0B0751065F4E",
     "0001714174-26-000096|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000096/bur-20260806xex991.htm": "DOC-130B5C8EE760CD69",
     "0001714174-26-000096|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000096/bur-20260806xex992.htm": "DOC-8743BCD8C18E024C",
-    "0002007855-26-000063|https://www.sec.gov/Archives/edgar/data/2007855/000200785526000063/vgincq22026earningsrelease.htm": "DOC-68D69EBBD3D3C40E"
+    "0002007855-26-000063|https://www.sec.gov/Archives/edgar/data/2007855/000200785526000063/vgincq22026earningsrelease.htm": "DOC-68D69EBBD3D3C40E",
+    "0002013745-26-000032|https://www.sec.gov/Archives/edgar/data/2013745/000201374526000032/clmt-20260930xex991.htm": "DOC-41B17B41C7E769AE",
+    "0002013745-26-000022|https://www.sec.gov/Archives/edgar/data/2013745/000201374526000022/clmt-20260630xex991.htm": "DOC-3454B86BC88DEAAC"
   }
 }

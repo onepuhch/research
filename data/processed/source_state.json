@@ -12880,7 +12880,7 @@
     "processed_run": "43664266354-1"
   },
   "0001193125-26-444439": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12891,16 +12891,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1425292/000119312526444439/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1425292/000119312526444439/d162480dex991.htm",
       "published_at": "2026-11-03",
-      "raw_text": "CVR PARTNERS, LP (UAN) (CIK 0001425292) EX-99.1 2026-11-03. EX-99.1 2 d162480dex991.htm EX-99.1 EX-99.1 Exhibit 99.1 CVR Partners Reports Third Quarter 2026 Results • Third quarter net loss of $11 million, or $1.02 per common unit; EBITDA of $20 million • Planned turnaround at East Dubuque completed on schedule in mid-October, along with completion of the water system upgrade and brownfield ammonia capacity expansion projects • Announced cash distribution of $1.79 per common unit SUGAR LAND, Texas (November 3, 2026) – CVR Partners, LP (“CVR Partners” or the “Partnership”) (NYSE: UAN), a manufacturer of ammonia and urea ammonium nitrate (“UAN”) solution fertilizer products, today announced a net loss of $11 million, or $1.02 per common unit, and EBITDA of $20 million on net sales of $146 million for the third quarter of 2026, compared to net income of $43 million, or $4.08 per common unit, and EBITDA of $71 million on net sales of $164 million for the third quarter of 2025. During the turnaround we also completed the upgrades to East Dubuque’s water systems, along with the brownfield ammonia capacity expansion that is expected to increase ammonia production capacity by approximately 5%,” said Dane Neumann, President and Chief Executive Officer of CVR Partners. These forward-looking statements include, but are not limited to, the information provided under the section titled “Q4 2026 Outlook” herein and statements regarding future: continued safe and reliable operations; impacts of planned and unplanned downtime and turnarounds on our results; drivers of our results; utilization and production rates; supply and demand; pricing of our products; ability to generate free cash flow; distributions, including the timing, payment and amount (if any) thereof; ability to and levels to which we upgrade ammonia to other fertilizer products, including UAN; global fertilizer industry conditions; ability to increase ammonia production capacity through our brownfield ammonia capacit"
+      "raw_text": "CVR PARTNERS, LP (UAN) (CIK 0001425292) EX-99.1 2026-11-03. EX-99.1 2 d162480dex991.htm EX-99.1 EX-99.1 Exhibit 99.1 CVR Partners Reports Third Quarter 2026 Results • Third quarter net loss of $11 million, or $1.02 per common unit; EBITDA of $20 million • Planned turnaround at East Dubuque completed on schedule in mid-October, along with completion of the water system upgrade and brownfield ammonia capacity expansion projects • Announced cash distribution of $1.79 per common unit SUGAR LAND, Texas (November 3, 2026) – CVR Partners, LP (“CVR Partners” or the “Partnership”) (NYSE: UAN), a manufacturer of ammonia and urea ammonium nitrate (“UAN”) solution fertilizer products, today announced a net loss of $11 million, or $1.02 per common unit, and EBITDA of $20 million on net sales of $146 million for the third quarter of 2026, compared to net income of $43 million, or $4.08 per common unit, and EBITDA of $71 million on net sales of $164 million for the third quarter of 2025. During the turnaround we also completed the upgrades to East Dubuque’s water systems, along with the brownfield ammonia capacity expansion that is expected to increase ammonia production capacity by approximately 5%,” said Dane Neumann, President and Chief Executive Officer of CVR Partners. These forward-looking statements include, but are not limited to, the information provided under the section titled “Q4 2026 Outlook” herein and statements regarding future: continued safe and reliable operations; impacts of planned and unplanned downtime and turnarounds on our results; drivers of our results; utilization and production rates; supply and demand; pricing of our products; ability to generate free cash flow; distributions, including the timing, payment and amount (if any) thereof; ability to and levels to which we upgrade ammonia to other fertilizer products, including UAN; global fertilizer industry conditions; ability to increase ammonia production capacity through our brownfield ammonia capacit",
+      "_model_response": {
+        "evidence_quote": "Planned turnaround at East Dubuque completed on schedule in mid-October, along with completion of the water system upgrade and brownfield ammonia capacity expansion projects ... During the turnaround we also completed the upgrades to East Dubuque’s water systems, along with the brownfield ammonia capacity expansion that is expected to increase ammonia production capacity by approximately 5%,” said Dane Neumann, President and Chief Executive Officer of CVR Partners.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "brownfield ammonia capacity expansion that is expected to increase ammonia production capacity by approximately 5%",
+          "supply_demand_tightness": "brownfield ammonia capacity expansion that is expected to increase ammonia production capacity by approximately 5%",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Planned turnaround at East Dubuque completed on schedule in mid-October, along with completion of the water system upgrade and brownfield ammonia capacity expansion projects"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "암모니아 생산",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CVR Partners, LP (UAN)",
+        "theme": "비료",
+        "signal_type": "CAPEX",
+        "what_happened": "CVR Partners가 East Dubuque 공장의 정기 보수 기간 동안 수처리 시스템 업그레이드와 함께 암모니아 생산 능력을 약 5% 증설하는 프로젝트를 완료했습니다.",
+        "why_it_matters": "생산 능력 증설은 향후 암모니아 및 UAN 비료 제품의 생산량 증가로 이어져 매출 및 이익 성장에 긍정적인 영향을 미칠 수 있으며, 이는 회사의 장기적인 성장 잠재력을 높이는 중요한 투자 신호입니다.",
+        "what_to_watch": "증설된 생산 능력의 실제 가동률 및 생산량 변화, 그리고 암모니아 및 UAN 비료 제품의 시장 가격 추이와 수요 변화를 주시해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "턴어라운드(Turnaround): 공장의 정기적인 대규모 보수 및 점검 작업. 브라운필드 증설(Brownfield expansion): 기존 시설을 활용하여 생산 능력을 확장하는 방식."
+      }
     },
     "content_hash": "cfbf31e07d1ef27b496029ad7834bd310ece48592577548fa25646dec78b92fa",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-11-15T01:44:25+00:00",
-    "reason": "deferred_budget"
+    "attempts": 2,
+    "updated_at": "2026-11-16T06:45:00+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000004127-26-000052": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12911,15 +12946,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/4127/000000412726000052/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/4127/000000412726000052/q426earningsreleaseformex9.htm",
       "published_at": "2026-11-03",
-      "raw_text": "SKYWORKS SOLUTIONS, INC. (SWKS) (CIK 0000004127) EX-99.1 2026-11-03. Our focus now is execution: delivering for our customers, achieving $500 million or more of annual cost synergies and building a stronger, more diversified Skyworks.” Recent Business Highlights • Received favorable credit rating actions following completion of the Qorvo combination, including an upgrade to investment grade by Moody’s (Baa3) and an outlook revision to Stable from Negative by Fitch (BBB+ affirmed) • Began realizing synergies, completing the initial consolidation of our management team and HR systems integration • Secured timing design wins across AI data center networking, including 1.6T scale-up, scale-out and data center interconnect switches and began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems • Extended automotive design-win momentum, including an EV traction inverter gate driver win with a German premium automaker and new infotainment programs with leading global OEMs Basis of Presentation and New Revenue Categories “Because our combination with Qorvo closed after the end of our fiscal fourth quarter, our reported September-quarter results are Skyworks standalone,” said Philip Carter, chief financial officer and senior vice president of Skyworks. Department of Commerce), the susceptibility of the semiconductor industry and the markets addressed by our, and our customers’, products to economic cycles or changes in economic conditions, including inflation and recession that could result from trade war or trade protection measures; our reliance on a small number of key customers for a large percentage of our sales; decreased gross margins and loss of market share as a result of increased competition; our ability to obtain design wins from customers; our ability to convert design wins into revenue market acceptance of our products and our customers’ products, including market acceptance of new, emerging technologies such as AI; the mix and volume"
+      "raw_text": "SKYWORKS SOLUTIONS, INC. (SWKS) (CIK 0000004127) EX-99.1 2026-11-03. Our focus now is execution: delivering for our customers, achieving $500 million or more of annual cost synergies and building a stronger, more diversified Skyworks.” Recent Business Highlights • Received favorable credit rating actions following completion of the Qorvo combination, including an upgrade to investment grade by Moody’s (Baa3) and an outlook revision to Stable from Negative by Fitch (BBB+ affirmed) • Began realizing synergies, completing the initial consolidation of our management team and HR systems integration • Secured timing design wins across AI data center networking, including 1.6T scale-up, scale-out and data center interconnect switches and began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems • Extended automotive design-win momentum, including an EV traction inverter gate driver win with a German premium automaker and new infotainment programs with leading global OEMs Basis of Presentation and New Revenue Categories “Because our combination with Qorvo closed after the end of our fiscal fourth quarter, our reported September-quarter results are Skyworks standalone,” said Philip Carter, chief financial officer and senior vice president of Skyworks. Department of Commerce), the susceptibility of the semiconductor industry and the markets addressed by our, and our customers’, products to economic cycles or changes in economic conditions, including inflation and recession that could result from trade war or trade protection measures; our reliance on a small number of key customers for a large percentage of our sales; decreased gross margins and loss of market share as a result of increased competition; our ability to obtain design wins from customers; our ability to convert design wins into revenue market acceptance of our products and our customers’ products, including market acceptance of new, emerging technologies such as AI; the mix and volume",
+      "_model_response": {
+        "evidence_quote": "Secured timing design wins across AI data center networking, including 1.6T scale-up, scale-out and data center interconnect switches and began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems • Extended automotive design-win momentum, including an EV traction inverter gate driver win with a German premium automaker and new infotainment programs with leading global OEMs",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Secured timing design wins across AI data center networking, including 1.6T scale-up, scale-out and data center interconnect switches and began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems",
+          "earnings_leverage": "Secured timing design wins across AI data center networking... began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems",
+          "supply_demand_tightness": "began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems",
+          "structural_ai_demand": "Secured timing design wins across AI data center networking, including 1.6T scale-up, scale-out and data center interconnect switches and began shipping high-performance clocks for leading AI hyperscalers’ rackscale systems",
+          "revision_momentum": "",
+          "catalyst_visibility": "Secured timing design wins across AI data center networking... began shipping high-performance clocks"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "반도체 부품 (타이밍 솔루션, 게이트 드라이버)",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "SKYWORKS SOLUTIONS, INC. (SWKS)",
+        "theme": "AI 데이터센터, 자동차",
+        "signal_type": "디자인윈",
+        "what_happened": "스카이웍스 솔루션즈는 AI 데이터센터 네트워킹 및 자동차 분야에서 디자인윈을 확보하고 AI 하이퍼스케일러에 고성능 클럭을 출하하기 시작했습니다.",
+        "why_it_matters": "AI 데이터센터와 전기차 시장의 성장에 필수적인 부품 공급사로서, 주요 고객사 확보를 통해 향후 매출 증가와 시장 점유율 확대가 기대됩니다.",
+        "what_to_watch": "AI 데이터센터 및 자동차 부문 매출 성장률, 신규 디자인윈 추가 확보 여부",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "디자인윈 (Design Win): 고객사가 자사 제품에 특정 부품을 채택하기로 결정하는 것. 향후 수주 및 매출 발생의 선행 지표.\n하이퍼스케일러 (Hyperscaler): 대규모 클라우드 컴퓨팅 서비스를 제공하는 기업 (예: AWS, Google Cloud, Microsoft Azure)."
+      }
     },
     "content_hash": "9daa953584b9eb2ae49beba5647f99f4f4e711335d4cf2aacc7f653f6e5e13c9",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-16T06:45:17+00:00",
+    "signal_id": "SIG-0948",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-16",
+    "processed_run": "43818752666-1"
   },
   "0001193125-26-444397": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12930,15 +13003,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/926282/000119312526444397/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/926282/000119312526444397/adtn-ex99_2.htm",
       "published_at": "2026-11-03",
-      "raw_text": "ADTRAN Holdings, Inc. (ADTN) (CIK 0000926282) EX-99.2 2026-11-03. SERVICE PROVIDERS Service provider fiber networking Capacity expansion, vendor replacement and multi-Gig upgrades drive investment. • Demand driven by transport capacity expansion, cloud wholesale connectivity and hyperscale DCI Access and aggregation solutions +5% YoY · −10% Q-o-Q $78.5M revenue in Q3’26 • YoY growth led by Europe with fourth straight Q-o-Q gain • U.S. EX-99.2 3 adtn-ex99_2.htm EX-99.2 Adtran Holdings NASDAQ: ADTN Q3 2026 financial results November 3, 2026 Financial results Q3 2026 Third quarter 2026 IMPORTANT INFORMATION Cautionary note regarding forward-looking statements Statements and graphics contained in this investor presentation which are not historical facts, such as those relating to market trends, future global optical demand, future demand across end markets, future demand driver growth (including with respect to expected engagements with pluggable optics, expansion of fiber networks, high-risk vendor replacement, demand for secure critical networks, and hyperscale demand for data center interconnect and next-generation connectivity), future gross margin percentage due to changing customer and product mix, future investment and other focus areas and cost-out actions, and ADTRAN Holdings’ strategy, outlook and financial guidance, are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements can also generally be identified by the use of words such as “believe,” “expect,” “intend,” “estimate,” “anticipate,” “will,” “may,” “could,” “look forward,” and similar expressions. In addition, ADTRAN Holdings, through its senior management, may from time to time make forward-looking public statements concerning the matters described herein. All such projections and other forward-looking information speak only as of the date hereof, and ADTRAN Holdings undertakes no duty to publicly update or revise such forward-l"
+      "raw_text": "ADTRAN Holdings, Inc. (ADTN) (CIK 0000926282) EX-99.2 2026-11-03. SERVICE PROVIDERS Service provider fiber networking Capacity expansion, vendor replacement and multi-Gig upgrades drive investment. • Demand driven by transport capacity expansion, cloud wholesale connectivity and hyperscale DCI Access and aggregation solutions +5% YoY · −10% Q-o-Q $78.5M revenue in Q3’26 • YoY growth led by Europe with fourth straight Q-o-Q gain • U.S. EX-99.2 3 adtn-ex99_2.htm EX-99.2 Adtran Holdings NASDAQ: ADTN Q3 2026 financial results November 3, 2026 Financial results Q3 2026 Third quarter 2026 IMPORTANT INFORMATION Cautionary note regarding forward-looking statements Statements and graphics contained in this investor presentation which are not historical facts, such as those relating to market trends, future global optical demand, future demand across end markets, future demand driver growth (including with respect to expected engagements with pluggable optics, expansion of fiber networks, high-risk vendor replacement, demand for secure critical networks, and hyperscale demand for data center interconnect and next-generation connectivity), future gross margin percentage due to changing customer and product mix, future investment and other focus areas and cost-out actions, and ADTRAN Holdings’ strategy, outlook and financial guidance, are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. Forward-looking statements can also generally be identified by the use of words such as “believe,” “expect,” “intend,” “estimate,” “anticipate,” “will,” “may,” “could,” “look forward,” and similar expressions. In addition, ADTRAN Holdings, through its senior management, may from time to time make forward-looking public statements concerning the matters described herein. All such projections and other forward-looking information speak only as of the date hereof, and ADTRAN Holdings undertakes no duty to publicly update or revise such forward-l",
+      "_model_response": {
+        "evidence_quote": "SERVICE PROVIDERS Service provider fiber networking Capacity expansion, vendor replacement and multi-Gig upgrades drive investment. • Demand driven by transport capacity expansion, cloud wholesale connectivity and hyperscale DCI Access and aggregation solutions +5% YoY · −10% Q-o-Q $78.5M revenue in Q3’26 • YoY growth led by Europe with fourth straight Q-o-Q gain",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Access and aggregation solutions +5% YoY · −10% Q-o-Q $78.5M revenue in Q3’26 • YoY growth led by Europe with fourth straight Q-o-Q gain",
+          "earnings_leverage": "Access and aggregation solutions +5% YoY ... YoY growth led by Europe with fourth straight Q-o-Q gain",
+          "supply_demand_tightness": "Capacity expansion, vendor replacement and multi-Gig upgrades drive investment. • Demand driven by transport capacity expansion, cloud wholesale connectivity and hyperscale DCI",
+          "structural_ai_demand": "Demand driven by transport capacity expansion, cloud wholesale connectivity and hyperscale DCI",
+          "revision_momentum": "Access and aggregation solutions +5% YoY ... YoY growth led by Europe with fourth straight Q-o-Q gain",
+          "catalyst_visibility": "Q3 2026 financial results November 3, 2026"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "네트워크 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ADTN",
+        "theme": "네트워킹 장비",
+        "signal_type": "기타",
+        "what_happened": "ADTRAN Holdings의 3분기 실적 발표에서 액세스 및 애그리게이션 솔루션 매출이 전년 대비 5% 성장했으며, 유럽 지역에서 4분기 연속 전분기 대비 성장을 기록했습니다.",
+        "why_it_matters": "서비스 제공업체의 광섬유 네트워크 확장, 벤더 교체, 멀티기가 업그레이드 수요가 ADTRAN의 특정 솔루션 매출 성장을 견인하고 있어, 관련 인프라 투자 확대의 수혜를 입을 수 있습니다.",
+        "what_to_watch": "다음 분기 액세스 및 애그리게이션 솔루션의 매출 성장률과 유럽 지역의 연속적인 성장 여부; 전체 가이던스 상향 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 1,
+          "revision_momentum": 1,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "액세스 및 애그리게이션 솔루션: 통신망에서 최종 사용자에게 접근하고 여러 네트워크 트래픽을 모아 상위망으로 전달하는 장비 및 기술. 하이퍼스케일 DCI: 대규모 데이터센터 간의 고속 연결(Data Center Interconnect)을 위한 기술."
+      }
     },
     "content_hash": "f947267b20501ae04438ecc98f1520e66827ba4e3634038b8fdb59838d11031e",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-16T06:45:39+00:00",
+    "signal_id": "SIG-0949",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-16",
+    "processed_run": "43818752666-1"
   },
   "0001361538-26-000035": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12949,15 +13060,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1361538/000136153826000035/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1361538/000136153826000035/prim-ex99.htm",
       "published_at": "2026-11-03",
-      "raw_text": "Primoris Services Corp (PRIM) (CIK 0001361538) EX-99 2026-11-03. Supported by a record backlog, improved project execution, and sustained demand for power generation and utility infrastructure services, we are well positioned to return to profitable growth, expand margins, and create sustainable value for our customers, employees and shareholders,” he added. EX-99 2 prim-ex99.htm EX-99 For your information, please see the attached earnings release of Primoris Corporation (“Primoris”) for the three months ended March 31, 2008 ​ ​ Exhibit 99.1 ​ ​ Primoris Services Corporation Reports Third Quarter 2026 Results ​ Dallas, TX – November 3, 2026 – Primoris Services Corporation ( NYSE : PRIM) (“Primoris” or the “Company”) today announced financial results for its third quarter ended September 30, 2026 and provided comments on the Company’s operational performance and outlook for the remainder of 2026. ​ For the third quarter of 2026, Primoris reported the following highlights (1) : ● Revenue of $2.0 billion, down $0.2 billion, or 10.4%, compared to the third quarter of 2025; ● Net income of $51.3 million, or $0.95 per diluted share, a decrease of $43.3 million, or $0.78 per diluted share, from the third quarter of 2025; ● Adjusted net income of $64.9 million, or $1.20 per diluted share, a decrease of $38.2 million, or $0.68 per diluted share, from the third quarter of 2025; ● Adjusted earnings before interest, income taxes, depreciation, and amortization (“Adjusted EBITDA”) of $134.4 million, down $34.3 million, or 20.3%, from the third quarter of 2025; ● Record total backlog of $14.1 billion, including $8.5 billion of total master service agreement (“MSA”) backlog; ● Updating net income and Adjusted EBITDA guidance ranges to $65.2 million to $73.2 million and $290.0 million to $310.0 million, respectively, for the full year 2026; and ● Updating diluted earnings per share (“EPS”) and Adjusted EPS guidance ranges to $1.20 to $1.35 and $2.10 to $2.25 per diluted share, resp"
+      "raw_text": "Primoris Services Corp (PRIM) (CIK 0001361538) EX-99 2026-11-03. Supported by a record backlog, improved project execution, and sustained demand for power generation and utility infrastructure services, we are well positioned to return to profitable growth, expand margins, and create sustainable value for our customers, employees and shareholders,” he added. EX-99 2 prim-ex99.htm EX-99 For your information, please see the attached earnings release of Primoris Corporation (“Primoris”) for the three months ended March 31, 2008 ​ ​ Exhibit 99.1 ​ ​ Primoris Services Corporation Reports Third Quarter 2026 Results ​ Dallas, TX – November 3, 2026 – Primoris Services Corporation ( NYSE : PRIM) (“Primoris” or the “Company”) today announced financial results for its third quarter ended September 30, 2026 and provided comments on the Company’s operational performance and outlook for the remainder of 2026. ​ For the third quarter of 2026, Primoris reported the following highlights (1) : ● Revenue of $2.0 billion, down $0.2 billion, or 10.4%, compared to the third quarter of 2025; ● Net income of $51.3 million, or $0.95 per diluted share, a decrease of $43.3 million, or $0.78 per diluted share, from the third quarter of 2025; ● Adjusted net income of $64.9 million, or $1.20 per diluted share, a decrease of $38.2 million, or $0.68 per diluted share, from the third quarter of 2025; ● Adjusted earnings before interest, income taxes, depreciation, and amortization (“Adjusted EBITDA”) of $134.4 million, down $34.3 million, or 20.3%, from the third quarter of 2025; ● Record total backlog of $14.1 billion, including $8.5 billion of total master service agreement (“MSA”) backlog; ● Updating net income and Adjusted EBITDA guidance ranges to $65.2 million to $73.2 million and $290.0 million to $310.0 million, respectively, for the full year 2026; and ● Updating diluted earnings per share (“EPS”) and Adjusted EPS guidance ranges to $1.20 to $1.35 and $2.10 to $2.25 per diluted share, resp",
+      "_model_response": {
+        "evidence_quote": "Supported by a record backlog, improved project execution, and sustained demand for power generation and utility infrastructure services, we are well positioned to return to profitable growth, expand margins, and create sustainable value for our customers, employees and shareholders,” he added. ... Record total backlog of $14.1 billion, including $8.5 billion of total master service agreement (“MSA”) backlog; Updating net income and Adjusted EBITDA guidance ranges to $65.2 million to $73.2 million and $290.0 million to $310.0 million, respectively, for the full year 2026; and Updating diluted earnings per share (“EPS”) and Adjusted EPS guidance ranges to $1.20 to $1.35 and $2.10 to $2.25 per diluted share, resp",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Primoris Services Corporation ( NYSE : PRIM) ... power generation and utility infrastructure services",
+          "earnings_leverage": "Supported by a record backlog, improved project execution, and sustained demand for power generation and utility infrastructure services, we are well positioned to return to profitable growth, expand margins",
+          "supply_demand_tightness": "sustained demand for power generation and utility infrastructure services, we are well positioned to return to profitable growth",
+          "structural_ai_demand": "",
+          "revision_momentum": "Updating net income and Adjusted EBITDA guidance ranges to $65.2 million to $73.2 million and $290.0 million to $310.0 million, respectively, for the full year 2026; and Updating diluted earnings per share (“EPS”) and Adjusted EPS guidance ranges to $1.20 to $1.35 and $2.10 to $2.25 per diluted share, resp",
+          "catalyst_visibility": "Record total backlog of $14.1 billion, including $8.5 billion of total master service agreement (“MSA”) backlog; Updating net income and Adjusted EBITDA guidance ranges"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "PRIM",
+        "theme": "인프라 서비스",
+        "signal_type": "수주/백로그",
+        "what_happened": "Primoris Services Corp이 2026년 3분기 실적 발표에서 141억 달러의 사상 최대 총 수주잔고를 기록하고, 2026년 연간 순이익 및 EPS 가이던스를 업데이트했습니다.",
+        "why_it_matters": "사상 최대 수주잔고는 향후 매출 및 이익 성장의 강력한 기반을 제공하며, 인프라 서비스 수요 증가에 따른 기업의 수혜를 보여주어 저평가된 기업 가치 재평가 기회가 될 수 있습니다.",
+        "what_to_watch": "향후 분기별 수주잔고 추이 및 신규 수주 계약 규모, 업데이트된 가이던스 대비 실제 실적 달성 여부 및 추가적인 가이던스 상향 가능성",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "수주잔고 (Backlog): 고객과 계약은 체결했지만 아직 매출로 인식되지 않은 미완료 계약 금액.\n가이던스 (Guidance): 기업이 투자자들에게 제시하는 미래 실적(매출, 이익 등)에 대한 예상치."
+      }
     },
     "content_hash": "7b143ea1664e0decbf11789aef1b8fce18f2217e22c6c762cc278840d9a6c3fe",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-16T06:46:04+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000060519-26-000040": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -12968,12 +13115,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/60519/000006051926000040/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/60519/000006051926000040/q32026ex991pressrelease.htm",
       "published_at": "2026-11-03",
-      "raw_text": "LOUISIANA-PACIFIC CORP (LPX) (CIK 0000060519) EX-99.1 2026-11-03. Forward-looking statements include other statements regarding matters that are not historical facts, including without limitation, plans for product development, forecasts of future costs and expenditures, possible outcomes of legal proceedings, capacity expansion and other growth initiatives, the adequacy of reserves for loss contingencies, and any statements regarding the Company’s financial outlook. EX-99.1 2 q32026ex991pressrelease.htm EX-99.1 Document LP Building Solutions Reports Third Quarter 2026 Results Including Record Siding Sales NASHVILLE, Tenn. (November 3, 2026) – Louisiana-Pacific Corporation (LP) (NYSE: LPX), a leading manufacturer of high-performance building products, today reported its financial results for the three and nine months ended September 30, 2026. Third Quarter 2026 Summary, Compared to Third Quarter 2025 • Siding net sales increased by $30 million, or 7%, to $473 million • Oriented Strand Board (OSB) net sales increased by $1 million to $180 million • Net income was $23 million, an increase of $14 million • Net income per diluted share was $0.32 per diluted share, an increase of $0.20 per diluted share • Adjusted EBITDA (1) was $82 million, flat year over year • Adjusted Diluted EPS (1) was $0.39 per diluted share, an increase of $0.02 per diluted share • Cash provided by operating activities was $112 million (1) This is a non-GAAP financial measure. See “Use of Non-GAAP Information” and “Reconciliation of Net Income to Non-GAAP Adjusted EBITDA, Non-GAAP Adjusted Income, and Non-GAAP Adjusted Diluted EPS\" below for additional information regarding non-GAAP measures. Capital Allocation Update • Invested $56 million in capital expenditures during the third quarter of 2026 • Paid $21 million in cash dividends during the third quarter of 2026 • Maintained total liquidity of approximately $1 billion as of September 30, 2026 \"Siding returned to volume growth in the third quar"
+      "raw_text": "LOUISIANA-PACIFIC CORP (LPX) (CIK 0000060519) EX-99.1 2026-11-03. Forward-looking statements include other statements regarding matters that are not historical facts, including without limitation, plans for product development, forecasts of future costs and expenditures, possible outcomes of legal proceedings, capacity expansion and other growth initiatives, the adequacy of reserves for loss contingencies, and any statements regarding the Company’s financial outlook. EX-99.1 2 q32026ex991pressrelease.htm EX-99.1 Document LP Building Solutions Reports Third Quarter 2026 Results Including Record Siding Sales NASHVILLE, Tenn. (November 3, 2026) – Louisiana-Pacific Corporation (LP) (NYSE: LPX), a leading manufacturer of high-performance building products, today reported its financial results for the three and nine months ended September 30, 2026. Third Quarter 2026 Summary, Compared to Third Quarter 2025 • Siding net sales increased by $30 million, or 7%, to $473 million • Oriented Strand Board (OSB) net sales increased by $1 million to $180 million • Net income was $23 million, an increase of $14 million • Net income per diluted share was $0.32 per diluted share, an increase of $0.20 per diluted share • Adjusted EBITDA (1) was $82 million, flat year over year • Adjusted Diluted EPS (1) was $0.39 per diluted share, an increase of $0.02 per diluted share • Cash provided by operating activities was $112 million (1) This is a non-GAAP financial measure. See “Use of Non-GAAP Information” and “Reconciliation of Net Income to Non-GAAP Adjusted EBITDA, Non-GAAP Adjusted Income, and Non-GAAP Adjusted Diluted EPS\" below for additional information regarding non-GAAP measures. Capital Allocation Update • Invested $56 million in capital expenditures during the third quarter of 2026 • Paid $21 million in cash dividends during the third quarter of 2026 • Maintained total liquidity of approximately $1 billion as of September 30, 2026 \"Siding returned to volume growth in the third quar",
+      "_model_response": {
+        "evidence_quote": "LP Building Solutions Reports Third Quarter 2026 Results Including Record Siding Sales... Siding net sales increased by $30 million, or 7%, to $473 million... Net income per diluted share was $0.32 per diluted share, an increase of $0.20 per diluted share... \"Siding returned to volume growth in the third quar",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Louisiana-Pacific Corporation (LP) (NYSE: LPX), a leading manufacturer of high-performance building products",
+          "earnings_leverage": "Siding net sales increased by $30 million, or 7%, to $473 million • Net income per diluted share was $0.32 per diluted share, an increase of $0.20 per diluted share",
+          "supply_demand_tightness": "Record Siding Sales... \"Siding returned to volume growth in the third quar",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "LP Building Solutions Reports Third Quarter 2026 Results"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "LPX",
+        "theme": "건축자재",
+        "signal_type": "수주/백로그",
+        "what_happened": "Louisiana-Pacific Corporation (LPX)의 2026년 3분기 사이딩 순매출이 전년 동기 대비 7% 증가한 4억 7,300만 달러를 기록하며 기록적인 수준에 도달했습니다.",
+        "why_it_matters": "주택 건설 및 리모델링 시장의 견조한 수요를 반영하며, LPX의 핵심 고마진 제품인 사이딩 부문의 성장이 전체 수익성 개선에 기여할 수 있습니다.",
+        "what_to_watch": "향후 주택 착공 및 리모델링 지표와 사이딩 제품의 추가적인 판매량 및 가격 추이를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 4,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "사이딩 (Siding): 주택 외벽 마감재로 사용되는 건축 자재."
+      }
     },
     "content_hash": "1df441d2bd1a167f7063af88d8d7574b4692f1cbc4ff7d0cb21dbfdedac028d8",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-16T06:46:34+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001628280-26-069453": {
     "status": "deferred",

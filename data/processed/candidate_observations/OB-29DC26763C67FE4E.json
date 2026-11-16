@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-29DC26763C67FE4E",
+  "candidate_id": "CAN-FC7BBBC12A5093CF",
+  "candidate_version": "CV-9D8F2D94700AEC93",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:CRGY",
+    "ticker": "CRGY",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-16T06:52:02+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261116T064640Z_43818752666-1.json.gz",
+    "sha256": "189f5babfbb9897f697cf597d71e3626c0ce7318d69aed1a2bb334947ce01012",
+    "run_id": "43818752666-1",
+    "finished_at": "2026-11-16T07:00:47+00:00"
+  },
+  "eps": {
+    "eps_now": 3.17922,
+    "eps_30d": 2.34962,
+    "eps_90d": 2.14623,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 15,
+    "up30": 12,
+    "down30": 0,
+    "pct_90": 48.1,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 8.523,
+    "yield_change_30_pp": 6.845
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-18",
+    "price_start_date": "2026-08-18",
+    "price_end_expected": "2026-11-13",
+    "price_end_date": "2026-11-13",
+    "close_start": 12.949999809265137,
+    "close_end": 12.119999885559082,
+    "price_pct_90": -6.4,
+    "adj_return_pct_90": -6.4,
+    "pe_change_pct": -36.8
+  },
+  "display_rank": 10,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 7
+    }
+  ],
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 5883727872,
+  "context_id": "CTX-D4408A5E23436C66",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-16T07:00:52+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:CRGY",
+  "approval_version": null,
+  "rendered_at": "2026-11-16T07:01:10+00:00"
+}
