@@ -47,15 +47,15 @@
     "failed": 0
   },
   "telegram_delivery": {
-    "checked_at": "2026-11-16T07:01:21+00:00",
+    "checked_at": "2026-11-16T07:01:48+00:00",
     "status": "success",
-    "last_success_at": "2026-11-16T07:01:21+00:00",
-    "message_id": 256
+    "last_success_at": "2026-11-16T07:01:48+00:00",
+    "message_id": 259
   },
   "review_report": {
-    "checked_at": "2026-11-09T07:06:49+00:00",
+    "checked_at": "2026-11-16T07:01:48+00:00",
     "status": "success",
-    "last_success_at": "2026-11-09T07:06:49+00:00"
+    "last_success_at": "2026-11-16T07:01:48+00:00"
   },
   "notify": {
     "checked_at": "2026-11-16T06:46:37+00:00",
@@ -71,9 +71,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-11-15T01:59:35+00:00",
+    "checked_at": "2026-11-16T07:01:24+00:00",
     "status": "success",
-    "last_success_at": "2026-11-15T01:59:35+00:00",
+    "last_success_at": "2026-11-16T07:01:24+00:00",
     "targets": 4,
     "failures": []
   },
@@ -140,9 +140,9 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-11-15T01:59:34+00:00",
+    "checked_at": "2026-11-16T07:01:23+00:00",
     "status": "success",
-    "last_success_at": "2026-11-15T01:59:34+00:00",
+    "last_success_at": "2026-11-16T07:01:23+00:00",
     "slots": 3,
     "bootstrap": false,
     "material_eligible": 0,
@@ -152,11 +152,9 @@
     "sent": 1,
     "failed": 0,
     "uncertain": 0,
-    "held_unconfirmed": [
-      "NYSE:BUR|eps-revision-review:v1|new_discovery"
-    ],
+    "held_unconfirmed": [],
     "released_unconfirmed": [],
-    "hold_not_compared": 0,
+    "hold_not_compared": 1,
     "reservation_persisted": true,
     "receipts_persisted": true,
     "selected": 1
@@ -233,20 +231,20 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-11-15T01:59:45+00:00",
+    "checked_at": "2026-11-16T07:01:37+00:00",
     "status": "success",
-    "last_success_at": "2026-11-15T01:59:45+00:00",
-    "due": 11,
-    "fresh": 10,
+    "last_success_at": "2026-11-16T07:01:37+00:00",
+    "due": 12,
+    "fresh": 11,
     "retry_waiting": 1,
     "retry_ready": 0,
     "retries": 0,
-    "requests": 11,
-    "collected": 10,
+    "requests": 12,
+    "collected": 11,
     "failures": 0,
     "stopped": null,
     "retry_share_left": 5,
-    "day_requests": 11,
+    "day_requests": 12,
     "day_retries": 0
   }
 }
