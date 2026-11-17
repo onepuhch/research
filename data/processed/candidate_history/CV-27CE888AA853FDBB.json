@@ -1,0 +1,155 @@
+{
+  "candidate_id": "CAN-04067A837420C872",
+  "candidate_version": "CV-27CE888AA853FDBB",
+  "identity": {
+    "entity_id": "NASDAQ:CLMT",
+    "ticker": "CLMT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Calumet, Inc.",
+  "industry": "Specialty Chemicals",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "특수 브랜드 제품과 재생 연료를 제조, 판매하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Calumet, Inc. manufactures, formulates, and markets a slate of specialty branded products and renewable fuels in North America and internationally. It operates through Specialty Products and Solutions; Performance Brands; and Montana/Renewables segments. The Specialty Products and Solutions segment manufactures and markets various solvents, waxes, customized lubricating oils, white oils, petrolatums, gels, esters, and other products. The Montana/Renewables segment processes geographically advantaged renewable feedstocks into renewable diesel, aviation fuel, and renewable naphtha. This segment"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CLMT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLMT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-17T08:13:39+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CLMT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLMT/history",
+      "published_at": null,
+      "observed_at": "2026-11-17T08:13:39+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CLMT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CLMT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-17T08:13:39+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-41B17B41C7E769AE",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2013745/000201374526000032/clmt-20260930xex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-06",
+      "observed_at": "2026-11-16T07:00:52+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-3454B86BC88DEAAC",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2013745/000201374526000022/clmt-20260630xex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-07",
+      "observed_at": "2026-11-16T07:00:52+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-5E0E620A7BDDAE16",
+    "input_sha": "5e0e620a7bddae16bf190c6138ffec5ed24a00d4518af0f01a84f4f581c240fd",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-41B17B41C7E769AE",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2013745/000201374526000032/clmt-20260930xex991.htm",
+        "filed_at": "2026-11-06",
+        "observed_at": "2026-11-16T07:00:52+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-3454B86BC88DEAAC",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2013745/000201374526000022/clmt-20260630xex991.htm",
+        "filed_at": "2026-08-07",
+        "observed_at": "2026-11-16T07:00:52+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-17T08:20:51+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 3.17203,
+    "eps_30d": 2.15203,
+    "eps_90d": 1.398,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 126.9,
+    "steady": false,
+    "turnaround": false
+  }
+}

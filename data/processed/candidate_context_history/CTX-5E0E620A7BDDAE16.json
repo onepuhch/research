@@ -1,0 +1,118 @@
+{
+  "context_id": "CTX-5E0E620A7BDDAE16",
+  "candidate_id": "CAN-04067A837420C872",
+  "ticker": "CLMT",
+  "issuer_cik": "0002013745",
+  "document_ids": [
+    "DOC-41B17B41C7E769AE",
+    "DOC-3454B86BC88DEAAC"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-41B17B41C7E769AE#p5",
+    "DOC-41B17B41C7E769AE#p8",
+    "DOC-41B17B41C7E769AE#p14",
+    "DOC-41B17B41C7E769AE#p15",
+    "DOC-41B17B41C7E769AE#p16",
+    "DOC-41B17B41C7E769AE#p42",
+    "DOC-41B17B41C7E769AE#p45",
+    "DOC-41B17B41C7E769AE#p46",
+    "DOC-41B17B41C7E769AE#p47",
+    "DOC-41B17B41C7E769AE#p48",
+    "DOC-41B17B41C7E769AE#t7",
+    "DOC-41B17B41C7E769AE#p77",
+    "DOC-3454B86BC88DEAAC#p15",
+    "DOC-3454B86BC88DEAAC#t7"
+  ],
+  "input_sha": "5e0e620a7bddae16bf190c6138ffec5ed24a00d4518af0f01a84f4f581c240fd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-17T08:20:51+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사의 순이익이다",
+      "figures": [
+        "$273.3 million"
+      ],
+      "quote": "Third Quarter 2026 net income of $273.3 million, or basic earnings per common share of $2.91",
+      "where": "DOC-41B17B41C7E769AE#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사의 기본 주당 순이익이다",
+      "figures": [
+        "$2.91"
+      ],
+      "quote": "Third Quarter 2026 net income of $273.3 million, or basic earnings per common share of $2.91",
+      "where": "DOC-41B17B41C7E769AE#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "Specialty Products & Solutions 부문의 조정 EBITDA는 통합 특수 제품 플랫폼에 대한 강력한 시장 환경, 지속적인 산업 공급망 중단 및 상업적 실행에 의해 증가했다",
+      "figures": [
+        "$248.1 million"
+      ],
+      "quote": "$248.1 million of Specialty Products & Solutions Adjusted EBITDA driven by strong market environment for integrated specialties platform, lasting industry supply chain disruptions, and commercial exec",
+      "where": "DOC-41B17B41C7E769AE#p8"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "Specialty Products and Solutions 부문의 조정 EBITDA는 전년 동기보다 증가했다",
+      "figures": [
+        "$248.1 million"
+      ],
+      "quote": "The SPS segment reported Adjusted EBITDA of $248.1 million during the third quarter 2026 compared to Adjusted EBITDA of $80.2 million for the same quarter a year ago.",
+      "where": "DOC-41B17B41C7E769AE#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "Performance Brands 부문의 조정 EBITDA는 전년 동기보다 감소했다",
+      "figures": [
+        "$9.1 million"
+      ],
+      "quote": "The PB segment reported Adjusted EBITDA of $9.1 million during the third quarter 2026 versus Adjusted EBITDA of $13.2 million in the third quarter of 2025.",
+      "where": "DOC-41B17B41C7E769AE#p15"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "Performance Brands 부문의 조정 EBITDA는 사업 중단 보험 청구로 인한 수익을 포함한다",
+      "figures": [
+        "$7.0 million"
+      ],
+      "quote": "Third quarter 2026 results also included $7.0 million of proceeds for a business interruption insurance claim that was recognized during the current quarter.",
+      "where": "DOC-41B17B41C7E769AE#p15"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "Performance Brands 부문의 조정 EBITDA는 견고한 물량에도 불구하고 원료 비용 상승에 대한 가격 인상 지연으로 인해 마진이 압축되어 부분적으로 상쇄되었다",
+      "figures": [],
+      "quote": "Third quarter 2026 results reflected solid volumes, partially offset by compressed margins due to a normal price lag as increases were implemented in response to ongoing feedstock cost escalation.",
+      "where": "DOC-41B17B41C7E769AE#p15"
+    },
+    {
+      "what": "limitation",
+      "reason": "period_not_a_period",
+      "note_ko": "조정 EBITDA는 비현금성 주식 기반 보상 비용 및 기타 비현금성 항목을 조정한다",
+      "figures": [],
+      "quote": "Adjusted EBITDA: We define Adjusted EBITDA for any period as: EBITDA adjusted for (a) impairment; (b) unrealized gains and losses from mark-to-market accounting for hedging activities; (c) realized ga",
+      "where": "DOC-41B17B41C7E769AE#p42"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

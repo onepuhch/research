@@ -2937,6 +2937,24 @@
             "provider-unspecified"
           ]
         }
+      },
+      "NYSE:CODI|eps-revision-review:v1": {
+        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+        "first": {
+          "observation_id": "OB-FB208E346063878A",
+          "baseline_id": "OB-FB208E346063878A",
+          "observed_at": "2026-11-17T08:20:28+00:00",
+          "day": "2026-11-17",
+          "snapshot_sha256": "b98aa79cf75dd14b569a527e93de57b176d8554b9d9152cd9052686ecef0a7e7",
+          "eps_now": 0.9,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
       }
     },
     "rebases": {

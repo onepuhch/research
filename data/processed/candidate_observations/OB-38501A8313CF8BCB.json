@@ -1,0 +1,86 @@
+{
+  "observation_id": "OB-38501A8313CF8BCB",
+  "candidate_id": "CAN-04067A837420C872",
+  "candidate_version": "CV-27CE888AA853FDBB",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:CLMT",
+    "ticker": "CLMT",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-17T08:13:39+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261117T080617Z_44043519939-1.json.gz",
+    "sha256": "b98aa79cf75dd14b569a527e93de57b176d8554b9d9152cd9052686ecef0a7e7",
+    "run_id": "44043519939-1",
+    "finished_at": "2026-11-17T08:20:28+00:00"
+  },
+  "eps": {
+    "eps_now": 3.17203,
+    "eps_30d": 2.15203,
+    "eps_90d": 1.398,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 6,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 126.9,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 5.551,
+    "yield_change_30_pp": 3.191
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-19",
+    "price_start_date": "2026-08-19",
+    "price_end_expected": "2026-11-16",
+    "price_end_date": "2026-11-16",
+    "close_start": 49.189998626708984,
+    "close_end": 31.959999084472656,
+    "price_pct_90": -35.0,
+    "adj_return_pct_90": -35.0,
+    "pe_change_pct": -71.4
+  },
+  "display_rank": 9,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 6
+    },
+    {
+      "list": "A",
+      "rank": 16
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 2815434240,
+  "context_id": "CTX-5E0E620A7BDDAE16",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-16T07:00:52+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:CLMT",
+  "approval_version": null,
+  "rendered_at": "2026-11-17T08:20:58+00:00"
+}
