@@ -2954,12 +2954,20 @@
         ]
       },
       "day": "2026-11-18",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-18T07:57:06+00:00",
+          "status": "sent",
+          "message_id": 260,
+          "error": null
+        }
+      ],
       "reserved_by": "44260623322-1",
       "reserved_at": "2026-11-18T07:57:02+00:00",
       "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CODI Compass Diversified</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $0.64 → 현재 $0.90 (+40%), 2026-11-17·2026-11-18 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-36582E27909720FE</code> · 추적 <code>/track CAN-36582E27909720FE</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
-      "payload_sha256": "fbf3f59f26aeb8e487691b1604d52792c9231332b0b9477af50ff7d720b07ede"
+      "payload_sha256": "fbf3f59f26aeb8e487691b1604d52792c9231332b0b9477af50ff7d720b07ede",
+      "message_id": 260
     },
     "NYSE:BXDC|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -2972,12 +2980,20 @@
       "signal_id": null,
       "verdict": "consider",
       "day": "2026-11-18",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-18T07:57:06+00:00",
+          "status": "sent",
+          "message_id": 261,
+          "error": null
+        }
+      ],
       "reserved_by": "44260623322-1",
       "reserved_at": "2026-11-18T07:57:02+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · BXDC Blackstone Digital Infrastructure Trust Inc.</b>\n<b>🟢 시스템 판단: 추적 고려</b>\n데이터 센터 자산을 인수하고 임대하여 임대료 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.49 → 지금 $1.34 (+174%) · 주가 같은 기간 -16.8%\n\n👍 최근 30일 분석가 4명 중 2명이 올림(내린 사람 없음)\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+179%)\n👍 주가는 같은 90일에 -17%로, 이익 예상 상향(+174%)보다 덜 움직임\n👎 부동산 리츠(REIT): 제공처 이익 숫자가 리츠에 맞는 기준이 아닐 수 있음\n❓ 11/16 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-D5381380E1067E0B</code> · 추적 <code>/track CAN-D5381380E1067E0B</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "a6b885dc4e6294a18e16fbda1ab32f45ab9ed8fc8acff4a54465de6ad201069c"
+      "payload_sha256": "a6b885dc4e6294a18e16fbda1ab32f45ab9ed8fc8acff4a54465de6ad201069c",
+      "message_id": 261
     }
   },
   "bootstrap": {
