@@ -1,0 +1,160 @@
+{
+  "context_id": "CTX-396E60894743A748",
+  "candidate_id": "CAN-D5381380E1067E0B",
+  "ticker": "BXDC",
+  "issuer_cik": "0002100161",
+  "document_ids": [
+    "DOC-68BDAEB740996C62",
+    "DOC-D30B1741C3A1AC16",
+    "DOC-115F788AB569BD79"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-68BDAEB740996C62#p4",
+    "DOC-68BDAEB740996C62#p5",
+    "DOC-68BDAEB740996C62#p9",
+    "DOC-68BDAEB740996C62#p11",
+    "DOC-D30B1741C3A1AC16#p4",
+    "DOC-D30B1741C3A1AC16#p10",
+    "DOC-D30B1741C3A1AC16#p26",
+    "DOC-D30B1741C3A1AC16#p27",
+    "DOC-D30B1741C3A1AC16#t1",
+    "DOC-115F788AB569BD79#p4",
+    "DOC-115F788AB569BD79#p10",
+    "DOC-115F788AB569BD79#p24",
+    "DOC-115F788AB569BD79#p29",
+    "DOC-115F788AB569BD79#t1"
+  ],
+  "input_sha": "396e60894743a7480d8c91f493521c9f44d045883af0f7045073cd55327cbab2",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-18T07:56:44+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "순이익(Net income) · third-quarter 2026: $15.6 million — 해당 분기 순이익이다",
+      "note_ko": "해당 분기 순이익이다",
+      "kind": "fact",
+      "quote": "Net income for the quarter was $15.6 million, and net income per share was $0.15.",
+      "document_id": "DOC-D30B1741C3A1AC16",
+      "block_id": "p4",
+      "metric": "Net income",
+      "figures": [
+        "$15.6 million"
+      ],
+      "period": "third-quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "net income per share · third-quarter 2026: $0.15 — 해당 분기 주당 순이익이다",
+      "note_ko": "해당 분기 주당 순이익이다",
+      "kind": "fact",
+      "quote": "Net income for the quarter was $15.6 million, and net income per share was $0.15.",
+      "document_id": "DOC-D30B1741C3A1AC16",
+      "block_id": "p4",
+      "metric": "net income per share",
+      "figures": [
+        "$0.15"
+      ],
+      "period": "third-quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "adjusted FFO (“AFFO”) per share · third-quarter 2026: $0.17 — 해당 분기 주당 AFFO이다",
+      "note_ko": "해당 분기 주당 AFFO이다",
+      "kind": "fact",
+      "quote": "Funds from Operations (“FFO”) per share, and adjusted FFO (“AFFO”) per share were $0.15 and $0.17, respectively.",
+      "document_id": "DOC-D30B1741C3A1AC16",
+      "block_id": "p4",
+      "metric": "adjusted FFO (“AFFO”) per share",
+      "figures": [
+        "$0.17"
+      ],
+      "period": "third-quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "gaap_not_as_stated",
+      "note_ko": "해당 분기 주당 FFO이다",
+      "figures": [
+        "$0.15"
+      ],
+      "quote": "Funds from Operations (“FFO”) per share, and adjusted FFO (“AFFO”) per share were $0.15 and $0.17, respectively.",
+      "where": "DOC-D30B1741C3A1AC16#p4"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사가 데이터 센터 포트폴리오를 인수하는 거래의 가치이다",
+      "figures": [
+        "$5 billion"
+      ],
+      "quote": "Blackstone Digital Infrastructure Trust Inc. (NYSE: BXDC) today announced that it has signed a definitive agreement to acquire a 75% majority interest in two joint ventures with Amazon Web Services (“",
+      "where": "DOC-68BDAEB740996C62#p5"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

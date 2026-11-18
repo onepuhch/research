@@ -1,0 +1,86 @@
+{
+  "observation_id": "OB-48F23B8125A12CA3",
+  "candidate_id": "CAN-5289D6512C83E305",
+  "candidate_version": "CV-826A8C443DBD2C5D",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:GPRE",
+    "ticker": "GPRE",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-18T07:52:48+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261118T074219Z_44260623322-1.json.gz",
+    "sha256": "649fe717d303db961f34b862c4953e41a181f28aa6383b17ee99e9516e3d0e8b",
+    "run_id": "44260623322-1",
+    "finished_at": "2026-11-18T07:56:20+00:00"
+  },
+  "eps": {
+    "eps_now": 2.3475,
+    "eps_30d": 1.70483,
+    "eps_90d": 1.5625,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 50.2,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 6.25,
+    "yield_change_30_pp": 5.117
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-20",
+    "price_start_date": "2026-08-20",
+    "price_end_expected": "2026-11-17",
+    "price_end_date": "2026-11-17",
+    "close_start": 16.020000457763672,
+    "close_end": 12.5600004196167,
+    "price_pct_90": -21.6,
+    "adj_return_pct_90": -21.6,
+    "pe_change_pct": -47.8
+  },
+  "display_rank": 18,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 13
+    },
+    {
+      "list": "B",
+      "rank": 20
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 886980800,
+  "context_id": "CTX-EBDE5FCDDA913E0D",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-15T01:58:40+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:GPRE",
+  "approval_version": null,
+  "rendered_at": "2026-11-18T07:56:49+00:00"
+}

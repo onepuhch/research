@@ -2875,6 +2875,109 @@
       "payload_text": "<b>🆕 새 발굴 후보 · CLMT Calumet, Inc.</b>\n<b>🟡 시스템 판단: 지켜보기</b>\n회사 설명 확인 중 (CLMT)\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $1.40 → 지금 $3.17 (+127%) · 주가 같은 기간 -32.5%\n\n👍 주가는 같은 90일에 -32%로, 이익 예상 상향(+127%)보다 덜 움직임\n👎 최근 30일 분석가 6명 중 2명만 올림 — 일부 분석가의 상향\n👎 같은 30일에 내린 분석가도 1명\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 이익 예상이 알림 때보다 25% 이상 더 오르거나 새 공식 발표가 확인되면 &#x27;재검토&#x27; 알림으로 다시 알려 드립니다.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-04067A837420C872</code> · 추적 <code>/track CAN-04067A837420C872</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "963aeece338549c2f9bce5045e386f186f13bdcedec5785c140bdac6a5da1e1b",
       "message_id": 256
+    },
+    "NYSE:CODI|eps-revision-review:v1|material_update|B:bootstrap:2026-09-25:48e01e7fb156>OB-FB208E346063878A": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:CODI",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-36582E27909720FE",
+      "candidate_version": "CV-662044CFEDC865C9",
+      "observation_id": "OB-7165C97A85689652",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "bootstrap",
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "observed_at": "2026-09-25T12:25:51+00:00",
+          "day": "2026-09-25",
+          "observation_id": null,
+          "snapshot_sha256": "48e01e7fb156929d922eef7345fb8b34a11c77fb627ebb341afd66b5dfcc822c",
+          "eps_now": 0.644,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-FB208E346063878A",
+          "baseline_id": "OB-FB208E346063878A",
+          "observed_at": "2026-11-17T08:20:28+00:00",
+          "day": "2026-11-17",
+          "snapshot_sha256": "b98aa79cf75dd14b569a527e93de57b176d8554b9d9152cd9052686ecef0a7e7",
+          "eps_now": 0.9,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-7165C97A85689652",
+          "baseline_id": "OB-7165C97A85689652",
+          "observed_at": "2026-11-18T07:56:20+00:00",
+          "day": "2026-11-18",
+          "snapshot_sha256": "649fe717d303db961f34b862c4953e41a181f28aa6383b17ee99e9516e3d0e8b",
+          "eps_now": 0.9,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 39.75,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:bootstrap:2026-09-25:48e01e7fb156>OB-FB208E346063878A"
+        ]
+      },
+      "day": "2026-11-18",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "44260623322-1",
+      "reserved_at": "2026-11-18T07:57:02+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CODI Compass Diversified</b>\n기준: 2026-09-25 첫 실행 기준 목록 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $0.64 → 현재 $0.90 (+40%), 2026-11-17·2026-11-18 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-36582E27909720FE</code> · 추적 <code>/track CAN-36582E27909720FE</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "fbf3f59f26aeb8e487691b1604d52792c9231332b0b9477af50ff7d720b07ede"
+    },
+    "NYSE:BXDC|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:BXDC",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-D5381380E1067E0B",
+      "candidate_version": "CV-22F297EF62816F73",
+      "observation_id": "OB-6F5B4173C1D63DC3",
+      "signal_id": null,
+      "verdict": "consider",
+      "day": "2026-11-18",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "44260623322-1",
+      "reserved_at": "2026-11-18T07:57:02+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · BXDC Blackstone Digital Infrastructure Trust Inc.</b>\n<b>🟢 시스템 판단: 추적 고려</b>\n데이터 센터 자산을 인수하고 임대하여 임대료 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.49 → 지금 $1.34 (+174%) · 주가 같은 기간 -16.8%\n\n👍 최근 30일 분석가 4명 중 2명이 올림(내린 사람 없음)\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+179%)\n👍 주가는 같은 90일에 -17%로, 이익 예상 상향(+174%)보다 덜 움직임\n👎 부동산 리츠(REIT): 제공처 이익 숫자가 리츠에 맞는 기준이 아닐 수 있음\n❓ 11/16 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-D5381380E1067E0B</code> · 추적 <code>/track CAN-D5381380E1067E0B</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "a6b885dc4e6294a18e16fbda1ab32f45ab9ed8fc8acff4a54465de6ad201069c"
     }
   },
   "bootstrap": {
@@ -2947,6 +3050,24 @@
           "day": "2026-11-17",
           "snapshot_sha256": "b98aa79cf75dd14b569a527e93de57b176d8554b9d9152cd9052686ecef0a7e7",
           "eps_now": 0.9,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        }
+      },
+      "NYSE:CVI|eps-revision-review:v1": {
+        "baseline_id": "OB-4D030CA74CC16F2B",
+        "first": {
+          "observation_id": "OB-6BE89D82C0BBF9C0",
+          "baseline_id": "OB-6BE89D82C0BBF9C0",
+          "observed_at": "2026-11-18T07:56:20+00:00",
+          "day": "2026-11-18",
+          "snapshot_sha256": "649fe717d303db961f34b862c4953e41a181f28aa6383b17ee99e9516e3d0e8b",
+          "eps_now": 8.78434,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",

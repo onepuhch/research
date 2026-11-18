@@ -13318,7 +13318,7 @@
     "validation_rejected": true
   },
   "0001628280-26-069513": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13334,11 +13334,11 @@
     "content_hash": "a810eaf3c75e266cc3ab688256fbcbb8d4f1735ec63c22e267a5b61a6896b728",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-11-17T08:06:13+00:00",
-    "reason": "deferred_budget"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "expired_unprocessed"
   },
   "0001497645-26-000080": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13354,10 +13354,11 @@
     "content_hash": "27e7c1514f990baaaa9ff69b6b6cf5608256acce933e76beaddffe2118751a66",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001703056-26-000113": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13373,10 +13374,11 @@
     "content_hash": "31fd730ea5620c3215eb76937e5f745a731933d6e1b8b0d47105ccb36562e69f",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-444429": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13392,10 +13394,11 @@
     "content_hash": "11c6c0dda3d490510a49ea91bd93894508000ae9d4900595b6789f510cbaa372",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-445650": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13411,10 +13414,11 @@
     "content_hash": "5ea2fc5beabba5c095c07691e238a45b41eab8b12f9b6ad64651f89f03a85612",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-121980": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13430,10 +13434,11 @@
     "content_hash": "89ccd2dc2419d790cdf252e48abf94c13745184d8e0fa62318007ba104e7df0c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-444428": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13449,7 +13454,8 @@
     "content_hash": "8fa0ad137ed5409d3ea4ad7e08c84ea679c38b3292bbe1ef22f97c445a7905a2",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-04T06:39:22.189100+00:00"
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-122704": {
     "status": "rejected",
@@ -13507,7 +13513,7 @@
     "validation_rejected": true
   },
   "0001628280-26-070106": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13518,12 +13524,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2021880/000162828026070106/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2021880/000162828026070106/q32026exhibit991.htm",
       "published_at": "2026-11-04",
-      "raw_text": "HMH Holding Inc (HMH) (CIK 0002021880) EX-99.1 2026-11-04. Product revenue decreased 69% year-over-year and 19% sequentially, reflecting both a lower order intake and backlog of equipment orders and delays in the Middle East due to the ongoing conflict in the region. The year-over-year and sequential decreases reflect the pace of order intake and regional mix. Order Intake, Adjusted EBITDA, Adjusted EBITDA Margin and Free Cash Flow Orders for the quarter were $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026. Product order intake was $16 million, flat year-over-year and decreased 27% sequentially. Service order intake was $115 million, up 16% year-over-year and down 3% sequentially. Spare parts order intake was $60 million, up 7% year-over-year and down 8% sequentially. EX-99.1 2 q32026exhibit991.htm EX-99.1 Document Exhibit 99.1 HMH Holding Inc. Announces Third Quarter 2026 Results HOUSTON, November 4, 2026 – HMH Holding Inc. (“HMH” or the “Company”) (NASDAQ: HMH) today announced financial and operational results for the third quarter of 2026. Third Quarter Highlights • Revenue of $171.1 million, down 21% compared to the third quarter of 2025 and substantially flat compared to the second quarter of 2026. • Net income attributable to HMH of $5.0 million, compared to net income of $16.2 million in the third quarter of 2025 and net income of $5.0 million in the second quarter of 2026. • Orders of $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026, resulting in book-to-bill of 1.12x. • Adjusted EBITDA of $38.2 million, down 3% compared to the third quarter of 2025 and up 13% compared to the second quarter of 2026. • Completed acquisition of Deepwater Riser Services for $14.5 million. Financial Summary HMH reported revenue for the third quarter of 2026 of $171.1 million, down 21% compared to the third quarter of 2025 and substantially flat compared to t"
+      "raw_text": "HMH Holding Inc (HMH) (CIK 0002021880) EX-99.1 2026-11-04. Product revenue decreased 69% year-over-year and 19% sequentially, reflecting both a lower order intake and backlog of equipment orders and delays in the Middle East due to the ongoing conflict in the region. The year-over-year and sequential decreases reflect the pace of order intake and regional mix. Order Intake, Adjusted EBITDA, Adjusted EBITDA Margin and Free Cash Flow Orders for the quarter were $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026. Product order intake was $16 million, flat year-over-year and decreased 27% sequentially. Service order intake was $115 million, up 16% year-over-year and down 3% sequentially. Spare parts order intake was $60 million, up 7% year-over-year and down 8% sequentially. EX-99.1 2 q32026exhibit991.htm EX-99.1 Document Exhibit 99.1 HMH Holding Inc. Announces Third Quarter 2026 Results HOUSTON, November 4, 2026 – HMH Holding Inc. (“HMH” or the “Company”) (NASDAQ: HMH) today announced financial and operational results for the third quarter of 2026. Third Quarter Highlights • Revenue of $171.1 million, down 21% compared to the third quarter of 2025 and substantially flat compared to the second quarter of 2026. • Net income attributable to HMH of $5.0 million, compared to net income of $16.2 million in the third quarter of 2025 and net income of $5.0 million in the second quarter of 2026. • Orders of $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026, resulting in book-to-bill of 1.12x. • Adjusted EBITDA of $38.2 million, down 3% compared to the third quarter of 2025 and up 13% compared to the second quarter of 2026. • Completed acquisition of Deepwater Riser Services for $14.5 million. Financial Summary HMH reported revenue for the third quarter of 2026 of $171.1 million, down 21% compared to the third quarter of 2025 and substantially flat compared to t",
+      "_model_response": {
+        "evidence_quote": "Orders for the quarter were $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026, resulting in book-to-bill of 1.12x. Product order intake was $16 million, flat year-over-year and decreased 27% sequentially. Service order intake was $115 million, up 16% year-over-year and down 3% sequentially. Spare parts order intake was $60 million, up 7% year-over-year and down 8% sequentially.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "HMH Holding Inc. (“HMH” or the “Company”) (NASDAQ: HMH) today announced financial and operational results for the third quarter of 2026.",
+          "earnings_leverage": "Orders of $191 million, up 12% compared to the third quarter of 2025 and down 7% compared to the second quarter of 2026, resulting in book-to-bill of 1.12x.",
+          "supply_demand_tightness": "Orders for the quarter were $191 million, up 12% compared to the third quarter of 2025",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "HMH Holding Inc. Announces Third Quarter 2026 Results HOUSTON, November 4, 2026 – HMH Holding Inc. (“HMH” or the “Company”) (NASDAQ: HMH) today announced financial and operational results for the third quarter of 2026."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "HMH",
+        "theme": "산업재",
+        "signal_type": "수주/백로그",
+        "what_happened": "HMH Holding Inc.의 2026년 3분기 총 수주액이 전년 동기 대비 12% 증가한 1억 9,100만 달러를 기록했으며, 수주잔고 대비 매출 비율(book-to-bill)은 1.12배를 기록했습니다.",
+        "why_it_matters": "총 수주액 증가와 1을 초과하는 수주잔고 대비 매출 비율은 향후 매출 성장 가능성을 시사하며, 이는 시장에 아직 충분히 반영되지 않은 긍정적인 신호일 수 있습니다.",
+        "what_to_watch": "향후 분기별 총 수주액 추이 및 중동 지역의 지정학적 리스크 완화 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "Book-to-bill: 수주잔고 대비 매출 비율로, 특정 기간 동안 접수된 신규 주문액을 같은 기간 동안 발생한 매출액으로 나눈 값. 1보다 크면 미래 매출 증가 가능성을 시사합니다. Order intake: 특정 기간 동안 고객으로부터 접수된 총 주문액."
+      }
     },
     "content_hash": "714a033fc64da9fc2c5de1ad8e020b1da05f1cc5e31e2704701e53946554580a",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-18T07:41:18+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0002046386-26-000060": {
     "status": "rejected",
@@ -13581,7 +13623,7 @@
     "validation_rejected": true
   },
   "0001104657-26-000049": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13592,15 +13634,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1104657/000110465726000049/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1104657/000110465726000049/q32026pressrelease.htm",
       "published_at": "2026-11-04",
-      "raw_text": "MATERION Corp (MTRN) (CIK 0001104657) EX-99.1 2026-11-04. We expect a meaningful step up in sales supported by record backlog and robust demand across our end markets. OUTLOOK Our strong year-to-date performance, record backlog and continued order rate momentum have further reinforced our confidence in delivering record results for 2026. EX-99.1 2 q32026pressrelease.htm EX-99.1 Document MATERION CORPORATION REPORTS RECORD THIRD-QUARTER 2026 FINANCIAL RESULTS AND RAISES FULL-YEAR OUTLOOK MAYFIELD HEIGHTS, Ohio – Materion Corporation (NYSE: MTRN) today reported record third-quarter 2026 financial results and raised its full-year outlook. Financial Summary • Net sales were $567.3 million versus $444.8 million in the prior year period; value-added sales 1 were $313.7 million versus $263.9 million in the prior year period • Net income of $38.3 million, or $1.81 per share, diluted, versus $25.4 million, or $1.22 per share, in the prior year period; adjusted earnings of $1.93 per share versus $1.41 in the prior year period • Operating profit of $50.4 million versus $34.9 million in the prior year period; adjusted EBITDA 2 of $70.7 million, or 22.5% of value-added sales, versus $55.5 million, or 21.0%, in the prior year period • Strong free cash flow 3 generation of ~$46 million, with 120% conversion • Raising full-year adjusted earnings per share outlook to $7.10 – $7.40, an increase of 33% year-over-year at the midpoint Business Highlights • Delivered: ◦ Record quarterly value-added sales and earnings ◦ Highest quarterly semiconductor sales in company history ◦ Double-digit year-over-year sales and earnings growth in each segment ◦ Fourth consecutive quarter of year-over-year adjusted EBITDA margin expansion • Incoming orders and backlog reached all-time high, up ~25% and ~35% year-over-year respectively • Making significant progress towards mid-term adjusted EBITDA margin target of 23% “Our third quarter results demonstrate the power of our advanced materials portfolio a"
+      "raw_text": "MATERION Corp (MTRN) (CIK 0001104657) EX-99.1 2026-11-04. We expect a meaningful step up in sales supported by record backlog and robust demand across our end markets. OUTLOOK Our strong year-to-date performance, record backlog and continued order rate momentum have further reinforced our confidence in delivering record results for 2026. EX-99.1 2 q32026pressrelease.htm EX-99.1 Document MATERION CORPORATION REPORTS RECORD THIRD-QUARTER 2026 FINANCIAL RESULTS AND RAISES FULL-YEAR OUTLOOK MAYFIELD HEIGHTS, Ohio – Materion Corporation (NYSE: MTRN) today reported record third-quarter 2026 financial results and raised its full-year outlook. Financial Summary • Net sales were $567.3 million versus $444.8 million in the prior year period; value-added sales 1 were $313.7 million versus $263.9 million in the prior year period • Net income of $38.3 million, or $1.81 per share, diluted, versus $25.4 million, or $1.22 per share, in the prior year period; adjusted earnings of $1.93 per share versus $1.41 in the prior year period • Operating profit of $50.4 million versus $34.9 million in the prior year period; adjusted EBITDA 2 of $70.7 million, or 22.5% of value-added sales, versus $55.5 million, or 21.0%, in the prior year period • Strong free cash flow 3 generation of ~$46 million, with 120% conversion • Raising full-year adjusted earnings per share outlook to $7.10 – $7.40, an increase of 33% year-over-year at the midpoint Business Highlights • Delivered: ◦ Record quarterly value-added sales and earnings ◦ Highest quarterly semiconductor sales in company history ◦ Double-digit year-over-year sales and earnings growth in each segment ◦ Fourth consecutive quarter of year-over-year adjusted EBITDA margin expansion • Incoming orders and backlog reached all-time high, up ~25% and ~35% year-over-year respectively • Making significant progress towards mid-term adjusted EBITDA margin target of 23% “Our third quarter results demonstrate the power of our advanced materials portfolio a",
+      "_model_response": {
+        "evidence_quote": "MATERION CORPORATION REPORTS RECORD THIRD-QUARTER 2026 FINANCIAL RESULTS AND RAISES FULL-YEAR OUTLOOK... Raising full-year adjusted earnings per share outlook to $7.10 – $7.40, an increase of 33% year-over-year at the midpoint... Incoming orders and backlog reached all-time high, up ~25% and ~35% year-over-year respectively",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Materion Corporation (NYSE: MTRN)",
+          "earnings_leverage": "Raising full-year adjusted earnings per share outlook to $7.10 – $7.40, an increase of 33% year-over-year at the midpoint",
+          "supply_demand_tightness": "record backlog and robust demand across our end markets. Incoming orders and backlog reached all-time high, up ~25% and ~35% year-over-year respectively",
+          "structural_ai_demand": "Highest quarterly semiconductor sales in company history",
+          "revision_momentum": "Raising full-year adjusted earnings per share outlook to $7.10 – $7.40, an increase of 33% year-over-year at the midpoint",
+          "catalyst_visibility": "Raising full-year adjusted earnings per share outlook to $7.10 – $7.40"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "semiconductor",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MATERION Corp",
+        "theme": "반도체",
+        "signal_type": "가이던스상향",
+        "what_happened": "Materion이 2026년 3분기 실적 발표와 함께 연간 조정 EPS 가이던스를 $7.10~$7.40로 상향 조정했으며, 이는 전년 대비 중간값 기준 33% 증가한 수치이다.",
+        "why_it_matters": "반도체 시장의 견조한 수요와 사상 최고치 백로그를 바탕으로 한 가이던스 상향은 Materion의 실적 개선과 시장 추정치 상향 가능성을 시사한다.",
+        "what_to_watch": "향후 분기별 실적 발표 시 가이던스 추가 상향 여부 및 반도체 부문 매출 성장률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 1,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "중기",
+        "glossary": "조정 EPS: 비반복성 항목을 제외하여 기업의 핵심 수익성을 나타내는 주당 순이익. 백로그: 고객으로부터 주문을 받았지만 아직 인도되지 않은 제품이나 서비스의 총 가치."
+      }
     },
     "content_hash": "6d3200dba90aa431d88b1ff5c4fb8d8e987c4a1132fd46c7d92a3d5bb622eeb8",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-18T07:41:38+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000077543-26-000218": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13611,12 +13689,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/77543/000007754326000218/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/77543/000007754326000218/tpc20261104ex991.htm",
       "published_at": "2026-11-04",
-      "raw_text": "TUTOR PERINI CORP (TPC) (CIK 0000077543) EX-99.1 2026-11-04. EX-99.1 2 tpc20261104ex991.htm EX-99.1 Document News Release Tutor Perini Reports Record Third Quarter 2026 Financial Results; Raises 2026 Adjusted EPS Guidance • Record operating cash flow of $330.9 million and $665.1 million for the third quarter and first nine months of 2026, up 14% and 16% Y/Y, respectively • Record Q3 2026 revenue of $1.7 billion, up 22% Y/Y • Record Q3 2026 income from construction operations of $125.4 million, up 213% Y/Y reflecting continued strong operating performance and contributions from higher-margin projects • Q3 2026 diluted earnings per share (\"EPS\") of $0.39, up 457% Y/Y • Q3 2026 adjusted EPS of $1.83, up 59% Y/Y • High-quality, near-record backlog of $20.4 billion • Raising 2026 adjusted EPS guidance to $5.90 to $6.10 (up from $5.15 to $5.45) • Tutor Perini anticipates continued strong revenue and adjusted EPS growth in 2027 due to clear visibility provided by long-duration backlog LOS ANGELES – (BUSINESS WIRE) – November 4, 2026 – Tutor Perini Corporation (the \"Company\") (NYSE: TPC), a leading civil, building and specialty construction company, today reported strong financial results for the third quarter of 2026 (see attached tables). Our results demonstrated the continued momentum in our business, as well as the significant earnings and cash flow potential embedded in our near-record backlog."
+      "raw_text": "TUTOR PERINI CORP (TPC) (CIK 0000077543) EX-99.1 2026-11-04. EX-99.1 2 tpc20261104ex991.htm EX-99.1 Document News Release Tutor Perini Reports Record Third Quarter 2026 Financial Results; Raises 2026 Adjusted EPS Guidance • Record operating cash flow of $330.9 million and $665.1 million for the third quarter and first nine months of 2026, up 14% and 16% Y/Y, respectively • Record Q3 2026 revenue of $1.7 billion, up 22% Y/Y • Record Q3 2026 income from construction operations of $125.4 million, up 213% Y/Y reflecting continued strong operating performance and contributions from higher-margin projects • Q3 2026 diluted earnings per share (\"EPS\") of $0.39, up 457% Y/Y • Q3 2026 adjusted EPS of $1.83, up 59% Y/Y • High-quality, near-record backlog of $20.4 billion • Raising 2026 adjusted EPS guidance to $5.90 to $6.10 (up from $5.15 to $5.45) • Tutor Perini anticipates continued strong revenue and adjusted EPS growth in 2027 due to clear visibility provided by long-duration backlog LOS ANGELES – (BUSINESS WIRE) – November 4, 2026 – Tutor Perini Corporation (the \"Company\") (NYSE: TPC), a leading civil, building and specialty construction company, today reported strong financial results for the third quarter of 2026 (see attached tables). Our results demonstrated the continued momentum in our business, as well as the significant earnings and cash flow potential embedded in our near-record backlog.",
+      "_model_response": {
+        "evidence_quote": "Tutor Perini Reports Record Third Quarter 2026 Financial Results; Raises 2026 Adjusted EPS Guidance • Record operating cash flow of $330.9 million and $665.1 million for the third quarter and first nine months of 2026, up 14% and 16% Y/Y, respectively • Record Q3 2026 revenue of $1.7 billion, up 22% Y/Y • Record Q3 2026 income from construction operations of $125.4 million, up 213% Y/Y reflecting continued strong operating performance and contributions from higher-margin projects • Q3 2026 diluted earnings per share (\"EPS\") of $0.39, up 457% Y/Y • Q3 2026 adjusted EPS of $1.83, up 59% Y/Y • High-quality, near-record backlog of $20.4 billion • Raising 2026 adjusted EPS guidance to $5.90 to $6.10 (up from $5.15 to $5.45) • Tutor Perini anticipates continued strong revenue and adjusted EPS growth in 2027 due to clear visibility provided by long-duration backlog",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Tutor Perini Corporation (the \"Company\") (NYSE: TPC), a leading civil, building and specialty construction company",
+          "earnings_leverage": "Record Q3 2026 income from construction operations of $125.4 million, up 213% Y/Y reflecting continued strong operating performance and contributions from higher-margin projects • Q3 2026 adjusted EPS of $1.83, up 59% Y/Y",
+          "supply_demand_tightness": "continued strong operating performance and contributions from higher-margin projects • High-quality, near-record backlog of $20.4 billion",
+          "structural_ai_demand": "",
+          "revision_momentum": "Raises 2026 Adjusted EPS Guidance • Raising 2026 adjusted EPS guidance to $5.90 to $6.10 (up from $5.15 to $5.45)",
+          "catalyst_visibility": "Tutor Perini anticipates continued strong revenue and adjusted EPS growth in 2027 due to clear visibility provided by long-duration backlog"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "TPC",
+        "theme": "건설/인프라",
+        "signal_type": "EPS상향",
+        "what_happened": "튜터 페리니(Tutor Perini)가 2026년 3분기 실적 발표에서 조정 EPS 가이던스를 상향 조정하고, 204억 달러의 거의 사상 최고 수준의 수주잔고를 기록했다고 발표했다.",
+        "why_it_matters": "건설 프로젝트의 강력한 실적과 높은 마진 기여로 인해 회사의 수익성이 개선되고 있으며, 대규모 수주잔고는 향후 실적 성장에 대한 높은 가시성을 제공하여 시장의 긍정적인 재평가를 이끌 수 있다.",
+        "what_to_watch": "향후 분기별 수주잔고 변화 추이 및 실제 EPS 성장률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "A",
+        "stage": "중기",
+        "glossary": "EPS (Earnings Per Share): 주당순이익, 기업의 수익성을 나타내는 지표. 수주잔고 (Backlog): 아직 완료되지 않은 계약 금액, 미래 매출의 기반."
+      }
     },
     "content_hash": "277b5932a3768fc396ed7703bc42205e81773b84a26d50dacf3e82fcf7c4b825",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-18T07:41:58+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0000103730-26-000079": {
     "status": "rejected",
@@ -13684,7 +13798,7 @@
     }
   },
   "0000068505-26-000041": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -13695,12 +13809,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/68505/000006850526000041/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/68505/000006850526000041/msiq32026pressrelease.htm",
       "published_at": "2026-11-04",
-      "raw_text": "Motorola Solutions, Inc. (MSI) (CIK 0000068505) EX-99.1 2026-11-04. • Backlog - The company ended the quarter with record backlog of $16.6 billion, up 14% or $2.1 billion from the year-ago quarter driven by record Q3 orders in all three technologies. EX-99.1 2 msiq32026pressrelease.htm EX-99.1 Document Exhibit 99.1 Motorola Solutions Reports Third-Quarter 2026 Financial Results Company raises full-year revenue and earnings outlook again and increases full-year cash flow expectations • Sales of $3.4 billion, up 12% versus a year ago ◦ Products and Systems Integration sales up 12% ◦ Software and Services sales up 13% • GAAP earnings per share (\"EPS\") of $3.06 • Non-GAAP EPS* of $4.69 • Record ending backlog of $16.6 billion, up 14% versus a year ago, driven by record Q3 orders • Acquired D-Fend Solutions (\"D-Fend\"), an industry leader in counter-drone technology • Announced $2 billion increase to the share repurchase authorization CHICAGO – November 4, 2026 – Motorola Solutions, Inc. (NYSE: MSI) today reported its earnings results for the third quarter of 2026. “Q3 was another outstanding quarter, with double-digit revenue growth across both segments and all three technologies,” said Greg Brown, chairman and CEO, Motorola Solutions. “We continue to see exceptionally strong demand across our safety and security solutions, driving record Q3 orders and an all-time record ending backlog. As a result, we’re raising our revenue and earnings outlook again and increasing our cash flow expectations for the full year.” KEY FINANCIAL RESULTS (presented in millions, except per share data and percentages) Q3 2026 Q3 2025 % Change Sales $3,376 $3,009 12 % GAAP Operating Earnings $777 $770 1 % % of Sales 23.0 % 25.6 % EPS $3.06 $3.33 (8) % Non-GAAP * Operating Earnings $1,096 $918 19 % % of Sales 32.5 % 30.5 % EPS $4.69 $4.06 16 % Products and Systems Integration Segment Sales $2,118 $1,897 12 % GAAP Operating Earnings $446 $458 (3) % % of Sales 21.1 % 24.1 % Non-GAAP * Operating Ea"
+      "raw_text": "Motorola Solutions, Inc. (MSI) (CIK 0000068505) EX-99.1 2026-11-04. • Backlog - The company ended the quarter with record backlog of $16.6 billion, up 14% or $2.1 billion from the year-ago quarter driven by record Q3 orders in all three technologies. EX-99.1 2 msiq32026pressrelease.htm EX-99.1 Document Exhibit 99.1 Motorola Solutions Reports Third-Quarter 2026 Financial Results Company raises full-year revenue and earnings outlook again and increases full-year cash flow expectations • Sales of $3.4 billion, up 12% versus a year ago ◦ Products and Systems Integration sales up 12% ◦ Software and Services sales up 13% • GAAP earnings per share (\"EPS\") of $3.06 • Non-GAAP EPS* of $4.69 • Record ending backlog of $16.6 billion, up 14% versus a year ago, driven by record Q3 orders • Acquired D-Fend Solutions (\"D-Fend\"), an industry leader in counter-drone technology • Announced $2 billion increase to the share repurchase authorization CHICAGO – November 4, 2026 – Motorola Solutions, Inc. (NYSE: MSI) today reported its earnings results for the third quarter of 2026. “Q3 was another outstanding quarter, with double-digit revenue growth across both segments and all three technologies,” said Greg Brown, chairman and CEO, Motorola Solutions. “We continue to see exceptionally strong demand across our safety and security solutions, driving record Q3 orders and an all-time record ending backlog. As a result, we’re raising our revenue and earnings outlook again and increasing our cash flow expectations for the full year.” KEY FINANCIAL RESULTS (presented in millions, except per share data and percentages) Q3 2026 Q3 2025 % Change Sales $3,376 $3,009 12 % GAAP Operating Earnings $777 $770 1 % % of Sales 23.0 % 25.6 % EPS $3.06 $3.33 (8) % Non-GAAP * Operating Earnings $1,096 $918 19 % % of Sales 32.5 % 30.5 % EPS $4.69 $4.06 16 % Products and Systems Integration Segment Sales $2,118 $1,897 12 % GAAP Operating Earnings $446 $458 (3) % % of Sales 21.1 % 24.1 % Non-GAAP * Operating Ea",
+      "_model_response": {
+        "evidence_quote": "Motorola Solutions Reports Third-Quarter 2026 Financial Results Company raises full-year revenue and earnings outlook again and increases full-year cash flow expectations • Sales of $3.4 billion, up 12% versus a year ago ◦ Products and Systems Integration sales up 12% ◦ Software and Services sales up 13% • GAAP earnings per share (\"EPS\") of $3.06 • Non-GAAP EPS* of $4.69 • Record ending backlog of $16.6 billion, up 14% versus a year ago, driven by record Q3 orders • Acquired D-Fend Solutions (\"D-Fend\"), an industry leader in counter-drone technology • Announced $2 billion increase to the share repurchase authorization CHICAGO – November 4, 2026 – Motorola Solutions, Inc. (NYSE: MSI) today reported its earnings results for the third quarter of 2026. “Q3 was another outstanding quarter, with double-digit revenue growth across both segments and all three technologies,” said Greg Brown, chairman and CEO, Motorola Solutions. “We continue to see exceptionally strong demand across our safety and security solutions, driving record Q3 orders and an all-time record ending backlog. As a result, we’re raising our revenue and earnings outlook again and increasing our cash flow expectations for the full year.”",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Sales of $3.4 billion, up 12% versus a year ago ... Non-GAAP EPS* of $4.69 ... up 16% ... double-digit revenue growth across both segments and all three technologies",
+          "supply_demand_tightness": "Record ending backlog of $16.6 billion, up 14% versus a year ago, driven by record Q3 orders ... exceptionally strong demand across our safety and security solutions, driving record Q3 orders and an all-time record ending backlog",
+          "structural_ai_demand": "",
+          "revision_momentum": "Company raises full-year revenue and earnings outlook again and increases full-year cash flow expectations ... As a result, we’re raising our revenue and earnings outlook again and increasing our cash flow expectations for the full year.",
+          "catalyst_visibility": "Company raises full-year revenue and earnings outlook again and increases full-year cash flow expectations ... Record ending backlog of $16.6 billion, up 14% versus a year ago, driven by record Q3 orders"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MSI",
+        "theme": "Public Safety & Enterprise Communications",
+        "signal_type": "가이던스상향",
+        "what_happened": "모토로라 솔루션즈(MSI)가 2026년 3분기 실적 발표에서 매출과 비일반회계기준(Non-GAAP) EPS가 각각 12%, 16% 증가했으며, 기록적인 166억 달러의 수주잔고를 달성하고 연간 매출 및 이익 전망치를 다시 상향 조정했습니다.",
+        "why_it_matters": "강력한 수요와 기록적인 수주잔고를 바탕으로 회사가 연간 가이던스를 재차 상향 조정한 것은 시장의 기대치를 뛰어넘는 실적 모멘텀이 지속될 가능성이 높다는 긍정적인 투자 신호입니다.",
+        "what_to_watch": "향후 분기별 수주잔고 증가율과 가이던스 추가 상향 여부를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "수주잔고(Backlog): 고객으로부터 주문을 받았으나 아직 인도되지 않은 제품이나 서비스의 총 가치. Non-GAAP EPS: 특정 비반복성 비용이나 비현금성 항목을 제외하여 기업의 핵심 사업 성과를 더 잘 나타내는 주당 순이익 지표."
+      }
     },
     "content_hash": "5df76730c36eef8d108837112b999d2e467c62f0886e8d86bf14a081f5a9663b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-05T06:59:14.022693+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-18T07:42:15+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001819810-26-000139": {
     "status": "deferred",
@@ -18111,5 +18261,197 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-17T08:04:51.902827+00:00"
+  },
+  "0001193125-26-464750": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-464750",
+      "entity_id": "CIK:0002088281",
+      "source_role": "candidate",
+      "title": "Midera Food Processing, Inc. (MFP) (CIK 0002088281) EX-99.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/2088281/000119312526464750/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2088281/000119312526464750/ck0002088281-ex99_1.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "Midera Food Processing, Inc. (MFP) (CIK 0002088281) EX-99.1 2026-11-17. Third Quarter 2026 Highlights • Net sales of $229 million increased 13.1% over the prior year period; 11.5% increase on an organic basis 1 • Net earnings of $21 million compared to $14 million in the prior year period • Adjusted EBITDA 1, 2 of $43 million, an increase of 44.9% compared to $30 million in the prior year period • Total debt of $249 million, Net debt 1 of $200 million and Net leverage ratio 1 of approximately 1.2x as of quarter-end • Strong demand with orders up 13% over the prior year period to $229 million, maintaining record backlog of $446 million at quarter-end • Raised full-year 2026 guidance. EX-99.1 2 ck0002088281-ex99_1.htm EX-99.1 EX-99.1 MIDERA FOOD PROCESSING REPORTS THIRD QUARTER 2026 RESULTS Completed first quarterly reporting period as an independent company Delivered fifth consecutive quarter with double-digit year-over-year organic order growth Completed first acquisition post-spin subsequent to quarter-end Raises full-year 2026 guidance ROSEMONT, Ill.— November 17, 2026 — Midera Food Processing, Inc. (Nasdaq: MFP) (“Midera,” the “Company,” “we,” “our,” or “us”), a leading global pure-play food processing technology company, today reported financial results for its fiscal third quarter ended October 3, 2026, its first quarterly reporting period following its separation (the “Spin-off” or “Separation”) from The Middleby Corporation (Nasdaq: MIDD) (“Middleby”) on July 6, 2026. Third Quarter 2026 Highlights • Net sales of $229 million increased 13.1% over the prior year period; 11.5% increase on an organic basis 1 • Net earnings of $21 million compared to $14 million in the prior year period • Adjusted EBITDA 1, 2 of $43 million, an increase of 44.9% compared to $30 million in the prior year period • Total debt of $249 million, Net debt 1 of $200 million and Net leverage ratio 1 of approximately 1.2x as of quarter-end • Strong demand with orders up 13% over the prior y"
+    },
+    "content_hash": "9dab0ddd4fc1dee75eb9076eefea981a1df01ef31cd0f049d31260ce0d190087",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00"
+  },
+  "0001104659-26-128849": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-128849",
+      "entity_id": "CIK:0000945394",
+      "source_role": "candidate",
+      "title": "Service Properties Trust (SVC) (CIK 0000945394) EX-99.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/945394/000110465926128849/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/945394/000110465926128849/tm2629991d1_ex99-1.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "Service Properties Trust (SVC) (CIK 0000945394) EX-99.1 2026-11-17. These forward-looking statements include, among others, statements regarding: potential margin, RevPAR, CAD, cash flow and EBITDA growth; the Board’s assessment of the potential value of SVC’s retained hotel portfolio, including hypothetical enterprise values based on targeted EBITDA and assumed valuation multiples; SVC’s strategic transformation to a pure-play triple net lease REIT; the potential benefits from SVC’s capital recycling, liquidity, leasing, acquisition and asset management initiatives, asset sales, revenue mix, labor and operating efficiency, operating leverage, secured financings and unencumbered properties; the durability of SVC’s cash flows and its ability to generate free cash flow; SVC’s expectations regarding CapEx; SVC’s execution of additional hotel dispositions, including the expected timing thereof and plans to sell substantially all of its hotels by the end of 2028; the completion and timing of hotel renovations, redevelopments and reopenings, and the anticipated benefits therefrom, including enhanced guest experience, pricing power and market share gains; the potential benefits of SVC’s hotel portfolio mix, locations, event calendar, limited new supply, competitive positioning, market share and customer demand trends; the competitive advantages of SVC’s travel center properties; the potential benefits of SVC’s master trust and other secured financing structures, the focus of the executive leadership of Sonesta International Hotels Corporation and its subsidiaries, or Sonesta; the potential benefits of Sonesta’s strategic affiliation with Boyd Gaming Corporation and future branding of Boyd properties under Sonesta brands; SVC’s ability to enhance liquidity, refinance its secured revolving credit facility with a new $525 million secured revolving credit facility, including the expected terms, collateral and timing of closing of that facility, address upcoming debt maturities"
+    },
+    "content_hash": "d319f97036fd839ac51d40ed54ab6c69283820d8400b5a01de5a53dcee404027",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "financing/loan language without a commercial demand event"
+  },
+  "0001493152-26-052833": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-052833",
+      "entity_id": "CIK:0001962481",
+      "source_role": "candidate",
+      "title": "BranchOut Food Inc. (BOF) (CIK 0001962481) EX-99.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1962481/000149315226052833/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1962481/000149315226052833/ex99-1.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "BranchOut Food Inc. (BOF) (CIK 0001962481) EX-99.1 2026-11-17. We also received a first order from another leading warehouse club chain, an important new customer. Business Highlights ● Scale: expanded preprocessing and a second 120kW REV machine lifted output approximately 80% from July to September and drove record October production of 71,400 kilograms, approximately 30% above estimated breakeven of approximately 55,000 kilograms per month (approximately $22 million in annual revenue at recent costs); the Company’s objective is approximately 90,000 to 100,000 kilograms per month within its existing facility ● Recurring revenue: Crunchy Fruit Chips are an everyday item in 309 locations of a leading warehouse club chain, and five branded products are on shelf at a national mass retailer; with contracted ingredient orders, these programs are expected to establish a revenue base of approximately $4 million per quarter entering 2027 ● Ingredients: a major customer expanded its program by approximately $3 million through the first half of 2027; ingredient revenue is expected to grow from approximately $2 million in 2025 to more than $10 million in 2027 ● New customer: a leading warehouse club chain placed its first order, for strawberries delivering in the first quarter of 2027, expanding BranchOut’s presence in the warehouse club channel ● Products in test that could become everyday items: Tropical Fruit Mix (approximately $2 million club order shipping in December), Crunchy Cheese Sticks (November discount variety store channel test that could lead to an approximately $5 million annual program) and Dried Cheesecake Snacks (launching for the holidays in a leading warehouse club chain’s stores across the Texas region) Third Quarter 2026 Results Net revenue of $1.35 million decreased 57.6% versus the prior-year period. Outlook Based on current booked orders and anticipated delivery schedules, the Company expects: ● Fourth quarter 2026 net revenue of approximately $6 mil"
+    },
+    "content_hash": "07fa0dcd0f819dd7582459af1d1ea8c65f3578026a0a0f99df7abc94ebcb3886",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00"
+  },
+  "0001477932-26-007091": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001477932-26-007091",
+      "entity_id": "CIK:0001976663",
+      "source_role": "candidate",
+      "title": "Nexscient, Inc. (NXNT) (CIK 0001976663) EX-99.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1976663/000147793226007091/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1976663/000147793226007091/nexscient_ex991.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "Nexscient, Inc. (NXNT) (CIK 0001976663) EX-99.1 2026-11-17. “In the third quarter, we delivered sequential improvement across the business: we added new customers, grew revenue, expanded gross margin, and narrowed our net loss.” During the third quarter, Nexscient’s wholly-owned subsidiary, Flipside AI, expanded existing customer engagements and secured new commercial agreements in the autonomous driving and humanoid robotics sectors, advancing the Company’s growth strategy in real-world AI training data, supervised data annotation, and quality assurance services. · Customer growth : The Company added four new customers during 2026, including the frontier AI lab, and billed sixteen customers in the first nine months of the year. For additional operating context, third-quarter revenue was approximately 70% higher than Flipside’s standalone first-quarter 2026 revenue of $685,000, recorded before the acquisition, as new customer programs more than offset the completion of certain legacy programs."
+    },
+    "content_hash": "3f61e79929eb4294271215572d6388b13aa87656a605363190b1be52c4bb6ec5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00"
+  },
+  "0001193125-26-464874": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-464874",
+      "entity_id": "CIK:0000006176",
+      "source_role": "candidate",
+      "title": "AMPCO PITTSBURGH CORP (AP) (CIK 0000006176) EX-99 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/6176/000119312526464874/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/6176/000119312526464874/ap-ex99.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "AMPCO PITTSBURGH CORP (AP) (CIK 0000006176) EX-99 2026-11-17. Nuclear Power Generation [1] Heat exchangers Used in nuclear power, industrial process and HVAC Large custom air handling systems Used in commercial, institutional and industrial buildings Centrifugal pumps Used in marine defense, power generation, and commercial refrigeration Air and Liquid Processing SegmentLeading Player in Niche Markets [1] Corporation Estimate as of 1/1/2026 Air and Liquid Processing SegmentRecord Revenue in Each of the Last Two Years Ampco-Pittsburgh Investor Presentation Launched new growth plans in 2022 ~67% revenue growth between 2021 and 2025 Growth expected to continue at an average of ~10-12% per year 2026 to 2029 Strong positions in strategic markets Significant barriers to entry in multiple markets Historical Revenue Performance ($M) 1 2 3 4 5 5-YR CAGR +14% AerofinHeat Exchangers Ampco-Pittsburgh Investor Presentation Business Overview & Industry Dynamics Nuclear Market Key Drivers #1 supplier of heat exchangers to the North American nuclear market, with high technical barriers [1] Engineered, mission-critical components specified early in project cycles Custom heat transfer solutions across nuclear, industrial, and HVAC markets Global nuclear investment driving sustained demand for heat exchangers Limited qualified suppliers support pricing power and margin strength #1 Supplier of Heat Exchangers to North American Nuclear Power Generation Market [1] 2025 Orders & Shipments for the Nuclear Market were the highest in Ampco history Nuclear market positioned for significant long-term growth with nuclear power emerging as the favorable option [1] Corporation Estimates as of 1/1/2026 Ampco-Pittsburgh Investor Presentation Business Overview & Industry Dynamics Key Drivers Custom air handling systems for pharma, healthcare and industrial applications Engineered-to-order products specified at project level with limited standardization Regional manufacturing footprint supports deliv"
+    },
+    "content_hash": "dacc580b3ce956786b8b07f1cd0f4597d010e165b617d7ef7013304116495467",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00"
+  },
+  "0001171843-26-007509": {
+    "status": "accepted",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001171843-26-007509",
+      "entity_id": "CIK:0001446159",
+      "source_role": "candidate",
+      "title": "AXE COMPUTE INC. (AGPU) (CIK 0001446159) EX-99.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1446159/000117184326007509/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1446159/000117184326007509/exh_991.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "AXE COMPUTE INC. (AGPU) (CIK 0001446159) EX-99.1 2026-11-17. Cash grew 6.7x to $147.7 million and contract liabilities representing customer prepayments grew to $569.3 million from $60.8 million at June 30, 2026, funding $349.6 million of GPU infrastructure purchases in the quarter. Q3 2026 AND RECENT BUSINESS HIGHLIGHTS More Than $2.8 Billion in New Build Contracts Signed (July 2026): During the quarter, the Company secured three new customer contracts across the United States and Europe with a TCV of more than $2.8 billion, all under the Axe Compute Build model. These purchases were largely funded by customer prepayments, reflected on the balance sheet as contract liabilities. Customer prepayments funding infrastructure ahead of deployment is the central feature of the Company's capital-efficient operating model. Operating Cash Flow: Net cash provided by operating activities of continuing operations was $465.2 million for the nine months ended September 30, 2026, compared to net cash used of $3.4 million in the prior year period, driven by $569.2 million of customer prepayments under compute contracts, partially offset by $92.7 million of prepayments to compute vendors. Forward-looking statements include, but are not limited to, statements regarding the deployment timeline and revenue expectations for the Georgia Cluster, the execution and deployment against the Company's signed contracts, signed contract value, customer prepayments, the Company's commercial strategy, pipeline and contract goals, the expected evolution of the Company's revenue mix and economics as Build contracts come online, the expected annualized run rate in future periods, the Company's ability to pay or refinance the deferred purchase price for the Georgia cluster, the value and conversion of the DataMeds securities, the Company's liquidity and capital resources, and the market opportunity for GPU compute infrastructure.",
+      "_model_response": {
+        "evidence_quote": "More Than $2.8 Billion in New Build Contracts Signed (July 2026): During the quarter, the Company secured three new customer contracts across the United States and Europe with a TCV of more than $2.8 billion, all under the Axe Compute Build model. These purchases were largely funded by customer prepayments, reflected on the balance sheet as contract liabilities. Customer prepayments funding infrastructure ahead of deployment is the central feature of the Company's capital-efficient operating model.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "AXE COMPUTE INC. (AGPU)",
+          "earnings_leverage": "Cash grew 6.7x to $147.7 million and contract liabilities representing customer prepayments grew to $569.3 million from $60.8 million at June 30, 2026, funding $349.6 million of GPU infrastructure purchases in the quarter. Customer prepayments funding infrastructure ahead of deployment is the central feature of the Company's capital-efficient operating model.",
+          "supply_demand_tightness": "More Than $2.8 Billion in New Build Contracts Signed (July 2026): During the quarter, the Company secured three new customer contracts across the United States and Europe with a TCV of more than $2.8 billion, all under the Axe Compute Build model. These purchases were largely funded by customer prepayments, reflected on the balance sheet as contract liabilities.",
+          "structural_ai_demand": "funding $349.6 million of GPU infrastructure purchases in the quarter. ... the market opportunity for GPU compute infrastructure.",
+          "revision_momentum": "",
+          "catalyst_visibility": "More Than $2.8 Billion in New Build Contracts Signed (July 2026): During the quarter, the Company secured three new customer contracts across the United States and Europe with a TCV of more than $2.8 billion"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "GPU compute infrastructure",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AGPU",
+        "theme": "AI 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "AXE COMPUTE INC.가 3분기에 미국과 유럽에서 총 계약 가치(TCV) 28억 달러 이상의 신규 고객 계약 3건을 체결했으며, 이는 주로 고객 선지급금으로 조달되었다.",
+        "why_it_matters": "대규모 신규 계약 체결과 고객 선지급금 증가는 AI 시대의 GPU 컴퓨팅 인프라에 대한 강력한 수요를 보여주며, 이는 향후 매출 성장과 자본 효율적인 사업 모델의 성공을 시사한다.",
+        "what_to_watch": "신규 계약의 실제 인프라 구축 및 배포 진행 상황과 계약 부채의 매출 전환율을 확인해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "TCV (Total Contract Value): 총 계약 가치로, 계약 기간 동안 발생할 것으로 예상되는 총 수익을 의미합니다. GPU 컴퓨팅 인프라: 그래픽 처리 장치(GPU)를 활용하여 대규모 병렬 연산을 수행하는 컴퓨팅 시스템으로, 주로 인공지능(AI) 및 고성능 컴퓨팅에 사용됩니다."
+      }
+    },
+    "content_hash": "bf441f275a64f3ba01754ae09b4059de49a158ede72d482bd0a92c12d21fc408",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-18T07:41:00+00:00",
+    "signal_id": "SIG-0951",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-18",
+    "processed_run": "44260623322-1"
+  },
+  "0001744489-26-000065": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001744489-26-000065",
+      "entity_id": "CIK:0001744489",
+      "source_role": "candidate",
+      "title": "Walt Disney Co (DIS) (CIK 0001744489) EX-99.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000065/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000065/fy2026_q4xerxex991.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "Walt Disney Co (DIS) (CIK 0001744489) EX-99.1 2026-11-17. Our capacity expansion, operational excellence, and unmatched IP portfolio helped Disney Experiences set an all-time global guests record, up 5% for the full fiscal year (4% excluding the 53 rd week). EX-99.1 2 fy2026_q4xerxex991.htm EARNINGS RELEASE Document Exhibit 99.1 November 17, 2026 To Our Shareholders and the Broader Investment Community, We closed fiscal 2026 with a strong fourth quarter. Consumers around the world, faced with endless options, chose Disney. We welcomed 4% more global guests at Experiences and increased engagement on our streaming platforms and across the ESPN networks (1) , trends that support strong revenue growth. Disney’s mission is to be the world’s leading entertainment company and to compound growth for shareholders over time. Our strong fiscal 2026 results, delivered amid a challenging macroeconomic environment, show we are succeeding on that mission. Revenues increased 16% for the fourth quarter to $25.9 billion from $22.5 billion in Q4 fiscal 2025. Income before income taxes increased 71% to $3.5 billion from $2.0 billion in Q4 fiscal 2025. Total segment operating income (2) increased 43% to $5.0 billion from $3.5 billion in Q4 fiscal 2025. Diluted earnings per share (EPS) increased to $1.51 from $0.73 in Q4 fiscal 2025. Adjusted EPS increased to $1.77 from $1.11 in Q4 fiscal 2025. Revenues increased 8% for the fiscal year to $102.3 billion from $94.4 billion in fiscal 2025. Income before income taxes increased 18% to $14.2 billion from $12.0 billion in fiscal 2025. Total segment operating income increased 12% to $19.7 billion from $17.6 billion in fiscal 2025. Diluted EPS decreased 18% to $5.63 from $6.85 in fiscal 2025. Adjusted EPS increased 18% to $7.02 from $5.93 in fiscal 2025. We exceeded our fourth quarter total segment operating income and full year adjusted EPS guidance. In a pivotal year for the Company, we delivered approximately 10% total segment operating incom"
+    },
+    "content_hash": "549761177026ffc1fdeaa564acaae69afd9ac167ad5b8493070e4e649119a47e",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00"
+  },
+  "0001104659-26-128845": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-128845",
+      "entity_id": "CIK:0001780201",
+      "source_role": "candidate",
+      "title": "Lulu's Fashion Lounge Holdings, Inc. (LVLU) (CIK 0001780201) EX-10.1 2026-11-17",
+      "url": "https://www.sec.gov/Archives/edgar/data/1780201/000110465926128845/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1780201/000110465926128845/tm2629972d1_ex10-1.htm",
+      "published_at": "2026-11-17",
+      "raw_text": "Lulu's Fashion Lounge Holdings, Inc. (LVLU) (CIK 0001780201) EX-10.1 2026-11-17. Eligible Wholesale Accounts shall not include the following: (a) Accounts with respect to which the Account Debtor has failed to pay within (i) with respect to Accounts owing by [***], the earlier to occur of (A) one hundred twenty (120) days of original invoice date and (B) thirty (30) days of its due date; and (ii) for each other Account Debtor, the earlier to occur of (A) ninety (90) days of original invoice date and (B) sixty (60) days of its due date; (b) Accounts owed by an Account Debtor (or its Affiliates) where twenty-five percent (25%) or more of all Accounts owed by that Account Debtor (or its Affiliates) are deemed ineligible under clause (a) above; (c) Accounts with respect to which the Account Debtor is (i) an employee or agent of any Borrower or any Affiliate of any Borrower, (ii) an Affiliate of any Borrower or (iii) otherwise constitutes an intercompany Account; (d) Accounts (i) arising in a transaction wherein goods are placed on consignment or are sold pursuant to a guaranteed sale, a sale or return, a sale on approval, a bill and hold, a rebate, or any other terms by reason of which the payment by the Account Debtor may be conditional, or (ii) with respect to which the payment terms are “C.O.D.”, cash on delivery or other similar terms; (e) Accounts that are not payable in Dollars; (f) Accounts with respect to which the Account Debtor either (i) does not maintain its chief executive office in the United States, or (ii) is not organized under the laws of the United States or any state or territory thereof; (g) Accounts with respect to which the Account Debtor has been billed by the applicable Borrower from an office or location of the applicable Borrower that is not located in the United States, or the collection of the Account is to occur via an office or location of the applicable Borrower that is not located in the United States, or the payment of such Account will"
+    },
+    "content_hash": "b8993a3ed79a26be7eeb82f2f2ab03416ccba09a71a16d7fc4d9ac9c4dd7aa26",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-18T07:40:46.943667+00:00",
+    "reason": "financing/loan language without a commercial demand event"
   }
 }
