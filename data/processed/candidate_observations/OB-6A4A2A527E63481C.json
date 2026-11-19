@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-6A4A2A527E63481C",
+  "candidate_id": "CAN-76DD3777C06E7825",
+  "candidate_version": "CV-5DC94EAA0688F483",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:MXL",
+    "ticker": "MXL",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-19T07:44:48+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261119T073847Z_44480870260-1.json.gz",
+    "sha256": "79b1559186b39827830a600757ed32bfe188ca83784e3d37f113a276f2ea6b44",
+    "run_id": "44480870260-1",
+    "finished_at": "2026-11-19T07:52:48+00:00"
+  },
+  "eps": {
+    "eps_now": 4.29941,
+    "eps_30d": 2.61305,
+    "eps_90d": 2.58305,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 11,
+    "up30": 10,
+    "down30": 0,
+    "pct_90": 66.4,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.465,
+    "yield_change_30_pp": 3.405
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-21",
+    "price_start_date": "2026-08-21",
+    "price_end_expected": "2026-11-18",
+    "price_end_date": "2026-11-18",
+    "close_start": 66.61000061035156,
+    "close_end": 49.529998779296875,
+    "price_pct_90": -25.6,
+    "adj_return_pct_90": -25.6,
+    "pe_change_pct": -55.3
+  },
+  "display_rank": 19,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 13
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 4507230208,
+  "context_id": "CTX-7077C1114B291649",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-14T06:56:19+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:MXL",
+  "approval_version": null,
+  "rendered_at": "2026-11-19T07:53:09+00:00"
+}

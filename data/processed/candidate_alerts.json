@@ -2994,6 +2994,125 @@
       "payload_text": "<b>🆕 새 발굴 후보 · BXDC Blackstone Digital Infrastructure Trust Inc.</b>\n<b>🟢 시스템 판단: 추적 고려</b>\n데이터 센터 자산을 인수하고 임대하여 임대료 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.49 → 지금 $1.34 (+174%) · 주가 같은 기간 -16.8%\n\n👍 최근 30일 분석가 4명 중 2명이 올림(내린 사람 없음)\n👍 지난번 관측보다 내년 이익 예상이 또 올라감(+179%)\n👍 주가는 같은 90일에 -17%로, 이익 예상 상향(+174%)보다 덜 움직임\n👎 부동산 리츠(REIT): 제공처 이익 숫자가 리츠에 맞는 기준이 아닐 수 있음\n❓ 11/16 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 추적하려면 이 메시지에 &#x27;추적&#x27;으로 답장해 주세요. 아니면 &#x27;관심없음&#x27;.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-D5381380E1067E0B</code> · 추적 <code>/track CAN-D5381380E1067E0B</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "a6b885dc4e6294a18e16fbda1ab32f45ab9ed8fc8acff4a54465de6ad201069c",
       "message_id": 261
+    },
+    "NYSE:CVI|eps-revision-review:v1|material_update|B:OB-4D030CA74CC16F2B>OB-6BE89D82C0BBF9C0": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:CVI",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-F451582E2056444F",
+      "candidate_version": "CV-CE5FD8C527BA3963",
+      "observation_id": "OB-FC6BFED2F7351E5A",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "observation_id": "OB-4D030CA74CC16F2B",
+          "baseline_id": "OB-4D030CA74CC16F2B",
+          "observed_at": "2026-10-22T05:14:57+00:00",
+          "day": "2026-10-22",
+          "snapshot_sha256": "a2155062b1bce5a466ce543a8916a46121d76ddfdc7bc65dd949c9c3bf15ac8d",
+          "eps_now": 4.55204,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ],
+          "source": "material_update"
+        },
+        "first": {
+          "observation_id": "OB-6BE89D82C0BBF9C0",
+          "baseline_id": "OB-6BE89D82C0BBF9C0",
+          "observed_at": "2026-11-18T07:56:20+00:00",
+          "day": "2026-11-18",
+          "snapshot_sha256": "649fe717d303db961f34b862c4953e41a181f28aa6383b17ee99e9516e3d0e8b",
+          "eps_now": 8.78434,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-FC6BFED2F7351E5A",
+          "baseline_id": "OB-FC6BFED2F7351E5A",
+          "observed_at": "2026-11-19T07:52:48+00:00",
+          "day": "2026-11-19",
+          "snapshot_sha256": "79b1559186b39827830a600757ed32bfe188ca83784e3d37f113a276f2ea6b44",
+          "eps_now": 8.78434,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 92.98,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-4D030CA74CC16F2B>OB-6BE89D82C0BBF9C0"
+        ]
+      },
+      "day": "2026-11-19",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "44480870260-1",
+      "reserved_at": "2026-11-19T07:53:16+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · CVI CVR Energy, Inc.</b>\n기준: 2026-10-22 이전 재검토 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $4.55 → 현재 $8.78 (+93%), 2026-11-18·2026-11-19 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-F451582E2056444F</code> · 추적 <code>/track CAN-F451582E2056444F</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "4928a88c70774948635c32dc127e1897895364f9f3a78e1874c3e6c0ac367081"
+    },
+    "CIK:0001396536|vc-power|new_discovery": {
+      "channel": "news",
+      "event": "new_discovery",
+      "entity_id": "CIK:0001396536",
+      "thesis_key": "vc-power",
+      "candidate_id": null,
+      "candidate_version": null,
+      "observation_id": null,
+      "signal_id": "SIG-0952",
+      "day": "2026-11-19",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "44480870260-1",
+      "reserved_at": "2026-11-19T07:53:16+00:00",
+      "payload_text": "📡 새 발굴 신호 · 2026-11-19\n\n<b>🅱️ DUOT · 7/12점</b>\nSIG-0952 · 검토 우선순위 B · AI compute infrastructure\n근거: contracted · 변화 방향: positive\n\n· 무슨 일: DUOT가 FY2025A에서 9M 2026A까지 매출이 0.4M 달러에서 10.6M 달러로 크게 증가할 것으로 예상하며, NTT, Edged 등 주요 고객사와의 계약 및 30개 이상의 신규 고객 확보를 발표했다.\n· 왜 중요: 이는 AI 컴퓨팅 인프라 수요 증가에 직접적으로 수혜를 입는 DUOT의 사업 확장과 시장 점유율 확대를 보여주며, 향후 실적 성장의 강력한 촉매가 될 수 있다.\n· 볼 것: 향후 분기별 실적 발표에서 실제 매출 성장률과 신규 고객 확보 추이, 그리고 5MW 포드 증설 진행 상황을 확인해야 한다.\n· 용어: colocation agreement: 데이터 센터 공간, 전력, 네트워크를 제공하는 계약; MW (메가와트): 전력 단위로 데이터 센터 용량을 나타냄.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1396536/000140025326000032/ex99x1.htm\">SEC EDGAR</a> (2026-11-18)\n\n추적 <code>/track SIG-0952</code>",
+      "payload_sha256": "6dddc47f7bbcd8afc2b31b2f0dead77839eed3d46f0266437479677d46879a82"
+    },
+    "CIK:0001841925|automotive semiconductors, ai semiconductors, radar, sensing|new_discovery": {
+      "channel": "news",
+      "event": "new_discovery",
+      "entity_id": "CIK:0001841925",
+      "thesis_key": "automotive semiconductors, ai semiconductors, radar, sensing",
+      "candidate_id": null,
+      "candidate_version": null,
+      "observation_id": null,
+      "signal_id": "SIG-0954",
+      "day": "2026-11-19",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "44480870260-1",
+      "reserved_at": "2026-11-19T07:53:16+00:00",
+      "payload_text": "📡 새 발굴 신호 · 2026-11-19\n\n<b>🅱️ INDI · 6/12점</b>\nSIG-0954 · 검토 우선순위 B · Automotive Semiconductors, AI Semiconductors, Radar, Sensing\n근거: contracted · 변화 방향: positive\n\n· 무슨 일: indie Semiconductor가 볼보를 지원하는 Tier 1 공급업체와 레이더 디자인 윈을 확보했으며, Unitree 및 Agibot과 물리적 AI 센싱 제품 디자인 윈을 확보했습니다.\n· 왜 중요: 이는 INDI가 자동차 레이더 및 AI 로봇 시장에서 핵심 고객사를 확보하며 미래 매출 성장을 위한 기반을 마련하고 있음을 보여줍니다.\n· 볼 것: 해당 디자인 윈의 양산 시점 및 예상 매출 기여도, 그리고 추가적인 디자인 윈 확보 여부.\n· 용어: 디자인 윈: 반도체 기업이 고객사의 제품에 자사 칩이 채택되도록 하는 것. Tier 1 공급업체: 완성차 업체에 직접 부품을 공급하는 1차 협력사.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1841925/000119312526449794/indi-ex99_2.htm\">SEC EDGAR</a> (2026-11-05)\n\n추적 <code>/track SIG-0954</code>",
+      "payload_sha256": "e9308bef589cd1bf24387d384f27e9f321cf0c9f3000d63052500ad42af34c5b"
     }
   },
   "bootstrap": {
@@ -3048,24 +3167,6 @@
           "day": "2026-10-27",
           "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
           "eps_now": 52.99214,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NYSE:CODI|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-FB208E346063878A",
-          "baseline_id": "OB-FB208E346063878A",
-          "observed_at": "2026-11-17T08:20:28+00:00",
-          "day": "2026-11-17",
-          "snapshot_sha256": "b98aa79cf75dd14b569a527e93de57b176d8554b9d9152cd9052686ecef0a7e7",
-          "eps_now": 0.9,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",
