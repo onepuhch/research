@@ -1,0 +1,94 @@
+{
+  "observation_id": "OB-44A2E14A248A44AE",
+  "candidate_id": "CAN-77F79A3B05ABB893",
+  "candidate_version": "CV-0E7B46CDEBEF46A6",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:MPC",
+    "ticker": "MPC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-20T07:29:47+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261120T072851Z_44694982448-1.json.gz",
+    "sha256": "59eed0a78e20c7ca4e3ec5249b9a52ac0d813164844665d7e48a086800e60db0",
+    "run_id": "44694982448-1",
+    "finished_at": "2026-11-20T07:42:49+00:00"
+  },
+  "eps": {
+    "eps_now": 60.14361,
+    "eps_30d": 57.66221,
+    "eps_90d": 32.61416,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 18,
+    "up30": 13,
+    "down30": 3,
+    "pct_90": 84.4,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 7.482,
+    "yield_change_30_pp": 0.674
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 100180811776,
+  "context_id": "CTX-12161DC8DF778F7C",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-17T08:20:32+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas Refining & Marketing",
+    "count": 7,
+    "shown": [
+      "DINO",
+      "CVI",
+      "DK"
+    ],
+    "folded": [
+      "MPC",
+      "VLO",
+      "PSX",
+      "PARR"
+    ],
+    "outside": []
+  },
+  "entity_id": "NYSE:MPC",
+  "approval_version": null,
+  "rendered_at": "2026-11-20T07:43:04+00:00"
+}

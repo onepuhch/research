@@ -1,0 +1,125 @@
+{
+  "context_id": "CTX-A795D516015B3CF7",
+  "candidate_id": "CAN-5FD7409FDFE8F5EA",
+  "ticker": "SMCI",
+  "issuer_cik": "0001375365",
+  "document_ids": [
+    "DOC-02C797FFF9CA747D",
+    "DOC-1A7AC5499B6FC87E",
+    "DOC-CB4C6F73439A9792"
+  ],
+  "eps_target_period": "2028-06-30",
+  "source_blocks": [
+    "DOC-02C797FFF9CA747D#p7",
+    "DOC-02C797FFF9CA747D#p8",
+    "DOC-02C797FFF9CA747D#p9",
+    "DOC-02C797FFF9CA747D#p10",
+    "DOC-02C797FFF9CA747D#p11",
+    "DOC-02C797FFF9CA747D#p12",
+    "DOC-02C797FFF9CA747D#p14",
+    "DOC-02C797FFF9CA747D#p15",
+    "DOC-02C797FFF9CA747D#p17",
+    "DOC-02C797FFF9CA747D#p18",
+    "DOC-02C797FFF9CA747D#p19",
+    "DOC-02C797FFF9CA747D#t4",
+    "DOC-02C797FFF9CA747D#p57",
+    "DOC-02C797FFF9CA747D#p60",
+    "DOC-02C797FFF9CA747D#p61",
+    "DOC-1A7AC5499B6FC87E#p5",
+    "DOC-1A7AC5499B6FC87E#p6",
+    "DOC-CB4C6F73439A9792#p20",
+    "DOC-CB4C6F73439A9792#p21",
+    "DOC-CB4C6F73439A9792#p22",
+    "DOC-CB4C6F73439A9792#t4",
+    "DOC-CB4C6F73439A9792#p61",
+    "DOC-CB4C6F73439A9792#p64"
+  ],
+  "input_sha": "a795d516015b3cf72668d0ed08e08d1a002eb43c02170b5c6f69df4cbb1ca528",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-20T07:42:59+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(net sales) · fiscal year 2027: $72.0 billion to $82.0 billion — 회사는 회계연도 순매출을 예상한다",
+      "note_ko": "회사는 회계연도 순매출을 예상한다",
+      "kind": "guidance",
+      "quote": "For fiscal year 2027, the Company expects net sales in the range of $72.0 billion to $82.0 billion.",
+      "document_id": "DOC-02C797FFF9CA747D",
+      "block_id": "p19",
+      "metric": "net sales",
+      "figures": [
+        "$72.0 billion to $82.0 billion"
+      ],
+      "period": "fiscal year 2027",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사의 순매출은 기록적인 수준을 달성했다",
+      "figures": [
+        "$19.9 billion"
+      ],
+      "quote": "“Supermicro’s transformation into a Total AI and IT Datacenter Solution provider continues to accelerate, delivering record revenue of $19.9 billion for the first quarter fiscal 2027,” said Charles Li",
+      "where": "DOC-02C797FFF9CA747D#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순매출은 이전 분기보다 증가했다",
+      "figures": [
+        "$19.9 billion"
+      ],
+      "quote": "•Net sales of $19.9 billion versus $11.1 billion in Q4'26 and $5.0 billion in Q1'26.",
+      "where": "DOC-02C797FFF9CA747D#p7"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 순이익은 이전 분기보다 증가했다",
+      "figures": [
+        "$1,594 million"
+      ],
+      "quote": "•Net income of $1,594 million versus $1,178 million in Q4'26 and $168 million in Q1'26.",
+      "where": "DOC-02C797FFF9CA747D#p9"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "회사의 희석 주당 순이익은 이전 분기보다 증가했다",
+      "figures": [
+        "$1.75"
+      ],
+      "quote": "•Diluted net income per common share of $1.75 versus $1.62 in Q4'26 and $0.26 in Q1'26.",
+      "where": "DOC-02C797FFF9CA747D#p10"
+    }
+  ],
+  "context_status": "draft_ready"
+}

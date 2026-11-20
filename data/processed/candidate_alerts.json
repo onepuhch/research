@@ -3137,6 +3137,24 @@
       "payload_text": "📡 새 발굴 신호 · 2026-11-19\n\n<b>🅱️ INDI · 6/12점</b>\nSIG-0954 · 검토 우선순위 B · Automotive Semiconductors, AI Semiconductors, Radar, Sensing\n근거: contracted · 변화 방향: positive\n\n· 무슨 일: indie Semiconductor가 볼보를 지원하는 Tier 1 공급업체와 레이더 디자인 윈을 확보했으며, Unitree 및 Agibot과 물리적 AI 센싱 제품 디자인 윈을 확보했습니다.\n· 왜 중요: 이는 INDI가 자동차 레이더 및 AI 로봇 시장에서 핵심 고객사를 확보하며 미래 매출 성장을 위한 기반을 마련하고 있음을 보여줍니다.\n· 볼 것: 해당 디자인 윈의 양산 시점 및 예상 매출 기여도, 그리고 추가적인 디자인 윈 확보 여부.\n· 용어: 디자인 윈: 반도체 기업이 고객사의 제품에 자사 칩이 채택되도록 하는 것. Tier 1 공급업체: 완성차 업체에 직접 부품을 공급하는 1차 협력사.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1841925/000119312526449794/indi-ex99_2.htm\">SEC EDGAR</a> (2026-11-05)\n\n추적 <code>/track SIG-0954</code>",
       "payload_sha256": "e9308bef589cd1bf24387d384f27e9f321cf0c9f3000d63052500ad42af34c5b",
       "message_id": 264
+    },
+    "NYSE:BUR|eps-revision-review:v1|new_discovery": {
+      "channel": "screen",
+      "event": "new_discovery",
+      "entity_id": "NYSE:BUR",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-719D0BAE3BE38043",
+      "candidate_version": "CV-A41DD2731BDECA14",
+      "observation_id": "OB-BC9885131BFE6127",
+      "signal_id": null,
+      "verdict": "low",
+      "day": "2026-11-20",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "44694982448-1",
+      "reserved_at": "2026-11-20T07:43:11+00:00",
+      "payload_text": "<b>🆕 새 발굴 후보 · BUR Burford Capital Limited</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\n법률 분쟁에 필요한 자금을 제공하고 관련 서비스를 판매하여 수익을 얻습니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $0.54 → 지금 $0.69 (+28%) · 주가 같은 기간 -20.4%\n\n👍 주가는 같은 90일에 -20%로, 이익 예상 상향(+28%)보다 덜 움직임\n👎 최근 30일 분석가 3명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사를 보는 분석가가 3명뿐이라 예상치가 몇 명의 수정에 크게 흔들림\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 11/4 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-719D0BAE3BE38043</code> · 추적 <code>/track CAN-719D0BAE3BE38043</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
+      "payload_sha256": "60f97657a7879846a1fd60d20553172f166a3c578c4d908b3122eabe2c87e3f4"
     }
   },
   "bootstrap": {
@@ -3191,24 +3209,6 @@
           "day": "2026-10-27",
           "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
           "eps_now": 52.99214,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      },
-      "NYSE:CVI|eps-revision-review:v1": {
-        "baseline_id": "OB-4D030CA74CC16F2B",
-        "first": {
-          "observation_id": "OB-6BE89D82C0BBF9C0",
-          "baseline_id": "OB-6BE89D82C0BBF9C0",
-          "observed_at": "2026-11-18T07:56:20+00:00",
-          "day": "2026-11-18",
-          "snapshot_sha256": "649fe717d303db961f34b862c4953e41a181f28aa6383b17ee99e9516e3d0e8b",
-          "eps_now": 8.78434,
           "comparison_key": [
             "eps_next_fy_per_share",
             "2027-12-31",
@@ -3560,7 +3560,7 @@
       "candidate_id": "CAN-719D0BAE3BE38043",
       "ticker": "BUR",
       "day": "2026-11-15",
-      "status": "held",
+      "status": "released",
       "reason": "provider_silent_jump",
       "threshold": 0.1,
       "threshold_status": "provisional",
@@ -3580,7 +3580,16 @@
         "up30": 1,
         "down30": 0
       },
-      "history": []
+      "history": [],
+      "released_day": "2026-11-20",
+      "released": {
+        "snapshot": "20261120T072851Z_44694982448-1.json.gz",
+        "eps_now": 0.69003,
+        "eps_target_period": "2027-12-31",
+        "analysts": 3,
+        "up30": 1,
+        "down30": 0
+      }
     }
   }
 }

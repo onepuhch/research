@@ -1790,11 +1790,11 @@
         "exchange": "NYSE",
         "name": "Cleveland-Cliffs Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "98d357e2c5b2fb5bfdb085f3d6a9010036e43a2306e63563061b1997d1e8224e",
-        "mapping_observed_at": "2026-11-13T06:57:12+00:00"
+        "mapping_sha256": "8e93e877216836e3e246ce8bc1163b2465a20fa359b4dd0c0ed6a7ea20121b6f",
+        "mapping_observed_at": "2026-11-19T07:38:47+00:00"
       },
-      "attempted_at": "2026-11-13T07:11:35+00:00",
-      "eps_key": "2027-12-31|1.73838",
+      "attempted_at": "2026-11-20T07:42:53+00:00",
+      "eps_key": "2027-12-31|1.701",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-FB738D337778C4F4",
@@ -1807,7 +1807,7 @@
         "DOC-067BE90E51AC5E3F"
       ],
       "notes": [],
-      "next_eligible_at": "2026-11-20T07:11:35+00:00",
+      "next_eligible_at": "2026-11-27T07:42:53+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-F17BD01FE8D4E121",
       "context_input_sha": "f17bd01fe8d4e1211120ede0f16d3ba9c0dde10501097d0b09948601c301a2ca",
@@ -2272,11 +2272,11 @@
         "exchange": "Nasdaq",
         "name": "Space Exploration Technologies Corp.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "efa5abb79b88cbc8ba37436f4fde08d3be450651f6986e53ae794e339e6d08d5",
-        "mapping_observed_at": "2026-11-17T08:06:17+00:00"
+        "mapping_sha256": "8e93e877216836e3e246ce8bc1163b2465a20fa359b4dd0c0ed6a7ea20121b6f",
+        "mapping_observed_at": "2026-11-19T07:38:47+00:00"
       },
-      "attempted_at": "2026-11-17T08:20:32+00:00",
-      "eps_key": "2027-12-31|4.16831",
+      "attempted_at": "2026-11-20T07:42:53+00:00",
+      "eps_key": "2027-12-31|4.16802",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-BFAB16DB26870547",
@@ -2319,7 +2319,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-11-24T08:20:32+00:00",
+      "next_eligible_at": "2026-11-27T07:42:53+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-9B639B0FE568E1DC",
       "context_input_sha": "9b639b0fe568e1dc1313fc0f4b28c7a3ea1490989b2510fd80f8d0374134efbf"
@@ -3693,25 +3693,23 @@
         "exchange": "Nasdaq",
         "name": "Super Micro Computer, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "98d357e2c5b2fb5bfdb085f3d6a9010036e43a2306e63563061b1997d1e8224e",
-        "mapping_observed_at": "2026-11-13T06:57:12+00:00"
+        "mapping_sha256": "8e93e877216836e3e246ce8bc1163b2465a20fa359b4dd0c0ed6a7ea20121b6f",
+        "mapping_observed_at": "2026-11-19T07:38:47+00:00"
       },
-      "attempted_at": "2026-11-13T07:11:35+00:00",
+      "attempted_at": "2026-11-20T07:42:53+00:00",
       "eps_key": "2028-06-30|6.94506",
       "eps_target_period": "2028-06-30",
       "document_ids": [
         "DOC-02C797FFF9CA747D",
         "DOC-1A7AC5499B6FC87E",
-        "DOC-CB4C6F73439A9792",
-        "DOC-24427DC769C94DB0"
+        "DOC-CB4C6F73439A9792"
       ],
       "quality": "complete",
       "failures": 0,
       "examined": [
         "DOC-02C797FFF9CA747D",
         "DOC-1A7AC5499B6FC87E",
-        "DOC-CB4C6F73439A9792",
-        "DOC-24427DC769C94DB0"
+        "DOC-CB4C6F73439A9792"
       ],
       "notes": [],
       "update_checks": [
@@ -3740,22 +3738,12 @@
           "alert_reasons": [
             "event_date_unknown"
           ]
-        },
-        {
-          "document_id": "DOC-24427DC769C94DB0",
-          "eligible": true,
-          "search_eligible": true,
-          "alert_eligible": false,
-          "reason": "update-check-v5:customer_contract:p7",
-          "alert_reasons": [
-            "period_recount"
-          ]
         }
       ],
-      "next_eligible_at": "2026-11-20T07:11:35+00:00",
+      "next_eligible_at": "2026-11-27T07:42:53+00:00",
       "draft_status": "draft_ready",
-      "context_id": "CTX-EFF299115BC51A89",
-      "context_input_sha": "eff299115bc51a89f570f4b9aece14fa723b08525201e494d469aadc5cbed2c7"
+      "context_id": "CTX-A795D516015B3CF7",
+      "context_input_sha": "a795d516015b3cf72668d0ed08e08d1a002eb43c02170b5c6f69df4cbb1ca528"
     },
     "CAN-A00785AF9CF7E07A": {
       "status": "success",
@@ -5540,6 +5528,10 @@
     "2026-11-19": {
       "companies": 8,
       "http_attempts": 32
+    },
+    "2026-11-20": {
+      "companies": 3,
+      "http_attempts": 11
     }
   },
   "documents_by_source": {
