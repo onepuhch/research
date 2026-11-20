@@ -236,7 +236,11 @@
     "BXDC",
     "CMBT",
     "FLEX",
-    "SMWB"
+    "SMWB",
+    "EVH",
+    "HP",
+    "MATX",
+    "TIGO"
   ],
   "days": {
     "2026-10-06": {
@@ -418,13 +422,17 @@
     "2026-11-19": {
       "requests": 13,
       "retries": 0
+    },
+    "2026-11-20": {
+      "requests": 9,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 45,
-      "last_attempt_at": "2026-11-19T07:53:28.901066+00:00",
+      "attempts": 46,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1487,8 +1495,8 @@
       "reason": null
     },
     "TTMI": {
-      "attempts": 4,
-      "last_attempt_at": "2026-11-06T07:15:07.376921+00:00",
+      "attempts": 5,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1607,8 +1615,8 @@
       "reason": null
     },
     "CRGY": {
-      "attempts": 5,
-      "last_attempt_at": "2026-11-17T08:21:11.416014+00:00",
+      "attempts": 6,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -1999,8 +2007,8 @@
       "reason": null
     },
     "BUR": {
-      "attempts": 6,
-      "last_attempt_at": "2026-11-17T08:21:11.416014+00:00",
+      "attempts": 7,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -2311,8 +2319,40 @@
       "reason": null
     },
     "SMWB": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "EVH": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-19T07:53:28.901066+00:00",
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "HP": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "MATX": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "TIGO": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-20T07:43:22.586295+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
