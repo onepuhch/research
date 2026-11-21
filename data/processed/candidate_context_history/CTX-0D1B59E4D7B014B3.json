@@ -1,0 +1,193 @@
+{
+  "context_id": "CTX-0D1B59E4D7B014B3",
+  "candidate_id": "CAN-76DD3777C06E7825",
+  "ticker": "MXL",
+  "issuer_cik": "0001288469",
+  "document_ids": [
+    "DOC-EF27AAF00B92A999"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-EF27AAF00B92A999#p6",
+    "DOC-EF27AAF00B92A999#p25",
+    "DOC-EF27AAF00B92A999#p26",
+    "DOC-EF27AAF00B92A999#p28",
+    "DOC-EF27AAF00B92A999#p29",
+    "DOC-EF27AAF00B92A999#p30",
+    "DOC-EF27AAF00B92A999#p32",
+    "DOC-EF27AAF00B92A999#p36",
+    "DOC-EF27AAF00B92A999#t8",
+    "DOC-EF27AAF00B92A999#t9"
+  ],
+  "input_sha": "0d1b59e4d7b014b30e42920eee9a7ccf626914a1b4d33910b80d0a4442ed2bbd",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-21T07:38:32+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "net revenue · Q3: $218.1 million / 29%(변화율·증가) / 72%(변화율·증가) — 순 매출이 전 분기보다 늘었고 전년 같은 기간보다 늘었다",
+      "note_ko": "순 매출이 전 분기보다 늘었고 전년 같은 기간보다 늘었다",
+      "kind": "fact",
+      "quote": "Q3 net revenue of $218.1 million, up 29% sequentially and up 72% year over year",
+      "document_id": "DOC-EF27AAF00B92A999",
+      "block_id": "p6",
+      "metric": "net revenue",
+      "figures": [
+        "$218.1 million",
+        "29%",
+        "72%"
+      ],
+      "period": "Q3",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level",
+        "delta",
+        "delta"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        },
+        {
+          "role": "delta",
+          "unit": "pct",
+          "direction": "up"
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 GAAP 재무 측정치와 분리하여 고려하거나 대체할 수 없다",
+      "note_ko": "비 GAAP 재무 측정치는 GAAP 재무 측정치와 분리하여 고려하거나 대체할 수 없다",
+      "kind": "fact",
+      "quote": "Non-GAAP financial measures are not meant to be considered in isolation or as a substitute for the comparable GAAP financial measures.",
+      "document_id": "DOC-EF27AAF00B92A999",
+      "block_id": "p25",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 한계가 있으며 GAAP에 따라 작성된 회사의 연결 재무제표와 함께 읽어야 한다",
+      "note_ko": "비 GAAP 재무 측정치는 한계가 있으며 GAAP에 따라 작성된 회사의 연결 재무제표와 함께 읽어야 한다",
+      "kind": "fact",
+      "quote": "Non-GAAP financial measures are subject to limitations and should be read only in conjunction with the company’s consolidated financial statements prepared in accordance with GAAP.",
+      "document_id": "DOC-EF27AAF00B92A999",
+      "block_id": "p25",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사에서 제시하는 유사한 제목의 측정치와 비교할 수 없을 가능성이 높다",
+      "note_ko": "비 GAAP 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사에서 제시하는 유사한 제목의 측정치와 비교할 수 없을 가능성이 높다",
+      "kind": "fact",
+      "quote": "Non-GAAP financial measures do not have any standardized meaning and are therefore unlikely to be comparable to similarly titled measures presented by other companies.",
+      "document_id": "DOC-EF27AAF00B92A999",
+      "block_id": "p25",
+      "metric": "non-GAAP financial measures",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "희석 주당 순이익은 이 금액이다",
+      "figures": [
+        "$0.62"
+      ],
+      "quote": "Non-GAAP diluted net income per share ; $0.62",
+      "where": "DOC-EF27AAF00B92A999#t8"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "희석 주당 순이익은 이 금액이다",
+      "figures": [
+        "$0.35"
+      ],
+      "quote": "Non-GAAP diluted net income per share ; $0.35",
+      "where": "DOC-EF27AAF00B92A999#t8"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "희석 주당 순이익은 이 금액이다",
+      "figures": [
+        "$0.14"
+      ],
+      "quote": "Non-GAAP diluted net income per share ; $0.14",
+      "where": "DOC-EF27AAF00B92A999#t8"
+    },
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "희석 주당 순이익은 이 금액이다",
+      "figures": [
+        "$1.21"
+      ],
+      "quote": "Non-GAAP diluted net income per share ; $1.21",
+      "where": "DOC-EF27AAF00B92A999#t8"
+    }
+  ],
+  "context_status": "insufficient_earnings_context"
+}

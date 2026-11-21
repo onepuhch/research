@@ -15658,7 +15658,7 @@
     "processed_run": "42453944270-1"
   },
   "0001173514-26-000251": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -15674,7 +15674,8 @@
     "content_hash": "3906475d323121679b85af6918ccd2e4eaa5255bae749246b21bf32d0d6eacd3",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-07T01:00:43.614053+00:00"
+    "updated_at": "2026-11-21T07:22:21.950804+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001171843-26-007211": {
     "status": "accepted",
@@ -15958,7 +15959,7 @@
     "processed_run": "44694982448-1"
   },
   "0001628280-26-071783": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -15974,10 +15975,11 @@
     "content_hash": "8366cc3c00bf2b42b5745201cb14d3ed2b6c8496f08bda95d391246eb72ac370",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-07T01:00:43.614053+00:00"
+    "updated_at": "2026-11-21T07:22:21.950804+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001819994-26-000073": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -15988,12 +15990,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000073/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000073/rklb-11092026ex991.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Rocket Lab Corp (RKLB) (CIK 0001819994) EX-99.1 2026-11-09. We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. EX-99.1 2 rklb-11092026ex991.htm EX-99.1 Document MEDIA RELEASE Exhibit 99.1 Rocket Lab Announces Third Quarter 2026 Financial Results: Posts Record Revenue, $1.2 Billion or 52% Sequential Quarterly Backlog Growth, Positive GAAP Operating Cash Flow, and Guides to Record Revenue and Gross Margin Expansion in Q4 2026 Long Beach, California. November 9, 2026 – Rocket Lab Corporation (Nasdaq: RKLB), a global leader in launch services and space systems, today shared the financial results for fiscal third quarter ended September 30, 2026. Rocket Lab founder and CEO, Sir Peter Beck, says: “Q3 2026 was a defining quarter for Rocket Lab. We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. Nearly $1 billion of that backlog comes from new launch contracts, signed in Q3 2026 alone, as well as $470 million signed for Space Systems. Our end-to-end space strategy is delivering exactly as designed: the world's most critical and ambitious missions increasingly rely on Rocket Lab for launch, spacecraft, and components, sometimes all on a single mission, and every part of our business is growing as a result.” Highlights for the Third Quarter 2026, plus business updates since September 30, 2026. • Record quarterly revenue of $268 million, a 73% increase year-on-year. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. • Positive GAAP operating cash flow of $7.2M. • Approximately $1 billion in new launch contracts signed across Electron, HASTE, and Neutron, bringing Rocket Lab’s total launch backlog to 117 launches: a new record. • Secured over $515M in Neutron launch contracts from con"
+      "raw_text": "Rocket Lab Corp (RKLB) (CIK 0001819994) EX-99.1 2026-11-09. We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. EX-99.1 2 rklb-11092026ex991.htm EX-99.1 Document MEDIA RELEASE Exhibit 99.1 Rocket Lab Announces Third Quarter 2026 Financial Results: Posts Record Revenue, $1.2 Billion or 52% Sequential Quarterly Backlog Growth, Positive GAAP Operating Cash Flow, and Guides to Record Revenue and Gross Margin Expansion in Q4 2026 Long Beach, California. November 9, 2026 – Rocket Lab Corporation (Nasdaq: RKLB), a global leader in launch services and space systems, today shared the financial results for fiscal third quarter ended September 30, 2026. Rocket Lab founder and CEO, Sir Peter Beck, says: “Q3 2026 was a defining quarter for Rocket Lab. We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. Nearly $1 billion of that backlog comes from new launch contracts, signed in Q3 2026 alone, as well as $470 million signed for Space Systems. Our end-to-end space strategy is delivering exactly as designed: the world's most critical and ambitious missions increasingly rely on Rocket Lab for launch, spacecraft, and components, sometimes all on a single mission, and every part of our business is growing as a result.” Highlights for the Third Quarter 2026, plus business updates since September 30, 2026. • Record quarterly revenue of $268 million, a 73% increase year-on-year. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. • Positive GAAP operating cash flow of $7.2M. • Approximately $1 billion in new launch contracts signed across Electron, HASTE, and Neutron, bringing Rocket Lab’s total launch backlog to 117 launches: a new record. • Secured over $515M in Neutron launch contracts from con",
+      "_model_response": {
+        "evidence_quote": "We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. Nearly $1 billion of that backlog comes from new launch contracts, signed in Q3 2026 alone, as well as $470 million signed for Space Systems. Our end-to-end space strategy is delivering exactly as designed: the world's most critical and ambitious missions increasingly rely on Rocket Lab for launch, spacecraft, and components, sometimes all on a single mission, and every part of our business is growing as a result.” Highlights for the Third Quarter 2026, plus business updates since September 30, 2026. • Record quarterly revenue of $268 million, a 73% increase year-on-year. • Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. • Approximately $1 billion in new launch contracts signed across Electron, HASTE, and Neutron, bringing Rocket Lab’s total launch backlog to 117 launches: a new record. • Secured over $515M in Neutron launch contracts from con",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "We delivered a record $268 million in revenue ($34 million higher than Q2 2026) alongside a record backlog which has grown to $3.57 billion. Nearly $1 billion of that backlog comes from new launch contracts, signed in Q3 2026 alone, as well as $470 million signed for Space Systems.",
+          "supply_demand_tightness": "Our end-to-end space strategy is delivering exactly as designed: the world's most critical and ambitious missions increasingly rely on Rocket Lab for launch, spacecraft, and components, sometimes all on a single mission, and every part of our business is growing as a result.”",
+          "structural_ai_demand": "",
+          "revision_momentum": "Guides to Record Revenue and Gross Margin Expansion in Q4 2026",
+          "catalyst_visibility": "Record backlog of approximately $3.6 billion, a 52% increase since end of Q2 2026. Approximately $1 billion in new launch contracts signed across Electron, HASTE, and Neutron, bringing Rocket Lab’s total launch backlog to 117 launches: a new record."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "RKLB",
+        "theme": "우주 발사 서비스",
+        "signal_type": "수주/백로그",
+        "what_happened": "Rocket Lab이 2026년 3분기에 사상 최대 매출 2.68억 달러와 35.7억 달러의 기록적인 백로그를 달성했으며, 이 중 약 10억 달러는 신규 발사 계약에서 발생했고, 2026년 4분기에도 사상 최대 매출과 총 마진 확대를 가이던스했다.",
+        "why_it_matters": "사상 최대 백로그와 신규 계약은 향후 몇 년간 안정적인 매출 성장을 보장하며, 우주 산업 내 Rocket Lab의 입지가 강화되고 있음을 보여주어 투자 매력이 높다.",
+        "what_to_watch": "향후 분기별 신규 수주 계약 규모 및 백로그 변화 추이; 2026년 4분기 실제 매출 및 총 마진 달성 여부",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 기업이 계약을 체결했으나 아직 수행하지 않은 주문 또는 서비스의 총액.\n가이던스 (Guidance): 기업이 투자자들에게 제시하는 미래 실적 전망치."
+      }
     },
     "content_hash": "e07cb8526329d25f7c50acf9a56d9b552214330ad487ec08446227db069c4aed",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-21T07:22:38+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001193125-26-453633": {
     "status": "accepted",
@@ -16053,7 +16091,7 @@
     "processed_run": "42775409704-1"
   },
   "0001567094-26-000020": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16064,15 +16102,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000020/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1567094/000156709426000020/cnh_q32026final.htm",
       "published_at": "2026-11-09",
-      "raw_text": "CNH Industrial N.V. (CNH) (CIK 0001567094) EX-99.2 2026-11-09. Diluted EPS1 $0.55 $0.41 - $0.46 $0.44 - $0.48 18 Q3 2026 results | November 9, 2026 CONSTRUCTION TRANSACTION OVERVIEW 18 Transaction Structure • CNH to sell 70% interest in CNH’s Construction Equipment business; forms new joint venture (\"CE JV\") • Transaction values CNH’s Construction Equipment business at an enterprise value of $1 billion • Kobelco to own 70% of CE JV; CNH to retain 30% equity ownership in CE JV • Each party subject to three-year lockup CNH Consideration • CNH expects to receive $700 million in cash consideration for its 70% of the business, subject to adjustments for net debt, working capital, and other customary items • CNH intends to use cash proceeds, net of tax, to reduce debt and strengthen balance sheet Continued Collaboration • CNH Agriculture dealers will have continued access to a full suite of competitive construction equipment machines supplied by CE JV • CNH Capital will continue to support CE JV customers and dealers with a full range of retail financing, leases, rental programs, and insurance products • To support a smooth business transition for dealers, customers, and employees, CNH will continue to collaborate closely with CE JV Expected Close • Expected to close by the end of 2027, subject to regulatory approvals and other customary closing conditions 19 Q3 2026 results | November 9, 2026 2026 PRIORITIES & OUTLOOK Tracking macroeconomic factors impacting ag industry cycle North America order intake pace modestly positive for MY27 vs MY261 Ag dealer inventories2 expected to further reduce in Q4 Margin improvements from quality, sourcing, and operational efficiency Focus on manufacturing and supply base readiness Ongoing multi-brand dealership consolidation in all geographies (1) MY = model year (2) As independent businesses, dealers control their own inventory 20 APPENDIX Q3 2026 results | November 9, 202621 UPCOMING EVENTS Q4 2026 earnings call: Tuesday, February 16,"
+      "raw_text": "CNH Industrial N.V. (CNH) (CIK 0001567094) EX-99.2 2026-11-09. Diluted EPS1 $0.55 $0.41 - $0.46 $0.44 - $0.48 18 Q3 2026 results | November 9, 2026 CONSTRUCTION TRANSACTION OVERVIEW 18 Transaction Structure • CNH to sell 70% interest in CNH’s Construction Equipment business; forms new joint venture (\"CE JV\") • Transaction values CNH’s Construction Equipment business at an enterprise value of $1 billion • Kobelco to own 70% of CE JV; CNH to retain 30% equity ownership in CE JV • Each party subject to three-year lockup CNH Consideration • CNH expects to receive $700 million in cash consideration for its 70% of the business, subject to adjustments for net debt, working capital, and other customary items • CNH intends to use cash proceeds, net of tax, to reduce debt and strengthen balance sheet Continued Collaboration • CNH Agriculture dealers will have continued access to a full suite of competitive construction equipment machines supplied by CE JV • CNH Capital will continue to support CE JV customers and dealers with a full range of retail financing, leases, rental programs, and insurance products • To support a smooth business transition for dealers, customers, and employees, CNH will continue to collaborate closely with CE JV Expected Close • Expected to close by the end of 2027, subject to regulatory approvals and other customary closing conditions 19 Q3 2026 results | November 9, 2026 2026 PRIORITIES & OUTLOOK Tracking macroeconomic factors impacting ag industry cycle North America order intake pace modestly positive for MY27 vs MY261 Ag dealer inventories2 expected to further reduce in Q4 Margin improvements from quality, sourcing, and operational efficiency Focus on manufacturing and supply base readiness Ongoing multi-brand dealership consolidation in all geographies (1) MY = model year (2) As independent businesses, dealers control their own inventory 20 APPENDIX Q3 2026 results | November 9, 202621 UPCOMING EVENTS Q4 2026 earnings call: Tuesday, February 16,",
+      "_model_response": {
+        "evidence_quote": "North America order intake pace modestly positive for MY27 vs MY261 Ag dealer inventories2 expected to further reduce in Q4",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "North America order intake pace modestly positive for MY27 vs MY261 Ag dealer inventories2 expected to further reduce in Q4",
+          "supply_demand_tightness": "Ag dealer inventories2 expected to further reduce in Q4",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "North America order intake pace modestly positive for MY27 vs MY261 Ag dealer inventories2 expected to further reduce in Q4"
+        },
+        "event_state": "unknown",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CNH Industrial N.V.",
+        "theme": "농업 장비",
+        "signal_type": "수주/백로그",
+        "what_happened": "CNH Industrial N.V.는 2027년 모델 연도 북미 지역 농업 장비 수주 속도가 2026년 모델 연도 대비 완만하게 긍정적이며, 4분기 농업 장비 딜러 재고가 추가로 감소할 것으로 예상한다고 밝혔다.",
+        "why_it_matters": "농업 장비 수요 개선과 재고 감소는 CNH Industrial N.V.의 향후 매출 및 수익성 개선에 긍정적인 영향을 미칠 수 있는 조기 신호이다.",
+        "what_to_watch": "향후 분기별 농업 장비 수주량 및 딜러 재고 추이, 그리고 이에 따른 가이던스 변화를 확인해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 3,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "MY (Model Year): 제품의 연식 또는 모델 출시 연도를 의미합니다.\nAg (Agriculture): 농업을 의미합니다."
+      }
     },
     "content_hash": "59da231f8b4338bb9b4a0ca63c62700a6343633000711b7b7307441186f97274",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-21T07:22:57+00:00",
+    "signal_id": "SIG-0960",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-21",
+    "processed_run": "44879878089-1"
   },
   "0001628280-26-072188": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16083,15 +16159,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/709283/000162828026072188/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/709283/000162828026072188/fy27q2ex991pressrelease.htm",
       "published_at": "2026-11-09",
-      "raw_text": "QUANTUM CORP /DE/ (QMCO) (CIK 0000709283) EX-99.1 2026-11-09. We ended the quarter with a record backlog of nearly $100 million, and we also secured one of the most significant purchase orders in the Company’s history — a major hyperscale deployment of our Scalar i7 Raptor following a multi-year evaluation in which reliability, density, and infrastructure efficiency were key differentiators. EX-99.1 2 fy27q2ex991pressrelease.htm EX-99.1 Document Quantum Reports Fiscal Second Quarter 2027 Financial Results CENTENNIAL, Colo. — Nov. 9, 2026 — Quantum Corporation (Nasdaq: QMCO) (\"Quantum\" or the \"Company\"), today announced financial results for its fiscal second quarter of 2027 ended September 30, 2026. Fiscal Second Quarter 2027 Financial Summary • Revenue increased sequentially and 42.9% year-over-year to $89.6 million, with strong customer demand also contributing to record order backlog • Gross margin expanded to 41.0%, increasing 170 basis points sequentially and 340 basis points year-over-year • GAAP operating expenses were $29.9 million; non-GAAP adjusted operating expenses were $26.9 million • GAAP net loss was $44.8 million, or ($1.14) per share, which included a $51.6 million non-cash adjustment from the change in fair value of warrant liabilities • Non-GAAP adjusted net income increased to $9.8 million, or $0.25 per share • Non-GAAP adjusted EBITDA was $11.1 million “This quarter marked our fourth consecutive quarter of sequential revenue growth and our second quarter of non-GAAP profitability. These results underscore the meaningful progress we have made over the past year in strengthening execution, improving our financial position, and positioning Quantum for sustainable growth,” commented Hugues Meyrath, Chief Executive Officer of Quantum. “Revenue grew 42.9% year-over-year and 11% sequentially to more than $89.6 million, driven by strong demand across our secondary storage portfolio. We ended the quarter with a record backlog of nearly $100 million, and "
+      "raw_text": "QUANTUM CORP /DE/ (QMCO) (CIK 0000709283) EX-99.1 2026-11-09. We ended the quarter with a record backlog of nearly $100 million, and we also secured one of the most significant purchase orders in the Company’s history — a major hyperscale deployment of our Scalar i7 Raptor following a multi-year evaluation in which reliability, density, and infrastructure efficiency were key differentiators. EX-99.1 2 fy27q2ex991pressrelease.htm EX-99.1 Document Quantum Reports Fiscal Second Quarter 2027 Financial Results CENTENNIAL, Colo. — Nov. 9, 2026 — Quantum Corporation (Nasdaq: QMCO) (\"Quantum\" or the \"Company\"), today announced financial results for its fiscal second quarter of 2027 ended September 30, 2026. Fiscal Second Quarter 2027 Financial Summary • Revenue increased sequentially and 42.9% year-over-year to $89.6 million, with strong customer demand also contributing to record order backlog • Gross margin expanded to 41.0%, increasing 170 basis points sequentially and 340 basis points year-over-year • GAAP operating expenses were $29.9 million; non-GAAP adjusted operating expenses were $26.9 million • GAAP net loss was $44.8 million, or ($1.14) per share, which included a $51.6 million non-cash adjustment from the change in fair value of warrant liabilities • Non-GAAP adjusted net income increased to $9.8 million, or $0.25 per share • Non-GAAP adjusted EBITDA was $11.1 million “This quarter marked our fourth consecutive quarter of sequential revenue growth and our second quarter of non-GAAP profitability. These results underscore the meaningful progress we have made over the past year in strengthening execution, improving our financial position, and positioning Quantum for sustainable growth,” commented Hugues Meyrath, Chief Executive Officer of Quantum. “Revenue grew 42.9% year-over-year and 11% sequentially to more than $89.6 million, driven by strong demand across our secondary storage portfolio. We ended the quarter with a record backlog of nearly $100 million, and ",
+      "_model_response": {
+        "evidence_quote": "We ended the quarter with a record backlog of nearly $100 million, and we also secured one of the most significant purchase orders in the Company’s history — a major hyperscale deployment of our Scalar i7 Raptor following a multi-year evaluation in which reliability, density, and infrastructure efficiency were key differentiators.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Quantum Corporation (Nasdaq: QMCO) (\"Quantum\" or the \"Company\"), today announced financial results for its fiscal second quarter of 2027 ended September 30, 2026.",
+          "earnings_leverage": "We ended the quarter with a record backlog of nearly $100 million, and we also secured one of the most significant purchase orders in the Company’s history — a major hyperscale deployment of our Scalar i7 Raptor... Non-GAAP adjusted net income increased to $9.8 million, or $0.25 per share",
+          "supply_demand_tightness": "strong customer demand also contributing to record order backlog",
+          "structural_ai_demand": "a major hyperscale deployment of our Scalar i7 Raptor",
+          "revision_momentum": "",
+          "catalyst_visibility": "record backlog of nearly $100 million, and we also secured one of the most significant purchase orders in the Company’s history — a major hyperscale deployment"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "QMCO",
+        "theme": "데이터 스토리지",
+        "signal_type": "수주/백로그",
+        "what_happened": "Quantum Corp이 기록적인 약 1억 달러의 백로그를 달성하고, Scalar i7 Raptor의 주요 하이퍼스케일 배포를 위한 역사적인 대규모 구매 주문을 확보했습니다.",
+        "why_it_matters": "기록적인 백로그와 대규모 구매 주문은 Quantum의 제품에 대한 강력한 수요를 보여주며, 특히 하이퍼스케일 고객 확보는 향후 매출 성장과 시장 점유율 확대에 긍정적인 영향을 미칠 수 있습니다.",
+        "what_to_watch": "다음 분기 실적 발표 시 백로그의 실제 매출 전환율과 하이퍼스케일 고객과의 추가 계약 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 1,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 고객으로부터 주문을 받았지만 아직 인도되지 않은 제품이나 서비스의 총액.\n하이퍼스케일 (Hyperscale): 대규모 컴퓨팅 및 스토리지 인프라를 의미하며, 주로 클라우드 서비스 제공업체나 대기업 데이터 센터에서 사용됩니다."
+      }
     },
     "content_hash": "0f30a12c19025e6e4c0ed03198e366cc0c88ce3b89d44686d4017964b2ee4bab",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-21T07:23:14+00:00",
+    "signal_id": "SIG-0961",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-21",
+    "processed_run": "44879878089-1"
   },
   "0001829126-26-012120": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16102,15 +16216,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2109869/000182912626012120/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2109869/000182912626012120/exascalelabs_ex10-6.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Exascale Labs Holdings Inc. (XLAB, XLABW) (CIK 0002109869) EX-10.6 2026-11-09. 5.2 Lead time: for each Release, the Supplier shall have the Equipment ready for shipment in the agreed configuration within four to six (4–6) weeks after receipt of the Down Payment for that Release, and shall ship within five (5) business days after receipt of the full price for that Release, unless the Parties agree in writing to postpone shipment, in which case the Equipment is stored under the Storage Agreement between the Parties. (or the end user designated by the Buyer for a Release); site as stated in Part 3; quantity 64 units; independent registration ☐ Confirmed ☐ Amended: ____________ 3 Supplier’s and NVIDIA’s compliance review of the Buyer completed and approved, date stated below ☐ Confirmed ☐ Amended: ____________ 4 PSA executed by the Supplier and attached to this acknowledgment ☐ Confirmed ☐ Amended: ____________ 5 Proforma invoice to be issued for each Release: DAP (Incoterms 2020) Deployment Place, stating the price validity date, without the “ETA market price” note ☐ Confirmed ☐ Amended: ____________ 6 Price: US$565,000.00 per unit, tax excluded, firm and fixed for all Releases issued during the Release Period (Clause 2) ☐ Confirmed ☐ Amended: ____________ 7 Payment per Release: 20% by telegraphic transfer within 5 business days after the Release Confirmation; 80% within 5 business days after the notice of readiness and before shipment (Clause 3) ☐ Confirmed ☐ Amended: ____________ 8 Bank account as in PSA Appendix A / proforma invoice, unchanged; email verification by the Buyer before payment accepted (Clause 3.3) ☐ Confirmed ☐ Amended: ____________ 9 Lead time per Release: ready for shipment within 4–6 weeks after the Down Payment; shipment within 5 business days after full payment unless postponed under the Storage Agreement (Clause 5.2) ☐ Confirmed ☐ Amended: ____________ 10 Configuration per Part 4; CPU and memory substitution only as stated in Part 4 ☐ Confirmed "
+      "raw_text": "Exascale Labs Holdings Inc. (XLAB, XLABW) (CIK 0002109869) EX-10.6 2026-11-09. 5.2 Lead time: for each Release, the Supplier shall have the Equipment ready for shipment in the agreed configuration within four to six (4–6) weeks after receipt of the Down Payment for that Release, and shall ship within five (5) business days after receipt of the full price for that Release, unless the Parties agree in writing to postpone shipment, in which case the Equipment is stored under the Storage Agreement between the Parties. (or the end user designated by the Buyer for a Release); site as stated in Part 3; quantity 64 units; independent registration ☐ Confirmed ☐ Amended: ____________ 3 Supplier’s and NVIDIA’s compliance review of the Buyer completed and approved, date stated below ☐ Confirmed ☐ Amended: ____________ 4 PSA executed by the Supplier and attached to this acknowledgment ☐ Confirmed ☐ Amended: ____________ 5 Proforma invoice to be issued for each Release: DAP (Incoterms 2020) Deployment Place, stating the price validity date, without the “ETA market price” note ☐ Confirmed ☐ Amended: ____________ 6 Price: US$565,000.00 per unit, tax excluded, firm and fixed for all Releases issued during the Release Period (Clause 2) ☐ Confirmed ☐ Amended: ____________ 7 Payment per Release: 20% by telegraphic transfer within 5 business days after the Release Confirmation; 80% within 5 business days after the notice of readiness and before shipment (Clause 3) ☐ Confirmed ☐ Amended: ____________ 8 Bank account as in PSA Appendix A / proforma invoice, unchanged; email verification by the Buyer before payment accepted (Clause 3.3) ☐ Confirmed ☐ Amended: ____________ 9 Lead time per Release: ready for shipment within 4–6 weeks after the Down Payment; shipment within 5 business days after full payment unless postponed under the Storage Agreement (Clause 5.2) ☐ Confirmed ☐ Amended: ____________ 10 Configuration per Part 4; CPU and memory substitution only as stated in Part 4 ☐ Confirmed ",
+      "_model_response": {
+        "evidence_quote": "quantity 64 units; independent registration ☐ Confirmed ... 6 Price: US$565,000.00 per unit, tax excluded, firm and fixed for all Releases issued during the Release Period (Clause 2) ... 9 Lead time per Release: ready for shipment within 4–6 weeks after the Down Payment; shipment within 5 business days after full payment unless postponed under the Storage Agreement (Clause 5.2)",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "quantity 64 units; ... 6 Price: US$565,000.00 per unit, tax excluded, firm and fixed for all Releases issued during the Release Period (Clause 2)",
+          "supply_demand_tightness": "Lead time: for each Release, the Supplier shall have the Equipment ready for shipment in the agreed configuration within four to six (4–6) weeks after receipt of the Down Payment for that Release",
+          "structural_ai_demand": "Exascale Labs Holdings Inc. (XLAB, XLABW)",
+          "revision_momentum": "",
+          "catalyst_visibility": "PSA executed by the Supplier and attached to this acknowledgment ☐ Confirmed"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI/HPC 인프라",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Exascale Labs Holdings Inc.",
+        "theme": "AI/HPC 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "Exascale Labs Holdings Inc.가 대당 56만 5천 달러의 장비 64대를 4~6주 리드타임으로 공급받는 계약을 체결했다.",
+        "why_it_matters": "Exascale Labs가 고가의 AI/HPC 인프라 장비를 대량으로 확보하며 향후 사업 확장을 위한 구체적인 수요를 확인시켜 주어 관련 공급망에 긍정적인 영향을 미칠 수 있다.",
+        "what_to_watch": "계약된 장비의 실제 인도 및 설치 일정, 해당 장비를 활용한 서비스 출시 및 매출 기여도.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "EX-10.6: 미국 증권거래위원회(SEC)에 제출하는 서류 중 하나로, 기업의 중요한 계약(예: 구매 계약, 라이선스 계약 등)을 첨부할 때 사용됩니다. 리드타임 (Lead time): 주문 접수부터 제품 인도까지 걸리는 시간."
+      }
     },
     "content_hash": "8f46b15d5c59fcc1eef3a12c9e45f9a15fcec95fc143df5604fc85f6dff88e7b",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-21T07:23:35+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0002105398-26-000007": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16121,12 +16271,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2105398/000210539826000007/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2105398/000210539826000007/csqr-ex99_1.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Csquare, Inc. (CSQR) (CIK 0002105398) EX-99.1 2026-11-09. Contracted utilization reached 108%, demonstrating demand that exceeds current sellable capacity and is supported by the Company's development pipeline and planned capacity expansions. prior quarter to increase sellable power to 397 MW as part of the Company’s ongoing focus to invest in attractive, high return capacity expansion projects. EX-99.1 2 csqr-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Csquare Reports Third Quarter 2026 Results and Business Highlights • Delivered 25.6% year-over-year revenue growth to $302.3 million , reflecting sustained demand and continued customer deployments across Csquare's enterprise infrastructure platform. • Achieved record bookings of $66.1 million , marking Csquare's 14th consecutive quarter of sequential bookings growth across enterprise, network, cloud and higher-density deployments. • Entered Q4 with approximately $114 million of contracted annualized revenue backlog , including approximately $104 million expected to commence over the next twelve months. • Continued to expand capacity to meet contracted demand , commissioning approximately 12 MW during Q3 and ending the quarter with 428 MW contracted against 397 MW of sellable capacity. • Maintained strong customer retention , with quarterly net revenue churn of 1.9% and continued strength in advance customer commitments. • Continued disciplined capital deployment , investing $149 million in growth at an average build multiple of approximately 4x and approximately $16 million in recurring capital expenditures. • Reported net loss of $88.1 million , primarily reflecting $58.6 million of IPO-related transaction and compensation costs, as well as higher year-over-year interest expense. Net margin for the quarter was (29.2%). • Adjusted EBITDA increased 44.3% to $132.1 million , with Adjusted EBITDA margin expanding to 47.8% from 40.5%. • Strengthened the balance sheet following the July IPO , using proceeds to repay approxim"
+      "raw_text": "Csquare, Inc. (CSQR) (CIK 0002105398) EX-99.1 2026-11-09. Contracted utilization reached 108%, demonstrating demand that exceeds current sellable capacity and is supported by the Company's development pipeline and planned capacity expansions. prior quarter to increase sellable power to 397 MW as part of the Company’s ongoing focus to invest in attractive, high return capacity expansion projects. EX-99.1 2 csqr-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Csquare Reports Third Quarter 2026 Results and Business Highlights • Delivered 25.6% year-over-year revenue growth to $302.3 million , reflecting sustained demand and continued customer deployments across Csquare's enterprise infrastructure platform. • Achieved record bookings of $66.1 million , marking Csquare's 14th consecutive quarter of sequential bookings growth across enterprise, network, cloud and higher-density deployments. • Entered Q4 with approximately $114 million of contracted annualized revenue backlog , including approximately $104 million expected to commence over the next twelve months. • Continued to expand capacity to meet contracted demand , commissioning approximately 12 MW during Q3 and ending the quarter with 428 MW contracted against 397 MW of sellable capacity. • Maintained strong customer retention , with quarterly net revenue churn of 1.9% and continued strength in advance customer commitments. • Continued disciplined capital deployment , investing $149 million in growth at an average build multiple of approximately 4x and approximately $16 million in recurring capital expenditures. • Reported net loss of $88.1 million , primarily reflecting $58.6 million of IPO-related transaction and compensation costs, as well as higher year-over-year interest expense. Net margin for the quarter was (29.2%). • Adjusted EBITDA increased 44.3% to $132.1 million , with Adjusted EBITDA margin expanding to 47.8% from 40.5%. • Strengthened the balance sheet following the July IPO , using proceeds to repay approxim",
+      "_model_response": {
+        "evidence_quote": "Contracted utilization reached 108%, demonstrating demand that exceeds current sellable capacity and is supported by the Company's development pipeline and planned capacity expansions. Achieved record bookings of $66.1 million, marking Csquare's 14th consecutive quarter of sequential bookings growth across enterprise, network, cloud and higher-density deployments. Entered Q4 with approximately $114 million of contracted annualized revenue backlog, including approximately $104 million expected to commence over the next twelve months. Continued to expand capacity to meet contracted demand, commissioning approximately 12 MW during Q3 and ending the quarter with 428 MW contracted against 397 MW of sellable capacity.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Strengthened the balance sheet following the July IPO",
+          "earnings_leverage": "Adjusted EBITDA increased 44.3% to $132.1 million , with Adjusted EBITDA margin expanding to 47.8% from 40.5%.",
+          "supply_demand_tightness": "Contracted utilization reached 108%, demonstrating demand that exceeds current sellable capacity",
+          "structural_ai_demand": "continued customer deployments across Csquare's enterprise infrastructure platform. • Achieved record bookings of $66.1 million, marking Csquare's 14th consecutive quarter of sequential bookings growth across enterprise, network, cloud and higher-density deployments.",
+          "revision_momentum": "",
+          "catalyst_visibility": "Achieved record bookings of $66.1 million, marking Csquare's 14th consecutive quarter of sequential bookings growth... Entered Q4 with approximately $114 million of contracted annualized revenue backlog, including approximately $104 million expected to commence over the next twelve months. Continued to expand capacity to meet contracted demand, commissioning approximately 12 MW during Q3"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "데이터센터 용량",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CSQR",
+        "theme": "데이터센터/클라우드 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "Csquare는 3분기에 가용 용량을 초과하는 108%의 계약 활용률과 14분기 연속 증가한 기록적인 신규 수주를 달성하여 1억 1,400만 달러의 계약된 백로그를 확보하고, 이를 충족하기 위해 12MW의 용량을 추가 가동했습니다.",
+        "why_it_matters": "가용 용량을 초과하는 수요와 기록적인 수주 및 백로그 증가는 Csquare의 강력한 성장 모멘텀과 미래 매출 가시성을 보여주며, 이는 시장의 타이트한 수급 상황을 반영합니다.",
+        "what_to_watch": "향후 분기별 신규 수주 및 백로그 증가 추이와 계획된 CAPEX의 실제 집행 및 가동률 변화를 확인해야 합니다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 1,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "A",
+        "stage": "중기",
+        "glossary": "Bookings: 신규 수주액, Backlog: 수주 잔고"
+      }
     },
     "content_hash": "5019eebce61a1065437356128c869cb06b65a88ffddffb8eaf8880cb6af39b80",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-21T07:23:57+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001868275-26-000116": {
     "status": "deferred",
@@ -17942,7 +18128,7 @@
     "updated_at": "2026-11-13T06:55:35.099965+00:00"
   },
   "0001091667-26-000072": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17958,7 +18144,8 @@
     "content_hash": "d9631c53bd726b8b1ae68a7b74c3b6bc6cce314473ddf3e350f53d85224144a2",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-21T07:22:21.950804+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001013871-26-000022": {
     "status": "deferred",
@@ -19132,5 +19319,24 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-20T07:27:25.920393+00:00"
+  },
+  "0001193125-26-469358": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-469358",
+      "entity_id": "CIK:0000078749",
+      "source_role": "candidate",
+      "title": "AGILYSYS INC (AGYS) (CIK 0000078749) EX-99.1 2026-11-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/78749/000119312526469358/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/78749/000119312526469358/agys-ex99_1.htm",
+      "published_at": "2026-11-20",
+      "raw_text": "AGILYSYS INC (AGYS) (CIK 0000078749) EX-99.1 2026-11-20. Region 92% of Revenue North America 8% of Revenue APAC Plus EMEA Allocation of Revenue Cross Functional $374M - $378M ANNUAL REVENUE 25% ADJUSTED EBITDA/ REVENUE At least 34% YEAR OVER YEAR GROWTH REVENUE July raise to $368M to $373 M Original Guidance $365M to $370M Adjusted EBITDA Original Guidance of 24% SUBSCRIPTION REVENUE July raise to at least 32% year over year growth Original guidance of at least 30% year over year growth FY27 Annual Guidance – RAISED Revenue Guidance October CY2026 FINANCIAL OVERVIEW Share Price (11/10/26) $124.15 Diluted Shares Outstanding 28.6M Diluted Market Capitalization $3,545.4M Cash (as of 09/30/26) $137.6M Debt (as of 09/30/26) $17.2M Enterprise Value $3,425.0M Revenue $344.4M Gross Profit $219.6M Adjusted EBITDA^ $81.2M Earnings per Share $1.55 EV/Revenue 9.9x EV/Gross Profit 15.6x Recurring Revenue* As % of Total Revenue 66% Subscription Revenue* As % of Recurring Revenue 69% Services Revenue* As % of Total Revenue 22% Subscription Revenue Growth Y/Y* 27% New Customer Count* 65 Financial Metrics and Valuation* Business Metrics (as of 9/30/26) Evolving Business, Evolving P&L ^Non-GAAP measure, see reconciliation on slide 23."
+    },
+    "content_hash": "6d09c0c6b97cd2d15ab6724350f065de1d93e6c06064499ff09c2fef2b9bcc79",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-21T07:22:21.950804+00:00"
   }
 }

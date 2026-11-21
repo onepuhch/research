@@ -1,0 +1,175 @@
+{
+  "context_id": "CTX-389A35DB71F19684",
+  "candidate_id": "CAN-7506B6BECE695B39",
+  "ticker": "FRO",
+  "issuer_cik": "0000913290",
+  "document_ids": [
+    "DOC-5BC482F136ACE91C",
+    "DOC-9257C52A1302173B"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-5BC482F136ACE91C#p20",
+    "DOC-5BC482F136ACE91C#p22",
+    "DOC-5BC482F136ACE91C#p29",
+    "DOC-5BC482F136ACE91C#p31",
+    "DOC-5BC482F136ACE91C#t27",
+    "DOC-5BC482F136ACE91C#t29",
+    "DOC-5BC482F136ACE91C#t77",
+    "DOC-5BC482F136ACE91C#p103",
+    "DOC-5BC482F136ACE91C#p105",
+    "DOC-5BC482F136ACE91C#p112",
+    "DOC-9257C52A1302173B#p33",
+    "DOC-9257C52A1302173B#p41",
+    "DOC-9257C52A1302173B#p44",
+    "DOC-9257C52A1302173B#p45",
+    "DOC-9257C52A1302173B#p57",
+    "DOC-9257C52A1302173B#p58",
+    "DOC-9257C52A1302173B#t4",
+    "DOC-9257C52A1302173B#p66",
+    "DOC-9257C52A1302173B#p67",
+    "DOC-9257C52A1302173B#p75",
+    "DOC-9257C52A1302173B#p77",
+    "DOC-9257C52A1302173B#p79",
+    "DOC-9257C52A1302173B#p81",
+    "DOC-9257C52A1302173B#p82",
+    "DOC-9257C52A1302173B#p83",
+    "DOC-9257C52A1302173B#p85",
+    "DOC-9257C52A1302173B#p99",
+    "DOC-9257C52A1302173B#p109",
+    "DOC-9257C52A1302173B#p126",
+    "DOC-9257C52A1302173B#p127",
+    "DOC-9257C52A1302173B#p132",
+    "DOC-9257C52A1302173B#p250"
+  ],
+  "input_sha": "389a35db71f196845238fd8141da38905faf0b9d1b5f19656e3dbcfbe6526f97",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-21T07:38:32+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "profit · third quarter ended September 30, 2026: $641.4 million — 회사의 이익은 이전 분기보다 줄었다",
+      "note_ko": "회사의 이익은 이전 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "The Company reported profit of $641.4 million for the third quarter ended September 30, 2026, compared with profit of $659.2 million in the previous quarter.",
+      "document_id": "DOC-5BC482F136ACE91C",
+      "block_id": "p22",
+      "metric": "profit",
+      "figures": [
+        "$641.4 million"
+      ],
+      "period": "third quarter ended September 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "adjusted profit · third quarter of 2026: $530.9 million — 조정 이익은 이전 분기보다 줄었다",
+      "note_ko": "조정 이익은 이전 분기보다 줄었다",
+      "kind": "fact",
+      "quote": "The adjusted profit was $530.9 million for the third quarter of 2026 compared with adjusted profit of $580.2 million in the previous quarter.",
+      "document_id": "DOC-5BC482F136ACE91C",
+      "block_id": "p22",
+      "metric": "adjusted profit",
+      "figures": [
+        "$530.9 million"
+      ],
+      "period": "third quarter of 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "negative"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사는 선박 매각 이익을 기록했다",
+      "figures": [
+        "$111.2 million"
+      ],
+      "quote": "the Company recorded a gain in the third quarter of 2026 of $111.2 million.",
+      "where": "DOC-5BC482F136ACE91C#p31"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "조정 기본 및 희석 주당 순이익은 이전 기간보다 줄었다",
+      "figures": [
+        "2.38"
+      ],
+      "quote": "Adjusted basic and diluted earnings per share ; 2.38 ; 2.61 ; 0.19 ; 6.54 ; 0.73",
+      "where": "DOC-5BC482F136ACE91C#t77"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 4분기 전체의 스팟 TCE가 현재 계약된 스팟 TCE보다 낮을 것으로 예상한다",
+      "figures": [],
+      "quote": "We expect the spot TCEs for the full fourth quarter of 2026 to be lower than the spot TCEs currently contracted, due to the impact of ballast days during the fourth quarter of 2026.",
+      "where": "DOC-5BC482F136ACE91C#p20"
+    },
+    {
+      "what": "limitation",
+      "reason": "effect_presented_as_level",
+      "note_ko": "조정 이익의 조정 사항에는 선박 매각 이익, 관계 회사 지분 결과, 시장성 유가증권 이익이 포함되며, 이연 용선 수익, 부채 소멸 손실, 파생상품 미실현 손실, 합성 옵션 재평가 손실로 상쇄되었다",
+      "figures": [
+        "$111.2 million",
+        "$5.9 million",
+        "$0.3 million",
+        "$2.1 million",
+        "$1.9 million"
+      ],
+      "quote": "The adjustments in the third quarter of 2026 consisted of a $111.2 million gain on sale of vessels, a $5.9 million share of results of associated companies and a $0.3 million gain on marketable securi",
+      "where": "DOC-5BC482F136ACE91C#p22"
+    },
+    {
+      "what": "limitation",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "보고된 스팟 요율은 4분기 현재까지 계약된 모든 스팟 일수에 대한 것이므로 4분기 전체에 대해 벌어들일 스팟 요율을 반영하지 않을 수 있다",
+      "figures": [],
+      "quote": "The spot rates reported are for all contracted spot days so far in the fourth quarter and therefore may not be reflective of spot rates to be earned for the full fourth quarter.",
+      "where": "DOC-5BC482F136ACE91C#p112"
+    }
+  ],
+  "context_status": "draft_ready"
+}

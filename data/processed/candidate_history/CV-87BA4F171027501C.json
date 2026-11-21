@@ -1,0 +1,102 @@
+{
+  "candidate_id": "CAN-DEEE3039EE887F32",
+  "candidate_version": "CV-87BA4F171027501C",
+  "identity": {
+    "entity_id": "NYSE:CMBT",
+    "ticker": "CMBT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Cmb.Tech NV",
+  "industry": "Oil & Gas Midstream",
+  "sector": "Energy",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "base_classification": "needs_evidence",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Cmb.Tech NV engages in marine transportation business in Belgium. It operates through three divisions: Marine, H2 Infra, and H2 Industry. The Marine division designs, builds, owns, and operates various low and zero carbon ships and vessels, such as crew transfer vessels, ferries, commissioning service operations vessels, tugboats, ammonia-powered large bulk carriers, container ships, and chemical and crude oil tankers. The H2 Infra division develops and secures green molecule supplies; and produces and distributes green hydrogen and ammonia. The H2 Industry division provides scalable dual-fuel"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CMBT analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CMBT/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:30:00+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CMBT daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CMBT/history",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:30:00+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CMBT company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CMBT/profile",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:30:00+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": null,
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 2.045,
+    "eps_30d": 1.54,
+    "eps_90d": 1.33667,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 53.0,
+    "steady": true,
+    "turnaround": false
+  }
+}

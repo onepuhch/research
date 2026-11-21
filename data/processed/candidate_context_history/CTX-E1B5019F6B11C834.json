@@ -1,0 +1,83 @@
+{
+  "context_id": "CTX-E1B5019F6B11C834",
+  "candidate_id": "CAN-A56C76447137EBC2",
+  "ticker": "SKHY",
+  "issuer_cik": "0002120882",
+  "document_ids": [
+    "DOC-467F79D871FF38EF"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-467F79D871FF38EF#t11",
+    "DOC-467F79D871FF38EF#p50",
+    "DOC-467F79D871FF38EF#p55",
+    "DOC-467F79D871FF38EF#p56",
+    "DOC-467F79D871FF38EF#p58",
+    "DOC-467F79D871FF38EF#p60",
+    "DOC-467F79D871FF38EF#p61",
+    "DOC-467F79D871FF38EF#p70",
+    "DOC-467F79D871FF38EF#p73",
+    "DOC-467F79D871FF38EF#p83",
+    "DOC-467F79D871FF38EF#t60",
+    "DOC-467F79D871FF38EF#p182"
+  ],
+  "input_sha": "e1b5019f6b11c83410e21eb505d628a883c9214fc0c3f51db7f9bf21b895a065",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-21T07:38:32+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "수요 회복과 AI 수요 확대로 시장이 크게 반등했다",
+      "figures": [
+        "+82.7%"
+      ],
+      "quote": "In 2024, demand that had been depressed, primarily in the general server segment, recovered, and HBM grew on the back of expanding AI demand, resulting in a significant rebound to US$91.6 billion (or ",
+      "where": "DOC-467F79D871FF38EF#p56"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "생성형 AI 서비스 발전과 온디바이스 AI 상용화에 힘입어 고성능, 고용량 메모리인 HBM을 중심으로 수요가 크게 늘었다",
+      "figures": [
+        "+60.0%"
+      ],
+      "quote": "In 2025, demand increased substantially, centered on HBM, a high-performance, high-capacity memory, driven by the advancement of generative AI services and the commercialization of on-device AI, with ",
+      "where": "DOC-467F79D871FF38EF#p56"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "AI 서버와 데이터 센터 중심의 고성능 메모리 수요가 계속 확대되는 가운데, HBM과 DDR5 중심의 고부가가치 제품 수요 증가에 힘입어 성장이 지속될 것으로 예상된다",
+      "figures": [],
+      "quote": "In 2026, amid the continued expansion of demand for high performance memory centered on AI servers and data centers, growth is expected to continue, driven by the increase in demand for high value-add",
+      "where": "DOC-467F79D871FF38EF#p56"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "AI 인프라 투자 확대에 따른 데이터 센터 스토리지 수요 증가와 고용량, 고성능 제품 중심의 수요 확대가 시장 성장을 견인할 것으로 예상된다",
+      "figures": [],
+      "quote": "In 2026, growth is expected to continue, centered on eSSDs, due to the increase in data center storage demand resulting from the expansion of AI infrastructure investment, and the expansion of demand ",
+      "where": "DOC-467F79D871FF38EF#p58"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "AI PC의 등장이 시장의 새로운 성장 동력이 되고 있으며, AI PC는 최소 16GB의 메모리를 요구하고 고사양 모델의 경우 32GB 이상을 요구하는 등 DRAM 용량 증가 추세가 PC DRAM 시장의 질적 성장을 이끄는 핵심 요소가 될 것으로 예상된다",
+      "figures": [],
+      "quote": "Although adjustments to PC shipments and a partial slowdown in demand are expected in 2026 due to the purchasing burden resulting from recent memory price increases, the emergence of AI PCs is becomin",
+      "where": "DOC-467F79D871FF38EF#p70"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

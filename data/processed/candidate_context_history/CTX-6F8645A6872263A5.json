@@ -1,0 +1,160 @@
+{
+  "context_id": "CTX-6F8645A6872263A5",
+  "candidate_id": "CAN-C4FE27DDC21163EF",
+  "ticker": "AMC",
+  "issuer_cik": "0001411579",
+  "document_ids": [
+    "DOC-B40F68E8AF283D7B"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-B40F68E8AF283D7B#p5",
+    "DOC-B40F68E8AF283D7B#p6",
+    "DOC-B40F68E8AF283D7B#t2",
+    "DOC-B40F68E8AF283D7B#t4",
+    "DOC-B40F68E8AF283D7B#t5",
+    "DOC-B40F68E8AF283D7B#t8",
+    "DOC-B40F68E8AF283D7B#t11",
+    "DOC-B40F68E8AF283D7B#p16",
+    "DOC-B40F68E8AF283D7B#t24",
+    "DOC-B40F68E8AF283D7B#t29",
+    "DOC-B40F68E8AF283D7B#t30",
+    "DOC-B40F68E8AF283D7B#p93",
+    "DOC-B40F68E8AF283D7B#t31",
+    "DOC-B40F68E8AF283D7B#t38",
+    "DOC-B40F68E8AF283D7B#t40",
+    "DOC-B40F68E8AF283D7B#p106",
+    "DOC-B40F68E8AF283D7B#t46"
+  ],
+  "input_sha": "6f8645a6872263a529cd9bb60f4ce82d9447ace4fd1b76804ce14c47abdd2d13",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-21T07:38:32+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "잉여현금흐름(Free Cash Flow) · full year 2026 — 회사는 연간 잉여 현금 흐름이 긍정적일 것으로 예상한다",
+      "note_ko": "회사는 연간 잉여 현금 흐름이 긍정적일 것으로 예상한다",
+      "kind": "guidance",
+      "quote": "This gives us confidence to expect that AMC will achieve the much-welcomed milestone of positive annual Free Cash Flow for the full year 2026.",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "p16",
+      "metric": "Free Cash Flow",
+      "figures": [],
+      "period": "full year 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따른 영업 성과 지표인 순이익의 대안으로 해석되어서는 안 된다",
+      "note_ko": "조정 EBITDA는 GAAP에 따른 영업 성과 지표인 순이익의 대안으로 해석되어서는 안 된다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA is a non-U.S. GAAP financial measure commonly used in our industry and should not be construed as an alternative to net earnings (loss) as an indicator of operating performance (as determined in accordance with U.S. GAAP).",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "t30",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 다른 회사가 보고한 유사한 명칭의 측정치와 비교 가능하지 않을 수 있다",
+      "note_ko": "조정 EBITDA는 다른 회사가 보고한 유사한 명칭의 측정치와 비교 가능하지 않을 수 있다",
+      "kind": "fact",
+      "quote": "Adjusted EBITDA may not be comparable to similarly titled measures reported by other companies.",
+      "document_id": "DOC-B40F68E8AF283D7B",
+      "block_id": "t30",
+      "metric": "Adjusted EBITDA",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "총 매출은 전년 동기 대비 증가했다",
+      "figures": [
+        "$1,711.1 million"
+      ],
+      "quote": "Total revenues were $1,711.1 million compared to $1,300.2 million, up 31.6%.",
+      "where": "DOC-B40F68E8AF283D7B#t5"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "조정 EBITDA는 전년 동기 대비 증가했다",
+      "figures": [
+        "$347.5 million"
+      ],
+      "quote": "Adjusted EBITDA was $347.5 million compared to $122.5 million, up 183.7%.",
+      "where": "DOC-B40F68E8AF283D7B#t8"
+    },
+    {
+      "what": "claim",
+      "reason": "period_not_in_source",
+      "note_ko": "총 매출은 전년 동기 대비 증가했다",
+      "figures": [
+        "$4,353.2 million"
+      ],
+      "quote": "Total revenues were $4,353.2 million compared to $3,560.6 million, up 22.3%.",
+      "where": "DOC-B40F68E8AF283D7B#t11"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_from_another_period",
+      "note_ko": "조정 EBITDA 마진은 전년 동기 대비 두 배 이상 증가하여 기록적인 수치를 달성했다",
+      "figures": [
+        "20.3%"
+      ],
+      "quote": "Our Q3 Adjusted EBITDA grew by 183.7%, nearly triple the result of last year’s third quarter, while our Adjusted EBITDA margin reached a record of 20.3%, more than double the 9.4% recorded in last yea",
+      "where": "DOC-B40F68E8AF283D7B#p16"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "조정 EBITDA는 자본 지출, 미래 자본 지출 요구 사항 또는 계약상 약정을 반영하지 않는다",
+      "figures": [],
+      "quote": "does not reflect our capital expenditures, future requirements for capital expenditures or contractual commitments;",
+      "where": "DOC-B40F68E8AF283D7B#t31"
+    }
+  ],
+  "context_status": "draft_ready"
+}

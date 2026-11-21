@@ -1,0 +1,203 @@
+{
+  "candidate_id": "CAN-C4FE27DDC21163EF",
+  "candidate_version": "CV-BBE63E484358B5F8",
+  "identity": {
+    "entity_id": "NYSE:AMC",
+    "ticker": "AMC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "AMC Entertainment Holdings, Inc.",
+  "industry": "Entertainment",
+  "sector": "Communication Services",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "극장을 소유, 운영하며 영화 상영 사업을 통해 돈을 번다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "AMC Entertainment Holdings, Inc. engages in the theatrical exhibition business in the United States and internationally. It owns, operates, or has interests in theatres. The company was founded in 1920 and is headquartered in Leawood, Kansas."
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "AMC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMC/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:31:41+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "AMC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMC/history",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:31:41+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "AMC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/AMC/profile",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:31:41+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-B40F68E8AF283D7B",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1411579/000141157926000073/amc-ex99d1.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-04",
+      "observed_at": "2026-11-08T06:32:04+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-6F8645A6872263A5",
+    "input_sha": "6f8645a6872263a529cd9bb60f4ce82d9447ace4fd1b76804ce14c47abdd2d13",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "잉여현금흐름(Free Cash Flow) · full year 2026 — 회사는 연간 잉여 현금 흐름이 긍정적일 것으로 예상한다",
+        "note_ko": "회사는 연간 잉여 현금 흐름이 긍정적일 것으로 예상한다",
+        "kind": "guidance",
+        "quote": "This gives us confidence to expect that AMC will achieve the much-welcomed milestone of positive annual Free Cash Flow for the full year 2026.",
+        "document_id": "DOC-B40F68E8AF283D7B",
+        "block_id": "p16",
+        "metric": "Free Cash Flow",
+        "figures": [],
+        "period": "full year 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 GAAP에 따른 영업 성과 지표인 순이익의 대안으로 해석되어서는 안 된다",
+        "note_ko": "조정 EBITDA는 GAAP에 따른 영업 성과 지표인 순이익의 대안으로 해석되어서는 안 된다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA is a non-U.S. GAAP financial measure commonly used in our industry and should not be construed as an alternative to net earnings (loss) as an indicator of operating performance (as determined in accordance with U.S. GAAP).",
+        "document_id": "DOC-B40F68E8AF283D7B",
+        "block_id": "t30",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) — 조정 EBITDA는 다른 회사가 보고한 유사한 명칭의 측정치와 비교 가능하지 않을 수 있다",
+        "note_ko": "조정 EBITDA는 다른 회사가 보고한 유사한 명칭의 측정치와 비교 가능하지 않을 수 있다",
+        "kind": "fact",
+        "quote": "Adjusted EBITDA may not be comparable to similarly titled measures reported by other companies.",
+        "document_id": "DOC-B40F68E8AF283D7B",
+        "block_id": "t30",
+        "metric": "Adjusted EBITDA",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-B40F68E8AF283D7B",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1411579/000141157926000073/amc-ex99d1.htm",
+        "filed_at": "2026-11-04",
+        "observed_at": "2026-11-08T06:32:04+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-21T07:38:32+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.09,
+    "eps_30d": 0.08,
+    "eps_90d": -0.125,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 3,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": null,
+    "steady": true,
+    "turnaround": true
+  }
+}

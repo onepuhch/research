@@ -1,0 +1,251 @@
+{
+  "candidate_id": "CAN-76DD3777C06E7825",
+  "candidate_version": "CV-41B9E5FA94A4790F",
+  "identity": {
+    "entity_id": "NASDAQ:MXL",
+    "ticker": "MXL",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "MaxLinear, Inc.",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "고속 통신 시스템에 사용되는 시스템 온 칩 솔루션을 제공하여 수익을 창출합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "MaxLinear, Inc. provides communications systems-on-chip solutions in the United States, Asia, Europe, and internationally. Its products integrate various portions of a high-speed communication system, including radio frequency, high-performance analog, mixed-signal, digital signal processing, security engines, data compression and networking layers, and power management. Its products are used in various electronic devices, such as radio transceivers and modems for 4G/5G base-station and backhaul infrastructure; optical transceivers; wi-fi and wireline routers for home networking; broadband mod"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "MXL analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MXL/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:30:10+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "MXL daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MXL/history",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:30:10+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "MXL company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/MXL/profile",
+      "published_at": null,
+      "observed_at": "2026-11-21T07:30:10+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-EF27AAF00B92A999",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1288469/000128846926000060/a09302026exhibit991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-10-22",
+      "observed_at": "2026-10-24T05:02:27+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-0D1B59E4D7B014B3",
+    "input_sha": "0d1b59e4d7b014b30e42920eee9a7ccf626914a1b4d33910b80d0a4442ed2bbd",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "net revenue · Q3: $218.1 million / 29%(변화율·증가) / 72%(변화율·증가) — 순 매출이 전 분기보다 늘었고 전년 같은 기간보다 늘었다",
+        "note_ko": "순 매출이 전 분기보다 늘었고 전년 같은 기간보다 늘었다",
+        "kind": "fact",
+        "quote": "Q3 net revenue of $218.1 million, up 29% sequentially and up 72% year over year",
+        "document_id": "DOC-EF27AAF00B92A999",
+        "block_id": "p6",
+        "metric": "net revenue",
+        "figures": [
+          "$218.1 million",
+          "29%",
+          "72%"
+        ],
+        "period": "Q3",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level",
+          "delta",
+          "delta"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          },
+          {
+            "role": "delta",
+            "unit": "pct",
+            "direction": "up"
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 GAAP 재무 측정치와 분리하여 고려하거나 대체할 수 없다",
+        "note_ko": "비 GAAP 재무 측정치는 GAAP 재무 측정치와 분리하여 고려하거나 대체할 수 없다",
+        "kind": "fact",
+        "quote": "Non-GAAP financial measures are not meant to be considered in isolation or as a substitute for the comparable GAAP financial measures.",
+        "document_id": "DOC-EF27AAF00B92A999",
+        "block_id": "p25",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 한계가 있으며 GAAP에 따라 작성된 회사의 연결 재무제표와 함께 읽어야 한다",
+        "note_ko": "비 GAAP 재무 측정치는 한계가 있으며 GAAP에 따라 작성된 회사의 연결 재무제표와 함께 읽어야 한다",
+        "kind": "fact",
+        "quote": "Non-GAAP financial measures are subject to limitations and should be read only in conjunction with the company’s consolidated financial statements prepared in accordance with GAAP.",
+        "document_id": "DOC-EF27AAF00B92A999",
+        "block_id": "p25",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "non-GAAP financial measures — 비 GAAP 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사에서 제시하는 유사한 제목의 측정치와 비교할 수 없을 가능성이 높다",
+        "note_ko": "비 GAAP 재무 측정치는 표준화된 의미를 가지지 않으므로 다른 회사에서 제시하는 유사한 제목의 측정치와 비교할 수 없을 가능성이 높다",
+        "kind": "fact",
+        "quote": "Non-GAAP financial measures do not have any standardized meaning and are therefore unlikely to be comparable to similarly titled measures presented by other companies.",
+        "document_id": "DOC-EF27AAF00B92A999",
+        "block_id": "p25",
+        "metric": "non-GAAP financial measures",
+        "figures": [],
+        "period": "unknown",
+        "currency": null,
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치가 최근 올라 검토 대상이 된 것이 이 발표 때문인지 확인해야 한다."
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-EF27AAF00B92A999",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1288469/000128846926000060/a09302026exhibit991.htm",
+        "filed_at": "2026-10-22",
+        "observed_at": "2026-10-24T05:02:27+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-21T07:38:32+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 4.29941,
+    "eps_30d": 2.61305,
+    "eps_90d": 2.58305,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 11,
+    "up30": 10,
+    "down30": 0,
+    "pct_90": 66.4,
+    "steady": true,
+    "turnaround": false
+  }
+}
