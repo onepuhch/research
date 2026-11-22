@@ -1,0 +1,109 @@
+{
+  "observation_id": "OB-E034482DE9BF6ACF",
+  "candidate_id": "CAN-A7167939B6E22B83",
+  "candidate_version": "CV-5FF402D09156AAC7",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:REPX",
+    "ticker": "REPX",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-22T07:14:29+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261122T070401Z_44996333072-1.json.gz",
+    "sha256": "2b6fb8522353ecb1143e87414c8bb8dfa36ffa3e3a1d8fe8b8d396926c919db7",
+    "run_id": "44996333072-1",
+    "finished_at": "2026-11-22T07:17:53+00:00"
+  },
+  "eps": {
+    "eps_now": 11.94,
+    "eps_30d": 8.142,
+    "eps_90d": 7.894,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 4,
+    "down30": 0,
+    "pct_90": 51.3,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 9.859,
+    "yield_change_30_pp": 9.254
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-24",
+    "price_start_date": "2026-08-24",
+    "price_end_expected": "2026-11-20",
+    "price_end_date": "2026-11-20",
+    "close_start": 37.619998931884766,
+    "close_end": 41.040000915527344,
+    "price_pct_90": 9.1,
+    "adj_return_pct_90": 10.0,
+    "pe_change_pct": -27.9
+  },
+  "display_rank": 6,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 5
+    },
+    {
+      "list": "B",
+      "rank": 20
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 907866112,
+  "context_id": "CTX-D3005DA6A4476854",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-19T07:52:52+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas E&P",
+    "count": 14,
+    "shown": [
+      "CHRD",
+      "CRGY",
+      "REPX",
+      "TXO"
+    ],
+    "folded": [
+      "GRNT"
+    ],
+    "outside": [
+      "COP",
+      "EOG",
+      "OXY",
+      "FANG",
+      "PR",
+      "OVV",
+      "APA",
+      "SM",
+      "TALO"
+    ]
+  },
+  "entity_id": "NYSE:REPX",
+  "approval_version": null,
+  "rendered_at": "2026-11-22T07:18:13+00:00"
+}

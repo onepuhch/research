@@ -16315,7 +16315,7 @@
     "validation_rejected": true
   },
   "0001868275-26-000116": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16326,15 +16326,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000116/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000116/ceg-20261109991.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Constellation Energy Corp (CEG) (CIK 0001868275), CONSTELLATION ENERGY GENERATION LLC (CIK 0001168165) EX-99.1 2026-11-09. The agreement will enable more than $3 billion in infrastructure investment in our Calvert Cliffs Clean Energy Center, including facility improvements and a 190 MW capacity expansion expected to come online between 2030 and 2032, while supporting the facility's continued operation and future relicensing. EX-99.1 2 ceg-20261109991.htm EX-99.1 Document Exhibit 99.1 News Release Contact: Linsey Wisniewski Corporate Communications 667-218-7700 Tim Flottemesch Investor Relations 833-447-2783 CONSTELLATION REPORTS THIRD QUARTER 2026 RESULTS Earnings Release Highlights • GAAP Net Income of $5.19 per share and Adjusted (non-GAAP) Operating Earnings of $5.06 per share for the third quarter of 2026 • Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share • Agreed to Acquire Rhode Island State Energy Center • Entered into long-term agreement supporting Calvert Cliffs Clean Energy Center investment and expansion • Entered into long-term collaboration with Google supporting new nuclear capacity • Signed a new 20-year, 270-megawatt agreement for energy, capacity, and nuclear attributes through our Peak+, an integrated customer solution that combines new capacity to support peak demand growth with energy products tailored to customer needs • Signed a conditional DOE loan commitment for up to $5 billion supporting nuclear uprates Baltimore (Nov 9, 2026) — Constellation Energy Corporation (Nasdaq: CEG) today reported its financial results for the third quarter of 2026. “This past quarter Constellation announced agreements that are helping meet one of the nation’s greatest challenges – powering a growing economy while protecting existing customers. These agreements add more than 1,000 megawatts of new, emissions-free generation to the grid and help ensure the continued operations of existing cle"
+      "raw_text": "Constellation Energy Corp (CEG) (CIK 0001868275), CONSTELLATION ENERGY GENERATION LLC (CIK 0001168165) EX-99.1 2026-11-09. The agreement will enable more than $3 billion in infrastructure investment in our Calvert Cliffs Clean Energy Center, including facility improvements and a 190 MW capacity expansion expected to come online between 2030 and 2032, while supporting the facility's continued operation and future relicensing. EX-99.1 2 ceg-20261109991.htm EX-99.1 Document Exhibit 99.1 News Release Contact: Linsey Wisniewski Corporate Communications 667-218-7700 Tim Flottemesch Investor Relations 833-447-2783 CONSTELLATION REPORTS THIRD QUARTER 2026 RESULTS Earnings Release Highlights • GAAP Net Income of $5.19 per share and Adjusted (non-GAAP) Operating Earnings of $5.06 per share for the third quarter of 2026 • Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share • Agreed to Acquire Rhode Island State Energy Center • Entered into long-term agreement supporting Calvert Cliffs Clean Energy Center investment and expansion • Entered into long-term collaboration with Google supporting new nuclear capacity • Signed a new 20-year, 270-megawatt agreement for energy, capacity, and nuclear attributes through our Peak+, an integrated customer solution that combines new capacity to support peak demand growth with energy products tailored to customer needs • Signed a conditional DOE loan commitment for up to $5 billion supporting nuclear uprates Baltimore (Nov 9, 2026) — Constellation Energy Corporation (Nasdaq: CEG) today reported its financial results for the third quarter of 2026. “This past quarter Constellation announced agreements that are helping meet one of the nation’s greatest challenges – powering a growing economy while protecting existing customers. These agreements add more than 1,000 megawatts of new, emissions-free generation to the grid and help ensure the continued operations of existing cle",
+      "_model_response": {
+        "evidence_quote": "Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share • Entered into long-term agreement supporting Calvert Cliffs Clean Energy Center investment and expansion • Entered into long-term collaboration with Google supporting new nuclear capacity • Signed a new 20-year, 270-megawatt agreement for energy, capacity, and nuclear attributes through our Peak+, an integrated customer solution that combines new capacity to support peak demand growth with energy products tailored to customer needs • Signed a conditional DOE loan commitment for up to $5 billion supporting nuclear uprates",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share",
+          "supply_demand_tightness": "This past quarter Constellation announced agreements that are helping meet one of the nation’s greatest challenges – powering a growing economy while protecting existing customers. These agreements add more than 1,000 megawatts of new, emissions-free generation to the grid",
+          "structural_ai_demand": "Entered into long-term collaboration with Google supporting new nuclear capacity",
+          "revision_momentum": "Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share",
+          "catalyst_visibility": "Raising midpoint and narrowing full-year Adjusted (non-GAAP) Operating Earnings guidance range to $12.50 - $12.80 per share"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "Clean Energy Supply",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Constellation Energy Corp",
+        "theme": "Nuclear Energy, Clean Energy, AI Data Center Power",
+        "signal_type": "가이던스상향",
+        "what_happened": "Constellation Energy Corp이 2026년 3분기 실적 발표에서 연간 조정 영업이익 가이던스를 상향하고, Calvert Cliffs 발전소 확장 및 Google과의 장기 협력 등 신규 투자 및 계약을 발표했다.",
+        "why_it_matters": "회사의 실적 전망이 개선되었으며, 특히 Google과의 협력 및 대규모 인프라 투자는 AI 데이터센터 등 증가하는 전력 수요에 대한 핵심 공급자로서의 역할을 강화하여 장기적인 성장 동력을 확보했음을 시사한다.",
+        "what_to_watch": "Calvert Cliffs 발전소의 190MW 증설 진행 상황 및 Google과의 협력으로 인한 추가적인 신규 수주 또는 용량 증설 계획.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "가이던스 상향: 기업이 제시하는 미래 실적 전망치를 높이는 것. CAPEX (자본적 지출): 기업이 미래의 이윤을 창출하기 위해 토지, 건물, 기계 등 고정 자산을 구매하거나 개선하는 데 지출하는 비용."
+      }
     },
     "content_hash": "234e3793d6a77cc46cbb0896bb5756943ba81a145c474856e5c41ffa8535ba3e",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-22T07:02:44+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001193125-26-452618": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16345,15 +16381,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1584549/000119312526452618/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1584549/000119312526452618/vff-ex99_1.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Village Farms International, Inc. (VFF) (CIK 0001584549) EX-99.1 2026-11-09. • The Company’s capacity expansion project at its Delta 2 greenhouse in British Columbia remains on track to be completed during Q1 of 2027. EX-99.1 2 vff-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Village Farms International Reports Q3 2026 Results Driven by Record Cannabis Revenues • Consolidated Net Sales Increased to $67 Million with Record Cannabis Sales of $55 Million • Net Income of $10 Million or $0.08 Per Share; Operating Cash Flow of $9.5 Million • Adjusted EBITDA from Continuing Operations of $18.2 Million or 27% of Sales • International Exports Increased 75% YoY to $20.8 Million in Line with Previous Quarter Record • Company Closes Q3 with $80 Million in Cash and Net Cash Position of $41 Million • Company Begins Mobilizing Efforts to Activate Texas Production Assets; Enhances Canadian Optionality by Exercising Rights to Convert 16 Acres of Delta 1 to Cannabis VANCOUVER, British Columbia, November 9, 2026 – Village Farms International, Inc. (“Village Farms” or the “Company”) (NASDAQ: VFF) today reported financial results for its third quarter ended September 30, 2026. All figures are in U.S. dollars unless otherwise indicated. Management Commentary President and Chief Executive Officer Michael DeGiglio commented, “Our third quarter results were driven by record cannabis revenues of $55 million and approximately 43% of cannabis sales from some of the world’s most attractive and fastest growing international markets. We also delivered our sixth consecutive quarter of positive net income and EPS, clearly demonstrating the strength of our sustainably profitable and expanding global cannabis enterprise.” “In Canada, we continue to maintain our top five market share position with continued share gains in convenience product categories and a brand portfolio that remains in the top 10 of all major product categories nationally. International export sales grew 75% year-over-year, in line wit"
+      "raw_text": "Village Farms International, Inc. (VFF) (CIK 0001584549) EX-99.1 2026-11-09. • The Company’s capacity expansion project at its Delta 2 greenhouse in British Columbia remains on track to be completed during Q1 of 2027. EX-99.1 2 vff-ex99_1.htm EX-99.1 EX-99.1 Exhibit 99.1 Village Farms International Reports Q3 2026 Results Driven by Record Cannabis Revenues • Consolidated Net Sales Increased to $67 Million with Record Cannabis Sales of $55 Million • Net Income of $10 Million or $0.08 Per Share; Operating Cash Flow of $9.5 Million • Adjusted EBITDA from Continuing Operations of $18.2 Million or 27% of Sales • International Exports Increased 75% YoY to $20.8 Million in Line with Previous Quarter Record • Company Closes Q3 with $80 Million in Cash and Net Cash Position of $41 Million • Company Begins Mobilizing Efforts to Activate Texas Production Assets; Enhances Canadian Optionality by Exercising Rights to Convert 16 Acres of Delta 1 to Cannabis VANCOUVER, British Columbia, November 9, 2026 – Village Farms International, Inc. (“Village Farms” or the “Company”) (NASDAQ: VFF) today reported financial results for its third quarter ended September 30, 2026. All figures are in U.S. dollars unless otherwise indicated. Management Commentary President and Chief Executive Officer Michael DeGiglio commented, “Our third quarter results were driven by record cannabis revenues of $55 million and approximately 43% of cannabis sales from some of the world’s most attractive and fastest growing international markets. We also delivered our sixth consecutive quarter of positive net income and EPS, clearly demonstrating the strength of our sustainably profitable and expanding global cannabis enterprise.” “In Canada, we continue to maintain our top five market share position with continued share gains in convenience product categories and a brand portfolio that remains in the top 10 of all major product categories nationally. International export sales grew 75% year-over-year, in line wit",
+      "_model_response": {
+        "evidence_quote": "The Company’s capacity expansion project at its Delta 2 greenhouse in British Columbia remains on track to be completed during Q1 of 2027. ... Company Begins Mobilizing Efforts to Activate Texas Production Assets; Enhances Canadian Optionality by Exercising Rights to Convert 16 Acres of Delta 1 to Cannabis",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Village Farms International, Inc. (VFF)",
+          "earnings_leverage": "The Company’s capacity expansion project at its Delta 2 greenhouse in British Columbia remains on track to be completed during Q1 of 2027. ... Company Begins Mobilizing Efforts to Activate Texas Production Assets; Enhances Canadian Optionality by Exercising Rights to Convert 16 Acres of Delta 1 to Cannabis",
+          "supply_demand_tightness": "record cannabis revenues of $55 million and approximately 43% of cannabis sales from some of the world’s most attractive and fastest growing international markets.",
+          "structural_ai_demand": "",
+          "revision_momentum": "Consolidated Net Sales Increased to $67 Million with Record Cannabis Sales of $55 Million ... delivered our sixth consecutive quarter of positive net income and EPS",
+          "catalyst_visibility": "The Company’s capacity expansion project at its Delta 2 greenhouse in British Columbia remains on track to be completed during Q1 of 2027."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "Cannabis Production",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "VFF",
+        "theme": "Cannabis",
+        "signal_type": "CAPEX",
+        "what_happened": "Village Farms International이 브리티시컬럼비아 델타 2 온실의 생산능력 증설 프로젝트를 2027년 1분기 완료 목표로 진행 중이며, 텍사스 생산 자산 활성화 및 캐나다 델타 1의 16에이커를 대마초 재배로 전환하는 권리를 행사하기 시작했다.",
+        "why_it_matters": "회사가 성장하는 대마초 시장 수요에 맞춰 생산 능력을 확장하여 미래 매출 및 수익 증가의 기반을 마련하고 있다.",
+        "what_to_watch": "2027년 1분기 델타 2 온실 증설 완료 여부 및 텍사스/델타 1 자산의 실제 생산량 증가.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "CAPEX (Capital Expenditure): 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출."
+      }
     },
     "content_hash": "049fcdfad8eae9582919c924a026948ebc2c1dce64c983197addcece28516307",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-22T07:03:01+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001683168-26-008440": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16364,12 +16436,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1496443/000168316826008440/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1496443/000168316826008440/paysign_ex9901.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Paysign, Inc. (PAYS) (CIK 0001496443) EX-99.1 2026-11-09. Cost of revenues increased 15.2% to $10.88 million due to related costs associated with the growth in the businesses including network and related costs, call center support costs, a new customer service contact center that went live in November 2025 and higher employee costs. 2 Balance Sheet at September 30, 2026 The company’s unrestricted and restricted cash balances increased by a combined $71.35 million from December 31, 2025, largely related to the improvement in our operating results, growth of existing customer programs and the launch of new customer programs. EX-99.1 2 paysign_ex9901.htm PRESS RELEASE Exhibit 99.1 Earnings Release Paysign Reports Record Third Quarter 2026 Revenue of $30.8 Million, Up 43%; Operating Margin More Than Triples to 23.8% Patient Affordability Growth Drives Revenue and Margin Expansion Raises Full Year 2026 Gross Margin, Net Income, GAAP EPS and Adjusted EBITDA Guidance Balance Sheet Supports Continued Investment and Growth Initiatives HENDERSON, Nev. – November 9, 2026 – (Business Wire) – Paysign, Inc. (NASDAQ: PAYS), a provider of patient affordability offerings, donor compensation solutions, engagement and management platforms and integrated payment processing for the life sciences industries, today announced financial results for the third quarter 2026. Third Quarter 2026 Financial Highlights · Revenues of $30.80 million in Q3’26, up 42.6% from Q3’25 · Pharma revenue increased 109.8% to $16.62 million in Q3’26 versus Q3’25; added 62 net patient affordability programs during the past 12 months, exiting the quarter with 167 active programs · Plasma revenue increased 7.5% to $13.83 million in Q3’26 versus Q3’25; total net plasma center count decreased by 33 during the past 12 months, exiting the quarter with 562 centers · Gross profit margin was 64.7% in Q3’26 compared to 56.3% in Q3’25; operating margin increased to 23.8% in Q3’26, up from 7.3% in Q3’25 · GAAP net income o"
+      "raw_text": "Paysign, Inc. (PAYS) (CIK 0001496443) EX-99.1 2026-11-09. Cost of revenues increased 15.2% to $10.88 million due to related costs associated with the growth in the businesses including network and related costs, call center support costs, a new customer service contact center that went live in November 2025 and higher employee costs. 2 Balance Sheet at September 30, 2026 The company’s unrestricted and restricted cash balances increased by a combined $71.35 million from December 31, 2025, largely related to the improvement in our operating results, growth of existing customer programs and the launch of new customer programs. EX-99.1 2 paysign_ex9901.htm PRESS RELEASE Exhibit 99.1 Earnings Release Paysign Reports Record Third Quarter 2026 Revenue of $30.8 Million, Up 43%; Operating Margin More Than Triples to 23.8% Patient Affordability Growth Drives Revenue and Margin Expansion Raises Full Year 2026 Gross Margin, Net Income, GAAP EPS and Adjusted EBITDA Guidance Balance Sheet Supports Continued Investment and Growth Initiatives HENDERSON, Nev. – November 9, 2026 – (Business Wire) – Paysign, Inc. (NASDAQ: PAYS), a provider of patient affordability offerings, donor compensation solutions, engagement and management platforms and integrated payment processing for the life sciences industries, today announced financial results for the third quarter 2026. Third Quarter 2026 Financial Highlights · Revenues of $30.80 million in Q3’26, up 42.6% from Q3’25 · Pharma revenue increased 109.8% to $16.62 million in Q3’26 versus Q3’25; added 62 net patient affordability programs during the past 12 months, exiting the quarter with 167 active programs · Plasma revenue increased 7.5% to $13.83 million in Q3’26 versus Q3’25; total net plasma center count decreased by 33 during the past 12 months, exiting the quarter with 562 centers · Gross profit margin was 64.7% in Q3’26 compared to 56.3% in Q3’25; operating margin increased to 23.8% in Q3’26, up from 7.3% in Q3’25 · GAAP net income o",
+      "_model_response": {
+        "evidence_quote": "Paysign Reports Record Third Quarter 2026 Revenue of $30.8 Million, Up 43%; Operating Margin More Than Triples to 23.8% Patient Affordability Growth Drives Revenue and Margin Expansion Raises Full Year 2026 Gross Margin, Net Income, GAAP EPS and Adjusted EBITDA Guidance Balance Sheet Supports Continued Investment and Growth Initiatives",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Paysign, Inc. (NASDAQ: PAYS), a provider of patient affordability offerings, donor compensation solutions, engagement and management platforms and integrated payment processing for the life sciences industries",
+          "earnings_leverage": "Gross profit margin was 64.7% in Q3’26 compared to 56.3% in Q3’25; operating margin increased to 23.8% in Q3’26, up from 7.3% in Q3’25",
+          "supply_demand_tightness": "Patient Affordability Growth Drives Revenue and Margin Expansion; added 62 net patient affordability programs during the past 12 months, exiting the quarter with 167 active programs",
+          "structural_ai_demand": "",
+          "revision_momentum": "Raises Full Year 2026 Gross Margin, Net Income, GAAP EPS and Adjusted EBITDA Guidance",
+          "catalyst_visibility": "Paysign Reports Record Third Quarter 2026 Revenue of $30.8 Million, Up 43%; Operating Margin More Than Triples to 23.8% Patient Affordability Growth Drives Revenue and Margin Expansion Raises Full Year 2026 Gross Margin, Net Income, GAAP EPS and Adjusted EBITDA Guidance"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "PAYS",
+        "theme": "환자 지원 프로그램, 헬스케어 핀테크",
+        "signal_type": "가이던스상향",
+        "what_happened": "Paysign이 2026년 3분기 실적 발표에서 매출 43% 증가와 영업이익률 3배 이상 증가를 기록하며, 2026년 연간 총마진, 순이익, GAAP EPS 및 조정 EBITDA 가이던스를 상향 조정했습니다.",
+        "why_it_matters": "회사의 핵심 사업인 환자 지원 프로그램의 성장이 가속화되고 수익성이 크게 개선되면서, 시장의 기대치를 뛰어넘는 실적과 향후 전망에 대한 긍정적인 신호로 작용하여 주가에 긍정적인 영향을 줄 수 있습니다.",
+        "what_to_watch": "향후 분기별 환자 지원 프로그램 신규 추가 및 활성 프로그램 수 변화, 연간 가이던스 달성 여부 및 추가 상향 가능성",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "GAAP EPS: 일반적으로 인정되는 회계 원칙에 따른 주당 순이익, Adjusted EBITDA: 이자, 세금, 감가상각비, 무형자산 상각비 차감 전 이익에서 특정 항목을 조정한 수치"
+      }
     },
     "content_hash": "606e262a7db34520811b99962ffe1469d7a21d36e9316e934dfe6bfa05fabd05",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-22T07:03:20+00:00",
+    "signal_id": "SIG-0962",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-22",
+    "processed_run": "44996333072-1"
   },
   "0001437749-26-035901": {
     "status": "accepted",
@@ -16448,7 +16558,7 @@
     "updated_at": "2026-11-10T07:28:44.152360+00:00"
   },
   "0001493152-26-050810": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16459,15 +16569,46 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1812727/000149315226050810/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1812727/000149315226050810/form8-k.htm",
       "published_at": "2026-11-09",
-      "raw_text": "Reliance Global Group, Inc. (EZRA) (CIK 0001812727) 8-K 2026-11-09. On the Closing Date, Buyer and, solely with respect to the stock grants described below, the Company entered into a 12-month consulting agreement with the Founder (the “Consulting Agreement”), under which he will provide transition and business development services as an independent contractor for $250,000 in cash fees during the term of the agreement, payable in monthly installments, plus a bonus of 5% of the gross profit Buyer receives during the 12 months following its entry into an agreement with a new customer, supplier or other counterparty he introduces. false 0001812727 0001812727 2026-11-03 2026-11-03 iso4217:USD xbrli:shares iso4217:USD xbrli:shares UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): November 3, 2026 RELIANCE GLOBAL GROUP, INC. (Exact Name of Registrant as Specified in Its Charter) Florida 001-40020 46-3390293 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 300 Blvd. of the Americas , Suite 105 Lakewood , New Jersey 08701 (Address of Principal Executive Offices) (Zip Code) (732) 380-4600 (Registrant’s Telephone Number, Including Area Code) N/A (Former Name or Former Address, if Changed Since Last Report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) S"
+      "raw_text": "Reliance Global Group, Inc. (EZRA) (CIK 0001812727) 8-K 2026-11-09. On the Closing Date, Buyer and, solely with respect to the stock grants described below, the Company entered into a 12-month consulting agreement with the Founder (the “Consulting Agreement”), under which he will provide transition and business development services as an independent contractor for $250,000 in cash fees during the term of the agreement, payable in monthly installments, plus a bonus of 5% of the gross profit Buyer receives during the 12 months following its entry into an agreement with a new customer, supplier or other counterparty he introduces. false 0001812727 0001812727 2026-11-03 2026-11-03 iso4217:USD xbrli:shares iso4217:USD xbrli:shares UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): November 3, 2026 RELIANCE GLOBAL GROUP, INC. (Exact Name of Registrant as Specified in Its Charter) Florida 001-40020 46-3390293 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 300 Blvd. of the Americas , Suite 105 Lakewood , New Jersey 08701 (Address of Principal Executive Offices) (Zip Code) (732) 380-4600 (Registrant’s Telephone Number, Including Area Code) N/A (Former Name or Former Address, if Changed Since Last Report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) S",
+      "_model_response": {
+        "evidence_quote": "On the Closing Date, Buyer and, solely with respect to the stock grants described below, the Company entered into a 12-month consulting agreement with the Founder (the “Consulting Agreement”), under which he will provide transition and business development services as an independent contractor for $250,000 in cash fees during the term of the agreement, payable in monthly installments, plus a bonus of 5% of the gross profit Buyer receives during the 12 months following its entry into an agreement with a new customer, supplier or other counterparty he introduces.",
+        "axes_evidence": {},
+        "event_state": "contracted",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "창업자와의 컨설팅 계약은 잠재적인 미래 사업 개발을 위한 계획 또는 의지에 해당하며, 구체적인 수주, 생산능력 증설, 가이던스 상향 등 회사의 조기 실적 지표로 보기 어렵습니다.",
+        "subject": "Reliance Global Group, Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "Reliance Global Group이 창업자와 12개월 컨설팅 계약을 체결했으며, 창업자는 신규 고객/공급사 소개 시 총이익의 5%를 보너스로 받습니다.",
+        "why_it_matters": "",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "창업자와의 컨설팅 계약은 잠재적인 미래 사업 개발을 위한 계획 또는 의지에 해당하며, 구체적인 수주, 생산능력 증설, 가이던스 상향 등 회사의 조기 실적 지표로 보기 어렵습니다."
     },
     "content_hash": "59e99002fe4fa35b855685f3887a8249662daf8ba3f701f5298737a2bd3f36ed",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-22T07:03:35+00:00",
+    "reason": "창업자와의 컨설팅 계약은 잠재적인 미래 사업 개발을 위한 계획 또는 의지에 해당하며, 구체적인 수주, 생산능력 증설, 가이던스 상향 등 회사의 조기 실적 지표로 보기 어렵습니다.",
+    "processed_day": "2026-11-22",
+    "processed_run": "44996333072-1"
   },
   "0001437749-26-035705": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16478,12 +16619,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926035705/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926035705/ex_1040721.htm",
       "published_at": "2026-11-09",
-      "raw_text": "CEVA INC (CEVA) (CIK 0001173489) EX-99.1 2026-11-09. Six were for AI technologies, including one with a new customer targeting AI infrastructure, and Edge AI agreements targeting consumer, automotive and industrial markets. EX-99.1 2 ex_1040721.htm EXHIBIT 99.1 ex_1040721.htm Exhibit 99.1 Ceva, Inc. Announces Third Quarter 2026 Financial Results 18% sequential royalty revenue growth and record AI licensing revenues, with multi-year smartphone modem ramp ahead ROCKVILLE, MD., November 9, 2026 – Ceva, Inc. (NASDAQ: CEVA), the leading licensor of silicon and software IP for the Smart Edge, today announced its financial results for the third quarter ended September 30, 2026. Third Quarter Highlights: * ● Total revenues of $29.1 million, up 2% YoY. ● Licensing and related revenues of $16.3 million, up 2% YoY. ● Record AI licensing revenues, accounting for more than 35% of total licensing and related revenues. ● Royalty revenues of $12.7 million, up 3% YoY and 18% sequentially. ● 623 million Ceva-powered devices shipped by customers, matching all-time quarterly record, including record cellular IoT and Wi-Fi 6 shipments. *Unless otherwise stated, all comparisons are to the third quarter 2025. Amir Panush, Chief Executive Officer of Ceva, commented, “We continued to grow our business in the third quarter, with 18% sequential royalty revenue growth and Ceva-powered device shipments matching our all-time quarterly record. In licensing, we achieved our highest-ever AI licensing revenues and expanded our relationships with three of our highest-volume connectivity customers, building a broader base of potential future royalty-generating products. “The continued ramp of internally developed modems at a major U.S. customer is creating a multi-year smartphone royalty growth opportunity through 2027 and beyond. We are also extending our AI business into infrastructure applications and moving closer to initial NPU royalties. Together, we believe these developments reinforce the long"
+      "raw_text": "CEVA INC (CEVA) (CIK 0001173489) EX-99.1 2026-11-09. Six were for AI technologies, including one with a new customer targeting AI infrastructure, and Edge AI agreements targeting consumer, automotive and industrial markets. EX-99.1 2 ex_1040721.htm EXHIBIT 99.1 ex_1040721.htm Exhibit 99.1 Ceva, Inc. Announces Third Quarter 2026 Financial Results 18% sequential royalty revenue growth and record AI licensing revenues, with multi-year smartphone modem ramp ahead ROCKVILLE, MD., November 9, 2026 – Ceva, Inc. (NASDAQ: CEVA), the leading licensor of silicon and software IP for the Smart Edge, today announced its financial results for the third quarter ended September 30, 2026. Third Quarter Highlights: * ● Total revenues of $29.1 million, up 2% YoY. ● Licensing and related revenues of $16.3 million, up 2% YoY. ● Record AI licensing revenues, accounting for more than 35% of total licensing and related revenues. ● Royalty revenues of $12.7 million, up 3% YoY and 18% sequentially. ● 623 million Ceva-powered devices shipped by customers, matching all-time quarterly record, including record cellular IoT and Wi-Fi 6 shipments. *Unless otherwise stated, all comparisons are to the third quarter 2025. Amir Panush, Chief Executive Officer of Ceva, commented, “We continued to grow our business in the third quarter, with 18% sequential royalty revenue growth and Ceva-powered device shipments matching our all-time quarterly record. In licensing, we achieved our highest-ever AI licensing revenues and expanded our relationships with three of our highest-volume connectivity customers, building a broader base of potential future royalty-generating products. “The continued ramp of internally developed modems at a major U.S. customer is creating a multi-year smartphone royalty growth opportunity through 2027 and beyond. We are also extending our AI business into infrastructure applications and moving closer to initial NPU royalties. Together, we believe these developments reinforce the long",
+      "_model_response": {
+        "evidence_quote": "Six were for AI technologies, including one with a new customer targeting AI infrastructure, and Edge AI agreements targeting consumer, automotive and industrial markets. ... In licensing, we achieved our highest-ever AI licensing revenues and expanded our relationships with three of our highest-volume connectivity customers, building a broader base of potential future royalty-generating products. “The continued ramp of internally developed modems at a major U.S. customer is creating a multi-year smartphone royalty growth opportunity through 2027 and beyond. We are also extending our AI business into infrastructure applications and moving closer to initial NPU royalties.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "the leading licensor of silicon and software IP for the Smart Edge",
+          "earnings_leverage": "18% sequential royalty revenue growth and record AI licensing revenues, with multi-year smartphone modem ramp ahead",
+          "supply_demand_tightness": "Six were for AI technologies, including one with a new customer targeting AI infrastructure",
+          "structural_ai_demand": "Six were for AI technologies, including one with a new customer targeting AI infrastructure, and Edge AI agreements targeting consumer, automotive and industrial markets.",
+          "revision_momentum": "record AI licensing revenues... The continued ramp of internally developed modems at a major U.S. customer is creating a multi-year smartphone royalty growth opportunity through 2027 and beyond.",
+          "catalyst_visibility": "multi-year smartphone royalty growth opportunity through 2027 and beyond. We are also extending our AI business into infrastructure applications and moving closer to initial NPU royalties."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI IP",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "CEVA",
+        "theme": "AI",
+        "signal_type": "수주/백로그",
+        "what_happened": "CEVA가 3분기 실적 발표에서 AI 라이선싱 매출 최고치를 기록하고, 새로운 AI 인프라 고객을 확보했으며, 주요 고객사와의 관계를 확장하여 다년간의 스마트폰 모뎀 로열티 성장을 기대한다고 밝혔다.",
+        "why_it_matters": "CEVA가 AI 및 스마트폰 모뎀 분야에서 신규 고객 확보와 기존 고객 관계 강화를 통해 향후 로열티 매출 성장의 기반을 마련하고 있어, AI 시장 확대에 따른 수혜가 예상된다.",
+        "what_to_watch": "향후 분기별 AI 라이선싱 및 로열티 매출 성장률, NPU 로열티 발생 시점 및 규모",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "NPU: 신경망 처리 장치 (Neural Processing Unit), IP: 지적 재산 (Intellectual Property)"
+      }
     },
     "content_hash": "664883b336c9ce61a36972887666e48f02994ef17da739c1907a4a3634c7d7f0",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-22T07:03:56+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001628280-26-072172": {
     "status": "deferred",

@@ -1,0 +1,474 @@
+{
+  "retrieved_at": "2026-11-22T07:18:27.625323+00:00",
+  "kind": "candidate",
+  "series": {
+    "SPY": {
+      "2026-11-16": {
+        "adjusted_close": 739.9500122070312,
+        "closed_at": "2026-11-16T21:00:00+00:00"
+      },
+      "2026-11-17": {
+        "adjusted_close": 732.4400024414062,
+        "closed_at": "2026-11-17T21:00:00+00:00"
+      },
+      "2026-11-18": {
+        "adjusted_close": 730.2000122070312,
+        "closed_at": "2026-11-18T21:00:00+00:00"
+      },
+      "2026-11-19": {
+        "adjusted_close": 715.8699951171875,
+        "closed_at": "2026-11-19T21:00:00+00:00"
+      },
+      "2026-11-20": {
+        "adjusted_close": 689.8099975585938,
+        "closed_at": "2026-11-20T21:00:00+00:00"
+      }
+    },
+    "ACLS": {
+      "2026-11-16": {
+        "adjusted_close": 99.22000122070312,
+        "closed_at": "2026-11-16T21:00:00+00:00"
+      },
+      "2026-11-17": {
+        "adjusted_close": 97.9800033569336,
+        "closed_at": "2026-11-17T21:00:00+00:00"
+      },
+      "2026-11-18": {
+        "adjusted_close": 100.9800033569336,
+        "closed_at": "2026-11-18T21:00:00+00:00"
+      },
+      "2026-11-19": {
+        "adjusted_close": 99.94000244140625,
+        "closed_at": "2026-11-19T21:00:00+00:00"
+      },
+      "2026-11-20": {
+        "adjusted_close": 90.26000213623047,
+        "closed_at": "2026-11-20T21:00:00+00:00"
+      }
+    },
+    "STRL": {
+      "2026-11-16": {
+        "adjusted_close": 275.1300048828125,
+        "closed_at": "2026-11-16T21:00:00+00:00"
+      },
+      "2026-11-17": {
+        "adjusted_close": 275.260009765625,
+        "closed_at": "2026-11-17T21:00:00+00:00"
+      },
+      "2026-11-18": {
+        "adjusted_close": 276.3599853515625,
+        "closed_at": "2026-11-18T21:00:00+00:00"
+      },
+      "2026-11-19": {
+        "adjusted_close": 273.25,
+        "closed_at": "2026-11-19T21:00:00+00:00"
+      },
+      "2026-11-20": {
+        "adjusted_close": 247.9199981689453,
+        "closed_at": "2026-11-20T21:00:00+00:00"
+      }
+    }
+  },
+  "sources": {
+    "SPY": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPY?period1=1794641886&period2=1795331907&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "payload": {
+        "chart": {
+          "result": [
+            {
+              "meta": {
+                "currency": "USD",
+                "symbol": "SPY",
+                "exchangeName": "PCX",
+                "fullExchangeName": "NYSEArca",
+                "instrumentType": "ETF",
+                "firstTradeDate": 728317800,
+                "regularMarketTime": 1795208404,
+                "hasPrePostMarketData": true,
+                "gmtoffset": -18000,
+                "timezone": "EST",
+                "exchangeTimezoneName": "America/New_York",
+                "regularMarketPrice": 689.81,
+                "regularMarketChangePercent": -3.64,
+                "fulldayPrice": 689.81,
+                "fulldayChange": -18.38,
+                "fulldayChangePercent": -2.568,
+                "fiftyTwoWeekHigh": 781.62,
+                "fiftyTwoWeekLow": 629.28,
+                "regularMarketDayHigh": 718.29,
+                "regularMarketDayLow": 686.752,
+                "regularMarketVolume": 150944451,
+                "longName": "State Street SPDR S&P 500 ETF Trust",
+                "shortName": "State Street SPDR S&P 500 ETF T",
+                "chartPreviousClose": 754.37,
+                "priceHint": 2,
+                "currentTradingPeriod": {
+                  "pre": {
+                    "timezone": "EST",
+                    "start": 1795165200,
+                    "end": 1795185000,
+                    "gmtoffset": -18000
+                  },
+                  "regular": {
+                    "timezone": "EST",
+                    "start": 1795185000,
+                    "end": 1795208400,
+                    "gmtoffset": -18000
+                  },
+                  "post": {
+                    "timezone": "EST",
+                    "start": 1795208400,
+                    "end": 1795222800,
+                    "gmtoffset": -18000
+                  }
+                },
+                "dataGranularity": "1d",
+                "range": "",
+                "validRanges": [
+                  "1d",
+                  "5d",
+                  "1mo",
+                  "3mo",
+                  "6mo",
+                  "1y",
+                  "2y",
+                  "5y",
+                  "10y",
+                  "ytd",
+                  "max"
+                ]
+              },
+              "timestamp": [
+                1794839400,
+                1794925800,
+                1795012200,
+                1795098600,
+                1795185000
+              ],
+              "indicators": {
+                "quote": [
+                  {
+                    "volume": [
+                      69207300,
+                      71636300,
+                      51804800,
+                      76702600,
+                      151049800
+                    ],
+                    "open": [
+                      749.6599731445312,
+                      738.3900146484375,
+                      733.3699951171875,
+                      737.4600219726562,
+                      713.5599975585938
+                    ],
+                    "low": [
+                      738.0700073242188,
+                      727.0,
+                      726.7999877929688,
+                      715.6500244140625,
+                      686.75
+                    ],
+                    "close": [
+                      739.9500122070312,
+                      732.4400024414062,
+                      730.2000122070312,
+                      715.8699951171875,
+                      689.8099975585938
+                    ],
+                    "high": [
+                      749.8200073242188,
+                      739.760009765625,
+                      735.0599975585938,
+                      739.9000244140625,
+                      718.2899780273438
+                    ]
+                  }
+                ],
+                "adjclose": [
+                  {
+                    "adjclose": [
+                      739.9500122070312,
+                      732.4400024414062,
+                      730.2000122070312,
+                      715.8699951171875,
+                      689.8099975585938
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "error": null
+        }
+      }
+    },
+    "ACLS": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ACLS?period1=1794641886&period2=1795331907&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "payload": {
+        "chart": {
+          "result": [
+            {
+              "meta": {
+                "currency": "USD",
+                "symbol": "ACLS",
+                "exchangeName": "NMS",
+                "fullExchangeName": "NasdaqGS",
+                "instrumentType": "EQUITY",
+                "firstTradeDate": 963322200,
+                "regularMarketTime": 1795208400,
+                "hasPrePostMarketData": true,
+                "gmtoffset": -18000,
+                "timezone": "EST",
+                "exchangeTimezoneName": "America/New_York",
+                "regularMarketPrice": 90.26,
+                "regularMarketChangePercent": -9.686,
+                "fulldayPrice": 90.26,
+                "fulldayChange": -9.68,
+                "fulldayChangePercent": -9.686,
+                "fiftyTwoWeekHigh": 193.78,
+                "fiftyTwoWeekLow": 75.31,
+                "regularMarketDayHigh": 96.567,
+                "regularMarketDayLow": 89.06,
+                "regularMarketVolume": 391753,
+                "longName": "Axcelis Technologies, Inc.",
+                "shortName": "Axcelis Technologies, Inc.",
+                "chartPreviousClose": 104.42,
+                "priceHint": 2,
+                "currentTradingPeriod": {
+                  "pre": {
+                    "timezone": "EST",
+                    "start": 1795165200,
+                    "end": 1795185000,
+                    "gmtoffset": -18000
+                  },
+                  "regular": {
+                    "timezone": "EST",
+                    "start": 1795185000,
+                    "end": 1795208400,
+                    "gmtoffset": -18000
+                  },
+                  "post": {
+                    "timezone": "EST",
+                    "start": 1795208400,
+                    "end": 1795222800,
+                    "gmtoffset": -18000
+                  }
+                },
+                "dataGranularity": "1d",
+                "range": "",
+                "validRanges": [
+                  "1d",
+                  "5d",
+                  "1mo",
+                  "3mo",
+                  "6mo",
+                  "1y",
+                  "2y",
+                  "5y",
+                  "10y",
+                  "ytd",
+                  "max"
+                ]
+              },
+              "timestamp": [
+                1794839400,
+                1794925800,
+                1795012200,
+                1795098600,
+                1795185000
+              ],
+              "indicators": {
+                "quote": [
+                  {
+                    "close": [
+                      99.22000122070312,
+                      97.9800033569336,
+                      100.9800033569336,
+                      99.94000244140625,
+                      90.26000213623047
+                    ],
+                    "volume": [
+                      241900,
+                      240900,
+                      347200,
+                      303300,
+                      391800
+                    ],
+                    "high": [
+                      101.97000122070312,
+                      100.45999908447266,
+                      101.4000015258789,
+                      104.19000244140625,
+                      96.56999969482422
+                    ],
+                    "open": [
+                      99.04000091552734,
+                      100.45999908447266,
+                      99.4800033569336,
+                      103.5999984741211,
+                      96.16000366210938
+                    ],
+                    "low": [
+                      97.19999694824219,
+                      95.56999969482422,
+                      96.9800033569336,
+                      98.66000366210938,
+                      89.05999755859375
+                    ]
+                  }
+                ],
+                "adjclose": [
+                  {
+                    "adjclose": [
+                      99.22000122070312,
+                      97.9800033569336,
+                      100.9800033569336,
+                      99.94000244140625,
+                      90.26000213623047
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "error": null
+        }
+      }
+    },
+    "STRL": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/STRL?period1=1794641886&period2=1795331907&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "payload": {
+        "chart": {
+          "result": [
+            {
+              "meta": {
+                "currency": "USD",
+                "symbol": "STRL",
+                "exchangeName": "NMS",
+                "fullExchangeName": "NasdaqGS",
+                "instrumentType": "EQUITY",
+                "firstTradeDate": 679325400,
+                "regularMarketTime": 1795208401,
+                "hasPrePostMarketData": true,
+                "gmtoffset": -18000,
+                "timezone": "EST",
+                "exchangeTimezoneName": "America/New_York",
+                "regularMarketPrice": 247.92,
+                "regularMarketChangePercent": -9.27,
+                "fulldayPrice": 247.92,
+                "fulldayChange": -22.25,
+                "fulldayChangePercent": -8.143,
+                "fiftyTwoWeekHigh": 1005.68,
+                "fiftyTwoWeekLow": 239.36,
+                "regularMarketDayHigh": 269.0,
+                "regularMarketDayLow": 245.18,
+                "regularMarketVolume": 1144860,
+                "longName": "Sterling Infrastructure, Inc.",
+                "shortName": "Sterling Infrastructure, Inc.",
+                "chartPreviousClose": 292.39,
+                "priceHint": 2,
+                "currentTradingPeriod": {
+                  "pre": {
+                    "timezone": "EST",
+                    "end": 1795185000,
+                    "start": 1795165200,
+                    "gmtoffset": -18000
+                  },
+                  "regular": {
+                    "timezone": "EST",
+                    "end": 1795208400,
+                    "start": 1795185000,
+                    "gmtoffset": -18000
+                  },
+                  "post": {
+                    "timezone": "EST",
+                    "end": 1795222800,
+                    "start": 1795208400,
+                    "gmtoffset": -18000
+                  }
+                },
+                "dataGranularity": "1d",
+                "range": "",
+                "validRanges": [
+                  "1d",
+                  "5d",
+                  "1mo",
+                  "3mo",
+                  "6mo",
+                  "1y",
+                  "2y",
+                  "5y",
+                  "10y",
+                  "ytd",
+                  "max"
+                ]
+              },
+              "timestamp": [
+                1794839400,
+                1794925800,
+                1795012200,
+                1795098600,
+                1795185000
+              ],
+              "indicators": {
+                "quote": [
+                  {
+                    "high": [
+                      285.6499938964844,
+                      290.7099914550781,
+                      284.80999755859375,
+                      294.25,
+                      269.0
+                    ],
+                    "low": [
+                      272.1600036621094,
+                      266.5299987792969,
+                      270.6000061035156,
+                      269.05999755859375,
+                      245.17999267578125
+                    ],
+                    "open": [
+                      277.7699890136719,
+                      279.67999267578125,
+                      281.1099853515625,
+                      286.0,
+                      264.0
+                    ],
+                    "volume": [
+                      749500,
+                      726400,
+                      666700,
+                      647200,
+                      1144800
+                    ],
+                    "close": [
+                      275.1300048828125,
+                      275.260009765625,
+                      276.3599853515625,
+                      273.25,
+                      247.9199981689453
+                    ]
+                  }
+                ],
+                "adjclose": [
+                  {
+                    "adjclose": [
+                      275.1300048828125,
+                      275.260009765625,
+                      276.3599853515625,
+                      273.25,
+                      247.9199981689453
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "error": null
+        }
+      }
+    }
+  },
+  "failures": []
+}
