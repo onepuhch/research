@@ -16663,7 +16663,7 @@
     "validation_rejected": true
   },
   "0001628280-26-072172": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16674,15 +16674,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1818331/000162828026072172/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1818331/000162828026072172/exhibit992q32026earnings.htm",
       "published_at": "2026-11-09",
-      "raw_text": "GeneDx Holdings Corp. (WGS) (CIK 0001818331) EX-99.2 2026-11-09. Claims data provided by Definitive Healthcare Foundational Market 26 Pediatric specialists continue to drive high growth Significant share: Over 30% of pediatric neurologists now order from us with continued growth ahead Strong awareness: Greatest brand recognition of any genetics lab - over 80% of pediatric specialists know GeneDx Expanding our footprint: Continuing to add new call points and indications to serve the over 10,000 rare diseases Increased ordering and new customer activation driving expansion 1. EX-99.2 3 exhibit992q32026earnings.htm EX-99.2 exhibit992q32026earnings GeneDx Nasdaq: WGS Q3 2026 Earnings Presentation November 2026 Exhibit 99.2 2 Forward-Looking Statements This presentation contains “forward-looking statements” within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended, and the U.S. Private Securities Litigation Reform Act of 1995, including statements regarding our future performance and our market opportunity, including expectations for full year and fourth quarter 2026 revenue, exome and genome revenue and test volumes, adjusted gross margin and adjusted net income. These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions. Forward-looking statements are predictions, projections and other statements about future events that are based on current expectations and assumptions and, as a result, are subject to risks and uncertainties. Many factors could cause actual future events to differ materially from the forward-looking statements in this presentation, including but not limited to: (i) our ability to implement business plans, goals and forecasts, and identify and realize additional opportunities, (ii) the risk of dow"
+      "raw_text": "GeneDx Holdings Corp. (WGS) (CIK 0001818331) EX-99.2 2026-11-09. Claims data provided by Definitive Healthcare Foundational Market 26 Pediatric specialists continue to drive high growth Significant share: Over 30% of pediatric neurologists now order from us with continued growth ahead Strong awareness: Greatest brand recognition of any genetics lab - over 80% of pediatric specialists know GeneDx Expanding our footprint: Continuing to add new call points and indications to serve the over 10,000 rare diseases Increased ordering and new customer activation driving expansion 1. EX-99.2 3 exhibit992q32026earnings.htm EX-99.2 exhibit992q32026earnings GeneDx Nasdaq: WGS Q3 2026 Earnings Presentation November 2026 Exhibit 99.2 2 Forward-Looking Statements This presentation contains “forward-looking statements” within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended, and the U.S. Private Securities Litigation Reform Act of 1995, including statements regarding our future performance and our market opportunity, including expectations for full year and fourth quarter 2026 revenue, exome and genome revenue and test volumes, adjusted gross margin and adjusted net income. These forward-looking statements generally are identified by the words “believe,” “project,” “expect,” “anticipate,” “estimate,” “intend,” “strategy,” “future,” “opportunity,” “plan,” “may,” “should,” “will,” “would,” “will be,” “will continue,” “will likely result,” and similar expressions. Forward-looking statements are predictions, projections and other statements about future events that are based on current expectations and assumptions and, as a result, are subject to risks and uncertainties. Many factors could cause actual future events to differ materially from the forward-looking statements in this presentation, including but not limited to: (i) our ability to implement business plans, goals and forecasts, and identify and realize additional opportunities, (ii) the risk of dow",
+      "_model_response": {
+        "evidence_quote": "Significant share: Over 30% of pediatric neurologists now order from us with continued growth ahead Strong awareness: Greatest brand recognition of any genetics lab - over 80% of pediatric specialists know GeneDx Expanding our footprint: Continuing to add new call points and indications to serve the over 10,000 rare diseases Increased ordering and new customer activation driving expansion",
+        "axes_evidence": {
+          "underfollowed_pure_play": "GeneDx Nasdaq: WGS Q3 2026 Earnings Presentation",
+          "earnings_leverage": "Increased ordering and new customer activation driving expansion",
+          "supply_demand_tightness": "Pediatric specialists continue to drive high growth",
+          "structural_ai_demand": "",
+          "revision_momentum": "continued growth ahead",
+          "catalyst_visibility": "Increased ordering and new customer activation driving expansion"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "GeneDx Holdings Corp.",
+        "theme": "유전체 진단",
+        "signal_type": "수주/백로그",
+        "what_happened": "GeneDx가 소아과 전문의들로부터 유전체 검사 주문을 늘리고 신규 고객을 활성화하며 시장 점유율과 인지도를 확대하고 있습니다.",
+        "why_it_matters": "유전체 진단 시장에서 GeneDx가 소아과 분야에서 강력한 입지를 구축하고 있으며, 이는 향후 매출 성장과 시장 지배력 확대로 이어질 수 있는 조기 지표입니다.",
+        "what_to_watch": "다음 분기 유전체 검사량(test volumes) 및 신규 고객 확보 추이; 소아과 외 다른 전문 분야로의 확장 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "Pediatric specialists: 소아과 전문의 (어린이 질병을 전문으로 진료하는 의사); Exome and genome revenue: 엑솜 및 유전체 매출 (유전체 전체 또는 단백질을 만드는 유전자 영역(엑솜) 분석 서비스로 발생하는 매출)"
+      }
     },
     "content_hash": "8d09ffed37d131e0ab989a9bdabc0a8338df3887ca638890ec50fcf952d8ec0a",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-23T07:51:33+00:00",
+    "signal_id": "SIG-0963",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-23",
+    "processed_run": "45134023197-1"
   },
   "0001140361-26-042613": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16693,12 +16731,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/918251/000114036126042613/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/918251/000114036126042613/ef20084732_ex99-1.htm",
       "published_at": "2026-11-09",
-      "raw_text": "MOTORCAR PARTS OF AMERICA INC (MPAA) (CIK 0000918251) EX-99.1 2026-11-09. Management Commentary “Although our second-quarter results reflect delayed customer orders and some industry softness, we remain confident in the underlying aftermarket and in the substantial opportunities we are creating through new customer awards, geographic expansion and improved operating competitiveness,” said Selwyn Joffe, chairman, president and chief executive officer. “We have secured approximately $60 million in annualized new business awards from existing and new customers. He added that the company’s rotating electrical diagnostic testing equipment business continues to expand with existing and new customers, including new international markets. EX-99.1 2 ef20084732_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 NEWS RELEASE CONTACT: Gary S. Maier Vice President, Corporate Communications & IR (310) 972-5124 MOTORCAR PARTS OF AMERICA REPORTS FISCAL 2027 SECOND QUARTER RESULTS Approximately $60 Million in Annualized New Business Awarded; Shipments Beginning with Further Launches Expected This Fiscal Year LOS ANGELES, CA – November 9, 2026 – Motorcar Parts of America, Inc. (Nasdaq: MPAA) today reported financial results for its fiscal 2027 second quarter ended September 30, 2026. Results reflect delayed customer orders and launches of new business awards, requiring revised guidance for the fiscal year. The company expects increased sales for the second half of the current fiscal year compared with the same period a year ago. Positive Drivers ● Approximately $60 Million in New Annualized Customer Business Awards Received; All Awards are Expected to Start Shipping by Fiscal Year End ● Expects to Secure Approximately $25 Million of Additional New Annualized Customer Business Awards by Fiscal Year End ● North American Expansion, Centric Parts Brand Relaunch and Rotating Electrical Diagnostics Support Incremental Longer-Term Growth Opportunities Three-Month Results Net sales for the fiscal second q"
+      "raw_text": "MOTORCAR PARTS OF AMERICA INC (MPAA) (CIK 0000918251) EX-99.1 2026-11-09. Management Commentary “Although our second-quarter results reflect delayed customer orders and some industry softness, we remain confident in the underlying aftermarket and in the substantial opportunities we are creating through new customer awards, geographic expansion and improved operating competitiveness,” said Selwyn Joffe, chairman, president and chief executive officer. “We have secured approximately $60 million in annualized new business awards from existing and new customers. He added that the company’s rotating electrical diagnostic testing equipment business continues to expand with existing and new customers, including new international markets. EX-99.1 2 ef20084732_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 NEWS RELEASE CONTACT: Gary S. Maier Vice President, Corporate Communications & IR (310) 972-5124 MOTORCAR PARTS OF AMERICA REPORTS FISCAL 2027 SECOND QUARTER RESULTS Approximately $60 Million in Annualized New Business Awarded; Shipments Beginning with Further Launches Expected This Fiscal Year LOS ANGELES, CA – November 9, 2026 – Motorcar Parts of America, Inc. (Nasdaq: MPAA) today reported financial results for its fiscal 2027 second quarter ended September 30, 2026. Results reflect delayed customer orders and launches of new business awards, requiring revised guidance for the fiscal year. The company expects increased sales for the second half of the current fiscal year compared with the same period a year ago. Positive Drivers ● Approximately $60 Million in New Annualized Customer Business Awards Received; All Awards are Expected to Start Shipping by Fiscal Year End ● Expects to Secure Approximately $25 Million of Additional New Annualized Customer Business Awards by Fiscal Year End ● North American Expansion, Centric Parts Brand Relaunch and Rotating Electrical Diagnostics Support Incremental Longer-Term Growth Opportunities Three-Month Results Net sales for the fiscal second q",
+      "_model_response": {
+        "evidence_quote": "Management Commentary “Although our second-quarter results reflect delayed customer orders and some industry softness, we remain confident in the underlying aftermarket and in the substantial opportunities we are creating through new customer awards, geographic expansion and improved operating competitiveness,” said Selwyn Joffe, chairman, president and chief executive officer. “We have secured approximately $60 million in annualized new business awards from existing and new customers. He added that the company’s rotating electrical diagnostic testing equipment business continues to expand with existing and new customers, including new international markets. ... Approximately $60 Million in New Annualized Customer Business Awards Received; All Awards are Expected to Start Shipping by Fiscal Year End ● Expects to Secure Approximately $25 Million of Additional New Annualized Customer Business Awards by Fiscal Year End",
+        "axes_evidence": {
+          "underfollowed_pure_play": "MOTORCAR PARTS OF AMERICA INC (MPAA) (CIK 0000918251)",
+          "earnings_leverage": "Approximately $60 Million in Annualized New Business Awarded; ... The company expects increased sales for the second half of the current fiscal year compared with the same period a year ago.",
+          "supply_demand_tightness": "Although our second-quarter results reflect delayed customer orders and some industry softness, we remain confident in the underlying aftermarket and in the substantial opportunities we are creating through new customer awards",
+          "structural_ai_demand": "",
+          "revision_momentum": "Results reflect delayed customer orders and launches of new business awards, requiring revised guidance for the fiscal year. ... Approximately $60 Million in New Annualized Customer Business Awards Received; All Awards are Expected to Start Shipping by Fiscal Year End",
+          "catalyst_visibility": "All Awards are Expected to Start Shipping by Fiscal Year End ● Expects to Secure Approximately $25 Million of Additional New Annualized Customer Business Awards by Fiscal Year End"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MPAA",
+        "theme": "자동차 부품",
+        "signal_type": "수주/백로그",
+        "what_happened": "Motorcar Parts of America가 약 6천만 달러 규모의 신규 연간 사업 수주를 확보했으며, 회계연도 말까지 추가로 약 2천5백만 달러 규모의 신규 수주를 기대하고 있다.",
+        "why_it_matters": "현재 지연된 주문과 산업 약세에도 불구하고, 신규 수주 확보는 향후 매출 성장 동력을 제공하며 시장의 우려를 상쇄할 잠재력이 있다.",
+        "what_to_watch": "신규 수주 물량의 실제 출하 시작 시점 및 매출 기여도, 그리고 추가 2천5백만 달러 수주 확정 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "애프터마켓: 자동차 제조사 보증 기간 이후의 부품 교체 및 수리 시장."
+      }
     },
     "content_hash": "de6def18b93a2c75a7876f6700da301eaf28fe4f3357b3433cb40e3df9645f99",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-23T07:51:50+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001437749-26-035892": {
     "status": "rejected",
@@ -16882,7 +16956,7 @@
     "updated_at": "2026-11-11T06:41:27.864026+00:00"
   },
   "0001437749-26-036186": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16893,15 +16967,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/882508/000143774926036186/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/882508/000143774926036186/ex_1014693.htm",
       "published_at": "2026-11-10",
-      "raw_text": "QUICKLOGIC Corp (QUIK) (CIK 0000882508) EX-99.1 2026-11-10. Recent Highlights • Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology • Expanded our eFPGA IP portfolio with a new 12LP core featuring enhanced DSP capabilities, scalability beyond 250,000 LUTs, and optional configuration-bit health monitoring for improved reliability in mission-critical applications • Appointed James Sullivan as Senior Vice President of Finance and Chief Financial Officer “Our recent automotive and industrial design win is a strong validation of our eFPGA technology,\" said Brian Faith, CEO of QuickLogic. EX-99.1 2 ex_1014693.htm EXHIBIT 99.1 ex_1014693.htm Exhibit 99.1 QuickLogic Reports Fiscal Third Quarter 2026 Financial Results SAN JOSE, Calif. – November 10, 2026 - QuickLogic® Corporation (NASDAQ: QUIK) (“QuickLogic” or the “Company”), a developer of embedded FPGA (\"eFPGA\") Hard IP, Strategic Radiation Hardened and Antifuse FPGAs, and ruggedized programmable logic solutions, today announced its financial results for the fiscal third quarter ended September 27, 2026 . Recent Highlights • Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology • Expanded our eFPGA IP portfolio with a new 12LP core featuring enhanced DSP capabilities, scalability beyond 250,000 LUTs, and optional configuration-bit health monitoring for improved reliability in mission-critical applications • Appointed James Sullivan as Senior Vice President of Finance and Chief Financial Officer “Our recent automotive and industrial design win is a strong validation of our eFPGA technology,\" said Brian Faith, CEO of QuickLogic. \"Combined with our latest eFPGA Hard IP advancements and continued progress on the U.S. strategic radiation-hardened FPGA program, w"
+      "raw_text": "QUICKLOGIC Corp (QUIK) (CIK 0000882508) EX-99.1 2026-11-10. Recent Highlights • Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology • Expanded our eFPGA IP portfolio with a new 12LP core featuring enhanced DSP capabilities, scalability beyond 250,000 LUTs, and optional configuration-bit health monitoring for improved reliability in mission-critical applications • Appointed James Sullivan as Senior Vice President of Finance and Chief Financial Officer “Our recent automotive and industrial design win is a strong validation of our eFPGA technology,\" said Brian Faith, CEO of QuickLogic. EX-99.1 2 ex_1014693.htm EXHIBIT 99.1 ex_1014693.htm Exhibit 99.1 QuickLogic Reports Fiscal Third Quarter 2026 Financial Results SAN JOSE, Calif. – November 10, 2026 - QuickLogic® Corporation (NASDAQ: QUIK) (“QuickLogic” or the “Company”), a developer of embedded FPGA (\"eFPGA\") Hard IP, Strategic Radiation Hardened and Antifuse FPGAs, and ruggedized programmable logic solutions, today announced its financial results for the fiscal third quarter ended September 27, 2026 . Recent Highlights • Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology • Expanded our eFPGA IP portfolio with a new 12LP core featuring enhanced DSP capabilities, scalability beyond 250,000 LUTs, and optional configuration-bit health monitoring for improved reliability in mission-critical applications • Appointed James Sullivan as Senior Vice President of Finance and Chief Financial Officer “Our recent automotive and industrial design win is a strong validation of our eFPGA technology,\" said Brian Faith, CEO of QuickLogic. \"Combined with our latest eFPGA Hard IP advancements and continued progress on the U.S. strategic radiation-hardened FPGA program, w",
+      "_model_response": {
+        "evidence_quote": "Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology",
+        "axes_evidence": {
+          "underfollowed_pure_play": "QuickLogic® Corporation (NASDAQ: QUIK) (“QuickLogic” or the “Company”), a developer of embedded FPGA (\"eFPGA\") Hard IP, Strategic Radiation Hardened and Antifuse FPGAs, and ruggedized programmable logic solutions",
+          "earnings_leverage": "Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology",
+          "supply_demand_tightness": "Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Secured a six-figure eFPGA Hard IP design win for an automotive industrial SoC targeting battery management, precision motor control, and robotic applications on a 16nm process technology"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "eFPGA",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "QUIK",
+        "theme": "eFPGA, Automotive, Industrial IoT",
+        "signal_type": "신규고객",
+        "what_happened": "QuickLogic이 자동차 및 산업용 SoC 시장에서 배터리 관리, 정밀 모터 제어, 로봇 애플리케이션을 위한 16nm 공정 기반 eFPGA Hard IP 디자인 윈을 확보했다.",
+        "why_it_matters": "이는 QuickLogic의 eFPGA 기술이 고성장 자동차 및 산업용 시장에서 새로운 고객사를 확보하며 미래 매출 성장의 기반을 마련했음을 보여주는 조기 신호이다.",
+        "what_to_watch": "해당 디자인 윈의 구체적인 고객사 정보 및 양산 시점, 그리고 추가적인 디자인 윈 확보 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "eFPGA: 임베디드 FPGA (Field-Programmable Gate Array)로, SoC(System-on-Chip) 내부에 통합되어 유연한 하드웨어 재구성을 가능하게 하는 기술.\n디자인 윈 (Design Win): 반도체 또는 부품 공급사가 고객사의 신제품 설계에 자사 제품이 채택되도록 성공하는 것을 의미하며, 향후 대량 생산으로 이어질 잠재적 매출을 나타내는 조기 지표."
+      }
     },
     "content_hash": "e7d19ee84cc211e997b35ccbc5119edd72e9691f6bfc6ce2f922af7ac3184032",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-23T07:52:08+00:00",
+    "signal_id": "SIG-0964",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-23",
+    "processed_run": "45134023197-1"
   },
   "0001049521-26-000096": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16912,15 +17024,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1049521/000104952126000096/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1049521/000104952126000096/q1fy27earningspresentati.htm",
       "published_at": "2026-11-10",
-      "raw_text": "MERCURY SYSTEMS INC (MRCY) (CIK 0001049521) EX-99.2 2026-11-10. /Mercury Proprietary/No Tech Data/ Business and results ▪ Our Q1 results reflect robust organic growth and margins that are in-line with our target profile: • Record Q1 bookings of $370M, up 48.0% year-over-year; a 1.46 book-to-bill, record backlog of $2.1B, and record next-12-month backlog of over $1B. ▪ Our progress in scaling efficiently, combined with strong bookings and record backlog, have resulted in organic growth above our prior expectation for Q1, and a raised outlook for the full year. ▪ Finally, while we are not updating today the FY28 reference points that we provided last quarter, our record Q1 performance, record backlog, and improving visibility gives us increasing confidence in our outlook beyond FY27. EX-99.2 3 q1fy27earningspresentati.htm EX-99.2 q1fy27earningspresentati © Mercury Systems, Inc. WEBCAST LOGIN AT WWW.MRCY.COM/INVESTOR WEBCAST REPLAY AVAILABLE BY 7:00 P.M. ET NOVEMBER 10, 2026 Bill Ballhaus Chairman and CEO David Farnsworth Executive Vice President, CFO, and COO November 10, 2026, 5:00 pm ET FIRST QUARTER FISCAL YEAR 2027 FINANCIAL RESULTS 1 © Mercury Systems, Inc. /Mercury Proprietary/No Tech Data/ Forward-looking safe harbor statement This presentation contains certain forward-looking statements, as that term is defined in the Private Securities Litigation Reform Act of 1995, including those relating to the Company's focus on enhanced execution of the Company's strategic plan. You can identify these statements by the words “may,” “will,” “could,” “should,” “would,” “plans,” “expects,” “anticipates,” “continue,” “estimate,” “project,” “intend,” “likely,” “forecast,” “probable,” “potential,” and similar expressions. These forward-looking statements involve risks and uncertainties that could cause actual results to differ materially from those projected or anticipated. Such risks and uncertainties include, but are not limited to, cost increases, our inability to increase "
+      "raw_text": "MERCURY SYSTEMS INC (MRCY) (CIK 0001049521) EX-99.2 2026-11-10. /Mercury Proprietary/No Tech Data/ Business and results ▪ Our Q1 results reflect robust organic growth and margins that are in-line with our target profile: • Record Q1 bookings of $370M, up 48.0% year-over-year; a 1.46 book-to-bill, record backlog of $2.1B, and record next-12-month backlog of over $1B. ▪ Our progress in scaling efficiently, combined with strong bookings and record backlog, have resulted in organic growth above our prior expectation for Q1, and a raised outlook for the full year. ▪ Finally, while we are not updating today the FY28 reference points that we provided last quarter, our record Q1 performance, record backlog, and improving visibility gives us increasing confidence in our outlook beyond FY27. EX-99.2 3 q1fy27earningspresentati.htm EX-99.2 q1fy27earningspresentati © Mercury Systems, Inc. WEBCAST LOGIN AT WWW.MRCY.COM/INVESTOR WEBCAST REPLAY AVAILABLE BY 7:00 P.M. ET NOVEMBER 10, 2026 Bill Ballhaus Chairman and CEO David Farnsworth Executive Vice President, CFO, and COO November 10, 2026, 5:00 pm ET FIRST QUARTER FISCAL YEAR 2027 FINANCIAL RESULTS 1 © Mercury Systems, Inc. /Mercury Proprietary/No Tech Data/ Forward-looking safe harbor statement This presentation contains certain forward-looking statements, as that term is defined in the Private Securities Litigation Reform Act of 1995, including those relating to the Company's focus on enhanced execution of the Company's strategic plan. You can identify these statements by the words “may,” “will,” “could,” “should,” “would,” “plans,” “expects,” “anticipates,” “continue,” “estimate,” “project,” “intend,” “likely,” “forecast,” “probable,” “potential,” and similar expressions. These forward-looking statements involve risks and uncertainties that could cause actual results to differ materially from those projected or anticipated. Such risks and uncertainties include, but are not limited to, cost increases, our inability to increase ",
+      "_model_response": {
+        "evidence_quote": "Our Q1 results reflect robust organic growth and margins that are in-line with our target profile: • Record Q1 bookings of $370M, up 48.0% year-over-year; a 1.46 book-to-bill, record backlog of $2.1B, and record next-12-month backlog of over $1B. ▪ Our progress in scaling efficiently, combined with strong bookings and record backlog, have resulted in organic growth above our prior expectation for Q1, and a raised outlook for the full year.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "MERCURY SYSTEMS INC (MRCY)",
+          "earnings_leverage": "Our Q1 results reflect robust organic growth and margins that are in-line with our target profile: • Record Q1 bookings of $370M, up 48.0% year-over-year; a 1.46 book-to-bill, record backlog of $2.1B, and record next-12-month backlog of over $1B. ▪ Our progress in scaling efficiently, combined with strong bookings and record backlog, have resulted in organic growth above our prior expectation for Q1",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "raised outlook for the full year.",
+          "catalyst_visibility": "record backlog of $2.1B, and record next-12-month backlog of over $1B."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "MRCY",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "Mercury Systems가 1분기 기록적인 수주액 3.7억 달러와 21억 달러의 백로그를 달성하며, 연간 실적 전망을 상향 조정했습니다.",
+        "why_it_matters": "기록적인 수주와 백로그는 향후 몇 년간의 안정적인 매출 기반을 확보했음을 의미하며, 이는 기업의 성장 잠재력과 시장 지배력 강화를 시사합니다.",
+        "what_to_watch": "다음 분기 수주액 및 백로그의 지속적인 증가 여부와 실제 매출액으로의 전환율.",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "Book-to-bill: 수주액을 매출액으로 나눈 비율로, 1보다 크면 수주잔고가 증가함을 의미합니다.\nBacklog: 기업이 계약했지만 아직 수행하지 않은 주문 잔고를 의미합니다."
+      }
     },
     "content_hash": "d2c9f5abfea0a30b6e4e9b0e61a4a0470186e7c0ef52547e30702d7619989308",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-23T07:52:29+00:00",
+    "signal_id": "SIG-0965",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-23",
+    "processed_run": "45134023197-1"
   },
   "0001193125-26-453913": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16931,12 +17081,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1521036/000119312526453913/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1521036/000119312526453913/d166239d8k.htm",
       "published_at": "2026-11-10",
-      "raw_text": "Lantheus Holdings, Inc. (LNTH) (CIK 0001521036) 8-K 2026-11-10. In addition, the parties will enter into a long-term supply agreement under which PharmaLogic’s therapeutic CDMO franchise, Agilera, will manufacture lutetium Lu 177 dotatate for the Company. 8-K false 0001521036 0001521036 2026-11-08 2026-11-08 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): November 8, 2026 LANTHEUS HOLDINGS, INC. (Exact name of Registrant as Specified in Its Charter) Delaware 001-36569 35-2318913 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 201 Burlington Road South Building Bedford , Massachusetts 01730 (Address of Principal Executive Offices) (Zip Code) Registrant’s Telephone Number, Including Area Code: (978) 671-8001 Not Applicable (Former Name or Former Address, if Changed Since Last Report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common stock, par value $0.01 per share LNTH The Nasdaq Global Market Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§ 230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 ("
+      "raw_text": "Lantheus Holdings, Inc. (LNTH) (CIK 0001521036) 8-K 2026-11-10. In addition, the parties will enter into a long-term supply agreement under which PharmaLogic’s therapeutic CDMO franchise, Agilera, will manufacture lutetium Lu 177 dotatate for the Company. 8-K false 0001521036 0001521036 2026-11-08 2026-11-08 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, D.C. 20549 FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): November 8, 2026 LANTHEUS HOLDINGS, INC. (Exact name of Registrant as Specified in Its Charter) Delaware 001-36569 35-2318913 (State or Other Jurisdiction of Incorporation) (Commission File Number) (IRS Employer Identification No.) 201 Burlington Road South Building Bedford , Massachusetts 01730 (Address of Principal Executive Offices) (Zip Code) Registrant’s Telephone Number, Including Area Code: (978) 671-8001 Not Applicable (Former Name or Former Address, if Changed Since Last Report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: ☐ Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) ☐ Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) ☐ Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) ☐ Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common stock, par value $0.01 per share LNTH The Nasdaq Global Market Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (§ 230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (",
+      "_model_response": {
+        "evidence_quote": "In addition, the parties will enter into a long-term supply agreement under which PharmaLogic’s therapeutic CDMO franchise, Agilera, will manufacture lutetium Lu 177 dotatate for the Company.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "long-term supply agreement under which PharmaLogic’s therapeutic CDMO franchise, Agilera, will manufacture lutetium Lu 177 dotatate for the Company.",
+          "supply_demand_tightness": "long-term supply agreement under which PharmaLogic’s therapeutic CDMO franchise, Agilera, will manufacture lutetium Lu 177 dotatate for the Company.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "FORM 8-K CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (Date of earliest event reported): November 8, 2026"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "radiopharmaceutical CDMO",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Lantheus Holdings, Inc. (LNTH)",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "Lantheus Holdings가 PharmaLogic의 Agilera와 루테튬 Lu 177 도타테이트 제조를 위한 장기 공급 계약을 체결했다.",
+        "why_it_matters": "Lantheus는 핵심 치료제의 안정적인 공급망을 확보하고, PharmaLogic/Agilera는 CDMO 사업의 중요한 수주를 확보하여 향후 실적 성장의 기반을 마련했다.",
+        "what_to_watch": "Lantheus의 루테튬 Lu 177 도타테이트 관련 매출 성장 및 PharmaLogic/Agilera의 CDMO 사업부 실적 발표.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 6,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "루테튬 Lu 177 도타테이트: 특정 암 치료에 사용되는 방사성 의약품입니다. CDMO: 계약 개발 및 제조 조직으로, 제약 회사를 대신하여 의약품 개발 및 제조 서비스를 제공합니다."
+      }
     },
     "content_hash": "4fd1bd8a6e58c749d435b70321eff981405d99772d838911f6bacef4237417fd",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-23T07:52:49+00:00",
+    "signal_id": "SIG-0966",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-23",
+    "processed_run": "45134023197-1"
   },
   "0001038074-26-000033": {
     "status": "deferred",

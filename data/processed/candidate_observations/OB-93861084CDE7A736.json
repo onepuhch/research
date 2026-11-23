@@ -1,0 +1,85 @@
+{
+  "observation_id": "OB-93861084CDE7A736",
+  "candidate_id": "CAN-36582E27909720FE",
+  "candidate_version": "CV-662044CFEDC865C9",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:CODI",
+    "ticker": "CODI",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-23T08:03:13+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261123T075252Z_45134023197-1.json.gz",
+    "sha256": "66133da0b60542673c1b2f1c3ec23ec6bfc1e926437114e1e8ac69118520d786",
+    "run_id": "45134023197-1",
+    "finished_at": "2026-11-23T08:06:44+00:00"
+  },
+  "eps": {
+    "eps_now": 0.9,
+    "eps_30d": 0.67,
+    "eps_90d": 0.554,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 4,
+    "down30": 1,
+    "pct_90": 62.5,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 2.886,
+    "yield_change_30_pp": 1.918
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-25",
+    "price_start_date": "2026-08-25",
+    "price_end_expected": "2026-11-20",
+    "price_end_date": "2026-11-20",
+    "close_start": 11.520000457763672,
+    "close_end": 11.989999771118164,
+    "price_pct_90": 4.1,
+    "adj_return_pct_90": 4.1,
+    "pe_change_pct": -35.9
+  },
+  "display_rank": 21,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 14
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 902079232,
+  "context_id": "CTX-5A08910F090C303D",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-17T08:20:32+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-5A08910F090C303D",
+    "generated_at": "2026-11-05T12:05:55+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:CODI",
+  "approval_version": null,
+  "rendered_at": "2026-11-23T08:06:48+00:00"
+}
