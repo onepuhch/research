@@ -3174,12 +3174,20 @@
       "observation_id": null,
       "signal_id": "SIG-0966",
       "day": "2026-11-23",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-23T08:06:56+00:00",
+          "status": "sent",
+          "message_id": 266,
+          "error": null
+        }
+      ],
       "reserved_by": "45134023197-1",
       "reserved_at": "2026-11-23T08:06:53+00:00",
       "payload_text": "📡 새 발굴 신호 · 2026-11-23\n\n<b>🅱️ Lantheus Holdings, Inc. (LNTH) · 6/12점</b>\nSIG-0966 · 검토 우선순위 B · 미분류\n근거: contracted · 변화 방향: positive\n\n· 무슨 일: Lantheus Holdings가 PharmaLogic의 Agilera와 루테튬 Lu 177 도타테이트 제조를 위한 장기 공급 계약을 체결했다.\n· 왜 중요: Lantheus는 핵심 치료제의 안정적인 공급망을 확보하고, PharmaLogic/Agilera는 CDMO 사업의 중요한 수주를 확보하여 향후 실적 성장의 기반을 마련했다.\n· 볼 것: Lantheus의 루테튬 Lu 177 도타테이트 관련 매출 성장 및 PharmaLogic/Agilera의 CDMO 사업부 실적 발표.\n· 용어: 루테튬 Lu 177 도타테이트: 특정 암 치료에 사용되는 방사성 의약품입니다. CDMO: 계약 개발 및 제조 조직으로, 제약 회사를 대신하여 의약품 개발 및 제조 서비스를 제공합니다.\n출처: <a href=\"https://www.sec.gov/Archives/edgar/data/1521036/000119312526453913/d166239d8k.htm\">SEC EDGAR</a> (2026-11-10)\n\n추적 <code>/track SIG-0966</code>",
-      "payload_sha256": "763d0b37b0cbc26b4c8dd2497a8eca7d690466b54d5d6471292a279674ee0808"
+      "payload_sha256": "763d0b37b0cbc26b4c8dd2497a8eca7d690466b54d5d6471292a279674ee0808",
+      "message_id": 266
     }
   },
   "bootstrap": {
