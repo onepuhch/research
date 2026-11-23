@@ -436,13 +436,17 @@
     "2026-11-22": {
       "requests": 3,
       "retries": 0
+    },
+    "2026-11-23": {
+      "requests": 3,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 48,
-      "last_attempt_at": "2026-11-22T07:18:27.625323+00:00",
+      "attempts": 49,
+      "last_attempt_at": "2026-11-23T08:07:01.940599+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -2369,16 +2373,16 @@
       "reason": null
     },
     "ACLS": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-22T07:18:27.625323+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-23T08:07:01.940599+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
       "reason": null
     },
     "STRL": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-22T07:18:27.625323+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-23T08:07:01.940599+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
