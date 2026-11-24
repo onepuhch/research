@@ -1,0 +1,100 @@
+{
+  "observation_id": "OB-2CBE6CA51DC71BED",
+  "candidate_id": "CAN-3BD5E965B73FD420",
+  "candidate_version": "CV-B1A2B66DEB968893",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:STNG",
+    "ticker": "STNG",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-24T10:09:54+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261124T100336Z_45370908266-1.json.gz",
+    "sha256": "4aea4887d6baec57f4eafe2b079beb315481616d0a8459022c250b3af7bba27c",
+    "run_id": "45370908266-1",
+    "finished_at": "2026-11-24T10:17:30+00:00"
+  },
+  "eps": {
+    "eps_now": 8.51621,
+    "eps_30d": 6.73105,
+    "eps_90d": 5.35684,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 8,
+    "down30": 1,
+    "pct_90": 59.0,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.997,
+    "yield_change_30_pp": 2.258
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-26",
+    "price_start_date": "2026-08-26",
+    "price_end_expected": "2026-11-23",
+    "price_end_date": "2026-11-23",
+    "close_start": 74.8499984741211,
+    "close_end": 79.05000305175781,
+    "price_pct_90": 5.6,
+    "adj_return_pct_90": 6.6,
+    "pe_change_pct": -33.6
+  },
+  "display_rank": 21,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 15
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 4037783296,
+  "context_id": "CTX-9C47C1E217B4FDDF",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "partial",
+  "source_failures": 1,
+  "source_failure_reasons": [
+    "0001628280-26-067899 index 404"
+  ],
+  "source_attempt_at": "2026-11-24T10:17:35+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": {
+    "industry": "Oil & Gas Midstream",
+    "count": 8,
+    "shown": [
+      "VG",
+      "FRO",
+      "STNG",
+      "DHT"
+    ],
+    "folded": [
+      "INSW",
+      "CMBT"
+    ],
+    "outside": [
+      "LNG",
+      "CQP"
+    ]
+  },
+  "entity_id": "NYSE:STNG",
+  "approval_version": null,
+  "rendered_at": "2026-11-24T10:18:00+00:00"
+}

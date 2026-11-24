@@ -1,0 +1,90 @@
+{
+  "observation_id": "OB-9B417BC4FA3552BD",
+  "candidate_id": "CAN-53CAB32910212188",
+  "candidate_version": "CV-25B7DE1344B8928A",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NASDAQ:MSTR",
+    "ticker": "MSTR",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-24T10:05:34+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261124T100336Z_45370908266-1.json.gz",
+    "sha256": "4aea4887d6baec57f4eafe2b079beb315481616d0a8459022c250b3af7bba27c",
+    "run_id": "45370908266-1",
+    "finished_at": "2026-11-24T10:17:30+00:00"
+  },
+  "eps": {
+    "eps_now": 21.34548,
+    "eps_30d": 13.04459,
+    "eps_90d": 1.01899,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 9,
+    "up30": 3,
+    "down30": 2,
+    "pct_90": 1994.8,
+    "steady": false,
+    "turnaround": false,
+    "yield_change_90_pp": 24.084,
+    "yield_change_30_pp": 9.835
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-26",
+    "price_start_date": "2026-08-26",
+    "price_end_expected": "2026-11-23",
+    "price_end_date": "2026-11-23",
+    "close_start": 123.19000244140625,
+    "close_end": 84.4000015258789,
+    "price_pct_90": -31.5,
+    "adj_return_pct_90": -31.5,
+    "pe_change_pct": -96.7
+  },
+  "display_rank": 1,
+  "memberships": [
+    {
+      "list": "A",
+      "rank": 1
+    },
+    {
+      "list": "B",
+      "rank": 1
+    }
+  ],
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 35724972032,
+  "context_id": "CTX-7CF998B754968F70",
+  "research_status": "draft_ready",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-22T07:17:58+00:00",
+  "source_status": "success",
+  "last_valid_context": {
+    "context_id": "CTX-7CF998B754968F70",
+    "generated_at": "2026-11-13T07:12:03+00:00",
+    "eps_target_period": "2027-12-31"
+  },
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NASDAQ:MSTR",
+  "approval_version": null,
+  "rendered_at": "2026-11-24T10:18:00+00:00"
+}

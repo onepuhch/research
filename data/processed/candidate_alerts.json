@@ -3232,26 +3232,7 @@
   },
   "material": {
     "version": "material-update-v3",
-    "pending": {
-      "NYSE:VLO|eps-revision-review:v1": {
-        "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
-        "first": {
-          "observation_id": "OB-9FCC822D255573CB",
-          "baseline_id": "OB-9FCC822D255573CB",
-          "observed_at": "2026-10-27T05:30:44+00:00",
-          "day": "2026-10-27",
-          "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
-          "eps_now": 52.99214,
-          "comparison_key": [
-            "eps_next_fy_per_share",
-            "2027-12-31",
-            "Yahoo Finance earningsTrend (+1y)",
-            "USD",
-            "provider-unspecified"
-          ]
-        }
-      }
-    },
+    "pending": {},
     "rebases": {
       "NASDAQ:MU|eps-revision-review:v1": {
         "observation_id": "OB-F33774954D06D02F",
@@ -3358,6 +3339,29 @@
             "day": "2026-11-14",
             "snapshot_sha256": "743d3e9c74781b0695764626cc8750231e8cab96b46571f5446eef210123a8d8",
             "eps_now": 3.375,
+            "comparison_key": [
+              "eps_next_fy_per_share",
+              "2027-12-31",
+              "Yahoo Finance earningsTrend (+1y)",
+              "USD",
+              "provider-unspecified"
+            ]
+          }
+        }
+      },
+      {
+        "entity": "NYSE:VLO|eps-revision-review:v1",
+        "reason": "not_in_current_screen",
+        "at": "2026-11-24T10:18:07+00:00",
+        "pending": {
+          "baseline_id": "bootstrap:2026-09-25:48e01e7fb156",
+          "first": {
+            "observation_id": "OB-9FCC822D255573CB",
+            "baseline_id": "OB-9FCC822D255573CB",
+            "observed_at": "2026-10-27T05:30:44+00:00",
+            "day": "2026-10-27",
+            "snapshot_sha256": "380529c2ed225d5269253e37c6310b6b6cf3ac4e8b1eab79127bce5b7f01416c",
+            "eps_now": 52.99214,
             "comparison_key": [
               "eps_next_fy_per_share",
               "2027-12-31",

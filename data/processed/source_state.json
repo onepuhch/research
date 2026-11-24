@@ -16539,7 +16539,7 @@
     "processed_run": "42775409704-1"
   },
   "0001630805-26-000080": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16555,7 +16555,8 @@
     "content_hash": "872e3a142868117a7259a2e8edcedfe7d2d73eb282737dc877b6e85516e84c13",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-10T07:28:44.152360+00:00"
+    "updated_at": "2026-11-24T10:03:18.178905+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001493152-26-050810": {
     "status": "rejected",
@@ -17161,8 +17162,12 @@
     },
     "content_hash": "474e614bc554461c0b03962b25c37f3604cff8bdfd58dba91ae1808f26136050",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-24T10:03:30+00:00",
+    "reason": "provider_overloaded",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-24",
+    "failure_run": "45370908266-1"
   },
   "0001193125-26-454502": {
     "status": "accepted",
@@ -17657,7 +17662,7 @@
     "reason": "missing, future, or stale publication date"
   },
   "0001821159-26-000032": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17673,7 +17678,8 @@
     "content_hash": "b4febb47ed73d9473ba1d9efb64ec7bf4f6cc6e053ab9c3e22d1949b690a9486",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+    "updated_at": "2026-11-24T10:03:18.178905+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-449893": {
     "status": "rejected",
@@ -18513,7 +18519,7 @@
     "reason": "missing, future, or stale publication date"
   },
   "0001013871-26-000022": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18529,7 +18535,8 @@
     "content_hash": "a23c098f1f71ce7f84aaf30738d7d8a1a02c15f6a60d2fe0cb1e8e71bb2a8a06",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-24T10:03:18.178905+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-454094": {
     "status": "rejected",
@@ -18582,7 +18589,7 @@
     "processed_run": "43381924530-1"
   },
   "0001628280-26-071942": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18598,7 +18605,8 @@
     "content_hash": "b048d1d29c39de0accce6e86df3e3730ecd8ec02e7984ac58ecfe0df9aaf27cd",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-24T10:03:18.178905+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-460685": {
     "status": "accepted",
@@ -19703,5 +19711,144 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-21T07:22:21.950804+00:00"
+  },
+  "0001868941-26-000056": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001868941-26-000056",
+      "entity_id": "CIK:0001868941",
+      "source_role": "candidate",
+      "title": "Fluence Energy, Inc. (FLNC) (CIK 0001868941) EX-99.1 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/1868941/000186894126000056/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1868941/000186894126000056/flncq4andfullfy26earningsp.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "Fluence Energy, Inc. (FLNC) (CIK 0001868941) EX-99.1 2026-11-23. The Company's newly constituted executive management team continues to work diligently to both sharpen execution and maintain current momentum on order intake, driven by Smartstack's differentiated technology, high energy density, and modular architecture. Fiscal Year 2026 Financial Highlights • Order intake of more than $6.2 billion for fiscal year 2026 including $3.5 billion signed during the fourth quarter, more than double the levels of fourth quarter and fiscal year 2025 respectively, and representing the largest amounts in the Company's history. All statements other than statements of historical facts contained in this press release and on our earnings call are intended to be forward-looking statements, including, without limitation, statements regarding the Company's future results of operations and financial position, including expectations regarding revenue growth and cash generation, operational performance, the Company's transformation strategy and its expected benefit, expectations related to backlog, pipeline, order intake, and contracted backlog, expectations regarding Smartstack and other new product offerings, expectations regarding customer demand for Company products and solutions, expectations regarding our contract manufacturing partners and related facilities, potential impact from delays in ramp up of production facilities, associated project delays, and cost overruns, and beliefs, assumptions, prospects, plans and objectives of management and timing associated therewith. These forward-looking statements are subject to a number of risks, uncertainties and other important factors that could cause actual results to differ materially from those in the forward-looking statements, including, but are not limited to, manufacturing delays, supply chain disruptions, quality issues and production constraints; the development, delivery, installation, commissioning and interconnection of ener"
+    },
+    "content_hash": "4830eab0c1798adc0dbdd9b5239d8ef5773a954aac82f277d1ec9206d2349d1a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-24T10:03:18.178905+00:00"
+  },
+  "0001493152-26-053832": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-053832",
+      "entity_id": "CIK:0002033264",
+      "source_role": "candidate",
+      "title": "Vertical Data Inc. (VDTA) (CIK 0002033264) EX-99.1 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/2033264/000149315226053832/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2033264/000149315226053832/ex99-1.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "Vertical Data Inc. (VDTA) (CIK 0002033264) EX-99.1 2026-11-23. data center capacity expansion. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 Vertical Data Completes 4.7 MW Swedish Data Center Transaction Through Vertical Edge Joint Venture Transaction marks Vertical Edge’s Nordic expansion alongside a major global institutional investment partner LAS VEGAS, NV / ACCESS Newswire / November 23, 2026 / Vertical Data Inc. (OTCQB: VDTA) (“Vertical Data” or the “Company”), a vertically integrated AI infrastructure company providing GPU financing, AI hardware, sovereign cloud and edge data center solutions, today announced that it has completed a transaction bringing its recently acquired 4.7 MW data center project in central Sweden into a joint venture involving Vertical Edge and affiliates of a major global private equity investment firm. Vertical Edge is the Company’s data center investment and development platform, through which it participates in the ownership, development, leasing and management of data center projects in North America and Europe. The transaction follows Vertical Data’s September 2026 acquisition of the Hamre property for approximately $6.2 million and advances the Company’s strategy of sourcing data center assets and partnering with institutional investors to pursue their development through the Vertical Edge platform. The transaction included the sale of a 95% interest in the Hamre project company by Vertical Data’s majority-owned Swedish subsidiary, which retained the remaining 5%. In connection with the transaction, Vertical Data and its subsidiary received approximately $5.8 million in cash, including amounts received in September 2026. “Through Vertical Edge, we are building a portfolio of data center investment and development opportunities across major markets in North America and Europe. Bringing our Swedish project into a joint venture with a major institutional investment partner advances this strategy and establishes a foundation for pursuing"
+    },
+    "content_hash": "914c96cab9bfc38a08c3d6de627488d4a16c667021f56ecafd6abcdbcf8e9c91",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-24T10:03:18.178905+00:00"
+  },
+  "0000088941-26-000045": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000088941-26-000045",
+      "entity_id": "CIK:0000088941",
+      "source_role": "candidate",
+      "title": "SEMTECH CORP (SMTC) (CIK 0000088941) EX-99.1 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/88941/000008894126000045/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/88941/000008894126000045/smtc-10252026x8k991.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "SEMTECH CORP (SMTC) (CIK 0000088941) EX-99.1 2026-11-23. \"We expect that momentum to continue into Q4 and fiscal year 2028, broadly supported by the record backlog in our FiberEdge, CopperEdge and photonics solutions. EX-99.1 2 smtc-10252026x8k991.htm EX-99.1 Document Exhibit 99.1 FOR IMMEDIATE RELEASE Contact: Mitch Haws Semtech Corporation webir@semtech.com Semtech Announces Third Quarter of Fiscal Year 2027 Results • Record net sales of $423.0 million, up 24% sequentially and up 58% year-over-year • GAAP gross margin of 58.6% and Non-GAAP adjusted gross margin of 59.3% • GAAP operating margin of 26.3% and record Non-GAAP adjusted operating margin of 33.0% • GAAP diluted earnings per share of $0.97 and record Non-GAAP adjusted diluted earnings per share of $1.17 CAMARILLO, Calif., November 23, 2026—Semtech Corporation (Nasdaq: SMTC), a leading provider of high-performance semiconductors powering AI data center networking and intelligent, connected Internet of Things (\"IoT\") devices worldwide, announced today unaudited financial results for its third quarter of fiscal year 2027, which ended October 25, 2026. \"The Semtech team delivered another quarter of record financial results, driven by significant business growth across our broad data center portfolio and LoRa,\" said Hong Hou, president and chief executive officer. \"We expect that momentum to continue into Q4 and fiscal year 2028, broadly supported by the record backlog in our FiberEdge, CopperEdge and photonics solutions. We believe the industry’s increasing demand to move more data with less power positions Semtech as a trusted partner for the signal integrity challenges of each new generation of AI infrastructure.\" \"Third quarter results demonstrate the operating leverage underpinning the financial framework we introduced at our Analyst Day,\" said Mark Lin, executive vice president and chief financial officer. \"Revenue growth and disciplined investment delivered record adjusted operating margin, adjusted EBI"
+    },
+    "content_hash": "7ec506dea5140018aa31f121074c0d29c88eee88b186f68cc50e2571816f5ca1",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-24T10:03:18.178905+00:00"
+  },
+  "0001628280-26-075497": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-075497",
+      "entity_id": "CIK:0001840780",
+      "source_role": "candidate",
+      "title": "Local Bounti Corporation/DE (LOCL, LOCLW) (CIK 0001840780) EX-99.1 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840780/000162828026075497/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1840780/000162828026075497/earningsrelease-20260930.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "Local Bounti Corporation/DE (LOCL, LOCLW) (CIK 0001840780) EX-99.1 2026-11-23. Additional capacity at the Texas facility to be acquired is expected to support growth as that capacity becomes sold out. and Local Bounti's ability to comply therewith; the risk that the concentrated ownership of our common stock will prevent other stockholders from influencing significant decisions; the dilutive effect of the conversion or exercise of outstanding and newly issued convertible notes, warrants, and other securities; the risk that Local Bounti may never achieve or sustain profitability; the risk that Local Bounti could fail to effectively manage its future growth; Local Bounti's ability to complete the build out of its current or additional facilities in the future; Local Bounti's reliance on third parties for construction, the risk of delays relating to material delivery and supply chains, and fluctuating material prices; Local Bounti's ability to scale its operations and decrease its cost of goods sold over time; the potential for damage to or problems with Local Bounti's facilities; the impact that current or future acquisitions, investments or expansions of scope of existing relationships have on Local Bounti's business, financial condition, and results of operations; unknown liabilities that may be assumed in acquisitions; the risk that the planned acquisition of the Revol Greens facilities may not close on the expected timeline or at all, including due to the failure to satisfy closing conditions or to obtain required financing or third-party consents; Local Bounti's ability to realize the anticipated benefits of the planned acquisition, including, without limitation, the risk that run-rate revenue may not be sustained and that additional capacity may not be sold out as expected; the additional indebtedness and interest obligations to be incurred to finance the planned acquisition; Local Bounti's ability to attract and retain qualified employees; Local Bounti's abilit"
+    },
+    "content_hash": "9faa5b0abe30e96e5eaa59268bc1234898b42cf33b256fc4088f1ab1fd9aee01",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-24T10:03:18.178905+00:00"
+  },
+  "0001493152-26-053600": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-053600",
+      "entity_id": "CIK:0002036307",
+      "source_role": "candidate",
+      "title": "OFA Group (OFAL) (CIK 0002036307) EX-99.2 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/2036307/000149315226053600/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/2036307/000149315226053600/ex99-2.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "OFA Group (OFAL) (CIK 0002036307) EX-99.2 2026-11-23. The timing, scale and profitability of any such revenue remain uncertain, and the Company is not announcing new customer, revenue or subscription metrics in this release. EX-99.2 3 ex99-2.htm EX-99.2 Exhibit 99.2 OFA Group Highlights $19.8 Million in Reported Assets, AI Commercialization Strategy and Japan Expansion as CEO Addresses Market Valuation CEO interview to focus on underlying business fundamentals, technology-enabled recurring revenue opportunities, capital discipline and measurable long-term execution LOS ANGELES, California, November 12, 2026 — OFA Group (Nasdaq: OFAL) (the “Company” or “OFA”), a technology-driven architecture, real estate development and asset management company, today announced that Chief Executive Officer Larry Wong will participate in an investor interview addressing recent share-price volatility, the Company’s reported asset base, its AI technology commercialization strategy and the development of its Japan business initiatives. The discussion is intended to provide shareholders and prospective investors with additional context for evaluating OFA’s business fundamentals and strategic priorities beyond short-term stock-price movements. Management will also outline the operating milestones through which it believes investors can assess the Company’s execution over time. “We recognize the concerns of shareholders regarding OFA’s recent stock performance,” said Larry Wong, Chief Executive Officer of OFA Group. “We believe our long-term potential should be assessed through our reported assets, technology portfolio, business opportunities and, most importantly, our ability to turn those resources into measurable operating results. We cannot control daily market trading, but we can focus on commercial execution, responsible capital allocation and transparent communication. Those are the foundations on which we intend to build sustainable shareholder value.” Reported Asset Base and a Foc"
+    },
+    "content_hash": "968e62b8cacb7c2cf8c3e1815ae8313a9ca30b3faf8bba59e80eb7ecc7ff4a48",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-24T10:03:18.178905+00:00"
+  },
+  "0001104659-26-131078": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-131078",
+      "entity_id": "CIK:0001852353",
+      "source_role": "candidate",
+      "title": "Dakota Gold Corp. (DC) (CIK 0001852353) EX-99.2 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/1852353/000110465926131078/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1852353/000110465926131078/tm2629467d1_ex99-2.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "Dakota Gold Corp. (DC) (CIK 0001852353) EX-99.2 2026-11-23. Pre-Construction - Major Procurement Packages - Fleet and Facilities Equipment ​ - Begin Site Prep and Construction De-risking Building the foundation Permitting Securing approvals Engineering Design and procurement Construction Build the project Production Creating long-term value Baseline Data Collection Permitting Engineering & EPCM - 2027 Initiate & Advance Final Detailed Engineering - 2027-2028 Purchase Additional Long Lead Time Item Construction Production 1 - County Conditional Use Permit - SD DANR Large Scale Mine Permit Pre-Feasibility Study Feasibility Study Notice of Intent Pre-Construction - Major Procurement Packages - Fleet & Facilities Equipment ​ - Begin Site Prep and Construction Richmond Hill - Timeline to production dakotagoldcorp.com | NYSE-A: DC 33 HOMESTAKE DISTRICT ~50K MINERAL ACRES One concentrated land position 2 core project areas + district-wide upside One location."
+    },
+    "content_hash": "1a921b877b1e3f39f3ba77735e524add1392460d0b9cfc39c09c3f3b79ed1007",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-24T10:03:18.178905+00:00"
+  },
+  "0001493152-26-053685": {
+    "status": "retry",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-053685",
+      "entity_id": "CIK:0001853070",
+      "source_role": "candidate",
+      "title": "SOAR AI, Inc. (SOAR, SOARW) (CIK 0001853070) EX-99.2 2026-11-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/1853070/000149315226053685/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1853070/000149315226053685/ex99-2.htm",
+      "published_at": "2026-11-23",
+      "raw_text": "SOAR AI, Inc. (SOAR, SOARW) (CIK 0001853070) EX-99.2 2026-11-23. The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Management’s liquidity plans include obtaining additional financing and using customer prepayments to support deployment of the data center. Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027. EX-99.2 4 ex99-2.htm EX-99.2 Exhibit 99.2 ALIGNMENT ENGINE INC. AND SUBSIDIARY CONDENSED CONSOLIDATED FINANCIAL STATEMENTS Page Condensed Consolidated Balance Sheets as of June 30, 2026 (unaudited) and September 30, 2025 F-2 Condensed Consolidated Statements of Operations for the Three and Nine Months Ended June 30, 2026 and 2025 (unaudited) F-3 Condensed Consolidated Statements of Changes in Stockholders’ Deficiency and Mezzanine Equity for the Three and Nine Months Ended June 30, 2026 and 2025 (unaudited) F-4 Condensed Consolidated Statements of Cash Flows for the Nine Months Ended June 30, 2026 and 2025 (unaudited) F-6 Notes to Condensed Consolidated Financial Statements (unaudited) F-7 F- 1 ALIGNMENT ENGINE INC. AND SUBSIDIARY CONDENSED CONSOLIDATED BALANCE SHEETS June 30, 2026 September 30, 2025 (Unaudited) Assets Current assets: Cash $ 1,095,425 $ 111,530 Accounts receivable - 30,000 Accounts receivable - related parties - 4,513 Inventories, current portion 32,000 32,000 Prepaid expenses and other current assets 26,702 178,676 Deposit on future lease agreement 750,000 - Due from officer - related party 47,274 - Total current assets 1,951,401 356,719 Property and equipment, net 550,947 705,070 Inventories, less current portion 2,517,654 2,517,654 Operating lease right-of-use asset, net 2,264,754 2,590,769 Security deposit 12,231 12,231 Total assets $ 7,296,987 $ 6,182,443 Liabilities and Stockholders’ Deficiency Current liabilities: Accounts payable $ 481,577 $ 337,764 Accrued expenses 2,054,477 1,916,394 "
+    },
+    "content_hash": "7b19bc5c92d772e58155d003276238fcf95a4d1077698f2f7f281cdb2b0ab2fd",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-24T10:03:26+00:00",
+    "reason": "provider_overloaded",
+    "http_status": 503,
+    "next_retry_at": "2026-11-24T10:33:28+00:00",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-24",
+    "failure_run": "45370908266-1"
   }
 }
