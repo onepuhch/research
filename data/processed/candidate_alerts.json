@@ -3200,12 +3200,20 @@
       "signal_id": null,
       "verdict": "low",
       "day": "2026-11-25",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-25T09:04:34+00:00",
+          "status": "sent",
+          "message_id": 270,
+          "error": null
+        }
+      ],
       "reserved_by": "45579319757-1",
       "reserved_at": "2026-11-25T09:04:30+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · ASPN Aspen Aerogels, Inc.</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\n회사 설명 확인 중 (ASPN)\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 -$0.18 → 지금 $0.02 (적자→흑자) · 주가 같은 기간 -14.7%\n\n👎 최근 30일 분석가 4명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 11/5 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-6791FD80ACF947E8</code> · 추적 <code>/track CAN-6791FD80ACF947E8</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "2d4474eb9c57d8e90d3fab33b45d7fe1d6b2b6a2bf42fa0a53b73e1c44a13bdf"
+      "payload_sha256": "2d4474eb9c57d8e90d3fab33b45d7fe1d6b2b6a2bf42fa0a53b73e1c44a13bdf",
+      "message_id": 270
     },
     "NYSE:DELL|eps-revision-review:v1|new_discovery": {
       "channel": "screen",
@@ -3218,12 +3226,20 @@
       "signal_id": null,
       "verdict": "low",
       "day": "2026-11-25",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-25T09:04:35+00:00",
+          "status": "sent",
+          "message_id": 271,
+          "error": null
+        }
+      ],
       "reserved_by": "45579319757-1",
       "reserved_at": "2026-11-25T09:04:30+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · DELL Dell Technologies Inc.</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\n회사 설명 확인 중 (DELL)\n내년 이익 예상(EPS, 2028-01-31 회계연도 말) 90일 전 $19.43 → 지금 $28.48 (+47%) · 주가 같은 기간 -37.5%\n\n👍 주가는 같은 90일에 -38%로, 이익 예상 상향(+47%)보다 덜 움직임\n👎 최근 30일 분석가 9명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 왜 올랐는지는 아직 모름(회사 발표 원문 미확인)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-361AFF9E8FAA657E</code> · 추적 <code>/track CAN-361AFF9E8FAA657E</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "6610e1dc58f6052e84e885dae43628a2f31807d872a0cb2a83b647993aafc6dc"
+      "payload_sha256": "6610e1dc58f6052e84e885dae43628a2f31807d872a0cb2a83b647993aafc6dc",
+      "message_id": 271
     }
   },
   "bootstrap": {
