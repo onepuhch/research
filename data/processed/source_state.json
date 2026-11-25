@@ -16938,7 +16938,7 @@
     "validation_rejected": true
   },
   "0000929008-26-000034": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -16954,7 +16954,8 @@
     "content_hash": "575f08cb8388374f7f970fbb7fbd011f794771e75d1b1d77a18e37b2fd3d2b6c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001437749-26-036186": {
     "status": "accepted",
@@ -17128,7 +17129,7 @@
     "processed_run": "45134023197-1"
   },
   "0001038074-26-000033": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17144,10 +17145,11 @@
     "content_hash": "00a2a2bc534ce36f92378b2a4998bb93fc980ca03056ada6d036e30e2a546c1b",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001860160-26-000030": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17163,11 +17165,16 @@
     "content_hash": "474e614bc554461c0b03962b25c37f3604cff8bdfd58dba91ae1808f26136050",
     "prompt_version": "research-v2-20260906",
     "attempts": 1,
-    "updated_at": "2026-11-24T10:03:30+00:00",
-    "reason": "provider_overloaded",
-    "failure_class": "unserved",
-    "failure_day": "2026-11-24",
-    "failure_run": "45370908266-1"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "expired_unprocessed",
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-11-24",
+      "failure_run": "45370908266-1",
+      "day": "2026-11-25",
+      "run": "45579319757-1",
+      "by": "expired"
+    }
   },
   "0001193125-26-454502": {
     "status": "accepted",
@@ -17340,7 +17347,7 @@
     "processed_run": "42974035239-1"
   },
   "0001628280-26-072504": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17356,10 +17363,11 @@
     "content_hash": "43529577a5264a0891cb45547fa650b5981af7778504a569b36702f713ed2dbf",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001213900-26-118067": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17375,10 +17383,11 @@
     "content_hash": "fd45c2b017c8fd90c453dc2b337a8558703008493d1e5eeff303443bb3994a64",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001877939-26-000100": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17394,10 +17403,11 @@
     "content_hash": "32720f9817c0d1eb7e134e9f99066377fb872008c8d5329cd42db9982f6189ff",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001493152-26-050965": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17413,10 +17423,11 @@
     "content_hash": "f268a388b2abaa9f0f04f960b80b7d711ddcedb31f8119ba3ef97b9aba393b59",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001628280-26-072717": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17432,10 +17443,11 @@
     "content_hash": "e7c1bfb11822e9832897d2c5c91fc550901a08c1d037452362fbba92574dbce4",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001493152-26-050970": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17451,10 +17463,11 @@
     "content_hash": "4793b2d7be68318a180e89c41a12fc39432ba92248c74142765e64dcac7df0f1",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001040130-26-000068": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17470,10 +17483,11 @@
     "content_hash": "8bb2b8444f1a8290395059aa92cbdabfffc2ff0ef5fb012be306545147e8be1c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001477932-26-006816": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17489,10 +17503,11 @@
     "content_hash": "c5dca5039581447add5c809c64550f11ee691061fcab4e49b81bb847759fc07c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001171843-26-007309": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17508,10 +17523,11 @@
     "content_hash": "f89af31b3edd98c51a77c877b40c295ae6525b69d6ee68d376e00640e9784f4b",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0002007855-26-000091": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17527,10 +17543,11 @@
     "content_hash": "5c4e3dad7b1f91fc07bb7eab2b0898d19bbe6a406fd1b0b5c5639052662f36b0",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-124829": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17546,10 +17563,11 @@
     "content_hash": "84a1f2d69bf0c41769fb984178f33888dfd91849256209bb524d4fad22d569e5",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-11T06:41:27.864026+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001213900-26-118026": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17565,10 +17583,11 @@
     "content_hash": "8eff37e61379097de919c0df8deaf02f055406034040630e9f6891df99fd4a55",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001368458-26-000018": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17584,7 +17603,8 @@
     "content_hash": "6c164d01d7e9dca07b30eeaf2767156749b07e843d41b83a2a0deffc324afc1f",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-12T07:23:01.993166+00:00"
+    "updated_at": "2026-11-25T08:47:46.240746+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001104659-26-124138": {
     "status": "rejected",
@@ -17969,7 +17989,7 @@
     "validation_rejected": true
   },
   "0001171843-26-007367": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17980,15 +18000,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2048519/000117184326007367/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2048519/000117184326007367/exh_991.htm",
       "published_at": "2026-11-12",
-      "raw_text": "Aebi Schmidt Holding AG (AEBI) (CIK 0002048519) EX-99.1 2026-11-12. EX-99.1 2 exh_991.htm PRESS RELEASE EdgarFiling EXHIBIT 99.1 Aebi Schmidt Group reports continued growth in Net Sales and Profitability in a challenging market environment, updates full-year 2026 outlook Q3 2026 Order Intake of $528m, up 2.0% vs Q3 2025 and Order Backlog of $1.3b, expanding 16.4% vs Q3 2025 on the back of good demand particularly in Airport, Municipal and for Walk-In Van solutions Net Sales of $493m in Q3 2026, up 4.6% vs Q3 2025, supported by very strong performance in Walk-In Vans Gross Margin of 19.2% in Q3 2026, down 80bps vs Q3 2025 due to ongoing high inflationary pressure Adjusted EBITDA 1 of $44.2m in Q3 2026, up 4.9% vs Q3 2025, representing an unchanged 9.0% of Net Sales, overcoming gross margin performance with accelerated synergy realization and cost management Net Income substantially improved to $10.8m in Q3 2026, up $9.6m vs Q3 2025 Aebi Schmidt Group updates full-year 2026 guidance 2 to Net Sales of $1.95b to $2.00b, Adjusted EBITDA 1 of $170m to $180m and leverage at year-end of <2.5x Recently announced planned acquisition of O.J. “We responded quickly by accelerating synergy realization and cost measures to deliver strong profitability, while advancing the transformation of the combined organization at a remarkable pace through an expanded leadership structure and an optimized operational footprint.” Third Quarter 2026 Financial Results Order Intake in Q3 2026 increased 2.0% vs Q3 2025, driven by North America despite softness in select end markets and weaker demand from China and the Middle East driven by geopolitical conflicts Order Backlog, as of September 30, 2026, grew 16.4% to $1.3b vs September 30, 2025, driven by continued strength in Airport and Municipal and a growing Walk-in-Van backlog, extending into 2027 Net Sales of $493m, a solid 4.6% increase vs Q3 2025 North America Net Sales with strong organic growth of 7.9% vs Q3 2025, reflecting improvements i"
+      "raw_text": "Aebi Schmidt Holding AG (AEBI) (CIK 0002048519) EX-99.1 2026-11-12. EX-99.1 2 exh_991.htm PRESS RELEASE EdgarFiling EXHIBIT 99.1 Aebi Schmidt Group reports continued growth in Net Sales and Profitability in a challenging market environment, updates full-year 2026 outlook Q3 2026 Order Intake of $528m, up 2.0% vs Q3 2025 and Order Backlog of $1.3b, expanding 16.4% vs Q3 2025 on the back of good demand particularly in Airport, Municipal and for Walk-In Van solutions Net Sales of $493m in Q3 2026, up 4.6% vs Q3 2025, supported by very strong performance in Walk-In Vans Gross Margin of 19.2% in Q3 2026, down 80bps vs Q3 2025 due to ongoing high inflationary pressure Adjusted EBITDA 1 of $44.2m in Q3 2026, up 4.9% vs Q3 2025, representing an unchanged 9.0% of Net Sales, overcoming gross margin performance with accelerated synergy realization and cost management Net Income substantially improved to $10.8m in Q3 2026, up $9.6m vs Q3 2025 Aebi Schmidt Group updates full-year 2026 guidance 2 to Net Sales of $1.95b to $2.00b, Adjusted EBITDA 1 of $170m to $180m and leverage at year-end of <2.5x Recently announced planned acquisition of O.J. “We responded quickly by accelerating synergy realization and cost measures to deliver strong profitability, while advancing the transformation of the combined organization at a remarkable pace through an expanded leadership structure and an optimized operational footprint.” Third Quarter 2026 Financial Results Order Intake in Q3 2026 increased 2.0% vs Q3 2025, driven by North America despite softness in select end markets and weaker demand from China and the Middle East driven by geopolitical conflicts Order Backlog, as of September 30, 2026, grew 16.4% to $1.3b vs September 30, 2025, driven by continued strength in Airport and Municipal and a growing Walk-in-Van backlog, extending into 2027 Net Sales of $493m, a solid 4.6% increase vs Q3 2025 North America Net Sales with strong organic growth of 7.9% vs Q3 2025, reflecting improvements i",
+      "_model_response": {
+        "evidence_quote": "Q3 2026 Order Intake of $528m, up 2.0% vs Q3 2025 and Order Backlog of $1.3b, expanding 16.4% vs Q3 2025 on the back of good demand particularly in Airport, Municipal and for Walk-In Van solutions Net Sales of $493m in Q3 2026, up 4.6% vs Q3 2025, supported by very strong performance in Walk-In Vans ... Aebi Schmidt Group updates full-year 2026 guidance 2 to Net Sales of $1.95b to $2.00b, Adjusted EBITDA 1 of $170m to $180m",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Aebi Schmidt Holding AG (AEBI)",
+          "earnings_leverage": "Adjusted EBITDA 1 of $44.2m in Q3 2026, up 4.9% vs Q3 2025, representing an unchanged 9.0% of Net Sales, overcoming gross margin performance with accelerated synergy realization and cost management",
+          "supply_demand_tightness": "Order Backlog of $1.3b, expanding 16.4% vs Q3 2025 on the back of good demand particularly in Airport, Municipal and for Walk-In Van solutions",
+          "structural_ai_demand": "",
+          "revision_momentum": "Aebi Schmidt Group updates full-year 2026 guidance 2 to Net Sales of $1.95b to $2.00b, Adjusted EBITDA 1 of $170m to $180m",
+          "catalyst_visibility": "Q3 2026 Order Intake of $528m, up 2.0% vs Q3 2025 and Order Backlog of $1.3b, expanding 16.4% vs Q3 2025"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Aebi Schmidt Holding AG",
+        "theme": "산업용 특수차량 및 장비",
+        "signal_type": "수주/백로그",
+        "what_happened": "Aebi Schmidt Group은 2026년 3분기 수주액이 전년 동기 대비 2.0% 증가한 5.28억 달러를 기록했고, 수주잔고는 16.4% 증가한 13억 달러를 기록했으며, 2026년 연간 가이던스를 업데이트했습니다.",
+        "why_it_matters": "수주액과 수주잔고의 증가는 향후 매출 성장을 견인할 잠재적 수요 증가를 나타내며, 특히 어려운 시장 환경 속에서도 견고한 실적을 유지하고 있다는 점에서 긍정적입니다.",
+        "what_to_watch": "향후 분기별 수주액 및 수주잔고 추이; 업데이트된 연간 가이던스 달성 여부 및 추가 상향 가능성",
+        "upside_axes": {
+          "underfollowed_pure_play": 1,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "Order Intake (수주액): 특정 기간 동안 고객으로부터 새로 받은 주문의 총 가치. Order Backlog (수주잔고): 아직 이행되지 않은 고객 주문의 총 가치로, 미래 매출의 지표."
+      }
     },
     "content_hash": "1fbf9e32b52cb08b5f3a8325608254651eeea96686b604e2408e717c314b4c53",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-25T08:48:59+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001493152-26-051408": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -17999,12 +18055,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1518461/000149315226051408/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1518461/000149315226051408/ex99-1.htm",
       "published_at": "2026-11-12",
-      "raw_text": "AmpliTech Group, Inc. (AMPG, AMPGZ) (CIK 0001518461) EX-99.1 2026-11-12. ● Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million. Maqbool continued, “We are encouraged by the customer activity we have announced since quarter-end, including our largest single purchase order to date and a record backlog exceeding $52 million as of October 21. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 AmpliTech Group Reports Q3 2026 Revenue of $6.58 Million, Up 8.0% Year-over-Year, and 41.1% Nine-Month Gross Profit Growth Q3 Gross Margin Expands Sequentially to 34.2%; Previously Announced Backlog Surpassed $52 Million in October HAUPPAUGE, N.Y., November 12, 2026; AmpliTech Group, Inc. (Nasdaq: AMPG, AMPGZ) (the “Company” or “AmpliTech”), a designer, developer and manufacturer of advanced radio frequency (RF) microwave components, 5G communications systems, semiconductor solutions and quantum-computing low-noise amplifiers (LNAs), today announced unaudited financial results for the three - and nine-months quarter ended September 30, 2026. Third Quarter 2026 Highlights ● Revenue increased 8.0% year-over-year to $6.58 million, compared with $6.09 million in the third quarter of 2025. ● Spectrum Semiconductor Materials distribution revenue increased 36.4% year-over-year to $2.89 million, reflecting higher distribution-channel sales volumes and continued business expansion. ● Gross margin increased sequentially to 34.2% from 27.9% in Q2 2026, an improvement of approximately 6.3 percentage points. Quarterly gross profit was $2.25 million. ● Net loss narrowed sequentially to $1.89 million, or $0.07 per basic and diluted share, from approximately $3.09 million in Q2 2026. ● For the first nine months of 2026, gross profit increased 41.1% year-over-year to $7.07 million, while gross margin expanded to 35.3% from 24.2% in the prior-year period. ● The Company previously announced receipt of more than $17 "
+      "raw_text": "AmpliTech Group, Inc. (AMPG, AMPGZ) (CIK 0001518461) EX-99.1 2026-11-12. ● Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million. Maqbool continued, “We are encouraged by the customer activity we have announced since quarter-end, including our largest single purchase order to date and a record backlog exceeding $52 million as of October 21. EX-99.1 2 ex99-1.htm EX-99.1 Exhibit 99.1 AmpliTech Group Reports Q3 2026 Revenue of $6.58 Million, Up 8.0% Year-over-Year, and 41.1% Nine-Month Gross Profit Growth Q3 Gross Margin Expands Sequentially to 34.2%; Previously Announced Backlog Surpassed $52 Million in October HAUPPAUGE, N.Y., November 12, 2026; AmpliTech Group, Inc. (Nasdaq: AMPG, AMPGZ) (the “Company” or “AmpliTech”), a designer, developer and manufacturer of advanced radio frequency (RF) microwave components, 5G communications systems, semiconductor solutions and quantum-computing low-noise amplifiers (LNAs), today announced unaudited financial results for the three - and nine-months quarter ended September 30, 2026. Third Quarter 2026 Highlights ● Revenue increased 8.0% year-over-year to $6.58 million, compared with $6.09 million in the third quarter of 2025. ● Spectrum Semiconductor Materials distribution revenue increased 36.4% year-over-year to $2.89 million, reflecting higher distribution-channel sales volumes and continued business expansion. ● Gross margin increased sequentially to 34.2% from 27.9% in Q2 2026, an improvement of approximately 6.3 percentage points. Quarterly gross profit was $2.25 million. ● Net loss narrowed sequentially to $1.89 million, or $0.07 per basic and diluted share, from approximately $3.09 million in Q2 2026. ● For the first nine months of 2026, gross profit increased 41.1% year-over-year to $7.07 million, while gross margin expanded to 35.3% from 24.2% in the prior-year period. ● The Company previously announced receipt of more than $17 ",
+      "_model_response": {
+        "evidence_quote": "Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million. Maqbool continued, “We are encouraged by the customer activity we have announced since quarter-end, including our largest single purchase order to date and a record backlog exceeding $52 million as of October 21.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "AmpliTech Group, Inc. (Nasdaq: AMPG, AMPGZ) (the “Company” or “AmpliTech”), a designer, developer and manufacturer of advanced radio frequency (RF) microwave components, 5G communications systems, semiconductor solutions and quantum-computing low-noise amplifiers (LNAs)",
+          "earnings_leverage": "Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million.",
+          "supply_demand_tightness": "Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million. Maqbool continued, “We are encouraged by the customer activity we have announced since quarter-end, including our largest single purchase order to date and a record backlog exceeding $52 million as of October 21.",
+          "structural_ai_demand": "",
+          "revision_momentum": "Total bookings in October alone were near $25 million which is a record , effectively giving the company a record backlog in excess of $52 Million.",
+          "catalyst_visibility": "effectively giving the company a record backlog in excess of $52 Million."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "RF/Microwave Components",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "AmpliTech Group, Inc. (AMPG)",
+        "theme": "5G 통신",
+        "signal_type": "수주/백로그",
+        "what_happened": "AmpliTech Group이 10월에 약 2,500만 달러의 기록적인 신규 수주를 달성하여, 총 백로그가 5,200만 달러를 초과하는 사상 최고치를 기록했습니다.",
+        "why_it_matters": "기록적인 수주와 백로그 증가는 AmpliTech Group의 향후 매출 성장을 강력히 시사하며, 이는 시장의 기대치를 상회할 잠재적 실적 개선으로 이어질 수 있습니다.",
+        "what_to_watch": "향후 분기별 매출액 및 이익률 변화, 신규 수주 및 백로그의 지속적인 증가 여부",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "백로그 (Backlog): 고객으로부터 수주했으나 아직 매출로 인식되지 않은 미처리 주문 잔고. LNA (Low-Noise Amplifier): 무선 통신 시스템에서 신호 수신 시 잡음을 최소화하여 신호 품질을 향상시키는 증폭기."
+      }
     },
     "content_hash": "f4a640ab8432a0a65210b7c975e69ca020949d27cb2621512a1ac9a2c46309bb",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-25T08:49:17+00:00",
+    "signal_id": "SIG-0968",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-25",
+    "processed_run": "45579319757-1"
   },
   "0001213900-26-118327": {
     "status": "rejected",
@@ -19827,7 +19921,7 @@
     "updated_at": "2026-11-24T10:03:18.178905+00:00"
   },
   "0001493152-26-053685": {
-    "status": "retry",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -19838,17 +19932,266 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1853070/000149315226053685/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1853070/000149315226053685/ex99-2.htm",
       "published_at": "2026-11-23",
-      "raw_text": "SOAR AI, Inc. (SOAR, SOARW) (CIK 0001853070) EX-99.2 2026-11-23. The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Management’s liquidity plans include obtaining additional financing and using customer prepayments to support deployment of the data center. Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027. EX-99.2 4 ex99-2.htm EX-99.2 Exhibit 99.2 ALIGNMENT ENGINE INC. AND SUBSIDIARY CONDENSED CONSOLIDATED FINANCIAL STATEMENTS Page Condensed Consolidated Balance Sheets as of June 30, 2026 (unaudited) and September 30, 2025 F-2 Condensed Consolidated Statements of Operations for the Three and Nine Months Ended June 30, 2026 and 2025 (unaudited) F-3 Condensed Consolidated Statements of Changes in Stockholders’ Deficiency and Mezzanine Equity for the Three and Nine Months Ended June 30, 2026 and 2025 (unaudited) F-4 Condensed Consolidated Statements of Cash Flows for the Nine Months Ended June 30, 2026 and 2025 (unaudited) F-6 Notes to Condensed Consolidated Financial Statements (unaudited) F-7 F- 1 ALIGNMENT ENGINE INC. AND SUBSIDIARY CONDENSED CONSOLIDATED BALANCE SHEETS June 30, 2026 September 30, 2025 (Unaudited) Assets Current assets: Cash $ 1,095,425 $ 111,530 Accounts receivable - 30,000 Accounts receivable - related parties - 4,513 Inventories, current portion 32,000 32,000 Prepaid expenses and other current assets 26,702 178,676 Deposit on future lease agreement 750,000 - Due from officer - related party 47,274 - Total current assets 1,951,401 356,719 Property and equipment, net 550,947 705,070 Inventories, less current portion 2,517,654 2,517,654 Operating lease right-of-use asset, net 2,264,754 2,590,769 Security deposit 12,231 12,231 Total assets $ 7,296,987 $ 6,182,443 Liabilities and Stockholders’ Deficiency Current liabilities: Accounts payable $ 481,577 $ 337,764 Accrued expenses 2,054,477 1,916,394 "
+      "raw_text": "SOAR AI, Inc. (SOAR, SOARW) (CIK 0001853070) EX-99.2 2026-11-23. The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Management’s liquidity plans include obtaining additional financing and using customer prepayments to support deployment of the data center. Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027. EX-99.2 4 ex99-2.htm EX-99.2 Exhibit 99.2 ALIGNMENT ENGINE INC. AND SUBSIDIARY CONDENSED CONSOLIDATED FINANCIAL STATEMENTS Page Condensed Consolidated Balance Sheets as of June 30, 2026 (unaudited) and September 30, 2025 F-2 Condensed Consolidated Statements of Operations for the Three and Nine Months Ended June 30, 2026 and 2025 (unaudited) F-3 Condensed Consolidated Statements of Changes in Stockholders’ Deficiency and Mezzanine Equity for the Three and Nine Months Ended June 30, 2026 and 2025 (unaudited) F-4 Condensed Consolidated Statements of Cash Flows for the Nine Months Ended June 30, 2026 and 2025 (unaudited) F-6 Notes to Condensed Consolidated Financial Statements (unaudited) F-7 F- 1 ALIGNMENT ENGINE INC. AND SUBSIDIARY CONDENSED CONSOLIDATED BALANCE SHEETS June 30, 2026 September 30, 2025 (Unaudited) Assets Current assets: Cash $ 1,095,425 $ 111,530 Accounts receivable - 30,000 Accounts receivable - related parties - 4,513 Inventories, current portion 32,000 32,000 Prepaid expenses and other current assets 26,702 178,676 Deposit on future lease agreement 750,000 - Due from officer - related party 47,274 - Total current assets 1,951,401 356,719 Property and equipment, net 550,947 705,070 Inventories, less current portion 2,517,654 2,517,654 Operating lease right-of-use asset, net 2,264,754 2,590,769 Security deposit 12,231 12,231 Total assets $ 7,296,987 $ 6,182,443 Liabilities and Stockholders’ Deficiency Current liabilities: Accounts payable $ 481,577 $ 337,764 Accrued expenses 2,054,477 1,916,394 ",
+      "_model_response": {
+        "evidence_quote": "The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Management’s liquidity plans include obtaining additional financing and using customer prepayments to support deployment of the data center. Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "SOAR AI, Inc. (SOAR, SOARW) (CIK 0001853070)",
+          "earnings_leverage": "The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Management’s liquidity plans include obtaining additional financing and using customer prepayments to support deployment of the data center.",
+          "supply_demand_tightness": "The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027.",
+          "structural_ai_demand": "GPU compute services agreement.",
+          "revision_momentum": "The Company also received an initial customer prepayment of approximately $39.9 million in September 2026 under the GPU compute services agreement. Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027.",
+          "catalyst_visibility": "initial customer prepayment of approximately $39.9 million in September 2026... Estimated delivery lead times under the outstanding purchase orders range from August 2026 through July 2027."
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "GPU 컴퓨팅",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "SOAR AI, Inc.",
+        "theme": "AI 인프라",
+        "signal_type": "수주/백로그",
+        "what_happened": "SOAR AI가 GPU 컴퓨팅 서비스 계약에 따라 약 3,990만 달러의 고객 선지급금을 수령했으며, 기존 구매 주문에 대한 예상 납기가 2026년 8월부터 2027년 7월까지로 확인되었다.",
+        "why_it_matters": "이는 SOAR AI의 GPU 컴퓨팅 서비스에 대한 강력한 초기 수요를 보여주며, 데이터센터 배포 및 향후 매출 성장의 구체적인 근거가 되어 시장의 저평가 해소에 기여할 수 있다.",
+        "what_to_watch": "향후 추가 고객 계약 및 선지급금 규모, 데이터센터 구축 진행 상황 및 가동률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 11,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "선지급금: 고객이 서비스나 제품을 받기 전에 미리 지불하는 금액. 백로그: 아직 인도되지 않은 고객의 주문 잔량."
+      }
     },
     "content_hash": "7b19bc5c92d772e58155d003276238fcf95a4d1077698f2f7f281cdb2b0ab2fd",
     "prompt_version": "research-v2-20260906",
-    "attempts": 1,
-    "updated_at": "2026-11-24T10:03:26+00:00",
-    "reason": "provider_overloaded",
+    "attempts": 2,
+    "updated_at": "2026-11-25T08:48:01+00:00",
+    "reason": "grounded extraction",
     "http_status": 503,
     "next_retry_at": "2026-11-24T10:33:28+00:00",
-    "failure_class": "unserved",
-    "failure_day": "2026-11-24",
-    "failure_run": "45370908266-1"
+    "signal_id": "SIG-0967",
+    "processed_day": "2026-11-25",
+    "processed_run": "45579319757-1",
+    "resolved": {
+      "failure_class": "unserved",
+      "failure_day": "2026-11-24",
+      "failure_run": "45370908266-1",
+      "day": "2026-11-25",
+      "run": "45579319757-1",
+      "by": "model answer"
+    }
+  },
+  "0001213900-26-123385": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001213900-26-123385",
+      "entity_id": "CIK:0001996192",
+      "source_role": "candidate",
+      "title": "Quanome Technologies, Inc. (QNME) (CIK 0001996192) EX-99.1 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1996192/000121390026123385/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1996192/000121390026123385/ea031335401ex99-1.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "Quanome Technologies, Inc. (QNME) (CIK 0001996192) EX-99.1 2026-11-24. Forward-Looking Statements This presentation contains forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, Section 21E of the Securities Exchange Act of 1934 and the Private Securities Litigation Reform Act of 1995, including statements about the Company's strategy, portfolio and partnership development; the proposed investment in QAI Labs and its completion; NOVA-3 and AI and quantum-enhanced methods in life sciences; XDT's service start, infrastructure delivery and customer prepayment; and financing. 29 OCT Customer prepayment Received US$13.5M toward future XDT services. It received a US$13.5M customer prepayment on 29 October for future services. EX-99.1 2 ea031335401ex99-1.htm INVESTOR PRESENTATION Exhibit 99.1 01 / 16 Company Presentation | November 2026 Where Quantum and AI transform daily industry Building an impact-driven Quantum and AI Platform Company Quanome Technologies, Inc. (Nasdaq: QNME) DISCLAIMER Important Information 02 / 16 No Offer or Solicitation This presentation is for information only. It is not an offer to sell, or a solicitation of an offer to buy, any securities of Quanome Technologies, Inc. (\"Quanome\" or the \"Company\"). Any offering would be made only by means of definitive offering documents and in compliance with applicable securities laws. Sources of Information Information is drawn from the Company's SEC filings, press releases and website, together with company-supplied information where noted. Sources and dates are cited on each slide. Quanome Technologies, Inc. was formerly named Lakeside Holding Limited. This presentation is not intended to contain material non-public information. Read the Company's SEC filings in full at www.sec.gov. Market and Third-Party Data Market data are as cited in this presentation and have not been independently verified. Third- party names are used for identification only. Forward-Looking State"
+    },
+    "content_hash": "c8959b1f1cc16acd4f3b2f2424e79e62c2dfe01364c5cc4ef10be290536eb438",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-25T08:47:46.240746+00:00"
+  },
+  "0000067215-26-000048": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0000067215-26-000048",
+      "entity_id": "CIK:0000067215",
+      "source_role": "candidate",
+      "title": "DYCOM INDUSTRIES INC (DY) (CIK 0000067215) EX-99.2 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/67215/000006721526000048/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/67215/000006721526000048/q32027presentationmateri.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "DYCOM INDUSTRIES INC (DY) (CIK 0000067215) EX-99.2 2026-11-24. – Dan Peyovich President and CEO “ “ FINANCIAL HIGHLIGHTS Record Third Quarter Revenue and Strong Earnings $ MILLIONS, except EPS Q3 2027 Q3 2026 Y/Y Total Contract Revenues1 $ 2,056.3 $ 1,451.8 41.6% Organic Revenue Growth 11.2% Adjusted EBITDA $ 311.7 $ 219.4 42.0% Adjusted EBITDA Margin 15.2% 15.1% 4 bps Adjusted Diluted EPS2 $ 5.23 $ 3.93 33.1% Reconciliations of non-GAAP measures begin on slide 11 4 BACKLOG Record Backlog Supports Multi-Year Visibility $ BILLIONS Next 12 Months Backlog $12.911 $8.222 $9.542 Q3 2026 Q4 2026 Q1 2027 Q2 2027 Q3 2027 $4.994 $6.358 $6.397 $6.472 $11.906 $12.242 1.3x Total Book-to-Bill Q3 2027 +57% Total Backlog Y/Y Recent project awards continue to diversify backlog across customers, demand drivers, and geographies Total contracted backlog for long-haul and data center interconnect builds more than doubled from Q2 2027 and now exceeds $2 billion including contracts executed subsequent to Q3 2027 $6.715 5 Q3 2027 Q3 2026 Y/Y $ MILLIONS Total Contract Revenues $ 1,614.6 $ 1,451.8 11.2% Adjusted EBITDA $ 206.4 $ 219.4 (5.9)% Adjusted EBITDA % 12.8% 15.1% (233) bps Q3 2027 Q3 2026 Y/Y $ MILLIONS Total Backlog3 $ 11,189 $ 8,222 36.1% Next 12 Months Backlog (included in Total Backlog) $ 5,421 $ 4,994 8.6% Q3 2027 Key Performance Drivers • Strong revenue growth driven by robust FTTH programs, increased long-haul and data center interconnect builds, and continued maintenance and operations services Robust Demand Outlook • Customers reiterated multi-year f iber-to- the-home deployment targets • Investment in long-haul and data center interconnect builds continues to drive signif icant demand • Copper reclamation expected to be meaningful multi-year contributor as programs ramp in f iscal 2028 Looking Ahead to Fiscal 2028 • The Company expects mid-single digit segment revenue growth with Adjusted EBITDA margin expanding year-over-year COMMUNICATIONS SEGMENT BUILDING SYSTEMS SEGMEN"
+    },
+    "content_hash": "9362aa85a0ea73c73e739c2e4acdcc6334d24ac3c57e110daf5b6374f22570d1",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-25T08:47:46.240746+00:00"
+  },
+  "0001493152-26-054002": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001493152-26-054002",
+      "entity_id": "CIK:0001144879",
+      "source_role": "candidate",
+      "title": "Applied Digital Corp. (APLD) (CIK 0001144879) EX-99.2 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1144879/000149315226054002/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000149315226054002/ex99-2.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "Applied Digital Corp. (APLD) (CIK 0001144879) EX-99.2 2026-11-24. These risks, uncertainties, and other factors include, among others: our ability to satisfy the draw conditions under this financing facility and obtain the financing thereunder, if at all; whether or not our customers exercise the renewal options under their leases with us (if not, we will not recognize further revenue from such customer under its respective lease); our ability to complete construction of our data center campuses as planned, including at the Delta Forge 1 campus; the lead time of customer acquisition and leasing decisions and related internal approval processes; changes to artificial intelligence and HPC infrastructure needs and their impact on future plans; costs related to the HPC operations and strategy; our ability to timely deliver any services required in connection with completion of installation under lease agreements; our ability to raise additional capital to fund the ongoing datacenter construction and operations, including at the Delta Forge 1 campus; our ability to obtain financing of datacenter leases and more broadly for our development and general corporate activities; our dependence on principal customers, including our ability to execute and perform our obligations under our leases with key customers; our ability to timely and successfully build new hosting facilities with the appropriate contractual margins and efficiencies; power or other supply disruptions and equipment failures; the inability to comply with regulations, developments and changes in regulations; cash flow and access to capital; availability of financing to continue to grow our business; decline in demand for our products and services; maintenance of third party relationships; and conditions in the debt and equity capital markets."
+    },
+    "content_hash": "51ae68a3990c42c4d7b135edaa9b02abca90a9503ea287c88112d646f76869e5",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-25T08:47:46.240746+00:00"
+  },
+  "0001628280-26-075712": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-075712",
+      "entity_id": "CIK:0001680062",
+      "source_role": "candidate",
+      "title": "ACM Research, Inc. (ACMR) (CIK 0001680062) EX-99.1 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1680062/000162828026075712/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1680062/000162828026075712/recordsofinvestorrelatio.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "ACM Research, Inc. (ACMR) (CIK 0001680062) EX-99.1 2026-11-24. How are procurement costs overall, and have these factors affected delivery lead times for your products? As for delivery lead times, our current lead time is approximately 7 to 8 months, primarily due to our substantial order backlog. We believe this additional capacity will help us improve delivery efficiency and may further shorten order lead times. EX-99.1 2 recordsofinvestorrelatio.htm EX-99.1 recordsofinvestorrelatio 1617351195.3 Internal Stock Code: 688082 Short Name: ACMSH ACM Research (Shanghai), Inc. Records of Investor Relations Activities NO.: 2026-06 Type of investor relation activities □Specific target research □Analyst meeting □Media interview √ Earnings conference call □Press conference □Roadshow □On-site visit □Others Date November 16, 2026 Venue Conference Call Representatives of the listed company Chairman: HUI WANG General Manager: JIAN WANG Chief Financial Officer: LISA YI LU FENG Board Secretary: MINGZHU LUO Summary of investor relations activities I. Company Introduction: Management of ACM Research (Shanghai), Inc. (the “Company”) provided a brief overview of the Company’s third-quarter 2026 results and financial position and answered questions from investors. II. Q&A 1. Q: October saw strong order activity across the industry. What do you expect to see in terms of order trends and growth from November 2026 through 2027? A: Since the second half of this year, we have continued to see healthy order growth. New orders signed for the first three quarters of 2026 were up 147% year over year. As we previously disclosed, our order backlog totaled RMB 17.073 billion as of September 29, 2026, up 88.20% from the order backlog we voluntarily disclosed for the same period last year. We currently have a substantial order backlog and are 1617351195.3 Internal working to fulfill and deliver our existing orders. As we typically do, we plan to voluntarily disclose our 2027 revenue outlook in Janua"
+    },
+    "content_hash": "f9f57a589e4ff7131af6d4378e663b7cd2def023317808b6d85e9947499fd94a",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-25T08:47:46.240746+00:00"
+  },
+  "0001628280-26-075757": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001628280-26-075757",
+      "entity_id": "CIK:0001840780",
+      "source_role": "candidate",
+      "title": "Local Bounti Corporation/DE (LOCL) (CIK 0001840780) EX-99.1 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1840780/000162828026075757/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1840780/000162828026075757/exhibit991loclrevolclosing.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "Local Bounti Corporation/DE (LOCL) (CIK 0001840780) EX-99.1 2026-11-24. Additional capacity at the Texas facility is expected to support growth as that facility becomes sold out. EX-99.1 15 exhibit991loclrevolclosing.htm EX-99.1 Document Exhibit 99.1 Local Bounti Becomes Largest Leafy Greens CEA Grower in the U.S. with Completed Acquisition of Revol Greens’ Certified-Organic Facilities Local Bounti’s growing footprint expands roughly 70% FoodVentures, a Member of the DENSO Group, Local Bounti’s Existing Strategic Investor and Other Investors Backed Completed Transaction HAMILTON, Mont., November 24, 2026 – Local Bounti Corporation (NYSE: LOCL) (“Local Bounti” or the “Company”), a breakthrough U.S. indoor agriculture company currently servicing approximately 13,000 retail doors, today announced that it has completed the purchase of two certified-organic controlled environment agriculture (CEA) facilities from Revol Greens, located in Temple, Texas and Medford, Minnesota, as well as the Revol brand. The facilities bring 30 acres of certified-organic production and expand Local Bounti’s assortment with a new organic offering for its retail customers. Kathleen Valiasek, President and CEO of Local Bounti, commented, “We are excited to welcome the Revol Greens team to Local Bounti. Together, we are now the largest leafy greens CEA grower in the U.S. Demand for our products continues to outpace our capacity, and acquiring two operating facilities lets us meet that demand at a fraction of the cost and time of building new ones. Revol Greens has built strong, trusted relationships with retailers in markets that are new to us, and we are committed to building on that foundation. Organic is an important part of the assortment our retail partners want, and Revol’s certified-organic greens broaden what we can offer them as a single grower.” The 20 acre Texas facility and the 10 acre Minnesota facility increase Local Bounti’s growing footprint by roughly 70%, making it the larges"
+    },
+    "content_hash": "6419866424b561ac113959974ad4799fe2e35444943c22480ab8f04efc3cc47f",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-25T08:47:46.240746+00:00"
+  },
+  "0001104659-26-131304": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-131304",
+      "entity_id": "CIK:0001884046",
+      "source_role": "candidate",
+      "title": "Spark I Acquisition Corp (SPKLF, SPKUF, SPKWF) (CIK 0001884046) EX-99.1 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1884046/000110465926131304/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1884046/000110465926131304/tm2630525d1_ex99-1.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "Spark I Acquisition Corp (SPKLF, SPKUF, SPKWF) (CIK 0001884046) EX-99.1 2026-11-24. customers directly, reducing lead times, tariffs, and mitigating supply chain risk ZincFive estimates that ~$30 million of manufacturing CAPEX in the U.S. Update with Q3 S-4 Financials 48 124 225 253 196 44 233 238 243 68 224 106 43 51 60 68 84 106 255 255 255 12 16 21 Historical Financials Historical Financials 29 Updated Unaudited Financial Summary YTD Q3 2025A – YTD Q3 2026A ($MM)1 ▪ Revenue increased from $54.0 million (YTD Q3 2025A) to $62.2 million (YTD Q3 2026A), representing 15% growth year-over-year, driven by continued expansion of end-market demand and new customer acquisition ▪ Gross margin enhancement of 22% from YTD Q3 2025A to YTD Q3 2026A as revenue scales across the existing cost base, demonstrating stronger benefits of revenue scale over fixed manufacturing costs ▪ Operating expenses increased by $13.4 million (up 42.8%) as the company scales with targeted investment in sales and marketing to drive growth Commentary YTD Q3 2025A YTD Q3 2026A Revenues $54.0 $62.2 COGS 59.3 54.7 Gross Profit ($5.4) $7.5 Margin % (10.0%) 12.1% Research & Development 8.1 8.3 SG&A 23.3 36.5 Operating Loss ($36.8) ($37.3) Other Income/(Expense) 0.0 0.3 Change in fair value of securities 3.7 13.7 Loss on issuance of debt (24.4) (33.4) Interest Expense (9.0) (11.0) Income Tax Expense (0.1) (0.1) Net Loss ($66.5) ($67.8) Adj.",
+      "_model_response": {
+        "evidence_quote": "Revenue increased from $54.0 million (YTD Q3 2025A) to $62.2 million (YTD Q3 2026A), representing 15% growth year-over-year, driven by continued expansion of end-market demand and new customer acquisition. Gross margin enhancement of 22% from YTD Q3 2025A to YTD Q3 2026A as revenue scales across the existing cost base, demonstrating stronger benefits of revenue scale over fixed manufacturing costs. ZincFive estimates that ~$30 million of manufacturing CAPEX in the U.S.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Spark I Acquisition Corp (SPKLF, SPKUF, SPKWF) (CIK 0001884046) EX-99.1 2026-11-24",
+          "earnings_leverage": "Gross margin enhancement of 22% from YTD Q3 2025A to YTD Q3 2026A as revenue scales across the existing cost base, demonstrating stronger benefits of revenue scale over fixed manufacturing costs",
+          "supply_demand_tightness": "continued expansion of end-market demand and new customer acquisition",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Revenue increased from $54.0 million (YTD Q3 2025A) to $62.2 million (YTD Q3 2026A), representing 15% growth year-over-year"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ZincFive",
+        "theme": "에너지 저장",
+        "signal_type": "공시(8-K)",
+        "what_happened": "ZincFive가 2025년 3분기 대비 2026년 3분기 누적 매출이 15% 성장하고, 매출 규모 확대와 고정 제조 비용 절감으로 총 마진율이 22% 개선되었으며, 미국 내 약 3천만 달러의 제조 CAPEX를 계획하고 있다고 발표했다.",
+        "why_it_matters": "매출 성장과 함께 마진율이 크게 개선된 것은 회사의 운영 레버리지가 발현되고 있음을 보여주며, 이는 향후 이익 증가에 긍정적인 영향을 미칠 수 있는 조기 신호이며, CAPEX 계획은 미래 성장 동력 확보 의지를 나타낸다.",
+        "what_to_watch": "향후 분기별 매출 성장률 및 총 마진율 추이, 그리고 CAPEX 집행 현황 및 생산 능력 증대 효과.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출. 주로 공장 건설, 장비 구매 등에 사용된다."
+      }
+    },
+    "content_hash": "13e5f1bb38ad44244e7f424cd653c19a78fcb55190235039d7153dbed431b9c3",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-25T08:48:24+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
+  },
+  "0001104659-26-131619": {
+    "status": "rejected",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001104659-26-131619",
+      "entity_id": "CIK:0001386301",
+      "source_role": "candidate",
+      "title": "Research Solutions, Inc. (RSSS) (CIK 0001386301) EX-2.1 2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1386301/000110465926131619/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1386301/000110465926131619/tm2630498d1_ex2-1.htm",
+      "published_at": "2026-11-24",
+      "raw_text": "Research Solutions, Inc. (RSSS) (CIK 0001386301) EX-2.1 2026-11-24. Subsidiaries), (ii) the deferred revenue (current and long-term), customer deposits, prepayments and unapplied customer credits of the Acquired Companies, together with a schedule thereof by customer and revenue stream showing the period over which such amounts are expected to be recognized or applied, and (iii) all other indebtedness for borrowed money, capital lease obligations, deferred purchase price obligations and guarantees of the Acquired Companies, each determined in accordance with GAAP applied on a basis consistent with the Company Balance Sheet. All deferred revenue, customer deposits and prepayments reflected on Section 4.07(e) of the Company Disclosure Letter were billed and collected in the ordinary course of business consistent with past practice, and since the Company Balance Sheet Date no Acquired Company has offered any discount, credit or other incentive for early payment, prepayment or multi-year billing outside the ordinary course of business consistent with past practice. Since the Company Balance Sheet Date, no Acquired Company has taken or omitted to take any action the purpose or effect of which is to artificially accelerate the collection of accounts receivable, delay the payment of accounts payable or accrued expenses, accelerate billings or the receipt of customer prepayments or deposits, or otherwise artificially increase or decrease the amount of cash, deferred revenue, customer deposits or working capital of the Acquired Companies, and the working capital, billing, collection and cash-management practices of the Acquired Companies have been conducted in the ordinary course of business consistent with past practice. Without limiting the foregoing, and as an extension thereof, except (A) as set forth on Section 6.01(a) of the Company Disclosure Letter, (B) as required by Applicable Law, (C) expressly required in this Agreement, or (D) otherwise with the prior written co",
+      "_model_response": {
+        "evidence_quote": "All deferred revenue, customer deposits and prepayments reflected on Section 4.07(e) of the Company Disclosure Letter were billed and collected in the ordinary course of business consistent with past practice, and since the Company Balance Sheet Date no Acquired Company has offered any discount, credit or other incentive for early payment, prepayment or multi-year billing outside the ordinary course of business consistent with past practice. Since the Company Balance Sheet Date, no Acquired Company has taken or omitted to take any action the purpose or effect of which is to artificially accelerate the collection of accounts receivable, delay the payment of accounts payable or accrued expenses, accelerate billings or the receipt of customer prepayments or deposits, or otherwise artificially increase or decrease the amount of cash, deferred revenue, customer deposits or working capital of the Acquired Companies, and the working capital, billing, collection and cash-management practices of the Acquired Companies have been conducted in the ordinary course of business consistent with past practice.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": ""
+        },
+        "event_state": "unknown",
+        "signal_direction": "neutral",
+        "bottleneck_id": "",
+        "is_signal": false,
+        "reject_reason": "인수 대상 회사의 회계 관행이 과거와 일관되게 정상적인 사업 과정에서 이루어졌으며, 인위적인 매출/현금 조작이 없었음을 명시하는 루틴 공시로, 구체적인 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 증설 등)에 해당하지 않습니다.",
+        "subject": "Research Solutions, Inc.",
+        "theme": "미분류",
+        "signal_type": "공시(8-K)",
+        "what_happened": "Research Solutions, Inc.의 인수 관련 공시에서 인수 대상 회사의 이연 매출, 고객 예치금, 선지급금 및 운전자본 관리 관행이 정상적인 사업 과정에서 이루어졌음을 명시했습니다.",
+        "why_it_matters": "이 공시는 인수 대상 회사의 재무 건전성과 투명성을 확인하는 루틴한 내용으로, 새로운 투자 기회를 시사하는 구체적인 변화나 성장을 나타내지 않습니다.",
+        "what_to_watch": "",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 0,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 0
+        },
+        "upside_score": 0,
+        "tier": "관망",
+        "stage": "제외",
+        "glossary": ""
+      },
+      "_reject_reason": "인수 대상 회사의 회계 관행이 과거와 일관되게 정상적인 사업 과정에서 이루어졌으며, 인위적인 매출/현금 조작이 없었음을 명시하는 루틴 공시로, 구체적인 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 증설 등)에 해당하지 않습니다."
+    },
+    "content_hash": "a0eb55181ccc81ec4b401c7179d4e0dcc0e0d17bddfd7f1f541f5cfc535c6a6d",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 1,
+    "updated_at": "2026-11-25T08:48:40+00:00",
+    "reason": "인수 대상 회사의 회계 관행이 과거와 일관되게 정상적인 사업 과정에서 이루어졌으며, 인위적인 매출/현금 조작이 없었음을 명시하는 루틴 공시로, 구체적인 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 증설 등)에 해당하지 않습니다.",
+    "processed_day": "2026-11-25",
+    "processed_run": "45579319757-1"
   }
 }

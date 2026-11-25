@@ -1,0 +1,201 @@
+{
+  "context_id": "CTX-08B86681FF5461A0",
+  "candidate_id": "CAN-6791FD80ACF947E8",
+  "ticker": "ASPN",
+  "issuer_cik": "0001145986",
+  "document_ids": [
+    "DOC-507EAB470B4EE55E",
+    "DOC-14110BB0F72E9CB8"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-507EAB470B4EE55E#p5",
+    "DOC-507EAB470B4EE55E#p6",
+    "DOC-507EAB470B4EE55E#p12",
+    "DOC-507EAB470B4EE55E#p17",
+    "DOC-507EAB470B4EE55E#p27",
+    "DOC-507EAB470B4EE55E#p29",
+    "DOC-507EAB470B4EE55E#p32",
+    "DOC-507EAB470B4EE55E#p35",
+    "DOC-507EAB470B4EE55E#p37",
+    "DOC-507EAB470B4EE55E#p38",
+    "DOC-507EAB470B4EE55E#p39",
+    "DOC-507EAB470B4EE55E#p46",
+    "DOC-507EAB470B4EE55E#t2",
+    "DOC-507EAB470B4EE55E#t5",
+    "DOC-507EAB470B4EE55E#t6",
+    "DOC-507EAB470B4EE55E#t7",
+    "DOC-14110BB0F72E9CB8#p6",
+    "DOC-14110BB0F72E9CB8#p7",
+    "DOC-14110BB0F72E9CB8#p11",
+    "DOC-14110BB0F72E9CB8#p12",
+    "DOC-14110BB0F72E9CB8#p29",
+    "DOC-14110BB0F72E9CB8#p40"
+  ],
+  "input_sha": "08b86681ff5461a091c19fc00cca53f5472b96ddd567c5b9d0737af426ebc2fb",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-25T09:03:47+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · Q4 2026: $60 million and $75 million — 회사의 예상 매출 범위이다",
+      "note_ko": "회사의 예상 매출 범위이다",
+      "kind": "guidance",
+      "quote": "Q4 2026 Revenue is expected to range between $60 million and $75 million",
+      "document_id": "DOC-507EAB470B4EE55E",
+      "block_id": "p32",
+      "metric": "Revenue",
+      "figures": [
+        "$60 million and $75 million"
+      ],
+      "period": "Q4 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Q4 2026: $5 million and $13 million — 회사의 예상 조정 이자, 세금, 감가상각비 차감 전 이익 범위이다",
+      "note_ko": "회사의 예상 조정 이자, 세금, 감가상각비 차감 전 이익 범위이다",
+      "kind": "guidance",
+      "quote": "Q4 2026 Adjusted EBITDA is expected to range between $5 million and $13 million, which excludes an estimated $5 million to $10 million of East Providence incident-related costs, including expedited freight and expedited repair costs, professional fees, and the incremental cost of temporarily sourcing certain products from the Company's external manufacturing facility until the East Providence facility returns to full production capacity; the Company is engaged in the claims process under its insurance policies with respect to these costs",
+      "document_id": "DOC-507EAB470B4EE55E",
+      "block_id": "p35",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$5 million and $13 million"
+      ],
+      "period": "Q4 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "limitations": [
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · Q4 2026: $5 million to $10 million — 이스트 프로비던스 사고 관련 비용이 제외되어 있다",
+      "note_ko": "이스트 프로비던스 사고 관련 비용이 제외되어 있다",
+      "kind": "fact",
+      "quote": "The Adjusted EBITDA range excludes an estimated $5 million to $10 million of East Providence incident-related costs, as described above.",
+      "document_id": "DOC-507EAB470B4EE55E",
+      "block_id": "p38",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$5 million to $10 million"
+      ],
+      "period": "Q4 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [
+    "이스트 프로비던스 사고 관련 비용에 대한 보험 청구 진행 상황은 어떠한가?",
+    "데이터 센터 인프라 및 배터리 에너지 저장 분야의 상업적 이정표는 무엇인가?"
+  ],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "이전 분기보다 늘었으며 전망치 상단을 넘어섰다",
+      "figures": [
+        "$85 million"
+      ],
+      "quote": "Q3 2026 revenue of $85 million, up 71% quarter-over-quarter and above the high end of outlook",
+      "where": "DOC-507EAB470B4EE55E#p5"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사의 순손실이다",
+      "figures": [
+        "$10 million"
+      ],
+      "quote": "Q3 2026 net loss of $10 million; Adjusted EBITDA of $20 million, above the high end of outlook",
+      "where": "DOC-507EAB470B4EE55E#p6"
+    },
+    {
+      "what": "claim",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "전망치 상단을 넘어섰다",
+      "figures": [
+        "$20 million"
+      ],
+      "quote": "Q3 2026 net loss of $10 million; Adjusted EBITDA of $20 million, above the high end of outlook",
+      "where": "DOC-507EAB470B4EE55E#p6"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "이스트 프로비던스 사고 관련 비용이 포함되어 있다",
+      "figures": [
+        "$10.4 million"
+      ],
+      "quote": "Third quarter 2026 results included $15.1 million of East Providence incident-related costs, such as expedited freight, professional fees, and the incremental cost of temporarily sourcing certain prod",
+      "where": "DOC-507EAB470B4EE55E#p12"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "유형 자산 처분 손실이 포함되어 있다",
+      "figures": [
+        "$10.4 million"
+      ],
+      "quote": "Results also included a $4.6 million loss on disposal of property, plant and equipment, primarily related to the write-down of certain Statesboro, Georgia manufacturing assets.",
+      "where": "DOC-507EAB470B4EE55E#p12"
+    }
+  ],
+  "context_status": "draft_ready"
+}

@@ -1,0 +1,133 @@
+{
+  "context_id": "CTX-9BB0DECABC0FE9A2",
+  "candidate_id": "CAN-3BD5E965B73FD420",
+  "ticker": "STNG",
+  "issuer_cik": "0001483934",
+  "document_ids": [
+    "DOC-5E31D8ADC03214CC",
+    "DOC-B3416D8D9E85BDCF"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-5E31D8ADC03214CC#p20",
+    "DOC-5E31D8ADC03214CC#p23",
+    "DOC-5E31D8ADC03214CC#p24",
+    "DOC-B3416D8D9E85BDCF#p4",
+    "DOC-B3416D8D9E85BDCF#p5",
+    "DOC-B3416D8D9E85BDCF#p7",
+    "DOC-B3416D8D9E85BDCF#t2",
+    "DOC-B3416D8D9E85BDCF#p8",
+    "DOC-B3416D8D9E85BDCF#p9",
+    "DOC-B3416D8D9E85BDCF#p11",
+    "DOC-B3416D8D9E85BDCF#p12",
+    "DOC-B3416D8D9E85BDCF#p16",
+    "DOC-B3416D8D9E85BDCF#p17",
+    "DOC-B3416D8D9E85BDCF#p19",
+    "DOC-B3416D8D9E85BDCF#p22",
+    "DOC-B3416D8D9E85BDCF#p23"
+  ],
+  "input_sha": "9bb0decabc0fe9a242eda98b53d19f15128352b7a93fae4393c3a7812b4ae197",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-25T09:03:47+00:00",
+  "source_coverage": "complete",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [
+    {
+      "text_ko": "diluted shares outstanding — 희석 주식수는 예비적이며 기간 동안 회사 보통주 평균 가격에 따라 달라질 수 있다",
+      "note_ko": "희석 주식수는 예비적이며 기간 동안 회사 보통주 평균 가격에 따라 달라질 수 있다",
+      "kind": "fact",
+      "quote": "The estimated diluted shares outstanding provided herein is preliminary and subject to change as the calculation is partially dependent upon the average price of the Company’s common stock during the period.",
+      "document_id": "DOC-B3416D8D9E85BDCF",
+      "block_id": "p17",
+      "metric": "diluted shares outstanding",
+      "figures": [],
+      "period": "unknown",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "unknown"
+    }
+  ],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "bad_tag",
+      "note_ko": "회사가 보유한 유조선 수량이다",
+      "figures": [
+        "74"
+      ],
+      "quote": "Scorpio Tankers Inc. currently owns 74 product tankers (25 LR2 tankers, 35 MR tankers and 14 Handymax tankers) with an average age of 10.3 years.",
+      "where": "DOC-5E31D8ADC03214CC#p20"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사가 매각하기로 합의한 LR2 유조선 수량이며, 해당 분기에 거래가 완료될 것으로 예상된다",
+      "figures": [
+        "two"
+      ],
+      "quote": "The Company has reached agreements to sell two LR2 product tankers, which are expected to close in the fourth quarter of 2026.",
+      "where": "DOC-5E31D8ADC03214CC#p20"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_not_verbatim",
+      "note_ko": "회사가 건조하기로 합의한 MR 신조선 수량이며, 해당 연도에 인도될 것으로 예상된다",
+      "figures": [
+        "five"
+      ],
+      "quote": "The Company has also reached agreements to construct five MR newbuildings with deliveries expected in 2027 and 2030, eight LR2 newbuildings with deliveries expected in 2027 and 2029 and four VLCC newb",
+      "where": "DOC-5E31D8ADC03214CC#p20"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "LR2 선박의 평균 일일 용선료 수익이다",
+      "figures": [
+        "$64,900"
+      ],
+      "quote": "LR2 ; $64,900 ; 1,249 ; 85% ; $30,800 ; 902 ; $— ; — ; —%",
+      "where": "DOC-B3416D8D9E85BDCF#t2"
+    },
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "STI Gladiator 선박의 3년 기간 용선료이며, 해당 월에 시작될 것으로 예상된다",
+      "figures": [
+        "$40,188 per day"
+      ],
+      "quote": "The agreements for STI Gladiator and STI Jermyn are each for a term of three years at rates of $40,188 per day and $42,500 per day, respectively. These time charters are expected to commence in Septem",
+      "where": "DOC-B3416D8D9E85BDCF#p12"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "미래예측진술은 예측하기 어렵거나 불가능한 중대한 불확실성과 우발상황에 따라 달라질 수 있다",
+      "figures": [],
+      "quote": "Although management believes that these assumptions were reasonable when made, because these assumptions are inherently subject to significant uncertainties and contingencies which are difficult or im",
+      "where": "DOC-5E31D8ADC03214CC#p23"
+    },
+    {
+      "what": "limitation",
+      "reason": "bad_note",
+      "note_ko": "실제 결과는 예상치 못한 부채, 미래 자본 지출, 수익, 비용, 이익, 시너지, 경제 성과, 부채, 재무 상태, 손실, 미래 전망, 회사 운영의 확장 및 성장, 자산 또는 사업부 통합 관련 위험, 예상 시너지 및 기타 혜택 미실현 가능성, 계약 불이행, 세계 경제 및 통화 강세, 용선료 및 선박 가치 변동을 포함한 일반적인 시장 상황, 유조선 용량 수요 변",
+      "figures": [],
+      "quote": "In addition to these important factors, other important factors that, in the Company’s view, could cause actual results to differ materially from those discussed in the forward‐looking statements incl",
+      "where": "DOC-5E31D8ADC03214CC#p24"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}

@@ -1,0 +1,254 @@
+{
+  "candidate_id": "CAN-6791FD80ACF947E8",
+  "candidate_version": "CV-F8A9A0B6145BA76A",
+  "identity": {
+    "entity_id": "NYSE:ASPN",
+    "ticker": "ASPN",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Aspen Aerogels, Inc.",
+  "industry": "Specialty Chemicals",
+  "sector": "Basic Materials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": null,
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "pending",
+      "source_text": "Aspen Aerogels, Inc., an aerogel technology company, designs, develops, manufactures, and sells aerogel materials primarily for use in the energy industrial, sustainable insulation materials, and electric vehicle (EV) markets in the United States, Canada, Asia, Europe, and Latin America. It operates through two segments: Thermal Barrier and Energy Industrial. The company offers PyroThin aerogel thermal barriers for use in battery packs in EVs; Pyrogel XTE for refineries and petrochemical facilities; Pyrogel HPS for high temperatures and in demanding thermal applications in refining and chemica"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "ASPN analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ASPN/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-25T09:02:01+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "ASPN daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ASPN/history",
+      "published_at": null,
+      "observed_at": "2026-11-25T09:02:01+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "ASPN company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/ASPN/profile",
+      "published_at": null,
+      "observed_at": "2026-11-25T09:02:01+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-507EAB470B4EE55E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1145986/000117184326007142/exh_991.htm",
+      "title": "SEC 8-K EX-99.1 — PRESS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-11-05",
+      "observed_at": "2026-11-25T09:03:25+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-14110BB0F72E9CB8",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1145986/000117184326005289/exh_991.htm",
+      "title": "SEC 8-K EX-99.1 — PRESS RELEASE",
+      "published_at": null,
+      "filed_at": "2026-08-06",
+      "observed_at": "2026-11-25T09:03:25+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-08B86681FF5461A0",
+    "input_sha": "08b86681ff5461a091c19fc00cca53f5472b96ddd567c5b9d0737af426ebc2fb",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "매출(Revenue) · Q4 2026: $60 million and $75 million — 회사의 예상 매출 범위이다",
+        "note_ko": "회사의 예상 매출 범위이다",
+        "kind": "guidance",
+        "quote": "Q4 2026 Revenue is expected to range between $60 million and $75 million",
+        "document_id": "DOC-507EAB470B4EE55E",
+        "block_id": "p32",
+        "metric": "Revenue",
+        "figures": [
+          "$60 million and $75 million"
+        ],
+        "period": "Q4 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · Q4 2026: $5 million and $13 million — 회사의 예상 조정 이자, 세금, 감가상각비 차감 전 이익 범위이다",
+        "note_ko": "회사의 예상 조정 이자, 세금, 감가상각비 차감 전 이익 범위이다",
+        "kind": "guidance",
+        "quote": "Q4 2026 Adjusted EBITDA is expected to range between $5 million and $13 million, which excludes an estimated $5 million to $10 million of East Providence incident-related costs, including expedited freight and expedited repair costs, professional fees, and the incremental cost of temporarily sourcing certain products from the Company's external manufacturing facility until the East Providence facility returns to full production capacity; the Company is engaged in the claims process under its insurance policies with respect to these costs",
+        "document_id": "DOC-507EAB470B4EE55E",
+        "block_id": "p35",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$5 million and $13 million"
+        ],
+        "period": "Q4 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [
+      {
+        "text_ko": "조정 EBITDA(Adjusted EBITDA) · Q4 2026: $5 million to $10 million — 이스트 프로비던스 사고 관련 비용이 제외되어 있다",
+        "note_ko": "이스트 프로비던스 사고 관련 비용이 제외되어 있다",
+        "kind": "fact",
+        "quote": "The Adjusted EBITDA range excludes an estimated $5 million to $10 million of East Providence incident-related costs, as described above.",
+        "document_id": "DOC-507EAB470B4EE55E",
+        "block_id": "p38",
+        "metric": "Adjusted EBITDA",
+        "figures": [
+          "$5 million to $10 million"
+        ],
+        "period": "Q4 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "next_check": [
+      "이스트 프로비던스 사고 관련 비용에 대한 보험 청구 진행 상황은 어떠한가?",
+      "데이터 센터 인프라 및 배터리 에너지 저장 분야의 상업적 이정표는 무엇인가?"
+    ],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-507EAB470B4EE55E",
+        "title": "PRESS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1145986/000117184326007142/exh_991.htm",
+        "filed_at": "2026-11-05",
+        "observed_at": "2026-11-25T09:03:25+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-14110BB0F72E9CB8",
+        "title": "PRESS RELEASE",
+        "url": "https://www.sec.gov/Archives/edgar/data/1145986/000117184326005289/exh_991.htm",
+        "filed_at": "2026-08-06",
+        "observed_at": "2026-11-25T09:03:25+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-25T09:03:47+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 0.016,
+    "eps_30d": -0.155,
+    "eps_90d": -0.17767,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": null,
+    "steady": true,
+    "turnaround": true
+  }
+}
