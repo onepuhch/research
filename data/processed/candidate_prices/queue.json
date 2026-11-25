@@ -243,7 +243,9 @@
     "TIGO",
     "ACLS",
     "STRL",
-    "YPF"
+    "YPF",
+    "PFLT",
+    "RS"
   ],
   "days": {
     "2026-10-06": {
@@ -445,13 +447,17 @@
     "2026-11-24": {
       "requests": 10,
       "retries": 1
+    },
+    "2026-11-25": {
+      "requests": 6,
+      "retries": 0
     }
   },
   "fixed_at": "2026-10-06T06:49:07+00:00",
   "tickers": {
     "SPY": {
-      "attempts": 50,
-      "last_attempt_at": "2026-11-24T10:18:13.245782+00:00",
+      "attempts": 51,
+      "last_attempt_at": "2026-11-25T09:04:43.364279+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -946,8 +952,8 @@
       "reason": null
     },
     "DELL": {
-      "attempts": 2,
-      "last_attempt_at": "2026-10-30T06:15:06.108174+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-25T09:04:43.364279+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -2170,8 +2176,8 @@
       "reason": null
     },
     "ASPN": {
-      "attempts": 2,
-      "last_attempt_at": "2026-11-14T06:57:14.534635+00:00",
+      "attempts": 3,
+      "last_attempt_at": "2026-11-25T09:04:43.364279+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
@@ -2394,8 +2400,24 @@
       "reason": null
     },
     "YPF": {
+      "attempts": 2,
+      "last_attempt_at": "2026-11-25T09:04:43.364279+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "PFLT": {
       "attempts": 1,
-      "last_attempt_at": "2026-11-24T10:18:13.245782+00:00",
+      "last_attempt_at": "2026-11-25T09:04:43.364279+00:00",
+      "state": "ok",
+      "failures": 0,
+      "next_eligible_at": null,
+      "reason": null
+    },
+    "RS": {
+      "attempts": 1,
+      "last_attempt_at": "2026-11-25T09:04:43.364279+00:00",
       "state": "ok",
       "failures": 0,
       "next_eligible_at": null,
