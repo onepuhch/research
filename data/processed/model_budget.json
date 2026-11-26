@@ -1,9 +1,5 @@
 {
   "days": {
-    "2026-11-11": {
-      "extract": 5,
-      "candidate_context": 2
-    },
     "2026-11-12": {
       "extract": 5,
       "candidate_context": 2,
@@ -62,6 +58,11 @@
     "2026-11-25": {
       "extract": 5,
       "candidate_context": 6
+    },
+    "2026-11-26": {
+      "extract": 5,
+      "candidate_context": 6,
+      "cards": 1
     }
   },
   "counting_since": "2026-09-25, first counted call by the cards step of run 36133507734 (about 12:25 UTC); extract calls earlier that day were not counted",
@@ -82,12 +83,12 @@
   },
   "overload": {
     "gemini-2.5-flash": {
-      "consecutive_503": 2,
-      "stage": 1,
-      "until": "2026-11-25T09:34:42+00:00",
-      "jitter_s": 19.7,
-      "last_result": "503",
-      "last_at": "2026-11-25T09:04:22+00:00"
+      "consecutive_503": 0,
+      "stage": 0,
+      "until": null,
+      "jitter_s": null,
+      "last_result": "ok",
+      "last_at": "2026-11-26T08:50:52+00:00"
     }
   }
 }

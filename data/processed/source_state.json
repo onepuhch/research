@@ -18156,7 +18156,7 @@
     "validation_rejected": true
   },
   "0001628280-26-073041": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18167,12 +18167,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1289308/000162828026073041/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1289308/000162828026073041/ex991_earningsx2qfy27.htm",
       "published_at": "2026-11-12",
-      "raw_text": "EnerSys (ENS) (CIK 0001289308) EX-99.1 2026-11-12. All statements addressing operating performance, events, or developments that EnerSys expects or anticipates will occur in the future, including statements relating to sales growth, earnings or earnings per share growth, order intake, backlog, payment of future cash dividends, commodity prices, execution of its stock buyback program, judicial or regulatory proceedings, ability to identify and realize benefits in connection with acquisition and disposition opportunities, EnerSys’ pending acquisition of Ultralife, including the anticipated timing of completion and the anticipated benefits of the pending acquisition, and EnerSys’ strategy, plans, objectives, expectations (financial or otherwise) and intentions with respect to its future financial results, growth potential and anticipated product portfolio in connection with the pending acquisition, and market share, as well as statements expressing optimism or pessimism about future operating results or benefits from its cash dividend, its stock buyback programs, application of Section 45X of the Internal Revenue Code, funding, development and construction of the Company's gigafactory in Greenville, South Carolina, adverse developments with respect to the economic conditions in the U.S."
+      "raw_text": "EnerSys (ENS) (CIK 0001289308) EX-99.1 2026-11-12. All statements addressing operating performance, events, or developments that EnerSys expects or anticipates will occur in the future, including statements relating to sales growth, earnings or earnings per share growth, order intake, backlog, payment of future cash dividends, commodity prices, execution of its stock buyback program, judicial or regulatory proceedings, ability to identify and realize benefits in connection with acquisition and disposition opportunities, EnerSys’ pending acquisition of Ultralife, including the anticipated timing of completion and the anticipated benefits of the pending acquisition, and EnerSys’ strategy, plans, objectives, expectations (financial or otherwise) and intentions with respect to its future financial results, growth potential and anticipated product portfolio in connection with the pending acquisition, and market share, as well as statements expressing optimism or pessimism about future operating results or benefits from its cash dividend, its stock buyback programs, application of Section 45X of the Internal Revenue Code, funding, development and construction of the Company's gigafactory in Greenville, South Carolina, adverse developments with respect to the economic conditions in the U.S.",
+      "_model_response": {
+        "evidence_quote": "funding, development and construction of the Company's gigafactory in Greenville, South Carolina",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "funding, development and construction of the Company's gigafactory in Greenville, South Carolina",
+          "supply_demand_tightness": "funding, development and construction of the Company's gigafactory in Greenville, South Carolina",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "funding, development and construction of the Company's gigafactory in Greenville, South Carolina"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "배터리 생산",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "EnerSys",
+        "theme": "에너지 저장 시스템",
+        "signal_type": "CAPEX",
+        "what_happened": "EnerSys가 사우스캐롤라이나 그린빌에 기가팩토리 건설을 위한 자금 조달, 개발 및 건설을 진행 중임을 밝혔다.",
+        "why_it_matters": "기가팩토리 건설은 EnerSys의 생산 능력 확대를 통해 미래 수요에 대비하고 시장 점유율을 높일 수 있는 중요한 투자이며, 이는 장기적인 매출 및 이익 성장의 기반이 될 수 있다.",
+        "what_to_watch": "기가팩토리 건설 진행 상황 및 예상 완공 시점, 초기 생산량 및 가동률.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 4,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "기가팩토리: 대규모 생산 시설을 의미하며, 주로 전기차 배터리 등 첨단 제품 생산에 사용됨."
+      }
     },
     "content_hash": "0ec49afdd20d8f0acb907f5ba06bd4d9f1d7a10f34ddbfc46fec45febb1ad7ee",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-26T08:34:06+00:00",
+    "signal_id": "SIG-0969",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-26",
+    "processed_run": "45784118958-1"
   },
   "0001628280-26-073106": {
     "status": "deferred",
@@ -18194,7 +18232,7 @@
     "updated_at": "2026-11-13T06:55:35.099965+00:00"
   },
   "0001140361-26-043093": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18205,12 +18243,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2011514/000114036126043093/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2011514/000114036126043093/ef20085361_ex99-2.htm",
       "published_at": "2026-11-12",
-      "raw_text": "Anteris Technologies Global Corp. (AVR) (CIK 0002011514) EX-99.2 2026-11-12. The PARADIGM Trial recruitment is advancing along with capacity expansion in line with our clinical and commercial plan. EX-99.2 3 ef20085361_ex99-2.htm EXHIBIT 99.2 Exhibit 99.2 Anteris Technologies Announces Results for the Third Quarter of 2026 MINNEAPOLIS, United States and BRISBANE, Australia November 11, 2026 (AEDT): Anteris Technologies Global Corp. (“Anteris” or the “Company”) (NASDAQ: AVR, ASX: AVR), a global healthcare company committed to designing, developing, and commercializing cutting-edge medical devices to restore healthy heart function, today reported financial results for the quarter ended September 30, 2026, and provided a corporate update. Q3 2026 Highlights • Continued execution of the PARADIGM Trial, with enrollment progressing across active sites in the U.S., Canada, Denmark, the Netherlands and France. Subsequent to quarter-end, the trial received regulatory clearance from Germany’s Federal Institute for Drugs and Medical Devices (BfArM) and advanced in Australia following HREC approval and TGA authorization under the Clinical Trial Notification pathway. • Assumed occupancy of the Northcross facility in Minnesota, providing additional capacity to scale production of the DurAVR ® THVs and ComASUR ® Delivery System, in preparation for commercialization. • Appointed Brent Moen as Chief Financial Officer, effective September 11, to support the Company’s financial and governance priorities as it advances the DurAVR THV toward commercialization. “Q3 saw continued progress on multiple fronts. The PARADIGM Trial recruitment is advancing along with capacity expansion in line with our clinical and commercial plan. The Company also brought in some key hires to strengthen our operating model and future capabilities,” said Wayne Paterson, Vice Chairman and Chief Executive Officer of Anteris. Business & Operations During the quarter, the Company continued to execute the global pi"
+      "raw_text": "Anteris Technologies Global Corp. (AVR) (CIK 0002011514) EX-99.2 2026-11-12. The PARADIGM Trial recruitment is advancing along with capacity expansion in line with our clinical and commercial plan. EX-99.2 3 ef20085361_ex99-2.htm EXHIBIT 99.2 Exhibit 99.2 Anteris Technologies Announces Results for the Third Quarter of 2026 MINNEAPOLIS, United States and BRISBANE, Australia November 11, 2026 (AEDT): Anteris Technologies Global Corp. (“Anteris” or the “Company”) (NASDAQ: AVR, ASX: AVR), a global healthcare company committed to designing, developing, and commercializing cutting-edge medical devices to restore healthy heart function, today reported financial results for the quarter ended September 30, 2026, and provided a corporate update. Q3 2026 Highlights • Continued execution of the PARADIGM Trial, with enrollment progressing across active sites in the U.S., Canada, Denmark, the Netherlands and France. Subsequent to quarter-end, the trial received regulatory clearance from Germany’s Federal Institute for Drugs and Medical Devices (BfArM) and advanced in Australia following HREC approval and TGA authorization under the Clinical Trial Notification pathway. • Assumed occupancy of the Northcross facility in Minnesota, providing additional capacity to scale production of the DurAVR ® THVs and ComASUR ® Delivery System, in preparation for commercialization. • Appointed Brent Moen as Chief Financial Officer, effective September 11, to support the Company’s financial and governance priorities as it advances the DurAVR THV toward commercialization. “Q3 saw continued progress on multiple fronts. The PARADIGM Trial recruitment is advancing along with capacity expansion in line with our clinical and commercial plan. The Company also brought in some key hires to strengthen our operating model and future capabilities,” said Wayne Paterson, Vice Chairman and Chief Executive Officer of Anteris. Business & Operations During the quarter, the Company continued to execute the global pi",
+      "_model_response": {
+        "evidence_quote": "Assumed occupancy of the Northcross facility in Minnesota, providing additional capacity to scale production of the DurAVR ® THVs and ComASUR ® Delivery System, in preparation for commercialization.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Anteris Technologies Global Corp. (“Anteris” or the “Company”) (NASDAQ: AVR, ASX: AVR), a global healthcare company committed to designing, developing, and commercializing cutting-edge medical devices to restore healthy heart function",
+          "earnings_leverage": "providing additional capacity to scale production of the DurAVR ® THVs and ComASUR ® Delivery System, in preparation for commercialization.",
+          "supply_demand_tightness": "in preparation for commercialization.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Assumed occupancy of the Northcross facility in Minnesota, providing additional capacity to scale production of the DurAVR ® THVs and ComASUR ® Delivery System, in preparation for commercialization."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Anteris Technologies Global Corp. (AVR)",
+        "theme": "의료기기 (심장 판막)",
+        "signal_type": "CAPEX",
+        "what_happened": "Anteris Technologies는 미네소타의 Northcross 시설에 입주하여 DurAVR THV 및 ComASUR Delivery System의 상업화를 위한 생산 능력 확장을 준비하고 있습니다.",
+        "why_it_matters": "생산 능력 증설은 향후 제품 상업화에 대한 회사의 자신감과 준비 상태를 보여주며, 이는 잠재적인 매출 성장을 위한 필수적인 선행 지표입니다.",
+        "what_to_watch": "DurAVR THV 및 ComASUR Delivery System의 상업화 일정 및 초기 판매량, 생산 시설의 실제 가동률 및 추가 CAPEX 계획",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "DurAVR THV: 경피적 대동맥 판막 (Transcatheter Aortic Valve), ComASUR Delivery System: 심장 판막 전달 시스템"
+      }
     },
     "content_hash": "884fa518c783c2e9a359e3a12db2393f5f32cd67d644692c9dd0fed60f320345",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-26T08:34:22+00:00",
+    "signal_id": "SIG-0970",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-26",
+    "processed_run": "45784118958-1"
   },
   "0001104659-26-125825": {
     "status": "accepted",
@@ -18270,7 +18346,7 @@
     "processed_run": "43567384363-1"
   },
   "0001213900-26-119000": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18281,15 +18357,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1828805/000121390026119000/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1828805/000121390026119000/ea031196101ex99-1.htm",
       "published_at": "2026-11-12",
-      "raw_text": "Aeluma, Inc. (ALMU) (CIK 0001828805) EX-99.1 2026-11-12. DATED NOVEMBER 12, 2026 Exhibit 99.1 Aeluma Announces First Quarter Fiscal 2027 Financial Results Continued Progress in Technology Readiness for AI Datacom Market Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing GOLETA, CA – November 12, 2026 – Aeluma, Inc. EX-99.1 2 ea031196101ex99-1.htm PRESS RELEASE OF AELUMA, INC. DATED NOVEMBER 12, 2026 Exhibit 99.1 Aeluma Announces First Quarter Fiscal 2027 Financial Results Continued Progress in Technology Readiness for AI Datacom Market Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing GOLETA, CA – November 12, 2026 – Aeluma, Inc. (NASDAQ: ALMU) (“Aeluma” or the “Company”), a semiconductor company specializing in high-performance, scalable technologies for AI, mobile and consumer, defense and aerospace, and quantum, today reported financial results for its first quarter of fiscal 2027 ended September 30, 2026. Fiscal First Quarter 2027 and Subsequent Highlights ● Increased Technology Readiness: Advanced development of high-speed photodetectors and quantum dot lasers leveraging capabilities at Aeluma and supply chain partners such as Sumitomo Chemical Advanced Technologies. ● Manufacturing Expansion : Finalized a purchase agreement with Aixtron for a new 200 mm capable MOCVD system to expand manufacturing capacity and accelerate development for non-indium-phosphide photonics. ● Customer Engagements: Expanded customer discussions in Datacom and other markets regarding product opportunities and non-recurring engineering investments. Several initiatives involve potentially high-volume demand to support the 2028 through 2032 AI infrastructure buildout. ● CHIPS Funding: Continued diligence and definitive agreement negotiations with the U.S. Department of Commerce CHIPS R&D Office for up to $30 million in proposed funding for development and commercialization"
+      "raw_text": "Aeluma, Inc. (ALMU) (CIK 0001828805) EX-99.1 2026-11-12. DATED NOVEMBER 12, 2026 Exhibit 99.1 Aeluma Announces First Quarter Fiscal 2027 Financial Results Continued Progress in Technology Readiness for AI Datacom Market Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing GOLETA, CA – November 12, 2026 – Aeluma, Inc. EX-99.1 2 ea031196101ex99-1.htm PRESS RELEASE OF AELUMA, INC. DATED NOVEMBER 12, 2026 Exhibit 99.1 Aeluma Announces First Quarter Fiscal 2027 Financial Results Continued Progress in Technology Readiness for AI Datacom Market Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing GOLETA, CA – November 12, 2026 – Aeluma, Inc. (NASDAQ: ALMU) (“Aeluma” or the “Company”), a semiconductor company specializing in high-performance, scalable technologies for AI, mobile and consumer, defense and aerospace, and quantum, today reported financial results for its first quarter of fiscal 2027 ended September 30, 2026. Fiscal First Quarter 2027 and Subsequent Highlights ● Increased Technology Readiness: Advanced development of high-speed photodetectors and quantum dot lasers leveraging capabilities at Aeluma and supply chain partners such as Sumitomo Chemical Advanced Technologies. ● Manufacturing Expansion : Finalized a purchase agreement with Aixtron for a new 200 mm capable MOCVD system to expand manufacturing capacity and accelerate development for non-indium-phosphide photonics. ● Customer Engagements: Expanded customer discussions in Datacom and other markets regarding product opportunities and non-recurring engineering investments. Several initiatives involve potentially high-volume demand to support the 2028 through 2032 AI infrastructure buildout. ● CHIPS Funding: Continued diligence and definitive agreement negotiations with the U.S. Department of Commerce CHIPS R&D Office for up to $30 million in proposed funding for development and commercialization",
+      "_model_response": {
+        "evidence_quote": "Executed Purchase Agreement With Aixtron for MOCVD Capacity Expansion and Large-Diameter Wafer Manufacturing... Finalized a purchase agreement with Aixtron for a new 200 mm capable MOCVD system to expand manufacturing capacity and accelerate development for non-indium-phosphide photonics.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Aeluma, Inc. (NASDAQ: ALMU) (“Aeluma” or the “Company”), a semiconductor company specializing in high-performance, scalable technologies for AI, mobile and consumer, defense and aerospace, and quantum",
+          "earnings_leverage": "expand manufacturing capacity and accelerate development",
+          "supply_demand_tightness": "expand manufacturing capacity",
+          "structural_ai_demand": "Continued Progress in Technology Readiness for AI Datacom Market... Several initiatives involve potentially high-volume demand to support the 2028 through 2032 AI infrastructure buildout.",
+          "revision_momentum": "",
+          "catalyst_visibility": "Executed Purchase Agreement With Aixtron... Finalized a purchase agreement"
+        },
+        "event_state": "contracted",
+        "signal_direction": "positive",
+        "bottleneck_id": "AI Datacom Photonics",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Aeluma, Inc. (ALMU)",
+        "theme": "AI Datacom Photonics",
+        "signal_type": "CAPEX",
+        "what_happened": "Aeluma가 Aixtron과 MOCVD 시스템 구매 계약을 체결하여 제조 역량을 확장하고 비인듐인화물 포토닉스 개발을 가속화하기로 했습니다.",
+        "why_it_matters": "AI 데이터센터 시장의 성장에 대비하여 핵심 부품인 포토닉스 생산 능력을 선제적으로 확보함으로써 향후 매출 증대와 시장 점유율 확대의 기반을 마련할 수 있습니다.",
+        "what_to_watch": "MOCVD 시스템 설치 및 가동 시점, 비인듐인화물 포토닉스 제품의 고객사 확보 및 수주 현황.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 2,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "MOCVD: 유기금속 화학 기상 증착법으로 반도체 웨이퍼 위에 박막을 증착하는 기술. Photonics: 빛을 이용한 기술로, 광통신, 센서 등에 사용되는 광학 부품 및 시스템."
+      }
     },
     "content_hash": "a4eada535e629435d7d98ae0ac7b3a3b3a89b360df1b3c3c0e262b118f49a5b5",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-26T08:34:37+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001104659-26-126237": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18300,15 +18412,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/101538/000110465926126237/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/101538/000110465926126237/tm2629635d1_ex99-1.htm",
       "published_at": "2026-11-12",
-      "raw_text": "UNITED STATES ANTIMONY CORP (UAMY) (CIK 0000101538) EX-99.1 2026-11-12. The Company’s exclusive long-term supply agreement with the supplier, and its exclusive license to the supplier’s antimony processing technology for use in North America and Australia, will remain in place. EX-99.1 2 tm2629635d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 United States Antimony Corporation Reports Third Quarter and Nine Months Ended September 30, 2026 Financial and Operating Results Third Quarter 2026 Revenues Increased 16% to $10.1 Million Antimony pounds sold up 68% in the quarter Gross Profit Margin Expands to 42% from 23% Gross Profit up 113% to $4.3 Million Projected 2026 Antimony Sales of 1.68–1.81 Million Pounds; Up ~24%; October Antimony Sales of ~310,000 Pounds; Highest Ever Monthly Volumes Maintained Significant Liquidity Equal to Year-end 2025 of ~ $90 Million Including Marketable Securities \"The Critical Minerals and ZEO Company\" ~ Antimony, Gold, Tungsten, and Zeolite ~ DALLAS, TX / ACCESS Newswire / November 12, 2026 / United States Antimony Corporation (\"USAC,\" \"US Antimony Corporation,\" or the \"Company\") (NYSE: UAMY) (NYSE Texas: UAMY) , a leading producer and processor of antimony, zeolite, and other critical minerals, and the only fully integrated antimony company in the world outside of China and Russia, today reported its financial and operating results for the third quarter and nine months ended September 30, 2026. Third Quarter 2026 Highlights · Revenue Growth: Generated revenue of $10.1 million in the third quarter of 2026, an increase of approximately 16% from $8.7 million in the third quarter of 2025 . · Improved Gross Profit: Gross profit increased 113% to $4.3 million in the third quarter of 2026 from $2.0 million in the third quarter of 2025, while gross margin improved to approximately 42% from 23%. · Net Loss: Reported a net loss of $9.5 million for the quarter, which included $2.1 million of non-cash stock-based compensation expense, $0.8 million of depre"
+      "raw_text": "UNITED STATES ANTIMONY CORP (UAMY) (CIK 0000101538) EX-99.1 2026-11-12. The Company’s exclusive long-term supply agreement with the supplier, and its exclusive license to the supplier’s antimony processing technology for use in North America and Australia, will remain in place. EX-99.1 2 tm2629635d1_ex99-1.htm EXHIBIT 99.1 Exhibit 99.1 United States Antimony Corporation Reports Third Quarter and Nine Months Ended September 30, 2026 Financial and Operating Results Third Quarter 2026 Revenues Increased 16% to $10.1 Million Antimony pounds sold up 68% in the quarter Gross Profit Margin Expands to 42% from 23% Gross Profit up 113% to $4.3 Million Projected 2026 Antimony Sales of 1.68–1.81 Million Pounds; Up ~24%; October Antimony Sales of ~310,000 Pounds; Highest Ever Monthly Volumes Maintained Significant Liquidity Equal to Year-end 2025 of ~ $90 Million Including Marketable Securities \"The Critical Minerals and ZEO Company\" ~ Antimony, Gold, Tungsten, and Zeolite ~ DALLAS, TX / ACCESS Newswire / November 12, 2026 / United States Antimony Corporation (\"USAC,\" \"US Antimony Corporation,\" or the \"Company\") (NYSE: UAMY) (NYSE Texas: UAMY) , a leading producer and processor of antimony, zeolite, and other critical minerals, and the only fully integrated antimony company in the world outside of China and Russia, today reported its financial and operating results for the third quarter and nine months ended September 30, 2026. Third Quarter 2026 Highlights · Revenue Growth: Generated revenue of $10.1 million in the third quarter of 2026, an increase of approximately 16% from $8.7 million in the third quarter of 2025 . · Improved Gross Profit: Gross profit increased 113% to $4.3 million in the third quarter of 2026 from $2.0 million in the third quarter of 2025, while gross margin improved to approximately 42% from 23%. · Net Loss: Reported a net loss of $9.5 million for the quarter, which included $2.1 million of non-cash stock-based compensation expense, $0.8 million of depre",
+      "_model_response": {
+        "evidence_quote": "Third Quarter 2026 Revenues Increased 16% to $10.1 Million Antimony pounds sold up 68% in the quarter Gross Profit Margin Expands to 42% from 23% Gross Profit up 113% to $4.3 Million Projected 2026 Antimony Sales of 1.68–1.81 Million Pounds; Up ~24%; October Antimony Sales of ~310,000 Pounds; Highest Ever Monthly Volumes",
+        "axes_evidence": {
+          "underfollowed_pure_play": "the only fully integrated antimony company in the world outside of China and Russia",
+          "earnings_leverage": "Revenues Increased 16% to $10.1 Million... Gross Profit up 113% to $4.3 Million",
+          "supply_demand_tightness": "The Critical Minerals and ZEO Company\" ~ Antimony... Highest Ever Monthly Volumes",
+          "structural_ai_demand": "",
+          "revision_momentum": "Projected 2026 Antimony Sales of 1.68–1.81 Million Pounds; Up ~24%",
+          "catalyst_visibility": "United States Antimony Corporation Reports Third Quarter and Nine Months Ended September 30, 2026 Financial and Operating Results... Projected 2026 Antimony Sales..."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "UAMY",
+        "theme": "핵심 광물",
+        "signal_type": "가이던스상향",
+        "what_happened": "United States Antimony Corporation (UAMY)이 2026년 3분기 매출이 16% 증가한 1,010만 달러를 기록했으며, 2026년 연간 안티몬 판매량은 약 24% 증가한 168만~181만 파운드로 예상하고, 10월 안티몬 판매량은 사상 최고치를 기록했다.",
+        "why_it_matters": "핵심 광물인 안티몬 판매량과 매출이 크게 증가하고 연간 판매량 가이던스까지 상향되어, 핵심 광물 수요 증가와 UAMY의 시장 지위 강화로 향후 실적 개선이 기대된다.",
+        "what_to_watch": "다음 분기 실적 발표에서 안티몬 판매량 및 마진 추이, 그리고 안티몬 시장 가격 변동.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 10,
+        "tier": "A",
+        "stage": "초기후반",
+        "glossary": "안티몬 (Antimony): 반도체, 난연제, 배터리 등에 사용되는 핵심 광물.\n가이던스 (Guidance): 기업이 미래 실적에 대해 제시하는 예상치."
+      }
     },
     "content_hash": "a4bbbc595495fad404a5f91834b100e77f44ba2811e8acc74b97ee19348df55d",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-26T08:34:55+00:00",
+    "signal_id": "SIG-0971",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-26",
+    "processed_run": "45784118958-1"
   },
   "0001628280-26-073382": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18319,12 +18469,48 @@
       "url": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026073382/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/2141406/000162828026073382/a3q2026earningsrelease.htm",
       "published_at": "2026-11-12",
-      "raw_text": "Accelevation Holdings Corp. (ACCV) (CIK 0002141406) EX-99.1 2026-11-12. Forward-looking statements include all statements that are not historical facts, including our guidance, the conversion of our backlog into revenue, demand in our end markets and for our products, increases in market share, our capabilities to satisfy demand, continued investment in our business, including capacity expansion and our modular and power product offerings, the diversification of our customer base and expansion of our addressable market, our estimated and projected costs, expenditures, cash flows, growth rates and margin improvements, our future leverage, the expected benefits from the entry into the new facilities, our plans and objectives for future operations and the execution of our growth strategy and long-term strategic priorities. EX-99.1 2 a3q2026earningsrelease.htm EX-99.1 3Q 2026 Earnings Release 1 FOR IMMEDIATE RELEASE Accelevation Holdings Corp. Reports Strong Third Quarter 2026 with Revenue Growth of 66% , Bookings Growth of over 350%, and Robust Cash Generation November 12, 2026 Third Quarter 2026 Business Highlights • Revenue grew 65.9% year over year to $202.2 million . • Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. • Book-to-bill ratio of 3.8x. • Net income was $3.2 million , a decline of $10.5 million ; net income margin was 1.6% . • Adjusted net income* was $20.9 million , a decline of 7.0% . • Adjusted EBITDA* increased by $8.9 million to $37.7 million ; Adjusted EBITDA margin* was 18.7% . • Operating cash flow increased to $62.5 million from an outflow of $0.6 million in the prior year. • Subsequent to quarter end, the Company entered into a new $650 million senior secured credit agreement with significant pricing improvement. Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth"
+      "raw_text": "Accelevation Holdings Corp. (ACCV) (CIK 0002141406) EX-99.1 2026-11-12. Forward-looking statements include all statements that are not historical facts, including our guidance, the conversion of our backlog into revenue, demand in our end markets and for our products, increases in market share, our capabilities to satisfy demand, continued investment in our business, including capacity expansion and our modular and power product offerings, the diversification of our customer base and expansion of our addressable market, our estimated and projected costs, expenditures, cash flows, growth rates and margin improvements, our future leverage, the expected benefits from the entry into the new facilities, our plans and objectives for future operations and the execution of our growth strategy and long-term strategic priorities. EX-99.1 2 a3q2026earningsrelease.htm EX-99.1 3Q 2026 Earnings Release 1 FOR IMMEDIATE RELEASE Accelevation Holdings Corp. Reports Strong Third Quarter 2026 with Revenue Growth of 66% , Bookings Growth of over 350%, and Robust Cash Generation November 12, 2026 Third Quarter 2026 Business Highlights • Revenue grew 65.9% year over year to $202.2 million . • Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. • Book-to-bill ratio of 3.8x. • Net income was $3.2 million , a decline of $10.5 million ; net income margin was 1.6% . • Adjusted net income* was $20.9 million , a decline of 7.0% . • Adjusted EBITDA* increased by $8.9 million to $37.7 million ; Adjusted EBITDA margin* was 18.7% . • Operating cash flow increased to $62.5 million from an outflow of $0.6 million in the prior year. • Subsequent to quarter end, the Company entered into a new $650 million senior secured credit agreement with significant pricing improvement. Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth",
+      "_model_response": {
+        "evidence_quote": "Third Quarter 2026 Business Highlights • Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. • Book-to-bill ratio of 3.8x. ... Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. ... Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth",
+          "supply_demand_tightness": "Book-to-bill ratio of 3.8x.",
+          "structural_ai_demand": "",
+          "revision_momentum": "Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. ... Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth",
+          "catalyst_visibility": "Bookings of $768.9 million , an increase of 364% year over year. • Backlog of $1.7 billion , an increase of 329% and 51.0% over prior year and prior quarter, respectively. • Book-to-bill ratio of 3.8x. ... Full Year 2026 Guidance** • Revenue in the range of $ 905 -$ 915 million, representing 103% year-over-year growth"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "Accelevation Holdings Corp.",
+        "theme": "미분류",
+        "signal_type": "수주/백로그",
+        "what_happened": "Accelevation Holdings Corp.는 2026년 3분기에 전년 대비 364% 증가한 수주와 329% 증가한 백로그를 기록하며 3.8배의 높은 수주잔고비율을 달성했고, 연간 103% 매출 성장을 예상하는 가이던스를 발표했습니다.",
+        "why_it_matters": "높은 수주와 백로그 증가는 향후 매출 성장을 강력히 시사하며, 이는 시장의 기대치를 상회할 잠재력이 있어 저평가된 기업 가치에 대한 재평가 촉매가 될 수 있습니다.",
+        "what_to_watch": "다음 분기 수주 및 백로그 추이, 연간 가이던스 상향 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 2,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기후반",
+        "glossary": "수주잔고비율(Book-to-bill ratio): 특정 기간 동안 신규 수주액을 매출액으로 나눈 비율로, 1보다 크면 수주가 매출보다 많아 향후 성장 잠재력이 높음을 의미합니다. 백로그(Backlog): 고객으로부터 주문을 받았지만 아직 인도되지 않은 제품이나 서비스의 총 가치입니다."
+      }
     },
     "content_hash": "885efafca8499b97a002d7c17750153610288ec6c3d64eb6dd411162f652b29d",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-26T08:35:28+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001213900-26-118353": {
     "status": "deferred",
@@ -20193,5 +20379,24 @@
     "reason": "인수 대상 회사의 회계 관행이 과거와 일관되게 정상적인 사업 과정에서 이루어졌으며, 인위적인 매출/현금 조작이 없었음을 명시하는 루틴 공시로, 구체적인 투자 발굴 신호(가이던스 상향, 수주/백로그 변화, CAPEX 증설 등)에 해당하지 않습니다.",
     "processed_day": "2026-11-25",
     "processed_run": "45579319757-1"
+  },
+  "0001193125-26-477264": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001193125-26-477264",
+      "entity_id": "CIK:0000912615",
+      "source_role": "candidate",
+      "title": "URBAN OUTFITTERS INC (URBN) (CIK 0000912615) EX-99.1 2026-11-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526477264/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526477264/urbn-ex99_1.htm",
+      "published_at": "2026-11-25",
+      "raw_text": "URBAN OUTFITTERS INC (URBN) (CIK 0000912615) EX-99.1 2026-11-25. Any one, or all, of the following factors could cause actual financial results to differ materially from those financial results mentioned in the forward-looking statements: overall economic and market conditions (including current levels of inflation) and worldwide political events and the resultant impact on consumer spending patterns and our pricing power, the difficulty in predicting and responding to shifts in fashion trends, changes in the level of competitive pricing and promotional activity and other industry factors, currency fluctuations, economic conditions and legal or regulatory changes, the effects of war and geopolitical instability, including impacts of the conflicts in the Middle East and impacts of the war between Russia and Ukraine and from related sanctions imposed by the United States, European Union, United Kingdom and others, terrorism and civil unrest, natural disasters, severe or unseasonable weather conditions (including as a result of climate change) or public health crises, labor shortages and increases in labor costs, raw material costs and transportation costs, availability of suitable retail space for expansion, timing of store openings, risks associated with international expansion, seasonal fluctuations in gross sales, response to new concepts, our ability to integrate acquisitions, risks associated with digital sales, our ability to maintain and expand our digital sales channels, any material disruptions or security breaches with respect to our technology systems, our effective utilization of technological advancements, including in artificial intelligence, the departure of one or more key senior executives, import risks (including any shortage of transportation capacities or delays at ports), changes to U.S."
+    },
+    "content_hash": "0f894b5299ff7a8139059f75a4e7d8bd04cfde6ef721273800195d50e662746c",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-26T08:33:52.794498+00:00"
   }
 }

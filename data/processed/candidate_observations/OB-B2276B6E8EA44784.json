@@ -1,0 +1,83 @@
+{
+  "observation_id": "OB-B2276B6E8EA44784",
+  "candidate_id": "CAN-ACA3C56448173C32",
+  "candidate_version": "CV-889212EF261B8F19",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:EMBJ",
+    "ticker": "EMBJ",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-26T08:39:02+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261126T083532Z_45784118958-1.json.gz",
+    "sha256": "c0b6b7e281458e386e47d0a2fa94b6875d393079e543779d082c4c9b48cc01b1",
+    "run_id": "45784118958-1",
+    "finished_at": "2026-11-26T08:49:41+00:00"
+  },
+  "eps": {
+    "eps_now": 1.59423,
+    "eps_30d": 0.99673,
+    "eps_90d": 0.98573,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 61.7,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.417,
+    "yield_change_30_pp": 3.355
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "split_in_window",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-28",
+    "price_start_date": "2026-08-28",
+    "price_end_expected": "2026-11-25",
+    "price_end_date": "2026-11-25",
+    "close_start": 72.54000091552734,
+    "close_end": 17.809999465942383,
+    "price_pct_90": -75.4,
+    "adj_return_pct_90": -75.4,
+    "pe_change_pct": null
+  },
+  "display_rank": 20,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 14
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 12677747712,
+  "context_id": "CTX-5CFC694A6AA30394",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [
+    "document budget reached before every results filing was read"
+  ],
+  "source_attempt_at": "2026-11-26T08:49:46+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:EMBJ",
+  "approval_version": null,
+  "rendered_at": "2026-11-26T08:50:47+00:00"
+}

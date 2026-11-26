@@ -1,0 +1,206 @@
+{
+  "context_id": "CTX-A64BE7BD142547E1",
+  "candidate_id": "CAN-029DB18061B03227",
+  "ticker": "NMM",
+  "issuer_cik": "0001415921",
+  "document_ids": [
+    "DOC-4CBED80B63C6C8EE",
+    "DOC-3093B3C66BDDC302"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-4CBED80B63C6C8EE#p131",
+    "DOC-4CBED80B63C6C8EE#p163",
+    "DOC-4CBED80B63C6C8EE#p211",
+    "DOC-4CBED80B63C6C8EE#p622",
+    "DOC-3093B3C66BDDC302#p30",
+    "DOC-3093B3C66BDDC302#p106",
+    "DOC-3093B3C66BDDC302#p117",
+    "DOC-3093B3C66BDDC302#p121",
+    "DOC-3093B3C66BDDC302#p130",
+    "DOC-3093B3C66BDDC302#p135",
+    "DOC-3093B3C66BDDC302#p145",
+    "DOC-3093B3C66BDDC302#p157",
+    "DOC-3093B3C66BDDC302#p159",
+    "DOC-3093B3C66BDDC302#p163",
+    "DOC-3093B3C66BDDC302#p173",
+    "DOC-3093B3C66BDDC302#t22"
+  ],
+  "input_sha": "a64be7bd142547e1ab9a89705325e2060d9c8ef11f534d575e64f622093be0e7",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-26T08:50:13+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "Time charter and voyage expenses · three month period ended June 30, 2026: $45.6 million — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Time charter and voyage expenses for the three month period ended June 30, 2026 increased by $14.4 million to $45.6 million, as compared to $31.2 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p117",
+      "metric": "Time charter and voyage expenses",
+      "figures": [
+        "$45.6 million"
+      ],
+      "period": "three month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Depreciation and amortization · three month period ended June 30, 2026: $83.0 million — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Depreciation and amortization amounted to $83.0 million for the three month period ended June 30, 2026, as compared to $80.8 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p121",
+      "metric": "Depreciation and amortization",
+      "figures": [
+        "$83.0 million"
+      ],
+      "period": "three month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal",
+        "capacity"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Time charter and voyage expenses · six month period ended June 30, 2026: $76.6 million — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Time charter and voyage expenses for the six month period ended June 30, 2026 increased by $15.4 million to $76.6 million, as compared to $61.2 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p130",
+      "metric": "Time charter and voyage expenses",
+      "figures": [
+        "$76.6 million"
+      ],
+      "period": "six month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "margin_cost"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "Depreciation and amortization · six month period ended June 30, 2026: $164.6 million — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Depreciation and amortization amounted to $164.6 million for the six month period ended June 30, 2026, as compared to $159.4 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p135",
+      "metric": "Depreciation and amortization",
+      "figures": [
+        "$164.6 million"
+      ],
+      "period": "six month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "acquisition_disposal",
+        "capacity"
+      ],
+      "direction": "negative"
+    },
+    {
+      "text_ko": "조정 EBITDA(Adjusted EBITDA) · three month period ended June 30, 2026: $242.2 million — 전년 같은 기간보다 증가했다",
+      "note_ko": "전년 같은 기간보다 증가했다",
+      "kind": "fact",
+      "quote": "Excluding this item, Adjusted EBITDA increased by $69.6 million to $242.2 million for the three month period ended June 30, 2026, as compared to $172.6 million for the same period in 2025.",
+      "document_id": "DOC-3093B3C66BDDC302",
+      "block_id": "p173",
+      "metric": "Adjusted EBITDA",
+      "figures": [
+        "$242.2 million"
+      ],
+      "period": "three month period ended June 30, 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [],
+  "context_status": "insufficient_earnings_context"
+}

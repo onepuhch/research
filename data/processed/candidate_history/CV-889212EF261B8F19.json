@@ -1,0 +1,137 @@
+{
+  "candidate_id": "CAN-ACA3C56448173C32",
+  "candidate_version": "CV-889212EF261B8F19",
+  "identity": {
+    "entity_id": "NYSE:EMBJ",
+    "ticker": "EMBJ",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Embraer S.A.",
+  "industry": "Aerospace & Defense",
+  "sector": "Industrials",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "상업용, 군용, 비즈니스 항공기 및 관련 시스템을 설계, 개발, 제조, 판매하여 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Embraer S.A., together with its subsidiaries, engages in the design, development, manufacture, and sale of aircraft and systems worldwide. The company operates through Commercial Aviation; Defense & Security; Executive Aviation; Services & Support; and Other segments. The Commercial Aviation segment develops, produces, and sells commercial jets. The Defense & Security segment develops and produces military aircraft; and is involved in research and development of software and integrated information systems, communications, border monitoring and surveillance, space systems/satellites, and aircra"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "EMBJ analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/EMBJ/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-26T08:39:02+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "EMBJ daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/EMBJ/history",
+      "published_at": null,
+      "observed_at": "2026-11-26T08:39:02+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "EMBJ company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/EMBJ/profile",
+      "published_at": null,
+      "observed_at": "2026-11-26T08:39:02+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-CB63FF712752254C",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/1355444/000129281426005209/embjpr3q26_6k.htm",
+      "title": "SEC 6-K 6-K",
+      "published_at": null,
+      "filed_at": "2026-11-10",
+      "observed_at": "2026-11-26T08:49:46+00:00",
+      "fields": "6-K 6-K"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-5CFC694A6AA30394",
+    "input_sha": "5cfc694a6aa30394e416cd51ebd642a59f5c0a6b535d00cafb10a4fa46593528",
+    "context_status": "no_supported_claims",
+    "claims": [],
+    "limitations": [],
+    "next_check": [
+      "애널리스트의 내년 EPS 예상치 상향이 이 발표와 관련이 있는지 확인해야 한다."
+    ],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-CB63FF712752254C",
+        "title": "6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1355444/000129281426005209/embjpr3q26_6k.htm",
+        "filed_at": "2026-11-10",
+        "observed_at": "2026-11-26T08:49:46+00:00",
+        "form": "6-K",
+        "document_type": "6-K"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-26T08:50:13+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.59423,
+    "eps_30d": 0.99673,
+    "eps_90d": 0.98573,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 61.7,
+    "steady": true,
+    "turnaround": false
+  }
+}

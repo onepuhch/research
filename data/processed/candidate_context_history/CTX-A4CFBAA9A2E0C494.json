@@ -1,0 +1,217 @@
+{
+  "context_id": "CTX-A4CFBAA9A2E0C494",
+  "candidate_id": "CAN-7F0690B785E31226",
+  "ticker": "CLF",
+  "issuer_cik": "0000764065",
+  "document_ids": [
+    "DOC-FB738D337778C4F4"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-FB738D337778C4F4#p8",
+    "DOC-FB738D337778C4F4#p10",
+    "DOC-FB738D337778C4F4#p11",
+    "DOC-FB738D337778C4F4#p12",
+    "DOC-FB738D337778C4F4#p14",
+    "DOC-FB738D337778C4F4#p15",
+    "DOC-FB738D337778C4F4#p16",
+    "DOC-FB738D337778C4F4#p17",
+    "DOC-FB738D337778C4F4#p19",
+    "DOC-FB738D337778C4F4#p20",
+    "DOC-FB738D337778C4F4#p27",
+    "DOC-FB738D337778C4F4#p28",
+    "DOC-FB738D337778C4F4#p29",
+    "DOC-FB738D337778C4F4#p39",
+    "DOC-FB738D337778C4F4#t3",
+    "DOC-FB738D337778C4F4#t5",
+    "DOC-FB738D337778C4F4#t6",
+    "DOC-FB738D337778C4F4#p57",
+    "DOC-FB738D337778C4F4#p58"
+  ],
+  "input_sha": "a4cfbaa9a2e0c49459e62880864ffdf303a982d4148b05e15a815b4d5033fe6f",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-26T08:50:13+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenues) · Third-quarter 2026: $5.6 billion — 회사의 매출액이다",
+      "note_ko": "회사의 매출액이다",
+      "kind": "fact",
+      "quote": "Third-quarter 2026 consolidated revenues were $5.6 billion, compared to $5.2 billion in the second quarter of 2026.",
+      "document_id": "DOC-FB738D337778C4F4",
+      "block_id": "p14",
+      "metric": "Revenues",
+      "figures": [
+        "$5.6 billion"
+      ],
+      "period": "Third-quarter 2026",
+      "currency": "USD",
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "GAAP net income · Third quarter of 2026: $165 million — 회사의 순이익이다",
+      "note_ko": "회사의 순이익이다",
+      "kind": "fact",
+      "quote": "For the third quarter of 2026, the Company recorded GAAP net income of $165 million, or $0.26 per diluted share, with an adjusted net income1 of $0.28 per diluted share.",
+      "document_id": "DOC-FB738D337778C4F4",
+      "block_id": "p15",
+      "metric": "GAAP net income",
+      "figures": [
+        "$165 million"
+      ],
+      "period": "Third quarter of 2026",
+      "currency": "USD",
+      "gaap": "GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Adjusted EBITDA2 · Third quarter of 2026: $612 million — 회사의 조정 EBITDA이다",
+      "note_ko": "회사의 조정 EBITDA이다",
+      "kind": "fact",
+      "quote": "For the third quarter of 2026, the Company reported Adjusted EBITDA2 of $612 million, a $326 million improvement compared to Adjusted EBITDA2 of $286 million recorded in the second quarter of 2026.",
+      "document_id": "DOC-FB738D337778C4F4",
+      "block_id": "p16",
+      "metric": "Adjusted EBITDA2",
+      "figures": [
+        "$612 million"
+      ],
+      "period": "Third quarter of 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "adjusted EBITDA2 · fourth-quarter 2026: approximately $715 million — 회사의 조정 EBITDA 예상치이다",
+      "note_ko": "회사의 조정 EBITDA 예상치이다",
+      "kind": "guidance",
+      "quote": "The Company expects fourth-quarter 2026 adjusted EBITDA2 to be approximately $715 million, an increase from the third quarter as a result of increased pricing, partially offset by seasonality, increased maintenance outages, input costs and incentive compensation accruals.",
+      "document_id": "DOC-FB738D337778C4F4",
+      "block_id": "p28",
+      "metric": "adjusted EBITDA2",
+      "figures": [
+        "approximately $715 million"
+      ],
+      "period": "fourth-quarter 2026",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "price",
+        "margin_cost",
+        "one_off"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "조정 EBITDA(adjusted EBITDA) · 2027: exceed $4 billion — 회사의 조정 EBITDA 예상치이다",
+      "note_ko": "회사의 조정 EBITDA 예상치이다",
+      "kind": "guidance",
+      "quote": "Based on 2027 contract changes and prevailing price forecasts, the Company would expect 2027 adjusted EBITDA to exceed $4 billion.",
+      "document_id": "DOC-FB738D337778C4F4",
+      "block_id": "p29",
+      "metric": "adjusted EBITDA",
+      "figures": [
+        "exceed $4 billion"
+      ],
+      "period": "2027",
+      "currency": "USD",
+      "gaap": "non-GAAP",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [
+        "level"
+      ],
+      "figure_readings": [
+        {
+          "role": "level",
+          "unit": "amount",
+          "direction": null
+        }
+      ],
+      "drivers": [
+        "price"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "limitation",
+      "reason": "guidance_written_as_fact",
+      "note_ko": "회사는 조정 EBITDA를 가장 직접적으로 비교 가능한 GAAP 재무 측정치인 순이익과 합리적인 노력 없이 조정할 수 없다",
+      "figures": [],
+      "quote": "We are unable to reconcile, without unreasonable effort, our expected adjusted EBITDA for the fourth quarter of 2026 and full-year 2027 to its most directly comparable GAAP financial measure, net inco",
+      "where": "DOC-FB738D337778C4F4#p58"
+    }
+  ],
+  "context_status": "draft_ready"
+}

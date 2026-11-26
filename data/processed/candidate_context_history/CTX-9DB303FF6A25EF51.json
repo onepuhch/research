@@ -1,0 +1,103 @@
+{
+  "context_id": "CTX-9DB303FF6A25EF51",
+  "candidate_id": "CAN-11B1565B12AFE2F9",
+  "ticker": "DINO",
+  "issuer_cik": "0001915657",
+  "document_ids": [
+    "DOC-3541B117ECA7BC8B",
+    "DOC-6EA52AE3808FADE4",
+    "DOC-0F62310DD65064FB"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-3541B117ECA7BC8B#p25",
+    "DOC-6EA52AE3808FADE4#p10",
+    "DOC-6EA52AE3808FADE4#p11",
+    "DOC-6EA52AE3808FADE4#p14",
+    "DOC-6EA52AE3808FADE4#p79",
+    "DOC-6EA52AE3808FADE4#t14",
+    "DOC-6EA52AE3808FADE4#t16",
+    "DOC-6EA52AE3808FADE4#p128",
+    "DOC-6EA52AE3808FADE4#t23",
+    "DOC-0F62310DD65064FB#p11",
+    "DOC-0F62310DD65064FB#p80",
+    "DOC-0F62310DD65064FB#t14",
+    "DOC-0F62310DD65064FB#p115",
+    "DOC-0F62310DD65064FB#t23"
+  ],
+  "input_sha": "9db303ff6a25ef51cf2e561b189fe0042cb26b9b6dfc89ae8a80e47586e6e0d1",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-26T08:50:13+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [],
+  "limitations": [],
+  "next_check": [],
+  "link": "unconfirmed",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "quote_not_in_block",
+      "note_ko": "조정 에비타는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$2,984"
+      ],
+      "quote": "Adjusted EBITDA ; $2,984 ; $870 ; $5,455 ; $1,574",
+      "where": "DOC-6EA52AE3808FADE4#t14"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "정유 부문의 이자 및 법인세 차감 전 이익은 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$2,435 million"
+      ],
+      "quote": "Refining segment income before interest and income taxes was $2,435 million for the third quarter of 2026 compared to income of $476 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p10"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "재생에너지 부문의 이자 및 법인세 차감 전 이익은 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$123 million"
+      ],
+      "quote": "Renewables segment income before interest and income taxes was $123 million for the third quarter of 2026 compared to a loss of $55 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p11"
+    },
+    {
+      "what": "claim",
+      "reason": "figure_belongs_to_another_metric",
+      "note_ko": "윤활유 및 특수제품 부문의 이자 및 법인세 차감 전 이익은 전년 같은 분기보다 줄었다",
+      "figures": [
+        "$38 million"
+      ],
+      "quote": "Lubricants & Specialties segment income before interest and income taxes was $38 million for the third quarter of 2026 compared to $52 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p14"
+    },
+    {
+      "what": "claim",
+      "reason": "subject_not_in_quote",
+      "note_ko": "윤활유 및 특수제품 부문의 조정 에비타는 전년 같은 분기보다 늘었다",
+      "figures": [
+        "$174 million"
+      ],
+      "quote": "Excluding these items, the segment reported Adjusted EBITDA of $174 million for the third quarter of 2026 compared to EBITDA of $78 million for the third quarter of 2025.",
+      "where": "DOC-6EA52AE3808FADE4#p14"
+    },
+    {
+      "what": "limitation",
+      "reason": "figure_not_verbatim",
+      "note_ko": "윤활유 및 특수제품 부문의 이자 및 법인세 차감 전 이익은 미시소거 자산 폐기 관련 특별 항목을 반영한다",
+      "figures": [
+        "$38 million"
+      ],
+      "quote": "The third quarter results reflect special items related to the decision to retire our Mississauga, Ontario base oil refining assets (the “Mississauga Refinery”), with the transition expected to be sub",
+      "where": "DOC-6EA52AE3808FADE4#p14"
+    }
+  ],
+  "context_status": "no_supported_claims"
+}
