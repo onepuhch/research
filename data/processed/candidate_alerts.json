@@ -3278,12 +3278,20 @@
       "signal_id": null,
       "verdict": "low",
       "day": "2026-11-27",
-      "status": "reserved",
-      "attempts": [],
+      "status": "sent",
+      "attempts": [
+        {
+          "at": "2026-11-27T09:03:11+00:00",
+          "status": "sent",
+          "message_id": 273,
+          "error": null
+        }
+      ],
       "reserved_by": "45968127921-1",
       "reserved_at": "2026-11-27T09:03:06+00:00",
       "payload_text": "<b>🆕 새 발굴 후보 · CBRS Cerebras Systems Inc.</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\nAI 컴퓨팅 플랫폼과 독점 시스템, 소프트웨어를 설계 및 제조하여 데이터 센터에 공급합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $1.27 → 지금 $1.86 (+46%) · 주가 같은 기간 -49.9%\n\n👍 주가는 같은 90일에 -50%로, 이익 예상 상향(+46%)보다 덜 움직임\n👎 최근 30일 분석가 10명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 11/12 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-B34795936AC4EF8E</code> · 추적 <code>/track CAN-B34795936AC4EF8E</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
-      "payload_sha256": "935b3d102abe79c954b047c9aba231e6c2a21b998a9466ebbd2b8e030a9d36f6"
+      "payload_sha256": "935b3d102abe79c954b047c9aba231e6c2a21b998a9466ebbd2b8e030a9d36f6",
+      "message_id": 273
     }
   },
   "bootstrap": {
