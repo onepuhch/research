@@ -868,13 +868,12 @@
         "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
         "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-25T09:03:25+00:00",
-      "eps_key": "2027-12-31|16.82157",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
+      "eps_key": "2027-12-31|16.8297",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-3541B117ECA7BC8B",
-        "DOC-6EA52AE3808FADE4",
-        "DOC-0F62310DD65064FB"
+        "DOC-6EA52AE3808FADE4"
       ],
       "quality": "complete",
       "failures": 0,
@@ -882,14 +881,13 @@
         "DOC-570CF4572DD5C185",
         "DOC-E736CE0E153DABFA",
         "DOC-3541B117ECA7BC8B",
-        "DOC-6EA52AE3808FADE4",
-        "DOC-0F62310DD65064FB"
+        "DOC-6EA52AE3808FADE4"
       ],
       "notes": [],
-      "next_eligible_at": "2026-12-02T09:03:25+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "no_supported_claims",
-      "context_id": "CTX-9DB303FF6A25EF51",
-      "context_input_sha": "9db303ff6a25ef51cf2e561b189fe0042cb26b9b6dfc89ae8a80e47586e6e0d1",
+      "context_id": "CTX-8F7AD1F56CE3E3CD",
+      "context_input_sha": "8f7ad1f56ce3e3cdf9fd48bec660dccb65b3a1b5c71077e67f89f7d3a5c67b14",
       "update_checks": [
         {
           "document_id": "DOC-570CF4572DD5C185",
@@ -919,14 +917,6 @@
         },
         {
           "document_id": "DOC-6EA52AE3808FADE4",
-          "eligible": false,
-          "search_eligible": false,
-          "alert_eligible": false,
-          "reason": "update-check-v5:no_event_sentence",
-          "alert_reasons": []
-        },
-        {
-          "document_id": "DOC-0F62310DD65064FB",
           "eligible": false,
           "search_eligible": false,
           "alert_eligible": false,
@@ -2584,8 +2574,8 @@
         "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
         "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-25T09:03:25+00:00",
-      "eps_key": "2027-12-31|6.22915",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
+      "eps_key": "2027-12-31|7.25715",
       "eps_target_period": "2027-12-31",
       "document_ids": [
         "DOC-5BC482F136ACE91C",
@@ -2625,7 +2615,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-12-02T09:03:25+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-389A35DB71F19684",
       "context_input_sha": "389a35db71f196845238fd8141da38905faf0b9d1b5f19656e3dbcfbe6526f97"
@@ -3327,25 +3317,34 @@
         "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
         "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-24T10:17:35+00:00",
-      "eps_key": "2027-12-31|3.06927",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
+      "eps_key": "2027-12-31|3.0746",
       "eps_target_period": "2027-12-31",
       "document_ids": [
-        "DOC-6994CC44D493B12A"
+        "DOC-8248216B02ABA81A",
+        "DOC-6994CC44D493B12A",
+        "DOC-95C482A2DC3DAF89"
       ],
-      "quality": "partial",
-      "failures": 2,
+      "quality": "complete",
+      "failures": 0,
       "examined": [
+        "DOC-8248216B02ABA81A",
         "DOC-E85890660884DB84",
         "DOC-14BD33CD4FDE8ABB",
         "DOC-7DAB1B88C679C2A6",
-        "DOC-6994CC44D493B12A"
+        "DOC-6994CC44D493B12A",
+        "DOC-95C482A2DC3DAF89"
       ],
-      "notes": [
-        "0001866175-26-000148 index 404",
-        "0001866175-26-000112 index 404"
-      ],
+      "notes": [],
       "update_checks": [
+        {
+          "document_id": "DOC-8248216B02ABA81A",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": true,
+          "reason": "update-check-v5:acquisition:p24",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-E85890660884DB84",
           "eligible": false,
@@ -3377,12 +3376,20 @@
           "alert_eligible": false,
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-95C482A2DC3DAF89",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-12-01T10:17:35+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "no_supported_claims",
-      "context_id": "CTX-94E1BD9E5BE60724",
-      "context_input_sha": "94e1bd9e5be6072458e07db038d43f9a0ed4ba6c1f83c207271907efa383d455"
+      "context_id": "CTX-D4408A5E23436C66",
+      "context_input_sha": "d4408a5e23436c66a789808b9572feb020e690efe647ab7204808960561912c8"
     },
     "CAN-486C908614BC89B1": {
       "status": "success",
@@ -3703,10 +3710,10 @@
         "exchange": "Nasdaq",
         "name": "Super Micro Computer, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "8e93e877216836e3e246ce8bc1163b2465a20fa359b4dd0c0ed6a7ea20121b6f",
-        "mapping_observed_at": "2026-11-19T07:38:47+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-20T07:42:53+00:00",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
       "eps_key": "2028-06-30|6.94506",
       "eps_target_period": "2028-06-30",
       "document_ids": [
@@ -3750,7 +3757,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-11-27T07:42:53+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-A795D516015B3CF7",
       "context_input_sha": "a795d516015b3cf72668d0ed08e08d1a002eb43c02170b5c6f69df4cbb1ca528"
@@ -5026,10 +5033,10 @@
         "exchange": "Nasdaq",
         "name": "Satellogic Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "efa5abb79b88cbc8ba37436f4fde08d3be450651f6986e53ae794e339e6d08d5",
-        "mapping_observed_at": "2026-11-17T08:06:17+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-18T07:56:25+00:00",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
       "eps_key": "2027-12-31|0.124",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -5063,7 +5070,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-25T07:56:25+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-1BC244D06D51129B",
       "context_input_sha": "1bc244d06d51129b52d56343c6808362987dea526a8ac03f6659f0cffa6683cf"
@@ -5077,10 +5084,10 @@
         "exchange": "NYSE",
         "name": "Burford Capital Limited",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "d5232e162521cf623dcf7c607355e930adce5a6a885b48c3ae06a0441ff27314",
-        "mapping_observed_at": "2026-11-14T06:41:58+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-15T01:58:40+00:00",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
       "eps_key": "2027-12-31|0.69003",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -5090,12 +5097,30 @@
       "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-3008C46E7EF13502",
+        "DOC-52C054B44FE8BEC6",
         "DOC-C25B0B0751065F4E",
         "DOC-130B5C8EE760CD69",
         "DOC-8743BCD8C18E024C"
       ],
       "notes": [],
       "update_checks": [
+        {
+          "document_id": "DOC-3008C46E7EF13502",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-52C054B44FE8BEC6",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-C25B0B0751065F4E",
           "eligible": false,
@@ -5121,7 +5146,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-22T01:58:40+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-F4861DAB40FCF9DA",
       "context_input_sha": "f4861dab40fcf9da8c66137aea50cc3e26ff43068b705d9e3bdeac9464634914"
@@ -5135,10 +5160,10 @@
         "exchange": "Nasdaq",
         "name": "Calumet, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "8e93e877216836e3e246ce8bc1163b2465a20fa359b4dd0c0ed6a7ea20121b6f",
-        "mapping_observed_at": "2026-11-19T07:38:47+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-19T07:52:52+00:00",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
       "eps_key": "2027-12-31|3.42036",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -5170,7 +5195,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-26T07:52:52+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "no_supported_claims",
       "draft_error": "HTTPError",
       "draft_http_status": 503,
@@ -5187,10 +5212,10 @@
         "exchange": "NYSE",
         "name": "Blackstone Digital Infrastructure Trust Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "8e93e877216836e3e246ce8bc1163b2465a20fa359b4dd0c0ed6a7ea20121b6f",
-        "mapping_observed_at": "2026-11-19T07:38:47+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-19T07:52:52+00:00",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
       "eps_key": "2027-12-31|1.10836",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -5234,7 +5259,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-26T07:52:52+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-396E60894743A748",
       "context_input_sha": "396e60894743a7480d8c91f493521c9f44d045883af0f7045073cd55327cbab2"
@@ -5367,8 +5392,8 @@
         "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
         "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-25T09:03:25+00:00",
-      "eps_key": "2028-01-31|28.48325",
+      "attempted_at": "2026-11-27T09:02:08+00:00",
+      "eps_key": "2028-01-31|30.48959",
       "eps_target_period": "2028-01-31",
       "document_ids": [
         "DOC-78BB378ACEB91BAD",
@@ -5403,7 +5428,7 @@
           ]
         }
       ],
-      "next_eligible_at": "2026-12-02T09:03:25+00:00",
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
       "draft_status": "insufficient_earnings_context",
       "context_id": "CTX-AA7F43AED1F2EDC3",
       "context_input_sha": "aa7f43aed1f2edc380ce89223f2fb4923f2492a545028476b63e293970539304"
@@ -5477,6 +5502,57 @@
       "draft_status": "no_supported_claims",
       "context_id": "CTX-5CFC694A6AA30394",
       "context_input_sha": "5cfc694a6aa30394e416cd51ebd642a59f5c0a6b535d00cafb10a4fa46593528"
+    },
+    "CAN-B34795936AC4EF8E": {
+      "status": "success",
+      "ticker": "CBRS",
+      "issuer": {
+        "cik": "0002021728",
+        "ticker": "CBRS",
+        "exchange": "Nasdaq",
+        "name": "Cerebras Systems Inc.",
+        "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
+      },
+      "attempted_at": "2026-11-27T09:02:08+00:00",
+      "eps_key": "2027-12-31|1.85737",
+      "eps_target_period": "2027-12-31",
+      "document_ids": [
+        "DOC-2EFDFE539943BBFE",
+        "DOC-0A1EECE466DE433E"
+      ],
+      "quality": "complete",
+      "failures": 0,
+      "examined": [
+        "DOC-2EFDFE539943BBFE",
+        "DOC-0A1EECE466DE433E"
+      ],
+      "notes": [],
+      "update_checks": [
+        {
+          "document_id": "DOC-2EFDFE539943BBFE",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-0A1EECE466DE433E",
+          "eligible": true,
+          "search_eligible": true,
+          "alert_eligible": false,
+          "reason": "update-check-v5:capacity:p23",
+          "alert_reasons": [
+            "event_date_unknown"
+          ]
+        }
+      ],
+      "next_eligible_at": "2026-12-04T09:02:08+00:00",
+      "draft_status": "draft_ready",
+      "context_id": "CTX-461AC4D8BDF1DC83",
+      "context_input_sha": "461ac4d8bdf1dc839a8f3b8d451675abccfc7bf814a5f0a4e93f08c912c11857"
     }
   },
   "days": {
@@ -5772,6 +5848,10 @@
       "companies": 10,
       "http_attempts": 51,
       "folded_companies": 1
+    },
+    "2026-11-27": {
+      "companies": 10,
+      "http_attempts": 41
     }
   },
   "documents_by_source": {
@@ -6145,6 +6225,10 @@
     "0001193125-26-476869|https://www.sec.gov/Archives/edgar/data/2120882/000119312526476869/d135553d6k.htm": "DOC-1258482A5DDA874D",
     "0001193125-26-467061|https://www.sec.gov/Archives/edgar/data/1415921/000119312526467061/nmm-ex99_1.htm": "DOC-4CBED80B63C6C8EE",
     "0001928446-26-000070|https://www.sec.gov/Archives/edgar/data/1928446/000192844626000070/grnt-20261119xexx991.htm": "DOC-3CDCECCE3017A92F",
-    "0001928446-26-000070|https://www.sec.gov/Archives/edgar/data/1928446/000192844626000070/grnt-20261119.htm": "DOC-7A377175C024CBDA"
+    "0001928446-26-000070|https://www.sec.gov/Archives/edgar/data/1928446/000192844626000070/grnt-20261119.htm": "DOC-7A377175C024CBDA",
+    "0001628280-26-073366|https://www.sec.gov/Archives/edgar/data/2021728/000162828026073366/cbrsannouncesfinancialresu.htm": "DOC-2EFDFE539943BBFE",
+    "0001628280-26-056186|https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrsannouncesfinancialresu.htm": "DOC-0A1EECE466DE433E",
+    "0001714174-26-000116|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000116/bur-20261123xex991.htm": "DOC-3008C46E7EF13502",
+    "0001714174-26-000116|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000116/bur-20261118.htm": "DOC-52C054B44FE8BEC6"
   }
 }

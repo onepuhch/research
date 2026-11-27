@@ -1,0 +1,96 @@
+{
+  "observation_id": "OB-AE2907A8EA9F1D9A",
+  "candidate_id": "CAN-71C24817F9DA0FA8",
+  "candidate_version": "CV-7A04B6677F0DA274",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:INSW",
+    "ticker": "INSW",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-27T08:53:33+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261127T084754Z_45968127921-1.json.gz",
+    "sha256": "3fd73cb0cdb1b12ce5ec6dc29801a7a22aeac241c0ddc37fb69c55a34414fa06",
+    "run_id": "45968127921-1",
+    "finished_at": "2026-11-27T09:02:02+00:00"
+  },
+  "eps": {
+    "eps_now": 9.80778,
+    "eps_30d": 7.80209,
+    "eps_90d": 6.29967,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 1,
+    "pct_90": 55.7,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.426,
+    "yield_change_30_pp": 1.959
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 5237795840,
+  "context_id": "CTX-908F118A05B5190B",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-25T09:03:25+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas Midstream",
+    "count": 8,
+    "shown": [
+      "VG",
+      "FRO",
+      "DHT"
+    ],
+    "folded": [
+      "INSW",
+      "CMBT",
+      "STNG"
+    ],
+    "outside": [
+      "LNG",
+      "CQP"
+    ]
+  },
+  "entity_id": "NYSE:INSW",
+  "approval_version": null,
+  "rendered_at": "2026-11-27T09:02:52+00:00"
+}

@@ -1,0 +1,199 @@
+{
+  "candidate_id": "CAN-B34795936AC4EF8E",
+  "candidate_version": "CV-E7D2FB33D87FAD02",
+  "identity": {
+    "entity_id": "NASDAQ:CBRS",
+    "ticker": "CBRS",
+    "exchange": "NASDAQ",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Cerebras Systems Inc.",
+  "industry": "Semiconductors",
+  "sector": "Technology",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "AI 컴퓨팅 플랫폼과 독점 시스템, 소프트웨어를 설계 및 제조하여 데이터 센터에 공급합니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Cerebras Systems Inc. operates as an artificial intelligence infrastructure company. It designs and manufactures an AI compute platform that comprises of proprietary systems and software that is delivered in racks for deployment in data centers up to supercomputer scale. The company's pioneering wafer-scale engine, a chip encompassing a silicon wafer, designed to enable higher performance and speeds than GPUs for the computational demands of inference, Generative AI, and other AI applications. Its customers include hyperscalers, foundation model labs, AI-native and digital-native businesses, e"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "CBRS analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CBRS/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-27T08:50:33+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "CBRS daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CBRS/history",
+      "published_at": null,
+      "observed_at": "2026-11-27T08:50:33+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "CBRS company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/CBRS/profile",
+      "published_at": null,
+      "observed_at": "2026-11-27T08:50:33+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-2EFDFE539943BBFE",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073366/cbrsannouncesfinancialresu.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-12",
+      "observed_at": "2026-11-27T09:02:08+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-0A1EECE466DE433E",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrsannouncesfinancialresu.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-12",
+      "observed_at": "2026-11-27T09:02:08+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-461AC4D8BDF1DC83",
+    "input_sha": "461ac4d8bdf1dc839a8f3b8d451675abccfc7bf814a5f0a4e93f08c912c11857",
+    "context_status": "draft_ready",
+    "claims": [
+      {
+        "text_ko": "매출(Revenue) · Third Quarter 2026 — 회사가 기록적인 매출을 달성했다",
+        "note_ko": "회사가 기록적인 매출을 달성했다",
+        "kind": "fact",
+        "quote": "Cerebras Systems Delivers Record Revenue in Third Quarter 2026",
+        "document_id": "DOC-2EFDFE539943BBFE",
+        "block_id": "p3",
+        "metric": "Revenue",
+        "figures": [],
+        "period": "Third Quarter 2026",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": true,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      },
+      {
+        "text_ko": "Outlook · Full-Year — 회사가 연간 전망을 상향 조정했다",
+        "note_ko": "회사가 연간 전망을 상향 조정했다",
+        "kind": "guidance",
+        "quote": "Raises Full-Year Outlook",
+        "document_id": "DOC-2EFDFE539943BBFE",
+        "block_id": "p4",
+        "metric": "Outlook",
+        "figures": [],
+        "period": "Full-Year",
+        "currency": null,
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [],
+        "figure_readings": [],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "positive"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "temporal_context",
+    "link_note": null,
+    "source_coverage": "partial",
+    "documents": [
+      {
+        "document_id": "DOC-2EFDFE539943BBFE",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073366/cbrsannouncesfinancialresu.htm",
+        "filed_at": "2026-11-12",
+        "observed_at": "2026-11-27T09:02:08+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-0A1EECE466DE433E",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrsannouncesfinancialresu.htm",
+        "filed_at": "2026-08-12",
+        "observed_at": "2026-11-27T09:02:08+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-27T09:02:29+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.85737,
+    "eps_30d": 1.27368,
+    "eps_90d": 1.27368,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 10,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 45.8,
+    "steady": false,
+    "turnaround": false
+  }
+}

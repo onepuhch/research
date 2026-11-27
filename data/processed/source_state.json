@@ -18213,7 +18213,7 @@
     "processed_run": "45784118958-1"
   },
   "0001628280-26-073106": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18229,7 +18229,8 @@
     "content_hash": "4f283619e69b9ae5b75d841f4c8f497f6ca579eefb08c8411ae35f37f6f036ac",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001140361-26-043093": {
     "status": "accepted",
@@ -18513,7 +18514,7 @@
     "validation_rejected": true
   },
   "0001213900-26-118353": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18529,10 +18530,11 @@
     "content_hash": "b6f02434b811705af372c8f6984e965a9a9e768e0ec09e3307378c76f4b5572d",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001357615-26-000205": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18548,10 +18550,11 @@
     "content_hash": "24076c49ed589fe9bc0e9fc45434c0ed042e43aa491950ef46f51c2b6cc60035",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001628280-26-072942": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18567,10 +18570,11 @@
     "content_hash": "7aaed8fb3768ae04d5db4946629f4874f8f022f3fc6d5bdff8ee52311ca65a52",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001628280-26-073387": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18586,10 +18590,11 @@
     "content_hash": "7a40cf7084763c2480590199b408bd7fdc3a01959e778a0fc3c060fac585f86c",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-458336": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18605,10 +18610,11 @@
     "content_hash": "8ddfc1d3402ea727ace10765741194205be86c523ac5d43d4c24533695534275",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0000929638-26-004266": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18624,10 +18630,11 @@
     "content_hash": "ad101093b69ac1d23377dc26bc2a204981b4183cc5d1671b4e740d372605dc2b",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001628280-26-073432": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18643,10 +18650,11 @@
     "content_hash": "9ccfaa9284d6ac54eecb8d8a7a5a083c24aa14a8f47fb5849e851a87721e606f",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001193125-26-458738": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18662,7 +18670,8 @@
     "content_hash": "5859fe52cf90dba5909b34bbef400ee81ed81bc1f927fa036fd1e508e3fc6bbe",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001171843-26-007370": {
     "status": "rejected",
@@ -18722,7 +18731,7 @@
     "processed_run": "43567384363-1"
   },
   "0001213900-26-118457": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18738,10 +18747,11 @@
     "content_hash": "ce755965609e7e18ba4127d3b1ca74f7d793c3be9b1b89685ac72e856f6bd446",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001628280-26-073390": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18757,10 +18767,11 @@
     "content_hash": "c66fe5d231b8e7ac7e10b077f7b621e608f39222677d6422d7ec3a6405440def",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001213900-26-118924": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18776,7 +18787,8 @@
     "content_hash": "4581bedd644eaf5b165d1d8c802f938a15909f23fa26ee8e74acdb69dc7b8074",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-13T06:55:35.099965+00:00"
+    "updated_at": "2026-11-27T08:46:01.197700+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001091667-26-000072": {
     "status": "rejected",
@@ -18946,7 +18958,7 @@
     "processed_run": "43567384363-1"
   },
   "0001437749-26-036629": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18957,15 +18969,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/811641/000143774926036629/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/811641/000143774926036629/ex_1044599.htm",
       "published_at": "2026-11-13",
-      "raw_text": "IMMUCELL CORP /DE/ (ICCC) (CIK 0000811641) EX-99.1 2026-11-13. We are investing in capacity expansion and colostrum sourcing capabilities for future demand, and those efforts are projected to be completed on time and within budget.” “We have negotiated a new, larger $3 million line of credit with our bank, which we expect to sign during the fourth quarter of 2026,” continued Mr. EX-99.1 2 ex_1044599.htm EXHIBIT 99.1 ex_1044599.htm Exhibit 99.1 ImmuCell ImmuCell Announces Unaudited Financial Results for the Quarter Ended September 30, 2026 For Immediate Release PORTLAND, Maine – October 12, 2026 – ImmuCell Corporation (Nasdaq: ICCC) (“ImmuCell” or the “Company”), an animal health biologics company that develops, manufactures and markets products to improve calf health and productivity, today announced preliminary, unaudited sales results for the third quarter of 2026. Management’s Discussion: “Today we are reporting net income of $953,000 for the third quarter of 2026, a $1.1 million increase compared to the third quarter of 2025,” commented Timothy C. Fiori, Chief Financial Officer of ImmuCell. “Revenue grew 46.0% to $8.0 million in the third quarter of 2026 compared to the third quarter of 2025, a comparison aided in part by the absence of distributor restocking headwinds that had adversely affected the third quarter sales in 2025. Gross margin was 44.2% in the third quarter of 2026, which is 130 basis points higher than the third quarter of 2025 and reflects higher pricing and manufacturing execution partially offset by the previously discussed shift of certain product development expenses to costs of goods sold.” “We are pleased with our third quarter revenue and with distributor out-the-door volume growth of 18% over 2025,” commented Bobbi Jo Brockmann, Senior Vice President of Sales & Marketing. “Growth remained broad-based across our sales territories and product lines, supported by an increase in sales activity and continued progress in customer acquisition. "
+      "raw_text": "IMMUCELL CORP /DE/ (ICCC) (CIK 0000811641) EX-99.1 2026-11-13. We are investing in capacity expansion and colostrum sourcing capabilities for future demand, and those efforts are projected to be completed on time and within budget.” “We have negotiated a new, larger $3 million line of credit with our bank, which we expect to sign during the fourth quarter of 2026,” continued Mr. EX-99.1 2 ex_1044599.htm EXHIBIT 99.1 ex_1044599.htm Exhibit 99.1 ImmuCell ImmuCell Announces Unaudited Financial Results for the Quarter Ended September 30, 2026 For Immediate Release PORTLAND, Maine – October 12, 2026 – ImmuCell Corporation (Nasdaq: ICCC) (“ImmuCell” or the “Company”), an animal health biologics company that develops, manufactures and markets products to improve calf health and productivity, today announced preliminary, unaudited sales results for the third quarter of 2026. Management’s Discussion: “Today we are reporting net income of $953,000 for the third quarter of 2026, a $1.1 million increase compared to the third quarter of 2025,” commented Timothy C. Fiori, Chief Financial Officer of ImmuCell. “Revenue grew 46.0% to $8.0 million in the third quarter of 2026 compared to the third quarter of 2025, a comparison aided in part by the absence of distributor restocking headwinds that had adversely affected the third quarter sales in 2025. Gross margin was 44.2% in the third quarter of 2026, which is 130 basis points higher than the third quarter of 2025 and reflects higher pricing and manufacturing execution partially offset by the previously discussed shift of certain product development expenses to costs of goods sold.” “We are pleased with our third quarter revenue and with distributor out-the-door volume growth of 18% over 2025,” commented Bobbi Jo Brockmann, Senior Vice President of Sales & Marketing. “Growth remained broad-based across our sales territories and product lines, supported by an increase in sales activity and continued progress in customer acquisition. ",
+      "_model_response": {
+        "evidence_quote": "We are investing in capacity expansion and colostrum sourcing capabilities for future demand, and those efforts are projected to be completed on time and within budget.”",
+        "axes_evidence": {
+          "underfollowed_pure_play": "ImmuCell Corporation (Nasdaq: ICCC) (“ImmuCell” or the “Company”), an animal health biologics company that develops, manufactures and markets products to improve calf health and productivity",
+          "earnings_leverage": "We are investing in capacity expansion and colostrum sourcing capabilities for future demand, and those efforts are projected to be completed on time and within budget.”",
+          "supply_demand_tightness": "We are investing in capacity expansion and colostrum sourcing capabilities for future demand",
+          "structural_ai_demand": "",
+          "revision_momentum": "We are investing in capacity expansion and colostrum sourcing capabilities for future demand, and those efforts are projected to be completed on time and within budget.”",
+          "catalyst_visibility": "those efforts are projected to be completed on time and within budget.”"
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "ImmuCell Corporation",
+        "theme": "동물 건강 바이오로직스",
+        "signal_type": "CAPEX",
+        "what_happened": "ImmuCell Corporation이 미래 수요에 대비한 생산 능력 확장 및 초유 조달 역량 투자를 발표했으며, 이는 예정대로 예산 내에서 완료될 것으로 예상된다.",
+        "why_it_matters": "회사의 생산 능력 증설 투자는 미래 수요에 대한 경영진의 강한 확신을 보여주며, 이는 향후 매출 성장과 시장 점유율 확대로 이어질 수 있는 긍정적인 신호이다.",
+        "what_to_watch": "생산 능력 확장 프로젝트의 완료 시점 및 실제 생산량 증가, 그리고 향후 분기별 매출 성장률 및 ASP 변화 추이.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 1,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 9,
+        "tier": "A",
+        "stage": "초기",
+        "glossary": "초유 조달 역량: 송아지 건강 개선 제품의 핵심 원료인 초유를 확보하고 공급하는 능력. 동물 건강 바이오로직스: 동물의 질병 예방 및 치료를 위해 생물학적 제제를 활용하는 의약품 분야."
+      }
     },
     "content_hash": "ec854996c5f4b5c2363c78f0f56f37509f08056ec5aef7fd1ac79098de650ee1",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-27T08:46:22+00:00",
+    "signal_id": "SIG-0972",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-27",
+    "processed_run": "45968127921-1"
   },
   "0001437749-26-036667": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18976,15 +19026,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1019034/000143774926036667/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1019034/000143774926036667/ex_1044771.htm",
       "published_at": "2026-11-13",
-      "raw_text": "BIO KEY INTERNATIONAL INC (BKYI) (CIK 0001019034) EX-99.1 2026-11-13. BIO-key’s blended gross margin has increased for five consecutive quarters, from 73% in Q2’25 to 90% in Q3’26, reflecting both new customer deployments and its expanding base of annual recurring software license fees. Recent Progress ● Middle East: BIO-key added three new government customers in October, bringing to eight the number of new Middle East region customers in the past seven months: – Middle East government security agency customer – Middle East government contract for passwordless, biometric IAM solutions – New customer within a Middle East government’s national security ecosystem – Partnership with Al Majlis Group to expand identity security across the Arabian Gulf ● Portugal: Integration of BIO-key’s IAM and biometric authentication solutions into the cybersecurity portfolio of Cipher, a Prosegur company , starting in Portugal – with plans to explore extending the offering to other Cipher markets, including Spain, the U.S. $917,951 in Q3’25, reflecting several new customer deployments, and represented 86% of total revenues vs. $363,642 in Q3’25, as new customer orders in Q3’26 were primarily software-only, while Q3’25 reflected a large hardware deployment by a long-term customer and expanded hardware deployments by several existing customers."
+      "raw_text": "BIO KEY INTERNATIONAL INC (BKYI) (CIK 0001019034) EX-99.1 2026-11-13. BIO-key’s blended gross margin has increased for five consecutive quarters, from 73% in Q2’25 to 90% in Q3’26, reflecting both new customer deployments and its expanding base of annual recurring software license fees. Recent Progress ● Middle East: BIO-key added three new government customers in October, bringing to eight the number of new Middle East region customers in the past seven months: – Middle East government security agency customer – Middle East government contract for passwordless, biometric IAM solutions – New customer within a Middle East government’s national security ecosystem – Partnership with Al Majlis Group to expand identity security across the Arabian Gulf ● Portugal: Integration of BIO-key’s IAM and biometric authentication solutions into the cybersecurity portfolio of Cipher, a Prosegur company , starting in Portugal – with plans to explore extending the offering to other Cipher markets, including Spain, the U.S. $917,951 in Q3’25, reflecting several new customer deployments, and represented 86% of total revenues vs. $363,642 in Q3’25, as new customer orders in Q3’26 were primarily software-only, while Q3’25 reflected a large hardware deployment by a long-term customer and expanded hardware deployments by several existing customers.",
+      "_model_response": {
+        "evidence_quote": "BIO-key’s blended gross margin has increased for five consecutive quarters, from 73% in Q2’25 to 90% in Q3’26, reflecting both new customer deployments and its expanding base of annual recurring software license fees. Recent Progress ● Middle East: BIO-key added three new government customers in October, bringing to eight the number of new Middle East region customers in the past seven months: – Middle East government security agency customer – Middle East government contract for passwordless, biometric IAM solutions – New customer within a Middle East government’s national security ecosystem – Partnership with Al Majlis Group to expand identity security across the Arabian Gulf ● Portugal: Integration of BIO-key’s IAM and biometric authentication solutions into the cybersecurity portfolio of Cipher, a Prosegur company",
+        "axes_evidence": {
+          "underfollowed_pure_play": "BIO KEY INTERNATIONAL INC (BKYI)",
+          "earnings_leverage": "BIO-key’s blended gross margin has increased for five consecutive quarters, from 73% in Q2’25 to 90% in Q3’26, reflecting both new customer deployments and its expanding base of annual recurring software license fees.",
+          "supply_demand_tightness": "BIO-key added three new government customers in October, bringing to eight the number of new Middle East region customers in the past seven months",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "Middle East: BIO-key added three new government customers in October, bringing to eight the number of new Middle East region customers in the past seven months... Portugal: Integration of BIO-key’s IAM and biometric authentication solutions into the cybersecurity portfolio of Cipher, a Prosegur company , starting in Portugal – with plans to explore extending the offering to other Cipher markets"
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "BKYI",
+        "theme": "IAM/사이버보안/생체인식",
+        "signal_type": "신규고객",
+        "what_happened": "BIO-key는 5분기 연속 총 마진이 증가했으며, 최근 7개월간 중동 지역에서 8개의 신규 정부 고객을 확보하고 포르투갈의 Cipher와 파트너십을 통해 IAM 및 생체인증 솔루션 통합을 시작했습니다.",
+        "why_it_matters": "신규 정부 고객 확보와 주요 파트너십은 BIO-key의 IAM 및 생체인증 솔루션에 대한 시장 수요 증가와 제품 경쟁력을 보여주며, 이는 향후 매출 성장과 수익성 개선으로 이어질 수 있는 긍정적인 신호입니다.",
+        "what_to_watch": "중동 및 포르투갈 외 다른 지역으로의 고객 확장 여부, 신규 고객으로부터의 연간 반복 매출(ARR) 성장률",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 7,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "IAM: Identity and Access Management의 약자로, 사용자의 신원을 확인하고 시스템 접근 권한을 관리하는 보안 솔루션입니다."
+      }
     },
     "content_hash": "c144fa7c7a740dd78aafbeefb4607b654b8da0adf734a4595b5662d3d8136ca4",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-27T08:46:41+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001279569-26-001068": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -18995,15 +19081,53 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1463000/000127956926001068/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1463000/000127956926001068/ex991.htm",
       "published_at": "2026-11-13",
-      "raw_text": "Grown Rogue International Inc. (GRUSF) (CIK 0001463000) EX-99.1 2026-11-13. It also assumes continued capacity expansion in Illinois and Minnesota. EX-99.1 2 ex991.htm NEWS RELEASE DATED NOVEMBER 12, 2026 Exhibit 99.1 Grown Rogue Reports Third Quarter 2026 Results Steady Execution Across Existing and New Markets; 2026 and 2027 Guidance and Growth Targets Maintained MEDFORD, Ore., Nov. 12, 2026 /CNW/ - Grown Rogue International Inc. (\"Grown Rogue,\" \"we,\" \"us,\" \"our,\" or the \"Company\") (CSE: GRIN) (OTC: GRUSF), a flower-forward cannabis company combining craft values with disciplined execution, today reported its unaudited financial results for the three and nine months ended September 30, 2026. Results are presented in U.S. dollars and in accordance with U.S. generally accepted accounting principles (\"GAAP\"). Comparative periods have been recast, where applicable, in accordance with GAAP. Obie Strickler, Chief Executive Officer, said: \"For us, it always comes back to the people buying what we make. They're spending their hard-earned money and trusting us to deliver products worth coming back for. We take that responsibility seriously, and as we grow, so does our commitment to getting it consistently right. I'm incredibly proud of how our team has maintained that focus while bringing several new markets online simultaneously. We've welcomed talented new people who are working alongside our existing team, bringing fresh perspectives to our deep operational experience. This combination gives me tremendous confidence in our ability to execute on our ambitious growth plans.\" Highlights • Revenue: Revenue of $11.0 million for the third quarter of 2026, compared with $8.5 million in the third quarter of 2025, an increase of 29% (25% excluding the Michigan wholesale excise tax reported as revenue). Growth was driven by revenue increases of 44% in New Jersey, 21% in Oregon and 19% in Michigan (5% excluding the excise tax). • Adjusted EBITDA: Adjusted EBITDA (non-GAAP) of $2.6"
+      "raw_text": "Grown Rogue International Inc. (GRUSF) (CIK 0001463000) EX-99.1 2026-11-13. It also assumes continued capacity expansion in Illinois and Minnesota. EX-99.1 2 ex991.htm NEWS RELEASE DATED NOVEMBER 12, 2026 Exhibit 99.1 Grown Rogue Reports Third Quarter 2026 Results Steady Execution Across Existing and New Markets; 2026 and 2027 Guidance and Growth Targets Maintained MEDFORD, Ore., Nov. 12, 2026 /CNW/ - Grown Rogue International Inc. (\"Grown Rogue,\" \"we,\" \"us,\" \"our,\" or the \"Company\") (CSE: GRIN) (OTC: GRUSF), a flower-forward cannabis company combining craft values with disciplined execution, today reported its unaudited financial results for the three and nine months ended September 30, 2026. Results are presented in U.S. dollars and in accordance with U.S. generally accepted accounting principles (\"GAAP\"). Comparative periods have been recast, where applicable, in accordance with GAAP. Obie Strickler, Chief Executive Officer, said: \"For us, it always comes back to the people buying what we make. They're spending their hard-earned money and trusting us to deliver products worth coming back for. We take that responsibility seriously, and as we grow, so does our commitment to getting it consistently right. I'm incredibly proud of how our team has maintained that focus while bringing several new markets online simultaneously. We've welcomed talented new people who are working alongside our existing team, bringing fresh perspectives to our deep operational experience. This combination gives me tremendous confidence in our ability to execute on our ambitious growth plans.\" Highlights • Revenue: Revenue of $11.0 million for the third quarter of 2026, compared with $8.5 million in the third quarter of 2025, an increase of 29% (25% excluding the Michigan wholesale excise tax reported as revenue). Growth was driven by revenue increases of 44% in New Jersey, 21% in Oregon and 19% in Michigan (5% excluding the excise tax). • Adjusted EBITDA: Adjusted EBITDA (non-GAAP) of $2.6",
+      "_model_response": {
+        "evidence_quote": "It also assumes continued capacity expansion in Illinois and Minnesota.",
+        "axes_evidence": {
+          "underfollowed_pure_play": "Grown Rogue International Inc. (\"Grown Rogue,\" \"we,\" \"us,\" \"our,\" or the \"Company\") (CSE: GRIN) (OTC: GRUSF), a flower-forward cannabis company combining craft values with disciplined execution",
+          "earnings_leverage": "Revenue of $11.0 million for the third quarter of 2026, compared with $8.5 million in the third quarter of 2025, an increase of 29%",
+          "supply_demand_tightness": "It also assumes continued capacity expansion in Illinois and Minnesota.",
+          "structural_ai_demand": "",
+          "revision_momentum": "2026 and 2027 Guidance and Growth Targets Maintained",
+          "catalyst_visibility": "It also assumes continued capacity expansion in Illinois and Minnesota."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "GRUSF",
+        "theme": "Cannabis",
+        "signal_type": "CAPEX",
+        "what_happened": "Grown Rogue International Inc.가 일리노이와 미네소타에서 생산능력 확장을 지속할 것으로 예상된다고 밝혔다.",
+        "why_it_matters": "생산능력 증설은 미래 매출 성장을 위한 구체적인 투자이며, 이는 회사의 성장 계획에 대한 자신감을 반영하여 잠재적인 실적 개선으로 이어질 수 있다.",
+        "what_to_watch": "향후 분기별 생산능력 증설 진행 상황 및 신규 시장 매출 기여도, 그리고 가이던스 상향 여부를 확인해야 한다.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 1,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 5,
+        "tier": "관망",
+        "stage": "초기",
+        "glossary": "CAPEX: 기업이 미래의 이윤을 창출하기 위해 투자하는 자본적 지출."
+      }
     },
     "content_hash": "9e11633b3a9fa2e06c2d5551758e5fc6bacefdc88131a3dc7c05d7ace5e5d87e",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-27T08:47:08+00:00",
+    "signal_id": "SIG-0973",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-27",
+    "processed_run": "45968127921-1"
   },
   "0001493152-26-051832": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -19014,15 +19138,51 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1360565/000149315226051832/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/1360565/000149315226051832/ex99-2.htm",
       "published_at": "2026-11-13",
-      "raw_text": "Where Food Comes From, Inc. (WFCF) (CIK 0001360565) EX-99.2 2026-11-13. We now cover more than 1,500 organic operations, an increase of 94 new customers through the first nine months of 2026. New customer wins this year include fledgling organic food makers and more than 30 established operations that transferred to us from other certification bodies. EX-99.2 3 ex99-2.htm EX-99.2 Exhibit 99.2 Where Food Comes From, Inc. 2026 Third Quarter Conference Call Call date: Thursday November 12, 2026 Call time: 10:00 a.m. Mountain Time Jay Pfeiffer – Investor Relations Good morning and welcome to the Where Food Comes From 2026 third quarter earnings call. Joining me on the call today are CEO John Saunders, President and Chief Strategy Officer Leann Saunders, and CFO Dannette Henning. During this call we’ll make forward-looking statements based on current expectations, estimates and projections that are subject to risk. Statements about financial performance, growth strategy, customers, business opportunities, market acceptance of our products and services, and potential acquisitions are forward looking statements. Listeners should not place undue reliance on these statements as there are many factors that could cause actual results to differ materially from our forward-looking statements. We encourage you to review our publicly filed documents as well as our news releases and website for more information. I’ll now turn the call over to John Saunders. John Hello and thank you for joining the call today. This morning, we were pleased to report strong financial results in our news release issued before the market opened. Total revenue in the third quarter increased 4% to $7.3 million. That increase included 6% growth in our core verification and certification segment, which is benefitting from strong demand for multiple services across our solutions portfolio. As highlighted in our press release, we are seeing resurgent demand in our beef-related business despite continued pres"
+      "raw_text": "Where Food Comes From, Inc. (WFCF) (CIK 0001360565) EX-99.2 2026-11-13. We now cover more than 1,500 organic operations, an increase of 94 new customers through the first nine months of 2026. New customer wins this year include fledgling organic food makers and more than 30 established operations that transferred to us from other certification bodies. EX-99.2 3 ex99-2.htm EX-99.2 Exhibit 99.2 Where Food Comes From, Inc. 2026 Third Quarter Conference Call Call date: Thursday November 12, 2026 Call time: 10:00 a.m. Mountain Time Jay Pfeiffer – Investor Relations Good morning and welcome to the Where Food Comes From 2026 third quarter earnings call. Joining me on the call today are CEO John Saunders, President and Chief Strategy Officer Leann Saunders, and CFO Dannette Henning. During this call we’ll make forward-looking statements based on current expectations, estimates and projections that are subject to risk. Statements about financial performance, growth strategy, customers, business opportunities, market acceptance of our products and services, and potential acquisitions are forward looking statements. Listeners should not place undue reliance on these statements as there are many factors that could cause actual results to differ materially from our forward-looking statements. We encourage you to review our publicly filed documents as well as our news releases and website for more information. I’ll now turn the call over to John Saunders. John Hello and thank you for joining the call today. This morning, we were pleased to report strong financial results in our news release issued before the market opened. Total revenue in the third quarter increased 4% to $7.3 million. That increase included 6% growth in our core verification and certification segment, which is benefitting from strong demand for multiple services across our solutions portfolio. As highlighted in our press release, we are seeing resurgent demand in our beef-related business despite continued pres",
+      "_model_response": {
+        "evidence_quote": "We now cover more than 1,500 organic operations, an increase of 94 new customers through the first nine months of 2026. New customer wins this year include fledgling organic food makers and more than 30 established operations that transferred to us from other certification bodies. EX-99.2 3 ex99-2.htm EX-99.2 Exhibit 99.2 Where Food Comes From, Inc. 2026 Third Quarter Conference Call Call date: Thursday November 12, 2026 Call time: 10:00 a.m. Mountain Time Jay Pfeiffer – Investor Relations Good morning and welcome to the Where Food Comes From 2026 third quarter earnings call. Joining me on the call today are CEO John Saunders, President and Chief Strategy Officer Leann Saunders, and CFO Dannette Henning. During this call we’ll make forward-looking statements based on current expectations, estimates and projections that are subject to risk. Statements about financial performance, growth strategy, customers, business opportunities, market acceptance of our products and services, and potential acquisitions are forward looking statements. Listeners should not place undue reliance on these statements as there are many factors that could cause actual results to differ materially from our forward-looking statements. We encourage you to review our publicly filed documents as well as our news releases and website for more information. I’ll now turn the call over to John Saunders. John Hello and thank you for joining the call today. This morning, we were pleased to report strong financial results in our news release issued before the market opened. Total revenue in the third quarter increased 4% to $7.3 million. That increase included 6% growth in our core verification and certification segment, which is benefitting from strong demand for multiple services across our solutions portfolio. As highlighted in our press release, we are seeing resurgent demand in our beef-related business despite continued pres",
+        "axes_evidence": {
+          "underfollowed_pure_play": "We now cover more than 1,500 organic operations, an increase of 94 new customers through the first nine months of 2026.",
+          "earnings_leverage": "Total revenue in the third quarter increased 4% to $7.3 million. That increase included 6% growth in our core verification and certification segment, which is benefitting from strong demand for multiple services across our solutions portfolio.",
+          "supply_demand_tightness": "New customer wins this year include fledgling organic food makers and more than 30 established operations that transferred to us from other certification bodies.",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "an increase of 94 new customers through the first nine months of 2026."
+        },
+        "event_state": "realized",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "WFCF",
+        "theme": "유기농 인증",
+        "signal_type": "신규고객",
+        "what_happened": "Where Food Comes From (WFCF)는 2026년 첫 9개월 동안 94개의 신규 고객을 확보했으며, 이 중 30개 이상의 기존 사업체는 다른 인증 기관에서 전환되었다고 발표했다.",
+        "why_it_matters": "신규 고객 확보, 특히 경쟁사로부터의 전환은 WFCF의 인증 서비스에 대한 강력한 수요와 시장 점유율 확대를 시사하며, 이는 지속적인 매출 성장을 견인할 수 있다.",
+        "what_to_watch": "다음 분기 신규 고객 확보 추이 및 신규 고객이 매출과 수익성에 미치는 영향.",
+        "upside_axes": {
+          "underfollowed_pure_play": 2,
+          "earnings_leverage": 2,
+          "supply_demand_tightness": 2,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 2
+        },
+        "upside_score": 8,
+        "tier": "B",
+        "stage": "초기",
+        "glossary": "유기농 인증: 농산물, 축산물 등이 유기농 기준에 따라 생산되었음을 검증하고 공식적으로 인정하는 절차. 핵심 검증 및 인증 부문: 기업의 주요 사업 영역 중 제품이나 서비스의 품질, 안전성, 기준 준수 여부를 확인하고 증명하는 사업 부문."
+      }
     },
     "content_hash": "0148ccf184cb04572e0aedab52aa88a7bf4c949ba1e890332aa1133d8b0c9674",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-27T08:47:25+00:00",
+    "reason": "evidence_grounding_failed",
+    "validation_rejected": true
   },
   "0001628280-26-073578": {
-    "status": "deferred",
+    "status": "accepted",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -19033,12 +19193,50 @@
       "url": "https://www.sec.gov/Archives/edgar/data/31791/000162828026073578/",
       "document_url": "https://www.sec.gov/Archives/edgar/data/31791/000162828026073578/investorday2026presentat.htm",
       "published_at": "2026-11-13",
-      "raw_text": "REVVITY, INC. (RVTY) (CIK 0000031791) EX-99.2 2026-11-13. 82 Signals is poised to grow through customer-centric innovations and solutions Expansion with existing customers 500bps 300bps 300bps New customer wins Growth drivers 10-12% APV LRP New offerings Robust innovation, scaled and entrenched platform driving sustainable long-term growth in new and existing markets Digital system of record connecting scientific workflows from idea to creation Key messages ©2026 Revvity, Inc. EX-99.2 3 investorday2026presentat.htm EX-99.2 investorday2026presentat ©2026 Revvity, Inc.©2026 Revvity, Inc. All rights reserved. Powering scientific intelligence Transforming insight into impact INVESTOR DAY 2026 | November 13 Welcome and Opening Remarks Steve Willoughby Senior VP, Investor Relations, ESG, Risk ©2026 Revvity, Inc. ©2026 Revvity, Inc. Safe Harbor 3 This presentation contains \"forward-looking\" statements within the meaning of the Private Securities Litigation Reform Act of 1995, including but not limited to statements relating to estimates and projections of future earnings per share, cash flow and revenue growth and other financial results, developments relating to our customers and end-markets, plans concerning business development opportunities, and acquisitions or divestitures. Words such as \"believes,\" \"intends,\" \"anticipates,\" \"plans,\" \"expects,\" \"projects,\" \"forecasts,\" \"will\" and similar expressions, and references to guidance, are intended to identify forward-looking statements. Such statements are based on management's current assumptions and expectations, and no assurances can be given that our assumptions or expectations will prove to be correct. A number of important risk factors could cause actual results to differ materially from the results described, implied or projected in any forward- looking statements. A detailed description of these risk factors can be found under the caption \"Risk Factors\" in our most recent quarterly report on Form 10-Q and in our othe"
+      "raw_text": "REVVITY, INC. (RVTY) (CIK 0000031791) EX-99.2 2026-11-13. 82 Signals is poised to grow through customer-centric innovations and solutions Expansion with existing customers 500bps 300bps 300bps New customer wins Growth drivers 10-12% APV LRP New offerings Robust innovation, scaled and entrenched platform driving sustainable long-term growth in new and existing markets Digital system of record connecting scientific workflows from idea to creation Key messages ©2026 Revvity, Inc. EX-99.2 3 investorday2026presentat.htm EX-99.2 investorday2026presentat ©2026 Revvity, Inc.©2026 Revvity, Inc. All rights reserved. Powering scientific intelligence Transforming insight into impact INVESTOR DAY 2026 | November 13 Welcome and Opening Remarks Steve Willoughby Senior VP, Investor Relations, ESG, Risk ©2026 Revvity, Inc. ©2026 Revvity, Inc. Safe Harbor 3 This presentation contains \"forward-looking\" statements within the meaning of the Private Securities Litigation Reform Act of 1995, including but not limited to statements relating to estimates and projections of future earnings per share, cash flow and revenue growth and other financial results, developments relating to our customers and end-markets, plans concerning business development opportunities, and acquisitions or divestitures. Words such as \"believes,\" \"intends,\" \"anticipates,\" \"plans,\" \"expects,\" \"projects,\" \"forecasts,\" \"will\" and similar expressions, and references to guidance, are intended to identify forward-looking statements. Such statements are based on management's current assumptions and expectations, and no assurances can be given that our assumptions or expectations will prove to be correct. A number of important risk factors could cause actual results to differ materially from the results described, implied or projected in any forward- looking statements. A detailed description of these risk factors can be found under the caption \"Risk Factors\" in our most recent quarterly report on Form 10-Q and in our othe",
+      "_model_response": {
+        "evidence_quote": "82 Signals is poised to grow through customer-centric innovations and solutions Expansion with existing customers 500bps 300bps 300bps New customer wins Growth drivers 10-12% APV LRP New offerings Robust innovation, scaled and entrenched platform driving sustainable long-term growth in new and existing markets Digital system of record connecting scientific workflows from idea to creation Key messages",
+        "axes_evidence": {
+          "underfollowed_pure_play": "",
+          "earnings_leverage": "Growth drivers 10-12% APV LRP",
+          "supply_demand_tightness": "",
+          "structural_ai_demand": "",
+          "revision_momentum": "",
+          "catalyst_visibility": "INVESTOR DAY 2026 | November 13 Welcome and Opening Remarks Steve Willoughby Senior VP, Investor Relations, ESG, Risk ©2026 Revvity, Inc. ©2026 Revvity, Inc. Safe Harbor 3 This presentation contains \"forward-looking\" statements within the meaning of the Private Securities Litigation Reform Act of 1995, including but not limited to statements relating to estimates and projections of future earnings per share, cash flow and revenue growth and other financial results, developments relating to our customers and end-markets, plans concerning business development opportunities, and acquisitions or divestitures. Words such as \"believes,\" \"intends,\" \"anticipates,\" \"plans,\" \"expects,\" \"projects,\" \"forecasts,\" \"will\" and similar expressions, and references to guidance, are intended to identify forward-looking statements."
+        },
+        "event_state": "planned",
+        "signal_direction": "positive",
+        "bottleneck_id": "",
+        "is_signal": true,
+        "reject_reason": "",
+        "subject": "REVVITY, INC.",
+        "theme": "미분류",
+        "signal_type": "가이던스상향",
+        "what_happened": "Revvity가 2026년 투자자의 날 행사에서 기존 고객 확장 및 신규 고객 확보를 통해 장기적으로 연간 10-12%의 매출 성장을 목표로 하는 계획을 발표했다.",
+        "why_it_matters": "회사가 장기적인 성장 목표를 구체적으로 제시하며 사업 확장에 대한 자신감을 보여주어, 향후 실적 개선 가능성과 시장의 긍정적인 재평가를 기대할 수 있다.",
+        "what_to_watch": "분기별 실적 발표에서 실제 고객 확장 및 신규 고객 확보 추이, 그리고 매출 성장률 달성 여부.",
+        "upside_axes": {
+          "underfollowed_pure_play": 0,
+          "earnings_leverage": 1,
+          "supply_demand_tightness": 0,
+          "structural_ai_demand": 0,
+          "revision_momentum": 0,
+          "catalyst_visibility": 1
+        },
+        "upside_score": 2,
+        "tier": "관망",
+        "stage": "관찰",
+        "glossary": "APV LRP: Annualized Percentage Value Long-Range Plan의 약자로, 연간 백분율 가치 장기 계획을 의미하며, 기업의 장기적인 성장 목표를 나타내는 지표이다."
+      }
     },
     "content_hash": "230ef2b00e2e3b25a6c89e505eafbf0913ebbe7c722766cad05890c306f652b6",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-27T08:47:47+00:00",
+    "signal_id": "SIG-0974",
+    "reason": "grounded extraction",
+    "processed_day": "2026-11-27",
+    "processed_run": "45968127921-1"
   },
   "0001213900-26-119240": {
     "status": "deferred",

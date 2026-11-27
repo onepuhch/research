@@ -1,0 +1,98 @@
+{
+  "observation_id": "OB-35444D670C439A12",
+  "candidate_id": "CAN-DEEE3039EE887F32",
+  "candidate_version": "CV-53BC7150165D40CB",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:CMBT",
+    "ticker": "CMBT",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-27T08:53:44+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261127T084754Z_45968127921-1.json.gz",
+    "sha256": "3fd73cb0cdb1b12ce5ec6dc29801a7a22aeac241c0ddc37fb69c55a34414fa06",
+    "run_id": "45968127921-1",
+    "finished_at": "2026-11-27T09:02:02+00:00"
+  },
+  "eps": {
+    "eps_now": 2.16,
+    "eps_30d": 1.54,
+    "eps_90d": 1.33667,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 4,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 61.6,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 4.646,
+    "yield_change_30_pp": 3.499
+  },
+  "price": {
+    "price_status": "failed",
+    "price_note": "price_not_retrieved",
+    "price_basis": null,
+    "price_start_target": null,
+    "price_start_date": null,
+    "price_end_expected": null,
+    "price_end_date": null,
+    "close_start": null,
+    "close_end": null,
+    "price_pct_90": null,
+    "adj_return_pct_90": null,
+    "pe_change_pct": null
+  },
+  "display_rank": null,
+  "memberships": [],
+  "lists": [],
+  "missing": [
+    {
+      "field": "price_comparison",
+      "reason": "price_not_retrieved"
+    }
+  ],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "needs_evidence",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 5141808128,
+  "context_id": null,
+  "research_status": "queued",
+  "research_note": "최근 120일 공식 발표에서 관련 원문을 확인하지 못했습니다(원문에서 확인 못 함).",
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [
+    "document budget reached before every results filing was read"
+  ],
+  "source_attempt_at": "2026-11-21T07:38:10+00:00",
+  "source_status": "no_relevant_document",
+  "last_valid_context": null,
+  "display_state": "industry_folded",
+  "industry_group": {
+    "industry": "Oil & Gas Midstream",
+    "count": 8,
+    "shown": [
+      "VG",
+      "FRO",
+      "DHT"
+    ],
+    "folded": [
+      "INSW",
+      "CMBT",
+      "STNG"
+    ],
+    "outside": [
+      "LNG",
+      "CQP"
+    ]
+  },
+  "entity_id": "NYSE:CMBT",
+  "approval_version": null,
+  "rendered_at": "2026-11-27T09:02:52+00:00"
+}

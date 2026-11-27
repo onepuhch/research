@@ -1,0 +1,141 @@
+{
+  "context_id": "CTX-461AC4D8BDF1DC83",
+  "candidate_id": "CAN-B34795936AC4EF8E",
+  "ticker": "CBRS",
+  "issuer_cik": "0002021728",
+  "document_ids": [
+    "DOC-2EFDFE539943BBFE",
+    "DOC-0A1EECE466DE433E"
+  ],
+  "eps_target_period": "2027-12-31",
+  "source_blocks": [
+    "DOC-2EFDFE539943BBFE#p3",
+    "DOC-2EFDFE539943BBFE#p4",
+    "DOC-2EFDFE539943BBFE#p52",
+    "DOC-2EFDFE539943BBFE#p54",
+    "DOC-2EFDFE539943BBFE#t4",
+    "DOC-2EFDFE539943BBFE#p122",
+    "DOC-2EFDFE539943BBFE#p126",
+    "DOC-2EFDFE539943BBFE#p127",
+    "DOC-2EFDFE539943BBFE#p128",
+    "DOC-0A1EECE466DE433E#p10",
+    "DOC-0A1EECE466DE433E#t4",
+    "DOC-0A1EECE466DE433E#p94",
+    "DOC-0A1EECE466DE433E#p98",
+    "DOC-0A1EECE466DE433E#p99"
+  ],
+  "input_sha": "461ac4d8bdf1dc839a8f3b8d451675abccfc7bf814a5f0a4e93f08c912c11857",
+  "model": "gemini-2.5-flash",
+  "prompt_version": "context-ko-v4",
+  "parser_version": "context-check-v11",
+  "generated_at": "2026-11-27T09:02:29+00:00",
+  "source_coverage": "partial",
+  "review": "자동 정리·미검토",
+  "claims": [
+    {
+      "text_ko": "매출(Revenue) · Third Quarter 2026 — 회사가 기록적인 매출을 달성했다",
+      "note_ko": "회사가 기록적인 매출을 달성했다",
+      "kind": "fact",
+      "quote": "Cerebras Systems Delivers Record Revenue in Third Quarter 2026",
+      "document_id": "DOC-2EFDFE539943BBFE",
+      "block_id": "p3",
+      "metric": "Revenue",
+      "figures": [],
+      "period": "Third Quarter 2026",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": true,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    },
+    {
+      "text_ko": "Outlook · Full-Year — 회사가 연간 전망을 상향 조정했다",
+      "note_ko": "회사가 연간 전망을 상향 조정했다",
+      "kind": "guidance",
+      "quote": "Raises Full-Year Outlook",
+      "document_id": "DOC-2EFDFE539943BBFE",
+      "block_id": "p4",
+      "metric": "Outlook",
+      "figures": [],
+      "period": "Full-Year",
+      "currency": null,
+      "gaap": "unknown",
+      "subject": "issuer",
+      "subject_name": null,
+      "core": false,
+      "figure_roles": [],
+      "figure_readings": [],
+      "drivers": [
+        "unknown"
+      ],
+      "direction": "positive"
+    }
+  ],
+  "limitations": [],
+  "next_check": [],
+  "link": "temporal_context",
+  "link_note": null,
+  "rejected": [
+    {
+      "what": "claim",
+      "reason": "number_or_unit_in_note",
+      "note_ko": "회사는 연말까지 제조 역량이 연초 대비 배 이상 증가할 것으로 예상한다",
+      "figures": [
+        "10x"
+      ],
+      "quote": "expects to exit 2026 with more than 10x manufacturing capacity versus beginning of the year.",
+      "where": "DOC-2EFDFE539943BBFE#p52"
+    },
+    {
+      "what": "claim",
+      "reason": "metric_not_in_quote",
+      "note_ko": "회사의 분산형 추론 역량이 데이터 센터가 제공할 수 있는 토큰 수를 배까지 늘려 역량을 확장한다",
+      "figures": [
+        "5x"
+      ],
+      "quote": "Cerebras disaggregated inference expands capacity by increasing up to 5x the number of tokens that data centers can deliver.",
+      "where": "DOC-2EFDFE539943BBFE#p54"
+    },
+    {
+      "what": "claim",
+      "reason": "ambiguous_table_figures",
+      "note_ko": "회사의 순이익은 손실을 기록했다",
+      "figures": [
+        "$(625,752)"
+      ],
+      "quote": "Net income (loss) ; $(625,752)",
+      "where": "DOC-2EFDFE539943BBFE#t4"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "고객 워런트 상각은 비현금성, 가치 평가 기반 조정이며 회사의 영업 성과를 반영하지 않을 수 있다",
+      "figures": [],
+      "quote": "This adjustment does not reflect the underlying economics of our core revenue‑generating activities, including pricing, volume, or cost of delivering our products and services, and therefore may not b",
+      "where": "DOC-2EFDFE539943BBFE#p126"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "패스스루 매출 및 관련 패스스루 매출 원가는 회사의 핵심 기술 및 서비스 제공의 기본 경제를 반영하지 않으며 영업 성과 비교를 모호하게 할 수 있다",
+      "figures": [],
+      "quote": "We exclude pass‑through revenue and the associated pass-through cost of revenue from our non‑GAAP financial measures because such amounts are incurred on behalf of specific customers and do not reflec",
+      "where": "DOC-2EFDFE539943BBFE#p127"
+    },
+    {
+      "what": "limitation",
+      "reason": "metric_not_in_quote",
+      "note_ko": "선도 계약 부채의 공정 가치 변동(소멸)은 핵심 기술 및 서비스 제공의 영업 성과에서 발생한 것이 아니다",
+      "figures": [],
+      "quote": "We exclude this item from core net income (loss) because it arose from the forward contract liability rather than from the operating performance of our core technology and services offerings.",
+      "where": "DOC-2EFDFE539943BBFE#p128"
+    }
+  ],
+  "context_status": "draft_ready"
+}

@@ -1,0 +1,81 @@
+{
+  "observation_id": "OB-50FC0DF41D6C6B6C",
+  "candidate_id": "CAN-361AFF9E8FAA657E",
+  "candidate_version": "CV-C89E6B12EAC12EFC",
+  "thesis_key": "eps-revision-review:v1",
+  "identity": {
+    "entity_id": "NYSE:DELL",
+    "ticker": "DELL",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "observed_at": "2026-11-27T08:48:31+00:00",
+  "source_snapshot": {
+    "path": "data/processed/revision_screen/20261127T084754Z_45968127921-1.json.gz",
+    "sha256": "3fd73cb0cdb1b12ce5ec6dc29801a7a22aeac241c0ddc37fb69c55a34414fa06",
+    "run_id": "45968127921-1",
+    "finished_at": "2026-11-27T09:02:02+00:00"
+  },
+  "eps": {
+    "eps_now": 30.48959,
+    "eps_30d": 26.8056,
+    "eps_90d": 20.15625,
+    "eps_target_period": "2028-01-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 8,
+    "up30": 1,
+    "down30": 0,
+    "pct_90": 51.3,
+    "steady": true,
+    "turnaround": false,
+    "yield_change_90_pp": 3.479,
+    "yield_change_30_pp": 1.24
+  },
+  "price": {
+    "price_status": "success",
+    "price_note": "",
+    "price_basis": "Yahoo chart close: split-adjusted, not dividend-adjusted",
+    "price_start_target": "2026-08-29",
+    "price_start_date": "2026-08-28",
+    "price_end_expected": "2026-11-25",
+    "price_end_date": "2026-11-25",
+    "close_start": 456.239990234375,
+    "close_end": 297.05999755859375,
+    "price_pct_90": -34.9,
+    "adj_return_pct_90": -34.8,
+    "pe_change_pct": -57.0
+  },
+  "display_rank": 26,
+  "memberships": [
+    {
+      "list": "B",
+      "rank": 18
+    }
+  ],
+  "lists": [
+    "B"
+  ],
+  "missing": [],
+  "run_quality": "complete",
+  "scope_note": "전체 조회 범위 순위",
+  "classification": "found",
+  "policy_version": "171cefb46b8c",
+  "generator_version": "cards-v10",
+  "market_cap": 188874522624,
+  "context_id": "CTX-AA7F43AED1F2EDC3",
+  "research_status": "source_linked",
+  "research_note": null,
+  "source_quality": "complete",
+  "source_failures": 0,
+  "source_failure_reasons": [],
+  "source_attempt_at": "2026-11-27T09:02:08+00:00",
+  "source_status": "success",
+  "last_valid_context": null,
+  "display_state": "card",
+  "industry_group": null,
+  "entity_id": "NYSE:DELL",
+  "approval_version": null,
+  "rendered_at": "2026-11-27T09:02:52+00:00"
+}
