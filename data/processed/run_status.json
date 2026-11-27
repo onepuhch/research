@@ -71,9 +71,9 @@
     "failures": []
   },
   "returns": {
-    "checked_at": "2026-11-26T08:51:07+00:00",
+    "checked_at": "2026-11-27T09:03:14+00:00",
     "status": "success",
-    "last_success_at": "2026-11-26T08:51:07+00:00",
+    "last_success_at": "2026-11-27T09:03:14+00:00",
     "targets": 4,
     "failures": []
   },
@@ -139,9 +139,9 @@
     "stale": []
   },
   "candidate_alerts": {
-    "checked_at": "2026-11-26T08:51:06+00:00",
+    "checked_at": "2026-11-27T09:03:13+00:00",
     "status": "success",
-    "last_success_at": "2026-11-26T08:51:06+00:00",
+    "last_success_at": "2026-11-27T09:03:13+00:00",
     "slots": 3,
     "bootstrap": false,
     "material_eligible": 0,
@@ -151,9 +151,7 @@
     "sent": 1,
     "failed": 0,
     "uncertain": 0,
-    "held_unconfirmed": [
-      "NYSE:EMBJ|eps-revision-review:v1|new_discovery"
-    ],
+    "held_unconfirmed": [],
     "released_unconfirmed": [],
     "hold_not_compared": 0,
     "reservation_persisted": true,
@@ -239,20 +237,20 @@
     "protected_state_unchanged": true
   },
   "candidate_prices": {
-    "checked_at": "2026-11-26T08:51:19+00:00",
+    "checked_at": "2026-11-27T09:03:23+00:00",
     "status": "degraded",
     "last_success_at": "2026-11-25T09:04:47+00:00",
-    "due": 12,
-    "fresh": 11,
+    "due": 6,
+    "fresh": 4,
     "retry_waiting": 1,
-    "retry_ready": 0,
-    "retries": 0,
-    "requests": 12,
-    "collected": 10,
+    "retry_ready": 1,
+    "retries": 1,
+    "requests": 6,
+    "collected": 4,
     "failures": 1,
     "stopped": null,
     "retry_share_left": 5,
-    "day_requests": 12,
-    "day_retries": 0
+    "day_requests": 6,
+    "day_retries": 1
   }
 }
