@@ -19239,7 +19239,7 @@
     "processed_run": "45968127921-1"
   },
   "0001213900-26-119240": {
-    "status": "deferred",
+    "status": "rejected",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -19255,10 +19255,11 @@
     "content_hash": "2bc9029727ca43d31093c521505106d93e0daffd681b2a7940e6650eaf17ad12",
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
-    "updated_at": "2026-11-14T06:40:30.638637+00:00"
+    "updated_at": "2026-11-28T08:00:13.927637+00:00",
+    "reason": "missing, future, or stale publication date"
   },
   "0001654954-26-009852": {
-    "status": "deferred",
+    "status": "retry",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -19273,11 +19274,17 @@
     },
     "content_hash": "557858c0d7deb29356852607a082b41cb72a77cfcf94beafceb1402ba5940ea6",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-17T08:04:51.902827+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-28T08:00:50+00:00",
+    "reason": "provider_overloaded",
+    "http_status": 503,
+    "next_retry_at": "2026-11-28T08:30:13.927637+00:00",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-28",
+    "failure_run": "46123694284-1"
   },
   "0001104659-26-128300": {
-    "status": "deferred",
+    "status": "retry",
     "item": {
       "source_type": "edgar",
       "source_name": "SEC EDGAR",
@@ -19292,8 +19299,14 @@
     },
     "content_hash": "31c3eca1b9099874b69c3fba6c463123dd4069ae46323978bc0a070caf062d72",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-17T08:04:51.902827+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-28T08:00:55+00:00",
+    "reason": "provider_overloaded",
+    "http_status": 503,
+    "next_retry_at": "2026-11-28T08:31:00+00:00",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-28",
+    "failure_run": "46123694284-1"
   },
   "0001213900-26-120168": {
     "status": "deferred",
@@ -19311,8 +19324,12 @@
     },
     "content_hash": "b3b0a0691fb3a8c7ec017c1f083c07832db5b7e02d3ed2802a6dffab9057ab33",
     "prompt_version": "research-v2-20260906",
-    "attempts": 0,
-    "updated_at": "2026-11-17T08:04:51.902827+00:00"
+    "attempts": 1,
+    "updated_at": "2026-11-28T08:00:59+00:00",
+    "reason": "provider_overloaded",
+    "failure_class": "unserved",
+    "failure_day": "2026-11-28",
+    "failure_run": "46123694284-1"
   },
   "0001213900-26-120828": {
     "status": "deferred",
@@ -20596,5 +20613,24 @@
     "prompt_version": "research-v2-20260906",
     "attempts": 0,
     "updated_at": "2026-11-26T08:33:52.794498+00:00"
+  },
+  "0001144879-26-000069": {
+    "status": "deferred",
+    "item": {
+      "source_type": "edgar",
+      "source_name": "SEC EDGAR",
+      "source_id": "0001144879-26-000069",
+      "entity_id": "CIK:0001144879",
+      "source_role": "candidate",
+      "title": "Applied Digital Corp. (APLD) (CIK 0001144879) EX-99.1 2026-11-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000069/",
+      "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000069/apldpresentation11232026.htm",
+      "published_at": "2026-11-27",
+      "raw_text": "Applied Digital Corp. (APLD) (CIK 0001144879) EX-99.1 2026-11-27. Supply Chain Applied secured hundreds of MW of supply chain before the market tightened (14) World Wide Technology – AI Day presentation 17 / 41 2 0 1 9 2 0 2 3 2 0 2 5 / 2 6 Generator UPS Switchgear PDU 24-40 WEEKS 40-64 WEEKS 72-96 WEEKS 24-40 WEEKS 64-80 WEEKS 45-50 WEEKS 52-78 WEEKS 32-48 WEEKS 12-20 WEEKS 8-12 WEEKS 4-28 WEEKS 32-40 WEEKS DC EQUIPMENT LEAD TIME Financial Overview Financial Overview 18 / 41 03 Applied’s contracts and delivery dates All 1,560 MW contracted for delivery by 2028 · $41.13B base-term · $98.36B with renewals Campus Contracted IT Capacity Lease Term Expected Base- Term Lease Value All Renewals Counterparty Credit Rating Delivery Dates Polaris Forge 1 400 MW 15 yrs + 3 × 5-yr $10.71B $27.40B CoreWeave 2H 2025 / 1H 2027 Polaris Forge 2 200 MW 15 yrs + 2 × 5-yr $4.82B $9.18B Investment-Grade 2H 2026 / 1H 2027 Polaris Forge 3 300 MW 15 yrs + 3 × 5-yr $7.50B $18.18B High Investment-Grade 2H 2027 / 2H 2028 Delta Forge 1 300 MW 15 yrs + 3 × 5-yr $7.50B $18.18B High Investment-Grade MID 2027 / 1H 2028 Delta Forge 2 210 MW 15 yrs + 3 × 5-yr $5.20B $12.72B High Investment-Grade 1H 2028 New 150 MW 150 MW 18 yrs + 3 × 5-yr $5.40B $12.70B High Investment-Grade 1H 2028 / 2H 2028 Contracted subtotal 1,560 MW $41.13B $98.36B ~75% Investment-Grade on MW All delivered by 2028 Polaris Forge 2 — expansion 100 MW 2027 Total with expansion 1,660 MW ~76% Investment-Grade on MW All delivered by 2028 Shaded row assumes one additional expansion lease — 100 MW at Polaris Forge 2."
+    },
+    "content_hash": "456d125868e59ef357b33ba7e93ebf7f6b7367554c7e63fa68d31e8822764db3",
+    "prompt_version": "research-v2-20260906",
+    "attempts": 0,
+    "updated_at": "2026-11-28T08:00:13.927637+00:00"
   }
 }

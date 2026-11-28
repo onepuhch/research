@@ -1,0 +1,271 @@
+{
+  "candidate_id": "CAN-D5381380E1067E0B",
+  "candidate_version": "CV-8BB012E9B73E1C62",
+  "identity": {
+    "entity_id": "NYSE:BXDC",
+    "ticker": "BXDC",
+    "exchange": "NYSE",
+    "source": "SEC company_tickers_exchange",
+    "verified": true
+  },
+  "thesis_key": "eps-revision-review:v1",
+  "name": "Blackstone Digital Infrastructure Trust Inc.",
+  "industry": "REIT - Specialty",
+  "sector": "Real Estate",
+  "eps_provider": "Yahoo Finance earningsTrend (+1y)",
+  "lists": [
+    "A",
+    "B"
+  ],
+  "missing": [],
+  "base_classification": "found",
+  "explanations": {
+    "company_description_ko": {
+      "text": "데이터 센터 자산을 인수하고 임대하여 임대료 수익을 얻습니다.",
+      "kind": "fact",
+      "source_ids": [
+        "yahoo-profile"
+      ],
+      "status": "translated",
+      "model": "gemini-2.5-flash",
+      "source_text": "Blackstone Digital Infrastructure Trust Inc. is a newly organized company focused on acquiring and owning mission-critical data center assets that power the modern digital economy. BXDC targets newly-constructed, income-generating, stabilized data center properties leased to investment-grade hyperscale tenants on long-term contracts. Our investment strategy is designed to generate stable, long-term cash flows and deliver current income to shareholders, with growth potential through contractual rent escalations and accretive acquisition opportunities. BXDC is externally managed by an affiliate"
+    },
+    "earnings_path": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "persistence_evidence": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "market_expectation_gap": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "falsification": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    },
+    "next_check": {
+      "statements": [],
+      "reason": "원문 근거 미연결 (EPS 스크린만 통과)"
+    }
+  },
+  "sources": [
+    {
+      "id": "yahoo-estimates",
+      "title": "BXDC analyst estimates (EPS trend)",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BXDC/analysis",
+      "published_at": null,
+      "observed_at": "2026-11-28T08:09:57+00:00",
+      "fields": "earningsTrend +1y: current, 30/90 days ago, up/down last 30 days, analysts"
+    },
+    {
+      "id": "yahoo-price",
+      "title": "BXDC daily closes",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BXDC/history",
+      "published_at": null,
+      "observed_at": "2026-11-28T08:09:57+00:00",
+      "fields": "chart close (split-adjusted)"
+    },
+    {
+      "id": "yahoo-profile",
+      "title": "BXDC company profile",
+      "provider": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/quote/BXDC/profile",
+      "published_at": null,
+      "observed_at": "2026-11-28T08:09:57+00:00",
+      "fields": "assetProfile industry, sector, business summary"
+    },
+    {
+      "id": "DOC-68BDAEB740996C62",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-16",
+      "observed_at": "2026-11-18T07:56:25+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-D30B1741C3A1AC16",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2100161/000210016126000015/exhibit991-20260930.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-11-16",
+      "observed_at": "2026-11-18T07:56:25+00:00",
+      "fields": "8-K EX-99.1"
+    },
+    {
+      "id": "DOC-115F788AB569BD79",
+      "provider": "SEC EDGAR",
+      "url": "https://www.sec.gov/Archives/edgar/data/2100161/000210016126000008/exhibit991-20260630.htm",
+      "title": "SEC 8-K EX-99.1",
+      "published_at": null,
+      "filed_at": "2026-08-04",
+      "observed_at": "2026-11-18T07:56:25+00:00",
+      "fields": "8-K EX-99.1"
+    }
+  ],
+  "generator_version": "cards-v10",
+  "context": {
+    "context_id": "CTX-396E60894743A748",
+    "input_sha": "396e60894743a7480d8c91f493521c9f44d045883af0f7045073cd55327cbab2",
+    "context_status": "insufficient_earnings_context",
+    "claims": [
+      {
+        "text_ko": "순이익(Net income) · third-quarter 2026: $15.6 million — 해당 분기 순이익이다",
+        "note_ko": "해당 분기 순이익이다",
+        "kind": "fact",
+        "quote": "Net income for the quarter was $15.6 million, and net income per share was $0.15.",
+        "document_id": "DOC-D30B1741C3A1AC16",
+        "block_id": "p4",
+        "metric": "Net income",
+        "figures": [
+          "$15.6 million"
+        ],
+        "period": "third-quarter 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "net income per share · third-quarter 2026: $0.15 — 해당 분기 주당 순이익이다",
+        "note_ko": "해당 분기 주당 순이익이다",
+        "kind": "fact",
+        "quote": "Net income for the quarter was $15.6 million, and net income per share was $0.15.",
+        "document_id": "DOC-D30B1741C3A1AC16",
+        "block_id": "p4",
+        "metric": "net income per share",
+        "figures": [
+          "$0.15"
+        ],
+        "period": "third-quarter 2026",
+        "currency": "USD",
+        "gaap": "unknown",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      },
+      {
+        "text_ko": "adjusted FFO (“AFFO”) per share · third-quarter 2026: $0.17 — 해당 분기 주당 AFFO이다",
+        "note_ko": "해당 분기 주당 AFFO이다",
+        "kind": "fact",
+        "quote": "Funds from Operations (“FFO”) per share, and adjusted FFO (“AFFO”) per share were $0.15 and $0.17, respectively.",
+        "document_id": "DOC-D30B1741C3A1AC16",
+        "block_id": "p4",
+        "metric": "adjusted FFO (“AFFO”) per share",
+        "figures": [
+          "$0.17"
+        ],
+        "period": "third-quarter 2026",
+        "currency": "USD",
+        "gaap": "non-GAAP",
+        "subject": "issuer",
+        "subject_name": null,
+        "core": false,
+        "figure_roles": [
+          "level"
+        ],
+        "figure_readings": [
+          {
+            "role": "level",
+            "unit": "amount",
+            "direction": null
+          }
+        ],
+        "drivers": [
+          "unknown"
+        ],
+        "direction": "unknown"
+      }
+    ],
+    "limitations": [],
+    "next_check": [],
+    "link": "unconfirmed",
+    "link_note": null,
+    "source_coverage": "complete",
+    "documents": [
+      {
+        "document_id": "DOC-68BDAEB740996C62",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778dex991.htm",
+        "filed_at": "2026-11-16",
+        "observed_at": "2026-11-18T07:56:25+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-D30B1741C3A1AC16",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2100161/000210016126000015/exhibit991-20260930.htm",
+        "filed_at": "2026-11-16",
+        "observed_at": "2026-11-18T07:56:25+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      },
+      {
+        "document_id": "DOC-115F788AB569BD79",
+        "title": "EX-99.1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2100161/000210016126000008/exhibit991-20260630.htm",
+        "filed_at": "2026-08-04",
+        "observed_at": "2026-11-18T07:56:25+00:00",
+        "form": "8-K",
+        "document_type": "EX-99.1"
+      }
+    ],
+    "source_parser_version": "context-check-v11",
+    "display_validator_version": "context-check-v11",
+    "validation_scope": "as_generated",
+    "generated_at": "2026-11-18T07:56:44+00:00"
+  },
+  "context_hold": null,
+  "evidence_review": null,
+  "eps": {
+    "eps_now": 1.10836,
+    "eps_30d": 0.48018,
+    "eps_90d": 0.48932,
+    "eps_target_period": "2027-12-31",
+    "eps_currency": "USD",
+    "eps_basis": "provider-unspecified",
+    "analysts": 5,
+    "up30": 2,
+    "down30": 0,
+    "pct_90": 126.5,
+    "steady": false,
+    "turnaround": false
+  }
+}

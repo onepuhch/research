@@ -3292,6 +3292,91 @@
       "payload_text": "<b>🆕 새 발굴 후보 · CBRS Cerebras Systems Inc.</b>\n<b>⚪ 시스템 판단: 관심 낮음</b>\nAI 컴퓨팅 플랫폼과 독점 시스템, 소프트웨어를 설계 및 제조하여 데이터 센터에 공급합니다.\n내년 이익 예상(EPS, 2027-12-31 회계연도 말) 90일 전 $1.27 → 지금 $1.86 (+46%) · 주가 같은 기간 -49.9%\n\n👍 주가는 같은 90일에 -50%로, 이익 예상 상향(+46%)보다 덜 움직임\n👎 최근 30일 분석가 10명 중 1명만 올림 — 한 곳의 수정일 수 있음\n👎 이 회사 숫자는 지난번 관측과 같음 — 다른 회사가 순위에서 빠지면서 20위로 들어옴\n❓ 11/12 회사 공식 발표(SEC 8-K) 무렵에 예상이 대부분 올라감 — 발표 내용이 원인일 가능성(내용은 아직 확인 전)\n→ 지금은 답장 안 하셔도 됩니다. 관심 있으면 &#x27;추적&#x27;으로 답장해 주세요.\n\n자세히: 이 메시지에 '자세히' 답장 또는 <code>/candidate CAN-B34795936AC4EF8E</code> · 추적 <code>/track CAN-B34795936AC4EF8E</code>\n시스템 판단은 정해진 규칙으로 계산한 참고 의견이며 투자 권유가 아닙니다.",
       "payload_sha256": "935b3d102abe79c954b047c9aba231e6c2a21b998a9466ebbd2b8e030a9d36f6",
       "message_id": 273
+    },
+    "NYSE:FRO|eps-revision-review:v1|material_update|B:OB-AD62B8FECCA80C6B>OB-E1A2AFE776F99A44": {
+      "channel": "screen",
+      "event": "material_update",
+      "entity_id": "NYSE:FRO",
+      "thesis_key": "eps-revision-review:v1",
+      "candidate_id": "CAN-7506B6BECE695B39",
+      "candidate_version": "CV-66E24EE0A182131F",
+      "observation_id": "OB-7CFD15D6B6C9E8D7",
+      "signal_id": null,
+      "material": {
+        "version": "material-update-v3",
+        "triggers": [
+          "B"
+        ],
+        "comparison_key": [
+          "eps_next_fy_per_share",
+          "2027-12-31",
+          "Yahoo Finance earningsTrend (+1y)",
+          "USD",
+          "provider-unspecified"
+        ],
+        "baseline": {
+          "source": "new_discovery",
+          "baseline_id": "OB-AD62B8FECCA80C6B",
+          "observed_at": "2026-10-10T06:16:03+00:00",
+          "day": "2026-10-10",
+          "observation_id": "OB-AD62B8FECCA80C6B",
+          "snapshot_sha256": "2a0ad42faaf1d2cd519b077f8a6a41a71d9f8ff859d7aa6274549482d77a0b22",
+          "eps_now": 5.24214,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "first": {
+          "observation_id": "OB-E1A2AFE776F99A44",
+          "baseline_id": "OB-E1A2AFE776F99A44",
+          "observed_at": "2026-11-27T09:02:02+00:00",
+          "day": "2026-11-27",
+          "snapshot_sha256": "3fd73cb0cdb1b12ce5ec6dc29801a7a22aeac241c0ddc37fb69c55a34414fa06",
+          "eps_now": 7.25715,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "current": {
+          "observation_id": "OB-7CFD15D6B6C9E8D7",
+          "baseline_id": "OB-7CFD15D6B6C9E8D7",
+          "observed_at": "2026-11-28T08:15:16+00:00",
+          "day": "2026-11-28",
+          "snapshot_sha256": "5e43179796878aa5f2a5968467b955e2cbfcdd56ec3a0a7d1e0bde649bb2e1bd",
+          "eps_now": 7.25715,
+          "comparison_key": [
+            "eps_next_fy_per_share",
+            "2027-12-31",
+            "Yahoo Finance earningsTrend (+1y)",
+            "USD",
+            "provider-unspecified"
+          ]
+        },
+        "pct": 38.44,
+        "thresholds": {
+          "min_growth_pct": 25.0,
+          "min_growth_base_eps": 0.25
+        },
+        "documents": [],
+        "parts": [
+          "B:OB-AD62B8FECCA80C6B>OB-E1A2AFE776F99A44"
+        ]
+      },
+      "day": "2026-11-28",
+      "status": "reserved",
+      "attempts": [],
+      "reserved_by": "46123694284-1",
+      "reserved_at": "2026-11-28T08:15:35+00:00",
+      "payload_text": "<b>🔁 기존 후보의 재검토 변화 · FRO Frontline plc</b>\n기준: 2026-10-10 새 발굴 알림 관측\n내년 EPS 예상(2027-12-31 회계연도 말) 기준 $5.24 → 현재 $7.26 (+38%), 2026-11-27·2026-11-28 두 정상 일간 스크린에서 유지\n제공처 평균 추정치(회계기준 미표시)의 직접 보관값 비교이며 원문 GAAP 실적과 같은 기준이 아님\n사업 원인: 원문 미확인\n상세 <code>/candidate CAN-7506B6BECE695B39</code> · 추적 <code>/track CAN-7506B6BECE695B39</code>\n이미 본 후보의 새 변화를 다시 검토하라는 알림이며 투자 권유가 아닙니다.",
+      "payload_sha256": "6042df83c9a6c6ca9830bab2628565d011d9abd4a83186019f18e5777acef9c6"
     }
   },
   "bootstrap": {

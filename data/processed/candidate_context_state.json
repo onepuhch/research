@@ -4547,10 +4547,10 @@
         "exchange": "NYSE",
         "name": "AMC Entertainment Holdings, Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "9551d90d1c328044ef12c8db2191cde43aa4806b331f4ec5c0309b417289eeaa",
-        "mapping_observed_at": "2026-11-21T07:24:03+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-21T07:38:10+00:00",
+      "attempted_at": "2026-11-28T08:15:20+00:00",
       "eps_key": "2027-12-31|0.09",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -4572,7 +4572,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-28T07:38:10+00:00",
+      "next_eligible_at": "2026-12-05T08:15:20+00:00",
       "draft_status": "draft_ready",
       "context_id": "CTX-6F8645A6872263A5",
       "context_input_sha": "6f8645a6872263a529cd9bb60f4ce82d9447ace4fd1b76804ce14c47abdd2d13"
@@ -4770,10 +4770,10 @@
         "exchange": "NYSE",
         "name": "Unity Software Inc.",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "9551d90d1c328044ef12c8db2191cde43aa4806b331f4ec5c0309b417289eeaa",
-        "mapping_observed_at": "2026-11-21T07:24:03+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-21T07:38:10+00:00",
+      "attempted_at": "2026-11-28T08:15:20+00:00",
       "eps_key": "2027-12-31|2.64575",
       "eps_target_period": "2027-12-31",
       "document_ids": [
@@ -4805,7 +4805,7 @@
           "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-28T07:38:10+00:00",
+      "next_eligible_at": "2026-12-05T08:15:20+00:00",
       "draft_status": "no_supported_claims",
       "context_id": "CTX-A89D27A892F55A9D",
       "context_input_sha": "a89d27a892f55a9d26911920cc21518ccc9c8c7af42359e81dc65cdca6f279b4"
@@ -5265,7 +5265,7 @@
       "context_input_sha": "396e60894743a7480d8c91f493521c9f44d045883af0f7045073cd55327cbab2"
     },
     "CAN-DEEE3039EE887F32": {
-      "status": "no_relevant_document",
+      "status": "success",
       "ticker": "CMBT",
       "issuer": {
         "cik": "0001604481",
@@ -5273,25 +5273,37 @@
         "exchange": "NYSE",
         "name": "Cmb.Tech NV",
         "mapping_source": "screen snapshot (SEC company_tickers_exchange)",
-        "mapping_sha256": "9551d90d1c328044ef12c8db2191cde43aa4806b331f4ec5c0309b417289eeaa",
-        "mapping_observed_at": "2026-11-21T07:24:03+00:00"
+        "mapping_sha256": "a4549a73d027584e90490c5b8ff207de3e6a607768c7de416144ef52e6474c84",
+        "mapping_observed_at": "2026-11-24T10:03:36+00:00"
       },
-      "attempted_at": "2026-11-21T07:38:10+00:00",
-      "eps_key": "2027-12-31|2.045",
+      "attempted_at": "2026-11-28T08:15:20+00:00",
+      "eps_key": "2027-12-31|2.16",
       "eps_target_period": "2027-12-31",
-      "document_ids": [],
-      "quality": "unknown",
+      "document_ids": [
+        "DOC-12728B514CA9D83C"
+      ],
+      "quality": "complete",
       "failures": 0,
       "examined": [
+        "DOC-12728B514CA9D83C",
         "DOC-286FD0C6665B141A",
         "DOC-055DB80C7A4FD4E1",
         "DOC-9E5A495F62455E41",
-        "DOC-2A8AAAFCB1C1B4F6"
+        "DOC-2A8AAAFCB1C1B4F6",
+        "DOC-C79D2B74828A7FE6",
+        "DOC-B232569A6CA80A60",
+        "DOC-88FD9EA62168F384"
       ],
-      "notes": [
-        "document budget reached before every results filing was read"
-      ],
+      "notes": [],
       "update_checks": [
+        {
+          "document_id": "DOC-12728B514CA9D83C",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
         {
           "document_id": "DOC-286FD0C6665B141A",
           "eligible": false,
@@ -5323,9 +5335,35 @@
           "alert_eligible": false,
           "reason": "update-check-v5:no_event_sentence",
           "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-C79D2B74828A7FE6",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-B232569A6CA80A60",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
+        },
+        {
+          "document_id": "DOC-88FD9EA62168F384",
+          "eligible": false,
+          "search_eligible": false,
+          "alert_eligible": false,
+          "reason": "update-check-v5:no_event_sentence",
+          "alert_reasons": []
         }
       ],
-      "next_eligible_at": "2026-11-28T07:38:10+00:00"
+      "next_eligible_at": "2026-12-05T08:15:20+00:00",
+      "draft_status": "provider_overloaded",
+      "draft_next_at": "2026-11-28T08:31:00+00:00"
     },
     "CAN-6791FD80ACF947E8": {
       "status": "success",
@@ -5852,6 +5890,11 @@
     "2026-11-27": {
       "companies": 10,
       "http_attempts": 41
+    },
+    "2026-11-28": {
+      "companies": 3,
+      "http_attempts": 15,
+      "folded_companies": 1
     }
   },
   "documents_by_source": {
@@ -6229,6 +6272,10 @@
     "0001628280-26-073366|https://www.sec.gov/Archives/edgar/data/2021728/000162828026073366/cbrsannouncesfinancialresu.htm": "DOC-2EFDFE539943BBFE",
     "0001628280-26-056186|https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrsannouncesfinancialresu.htm": "DOC-0A1EECE466DE433E",
     "0001714174-26-000116|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000116/bur-20261123xex991.htm": "DOC-3008C46E7EF13502",
-    "0001714174-26-000116|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000116/bur-20261118.htm": "DOC-52C054B44FE8BEC6"
+    "0001714174-26-000116|https://www.sec.gov/Archives/edgar/data/1714174/000171417426000116/bur-20261118.htm": "DOC-52C054B44FE8BEC6",
+    "0000919574-26-008238|https://www.sec.gov/Archives/edgar/data/1604481/000091957426008238/p15165084_exh99-1.htm": "DOC-12728B514CA9D83C",
+    "0000919574-26-006891|https://www.sec.gov/Archives/edgar/data/1604481/000091957426006891/p15111557_ex99-1.htm": "DOC-C79D2B74828A7FE6",
+    "0000919574-26-006891|https://www.sec.gov/Archives/edgar/data/1604481/000091957426006891/p15111557_6-k.htm": "DOC-B232569A6CA80A60",
+    "0000919574-26-006836|https://www.sec.gov/Archives/edgar/data/1604481/000091957426006836/p15110415_ex99-1.htm": "DOC-88FD9EA62168F384"
   }
 }
